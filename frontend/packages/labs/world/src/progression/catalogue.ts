@@ -1008,11 +1008,11 @@ export const TILES: readonly Tile[] = [
     region: 'look',
     at: at('look', 3, 0),
     title: 'Pictures in a row',
-    teaches: 'An animation is a file that reads rectangles out of one image.',
+    teaches:
+      'An animation is the actor’s own: a timeline of rectangles cut out of one image.',
     task: 'A Hero that slides without moving its legs. Give it a walk cycle.',
     requires: ['look/drawing'],
     unlocks: [
-      {kind: 'editor', id: 'animation'},
       {kind: 'block', type: 'world_play_animation'},
       {kind: 'asset', id: 'playerWalk'},
     ],

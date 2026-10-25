@@ -387,6 +387,31 @@ The lessons and scenario instructions that name `animations/`, `.anim`
 or the animation editor are rewritten for the actor's animations; the
 catalogue's checks that read `.anim` files read the actor's instead.
 
+BUILT. One lesson taught a file: `look/animation`, whose steps named the
+`(import…)` row on `play animation`'s dropdown, gone since step 3, and an
+animation file to open. Its Hero is now written as data (`inDataShape`),
+so it opens in the Actor Editor, and the steps are the ones that work: on
+the Map, choose the Hero and Open it; take Player Walk from the library
+under Looks like, which becomes its Main; run it; step through Main's
+picture keys on the timeline; and Add frames again at 4 a second to walk
+slower. Its tile teaches "a timeline of rectangles cut out of one image"
+and no longer unlocks an animation editor, which is gone from the unlock
+kinds. Its check was the Hero's frame changing, which a timeline still
+does; the test that solves it now does what Looks like does
+(`withMainAnimation`) and asserts the Hero opens in the Actor Editor.
+
+No scenario named `.anim`, `animations/` or the editor; the starter
+scenario's note on the coin and the player, and Jetpack's Pilot, were
+already the actor's own animations (step 4).
+
+Departure: the lesson's Hero is the only lesson actor in the data shape.
+The others teach rows of blocks in `define actor`, which is what they
+are about; this one teaches a thing no block makes.
+
+In the browser: the lesson opened, the Hero opened from the Map, and
+Player Walk from the library became Main, five picture keys on its
+timeline, with the Hero's legs moving in the game.
+
 ### 10. Documents, the browser, and the ledger
 
 ## Not in this phase

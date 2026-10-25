@@ -87,7 +87,7 @@ export type UnlockTarget =
    * never locked (`mapEditor/WorldEditor`), and what a gate withholds is
    * inside one — see `affordance`.
    */
-  | {kind: 'editor'; id: 'map' | 'animation' | 'effect' | 'image'}
+  | {kind: 'editor'; id: 'map' | 'effect' | 'image'}
   /**
    * Something an editor lets you do, that a lesson teaches and a gated lab
    * withholds until then (specs/CURRICULUM_PLAN.md). A gate hides the

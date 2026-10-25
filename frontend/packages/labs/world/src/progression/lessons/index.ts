@@ -18,6 +18,7 @@
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
 
+import {inDataShape} from '../../actors/actorData';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {LABEL_PROPERTIES} from '../../actors/stock/label';
 import {
@@ -521,44 +522,53 @@ the game is running. What you set here is where it STARTS.
 const animation: WorldScenario = {
   name: 'Pictures in a row',
   description: 'A Hero that slides along without ever moving its legs.',
-  source: lessonSource({
-    world: worldFile({
-      name: 'My World',
-      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
-      actors: [
-        {
-          id: 'hero',
-          name: 'Hero',
-          rows: [
-            useTrait('Arrow Keys#MovesAcrossTrait'),
-            setSprite('player.png'),
-          ],
-        },
-      ],
+  // The Hero as data, so it opens in the Actor Editor: an animation is made
+  // there, on its timeline, and no block makes one (specs/ANIMATION_PLAN.md).
+  source: inDataShape(
+    lessonSource({
+      world: worldFile({
+        name: 'My World',
+        rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
+        actors: [
+          {
+            id: 'hero',
+            name: 'Hero',
+            rows: [
+              useTrait('Arrow Keys#MovesAcrossTrait'),
+              setSprite('player.png'),
+            ],
+          },
+        ],
+      }),
+      sprites: ['player'],
+      rules: ['arrows'],
     }),
-    sprites: ['player'],
-    rules: ['arrows'],
-  }),
+  ),
   instructions: `
 ## Pictures in a row
 
 Walk the Hero left and right. It slides: the picture never changes, because a
 sprite is one picture and that is all it can be.
 
-An **animation** is a file too, and what is in it is not pictures — it is a
-list of RECTANGLES cut out of one image, and how long to hold each one. The
-image is a strip of frames; the animation says which part is which frame.
+An **animation** is the actor's own, and what is in it is not pictures — it is
+a TIMELINE that says, at each moment, which RECTANGLE of one image to draw.
+The image is a strip of frames; the animation says which part is which frame,
+and when.
 
 ### What you do
 
-1. In \`hero.actor\`, add **play animation ⟨…⟩ on ⟨this actor⟩** under
-   \`define actor ⟨Hero⟩\`, and use the \`(import…)\` row on its dropdown to
-   bring a walk cycle in.
+1. On the **Map**, choose the Hero and press **Open**. Under **Looks
+   like**, choose **(an animation from the library…)** and take **Player
+   Walk**. It becomes the Hero's **Main**, which plays from the moment a
+   Hero is made.
 2. Run it. The legs move.
-3. Open the animation and look at the frames — the image is one picture with
-   the walk laid out across it, and the file is where each frame's rectangle
-   is written down.
-4. Change how long a frame is held, and run it again.
+3. Back in the Hero, look at Main's timeline. Each mark on the **Picture**
+   row is a frame: press one, or step along with the arrow keys, and the
+   picture above shows it. The image is one picture with the walk laid out
+   across it, and each mark says which part of it to draw.
+4. Walk slower: put the playhead at the start, press **Add frames…**, and
+   take the same four cells at **4** frames a second. Each frame is held
+   twice as long. Run it again.
 `.trim(),
 };
 

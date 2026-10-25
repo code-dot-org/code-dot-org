@@ -199,10 +199,15 @@ describe('every actor, folded and viewed again', () => {
     );
     await new Promise(resolve => setTimeout(resolve, 0));
 
-    for (const [path, contents] of Object.entries(files)) {
+    for (const [path, written] of Object.entries(files)) {
       if (!path.endsWith('.actor')) {
         continue;
       }
+      // One written as data (`look/animation`'s Hero) starts from its view.
+      const held = JSON.parse(written) as unknown;
+      const contents = isActorData(held)
+        ? JSON.stringify(actorView(held))
+        : written;
       const data = fold(contents);
       expect(data, path).toBeDefined();
       // Every row a shipped actor holds is data or code; none is kept aside.

@@ -16,11 +16,15 @@ import {describe, expect, it} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
+import {
+  isActorData,
+  withMainAnimation,
+  type ActorData,
+} from '../../actors/actorData';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {enhanceWith} from '../../actors/enhance/enhancements';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
-import {looksLike} from '../../actors/stock/workspace';
 import {
   importStockAnimation,
   importStockSprite,
@@ -1855,25 +1859,24 @@ describe('the animation lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
+  it('opens its Hero in the Actor Editor, where an animation is made', () => {
+    const hero = Object.values(lesson.source.files).find(
+      file => file.name === 'hero.actor',
+    )!;
+    expect(isActorData(JSON.parse(hero.contents))).toBe(true);
+  });
+
   it('accepts one playing a walk cycle', async () => {
-    // What taking one from the library does, in its two moves: the image it
-    // reads lands in the project, and the actor keeps the animation as its
-    // own Main (specs/ANIMATION_PLAN.md).
-    const imported = importStockAnimation(
-      lesson.source,
-      stockAnimation('playerWalk')!,
+    // What taking one from the library under Looks like does, in its two
+    // moves: the image it reads lands in the project, and the actor keeps
+    // the animation as its own Main (specs/ANIMATION_PLAN.md).
+    const walk = stockAnimation('playerWalk')!;
+    const imported = importStockAnimation(lesson.source, walk);
+    const solved = editing(imported.source, 'hero.actor', contents =>
+      JSON.stringify(
+        withMainAnimation(JSON.parse(contents) as ActorData, walk.timeline),
+      ),
     );
-    const solved = editing(imported.source, 'main.world', contents => {
-      const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
-      // At the END of its chain: a `set sprite` after it would stop it, a
-      // still picture being what that row says.
-      let last = actorIn(workspace, 'Hero');
-      while (last.next?.block) {
-        last = last.next.block;
-      }
-      last.next = {block: looksLike(imported.value) as Row};
-      return JSON.stringify(workspace);
-    });
     const {passes, result} = await check('look/animation', solved);
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
