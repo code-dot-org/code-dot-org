@@ -150,3 +150,15 @@
   flex: 1;
   min-height: 0;
 }
+
+/* A property of its own, with its rename and delete under it. */
+.property {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.acts {
+  display: flex;
+  gap: 0.25rem;
+}

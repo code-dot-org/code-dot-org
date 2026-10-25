@@ -236,6 +236,16 @@ their look, and the games play.
 A rename rewrites every block that reads or sets it, in every file: its
 blocks are named after it. A delete first says where it is used.
 
+BUILT. `actors/editor/selfProperties` (`renameProperty`, `propertyUses`,
+`deleteProperty`) and `SelfProperty`, the row that offers both in place.
+A rename rewrites the declaration and, through `mapWorkspaces`, every
+block type made from the old name (`world_get_ActorsPlayer_LivesProperty`
+and its kin), the actor's own starting value among them; it is written with
+`replaceSources`, since it reaches files other editors may have open. A
+delete names the files whose code uses the property (not counting the
+value it starts at) and takes the property and that value away. In the
+browser: lives, added to the starter's Player, renamed hearts and deleted.
+
 ### 7. Documents and the browser
 
 ## Not in this phase

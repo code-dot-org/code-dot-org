@@ -65,13 +65,13 @@ import {
   setEffectSetting,
   switchEffect,
   setLook,
-  setPropertyDefault,
   setPurpose,
   setValue,
   takesValue,
   valueText,
   type TraitChoice,
 } from './actorEdits';
+import {SelfProperty} from './SelfProperty';
 import {ValueField} from './ValueField';
 
 const parse = (contents: string): ActorData | undefined => {
@@ -100,7 +100,7 @@ const capitalize = (text: string) =>
 
 export const ActorEditor = (props: CustomEditorProps) => {
   const {fileId, initialContents, isReadOnly, onChange} = props;
-  const {currentSources} = useSources<MultiFileSource>();
+  const {currentSources, replaceSources} = useSources<MultiFileSource>();
   const files = useMemo(
     () => projectFiles(currentSources.source),
     [currentSources],
@@ -407,20 +407,20 @@ export const ActorEditor = (props: CustomEditorProps) => {
                   Self
                 </Typography>
                 {(data.properties ?? []).map(property => (
-                  <ValueField
+                  <SelfProperty
                     key={property.name}
-                    name={`self-${property.name}`}
-                    label={capitalize(property.name)}
-                    type={property.type}
-                    value={
-                      property.type === 'vector' || property.type === 'point'
-                        ? `${property.value ?? 0},${property.valueY ?? 0}`
-                        : (property.value ?? '')
+                    property={property}
+                    data={data}
+                    fileId={fileId}
+                    modulePath={modulePath}
+                    source={currentSources.source}
+                    onEdit={edit}
+                    // A rename reaches other files, so the project is
+                    // replaced, and the editors open on them read it again.
+                    onProject={source =>
+                      replaceSources({...currentSources, source})
                     }
-                    isReadOnly={isReadOnly || !takesValue(property.type)}
-                    onValue={text =>
-                      edit(setPropertyDefault(data, property.name, text))
-                    }
+                    isReadOnly={isReadOnly}
                   />
                 ))}
                 {!isReadOnly && (

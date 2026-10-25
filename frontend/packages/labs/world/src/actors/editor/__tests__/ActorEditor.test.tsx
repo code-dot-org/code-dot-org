@@ -14,7 +14,7 @@ const PLAYER_ID = Object.values(STARTER.files).find(
   file => file.name === 'player.actor',
 )!.id;
 const PLAYER = asActorData(STARTER.files[PLAYER_ID].contents);
-const SOURCE: MultiFileSource = {
+let SOURCE: MultiFileSource = {
   ...STARTER,
   files: {
     ...STARTER.files,
@@ -22,8 +22,10 @@ const SOURCE: MultiFileSource = {
   },
 };
 
+const replaceSources = vi.fn();
 vi.mock('@code-dot-org/lab/contexts', () => ({
-  useSources: () => ({currentSources: {source: SOURCE}}),
+  // Read when called: a test may hand the project a changed file.
+  useSources: () => ({currentSources: {source: SOURCE}, replaceSources}),
 }));
 vi.mock('../../../runtime/WorldRuntimeContext', () => ({
   useWorldRuntime: () => ({getActorInfo: vi.fn(), hasCompiled: false}),
@@ -100,6 +102,48 @@ describe('the Actor Editor', () => {
     fireEvent.change(lives, {target: {value: '3'}});
     fireEvent.blur(lives);
     expect(written().properties[0].value).toBe('3');
+  });
+
+  it('renames a property of its own across the project, and deletes one after saying so', () => {
+    // A Player with lives of its own.
+    const withLives = JSON.stringify({
+      ...JSON.parse(PLAYER),
+      properties: [{name: 'lives', type: 'number', access: 'writable'}],
+    });
+    const shipped = SOURCE;
+    SOURCE = {
+      ...SOURCE,
+      files: {
+        ...SOURCE.files,
+        [PLAYER_ID]: {...SOURCE.files[PLAYER_ID], contents: withLives},
+      },
+    };
+    open(withLives);
+
+    fireEvent.click(screen.getByRole('button', {name: 'Rename lives'}));
+    fireEvent.change(screen.getByLabelText('Rename lives'), {
+      target: {value: 'hearts'},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Save name'}));
+    const replaced = replaceSources.mock.calls.at(-1)![0] as {
+      source: MultiFileSource;
+    };
+    expect(
+      JSON.parse(replaced.source.files[PLAYER_ID].contents).properties[0].name,
+    ).toBe('hearts');
+
+    fireEvent.click(screen.getByRole('button', {name: 'Delete lives'}));
+    expect(screen.getByRole('group', {name: 'Delete lives'})).toHaveTextContent(
+      'No code uses it.',
+    );
+    fireEvent.click(
+      within(screen.getByRole('group', {name: 'Delete lives'})).getByRole(
+        'button',
+        {name: 'Delete'},
+      ),
+    );
+    expect(written().properties).toBeUndefined();
+    SOURCE = shipped;
   });
 
   it('shows each trait with what can be set on it, and takes one away', () => {
