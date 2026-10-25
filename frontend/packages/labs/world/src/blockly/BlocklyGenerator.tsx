@@ -15,6 +15,7 @@ import {
   useBlocklyContext,
 } from '@code-dot-org/blockly';
 
+import {viewOf} from '../actors/actorData';
 import {TILE_SIZE} from '../runtime/viewport';
 
 import {
@@ -554,6 +555,11 @@ export const BlocklyGenerator = forwardRef<
         }
         // Ours, not whoever's the open editor last registered (`driverRef`).
         driverRef.current?.setBlocks(blocks);
+        // An actor in either shape: a data-shaped one compiles as the
+        // `define actor` it stands for (`actors/actorData`).
+        if (fileKindOf(path) === 'actor') {
+          contents = viewOf(contents);
+        }
         const workspace = (headlessRef.current ??= new Blockly.Workspace());
         // Tag this workspace so a renderer-dependent mutator (the params
         // `+`/`−`) skips its visual rebuild here — it has no renderer to draw

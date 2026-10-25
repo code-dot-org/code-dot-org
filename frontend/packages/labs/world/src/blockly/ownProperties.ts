@@ -34,6 +34,7 @@
 // deleting the actor cannot dangle a reference somewhere else. Widening this
 // later is additive; narrowing it would not be, which is why it starts here.
 
+import {viewOf} from '../actors/actorData';
 import type {PropertyType} from '../engine/core/types';
 
 import type {ParamType} from './enums';
@@ -166,7 +167,9 @@ export function parseActorOwnMeta(
 ): OwnMeta | undefined {
   return declarationsIn(
     modulePath,
-    contents,
+    // Either shape: a data-shaped actor is read as the rows it stands for
+    // (`actors/actorData`).
+    viewOf(contents),
     'world_actor',
     'actor',
     'Actor',

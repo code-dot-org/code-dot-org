@@ -12,6 +12,8 @@
 
 import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 
+import {viewOf} from '../actors/actorData';
+
 import {ANY_FIELD, THIS_FIELD} from './eventSubject';
 import type {EventMeta, RuleMeta} from './ruleMeta';
 import {memberLocalName, memberValue} from './ruleRegistry';
@@ -299,7 +301,9 @@ export function kindFactsFrom(
 ): (module: string) => KindFacts | undefined {
   const byModule = new Map(owns.map(meta => [meta.modulePath, meta]));
   return module => {
-    const contents = files[`${module}.actor`];
+    const held = files[`${module}.actor`];
+    // Either shape (`actors/actorData`).
+    const contents = held === undefined ? undefined : viewOf(held);
     const meta = byModule.get(module);
     if (contents === undefined && !meta) {
       return undefined;

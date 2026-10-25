@@ -7,6 +7,8 @@
 // unlike a thumbnail an icon is there the first time a dropdown is drawn. It is
 // text in a file; nothing has to render it.
 
+import {viewOf} from '../actors/actorData';
+
 /** A block as it appears in a serialized workspace — only what is read here. */
 interface Block {
   type?: string;
@@ -47,7 +49,10 @@ export function projectActorIcons(
     }
     let roots: Block[];
     try {
-      const parsed = JSON.parse(contents) as {blocks?: {blocks?: Block[]}};
+      // Either shape (`actors/actorData`).
+      const parsed = JSON.parse(viewOf(contents)) as {
+        blocks?: {blocks?: Block[]};
+      };
       roots = (parsed.blocks?.blocks ?? []).filter(
         b => b?.type === 'world_actor',
       );

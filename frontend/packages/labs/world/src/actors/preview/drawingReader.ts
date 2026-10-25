@@ -41,6 +41,7 @@ import {
   type ResolvedTheme,
 } from '../../engine/core/theme';
 import {STYLED} from '../../engine/rules/styled';
+import {viewOf} from '../actorData';
 
 /** A block as it sits in a saved workspace — only what is read here. */
 export interface Node {
@@ -171,9 +172,12 @@ export function defineActorIn(contents: string | undefined): Node | undefined {
   }
   try {
     return (
-      (JSON.parse(contents) as {blocks?: {blocks?: Node[]}}).blocks?.blocks ??
-      []
-    ).find(root => root.type === 'world_actor');
+      // Either shape (`actors/actorData`).
+      (
+        (JSON.parse(viewOf(contents)) as {blocks?: {blocks?: Node[]}}).blocks
+          ?.blocks ?? []
+      ).find(root => root.type === 'world_actor')
+    );
   } catch {
     return undefined; // mid-edit / not JSON, as everywhere else
   }

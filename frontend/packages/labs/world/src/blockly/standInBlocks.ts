@@ -36,6 +36,8 @@
 import type {BlockArgDefinition, BlockDefinition} from '@code-dot-org/blockly';
 import {Blockly, defineBlock} from '@code-dot-org/blockly';
 
+import {viewOf} from '../actors/actorData';
+
 import {missingRuleExtension} from './extensions/missingRule';
 import {registerStandInRule} from './ruleRegistry';
 
@@ -167,6 +169,9 @@ export function standInBlocks(
   contents: readonly string[],
   defined: ReadonlySet<string>,
 ): BlockDefinition[] {
+  // A data-shaped actor names its setters as data; its view names them as
+  // blocks (`actors/actorData`).
+  contents = contents.map(viewOf);
   const known = (type: string): boolean =>
     defined.has(type) || type in Blockly.Blocks;
   const wanted = new Map<string, {state: BlockState; shape: Shape}>();

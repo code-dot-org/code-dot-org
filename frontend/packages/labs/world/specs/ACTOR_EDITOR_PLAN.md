@@ -117,8 +117,19 @@ rows is shown when the scenarios play in the data shape (step 5).
 ### 2. The compiler and the readers through the view
 
 The generator, `parseActorOwnMeta` and the project's module list, the icon
-reader, `lookOf`, and the live-workspace helpers that read a file's rows
-read `viewOf`. A data-shaped actor plays as its block-shaped self.
+reader, and the other readers of a file's rows read `viewOf`. A
+data-shaped actor plays as its block-shaped self. (The helpers that read a
+LIVE workspace come with the editor in step 4: they see the workspace it
+loads, not the file.)
+
+BUILT. The generator views an `.actor` before loading it; so do
+`parseActorOwnMeta`, `projectActorIcons`, `defineActorIn` (the drawing
+preview), the kind facts behind the "+" (`eventChoices`), and
+`standInBlocks`, which has to see a data-shaped actor's setters as blocks
+to stand in for a deleted rule's. `lookOf` reads rows to write them, and
+goes with the writers. A test builds every scenario twice, as it ships and
+with every actor folded into data, and runs a second of each with the same
+random numbers: the two put every actor in the same place.
 
 ### 3. The writers through the view
 
