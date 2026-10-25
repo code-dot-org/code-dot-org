@@ -230,25 +230,12 @@ export const LEVEL1_ACTORS = [
   place('actors/ball', 'Ball', tileCenter(3), tileCenter(2)),
   // On the floor between the two coins, walking its beat across them.
   place('actors/crawler', 'Crawler', tileCenter(6), tileCenter(8)),
-  // …and the one placement in the starter that points at another. `Health_Bar`
-  // is the actor's own id, which is what an own property is filed under.
-  {
-    ...place('actors/healthBar', 'HealthBar', tileCenter(7), tileCenter(0)),
-    properties: {
-      positional: {position: {x: tileCenter(7), y: tileCenter(0)}},
-      Health_Bar: {subject: 'Player'},
-    },
-  },
-  // Top left, out of the way of everything that moves.
-  place('actors/scoreboard', 'Scoreboard', tileCenter(2), tileCenter(0)),
 ];
 
 // The level, `maps/main.map`: what the Main Screen's Viewport shows.
 //
-// The HUD — the Scoreboard and the Health Bar — is in the level for now and
-// moves to the screen with docking (specs/SIMPLE_INTERFACE.md, "The grid
-// layout is a tree of splits"): the Health Bar names the Player it watches by
-// its placement here, and the two are in one space while they are in one map.
+// The HUD — the Scoreboard and the Health Bar — is not in it: it is on the
+// Main Screen, docked above the Viewport (`STARTER_HUD`).
 const MAIN_MAP = JSON.stringify(
   {
     type: 'map',
@@ -279,6 +266,11 @@ export const gameScreen = (
     width: VIEWPORT_TILES,
     height: VIEWPORT_TILES,
   },
+  /**
+   * An interface beside the game: its placements, and the layout they dock
+   * in with the Viewport, which is called `Game` (specs/DOCKING_PLAN.md).
+   */
+  hud?: {actors: object[]; layout: object},
 ): string => {
   const width = size.width * TILE_SIZE;
   const height = size.height * TILE_SIZE;
@@ -292,7 +284,7 @@ export const gameScreen = (
       // The Viewport docked to the whole screen, so it is the screen's size
       // in any window and an interface docked beside it takes its share
       // (specs/DOCKING_PLAN.md).
-      layout: {dock: 'Game'},
+      layout: hud?.layout ?? {dock: 'Game'},
       actors: [
         {
           type: 'actors/viewport',
@@ -304,6 +296,7 @@ export const gameScreen = (
             showsMap: {map: 'maps/main'},
           },
         },
+        ...(hud?.actors ?? []),
       ],
     },
     null,
@@ -311,18 +304,67 @@ export const gameScreen = (
   );
 };
 
-const MAIN_SCREEN = gameScreen('Platform World', {
-  // Three coins at ten each. Set HERE rather than left to the rule's default
-  // of nothing, because a target of zero is a game that can be played and
-  // not won — and the level has an ending in it.
-  rules: [
+/** How tall the starter's HUD bar is: one tile. */
+const HUD_HEIGHT = TILE_SIZE;
+/** …and how much of it the Health Bar takes, at its right. */
+const HEALTH_BAR_WIDTH = 96;
+
+/**
+ * The starter's HUD: the Scoreboard and the Health Bar, in a bar docked
+ * above the Viewport, the Health Bar fixed at the right and the Scoreboard
+ * taking the rest (specs/DOCKING_PLAN.md, step 6). Their positions are where
+ * the editor first draws them; docked, the layout places them.
+ *
+ * The Health Bar watches the Player, who is in the level the Viewport
+ * shows, a map this one cannot name a placement in. So it names the KIND,
+ * and watches the first Player there is. `Health_Bar` is the actor's own id,
+ * which is what an own property is filed under.
+ */
+const STARTER_HUD = {
+  actors: [
+    place('actors/scoreboard', 'Scoreboard', tileCenter(3), tileCenter(0)),
     {
-      setter: 'world_set_Scoring_TargetScoreProperty',
-      type: 'number',
-      value: '30',
+      ...place('actors/healthBar', 'HealthBar', tileCenter(8), tileCenter(0)),
+      properties: {
+        positional: {position: {x: tileCenter(8), y: tileCenter(0)}},
+        Health_Bar: {subject: 'actors/player'},
+      },
     },
   ],
-});
+  layout: {
+    split: 'down',
+    fixed: 'first',
+    size: HUD_HEIGHT,
+    first: {
+      split: 'across',
+      fixed: 'second',
+      size: HEALTH_BAR_WIDTH,
+      first: {dock: 'Scoreboard'},
+      second: {dock: 'HealthBar'},
+    },
+    second: {dock: 'Game'},
+  },
+};
+
+const MAIN_SCREEN = gameScreen(
+  'Platform World',
+  {
+    // Three coins at ten each. Set HERE rather than left to the rule's
+    // default of nothing, because a target of zero is a game that can be
+    // played and not won — and the level has an ending in it.
+    rules: [
+      {
+        setter: 'world_set_Scoring_TargetScoreProperty',
+        type: 'number',
+        value: '30',
+      },
+    ],
+  },
+  // A tile taller than the level, for the HUD bar over it, so the Viewport
+  // shows the whole room.
+  {width: VIEWPORT_TILES, height: VIEWPORT_TILES + 1},
+  STARTER_HUD,
+);
 
 const PLAYER_ACTOR = JSON.stringify(
   {

@@ -161,3 +161,48 @@ describe('a docked placement', () => {
     });
   });
 });
+
+describe('a placement pointing at a kind', () => {
+  // A HUD on a Screen cannot name a placement in the level its Viewport
+  // shows; it names the kind, and points at the first of it
+  // (specs/DOCKING_PLAN.md, step 6).
+  const Watcher = new ActorBuilder({id: 'watcher', name: 'Watcher'});
+  const Subject = Watcher.defineProperty('subject', 'actor', undefined);
+  const Hero = new ActorBuilder({id: 'hero', name: 'Hero'});
+
+  const world = () => {
+    const made = makeWorld();
+    made.define('actors/watcher', Watcher);
+    made.define('actors/hero', Hero);
+    return made;
+  };
+  const hud: WorldMap = {
+    actors: [
+      {
+        type: 'actors/watcher',
+        id: 'bar',
+        properties: {watcher: {subject: 'actors/hero'}},
+      },
+    ],
+  };
+  const level: WorldMap = {actors: [{type: 'actors/hero', id: 'Hero'}]};
+
+  // An actor-typed property holds what it points at as a list of one.
+  it('is the first of it, when there is one already', () => {
+    const made = world();
+    made.loadMap(level);
+    made.loadMap(hud);
+    expect(named(made, 'bar').get(Subject)).toEqual([named(made, 'Hero')]);
+  });
+
+  it('is found once there is one, when the level loads after', () => {
+    const made = world();
+    made.loadMap(hud);
+    expect(named(made, 'bar').get(Subject)).toEqual([]);
+
+    made.loadMap(level);
+    made.tick(1 / 60);
+
+    expect(named(made, 'bar').get(Subject)).toEqual([named(made, 'Hero')]);
+  });
+});

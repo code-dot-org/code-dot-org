@@ -3084,6 +3084,14 @@ export class World {
       }
       const target = placed.get(id);
       if (!target) {
+        // A KIND, where a map names no placement of that id: the first
+        // actor of the kind, wherever it is — which is how a HUD on a Screen
+        // points at the Player in the level its Viewport shows, a map it
+        // cannot name a placement in (specs/DOCKING_PLAN.md). Looked for once
+        // the world is loaded, since that level may not be yet.
+        if (id.includes('/') && parentingKeys()?.parent !== property) {
+          this.kindRefs.push([actor, property, id]);
+        }
         continue;
       }
       // A placement's stored position is its LOCAL one when it has a parent
@@ -3119,6 +3127,7 @@ export class World {
       this.loadOf.set(actor, load);
     }
     beforeScript?.(added);
+    this.resolveKindRefs();
     if (typeof map.script === 'function') {
       // In the space it was loaded into, so what the script does without
       // naming an actor — a background, a spawn, another load — happens
@@ -3129,6 +3138,30 @@ export class World {
       );
     }
     return added;
+  }
+
+  /**
+   * Placements whose actor-typed value names a kind, not yet given the first
+   * actor of it: a map loaded before the level that holds that kind.
+   */
+  private kindRefs: Array<[Actor, Property, string]> = [];
+
+  /** Point each waiting placement at the first actor of its kind, if any. */
+  private resolveKindRefs(): void {
+    if (!this.kindRefs.length) {
+      return;
+    }
+    this.kindRefs = this.kindRefs.filter(([actor, property, kind]) => {
+      if (actor.world !== this) {
+        return false; // gone before it was pointed at anything
+      }
+      const [first] = this.actors.ofType(kind);
+      if (!first) {
+        return true;
+      }
+      actor.set(property, first as never);
+      return false;
+    });
   }
 
   /** Map `${ownerId}.${propId}` -> Property across the world's rules + traits. */
@@ -4221,6 +4254,9 @@ export class World {
   /** Advance the simulation by `delta` seconds. */
   tick(delta: number): void {
     this.inTick = true;
+    // A placement pointed at a kind that had nothing in it when its map
+    // loaded is pointed now, if there is one (`kindRefs`).
+    this.resolveKindRefs();
     // Before the steps, so every step in this frame reads one value, and that
     // value is the time the positions they compute belong to (see `time`).
     //

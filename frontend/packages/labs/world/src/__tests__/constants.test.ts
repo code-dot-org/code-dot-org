@@ -13,6 +13,7 @@ import {getNextFileId, getNextFolderId} from '@code-dot-org/codebridge';
 
 import {healthBarActor} from '../actors/stock/healthBar';
 import {DEFAULT_PROJECT, starterFile} from '../constants';
+import {dockedIds} from '../engine/core/layout';
 
 const source = DEFAULT_PROJECT.source;
 const files = Object.values(source.files);
@@ -113,32 +114,40 @@ describe('the starter project', () => {
     );
   });
 
-  it('ships the stock health bar, pointed at the player by the map', () => {
+  it('ships the stock health bar, on the Main Screen, pointed at the Player', () => {
     // The bar used to be one the starter kept for itself, asking the world for
     // the first actor with health — which works for exactly one game: the one
     // with a single hurtable thing in it. This is the file a learner gets by
     // importing, so the starter is a worked example of the shelf rather than a
     // thing beside it.
-    //
-    // WHO IT IS ABOUT IS IN THE WORLD'S MAP and in no blocks at all: a placement holds
-    // the id of another placement, and `loadMap` resolves it once every entry
-    // exists (specs/MAPS.md).
     expect(starterFile('healthBar').contents).toBe(healthBarActor);
 
-    // The level the Main Screen's Viewport shows.
-    const map = JSON.parse(starterFile('level').contents) as {
+    // It is on the Main Screen, docked in the HUD bar over the Viewport
+    // (specs/DOCKING_PLAN.md, step 6) …
+    const screen = JSON.parse(starterFile('main').contents) as {
+      layout: unknown;
       actors: Array<{
         id?: string;
         properties?: Record<string, Record<string, unknown>>;
       }>;
     };
-    const bar = map.actors.find(actor => actor.id === 'HealthBar');
-    const named = bar?.properties?.Health_Bar?.subject;
-
-    // …and the placement it names is really there, since a reference to
-    // nothing is left unset and would draw an empty bar for ever.
-    expect(named).toBe('Player');
-    expect(map.actors.some(actor => actor.id === named)).toBe(true);
+    const bar = screen.actors.find(actor => actor.id === 'HealthBar');
+    expect(dockedIds(screen.layout as never)).toEqual([
+      'Scoreboard',
+      'HealthBar',
+      'Game',
+    ]);
+    // …and the Player it watches is in the level the Viewport shows, a map
+    // it cannot name a placement in: it names the kind, and the world points
+    // it at the first Player there is.
+    expect(bar?.properties?.Health_Bar?.subject).toBe('actors/player');
+    const level = JSON.parse(starterFile('level').contents) as {
+      actors: Array<{id?: string; type?: string}>;
+    };
+    expect(level.actors.some(actor => actor.type === 'actors/player')).toBe(
+      true,
+    );
+    expect(level.actors.some(actor => actor.id === 'HealthBar')).toBe(false);
   });
 
   it('gives the player a jump, in one block instead of four', () => {

@@ -151,6 +151,19 @@ The health bar follows a placement by its name, which is only in reach
 inside one map; it follows the first actor of a kind instead, the way a
 camera follows (`actor to follow` takes a kind).
 
+BUILT. The engine resolves an actor-typed placement value that names no
+placement in its map but names a kind (a module path) as the first actor
+of that kind, anywhere in the world; looked for when the map has loaded,
+and again at the top of each tick until there is one, since the level a
+Viewport shows may load after the screen (`World.kindRefs`). The starter's
+Main Screen is a tile taller than its level, and its HUD is a bar one tile
+tall docked over the Viewport: the Health Bar fixed at its right, 96 wide,
+watching `actors/player`, and the Scoreboard taking the rest. A test
+compiles the starter and finds the bar in place, a whole room under it,
+and the Health Bar watching the Player in the Viewport's space. In the
+browser: walking right took two coins and ran into the Crawler, and the
+bar at the top drained to empty while the Scoreboard said GAME OVER.
+
 ### 7. Documents and the browser
 
 ## Not in this phase
