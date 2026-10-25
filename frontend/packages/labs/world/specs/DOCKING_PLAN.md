@@ -64,6 +64,11 @@ One commit each.
 id with its box; and the edits the editor makes — dock beside a region,
 undock, set a fixed side's size. Pure, with tests.
 
+BUILT. `engine/core/layout.ts`: `isLayout`, `layoutBoxes`, `dividers`
+(each split's line, by its path from the root, for the editor to draw and
+drag), `dock`, `undock`, `resize`, `splitAt`. A placement dropped on a
+target the layout does not hold docks beside the whole screen instead.
+
 ### 2. The engine places docked actors
 
 When a map with a `layout` is loaded, after the anchors and before its
