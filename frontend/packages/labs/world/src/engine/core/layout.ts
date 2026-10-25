@@ -288,3 +288,30 @@ export function splitAt(
   }
   return at && !isLeaf(at) ? at : undefined;
 }
+
+/**
+ * The split that fixes `id`'s side, when `id` is that fixed side: its path,
+ * and its direction and size. Nothing for a placement that fills what is
+ * left, or is not docked.
+ */
+export function fixedSideOf(
+  node: LayoutNode | undefined,
+  id: string,
+): {path: SplitPath; split: 'across' | 'down'; size: number} | undefined {
+  const walk = (
+    at: LayoutNode,
+    path: SplitPath,
+  ): ReturnType<typeof fixedSideOf> => {
+    if (isLeaf(at)) {
+      return undefined;
+    }
+    const fixed = at[at.fixed];
+    if (isLeaf(fixed) && fixed.dock === id) {
+      return {path, split: at.split, size: at.size};
+    }
+    return (
+      walk(at.first, [...path, 'first']) ?? walk(at.second, [...path, 'second'])
+    );
+  };
+  return node ? walk(node, []) : undefined;
+}

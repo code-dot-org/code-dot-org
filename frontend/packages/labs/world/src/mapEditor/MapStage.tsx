@@ -43,7 +43,14 @@ import type {EventChoice} from '../blockly/eventChoices';
 import {placementKey} from '../blockly/mapPlacements';
 import {setRevealer} from '../callouts/reveal';
 import {ANCHORS} from '../engine';
-import {dock, undock} from '../engine/core/layout';
+import {
+  dividers,
+  dock,
+  fixedSideOf,
+  resize,
+  undock,
+  type Divider,
+} from '../engine/core/layout';
 import {STYLED} from '../engine/rules/styled';
 import {VIEWPORT} from '../engine/rules/viewport';
 import fields from '../formFields.module.css';
@@ -56,13 +63,17 @@ import {AngleInput} from './AngleInput';
 import {CameraInspector} from './CameraInspector';
 import {CameraPanel} from './CameraPanel';
 import {
+  dividerAt,
   dockSize,
   dockZones,
+  dragDivider,
+  fitLayout,
   isDocked,
   withLayout,
   zoneAt,
   type DockZone,
 } from './docking';
+import {DockSizeField} from './DockSizeField';
 import {IconAction} from './IconAction';
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
@@ -192,6 +203,10 @@ const HOVER = 'rgba(77, 159, 255, 0.45)'; // lighter outline for the hovered act
 const REFERENCE = '#ffb454';
 /** The zone a dragged placement would dock in: the selection's blue, faint. */
 const DOCK_ZONE = 'rgba(77, 159, 255, 0.35)';
+/** The line between docked sides. */
+const DIVIDER = '#4d9fff';
+/** How near a divider a press grabs it, in screen pixels. */
+const DIVIDER_REACH = 6;
 /** The corner mark on a placement whose workspace holds blocks. */
 const SCRIPT = '#7c4dff';
 const DEG2RAD = Math.PI / 180;
@@ -651,6 +666,12 @@ export const MapStage = ({
   } | null>(null);
   /** The zone a dragged placement would dock in if let go now. */
   const [dockZone, setDockZone] = useState<DockZone | null>(null);
+  /** The line between two docked sides, while it is dragged. */
+  const dividerRef = useRef<{
+    line: Divider;
+    pointerId: number;
+    moved: boolean;
+  } | null>(null);
 
   /**
    * A stroke of the brush (specs/SHELL_PLAN.md, step 3). A press on an
@@ -1845,6 +1866,14 @@ export const MapStage = ({
   };
 
   const endGesture = () => {
+    const divider = dividerRef.current;
+    if (divider) {
+      canvasRef.current?.releasePointerCapture(divider.pointerId);
+      dividerRef.current = null;
+      if (divider.moved) {
+        commit(mapRef.current);
+      }
+    }
     const stroke = strokeRef.current;
     if (stroke) {
       canvasRef.current?.releasePointerCapture(stroke.pointerId);
@@ -1964,6 +1993,18 @@ export const MapStage = ({
       // should not be destructive.
       return;
     }
+    // A DIVIDER before anything: the line between two docked sides is
+    // dragged to resize them, and it lies along the edges of both, where a
+    // press would otherwise grab one of them (specs/DOCKING_PLAN.md).
+    if (canDock && !isReadOnly && mapRef.current.layout) {
+      const line = dividerAt(mapRef.current, world, DIVIDER_REACH / view.scale);
+      if (line) {
+        event.preventDefault();
+        dividerRef.current = {line, pointerId: event.pointerId, moved: false};
+        canvasRef.current?.setPointerCapture(event.pointerId);
+        return;
+      }
+    }
     // A GRIP FIRST, before whatever is under it. The grips sit on the
     // selection's edge, which is usually over the actor itself or over its
     // neighbour, so a press there means "resize this" rather than "select
@@ -2013,6 +2054,13 @@ export const MapStage = ({
   };
 
   const handlePointerMove = (event: ReactPointerEvent) => {
+    const divider = dividerRef.current;
+    if (divider) {
+      divider.moved = true;
+      const world = screenToWorld(event.clientX, event.clientY);
+      preview(fitLayout(dragDivider(mapRef.current, divider.line, world)));
+      return;
+    }
     const stroke = strokeRef.current;
     if (stroke) {
       const world = screenToWorld(event.clientX, event.clientY);
@@ -2856,6 +2904,23 @@ export const MapStage = ({
         ctx.stroke();
       }
     }
+    // The lines between docked sides, which are dragged to resize them.
+    if (canDock && map.layout) {
+      const extent = extentOf(map);
+      ctx.strokeStyle = DIVIDER;
+      ctx.lineWidth = 2 / view.scale;
+      ctx.beginPath();
+      for (const line of dividers(map.layout, extent.w, extent.h)) {
+        if (line.split === 'across') {
+          ctx.moveTo(line.at, line.box.y);
+          ctx.lineTo(line.at, line.box.y + line.box.height);
+        } else {
+          ctx.moveTo(line.box.x, line.at);
+          ctx.lineTo(line.box.x + line.box.width, line.at);
+        }
+      }
+      ctx.stroke();
+    }
     // Where a dragged placement would dock if let go now.
     if (dockZone) {
       ctx.fillStyle = DOCK_ZONE;
@@ -2902,6 +2967,7 @@ export const MapStage = ({
     skyColor,
     // …and where a dragged placement would dock.
     dockZone,
+    canDock,
   ]);
 
   const canvasClass = [
@@ -3494,6 +3560,27 @@ export const MapStage = ({
                 )}
               </div>
             )}
+            {canDock &&
+              (() => {
+                const fixed = fixedSideOf(map.layout, selectedActor.id);
+                return fixed ? (
+                  // The side it fixes, as a number: the same thing the line
+                  // beside it is dragged to change.
+                  <DockSizeField
+                    split={fixed.split}
+                    size={fixed.size}
+                    isReadOnly={isReadOnly}
+                    onSize={size =>
+                      commit(
+                        withLayout(
+                          mapRef.current,
+                          resize(mapRef.current.layout, fixed.path, size),
+                        ),
+                      )
+                    }
+                  />
+                ) : null;
+              })()}
             <SimpleDropdown
               name="actor-anchor"
               labelText="Anchored to"

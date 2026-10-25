@@ -10,9 +10,13 @@
 // Pure: the stage asks it while a placement is dragged and when it is let go.
 
 import {
+  dividers,
   dockedIds,
   layoutBoxes,
+  resize,
+  splitAt,
   undock,
+  type Divider,
   type Box,
   type LayoutNode,
   type Side,
@@ -158,4 +162,50 @@ export function withLayout(
     delete next.layout;
   }
   return next;
+}
+
+/** The divider within `reach` of a point, nearest first; or nothing. */
+export function dividerAt(
+  doc: MapDoc,
+  at: {x: number; y: number},
+  reach: number,
+): Divider | undefined {
+  const extent = extentOf(doc);
+  let best: Divider | undefined;
+  let bestDistance = reach;
+  for (const line of dividers(doc.layout, extent.w, extent.h, dockable(doc))) {
+    const across = line.split === 'across';
+    const along = across ? at.y : at.x;
+    const start = across ? line.box.y : line.box.x;
+    const end = start + (across ? line.box.height : line.box.width);
+    const distance = Math.abs((across ? at.x : at.y) - line.at);
+    if (along >= start && along <= end && distance <= bestDistance) {
+      best = line;
+      bestDistance = distance;
+    }
+  }
+  return best;
+}
+
+/**
+ * The document with a divider dragged to a point: its split's fixed side
+ * as large as the point makes it, within the region it divides.
+ */
+export function dragDivider(
+  doc: MapDoc,
+  line: Divider,
+  at: {x: number; y: number},
+): MapDoc {
+  const split = splitAt(doc.layout, line.path);
+  if (!split) {
+    return doc;
+  }
+  const across = line.split === 'across';
+  const whole = across ? line.box.width : line.box.height;
+  const along = Math.max(
+    0,
+    Math.min(whole, across ? at.x - line.box.x : at.y - line.box.y),
+  );
+  const size = split.fixed === 'first' ? along : whole - along;
+  return withLayout(doc, resize(doc.layout, line.path, size));
 }

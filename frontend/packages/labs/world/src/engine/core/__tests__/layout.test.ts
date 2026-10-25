@@ -6,6 +6,7 @@ import {
   dividers,
   dock,
   dockedIds,
+  fixedSideOf,
   isLayout,
   layoutBoxes,
   resize,
@@ -150,5 +151,22 @@ describe('a divider', () => {
     )!;
     expect(inner).toMatchObject({path: ['first'], split: 'across', at: 100});
     expect(splitAt(resize(nested, ['first'], 120), ['first'])!.size).toBe(120);
+  });
+});
+
+describe('the fixed side a placement is', () => {
+  it('is found with its split, and is nothing for one that fills', () => {
+    expect(fixedSideOf(HUD, 'hud')).toEqual({
+      path: [],
+      split: 'down',
+      size: 48,
+    });
+    expect(fixedSideOf(HUD, 'game')).toBeUndefined();
+    const nested = dock(HUD, 'score', 'hud', 'left', 100);
+    expect(fixedSideOf(nested, 'score')).toEqual({
+      path: ['first'],
+      split: 'across',
+      size: 100,
+    });
   });
 });

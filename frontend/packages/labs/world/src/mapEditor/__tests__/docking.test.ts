@@ -2,7 +2,15 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {dockSize, dockZones, fitLayout, isDocked, zoneAt} from '../docking';
+import {
+  dividerAt,
+  dockSize,
+  dockZones,
+  dragDivider,
+  fitLayout,
+  isDocked,
+  zoneAt,
+} from '../docking';
 import type {MapDoc} from '../mapModel';
 
 /** A 320 by 320 screen: a Viewport docked to all of it, a Panel floating. */
@@ -76,5 +84,53 @@ describe('where a dragged placement can dock', () => {
     expect(dockSize(hud, 'top')).toBe(40);
     expect(dockSize(hud, 'left')).toBe(200);
     expect(dockSize({type: 'actors/x', id: 'x'}, 'top')).toBe(48);
+  });
+});
+
+describe('the line between two docked sides', () => {
+  const barred = (): MapDoc => ({
+    ...screen(),
+    layout: {
+      split: 'down',
+      fixed: 'first',
+      size: 40,
+      first: {dock: 'hud'},
+      second: {dock: 'game'},
+    },
+  });
+
+  it('is found near where it is, and not far from it', () => {
+    expect(dividerAt(barred(), {x: 100, y: 43}, 6)).toMatchObject({
+      split: 'down',
+      at: 40,
+    });
+    expect(dividerAt(barred(), {x: 100, y: 60}, 6)).toBeUndefined();
+  });
+
+  it('dragged, fixes its side where it is let go, within the region', () => {
+    const line = dividerAt(barred(), {x: 100, y: 40}, 6)!;
+    expect(dragDivider(barred(), line, {x: 100, y: 64}).layout).toMatchObject({
+      size: 64,
+    });
+    expect(dragDivider(barred(), line, {x: 100, y: 900}).layout).toMatchObject({
+      size: 320,
+    });
+  });
+
+  it('measures a second fixed side from the far edge', () => {
+    const doc: MapDoc = {
+      ...screen(),
+      layout: {
+        split: 'down',
+        fixed: 'second',
+        size: 40,
+        first: {dock: 'game'},
+        second: {dock: 'hud'},
+      },
+    };
+    const line = dividerAt(doc, {x: 100, y: 280}, 6)!;
+    expect(dragDivider(doc, line, {x: 100, y: 260}).layout).toMatchObject({
+      size: 60,
+    });
   });
 });

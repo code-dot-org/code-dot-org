@@ -132,6 +132,17 @@ Viewport that took the rest.
 The line between two sides can be dragged; the inspector shows the fixed
 side's size as a number.
 
+BUILT. `dividers` and `fixedSideOf` (`engine/core/layout`); `dividerAt` and
+`dragDivider` (`mapEditor/docking`), which measures a second fixed side
+from the far edge and keeps the size within the region; the stage draws
+each line, a press within six screen pixels of one grabs it before
+anything under it, and the document is fitted as it moves and written
+once when it is let go; `DockSizeField` in the inspector for a placement
+that is a fixed side. In the browser: the starter's docked bar dragged from
+48 to 95 tall, the field saying so and the game following. The starter's
+Viewport camera does not follow anyone, so a shorter Viewport cuts off the
+bottom of its level; step 6 has to answer that.
+
 ### 6. The starter's HUD on its Main Screen
 
 The scoreboard and health bar move out of the level into a bar docked

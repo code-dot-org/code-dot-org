@@ -2539,4 +2539,28 @@ describe('docking on a Screen', () => {
     fireEvent.click(view.getByRole('button', {name: 'Undock'}));
     expect(written().layout).toBeUndefined();
   });
+
+  it('resizes a docked side by its line, and by its number', () => {
+    const map = fitLayout({
+      ...screenDoc(),
+      layout: {
+        split: 'down',
+        fixed: 'first',
+        size: 40,
+        first: {dock: 'hud'},
+        second: {dock: 'game'},
+      },
+    });
+    const {canvas, written, ...view} = mount(map, {canDock: true});
+    drag(canvas, map, {x: 300, y: 40}, {x: 300, y: 72});
+    expect(written().layout).toMatchObject({size: 72});
+
+    // …and the bar, selected, says its height and takes another.
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 160, y: 20}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 160, y: 20}));
+    const height = view.getByLabelText('Docked height');
+    fireEvent.change(height, {target: {value: '30'}});
+    fireEvent.blur(height);
+    expect(written().layout).toMatchObject({size: 30});
+  });
 });
