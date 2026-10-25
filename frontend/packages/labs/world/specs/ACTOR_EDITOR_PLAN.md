@@ -1,8 +1,6 @@
 # Plan: an actor as data and events, and its editor (SIMPLE_INTERFACE.md, phase three)
 
-STATUS: BUILT, BUT FOR 4c. Every step is in except the code rows as roots
-of their own (4c), so the Actor Editor's code still shows `define actor`.
-The working record, as the other plans are.
+STATUS: BUILT. The working record, as the other plans are.
 
 The third phase of the simple interface. Phase one made Screens and Maps
 files (SCREEN_MAP_PLAN.md); phase two put the editors in a shell
@@ -211,6 +209,47 @@ In the browser: a Badge made with the wizard from nothing opened in the
 editor from the palette; a property and Affected by Gravity were added, the
 trait showing its two fields; Code opened the view as a step on the
 breadcrumb, and the breadcrumb led back.
+
+### 4c. The code rows as roots
+
+The Code view opens the actor's own workspace, its handlers and its code,
+and no `define actor`. The four code rows (a drawing, an own block, an own
+event, an every-frame step) stand in it as roots WITHOUT A SECOND TYPE:
+once loaded, and whenever one is dragged in, a top-level one has its
+previous and next connections taken away. The orphan rule and the section
+layout ask whether a block has those connections, not what it is, so each
+is a root to both; and everything that finds these blocks by type finds
+them as before. A connection is not saved, so the file holds the same
+blocks either way, and the compiler reads them through the view, under
+the root. The "+" offers the four beside the events. What looked for the
+`define actor` in that workspace (the check for a block in the wrong kind
+of file, the definition held first, the helpers that read a block's
+context from its root) learns that an actor's code workspace has none.
+
+BUILT. `blockly/codeRoots` (`rootCodeRows`, and what the "+" offers
+besides the events, under "What it does"); the file editor takes
+`actorCode` and roots the four after every load it makes and on every
+block created or moved, never on one member's body surface. The Code view
+hands it the file's workspace alone and writes what it saves back into
+the file's `blocks`, the data left as it was.
+
+Less had to change than this step expected. The check for a block in the
+wrong kind of file asks only of roots without connections, and already
+lets an actor hold all four; the definition held first holds nothing when
+there is none; the helpers that read a block's context fell back to the
+file being an actor already. What did have to change was found in the
+browser: the orphan rule disables a block as it arrives, before it has
+been made a root, and a disabled block generates nothing. The Label's
+drawing came back from its first save disabled and the Label drew as a
+square. A code row made a root is enabled again; a row a learner disabled
+by hand is enabled again too when the workspace next loads, which is the
+cost of the orphan rule and a learner sharing one reason.
+
+In the browser: the Label's code shows its drawing as a root, enabled,
+with a "+" above and below; the "+" offers every frame, a block of its
+own, an event of its own and its drawing; an every-frame step added there
+is a root, stays one through Back and Code again, and compiles with the
+drawing; the drawing's pencil opens its body and Back returns.
 
 ### 5. The stock actors and the scenarios in the data shape
 

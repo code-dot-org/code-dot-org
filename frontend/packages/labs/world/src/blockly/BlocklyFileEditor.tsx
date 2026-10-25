@@ -60,6 +60,7 @@ import {projectActorIcons} from './actorIconMeta';
 import {addActorThumbnails, setActorIcons} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
 import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
+import {ACTOR_CODE_CHOICES, rootCodeRows} from './codeRoots';
 import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
@@ -253,12 +254,22 @@ function parseWorkspace(contents: string): BlocklySerialization {
   }
 }
 
+export interface BlocklyFileEditorProps extends CustomEditorProps {
+  /**
+   * The contents are an actor's code workspace, not a whole file: its
+   * handlers and its code rows, which stand as roots, and no `define actor`
+   * (`codeRoots`, specs/ACTOR_EDITOR_PLAN.md step 4c).
+   */
+  actorCode?: boolean;
+}
+
 export const BlocklyFileEditor = ({
   fileId,
   initialContents: storedContents,
   isReadOnly,
   onChange,
-}: CustomEditorProps) => {
+  actorCode = false,
+}: BlocklyFileEditorProps) => {
   // What this file SAYS, which is not always what it holds.
   //
   // A rule the learner has not edited is stored as a reference to the
@@ -669,10 +680,23 @@ export const BlocklyFileEditor = ({
     definitions: blocks,
     getToolbox: () => surfaceToolboxRef.current,
     narrowEvents,
+    ...(actorCode ? {moreChoices: ACTOR_CODE_CHOICES} : {}),
     isReadOnly,
     workspaceRef,
     isShowingSections: () => surfaceRef.current === null,
   });
+  /**
+   * An actor's code rows made roots, after every load and arrival — on the
+   * file's own surface, never on one member's body (`codeRoots`).
+   */
+  const rootCode = useCallback(
+    (workspace: Blockly.Workspace) => {
+      if (actorCode && surfaceRef.current === null) {
+        rootCodeRows(workspace);
+      }
+    },
+    [actorCode],
+  );
   const {
     prepare: stripCollapsed,
     save: saveSections,
@@ -808,13 +832,14 @@ export const BlocklyFileEditor = ({
     (document: BlocklySerialization, workspace: Blockly.WorkspaceSvg) => {
       const shown = HIDE_BODIES ? seam.show(document) : document;
       Blockly.serialization.workspaces.load(stripCollapsed(shown), workspace);
+      rootCode(workspace);
       // Handed back because the caller may be reloading UNDER an open body,
       // and the body is built from the interface, not from the workspace.
       // WHOLE, collapsed bodies and all: it is what a save from the body
       // surface writes.
       return shown;
     },
-    [seam, stripCollapsed],
+    [seam, stripCollapsed, rootCode],
   );
 
   // The toolbox the surface in front of the learner can actually use. Kept
@@ -1112,6 +1137,15 @@ export const BlocklyFileEditor = ({
       if (event.type === Blockly.Events.TOOLBOX_ITEM_SELECT) {
         syncFlyoutMetrics(workspace);
       }
+      // Before the layout below sees it: a code row loaded, dragged in or
+      // let go of at the top of an actor's code is a root there.
+      if (
+        event.type === Blockly.Events.FINISHED_LOADING ||
+        event.type === Blockly.Events.BLOCK_CREATE ||
+        event.type === Blockly.Events.BLOCK_MOVE
+      ) {
+        rootCode(workspace);
+      }
       // Opening a file is not editing it.
       if (loadedWorkspace.current !== workspace) {
         if (event.type === Blockly.Events.FINISHED_LOADING) {
@@ -1258,6 +1292,7 @@ export const BlocklyFileEditor = ({
       syncFlyoutMetrics,
       layOut,
       sectionEvent,
+      rootCode,
     ],
   );
 
@@ -1432,6 +1467,7 @@ export const BlocklyFileEditor = ({
     Blockly.Events.disable();
     try {
       Blockly.serialization.workspaces.load(document, workspace);
+      rootCode(workspace);
       if (editing) {
         // Inside the quiet, not after it: anchoring changes the block, and a
         // change event here would be read as the learner editing the body and
@@ -1464,7 +1500,7 @@ export const BlocklyFileEditor = ({
     // arrives. Without this a query is drawn as an action, every time.
     refreshBlockDesigns(workspace);
     layOut(workspace);
-  }, [editing, blocks, seam, startBlocks, layOut, stripCollapsed]);
+  }, [editing, blocks, seam, startBlocks, layOut, stripCollapsed, rootCode]);
 
   /**
    * Re-seed when the lab is handed a different document.
@@ -1525,6 +1561,7 @@ export const BlocklyFileEditor = ({
     Blockly.Events.disable();
     try {
       Blockly.serialization.workspaces.load(state, workspace);
+      rootCode(workspace);
       const head = workspace.getBlockById(BODY_OWNER_ID);
       if (head) {
         anchorBodyOwner(head);
@@ -1538,7 +1575,7 @@ export const BlocklyFileEditor = ({
     // The reload made every block anew, and the show/hide control is not part
     // of the file, so it is put back with the layout (`syncToggles`).
     layOut(workspace);
-  }, [locale, localizedBlocks, layOut]);
+  }, [locale, localizedBlocks, layOut, rootCode]);
 
   // Re-measure when the web fonts land.
   //
@@ -1592,6 +1629,7 @@ export const BlocklyFileEditor = ({
       Blockly.Events.disable();
       try {
         Blockly.serialization.workspaces.load(state, workspace);
+        rootCode(workspace);
         // The head is anchored imperatively, so a reload hands back a plain
         // block: draggable, deletable, wearing a pencil into itself.
         const head = workspace.getBlockById(BODY_OWNER_ID);

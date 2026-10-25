@@ -6,11 +6,10 @@
 // foot. Beside it is the actor's picture and what it looks like. Its code is
 // one press away, as a step on the breadcrumb.
 //
-// THE CODE, FOR NOW, IS ITS VIEW. Code opens the file editor over the
-// `define actor` workspace the data stands for (`actorView`), and every save
-// there is folded back into data (`asActorData`). The definition rows the
-// panel shows are therefore in the code too, until the code rows can be
-// roots of their own (specs/ACTOR_EDITOR_PLAN.md).
+// THE CODE IS ITS WORKSPACE, AND ONLY THAT. Code opens the file editor over
+// the actor's handlers and code rows, which stand there as roots
+// (`blockly/codeRoots`); what it is stays in the panel, and what is saved
+// there goes into the file's workspace with the data left as it was.
 
 import {
   Button,
@@ -34,6 +33,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {parseAnim} from '../../animationEditor/animDocument';
 import {isBackgroundPath} from '../../appearance/backgroundsFolder';
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
+import {WORKSPACE_KEYS} from '../../blockly/documentExtras';
 import {requestEffectImport} from '../../blockly/effectImport';
 import {parseEffectDocument} from '../../effect/model/schema';
 import type {EffectParameter} from '../../effect/model/types';
@@ -49,7 +49,7 @@ import {
   projectImagePaths,
 } from '../../runtime/projectFiles';
 import {useWorldRuntime} from '../../runtime/WorldRuntimeContext';
-import {asActorData, isActorData, viewOf, type ActorData} from '../actorData';
+import {isActorData, type ActorData} from '../actorData';
 import type {ActorPurpose} from '../actorPurpose';
 import {requestActorEnhance} from '../enhance/actorEnhance';
 
@@ -81,6 +81,32 @@ const parse = (contents: string): ActorData | undefined => {
   } catch {
     return undefined;
   }
+};
+
+/** The actor's code workspace, as the file editor is handed a file. */
+const workspaceOf = (contents: string): string =>
+  JSON.stringify(
+    parse(contents)?.blocks ?? {blocks: {languageVersion: 0, blocks: []}},
+    null,
+    2,
+  );
+
+/** The file with its code workspace replaced, and its data as it was. */
+const withWorkspace = (contents: string, saved: string): string => {
+  const data = parse(contents);
+  let workspace: Record<string, unknown>;
+  try {
+    workspace = JSON.parse(saved) as Record<string, unknown>;
+  } catch {
+    return contents;
+  }
+  if (!data) {
+    return contents;
+  }
+  const blocks = Object.fromEntries(
+    Object.entries(workspace).filter(([key]) => WORKSPACE_KEYS.has(key)),
+  );
+  return JSON.stringify({...data, blocks}, null, 2);
 };
 
 /** An effect file's parameters, or none for one that cannot be read. */
@@ -262,8 +288,9 @@ export const ActorEditor = (props: CustomEditorProps) => {
         <div className={styles.codeBlocks}>
           <BlocklyFileEditor
             {...props}
-            initialContents={viewOf(contents)}
-            onChange={next => write(asActorData(next, written.current))}
+            actorCode
+            initialContents={workspaceOf(contents)}
+            onChange={next => write(withWorkspace(written.current, next))}
           />
         </div>
       </div>

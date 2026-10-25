@@ -32,14 +32,20 @@ vi.mock('../../../runtime/WorldRuntimeContext', () => ({
 }));
 // The code is the file editor over the actor's view; what it is handed and
 // what it saves are what is asked about here.
-const saved: {onChange?: (contents: string) => void; contents?: string} = {};
+const saved: {
+  onChange?: (contents: string) => void;
+  contents?: string;
+  actorCode?: boolean;
+} = {};
 vi.mock('../../../blockly/BlocklyFileEditor', () => ({
   BlocklyFileEditor: (props: {
     initialContents: string;
     onChange: (contents: string) => void;
+    actorCode?: boolean;
   }) => {
     saved.onChange = props.onChange;
     saved.contents = props.initialContents;
+    saved.actorCode = props.actorCode;
     return <div data-testid="blocks" />;
   },
 }));
@@ -173,19 +179,31 @@ describe('the Actor Editor', () => {
     );
   });
 
-  it('opens its code as its view, and keeps what is saved there as data', () => {
+  it('opens its code, without define actor, and keeps the data as it was', () => {
     open();
     fireEvent.click(screen.getByRole('button', {name: 'Code'}));
     expect(screen.getByTestId('blocks')).toBeInTheDocument();
-    const view = JSON.parse(saved.contents!);
-    expect(view.blocks.blocks[0]).toMatchObject({
-      type: 'world_actor',
-      fields: {NAME: 'Player'},
-    });
+    // What it is stays in the panel; the code is its handlers and code rows.
+    const code = JSON.parse(saved.contents!);
+    const types = code.blocks.blocks.map((block: {type: string}) => block.type);
+    expect(types).not.toContain('world_actor');
+    expect(types.length).toBeGreaterThan(0);
 
-    // A rename typed into the definition, saved from the blocks.
-    view.blocks.blocks[0].fields.NAME = 'Hero';
-    saved.onChange!(JSON.stringify(view));
-    expect(written()).toMatchObject({type: 'actor', name: 'Hero'});
+    // A handler taken away, saved from the blocks.
+    saved.onChange!(
+      JSON.stringify({...code, blocks: {...code.blocks, blocks: []}}),
+    );
+    expect(written()).toMatchObject({
+      type: 'actor',
+      name: 'Player',
+      traits: JSON.parse(PLAYER).traits,
+      blocks: {blocks: {blocks: []}},
+    });
+  });
+
+  it('tells the file editor the workspace is an actor’s code', () => {
+    open();
+    fireEvent.click(screen.getByRole('button', {name: 'Code'}));
+    expect(saved.actorCode).toBe(true);
   });
 });

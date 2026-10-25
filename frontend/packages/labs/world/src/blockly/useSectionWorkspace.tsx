@@ -198,6 +198,12 @@ export interface SectionWorkspaceOptions {
    * every event and passes nothing.
    */
   narrowEvents?: (choices: EventChoice[]) => EventChoice[];
+  /**
+   * What the menu offers besides the events: an actor's code workspace
+   * offers what the actor does — every frame, a block, an event, its drawing
+   * (`codeRoots`).
+   */
+  moreChoices?: readonly EventChoice[];
   isReadOnly: boolean;
   workspaceRef: MutableRefObject<Blockly.WorkspaceSvg | null>;
   /**
@@ -213,6 +219,7 @@ export function useSectionWorkspace({
   definitions,
   getToolbox,
   narrowEvents,
+  moreChoices,
   isReadOnly,
   workspaceRef,
   isShowingSections = () => true,
@@ -347,8 +354,11 @@ export function useSectionWorkspace({
       return [];
     }
     const all = eventChoicesIn(toolboxRef.current(), definitions);
-    return narrowRef.current ? narrowRef.current(all) : all;
-  }, [addMenu, definitions]);
+    return [
+      ...(narrowRef.current ? narrowRef.current(all) : all),
+      ...(moreChoices ?? []),
+    ];
+  }, [addMenu, definitions, moreChoices]);
   /** A section just added, to bring into view once it is laid out. */
   const revealAfterLayout = useRef<string | null>(null);
   /**
