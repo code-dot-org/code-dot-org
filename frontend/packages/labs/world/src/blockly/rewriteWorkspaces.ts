@@ -109,7 +109,10 @@ export function mapWorkspaces(
     const data = isDataShaped(held);
     const renamed = rewrite(data ? viewOf(held) : held);
     if (renamed !== undefined) {
-      files[id] = {...file, contents: data ? asActorData(renamed) : renamed};
+      files[id] = {
+        ...file,
+        contents: data ? asActorData(renamed, held) : renamed,
+      };
       changed = true;
     }
   }

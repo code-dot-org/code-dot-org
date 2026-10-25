@@ -38,7 +38,7 @@ function foldedLike(
       files[id] =
         file.contents === viewOf(was.contents)
           ? {...file, contents: was.contents}
-          : {...file, contents: asActorData(file.contents)};
+          : {...file, contents: asActorData(file.contents, was.contents)};
     }
   }
   return files ? {...after, files} : after;

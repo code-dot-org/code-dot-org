@@ -2,18 +2,29 @@
 
 import {describe, expect, it} from 'vitest';
 
+import type {EffectParameter} from '../../../effect/model/types';
 import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
 import {projectFiles} from '../../../runtime/projectFiles';
-import type {ActorData} from '../../actorData';
+import {
+  actorView,
+  asActorData,
+  throughView,
+  type ActorData,
+} from '../../actorData';
 import {
   actorTraitChoices,
+  addEffect,
   addProperty,
   addTrait,
+  effectSettings,
   literalOf,
+  removeEffect,
   removeTrait,
+  setEffectSetting,
   setLook,
   setPropertyDefault,
   setValue,
+  switchEffect,
   takesValue,
   type TraitChoice,
 } from '../actorEdits';
@@ -115,5 +126,79 @@ describe('a look', () => {
     const looking = setLook(PLAYER, {sprite: 'player.png'});
     expect(looking.look).toEqual({sprite: 'player.png'});
     expect(setLook(looking, undefined).look).toBeUndefined();
+  });
+});
+
+describe('an effect', () => {
+  const RIPPLE: EffectParameter[] = [
+    {
+      id: 'p1',
+      name: 'strength',
+      type: 'float',
+      defaultValue: 0.5,
+      min: 0,
+      max: 1,
+    },
+    {id: 'p2', name: 'tint', type: 'vec3', defaultValue: [1, 0, 0]},
+  ];
+
+  it('is added on, with its settings at their defaults, and once', () => {
+    const added = addEffect(PLAYER, 'effects/ripple', RIPPLE);
+    expect(addEffect(added, 'effects/ripple', RIPPLE)).toBe(added);
+    const [effect] = added.effects!;
+    expect(effect).toMatchObject({effect: 'effects/ripple', on: true});
+    expect(effectSettings(effect)).toEqual([
+      expect.objectContaining({
+        label: 'strength',
+        type: 'number',
+        value: '0.5',
+      }),
+      expect.objectContaining({label: 'tint', type: 'color', value: '#ff0000'}),
+    ]);
+  });
+
+  it('is switched, set, and taken away', () => {
+    let data = addEffect(PLAYER, 'effects/ripple', RIPPLE);
+    data = switchEffect(data, 'effects/ripple', false);
+    expect(data.effects![0].on).toBe(false);
+    const [strength] = effectSettings(data.effects![0]);
+    data = setEffectSetting(data, 'effects/ripple', strength, '0.9');
+    expect(effectSettings(data.effects![0])[0].value).toBe('0.9');
+    expect(setEffectSetting(data, 'effects/ripple', strength, 'lots')).toBe(
+      data,
+    );
+    expect(removeEffect(data, 'effects/ripple').effects).toBeUndefined();
+  });
+
+  it('is a row of the view while it is on, and kept through a fold while it is off', () => {
+    let data = addEffect(PLAYER, 'effects/ripple', RIPPLE);
+    const rows = (view: ActorData) =>
+      JSON.stringify(actorView(view)).includes('world_add_effect');
+    expect(rows(data)).toBe(true);
+    // The view folds back to the same effect, settings and all.
+    expect(
+      JSON.parse(asActorData(JSON.stringify(actorView(data)))).effects,
+    ).toEqual(data.effects);
+
+    data = switchEffect(data, 'effects/ripple', false);
+    expect(rows(data)).toBe(false);
+    const contents = JSON.stringify(data);
+    // A change made through the view keeps it.
+    const renamed = throughView(contents, view =>
+      view.replace('"Player"', '"Hero"'),
+    );
+    expect(JSON.parse(renamed)).toMatchObject({
+      name: 'Hero',
+      effects: [{effect: 'effects/ripple', on: false}],
+    });
+  });
+});
+
+describe('a vector of its own', () => {
+  it('starts at an x and a y, kept in two halves', () => {
+    const added = addProperty(PLAYER, 'aim', 'vector');
+    const set = setPropertyDefault(added, 'aim', '2,3');
+    expect(set.properties![0]).toMatchObject({value: '2', valueY: '3'});
+    expect(setPropertyDefault(set, 'aim', 'nowhere')).toBe(set);
   });
 });

@@ -191,6 +191,20 @@ step, 4c: each of the four is found by its type across the lab (its body's
 surface, its button, the layout), so a second type for each is a change to
 all of those, not to the view alone.
 
+**Effects (4b), BUILT.** `ActorData.effects`: each is an effect's module
+path, whether it is on from the start, and its `add effect` row as the
+block holds it (`extraState` and the parameter sockets), since a setting
+is a socket's shadow and that block is what builds them
+(`effectParamsMutator`). The view writes the rows of the ones that are on.
+One that is off adds no row, so a fold of a view would lose it: `asActorData`
+takes the file the view came from and keeps its switched-off effects, and
+every fold of a view (`throughView`, the enhancements, `mapWorkspaces`, the
+code) passes it. The tab lists them with the switch and the settings (a
+number, a truth value or a color per socket); Add Effect offers the
+project's effects and Import…, which adds the one brought once the project
+holds it (`useAfterImport`). In the browser: Ripple added from the menu and
+switched off, Pulse imported from the shelf with its two settings.
+
 In the browser: a Badge made with the wizard from nothing opened in the
 editor from the palette; a property and Affected by Gravity were added, the
 trait showing its two fields; Code opened the view as a step on the

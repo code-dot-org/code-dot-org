@@ -106,7 +106,7 @@ export const paramSockets = (
 ): readonly ParamSocket[] => SOCKETS[type] ?? [{kind: 'number'}];
 
 /** Socket name for a parameter's whole value, or one of its components. */
-const socketName = (index: number, component = 0): string =>
+export const socketName = (index: number, component = 0): string =>
   `${PARAM_INPUT}${index}_${component}`;
 
 /** The nth component of a literal, or 0 when the shape does not reach. */

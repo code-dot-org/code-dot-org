@@ -4,16 +4,26 @@
 // Pure: each edit takes the data and gives back the data changed, or the
 // same data when there was nothing to change, and the editor writes it.
 
+import {
+  paramSockets,
+  socketName,
+  socketShadow,
+  toParamState,
+  type EffectParamState,
+} from '../../blockly/extensions/effectParamsMutator';
 import {projectRuleMetas} from '../../blockly/projectModules';
 import {memberLocalName, memberValue} from '../../blockly/ruleRegistry';
+import type {EffectParameter} from '../../effect/model/types';
 import {parseVectorText, vectorText} from '../../mapEditor/worldProperties';
 import {STOCK_RULES} from '../../rules/stock';
 import type {
   ActorData,
+  ActorEffect,
   ActorLiteral,
   ActorLook,
   ActorProperty,
   ActorValue,
+  Block,
 } from '../actorData';
 import type {ActorPurpose} from '../actorPurpose';
 
@@ -243,7 +253,10 @@ export function addProperty(
   return withList(data, 'properties', [...held, property]);
 }
 
-/** The data with one of its own properties starting at another value. */
+/**
+ * The data with one of its own properties starting at another value. A
+ * vector's text is `x,y`, and the block keeps the two halves in two fields.
+ */
 export function setPropertyDefault(
   data: ActorData,
   name: string,
@@ -251,11 +264,25 @@ export function setPropertyDefault(
 ): ActorData {
   const held = data.properties ?? [];
   const at = held.findIndex(one => one.name === name);
-  if (at < 0 || held[at].value === text) {
+  if (at < 0) {
+    return data;
+  }
+  const was = held[at];
+  let next: ActorProperty;
+  if (was.type === 'vector' || was.type === 'point') {
+    const pair = parseVectorText(text);
+    if (!pair) {
+      return data;
+    }
+    next = {...was, value: String(pair.x), valueY: String(pair.y)};
+  } else {
+    next = {...was, value: text};
+  }
+  if (next.value === was.value && next.valueY === was.valueY) {
     return data;
   }
   const properties = [...held];
-  properties[at] = {...held[at], value: text};
+  properties[at] = next;
   return {...data, properties};
 }
 
@@ -278,3 +305,176 @@ export const setPurpose = (
   data: ActorData,
   purpose: ActorPurpose,
 ): ActorData => ({...data, for: purpose});
+
+// ── Effects ─────────────────────────────────────────────────────────────
+
+/** One setting of an effect, as the panel edits it. */
+export interface EffectSetting {
+  /** The parameter's index, and the socket's within it (`socketName`). */
+  param: number;
+  socket: number;
+  label: string;
+  type: 'number' | 'boolean' | 'color';
+  value: string;
+}
+
+const withEffects = (data: ActorData, effects: ActorEffect[]): ActorData => {
+  const next = {...data};
+  if (effects.length) {
+    next.effects = effects;
+  } else {
+    delete next.effects;
+  }
+  return next;
+};
+
+/**
+ * The data with an effect added, on, at its parameters' own defaults: the
+ * `add effect` row its block would be built as (`effectParamsMutator`).
+ */
+export function addEffect(
+  data: ActorData,
+  effect: string,
+  parameters: readonly EffectParameter[],
+): ActorData {
+  if ((data.effects ?? []).some(one => one.effect === effect)) {
+    return data;
+  }
+  const params = parameters.map(toParamState);
+  const inputs = Object.fromEntries(
+    params.flatMap((param, index) =>
+      paramSockets(param.type).map((socket, at) => [
+        socketName(index, at),
+        {shadow: socketShadow(param, socket, at)},
+      ]),
+    ),
+  );
+  const row: Block = {
+    type: 'world_add_effect',
+    fields: {EFFECT: effect},
+    ...(params.length ? {extraState: {params}, inputs} : {}),
+  };
+  return withEffects(data, [
+    ...(data.effects ?? []),
+    {effect, on: true, ...(params.length ? {row} : {})},
+  ]);
+}
+
+/** The data with an effect on or off at the start. */
+export const switchEffect = (
+  data: ActorData,
+  effect: string,
+  on: boolean,
+): ActorData =>
+  withEffects(
+    data,
+    (data.effects ?? []).map(one =>
+      one.effect === effect ? {...one, on} : one,
+    ),
+  );
+
+/** The data without an effect. */
+export const removeEffect = (data: ActorData, effect: string): ActorData =>
+  withEffects(
+    data,
+    (data.effects ?? []).filter(one => one.effect !== effect),
+  );
+
+/** What a socket holds, as text, and the field that holds it. */
+function socketValue(
+  input: unknown,
+): {field: string; value: string} | undefined {
+  const held =
+    (input as {shadow?: Block; block?: Block} | undefined)?.block ??
+    (input as {shadow?: Block} | undefined)?.shadow;
+  const fields = (held?.fields ?? {}) as Record<string, unknown>;
+  for (const field of ['NUM', 'BOOL', 'COLOUR']) {
+    if (field in fields) {
+      const value = fields[field];
+      return {
+        field,
+        value:
+          field === 'BOOL' ? String(value === 'TRUE') : String(value ?? ''),
+      };
+    }
+  }
+  return undefined;
+}
+
+/** An effect's settings: each socket of each of its parameters. */
+export function effectSettings(effect: ActorEffect): EffectSetting[] {
+  const row = effect.row;
+  const params = ((row?.extraState as {params?: EffectParamState[]})?.params ??
+    []) as EffectParamState[];
+  const inputs = (row?.inputs ?? {}) as Record<string, unknown>;
+  return params.flatMap((param, index) =>
+    paramSockets(param.type).flatMap((socket, at) => {
+      const held = socketValue(inputs[socketName(index, at)]);
+      return held
+        ? [
+            {
+              param: index,
+              socket: at,
+              label: socket.label
+                ? `${param.name} ${socket.label}`
+                : param.name,
+              type: socket.kind,
+              value: held.value,
+            },
+          ]
+        : [];
+    }),
+  );
+}
+
+/** The data with one setting of an effect changed, or as it was. */
+export function setEffectSetting(
+  data: ActorData,
+  effect: string,
+  setting: EffectSetting,
+  text: string,
+): ActorData {
+  const one = (data.effects ?? []).find(each => each.effect === effect);
+  const name = socketName(setting.param, setting.socket);
+  const input = (
+    one?.row?.inputs as
+      | Record<string, {shadow?: Block; block?: Block}>
+      | undefined
+  )?.[name];
+  const held = socketValue(input);
+  if (!one?.row || !input || !held) {
+    return data;
+  }
+  const value =
+    held.field === 'NUM'
+      ? Number(text)
+      : held.field === 'BOOL'
+        ? text === 'true'
+          ? 'TRUE'
+          : 'FALSE'
+        : text;
+  if (held.field === 'NUM' && !Number.isFinite(value as number)) {
+    return data;
+  }
+  const slot = input.block ? 'block' : 'shadow';
+  const block = input[slot]!;
+  const row = {
+    ...one.row,
+    inputs: {
+      ...(one.row.inputs as object),
+      [name]: {
+        ...input,
+        [slot]: {
+          ...block,
+          fields: {...(block.fields as object), [held.field]: value},
+        },
+      },
+    },
+  };
+  return withEffects(
+    data,
+    (data.effects ?? []).map(each =>
+      each.effect === effect ? {...each, row} : each,
+    ),
+  );
+}

@@ -23,18 +23,25 @@ import {
 import {useEffect, useMemo, useRef, useState, type ChangeEvent} from 'react';
 
 import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {parseAnim} from '../../animationEditor/animDocument';
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
+import {requestEffectImport} from '../../blockly/effectImport';
+import {parseEffectDocument} from '../../effect/model/schema';
+import type {EffectParameter} from '../../effect/model/types';
 import {DEFAULT_BACKDROP_COLOR} from '../../engine';
 import {requestFileAct} from '../../files/fileActs';
+import {fileLabel} from '../../files/fileLabel';
 import {useScriptStep} from '../../layout/TrailContext';
 import {gameModuleOf} from '../../mainWorld';
+import {useAfterImport} from '../../mapEditor/useAfterImport';
 import {filePath, projectFiles} from '../../runtime/projectFiles';
 import {useWorldRuntime} from '../../runtime/WorldRuntimeContext';
 import {asActorData, isActorData, viewOf, type ActorData} from '../actorData';
@@ -44,9 +51,14 @@ import {requestActorEnhance} from '../enhance/actorEnhance';
 import styles from './actorEditor.module.css';
 import {
   actorTraitChoices,
+  addEffect,
   addProperty,
   addTrait,
+  effectSettings,
+  removeEffect,
   removeTrait,
+  setEffectSetting,
+  switchEffect,
   setLook,
   setPropertyDefault,
   setPurpose,
@@ -63,6 +75,15 @@ const parse = (contents: string): ActorData | undefined => {
     return isActorData(parsed) ? parsed : undefined;
   } catch {
     return undefined;
+  }
+};
+
+/** An effect file's parameters, or none for one that cannot be read. */
+const parametersOf = (contents: string): EffectParameter[] => {
+  try {
+    return parseEffectDocument(contents).parameters;
+  } catch {
+    return [];
   }
 };
 
@@ -109,11 +130,42 @@ export const ActorEditor = (props: CustomEditorProps) => {
   };
 
   const [script, setScript, onTrail] = useScriptStep(fileId);
+  const [tab, setTab] = useState<'traits' | 'effects'>('traits');
   const [enhanceAt, setEnhanceAt] = useState<HTMLElement | null>(null);
+  const [effectAt, setEffectAt] = useState<HTMLElement | null>(null);
   const [newName, setNewName] = useState('');
   const [newType, setNewType] = useState('number');
 
   const choices = useMemo(() => actorTraitChoices(files), [files]);
+  /** The project's effects, by module path, with what each is called. */
+  const effectFiles = useMemo(
+    () =>
+      Object.entries(files)
+        .filter(
+          ([one]) => one.startsWith('effects/') && one.endsWith('.effect'),
+        )
+        .map(([one, held]) => ({
+          path: one.replace(/\.effect$/, ''),
+          name: fileLabel({name: one.split('/').pop(), contents: held}),
+          parameters: parametersOf(held),
+        })),
+    [files],
+  );
+  const effectNamed = (effect: string) =>
+    effectFiles.find(one => one.path === effect)?.name ??
+    effect.split('/').pop() ??
+    effect;
+  const addEffectAt = (effect: string) => {
+    const file = effectFiles.find(one => one.path === effect);
+    if (data && file) {
+      edit(addEffect(data, effect, file.parameters));
+    }
+  };
+  // An effect brought from the shelf is added once the project holds it.
+  const importEffectThen = useAfterImport(
+    effectFiles.map(one => one.path),
+    effect => addEffectAt(effect),
+  );
   const taken = (data?.traits ?? []).map(
     value =>
       choices.find(choice => choice.value === value) ??
@@ -199,7 +251,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
           <BlocklyFileEditor
             {...props}
             initialContents={viewOf(contents)}
-            onChange={next => write(asActorData(next))}
+            onChange={next => write(asActorData(next, written.current))}
           />
         </div>
       </div>
@@ -261,117 +313,243 @@ export const ActorEditor = (props: CustomEditorProps) => {
       </div>
       <div className={styles.body}>
         <div className={styles.panel}>
-          <div className={styles.groups}>
-            <section className={styles.group} aria-label="Self">
-              <Typography variant="body2" component="h3">
-                Self
-              </Typography>
-              {(data.properties ?? []).map(property => (
-                <ValueField
-                  key={property.name}
-                  name={`self-${property.name}`}
-                  label={capitalize(property.name)}
-                  type={property.type}
-                  value={
-                    property.type === 'vector' || property.type === 'point'
-                      ? `${property.value ?? 0},${property.valueY ?? 0}`
-                      : (property.value ?? '')
-                  }
-                  isReadOnly={isReadOnly || !takesValue(property.type)}
-                  onValue={text =>
-                    edit(setPropertyDefault(data, property.name, text))
-                  }
-                />
-              ))}
-              {!isReadOnly && (
-                <div className={styles.add}>
-                  <TextField
-                    name="self-new-name"
-                    label="New property"
-                    size="s"
-                    value={newName}
-                    onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                      setNewName(event.target.value)
-                    }
-                  />
-                  <SimpleDropdown
-                    name="self-new-type"
-                    labelText="Kind"
-                    size="s"
-                    selectedValue={newType}
-                    items={NEW_TYPES.map(type => ({value: type, text: type}))}
-                    onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-                      setNewType(event.target.value)
-                    }
-                  />
-                  <Button
-                    variant="outlined"
-                    color="secondary"
-                    size="small"
-                    disabled={!newName.trim()}
-                    onClick={() => {
-                      edit(addProperty(data, newName, newType));
-                      setNewName('');
-                    }}
-                  >
-                    Add property
-                  </Button>
-                </div>
+          <div className={styles.tabs}>
+            <SegmentedButtons
+              size="xs"
+              selectedButtonValue={tab}
+              onChange={value => setTab(value as 'traits' | 'effects')}
+              buttons={[
+                {value: 'traits', label: 'Traits'},
+                {value: 'effects', label: 'Effects'},
+              ]}
+            />
+          </div>
+          {tab === 'effects' ? (
+            <div className={styles.groups}>
+              {(data.effects ?? []).length === 0 && (
+                <Typography
+                  variant="body3"
+                  component="p"
+                  className={`${styles.note} ${styles.group}`}
+                >
+                  No effects yet. An effect changes how the actor is drawn: a
+                  ripple, a glow, a tint.
+                </Typography>
               )}
-            </section>
-            {taken.map(trait => (
-              <section
-                key={trait.value}
-                className={styles.group}
-                aria-label={trait.name}
-              >
-                <div className={styles.groupHead}>
-                  <Typography variant="body2" component="h3">
-                    {trait.name}
-                  </Typography>
-                  {!isReadOnly && (
-                    <Button
-                      variant="text"
-                      size="extraSmall"
-                      aria-label={`Remove ${trait.name}`}
-                      onClick={() => edit(removeTrait(data, trait))}
-                    >
-                      Remove
-                    </Button>
-                  )}
-                </div>
-                {trait.description && (
-                  <Typography
-                    variant="body3"
-                    component="p"
-                    className={styles.note}
-                  >
-                    {trait.description}
-                  </Typography>
-                )}
-                {trait.properties
-                  .filter(property => takesValue(property.type))
-                  .map(property => (
+              {(data.effects ?? []).map(effect => (
+                <section
+                  key={effect.effect}
+                  className={styles.group}
+                  aria-label={effectNamed(effect.effect)}
+                >
+                  <div className={styles.groupHead}>
+                    <Typography variant="body2" component="h3">
+                      {effectNamed(effect.effect)}
+                    </Typography>
+                    {!isReadOnly && (
+                      <Button
+                        variant="text"
+                        size="extraSmall"
+                        aria-label={`Remove ${effectNamed(effect.effect)}`}
+                        onClick={() => edit(removeEffect(data, effect.effect))}
+                      >
+                        Remove
+                      </Button>
+                    )}
+                  </div>
+                  {/* How it starts. Code and animations turn it on and off
+                      while the game runs. */}
+                  <Checkbox
+                    name={`effect-${effect.effect}-on`}
+                    label="On from the start"
+                    checked={effect.on}
+                    disabled={isReadOnly}
+                    onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                      edit(
+                        switchEffect(data, effect.effect, event.target.checked),
+                      )
+                    }
+                  />
+                  {effectSettings(effect).map(setting => (
                     <ValueField
-                      key={property.setter}
-                      name={`trait-${property.setter}`}
-                      label={capitalize(property.name)}
-                      type={property.type}
-                      value={
-                        valueText(
-                          (data.values ?? []).find(
-                            value => value.setter === property.setter,
-                          ),
-                        ) ?? property.default
-                      }
+                      key={`${setting.param}-${setting.socket}`}
+                      name={`effect-${effect.effect}-${setting.param}-${setting.socket}`}
+                      label={capitalize(setting.label)}
+                      type={setting.type}
+                      value={setting.value}
                       isReadOnly={isReadOnly}
-                      onValue={text => edit(setValue(data, property, text))}
+                      onValue={text =>
+                        edit(
+                          setEffectSetting(data, effect.effect, setting, text),
+                        )
+                      }
                     />
                   ))}
+                </section>
+              ))}
+            </div>
+          ) : (
+            <div className={styles.groups}>
+              <section className={styles.group} aria-label="Self">
+                <Typography variant="body2" component="h3">
+                  Self
+                </Typography>
+                {(data.properties ?? []).map(property => (
+                  <ValueField
+                    key={property.name}
+                    name={`self-${property.name}`}
+                    label={capitalize(property.name)}
+                    type={property.type}
+                    value={
+                      property.type === 'vector' || property.type === 'point'
+                        ? `${property.value ?? 0},${property.valueY ?? 0}`
+                        : (property.value ?? '')
+                    }
+                    isReadOnly={isReadOnly || !takesValue(property.type)}
+                    onValue={text =>
+                      edit(setPropertyDefault(data, property.name, text))
+                    }
+                  />
+                ))}
+                {!isReadOnly && (
+                  <div className={styles.add}>
+                    <TextField
+                      name="self-new-name"
+                      label="New property"
+                      size="s"
+                      value={newName}
+                      onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                        setNewName(event.target.value)
+                      }
+                    />
+                    <SimpleDropdown
+                      name="self-new-type"
+                      labelText="Kind"
+                      size="s"
+                      selectedValue={newType}
+                      items={NEW_TYPES.map(type => ({value: type, text: type}))}
+                      onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+                        setNewType(event.target.value)
+                      }
+                    />
+                    <Button
+                      variant="outlined"
+                      color="secondary"
+                      size="small"
+                      disabled={!newName.trim()}
+                      onClick={() => {
+                        edit(addProperty(data, newName, newType));
+                        setNewName('');
+                      }}
+                    >
+                      Add property
+                    </Button>
+                  </div>
+                )}
               </section>
-            ))}
-          </div>
-          {!isReadOnly && (
+              {taken.map(trait => (
+                <section
+                  key={trait.value}
+                  className={styles.group}
+                  aria-label={trait.name}
+                >
+                  <div className={styles.groupHead}>
+                    <Typography variant="body2" component="h3">
+                      {trait.name}
+                    </Typography>
+                    {!isReadOnly && (
+                      <Button
+                        variant="text"
+                        size="extraSmall"
+                        aria-label={`Remove ${trait.name}`}
+                        onClick={() => edit(removeTrait(data, trait))}
+                      >
+                        Remove
+                      </Button>
+                    )}
+                  </div>
+                  {trait.description && (
+                    <Typography
+                      variant="body3"
+                      component="p"
+                      className={styles.note}
+                    >
+                      {trait.description}
+                    </Typography>
+                  )}
+                  {trait.properties
+                    .filter(property => takesValue(property.type))
+                    .map(property => (
+                      <ValueField
+                        key={property.setter}
+                        name={`trait-${property.setter}`}
+                        label={capitalize(property.name)}
+                        type={property.type}
+                        value={
+                          valueText(
+                            (data.values ?? []).find(
+                              value => value.setter === property.setter,
+                            ),
+                          ) ?? property.default
+                        }
+                        isReadOnly={isReadOnly}
+                        onValue={text => edit(setValue(data, property, text))}
+                      />
+                    ))}
+                </section>
+              ))}
+            </div>
+          )}
+          {!isReadOnly && tab === 'effects' && (
+            <div className={styles.foot}>
+              <Button
+                variant="outlined"
+                color="secondary"
+                size="small"
+                fullWidth
+                aria-haspopup="menu"
+                startIcon={
+                  <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+                }
+                onClick={event => setEffectAt(event.currentTarget)}
+              >
+                Add Effect
+              </Button>
+              <Menu
+                open={Boolean(effectAt)}
+                anchorEl={effectAt}
+                onClose={() => setEffectAt(null)}
+              >
+                {effectFiles
+                  .filter(
+                    file =>
+                      !(data.effects ?? []).some(
+                        one => one.effect === file.path,
+                      ),
+                  )
+                  .map(file => (
+                    <MenuItem
+                      key={file.path}
+                      onClick={() => {
+                        setEffectAt(null);
+                        addEffectAt(file.path);
+                      }}
+                    >
+                      <ListItemText>{file.name}</ListItemText>
+                    </MenuItem>
+                  ))}
+                <MenuItem
+                  onClick={() => {
+                    setEffectAt(null);
+                    importEffectThen(requestEffectImport, undefined);
+                  }}
+                >
+                  <ListItemText>Import…</ListItemText>
+                </MenuItem>
+              </Menu>
+            </div>
+          )}
+          {!isReadOnly && tab === 'traits' && (
             <div className={styles.foot}>
               <Button
                 variant="outlined"

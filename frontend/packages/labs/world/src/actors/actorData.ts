@@ -44,6 +44,20 @@ export type ActorLiteral =
 /** `set ⟨member⟩ of this actor to ⟨literal⟩`, by the setter's block type. */
 export type ActorValue = {setter: string} & ActorLiteral;
 
+/**
+ * An effect on the actor (SIMPLE_INTERFACE.md, "Effects are data on the
+ * actor"): the effect file, whether the actor starts with it on, and the
+ * `add effect` row that says its settings, kept as the block holds them.
+ * Code and animations turn it on and off while the game runs.
+ */
+export interface ActorEffect {
+  /** The effect's module path: `effects/ripple`. */
+  effect: string;
+  on: boolean;
+  /** Its `add effect` row, settings and all; absent for one set to nothing. */
+  row?: Block;
+}
+
 /** What it looks like: a still picture, or an animation playing. */
 export type ActorLook = {sprite: string} | {animation: string};
 
@@ -65,6 +79,7 @@ export interface ActorData {
   traits?: string[];
   properties?: ActorProperty[];
   values?: ActorValue[];
+  effects?: ActorEffect[];
   /**
    * Rows under the root that are neither data nor code a "+" offers: a
    * second look, a `set` of something computed. None of the shipped actors
@@ -76,7 +91,7 @@ export interface ActorData {
   [key: string]: unknown;
 }
 
-type Block = Record<string, unknown> & {type?: string};
+export type Block = Record<string, unknown> & {type?: string};
 
 /**
  * Rows that are code: what the actor does, rather than what it is. In the
@@ -321,6 +336,43 @@ function readLook(row: Block): ActorLook | undefined {
   return animation === undefined ? undefined : {animation};
 }
 
+const ADD_EFFECT = 'world_add_effect';
+
+/** `add effect ⟨effect⟩` on this actor, as data, or nothing. */
+function readEffect(row: Block): ActorEffect | undefined {
+  const fields = fieldsOf(row);
+  if (
+    row.type !== ADD_EFFECT ||
+    !only(row, ['type', 'fields', 'inputs', 'extraState', 'next']) ||
+    Object.keys(fields).join() !== 'EFFECT' ||
+    typeof fields.EFFECT !== 'string'
+  ) {
+    return undefined;
+  }
+  const inputs = {...(isObject(row.inputs) ? row.inputs : {})};
+  if ('ACTOR' in inputs) {
+    if (!isThisActor(inputs.ACTOR)) {
+      return undefined;
+    }
+    delete inputs.ACTOR;
+  }
+  const kept: Block = {type: ADD_EFFECT, fields: {EFFECT: fields.EFFECT}};
+  if (row.extraState !== undefined) {
+    kept.extraState = row.extraState;
+  }
+  if (Object.keys(inputs).length) {
+    kept.inputs = inputs;
+  }
+  return {
+    effect: fields.EFFECT,
+    on: true,
+    ...(Object.keys(kept).length > 2 ? {row: kept} : {}),
+  };
+}
+
+const writeEffect = (effect: ActorEffect): Block =>
+  effect.row ?? {type: ADD_EFFECT, fields: {EFFECT: effect.effect}};
+
 const writeLook = (look: ActorLook): Block =>
   'sprite' in look
     ? {type: 'world_set_sprite', fields: {SPRITE: look.sprite}}
@@ -364,6 +416,7 @@ const DATA_KEYS = new Set([
   'traits',
   'properties',
   'values',
+  'effects',
   'setup',
   'blocks',
 ]);
@@ -390,6 +443,7 @@ export function foldActor(
   const traits: string[] = [];
   const properties: ActorProperty[] = [];
   const values: ActorValue[] = [];
+  const effects: ActorEffect[] = [];
   const setup: Block[] = [];
   const code: Block[] = [];
   for (const row of rowsUnder(root)) {
@@ -399,6 +453,7 @@ export function foldActor(
     const look = readLook(row);
     const property = readProperty(row);
     const value = readValue(row);
+    const effect = readEffect(row);
     if (trait !== undefined) {
       traits.push(trait);
     } else if (parent !== undefined && data.actsLike === undefined) {
@@ -417,6 +472,8 @@ export function foldActor(
       properties.push(property);
     } else if (value) {
       values.push(value);
+    } else if (effect && !effects.some(one => one.effect === effect.effect)) {
+      effects.push(effect);
     } else if (typeof row.type === 'string' && CODE_ROWS.has(row.type)) {
       code.push(alone(row));
     } else {
@@ -426,6 +483,7 @@ export function foldActor(
   if (traits.length) data.traits = traits;
   if (properties.length) data.properties = properties;
   if (values.length) data.values = values;
+  if (effects.length) data.effects = effects;
   if (setup.length) data.setup = setup;
 
   const workspace: SavedWorkspace = {};
@@ -477,6 +535,7 @@ export function actorView(data: ActorData): Record<string, unknown> {
     })),
     ...(data.properties ?? []).map(writeProperty),
     ...(data.values ?? []).map(writeValue),
+    ...(data.effects ?? []).filter(effect => effect.on).map(writeEffect),
     ...(data.setup ?? []).map(alone),
     ...code.map(alone),
   ];
@@ -522,8 +581,12 @@ export function viewOf(contents: string): string {
 /**
  * The contents in the data shape: a `define actor` workspace folded, and a
  * data-shaped file or anything else as it is.
+ *
+ * `like` is the data-shaped file the workspace was the view of, when it was
+ * one. An effect that is off is not in a view, since it adds no row, so the
+ * fold takes those from there rather than losing them.
  */
-export function asActorData(contents: string): string {
+export function asActorData(contents: string, like?: string): string {
   let parsed: unknown;
   try {
     parsed = JSON.parse(contents);
@@ -534,7 +597,25 @@ export function asActorData(contents: string): string {
     return contents;
   }
   const data = foldActor(parsed);
-  return data ? JSON.stringify(data, null, 2) : contents;
+  if (!data) {
+    return contents;
+  }
+  const off = offEffectsOf(like).filter(
+    effect => !(data.effects ?? []).some(one => one.effect === effect.effect),
+  );
+  if (off.length) {
+    data.effects = [...(data.effects ?? []), ...off];
+  }
+  return JSON.stringify(data, null, 2);
+}
+
+/** The effects a data-shaped file holds that are off. */
+function offEffectsOf(contents: string | undefined): ActorEffect[] {
+  if (!isDataShaped(contents)) {
+    return [];
+  }
+  const data = JSON.parse(contents!) as ActorData;
+  return (data.effects ?? []).filter(effect => !effect.on);
 }
 
 /**
@@ -565,5 +646,7 @@ export function throughView(
     return change(contents);
   }
   const changed = change(viewOf(contents));
-  return changed === viewOf(contents) ? contents : asActorData(changed);
+  return changed === viewOf(contents)
+    ? contents
+    : asActorData(changed, contents);
 }
