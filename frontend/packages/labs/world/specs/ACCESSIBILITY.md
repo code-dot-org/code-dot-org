@@ -146,6 +146,13 @@ below, and are listed last.
   reached from the keyboard only as any Blockly field is, which no pass
   here has checked.
 
+### Animations on the actor (ANIMATION_PLAN.md)
+
+- **The animation row's buttons say which is chosen** (`aria-pressed`)
+  and Main says it plays "when made"; the preview of the chosen one is an
+  image named for it ("Pilot, Fly at its start"). Choosing one changes the
+  picture and says nothing else.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

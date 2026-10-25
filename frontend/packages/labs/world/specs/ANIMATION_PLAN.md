@@ -264,6 +264,26 @@ Under the preview, the actor's animations as a row (a menu when they do
 not fit), Main first and marked; Add New Animation; rename, delete, and
 Loop. Choosing one shows its first moment in the preview.
 
+BUILT. `AnimationRow`, under Looks like: the actor's animations as
+buttons, Main first and said to be the one it plays "when made"; the
+chosen one's Loop box, and its Rename and Delete; Add New Animation, which
+asks a name and makes one that does nothing yet (no tracks, not looping).
+Main is not renamed or deleted here: it is the look, and goes by Looks
+like's "(drawn by its code)". The row wraps rather than giving way to a
+dropdown and a modal, as the spec has it: an actor with more animations
+than a row holds is rare, and a second line reads as well as the first.
+The edits are `actorEdits` (`addAnimation`, `renameAnimation`,
+`removeAnimation`, `setAnimationLoop`, `animationNameProblem`); a rename
+carries every `play animation` in the actor's own code, and not one in
+another file playing it on this kind. Names are asked through the lab's
+prompt, which refuses an empty name or one the actor has.
+
+The preview shows the chosen animation at its start, painted from the
+project's pictures (`TimelineThumb`, held still); one with no picture to
+paint — a fade, a hop — shows the actor's own picture, as the game will.
+In the browser: Jetpack's Pilot listed Main, Fly and Climb; Fly showed
+its flame; Add New Animation made Wave.
+
 ### 6. The timeline
 
 Below the row: a strip the animation's length, ticks along it, each key as

@@ -25,7 +25,7 @@ import type {
   ActorValue,
   Block,
 } from '../actorData';
-import {withLookOf} from '../actorData';
+import {MAIN_ANIMATION, withLookOf} from '../actorData';
 import type {ActorPurpose} from '../actorPurpose';
 
 /** One property of a trait, as the panel edits it. */
@@ -296,6 +296,128 @@ export function setLook(
   look: ActorLook | undefined,
 ): ActorData {
   return withLookOf(data, look);
+}
+
+// ── Its animations (specs/ANIMATION_PLAN.md, step 5) ──────────────────────
+
+/** Its animations' names, Main first and the rest as the file has them. */
+export const animationNames = (data: ActorData): string[] => {
+  const names = Object.keys(data.animations ?? {});
+  return [
+    ...names.filter(name => name === MAIN_ANIMATION),
+    ...names.filter(name => name !== MAIN_ANIMATION),
+  ];
+};
+
+/**
+ * What is wrong with `name` for a new or renamed animation, in the words a
+ * prompt shows, or nothing. A name is what `play animation` stores and what
+ * the engine finds it by, so two of one name would be one animation lost.
+ */
+export function animationNameProblem(
+  data: ActorData,
+  name: string,
+  was?: string,
+): string | undefined {
+  const trimmed = name.trim();
+  if (!trimmed) {
+    return 'Enter a name.';
+  }
+  if (trimmed !== was && trimmed in (data.animations ?? {})) {
+    return `It already has an animation called ${trimmed}.`;
+  }
+  return undefined;
+}
+
+/**
+ * The data with a new animation that does nothing yet: no tracks, and not
+ * looping (SIMPLE_INTERFACE.md, "Animations": "by default, just the empty
+ * properties").
+ */
+export const addAnimation = (data: ActorData, name: string): ActorData => ({
+  ...data,
+  animations: {...(data.animations ?? {}), [name.trim()]: {tracks: {}}},
+});
+
+/**
+ * The data with an animation renamed, in its place in the file, and every
+ * `play animation` in the actor's own code that named it naming it still.
+ *
+ * Only its own code: a block in another file playing it on this kind names
+ * it too, and is not followed here.
+ */
+export function renameAnimation(
+  data: ActorData,
+  from: string,
+  to: string,
+): ActorData {
+  const name = to.trim();
+  if (!data.animations?.[from] || from === name) {
+    return data;
+  }
+  const animations = Object.fromEntries(
+    Object.entries(data.animations).map(([key, timeline]) => [
+      key === from ? name : key,
+      timeline,
+    ]),
+  );
+  const renamed = (node: unknown): unknown => {
+    if (Array.isArray(node)) {
+      return node.map(renamed);
+    }
+    if (!node || typeof node !== 'object') {
+      return node;
+    }
+    const held = node as Record<string, unknown>;
+    const next = Object.fromEntries(
+      Object.entries(held).map(([key, value]) => [key, renamed(value)]),
+    );
+    const fields = held.fields as Record<string, unknown> | undefined;
+    if (held.type === 'world_play_animation' && fields?.ANIMATION === from) {
+      next.fields = {...fields, ANIMATION: name};
+    }
+    return next;
+  };
+  return {
+    ...data,
+    animations,
+    ...(data.blocks
+      ? {blocks: renamed(data.blocks) as ActorData['blocks']}
+      : {}),
+  };
+}
+
+/** The data without an animation. */
+export function removeAnimation(data: ActorData, name: string): ActorData {
+  if (!data.animations?.[name]) {
+    return data;
+  }
+  const animations = {...data.animations};
+  delete animations[name];
+  const next: ActorData = {...data, animations};
+  if (!Object.keys(animations).length) {
+    delete next.animations;
+  }
+  return next;
+}
+
+/** The data with an animation starting again at its end, or not. */
+export function setAnimationLoop(
+  data: ActorData,
+  name: string,
+  loop: boolean,
+): ActorData {
+  const timeline = data.animations?.[name];
+  if (!timeline || Boolean(timeline.loop) === loop) {
+    return data;
+  }
+  const next = {...timeline};
+  if (loop) {
+    next.loop = true;
+  } else {
+    delete next.loop;
+  }
+  return {...data, animations: {...data.animations, [name]: next}};
 }
 
 /** The data for a game, an interface, or both (`actorPurpose`). */

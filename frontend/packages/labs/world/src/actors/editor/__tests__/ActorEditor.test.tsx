@@ -23,9 +23,14 @@ let SOURCE: MultiFileSource = {
 };
 
 const replaceSources = vi.fn();
+/** The prompt and confirm dialogs: answered with what a test says. */
+const showDialog = vi.fn<
+  (dialog: unknown) => Promise<{type: string; args: unknown}>
+>(async () => ({type: 'confirm', args: ''}));
 vi.mock('@code-dot-org/lab/contexts', () => ({
   // Read when called: a test may hand the project a changed file.
   useSources: () => ({currentSources: {source: SOURCE}, replaceSources}),
+  useDialogControl: () => ({showDialog}),
 }));
 vi.mock('../../../runtime/WorldRuntimeContext', () => ({
   useWorldRuntime: () => ({getActorInfo: vi.fn(), hasCompiled: false}),
@@ -116,6 +121,67 @@ describe('the Actor Editor', () => {
       ),
     );
     setAppearanceImportHandler(null);
+  });
+
+  // Its animations, under its picture (specs/ANIMATION_PLAN.md, step 5).
+  it('lists its animations, Main first, and makes, renames and deletes them', async () => {
+    const view = open();
+    const row = screen.getByRole('region', {name: 'Animations'});
+    // The Player's Main is the library's bob.
+    expect(within(row).getByRole('button', {name: /^Main/})).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+    expect(within(row).getByLabelText('Loop')).toBeChecked();
+    // Main is not renamed or deleted here.
+    expect(within(row).queryByRole('button', {name: 'Rename'})).toBeNull();
+
+    showDialog.mockResolvedValueOnce({type: 'confirm', args: 'Wave'});
+    fireEvent.click(
+      within(row).getByRole('button', {name: 'Add New Animation'}),
+    );
+    await vi.waitFor(() =>
+      expect(written().animations.Wave).toEqual({tracks: {}}),
+    );
+    // A name it has already is refused, in the prompt's own words.
+    const asked = showDialog.mock.calls.at(-1)![0] as {
+      validateInput: (value: string) => string | undefined;
+    };
+    expect(asked.validateInput('Main')).toMatch(/already has/);
+
+    // …and the new one is chosen, so it can be renamed and deleted.
+    const withWave = onChange.mock.calls.at(-1)![0] as string;
+    view.rerender(
+      <ActorFileEditor
+        fileId={PLAYER_ID}
+        initialContents={withWave}
+        language="actor"
+        isReadOnly={false}
+        onChange={onChange}
+      />,
+    );
+    const again = screen.getByRole('region', {name: 'Animations'});
+    expect(within(again).getByRole('button', {name: 'Wave'})).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+    showDialog.mockResolvedValueOnce({type: 'confirm', args: 'Waves'});
+    fireEvent.click(within(again).getByRole('button', {name: 'Rename'}));
+    await vi.waitFor(() =>
+      expect(Object.keys(written().animations)).toEqual(['Main', 'Waves']),
+    );
+    showDialog.mockResolvedValueOnce({type: 'confirm', args: ''});
+    fireEvent.click(within(again).getByRole('button', {name: 'Delete'}));
+    await vi.waitFor(() =>
+      expect(Object.keys(written().animations)).toEqual(['Main']),
+    );
+  });
+
+  it('turns a loop off', () => {
+    open();
+    const row = screen.getByRole('region', {name: 'Animations'});
+    fireEvent.click(within(row).getByLabelText('Loop'));
+    expect(written().animations.Main.loop).toBeUndefined();
   });
 
   it('opens what it looks like, as a step on the trail', () => {
@@ -232,9 +298,11 @@ describe('the Actor Editor', () => {
 
     // On its row: Edit opens it, and its menu renames and deletes it.
     again(onChange.mock.calls.at(-1)![0] as string);
+    // The effect's own section, beside the animations'.
     const name = screen
-      .getByRole('region', {name: /./})
-      .getAttribute('aria-label')!;
+      .getAllByRole('region')
+      .map(region => region.getAttribute('aria-label')!)
+      .find(label => label !== 'Animations')!;
     fireEvent.click(screen.getByRole('button', {name: `Edit ${name}`}));
     expect(acts).toHaveBeenCalledWith({
       act: 'open',

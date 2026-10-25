@@ -22,6 +22,11 @@ import {
   removeTrait,
   setEffectSetting,
   setLook,
+  addAnimation,
+  animationNames,
+  removeAnimation,
+  renameAnimation,
+  setAnimationLoop,
   setPropertyDefault,
   setValue,
   switchEffect,
@@ -204,5 +209,63 @@ describe('a vector of its own', () => {
     const set = setPropertyDefault(added, 'aim', '2,3');
     expect(set.properties![0]).toMatchObject({value: '2', valueY: '3'});
     expect(setPropertyDefault(set, 'aim', 'nowhere')).toBe(set);
+  });
+});
+
+describe('its animations', () => {
+  const play = (name: string) => ({
+    type: 'world_play_animation',
+    fields: {ANIMATION: name},
+  });
+  const BOBBER: ActorData = {
+    ...PLAYER,
+    animations: {
+      Hop: {tracks: {}},
+      Main: {loop: true, tracks: {sprite: [{at: 0, value: 'p.png'}]}},
+    },
+    blocks: {
+      blocks: {
+        languageVersion: 0,
+        blocks: [
+          {type: 'world_on_Input_KeyDownEvent', next: {block: play('Hop')}},
+        ],
+      },
+    },
+  };
+
+  it('are listed Main first', () => {
+    expect(animationNames(BOBBER)).toEqual(['Main', 'Hop']);
+  });
+
+  it('are added doing nothing, and not looping', () => {
+    expect(addAnimation(PLAYER, ' Wave ').animations).toEqual({
+      Wave: {tracks: {}},
+    });
+  });
+
+  it('are renamed in place, and the actor’s own code follows', () => {
+    const renamed = renameAnimation(BOBBER, 'Hop', 'Jump');
+    expect(Object.keys(renamed.animations!)).toEqual(['Jump', 'Main']);
+    expect(JSON.stringify(renamed.blocks)).toContain('"ANIMATION":"Jump"');
+    expect(JSON.stringify(renamed.blocks)).not.toContain('"Hop"');
+    expect(renameAnimation(BOBBER, 'Nope', 'Jump')).toBe(BOBBER);
+  });
+
+  it('are deleted, and the key with the last of them', () => {
+    expect(Object.keys(removeAnimation(BOBBER, 'Hop').animations!)).toEqual([
+      'Main',
+    ]);
+    const none = removeAnimation(removeAnimation(BOBBER, 'Hop'), 'Main');
+    expect(none.animations).toBeUndefined();
+  });
+
+  it('loop, or do not, which is said only when they do', () => {
+    expect(setAnimationLoop(BOBBER, 'Hop', true).animations!.Hop.loop).toBe(
+      true,
+    );
+    expect(
+      setAnimationLoop(BOBBER, 'Main', false).animations!.Main,
+    ).not.toHaveProperty('loop');
+    expect(setAnimationLoop(BOBBER, 'Main', true)).toBe(BOBBER);
   });
 });

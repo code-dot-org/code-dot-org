@@ -20,9 +20,16 @@ import {
   MenuItem,
   Typography,
 } from '@mui/material';
-import {useEffect, useMemo, useRef, useState, type ChangeEvent} from 'react';
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ChangeEvent,
+} from 'react';
 
-import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import {usePrompts, type CustomEditorProps} from '@code-dot-org/codebridge';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -33,7 +40,10 @@ import {useSources} from '@code-dot-org/lab/contexts';
 
 import {requestAppearanceImport} from '../../appearance/appearanceImport';
 import {isBackgroundPath} from '../../appearance/backgroundsFolder';
+import {largestCell} from '../../appearance/paintTimeline';
 import {stockAnimation} from '../../appearance/stock';
+import {TimelineThumb} from '../../appearance/TimelineThumb';
+import {useProjectImages} from '../../appearance/useProjectImages';
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
 import {WORKSPACE_KEYS} from '../../blockly/documentExtras';
 import {requestEffectImport} from '../../blockly/effectImport';
@@ -66,10 +76,16 @@ import {
   actorTraitChoices,
   addEffect,
   addProperty,
+  addAnimation,
   addTrait,
+  animationNameProblem,
+  animationNames,
   effectSettings,
+  removeAnimation,
   removeEffect,
+  renameAnimation,
   removeTrait,
+  setAnimationLoop,
   setEffectSetting,
   switchEffect,
   setLook,
@@ -79,6 +95,7 @@ import {
   valueText,
   type TraitChoice,
 } from './actorEdits';
+import {AnimationRow} from './AnimationRow';
 import {SelfProperty} from './SelfProperty';
 import {ValueField} from './ValueField';
 
@@ -90,6 +107,9 @@ const parse = (contents: string): ActorData | undefined => {
     return undefined;
   }
 };
+
+/** How big the actor's picture is drawn, in CSS pixels: the 12rem box. */
+const PREVIEW_SIZE = 192;
 
 /** Looks like's row for a Main that moves, and for the library's door. */
 const ANIMATED = 'animated:';
@@ -178,6 +198,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
   const [script, setScript, onTrail] = useScriptStep(fileId);
   const [tab, setTab] = useState<'traits' | 'effects'>('traits');
   const [enhanceAt, setEnhanceAt] = useState<HTMLElement | null>(null);
+  const {promptForName, confirm} = usePrompts();
   const [effectAt, setEffectAt] = useState<HTMLElement | null>(null);
   const [newName, setNewName] = useState('');
   const [newType, setNewType] = useState('number');
@@ -357,6 +378,71 @@ export const ActorEditor = (props: CustomEditorProps) => {
       }
     },
   );
+  // ── Its animations (specs/ANIMATION_PLAN.md, step 5) ──
+  const names = useMemo(() => {
+    const held = parse(contents);
+    return held ? animationNames(held) : [];
+  }, [contents]);
+  // The one chosen, kept to one it has: Main, else the first.
+  const [chosen, setChosen] = useState<string>();
+  const selected = chosen && names.includes(chosen) ? chosen : names[0];
+  const projectImages = useProjectImages(currentSources.source);
+  const imageFor = useCallback(
+    (file: string) => projectImages[file],
+    [projectImages],
+  );
+  const shownTimeline = selected
+    ? parse(contents)?.animations?.[selected]
+    : undefined;
+  // Only one with a picture to paint: one that only moves or fades is shown
+  // on the actor's own picture, as the game will show it.
+  const shown =
+    shownTimeline &&
+    largestCell(shownTimeline, imageFor).width > 0 &&
+    (shownTimeline.tracks.sprite?.length ?? 0) > 0
+      ? shownTimeline
+      : undefined;
+  const newAnimation = async () => {
+    if (!data) {
+      return;
+    }
+    const name = await promptForName({
+      title: 'New animation',
+      placeholder: 'Walk',
+      validateInput: value => animationNameProblem(data, value),
+    });
+    if (name) {
+      edit(addAnimation(data, name));
+      setChosen(name.trim());
+    }
+  };
+  const renameOne = async (was: string) => {
+    if (!data) {
+      return;
+    }
+    const name = await promptForName({
+      title: `Rename ${was}`,
+      value: was,
+      validateInput: value => animationNameProblem(data, value, was),
+    });
+    if (name && name.trim() !== was) {
+      edit(renameAnimation(data, was, name));
+      setChosen(name.trim());
+    }
+  };
+  const removeOne = async (name: string) => {
+    if (
+      data &&
+      (await confirm({
+        title: 'Delete animation',
+        message: `Delete ${name}? Code that plays it will play nothing.`,
+      }))
+    ) {
+      edit(removeAnimation(data, name));
+      setChosen(undefined);
+    }
+  };
+
   const lookAct = (act: () => void) => () => {
     setLookAt(null);
     act();
@@ -848,7 +934,22 @@ export const ActorEditor = (props: CustomEditorProps) => {
             className={styles.picture}
             style={{background: DEFAULT_BACKDROP_COLOR}}
           >
-            {picture ? (
+            {/* The chosen animation at its start, painted here from the
+                project's pictures; the sandbox's picture of the actor when
+                there is none to paint (`TimelineThumb`). */}
+            {shown ? (
+              <span
+                role="img"
+                aria-label={`${data.name}, ${selected} at its start`}
+              >
+                <TimelineThumb
+                  timeline={shown}
+                  imageFor={imageFor}
+                  size={PREVIEW_SIZE}
+                  playing={false}
+                />
+              </span>
+            ) : picture ? (
               <img src={picture} alt={`${data.name}, as it is drawn`} />
             ) : (
               <Typography variant="body3" className={styles.note}>
@@ -995,6 +1096,17 @@ export const ActorEditor = (props: CustomEditorProps) => {
               </Menu>
             )}
           </div>
+          <AnimationRow
+            names={names}
+            selected={selected}
+            loop={Boolean(selected && data.animations?.[selected]?.loop)}
+            onSelect={setChosen}
+            onAdd={() => void newAnimation()}
+            onRename={name => void renameOne(name)}
+            onRemove={name => void removeOne(name)}
+            onLoop={(name, loop) => edit(setAnimationLoop(data, name, loop))}
+            isReadOnly={isReadOnly}
+          />
         </div>
       </div>
     </div>
