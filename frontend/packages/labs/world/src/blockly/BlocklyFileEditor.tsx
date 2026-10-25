@@ -22,14 +22,14 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useLocalization} from '@code-dot-org/core/plugins/localization';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
-import {
-  SpritePickerDialog,
-  type PickedSprite,
-} from '../animationEditor/SpritePickerDialog';
 import {APP_HIDDEN_BLOCKS} from '../appBuilder';
 import {requestAppearanceImport} from '../appearance/appearanceImport';
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {projectSheets} from '../appearance/sheetFile';
+import {
+  SpritePickerDialog,
+  type PickedSprite,
+} from '../appearance/SpritePickerDialog';
 import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
 import {setRevealer, waitFor} from '../callouts/reveal';
 import {

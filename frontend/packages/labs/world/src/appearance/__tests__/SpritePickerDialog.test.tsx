@@ -7,8 +7,8 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
-import type {GeneratedPicture} from '../../appearance/generate/imageGenerator';
-import type {SheetFile} from '../../appearance/sheetFile';
+import type {GeneratedPicture} from '../generate/imageGenerator';
+import type {SheetFile} from '../sheetFile';
 import {SpritePickerDialog} from '../SpritePickerDialog';
 
 const SHEET: SheetFile = {type: 'sheet', cell: {width: 32, height: 32}};
@@ -129,7 +129,7 @@ describe('SpritePickerDialog', () => {
 
   it('offers the other two ways only when there are two ways', () => {
     // A blank one to draw on and a file off this machine are the file menus'
-    // to offer; the palette inside the animation editor has neither.
+    // to offer; a picker opened where neither makes sense has neither.
     const onNew = vi.fn();
     const onUpload = vi.fn();
     open({onNew, onUpload});

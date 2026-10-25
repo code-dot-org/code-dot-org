@@ -16,7 +16,7 @@
 //
 // The picture step needed no lifting at all. What it shows is whole
 // pictures and whole animations, and both already have a component that draws
-// one — `animationEditor/CellThumb` and `animationEditor/AnimationThumb` — so
+// one — `appearance/CellThumb` and `appearance/AnimationPreview` — so
 // it asks for them directly rather than borrowing a grid built to offer the
 // CELLS of a spritesheet, which is a question an actor's `set sprite` does not
 // ask (it names a file).
@@ -65,8 +65,8 @@ import {Dialog} from '@code-dot-org/component-library/dialog';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import {CellThumb} from '../../animationEditor/CellThumb';
 import {AnimationPreview} from '../../appearance/AnimationPreview';
+import {CellThumb} from '../../appearance/CellThumb';
 import {DescribePicture} from '../../appearance/generate/DescribePicture';
 import type {
   GeneratedPicture,

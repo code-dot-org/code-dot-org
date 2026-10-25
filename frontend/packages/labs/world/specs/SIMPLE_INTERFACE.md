@@ -34,7 +34,9 @@ placing from the keyboard (PURPOSE_PLAN.md), then the shell finished: a
 picture of each Screen and Map in the switcher, layers in front hidden
 while one is edited, a Viewport's cameras in its own inspector, a way in
 for every kind of file where it is used, and the folder buttons gone
-(SHELL_FINISH_PLAN.md). The accessibility gaps each phase opened or closed
+(SHELL_FINISH_PLAN.md), then animations as the actor's own timelines,
+edited in the Actor Editor, with `.anim` files retired
+(ANIMATION_PLAN.md). The accessibility gaps each phase opened or closed
 are kept in ACCESSIBILITY.md.
 
 ## World Editor is now a Screen Editor
@@ -379,6 +381,13 @@ Currently we will just do linear interpolation. We should consider how we would
 tell it how to use easing for that keyframe and whether or not we do it for all
 values or just the ones being set. We should do what is easiest to represent and
 best for Phaser to handle.
+
+Built (ANIMATION_PLAN.md), with two departures. The values at the
+playhead are a panel under the timeline rather than the side panel, whose
+fields stay the actor's own; and an effect is keyed by its checkbox in
+that panel, while the Effects tab says whether it starts on. The strip is
+drawn five seconds long only while an animation is empty, and its own
+length after that, which a Length field can stretch.
 
 ### Interface Actors
 

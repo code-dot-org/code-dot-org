@@ -12,7 +12,7 @@
 // hand rather than by anything here.
 //
 // WHAT IT DOES. Populates the registries the generator reads, turns every
-// Blockly file into a module, wraps every data file (`.map`, `.anim`) as one,
+// Blockly file into a module, wraps every data file (`.map`, `.effect`) as one,
 // and evaluates them in dependency order — then hands back the world the
 // `.world` module built.
 //
@@ -136,7 +136,7 @@ export async function compileProject(
       // theme is JSON a world imports as data (specs/STYLES_PLAN.md). Left
       // out, `use theme` compiled to an import of nothing and every fixture
       // that named a theme died reading `default` of undefined.
-    } else if (/\.(map|anim|sheet|effect|style)$/.test(path)) {
+    } else if (/\.(map|sheet|effect|style)$/.test(path)) {
       modules[modulePath(path)] = {default: JSON.parse(contents)};
     }
   }

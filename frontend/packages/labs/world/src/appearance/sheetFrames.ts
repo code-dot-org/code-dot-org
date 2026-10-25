@@ -11,7 +11,7 @@
 // the driver hands the texture (PhaserBinding.cellFrame) — a sheet is never a
 // thing at runtime, only at the moment somebody chooses frames from one.
 
-import {sheetSpacing, type SheetFile} from '../appearance/sheetFile';
+import {sheetSpacing, type SheetFile} from './sheetFile';
 
 /** A source rectangle within an image. */
 export interface CellRect {

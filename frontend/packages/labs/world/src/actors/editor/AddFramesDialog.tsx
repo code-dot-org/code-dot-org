@@ -22,14 +22,14 @@ import {useEffect, useMemo, useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import TextField from '@code-dot-org/component-library/textField';
 
-import {CellThumb} from '../../animationEditor/CellThumb';
-import cellStyles from '../../animationEditor/cellThumb.module.css';
+import {CellThumb} from '../../appearance/CellThumb';
+import cellStyles from '../../appearance/cellThumb.module.css';
+import type {SheetFile} from '../../appearance/sheetFile';
 import {
   type CellRect,
   sheetCells,
   sheetGrid,
-} from '../../animationEditor/sheetFrames';
-import type {SheetFile} from '../../appearance/sheetFile';
+} from '../../appearance/sheetFrames';
 
 import styles from './addFramesDialog.module.css';
 

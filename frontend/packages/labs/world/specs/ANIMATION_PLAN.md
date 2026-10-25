@@ -1,6 +1,6 @@
 # Plan: animations on the actor (SIMPLE_INTERFACE.md, phase seven)
 
-STATUS: IN PROGRESS.
+STATUS: BUILT, October 2026.
 
 The seventh phase of the simple interface: "Animations", under the Actor
 Editor. An actor is a set of animations with a Main one; each is a timeline
@@ -413,6 +413,19 @@ Player Walk from the library became Main, five picture keys on its
 timeline, with the Hero's legs moving in the game.
 
 ### 10. Documents, the browser, and the ledger
+
+BUILT. The README's editor table names the Actor Editor for an actor and
+has no `anim` row; where a picture comes from says an animation is the
+actor's own timeline. SIMPLE_INTERFACE.md lists this phase and records
+its two departures. What was left of `animationEditor/` — `CellThumb`,
+`sheetFrames` and `SpritePickerDialog`, read by the actor creator, the
+image editor, the blocks and Add frames — is in `appearance/`, beside
+`sheetFile`, and the folder is gone; comments and fixtures that named the
+animation editor or `.anim` say what is there now. The ledger was kept
+step by step.
+
+The browser was walked a step at a time (each BUILT note says what was
+seen); the last pass is step 9's, the lesson from start to legs moving.
 
 ## Not in this phase
 

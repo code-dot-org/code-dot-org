@@ -27,7 +27,7 @@ const FILES = {
   }),
   'actors/ground.js': `export default new ActorBuilder({id: 'ground', name: 'Ground'});`,
   'actors/blob.js': `export default 42;`, // no builder → basename fallback
-  'animations/game.anim': '{"type":"animation"}',
+  'effects/glow.effect': '{"type":"effect"}',
 };
 
 describe('projectModules', () => {
@@ -64,7 +64,7 @@ describe('projectModules', () => {
 
   it('ignores non-code files and other directories', () => {
     const paths = projectActorOptions(FILES).map(([, path]) => path);
-    expect(paths).not.toContain('animations/game');
+    expect(paths).not.toContain('effects/glow');
     expect(paths).not.toContain('maps/level1');
   });
 });

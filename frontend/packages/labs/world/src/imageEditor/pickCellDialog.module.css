@@ -1,6 +1,6 @@
 /* The cell picker's CONTENT. The dialog itself — surface, width, padding, the
    button row — is the design system's `Dialog`; the cells and what a chosen one
-   looks like are shared with the animation editor (cellThumb.module.css). */
+   looks like are shared with Add frames (appearance/cellThumb.module.css). */
 
 .grid {
   display: flex;

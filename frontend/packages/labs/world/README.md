@@ -33,13 +33,13 @@ file has no text contents at all: it reads and writes the bytes on the file's
 is not listed in the file browser (`hiddenFileTypes`); it belongs to the image
 of the same name, which is what writes and deletes it.
 
-| Type                       | Editor                                | On disk                    |
-| -------------------------- | ------------------------------------- | -------------------------- |
-| `rule` / `actor` / `world` | `src/blockly/BlocklyFileEditor`       | a Blockly workspace (JSON) |
-| `map`                      | `src/mapEditor/MapEditor`             | world population (JSON)    |
-| `anim`                     | `src/animationEditor/AnimationEditor` | an animation file (JSON)   |
-| `effect`                   | `src/effect/EffectFileEditor`         | a shader graph (JSON)      |
-| `png`                      | `src/imageEditor/ImageFileEditor`     | bytes, on the file's `url` |
+| Type             | Editor                            | On disk                            |
+| ---------------- | --------------------------------- | ---------------------------------- |
+| `rule` / `world` | `src/blockly/BlocklyFileEditor`   | a Blockly workspace (JSON)         |
+| `actor`          | `src/actors/editor/ActorEditor`   | its data, and its code's workspace |
+| `map`            | `src/mapEditor/MapEditor`         | world population (JSON)            |
+| `effect`         | `src/effect/EffectFileEditor`     | a shader graph (JSON)              |
+| `png`            | `src/imageEditor/ImageFileEditor` | bytes, on the file's `url`         |
 
 An `.effect` is a node graph that compiles to a GLSL fragment shader — see
 `src/effect/README.md` and `specs/EFFECT_EDITOR.md`. It travels through the
@@ -48,16 +48,18 @@ bundle as data and is compiled to GLSL in the preview surface, where Phaser is.
 ## Where a picture comes from
 
 Nothing is built in. A game draws only what its project holds: an image is a
-file (bytes on the file's `url`, the same shape an uploaded PNG has) and an
-animation is a `.anim` that reads rectangles out of one. The driver preloads the
-project's images and nothing else, and every `.anim` in the project is registered
-when the world is built — there is no `use animations` block, because an
-animation file is not something a world opts into, it is something the project
-has.
+file (bytes on the file's `url`, the same shape an uploaded PNG has). An
+animation is not a file. It is the actor's own, kept in its data as a
+timeline of keys — which picture, or which rectangle of one, and where it is
+drawn, how large, turned how far, how solid, and which effects are on —
+and edited on the Actor Editor's timeline (`specs/ANIMATION_PLAN.md`). The
+one named Main plays when the actor is made; a still picture is a Main of
+one key. The driver preloads the project's images and nothing else.
 
-The library at `src/appearance/stock.ts` is a shelf to copy from, reached by the
-`(import…)` row on a `set sprite` or `play animation` dropdown. Importing writes
-real files — an animation brings the image it reads — and from then on they are
+The library at `src/appearance/stock.ts` is a shelf to copy from, reached by
+the `(import…)` row on a `set sprite` dropdown and by Looks like in the Actor
+Editor. Importing a picture writes a real file; taking an animation writes the
+image it reads and makes the animation the actor's Main. From then on they are
 the learner's: repaintable, renamable, deletable. The drawings live in
 `scripts/generate-sprites.mjs`; `scripts/write-stock-assets.mjs` turns them into
 the data URLs the library hands out (`src/appearance/stockImages.ts`, generated

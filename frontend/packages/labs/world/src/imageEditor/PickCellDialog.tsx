@@ -9,9 +9,9 @@ import {Typography} from '@mui/material';
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
 
-import {CellThumb} from '../animationEditor/CellThumb';
-import cellStyles from '../animationEditor/cellThumb.module.css';
-import type {CellRect} from '../animationEditor/sheetFrames';
+import {CellThumb} from '../appearance/CellThumb';
+import cellStyles from '../appearance/cellThumb.module.css';
+import type {CellRect} from '../appearance/sheetFrames';
 
 import styles from './pickCellDialog.module.css';
 

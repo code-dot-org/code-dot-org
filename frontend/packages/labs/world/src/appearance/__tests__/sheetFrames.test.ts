@@ -6,7 +6,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import type {SheetFile} from '../../appearance/sheetFile';
+import type {SheetFile} from '../sheetFile';
 import {cellIndex, sheetCells, sheetGrid} from '../sheetFrames';
 
 const sheet = (width: number, height = width): SheetFile => ({

@@ -39,7 +39,7 @@ describe('importStockBackground', () => {
 
   it('never writes a .sheet beside one', () => {
     // A backdrop is stretched over the viewport, so a grid of one means
-    // nothing — and a `.sheet` saying otherwise is a lie the animation editor
+    // nothing — and a `.sheet` saying otherwise is a lie Add frames
     // would believe.
     const {source} = importStockBackground(empty(), {id: 'cave'}, BYTES);
 

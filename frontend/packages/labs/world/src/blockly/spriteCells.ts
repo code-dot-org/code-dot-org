@@ -11,8 +11,8 @@
 // this resolution needs the project's `.sheet` files AND its image sizes — a
 // cell index means nothing without knowing how many fit across.
 
-import {sheetCells, type CellRect} from '../animationEditor/sheetFrames';
 import type {SheetFile} from '../appearance/sheetFile';
+import {sheetCells, type CellRect} from '../appearance/sheetFrames';
 import type {ImageSize} from '../runtime/imageSize';
 
 /** What a `set sprite` field's value says. */

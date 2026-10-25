@@ -16,12 +16,8 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
-import {
-  cellIndex,
-  sheetCells,
-  type CellRect,
-} from '../animationEditor/sheetFrames';
 import type {SheetFile} from '../appearance/sheetFile';
+import {cellIndex, sheetCells, type CellRect} from '../appearance/sheetFrames';
 
 import ColorPicker from './ColorPicker';
 import PickCellDialog from './PickCellDialog';

@@ -50,15 +50,11 @@ import {useMemo, useState} from 'react';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import {DescribePicture} from '../appearance/generate/DescribePicture';
-import type {
-  GeneratedPicture,
-  ImageGenerator,
-} from '../appearance/generate/imageGenerator';
-import type {ImageKind} from '../appearance/generate/imagePrompts';
-import type {SheetFile} from '../appearance/sheetFile';
-
 import {CellThumb} from './CellThumb';
+import {DescribePicture} from './generate/DescribePicture';
+import type {GeneratedPicture, ImageGenerator} from './generate/imageGenerator';
+import type {ImageKind} from './generate/imagePrompts';
+import type {SheetFile} from './sheetFile';
 import {sheetCells, type CellRect} from './sheetFrames';
 import styles from './spritePickerDialog.module.css';
 

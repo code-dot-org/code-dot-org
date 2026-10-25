@@ -24,7 +24,7 @@ import {
 const coinSpin = stockSprite('coinSpin')!;
 const player = stockSprite('player')!;
 
-/** An empty project — neither `sprites/` nor `animations/` exists yet. */
+/** An empty project — no `sprites/` yet. */
 const project = (): MultiFileSource => ({
   files: {},
   folders: {},

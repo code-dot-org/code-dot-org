@@ -431,7 +431,6 @@ describe('the language on each file', () => {
     actor: 'actor',
     rule: 'rule',
     map: 'map',
-    anim: 'anim',
     effect: 'effect',
   };
 

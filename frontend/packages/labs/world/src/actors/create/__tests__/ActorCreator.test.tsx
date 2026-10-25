@@ -310,8 +310,8 @@ describe('the picture step', () => {
   });
 
   it('hands back an animation by its own id', () => {
-    // What a `play animation` row stores is the animation's key inside its
-    // `.anim` file, which is not always the file's stem.
+    // The library's id, which names the animation to copy: not always the
+    // stem of the picture it reads.
     show();
     pastOrigin('Create my own');
     fireEvent.click(screen.getByRole('button', {name: 'Coin Spin'}));
