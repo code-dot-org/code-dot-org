@@ -457,6 +457,8 @@ const BREAKOUT_SCREEN = JSON.stringify({
   // learner adds the menu themselves (`maps/declareEvents`); here the
   // fixture ships with it.
   events: [{name: 'quit'}],
+  // The Viewport docked to the whole screen (specs/DOCKING_PLAN.md).
+  layout: {dock: 'Game'},
   blocks: {
     blocks: {
       languageVersion: 0,

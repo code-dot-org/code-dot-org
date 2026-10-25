@@ -93,6 +93,13 @@ compiled load keeps every key it does not compile.
 `gameScreen` docks its Viewport to the whole screen, and so does a new
 project. The scenarios follow.
 
+BUILT. `gameScreen` writes `layout: {dock: 'Game'}`, and Flappy's and
+Breakout's screens, written by hand, say the same; every game but tapper
+and novel (still worlds) is then docked. Their boxes already matched their
+screens, so nothing moved; a test compiles the starter, Flappy and
+Breakout, gives each a window of another shape, and finds the Viewport
+filling it. In the browser every scenario opens and plays as before.
+
 ### 4. Docking in the Screen editor
 
 While a placed interface actor is dragged on a Screen, the places it can

@@ -372,6 +372,8 @@ const FLAPPY_SCREEN = JSON.stringify(
     name: 'Flappy',
     size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
     tile: {width: TILE_SIZE, height: TILE_SIZE},
+    // The Viewport docked to the whole screen (specs/DOCKING_PLAN.md).
+    layout: {dock: 'Game'},
     // Said out loud although it is also the rule's default, because it is
     // the one number that decides how this game feels and it should be one
     // click from the screen a reader is already looking at. The

@@ -289,6 +289,10 @@ export const gameScreen = (
       size,
       tile: {width: TILE_SIZE, height: TILE_SIZE},
       ...data,
+      // The Viewport docked to the whole screen, so it is the screen's size
+      // in any window and an interface docked beside it takes its share
+      // (specs/DOCKING_PLAN.md).
+      layout: {dock: 'Game'},
       actors: [
         {
           type: 'actors/viewport',
