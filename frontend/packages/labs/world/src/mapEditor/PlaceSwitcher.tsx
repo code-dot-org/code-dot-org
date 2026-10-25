@@ -3,8 +3,9 @@
 // specs/SHELL_PLAN.md, step 4).
 //
 // A section of screens and a section of maps, each with a way to add one.
-// The entries are names for now: a picture of a Screen or a Map needs a
-// renderer and a place in the project to keep it.
+// Each is its picture over its name: the place as the game shows it, kept
+// beside it in the project (`placePicture`). One not yet opened since has
+// no picture, and shows its kind's icon on a plain tile instead.
 
 import {Button, Typography} from '@mui/material';
 
@@ -16,6 +17,8 @@ import styles from './placeSwitcher.module.css';
 export interface Place {
   fileId: string;
   name: string;
+  /** What it looks like, as a data URL, once the editor has painted it. */
+  picture?: string;
 }
 
 export interface PlaceSwitcherProps {
@@ -59,10 +62,17 @@ export const PlaceSwitcher = ({
                 place.fileId === currentId ? onClose() : onOpen(place.fileId)
               }
             >
-              <FontAwesomeV6Icon
-                iconName={folder === 'screens' ? 'display' : 'map'}
-                iconStyle="solid"
-              />
+              {/* The name says which; the picture is to recognise it by. */}
+              <span className={styles.picture}>
+                {place.picture ? (
+                  <img src={place.picture} alt="" />
+                ) : (
+                  <FontAwesomeV6Icon
+                    iconName={folder === 'screens' ? 'display' : 'map'}
+                    iconStyle="solid"
+                  />
+                )}
+              </span>
               <span>{place.name}</span>
             </button>
           </li>

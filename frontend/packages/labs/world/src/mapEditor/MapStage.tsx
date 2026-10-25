@@ -220,6 +220,10 @@ const DIVIDER_REACH = 6;
  * rather than a square on it, so it reads as "move this line".
  */
 const EDGE_GRIP = 28;
+/** How big a place's picture is on its longer side, in pixels. */
+const PICTURE_SIZE = 240;
+/** How long after the last change a place's picture is painted, in ms. */
+const PICTURE_DELAY = 1500;
 /** The corner mark on a placement whose workspace holds blocks. */
 const SCRIPT = '#7c4dff';
 const DEG2RAD = Math.PI / 180;
@@ -293,6 +297,12 @@ export interface MapStageProps {
    * usual keys while the stage has focus.
    */
   onUndo?: () => void;
+  /**
+   * The place's picture, painted plain a while after it last changed, for
+   * the switcher (specs/SHELL_FINISH_PLAN.md, step 1). Not asked in a
+   * read-only project.
+   */
+  onPicture?: (picture: string) => void;
   onRedo?: () => void;
   /**
    * Whether a placement can be docked here: on a Screen, a placement dragged
@@ -517,6 +527,7 @@ export const MapStage = ({
   onRedo,
   canDock = false,
   incoming = null,
+  onPicture,
   eventsFor,
   worldCameras = [],
   worldCameraEditor,
@@ -2723,12 +2734,19 @@ export const MapStage = ({
   // space) the map region, grid, its border, the placed actors, and the ghost.
   /** What the map region is painted with, under its layers' images. */
   const skyColor = world?.header.backgroundColor?.color ?? MAP_BG;
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas || !view || size.w === 0 || size.h === 0) {
-      return;
-    }
-    const dpr = window.devicePixelRatio || 1;
+  /**
+   * Paint the scene onto `canvas` through `view`. DECORATED, it is the
+   * stage: the grid, the border, the selection, the marks and the ghosts.
+   * Plain, it is the place as the game would show it, which is what its
+   * picture in the switcher is (specs/SHELL_FINISH_PLAN.md, step 1).
+   */
+  const paint = (
+    canvas: HTMLCanvasElement,
+    view: View,
+    size: {w: number; h: number},
+    dpr: number,
+    decorate: boolean,
+  ) => {
     const bw = Math.round(size.w * dpr);
     const bh = Math.round(size.h * dpr);
     if (canvas.width !== bw) {
@@ -2755,35 +2773,37 @@ export const MapStage = ({
     ctx.fillStyle = skyColor;
     ctx.fillRect(0, 0, extent.w, extent.h);
 
-    ctx.strokeStyle = GRID;
-    ctx.lineWidth = 1 / view.scale; // ~1 CSS px regardless of zoom
-    ctx.beginPath();
-    for (let x = 0; x <= extent.w; x += map.tile.width) {
-      ctx.moveTo(x, 0);
-      ctx.lineTo(x, extent.h);
-    }
-    for (let y = 0; y <= extent.h; y += map.tile.height) {
-      ctx.moveTo(0, y);
-      ctx.lineTo(extent.w, y);
-    }
-    ctx.stroke();
+    if (decorate) {
+      ctx.strokeStyle = GRID;
+      ctx.lineWidth = 1 / view.scale; // ~1 CSS px regardless of zoom
+      ctx.beginPath();
+      for (let x = 0; x <= extent.w; x += map.tile.width) {
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, extent.h);
+      }
+      for (let y = 0; y <= extent.h; y += map.tile.height) {
+        ctx.moveTo(0, y);
+        ctx.lineTo(extent.w, y);
+      }
+      ctx.stroke();
 
-    ctx.strokeStyle = BORDER;
-    ctx.lineWidth = 2 / view.scale;
-    ctx.strokeRect(0, 0, extent.w, extent.h);
-
-    // What the player will actually see: a map bigger than the window has
-    // actors off screen. Drawn only when the two differ, because on a
-    // window-sized map this line would sit exactly under the border and mean
-    // nothing — which is the case for a one-room level that sets its view to
-    // its own size, and the reason the window is a prop.
-    if (extent.w !== visible.w || extent.h !== visible.h) {
-      ctx.save();
-      ctx.strokeStyle = VIEWPORT_EDGE;
+      ctx.strokeStyle = BORDER;
       ctx.lineWidth = 2 / view.scale;
-      ctx.setLineDash([6 / view.scale, 4 / view.scale]);
-      ctx.strokeRect(0, 0, visible.w, visible.h);
-      ctx.restore();
+      ctx.strokeRect(0, 0, extent.w, extent.h);
+
+      // What the player will actually see: a map bigger than the window has
+      // actors off screen. Drawn only when the two differ, because on a
+      // window-sized map this line would sit exactly under the border and mean
+      // nothing — which is the case for a one-room level that sets its view to
+      // its own size, and the reason the window is a prop.
+      if (extent.w !== visible.w || extent.h !== visible.h) {
+        ctx.save();
+        ctx.strokeStyle = VIEWPORT_EDGE;
+        ctx.lineWidth = 2 / view.scale;
+        ctx.setLineDash([6 / view.scale, 4 / view.scale]);
+        ctx.strokeRect(0, 0, visible.w, visible.h);
+        ctx.restore();
+      }
     }
 
     // Draw a sprite through its transform (translate → skew → rotate → scale),
@@ -3005,7 +3025,7 @@ export const MapStage = ({
         drawSprite(actor.type, t, 1, key, actor.id);
         transformById.set(actor.id, t);
         keyById.set(actor.id, key);
-        if (showIcons && hasScript(actor.blocks)) {
+        if (decorate && showIcons && hasScript(actor.blocks)) {
           markScripted(t, actor.type, key, actor.id);
         }
         if (actor.id === selectedId) {
@@ -3020,8 +3040,6 @@ export const MapStage = ({
         }
       }
     }
-    // Hover highlight (a lighter outline), drawn under the selection outline and
-    // skipped when the hovered actor is already the selected one.
     // What each Viewport holds, drawn inside its box: the held map's
     // placements at their own positions from the box's top-left corner,
     // clipped to the box and dimmed, over the Viewport's own face.
@@ -3049,12 +3067,20 @@ export const MapStage = ({
         drawSprite(
           inside.type,
           worldTransformOf(inside, held.actors, scales),
-          0.45,
+          // Dimmed on the stage, which is not where they are edited; whole
+          // in a picture, which is the game as it is shown.
+          decorate ? 0.45 : 1,
           placementKey(inside.type, inside.properties),
         );
       }
       ctx.restore();
     }
+    // The rest is the editor's, not the place's.
+    if (!decorate) {
+      return;
+    }
+    // Hover highlight (a lighter outline), drawn under the selection outline and
+    // skipped when the hovered actor is already the selected one.
     if (hoveredTransform && hoveredId !== selectedId) {
       // While POINTING a reference, the hover says what the click will choose
       // rather than what it will select — so it wears the reference color,
@@ -3191,6 +3217,49 @@ export const MapStage = ({
         0.5,
       );
     }
+  };
+  const paintRef = useRef(paint);
+  paintRef.current = paint;
+  // THE PLACE'S PICTURE: painted plain, PICTURE_SIZE on its longer side, a
+  // while after the last change — so a burst of edits is one picture, and
+  // the pictures of its actors, which arrive after the first paint, are in
+  // it. Not where the stage has never been measured, which is a test's DOM
+  // with no canvas to paint on.
+  const measured = size.w > 0 && size.h > 0;
+  useEffect(() => {
+    if (!onPicture || !measured) {
+      return;
+    }
+    const handle = window.setTimeout(() => {
+      const scale = PICTURE_SIZE / Math.max(extent.w, extent.h, 1);
+      const w = Math.max(1, Math.round(extent.w * scale));
+      const h = Math.max(1, Math.round(extent.h * scale));
+      const canvas = document.createElement('canvas');
+      paintRef.current(canvas, {scale, x: 0, y: 0}, {w, h}, 1, false);
+      try {
+        onPicture(canvas.toDataURL('image/png'));
+      } catch {
+        // A canvas tainted by an image from elsewhere cannot be read; the
+        // place keeps the picture it had.
+      }
+    }, PICTURE_DELAY);
+    return () => window.clearTimeout(handle);
+  }, [
+    onPicture,
+    measured,
+    map,
+    images,
+    pictures,
+    backgroundImages,
+    heldMaps,
+    skyColor,
+  ]);
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || !view || size.w === 0 || size.h === 0) {
+      return;
+    }
+    paint(canvas, view, size, window.devicePixelRatio || 1, true);
   }, [
     view,
     size,

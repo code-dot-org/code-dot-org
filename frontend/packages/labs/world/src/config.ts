@@ -14,6 +14,7 @@ import {FILE_ICONS} from './fileIcons';
 import {fileLabel} from './files/fileLabel';
 import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
+import {followPlaces, PICTURE_EXTENSION} from './mapEditor/placePicture';
 import {ScreenEditor} from './mapEditor/ScreenEditor';
 import {WorldEditor} from './mapEditor/WorldEditor';
 import {whyKeepFile} from './rules/deleteGuard';
@@ -89,10 +90,13 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   // A `.sheet` belongs to the `.png` of the same name: the image editor writes
   // it when an image is made a spritesheet and deletes it when it stops being
   // one, so it is not a file to open (appearance/sheetFile).
-  hiddenFileTypes: ['sheet'],
+  hiddenFileTypes: ['sheet', PICTURE_EXTENSION],
   // A `.sheet` is hidden, so nothing can move, rename or delete it by hand: it
   // goes wherever its `.png` goes, in the same write (appearance/sheetCompanions).
-  reconcileSource: followImages,
+  // …and a Screen's or Map's `.picture` goes wherever its place goes
+  // (mapEditor/placePicture).
+  reconcileSource: (next, previous) =>
+    followPlaces(followImages(next, previous), previous),
   // The tree's delete asks what the rules panel asks: a rule another rule
   // requires cannot go, and the refusal says which (rules/deleteGuard). Two
   // routes to the same act, one answer.

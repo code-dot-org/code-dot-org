@@ -5,6 +5,7 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {PICTURE_EXTENSION} from '../mapEditor/placePicture';
 import {resolveRuleContents} from '../rules/ruleReference';
 import {isSoundFile} from '../sound/soundFiles';
 
@@ -65,6 +66,11 @@ export function projectFiles(
     // empty module in the bundle is a module the compiler could be asked to
     // resolve. The driver gets those separately (projectAssets).
     if (file.url) {
+      continue;
+    }
+    // A place's picture is for the switcher, not the program: left out, so
+    // drawing one does not recompile the game (mapEditor/placePicture).
+    if (file.name.endsWith(`.${PICTURE_EXTENSION}`)) {
       continue;
     }
     // A rule nobody has edited is a REFERENCE — the library's rule, named

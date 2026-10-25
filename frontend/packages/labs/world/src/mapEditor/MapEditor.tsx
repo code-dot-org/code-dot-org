@@ -93,6 +93,7 @@ import {
 import {MapStage, type WorldCameraEditor} from './MapStage';
 import {PlaceHeading} from './PlaceHeading';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
+import {withPlacePicture} from './placePicture';
 import {MAIN_CAMERA, startingCamera} from './worldCameraCode';
 import {worldCameras} from './worldCameras';
 import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
@@ -342,6 +343,23 @@ export const MapEditor = ({
     actorIconImage(icons[path] ?? '') ?? thumbnails[path];
   // The picker template to PLACE; null is the stage's select mode.
   const [selected, setSelected] = useState<string | null>(null);
+  /**
+   * The place's picture, written beside it when it is new or different
+   * (`placePicture`). Through a ref, since it is asked a while after the
+   * render that made it, and an older project would undo what came since.
+   */
+  const latestSources = useRef(currentSources);
+  latestSources.current = currentSources;
+  const keepPicture = useCallback(
+    (picture: string) => {
+      const now = latestSources.current;
+      const next = withPlacePicture(now.source, fileId, picture);
+      if (next !== now.source) {
+        updateSources({...now, source: next});
+      }
+    },
+    [fileId, updateSources],
+  );
   /** The kind being dragged out of the palette, while it is (`ActorPalette`). */
   const [incoming, setIncoming] = useState<string | null>(null);
   /**
@@ -906,6 +924,7 @@ export const MapEditor = ({
         />
         <MapStage
           incoming={incoming}
+          onPicture={isReadOnly ? undefined : keepPicture}
           doc={map}
           onDocChange={commit}
           onDocPreview={setLiveMap}

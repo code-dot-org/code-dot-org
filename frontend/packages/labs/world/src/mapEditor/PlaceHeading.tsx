@@ -20,6 +20,7 @@ import {entryFileOf} from '../mainWorld';
 import {filePath, projectFiles} from '../runtime/projectFiles';
 
 import styles from './placeHeading.module.css';
+import {placePicture} from './placePicture';
 import {PlaceSwitcher, type Place} from './PlaceSwitcher';
 
 export interface PlaceHeadingProps {
@@ -33,7 +34,11 @@ const placesOf = (source: MultiFileSource, extensions: RegExp): Place[] =>
     .filter(
       (file: ProjectFile) => shouldShowFile(file) && extensions.test(file.name),
     )
-    .map(file => ({fileId: file.id, name: fileLabel(file)}))
+    .map(file => ({
+      fileId: file.id,
+      name: fileLabel(file),
+      picture: placePicture(source, file.id),
+    }))
     .sort((a, b) => a.name.localeCompare(b.name));
 
 export const PlaceHeading = ({fileId, isReadOnly}: PlaceHeadingProps) => {
