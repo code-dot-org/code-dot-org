@@ -1,7 +1,8 @@
 // One animation, playing, at whatever size the caller draws it.
 //
-// Lifted out of `AnimationPickerDialog` so a second surface can show the same
-// thing: the Actor Creator's picture step offers the project's animations
+// Lifted out of the grid of the project's animations, which went with the
+// folder buttons, so another surface could show the same thing: the Actor
+// Creator's picture step offers the project's animations
 // beside its pictures, and an animation that did not move there would be the
 // first frame of something, which is the one reading a still cannot give
 // (specs/ACTOR_CREATION_WIZARD.md).

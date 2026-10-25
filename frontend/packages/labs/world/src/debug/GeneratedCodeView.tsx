@@ -35,7 +35,7 @@ const DEBOUNCE_MS = 300;
  * for opening a `define block`'s body: the pane is the same pane and what
  * changed is what is in it. Swapped around each Blockly editor rather than
  * around Codebridge's whole `Workspace` (`config.editorComponents`), so the
- * file tabs and the folder menus stay where they are and a reader can move
+ * breadcrumb stays where it is and a reader can move
  * between files without going back first.
  *
  * FROM THE FILE, NOT FROM A WORKSPACE, and that is not a detail. With a `define

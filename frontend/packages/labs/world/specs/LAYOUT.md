@@ -147,7 +147,9 @@ keeping the size it was injected with.
 
 - **A level that turns the browser off** (`levelData.showFileBrowser: false`)
   and stage 2 must not fight: the level's answer is final, stage 2 only ever
-  removes a browser the learner would otherwise have.
+  removes a browser the learner would otherwise have. (Moot since: the
+  browser, the folder buttons after it, and the setting are all gone —
+  SHELL_FINISH_PLAN.md, step 5.)
 - **Whether the browser should come back on its own** when the window widens.
   Coming back is consistent (nothing was chosen, only accommodated), but a
   panel that reappears while you type is its own annoyance. Suggest: it returns,

@@ -1,42 +1,28 @@
-// The file menus: one button per folder, in the tab bar.
+// The host of a World project's file acts: the component every door asks
+// when it wants a file made, uploaded, opened, renamed, cloned, deleted or
+// drawn (`files/fileActs`), an actor created or deleted (`actors/actorCreate`,
+// `actors/actorDelete`), and the dialogs those need — the name prompt, the
+// Actor Creator, a picture drawn from words. It draws nothing of its own.
 //
-// See `folderMenus` for why a World project is read this way rather than as a
-// tree. This is the UI half: a button that opens the folder, the two ways to
-// get a new one at the top, and everything already there below.
+// It was the file menus, one button per folder in the tab bar, which were the
+// last way to browse a project's files after the tree and the tabs went. They
+// are gone too (specs/SHELL_FINISH_PLAN.md, step 5): each kind of file has its
+// way in where it is used — a picture from the look that shows it, an effect
+// from the Effects tab, a rule from Rules in Play — and those ways in ask this
+// rather than doing the act a second time.
 //
-// EVERY ACT HERE IS THE TREE'S ACT. Opening and deleting go through the same
-// `useFileOperations` and the same prompts the file browser uses, including the
-// lab's veto on deleting a rule another rule requires
-// (`config.blockFileDeletion`). Two routes to one behavior; nothing new is
-// possible from here, which is what makes this an alternative reading rather
-// than a second file system.
+// RENAME MEANS THE THING. A file's name is what it DECLARES — `player.actor`
+// reads as "Player", the word its blocks and every dropdown already use — so
+// the name worth changing is that one, and the file's stem is made from it so
+// the two cannot drift apart. Every reference moves with it
+// (`files/renameThing`).
 //
-// RENAME MEANS THE THING. These rows show what a file DECLARES —
-// `player.actor` reads as "Player", the word its blocks and every dropdown
-// already use — so the name worth changing is that one, and the file's stem is
-// made from it so the two cannot drift apart. Every reference moves with it
-// (`files/renameThing`). The tree still renames a FILE, which is a different
-// act and leaves the thing inside it called what it was.
-//
-// A MISSING FOLDER IS NOT A MISSING MENU. A project need not have all nine — a
-// scenario declares the folders it uses — and both ways in work regardless:
-// `Import…` because a shelf makes the folder it writes into, and `New` because
-// this makes it in the same write as the file (`make`). It was offered only
-// where the folder already existed, which meant a project with no `effects/`
-// could take an effect from the shelf and could not make one, for a reason
-// nobody could see.
+// A MISSING FOLDER IS NOT A MISSING KIND. A project need not have every folder
+// — a scenario declares the folders it uses — and making one makes its folder
+// in the same write as the file (`make`). A shelf likewise makes the folder it
+// writes into.
 
 import {
-  Divider,
-  IconButton,
-  ListItemIcon,
-  ListItemText,
-  Menu,
-  MenuItem,
-  Typography,
-} from '@mui/material';
-import {
-  createRef,
   useCallback,
   useEffect,
   useMemo,
@@ -58,29 +44,21 @@ import {
   useFileUpload,
   usePrompts,
 } from '@code-dot-org/codebridge';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {DashboardApiClient} from '@code-dot-org/core/api';
 import type {ProjectFile, MultiFileSource} from '@code-dot-org/core/api';
-import {IconButtonWithTooltip} from '@code-dot-org/lab/components';
 import {useSources} from '@code-dot-org/lab/contexts';
 import {labActions, useAppSelector} from '@code-dot-org/lab/redux';
 
 import {setActorDeleteHandler} from '../actors/actorDelete';
-import {ActorPickerDialog, type ActorTile} from '../actors/ActorPickerDialog';
 import {isUnder, type PaletteTab} from '../actors/actorPurpose';
 import {setActorCreateHandler} from '../actors/create/actorCreate';
 import {ActorCreator, type ActorDraft} from '../actors/create/ActorCreator';
 import {lookOf, withLook, withScale} from '../actors/create/actorLook';
 import {newActorFile} from '../actors/create/newActor';
-import {requestActorEnhance} from '../actors/enhance/actorEnhance';
 import {importStockActorAsData} from '../actors/importStockActor';
 import {STOCK_ACTORS, stockActorById} from '../actors/stock';
-import {AnimationPickerDialog} from '../animationEditor/AnimationPickerDialog';
 import {parseAnim} from '../animationEditor/animDocument';
-import {SpritePickerDialog} from '../animationEditor/SpritePickerDialog';
 import {offersActor, useAppBuilder} from '../appBuilder';
-import {BackgroundPickerDialog} from '../appearance/BackgroundPickerDialog';
 import {chooseImageGenerator} from '../appearance/generate/chooseImageGenerator';
 import type {
   GeneratedPicture,
@@ -107,7 +85,6 @@ import {
   SCREENS_FOLDER,
   SCREENS_MENU,
   SPRITES_FOLDER,
-  WORLDS_FOLDER,
   type FolderMenu,
   type Makeable,
 } from './folderMenus';
@@ -121,34 +98,7 @@ interface BuiltActor {
   path: string;
 }
 
-/** The file the row menu is about, and what it hangs off. */
-interface RowMenu {
-  file: ProjectFile;
-  /** What the row SHOWED, which is what a menu about it should say. */
-  name: string;
-  anchor: HTMLElement;
-  /**
-   * Whether this kind can be GIVEN something (`folderMenus.enhances`).
-   *
-   * Carried on the row rather than read off the open folder menu, because the
-   * actors reach this menu from a grid that is not one (`onOptions` below) and
-   * there is no open folder menu to ask.
-   */
-  enhances: boolean;
-}
-
-export interface FileMenusProps {
-  /**
-   * Whether the folder buttons are drawn. OFF for a level with nothing to
-   * browse (`levelData.showFileBrowser`), where this is still mounted: the
-   * dialogs it owns are asked for from elsewhere — the Actor Creator from the
-   * map editor's palette (`actors/create/actorCreate`) — and a seam with
-   * nobody behind it answers "nothing" to a learner who pressed a button.
-   */
-  menus?: boolean;
-}
-
-export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
+export const FileMenus = () => {
   const ops = useFileOperations();
   // A rename rewrites the WHOLE project in one go — the file, its contents and
   // every reference to it — which is a write `useFileOperations` has no verb
@@ -160,41 +110,12 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
   const isReadOnly = useAppSelector(labActions.isReadOnlyWorkspace);
   /** What scopes an uploaded asset to this project. */
   const channelId = useAppSelector(state => state.lab.channel?.id);
-  const [open, setOpen] = useState<{menu: FolderMenu; anchor: HTMLElement}>();
-  /**
-   * Whether the actor grid is up.
-   *
-   * The actors read as a grid rather than a list, because an actor is a thing
-   * you can see and the lab draws it everywhere else it is named
-   * (`actors/ActorPickerDialog`). Every act in it is still this component's —
-   * the same `make`, the same shelf, the same row menu — so the two readings
-   * cannot drift.
-   */
-  const [picking, setPicking] = useState(false);
-  /**
-   * …and whether the picture palette is.
-   *
-   * The same reading for the same reason, and the SAME DIALOG: choosing a
-   * picture to draw with and choosing one to open are one grid of the project's
-   * pictures, differing in what a press means (`SpritePickerDialog`).
-   */
-  const [painting, setPainting] = useState(false);
-  /** …and whether the animations are, which is the same grid again, running. */
-  const [playing, setPlaying] = useState(false);
-  /**
-   * …and whether the backdrops are.
-   *
-   * The same reading once more, at the size the stock shelf shows the same
-   * pictures at: a backdrop is a place, and a place is recognized rather than
-   * read (`appearance/BackgroundPickerDialog`).
-   */
-  const [staging, setStaging] = useState(false);
   /**
    * …and whether the Actor Creator is up.
    *
-   * Not a grid: a sequence of questions, of which one is built
-   * (`actors/create/ActorCreator`). It stands where `New` stood, because that
-   * is the moment a learner has the question it asks.
+   * A sequence of questions, of which one is built
+   * (`actors/create/ActorCreator`), asked for from the Actor Palette's Add
+   * New Actor (`actors/create/actorCreate`).
    */
   const [creating, setCreating] = useState(false);
   /**
@@ -211,20 +132,10 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
    * (specs/PURPOSE_PLAN.md).
    */
   const [creatingFor, setCreatingFor] = useState<PaletteTab>();
-  const [row, setRow] = useState<RowMenu>();
-  // The tolerant form: this renders inside the lab, which provides a theme,
-  // and in a bare tree in tests, which does not — and a menu is not worth a
-  // provider to mount.
-  const {theme} = useTheme(true);
   const uploading = useFileUpload();
   /** The one hidden input every folder's `Upload…` opens, and who asked. */
   const fileInput = useRef<HTMLInputElement>(null);
   const pickingFor = useRef<string | undefined>(undefined);
-  /** What each menu hangs off — one per button, since a click reports none. */
-  const anchors = useMemo(
-    () => FOLDER_MENUS.map(() => createRef<HTMLSpanElement>()),
-    [],
-  );
 
   /** Every folder the project has, by name — the id is what a write needs. */
   const folderIds = useMemo(
@@ -243,8 +154,8 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
    *
    * `player.actor` is called "Player" everywhere else a learner looks — on its
    * own blocks, in every dropdown that offers it, in the map editor — and the
-   * file name is where that lives rather than what it is. So the menus say the
-   * word the rest of the lab says.
+   * file name is where that lives rather than what it is. So the Actor
+   * Creator's list of actors to copy says the word the rest of the lab says.
    *
    * A file that declares NOTHING is titled from its own stem, which is the
    * same fallback every dropdown makes: a map is an arrangement and a `.png`
@@ -289,34 +200,22 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     [ops.source, folderIds, config],
   );
 
-  const close = useCallback(() => setOpen(undefined), []);
-
   /**
-   * Close the menus, and wait for them to be gone before opening a dialog.
+   * Close the Creator, and wait a tick before opening a dialog.
    *
-   * TWO FOCUS TRAPS FIGHT. A MUI `Menu` contains focus and so does the prompt
-   * dialog (`focus-trap-react`), and each pulls it back from the other the
-   * moment it leaves — forever, until the stack runs out: "Maximum call stack
-   * size exceeded", twice, on every rename. Closing a menu is a state update,
-   * so it has not happened yet when the dialog opens in the same tick; this
-   * yields to let React commit first.
-   *
-   * EVERY GRID, not only the actors'. Each of these dialogs traps focus too, so
-   * one left standing puts the shelf it just opened BEHIND it — visible,
-   * unreachable, and unclosable without dismissing the grid on top of it. That
-   * shipped for the sprites and the animations: their Import and New tiles led
-   * to a dialog nobody could touch. Whichever grid asked, all of them go.
+   * TWO FOCUS TRAPS FIGHT. A door is often a MUI `Menu`, which contains
+   * focus, and so does the prompt dialog (`focus-trap-react`); each pulls it
+   * back from the other the moment it leaves — forever, until the stack runs
+   * out: "Maximum call stack size exceeded", twice, on every rename. The door
+   * closing its menu is a state update, so it has not happened yet when the
+   * dialog would open in the same tick; this yields to let React commit
+   * first. A dialog left standing would likewise put the one it opened
+   * BEHIND it, visible and unreachable.
    */
   const thenAsk = useCallback(async () => {
-    setRow(undefined);
-    setPicking(false);
-    setPainting(false);
-    setPlaying(false);
-    setStaging(false);
     setCreating(false);
-    close();
     await new Promise(resolve => setTimeout(resolve, 0));
-  }, [close]);
+  }, []);
 
   /**
    * Make one, from a name and the extension the folder gives it.
@@ -366,8 +265,8 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
         return undefined;
       }
       // ONE NAME, SAID ONCE: it becomes the file's stem and the thing's own
-      // name, so the menus — which read what a file declares — call it what
-      // the learner just called it (`files/newThing`).
+      // name, so everywhere that reads what a file declares calls it what the
+      // learner just called it (`files/newThing`).
       const fileName = fileNameFor(name, makeable.extension);
       const language = languageForFileName(config, fileName);
       const seed = seedFor(makeable.extension, name);
@@ -692,7 +591,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     [thenAsk, commit],
   );
 
-  /** Who asked for the Creator from outside these menus, and their tab. */
+  /** Who asked for the Creator, and the tab to put back in front after. */
   const asked = useRef<{
     settle: (path: string | undefined) => void;
     returnTo?: string;
@@ -761,10 +660,11 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
   /**
    * Take a file of the learner's own into this folder.
    *
-   * The third way in, beside making one and taking one from the shelf — and
-   * the only one that was ever in the file tree, whose header button put every
-   * upload at the ROOT. Here it lands in the folder whose menu asked for it,
-   * which is what decides whether a picture is a sprite or a backdrop.
+   * The third way in, beside making one and taking one from the shelf. It
+   * lands in the folder the door asked for — the look's Pictures menu asks
+   * for `sprites/`, the Background field for `backgrounds/` — which is what
+   * decides whether a picture is a sprite or a backdrop. The file tree's
+   * upload put every one at the ROOT.
    */
   const uploadInto = useCallback(
     async (menu: FolderMenu) => {
@@ -796,36 +696,6 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     [ops.source, updateSources, currentSources, uploading, alert],
   );
 
-  const importInto = useCallback(
-    async (menu: FolderMenu) => {
-      await thenAsk();
-      await menu.shelf?.();
-    },
-    [thenAsk],
-  );
-
-  /**
-   * Give this actor something it does not have yet.
-   *
-   * On the file's OWN menu, beside Rename and Clone, because that is where
-   * everything done TO one file lives — and because choosing the actor is half
-   * the question, already answered by whose row this is (`actors/enhance`).
-   */
-  const enhance = useCallback(
-    async (file: ProjectFile, name: string) => {
-      await thenAsk();
-      await requestActorEnhance({
-        kind: 'actor',
-        path: (filePath(ops.source, file.id) ?? file.name).replace(
-          /\.[^./]+$/,
-          '',
-        ),
-        name,
-      });
-    },
-    [thenAsk, ops.source],
-  );
-
   const remove = useCallback(
     async (file: ProjectFile) => {
       await thenAsk();
@@ -851,8 +721,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
   /**
    * A file made, uploaded, opened, renamed, cloned or deleted, asked for by
    * the place its kind is used — the switcher over the map editor, a look
-   * in the Actor Editor, the Theme field (`files/fileActs`). The same acts
-   * a folder's row menu offers, with the same prompts.
+   * in the Actor Editor, the Theme field (`files/fileActs`).
    */
   useEffect(() => {
     setFileActHandler(async request => {
@@ -1002,16 +871,9 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     return () => setActorDeleteHandler(null);
   }, [isReadOnly, thenAsk, config, confirm, replaceSources, currentSources]);
 
-  const files = open ? filesIn(open.menu.folder) : [];
-
-  /** The pictures under `sprites/`, and those decoded to draw them. */
-  const spriteFiles = useMemo(
-    () => (painting ? filesIn(SPRITES_FOLDER) : []),
-    [painting, filesIn],
-  );
   /**
-   * The project's pictures, decoded — what a sprite tile shows and what an
-   * animation's frames are drawn from.
+   * The project's pictures, decoded — what the Actor Creator's picture step
+   * shows and what an animation's frames are drawn from.
    *
    * ASKED FOR ALWAYS, where this used to ask only while a grid was up. The
    * saving was imaginary: a decode is remembered per picture
@@ -1023,7 +885,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
    * Actor Creator was requested while the wizard was up and arrived after it
    * closed — by which time this had been handed `undefined`, and the decode
    * landed in a torn-down effect. It was never requested again, `requested`
-   * having already recorded it, so the sprites shelf could not show that
+   * having already recorded it, so the sprites grid could not show that
    * picture for the rest of the session while the `set sprite` picker, whose
    * own hook was never switched off, showed it perfectly. That was reported
    * exactly so.
@@ -1034,50 +896,9 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
   const decoded = useProjectImages(ops.source);
 
   /**
-   * The animation files, each with the FIRST animation it holds.
-   *
-   * The first because that is the one the editor opens on, and because a tile
-   * showing all of a file's animations would be a second grid inside the first
-   * (`AnimationPickerDialog`).
-   */
-  const animationTiles = useMemo(
-    () =>
-      playing
-        ? filesIn(ANIMATIONS_FOLDER).map(({file, name}) => ({
-            fileId: file.id,
-            name,
-            animation: Object.values(
-              parseAnim(file.contents ?? '').animations,
-            )[0],
-          }))
-        : [],
-    [playing, filesIn],
-  );
-
-  /**
-   * The backdrops, as the shelf needs them.
-   *
-   * The `url` and not the decoded image: a backdrop is drawn with an `<img>`
-   * stretched over the tile, the way the world stretches it over the viewport,
-   * and every image file in a project carries the URL its bytes are at
-   * (`appearance/useProjectImages` reads the same field).
-   */
-  const backgroundTiles = useMemo(
-    () =>
-      staging
-        ? filesIn(BACKGROUNDS_FOLDER).map(({file, name}) => ({
-            fileId: file.id,
-            name,
-            url: file.url,
-          }))
-        : [],
-    [staging, filesIn],
-  );
-
-  /**
    * The project's actors as things to COPY, and the library's as templates.
    *
-   * Read only while the wizard is up, like every other grid's rows here. The
+   * Read only while the wizard is up. The
    * picture is the one every other surface draws an actor by: its elected
    * symbol, else the sandbox's rendering of it (`blockly/actorThumbnails`).
    */
@@ -1187,7 +1008,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
    *
    * NOT THROUGH `useFileUpload`, though it is the same road, and the
    * difference is one thing that hook does at the end: it activates the file
-   * it makes. That is right for an upload from the file menus and wrong for a
+   * it makes. That is right for an upload a door asked for and wrong for a
    * wizard still asking questions — a learner who keeps a picture from each of
    * two prompts would find two editors open behind a dialog they have not
    * finished with, having asked for neither. So the upload is called directly
@@ -1267,244 +1088,8 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
     [config, channelId, folderIds, updateSources, currentSources],
   );
 
-  /** The folder menu the animations' grid stands in for. */
-  const animationsMenu = FOLDER_MENUS.find(
-    menu => menu.folder === ANIMATIONS_FOLDER,
-  ) as FolderMenu;
-
-  /** …and the one the backdrops' shelf stands in for. */
-  const backgroundsMenu = FOLDER_MENUS.find(
-    menu => menu.folder === BACKGROUNDS_FOLDER,
-  ) as FolderMenu;
-
-  /** The folder menu the sprites' palette stands in for. */
-  const spritesMenu = FOLDER_MENUS.find(
-    menu => menu.folder === SPRITES_FOLDER,
-  ) as FolderMenu;
-
-  /** The folder menu the actors' grid stands in for — its `New`, its shelf. */
-  const actorsMenu = FOLDER_MENUS.find(
-    menu => menu.folder === ACTORS_FOLDER,
-  ) as FolderMenu;
-
-  /**
-   * The actors, as the grid needs them.
-   *
-   * The `moduleKey` is what the picture registries are keyed by — a file's
-   * path without its extension, which is how every other surface asks for an
-   * actor's picture (`blockly/moduleOptions.pictured`).
-   */
-  const actorTiles: ActorTile[] = useMemo(
-    () =>
-      picking
-        ? filesIn(ACTORS_FOLDER).map(({file, name}) => ({
-            fileId: file.id,
-            name,
-            moduleKey: (filePath(ops.source, file.id) ?? file.name).replace(
-              /\.[^./]+$/,
-              '',
-            ),
-          }))
-        : [],
-    [picking, filesIn, ops.source],
-  );
-
   return (
-    <div className={styles.menus}>
-      {(menus ? FOLDER_MENUS : []).map((menu, at) => (
-        // The lab's icon button, not a bare MUI one: its tooltip is the design
-        // system's and takes the theme, where MUI's own renders dark-on-light
-        // whatever the page is doing. It reports no event, so the menu hangs
-        // off the container it wraps.
-        <span key={menu.folder} ref={anchors[at]}>
-          <IconButtonWithTooltip
-            id={`files-${menu.folder}`}
-            label={menu.label}
-            icon={{iconName: menu.icon, iconStyle: 'solid'}}
-            type="tertiary"
-            color="gray"
-            buttonSize="xs"
-            tooltipSize="xs"
-            tooltipDirection="onBottom"
-            theme={theme}
-            onClick={() => {
-              // THE WORLD OPENS; it does not offer a list. There is one per
-              // project — a world is a whole program, nothing composes them,
-              // and the compiler has one entry — so a menu of one row asking
-              // which world you meant was a question with one answer
-              // (specs/MAP_EVENTS_PLAN.md).
-              //
-              // Falls through to the menu if a project somehow holds two, so
-              // that the button is never a dead end: opening the first and
-              // hiding the second would be worse than saying there are two.
-              if (menu.folder === WORLDS_FOLDER) {
-                // The Main Screen, in a project whose game is one.
-                const main = filesIn(SCREENS_FOLDER).find(
-                  ({file}) => file.name === 'main.screen',
-                );
-                if (main) {
-                  ops.activateFile(main.file.id);
-                  return;
-                }
-                const worlds = filesIn(WORLDS_FOLDER);
-                if (worlds.length === 1) {
-                  ops.activateFile(worlds[0].file.id);
-                  return;
-                }
-              }
-              if (menu.folder === ACTORS_FOLDER) {
-                setPicking(true);
-                return;
-              }
-              if (menu.folder === SPRITES_FOLDER) {
-                setPainting(true);
-                return;
-              }
-              if (menu.folder === ANIMATIONS_FOLDER) {
-                setPlaying(true);
-                return;
-              }
-              if (menu.folder === BACKGROUNDS_FOLDER) {
-                setStaging(true);
-                return;
-              }
-              setOpen(
-                anchors[at].current
-                  ? {menu, anchor: anchors[at].current!}
-                  : undefined,
-              );
-            }}
-          />
-        </span>
-      ))}
-      <Menu
-        open={Boolean(open)}
-        anchorEl={open?.anchor}
-        onClose={close}
-        anchorOrigin={{vertical: 'bottom', horizontal: 'left'}}
-        transformOrigin={{vertical: 'top', horizontal: 'left'}}
-        slotProps={{list: {'aria-label': open?.menu.label, dense: true}}}
-      >
-        {!isReadOnly &&
-          open?.menu.makes.map(makeable => (
-            <MenuItem
-              key={makeable.extension}
-              onClick={() => make(open.menu, makeable)}
-            >
-              <ListItemIcon className={styles.menuIcon}>
-                <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-              </ListItemIcon>
-              <ListItemText disableTypography>
-                <Typography variant="body4">{makeable.label}</Typography>
-              </ListItemText>
-            </MenuItem>
-          ))}
-        {!isReadOnly && open?.menu.shelf && (
-          <MenuItem onClick={() => importInto(open.menu)}>
-            <ListItemIcon className={styles.menuIcon}>
-              <FontAwesomeV6Icon iconName="download" iconStyle="solid" />
-            </ListItemIcon>
-            <ListItemText disableTypography>
-              <Typography variant="body4">Import…</Typography>
-            </ListItemText>
-          </MenuItem>
-        )}
-        {!isReadOnly && open?.menu.uploads && uploading.enabled && (
-          <MenuItem onClick={() => uploadInto(open.menu)}>
-            <ListItemIcon className={styles.menuIcon}>
-              <FontAwesomeV6Icon iconName="upload" iconStyle="solid" />
-            </ListItemIcon>
-            <ListItemText disableTypography>
-              <Typography variant="body4">Upload…</Typography>
-            </ListItemText>
-          </MenuItem>
-        )}
-        {!isReadOnly && <Divider />}
-        {/* What is not there yet, said rather than left blank — the wording
-            every empty dropdown in this lab uses (`blockly/moduleOptions`). */}
-        {files.length === 0 && (
-          <MenuItem disabled>
-            <ListItemText disableTypography>
-              <Typography variant="body4">
-                {`(no ${open?.menu.label.toLowerCase()} yet)`}
-              </Typography>
-            </ListItemText>
-          </MenuItem>
-        )}
-        {files.map(({file, name}) => (
-          <MenuItem
-            key={file.id}
-            selected={Boolean(file.active)}
-            onClick={() => {
-              ops.activateFile(file.id);
-              close();
-            }}
-          >
-            <ListItemText disableTypography>
-              <Typography variant="body4">{name}</Typography>
-            </ListItemText>
-            {!isReadOnly && (
-              // A control inside a menu item, which is why it stops the click
-              // reaching the item: the row OPENS the file and this asks what
-              // else to do with it, the way the tree's `…` does.
-              <IconButton
-                aria-label={`Options for ${name}`}
-                size="extraSmall"
-                color="tertiary"
-                className={styles.rowOptions}
-                onClick={event => {
-                  event.stopPropagation();
-                  setRow({
-                    file,
-                    name,
-                    anchor: event.currentTarget,
-                    enhances: Boolean(open?.menu.enhances),
-                  });
-                }}
-              >
-                <FontAwesomeV6Icon iconName="ellipsis-v" iconStyle="solid" />
-              </IconButton>
-            )}
-          </MenuItem>
-        ))}
-      </Menu>
-      {picking && (
-        <ActorPickerDialog
-          actors={actorTiles}
-          readOnly={isReadOnly}
-          onOpen={fileId => {
-            ops.activateFile(fileId);
-            setPicking(false);
-          }}
-          // THE WIZARD, where `New` used to prompt for a name and write an
-          // empty file. The prompt is step one's third door now
-          // (`actors/create/ActorCreator`).
-          onNew={() => {
-            setPicking(false);
-            setTimeout(() => {
-              setCreatingFor(undefined);
-              setCreating(true);
-            }, 0);
-          }}
-          // The grid closes and the menu opens off the ACTORS BUTTON, which is
-          // still there — rather than off the tile, which is not. Two focus
-          // traps in a stack is the bug `thenAsk` exists for, and the way past
-          // it is the same: let one go before the next arrives.
-          onOptions={actor => {
-            const file = ops.source.files[actor.fileId];
-            const anchor = anchors[FOLDER_MENUS.indexOf(actorsMenu)].current;
-            if (!file || !anchor) {
-              return;
-            }
-            setPicking(false);
-            setTimeout(
-              () => setRow({file, name: actor.name, anchor, enhances: true}),
-              0,
-            );
-          }}
-          onCancel={() => setPicking(false)}
-        />
-      )}
+    <>
       {creating && (
         <ActorCreator
           actors={copyable}
@@ -1536,85 +1121,6 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
           }}
         />
       )}
-      {playing && (
-        <AnimationPickerDialog
-          animations={animationTiles}
-          images={decoded}
-          readOnly={isReadOnly}
-          onOpen={fileId => {
-            ops.activateFile(fileId);
-            setPlaying(false);
-          }}
-          onNew={() => void make(animationsMenu, animationsMenu.makes[0])}
-          onImport={() => void importInto(animationsMenu)}
-          onCancel={() => setPlaying(false)}
-        />
-      )}
-      {staging && (
-        <BackgroundPickerDialog
-          backgrounds={backgroundTiles}
-          onOpen={fileId => {
-            ops.activateFile(fileId);
-            setStaging(false);
-          }}
-          onImport={() => void importInto(backgroundsMenu)}
-          onNew={
-            isReadOnly
-              ? undefined
-              : () => void make(backgroundsMenu, backgroundsMenu.makes[0])
-          }
-          onUpload={
-            isReadOnly || !uploading.enabled
-              ? undefined
-              : () => void uploadInto(backgroundsMenu)
-          }
-          drawing={isReadOnly ? undefined : drawing}
-          onKeep={
-            isReadOnly
-              ? undefined
-              : picture => keepPicture(picture, BACKGROUNDS_FOLDER)
-          }
-          onCancel={() => setStaging(false)}
-        />
-      )}
-      {painting && (
-        <SpritePickerDialog
-          title="Sprites"
-          description="Open one to draw on, or bring in another."
-          // The FILES, not their cells: a spritesheet is one picture to open,
-          // and a cell of one is not a thing this can open at all. Which cell
-          // is a question the animation editor asks, where it has an answer.
-          sprites={spriteFiles.map(({file}) => file.name)}
-          images={decoded}
-          sheets={{}}
-          chooseOnPress
-          onPick={({sprite}) => {
-            const file = spriteFiles.find(one => one.file.name === sprite);
-            if (file) {
-              ops.activateFile(file.file.id);
-            }
-            setPainting(false);
-          }}
-          onImport={() => void importInto(spritesMenu)}
-          onNew={
-            isReadOnly
-              ? undefined
-              : () => void make(spritesMenu, spritesMenu.makes[0])
-          }
-          onUpload={
-            isReadOnly || !uploading.enabled
-              ? undefined
-              : () => void uploadInto(spritesMenu)
-          }
-          drawing={isReadOnly ? undefined : drawing}
-          onKeep={
-            isReadOnly
-              ? undefined
-              : picture => keepPicture(picture, SPRITES_FOLDER)
-          }
-          onCancel={() => setPainting(false)}
-        />
-      )}
       {describingFor && (
         <DrawPictureDialog
           drawing={drawing}
@@ -1636,7 +1142,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
           }}
         />
       )}
-      {/* One input for all nine menus: which folder asked is a ref, because the
+      {/* The file picker every upload opens: which folder asked is a ref, because
           browser's file picker answers long after the click that opened it. */}
       <input
         ref={fileInput}
@@ -1645,59 +1151,7 @@ export const FileMenus = ({menus = true}: FileMenusProps = {}) => {
         className={styles.hiddenInput}
         onChange={tookUpload}
       />
-      <Menu
-        open={Boolean(row)}
-        anchorEl={row?.anchor}
-        onClose={() => setRow(undefined)}
-        slotProps={{
-          list: {'aria-label': row && `Options for ${row.name}`, dense: true},
-        }}
-      >
-        {row?.enhances && (
-          // First, because it is the only one of these that ADDS something —
-          // the rest rename, copy and remove. An actor is the only kind with
-          // anything to be given (`actors/enhance`).
-          <MenuItem onClick={() => enhance(row.file, row.name)}>
-            <ListItemIcon className={styles.menuIcon}>
-              <FontAwesomeV6Icon iconName="sparkles" iconStyle="solid" />
-            </ListItemIcon>
-            <ListItemText disableTypography>
-              <Typography variant="body4">Enhance…</Typography>
-            </ListItemText>
-          </MenuItem>
-        )}
-        {row && (
-          <MenuItem onClick={() => rename(row.file, row.name)}>
-            <ListItemIcon className={styles.menuIcon}>
-              <FontAwesomeV6Icon iconName="pencil" iconStyle="solid" />
-            </ListItemIcon>
-            <ListItemText disableTypography>
-              <Typography variant="body4">Rename</Typography>
-            </ListItemText>
-          </MenuItem>
-        )}
-        {row && (
-          <MenuItem onClick={() => clone(row.file, row.name)}>
-            <ListItemIcon className={styles.menuIcon}>
-              <FontAwesomeV6Icon iconName="clone" iconStyle="solid" />
-            </ListItemIcon>
-            <ListItemText disableTypography>
-              <Typography variant="body4">Clone</Typography>
-            </ListItemText>
-          </MenuItem>
-        )}
-        {row && (
-          <MenuItem onClick={() => remove(row.file)}>
-            <ListItemIcon className={styles.menuIcon}>
-              <FontAwesomeV6Icon iconName="trash" iconStyle="solid" />
-            </ListItemIcon>
-            <ListItemText disableTypography>
-              <Typography variant="body4">Delete</Typography>
-            </ListItemText>
-          </MenuItem>
-        )}
-      </Menu>
-    </div>
+    </>
   );
 };
 

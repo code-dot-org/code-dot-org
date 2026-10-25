@@ -80,23 +80,21 @@ it('renders the World Lab shell from the default project', async () => {
   await act(async () => {});
 
   // No file tabs: the breadcrumb stands where they were, and names the open
-  // file what the screen in it is called — the word its blocks and the menus
-  // use (`worldConfig.fileLabel`, specs/SHELL_PLAN.md).
+  // file what the screen in it is called — the word its blocks use
+  // (`worldConfig.fileLabel`, specs/SHELL_PLAN.md).
   const trail = await screen.findByRole('navigation', {name: 'Breadcrumb'});
   expect(within(trail).getByText('Platform World')).toHaveAttribute(
     'aria-current',
     'page',
   );
   expect(screen.queryByRole('tab', {name: 'Platform World'})).toBeNull();
-  // …and the folder menus, one button per folder, sit before it
-  // (`files/FileMenus`).
-  // Singular, and the one button that is not a menu: there is one world per
-  // project, so it opens (specs/MAP_EVENTS_PLAN.md).
-  expect(screen.getByRole('button', {name: 'World'})).toBeTruthy();
-  expect(screen.getByRole('button', {name: 'Actors'})).toBeTruthy();
-  // …and there is no file tree, nor a way to bring one back: the menus are the
-  // way around a World project, and a tree beside them could rename a FILE,
-  // which for an actor strands every reference to it (`layout/WorldLayout`).
+  // No folder buttons before it: each kind of file is reached where it is
+  // used (specs/SHELL_FINISH_PLAN.md, step 5).
+  expect(screen.queryByRole('button', {name: 'World'})).toBeNull();
+  expect(screen.queryByRole('button', {name: 'Actors'})).toBeNull();
+  // …and there is no file tree, nor a way to bring one back: a tree could
+  // rename a FILE, which for an actor strands every reference to it
+  // (`layout/WorldLayout`).
   expect(screen.queryByText('actors')).toBeNull();
   expect(screen.queryByRole('button', {name: /file manager/i})).toBeNull();
   // The active file is the Main Screen, so its (stubbed) editor mounts.

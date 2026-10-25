@@ -16,10 +16,11 @@
 // ways to more of them belong where you notice you want one, which is while you
 // are looking at the ones you have.
 //
-// IT ANSWERS TWO QUESTIONS. "Which drawing shall this frame use", where a press
+// IT ANSWERS ONE QUESTION: "which drawing shall this use", where a press
 // selects and the button confirms — a click that changed the drawing under you
-// would make browsing them costly — and "which picture shall I open", where the
-// press is the whole act. `chooseOnPress` is which.
+// would make browsing them costly. It also answered "which picture shall I
+// open", for the Sprites folder button, which is gone; a picture is opened
+// from the look that shows it now (specs/SHELL_FINISH_PLAN.md).
 //
 // …AND THERE IS A FOURTH WAY TO MORE OF THEM, which is to describe one and
 // have it drawn. A tile like the other three, opening a view of its own: a
@@ -100,15 +101,6 @@ export interface SpritePickerDialogProps {
   /** Take one off this machine. Absent leaves the tile out. */
   onUpload?: () => void;
   /**
-   * Whether a press CHOOSES rather than selects.
-   *
-   * The palette picks a drawing for something being edited, so it selects and
-   * confirms. The file menus pick a picture to OPEN, and there the press is the
-   * whole act — the same reading the actors' grid has
-   * (`actors/ActorPickerDialog`).
-   */
-  chooseOnPress?: boolean;
-  /**
    * Where a described picture comes from, if anywhere.
    *
    * Absent leaves the tile out rather than offering one that fails
@@ -143,7 +135,6 @@ export const SpritePickerDialog = ({
   onImport,
   onNew,
   onUpload,
-  chooseOnPress = false,
   drawing,
   onKeep,
   onCancel,
@@ -238,24 +229,6 @@ export const SpritePickerDialog = ({
   };
 
   /**
-   * Done: keep what is drawn, and close.
-   *
-   * NOTHING DRAWN IS NOTHING TO WAIT FOR, which is why the pending check comes
-   * first rather than inside the write: an async function runs to its first
-   * `await`, so a press with no picture still closes in the same tick it
-   * always closed in.
-   */
-  const done = async () => {
-    if (busy) {
-      return;
-    }
-    if (pending && !(await keepDrawn(pending))) {
-      return;
-    }
-    onCancel();
-  };
-
-  /**
    * Use this picture: keep what is drawn and use THAT, or the one already
    * selected when nothing was drawn.
    */
@@ -303,24 +276,14 @@ export const SpritePickerDialog = ({
       description={description}
       onClose={onCancel}
       closeLabel="Close"
-      primaryButtonProps={
-        chooseOnPress
-          ? {
-              children: busy ? 'Keeping the picture…' : 'Done',
-              disabled: busy,
-              onClick: () => void done(),
-            }
-          : {
-              children: busy ? 'Keeping the picture…' : 'Use this picture',
-              // A drawn picture is as good an answer as a selected one, and
-              // before it is kept it is the only one this dialog has.
-              disabled: busy || (!picked && !pending),
-              onClick: () => void use(),
-            }
-      }
-      secondaryButtonProps={
-        chooseOnPress ? undefined : {children: 'Cancel', onClick: onCancel}
-      }
+      primaryButtonProps={{
+        children: busy ? 'Keeping the picture…' : 'Use this picture',
+        // A drawn picture is as good an answer as a selected one, and
+        // before it is kept it is the only one this dialog has.
+        disabled: busy || (!picked && !pending),
+        onClick: () => void use(),
+      }}
+      secondaryButtonProps={{children: 'Cancel', onClick: onCancel}}
       customContent={
         <div className={styles.body}>
           {describing && onKeep ? (
@@ -368,16 +331,10 @@ export const SpritePickerDialog = ({
                           ? `${styles.tile} ${styles.tileChosen}`
                           : styles.tile
                       }
-                      aria-pressed={
-                        chooseOnPress ? undefined : tile.key === chosen
-                      }
+                      aria-pressed={tile.key === chosen}
                       aria-label={tile.label}
                       title={tile.label}
-                      onClick={() =>
-                        chooseOnPress
-                          ? onPick(chose(tile))
-                          : setChosen(tile.key)
-                      }
+                      onClick={() => setChosen(tile.key)}
                       onDoubleClick={() => onPick(chose(tile))}
                     >
                       <CellThumb

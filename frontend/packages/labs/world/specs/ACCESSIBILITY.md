@@ -136,6 +136,15 @@ below, and are listed last.
   small text buttons in a dense row**; their names say whose they are
   ("More for Glow", "Rename coin.mp3"), but their targets are under 24
   pixels tall at the extra-small size.
+- **No single place lists a kind's files** now the folder buttons are
+  gone: pictures are reached through an actor's look or a background
+  field, effects through an actor's Effects tab. A learner who knows a
+  picture's name but not what uses it has no list to search. Rules
+  (Rules in Play) and sounds (the sound shelf) still have one.
+- **`set sprite`'s open button is an icon in a Blockly field**, named by
+  its tooltip ("Open the file this comes from") as `use trait`'s is; it is
+  reached from the keyboard only as any Blockly field is, which no pass
+  here has checked.
 
 ## Not yet done for any phase
 

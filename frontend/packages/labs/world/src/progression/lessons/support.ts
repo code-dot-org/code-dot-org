@@ -85,10 +85,9 @@ export interface LessonSpec {
  *
  * `main.world` is the active tab, because a lesson is about the world unless
  * it says otherwise, and the tab a learner lands on is the first thing the
- * lesson says to them. The actors the world spec listed are open as tabs
- * beside it: the file browser is off in most lessons (`lessons/index`,
- * `ONE_FILE`), and a tab is how a learner asked to change the Hero reaches
- * the Hero without a sidebar to find it in.
+ * lesson says to them. The actors the world spec listed are open beside it,
+ * so a learner asked to change the Hero reaches the Hero without a list of
+ * files to find it in.
  */
 export const lessonSource = (spec: LessonSpec): MultiFileSource => {
   const world = typeof spec.world === 'string' ? spec.world : spec.world.world;

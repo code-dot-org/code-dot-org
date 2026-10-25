@@ -31,8 +31,8 @@ const CODE_EXT = /\.(rule|actor|world|ts|js)$/;
  *
  * A Blockly root's NAME field, an effect graph's `name`, or a builder's — in
  * that order, and undefined for a file that declares no name at all (a `.map`
- * is an arrangement, a `.png` is bytes). Exported because the file menus show
- * a project by what its files declare rather than by what they are called
+ * is an arrangement, a `.png` is bytes). Exported because the lab shows a
+ * project by what its files declare rather than by what they are called
  * (specs/FILES.md), and there should be one answer to that question.
  */
 export function authoredName(contents: string): string | undefined {

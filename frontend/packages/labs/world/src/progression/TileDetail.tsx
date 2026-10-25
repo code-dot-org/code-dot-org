@@ -191,9 +191,9 @@ export const TileDetail = ({
                     <BlockPreview block={preview} />
                   ) : (
                     <Typography variant="body2" component="span">
-                      {/* The FILE BROWSER'S OWN ICON for that kind, not a
-                          bullet and not a word. A rule here wears the same
-                          mark a rule wears in the menus, so "you get the
+                      {/* The KIND'S OWN ICON, not a bullet and not a word. A
+                          rule here wears the same mark a rule's file wears
+                          (`files/folderMenus`), so "you get the
                           Gravity rule" and the row you will go and open are
                           recognisably the same thing — and the icon says
                           which kind it is in less room than "the … rule"
@@ -326,7 +326,7 @@ const previewBlock = (unlock: Unlock): PreviewBlock | undefined => {
 };
 
 /**
- * The icon for an unlock, taken from the file browser's own list.
+ * The icon for an unlock, taken from the list of kinds (`files/folderMenus`).
  *
  * Read from `FOLDER_MENUS` rather than written out here, so the mark a rule
  * wears in this list is the mark a rule wears everywhere — and stays that way

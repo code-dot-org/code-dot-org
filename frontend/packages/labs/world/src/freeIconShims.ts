@@ -53,7 +53,7 @@ export const FREE_ICON_SHIMS: Shim[] = [
     substitute: 'angles-right',
   },
   {
-    // `Enhance…` — the file menus' row, and the sparkles on `define actor`
+    // `Enhance…` — the map inspector's, and the sparkles on `define actor`
     // (`blockly/extensions/enhanceButton`, which carries the same pair for the
     // glyph it draws in a block). Free has no bare sparkles at all: every
     // sparkle it ships is attached to a wand, a hand, or a spray can, and the

@@ -37,7 +37,8 @@ curriculum uses almost none of it:
 
 Two of these cannot be reached from a lesson. The Creator and Enhance open
 from the file menus, which a lesson turns off (`showFileBrowser: false`),
-and from a wand on `define actor`, which is in the workspace. Nothing in the
+and from a wand on `define actor`, which is in the workspace. (The menus and
+the setting are gone since; SHELL_FINISH_PLAN.md, step 5.) Nothing in the
 map editor opens either, nor the file of the kind a placement is.
 
 ## The rule for which lessons move

@@ -17,8 +17,6 @@ import {
   compileProject,
   type CompiledProject,
 } from '../../__tests__/support/compileProject';
-import {importedContents} from '../../actors/importStockActor';
-import {STOCK_ACTORS} from '../../actors/stock';
 import {PositionProperty} from '../../engine';
 import {SpriteProperty} from '../../engine/rules/animation';
 import {projectFiles} from '../../runtime/projectFiles';
@@ -235,17 +233,19 @@ describe('what a lesson starts out doing', () => {
   });
 });
 
-// ── Tabs, not a sidebar ────────────────────────────────────────────────────
+// ── A way to every file a lesson names ────────────────────────────────────
 //
-// The claim `ONE_FILE` makes (lessons/index): a lesson is about its world and
-// the actors that world places, those are open as tabs, and the sidebar that
-// lists the rest of the project is off unless a lesson is about a file. What
-// the tests below hold it to is the pair of ways that can rot — a lesson that
-// hides the browser and then tells the learner to open a file, and an actor
-// the learner is meant to change that is not on a tab.
+// There is no list of a project's files to browse (specs/SHELL_FINISH_PLAN.md,
+// step 5). A lesson that sends the learner to a file has to say how they get
+// there: Rules in Play for a rule, the open button on the block that names
+// it, the switcher for a map.
 
-/** A path a learner would have to use the file browser to reach. */
+/** A path a learner would once have used the file browser to reach. */
 const PATHS = /`(actors|rules|sprites|worlds|backgrounds|maps|effects)\//;
+
+/** The ways in a lesson may name instead. */
+const DOORS =
+  /Rules in Play|\*\*open\*\* button|open button|Screens and Maps|switcher|Open [A-Z]/;
 
 describe('the view a lesson’s world opens on', () => {
   // A world opens on its map, and a lesson's task is nearly always a block
@@ -281,34 +281,11 @@ describe('the view a lesson’s world opens on', () => {
   });
 });
 
-describe('a lesson with no file browser', () => {
-  const oneFile = ids.filter(
-    id => LESSONS[id].levelData?.showFileBrowser === false,
-  );
+describe('a lesson that names a file', () => {
+  const naming = ids.filter(id => PATHS.test(LESSONS[id].instructions));
 
-  it('is what a lesson is unless it says otherwise', () => {
-    // Every lesson but the ones whose subject IS a file.
-    expect(oneFile).toHaveLength(ids.length - 8);
-  });
-
-  it.each(oneFile)('%s does not send the learner to a file', id => {
-    expect(LESSONS[id].instructions).not.toMatch(PATHS);
-  });
-
-  it.each(oneFile)('%s opens every actor of its own as a tab', id => {
-    // Not "has no other files": a lesson holds the rules and pictures it needs
-    // and nobody has to open those. What it may not do is put an actor the
-    // learner is meant to CHANGE somewhere they cannot see — so an `.actor`
-    // file that is not one of the library's, untouched, is open beside the
-    // world.
-    const stock = new Set(STOCK_ACTORS.map(importedContents));
-    const source = LESSONS[id].source;
-    const open = new Set(source.openFiles);
-    for (const [fileId, file] of Object.entries(source.files)) {
-      if (file.name.endsWith('.actor') && !stock.has(file.contents)) {
-        expect(open.has(fileId), `${id}: ${file.name} is not a tab`).toBe(true);
-      }
-    }
+  it.each(naming)('%s says how to get to it', id => {
+    expect(LESSONS[id].instructions).toMatch(DOORS);
   });
 });
 
@@ -320,32 +297,5 @@ describe('every lesson', () => {
       const world = projectFiles(LESSONS[id].source)['worlds/main.world'];
       expect(world, id).not.toContain('"type": "world_actor"');
     }
-  });
-});
-
-describe('a lesson that shows the file browser', () => {
-  it('says why, in the lesson', () => {
-    const shown = ids.filter(
-      id => LESSONS[id].levelData?.showFileBrowser !== false,
-    );
-    expect(shown.sort()).toEqual([
-      'adventure/rooms',
-      'look/sprite',
-      'making/block',
-      'making/change',
-      'making/property',
-      'making/read',
-      'making/rule',
-      'making/trait',
-    ]);
-    // Each says so where the learner reads it, rather than a sidebar simply
-    // appearing one day.
-    expect(LESSONS['look/sprite'].instructions).toContain(
-      'first lesson with a file browser',
-    );
-    // A Making lesson is spent inside a rule, which is a file by definition.
-    expect(LESSONS['making/property'].instructions).toContain(
-      'rules/wind.rule',
-    );
   });
 });

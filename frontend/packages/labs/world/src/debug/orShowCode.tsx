@@ -14,9 +14,9 @@ import {useShowCode} from './showCode';
  *
  * AROUND EACH EDITOR RATHER THAN AROUND THE WORKSPACE. Swapping Codebridge's
  * `Workspace` in the layout would have been fewer lines and would have taken
- * the file tabs and the folder menus with it — so a reader could not move
- * between files without leaving the code first. Here the swap is under the
- * tabs, where the editor already is.
+ * the breadcrumb with it — so a reader could not move between files without
+ * leaving the code first. Here the swap is under the breadcrumb, where the
+ * editor already is.
  *
  * The editor UNMOUNTS while the code is up, which is the same cost as switching
  * to another file and back: the workspace is rebuilt, its scroll position is

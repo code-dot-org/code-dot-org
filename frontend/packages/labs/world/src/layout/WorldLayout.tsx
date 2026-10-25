@@ -38,11 +38,7 @@ import {ViewMode, type ViewModeType} from '../constants';
 import {ConsolePanel} from '../debug/ConsolePanel';
 import {ShowCodeContext} from '../debug/showCode';
 import {FileMenus} from '../files/FileMenus';
-import {
-  buildsApps,
-  showsFileBrowser,
-  type WorldLevelProperties,
-} from '../levelData';
+import {buildsApps, type WorldLevelProperties} from '../levelData';
 import {LibraryImports} from '../library/LibraryImports';
 import {entryFileOf} from '../mainWorld';
 import {WorldPreview} from '../preview/WorldPreview';
@@ -86,9 +82,7 @@ const PREVIEW = {initial: 460, min: 240, max: 900};
 const showMe = (name: string) => void pointAt(name);
 
 const WorldLayout = () => {
-  // A level about one file has nothing to browse (levelData).
   const level = useMaybeLevelProperties<WorldLevelProperties>();
-  const browsable = showsFileBrowser(level);
   // Whether this is App Builder, for the code that is not a component — the
   // AI tutor's context (`appBuilder`, `activeAppBuilder`).
   const app = buildsApps(level);
@@ -332,8 +326,8 @@ const WorldLayout = () => {
               <div className={styles.editorAndPreview}>
                 {/* The import shelves, mounted beside the workspace rather than
                 inside an editor: they are asked for from a block's `(import…)`
-                row AND from the file menus, and the menus are on screen
-                whatever is open (`library/LibraryImports`). */}
+                row AND from the map editor and the Actor Editor, whatever is
+                open (`library/LibraryImports`). */}
                 <LibraryImports />
                 {/* Where Show me says what it pointed at, and the ring's style. */}
                 <CalloutAnnouncer />
@@ -341,22 +335,22 @@ const WorldLayout = () => {
                   <div className={styles.editorPane}>
                     <div className={styles.editorMain}>
                       <Workspace
-                        // NO FILE TREE. The menus are the way around a World
-                        // project (`files/folderMenus`), and the tree beside them
-                        // was a second one that could do a thing they deliberately
-                        // will not: rename a FILE, which for an actor leaves every
-                        // reference pointing at a path that is not there any more.
-                        // Everything it offered has a place in the menus now,
-                        // uploading included.
+                        // NO FILE TREE, and no folder buttons either: each kind
+                        // of file is reached where it is used — a picture from
+                        // the look that shows it, a rule from Rules in Play
+                        // (specs/SHELL_FINISH_PLAN.md). The tree could also do a
+                        // thing nothing here will: rename a FILE, which for an
+                        // actor leaves every reference pointing at a path that is
+                        // not there any more.
                         hideFileBrowser
                         // NO TABS EITHER: one place at a time, and the
                         // breadcrumb is the way back to the ones before it
                         // (specs/SHELL_PLAN.md).
                         tabStrip={<Breadcrumb />}
-                        // Mounted either way, with its buttons off when there
-                        // is nothing to browse: the dialogs it owns are asked
-                        // for from elsewhere too (`files/FileMenus`, `menus`).
-                        tabBarStart={<FileMenus menus={browsable} />}
+                        // The host of the file acts, which draws nothing of its
+                        // own: every door asks it (`files/FileMenus`). Here
+                        // because it needs what the workspace provides.
+                        tabBarStart={<FileMenus />}
                       />
                     </div>
                     {/* Code-only view: the console falls back to under the editor. */}

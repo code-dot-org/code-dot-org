@@ -391,14 +391,6 @@ describe('the scenario catalogue', () => {
     expect(bird).toContain('world_set_Gravity_GravityScaleProperty');
   });
 
-  it('shows the file list in every scenario', () => {
-    // The single-world tellings hid it, and they are gone: every actor is a
-    // file, and a scenario is a project to look around in.
-    for (const tag of WORLD_SCENARIO_TAGS) {
-      expect(WORLD_SCENARIOS[tag].levelData?.showFileBrowser).not.toBe(false);
-    }
-  });
-
   it('carries a scenario’s levelData into what the host is served', () => {
     // The level properties are written once for all of them, so this is the
     // one field that has to be threaded through rather than stated — and a

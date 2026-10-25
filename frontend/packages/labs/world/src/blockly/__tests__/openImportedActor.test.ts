@@ -18,6 +18,7 @@ import {projectFiles} from '../../runtime/projectFiles';
 import {moduleNamedBy} from '../extensions/openSourceButton';
 import {
   canOpenModule,
+  fileIdForModule,
   setModuleOpener,
   setModuleOpeningOffered,
   OPENABLE_EXTENSIONS,
@@ -103,5 +104,37 @@ describe('the kinds a module path can name', () => {
     ).find(path => path in held);
 
     expect(resolved).toBe('actors/coin.actor');
+  });
+});
+
+// A picture `set sprite` names, opened in the image editor
+// (specs/SHELL_FINISH_PLAN.md, step 5): with the folder buttons gone, the
+// block is the way to it for an actor still written in blocks.
+describe('a picture a block names', () => {
+  it('can be opened once the project has it, a sheet’s cell by its sheet', () => {
+    refreshProjectDropdowns(
+      {},
+      ['sprites/hero.png', 'backgrounds/cave.png'],
+      {},
+      [],
+    );
+
+    expect(canOpenModule(moduleNamedBy(block({SPRITE: 'hero.png'})))).toBe(
+      true,
+    );
+    expect(moduleNamedBy(block({SPRITE: 'hero.png#3'}))).toBe('sprites/hero');
+    expect(canOpenModule(moduleNamedBy(block({SPRITE: 'crab.png'})))).toBe(
+      false,
+    );
+  });
+
+  it('is found by its file, as a module path names one', () => {
+    const source = {
+      folders: {s: {id: 's', name: 'sprites', parentId: '0'}},
+      files: {
+        p: {id: 'p', name: 'hero.png', language: 'png', folderId: 's'},
+      },
+    } as never;
+    expect(fileIdForModule(source, 'sprites/hero')).toBe('p');
   });
 });

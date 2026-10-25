@@ -197,11 +197,10 @@ export interface WorldSpec {
    * The actors this world places, each written out as a file of its own.
    *
    * They used to be roots beside the world, so that a lesson was one file: a
-   * sidebar of eleven files argues with a lesson that is about one of them.
-   * The sidebar still stays off until a lesson is about files (`making/read`);
-   * what changed is that an actor is a file everywhere in the lab now, and a
-   * lesson reaches it the way a learner does — as a tab beside the world,
-   * which `lessonSource` opens for every actor listed here.
+   * sidebar of eleven files argued with a lesson that is about one of them.
+   * What changed is that an actor is a file everywhere in the lab now, and a
+   * lesson reaches it the way a learner does: from the Actor Palette, or as
+   * a file `lessonSource` opens beside the world for every actor listed here.
    */
   actors?: ActorSpec[];
   /**

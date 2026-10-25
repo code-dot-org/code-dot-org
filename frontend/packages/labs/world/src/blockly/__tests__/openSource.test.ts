@@ -13,7 +13,6 @@ import {createLevelPropertyFixture} from '@code-dot-org/core/api/mocks';
 
 import {
   hiddenToolboxCategories,
-  showsFileBrowser,
   showsRuleSource,
   type WorldLevelProperties,
 } from '../../levelData';
@@ -117,15 +116,6 @@ describe('what the level says', () => {
     ).toBe(false);
   });
 
-  it('shows the file browser unless a level turns it off', () => {
-    expect(showsFileBrowser(undefined)).toBe(true);
-    expect(
-      showsFileBrowser({
-        levelData: {showFileBrowser: false},
-      } as WorldLevelProperties),
-    ).toBe(false);
-  });
-
   it('hides no toolbox categories unless a level names some', () => {
     expect(hiddenToolboxCategories(undefined)).toEqual([]);
     expect(
@@ -151,14 +141,12 @@ describe('what the level says', () => {
         showExemplarLink: false,
         levelData: {
           showRuleSource: false,
-          showFileBrowser: false,
           hiddenToolboxCategories: ['Gravity'],
         },
       }),
     ) as {levelData?: Record<string, unknown>};
     expect(parsed.levelData).toEqual({
       showRuleSource: false,
-      showFileBrowser: false,
       hiddenToolboxCategories: ['Gravity'],
     });
   });

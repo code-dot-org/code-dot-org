@@ -35,7 +35,8 @@ import {filePath} from '../runtime/projectFiles';
  * opens is the file the project would compile.
  * `.actor` is a module with a namespace of its own. `.map` is last and is not
  * a module at all — a map is data a world names — but it has an editor, and
- * the open button opens FILES.
+ * the open button opens FILES. `.png` is the same: a picture `set sprite`
+ * names, opened in the image editor (specs/SHELL_FINISH_PLAN.md, step 5).
  */
 export const OPENABLE_EXTENSIONS = [
   'rule',
@@ -43,6 +44,7 @@ export const OPENABLE_EXTENSIONS = [
   'ts',
   'actor',
   'map',
+  'png',
 ] as const;
 
 /** Opens the project file a module path names. */

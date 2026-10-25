@@ -1,4 +1,5 @@
 // The open button on a `use rule` / `use trait` block: open the file that defines it.
+// On `set sprite` too, which names a picture: open it in the image editor.
 //
 // A block that names a rule is a block that names a FILE, when the rule is the
 // project's own — and until now the only route from one to the other was
@@ -17,8 +18,10 @@ import * as Blockly from 'blockly/core';
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
 
+import {SPRITES_FOLDER} from '../../files/folderMenus';
 import {canOpenModule, openModule} from '../openModule';
 import {refFromValue, refModule, ruleLocation} from '../ruleRegistry';
+import {parseSpriteRef} from '../spriteCells';
 
 import {glyphIcon} from './glyphIcon';
 import {addOnChange} from './onChange';
@@ -86,6 +89,13 @@ export function moduleNamedBy(block: Block): string | undefined {
     if (typeof value === 'string' && value.includes('/')) {
       return value;
     }
+  }
+  // A picture, named by its file in `sprites/` — `hero.png`, or one cell of a
+  // sheet, `coinSpin.png#3`, which opens the whole sheet.
+  const sprite = block.getFieldValue('SPRITE');
+  if (typeof sprite === 'string' && sprite) {
+    const {sprite: file} = parseSpriteRef(sprite);
+    return `${SPRITES_FOLDER}/${file.replace(/\.png$/, '')}`;
   }
   return undefined;
 }

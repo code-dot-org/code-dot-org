@@ -116,8 +116,9 @@ export function refreshProjectDropdowns(
   setProjectSounds(sounds);
   // Which module paths there is a file to open for — what puts the open button on a
   // `use rule` / `use trait` block (openModule).
+  // The pictures are among them, passed beside `files` for the reason above.
   setOpenableModules(
-    Object.keys(files)
+    [...Object.keys(files), ...images]
       .filter(path => MODULE_FILE.test(path))
       .map(path => path.replace(MODULE_FILE, '')),
   );

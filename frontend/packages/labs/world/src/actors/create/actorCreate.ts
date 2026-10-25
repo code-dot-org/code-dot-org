@@ -1,6 +1,6 @@
 // Asking for the Actor Creator from somewhere that does not own it.
 //
-// The Creator is the file menus': it is built from a dozen things they hold —
+// The Creator is the file acts' host's: it is built from a dozen things it holds —
 // the kinds that can be copied, the stock templates, the project's pictures
 // decoded, the fold that writes an actor with its picture and abilities — so
 // it stays there (`files/FileMenus`). The MAP EDITOR's palette wants it too:
@@ -13,10 +13,9 @@
 // headless generator and is ordinary rather than an error.
 //
 // WHAT THE ASKER GETS BACK BESIDES THE PATH: the tab it was on. The Creator
-// opens the file it writes, which is right from the Actors menu and wrong
-// from a canvas — a learner who asked from the map wants the new kind on the
-// palette, not to be taken to its blocks. The file menus put the active tab
-// back when the request came through here.
+// opens the file it writes, which is wrong from a canvas — a learner who asked
+// from the map wants the new kind on the palette, not to be taken to its
+// blocks — so the host puts the active tab back.
 
 import {importSeam} from '../../blockly/libraryImport';
 import type {PaletteTab} from '../actorPurpose';

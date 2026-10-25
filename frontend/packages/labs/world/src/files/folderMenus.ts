@@ -1,73 +1,62 @@
-// What each of a project's folders is FOR, as a menu.
+// What each of a project's folders holds: the kind of file it is, what a new
+// one of that kind is made as, whether one can be uploaded into it, and the
+// icon the kind wears.
 //
 // A World project's folders are semantic. A picture is a backdrop because it is
 // in `backgrounds/` and a sprite because it is in `sprites/`; a `.rule` is a
 // rule wherever it sits, but everything the editor offers assumes it is in
-// `rules/`. So the tree's central affordance — drag a file somewhere else — is
-// a move that either means nothing or breaks something, and the tree spends its
-// space on hierarchy a project never has: nine folders, one level, no nesting.
+// `rules/`. So a folder is a KIND, and this is the list of kinds.
 //
-// This is the other reading of the same project. One button per folder, each
-// saying what that folder is for, holding the two ways to get a new one (make
-// it, or take one from the shelf) and the files already there. The tree remains
-// one toggle away for anyone who wants the whole project at once.
+// It was the list of folder buttons along the top of the workspace, one per
+// folder, which were the last way to browse a project's files. They are gone
+// (specs/SHELL_FINISH_PLAN.md, step 5): each kind is reached where it is used —
+// a picture from the look that shows it, an effect from the Effects tab, a
+// rule from Rules in Play — and those doors ask the file acts to make, upload,
+// rename, clone or delete (`files/fileActs`, answered by `FileMenus`). What
+// the acts need to know about a folder is here: what `make` makes in it, and
+// whether `upload` may put a file there. The icons are still the kinds' own,
+// read by the progression's unlock list (`progression/TileDetail`).
 //
 // WHAT IS MISSING FROM A ROW IS THE POINT. A folder with no `makes` is one
 // where making a file from nothing means nothing: a SOUND is bytes, and an
-// empty one is silence nobody can draw. A folder with no `shelf` is one nobody
-// stocks: nothing ships a world or a map to import.
+// empty one is silence nobody can draw.
 //
-// Sprites and backdrops were in the first list and are not any more. An empty
-// PNG is not a starting point for a game and IS one for a drawing — it is what
-// the image editor exists to fill in — so "New sprite" writes a blank tile and
-// opens it (`files/newThing`).
+// A blank picture IS a starting point: an empty PNG is not one for a game and
+// is exactly one for a drawing, which is what the image editor exists to fill
+// in — so "New picture" writes a blank tile and opens it (`files/newThing`).
 
-import {requestActorImport} from '../actors/actorImport';
-import {requestAppearanceImport} from '../appearance/appearanceImport';
 import {BACKGROUNDS_FOLDER} from '../appearance/backgroundsFolder';
-import {requestEffectImport} from '../blockly/effectImport';
-import {requestRuleImport} from '../blockly/ruleImport';
-import {requestMapImport} from '../maps/mapImport';
-import {requestSoundImport} from '../sound/soundImport';
-import {requestStyleImport} from '../styles/styleImport';
 
 /**
- * The actors' folder, named because two places need to agree about it: this
- * list, and the file menus, whose Actors button opens a grid of them rather
- * than a menu (`actors/ActorPickerDialog`).
+ * The actors' folder, named because the file acts write actors into it
+ * (`FileMenus`).
  */
 export const ACTORS_FOLDER = 'actors';
 /** …and the world's, which holds exactly one file (specs/MAP_EVENTS_PLAN.md). */
 export const WORLDS_FOLDER = 'worlds';
 /**
  * …and the screens', whose Main Screen is the game in the shape that
- * replaces a world: the World button opens it when a project holds one
- * (specs/SCREEN_MAP_PLAN.md, step 4).
+ * replaces a world (specs/SCREEN_MAP_PLAN.md, step 4).
  */
 export const SCREENS_FOLDER = 'screens';
 
 /**
- * The sprites' folder, named for the same reason: its button opens the picture
- * palette rather than a menu (`animationEditor/SpritePickerDialog`).
+ * The sprites' folder: the pictures an actor may look like, which `set
+ * sprite` names and its open button opens (`blockly/extensions/openSourceButton`).
  */
 export const SPRITES_FOLDER = 'sprites';
 
-/**
- * …and the animations', whose button opens a grid of them RUNNING: what tells
- * two animations of one sprite apart is the motion (`AnimationPickerDialog`).
- */
+/** …and the animations'. */
 export const ANIMATIONS_FOLDER = 'animations';
 
-// The backdrops' folder is the fourth of these and is NOT declared here: it is
-// a rule about which images are backdrops rather than a path, and it is read by
-// the dropdowns and the importer as well as by this menu
-// (`appearance/backgroundsFolder`). Its button opens a shelf of them
-// (`appearance/BackgroundPickerDialog`).
+// The backdrops' folder is NOT declared here: it is a rule about which images
+// are backdrops rather than a path, and it is read by the dropdowns and the
+// importer as well (`appearance/backgroundsFolder`).
 export {BACKGROUNDS_FOLDER};
 
-/** One kind of file a folder's `New` can make. */
+/** One kind of file a folder's `make` can make. */
 export interface Makeable {
-  /** What the menu item says — "New actor". */
+  /** What the name prompt is titled — "New actor". */
   label: string;
   /** The extension it gets, which is what decides its editor. */
   extension: string;
@@ -78,51 +67,26 @@ export interface Makeable {
 export interface FolderMenu {
   /** The folder's name, which is the whole of what makes a file its kind. */
   folder: string;
-  /** What the button is called, for its tooltip and its label. */
+  /** What the kind is called, in the plural. */
   label: string;
-  /** Its icon — the file browser's icon for that kind, where there is one. */
+  /** The kind's icon, as the file icons and the unlock list draw it. */
   icon: string;
-  /** What `New` may make here, in the order offered. Empty means it may not. */
+  /** What `make` may make here, the first by default. Empty means it may not. */
   makes: readonly Makeable[];
-  /** The shelf `Import…` opens, when something stocks this kind. */
-  shelf?: () => Promise<string | undefined>;
   /**
-   * Whether a file here can be GIVEN something rather than only made,
-   * imported or deleted.
-   *
-   * Only the actors, and it is not on this menu: enhancing is done TO an
-   * actor, so it is offered on that actor's own row beside Rename and Clone,
-   * which is where everything else done to one file lives
-   * (`actors/enhance`).
-   */
-  enhances?: boolean;
-  /**
-   * Whether a file of your own can be brought in here.
+   * Whether a file of the learner's own can be brought in here.
    *
    * The pictures and the sounds: what a learner has on their machine that this
    * lab can use (`worldConfig.validMimeTypes`). An upload lands in THIS folder,
    * which is what decides whether a PNG is a sprite or a backdrop — where the
-   * file tree's upload always put one at the root, and left the learner to
-   * work out why their sky was in the sprite list.
+   * file tree's upload always put one at the root.
    */
   uploads?: boolean;
 }
 
 /**
- * The buttons, left to right, in the order a project is built up in.
- *
- * A world first, because that is what a project IS. Then the pictures, because
- * they come before the things made out of them: an actor is a drawing that was
- * given behavior, and a learner with one in mind draws it or takes it off the
- * shelf before there is anything to attach it to. Then the actors, the rules
- * that give them behavior, the animations made of those same pictures, and the
- * sounds; then the two documents — a map is a world's arrangement and an
- * effect is a picture's.
- */
-/**
- * Screens, which have no button: the World button opens the Main Screen,
- * and the others are reached from the map editor's switcher, which makes
- * new ones through this (`files/fileActs`).
+ * Screens, made from the map editor's switcher (`mapEditor/PlaceHeading`).
+ * Apart from the list below because no unlock is a screen.
  */
 export const SCREENS_MENU: FolderMenu = {
   folder: SCREENS_FOLDER,
@@ -131,16 +95,18 @@ export const SCREENS_MENU: FolderMenu = {
   makes: [{label: 'New screen', extension: 'screen', placeholder: 'Title'}],
 };
 
+/**
+ * The kinds, in the order a project is built up in: a world, then the
+ * pictures, because they come before the things made out of them; then the
+ * actors, the rules that give them behavior, the animations made of those
+ * same pictures, and the sounds; then the maps, and the effects and themes a
+ * picture is drawn through.
+ */
 export const FOLDER_MENUS: readonly FolderMenu[] = [
   {
-    // ONE WORLD PER PROJECT, so this button opens it rather than listing a
-    // folder. A world is a whole PROGRAM — nothing composes them, and the
-    // compiler has one entry — so levels, screens and dialogs are maps and
-    // there is never a second world to choose between
-    // (specs/MAP_EVENTS_PLAN.md).
-    //
-    // `makes` is empty for the same reason. "New world" offered a second
-    // program in the same folder, which nothing would have run.
+    // ONE WORLD PER PROJECT. A world is a whole PROGRAM — nothing composes
+    // them, and the compiler has one entry — so levels, screens and dialogs
+    // are maps, and `make` makes no second world (specs/MAP_EVENTS_PLAN.md).
     folder: WORLDS_FOLDER,
     label: 'World',
     icon: 'planet-ringed',
@@ -150,12 +116,7 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     folder: SPRITES_FOLDER,
     label: 'Sprites',
     icon: 'image',
-    // A blank one to draw on, which is what the image editor is for. It was
-    // "making one from nothing means nothing" until the seed existed; what an
-    // empty PNG is not is a *starting point for a game*, and it is exactly the
-    // starting point for a drawing (`files/newThing`).
     makes: [{label: 'New sprite', extension: 'png', placeholder: 'Chaser'}],
-    shelf: () => requestAppearanceImport('sprite'),
     uploads: true,
   },
   {
@@ -163,23 +124,21 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     label: 'Backgrounds',
     icon: 'mountain-sun',
     makes: [{label: 'New background', extension: 'png', placeholder: 'Cave'}],
-    shelf: () => requestAppearanceImport('background'),
     uploads: true,
   },
   {
     folder: ACTORS_FOLDER,
     label: 'Actors',
     icon: 'masks-theater',
+    // Made by the Actor Creator, which asks more than a name
+    // (`actors/create/actorCreate`); this is what a plain `make` would be.
     makes: [{label: 'New actor', extension: 'actor', placeholder: 'Chaser'}],
-    shelf: requestActorImport,
-    enhances: true,
   },
   {
     folder: 'rules',
     label: 'Rules',
     icon: 'scroll',
     makes: [{label: 'New rule', extension: 'rule', placeholder: 'Gravity'}],
-    shelf: requestRuleImport,
   },
   {
     folder: ANIMATIONS_FOLDER,
@@ -188,14 +147,12 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     makes: [
       {label: 'New animation', extension: 'anim', placeholder: 'Coin Spin'},
     ],
-    shelf: () => requestAppearanceImport('animation'),
   },
   {
     folder: 'sounds',
     label: 'Sounds',
     icon: 'volume-high',
     makes: [],
-    shelf: requestSoundImport,
     uploads: true,
   },
   {
@@ -203,25 +160,17 @@ export const FOLDER_MENUS: readonly FolderMenu[] = [
     label: 'Effects',
     icon: 'wand-sparkles',
     makes: [{label: 'New effect', extension: 'effect', placeholder: 'Ripple'}],
-    shelf: requestEffectImport,
   },
   {
     folder: 'maps',
     label: 'Maps',
     icon: 'map',
     makes: [{label: 'New map', extension: 'map', placeholder: 'Level 2'}],
-    shelf: requestMapImport,
   },
   {
-    // HOW A PROJECT GETS ITS FIRST THEME, and the reason this row exists: a
-    // project starts with none, so every dropdown that offers one starts
-    // empty — and an empty menu says nothing about where a theme comes from.
-    // The file browser is where a learner looks for a kind of file they have
-    // not got yet (specs/STYLES_PLAN.md).
     folder: 'styles',
     label: 'Themes',
     icon: 'palette',
     makes: [{label: 'New theme', extension: 'style', placeholder: 'Midnight'}],
-    shelf: requestStyleImport,
   },
 ];

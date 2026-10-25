@@ -2,8 +2,8 @@
 //
 // A world runs every rule the project holds (blockly/projectModules), which is
 // the right rule and an invisible one: the block that used to carry a row per
-// mechanic now carries nothing, and a level that hides the file browser leaves
-// a learner with no way to see the answer at all, let alone change it.
+// mechanic now carries nothing, and with no file browser a learner has no
+// other way to see the answer at all, let alone change it.
 //
 // So the block reads `define world named ⟨Platform World⟩ with ⟨8 rules⟩`, and
 // the count IS the button. One field rather than a label beside an icon: the

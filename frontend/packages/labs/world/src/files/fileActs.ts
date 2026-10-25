@@ -1,9 +1,8 @@
-// Asking the file menus to act on a project's files, from wherever a kind of
-// file is used rather than from a folder button (specs/SHELL_PLAN.md, step
-// 4; specs/SHELL_FINISH_PLAN.md, step 4).
+// Asking for an act on a project's files, from wherever a kind of file is
+// used (specs/SHELL_PLAN.md, step 4; specs/SHELL_FINISH_PLAN.md, step 4).
 //
-// The menus own the prompts and already do each of these from a folder's
-// row menu, so the doors ask them rather than doing it again
+// One host owns the prompts and does each act (`files/FileMenus`), so the
+// doors ask it rather than doing it again
 // (`actors/actorDelete` is the same seam for an actor). A request resolves
 // once the act is done or abandoned. `make` and `draw` answer the new file —
 // its id, or its name where the door knows its files by name, as the

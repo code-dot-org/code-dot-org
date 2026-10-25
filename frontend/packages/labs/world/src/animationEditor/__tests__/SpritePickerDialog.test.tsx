@@ -140,20 +140,6 @@ describe('SpritePickerDialog', () => {
     expect(onUpload).toHaveBeenCalled();
   });
 
-  it('opens on a press where a press is the whole act', () => {
-    // The file menus pick a picture to OPEN, and waiting for a second click
-    // there would be asking twice for one answer.
-    const onPick = vi.fn();
-    open({onPick, chooseOnPress: true});
-
-    fireEvent.click(screen.getByRole('button', {name: 'player.png'}));
-    expect(onPick).toHaveBeenCalledWith({
-      sprite: 'player.png',
-      cell: undefined,
-      rect: undefined,
-    });
-  });
-
   it('leaves out an image that has not decoded', () => {
     // Nothing to look at is nothing to choose; it appears when it arrives.
     open({images: {'player.png': image(1)}});
@@ -235,22 +221,9 @@ describe('describing a picture', () => {
     );
   });
 
-  it('keeps what is drawn when Done closes the shelf', async () => {
-    // The shelf reading of this dialog, which is the file menus'. Choosing a
-    // picture off it costs one press, so a drawn one must not want a second.
-    const onCancel = vi.fn();
-    open({...canDraw(), chooseOnPress: true, onCancel});
-    await drawOne();
-
-    fireEvent.click(screen.getByRole('button', {name: 'Done'}));
-
-    await vi.waitFor(() => expect(onKeep).toHaveBeenCalledWith(DRAWN[0]));
-    await vi.waitFor(() => expect(onCancel).toHaveBeenCalled());
-  });
-
   it('keeps what is drawn, and uses it, when the confirm is the answer', async () => {
-    // …and the palette reading, where the confirm names a drawing rather than
-    // closing. The one that lands is the answer.
+    // The confirm names a drawing rather than closing. The one that lands is
+    // the answer.
     const onPick = vi.fn();
     open({...canDraw(), onPick});
     await drawOne();
@@ -275,23 +248,25 @@ describe('describing a picture', () => {
   it('stays up when the write refused, rather than acting without it', async () => {
     onKeep.mockResolvedValueOnce(undefined as never);
     const onCancel = vi.fn();
-    open({...canDraw(), chooseOnPress: true, onCancel});
+    const onPick = vi.fn();
+    open({...canDraw(), onPick, onCancel});
     await drawOne();
 
-    fireEvent.click(screen.getByRole('button', {name: 'Done'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Use this picture'}));
 
     await vi.waitFor(() => expect(onKeep).toHaveBeenCalled());
+    expect(onPick).not.toHaveBeenCalled();
     expect(onCancel).not.toHaveBeenCalled();
     expect(screen.getByLabelText('Describe a picture')).toBeTruthy();
   });
 
   it('does not keep one the learner walked away from', async () => {
     const onCancel = vi.fn();
-    open({...canDraw(), chooseOnPress: true, onCancel});
+    open({...canDraw(), onCancel});
     await drawOne();
 
     fireEvent.click(screen.getByRole('button', {name: /Choose a picture/}));
-    fireEvent.click(screen.getByRole('button', {name: 'Done'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
 
     expect(onKeep).not.toHaveBeenCalled();
     expect(onCancel).toHaveBeenCalled();

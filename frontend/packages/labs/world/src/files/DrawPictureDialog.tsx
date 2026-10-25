@@ -44,7 +44,7 @@ export const DrawPictureDialog = ({
   );
   return (
     <Dialog
-      // A place to work in, not an alert (`ActorPickerDialog`).
+      // A place to work in, not an alert (`RulesInPlayDialog`).
       role="dialog"
       title={background ? 'Draw a background' : 'Draw a picture'}
       onClose={() => onDone(undefined)}

@@ -3,7 +3,7 @@
 //
 // The trail follows the active file rather than being told where the learner
 // went. Every way of opening a file already ends in `activateFile` — the
-// folder menus, a block naming a module, the map editor's Open, Show me — so
+// file acts' `open`, a block naming a module, the map editor's Open, Show me — so
 // watching that one fact keeps the trail right without any of them knowing it
 // exists.
 

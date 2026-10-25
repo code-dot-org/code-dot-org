@@ -39,7 +39,7 @@ const shimmed = new Set(FREE_ICON_SHIMS.map(shim => shim.name));
 const asked: ReadonlyArray<{name: string; where: string}> = [
   ...FOLDER_MENUS.map(menu => ({
     name: menu.icon,
-    where: `the ${menu.folder} folder menu`,
+    where: `the ${menu.folder} folder`,
   })),
   ...Object.entries(worldConfig.fileIcons ?? {}).map(([extension, icon]) => ({
     name: icon.iconName,

@@ -330,16 +330,15 @@ and nothing has elected it.
 // ── look/sprite ──────────────────────────────────────────────────────────────
 
 const sprite: WorldScenario = {
-  // THE FILE BROWSER IS ON, for the same reason `memory/actor-state` has it:
-  // the lesson's subject is the file. Step three opens the picture and paints
-  // on it, and a `.png` opens by being opened — there is no open button on
-  // `set sprite` the way there is on `use trait`, and no other way in.
+  // THE LESSON'S SUBJECT IS THE FILE. Step three opens the picture and
+  // paints on it, from the open button on `set sprite`, as `use trait`'s
+  // opens a rule.
   //
   // ON THE MAP, for the last step only (specs/LOOK_PLAN.md). The import and
   // the painting are file work and stay where they are; what the map adds is
   // the proof that the picture is the PROJECT's — a second kind, made from
   // the palette, is offered the same file.
-  levelData: {showFileBrowser: true, worldView: 'map'},
+  levelData: {worldView: 'map'},
   name: 'A picture is a file',
   description: 'An actor drawing a gray box, and the picture it could have.',
   source: lessonSource({
@@ -367,20 +366,20 @@ The Hero is a gray box because that is what \`hero.actor\` says to draw.
 Nothing in this lab is built in: a picture is a **file** the project holds,
 and until it holds one there is nothing to draw but shapes.
 
-This is the first lesson with a file browser down the left, and that is the
-lesson: the pictures are files like everything else — like the Hero, whose
-tab you have been opening — so they are in the list like everything else.
+That is the lesson: the pictures are files like everything else — like the
+Hero, whose editor you have been opening — so one can be opened and changed
+like everything else.
 
 ### What you do
 
 1. Press [Open Hero](#clickable=map.openKind:Hero) and add **set sprite**, using
-   the \`(import…)\` row on its dropdown to bring a picture in. Look at
-   \`sprites/\` on the left afterwards — it is really there, and it is yours,
-   not a link to the library's.
+   the \`(import…)\` row on its dropdown to bring a picture in. It lands in
+   \`sprites/\`, and it is yours, not a link to the library's.
 2. Run it. The sprite wins; the drawing underneath is what an actor does when it
    has no picture.
-3. Open the picture you imported and **paint on it**. It is yours now — the copy
-   in the library is untouched.
+3. Press the **open** button at the end of your **set sprite** block to open
+   the picture, and **paint on it**. It is yours now — the copy in the library
+   is untouched.
 4. Go back to the [Map](#clickable=view.map) and press
    [Add New Actor](#clickable=map.newActor). Its picture step offers the picture
    you imported: it was never the Hero's, it is the project's.
@@ -4297,9 +4296,7 @@ const WIND_RULE = JSON.stringify(
 );
 
 const ruleProperty: WorldScenario = {
-  // A lesson about a RULE FILE, so the file browser is on: this is one of the
-  // three that are about files rather than about a world (`ONE_FILE`).
-  levelData: {showFileBrowser: true},
+  // A lesson about a RULE FILE, reached from Rules in Play.
   name: 'A property is a block',
   description: 'A wind that blows everything at exactly the same speed.',
   source: lessonSource({
@@ -4336,7 +4333,8 @@ Two Leaves in the wind, drifting right at exactly the same speed — and they
 always will, because the speed is the number **2**, typed into
 \`rules/wind.rule\` where nothing else can reach it.
 
-Open that file. It is nine blocks: a rule, a trait, and a step that moves
+Open that file: **Rules in Play**, under Add Rules at the foot of the
+toolbox, lists it with an **Open** beside it. It is nine blocks: a rule, a trait, and a step that moves
 whatever elected the trait. Nothing in it is hidden from you, and nothing in it
 is different in kind from what you write in a world.
 
@@ -4624,9 +4622,8 @@ tokens.
 // ── making/change ────────────────────────────────────────────────────────────
 
 const changeRule: WorldScenario = {
-  // A lesson about a rule FILE, so the browser is on — and the point of it is
-  // that the file is the project's own copy.
-  levelData: {showFileBrowser: true},
+  // A lesson about a rule FILE — and the point of it is that the file is the
+  // project's own copy.
   name: 'Change it',
   description:
     'A guard on a long, slow beat, and the number that says how long.',
@@ -4661,7 +4658,8 @@ nothing anywhere else changes when you change it.
 
 ### What you do
 
-1. Open \`rules/patrol.rule\` — from the file browser, or the open button on
+1. Open \`rules/patrol.rule\` — from **Rules in Play** under the toolbox's Add
+   Rules, or the open button on
    \`use trait ⟨Patrols Across⟩\`.
 2. Find **define number across time with default 1.5** and make it 0.5. The
    Guard turns three times as often.
@@ -4732,7 +4730,6 @@ const WEATHER_RULE = JSON.stringify(
 );
 
 const ownTrait: WorldScenario = {
-  levelData: {showFileBrowser: true},
   name: 'A trait of your own',
   description: 'One weather, two kinds of thing, and the same wind on both.',
   source: lessonSource({
@@ -4789,7 +4786,8 @@ other.
 
 ### What you do
 
-1. In \`rules/weather.rule\`, add a second **define trait**, called **Sinks**.
+1. In \`rules/weather.rule\` (open it from **Rules in Play**, under Add Rules at
+   the foot of the toolbox), add a second **define trait**, called **Sinks**.
 2. Give it \`use trait ⟨Positional⟩\` and an **each frame** that adds to the
    position's **y** rather than its **x**.
 3. In \`stone.actor\`, give the Stone **Sinks** instead of **Blown**.
@@ -4857,7 +4855,6 @@ const bobStep = () => ({
 });
 
 const ownRule: WorldScenario = {
-  levelData: {showFileBrowser: true},
   name: 'Shared, without a copy',
   description: 'Two actors doing the same thing, written out twice.',
   source: lessonSource({
@@ -4902,8 +4899,9 @@ under the trait — so what is left to you is what goes in the mouth.
 
 ### What you do
 
-1. Make a new file, \`rules/bob.rule\`, named **Bob**. It opens on the three
-   blocks above.
+1. Press **Rules in Play** under Add Rules at the foot of the toolbox, then
+   **Write a new rule…**, and call it **Bob**. It opens on the three blocks
+   above, in \`rules/bob.rule\`.
 2. Move the bobbing into the **each frame** under the trait.
 3. Take the \`each frame\` out of both actors and give each
    **use trait ⟨Bob⟩** instead.
@@ -4973,7 +4971,6 @@ putting them together, which is what a genre is.
 // ── making/read ──────────────────────────────────────────────────────────────
 
 const readRule: WorldScenario = {
-  levelData: {showFileBrowser: true},
   name: 'Open it up',
   description: 'A rule you have used twenty times and never looked inside.',
   source: lessonSource({
@@ -5121,7 +5118,6 @@ const BOBBING_RULE = JSON.stringify(
 );
 
 const ownBlock: WorldScenario = {
-  levelData: {showFileBrowser: true},
   name: 'Your own vocabulary',
   description: 'The same sum written out twice, with one number different.',
   source: lessonSource({
@@ -5150,7 +5146,8 @@ const ownBlock: WorldScenario = {
   instructions: `
 ## Your own vocabulary
 
-Open \`rules/bobbing.rule\`. Two traits, two steps, and inside them the same sum
+Open \`rules/bobbing.rule\` from **Rules in Play**, under Add Rules at the foot
+of the toolbox. Two traits, two steps, and inside them the same sum
 written out twice: **sin of ⟨time × 180⟩ × ⟨a number⟩**. One says 1 and the other
 says 4, and everything else about them is identical.
 
@@ -5389,9 +5386,8 @@ const mapFile = (actors: object[]) =>
   );
 
 const rooms: WorldScenario = {
-  // THE FILE BROWSER IS ON, because the lesson is about there being two files:
-  // a room is a `.map`, and "somewhere else" is another one.
-  levelData: {showFileBrowser: true},
+  // The lesson is about there being two files: a room is a `.map`, and
+  // "somewhere else" is another one, reached from the map editor's switcher.
   name: 'A door to somewhere else',
   description: 'Two rooms in two files, and a door that does nothing.',
   source: lessonSource({
@@ -6530,28 +6526,7 @@ already in it.
 };
 
 /**
- * A lesson has NO FILE BROWSER unless it says otherwise.
- *
- * The world and the actors it places are the files a lesson is about, and
- * they are open as tabs (`support.lessonSource`). The rules and pictures it
- * holds are files nobody has to open, and a sidebar listing eleven of them
- * argues with a lesson about two: the first thing it invites is the click
- * that leaves them.
- *
- * The files are still THERE and still compiled — what is gone is the list. The
- * ways in that belong to a lesson are still on the blocks: the open button beside `use
- * trait` opens the rule behind it, and the rule count on `define world` opens
- * what the project holds.
- *
- * FILES ARE A LESSON OF THEIR OWN, and it is `making/read` — "the rules are
- * blocks, and you can read all of them". A lesson that is about files turns the
- * browser back on by saying so in its own `levelData`, which is what the spread
- * below leaves room for.
- */
-const ONE_FILE: WorldScenario['levelData'] = {showFileBrowser: false};
-
-/**
- * …AND IT OPENS ON ITS WORKSPACE. A world opens on its map
+ * A lesson OPENS ON ITS WORKSPACE. A world opens on its map
  * (specs/MAP_FIRST.md), and nearly every lesson's task is a block: "add
  * **when ⟨…⟩**". A lesson that opened on a canvas its instructions never
  * mention would start a learner one click from their work and not say so.
@@ -6649,7 +6624,7 @@ export const LESSONS: Readonly<Record<TileId, WorldScenario>> =
       id,
       {
         ...lesson,
-        levelData: {...ONE_FILE, ...IN_THE_WORKSPACE, ...lesson.levelData},
+        levelData: {...IN_THE_WORKSPACE, ...lesson.levelData},
       },
     ]),
   ) as Readonly<Record<TileId, WorldScenario>>;

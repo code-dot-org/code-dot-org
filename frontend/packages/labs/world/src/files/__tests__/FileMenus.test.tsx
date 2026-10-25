@@ -255,103 +255,22 @@ const {requestFileAct} = await import('../fileActs');
 
 // Cleared between cases, because `toHaveBeenCalled` on a mock that ALREADY was
 // is a wait that ends immediately — and then `calls.at(-1)` reads the last
-// test's call rather than this one's. Which is exactly what happened the moment
-// the menus started closing before their dialog opens.
+// test's call rather than this one's.
 beforeEach(() => {
   vi.clearAllMocks();
   promptForName.mockResolvedValue('Chaser');
 });
 
-/** Every folder button, in the order the tab bar puts them. */
-const FOLDERS = [
-  // Singular, and the only button that is not a menu: there is one world per
-  // project, so it OPENS (specs/MAP_EVENTS_PLAN.md).
-  'World',
-  'Sprites',
-  'Backgrounds',
-  'Actors',
-  'Rules',
-  'Animations',
-  'Sounds',
-  'Effects',
-  'Maps',
-];
-
-const openMenu = (name: string) => {
-  render(<FileMenus />);
-  fireEvent.click(screen.getByRole('button', {name}));
-};
-
-describe('the file menus', () => {
-  it('gives every folder a button, whether the project has one or not', () => {
-    render(<FileMenus />);
-
-    // Nine, because a project's folders are its kinds — and the two this
-    // project lacks are still offered, since a shelf makes the folder it
-    // writes into.
-    //
-    // IN ORDER, because the order is an argument: a world, then the pictures,
-    // then the things made out of them. An actor is a drawing that was given
-    // behavior, so the drawing comes first (`files/folderMenus`).
-    const buttons = screen
-      .getAllByRole('button')
-      .map(button => button.getAttribute('aria-label') ?? '')
-      .filter(name => FOLDERS.includes(name));
-
-    expect(buttons).toEqual(FOLDERS);
-  });
-
-  it('lists what is in the folder by NAME, and opens what is clicked', () => {
-    // "Has Gravity", not `gravity.rule`: the file name is where the rule lives
-    // rather than what it is, and every other place a learner meets it says
-    // the declared name.
-    openMenu('Rules');
-
-    expect(screen.queryByText('gravity.rule')).toBeNull();
-    fireEvent.click(screen.getByText('Has Gravity'));
-
-    expect(activateFile).toHaveBeenCalledWith('a');
-  });
-
-  it('titles an unedited rule by what the LIBRARY’S rule declares', () => {
-    // These rows are the one place in the lab that reads a file's contents
-    // without going through `projectFiles`, which is where a reference is
-    // resolved everywhere else. Unresolved, every rule nobody had edited fell
-    // back to its stem and the menu read `Solid` where the rest of the lab
-    // reads `Solid Bodies`.
-    openMenu('Rules');
-
-    expect(screen.getByText('Solid Bodies')).toBeTruthy();
-    expect(screen.queryByText('Solid')).toBeNull();
-  });
-
-  it('titles a file that declares no name, from its own stem', () => {
-    // A map is an arrangement and names nothing, so the file is the only name
-    // it has — titled the way every dropdown titles one (`blockly/label`).
-    openMenu('Rules');
-
-    expect(screen.getByText('Level1')).toBeTruthy();
-  });
-
-  it('leaves out what the tree leaves out', () => {
-    // A `.sheet` says how to cut the `.png` of the same name into cells. It is
-    // written and deleted by the image editor, never opened, and the tree
-    // hides it; a menu that listed it would be offering to open a file with no
-    // editor and to delete half of a spritesheet.
-    openMenu('Rules');
-
-    expect(screen.queryByText(/sheet/i)).toBeNull();
-  });
-
+describe('the file acts, as each door asks them', () => {
+  // The folder buttons are gone (specs/SHELL_FINISH_PLAN.md, step 5); what
+  // they did, the doors ask through `fileActs`, and the Actor Palette asks
+  // for the Creator through `actorCreate`.
   it('clones a thing under a new name, inside and out', async () => {
     // A copy that still called itself "Has Gravity" would be two rules a
     // learner cannot tell apart, and a word every dropdown offers twice.
     promptForName.mockResolvedValueOnce('Has Heavy Gravity');
-    openMenu('Rules');
-    fireEvent.click(
-      screen.getByRole('button', {name: 'Options for Has Gravity'}),
-    );
-    fireEvent.click(screen.getByText('Clone'));
+    render(<FileMenus />);
+    await requestFileAct({act: 'clone', fileId: 'a'});
 
     await vi.waitFor(() => expect(newFile).toHaveBeenCalled());
     const written = newFile.mock.calls.at(-1)![0] as {
@@ -369,15 +288,12 @@ describe('the file menus', () => {
   });
 
   it('renames the THING, and moves its file to match', async () => {
-    // The row says "Has Gravity"; renaming it renames the rule, moves
+    // The file says "Has Gravity"; renaming it renames the rule, moves
     // `gravity.rule` to `hasHeavyGravity.rule`, and carries every reference —
     // which is a write over the whole project rather than one file.
     promptForName.mockResolvedValueOnce('Has Heavy Gravity');
-    openMenu('Rules');
-    fireEvent.click(
-      screen.getByRole('button', {name: 'Options for Has Gravity'}),
-    );
-    fireEvent.click(screen.getByText('Rename'));
+    render(<FileMenus />);
+    await requestFileAct({act: 'rename', fileId: 'a'});
 
     await vi.waitFor(() => expect(replaceSources).toHaveBeenCalled());
     const written = replaceSources.mock.calls.at(-1)![0] as {
@@ -401,64 +317,18 @@ describe('the file menus', () => {
     // holding an actor still called "Ball". The file had moved and the
     // references had followed it; the name inside had not.
     promptForName.mockResolvedValueOnce('Has Heavy Gravity');
-    openMenu('Rules');
-    fireEvent.click(
-      screen.getByRole('button', {name: 'Options for Has Gravity'}),
-    );
-    fireEvent.click(screen.getByText('Rename'));
+    render(<FileMenus />);
+    await requestFileAct({act: 'rename', fileId: 'a'});
 
     await vi.waitFor(() => expect(replaceSources).toHaveBeenCalled());
     expect(updateSources).not.toHaveBeenCalled();
   });
 
-  it('offers renaming the thing, not the file', () => {
-    // Renaming the FILE changes nothing these rows show and leaves the name
-    // the learner meant untouched. The tree still renames a file.
-    openMenu('Rules');
-    fireEvent.click(
-      screen.getByRole('button', {name: 'Options for Has Gravity'}),
-    );
-
-    expect(screen.getByText('Delete')).toBeTruthy();
-    expect(screen.getByText('Clone')).toBeTruthy();
-    expect(screen.getByText('Rename')).toBeTruthy();
-  });
-
-  it('says what is not there yet, rather than showing a blank menu', () => {
-    // The rules' menu, since the actors are a grid and say it their own way.
-    render(<FileMenus />);
-    fireEvent.click(screen.getByRole('button', {name: 'Effects'}));
-
-    expect(screen.getByText('(no effects yet)')).toBeTruthy();
-  });
-
-  it('reads the actors as a grid, with both ways to get another', () => {
-    // An actor is a thing you can see, and the lab draws it everywhere else it
-    // is named; only the list of them was words (`actors/ActorPickerDialog`).
-    openMenu('Actors');
-
-    expect(screen.getByRole('dialog')).toBeTruthy();
-    // ONE tile, not two: importing is the Actor Creator's third door now.
-    expect(screen.queryByText('Import')).toBeNull();
-    expect(screen.getByText('New')).toBeTruthy();
-    expect(screen.getByRole('button', {name: 'Open Coin'})).toBeTruthy();
-  });
-
-  it('offers both ways in for a folder the project has not got', () => {
-    // The project has no `effects/`. Both work anyway: a shelf makes the folder
-    // it writes into, and `New` makes it in the same write as the file. It used
-    // to offer the shelf and not the making, for a reason nobody could see.
-    openMenu('Effects');
-
-    expect(screen.getByText('Import…')).toBeTruthy();
-    expect(screen.getByText('New effect')).toBeTruthy();
-  });
-
   it('makes the folder as well, when the project has not got one', async () => {
+    // The project has no `effects/`.
     promptForName.mockResolvedValueOnce('Ripple');
-    openMenu('Effects');
-
-    fireEvent.click(screen.getByText('New effect'));
+    render(<FileMenus />);
+    void requestFileAct({act: 'make', folder: 'effects'});
 
     await vi.waitFor(() => expect(createNewFile).toHaveBeenCalled());
     const {source, folderId} = createNewFile.mock.calls.at(-1)![0] as {
@@ -470,10 +340,10 @@ describe('the file menus', () => {
     expect(source.folders[folderId].name).toBe('effects');
   });
 
-  /** Open the Actor Creator, which is where the actors' `New` tile goes now. */
+  /** Open the Actor Creator, as the Actor Palette's Add New Actor does. */
   const startAnActor = async (called: string) => {
-    openMenu('Actors');
-    fireEvent.click(screen.getByText('New'));
+    render(<FileMenus />);
+    void requestActorCreate();
     await screen.findByText('Create my own');
     fireEvent.click(screen.getByText('Create my own'));
     fireEvent.change(screen.getByRole('textbox'), {target: {value: called}});
@@ -518,8 +388,8 @@ describe('the file menus', () => {
     // that has one it writes the dependencies and hands back THE LEARNER'S
     // file. Renaming that renamed their Coin and moved every reference with
     // it; the fix is to copy it, which is what the other door does anyway.
-    openMenu('Actors');
-    fireEvent.click(screen.getByText('New'));
+    render(<FileMenus />);
+    void requestActorCreate();
     await screen.findByText('Start from a template');
     fireEvent.click(screen.getByText('Start from a template'));
     fireEvent.click(screen.getByRole('button', {name: 'Coin'}));
@@ -545,8 +415,8 @@ describe('the file menus', () => {
     // The degenerate case of the same branch: a template the project has,
     // kept at the library's own name, would be a second `coin.actor`. The
     // caller's rule catches it before the wizard can ask.
-    openMenu('Actors');
-    fireEvent.click(screen.getByText('New'));
+    render(<FileMenus />);
+    void requestActorCreate();
     await screen.findByText('Start from a template');
     fireEvent.click(screen.getByText('Start from a template'));
     fireEvent.click(screen.getByRole('button', {name: 'Coin'}));
@@ -564,8 +434,8 @@ describe('the file menus', () => {
     // one `sessionStorage` blob and exhausted it. And the file is written
     // quietly: `createExternalFile` activates what it makes, which would open
     // an editor behind a dialog the learner has not finished with.
-    openMenu('Actors');
-    fireEvent.click(screen.getByText('New'));
+    render(<FileMenus />);
+    void requestActorCreate();
     await screen.findByText('Create my own');
     fireEvent.click(screen.getByText('Create my own'));
     fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Crabby'}});
@@ -610,8 +480,8 @@ describe('the file menus', () => {
     // has to read the project the keep just wrote. Built on the render's copy
     // instead, the commit put the pre-keep project back, and the actor came
     // out with a `set sprite` row naming a file that was no longer there.
-    openMenu('Actors');
-    fireEvent.click(screen.getByText('New'));
+    render(<FileMenus />);
+    void requestActorCreate();
     await screen.findByText('Create my own');
     fireEvent.click(screen.getByText('Create my own'));
     fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Crabby'}});
@@ -653,11 +523,8 @@ describe('the file menus', () => {
     // A blank tile to draw on: an empty PNG is not a starting point for a game
     // and is exactly one for a drawing. It goes through the other write, the
     // one that puts a file on a URL.
-    // The sprites read as a palette, so `New` is a tile of it rather than a
-    // menu row (`animationEditor/SpritePickerDialog`).
-    openMenu('Sprites');
-
-    fireEvent.click(screen.getByRole('button', {name: 'New'}));
+    render(<FileMenus />);
+    void requestFileAct({act: 'make', folder: 'sprites'});
     await vi.waitFor(() =>
       expect(createExternalFile).toHaveBeenCalledWith(
         expect.objectContaining({
@@ -668,25 +535,10 @@ describe('the file menus', () => {
     );
   });
 
-  it('reads the backgrounds as a shelf of the pictures themselves', () => {
-    // A backdrop is a PLACE, and "cave.png" versus "court.png" is a worse
-    // question than looking at the two (`appearance/BackgroundPickerDialog`).
-    openMenu('Backgrounds');
-
-    expect(screen.getByRole('dialog')).toBeTruthy();
-    const tile = screen.getByRole('button', {name: 'Open Cave'});
-    expect(tile.querySelector('img')?.getAttribute('src')).toBe(
-      'data:image/png;base64,cave',
-    );
-    fireEvent.click(tile);
-    expect(activateFile).toHaveBeenCalledWith('e');
-  });
-
   it('makes a backdrop as bytes, the way it makes a sprite', async () => {
     promptForName.mockResolvedValueOnce('Cavern');
-    openMenu('Backgrounds');
-
-    fireEvent.click(screen.getByRole('button', {name: 'New'}));
+    render(<FileMenus />);
+    void requestFileAct({act: 'make', folder: 'backgrounds'});
     await vi.waitFor(() =>
       expect(createExternalFile).toHaveBeenCalledWith(
         expect.objectContaining({
@@ -697,72 +549,14 @@ describe('the file menus', () => {
       ),
     );
   });
-
-  it('hands the actors grid over to the Actor Creator, rather than stacking', async () => {
-    // The same two-focus-traps claim as the shelves below, for the one grid
-    // whose `New` leads somewhere else now: the wizard has to arrive with the
-    // grid gone, or it arrives behind it (`FileMenus.thenAsk`).
-    openMenu('Actors');
-    fireEvent.click(screen.getByText('New'));
-
-    await screen.findByText('Create my own');
-    expect(screen.queryByRole('button', {name: 'Open Coin'})).toBeNull();
-  });
-
-  it.each(['Sprites', 'Backgrounds', 'Animations'])(
-    'gets the %s grid out of the way of the shelf it opens',
-    async grid => {
-      // TWO FOCUS TRAPS. The grid holds one and so does the dialog its Import
-      // tile opens, so a grid left standing puts that dialog BEHIND it —
-      // visible, unreachable, and unclosable without dismissing the grid on
-      // top of it. Every one of these leads somewhere, so every one gets out
-      // of the way (`FileMenus.thenAsk`). The actors' grid is above, since it
-      // has no Import tile any more.
-      openMenu(grid);
-      fireEvent.click(screen.getByRole('button', {name: 'Import'}));
-
-      await vi.waitFor(() => expect(screen.queryByRole('dialog')).toBeNull());
-    },
-  );
-
-  it('takes a file of your own into the folder that gives it meaning', () => {
-    // The tree's upload put every file at the ROOT, which for a picture is the
-    // one thing that decides what it is: a PNG in `backgrounds/` is a backdrop
-    // and the same bytes in `sprites/` are a sprite (BACKGROUNDS.md §5).
-    openMenu('Sprites');
-
-    expect(screen.getByRole('button', {name: 'Upload'})).toBeTruthy();
-  });
-
-  it('opens the world rather than asking which one', () => {
-    // A world is a whole PROGRAM. Nothing composes them and the compiler has
-    // one entry, so levels, screens and dialogs are maps and there is never a
-    // second world to choose between — a menu of one row was a question with
-    // one answer (specs/MAP_EVENTS_PLAN.md).
-    render(<FileMenus />);
-    fireEvent.click(screen.getByRole('button', {name: 'World'}));
-
-    expect(activateFile).toHaveBeenCalledWith('w');
-    // …and no menu came up behind it.
-    expect(screen.queryByText('Import…')).toBeNull();
-  });
-
-  it('still makes nothing where making one from nothing means nothing', () => {
-    // A sound is bytes, and an empty one is silence nobody can draw. The only
-    // way in is the shelf (or an upload from the tree).
-    openMenu('Sounds');
-
-    expect(screen.queryByText(/^New/)).toBeNull();
-    expect(screen.getByText('Import…')).toBeTruthy();
-  });
 });
 
 describe('the Actor Creator, asked for from the map', () => {
-  // A level with nothing to browse has no folder buttons, and the map
-  // editor's palette still has `Add New Actor` (specs/KINDS_FROM_THE_MAP_PLAN.md).
-  it('is mounted without its buttons, and still answers', async () => {
-    render(<FileMenus menus={false} />);
-    expect(screen.queryByRole('button', {name: 'Actors'})).toBeNull();
+  // The map editor's palette has `Add New Actor`
+  // (specs/KINDS_FROM_THE_MAP_PLAN.md).
+  it('draws nothing of its own, and answers', async () => {
+    render(<FileMenus />);
+    expect(screen.queryAllByRole('button')).toHaveLength(0);
 
     const asked = requestActorCreate();
     await screen.findByText('Create my own');
@@ -784,7 +578,7 @@ describe('the Actor Creator, asked for from the map', () => {
 
   it('from the Interface tab, offers interface templates and asks no picture', async () => {
     // specs/PURPOSE_PLAN.md, step 2.
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     const asked = requestActorCreate('interface');
     await screen.findByText('Start from a template');
     fireEvent.click(screen.getByText('Start from a template'));
@@ -812,7 +606,7 @@ describe('the Actor Creator, asked for from the map', () => {
   });
 
   it('answers with nothing when the learner backs out', async () => {
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     const asked = requestActorCreate();
     await screen.findByText('Create my own');
     fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
@@ -824,7 +618,7 @@ describe('an actor deleted from the palette', () => {
   // The Actor Palette's Delete is asked of these menus, which own the
   // prompts (`actors/actorDelete`, specs/SHELL_PLAN.md).
   it('asks first, then takes the actor out of the project', async () => {
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     const asked = requestActorDelete('actors/coin');
 
     expect(await asked).toBe('actors/coin');
@@ -844,13 +638,13 @@ describe('an actor deleted from the palette', () => {
 
   it('keeps it when the learner says no', async () => {
     confirm.mockResolvedValueOnce(false);
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     expect(await requestActorDelete('actors/coin')).toBeUndefined();
     expect(replaceSources).not.toHaveBeenCalled();
   });
 
   it('answers nothing for an actor the project does not hold', async () => {
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     expect(await requestActorDelete('actors/ghost')).toBeUndefined();
     expect(confirm).not.toHaveBeenCalled();
   });
@@ -860,7 +654,7 @@ describe('a Screen or Map acted on from the toolbar', () => {
   // The toolbar over the map editor asks these menus, which own the
   // prompts (`files/fileActs`, specs/SHELL_PLAN.md).
   it('makes a new map, asking its name', async () => {
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     promptForName.mockResolvedValueOnce('Level 2');
     await requestFileAct({act: 'make', folder: 'maps'});
 
@@ -873,7 +667,7 @@ describe('a Screen or Map acted on from the toolbar', () => {
   });
 
   it('makes a new screen, though no folder button makes one', async () => {
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     promptForName.mockResolvedValueOnce('Title');
     await requestFileAct({act: 'make', folder: 'screens'});
 
@@ -883,7 +677,7 @@ describe('a Screen or Map acted on from the toolbar', () => {
   });
 
   it('renames one by what it is called, and deletes one after asking', async () => {
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     promptForName.mockResolvedValueOnce('Level One');
     await requestFileAct({act: 'rename', fileId: 'b'});
     expect(promptForName).toHaveBeenCalledWith(
@@ -898,7 +692,7 @@ describe('a Screen or Map acted on from the toolbar', () => {
   // Every kind, from the place it is used (specs/SHELL_FINISH_PLAN.md, step
   // 4): the folder buttons are not the only way to these.
   it('makes any kind, and answers the new file’s id', async () => {
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     promptForName.mockResolvedValueOnce('Chaser');
     const made = await requestFileAct({act: 'make', folder: 'sprites'});
     expect(createExternalFile).toHaveBeenCalledWith(
@@ -917,7 +711,7 @@ describe('a Screen or Map acted on from the toolbar', () => {
   });
 
   it('answers nothing for a folder nothing makes in', async () => {
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     expect(await requestFileAct({act: 'make', folder: 'sounds'})).toBe(
       undefined,
     );
@@ -928,7 +722,7 @@ describe('a Screen or Map acted on from the toolbar', () => {
     const picker = vi
       .spyOn(HTMLInputElement.prototype, 'click')
       .mockImplementation(() => {});
-    render(<FileMenus menus={false} />);
+    render(<FileMenus />);
     await requestFileAct({act: 'open', fileId: 'b'});
     await vi.waitFor(() => expect(activateFile).toHaveBeenCalledWith('b'));
     // …and by its path, for a door that holds no project.

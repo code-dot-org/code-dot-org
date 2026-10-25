@@ -1,9 +1,9 @@
 // Renaming a THING, and moving its file to match.
 //
-// The menus name a file by what it declares (specs/FILES.md), so "rename" here
+// The lab names a file by what it declares (specs/FILES.md), so "rename" here
 // means the actor called "Player", not `player.actor`. Both change: the name
 // inside the file, and the file's own stem, because a file whose name has
-// nothing to do with the thing in it is the confusion the menus exist to end.
+// nothing to do with the thing in it is a confusion nothing should start.
 //
 // WHAT THAT COSTS is every reference. Nothing in this lab records where a
 // reference lives, so a rename has to go and find them:

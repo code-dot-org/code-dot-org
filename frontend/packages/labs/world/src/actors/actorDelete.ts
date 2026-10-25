@@ -1,7 +1,7 @@
 // Asking for an actor to be deleted from somewhere that does not own the
 // lab's dialogs: the Actor Palette's Delete (specs/SHELL_PLAN.md, step 2).
 //
-// The file menus own the prompts, as they own the Actor Creator
+// The file acts' host owns the prompts, as it owns the Actor Creator
 // (`create/actorCreate`), so they answer: they say where the actor is used,
 // ask, and take it and its placements out of the project
 // (`files/actorUses`). A request resolves with the actor's module path when

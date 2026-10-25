@@ -1202,11 +1202,13 @@ const worldSetSprite = defineBlock({
   // The options extension first, then the import one, so the latter wraps that
   // validator rather than being wrapped by it (see appearanceImportField).
   // `spritePick` replaces how the field is EDITED, which is independent of both.
+  // The open button last, after the dropdown: the picture, in its editor.
   extensions: [
     actorInputExtension,
     spriteOptionsExtension,
     spritePickExtension,
     spriteImportFieldExtension,
+    openSourceButtonExtension,
   ],
   previousStatement: true,
   nextStatement: true,

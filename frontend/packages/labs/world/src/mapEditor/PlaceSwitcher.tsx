@@ -93,7 +93,7 @@ export const PlaceSwitcher = ({
 
   return (
     <Dialog
-      // A place to choose from, not an alert (`ActorPickerDialog`).
+      // A place to choose from, not an alert (`RulesInPlayDialog`).
       role="dialog"
       title="Screens and Maps"
       onClose={onClose}

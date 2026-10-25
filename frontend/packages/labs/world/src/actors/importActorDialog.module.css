@@ -1,5 +1,5 @@
 /* The stock-actor picker's CONTENT — a grid of what each actor IS, the same
-   reading the project's own actors get (`actors/ActorPickerDialog`). The dialog
+   reading the Actor Palette gives the project's own actors. The dialog
    itself is the design system's, so this shapes only what is inside it. */
 
 .body {

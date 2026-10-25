@@ -1,7 +1,7 @@
 // Painting one frame of an animation onto a canvas.
 //
 // Three places do it: the editor's preview, its row of frame thumbnails, and
-// the grid of the project's animations (`AnimationPickerDialog`). A frame is a
+// a playing animation's thumbnail (`AnimationThumb`). A frame is a
 // sprite, a cell of it, a scale and an offset, and getting any of those wrong
 // puts the drawing somewhere the game will not — so there is one of these
 // rather than one per caller.

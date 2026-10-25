@@ -238,6 +238,36 @@ removed; folderMenus.ts's description of the menus is rewritten for what
 remains (the seam host and its dialogs). A test walks the audit's list
 and finds a door for every item.
 
+BUILT. `FileMenus` takes no props and draws nothing: it is the host of the
+file acts, the actor create and delete seams, the Actor Creator and the
+drawing dialog, still mounted where the buttons were because it needs what
+the workspace provides. The folder menu, the row menu and the three grids
+only the buttons opened (`ActorPickerDialog`, `AnimationPickerDialog`,
+`BackgroundPickerDialog`) are deleted, and with them the sprite picker's
+`chooseOnPress`, which was the Sprites button's way of opening a picture.
+`folderMenus.ts` is now the list of kinds: what `make` makes in each folder,
+whether `upload` may write there, and the icon, which the unlock list still
+reads; the shelves and the enhance flag the menus needed are gone.
+
+`showFileBrowser` is gone from the schema, `levelData`, the layout and the
+lessons, as are `ONE_FILE` and the eight lessons' `showFileBrowser: true`.
+The lessons that sent a learner to a file now say how to get there: Rules
+in Play for a rule (`making/read`, `making/change`, `making/property`,
+`making/rule`, `making/trait`, `making/block`), and for `look/sprite`, whose
+Hero is still written in blocks and so has no look to press Edit on, a new
+door: `set sprite` carries the open button `use trait` has, and opens the
+picture it names in the image editor (`openSourceButton`; `.png` joined
+`OPENABLE_EXTENSIONS`, and the project's pictures are among the openable
+modules). The lesson tests that held the browser's absence became one that
+holds every lesson naming a file to also name a way to it.
+
+The audit test is `files/__tests__/doors.test.ts`: each item of the list
+above with the source that now does it. Each door has its own behaviour
+test besides; this one fails, by name, if a door is taken away. The file
+menus' own tests moved to the acts and the Actor Creator's seam, and those
+that were about the buttons and grids went with them. In the browser: the
+starter, Tapper and Breakout open with no folder buttons.
+
 ### 6. Documents, the browser, and the ledger
 
 ## Not in this phase

@@ -1,7 +1,7 @@
 // The stock-actor picker, opened by the `(import…)` row on an ACTOR dropdown.
 //
 // A GRID of what each actor is, for the reason the project's own actors are one
-// (`actors/ActorPickerDialog`): an actor is a thing you can see, and a column of
+// on the Actor Palette (`mapEditor/ActorPalette`): an actor is a thing you can see, and a column of
 // nine paragraphs is asking a learner to read their way to a choice they could
 // have made by looking. Each tile is the actor doing what it does — a walk, a
 // spin, a still for the ones that do nothing on their own — with its name under

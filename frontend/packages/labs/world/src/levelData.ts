@@ -37,20 +37,6 @@ export function showsRuleSource(
 }
 
 /**
- * Whether this level lets a learner reach the project's other files.
- *
- * The FILE MENUS, since the tree went (`layout/WorldLayout`) — the level data
- * keeps the name it was saved under, which is what "showFileBrowser" now means
- * for a lab that has no browser: a level about one file shows the file and
- * nothing else, and its one file cannot be closed.
- */
-export function showsFileBrowser(
-  properties: WorldLevelProperties | undefined,
-): boolean {
-  return properties?.levelData?.showFileBrowser !== false;
-}
-
-/**
  * Which view a world's file opens on in this level: its map, unless the
  * level says its work is in the workspace (specs/CURRICULUM_PLAN.md).
  */
