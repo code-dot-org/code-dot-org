@@ -156,6 +156,14 @@ below, and are listed last.
   value text), moved by the arrows, Home and End. What it does not say:
   which tracks it has and where their keys are, which are drawn and
   hidden from a screen reader; and Play changes the picture with no word.
+- **Each key is a button** named for its track and time and pressed when
+  chosen, so the keys a screen reader could not find on the strip are in
+  the tab order, one stop each; Alt and an arrow move one, Delete removes
+  it. Dragging is never the only way. Not done: a key moved or removed is
+  not announced, and focus is lost with a deleted key.
+- **The values at the playhead are labelled fields**, and one not keyed
+  there says so in words ("Between keys", "Held from the last key"), not
+  only in italics. The section is named for the time.
 
 ## Not yet done for any phase
 

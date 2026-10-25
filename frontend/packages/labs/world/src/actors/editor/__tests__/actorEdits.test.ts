@@ -26,6 +26,10 @@ import {
   animationNames,
   removeAnimation,
   renameAnimation,
+  moveAnimationKey,
+  removeAnimationKey,
+  setAnimationKey,
+  setAnimationLength,
   setAnimationLoop,
   setPropertyDefault,
   setValue,
@@ -267,5 +271,31 @@ describe('its animations', () => {
       setAnimationLoop(BOBBER, 'Main', false).animations!.Main,
     ).not.toHaveProperty('loop');
     expect(setAnimationLoop(BOBBER, 'Main', true)).toBe(BOBBER);
+  });
+
+  it('are keyed at a time, and the key moved and taken away', () => {
+    const keyed = setAnimationKey(BOBBER, 'Hop', 'drawnScale', 0.5, 2);
+    expect(keyed.animations!.Hop.tracks.drawnScale).toEqual([
+      {at: 0.5, value: 2},
+    ]);
+    // Set again where it is, it is the same key with another value.
+    const again = setAnimationKey(keyed, 'Hop', 'drawnScale', 0.5, 3);
+    expect(again.animations!.Hop.tracks.drawnScale).toEqual([
+      {at: 0.5, value: 3},
+    ]);
+    const moved = moveAnimationKey(again, 'Hop', 'drawnScale', 0.5, 1.2);
+    expect(moved.animations!.Hop.tracks.drawnScale).toEqual([
+      {at: 1.2, value: 3},
+    ]);
+    const gone = removeAnimationKey(moved, 'Hop', 'drawnScale', 1.2);
+    expect(gone.animations!.Hop.tracks).toEqual({});
+    // Main is untouched throughout.
+    expect(gone.animations!.Main).toBe(BOBBER.animations!.Main);
+  });
+
+  it('are drawn as long as asked, but never shorter than their last key', () => {
+    const keyed = setAnimationKey(BOBBER, 'Hop', 'opacity', 2, 0);
+    expect(setAnimationLength(keyed, 'Hop', 4).animations!.Hop.length).toBe(4);
+    expect(setAnimationLength(keyed, 'Hop', 1).animations!.Hop.length).toBe(2);
   });
 });

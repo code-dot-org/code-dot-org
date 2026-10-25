@@ -84,8 +84,12 @@ import {
   effectSettings,
   removeAnimation,
   removeEffect,
+  moveAnimationKey,
+  removeAnimationKey,
   renameAnimation,
   removeTrait,
+  setAnimationKey,
+  setAnimationLength,
   setAnimationLoop,
   setEffectSetting,
   switchEffect,
@@ -97,6 +101,7 @@ import {
   type TraitChoice,
 } from './actorEdits';
 import {AnimationRow} from './AnimationRow';
+import {MomentPanel} from './MomentPanel';
 import {SelfProperty} from './SelfProperty';
 import {TimelineStrip} from './TimelineStrip';
 import {ValueField} from './ValueField';
@@ -416,7 +421,13 @@ export const ActorEditor = (props: CustomEditorProps) => {
       : undefined;
   // Where the playhead is, in seconds; back to the start for another one.
   const [time, setTime] = useState(0);
-  useEffect(() => setTime(0), [selected]);
+  const [selectedKey, setSelectedKey] = useState<
+    {property: string; at: number} | undefined
+  >();
+  useEffect(() => {
+    setTime(0);
+    setSelectedKey(undefined);
+  }, [selected]);
   const newAnimation = async () => {
     if (!data) {
       return;
@@ -1133,6 +1144,44 @@ export const ActorEditor = (props: CustomEditorProps) => {
                 time={time}
                 onTime={setTime}
                 effectName={path => effectNamed(path)}
+                selectedKey={selectedKey}
+                onSelectKey={setSelectedKey}
+                onMoveKey={
+                  isReadOnly
+                    ? undefined
+                    : (property, from, to) => {
+                        edit(
+                          moveAnimationKey(data, selected, property, from, to),
+                        );
+                        setSelectedKey({property, at: to});
+                      }
+                }
+                onDeleteKey={
+                  isReadOnly
+                    ? undefined
+                    : (property, at) => {
+                        edit(removeAnimationKey(data, selected, property, at));
+                        setSelectedKey(undefined);
+                      }
+                }
+                onLength={
+                  isReadOnly
+                    ? undefined
+                    : length => edit(setAnimationLength(data, selected, length))
+                }
+              />
+              <MomentPanel
+                timeline={chosenTimeline}
+                time={time}
+                pictures={pictureNames}
+                effects={(data.effects ?? []).map(effect => ({
+                  path: effect.effect,
+                  name: effectNamed(effect.effect),
+                }))}
+                onSet={(property, value) =>
+                  edit(setAnimationKey(data, selected, property, time, value))
+                }
+                isReadOnly={isReadOnly}
               />
               {Object.keys(chosenTimeline.tracks).some(track =>
                 track.startsWith('effect:'),

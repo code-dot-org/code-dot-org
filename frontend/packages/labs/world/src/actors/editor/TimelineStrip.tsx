@@ -77,6 +77,14 @@ export interface TimelineStripProps {
   onTime: (t: number) => void;
   /** What an effect track's effect is called. */
   effectName?: (path: string) => string;
+  /** The key chosen, if one is: its track and its time. */
+  selectedKey?: {property: string; at: number};
+  onSelectKey?: (key: {property: string; at: number} | undefined) => void;
+  /** Move a key to another time; absent, keys are not moved here. */
+  onMoveKey?: (property: string, from: number, to: number) => void;
+  onDeleteKey?: (property: string, at: number) => void;
+  /** Draw the strip this many seconds long; absent, it cannot be changed. */
+  onLength?: (length: number) => void;
 }
 
 export const TimelineStrip = ({
@@ -85,6 +93,11 @@ export const TimelineStrip = ({
   time,
   onTime,
   effectName,
+  selectedKey,
+  onSelectKey,
+  onMoveKey,
+  onDeleteKey,
+  onLength,
 }: TimelineStripProps) => {
   const end = endOf(timeline);
   const length = drawnLength(timeline);
@@ -154,6 +167,35 @@ export const TimelineStrip = ({
     onTime(toTick(Math.min(length, Math.max(0, next))));
   };
 
+  // A key being dragged: which, and where it is now. Written once, when
+  // it is let go, so a drag is one edit.
+  const [dragging, setDragging] = useState<{
+    property: string;
+    from: number;
+    to: number;
+  }>();
+  const keyDown = (
+    event: KeyboardEvent<HTMLButtonElement>,
+    property: string,
+    at: number,
+  ) => {
+    if (event.key === 'Delete' || event.key === 'Backspace') {
+      event.preventDefault();
+      onDeleteKey?.(property, at);
+      onSelectKey?.(undefined);
+      return;
+    }
+    const by =
+      event.key === 'ArrowLeft' ? -TICK : event.key === 'ArrowRight' ? TICK : 0;
+    if (by && event.altKey && onMoveKey) {
+      event.preventDefault();
+      const to = toTick(Math.min(length, Math.max(0, at + by)));
+      onMoveKey(property, at, to);
+      onSelectKey?.({property, at: to});
+      onTime(to);
+    }
+  };
+
   const place = (t: number) => `${(t / length) * 100}%`;
   const tracks = Object.entries(timeline.tracks);
   const marks = Array.from(
@@ -181,6 +223,25 @@ export const TimelineStrip = ({
         <Typography variant="body3" component="span" aria-hidden="true">
           {seconds(time)}
         </Typography>
+        {onLength && (
+          // Room for keys later than its last: the strip is drawn this long.
+          <label className={styles.timelineLength}>
+            Length
+            <input
+              type="number"
+              min={Math.max(TICK, end)}
+              step={0.5}
+              value={length}
+              onChange={event => {
+                const next = Number(event.target.value);
+                if (Number.isFinite(next) && next > 0) {
+                  onLength(next);
+                }
+              }}
+            />
+            s
+          </label>
+        )}
       </div>
       <div className={styles.timelineBody}>
         <ul className={styles.trackNames} aria-hidden="true">
@@ -191,21 +252,24 @@ export const TimelineStrip = ({
         <div
           ref={strip}
           className={styles.strip}
-          role="slider"
-          tabIndex={0}
-          aria-label={`${name} timeline`}
-          aria-valuemin={0}
-          aria-valuemax={length}
-          aria-valuenow={Math.round(time * 1000) / 1000}
-          aria-valuetext={seconds(time)}
           onPointerDown={press}
           onPointerMove={drag}
-          onKeyDown={key}
         >
-          <div className={styles.ruler} aria-hidden="true">
+          <div
+            className={styles.ruler}
+            role="slider"
+            tabIndex={0}
+            aria-label={`${name} timeline`}
+            aria-valuemin={0}
+            aria-valuemax={length}
+            aria-valuenow={Math.round(time * 1000) / 1000}
+            aria-valuetext={seconds(time)}
+            onKeyDown={key}
+          >
             {marks.map(t => (
               <span
                 key={t}
+                aria-hidden="true"
                 className={
                   Number.isInteger(t) ? styles.rulerSecond : styles.rulerHalf
                 }
@@ -218,14 +282,61 @@ export const TimelineStrip = ({
             ))}
           </div>
           {tracks.map(([property, track]) => (
-            <div key={property} className={styles.track} aria-hidden="true">
-              {track.map(one => (
-                <span
-                  key={one.at}
-                  className={styles.key}
-                  style={{left: place(one.at)}}
-                />
-              ))}
+            <div key={property} className={styles.track}>
+              {track.map(one => {
+                const chosen =
+                  selectedKey?.property === property &&
+                  selectedKey.at === one.at;
+                const shownAt =
+                  dragging?.property === property && dragging.from === one.at
+                    ? dragging.to
+                    : one.at;
+                return (
+                  <button
+                    key={one.at}
+                    type="button"
+                    className={
+                      chosen ? `${styles.key} ${styles.keyChosen}` : styles.key
+                    }
+                    style={{left: place(shownAt)}}
+                    aria-label={`${trackName(property, effectName)} key at ${seconds(one.at)}`}
+                    aria-pressed={chosen}
+                    // A key is pressed, not the strip under it.
+                    onPointerDown={event => {
+                      event.stopPropagation();
+                      setPlaying(false);
+                      onSelectKey?.({property, at: one.at});
+                      onTime(one.at);
+                      if (onMoveKey) {
+                        event.currentTarget.setPointerCapture?.(
+                          event.pointerId,
+                        );
+                        setDragging({property, from: one.at, to: one.at});
+                      }
+                    }}
+                    onPointerMove={event => {
+                      event.stopPropagation();
+                      if (dragging && event.buttons) {
+                        setDragging({...dragging, to: at(event.clientX)});
+                      }
+                    }}
+                    onPointerUp={event => {
+                      event.stopPropagation();
+                      if (dragging && dragging.to !== dragging.from) {
+                        onMoveKey?.(
+                          dragging.property,
+                          dragging.from,
+                          dragging.to,
+                        );
+                        onSelectKey?.({property, at: dragging.to});
+                        onTime(dragging.to);
+                      }
+                      setDragging(undefined);
+                    }}
+                    onKeyDown={event => keyDown(event, property, one.at)}
+                  />
+                );
+              })}
             </div>
           ))}
           {tracks.length === 0 && (

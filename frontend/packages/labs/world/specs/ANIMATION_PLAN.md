@@ -323,6 +323,37 @@ there. A key is selected by pressing its mark, moved by dragging it (or
 Alt and an arrow), and removed with Delete. An effect's on and off at the
 playhead is its checkbox on the Effects tab, which writes an effect key.
 
+BUILT. `MomentPanel`, under the strip: the picture, Offset X and Y,
+Scale, Turn, Opacity, and a checkbox per effect the actor has, each at the
+playhead. A key's value is shown plainly; one not keyed there is in
+italics with "Between keys" under it, or "Held from the last key" after
+the last; one the animation does not say yet is blank, with the drawing's
+untouched value as its placeholder. A number is written when the field is
+left or Enter is pressed, and only if it changed; the offset is written whole,
+keeping the other half. Each is a key at the playhead (`setAnimationKey`),
+replacing one there.
+
+The strip's marks are buttons now, named for their track and time ("Scale
+key at 0.5 s"), pressed when chosen. Pressing one chooses it and puts the
+playhead on it; dragging it moves it, to the tick, when let go
+(`moveAnimationKey`); Alt and an arrow move it a tick; Delete or Backspace
+removes it (`removeAnimationKey`). The ruler is the slider, since a
+focusable slider cannot hold the keys' buttons; the strip under it still
+takes a press. A Length field draws the strip longer, never shorter than
+its last key (`setAnimationLength`), which is the room step 6 lacked.
+
+Departures: the values are under the timeline, not in the side panel. The
+side panel's fields are the actor's own, the same at every moment; these
+are one animation's at one moment, and next to the strip they key is the
+shorter way between them. For the same reason an effect's key is its
+checkbox here, not on the Effects tab, whose checkbox stays whether the
+effect is on when the actor is made.
+
+In the browser: Jetpack's Pilot's Fly at 0.5 s, Scale set to 2, drew a
+Scale key and a larger preview; a tick on, the field held 2; the key,
+pressed, moved to 0.6 s with Alt and Right, and went with Delete; Length
+6 made the slider six seconds long.
+
 ### 8. A flipbook from a sheet
 
 "Add frames" puts a sheet's cells on the sprite track at a frame rate, one

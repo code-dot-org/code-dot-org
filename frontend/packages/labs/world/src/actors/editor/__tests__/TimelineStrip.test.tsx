@@ -20,6 +20,10 @@ const HOP: Timeline = {
 
 const show = (time = 0, timeline = HOP) => {
   const onTime = vi.fn();
+  const onSelectKey = vi.fn();
+  const onMoveKey = vi.fn();
+  const onDeleteKey = vi.fn();
+  const onLength = vi.fn();
   const view = render(
     <TimelineStrip
       name="Hop"
@@ -27,10 +31,26 @@ const show = (time = 0, timeline = HOP) => {
       time={time}
       onTime={onTime}
       effectName={path => (path === 'effects/glow' ? 'Glow' : path)}
+      onSelectKey={onSelectKey}
+      onMoveKey={onMoveKey}
+      onDeleteKey={onDeleteKey}
+      onLength={onLength}
     />,
   );
-  return {onTime, slider: screen.getByRole('slider'), ...view};
+  return {
+    onTime,
+    onSelectKey,
+    onMoveKey,
+    onDeleteKey,
+    onLength,
+    slider: screen.getByRole('slider'),
+    ...view,
+  };
 };
+
+/** A pointer event jsdom keeps the point of (it has no PointerEvent). */
+const pointer = (type: string, clientX: number) =>
+  new MouseEvent(type, {clientX, buttons: 1, bubbles: true});
 
 describe('the timeline', () => {
   it('is a slider over the timeline, saying the time', () => {
@@ -64,16 +84,62 @@ describe('the timeline', () => {
   });
 
   it('puts the playhead where it is pressed, to the tick', () => {
-    const {onTime, slider} = show();
-    slider.getBoundingClientRect = () =>
+    const {onTime, slider, container} = show();
+    // The ruler is the slider; the strip under it is what is measured.
+    container.querySelector<HTMLElement>(
+      '[class*="strip"]',
+    )!.getBoundingClientRect = () =>
       ({left: 100, width: 500, top: 0, height: 40}) as DOMRect;
     // A fifth of the way along one second is a fifth of a second.
     // jsdom has no PointerEvent, and drops the point from one it makes up.
-    fireEvent(
-      slider,
-      new MouseEvent('pointerdown', {clientX: 201, buttons: 1, bubbles: true}),
-    );
+    fireEvent(slider, pointer('pointerdown', 201));
     expect(onTime).toHaveBeenLastCalledWith(0.2);
+  });
+
+  it('chooses a key when it is pressed, and moves the playhead to it', () => {
+    const {onSelectKey, onTime, onMoveKey} = show();
+    const key = screen.getByRole('button', {name: 'Offset key at 0.5 s'});
+    fireEvent(key, pointer('pointerdown', 0));
+    fireEvent(key, pointer('pointerup', 0));
+    expect(onSelectKey).toHaveBeenLastCalledWith({
+      property: 'drawnOffset',
+      at: 0.5,
+    });
+    expect(onTime).toHaveBeenLastCalledWith(0.5);
+    // Pressed and let go where it was is not a move.
+    expect(onMoveKey).not.toHaveBeenCalled();
+  });
+
+  it('moves a key dragged along the strip, to the tick', () => {
+    const {onMoveKey, container} = show();
+    const strip = container.querySelector('[class*="strip"]')!;
+    strip.getBoundingClientRect = () =>
+      ({left: 100, width: 500, top: 0, height: 40}) as DOMRect;
+    const key = screen.getByRole('button', {name: 'Glow key at 0.5 s'});
+    fireEvent(key, pointer('pointerdown', 350));
+    fireEvent(key, pointer('pointermove', 451));
+    fireEvent(key, pointer('pointerup', 451));
+    expect(onMoveKey).toHaveBeenCalledWith('effect:effects/glow', 0.5, 0.7);
+  });
+
+  it('moves a key a tick with Alt and an arrow, and deletes it', () => {
+    const {onMoveKey, onDeleteKey} = show();
+    const key = screen.getByRole('button', {name: 'Offset key at 0.5 s'});
+    fireEvent.keyDown(key, {key: 'ArrowRight', altKey: true});
+    expect(onMoveKey).toHaveBeenLastCalledWith('drawnOffset', 0.5, 0.6);
+    // Without Alt an arrow is not a move.
+    fireEvent.keyDown(key, {key: 'ArrowLeft'});
+    expect(onMoveKey).toHaveBeenCalledTimes(1);
+    fireEvent.keyDown(key, {key: 'Delete'});
+    expect(onDeleteKey).toHaveBeenCalledWith('drawnOffset', 0.5);
+  });
+
+  it('is made longer with its Length field', () => {
+    const {onLength} = show();
+    fireEvent.change(screen.getByRole('spinbutton', {name: /Length/}), {
+      target: {value: '3'},
+    });
+    expect(onLength).toHaveBeenCalledWith(3);
   });
 
   it('cannot play an animation that does nothing', () => {

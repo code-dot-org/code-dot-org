@@ -14,6 +14,13 @@ import {
 import {projectRuleMetas} from '../../blockly/projectModules';
 import {memberLocalName, memberValue} from '../../blockly/ruleRegistry';
 import type {EffectParameter} from '../../effect/model/types';
+import {
+  endOf,
+  withKey,
+  withKeyMoved,
+  withoutKey,
+  type Timeline,
+} from '../../engine/core/keyframes';
 import {parseVectorText, vectorText} from '../../mapEditor/worldProperties';
 import {STOCK_RULES} from '../../rules/stock';
 import type {
@@ -598,3 +605,67 @@ export function setEffectSetting(
     ),
   );
 }
+
+/** The data with one of its animations changed by `change`. */
+function withTimeline(
+  data: ActorData,
+  name: string,
+  change: (timeline: Timeline) => Timeline,
+): ActorData {
+  const timeline = data.animations?.[name];
+  if (!timeline) {
+    return data;
+  }
+  const next = change(timeline);
+  return next === timeline
+    ? data
+    : {...data, animations: {...data.animations, [name]: next}};
+}
+
+/**
+ * The data with `property` set to `value` at `at` in an animation: a key
+ * there, replacing one that was (specs/ANIMATION_PLAN.md, step 7).
+ */
+export const setAnimationKey = (
+  data: ActorData,
+  name: string,
+  property: string,
+  at: number,
+  value: unknown,
+): ActorData =>
+  withTimeline(data, name, timeline => withKey(timeline, property, at, value));
+
+/** The data without the key of `property` at `at` in an animation. */
+export const removeAnimationKey = (
+  data: ActorData,
+  name: string,
+  property: string,
+  at: number,
+): ActorData =>
+  withTimeline(data, name, timeline => withoutKey(timeline, property, at));
+
+/** The data with a key moved from `from` to `to`, over one already there. */
+export const moveAnimationKey = (
+  data: ActorData,
+  name: string,
+  property: string,
+  from: number,
+  to: number,
+): ActorData =>
+  withTimeline(data, name, timeline =>
+    withKeyMoved(timeline, property, from, to),
+  );
+
+/**
+ * The data with an animation's timeline drawn `length` seconds long — room
+ * to put keys later than its last. Never shorter than its last key.
+ */
+export const setAnimationLength = (
+  data: ActorData,
+  name: string,
+  length: number,
+): ActorData =>
+  withTimeline(data, name, timeline => {
+    const next = Math.max(endOf(timeline), Math.round(length * 10) / 10);
+    return timeline.length === next ? timeline : {...timeline, length: next};
+  });

@@ -262,13 +262,15 @@
   touch-action: none;
 }
 
-.strip:focus-visible {
+/* The ruler is the slider, but the ring goes round the whole strip. */
+.strip:has(.ruler:focus-visible) {
   outline: 2px solid var(--borders-brand-primary, #0093a4);
   outline-offset: 2px;
 }
 
 .ruler {
   position: absolute;
+  outline: none;
   inset: 0 0 auto;
   height: 1.25rem;
   border-bottom: var(--lab-border-default);
@@ -298,9 +300,13 @@
   border-bottom: 1px dashed var(--borders-neutral-secondary, #ccc);
 }
 
+/* A key is a button, drawn as a diamond. */
 .key {
   position: absolute;
   top: 50%;
+  padding: 0;
+  border: none;
+  cursor: grab;
   width: 0.6rem;
   height: 0.6rem;
   background: var(--background-brand-primary, #0093a4);
@@ -315,4 +321,46 @@
   margin-left: -1px;
   background: var(--borders-danger-primary, #d32f2f);
   pointer-events: none;
+}
+
+/* Chosen, a key is drawn larger and outlined. */
+.keyChosen {
+  width: 0.85rem;
+  height: 0.85rem;
+  outline: 2px solid var(--text-neutral-primary);
+}
+
+.key:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.timelineLength {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+  font-size: var(--font-size-body-s, 14px);
+}
+
+.timelineLength input {
+  width: 3.5rem;
+}
+
+/* A value between two keys, worked out rather than set (`MomentPanel`). */
+.interpolated input {
+  font-style: italic;
+}
+
+/* The values at the playhead, under the strip (`MomentPanel`). */
+.moment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.momentPair {
+  display: flex;
+  gap: 0.5rem;
 }
