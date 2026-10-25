@@ -106,7 +106,9 @@ current Actors. Visually, they work the sawe: we see the visual depictions of
 each Actor. Clicking on them places them as the current Brush and clicking into
 the map will place them on the grid in the same way the Map Editor already does.
 From the keyboard, with an actor in hand, the arrows move a cursor a cell at a
-time on the stage and Enter or Space places one there, each said aloud.
+time on the stage and Enter or Space places one there, each said aloud. An
+Interface Actor's tile can also be dragged out, which places one, and docks
+it when it is let go in a dock zone, without taking it as the brush.
 
 The Actor has its own view, which we will discuss later. When an Actor is
 clicked it presents a couple of buttons below it while surrounding the entire

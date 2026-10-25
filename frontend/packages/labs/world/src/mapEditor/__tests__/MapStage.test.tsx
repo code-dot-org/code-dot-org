@@ -2575,6 +2575,80 @@ describe('docking on a Screen', () => {
     expect(written().layout).toEqual({dock: 'game'});
   });
 
+  describe('a kind dragged in from the palette', () => {
+    // DOCKING_PLAN.md, step 9: one placement where it is let go, docked if
+    // it is let go in a zone, and selected; never the brush.
+    // jsdom has no DragEvent, and a plain Event drops the coordinates: a
+    // MouseEvent of the drag's name, with a transfer, is what React reads.
+    const dragEvent = (type: 'dragover' | 'drop', point: Vec) => {
+      const event = new MouseEvent(type, {
+        bubbles: true,
+        cancelable: true,
+        clientX: point.x,
+        clientY: point.y,
+      });
+      Object.defineProperty(event, 'dataTransfer', {
+        value: {dropEffect: ''},
+      });
+      return event;
+    };
+    const over = (canvas: Element, map: MapDoc, at: Vec) => {
+      const point = screenPoint(map, at);
+      fireEvent(canvas, dragEvent('dragover', point));
+      fireEvent(canvas, dragEvent('drop', point));
+    };
+
+    it('places one where it is let go, and selects it', () => {
+      const map = screenDoc();
+      const view = mount(map, {canDock: true, incoming: 'actors/panel'});
+      over(view.canvas, map, {x: 160, y: 200});
+
+      const placed = view.written().actors.at(-1)!;
+      expect(placed.type).toBe('actors/panel');
+      expect(placed.properties?.positional?.position).toEqual({
+        x: 176,
+        y: 208,
+      });
+      expect(view.written().layout).toEqual({dock: 'game'});
+      expect(view.selectedId()).toBe(placed.id);
+      expect(view.getByTestId('stage-announcer').textContent).toBe(
+        'Placed a Panel',
+      );
+    });
+
+    it('docks it where it is let go in a zone', () => {
+      const map = screenDoc();
+      const view = mount(map, {canDock: true, incoming: 'actors/panel'});
+      over(view.canvas, map, {x: 160, y: 4});
+
+      const id = view.written().actors.at(-1)!.id;
+      expect(view.written().layout).toMatchObject({
+        split: 'down',
+        fixed: 'first',
+        first: {dock: id},
+        second: {dock: 'game'},
+      });
+      expect(view.getByTestId('stage-announcer').textContent).toBe(
+        'Docked a Panel: Along the top of the screen',
+      );
+    });
+
+    it('only places, in a level', () => {
+      const map = screenDoc();
+      const view = mount(map, {incoming: 'actors/panel'});
+      over(view.canvas, map, {x: 160, y: 4});
+      expect(view.written().layout).toEqual({dock: 'game'});
+      expect(view.written().actors).toHaveLength(3);
+    });
+
+    it('takes nothing when nothing is coming', () => {
+      const map = screenDoc();
+      const view = mount(map, {canDock: true});
+      over(view.canvas, map, {x: 160, y: 200});
+      expect(view.onDocChange).not.toHaveBeenCalled();
+    });
+  });
+
   it('docks a placement from the inspector, as a drop does', () => {
     // specs/PURPOSE_PLAN.md, step 5: the zones as a menu, for a keyboard.
     const map = screenDoc();

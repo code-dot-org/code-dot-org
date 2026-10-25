@@ -80,6 +80,10 @@ below, and are listed last.
 - **A zone is shown only by a tint**, and nothing is said when one is
   entered or when a placement docks. (1.4.1 Use of Color, for the tint
   alone; 4.1.3 Status Messages.)
+- **Dragging an Interface Actor out of the palette** (step 9) places and
+  docks one in a single gesture. Its keyboard route is two acts: the
+  brush and Enter, then Dock…. Both exist, so 2.1.1 holds; the drag is the
+  shorter path only for a pointer. The zone it lights is a tint, as above.
 - **The line between two sides is grabbed within six pixels.** Small for a
   pointer that is not precise (2.5.8 Target Size is about controls, and
   this is one); the size field is the alternative.

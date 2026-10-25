@@ -84,3 +84,37 @@ describe('the Actor Palette', () => {
     expect(screen.queryByRole('button', {name: 'Add New Actor'})).toBeNull();
   });
 });
+
+describe('dragging an actor out', () => {
+  // An interface's actor may be dragged out to place one (DOCKING_PLAN.md,
+  // step 9); a game's is the brush only.
+  const transfer = () => ({
+    setData: vi.fn(),
+    setDragImage: vi.fn(),
+    effectAllowed: '',
+  });
+
+  it('lets an actor for an interface, or both, be dragged, and says which', () => {
+    const onDragOut = vi.fn();
+    const props = renderPalette({onDragOut});
+    const label = screen.getByRole('button', {name: 'Label'});
+    expect(label).toHaveAttribute('draggable', 'true');
+    expect(screen.getByRole('button', {name: 'Player'})).not.toHaveAttribute(
+      'draggable',
+    );
+
+    fireEvent.dragStart(label, {dataTransfer: transfer()});
+    expect(onDragOut).toHaveBeenLastCalledWith('actors/label');
+    fireEvent.dragEnd(label);
+    expect(onDragOut).toHaveBeenLastCalledWith(null);
+    // …and the brush is left as it was.
+    expect(props.onSelect).not.toHaveBeenCalled();
+  });
+
+  it('drags nothing in a read-only project', () => {
+    renderPalette({onDragOut: vi.fn(), isReadOnly: true});
+    expect(screen.getByRole('button', {name: 'Label'})).not.toHaveAttribute(
+      'draggable',
+    );
+  });
+});

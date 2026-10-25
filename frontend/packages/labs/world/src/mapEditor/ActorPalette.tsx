@@ -5,9 +5,13 @@
 // A press takes an actor as the brush, and a second press on it puts it
 // down. The actor in hand is drawn with its two acts under it, Open and
 // Delete, inside one ring. Add New Actor is fixed at the foot.
+//
+// An actor for an interface may also be DRAGGED out, which places one where
+// it is let go — docked, on a Screen, if it is let go in a dock zone — and
+// does not take it as the brush. A HUD bar is placed once, not painted.
 
 import {Button} from '@mui/material';
-import {useState} from 'react';
+import {useState, type DragEvent} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
@@ -47,6 +51,12 @@ export interface ActorPaletteProps {
   newWithheld: boolean;
   /** A read-only project offers neither Delete nor Add New Actor. */
   isReadOnly: boolean;
+  /**
+   * A drag out of an interface actor's tile began, and ended. The stage is
+   * told which kind is coming through these, since a drag says what it
+   * carries only when it is dropped.
+   */
+  onDragOut?: (path: string | null) => void;
 }
 
 export const ActorPalette = ({
@@ -59,6 +69,7 @@ export const ActorPalette = ({
   onNew,
   newWithheld,
   isReadOnly,
+  onDragOut,
 }: ActorPaletteProps) => {
   const [tab, setTab] = useState<PaletteTab>(startTab);
   const shown = actors.filter(actor => isUnder(actor.purpose, tab));
@@ -90,6 +101,24 @@ export const ActorPalette = ({
                 type="button"
                 className={styles.actor}
                 onClick={() => onSelect(inHand ? null : actor.path)}
+                {...(onDragOut &&
+                !isReadOnly &&
+                isUnder(actor.purpose, 'interface')
+                  ? {
+                      draggable: true,
+                      onDragStart: (event: DragEvent<HTMLButtonElement>) => {
+                        event.dataTransfer.effectAllowed = 'copy';
+                        event.dataTransfer.setData('text/plain', actor.name);
+                        const picture =
+                          event.currentTarget.querySelector('img');
+                        if (picture) {
+                          event.dataTransfer.setDragImage(picture, 16, 16);
+                        }
+                        onDragOut(actor.path);
+                      },
+                      onDragEnd: () => onDragOut(null),
+                    }
+                  : {})}
                 aria-pressed={inHand}
                 data-callout={`map.palette:${actor.name}`}
               >

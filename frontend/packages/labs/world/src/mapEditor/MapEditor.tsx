@@ -342,6 +342,8 @@ export const MapEditor = ({
     actorIconImage(icons[path] ?? '') ?? thumbnails[path];
   // The picker template to PLACE; null is the stage's select mode.
   const [selected, setSelected] = useState<string | null>(null);
+  /** The kind being dragged out of the palette, while it is (`ActorPalette`). */
+  const [incoming, setIncoming] = useState<string | null>(null);
   /**
    * The document as it is being edited — a field half-typed — which the stage
    * reports before committing it (`MapStage.onDocPreview`). Pictures are
@@ -900,8 +902,10 @@ export const MapEditor = ({
           onNew={newActor}
           newWithheld={withheld.has('map-new-actor')}
           isReadOnly={isReadOnly}
+          onDragOut={setIncoming}
         />
         <MapStage
+          incoming={incoming}
           doc={map}
           onDocChange={commit}
           onDocPreview={setLiveMap}

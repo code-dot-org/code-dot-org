@@ -201,6 +201,25 @@ on the Viewport grew it by a step and said so.
 
 Left for later: the corner where two dividers meet, which could move both.
 
+### 9. Dragged out of the palette
+
+Added after the phase, from use. A HUD bar is placed once, not painted,
+and the brush made docking one two acts: paint it, then drag it to an
+edge.
+
+BUILT. A tile for an actor that is for an interface, or for both, can be
+dragged out of the Actor Palette; a game's stays the brush only. The drag
+does not take the actor in hand. Over the stage it draws the ghost where
+it would land and, on a Screen, lights the dock zone it is in, as moving
+a placement does. Let go, it makes one placement there, docked through
+`dockedAt` if it was let go in a zone, as one edit; selects it; and says
+"Placed a Scoreboard" or "Docked a Scoreboard: Along the bottom of the
+screen". The stage learns which kind is coming from the palette through
+`MapEditor` (`incoming`), since a drag says what it carries only when it
+is dropped. In the browser, a real drag of the starter's Scoreboard into
+the bottom zone docked it there, and another into the middle floated; the
+game drew both.
+
 ## Not in this phase
 
 - A ratio side, or more than two sides to a split.

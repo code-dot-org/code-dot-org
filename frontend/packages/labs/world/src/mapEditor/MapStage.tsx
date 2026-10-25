@@ -27,6 +27,7 @@ import {
 } from '@mui/material';
 import type {
   ChangeEvent,
+  DragEvent as ReactDragEvent,
   KeyboardEvent as ReactKeyboardEvent,
   MouseEvent as ReactMouseEvent,
   PointerEvent as ReactPointerEvent,
@@ -299,6 +300,11 @@ export interface MapStageProps {
    */
   canDock?: boolean;
   /**
+   * The kind being dragged out of the Actor Palette, while it is: dropped
+   * on the stage it places one, and docks it if it is dropped in a zone.
+   */
+  incoming?: string | null;
+  /**
    * The events an actor of a kind can start a section with, for the quick
    * add in the inspector (`blockly/eventChoices`). Absent, it is not offered.
    */
@@ -510,6 +516,7 @@ export const MapStage = ({
   onUndo,
   onRedo,
   canDock = false,
+  incoming = null,
   eventsFor,
   worldCameras = [],
   worldCameraEditor,
@@ -624,6 +631,8 @@ export const MapStage = ({
   // skewed sprite (drawn far from a naive center point) is easy to find and grab.
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [hover, setHover] = useState<Vec | null>(null);
+  /** Where a kind dragged from the palette would land, while it is over. */
+  const [dropAt, setDropAt] = useState<Vec | null>(null);
   /** Which way a draggable line under the pointer runs, for the cursor. */
   const [overLine, setOverLine] = useState<'across' | 'down' | null>(null);
   const [size, setSize] = useState<Size>({w: 0, h: 0});
@@ -2613,6 +2622,72 @@ export const MapStage = ({
     onEditScript?.(hit.id);
   };
 
+  /**
+   * A KIND DRAGGED OUT OF THE PALETTE, over the stage and let go on it: one
+   * placement where it lands, docked if it lands in a zone, and selected.
+   * Not the brush — the drag is for the one, a HUD bar or a panel, and the
+   * brush is for painting rows (specs/DOCKING_PLAN.md, step 9).
+   */
+  const incomingBox = incoming
+    ? boxOf({type: incoming, id: 'incoming'})
+    : undefined;
+  const handleDragOver = (event: ReactDragEvent) => {
+    if (!incoming || isReadOnly || !view) {
+      return;
+    }
+    // Accepting it is what makes it droppable here.
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+    const world = screenToWorld(event.clientX, event.clientY);
+    setDropAt(snap(world, false, incomingBox));
+    if (canDock) {
+      setDockZone(zoneAt(dockZones(mapRef.current, ''), world) ?? null);
+    }
+  };
+  const endDragOver = () => {
+    setDropAt(null);
+    setDockZone(null);
+  };
+  useEffect(() => {
+    if (!incoming) {
+      endDragOver();
+    }
+  }, [incoming]);
+  const handleDrop = (event: ReactDragEvent) => {
+    if (!incoming || isReadOnly || !view) {
+      return;
+    }
+    event.preventDefault();
+    const world = screenToWorld(event.clientX, event.clientY);
+    const zone = canDock
+      ? zoneAt(dockZones(mapRef.current, ''), world)
+      : undefined;
+    let next = withNewPlacement(
+      mapRef.current,
+      incoming,
+      snap(world, false, incomingBox),
+    );
+    const id = next.actors[next.actors.length - 1].id;
+    const named = kinds?.[incoming]?.name ?? kindName(incoming);
+    if (zone) {
+      next = dockedAt(next, id, zone.target, zone.side);
+    }
+    endDragOver();
+    commit(next);
+    setSelectedId(id);
+    canvasRef.current?.focus();
+    say(
+      zone
+        ? `Docked a ${named}: ${
+            dockChoices(next, id).find(
+              choice =>
+                choice.target === zone.target && choice.side === zone.side,
+            )?.label ?? zone.side
+          }`
+        : `Placed a ${named}`,
+    );
+  };
+
   const handleClick = (event: ReactMouseEvent) => {
     // The click that ends a stroke: the stroke has done what it meant.
     if (strokedRef.current) {
@@ -3107,6 +3182,15 @@ export const MapStage = ({
         0.5,
       );
     }
+    // …and, while a kind is dragged in from the palette, where it lands —
+    // unless a zone is lit, which says where it will go instead.
+    if (incoming && dropAt && !dockZone) {
+      drawSprite(
+        incoming,
+        {pos: dropAt, scale: {x: 1, y: 1}, rotation: 0, skew: 0},
+        0.5,
+      );
+    }
   }, [
     view,
     size,
@@ -3138,6 +3222,8 @@ export const MapStage = ({
     dockZone,
     canDock,
     selectedDocked,
+    incoming,
+    dropAt,
   ]);
 
   const canvasClass = [
@@ -3317,6 +3403,9 @@ export const MapStage = ({
         onClick={handleClick}
         onDoubleClick={handleDoubleClick}
         onKeyDown={handleKeyDown}
+        onDragOver={handleDragOver}
+        onDragLeave={endDragOver}
+        onDrop={handleDrop}
         /*
          * APPLICATION, though the rule below calls that a non-interactive role
          * on an interactive element. It is the honest one and the same one the
