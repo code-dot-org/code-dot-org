@@ -4,6 +4,7 @@ import React from 'react';
 import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getIdColumn} from '../selectors';
 import type {TableView} from '../types';
 
 import CellText from './CellText';
@@ -27,6 +28,7 @@ const RowsTableHeader = ({
 }: RowsTableHeaderProps) => {
   const {project} = useProject();
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const idColumn = useAppSelector(getIdColumn);
 
   return (
     <tr>
@@ -34,7 +36,8 @@ const RowsTableHeader = ({
         className={classNames(
           tableStyles.indexCell,
           tableStyles.indexHeader,
-          tableStyles.indexColumn
+          tableStyles.indexColumn,
+          {[tableStyles.frozenIndex]: idColumn}
         )}
         aria-label="Row"
       />
@@ -50,6 +53,7 @@ const RowsTableHeader = ({
             className={classNames(tableStyles.header, {
               [tableStyles.headerLabel]: role === 'label',
               [tableStyles.headerFeature]: role === 'feature',
+              [tableStyles.idHeader]: column === idColumn,
             })}
           >
             <CellText>{columnName}</CellText>

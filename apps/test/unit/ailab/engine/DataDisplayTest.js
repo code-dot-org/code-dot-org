@@ -264,4 +264,60 @@ describe('DataDisplay', () => {
       within(menu).getByRole('button', {name: /^animal/})
     );
   });
+
+  describe('with an id column', () => {
+    const NAMED = ANIMALS.map((row, index) => ({
+      ...row,
+      name: `pet ${index + 1}`,
+    }));
+
+    const renderNamed = () =>
+      renderWithProviders(createElement(DataDisplay), {
+        store: levelStore({idColumn: 'name'}, NAMED),
+        project: levelProject(),
+      });
+
+    test('follows the row number and heads each row', () => {
+      renderNamed();
+      expect(
+        screen
+          .getAllByRole('columnheader')
+          .map(header => header.getAttribute('aria-label'))
+      ).toEqual(['Row', 'name', 'animal', 'legs']);
+      expect(
+        Array.from(
+          screen.getAllByRole('row')[1].cells,
+          cell => cell.textContent
+        )
+      ).toEqual(['1', 'pet 1', 'bird', '2']);
+      expect(rowNumbers().slice(0, 3)).toEqual(['pet 1', 'pet 2', 'pet 3']);
+      expect(button('Sort by name A-Z')).toBeTruthy();
+    });
+
+    test('titles each card above its row number, and leaves the list', () => {
+      renderNamed();
+      fireEvent.click(button('Cards'));
+      fireEvent.click(button('Next card'));
+
+      const card = screen.getByRole('group', {name: 'pet 2 Row 2'});
+      expect(
+        Array.from(card.querySelectorAll('dt'), term => term.textContent)
+      ).toEqual(['animal, used as the label', 'legs, used as a feature']);
+    });
+
+    test('names a row with a blank id by its row number', () => {
+      renderWithProviders(createElement(DataDisplay), {
+        store: levelStore({idColumn: 'name'}, [
+          {...NAMED[0], name: ''},
+          ...NAMED.slice(1),
+        ]),
+        project: levelProject(),
+      });
+      expect(screen.getByRole('rowheader', {name: 'Row 1'})).toBeTruthy();
+
+      fireEvent.click(button('Cards'));
+
+      expect(screen.getByRole('group', {name: 'Row 1'})).toBeTruthy();
+    });
+  });
 });
