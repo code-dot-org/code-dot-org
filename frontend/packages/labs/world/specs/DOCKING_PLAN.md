@@ -77,6 +77,17 @@ changes size, as `reanchor` does. Boxed actors only: a docked actor
 without a box is placed and not sized. Engine tests; the Viewport's window
 following its region is seen in the browser.
 
+BUILT. `World.applyLayout` after `applyAnchors`, and `relayout` beside
+`reanchor` in `setViewSize`. A docked placement's middle and box are its
+region's, and its declared drawn size is asked again at once
+(`resizeDrawn`), since a Viewport's window and every click box read that.
+A docked Viewport's space is fitted as a load fits one: at least as big as
+its new window, a camera at rest in the old middle moved to the new, and
+settled. A layout is kept while any placement it docks is in the world. A
+child, or a placement that has left, is a hole. The map's `layout` reaches
+the engine unchanged: a `.map` is loaded whole, and the Main Screen's
+compiled load keeps every key it does not compile.
+
 ### 3. Games dock their Viewport
 
 `gameScreen` docks its Viewport to the whole screen, and so does a new

@@ -4,6 +4,7 @@
 // EventQueue. `tick(delta)` advances the simulation: run every Step in order,
 // then flush the events those steps raised.
 
+import {BOXED} from '../rules/boxed';
 import {STYLED} from '../rules/styled';
 import {
   ViewportContentProperty,
@@ -47,6 +48,7 @@ import {
   type LayerSlot,
   type MapLayer,
 } from './Layer';
+import {isLayout, layoutBoxes, type LayoutNode} from './layout';
 import {asList, isListType} from './lists';
 import {parentingKeys} from './parenting';
 import {phaseIndex} from './phases';
@@ -174,6 +176,13 @@ export interface WorldMap {
    * (specs/STYLES_PLAN.md).
    */
   theme?: string;
+  /**
+   * The grid layout its placements dock into, a tree of splits
+   * (`core/layout`, specs/DOCKING_PLAN.md). A docked placement fills its
+   * region, against the window it was loaded into; one not in it is placed
+   * where the map says, anchored or not.
+   */
+  layout?: unknown;
   actors: Array<{
     type: string;
     /** Stable instance id; a random unique one is assigned when omitted. */
@@ -2572,6 +2581,7 @@ export class World {
       }
     }
     this.reanchor();
+    this.relayout();
   }
 
   /**
@@ -2727,6 +2737,127 @@ export class World {
       // Kept, so that a window resized afterwards can measure again from the
       // MAP's position rather than from this one (`reanchor`).
       this.anchorHolds.set(actor, {space, anchor, at, drawn, put});
+    }
+  }
+
+  /**
+   * The layouts loaded so far, each with the placements its leaves name.
+   * Fitted again whenever the window changes size; one whose placements have
+   * all gone is dropped then.
+   */
+  private layouts: Array<{
+    readonly space: Space;
+    readonly layout: LayoutNode;
+    readonly placed: ReadonlyMap<string, Actor>;
+  }> = [];
+
+  /** Dock a map's placements into its layout, if it has one. */
+  private applyLayout(
+    space: Space,
+    map: WorldMap,
+    placed: ReadonlyMap<string, Actor>,
+  ): void {
+    if (!isLayout(map.layout)) {
+      return;
+    }
+    const held = {space, layout: map.layout, placed};
+    this.layouts.push(held);
+    this.layOut(held);
+  }
+
+  /** Every layout fitted again, to the window as it is now. */
+  private relayout(): void {
+    this.layouts = this.layouts.filter(held =>
+      [...held.placed.values()].some(actor => actor.world === this),
+    );
+    for (const held of this.layouts) {
+      this.layOut(held);
+    }
+  }
+
+  /**
+   * Fit one layout's docked placements to their regions.
+   *
+   * A docked placement's MIDDLE is its region's, which is where an actor's
+   * position is; its box, if it has one (the Boxed rule), is its region's
+   * size. A placement that has left the world, or is the child of another,
+   * is a hole the layout closes over (`layoutBoxes`).
+   *
+   * A Viewport docked here is a window that has changed size, so its space
+   * is fitted to it as a load would fit it: at least as big as the window,
+   * a camera at rest in the old window's middle moved to the new one's, and
+   * then settled (`settleSpace`).
+   */
+  private layOut(held: {
+    space: Space;
+    layout: LayoutNode;
+    placed: ReadonlyMap<string, Actor>;
+  }): void {
+    const position = this.positionalProperty(SPATIAL.position);
+    if (!position) {
+      return;
+    }
+    const view = held.space.owner
+      ? this.viewSizeOf(held.space.owner)
+      : this.viewSize();
+    const present = (id: string) => {
+      const actor = held.placed.get(id);
+      return Boolean(actor && actor.world === this && !actor.parent());
+    };
+    const width = this.boxProperty(BOXED.width);
+    const height = this.boxProperty(BOXED.height);
+    for (const [id, box] of layoutBoxes(held.layout, view.x, view.y, present)) {
+      const actor = held.placed.get(id)!;
+      const before = actor.has(ViewportTrait)
+        ? this.viewSizeOf(actor)
+        : undefined;
+      actor.set(
+        position,
+        new Vector(box.x + box.width / 2, box.y + box.height / 2),
+      );
+      if (width && height && actor.hasProperty(width)) {
+        actor.set(width, box.width);
+        actor.set(height, box.height);
+        this.resizeDrawn(actor);
+      }
+      const space = before && this.viewportSpaceOf(actor);
+      if (before && space) {
+        const after = this.viewSizeOf(actor);
+        space.bounds = new Vector(
+          Math.max(space.bounds.x, after.x),
+          Math.max(space.bounds.y, after.y),
+        );
+        const camera = space.camera;
+        if (
+          camera &&
+          camera.position.x === before.x / 2 &&
+          camera.position.y === before.y / 2
+        ) {
+          camera.position = new Vector(after.x / 2, after.y / 2);
+        }
+        this.settleSpace(space);
+      }
+    }
+  }
+
+  /** One of the Boxed rule's two properties, if this world's rules have it. */
+  private boxProperty(id: string): Property<number> | undefined {
+    const boxed = this.membership.items().find(r => r.id === BOXED.rule);
+    const trait: Trait | undefined = boxed?.traits[BOXED.trait];
+    return trait?.properties[id] as Property<number> | undefined;
+  }
+
+  /**
+   * A drawn actor's declared size, asked again: its drawing is sized from
+   * its box, and everything that asks how big it is reads the declared size
+   * (`place`), which would otherwise wait for the next frame drawn.
+   */
+  private resizeDrawn(actor: Actor): void {
+    const drawing = this.kindDrawings.get(actor.type);
+    const property = this.intrinsicSizeProperty();
+    if (drawing && property) {
+      const {width, height} = drawing.size(actor, this);
+      actor.set(property, new Vector(width, height));
     }
   }
 
@@ -2970,6 +3101,9 @@ export class World {
     // after the references are followed so a parent is known, and before the
     // script runs so it sees final positions (specs/ANCHORS_PLAN.md).
     this.applyAnchors(space, map, anchoring);
+    // …and the docked ones fitted to their regions, for the same reasons at
+    // the same moment (specs/DOCKING_PLAN.md).
+    this.applyLayout(space, map, placed);
     // What the map DOES, once everything it placed exists and every reference
     // is followed, so a hat about the Resume button registers on the button
     // and `the ⟨Door⟩` finds the door.
