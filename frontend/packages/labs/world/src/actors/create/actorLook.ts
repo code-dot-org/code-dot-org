@@ -17,6 +17,7 @@
 // builds its actor in a draft source and commits once, so nothing here knows
 // about the project or about React.
 
+import {throughView, viewOf} from '../actorData';
 import {down, rootsOf, type BlockJson} from '../enhance/patch';
 
 const SPRITE_ROW = 'world_set_sprite';
@@ -33,7 +34,9 @@ const isLook = (block: BlockJson): boolean =>
   block.type === SPRITE_ROW || block.type === ANIMATION_ROW;
 
 /** The look a workspace's `define actor` already declares, if it declares one. */
-export function lookOf(contents: string): ActorLook | undefined {
+export function lookOf(file: string): ActorLook | undefined {
+  // Either shape (`actors/actorData`).
+  const contents = viewOf(file);
   for (const root of rootsOf(contents)) {
     if (root.type !== 'world_actor') {
       continue;
@@ -69,7 +72,10 @@ const rowFor = (look: ActorLook): BlockJson =>
  * and this is not the thing to notice it (`enhance/patch.append` says the
  * same).
  */
-export function withLook(contents: string, look: ActorLook): string {
+export const withLook = (contents: string, look: ActorLook): string =>
+  throughView(contents, rows => lookOnRows(rows, look));
+
+function lookOnRows(contents: string, look: ActorLook): string {
   const workspace = JSON.parse(contents || '{}') as {
     blocks?: {blocks?: BlockJson[]};
   };
@@ -152,7 +158,13 @@ const scaleFor = (
   };
 };
 
-export function withScale(
+export const withScale = (
+  contents: string,
+  shape: {x: number; y: number},
+  drawn?: {width?: number; height?: number},
+): string => throughView(contents, rows => scaleOnRows(rows, shape, drawn));
+
+function scaleOnRows(
   contents: string,
   shape: {x: number; y: number},
   drawn?: {width?: number; height?: number},

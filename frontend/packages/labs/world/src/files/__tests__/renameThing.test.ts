@@ -191,6 +191,35 @@ describe('renaming an actor', () => {
     expect(said).toBe('actors/player');
   });
 
+  it('carries a data-shaped actor’s own setters, and keeps it data', () => {
+    // specs/ACTOR_EDITOR_PLAN.md, step 3: the data keeps a setter under a key
+    // of its own, which the walk reaches through the actor's view.
+    const source = project();
+    source.files.a = {
+      ...source.files.a,
+      contents: JSON.stringify({
+        type: 'actor',
+        name: 'Player',
+        properties: [{name: 'lives', type: 'number', access: 'writable'}],
+        values: [
+          {
+            setter: 'world_set_ActorsPlayer_LivesProperty',
+            type: 'number',
+            value: 3,
+          },
+        ],
+      }),
+    };
+
+    const {source: next} = renameThing(source, source.files.a, 'Hero');
+    const data = JSON.parse(read(next, 'a'));
+
+    expect(next.files.a.name).toBe('hero.actor');
+    expect(data.type).toBe('actor');
+    expect(data.name).toBe('Hero');
+    expect(data.values[0].setter).toBe('world_set_ActorsHero_LivesProperty');
+  });
+
   it('refuses a name whose file is already taken', () => {
     const source = project();
     source.files.b = file({id: 'b', name: 'hero.actor'});

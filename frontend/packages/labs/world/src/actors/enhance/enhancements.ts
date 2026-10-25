@@ -93,6 +93,7 @@ import {
   takenByAnyPadEnhancement,
   usesTeleportPadsEnhancement,
 } from './teleport';
+import {throughTheView} from './throughTheView';
 import {topDownControlsEnhancement} from './topDownControls';
 import {typesOutTextEnhancement} from './typesOutText';
 import {wrapsAcrossEnhancement, wrapsDownEnhancement} from './wraps';
@@ -229,7 +230,7 @@ export interface EnhancementGroup {
  * side-on world, the three an enemy is made of. Those comments were headings
  * nobody could see.
  */
-export const GROUPS: readonly EnhancementGroup[] = [
+const AS_WRITTEN: readonly EnhancementGroup[] = [
   {
     // First, because they are what make an actor a CHARACTER rather than
     // scenery, and everything under them is something a character then does.
@@ -337,6 +338,16 @@ export const GROUPS: readonly EnhancementGroup[] = [
     members: [cameraFollowEnhancement, scoreboardEnhancement],
   },
 ];
+
+/**
+ * The groups, each enhancement made to work on an actor of either shape: it
+ * is written against `define actor` rows, and is asked and applied through a
+ * data-shaped actor's view (`throughTheView`, specs/ACTOR_EDITOR_PLAN.md).
+ */
+export const GROUPS: readonly EnhancementGroup[] = AS_WRITTEN.map(group => ({
+  ...group,
+  members: group.members.map(throughTheView),
+}));
 
 export const ENHANCEMENTS: readonly Enhancement[] = GROUPS.flatMap(
   group => group.members,

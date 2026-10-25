@@ -8,6 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {asActorData} from '../../actorData';
 import {lookOf, withLook, withScale} from '../actorLook';
 
 /** A `define actor` with the given rows chained under it. */
@@ -234,5 +235,35 @@ describe('how many tiles it fills', () => {
       'world_set_Space_ScaleProperty',
     ]);
     expect(scaleIn(twice)).toEqual({x: 1, y: 3});
+  });
+});
+
+describe('the look of a data-shaped actor', () => {
+  // specs/ACTOR_EDITOR_PLAN.md, step 3: read and changed through its view,
+  // and data still afterwards.
+  const data = asActorData(actorWith(sprite('coin.png')));
+
+  it('is read as the row it stands for', () => {
+    expect(lookOf(data)).toEqual({kind: 'sprite', value: 'coin.png'});
+  });
+
+  it('is changed, and scaled, as data', () => {
+    const after = withLook(data, {kind: 'animation', value: 'coinSpin'});
+    expect(JSON.parse(after)).toMatchObject({
+      type: 'actor',
+      look: {animation: 'coinSpin'},
+    });
+    const scaled = JSON.parse(
+      withScale(after, {x: 1, y: 2}, {width: 512, height: 512}),
+    );
+    expect(scaled.values).toEqual([
+      {
+        setter: 'world_set_Space_ScaleProperty',
+        type: 'vector',
+        value: {x: 1, y: 2},
+      },
+    ]);
+    // …and a change that changes nothing leaves the file as it was.
+    expect(withScale(data, {x: 1, y: 1})).toBe(data);
   });
 });

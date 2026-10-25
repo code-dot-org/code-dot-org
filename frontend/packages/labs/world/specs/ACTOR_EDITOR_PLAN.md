@@ -143,6 +143,19 @@ of its own, so `mapWorkspaces` rewrites a data-shaped actor's view and
 folds it back: renaming an actor, a rule or an animation, and asking where
 an actor is used, then reach the data without knowing its shape.
 
+BUILT. `throughView` (in `actorData`) makes a change written for rows to
+contents of either shape. `withLook`, `withScale` and `lookOf` go through
+it; the wizard writes with those, a clone renames the data's own `name`,
+and an import writes its stock file, so the wizard needed nothing more.
+The enhancements are wrapped once, where their groups are listed
+(`enhance/throughTheView`): each is asked and applied with the project's
+data-shaped actors in their view, and an actor it wrote to is folded back.
+`mapWorkspaces` views and folds a data-shaped actor; `animationPlayedIn`
+and `actorUses` read its view. A test gives every actor enhancement to
+each of the starter's actors in both shapes and finds the same change
+(with the wrapper taken away, 329 of its 330 cases fail); another renames
+a data-shaped actor and finds its own setters renamed inside the data.
+
 ### 4. The Actor Editor
 
 A data-shaped actor opens in it; a block-shaped one opens in the block

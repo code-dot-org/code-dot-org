@@ -531,3 +531,34 @@ export function asActorData(contents: string): string {
   const data = foldActor(parsed);
   return data ? JSON.stringify(data, null, 2) : contents;
 }
+
+/**
+ * Whether the contents are data-shaped, asked cheaply: most callers hold
+ * many files, and only an actor's can be.
+ */
+export function isDataShaped(contents: string | undefined): boolean {
+  if (!contents || !/"type":\s*"actor"/.test(contents)) {
+    return false;
+  }
+  try {
+    return isActorData(JSON.parse(contents));
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * A change written for `define actor` rows, made to contents of either
+ * shape: a data-shaped file is changed through its view and folded back, so
+ * it stays data.
+ */
+export function throughView(
+  contents: string,
+  change: (rows: string) => string,
+): string {
+  if (!isDataShaped(contents)) {
+    return change(contents);
+  }
+  const changed = change(viewOf(contents));
+  return changed === viewOf(contents) ? contents : asActorData(changed);
+}

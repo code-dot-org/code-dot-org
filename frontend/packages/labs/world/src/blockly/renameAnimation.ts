@@ -16,6 +16,8 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {viewOf} from '../actors/actorData';
+
 import {
   mapWorkspaces,
   rewriteWorkspace,
@@ -118,7 +120,10 @@ export function animationPlayedIn(
     // The same structural test the rename uses, asked without rewriting: a
     // reference is an ANIMATION field holding this id, not the word appearing
     // in a log message or a sprite's file name.
-    if (renameAnimationReferences(contents, id, `${id}\u0000`) !== undefined) {
+    if (
+      renameAnimationReferences(viewOf(contents), id, `${id}\u0000`) !==
+      undefined
+    ) {
       playing.push(path);
     }
   }

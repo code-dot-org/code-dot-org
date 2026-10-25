@@ -9,6 +9,7 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {asActorData, isDataShaped, viewOf} from '../actors/actorData';
 import {resolveRuleContents} from '../rules/ruleReference';
 
 /**
@@ -101,9 +102,14 @@ export function mapWorkspaces(
     if (!WORKSPACE_FILE.test(file.name)) {
       continue;
     }
-    const renamed = rewrite(resolveRuleContents(file.contents));
+    // A data-shaped actor keeps a setter and a trait under keys of its
+    // own, where this walk does not look; its view holds them as blocks,
+    // and what changed there is folded back (`actors/actorData`).
+    const held = resolveRuleContents(file.contents);
+    const data = isDataShaped(held);
+    const renamed = rewrite(data ? viewOf(held) : held);
     if (renamed !== undefined) {
-      files[id] = {...file, contents: renamed};
+      files[id] = {...file, contents: data ? asActorData(renamed) : renamed};
       changed = true;
     }
   }
