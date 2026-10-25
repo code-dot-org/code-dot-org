@@ -109,6 +109,24 @@ taken from its own box. Dragged away from its region, it is undocked and
 floats. The inspector says whether a placement is docked, and has Undock,
 for the keyboard.
 
+BUILT. `mapEditor/docking.ts`: `fitLayout` keeps a docked placement's
+stored position and box equal to its region at the screen's own size, on
+every read and every commit (`MapEditor`), so the stage draws it, and a
+click finds it, where the game will put it; `dockZones` (the screen's four
+edges, 16 pixels deep, then the four sides of every other docked region, a
+quarter of it deep), `zoneAt`, `dockSize` (its box across the side, else
+48). The stage (`canDock`, on a `.screen`) shows the zone under the
+pointer while a placement is dragged and, let go, docks it there or, docked
+before, undocks it; the inspector says Docked, with Undock.
+
+Found while building: the map document dropped every key it did not
+know, so the first edit to a screen wrote it back without its layout and
+the Viewport came undocked. Fixed before this step, on its own
+(`MapDoc.layout`). In the browser: a Panel from the wizard's templates,
+placed on the starter's Main Screen and dragged to its top edge, docked
+there as a bar across the screen, and the game showed the bar over a
+Viewport that took the rest.
+
 ### 5. Resizing a docked side
 
 The line between two sides can be dragged; the inspector shows the fixed

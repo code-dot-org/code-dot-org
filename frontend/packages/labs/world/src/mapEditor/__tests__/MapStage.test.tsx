@@ -29,6 +29,7 @@ import {
 import {setRulesConfigHandler} from '../../blockly/rulesConfig';
 import {reveal} from '../../callouts/reveal';
 import type {ActorSchema} from '../../runtime/messages';
+import {fitLayout} from '../docking';
 import type {MapDoc, Vec} from '../mapModel';
 import {extentOf} from '../mapModel';
 import {MapStage} from '../MapStage';
@@ -2453,5 +2454,89 @@ describe('adding an event to a placement', () => {
     });
     select(canvas, map);
     expect(view.queryByRole('button', {name: 'Add an event'})).toBeNull();
+  });
+});
+
+describe('docking on a Screen', () => {
+  // specs/DOCKING_PLAN.md, step 4. A 320 by 320 screen with a Viewport docked
+  // to all of it and a Panel 40 tall floating over it.
+  const screenDoc = (): MapDoc => ({
+    type: 'map',
+    size: {width: 10, height: 10},
+    tile: {width: 32, height: 32},
+    layout: {dock: 'game'},
+    actors: [
+      {
+        type: 'actors/coin',
+        id: 'game',
+        properties: {
+          positional: {position: {x: 160, y: 160}},
+          hasABox: {width: 320, height: 320},
+        },
+      },
+      {
+        type: 'actors/coin',
+        id: 'hud',
+        properties: {
+          positional: {position: {x: 160, y: 120}},
+          hasABox: {width: 200, height: 40},
+        },
+      },
+    ],
+  });
+  const drag = (canvas: Element, map: MapDoc, from: Vec, to: Vec) => {
+    pointer(canvas, 'pointerdown', screenPoint(map, from));
+    pointer(canvas, 'pointermove', screenPoint(map, to));
+    pointer(canvas, 'pointerup', screenPoint(map, to));
+  };
+
+  it('docks a placement let go at the screen’s top edge', () => {
+    const map = screenDoc();
+    const {canvas, written} = mount(map, {canDock: true});
+    drag(canvas, map, {x: 160, y: 120}, {x: 160, y: 4});
+
+    expect(written().layout).toEqual({
+      split: 'down',
+      fixed: 'first',
+      size: 40,
+      first: {dock: 'hud'},
+      second: {dock: 'game'},
+    });
+  });
+
+  it('undocks one dragged away from any zone', () => {
+    // Fitted, as the editor hands it over: the bar at the top, 40 tall.
+    const map = fitLayout({
+      ...screenDoc(),
+      layout: {
+        split: 'down',
+        fixed: 'first',
+        size: 40,
+        first: {dock: 'hud'},
+        second: {dock: 'game'},
+      },
+    });
+    const {canvas, written} = mount(map, {canDock: true});
+    // From the bar to the middle of the screen, which is no zone.
+    drag(canvas, map, {x: 160, y: 20}, {x: 160, y: 160});
+    expect(written().layout).toEqual({dock: 'game'});
+  });
+
+  it('docks nothing in a level, however a placement is dragged', () => {
+    const map = screenDoc();
+    const {canvas, written} = mount(map);
+    drag(canvas, map, {x: 160, y: 120}, {x: 160, y: 4});
+    expect(written().layout).toEqual({dock: 'game'});
+  });
+
+  it('says a selected placement is docked, and undocks it', () => {
+    const map = screenDoc();
+    const {canvas, written, ...view} = mount(map, {canDock: true});
+    // Select the Viewport, at its middle.
+    pointer(canvas, 'pointerdown', screenPoint(map, {x: 160, y: 160}));
+    pointer(canvas, 'pointerup', screenPoint(map, {x: 160, y: 160}));
+    expect(view.getByText('Docked')).toBeInTheDocument();
+    fireEvent.click(view.getByRole('button', {name: 'Undock'}));
+    expect(written().layout).toBeUndefined();
   });
 });

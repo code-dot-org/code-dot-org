@@ -67,6 +67,7 @@ import {
 import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
 
 import {ActorPalette, type PaletteActor} from './ActorPalette';
+import {fitLayout} from './docking';
 import {EMPTY_HISTORY, record, redo, undo, type History} from './editHistory';
 import {
   drawsItself,
@@ -281,7 +282,11 @@ export const MapEditor = ({
     [files],
   );
 
-  const [map, setMap] = useState(() => document.read(initialContents));
+  // Read with its docked placements in their regions, so the stage draws
+  // and finds them where the game will (`docking.fitLayout`).
+  const [map, setMap] = useState(() =>
+    fitLayout(document.read(initialContents)),
+  );
   // The file as last known — what a write is made from, so a world's blocks
   // come through a map edit untouched. A ref for writing, since several
   // commits may land in one tick, and a state beside it for what is drawn
@@ -301,7 +306,7 @@ export const MapEditor = ({
     setHistory(EMPTY_HISTORY);
     contentsRef.current = initialContents;
     setFileText(initialContents);
-    setMap(document.read(initialContents));
+    setMap(fitLayout(document.read(initialContents)));
   }, [sourcesEpoch, initialContents, document]);
 
   const [thumbnails, setThumbnails] = useState<Record<string, string>>({});
@@ -531,7 +536,7 @@ export const MapEditor = ({
     setHistory(step.history);
     contentsRef.current = step.contents;
     setFileText(step.contents);
-    setMap(document.read(step.contents));
+    setMap(fitLayout(document.read(step.contents)));
     onChange(step.contents);
   };
   const undoEdit = () => restore(undo(historyRef.current, contentsRef.current));
@@ -561,8 +566,11 @@ export const MapEditor = ({
   }, [map, files]);
 
   const commit = (next: MapDoc, group?: string) => {
-    setMap(next);
-    writeFile(document.write(contentsRef.current, next), group);
+    // A change to the layout, or to the size it divides, moves what is
+    // docked; written so, the file agrees with the game.
+    const fitted = fitLayout(next);
+    setMap(fitted);
+    writeFile(document.write(contentsRef.current, fitted), group);
   };
   // What the world's window offers besides the world's own properties
   // (`worldRuleProperties`, specs/WORLD_RULE_FIELDS_PLAN.md).
@@ -909,6 +917,11 @@ export const MapEditor = ({
           visible={visible}
           onUndo={undoEdit}
           onRedo={redoEdit}
+          // A Screen's placements dock; a level's do not
+          // (specs/DOCKING_PLAN.md).
+          canDock={(filePath(currentSources.source, fileId) ?? '').endsWith(
+            '.screen',
+          )}
           onEditScript={id => {
             if (id !== undefined) {
               setScript({kind: 'placement', id});

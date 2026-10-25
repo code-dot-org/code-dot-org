@@ -43,6 +43,7 @@ import type {EventChoice} from '../blockly/eventChoices';
 import {placementKey} from '../blockly/mapPlacements';
 import {setRevealer} from '../callouts/reveal';
 import {ANCHORS} from '../engine';
+import {dock, undock} from '../engine/core/layout';
 import {STYLED} from '../engine/rules/styled';
 import {VIEWPORT} from '../engine/rules/viewport';
 import fields from '../formFields.module.css';
@@ -54,6 +55,14 @@ import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 import {AngleInput} from './AngleInput';
 import {CameraInspector} from './CameraInspector';
 import {CameraPanel} from './CameraPanel';
+import {
+  dockSize,
+  dockZones,
+  isDocked,
+  withLayout,
+  zoneAt,
+  type DockZone,
+} from './docking';
 import {IconAction} from './IconAction';
 import {LayerInspector} from './LayerInspector';
 import {LayerPanel} from './LayerPanel';
@@ -181,6 +190,8 @@ const HOVER = 'rgba(77, 159, 255, 0.45)'; // lighter outline for the hovered act
 // paler blue: it is not a weaker selection, it is a different relationship, and
 // two shades of one color would read as two strengths of the same thing.
 const REFERENCE = '#ffb454';
+/** The zone a dragged placement would dock in: the selection's blue, faint. */
+const DOCK_ZONE = 'rgba(77, 159, 255, 0.35)';
 /** The corner mark on a placement whose workspace holds blocks. */
 const SCRIPT = '#7c4dff';
 const DEG2RAD = Math.PI / 180;
@@ -255,6 +266,11 @@ export interface MapStageProps {
    */
   onUndo?: () => void;
   onRedo?: () => void;
+  /**
+   * Whether a placement can be docked here: on a Screen, a placement dragged
+   * into a zone at an edge docks there (specs/DOCKING_PLAN.md).
+   */
+  canDock?: boolean;
   /**
    * The events an actor of a kind can start a section with, for the quick
    * add in the inspector (`blockly/eventChoices`). Absent, it is not offered.
@@ -466,6 +482,7 @@ export const MapStage = ({
   onEditScript,
   onUndo,
   onRedo,
+  canDock = false,
   eventsFor,
   worldCameras = [],
   worldCameraEditor,
@@ -629,7 +646,11 @@ export const MapStage = ({
     moved: boolean;
     /** What its edges snap by, or nothing if it snaps by its middle. */
     box?: {width: number; height: number};
+    /** Where the pointer last was, for the zone it is let go in. */
+    last?: Vec;
   } | null>(null);
+  /** The zone a dragged placement would dock in if let go now. */
+  const [dockZone, setDockZone] = useState<DockZone | null>(null);
 
   /**
    * A stroke of the brush (specs/SHELL_PLAN.md, step 3). A press on an
@@ -1797,6 +1818,32 @@ export const MapStage = ({
     setPanning(true);
   };
 
+  /**
+   * The map as a drag leaves it on a Screen: docked in the zone it was let
+   * go in, or, docked before and let go anywhere else, floating where it
+   * was put (specs/DOCKING_PLAN.md).
+   */
+  const docked = (map: MapDoc, id: string, at: Vec | undefined): MapDoc => {
+    if (!canDock) {
+      return map;
+    }
+    const zone = at ? zoneAt(dockZones(map, id), at) : undefined;
+    if (zone) {
+      const placement = map.actors.find(actor => actor.id === id);
+      return {
+        ...map,
+        layout: dock(
+          map.layout,
+          id,
+          zone.target,
+          zone.side,
+          placement ? dockSize(placement, zone.side) : 48,
+        ),
+      };
+    }
+    return isDocked(map, id) ? withLayout(map, undock(map.layout, id)) : map;
+  };
+
   const endGesture = () => {
     const stroke = strokeRef.current;
     if (stroke) {
@@ -1828,8 +1875,9 @@ export const MapStage = ({
       // Commit ONCE, and only if the actor actually moved — writing the `.map`
       // recompiles the game, so a bare select (down-up, no move) must not.
       if (drag.moved) {
-        commit(mapRef.current);
+        commit(docked(mapRef.current, drag.id, drag.last));
       }
+      setDockZone(null);
       // Reflect the dragged position in the inspector fields.
       seedDraft(mapRef.current.actors.find(a => a.id === drag.id) ?? null);
     }
@@ -2018,6 +2066,10 @@ export const MapStage = ({
     if (drag) {
       drag.moved = true;
       const world = screenToWorld(event.clientX, event.clientY);
+      if (canDock) {
+        drag.last = world;
+        setDockZone(zoneAt(dockZones(mapRef.current, drag.id), world) ?? null);
+      }
       setProperty(
         drag.id,
         'positional',
@@ -2804,6 +2856,16 @@ export const MapStage = ({
         ctx.stroke();
       }
     }
+    // Where a dragged placement would dock if let go now.
+    if (dockZone) {
+      ctx.fillStyle = DOCK_ZONE;
+      ctx.fillRect(
+        dockZone.box.x,
+        dockZone.box.y,
+        dockZone.box.width,
+        dockZone.box.height,
+      );
+    }
     if (selected && hover) {
       drawSprite(
         selected,
@@ -2838,6 +2900,8 @@ export const MapStage = ({
     backgroundImages,
     // …and the world's background color.
     skyColor,
+    // …and where a dragged placement would dock.
+    dockZone,
   ]);
 
   const canvasClass = [
@@ -3405,6 +3469,31 @@ export const MapStage = ({
              * context and was the one place in the lab not using the word the
              * spec, the engine and the property all use.
              */}
+            {canDock && isDocked(map, selectedActor.id) && (
+              // Docked: it fills its region of the screen, and Undock lets
+              // it float again where it is (specs/DOCKING_PLAN.md).
+              <div className={styles.inspectorDocked}>
+                <Typography variant="body3" component="span">
+                  Docked
+                </Typography>
+                {!isReadOnly && (
+                  <Button
+                    variant="text"
+                    size="extraSmall"
+                    onClick={() =>
+                      commit(
+                        withLayout(
+                          mapRef.current,
+                          undock(mapRef.current.layout, selectedActor.id),
+                        ),
+                      )
+                    }
+                  >
+                    Undock
+                  </Button>
+                )}
+              </div>
+            )}
             <SimpleDropdown
               name="actor-anchor"
               labelText="Anchored to"
