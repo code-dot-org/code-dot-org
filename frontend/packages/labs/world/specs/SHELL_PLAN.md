@@ -1,6 +1,6 @@
 # Plan: the editor shell (SIMPLE_INTERFACE.md, phase two)
 
-STATUS: IN PROGRESS.
+STATUS: BUILT. Every step is in, with two departures recorded under step 4. The working record, as the other plans are.
 
 The second phase of the simple interface. Phase one (SCREEN_MAP_PLAN.md)
 made Screens and Maps files and put the game in a Viewport. This phase
@@ -217,6 +217,13 @@ palette, ends with Add Rules, and pressing it opens Add a rule.
 
 SIMPLE_INTERFACE.md, FILES.md and MAPS.md are brought into line; every
 fixture is opened and edited in the browser through the shell alone.
+
+BUILT. FILES.md says how a project is got around now; SIMPLE_INTERFACE.md
+names the two plans; MAPS.md describes the map block of a world and needed
+nothing. In the browser, every fixture opened on its Main Screen (or its
+world, for tapper and novel) with the breadcrumb at its first step and the
+palette on the Interface tab, opened its first map from the switcher onto
+the Game tab, and went back by the breadcrumb, with no page errors.
 
 ## Not in this phase
 

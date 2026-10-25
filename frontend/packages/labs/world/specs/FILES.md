@@ -14,8 +14,9 @@ change, each of which must be opened before it says anything.
 
 ## The menus
 
-So the tab bar carries one button per folder (`files/folderMenus`,
-`files/FileMenus`), and each opens a menu of that folder:
+So the row over the editor carries one button per folder
+(`files/folderMenus`, `files/FileMenus`), and each opens a menu of that
+folder:
 
 ```
 New actor          — where making one from nothing is a thing to want
@@ -26,14 +27,14 @@ Coin            ⋮   the row opens it; the ⋮ deletes it
 Player          ⋮
 ```
 
-**The tabs say the same thing.** A file opened from a menu called "Platform
-World" used to become a tab reading `main.world`, which is the one place in the
-lab that says a file name rather than a thing's name — and it wore a generic
-glyph beside a tree row wearing a globe. Codebridge asks the lab now
-(`CodebridgeConfig.fileLabel`, and the tab strip finally reads
-`config.fileIcons`), and the lab answers with the same `authoredName` the menus
-use. The file name stays as the tab's tooltip: it is still the answer to "which
-file is this".
+**There are no file tabs.** The editor shows one place at a time, and the
+breadcrumb where the tabs were names the steps from the Main Screen to it,
+each a way back (`layout/Breadcrumb`, specs/SHELL_PLAN.md). It names a file
+as the menus do (`files/fileLabel`, which is also `CodebridgeConfig.fileLabel`):
+by the `authoredName` it declares, never by its file name. The other ways to
+a file all end in the same `activateFile`, and the breadcrumb follows that:
+the name at the head of the map editor opens a switcher of the project's
+Screens and Maps, and the Actor Palette's Open opens an actor.
 
 **Rows are named by what the file DECLARES**, not by what it is called.
 `player.actor` reads as "Player" — the word on its own blocks, in every
@@ -49,8 +50,10 @@ two cannot drift apart. What that costs is every reference, since nothing in
 this lab records where one lives (`files/renameThing`):
 
 - a MODULE PATH — `actors/player`, on the fields that place an actor, filter an
-  event, count a kind, load a map, add an effect — and in every `.map`, which is
-  a document rather than a workspace and needs its own pass;
+  event, count a kind, load a map, add an effect — and in the placements of
+  every `.map` and `.screen`, which are a document rather than a workspace and
+  need their own pass; the code kept inside a map or screen is walked as any
+  other workspace;
 - a FILE NAME — an asset is named by its file, and a spritesheet cell carries
   `#3` on the end of it;
 - a BLOCK TYPE — an actor's own properties and blocks are minted from its path,
@@ -80,6 +83,14 @@ same `useFileOperations` and the same prompts the file browser uses, including
 the lab's veto on deleting a rule another rule requires (`rules/deleteGuard`).
 Nothing is possible from here that was not possible before; this is a second
 reading of one project, not a second file system.
+
+**The menus answer for the editors too.** They own the prompts, so the map
+editor asks them rather than prompting itself: its toolbar makes, renames and
+deletes a Screen or a Map through `files/fileActs`, and the Actor Palette's
+Delete goes through `actors/actorDelete`, which says where the actor is
+placed and whose code names it, and takes its placements with it
+(`files/actorUses`). Screens have no folder button; the switcher is how one
+is made (`SCREENS_MENU`).
 
 **What a row does not offer says something.** A folder with no `New` is one
 where making a file from nothing means nothing: a SOUND is bytes, and an empty
