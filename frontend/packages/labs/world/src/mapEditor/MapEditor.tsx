@@ -128,6 +128,26 @@ const MAP_AFFORDANCES: readonly Affordance[] = [
   'map-new-actor',
 ];
 
+/**
+ * `prev` with `answers` over it, or `prev` itself when they change nothing.
+ *
+ * What the sandbox is asked for is what the editor has not got, so an answer
+ * that lacks something — a kind or a placement the sandbox cannot picture,
+ * as the App's Note records cannot be — must not count as a change: a fresh
+ * object asked again, and again, every few hundred milliseconds for as long
+ * as the map was open, and the stage, re-rendered each time, never sat still
+ * long enough to paint the place's own picture.
+ */
+function withAnswers<T>(
+  prev: Record<string, T>,
+  answers: Record<string, T> | undefined,
+): Record<string, T> {
+  const changed = Object.entries(answers ?? {}).filter(
+    ([key, value]) => prev[key] !== value,
+  );
+  return changed.length ? {...prev, ...Object.fromEntries(changed)} : prev;
+}
+
 export const MapEditor = ({
   fileId,
   initialContents,
@@ -391,10 +411,13 @@ export const MapEditor = ({
     let alive = true;
     void infoFn.current(paths, worldPath).then(info => {
       if (alive) {
-        setThumbnails(prev => ({...prev, ...info.thumbnails}));
-        setSchemas(prev => ({...prev, ...info.schemas}));
-        setSizes(prev => ({...prev, ...info.sizes}));
-        setScales(prev => ({...prev, ...info.scales}));
+        // The same objects when the answer adds nothing: a kind the sandbox
+        // cannot picture stays missing, and a fresh object would run this
+        // effect again and ask again, without end (`withAnswers`).
+        setThumbnails(prev => withAnswers(prev, info.thumbnails));
+        setSchemas(prev => withAnswers(prev, info.schemas));
+        setSizes(prev => withAnswers(prev, info.sizes));
+        setScales(prev => withAnswers(prev, info.scales));
       }
     });
     return () => {
@@ -483,8 +506,9 @@ export const MapEditor = ({
     const timer = window.setTimeout(() => {
       void infoFn.current(paths, worldPath, placements).then(info => {
         if (alive) {
-          setThumbnails(prev => ({...prev, ...info.placements}));
-          setPlacementSizes(prev => ({...prev, ...info.placementSizes}));
+          // The same object when the answer adds nothing (`withAnswers`).
+          setThumbnails(prev => withAnswers(prev, info.placements));
+          setPlacementSizes(prev => withAnswers(prev, info.placementSizes));
         }
       });
     }, PICTURE_DEBOUNCE_MS);
