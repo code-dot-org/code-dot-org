@@ -10,6 +10,7 @@ import type {Grade} from '../helpers/displayTreeNodeContent';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setResultsTab} from '../redux';
+import {getIdColumn} from '../selectors';
 import {useGradedView} from '../useGradedView';
 import {useResultsTableView} from '../useResultsTableView';
 
@@ -31,6 +32,7 @@ const ResultsDetails = () => {
   const dispatch = useAppDispatch();
   const [showAllColumns, setShowAllColumns] = useState(false);
   const data = useAppSelector(state => state.data);
+  const idColumn = useAppSelector(getIdColumn);
   const results = useAppSelector(
     state => getAllResults(state, project),
     deepEqual
@@ -42,8 +44,8 @@ const ResultsDetails = () => {
     return byGrade;
   }, [grades]);
   const columns = useMemo(
-    () => dataColumnsFor(data, project, showAllColumns),
-    [data, project, showAllColumns]
+    () => dataColumnsFor(data, project, showAllColumns, idColumn),
+    [data, project, showAllColumns, idColumn]
   );
   const {view, counts} = useGradedView(
     useResultsTableView(results, columns),
