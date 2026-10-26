@@ -2814,7 +2814,9 @@ export const TILES: readonly Tile[] = [
         'Bringing the Portrait on and leaving it there wearing one face, which is a character rather than a scene — the check reads the face at each line as well as the opacity, and the backdrop as well as the face.',
       run: {
         probes: {
-          face: {kind: 'property', of: 'Portrait', name: 'sprite'},
+          // The picture it draws: a Portrait is an Image, and draws its face
+          // rather than wearing it (specs/ACTORS_AS_DATA_PLAN.md, step 4).
+          face: {kind: 'property', of: 'Portrait', name: 'picture'},
           seen: {kind: 'property', of: 'Portrait', name: 'opacity'},
           sky: {kind: 'backdrop'},
         },

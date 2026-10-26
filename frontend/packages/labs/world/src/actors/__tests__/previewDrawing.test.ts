@@ -71,8 +71,18 @@ describe('a stock actor’s preview', () => {
     expect(rectangles[1].width).toBeGreaterThan(0);
   });
 
+  it('draws the picture an Image shows into its box', () => {
+    // A Portrait is an Image: both are drawn (specs/ACTORS_AS_DATA_PLAN.md,
+    // step 4).
+    for (const id of ['image', 'portrait']) {
+      expect(previewDrawing(of(id))?.commands, id).toEqual([
+        {op: 'image', sprite: 'player.png', x: 0, y: 0, width: 64, height: 64},
+      ]);
+    }
+  });
+
   it('has nothing to draw for an actor that wears a picture', () => {
-    for (const id of ['coin', 'player', 'ground', 'portrait']) {
+    for (const id of ['coin', 'player', 'ground']) {
       expect(previewDrawing(of(id)), id).toBeUndefined();
     }
   });

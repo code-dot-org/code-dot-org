@@ -3561,9 +3561,13 @@ describe('the scene lesson’s check', () => {
       for (const [sprite, backdrop] of lines) {
         const rows: Row[] = [
           {
-            type: 'world_set_sprite',
-            fields: {SPRITE: sprite},
-            inputs: {ACTOR: portrait()},
+            type: 'world_set_ActorsImage_PictureProperty',
+            inputs: {
+              ACTOR: portrait(),
+              VALUE: {
+                shadow: {type: 'world_picture', fields: {SPRITE: sprite}},
+              },
+            },
           },
           {
             type: 'world_set_Appearance_OpacityProperty',

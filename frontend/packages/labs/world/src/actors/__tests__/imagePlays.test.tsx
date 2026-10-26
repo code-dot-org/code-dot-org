@@ -1,15 +1,14 @@
-// The Image, PLAYED: a picture made to sit in a box.
+// The Image, PLAYED: a picture drawn into a box.
 //
-// The fitting is arithmetic over two numbers the engine supplies — how big the
-// picture is and how big the box is — so what is pinned is the arithmetic and
-// the one case it has to refuse: a box with no picture in it
-// (specs/UI_ACTORS.md).
+// It is drawn (specs/ACTORS_AS_DATA_PLAN.md, step 4): its drawing is the size
+// of the box and draws its `picture` into it, fitted or stretched. The fit is
+// worked out where the picture is painted (`paintDrawing.placeInBox`, tested
+// there); what is pinned here is what the Image asks to be drawn.
 
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {Vector} from '../../engine/core/Vector';
-import {IntrinsicSizeProperty, ScaleProperty} from '../../engine/rules/spatial';
+import {ScaleProperty} from '../../engine/rules/spatial';
 import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
@@ -69,66 +68,61 @@ const play = async () => {
   const picture = [...world.actors].find(
     actor => actor.type === 'actors/image',
   )!;
-  const stretches = modules['actors/image'].StretchesProperty;
+  const own = modules['actors/image'];
   return {
     world,
     picture,
-    /** Say how big the file is, which is what a loaded picture reports. */
-    sized: (w: number, h: number) => {
-      picture.set(IntrinsicSizeProperty, new Vector(w, h));
-      world.tick(1 / 60);
-    },
-    stretch: (on: boolean) => picture.set(stretches as never, on as never),
+    show: (file: string) =>
+      picture.set(own.PictureProperty as never, file as never),
+    stretch: (on: boolean) =>
+      picture.set(own.StretchesProperty as never, on as never),
+    /** What it asks to be drawn, now. */
+    drawn: () =>
+      world.renderSnapshot().find(state => state.actor === picture)!.drawing,
     scale: () => picture.get(ScaleProperty) as {x: number; y: number},
   };
 };
 
-describe('an Image fitting its box', () => {
-  it('leaves a picture alone until there is one', async () => {
-    // No sprite means an intrinsic size of zero, and a box divided by zero is
-    // an infinite scale — which draws nothing and looks exactly like a missing
-    // picture, so the cause would be invisible.
-    const {world, scale} = await play();
-    world.tick(1 / 60);
-    expect(scale()).toEqual({x: 1, y: 1});
+describe('an Image drawing its picture', () => {
+  it('draws its picture into its box, fitted', async () => {
+    const {drawn} = await play();
+    expect(drawn()).toMatchObject({width: 100, height: 50});
+    expect(drawn()!.commands).toEqual([
+      {op: 'image', sprite: 'player.png', x: 0, y: 0, width: 100, height: 50},
+    ]);
   });
 
-  it('fits a wide picture by its width', async () => {
-    // 200 by 40 into 100 by 50: width wants a half, height wants 1.25, and the
-    // whole picture only fits at the smaller of the two.
-    const {sized, scale} = await play();
-    sized(200, 40);
-    expect(scale()).toEqual({x: 0.5, y: 0.5});
-  });
-
-  it('fits a tall picture by its height', async () => {
-    // 50 by 200 into 100 by 50: height wants a quarter, width wants two.
-    const {sized, scale} = await play();
-    sized(50, 200);
-    expect(scale()).toEqual({x: 0.25, y: 0.25});
-  });
-
-  it('keeps the picture’s shape, so both axes scale together', async () => {
-    const {sized, scale} = await play();
-    sized(300, 300);
-    const at = scale();
-    expect(at.x).toBe(at.y);
-  });
-
-  it('fills the box exactly when told to stretch', async () => {
-    const {sized, stretch, scale, world} = await play();
-    sized(200, 200);
+  it('fills the box when told to stretch', async () => {
+    const {drawn, stretch} = await play();
     stretch(true);
-    world.tick(1 / 60);
-    // Each axis takes its own ratio: 100/200 across and 50/200 down.
-    expect(scale()).toEqual({x: 0.5, y: 0.25});
+    expect(drawn()!.commands).toEqual([
+      {
+        op: 'image',
+        sprite: 'player.png',
+        x: 0,
+        y: 0,
+        width: 100,
+        height: 50,
+        stretch: true,
+      },
+    ]);
   });
 
   it('follows the picture when it is swapped for another', async () => {
-    const {sized, scale} = await play();
-    sized(200, 40);
-    expect(scale().x).toBe(0.5);
-    sized(400, 80);
-    expect(scale().x).toBe(0.25);
+    const {drawn, show} = await play();
+    show('coin.png');
+    expect(drawn()!.commands[0]).toMatchObject({sprite: 'coin.png'});
+  });
+
+  it('draws nothing with no picture', async () => {
+    const {drawn, show} = await play();
+    show('');
+    expect(drawn()!.commands).toEqual([]);
+  });
+
+  it('leaves its own scale alone, which a placement may use', async () => {
+    const {world, scale} = await play();
+    world.tick(1 / 60);
+    expect(scale()).toEqual({x: 1, y: 1});
   });
 });

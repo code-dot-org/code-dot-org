@@ -4054,8 +4054,8 @@ the same event as the words.
 
 ### What you do
 
-1. In the \`moves to a line\` handler, **set sprite** and **set opacity** on the
-   Portrait so that a face appears with line one, and a different one with
+1. In the \`moves to a line\` handler, **set picture** and **set opacity** on
+   the Portrait so that a face appears with line one, and a different one with
    line two.
 2. Add **set background to ⟨…⟩** with the \`(import…)\` row, and change it at
    line three so the story moves indoors.

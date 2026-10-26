@@ -15,6 +15,7 @@
 // Six lines and it is already the fiddliest block in the file; that is the
 // argument for a `.dialogue` file, made by writing one without.
 
+import {imageActor} from '../actors/stock/image';
 import {labelActor} from '../actors/stock/label';
 import {portraitActor} from '../actors/stock/portrait';
 import {speechBoxActor} from '../actors/stock/speechBox';
@@ -325,6 +326,13 @@ const SPEC: ProjectSpec = {
       name: 'speechBox.actor',
       language: 'actor',
       contents: speechBoxActor,
+      folderId: 'actors',
+    },
+    // The Image the Portrait acts like, which draws its face.
+    image: {
+      name: 'image.actor',
+      language: 'actor',
+      contents: imageActor,
       folderId: 'actors',
     },
     portrait: {

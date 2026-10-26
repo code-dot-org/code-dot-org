@@ -283,10 +283,8 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     name: 'Image',
     description:
       'A picture in a box you decide the size of — a thumbnail in a row, an avatar beside a name. Give it a width, a height and a picture and it fits the picture to them; turn on “stretches” to fill the box exactly instead.',
-    // Nothing at all. The picture is the engine's own Appearance, in every
-    // world, and the box is two properties of the Image's own — it does NOT
-    // act like a Label, because a Label brings a drawing and a drawing wins
-    // over a sprite, so it would never show its picture.
+    // Nothing at all: the box is the Boxed trait's, which every world has,
+    // and the picture is drawn by its own drawing.
     requires: [],
     sprites: [PORTRAIT_SPRITE],
     contents: imageActor,
@@ -315,6 +313,8 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     // No rule at all: a picture and two tweens, and a tween is not a rule.
     requires: [],
     sprites: [PORTRAIT_SPRITE],
+    // …and the Image it IS, which draws the picture into its box.
+    actors: ['image'],
     contents: portraitActor,
   },
   {

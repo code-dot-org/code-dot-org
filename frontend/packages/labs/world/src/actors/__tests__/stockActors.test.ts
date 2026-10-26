@@ -112,7 +112,9 @@ describe('every stock actor', () => {
       // How the picture meets its box. The BOX is nobody's own any more — it
       // is the `Has a Box` trait's, which every interface kind elects
       // (specs/BOXES_PLAN.md).
-      image: ['stretches'],
+      // What it shows, and how: a picture is the Image's own idea, and no
+      // rule's (specs/ACTORS_AS_DATA_PLAN.md, step 4).
+      image: ['picture', 'stretches'],
       // A text area's caret, and where its box is looking — DOWN the
       // paragraph and ACROSS the line. Two names rather than a vector because
       // they answer different questions: one is a place in the paragraph and

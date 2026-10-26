@@ -241,6 +241,40 @@ what it draws, so the crop Image's header says it cannot do is one more
 mode, left for when it is asked for. Portrait acts like Image, starting
 invisible. The fixtures that set either one's sprite set its picture.
 
+BUILT, in three commits. **The picture type:** `picture` is a property
+type, a file name held as a string as a color is; `world_picture` reports
+one, from the same field, list, open button and `(import…)` row as `set
+sprite`, and is a picture socket's shadow (`PICTURE_CHECK`). The Actor
+Editor offers it as a kind of own property; its fields (`ValueField`) and
+the map inspector's are a list of the project's pictures, with "(none)" or
+"(its kind's)" first and the one held kept even when the project no longer
+has it. A picture set on an actor is kept as data.
+
+**Drawing it:** `draw image ⟨picture⟩ in x y width height, fitted |
+stretched` (`world_draw_picture`), whose `image` command carries the box;
+the painter fits it, keeping its shape and centered, or stretches it, where
+the picture's size is known (`paintDrawing.placeInBox`). The map editor's
+reader reads the block and the picture.
+
+**Image and Portrait:** the Image declares `picture` (the stock face to
+start with) and `stretches`, and its drawing, the size of its box, draws
+the one into the other; the step that set its scale each frame is gone.
+The Portrait acts like the Image (`actors: ['image']`, and the visual
+novel holds `image.actor` beside it), starts invisible, and has an icon of
+its own, a face, since no two stock actors share one. The scene lesson
+sets its `picture` rather than its sprite, and its check reads `picture`:
+read as `sprite`, a Portrait that never changed face passed, from empty to
+the one face.
+
+Departure: `draw image` is kept beside the new block rather than given a
+socket. It names its picture in a field so a sheet's cell can be resolved
+where the `.sheet` files are known; a value is read while the game runs,
+where they are not, so the new block draws whole pictures.
+
+In the browser: the Interface Kit's Image opens with its Picture and
+Stretches under Self, the icon picker with `image` chosen, and its preview
+the picture fitted to its 64 by 64 box; no page errors.
+
 ### 5. Every actor file is data
 
 `lessonSource` writes each actor as data (`inDataShape`), as the scenarios

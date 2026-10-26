@@ -3,9 +3,9 @@
 // A picture, and a default of INVISIBLE. That is a thin actor, and the second
 // half is the half that earns it a place: a portrait placed on a map before
 // anybody has spoken should not be standing there, and a default of visible
-// makes its own entrance a thing you cannot see happen. `set sprite` is one
-// row anybody can write; knowing to start at nothing is the part learned by
-// getting it wrong.
+// makes its own entrance a thing you cannot see happen. Choosing a picture is
+// one field anybody can fill in; knowing to start at nothing is the part
+// learned by getting it wrong.
 //
 // IT SHIPS NO TWEENS, AND THE REASON IS WORTH WRITING DOWN, because `enters`
 // and `leaves` are the obvious things to put here and were here until they
@@ -22,9 +22,9 @@
 // their own, shared across files the way an actor is; until then, one written
 // here is a definition nothing can name.
 
-import {actorFile, num, setSprite} from './workspace';
+import {actorFile, actsLike, num, showAs} from './workspace';
 
-/** The sprite it wears until a project gives it a face of its own. */
+/** The picture it shows until a project gives it a face of its own. */
 export const PORTRAIT_SPRITE = 'player';
 
 /** `set opacity of ⟨this actor⟩ to ⟨value⟩`. */
@@ -37,10 +37,11 @@ const opacity = (value: number) => ({
 });
 
 export const portraitActor = actorFile('Portrait', [
-  // No `use trait` for being positioned or drawn: every actor has both
-  // without electing either, and saying so would be electing a fact rather
-  // than an ability — the same reason a Coin does not elect "Can Collide".
-  setSprite(`${PORTRAIT_SPRITE}.png`),
+  // AN IMAGE, which is a picture drawn into a box: the face is its
+  // `picture`, chosen per placement (specs/ACTORS_AS_DATA_PLAN.md, step 4).
+  // It was a sprite, which an interface actor no longer wears.
+  actsLike('actors/image'),
+  showAs('portrait'),
   // Off screen until it is asked for.
   opacity(0),
 ]);

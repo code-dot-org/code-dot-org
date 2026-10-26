@@ -17,6 +17,7 @@
 // matches how a picture already appears in the map editor's palette.
 
 import barsProgress from '@fortawesome/fontawesome-free/svgs/solid/bars-progress.svg?raw';
+import circleUser from '@fortawesome/fontawesome-free/svgs/solid/circle-user.svg?raw';
 import comment from '@fortawesome/fontawesome-free/svgs/solid/comment.svg?raw';
 import font from '@fortawesome/fontawesome-free/svgs/solid/font.svg?raw';
 import handPointer from '@fortawesome/fontawesome-free/svgs/solid/hand-pointer.svg?raw';
@@ -89,6 +90,9 @@ export const ACTOR_ICONS: Readonly<Record<string, string>> = {
   health: tile(heartPulse),
   panel: tile(windowMaximize),
   image: tile(image),
+  // A Portrait is an Image, and says whose face: the same picture symbol
+  // would be two kinds nobody could tell apart at 24 pixels.
+  portrait: tile(circleUser),
   viewport: tile(tv),
   // A Scroll View is a Viewport in every other respect, so the symbol has to
   // carry the one difference: it MOVES. A second screen glyph would have been

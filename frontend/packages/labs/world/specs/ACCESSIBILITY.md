@@ -176,6 +176,10 @@ below, and are listed last.
   radio group would be one: noted, not changed.
 - **What it is** is a named group: Acts like is a labelled dropdown, Is a
   record a checkbox with its meaning in a line of text after it.
+- **A picture is chosen from a labelled list**, in the Actor Editor and
+  in the map inspector alike, never typed; the one held is said even when
+  the project no longer has it. Not done: the list names files, and says
+  nothing of what is in them.
 - **The confirm prompt** asked before making an actor an interface's is
   not exposed as a dialog (`role="dialog"` is missing on the shared
   prompt, `usePrompts`); found here, not made here.
