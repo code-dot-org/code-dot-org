@@ -61,6 +61,7 @@ import {
 } from './cameras';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
+import {END_ROW, ROW_PART, settledParts} from './designParts';
 import {editingActorModule, editingRuleFor} from './editingRule';
 import {
   allEnums,
@@ -111,6 +112,7 @@ import {
   blockDesignerMutator,
   eventDesignerMutator,
   SIGNATURE_ARGUMENT,
+  SIGNATURE_ROW,
   shadowed,
   type SocketState,
 } from './extensions/blockDesigner';
@@ -1557,9 +1559,16 @@ const defineEventBlock = (event: EventMeta) => {
   // Every value the event carries, in the signature's order, so the blocks
   // that name them can be minted and the handler's closure can take them.
   const carried: Array<{name: string; type: string}> = [];
-  for (const part of event.parts ?? [{kind: 'label', text: event.name}]) {
+  for (const part of settledParts(
+    event.parts ?? [{kind: 'label', text: event.name}],
+  )) {
     if (part.kind === 'label') {
       message0 += ` ${part.text}`;
+      continue;
+    }
+    if (part.kind === ROW_PART) {
+      args0.push({type: END_ROW});
+      message0 += ` %${args0.length}`;
       continue;
     }
     const at = carried.length;
@@ -1780,7 +1789,9 @@ const emitBlockType = (event: EventMeta): string =>
  * the case in point — it raises its event once per key it is looping over.
  */
 const defineEmitBlock = (event: EventMeta) => {
-  const parts = event.parts ?? [{kind: 'label' as const, text: event.name}];
+  const parts = settledParts(
+    event.parts ?? [{kind: 'label' as const, text: event.name}],
+  );
   const params = parts.filter(part => part.kind === 'param');
   const names = params.map(param =>
     params.length > 1 ? paramValueNames(param.name) : DEFAULT_VALUE_NAMES,
@@ -1792,6 +1803,11 @@ const defineEmitBlock = (event: EventMeta) => {
   for (const part of parts) {
     if (part.kind === 'label') {
       message0 += ` ${part.text}`;
+      continue;
+    }
+    if (part.kind === ROW_PART) {
+      args0.push({type: END_ROW});
+      message0 += ` %${args0.length}`;
       continue;
     }
     // ANY type, not only an enum. The two sides of an event do not have to
@@ -3311,9 +3327,14 @@ const defineActionBlock = (action: ActionMeta) => {
   let message0 = action.parts ? '' : name;
   if (action.parts) {
     let paramIndex = 0;
-    for (const part of action.parts) {
+    for (const part of settledParts(action.parts)) {
       if (part.kind === 'label') {
         message0 += `${message0 ? ' ' : ''}${part.text}`;
+        continue;
+      }
+      if (part.kind === ROW_PART) {
+        args0.push({type: END_ROW});
+        message0 += ` %${args0.length}`;
         continue;
       }
       const built = typedValueInputs(
@@ -3459,9 +3480,14 @@ const defineQueryBlock = (query: QueryMeta) => {
       args0.push({type: 'input_value', name: 'ACTOR', check: 'Actor'});
       designed = '%1';
     }
-    for (const part of query.parts) {
+    for (const part of settledParts(query.parts)) {
       if (part.kind === 'label') {
         designed += `${designed ? ' ' : ''}${part.text}`;
+        continue;
+      }
+      if (part.kind === ROW_PART) {
+        args0.push({type: END_ROW});
+        designed += ` %${args0.length}`;
         continue;
       }
       const built = typedValueInputs(
@@ -8994,6 +9020,20 @@ const signatureText = defineBlock({
   generator: noGenerator,
 });
 
+/** `new line` — the block being designed carries on below (`designParts`). */
+const signatureRow = defineBlock({
+  type: SIGNATURE_ROW,
+  message0: 'new line',
+  args0: [],
+  previousStatement: true,
+  nextStatement: true,
+  style: 'text_blocks',
+  tooltip:
+    'What comes after this starts a new line on the block. One at the start ' +
+    'or the end, or after another, does nothing.',
+  generator: noGenerator,
+});
+
 // Blockly clips a text field's DISPLAY at 50 characters (`maxDisplayLength`) —
 // enough for a name, not for a sentence. The value was always whole; only the
 // reading was cut off, mid-word, with an ellipsis. Any field holding PROSE (a
@@ -11469,6 +11509,7 @@ export const DOMAIN_BLOCKS = [
   worldRuleEnumOption,
   signatureText,
   signatureArgument,
+  signatureRow,
   worldDoc,
   worldReturn,
   worldRuleStepIn,
@@ -11914,7 +11955,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     // offers is `surfaceToolbox`'s business — a `define block` takes
     // `argument`, a `define event` takes `choice`.
     name: SIGNATURE_DRAWER,
-    blocks: [SIGNATURE_ARGUMENT, 'world_signature_text'],
+    blocks: [SIGNATURE_ARGUMENT, 'world_signature_text', SIGNATURE_ROW],
   },
 ];
 
@@ -11947,7 +11988,12 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
  */
 export const SIGNATURE_CATEGORY: ToolboxCategory = {
   name: SIGNATURE_DRAWER,
-  blocks: [...LET_BLOCKS, 'world_signature_text', SIGNATURE_ARGUMENT],
+  blocks: [
+    ...LET_BLOCKS,
+    'world_signature_text',
+    SIGNATURE_ARGUMENT,
+    SIGNATURE_ROW,
+  ],
 };
 const BUILTIN_RULE_CATEGORIES: ToolboxCategory[] = AUTHORING_RULES.map(
   ruleCategory,

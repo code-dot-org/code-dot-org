@@ -25,6 +25,7 @@ import {
   SIGNATURE_CATEGORY,
   SIGNATURE_DRAWER,
 } from './domainBlocks';
+import {SIGNATURE_ROW} from './extensions/blockDesigner';
 
 /**
  * Which surface a toolbox is being built for.
@@ -92,6 +93,7 @@ const IMPLEMENTATION: ReadonlySet<string> = new Set([
   // there would be offering blocks with nowhere to put them.
   ARGUMENT_BLOCK,
   'world_signature_text',
+  SIGNATURE_ROW,
 ]);
 
 /** The type a toolbox entry offers, however it is written. */

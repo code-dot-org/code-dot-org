@@ -430,6 +430,9 @@ function designedBlock(
         },
       ];
     }
+    if (part.kind === 'row') {
+      return [{kind: 'row'}];
+    }
     return part.text ? [{kind: 'label', text: part.text}] : [];
   });
   const named = designedName(raw);
@@ -506,6 +509,9 @@ function designedEvent(
           ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
         },
       ];
+    }
+    if (part.kind === 'row') {
+      return [{kind: 'row'}];
     }
     return part.text ? [{kind: 'label', text: part.text}] : [];
   });

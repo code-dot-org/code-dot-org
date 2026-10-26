@@ -62,6 +62,8 @@ export const BLOCK_DESIGNER_MUTATOR = 'block_designer_mutator';
  */
 export type BlockPart =
   | {kind: 'label'; text: string}
+  /** A line break: what follows starts a new row (`designParts`). */
+  | {kind: 'row'}
   | {
       kind: 'param';
       type: string;
@@ -120,6 +122,9 @@ const TEXT_FIELD = 'TEXT';
  * dropdown of one.
  */
 export const SIGNATURE_ARGUMENT = 'world_signature_argument';
+
+/** `new line`: a line break in the block being designed (`designParts`). */
+export const SIGNATURE_ROW = 'world_signature_row';
 /** The field on it naming the type — a param type or an enum ref. */
 export const TYPE_FIELD = 'TYPE';
 
@@ -545,12 +550,14 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
       this.parts_.map(part =>
         part.kind === 'label'
           ? {kind: 'label' as const, text: part.text}
-          : {
-              kind: 'param' as const,
-              name: part.name,
-              type: part.type,
-              var: part.var,
-            },
+          : part.kind === 'row'
+            ? {kind: 'row' as const}
+            : {
+                kind: 'param' as const,
+                name: part.name,
+                type: part.type,
+                var: part.var,
+              },
       ),
       this.getFieldValue('RETURNS') ?? 'none',
       isActorScoped(this),
@@ -592,14 +599,18 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
         // with the blocks a block's signature is designed with.
         part.kind === 'label'
           ? 'world_signature_text'
-          : // A `let` for the types one can say, and `argument` for the rest
-            // — an enum-typed parameter and a `kind` have no `let`, and are
-            // what that block is still here for (`LET_ARGUMENTS`).
-            (letBlockFor(part.type) ?? SIGNATURE_ARGUMENT),
+          : part.kind === 'row'
+            ? SIGNATURE_ROW
+            : // A `let` for the types one can say, and `argument` for the rest
+              // — an enum-typed parameter and a `kind` have no `let`, and are
+              // what that block is still here for (`LET_ARGUMENTS`).
+              (letBlockFor(part.type) ?? SIGNATURE_ARGUMENT),
       );
       (item as Blockly.BlockSvg).initSvg?.();
       if (part.kind === 'label') {
         item.setFieldValue(part.text, TEXT_FIELD);
+      } else if (part.kind === 'row') {
+        // Nothing to set: a break is where it is and nothing else.
       } else if (letType(item.type) !== undefined) {
         // The variable this argument already is. `bindParts_` has run, so it
         // exists; pointing the field at its id is the whole of the binding,
@@ -653,6 +664,11 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
     const parts: BlockPart[] = [];
     let item = connection.targetBlock();
     while (item) {
+      if (item.type === SIGNATURE_ROW) {
+        parts.push({kind: 'row'});
+        item = item.getNextBlock();
+        continue;
+      }
       const param = paramTypeOf(item);
       const declared = letType(item.type);
       if (param && declared !== undefined) {
@@ -705,17 +721,19 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
         list.map(part =>
           part.kind === 'label'
             ? ['label', part.text]
-            : [
-                'param',
-                part.type,
-                part.name ?? '',
-                part.default ?? '',
-                // The whole starting block, because it is a whole block now: a
-                // learner who edits the number inside a default has changed
-                // the signature, and a comparison that stopped at the type
-                // would read the row and rebuild nothing.
-                JSON.stringify(part.shadow ?? ''),
-              ],
+            : part.kind === 'row'
+              ? ['row']
+              : [
+                  'param',
+                  part.type,
+                  part.name ?? '',
+                  part.default ?? '',
+                  // The whole starting block, because it is a whole block now: a
+                  // learner who edits the number inside a default has changed
+                  // the signature, and a comparison that stopped at the type
+                  // would read the row and rebuild nothing.
+                  JSON.stringify(part.shadow ?? ''),
+                ],
         ),
       );
     if (same(next) === same(this.parts_ ?? [])) {

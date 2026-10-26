@@ -17,6 +17,7 @@
 
 import * as Blockly from 'blockly/core';
 
+import {END_ROW, settledParts} from '../designParts';
 import {enumOptions, enumRefOfParamType} from '../enums';
 import {actorFieldOptions} from '../moduleOptions';
 import {paramFlavour} from '../typedVariables';
@@ -36,7 +37,7 @@ export type PreviewKind = 'block' | 'event';
 
 /** One piece of the drawn block, mirroring a designer part. */
 export interface PreviewPart {
-  kind: 'label' | 'param';
+  kind: 'label' | 'param' | 'row';
   /** A label's wording. */
   text?: string;
   /** A parameter's displayed name and value type. */
@@ -213,6 +214,10 @@ export class FieldBlockPreview extends FieldBlockDrawing {
 
   protected override drawnBlock(): Record<string, unknown> {
     const args: Blockly.utils.toolbox.BlockInfo[] = [];
+    // Sockets are named by their own count, not by their place among the
+    // args: a line break is an arg too, and `fill` finds sockets as P0, P1….
+    let sockets = 0;
+    const socketName = () => `P${(sockets += 1) - 1}`;
     let message = '';
     const push = (fragment: string) => {
       message += message ? ` ${fragment}` : fragment;
@@ -220,7 +225,7 @@ export class FieldBlockPreview extends FieldBlockDrawing {
     const actorSocket = () => {
       args.push({
         type: 'input_value',
-        name: `P${args.length}`,
+        name: socketName(),
         check: 'Actor',
       } as unknown as Blockly.utils.toolbox.BlockInfo);
       push(`%${args.length}`);
@@ -243,11 +248,18 @@ export class FieldBlockPreview extends FieldBlockDrawing {
       if (this.subject) {
         actorSocket();
       }
-      for (const part of this.parts) {
+      for (const part of settledParts(this.parts)) {
         if (part.kind === 'label') {
           if (part.text) {
             push(part.text);
           }
+          continue;
+        }
+        if (part.kind === 'row') {
+          args.push({
+            type: END_ROW,
+          } as unknown as Blockly.utils.toolbox.BlockInfo);
+          push(`%${args.length}`);
           continue;
         }
         const choice = enumRefOfParamType(part.type ?? '');
@@ -289,17 +301,24 @@ export class FieldBlockPreview extends FieldBlockDrawing {
       if (this.subject && reportsSomething) {
         actorSocket();
       }
-      for (const part of this.parts) {
+      for (const part of settledParts(this.parts)) {
         if (part.kind === 'label') {
           if (part.text) {
             push(part.text);
           }
           continue;
         }
+        if (part.kind === 'row') {
+          args.push({
+            type: END_ROW,
+          } as unknown as Blockly.utils.toolbox.BlockInfo);
+          push(`%${args.length}`);
+          continue;
+        }
         const check = paramFlavour(part.type ?? 'number').type;
         args.push({
           type: 'input_value',
-          name: `P${args.length}`,
+          name: socketName(),
           check,
         } as unknown as Blockly.utils.toolbox.BlockInfo);
         push(`%${args.length}`);

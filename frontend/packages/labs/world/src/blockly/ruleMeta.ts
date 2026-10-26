@@ -131,6 +131,7 @@ export interface PropertyMeta {
  */
 export type MemberPart =
   | {readonly kind: 'label'; readonly text: string}
+  | {readonly kind: 'row'}
   | {
       readonly kind: 'param';
       readonly name: string;
@@ -773,6 +774,9 @@ export function parseRuleMeta(
           },
         ];
       }
+      if (part.kind === 'row') {
+        return [{kind: 'row'}];
+      }
       return part.text ? [{kind: 'label', text: part.text}] : [];
     });
     const name = designedName(raw);
@@ -813,6 +817,9 @@ export function parseRuleMeta(
             ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
           },
         ];
+      }
+      if (part.kind === 'row') {
+        return [{kind: 'row'}];
       }
       return part.text ? [{kind: 'label', text: part.text}] : [];
     });

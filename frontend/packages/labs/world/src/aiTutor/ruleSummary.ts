@@ -37,11 +37,18 @@ const says = (m: {
   description?: string;
 }): string => {
   const parts = (m.parts ?? [])
-    .map(part =>
-      typeof part === 'string'
-        ? part
-        : `⟨${(part as {name?: string}).name ?? '…'}⟩`,
-    )
+    .map(part => {
+      if (typeof part === 'string') {
+        return part;
+      }
+      const {kind, text, name} = part as {
+        kind?: string;
+        text?: string;
+        name?: string;
+      };
+      return kind === 'label' ? text : kind === 'row' ? '' : `⟨${name ?? '…'}⟩`;
+    })
+    .filter(Boolean)
     .join(' ');
   const said = parts || m.name;
   return m.description ? `${said} — ${m.description}` : said;

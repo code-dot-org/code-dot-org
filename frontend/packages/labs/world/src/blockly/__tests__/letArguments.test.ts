@@ -100,6 +100,12 @@ const define = () => {
       nextStatement: true,
     },
     {
+      type: 'world_signature_row',
+      message0: 'new line',
+      previousStatement: true,
+      nextStatement: true,
+    },
+    {
       type: 'world_signature_argument',
       message0: 'argument %1 %2',
       args0: [
@@ -313,6 +319,27 @@ describe('a `let` in the arguments row', () => {
     block.buildArguments_();
 
     expect(row(block)).toEqual(['world_signature_text', 'world_let_number']);
+  });
+
+  it('writes a line break as `new line`, and reads it back', () => {
+    const block = host(workspace);
+    const parts: BlockPart[] = [
+      {kind: 'label', text: 'heal'},
+      {kind: 'row'},
+      {kind: 'label', text: 'now'},
+    ];
+    block.loadExtraState({parts});
+
+    block.buildArguments_();
+    expect(row(block)).toEqual([
+      'world_signature_text',
+      'world_signature_row',
+      'world_signature_text',
+    ]);
+    block.parts_ = [];
+    block.readArguments_();
+
+    expect(block.saveExtraState().parts).toEqual(parts);
   });
 
   it('leaves `argument` to the types no `let` can say', () => {
