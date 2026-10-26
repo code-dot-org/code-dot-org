@@ -63,7 +63,7 @@ describe('QuizQuestionCard', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
 
     expect(screen.getByRole('tab', {name: 'Question'})).toBeInTheDocument();
-    expect(screen.getByLabelText('Internal name')).toHaveValue(
+    expect(screen.getByLabelText('Internal name*')).toHaveValue(
       'Existing question'
     );
   });
@@ -74,10 +74,38 @@ describe('QuizQuestionCard', () => {
     expect(screen.getByRole('tab', {name: 'Question'})).toBeInTheDocument();
   });
 
+  it('marks Internal name and Question title as required', () => {
+    renderCard({isExpanded: true});
+
+    expect(screen.getByLabelText('Internal name*')).toBeRequired();
+    expect(screen.getByLabelText('Question title*')).toBeRequired();
+    expect(
+      screen.getByRole('textbox', {name: 'Description'})
+    ).not.toBeRequired();
+  });
+
+  it('describes each Question tab field with its helper text', () => {
+    renderCard({isExpanded: true});
+
+    expect(screen.getByLabelText('Internal name*')).toHaveAccessibleDescription(
+      'Not shown to students. A short label to help you find and group this question.'
+    );
+    expect(
+      screen.getByLabelText('Question title*')
+    ).toHaveAccessibleDescription(
+      'The main question text students see. For a simple question, this can be the whole question.'
+    );
+    expect(
+      screen.getByRole('textbox', {name: 'Description'})
+    ).toHaveAccessibleDescription(
+      'Additional context, instructions or content (e.g. a code snippet) shown below the title. Supports Markdown.'
+    );
+  });
+
   it('saves the edited draft and collapses on success', async () => {
     const {onSave} = renderCard({isExpanded: true});
 
-    fireEvent.change(screen.getByLabelText('Internal name'), {
+    fireEvent.change(screen.getByLabelText('Internal name*'), {
       target: {value: 'Renamed question'},
     });
     await act(async () => {
@@ -115,7 +143,7 @@ describe('QuizQuestionCard', () => {
       screen.getByRole('button', {name: 'Discard changes'})
     ).toBeDisabled();
 
-    fireEvent.change(screen.getByLabelText('Internal name'), {
+    fireEvent.change(screen.getByLabelText('Internal name*'), {
       target: {value: 'Something else'},
     });
 
@@ -133,12 +161,12 @@ describe('QuizQuestionCard', () => {
     );
     renderCard({isExpanded: true, onSave});
 
-    fireEvent.change(screen.getByLabelText('Internal name'), {
+    fireEvent.change(screen.getByLabelText('Internal name*'), {
       target: {value: 'Something else'},
     });
     fireEvent.click(screen.getByRole('button', {name: 'Save'}));
 
-    expect(screen.getByLabelText('Internal name')).toBeDisabled();
+    expect(screen.getByLabelText('Internal name*')).toBeDisabled();
 
     await act(async () => {
       resolveSave(7);
@@ -148,7 +176,7 @@ describe('QuizQuestionCard', () => {
   it('discards edits back to the saved question', () => {
     renderCard({isExpanded: true});
 
-    const nameField = screen.getByLabelText('Internal name');
+    const nameField = screen.getByLabelText('Internal name*');
     fireEvent.change(nameField, {target: {value: 'Something else'}});
     fireEvent.click(screen.getByRole('button', {name: 'Discard changes'}));
 
@@ -164,7 +192,7 @@ describe('QuizQuestionCard', () => {
   it('shows an unsaved-changes badge after an edit, even once collapsed', () => {
     renderCard({isExpanded: true});
 
-    fireEvent.change(screen.getByLabelText('Internal name'), {
+    fireEvent.change(screen.getByLabelText('Internal name*'), {
       target: {value: 'Something else'},
     });
     expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
@@ -200,14 +228,14 @@ describe('QuizQuestionCard', () => {
     it('focuses the Internal name field, since the create dropdown that made it loses focus', () => {
       renderCard({question: PENDING_QUESTION, isExpanded: true});
 
-      expect(screen.getByLabelText('Internal name')).toHaveFocus();
+      expect(screen.getByLabelText('Internal name*')).toHaveFocus();
     });
   });
 
   it('does not take focus when an existing question opens expanded', () => {
     renderCard({isExpanded: true});
 
-    expect(screen.getByLabelText('Internal name')).not.toHaveFocus();
+    expect(screen.getByLabelText('Internal name*')).not.toHaveFocus();
   });
 
   it('opens a free response question saved without choices', () => {
