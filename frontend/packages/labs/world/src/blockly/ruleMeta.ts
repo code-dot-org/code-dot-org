@@ -271,9 +271,8 @@ export interface StepMeta {
    *
    * `world` is the step as it always was: one run per tick, `(world, delta)`.
    * An actor- or camera-scoped step is declared UNDER A TRAIT and runs once per
-   * subject that has it, with that subject bound — which is what four of the
-   * seven stock steps open by doing for themselves, in a `for each … where has
-   * trait ⟨my own trait⟩` that says nothing the declaration site does not.
+   * subject that has it, with that subject bound: the `for each … where has
+   * trait ⟨my own trait⟩` a rule-level step would have to write out.
    */
   readonly scope: MemberScope;
   /** The trait that owns a subject-scoped step (absent for world-scoped). */
@@ -1484,8 +1483,8 @@ export function ruleMetaToModule(
       ruleBodyKey('step', step.scope, step.ownerTraitId, step.id),
     );
     // A subject-scoped step runs once per thing that has the trait, with that
-    // thing bound — the `for each … where has trait ⟨mine⟩` four of the seven
-    // stock steps open by writing out, supplied here instead. No `const world`
+    // thing bound — the `for each … where has trait ⟨mine⟩` a rule-level step
+    // would have to write out, supplied here instead. No `const world`
     // preamble: unlike an action's, a step's closure already has one.
     const traitExport = step.ownerTraitId
       ? traitExportById.get(step.ownerTraitId)

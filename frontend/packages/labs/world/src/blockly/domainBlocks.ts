@@ -9312,8 +9312,8 @@ const worldRuleStepIn = stepBlock(
 //
 // Two things follow from the position, and neither has to be typed. The body
 // runs once per subject that HAS the trait, with that subject bound — the
-// `for each … where has trait ⟨mine⟩` that four of the seven stock steps open
-// by writing out. And the subject narrows the phase list, so a camera trait is
+// `for each … where has trait ⟨mine⟩` a rule-level step would have to write
+// out. And the subject narrows the phase list, so a camera trait is
 // offered the camera's moments and an actor trait the actor's.
 //
 // A mouth rather than a chained body, unlike the hats: a trait's members chain

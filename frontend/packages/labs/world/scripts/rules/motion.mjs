@@ -218,25 +218,17 @@ rule.step('note where each body starts', 'sense', [
   }),
 ]);
 
-rule.step('reposition', 'move', [
-  forEach(each, {
-    from: allWithTrait(CanMove),
-    body: [
-      note('Moving is speed times time: how far do we get this frame?'),
-      travel.let(
-        vectorTimes(
-          velocity.of(each.get()),
-          times(frameTime(), pixelsPerUnit()),
-        ),
-      ),
-      note('Then add that to where the actor already is.'),
-      setPosition(
-        each.get(),
-        add(position.x(each.get()), axisOf('x', travel.get())),
-        add(position.y(each.get()), axisOf('y', travel.get())),
-      ),
-    ],
-  }),
+canMove.step('reposition', 'move', [
+  note('Moving is speed times time: how far do we get this frame?'),
+  travel.let(
+    vectorTimes(velocity.of(thisActor()), times(frameTime(), pixelsPerUnit())),
+  ),
+  note('Then add that to where the actor already is.'),
+  setPosition(
+    thisActor(),
+    add(position.x(thisActor()), axisOf('x', travel.get())),
+    add(position.y(thisActor()), axisOf('y', travel.get())),
+  ),
 ]);
 
 export default () => moduleFor(rule, 'motion');

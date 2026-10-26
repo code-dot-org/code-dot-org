@@ -3,7 +3,6 @@ import {CanCollide, collisionSizeOf, contacts} from './collisions.mjs';
 import {
   absolute,
   add,
-  allWithTrait,
   atLeast,
   atMost,
   axisOf,
@@ -300,85 +299,74 @@ rule
   .describe('Can be stood on by things that fall.')
   .uses(CanCollide);
 
-const each = rule.local('each', 'Actor');
 const resting = rule.local('resting', 'Boolean');
 
-rule.step('applyVelocity', 'push', [
-  forEach(each, {
-    from: allWithTrait(rule.traitRef('Affected by Gravity')),
-    body: [
-      doc(
-        'Falling is not one speed: every frame you fall a little faster. So add a bit of speed, in the direction gravity pulls.',
-      ),
-      velocity.set(
-        each.get(),
-        vectorPlus(
-          velocity.of(each.get()),
-          vectorTimes(
-            directionOfGravity.of(),
-            times(
-              times(amountOfGravity.of(), gravityScale.of(each.get())),
-              frameTime(),
-            ),
-          ),
+affected.step('applyVelocity', 'push', [
+  doc(
+    'Falling is not one speed: every frame you fall a little faster. So add a bit of speed, in the direction gravity pulls.',
+  ),
+  velocity.set(
+    thisActor(),
+    vectorPlus(
+      velocity.of(thisActor()),
+      vectorTimes(
+        directionOfGravity.of(),
+        times(
+          times(amountOfGravity.of(), gravityScale.of(thisActor())),
+          frameTime(),
         ),
       ),
-    ],
-  }),
+    ),
+  ),
 ]);
 
-rule.step('handleCollisions', 'react', [
-  forEach(each, {
-    from: allWithTrait(rule.traitRef('Affected by Gravity')),
-    body: [
-      note(
-        'Everything has moved by now, so this is where we decide who is standing.',
-      ),
-      note(
-        'Landing (or not) is also when we announce it: started falling, landed.',
-      ),
-      doc(
-        'Unless this actor is on its way THROUGH the floor, in which case there is nothing to land on and nothing to say about it — see `ignores ground`. The ANNOUNCEMENT is inside the guard too, and that is the half it is easy to leave out: a climber whose landing was skipped but whose "not resting" was not is a climber told it has started falling, once, at the foot of every ladder.',
-      ),
-      when([
-        [
-          not(ignoresGround.of(each.get())),
+affected.step('handleCollisions', 'react', [
+  note(
+    'Everything has moved by now, so this is where we decide who is standing.',
+  ),
+  note(
+    'Landing (or not) is also when we announce it: started falling, landed.',
+  ),
+  doc(
+    'Unless this actor is on its way THROUGH the floor, in which case there is nothing to land on and nothing to say about it — see `ignores ground`. The ANNOUNCEMENT is inside the guard too, and that is the half it is easy to leave out: a climber whose landing was skipped but whose "not resting" was not is a climber told it has started falling, once, at the foot of every ladder.',
+  ),
+  when([
+    [
+      not(ignoresGround.of(thisActor())),
+      [
+        resting.let(landOnGround({faller: thisActor()})),
+        when(
           [
-            resting.let(landOnGround({faller: each.get()})),
-            when(
-              [
-                [
-                  resting.get(),
-                  [
-                    when([
-                      [
-                        falling.of(each.get()),
-                        [
-                          falling.set(each.get(), no()),
-                          stopsFalling({}, each.get()),
-                        ],
-                      ],
-                    ]),
-                  ],
-                ],
-              ],
+            [
+              resting.get(),
               [
                 when([
                   [
-                    not(falling.of(each.get())),
+                    falling.of(thisActor()),
                     [
-                      falling.set(each.get(), yes()),
-                      startsFalling({}, each.get()),
+                      falling.set(thisActor(), no()),
+                      stopsFalling({}, thisActor()),
                     ],
                   ],
                 ]),
               ],
-            ),
+            ],
           ],
-        ],
-      ]),
+          [
+            when([
+              [
+                not(falling.of(thisActor())),
+                [
+                  falling.set(thisActor(), yes()),
+                  startsFalling({}, thisActor()),
+                ],
+              ],
+            ]),
+          ],
+        ),
+      ],
     ],
-  }),
+  ]),
 ]);
 
 export default () => moduleFor(rule, 'gravity');

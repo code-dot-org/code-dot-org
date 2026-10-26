@@ -2,7 +2,6 @@ import {CanMove, position, velocity} from './builtins.mjs';
 import {
   add,
   addToList,
-  allWithTrait,
   atLeast,
   atMost,
   axisOf,
@@ -14,21 +13,21 @@ import {
   emptyOut,
   equals,
   firstActor,
-  forEach,
   forEachPlace,
   listHolds,
   makeList,
   mapSize,
   moduleFor,
-  over,
   n,
   no,
   not,
   note,
+  over,
   remainder,
   repeatTimes,
   stopLoop,
   takeFirstOf,
+  thisActor,
   time,
   times,
   vector,
@@ -185,7 +184,6 @@ const minusRemainder = (v, size) => {
   return add(shifted, times(remainder(shifted, size), n(-1)));
 };
 
-const each = rule.local('each', 'Actor');
 const quarry = rule.local('quarry', 'Actor');
 const here = rule.local('here', 'Vector');
 const side = rule.local('side', 'Vector');
@@ -196,173 +194,158 @@ const queue = rule.local('queue', 'List');
 
 /** The four squares next to `place`, a step apart. */
 const neighbors = place => [
-  vectorPlus(place, vector(step.of(each.get()), n(0))),
-  vectorPlus(place, vector(times(step.of(each.get()), n(-1)), n(0))),
-  vectorPlus(place, vector(n(0), step.of(each.get()))),
-  vectorPlus(place, vector(n(0), times(step.of(each.get()), n(-1)))),
+  vectorPlus(place, vector(step.of(thisActor()), n(0))),
+  vectorPlus(place, vector(times(step.of(thisActor()), n(-1)), n(0))),
+  vectorPlus(place, vector(n(0), step.of(thisActor()))),
+  vectorPlus(place, vector(n(0), times(step.of(thisActor()), n(-1)))),
 ];
 
-rule.step('think', 'decide', [
+finder.step('think', 'decide', [
   note('One search per actor, on its own beat — never every frame.'),
-  forEach(each, {
-    from: allWithTrait(FindsAWay),
-    body: [
-      when([
-        [
-          atLeast(
-            time(),
-            add(thoughtAt.of(each.get()), rethink.of(each.get())),
-          ),
+  when([
+    [
+      atLeast(time(), add(thoughtAt.of(thisActor()), rethink.of(thisActor()))),
+      [
+        thoughtAt.set(thisActor(), time()),
+        found.set(thisActor(), no()),
+        note('Nothing to head for is nothing to work out.'),
+        when([
           [
-            thoughtAt.set(each.get(), time()),
-            found.set(each.get(), no()),
-            note('Nothing to head for is nothing to work out.'),
-            when([
-              [
-                atLeast(countOf(goal.of(each.get())), n(1)),
+            atLeast(countOf(goal.of(thisActor())), n(1)),
+            [
+              quarry.let(firstActor(goal.of(thisActor()))),
+              mine.let(snapped(posOf(thisActor()), step.of(thisActor()))),
+              doc(
+                'Already standing on it? Then the way is no way at all, which is not the same as not finding one.',
+              ),
+              when([
                 [
-                  quarry.let(firstActor(goal.of(each.get()))),
-                  mine.let(snapped(posOf(each.get()), step.of(each.get()))),
-                  doc(
-                    'Already standing on it? Then the way is no way at all, which is not the same as not finding one.',
-                  ),
-                  when([
-                    [
-                      atMost(
-                        vectorLength(
-                          vectorMinus(
-                            snapped(posOf(quarry.get()), step.of(each.get())),
-                            mine.get(),
-                          ),
-                        ),
-                        n(1),
+                  atMost(
+                    vectorLength(
+                      vectorMinus(
+                        snapped(posOf(quarry.get()), step.of(thisActor())),
+                        mine.get(),
                       ),
-                      [
-                        next.set(each.get(), mine.get()),
-                        found.set(each.get(), yes()),
-                      ],
-                    ],
-                  ]),
-                  emptyOut(seen),
-                  emptyOut(queue),
-                  here.let(snapped(posOf(quarry.get()), step.of(each.get()))),
-                  addToList(here.get(), seen),
-                  addToList(here.get(), queue),
-                  doc(
-                    'Flood out from the GOAL until it reaches me. The square it arrived from is the way to walk.',
-                  ),
-                  repeatTimes(
-                    times(
-                      times(reach.of(each.get()), reach.of(each.get())),
-                      n(4),
                     ),
-                    [
-                      when([[found.of(each.get()), [stopLoop()]]]),
-                      doc(
-                        'An empty queue is a way that does not exist — asked BEFORE taking, since what comes off an empty list is not a place to ask about.',
-                      ),
-                      when([
-                        [atMost(countIn(queue.get()), n(0)), [stopLoop()]],
-                      ]),
-                      here.set(takeFirstOf(queue)),
-                      forEachPlace(square, {
-                        from: makeList(neighbors(here.get())),
-                        body: [
-                          when([
-                            [
-                              both(
-                                not(listHolds(seen.get(), square.get())),
-                                insideMap(square.get()),
-                              ),
-                              [
-                                addToList(square.get(), seen),
-                                note('Am I standing on it? Then this is it.'),
-                                when([
-                                  [
-                                    atMost(
-                                      vectorLength(
-                                        vectorMinus(square.get(), mine.get()),
-                                      ),
-                                      n(1),
-                                    ),
-                                    [
-                                      next.set(each.get(), here.get()),
-                                      found.set(each.get(), yes()),
-                                      stopLoop(),
-                                    ],
-                                  ],
-                                ]),
-                                note('Solid there? Then the flood stops here.'),
-                                when([
-                                  [
-                                    equals(
-                                      countOf(
-                                        withTraitNear(
-                                          'Solid Bodies#SolidTrait',
-                                          times(step.of(each.get()), n(0.6)),
-                                          square.get(),
-                                        ),
-                                      ),
-                                      n(0),
-                                    ),
-                                    [addToList(square.get(), queue)],
-                                  ],
-                                ]),
-                              ],
-                            ],
-                          ]),
-                        ],
-                      }),
-                    ],
+                    n(1),
                   ),
-                  when([[not(found.of(each.get())), [noWay({}, each.get())]]]),
+                  [
+                    next.set(thisActor(), mine.get()),
+                    found.set(thisActor(), yes()),
+                  ],
                 ],
-              ],
-            ]),
+              ]),
+              emptyOut(seen),
+              emptyOut(queue),
+              here.let(snapped(posOf(quarry.get()), step.of(thisActor()))),
+              addToList(here.get(), seen),
+              addToList(here.get(), queue),
+              doc(
+                'Flood out from the GOAL until it reaches me. The square it arrived from is the way to walk.',
+              ),
+              repeatTimes(
+                times(
+                  times(reach.of(thisActor()), reach.of(thisActor())),
+                  n(4),
+                ),
+                [
+                  when([[found.of(thisActor()), [stopLoop()]]]),
+                  doc(
+                    'An empty queue is a way that does not exist — asked BEFORE taking, since what comes off an empty list is not a place to ask about.',
+                  ),
+                  when([[atMost(countIn(queue.get()), n(0)), [stopLoop()]]]),
+                  here.set(takeFirstOf(queue)),
+                  forEachPlace(square, {
+                    from: makeList(neighbors(here.get())),
+                    body: [
+                      when([
+                        [
+                          both(
+                            not(listHolds(seen.get(), square.get())),
+                            insideMap(square.get()),
+                          ),
+                          [
+                            addToList(square.get(), seen),
+                            note('Am I standing on it? Then this is it.'),
+                            when([
+                              [
+                                atMost(
+                                  vectorLength(
+                                    vectorMinus(square.get(), mine.get()),
+                                  ),
+                                  n(1),
+                                ),
+                                [
+                                  next.set(thisActor(), here.get()),
+                                  found.set(thisActor(), yes()),
+                                  stopLoop(),
+                                ],
+                              ],
+                            ]),
+                            note('Solid there? Then the flood stops here.'),
+                            when([
+                              [
+                                equals(
+                                  countOf(
+                                    withTraitNear(
+                                      'Solid Bodies#SolidTrait',
+                                      times(step.of(thisActor()), n(0.6)),
+                                      square.get(),
+                                    ),
+                                  ),
+                                  n(0),
+                                ),
+                                [addToList(square.get(), queue)],
+                              ],
+                            ]),
+                          ],
+                        ],
+                      ]),
+                    ],
+                  }),
+                ],
+              ),
+              when([[not(found.of(thisActor())), [noWay({}, thisActor())]]]),
+            ],
           ],
-        ],
-      ]),
+        ]),
+      ],
     ],
-  }),
+  ]),
 ]);
 
 // A SECOND step, in `move`, and separate from the thinking on purpose: a search
 // happens twice a second and walking happens sixty times, so they are not the
 // same job however close together they read.
-rule.step('walk', 'move', [
+finder.step('walk', 'move', [
   note('Walk toward the square the last search picked.'),
-  forEach(each, {
-    from: allWithTrait(FindsAWay),
-    body: [
-      when([
-        [
-          found.of(each.get()),
+  when([
+    [
+      found.of(thisActor()),
+      [
+        side.let(vectorMinus(next.of(thisActor()), posOf(thisActor()))),
+        when(
           [
-            side.let(vectorMinus(next.of(each.get()), posOf(each.get()))),
-            when(
+            [
+              atMost(vectorLength(side.get()), n(1)),
               [
-                [
-                  atMost(vectorLength(side.get()), n(1)),
-                  [
-                    doc(
-                      'Standing on it already: the next search will pick the one after, so stop rather than jitter.',
-                    ),
-                    velocity.set(each.get(), vector(n(0), n(0))),
-                  ],
-                ],
-              ],
-              [
-                velocity.set(
-                  each.get(),
-                  vectorTimes(normalised(side.get()), speed.of(each.get())),
+                doc(
+                  'Standing on it already: the next search will pick the one after, so stop rather than jitter.',
                 ),
+                velocity.set(thisActor(), vector(n(0), n(0))),
               ],
+            ],
+          ],
+          [
+            velocity.set(
+              thisActor(),
+              vectorTimes(normalised(side.get()), speed.of(thisActor())),
             ),
           ],
-        ],
-      ]),
+        ),
+      ],
     ],
-  }),
+  ]),
 ]);
 
 export default () => moduleFor(rule, 'path');

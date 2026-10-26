@@ -238,17 +238,27 @@ describe('rules/gravity.rule', () => {
     );
   });
 
-  /** The rule's own members: the chain hanging off `define rule`. */
+  const AFFECTED = 'Affected by Gravity';
+
+  /**
+   * A definition's members: the chain hanging off `define rule`, or off the
+   * `define trait` with this name.
+   */
   type Member = {
     type: string;
     fields?: Record<string, string>;
     inputs?: Record<string, {block?: unknown}>;
   };
-  const members = (json: string): Member[] => {
+  const members = (json: string, trait?: string): Member[] => {
     const doc = JSON.parse(json) as {
       blocks: {blocks: Array<Record<string, unknown>>};
     };
-    const rule = doc.blocks.blocks.find(b => b.type === 'world_rule');
+    const rule = doc.blocks.blocks.find(b =>
+      trait
+        ? b.type === 'world_rule_trait' &&
+          (b.fields as {NAME?: string})?.NAME === trait
+        : b.type === 'world_rule',
+    );
     const out: Member[] = [];
     let at = (rule?.next as {block?: Record<string, unknown>})?.block;
     while (at) {
@@ -258,12 +268,10 @@ describe('rules/gravity.rule', () => {
     return out;
   };
 
-  it('declares its traits as top blocks and its steps as members', () => {
+  it('declares its traits as top blocks and its steps as their members', () => {
     // A trait is a definition of its own — a separate stack a learner can move
-    // and read alone. A step used to be one too, because its body was the
-    // chain below it and hundreds of blocks long; the body is on its own
-    // surface now, so a step is one row in the rule's own list like every
-    // other member.
+    // and read alone. Its steps are rows among its members, and each runs once
+    // for every actor that has the trait, which is all gravity's ever did.
     const doc = JSON.parse(source) as {
       blocks: {blocks: Array<{type: string}>};
     };
@@ -273,15 +281,18 @@ describe('rules/gravity.rule', () => {
       'world_rule_trait',
       'world_rule_trait',
     ]);
-    expect(members(source).map(b => b.type)).toContain('world_rule_step_in');
+    expect(members(source).map(b => b.type)).not.toContain(
+      'world_rule_step_in',
+    );
+    expect(members(source, AFFECTED).map(b => b.type)).toContain(
+      'world_trait_step',
+    );
   });
 
-  it('carries a step’s ordering in its block type, not a field', () => {
-    // `during ⟨push⟩` and `when tick` are different KINDS of step, not one
-    // block with a setting — which is why no dropdown has to be hidden when it
-    // would be meaningless. The PHASE field is the phase itself, not a mode
-    // switch.
-    const steps = members(source).filter(b => b.type === 'world_rule_step_in');
+  it('names each step’s phase, and nothing else about its order', () => {
+    const steps = members(source, AFFECTED).filter(
+      b => b.type === 'world_trait_step',
+    );
 
     expect(steps.map(b => b.fields?.PHASE)).toEqual(['push', 'react']);
     expect(steps[0].fields?.STEP).toBeUndefined();
@@ -291,7 +302,9 @@ describe('rules/gravity.rule', () => {
   it('puts a step’s body in its mouth, not the chain below it', () => {
     // The chain below a member is the member AFTER it. Reading it as the body
     // would put the rest of the rule inside the step.
-    const [step] = members(source).filter(b => b.type === 'world_rule_step_in');
+    const [step] = members(source, AFFECTED).filter(
+      b => b.type === 'world_trait_step',
+    );
 
     expect(step.inputs?.DO?.block).toBeTruthy();
   });
@@ -344,13 +357,10 @@ describe('rules/gravity.rule', () => {
     walk(JSON.parse(source));
 
     expect(sources).toContain('world_get_Collisions_ContactsProperty');
-    // Its two per-tick steps still walk every actor gravity pulls on and every
-    // actor that might have landed — but they now say so in the SOURCE rather
-    // than by testing each of the world's actors in the loop. It is the INNER
-    // loop, over one faller's grounds, that had a shorter list all along.
-    expect(sources.filter(s => s === 'world_actors_with_trait')).toHaveLength(
-      2,
-    );
+    // Its two per-tick steps walk no list at all: each is a step of the
+    // trait, run once for each actor that has it. It is the INNER loop, over
+    // one faller's grounds, that had a shorter list all along.
+    expect(sources).not.toContain('world_actors_with_trait');
     expect(sources).not.toContain('(all actors)');
   });
 

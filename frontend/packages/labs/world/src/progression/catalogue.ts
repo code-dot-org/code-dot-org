@@ -312,8 +312,14 @@ export const TILES: readonly Tile[] = [
       // `set position`, and it lives in the same file now that a lesson is one
       // file. What the lesson replaces is a `set position` INSIDE an `each
       // frame`, and saying exactly that is what stays true either way.
+      //
+      // In the learner's own files: Physics moves a body that way itself.
       inspect: files =>
-        !nestedIn(files, 'world_trait_step', 'world_set_position'),
+        !nestedIn(
+          withoutRules(files),
+          'world_trait_step',
+          'world_set_position',
+        ),
     },
   },
   {
@@ -3716,6 +3722,12 @@ function nestedIn(
     }
   });
 }
+
+/** The project's files less its rules, which are not the learner's work. */
+const withoutRules = (files: Record<string, string>): Record<string, string> =>
+  Object.fromEntries(
+    Object.entries(files).filter(([path]) => !path.endsWith('.rule')),
+  );
 
 /**
  * The first block of a type in any of the project's files.
