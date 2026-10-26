@@ -1,3 +1,8 @@
+require 'dynamic_config/datastore_cache'
+require 'dynamic_config/adapters/dynamodb_adapter'
+require 'dynamic_config/adapters/json_file_adapter'
+require 'dynamic_config/adapters/memory_adapter'
+
 module EnvironmentAwareDynamicConfigHelper
   def self.create_datastore_cache(identifier)
     cache_expiration = 5

@@ -28,6 +28,16 @@ export const checkpointSourceSchema = z.strictObject({
    * past it. Needs `skillIds`.
    */
   skippable: z.boolean().optional(),
+  /**
+   * Whether finishing this checkpoint returns to the map focused on the
+   * next open checkpoint, so the student sees what their evidence skipped.
+   */
+  routeAfterCompletion: z.boolean().optional(),
+  /**
+   * The map destination this checkpoint belongs to. Only a terminal (leaf)
+   * checkpoint, one that no other checkpoint requires, can have one.
+   */
+  destination: z.string().min(1).optional(),
   steps: z.array(stepSourceSchema).min(1),
 });
 

@@ -8,8 +8,10 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     @dir.join('progress.json').write({
       'id' => 'progress',
       'project' => {'templateLevel' => 'adaptive-progress-template', 'description' => 'A site.'},
+      'skills' => {'build' => {'id' => 'build', 'evidenceLevels' => {'0' => 'Nothing yet', '1' => 'A start', '2' => 'Built'}}},
       'checkpoints' => [{
         'id' => 'basics',
+        'skillIds' => ['build'],
         'steps' => [
           {'id' => 'read', 'kind' => 'panels', 'panels' => []},
           {'id' => 'quiz', 'kind' => 'questions', 'questions' => [
@@ -18,7 +20,8 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
             {'id' => 'why', 'type' => 'freeResponse', 'text' => 'Why?'},
             {'id' => 'how', 'type' => 'scale', 'text' => 'How much?', 'scale' => {'min' => 1, 'max' => 5}},
           ]},
-          {'id' => 'try', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox'},
+          {'id' => 'try', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox', 'project' => true, 'instructionsPrompt' => 'Build on their page.',
+           'validation' => {'condition' => 'Adds a heading.', 'measures' => {'skillId' => 'build'}}},
           {'id' => 'retry', 'kind' => 'level', 'level' => 'adaptive-progress-sandbox'},
         ],
       }],
@@ -146,20 +149,110 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     end
   end
 
-  test "generated instructions and validation history are not implemented" do
-    %i(update_generated_instructions update_validation_history).each do |action|
+  test "generated instructions are saved on a project step with a prompt without starting it" do
+    generated = {'instructions' => 'Do this.', 'inputsHash' => 'ab'}
+
+    put_instructions 'try', generated
+
+    assert_response :success
+    row = UserAdaptiveStep.find_by(step_id: 'try')
+    assert_equal generated, row.generated_instructions
+    assert_nil row.progress
+    assert_equal({'timeSpent' => 0, 'generatedInstructions' => generated}, steps['try'])
+  end
+
+  test "refuses invalid generated instructions and stores nothing" do
+    [
+      ['nowhere', {'instructions' => 'Do this.'}],
+      ['read', {'instructions' => 'Do this.'}],
+      ['retry', {'instructions' => 'Do this.'}],
+      ['project', {'instructions' => 'Do this.'}],
+      ['try', 'text'],
+      ['try', {'instructions' => 'x' * 70_000}],
+    ].each do |step_id, generated|
       assert_no_difference ['UserAdaptiveStep.count', 'UserLevel.count'] do
-        put action, params: {step_id: 'try', **params}, as: :json
+        put_instructions step_id, generated
       end
-      assert_response :not_implemented
-      assert JSON.parse(response.body)['error'].present?
+      assert_response :unprocessable_entity, "#{step_id} #{generated}"
+    end
+  end
+
+  test "show returns each step's completion status so the frontend can compute where to resume" do
+    put_step 'read', started: true, completed: true
+    put_step 'quiz', started: true
+
+    all = steps
+    assert_equal 'complete', all['read']['status']
+    assert_equal 'started',  all['quiz']['status']
+    # stepIdToResume on the frontend scans these statuses left-to-right for the
+    # first step that is not complete.  Both non-level and level steps must
+    # return a status field for that scan to work across sessions.
+  end
+
+  test "validation attempts are appended with the server's time and shown with the level's state" do
+    travel_to Time.utc(2026, 10, 21, 17) do
+      put_validation 'try', {'pass' => false, 'evidenceLevel' => 1, 'reason' => 'No heading yet.', 'at' => 'yesterday'}
+    end
+    assert_response :success
+    travel_to Time.utc(2026, 10, 21, 18) do
+      put_validation 'try', {'pass' => true, 'evidenceLevel' => 2, 'reason' => 'Heading added.', 'traceId' => 'trace-2'}
+    end
+    create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: -150, time_spent: 12)
+
+    entry = steps['try']
+    assert_equal 'started', entry['status']
+    assert_equal(
+      [
+        {'at' => '2026-10-21T17:00:00Z', 'pass' => false, 'evidenceLevel' => 1, 'reason' => 'No heading yet.'},
+        {'at' => '2026-10-21T18:00:00Z', 'pass' => true, 'evidenceLevel' => 2, 'reason' => 'Heading added.', 'traceId' => 'trace-2'},
+      ],
+      entry['validationHistory']
+    )
+    assert_nil UserAdaptiveStep.find_by(step_id: 'try').progress
+  end
+
+  test "only the last validation attempts are kept" do
+    25.times do |i|
+      put_validation 'try', {'pass' => false, 'evidenceLevel' => 0, 'reason' => "Try #{i}"}
+    end
+
+    history = steps['try']['validationHistory']
+    assert_equal UserAdaptiveStep::MAX_VALIDATION_ATTEMPTS, history.length
+    assert_equal 'Try 24', history.last['reason']
+  end
+
+  test "refuses invalid validation attempts and stores nothing" do
+    good = {'pass' => true, 'evidenceLevel' => 1, 'reason' => 'Fine.'}
+    [
+      ['nowhere', good],
+      ['read', good],
+      ['retry', good],
+      ['project', good],
+      ['try', nil],
+      ['try', 'text'],
+      ['try', good.merge('pass' => 'yes')],
+      ['try', good.merge('evidenceLevel' => 3)],
+      ['try', good.merge('evidenceLevel' => '1')],
+      ['try', good.merge('evidenceLevel' => -1)],
+      ['try', good.merge('reason' => 'x' * 10_001)],
+      ['try', good.except('reason')],
+      ['try', good.merge('traceId' => 7)],
+    ].each do |step_id, attempt|
+      assert_no_difference ['UserAdaptiveStep.count', 'UserLevel.count'] do
+        put_validation step_id, attempt
+      end
+      assert_response :unprocessable_entity, "#{step_id} #{attempt}"
     end
   end
 
   test "level steps take their state from the step level's user level" do
+    put_instructions 'try', {'instructions' => 'Do this.'}
     user_level = create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: -150, time_spent: 12)
 
-    assert_equal({'status' => 'started', 'timeSpent' => 12}, steps['try'])
+    assert_equal(
+      {'status' => 'started', 'timeSpent' => 12, 'generatedInstructions' => {'instructions' => 'Do this.'}},
+      steps['try']
+    )
 
     user_level.update!(best_result: ActivityConstants::FREE_PLAY_RESULT)
     assert_equal 'complete', steps['try']['status']
@@ -202,6 +295,14 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
 
   private def put_step(step_id, **body)
     put :update_progress, params: {step_id: step_id, **params, **body}, as: :json
+  end
+
+  private def put_instructions(step_id, generated)
+    put :update_generated_instructions, params: {step_id: step_id, **params, generatedInstructions: generated}, as: :json
+  end
+
+  private def put_validation(step_id, attempt)
+    put :update_validation_history, params: {step_id: step_id, **params, attempt: attempt}, as: :json
   end
 
   private def steps

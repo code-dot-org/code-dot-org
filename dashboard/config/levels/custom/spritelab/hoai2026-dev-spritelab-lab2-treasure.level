@@ -29,6 +29,9 @@
       "gamelab_checkTouching": [
         "hero",
         "treasure"
+      ],
+      "spritelab2_beginsBehavior": [
+        "treasure"
       ]
     },
     "pinned_scene": {
@@ -37,7 +40,7 @@
       "type": "platform"
     },
     "objectives": {
-      "title": "**Find the treasure.**",
+      "title": "**Find the treasure**",
       "items": [
         {
           "text": "Drag a **say** block onto the dotted outline.",
@@ -72,6 +75,13 @@
                 "type": "gamelab_allSpritesWithAnimation"
               }
             }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_beginsBehavior",
+          "fields": {
+            "BEHAVIOR": "floating"
           }
         }
       ]

@@ -29,7 +29,7 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
       projectInfo: {name, description},
       sources: opts.sources,
       authoredInstructions: opts.authoredInstructions,
-      stepContext: opts.stepContext,
+      generatedInstructions: opts.generatedInstructions,
       saveGeneratedInstructions: opts.saveGeneratedInstructions,
       aichatContext: opts.aichatContext,
     }).then(instructions => {
@@ -46,7 +46,7 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
     description,
     opts.sources,
     opts.authoredInstructions,
-    opts.stepContext,
+    opts.generatedInstructions,
     opts.saveGeneratedInstructions,
     opts.aichatContext,
   ]);

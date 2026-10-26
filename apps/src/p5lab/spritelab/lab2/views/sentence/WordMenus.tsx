@@ -3,7 +3,6 @@
 // for the set on show.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
@@ -12,7 +11,6 @@ import {
   chainedSlotIds,
   Choices,
   phraseFilled,
-  promptText,
   Segment,
   Sentence,
   Slot,
@@ -39,8 +37,6 @@ const wordWidth = (w: Word) =>
 
 // How many sets, in carousel order, the sentence keeps height for.
 const RESERVED_SETS = 4;
-// How often Surprise me fills an optional slot.
-const OPTIONAL_WORD_CHANCE = 0.67;
 
 const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   sentence,
@@ -101,38 +97,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
     if (!wordId && slots[at].required && at !== index) {
       goTo(at);
     }
-  };
-
-  // A word for every required slot and for most of the rest, a chained
-  // phrase stopping at the first it skips.
-  const shuffle = () => {
-    const next: Choices = {};
-    const pick = (s: Slot) =>
-      s.words[Math.floor(Math.random() * s.words.length)].id;
-    let chainOpen = true;
-    for (const s of slots) {
-      if (s.required) {
-        next[s.id] = pick(s);
-        continue;
-      }
-      const inChain = chained.includes(s.id);
-      if (inChain && !chainOpen) {
-        continue;
-      }
-      if (Math.random() < OPTIONAL_WORD_CHANCE) {
-        next[s.id] = pick(s);
-      } else if (inChain) {
-        chainOpen = false;
-      }
-    }
-    onChange(next);
-    setAnnouncement(`New words: ${promptText(sentence, next)}`);
-    // Back to the required set, which is always filled, so the sentence
-    // reads whole: a skipped set on show would leave a blank in it.
-    if (index !== 0) {
-      show(0);
-    }
-    playSound('shuffle');
   };
 
   // A chip takes a dragged word of its own slot.
@@ -410,17 +374,6 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
               ) : null
             )}
           </div>
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
-            className={styles.shuffle}
-            startIcon={<FontAwesomeV6Icon iconName="shuffle" aria-hidden />}
-            disabled={disabled}
-            onClick={shuffle}
-          >
-            Surprise me
-          </MuiButton>
         </div>
       </div>
     </div>

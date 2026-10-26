@@ -1,0 +1,75 @@
+@use '../sharedMixins' as mixins;
+
+.panel {
+  @include mixins.side-panel;
+}
+
+.header {
+  @include mixins.panel-header;
+
+  justify-content: center;
+}
+
+.header .title {
+  @include mixins.panel-header-title;
+}
+
+.content {
+  @include mixins.panel-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  > * {
+    flex-shrink: 0;
+  }
+}
+
+.card {
+  @include mixins.card;
+
+  overflow: hidden;
+
+  > * + * {
+    border-top: 1px solid var(--border-neutral-primary);
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  overflow-wrap: anywhere;
+}
+
+.intro {
+  gap: 4px;
+}
+
+.stats {
+  display: flex;
+
+  > .section {
+    flex: 1;
+  }
+
+  > .section + .section {
+    border-left: 1px solid var(--border-neutral-primary);
+  }
+}
+
+.heading {
+  color: var(--text-neutral-tertiary);
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.actionRow {
+  padding: 8px;
+  background-color: var(--background-neutral-primary);
+  border-top: 1px solid var(--border-neutral-primary);
+}
