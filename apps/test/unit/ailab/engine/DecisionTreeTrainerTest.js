@@ -20,10 +20,10 @@ import train from '@cdo/apps/ailab/engine/train';
 import {buildTrainer} from '@cdo/apps/ailab/engine/trainers';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
-function setUp(data, columns, label) {
+function setUp(data, columns, label, mode = {}) {
   const store = createStore(rootReducer);
 
-  store.dispatch(setMode({trainer: 'decisionTree'}));
+  store.dispatch(setMode({trainer: 'decisionTree', ...mode}));
   store.dispatch(setImportedData(data, false));
   Object.entries(columns).forEach(([column, type]) =>
     store.dispatch(setColumnsByDataType(column, type))
@@ -140,13 +140,8 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     expect(run.hyperparameters).toEqual({maxDepth: 1});
   });
 
-  /*
-    The complement of the tie case, and the reason it is not enough on its own:
-    a sweep that always returned the first candidate would pass that test. Here
-    `x` separates A from {B, C} but cannot tell B from C, so one split scores
-    50% and two score 100%.
-  */
-  test('a deeper tree wins when one split cannot separate the label', () => {
+  // A depth-1 tree splits on x, so it gets one of the last two rows wrong.
+  function setUpTwoSplitLabel(mode) {
     const combinations = [
       {label: 'A', x: '0', y: '0'},
       {label: 'A', x: '0', y: '1'},
@@ -157,24 +152,42 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     for (let i = 0; i < 5; i++) {
       rows.push(...combinations);
     }
-    // The reserved rows are the last two, one B and one C, so a tree that
-    // cannot separate them scores 50%.
     const data = [
       ...rows.slice(0, 18),
       {label: 'B', x: '1', y: '0'},
       {label: 'C', x: '1', y: '1'},
     ];
-    const {store, trainer} = setUp(
+    return setUp(
       data,
       {label: CATEGORICAL, x: NUMERICAL, y: NUMERICAL},
-      'label'
+      'label',
+      mode
     );
+  }
+
+  // Catches what the tie case can't: a sweep that keeps its first candidate.
+  test('a deeper tree wins when one split cannot separate the label', () => {
+    const {store, trainer} = setUpTwoSplitLabel();
 
     const run = trainer.startTraining();
 
     const state = store.getState();
     expect(run.hyperparameters).toEqual({maxDepth: 2});
     expect(state.accuracyCheckPredictedLabels).toEqual(
+      state.accuracyCheckLabels
+    );
+  });
+
+  test("a level's maxDepth replaces the sweep", () => {
+    const {store, trainer} = setUpTwoSplitLabel({
+      hyperparameters: {maxDepth: 1},
+    });
+
+    const run = trainer.startTraining();
+
+    const state = store.getState();
+    expect(run.hyperparameters).toEqual({maxDepth: 1});
+    expect(state.accuracyCheckPredictedLabels).not.toEqual(
       state.accuracyCheckLabels
     );
   });
