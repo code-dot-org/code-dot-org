@@ -93,4 +93,24 @@ describe('a script on the trail', () => {
     expect(scriptOf(hurt, HERO)).toEqual({kind: 'member', id: 'event-1'});
     expect(hurt).toHaveLength(3);
   });
+
+  it('opens a trait’s member after the trait, which goes back to it', () => {
+    const onRule: Trail = [{fileId: MAIN}, {fileId: LEVEL}];
+    const member = withScript(onRule, LEVEL, {
+      kind: 'member',
+      id: 'block-0',
+      trait: 'Affected by Gravity',
+    });
+    expect(member.slice(2)).toEqual([
+      {fileId: LEVEL, script: {kind: 'trait', id: 'Affected by Gravity'}},
+      {
+        fileId: LEVEL,
+        script: {kind: 'member', id: 'block-0', trait: 'Affected by Gravity'},
+      },
+    ]);
+    expect(scriptOf(member.slice(0, 3), LEVEL)).toEqual({
+      kind: 'trait',
+      id: 'Affected by Gravity',
+    });
+  });
 });

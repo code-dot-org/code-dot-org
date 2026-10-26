@@ -17,7 +17,8 @@ export type ScriptStep =
   | {kind: 'placement'; id: string}
   | {kind: 'map'}
   | {kind: 'code'}
-  | {kind: 'member'; id: string}
+  /** …from a trait, when a rule's: the trail goes back to it. */
+  | {kind: 'member'; id: string; trait?: string}
   | {kind: 'trait'; id: string};
 
 /** One step: a file, or a script open within it. */
@@ -78,7 +79,8 @@ export function scriptOf(trail: Trail, fileId: string): ScriptStep | null {
 
 /**
  * The trail with `script` open in `fileId`, or closed when it is null. A
- * script replaces any other open in the same file: they are not nested.
+ * script replaces any other open in the same file: they are not nested,
+ * except that a member opened from a trait has the trait before it.
  */
 export function withScript(
   trail: Trail,
@@ -90,5 +92,9 @@ export function withScript(
     return trail;
   }
   const kept = trail.slice(0, at + 1);
-  return script ? [...kept, {fileId, script}] : kept;
+  const from: TrailStep[] =
+    script?.kind === 'member' && script.trait
+      ? [{fileId, script: {kind: 'trait', id: script.trait}}]
+      : [];
+  return script ? [...kept, ...from, {fileId, script}] : kept;
 }

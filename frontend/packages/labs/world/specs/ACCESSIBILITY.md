@@ -206,6 +206,12 @@ below, and are listed last.
   boolean"), each a list item under a heading.
 - **What it is for** is a native `textarea` with a label, there being no
   design-system one.
+- **A member's Edit and Delete are named by how it reads** ("Edit is on
+  the ground?, reports a boolean"), and New event and New block sit under
+  each list. Back from a member's page puts focus on its Edit; a delete,
+  on the row that took its place, else New. The member's page is the
+  actor's, with its own ledger below, and adds Reports, a labelled
+  dropdown.
 - **Untested**: no screen reader; the keys only by tests and a headless
   browser.
 

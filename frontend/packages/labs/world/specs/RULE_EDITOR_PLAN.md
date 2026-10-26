@@ -182,10 +182,37 @@ DONE in step 2. A trait's rename and delete are step 6.
 
 ### 4. Members
 
-The member page, for a rule's and a trait's events and blocks. Two things
-it does not do yet: a block that reports a value, and the actor a trait's
-block is asked of (the `on ⟨actor⟩` a call takes, and `this actor`
-within it).
+DONE. A rule's events and blocks, and each trait's, are listed on their
+view with Edit and Delete, and New event and New block; Edit opens the
+actor's member page (`MemberPage`) on the trail, after the trait when it
+is a trait's ("Gravity › Affected by Gravity › is on the ground?"). Back
+puts focus on its Edit; a delete says which files use it and puts focus on
+the row that took its place, else New.
+
+The page is handed the rule as an actor's data (`rules/ruleMembers`): every
+member of the rule in one list, traits' included, and the rule's variables.
+That list is the namespace the members share, since their blocks are named
+by the rule and their words alone, so two members of different traits may
+not read alike and a new id is new across the rule. What the page changes
+comes back by id; a member it makes goes to the definition it was opened
+from. The page takes three things it did not: the rule's palette, for an
+event's picture (`rulePalette`); the file's language, for its drawers; and
+what a block may report, offered as Reports in its design — a number, a
+true or false, a string, a vector — which makes the block a question
+(`world_query_…`) where it was a call.
+
+A member's new words are followed across the project when the page is
+left, as an actor's are (`renameMember`), its blocks named by the rule's
+name (`ruleSlug`) rather than an actor's path (`pathSlug`).
+
+A trait's block is asked of an actor, and its call takes `on ⟨actor⟩`; on
+its page, as on an actor's, the head leaves that out and the body says
+`this actor`. A rule's own event has nothing it happens to, so its
+picture reads "when the target is reached".
+
+In the browser: Gravity's `is on the ground?` from its trait, reporting a
+boolean, its body below its head; `⟨faller⟩ is resting on ⟨ground⟩` from
+the rule, its two values' getters in its head.
 
 ### 5. Steps
 

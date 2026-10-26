@@ -10,6 +10,8 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {memberName} from '../actors/actorData';
+import {ruleDataOf} from '../rules/ruleEdits';
+import {ruleMemberName} from '../rules/ruleMembers';
 
 import styles from './breadcrumb.module.css';
 import type {TrailStep} from './trail';
@@ -31,7 +33,9 @@ export const Breadcrumb = () => {
   const nameOf = (step: TrailStep): string => {
     const file = currentSources.source.files[step.fileId];
     if (step.script?.kind === 'member') {
-      return memberName(file?.contents, step.script.id);
+      return file?.name.endsWith('.rule')
+        ? ruleMemberName(ruleDataOf(file.contents ?? ''), step.script.id)
+        : memberName(file?.contents, step.script.id);
     }
     if (step.script) {
       return step.script.kind === 'placement' || step.script.kind === 'trait'

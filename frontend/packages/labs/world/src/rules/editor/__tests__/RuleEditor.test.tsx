@@ -16,9 +16,18 @@ const GRAVITY = Object.values(SOURCE.files).find(
 )!;
 
 const replaceSources = vi.fn();
+/** The confirm dialog: answered yes. */
+const showDialog = vi.fn(async () => ({type: 'confirm', args: ''}));
 vi.mock('@code-dot-org/lab/contexts', () => ({
   useSources: () => ({currentSources: {source: SOURCE}, replaceSources}),
+  useDialogControl: () => ({showDialog}),
   useMaybeLevelProperties: () => undefined,
+}));
+// A member's picture is a Blockly workspace, which jsdom cannot lay out.
+vi.mock('../../../actors/editor/MemberPicture', () => ({
+  MemberPicture: ({label}: {label: string}) => (
+    <span role="img" aria-label={label} />
+  ),
 }));
 // The code is the file editor over the rule's view; what it is handed and
 // what it saves are what is asked about here.
@@ -179,5 +188,70 @@ describe('the Rule Editor', () => {
     open(JSON.stringify(view));
     expect(screen.getByTestId('blocks')).toBeInTheDocument();
     expect(screen.queryByTestId('rule-editor')).toBeNull();
+  });
+});
+
+const traitOf = (data: {traits: Array<{name: string; members?: unknown[]}>}) =>
+  data.traits.find(one => one.name === 'Affected by Gravity')!;
+
+describe('a rule’s member', () => {
+  it('opens on its page from its trait, and says what it reports', () => {
+    open();
+    fireEvent.click(
+      screen.getByRole('button', {name: /^Affected by Gravity$/}),
+    );
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: 'Edit is on the ground?, reports a boolean',
+      }),
+    );
+
+    expect(
+      screen.getByRole('heading', {name: 'Block: is on the ground?'}),
+    ).toBeInTheDocument();
+    const reports = screen.getByLabelText('Reports') as HTMLSelectElement;
+    expect(reports.value).toBe('boolean');
+    fireEvent.change(reports, {target: {value: 'number'}});
+
+    const block = (
+      traitOf(written()).members as Array<{kind: string; returns?: string}>
+    ).find(one => one.kind === 'block')!;
+    expect(block.returns).toBe('number');
+  });
+
+  it('is made in the definition it is made from', () => {
+    open();
+    fireEvent.click(
+      screen.getByRole('button', {name: /^Affected by Gravity$/}),
+    );
+    const events = screen.getByRole('region', {name: 'Events'});
+    fireEvent.click(within(events).getByRole('button', {name: 'New event'}));
+
+    const members = traitOf(written()).members as Array<{
+      kind: string;
+      parts: Array<{text?: string}>;
+    }>;
+    expect(members.at(-1)).toMatchObject({
+      kind: 'event',
+      parts: [{text: 'happens'}],
+    });
+    expect(written().members).toHaveLength(4);
+    expect(
+      screen.getByRole('heading', {name: 'Event: happens'}),
+    ).toBeInTheDocument();
+  });
+
+  it('is deleted once the question is answered', async () => {
+    open();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Delete Invert Gravity'}),
+    );
+    await vi.waitFor(() =>
+      expect(
+        written().members.map((one: {parts: Array<{text?: string}>}) =>
+          one.parts.map(part => part.text).join(' '),
+        ),
+      ).not.toContain('Invert Gravity'),
+    );
   });
 });

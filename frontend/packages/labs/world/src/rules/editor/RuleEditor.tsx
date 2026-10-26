@@ -12,7 +12,7 @@
 import {Button, Typography} from '@mui/material';
 import {useEffect, useMemo, useRef, useState, type ChangeEvent} from 'react';
 
-import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import {usePrompts, type CustomEditorProps} from '@code-dot-org/codebridge';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
@@ -20,12 +20,19 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import type {ActorMember} from '../../actors/actorData';
+import {
+  addMember,
+  newMember,
+  removeMember,
+} from '../../actors/editor/memberEdits';
+import {MemberPage} from '../../actors/editor/MemberPage';
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
 import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseRuleMeta, type RuleMeta} from '../../blockly/ruleMeta';
 import {requestFileAct} from '../../files/fileActs';
+import {fileLabel} from '../../files/fileLabel';
 import {useScriptStep} from '../../layout/TrailContext';
-import {projectFiles} from '../../runtime/projectFiles';
+import {filePath, projectFiles} from '../../runtime/projectFiles';
 import {
   asRuleData,
   ruleView,
@@ -47,6 +54,16 @@ import {
   traitProblem,
   type Owner,
 } from '../ruleEdits';
+import {
+  asMemberHost,
+  fromMemberHost,
+  memberOf,
+  renameRuleMember,
+  RULE_REPORTS,
+  ruleMemberUses,
+  rulePalette,
+} from '../ruleMembers';
+import {resolveRuleContents} from '../ruleReference';
 
 import styles from './ruleEditor.module.css';
 import {RulePropertyRow} from './RulePropertyRow';
@@ -107,45 +124,116 @@ const Listed = ({
   </section>
 );
 
-/** A definition's events, blocks and steps, as they read. */
-const Members = ({
-  definition,
+/** Where focus goes in a members list: an Edit by member id, or a New. */
+type MemberFocus = Map<string, HTMLButtonElement>;
+
+/** One kind of member, each with Edit and Delete, and a way to make one. */
+const MemberList = ({
+  kind,
+  owner,
+  members,
+  isReadOnly,
+  buttons,
+  onEdit,
+  onDelete,
+  onNew,
 }: {
-  definition: Pick<RuleTrait, 'members' | 'steps'>;
+  kind: 'event' | 'block';
+  owner: Owner;
+  members: readonly ActorMember[];
+  isReadOnly: boolean;
+  buttons: MemberFocus;
+  onEdit: (member: ActorMember) => void;
+  onDelete: (member: ActorMember) => void;
+  onNew: () => void;
 }) => {
-  const members = definition.members ?? [];
-  const steps: RuleStep[] = definition.steps ?? [];
+  const title = kind === 'event' ? 'Events' : 'Blocks';
+  const keep = (key: string) => (element: HTMLButtonElement | null) => {
+    if (element) {
+      buttons.set(key, element);
+    } else {
+      buttons.delete(key);
+    }
+  };
   return (
-    <>
-      <Listed
-        title="Events"
-        empty="No events."
-        items={members
-          .filter(member => member.kind === 'event')
-          .map(member => `when ${reading(member)}`)}
-      />
-      <Listed
-        title="Blocks"
-        empty="No blocks."
-        items={members
-          .filter(member => member.kind === 'block')
-          .map(
-            member =>
-              `${reading(member)}${member.returns ? ` — reports a ${member.returns}` : ''}`,
-          )}
-      />
-      <Listed
-        title="Steps"
-        empty="No steps."
-        items={steps.map(step =>
-          step.phase
-            ? `${step.name} — during ${step.phase}`
-            : `${step.name} — every tick`,
-        )}
-      />
-    </>
+    <section aria-label={title}>
+      <Typography variant="h5" component="h3">
+        {title}
+      </Typography>
+      {members.length ? (
+        <ul className={styles.list}>
+          {members.map(member => {
+            const said = memberSays(member);
+            return (
+              <li key={member.id} className={styles.item}>
+                <Typography variant="body3" component="span">
+                  {said}
+                </Typography>
+                <div className={styles.acts}>
+                  <Button
+                    ref={keep(member.id)}
+                    variant="text"
+                    size="extraSmall"
+                    aria-label={`Edit ${said}`}
+                    onClick={() => onEdit(member)}
+                  >
+                    Edit
+                  </Button>
+                  {!isReadOnly && (
+                    <Button
+                      variant="text"
+                      size="extraSmall"
+                      aria-label={`Delete ${said}`}
+                      onClick={() => onDelete(member)}
+                    >
+                      Delete
+                    </Button>
+                  )}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <Typography variant="body3" component="p" className={styles.note}>
+          {kind === 'event' ? 'No events.' : 'No blocks.'}
+        </Typography>
+      )}
+      {!isReadOnly && (
+        <div className={styles.acts}>
+          <Button
+            ref={keep(`new-${kind}:${owner ?? ''}`)}
+            variant="outlined"
+            color="secondary"
+            size="small"
+            onClick={onNew}
+          >
+            {kind === 'event' ? 'New event' : 'New block'}
+          </Button>
+        </div>
+      )}
+    </section>
   );
 };
+
+/** A member as its row says it: an event after `when`, a block and what it reports. */
+const memberSays = (member: ActorMember): string =>
+  member.kind === 'event'
+    ? `when ${reading(member)}`
+    : `${reading(member)}${member.returns ? `, reports a ${member.returns}` : ''}`;
+
+/** A definition's steps, as they read: what each body does is in Code. */
+const Steps = ({steps}: {steps: readonly RuleStep[]}) => (
+  <Listed
+    title="Steps"
+    empty="No steps."
+    items={steps.map(step =>
+      step.phase
+        ? `${step.name} — during ${step.phase}`
+        : `${step.name} — every tick`,
+    )}
+  />
+);
 
 /**
  * What a definition uses: the rules a rule needs, or the traits a trait
@@ -390,6 +478,43 @@ export const RuleEditor = (props: CustomEditorProps) => {
     }
   }, [openTrait]);
 
+  /** A change made to the data as the file now holds it, not as last drawn. */
+  const update = (change: (now: RuleData) => RuleData) => {
+    const now = ruleDataOf(written.current);
+    const next = now && change(now);
+    if (now && next !== now) {
+      write(JSON.stringify(next, null, 2));
+    }
+  };
+  // The project as it is when a page is left, which is after its last render.
+  const sources = useRef(currentSources);
+  sources.current = currentSources;
+  const {confirm} = usePrompts();
+  /** The member just made, whose page opens on its design. */
+  const [fresh, setFresh] = useState<string | null>(null);
+  // Focus comes back to the member's Edit, or to a New where it has gone.
+  const memberButtons = useRef<MemberFocus>(new Map());
+  const [returnToMember, setReturnToMember] = useState<string | null>(null);
+  const openId = script?.kind === 'member' ? script.id : null;
+  const modulePath = (filePath(currentSources.source, fileId) ?? '').replace(
+    /\.rule$/,
+    '',
+  );
+  // Minted only while a member's page is open: it builds a whole palette.
+  const palette = useMemo(
+    () =>
+      openId
+        ? rulePalette(modulePath, resolveRuleContents(contents))
+        : undefined,
+    [openId, modulePath, contents],
+  );
+  useEffect(() => {
+    if (!openId && returnToMember) {
+      memberButtons.current.get(returnToMember)?.focus();
+      setReturnToMember(null);
+    }
+  }, [openId, returnToMember]);
+
   if (!data) {
     // A rule the data cannot say whole is written in blocks, as it was.
     return <BlocklyFileEditor {...props} />;
@@ -420,6 +545,106 @@ export const RuleEditor = (props: CustomEditorProps) => {
             onChange={next => write(asRuleData(next))}
           />
         </div>
+      </div>
+    );
+  }
+
+  const openMember = (member: ActorMember, owner: Owner) => {
+    setReturnToMember(member.id);
+    setScript({
+      kind: 'member',
+      id: member.id,
+      ...(owner ? {trait: owner} : {}),
+    });
+  };
+  const makeMember = (kind: 'event' | 'block', owner: Owner) => {
+    const host = asMemberHost(data, owner);
+    const member = newMember(host, kind);
+    edit(fromMemberHost(data, addMember(host, member), owner));
+    setFresh(member.id);
+    openMember(member, owner);
+  };
+  const deleteMember = async (member: ActorMember, owner: Owner) => {
+    const said = memberSays(member);
+    const uses = ruleMemberUses(currentSources.source, data.name, member)
+      .filter(id => id !== fileId)
+      .map(id => fileLabel(currentSources.source.files[id]));
+    if (
+      !(await confirm({
+        title: `Delete ${member.kind === 'event' ? 'event' : 'block'}`,
+        message: uses.length
+          ? `Delete “${said}”? The code in ${uses.join(', ')} uses it, ` +
+            'and will stop working where it does.'
+          : `Delete “${said}”? No other file uses it.`,
+      }))
+    ) {
+      return;
+    }
+    const definition =
+      owner === null
+        ? data
+        : (data.traits ?? []).find(one => one.name === owner);
+    const mine = (definition?.members ?? []).filter(
+      one => one.kind === member.kind,
+    );
+    const at = mine.findIndex(one => one.id === member.id);
+    const next = mine[at + 1] ?? mine[at - 1];
+    const host = asMemberHost(data, owner);
+    edit(fromMemberHost(data, removeMember(host, member.id), owner));
+    setReturnToMember(next?.id ?? `new-${member.kind}:${owner ?? ''}`);
+  };
+
+  const opened = openId ? memberOf(data, openId) : undefined;
+  if (opened) {
+    const {member, owner} = opened;
+    return (
+      <div className={styles.code}>
+        {!onTrail && (
+          <div className={styles.codeHeader}>
+            <Button
+              variant="text"
+              size="extraSmall"
+              startIcon={
+                <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
+              }
+              onClick={() =>
+                setScript(owner ? {kind: 'trait', id: owner} : null)
+              }
+            >
+              {owner ?? data.name}
+            </Button>
+          </div>
+        )}
+        <MemberPage
+          key={member.id}
+          data={asMemberHost(data, owner)}
+          member={member}
+          contents=""
+          modulePath={modulePath}
+          fileId={fileId}
+          isNew={member.id === fresh}
+          isReadOnly={isReadOnly}
+          language="rule"
+          palette={palette}
+          reports={member.kind === 'block' ? RULE_REPORTS : undefined}
+          onUpdate={change =>
+            update(now =>
+              fromMemberHost(now, change(asMemberHost(now, owner)), owner),
+            )
+          }
+          onLeave={(before, after) => {
+            const now = sources.current;
+            const source = renameRuleMember(
+              now.source,
+              data.name,
+              before,
+              after,
+            );
+            if (source !== now.source) {
+              replaceSources({...now, source});
+            }
+          }}
+        />
       </div>
     );
   }
@@ -643,7 +868,31 @@ export const RuleEditor = (props: CustomEditorProps) => {
                 onAdd={used => edit(addUse(data, trait.name, used))}
                 onRemove={used => edit(removeUse(data, trait.name, used))}
               />
-              <Members definition={trait} />
+              <MemberList
+                kind="event"
+                owner={trait.name}
+                members={(trait.members ?? []).filter(
+                  one => one.kind === 'event',
+                )}
+                isReadOnly={isReadOnly}
+                buttons={memberButtons.current}
+                onEdit={member => openMember(member, trait.name)}
+                onDelete={member => void deleteMember(member, trait.name)}
+                onNew={() => makeMember('event', trait.name)}
+              />
+              <MemberList
+                kind="block"
+                owner={trait.name}
+                members={(trait.members ?? []).filter(
+                  one => one.kind === 'block',
+                )}
+                isReadOnly={isReadOnly}
+                buttons={memberButtons.current}
+                onEdit={member => openMember(member, trait.name)}
+                onDelete={member => void deleteMember(member, trait.name)}
+                onNew={() => makeMember('block', trait.name)}
+              />
+              <Steps steps={trait.steps ?? []} />
             </div>
           ) : (
             <div className={styles.view}>
@@ -682,7 +931,31 @@ export const RuleEditor = (props: CustomEditorProps) => {
                 onAdd={used => edit(addUse(data, null, used))}
                 onRemove={used => edit(removeUse(data, null, used))}
               />
-              <Members definition={data} />
+              <MemberList
+                kind="event"
+                owner={null}
+                members={(data.members ?? []).filter(
+                  one => one.kind === 'event',
+                )}
+                isReadOnly={isReadOnly}
+                buttons={memberButtons.current}
+                onEdit={member => openMember(member, null)}
+                onDelete={member => void deleteMember(member, null)}
+                onNew={() => makeMember('event', null)}
+              />
+              <MemberList
+                kind="block"
+                owner={null}
+                members={(data.members ?? []).filter(
+                  one => one.kind === 'block',
+                )}
+                isReadOnly={isReadOnly}
+                buttons={memberButtons.current}
+                onEdit={member => openMember(member, null)}
+                onDelete={member => void deleteMember(member, null)}
+                onNew={() => makeMember('block', null)}
+              />
+              <Steps steps={data.steps ?? []} />
               <Typography variant="body3" component="p" className={styles.note}>
                 What each block and step does is written in Code.
               </Typography>
