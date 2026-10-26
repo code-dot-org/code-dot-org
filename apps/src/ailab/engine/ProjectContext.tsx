@@ -17,7 +17,7 @@ import {
 import {useAppSelector} from './hooks';
 import {getSelectableColumns} from './selectors';
 import type {TrainingRun} from './trainers/types';
-import {initialProject, type AilabProject} from './types';
+import {defaultProject, type AilabProject} from './types';
 import {useResetSignal} from './useResetSignal';
 
 /*
@@ -33,6 +33,8 @@ type TrainingRunOutputs = Pick<
 interface ProjectContextValue {
   project: AilabProject;
   openProject: (saved: AilabProject) => void;
+  isProjectLoaded: boolean;
+  isProjectLoading: boolean;
   setLabelColumn: (column?: string) => void;
   addSelectedFeature: (feature: string) => void;
   removeSelectedFeature: (feature: string) => void;
@@ -48,35 +50,44 @@ const ProjectContext = createContext<ProjectContextValue | undefined>(
 
 interface ProjectProviderProps {
   children: ReactNode;
-  project?: AilabProject;
+  initialProject?: AilabProject;
+  onProjectChange?: (project: AilabProject) => void;
 }
 
 export const ProjectProvider = ({
   children,
-  project: openWith,
+  initialProject,
+  onProjectChange,
 }: ProjectProviderProps) => {
-  const [project, setProject] = useState<AilabProject>(
-    openWith ?? initialProject
-  );
+  const [project, setProject] = useState<AilabProject>(defaultProject);
+  const [isProjectLoaded, setIsProjectLoaded] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
-  // A project handed to openProject before the dataset was described.
-  const pendingProject = useRef<AilabProject | undefined>(undefined);
+  const onProjectChangeRef = useRef(onProjectChange);
+  onProjectChangeRef.current = onProjectChange;
+  // A project waiting for the dataset to load.
+  const [pendingProject, setPendingProject] = useState<
+    AilabProject | undefined
+  >();
+  const datasetSelectionPending = useAppSelector(
+    state => !!state.csvfile && !state.invalidData
+  );
+  const isProjectLoading =
+    pendingProject !== undefined && datasetSelectionPending;
+  const isDefaultProject = project === defaultProject;
   const data = useAppSelector(state => state.data);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
-  // The rows and the column types arrive separately, and a dataset is only
-  // described once both have.
-  const columnTypesKnown = useAppSelector(
-    state => Object.keys(state.columnsByDataType).length > 0
-  );
-  const datasetDescribed = data.length > 0 && columnTypesKnown;
+  const columnsByDataType = useAppSelector(state => state.columnsByDataType);
+  const datasetDescribed =
+    data.length > 0 &&
+    Object.keys(data[0]).every(column => columnsByDataType[column]);
 
   useResetSignal(
     useCallback(() => {
       previousRun.current = undefined;
-      setProject(initialProject);
+      setProject(defaultProject);
     }, [])
   );
 
@@ -149,47 +160,57 @@ export const ProjectProvider = ({
   const applyProject = useCallback(
     (saved: AilabProject) => {
       previousRun.current = undefined;
-      const opened = keepSelectableColumns(saved, selectableColumns, data);
+      const reconciledProject = keepSelectableColumns(
+        saved,
+        selectableColumns,
+        data
+      );
       setProject(
         presetColumns
           ? applyPresetColumns(
-              opened,
+              reconciledProject,
               presetColumns,
               lockedLabel,
               lockedFeatures,
               data
             )
-          : opened
+          : reconciledProject
       );
+      setIsProjectLoaded(true);
     },
     [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
   );
 
-  /*
-    Opens a saved project, which may name columns this dataset no longer has
-    and predates any preset the level applies.
+  const openProject = useCallback((saved: AilabProject) => {
+    setPendingProject(saved);
+  }, []);
 
-    Waits for the dataset to be described before applying the project.
+  /*
+    This is done in an effect to ensure the level has loaded and cleared
+    previous data.
+    TODO: see if we can refactor things to not need an effect here.
   */
-  const openProject = useCallback(
-    (saved: AilabProject) => {
-      if (!datasetDescribed) {
-        pendingProject.current = saved;
-        return;
-      }
-      pendingProject.current = undefined;
-      applyProject(saved);
-    },
-    [datasetDescribed, applyProject]
-  );
+  useEffect(() => {
+    if (initialProject) {
+      setPendingProject(initialProject);
+    }
+  }, [initialProject]);
 
   useEffect(() => {
-    const saved = pendingProject.current;
-    if (saved && datasetDescribed) {
-      pendingProject.current = undefined;
-      applyProject(saved);
+    if (pendingProject && datasetDescribed) {
+      setPendingProject(undefined);
+      applyProject(pendingProject);
     }
-  }, [datasetDescribed, applyProject]);
+  }, [pendingProject, datasetDescribed, applyProject]);
+
+  // TODO: skip notifying on project change if the change is due to on-load
+  // reconciliation of the project with the saved state, as that is not a user
+  // change and shouldn't count as an 'edit'.
+  useEffect(() => {
+    if (isProjectLoaded && !isDefaultProject) {
+      onProjectChangeRef.current?.(project);
+    }
+  }, [isProjectLoaded, isDefaultProject, project]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
@@ -223,6 +244,8 @@ export const ProjectProvider = ({
     () => ({
       project,
       openProject,
+      isProjectLoaded,
+      isProjectLoading,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,
@@ -234,6 +257,8 @@ export const ProjectProvider = ({
     [
       project,
       openProject,
+      isProjectLoaded,
+      isProjectLoading,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,

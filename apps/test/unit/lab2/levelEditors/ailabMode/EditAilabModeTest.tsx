@@ -259,7 +259,7 @@ describe('EditAilabMode', () => {
 
   it('drops the training options saved with the testing view hidden', () => {
     const savedMode = renderEditor(
-      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true}'
+      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}}'
     );
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
@@ -268,27 +268,32 @@ describe('EditAilabMode', () => {
   });
 
   it('clears and locks the training options while the testing view is hidden', () => {
-    const savedMode = renderEditor('{"requireAccuracy": 70, "hideSave": true}');
+    const savedMode = renderEditor(
+      '{"requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}}'
+    );
     const accuracy = screen.getByRole('spinbutton', {
       name: /Required accuracy/,
     });
     const hideSave = screen.getByRole('checkbox', {
       name: 'Hide the save model step',
     });
+    const k = () =>
+      screen.getByRole('spinbutton', {name: /Number of neighbors \(k\)/});
     const hideTestingView = screen.getByRole('checkbox', {
       name: 'Hide training and testing so students only explore the dataset',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave].forEach(field => expect(field).toBeDisabled());
-    expect(accuracy).toHaveValue(null);
+    [accuracy, hideSave, k()].forEach(field => expect(field).toBeDisabled());
+    [accuracy, k()].forEach(field => expect(field).toHaveValue(null));
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
       trainer: 'knn',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave].forEach(field => expect(field).toBeEnabled());
+    [accuracy, hideSave, k()].forEach(field => expect(field).toBeEnabled());
+    expect(k()).toHaveValue(null);
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
@@ -364,6 +369,59 @@ describe('EditAilabMode', () => {
       trainer: 'decisionTree',
       requireAccuracy: 90,
     });
+  });
+
+  it("sets the trainer's hyperparameter and clears it when the trainer changes", () => {
+    const savedMode = renderEditor(null);
+    fireEvent.change(
+      screen.getByRole('spinbutton', {name: /Number of neighbors \(k\)/}),
+      {target: {value: '5'}}
+    );
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      hyperparameters: {k: 5},
+    });
+
+    fireEvent.change(screen.getByRole('combobox', {name: 'Trainer'}), {
+      target: {value: 'decisionTree'},
+    });
+    const maxDepth = screen.getByRole('spinbutton', {
+      name: /Maximum tree depth/,
+    });
+    expect(maxDepth).toHaveValue(null);
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'decisionTree'});
+
+    fireEvent.change(maxDepth, {target: {value: '3'}});
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'decisionTree',
+      hyperparameters: {maxDepth: 3},
+    });
+  });
+
+  it('shows a saved hyperparameter', () => {
+    renderEditor(
+      '{"trainer": "decisionTree", "hyperparameters": {"maxDepth": 4}}'
+    );
+    expect(
+      screen.getByRole('spinbutton', {name: /Maximum tree depth/})
+    ).toHaveValue(4);
+  });
+
+  it('does not save a hyperparameter that is not a whole number of at least 1', () => {
+    const savedMode = renderEditor('{"hyperparameters": {"k": 5}}');
+    const k = screen.getByRole('spinbutton', {
+      name: /Number of neighbors \(k\)/,
+    });
+    fireEvent.change(k, {target: {value: '0'}});
+    expect(
+      screen.getByText('Enter a whole number of at least 1.')
+    ).toBeInTheDocument();
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+
+    fireEvent.change(k, {target: {value: ''}});
+    expect(
+      screen.queryByText('Enter a whole number of at least 1.')
+    ).not.toBeInTheDocument();
   });
 
   it('lets students choose a dataset when none is set', () => {
