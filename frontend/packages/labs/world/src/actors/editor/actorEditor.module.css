@@ -104,6 +104,16 @@
   gap: 0.5rem;
 }
 
+/* Halves of the panel, however wide a field would like to be. */
+.pair > * {
+  min-width: 0;
+}
+
+.pair input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .color {
   display: flex;
   align-items: center;
