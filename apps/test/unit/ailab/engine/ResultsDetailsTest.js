@@ -129,14 +129,14 @@ describe('ResultsDetails', () => {
   test('shows the other dataset columns on request', () => {
     renderScorecard({data: NAMED_ANIMALS});
 
-    fireEvent.click(screen.getByLabelText('Show all columns'));
+    fireEvent.click(screen.getByRole('button', {name: 'Expand columns'}));
 
     expect(headerRows()).toEqual([
       ['', 'name', 'legs', 'animal', 'AI predicts'],
     ]);
     expect(bodyRows()[0]).toEqual(['1', 'Tweety', '2', 'bird', 'bird']);
 
-    fireEvent.click(screen.getByLabelText('Show only features and label'));
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse columns'}));
 
     expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
   });
@@ -158,7 +158,7 @@ describe('ResultsDetails', () => {
 
   test('sorts another dataset column by its own row', () => {
     renderScorecard({data: NAMED_ANIMALS, accuracyCheckRowIndices: [3, 4, 5]});
-    fireEvent.click(screen.getByLabelText('Show all columns'));
+    fireEvent.click(screen.getByRole('button', {name: 'Expand columns'}));
     fireEvent.click(sortButton('Sort by name A-Z'));
     fireEvent.click(sortButton('Sort by name Z-A'));
 

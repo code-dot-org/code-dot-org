@@ -3,12 +3,20 @@
 $visible-rows: 10;
 $min-visible-rows: 2;
 
+@function frame-height($rows) {
+  $table-height: ($rows + 1) * mixins.$data-table-row-height;
+
+  @return mixins.$table-action-row-height + $table-height;
+}
+
 .frame {
   position: relative;
   display: flex;
-  flex: 0 1 ($visible-rows + 1) * mixins.$data-table-row-height;
+  flex: 0 1 frame-height($visible-rows);
   flex-direction: column;
-  min-height: ($min-visible-rows + 1) * mixins.$data-table-row-height;
+  min-height: frame-height($min-visible-rows);
+  overflow: clip;
+  border-radius: var(--shape-md);
 
   // The border. A border on the frame itself would sit under the sticky headers.
   &::after {
@@ -17,6 +25,7 @@ $min-visible-rows: 2;
     inset: 0;
     z-index: 2;
     border: 1px solid var(--border-neutral-primary);
+    border-radius: inherit;
     pointer-events: none;
   }
 

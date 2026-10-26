@@ -174,11 +174,13 @@ describe('NodeModal', () => {
 
     const panel = () =>
       dialog().querySelector("[role='tabpanel']:not([hidden])");
-    fireEvent.click(within(panel()).getByLabelText('Show all columns'));
+    fireEvent.click(
+      within(panel()).getByRole('button', {name: 'Expand columns'})
+    );
     expect(shownRows()).toEqual([['10', 'Pet 10', '4', 'dog']]);
 
     fireEvent.click(
-      within(panel()).getByLabelText('Show only features and label')
+      within(panel()).getByRole('button', {name: 'Collapse columns'})
     );
     expect(shownRows()).toEqual([['10', '4', 'dog']]);
   });
