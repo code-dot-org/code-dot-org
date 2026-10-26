@@ -203,6 +203,8 @@ describe('NodeModal', () => {
 
     expect(shownHeaders()).toEqual([['', 'legs', 'animal', 'AI predicts']]);
     expect(shownRows()).toEqual([['10', '4', 'dog', 'dog']]);
+    const panel = dialog().querySelector("[role='tabpanel']:not([hidden])");
+    expect(within(panel).queryByText(/^\d+ (of \d+ )?rows?$/)).toBeNull();
 
     fireEvent.click(
       within(dialog()).getByRole('button', {name: 'Incorrect (0)'})

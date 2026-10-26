@@ -27,7 +27,7 @@ $visible-table-height: ($visible-rows + 1) * mixins.$data-table-row-height;
   }
 }
 
-// A zero basis keeps the frame's automatic minimum at the action row, however it wraps, plus these rows.
+// Basis 0, not flex: 1's 0%, so the frame's minimum is the action row at any height plus this min-height.
 .scroller {
   flex: 1 1 0;
   min-height: ($min-visible-rows + 1) * mixins.$data-table-row-height;
