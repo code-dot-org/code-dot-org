@@ -64,12 +64,11 @@ describe('loadDataset', () => {
   test('writes the rows, the metadata and the column types together', async () => {
     await loadDataset('animals.csv', 'animals.json');
 
-    const state = store.getState();
-    expect(state.data).toEqual(ROWS);
-    expect(state.metadata).toEqual(METADATA);
-    expect(state.columnsByDataType).toEqual({
-      legs: 'numerical',
-      animal: 'categorical',
+    expect(store.getState().dataset).toEqual({
+      rows: ROWS,
+      metadata: METADATA,
+      columnsByDataType: {legs: 'numerical', animal: 'categorical'},
+      removedRowsCount: 0,
     });
   });
 
@@ -88,7 +87,9 @@ describe('loadDataset', () => {
 
     await loadDataset('animals.csv', 'animals.json');
 
-    expect(store.getState().columnsByDataType).not.toHaveProperty('wings');
+    expect(store.getState().dataset.columnsByDataType).not.toHaveProperty(
+      'wings'
+    );
   });
 
   test("locks the dataset's default label when no label is set", async () => {
@@ -138,7 +139,7 @@ describe('a dataset that will not load', () => {
     await loadDataset('animals.csv', 'animals.json');
 
     expect(store.getState().invalidData).toBe('tooFewRows');
-    expect(store.getState().data).toEqual([]);
+    expect(store.getState().dataset).toBeUndefined();
   });
 
   test('reports a failure when the metadata cannot be read', async () => {
@@ -147,7 +148,7 @@ describe('a dataset that will not load', () => {
     await loadDataset('animals.csv', 'animals.json');
 
     expect(store.getState().invalidData).toBe('loadFailed');
-    expect(store.getState().data).toEqual([]);
+    expect(store.getState().dataset).toBeUndefined();
   });
 });
 
@@ -168,7 +169,7 @@ describe('a load a newer one has superseded', () => {
   test('writes no dataset', async () => {
     await supersede(ROWS_READ);
 
-    expect(store.getState().data).toEqual([]);
+    expect(store.getState().dataset).toBeUndefined();
   });
 
   test('reports no failure, which would outlive the load that replaced it', async () => {
@@ -184,9 +185,9 @@ describe('loadUploadedDataset', () => {
   test('reads the column types from the rows, having no metadata', async () => {
     await loadUploadedDataset(file);
 
-    const state = store.getState();
-    expect(state.data).toEqual(ROWS);
-    expect(state.columnsByDataType).toEqual({
+    const {dataset} = store.getState();
+    expect(dataset.rows).toEqual(ROWS);
+    expect(dataset.columnsByDataType).toEqual({
       name: 'categorical',
       legs: 'numerical',
       animal: 'categorical',

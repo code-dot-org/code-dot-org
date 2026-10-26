@@ -14,14 +14,28 @@ import type {RootState} from './redux';
 import type {
   AilabProject,
   DataRow,
+  Dataset,
   Metadata,
   TrainedModelDetailsSave,
 } from './types';
 
-export const getData = (state: RootState): DataRow[] => state.data;
+/*
+  Stand-ins for a dataset that has not loaded, returned by identity. A fresh
+  `[]` each call would defeat the reference equality the memoized selectors
+  below are built on, and they would recompute on every unrelated change.
+*/
+const NO_ROWS: DataRow[] = Object.freeze([]) as unknown as DataRow[];
+const NO_COLUMN_TYPES: Record<string, string> = Object.freeze({});
+const NO_METADATA: Metadata = Object.freeze({card: Object.freeze({})});
+
+export const getDataset = (state: RootState): Dataset | undefined =>
+  state.dataset;
+export const getData = (state: RootState): DataRow[] =>
+  state.dataset?.rows ?? NO_ROWS;
 export const getColumnsByDataType = (
   state: RootState
-): Record<string, string> => state.columnsByDataType;
+): Record<string, string> =>
+  state.dataset?.columnsByDataType ?? NO_COLUMN_TYPES;
 // Reselect passes a selector's extra arguments to every input selector, so
 // taking the project here gives it to everything derived below.
 const getSelectedFeatures = (
@@ -32,11 +46,12 @@ export const getLabelColumn = (
   _state: RootState,
   project: AilabProject
 ): string | undefined => project.labelColumn;
-export const getMetadata = (state: RootState): Metadata => state.metadata;
+export const getMetadata = (state: RootState): Metadata =>
+  state.dataset?.metadata ?? NO_METADATA;
 export const getDatasetId = (state: RootState): string | undefined =>
-  state.metadata && state.metadata.name;
+  state.dataset?.metadata.name;
 export const getRemovedRowsCount = (state: RootState): number =>
-  state.removedRowsCount;
+  state.dataset?.removedRowsCount ?? 0;
 export const getInvalidData = (state: RootState): string | undefined =>
   state.invalidData;
 /* The chosen dataset's display name, which an upload does not have. */
@@ -45,6 +60,19 @@ export const getSelectedName = (state: RootState): string | undefined =>
 /* The chosen CSV: a path for one of ours, the file itself for an upload. */
 export const getSelectedCsv = (state: RootState): string | File | undefined =>
   state.csvfile;
+
+export type DatasetStatus = 'none' | 'loading' | 'failed' | 'loaded';
+
+/* Where the chosen dataset has got to, which is the only thing to gate on. */
+export const getDatasetStatus = (state: RootState): DatasetStatus => {
+  if (state.dataset) {
+    return 'loaded';
+  }
+  if (state.invalidData) {
+    return 'failed';
+  }
+  return state.csvfile ? 'loading' : 'none';
+};
 export const getTrainedModelDetails = (
   state: RootState
 ): TrainedModelDetailsSave => state.trainedModelDetails;

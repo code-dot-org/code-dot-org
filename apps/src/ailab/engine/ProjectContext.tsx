@@ -16,8 +16,8 @@ import {
 } from './helpers/projectColumns';
 import {useAppSelector} from './hooks';
 import {
-  getColumnsByDataType,
   getData,
+  getDataset,
   getInvalidData,
   getSelectableColumns,
   getSelectedCsv,
@@ -85,10 +85,7 @@ export const ProjectProvider = ({
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
-  const columnsByDataType = useAppSelector(getColumnsByDataType);
-  const datasetDescribed =
-    data.length > 0 &&
-    Object.keys(data[0]).every(column => columnsByDataType[column]);
+  const datasetLoaded = useAppSelector(state => !!getDataset(state));
 
   useResetSignal(
     useCallback(() => {
@@ -203,11 +200,11 @@ export const ProjectProvider = ({
   }, [initialProject]);
 
   useEffect(() => {
-    if (pendingProject && datasetDescribed) {
+    if (pendingProject && datasetLoaded) {
       setPendingProject(undefined);
       applyProject(pendingProject);
     }
-  }, [pendingProject, datasetDescribed, applyProject]);
+  }, [pendingProject, datasetLoaded, applyProject]);
 
   // TODO: skip notifying on project change if the change is due to on-load
   // reconciliation of the project with the saved state, as that is not a user

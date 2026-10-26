@@ -13,8 +13,8 @@ import {
   setMode,
   setReserveLocation,
   setSelectedCSV,
-  setSelectedJSON,
 } from '@cdo/apps/ailab/engine/redux';
+import {getData} from '@cdo/apps/ailab/engine/selectors';
 import {getDisplayTree} from '@cdo/apps/ailab/engine/selectors/visualizationSelectors';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
@@ -42,7 +42,6 @@ export function trainDataset(
   train.reset();
   store.dispatch(setMode(mode));
   store.dispatch(setSelectedCSV(`${id}.csv`));
-  store.dispatch(setSelectedJSON(`${id}.json`));
   store.dispatch(
     setDatasetLoaded({
       dataset: {
@@ -60,7 +59,7 @@ export function trainDataset(
     labelColumn,
     selectedFeatures:
       features ||
-      Object.keys(store.getState().data[0]).filter(
+      Object.keys(getData(store.getState())[0]).filter(
         column => column !== labelColumn
       ),
   };
@@ -76,7 +75,7 @@ export function trainDataset(
 }
 
 export function modelInputs(state, project) {
-  return state.data.map(row =>
+  return getData(state).map(row =>
     project.selectedFeatures.map(feature =>
       convertValueForTraining(state, project, row[feature], feature)
     )
@@ -96,7 +95,7 @@ export function rowTraces(state, project, trainedModel) {
   const tree = getDisplayTree(state, project, trainedModel);
   const {root} = trainedModel.toJSON();
   const inputs = modelInputs(state, project);
-  return state.data.map((row, index) =>
+  return getData(state).map((row, index) =>
     traceDisplayTree(tree, root, inputs[index], row)
   );
 }

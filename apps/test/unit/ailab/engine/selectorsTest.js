@@ -14,21 +14,26 @@ import {
   getExtremaByColumn,
   getSelectableColumns,
   getFilterableColumns,
+  getColumnsByDataType,
+  getData,
   getIdColumn,
+  getMetadata,
   getTrainableColumns,
 } from '@cdo/apps/ailab/engine/selectors';
 
 import {
-  classificationState,
+  classificationRows,
+  classificationColumnTypes,
   classificationProject,
-  allNumericalState,
+  allNumericalRows,
+  allNumericalColumnTypes,
   allNumericalProject,
 } from './testData';
 
 describe('selecting columns by data type', () => {
   test('gets selected categorical features', async () => {
     const categoricalColumns = getCategoricalColumns
-      .resultFunc(classificationState.columnsByDataType)
+      .resultFunc(classificationColumnTypes)
       .sort();
     expect(categoricalColumns).toEqual(['play', 'temp', 'weather']);
     const result = getSelectedCategoricalFeatures.resultFunc(
@@ -40,7 +45,7 @@ describe('selecting columns by data type', () => {
 
   test('gets selected numerical features', async () => {
     const numericalColumns = getNumericalColumns.resultFunc(
-      allNumericalState.columnsByDataType
+      allNumericalColumnTypes
     );
     expect(numericalColumns).toEqual(['batCount', 'mosquitoCount']);
     const result = getSelectedNumericalFeatures.resultFunc(
@@ -54,7 +59,7 @@ describe('selecting columns by data type', () => {
 describe('getting category options', () => {
   test('gets unique options by column', async () => {
     const categoricalColumns = getCategoricalColumns
-      .resultFunc(classificationState.columnsByDataType)
+      .resultFunc(classificationColumnTypes)
       .sort();
     const selectedColumns = getSelectedColumns.resultFunc(
       classificationProject.selectedFeatures,
@@ -66,7 +71,7 @@ describe('getting category options', () => {
     );
     const uniqueOptionsByColumn = getUniqueOptionsByColumn.resultFunc(
       selectedCategoricalColumns,
-      classificationState.data
+      classificationRows
     );
     expect(uniqueOptionsByColumn['play']).toEqual(['no', 'yes']);
     expect(uniqueOptionsByColumn['temp']).toEqual(['cool', 'hot', 'mild']);
@@ -81,7 +86,7 @@ describe('getting category options', () => {
 describe('getting extrema', () => {
   test('gets extrema by column', async () => {
     const numericalColumns = getNumericalColumns.resultFunc(
-      allNumericalState.columnsByDataType
+      allNumericalColumnTypes
     );
     const selectedColumns = getSelectedColumns.resultFunc(
       allNumericalProject.selectedFeatures,
@@ -93,7 +98,7 @@ describe('getting extrema', () => {
     );
     const extremaByColumn = getExtremaByColumn.resultFunc(
       selectedNumericalColumns,
-      allNumericalState.data
+      allNumericalRows
     );
     expect(extremaByColumn['batCount'].max).toBe(100);
     expect(extremaByColumn['batCount'].min).toBe(40);
@@ -174,5 +179,29 @@ describe('getFilterableColumns', () => {
     expect(
       getFilterableColumns.resultFunc(['count', 'color'], ['color', 'id'])
     ).toEqual(['color']);
+  });
+});
+
+/*
+  The memoized selectors above compare their inputs by reference, so the
+  stand-ins for an absent dataset have to be the same objects every time. A
+  fresh `[]` per call would make every one of them recompute on any change.
+*/
+describe('reading a dataset that has not loaded', () => {
+  const empty = {dataset: undefined};
+
+  test('gives the same rows, column types and metadata each time', () => {
+    expect(getData(empty)).toBe(getData(empty));
+    expect(getColumnsByDataType(empty)).toBe(getColumnsByDataType(empty));
+    expect(getMetadata(empty)).toBe(getMetadata(empty));
+  });
+
+  test('leaves the selectors built on them memoized', () => {
+    getSelectableColumns(empty);
+    const computations = getSelectableColumns.recomputations();
+
+    getSelectableColumns({...empty, currentColumn: 'something else'});
+
+    expect(getSelectableColumns.recomputations()).toBe(computations);
   });
 });

@@ -18,12 +18,18 @@ export interface Extrema {
   range: number;
 }
 
+/*
+  This module is upstream of selectors.ts, so it reads the dataset off the
+  state rather than through getData and friends.
+*/
+const rowsOf = (state: RootState): DataRow[] => state.dataset?.rows ?? [];
+
 export function isColumnCategorical(state: RootState, column: string): boolean {
-  return state.columnsByDataType[column] === ColumnTypes.CATEGORICAL;
+  return state.dataset?.columnsByDataType[column] === ColumnTypes.CATEGORICAL;
 }
 
 export function isColumnNumerical(state: RootState, column: string): boolean {
-  return state.columnsByDataType[column] === ColumnTypes.NUMERICAL;
+  return state.dataset?.columnsByDataType[column] === ColumnTypes.NUMERICAL;
 }
 
 export function isRegression(state: RootState, project: AilabProject): boolean {
@@ -177,7 +183,7 @@ export function containsOnlyNumbers(data: DataRow[], column: string): boolean {
 
 export function getColumnDescription(
   columnId: string,
-  metadata: Metadata,
+  metadata: Metadata | undefined,
   trainedModelDetails: TrainedModelDetailsSave
 ): string | null {
   // Use metadata if available.
@@ -223,7 +229,7 @@ export function buildOptionNumberKey(
   feature: string
 ): Record<string, number> {
   const optionsMappedToNumbers: Record<string, number> = {};
-  const uniqueOptions = getUniqueOptions(state.data, feature);
+  const uniqueOptions = getUniqueOptions(rowsOf(state), feature);
   uniqueOptions.forEach(
     (option: string | number) =>
       (optionsMappedToNumbers[String(option)] = uniqueOptions.indexOf(option))
@@ -237,12 +243,15 @@ export function getColumnDataToSave(
 ): ModelCardColumn {
   const columnData: ModelCardColumn = {id: column};
   columnData.description =
-    getColumnDescription(column, state.metadata, state.trainedModelDetails) ??
-    undefined;
+    getColumnDescription(
+      column,
+      state.dataset?.metadata,
+      state.trainedModelDetails
+    ) ?? undefined;
   if (isColumnCategorical(state, column)) {
-    columnData.values = getUniqueOptions(state.data, column).map(String);
+    columnData.values = getUniqueOptions(rowsOf(state), column).map(String);
   } else if (isColumnNumerical(state, column)) {
-    const {max, min} = getExtrema(state.data, column);
+    const {max, min} = getExtrema(rowsOf(state), column);
     columnData.max = max;
     columnData.min = min;
   }

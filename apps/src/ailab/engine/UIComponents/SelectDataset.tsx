@@ -14,7 +14,6 @@ import {loadDataset, loadUploadedDataset} from '../loadDataset';
 import {
   setSelectedName as setSelectedNameAction,
   setSelectedCSV as setSelectedCSVAction,
-  setSelectedJSON as setSelectedJSONAction,
   resetState as resetStateAction,
   getSpecifiedDatasets,
 } from '../redux';
@@ -46,8 +45,6 @@ const SelectDataset = () => {
     dispatch(setSelectedNameAction(datasetName));
   const setSelectedCSV = (csvfilePath: string | File) =>
     dispatch(setSelectedCSVAction(csvfilePath));
-  const setSelectedJSON = (jsonfilePath: string) =>
-    dispatch(setSelectedJSONAction(jsonfilePath));
 
   const handleDatasetClick = (id: string) => {
     const assetPath = getAssetPath();
@@ -67,7 +64,6 @@ const SelectDataset = () => {
       resetState();
       setSelectedName(dataset.name);
       setSelectedCSV(csvPath);
-      setSelectedJSON(jsonPath);
 
       invalidatePendingDatasetLoads();
       loadDataset(csvPath, jsonPath);

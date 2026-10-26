@@ -3,7 +3,6 @@ import reducer, {
   initialState,
   setCurrentPanel,
   setCurrentColumn,
-  setColumnsByDataType,
   setInstructionsEnabled,
   setTestData,
   setPrediction,
@@ -111,7 +110,9 @@ describe('ailab reducer', () => {
     test('selects the label column on the dataset view', () => {
       let state = reducer(
         initialState,
-        setColumnsByDataType('lbl', ColumnTypes.NUMERICAL)
+        setDatasetLoaded({
+          dataset: dataset([{lbl: '1'}], {lbl: ColumnTypes.NUMERICAL}),
+        })
       );
       state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('lbl'));
@@ -220,10 +221,7 @@ describe('ailab reducer', () => {
     });
 
     test('selecting a feature column leaves the instructions alone', () => {
-      let state = reducer(
-        initialState,
-        setColumnsByDataType('a', ColumnTypes.NUMERICAL)
-      );
+      let state = reducer(initialState, setDatasetLoaded({dataset: DATASET}));
       state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('a'));
       expect(next.currentColumn).toBe('a');

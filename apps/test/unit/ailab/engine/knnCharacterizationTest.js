@@ -28,8 +28,8 @@ import {
   resetState,
   setReserveLocation,
   setSelectedCSV,
-  setSelectedJSON,
 } from '@cdo/apps/ailab/engine/redux';
+import {getData, getRemovedRowsCount} from '@cdo/apps/ailab/engine/selectors';
 import {getTrainedModelDataToSave} from '@cdo/apps/ailab/engine/selectors/saveSelectors';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
@@ -69,7 +69,6 @@ function load(id, features) {
   train.reset();
   // A string here is what makes `isUserUploaded` false, as it is for a level.
   store.dispatch(setSelectedCSV(`${id}.csv`));
-  store.dispatch(setSelectedJSON(`${id}.json`));
   seedDataset(
     store,
     parseCsvText(csv).rows,
@@ -85,7 +84,7 @@ function load(id, features) {
     labelColumn: metadata.defaultLabelColumn,
     selectedFeatures:
       features ||
-      Object.keys(store.getState().data[0]).filter(
+      Object.keys(getData(store.getState())[0]).filter(
         column => column !== metadata.defaultLabelColumn
       ),
   };
@@ -120,9 +119,9 @@ describe('shipped dataset fingerprints', () => {
   test('shapes_v1_toy is 100 clean rows over 6 columns', () => {
     const {state, project} = load('shapes_v1_toy');
 
-    expect(state.data.length).toBe(100);
-    expect(state.removedRowsCount).toBe(0);
-    expect(Object.keys(state.data[0])).toEqual([
+    expect(getData(state).length).toBe(100);
+    expect(getRemovedRowsCount(state)).toBe(0);
+    expect(Object.keys(getData(state)[0])).toEqual([
       'sides',
       'border color',
       'fill color',
@@ -136,8 +135,8 @@ describe('shipped dataset fingerprints', () => {
   test('jeans is 80 clean rows with a numerical label', () => {
     const {state, project} = load('jeans');
 
-    expect(state.data.length).toBe(80);
-    expect(state.removedRowsCount).toBe(0);
+    expect(getData(state).length).toBe(80);
+    expect(getRemovedRowsCount(state)).toBe(0);
     expect(project.labelColumn).toBe('Price in dollars');
     expect(project.selectedFeatures.length).toBe(13);
   });

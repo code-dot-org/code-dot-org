@@ -18,7 +18,6 @@ import type {
   DataRow,
   Dataset,
   DatasetError,
-  Metadata,
   Mode,
   PresetColumns,
   TrainedModelDetailsSave,
@@ -37,12 +36,9 @@ export type DatasetLayout = 'table' | 'cards';
 export interface RootState {
   name: string | undefined;
   csvfile: string | File | undefined;
-  jsonfile: string | undefined;
   invalidData: DatasetError | undefined;
-  data: DataRow[];
-  metadata: Metadata;
-  removedRowsCount: number;
-  columnsByDataType: Record<string, string>;
+  /* Absent until a whole one has loaded; read through the selectors. */
+  dataset: Dataset | undefined;
   featureNumberKey: Record<string, Record<string, number>>;
   trainingExamples: number[][];
   trainingLabels: (number | string)[];
@@ -105,15 +101,8 @@ export function getTrainingResults(state: RootState): TrainingResults {
 export const initialState: RootState = {
   name: undefined,
   csvfile: undefined,
-  jsonfile: undefined,
-  // Possible values for invalidData: "tooFewRows", and "tooFewColumns".
   invalidData: undefined,
-  data: [],
-  metadata: {
-    card: {},
-  },
-  removedRowsCount: 0,
-  columnsByDataType: {},
+  dataset: undefined,
   featureNumberKey: {},
   trainingExamples: [],
   trainingLabels: [],
@@ -165,35 +154,9 @@ const ailabSlice = createSlice({
     setSelectedCSV(state, action: PayloadAction<string | File>) {
       state.csvfile = action.payload;
     },
-    setSelectedJSON(state, action: PayloadAction<string>) {
-      state.jsonfile = action.payload;
-    },
     setInvalidData(state, action: PayloadAction<DatasetError>) {
       state.invalidData = action.payload;
     },
-    setImportedData: {
-      reducer(
-        state,
-        action: PayloadAction<{data: DataRow[]; userUploadedData: boolean}>
-      ) {
-        const {data, userUploadedData} = action.payload;
-        if (state.currentPanel === 'selectDataset') {
-          state.instructionsKey = userUploadedData
-            ? 'uploadedDataset'
-            : 'selectedDataset';
-          state.showOverlay = false;
-        }
-        state.data = data;
-      },
-      prepare(data: DataRow[], userUploadedData: boolean) {
-        return {payload: {data, userUploadedData}};
-      },
-    },
-    /*
-      A whole dataset in one write. The column types replace the previous
-      map rather than merging into it, so a column the last dataset had
-      cannot survive into this one.
-    */
     setDatasetLoaded(
       state,
       action: PayloadAction<{dataset: Dataset; presetColumns?: PresetColumns}>
@@ -207,34 +170,13 @@ const ailabSlice = createSlice({
             : 'selectedDataset';
         state.showOverlay = false;
       }
-      state.data = dataset.rows;
-      state.metadata = dataset.metadata;
-      state.columnsByDataType = dataset.columnsByDataType;
-      state.removedRowsCount = dataset.removedRowsCount;
+      state.dataset = dataset;
       if (presetColumns) {
         state.presetColumns = presetColumns;
       }
     },
-    setImportedMetadata(state, action: PayloadAction<Metadata>) {
-      state.metadata = action.payload;
-    },
     setPresetColumns(state, action: PayloadAction<PresetColumns>) {
       state.presetColumns = action.payload;
-    },
-    setRemovedRowsCount(state, action: PayloadAction<number>) {
-      state.removedRowsCount = action.payload;
-    },
-    setColumnsByDataType: {
-      reducer(
-        state,
-        action: PayloadAction<{column: string; dataType: string}>
-      ) {
-        state.columnsByDataType[action.payload.column] =
-          action.payload.dataType;
-      },
-      prepare(column: string, dataType: string) {
-        return {payload: {column, dataType}};
-      },
     },
     /* featureNumberKey maps feature names to a hash of category options mapped
       to integers.
@@ -438,14 +380,9 @@ export const {
   setMode,
   setSelectedName,
   setSelectedCSV,
-  setSelectedJSON,
   setInvalidData,
   setDatasetLoaded,
-  setImportedData,
-  setImportedMetadata,
   setPresetColumns,
-  setRemovedRowsCount,
-  setColumnsByDataType,
   setFeatureNumberKey,
   setReserveLocation,
   setAccuracyCheckExamples,
