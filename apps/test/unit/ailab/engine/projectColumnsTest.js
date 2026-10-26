@@ -3,11 +3,11 @@ import {
   keepSelectableColumns,
   sortByColumnOrder,
 } from '@cdo/apps/ailab/engine/helpers/projectColumns';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 const DATA = [{a: '1', b: '2', c: '3'}];
 
-const project = columns => ({...initialProject, ...columns});
+const project = columns => ({...defaultProject, ...columns});
 
 describe('sortByColumnOrder', () => {
   test('orders features as the dataset does', () => {
@@ -50,7 +50,7 @@ describe('applyPresetColumns', () => {
 
   test('an unlocked label fills a gap the project left', () => {
     const result = applyPresetColumns(
-      initialProject,
+      defaultProject,
       {labelColumn: 'c'},
       false,
       false,
@@ -83,7 +83,7 @@ describe('applyPresetColumns', () => {
 
   test('the label is never also a feature', () => {
     const result = applyPresetColumns(
-      initialProject,
+      defaultProject,
       {labelColumn: 'b', selectedFeatures: ['a', 'b', 'c']},
       false,
       false,

@@ -18,7 +18,7 @@ import rootReducer, {
 } from '@cdo/apps/ailab/engine/redux';
 import train from '@cdo/apps/ailab/engine/train';
 import {buildTrainer} from '@cdo/apps/ailab/engine/trainers';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 function setUp(data, columns, label) {
   const store = createStore(rootReducer);
@@ -29,7 +29,7 @@ function setUp(data, columns, label) {
     store.dispatch(setColumnsByDataType(column, type))
   );
   const project = {
-    ...initialProject,
+    ...defaultProject,
     labelColumn: label,
     selectedFeatures: Object.keys(columns).filter(column => column !== label),
   };

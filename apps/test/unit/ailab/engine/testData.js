@@ -2,7 +2,7 @@
 
 import MessageFormat from 'messageformat';
 
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 export const regressionState = {
   data: [
@@ -249,19 +249,19 @@ export const premadeDatasets = [premadeDataset];
 
 /* The column choices that pair with each state above. */
 export const regressionProject = {
-  ...initialProject,
+  ...defaultProject,
   labelColumn: 'height',
   selectedFeatures: ['sun'],
 };
 
 export const classificationProject = {
-  ...initialProject,
+  ...defaultProject,
   labelColumn: 'play',
   selectedFeatures: ['temp', 'weather'],
 };
 
 export const allNumericalProject = {
-  ...initialProject,
+  ...defaultProject,
   labelColumn: 'mosquitoCount',
   selectedFeatures: ['batCount'],
 };

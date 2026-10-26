@@ -7,7 +7,7 @@ import {getHideDatasetView, readyToTrain, setCurrentPanel} from './redux';
 import {useTrainingData} from './TrainingDataContext';
 import {useTrainingRun} from './useTrainingRun';
 
-export function usePretrainOnLoad() {
+export function usePretrainOnLoad(restoringModel: boolean) {
   const dispatch = useAppDispatch();
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
@@ -22,10 +22,23 @@ export function usePretrainOnLoad() {
   );
 
   useEffect(() => {
-    if (pretrained && dataLoaded && canTrain && !trainedModel) {
+    if (
+      pretrained &&
+      dataLoaded &&
+      canTrain &&
+      !trainedModel &&
+      !restoringModel
+    ) {
       beginRun();
     }
-  }, [pretrained, dataLoaded, canTrain, trainedModel, beginRun]);
+  }, [
+    pretrained,
+    dataLoaded,
+    canTrain,
+    trainedModel,
+    restoringModel,
+    beginRun,
+  ]);
 
   // The new run reaches `project` on the next render, so wait for canTest.
   // TODO: Add loading state for before training finishes.
