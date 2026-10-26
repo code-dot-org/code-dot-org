@@ -9,30 +9,9 @@ import {fetchCsv, inferColumnTypes, parseCsvFile} from './csvReaderWrapper';
 import {getDatasetLoadId, isCurrentDatasetLoad} from './datasetLoad';
 import {selectableColumns} from './helpers/columnDetails';
 import {columnTypesFromMetadata, fetchMetadata} from './jsonReaderWrapper';
-import {
-  setColumnsByDataType,
-  setImportedData,
-  setImportedMetadata,
-  setInvalidData,
-  setPresetColumns,
-  setRemovedRowsCount,
-} from './redux';
+import {setDatasetLoaded, setInvalidData} from './redux';
 import {store} from './store';
-import type {
-  DataRow,
-  DatasetError,
-  Metadata,
-  Mode,
-  PresetColumns,
-} from './types';
-
-interface LoadedDataset {
-  rows: DataRow[];
-  metadata: Metadata;
-  columnsByDataType: Record<string, string>;
-  removedRowsCount: number;
-  userUploadedData: boolean;
-}
+import type {Dataset, DatasetError, Mode, PresetColumns} from './types';
 
 export const loadDataset = async (
   csvPath: string,
@@ -51,13 +30,13 @@ export const loadDataset = async (
   } else if (!meta.ok) {
     reportFailure(meta.reason);
   } else {
-    apply({
+    const dataset = {
       rows: csv.rows,
       metadata: meta.metadata,
       columnsByDataType: columnTypesFromMetadata(meta.metadata),
       removedRowsCount: csv.removedRowsCount,
-      userUploadedData: false,
-    });
+    };
+    apply(dataset, modeColumns(store.getState().mode, dataset));
   }
 };
 
@@ -72,12 +51,12 @@ export const loadUploadedDataset = async (file: File): Promise<void> => {
     reportFailure(csv.reason);
     return;
   }
+  // No preset columns: a level's chosen columns describe our dataset, not this.
   apply({
     rows: csv.rows,
     metadata: {card: {}},
     columnsByDataType: inferColumnTypes(csv.rows),
     removedRowsCount: csv.removedRowsCount,
-    userUploadedData: true,
   });
 };
 
@@ -85,22 +64,14 @@ const reportFailure = (reason: DatasetError): void => {
   store.dispatch(setInvalidData(reason));
 };
 
-// Nothing may await between these dispatches: together they are one dataset.
-const apply = (dataset: LoadedDataset): void => {
-  const {rows, metadata, columnsByDataType, removedRowsCount} = dataset;
-  store.dispatch(setRemovedRowsCount(removedRowsCount));
-  store.dispatch(setImportedData(rows, dataset.userUploadedData));
-  store.dispatch(setImportedMetadata(metadata));
-  Object.entries(columnsByDataType).forEach(([column, dataType]) =>
-    store.dispatch(setColumnsByDataType(column, dataType))
-  );
-  store.dispatch(setPresetColumns(modeColumns(store.getState().mode, dataset)));
+const apply = (dataset: Dataset, presetColumns?: PresetColumns): void => {
+  store.dispatch(setDatasetLoaded({dataset, presetColumns}));
 };
 
 /* The columns a level fixes for the student, against the dataset that loaded. */
 const modeColumns = (
   mode: Mode | undefined,
-  {rows, metadata, columnsByDataType}: LoadedDataset
+  {rows, metadata, columnsByDataType}: Dataset
 ): PresetColumns => {
   const selectable = selectableColumns(rows, columnsByDataType);
   const isSelectable = (column: string): boolean => {

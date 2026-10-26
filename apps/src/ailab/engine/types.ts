@@ -7,6 +7,18 @@ export type Hyperparameters = {k: number} | {maxDepth: number};
 /* Why a dataset could not be loaded. */
 export type DatasetError = 'tooFewRows' | 'tooFewColumns' | 'loadFailed';
 
+/*
+  A dataset, whole. The rows and the column types are read from two separate
+  files, so they are kept together to stop anything seeing one without the
+  other.
+*/
+export interface Dataset {
+  rows: DataRow[];
+  metadata: Metadata;
+  columnsByDataType: Record<string, string>;
+  removedRowsCount: number;
+}
+
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;

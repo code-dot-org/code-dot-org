@@ -1,16 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 
-import {ColumnTypes, TestDataLocations} from '@cdo/apps/ailab/engine/constants';
+import {TestDataLocations} from '@cdo/apps/ailab/engine/constants';
 import {parseCsvText} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {traceDisplayTree} from '@cdo/apps/ailab/engine/helpers/displayTreeTrace';
 import {getKeyByValue} from '@cdo/apps/ailab/engine/helpers/utils';
 import {convertValueForTraining} from '@cdo/apps/ailab/engine/helpers/valueConversion';
+import {columnTypesFromMetadata} from '@cdo/apps/ailab/engine/jsonReaderWrapper';
 import {
   resetState,
-  setColumnsByDataType,
-  setImportedData,
-  setImportedMetadata,
+  setDatasetLoaded,
   setMode,
   setReserveLocation,
   setSelectedCSV,
@@ -44,12 +43,15 @@ export function trainDataset(
   store.dispatch(setMode(mode));
   store.dispatch(setSelectedCSV(`${id}.csv`));
   store.dispatch(setSelectedJSON(`${id}.json`));
-  store.dispatch(setImportedData(parseCsvText(csv).rows, false));
-  store.dispatch(setImportedMetadata(metadata));
-  metadata.fields.forEach(field =>
-    store.dispatch(
-      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL)
-    )
+  store.dispatch(
+    setDatasetLoaded({
+      dataset: {
+        rows: parseCsvText(csv).rows,
+        metadata,
+        columnsByDataType: columnTypesFromMetadata(metadata),
+        removedRowsCount: 0,
+      },
+    })
   );
   store.dispatch(setReserveLocation(reserveLocation));
   const labelColumn = label || metadata.defaultLabelColumn;

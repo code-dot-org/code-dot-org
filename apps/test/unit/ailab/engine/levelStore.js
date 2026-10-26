@@ -2,9 +2,8 @@ import {createStore} from 'redux';
 
 import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import rootReducer, {
-  setColumnsByDataType,
   setCurrentPanel,
-  setImportedData,
+  setDatasetLoaded,
   setMode,
 } from '@cdo/apps/ailab/engine/redux';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
@@ -36,9 +35,15 @@ export function seedLevel(
 ) {
   store.dispatch(setMode(mode));
   store.dispatch(setCurrentPanel('datasetView'));
-  store.dispatch(setImportedData(data, false));
-  Object.entries(columns).forEach(([column, type]) =>
-    store.dispatch(setColumnsByDataType(column, type))
+  store.dispatch(
+    setDatasetLoaded({
+      dataset: {
+        rows: data,
+        metadata: {card: {}},
+        columnsByDataType: columns,
+        removedRowsCount: 0,
+      },
+    })
   );
 
   return store;

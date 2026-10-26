@@ -9,7 +9,11 @@ import {
   loadDataset,
   loadUploadedDataset,
 } from '@cdo/apps/ailab/engine/loadDataset';
-import {resetState, setMode} from '@cdo/apps/ailab/engine/redux';
+import {
+  resetState,
+  setDatasetLoaded,
+  setMode,
+} from '@cdo/apps/ailab/engine/redux';
 import {store} from '@cdo/apps/ailab/engine/store';
 
 jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper', () => ({
@@ -67,6 +71,24 @@ describe('loadDataset', () => {
       legs: 'numerical',
       animal: 'categorical',
     });
+  });
+
+  // A column the last dataset had must not survive into this one.
+  test('replaces the column types rather than adding to them', async () => {
+    store.dispatch(
+      setDatasetLoaded({
+        dataset: {
+          rows: ROWS,
+          metadata: METADATA,
+          columnsByDataType: {wings: 'numerical'},
+          removedRowsCount: 0,
+        },
+      })
+    );
+
+    await loadDataset('animals.csv', 'animals.json');
+
+    expect(store.getState().columnsByDataType).not.toHaveProperty('wings');
   });
 
   test("locks the dataset's default label when no label is set", async () => {
@@ -169,6 +191,18 @@ describe('loadUploadedDataset', () => {
       legs: 'numerical',
       animal: 'categorical',
     });
+  });
+
+  /*
+    A level's columns name our dataset's, so they say nothing about a file the
+    student brought, and applying them would report every one as missing.
+  */
+  test("leaves the level's preset columns alone", async () => {
+    store.dispatch(setMode({label: 'animal', features: ['legs']}));
+
+    await loadUploadedDataset(file);
+
+    expect(store.getState().presetColumns).toBeUndefined();
   });
 
   test('reports a failure the same way', async () => {

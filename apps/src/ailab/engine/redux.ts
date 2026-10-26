@@ -16,6 +16,7 @@ import {getTrainedModelDataToSave} from './selectors/saveSelectors';
 import type {
   AilabProject,
   DataRow,
+  Dataset,
   DatasetError,
   Metadata,
   Mode,
@@ -187,6 +188,32 @@ const ailabSlice = createSlice({
       prepare(data: DataRow[], userUploadedData: boolean) {
         return {payload: {data, userUploadedData}};
       },
+    },
+    /*
+      A whole dataset in one write. The column types replace the previous
+      map rather than merging into it, so a column the last dataset had
+      cannot survive into this one.
+    */
+    setDatasetLoaded(
+      state,
+      action: PayloadAction<{dataset: Dataset; presetColumns?: PresetColumns}>
+    ) {
+      const {dataset, presetColumns} = action.payload;
+      if (state.currentPanel === 'selectDataset') {
+        // Only an upload is held as a File rather than a path to one of ours.
+        state.instructionsKey =
+          typeof state.csvfile === 'object'
+            ? 'uploadedDataset'
+            : 'selectedDataset';
+        state.showOverlay = false;
+      }
+      state.data = dataset.rows;
+      state.metadata = dataset.metadata;
+      state.columnsByDataType = dataset.columnsByDataType;
+      state.removedRowsCount = dataset.removedRowsCount;
+      if (presetColumns) {
+        state.presetColumns = presetColumns;
+      }
     },
     setImportedMetadata(state, action: PayloadAction<Metadata>) {
       state.metadata = action.payload;
@@ -413,6 +440,7 @@ export const {
   setSelectedCSV,
   setSelectedJSON,
   setInvalidData,
+  setDatasetLoaded,
   setImportedData,
   setImportedMetadata,
   setPresetColumns,
