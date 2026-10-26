@@ -1,7 +1,6 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {ReflectionData} from '@code-dot-org/lesson-deep-dive';
-import React, {
-  FC,
+import {
+  type FC,
+  type MouseEvent,
   useCallback,
   useEffect,
   useMemo,
@@ -9,9 +8,12 @@ import React, {
   useState,
 } from 'react';
 
-import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {useApiClient} from '@code-dot-org/core/api';
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
+
+import {getPodcast} from '../api';
+import {type LessonObjective, type ReflectionData} from '../types';
 
 import Waveform from './Waveform';
 
@@ -26,7 +28,7 @@ function formatTime(seconds: number): string {
 interface PodcastsBoxProps {
   lessonId: number;
   reflectionData: ReflectionData | null;
-  objectives: LessonDeepDiveData['objectives'];
+  objectives: LessonObjective[];
 }
 
 type PodcastStatus = 'loading' | 'ready' | 'unavailable';
@@ -39,6 +41,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({
   reflectionData,
   objectives,
 }) => {
+  const api = useApiClient();
   const audioRef = useRef<HTMLAudioElement>(null);
   const audioCtxRef = useRef<AudioContext | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -93,7 +96,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({
       .filter(
         ([, value]) =>
           value === LessonObjectiveReflectionValues.LOST ||
-          value === LessonObjectiveReflectionValues.UNSURE
+          value === LessonObjectiveReflectionValues.UNSURE,
       )
       .map(([objectiveId]) => objectiveId);
   }, [reflectionData, objectives]);
@@ -152,9 +155,8 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({
   // string of {voice_id, text} lines — so fetch it from the show route.
   useEffect(() => {
     let cancelled = false;
-    HttpClient.get(`/ai_student_podcasts?${transcriptQuery}`)
-      .then(response => response.json())
-      .then((data: {podcast_script?: string | null}) => {
+    getPodcast(api.transport, transcriptQuery)
+      .then(data => {
         if (cancelled || !data.podcast_script) return;
         setScriptLines(JSON.parse(data.podcast_script) as ScriptLine[]);
       })
@@ -162,7 +164,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({
     return () => {
       cancelled = true;
     };
-  }, [transcriptQuery]);
+  }, [api, transcriptQuery]);
 
   const togglePlay = useCallback(() => {
     const audio = audioRef.current;
@@ -183,7 +185,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({
     if (audioRef.current) {
       audioRef.current.currentTime = Math.max(
         0,
-        audioRef.current.currentTime - 10
+        audioRef.current.currentTime - 10,
       );
     }
   }, []);
@@ -192,20 +194,20 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({
     if (audioRef.current) {
       audioRef.current.currentTime = Math.min(
         audioRef.current.duration || 0,
-        audioRef.current.currentTime + 10
+        audioRef.current.currentTime + 10,
       );
     }
   }, []);
 
   const handleProgressClick = useCallback(
-    (e: React.MouseEvent<HTMLDivElement>) => {
+    (e: MouseEvent<HTMLDivElement>) => {
       const rect = e.currentTarget.getBoundingClientRect();
       const pct = (e.clientX - rect.left) / rect.width;
       if (audioRef.current && duration) {
         audioRef.current.currentTime = pct * duration;
       }
     },
-    [duration]
+    [duration],
   );
 
   const progress = duration ? (currentTime / duration) * 100 : 0;
@@ -231,6 +233,7 @@ const PodcastsBox: FC<PodcastsBoxProps> = ({
           <FontAwesomeV6Icon iconName="volume" />
         </div>
 
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events -- moved from apps, which turns this rule off; keyboard seeking needs its own change */}
         <div
           className={styles.progressTrack}
           onClick={handleProgressClick}
