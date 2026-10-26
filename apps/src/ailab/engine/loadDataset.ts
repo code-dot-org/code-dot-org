@@ -5,7 +5,7 @@
 
 import {fetchCsv, inferColumnTypes, parseCsvFile} from './csvReaderWrapper';
 import {getDatasetLoadId, isCurrentDatasetLoad} from './datasetLoad';
-import {selectableColumns} from './helpers/columnDetails';
+import {idColumnOf, selectableColumns} from './helpers/columnDetails';
 import {columnTypesFromMetadata, fetchMetadata} from './jsonReaderWrapper';
 import {setDatasetLoaded, setInvalidData} from './redux';
 import {store} from './store';
@@ -69,7 +69,10 @@ const modeColumns = (
   mode: Mode | undefined,
   {rows, metadata, columnsByDataType}: Dataset
 ): PresetColumns => {
-  const selectable = selectableColumns(rows, columnsByDataType);
+  const idColumn = idColumnOf(rows, mode?.idColumn, metadata.defaultIdColumn);
+  const selectable = selectableColumns(rows, columnsByDataType).filter(
+    column => column !== idColumn
+  );
   const isSelectable = (column: string): boolean => {
     if (selectable.includes(column)) {
       return true;

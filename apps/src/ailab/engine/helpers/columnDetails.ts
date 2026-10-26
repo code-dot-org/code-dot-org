@@ -56,6 +56,19 @@ export function withIdColumnFirst(
     : columns;
 }
 
+// A dataset can drop or rename the column a level names; null turns it off.
+export function idColumnOf(
+  data: DataRow[],
+  levelIdColumn: string | null | undefined,
+  defaultIdColumn: string | undefined
+): string | undefined {
+  const idColumn =
+    levelIdColumn === null ? undefined : levelIdColumn ?? defaultIdColumn;
+  return idColumn !== undefined && Object.hasOwn(data[0] ?? {}, idColumn)
+    ? idColumn
+    : undefined;
+}
+
 export function dataColumnsFor(
   data: DataRow[],
   project: AilabProject,

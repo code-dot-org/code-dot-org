@@ -7,6 +7,7 @@ import {
   getUniqueOptions,
   getExtrema,
   getColumnDescription,
+  idColumnOf,
   selectableColumns,
 } from './helpers/columnDetails';
 import {arrayIntersection} from './helpers/utils';
@@ -117,24 +118,13 @@ export const getSelectedNumericalFeatures = createSelector(
   }
 );
 
-// A dataset can drop or rename the column a level names.
 export const getIdColumn = createSelector(
   [
     getData,
     (state: RootState) => state.mode?.idColumn,
     (state: RootState) => getMetadata(state).defaultIdColumn,
   ],
-  (
-    data: DataRow[],
-    levelIdColumn: string | null | undefined,
-    defaultIdColumn: string | undefined
-  ): string | undefined => {
-    const idColumn =
-      levelIdColumn === null ? undefined : levelIdColumn ?? defaultIdColumn;
-    return idColumn !== undefined && Object.hasOwn(data[0] ?? {}, idColumn)
-      ? idColumn
-      : undefined;
-  }
+  idColumnOf
 );
 
 export const getTrainableColumns = createSelector(

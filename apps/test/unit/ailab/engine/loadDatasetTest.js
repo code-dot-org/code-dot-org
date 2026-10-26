@@ -121,6 +121,32 @@ describe('loadDataset', () => {
       'AI Lab mode: "name" is not a selectable column of this dataset.',
     ]);
   });
+
+  /*
+    `animal` is typed and has few enough values to train on, so only the id
+    rule keeps it out.
+  */
+  describe('the id column is never a preset', () => {
+    beforeEach(() => jest.spyOn(console, 'error').mockImplementation(() => {}));
+
+    test('when the level names it', async () => {
+      expect(
+        await load({idColumn: 'animal', features: ['animal', 'legs']})
+      ).toEqual({labelColumn: undefined, selectedFeatures: ['legs']});
+    });
+
+    test('when the dataset names it', async () => {
+      fetchMetadata.mockResolvedValue({
+        ok: true,
+        metadata: {...METADATA, defaultIdColumn: 'animal'},
+      });
+
+      expect(await load({label: 'animal', features: ['legs']})).toEqual({
+        labelColumn: undefined,
+        selectedFeatures: ['legs'],
+      });
+    });
+  });
 });
 
 describe('a dataset that will not load', () => {
