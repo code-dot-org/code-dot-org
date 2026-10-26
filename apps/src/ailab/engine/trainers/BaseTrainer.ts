@@ -1,6 +1,6 @@
 /*
-  The training flow shared by every trainer: sweep a list of candidate
-  hyperparameters, keep the model that grades best, and return it.
+  The training flow shared by every trainer: build the level's hyperparameters
+  if it sets them, else sweep the candidates and keep the most accurate model.
 
   A subclass supplies only what differs between algorithms — which candidates
   to try, how to build a model from one, and how to name it for the saved
@@ -91,9 +91,11 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     const state = this.store.getState();
     const candidate = this.candidateFor(hyperparameters);
 
+    // Against what training would have tried, which a level's own
+    // hyperparameters replace: ml-knn throws on a k below one.
     if (
       candidate === undefined ||
-      !this.candidates(state).includes(candidate)
+      !this.candidatesToTry(state).includes(candidate)
     ) {
       return undefined;
     }
@@ -127,7 +129,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     let best: OptimalModelDetails<Candidate> | undefined;
     let bestAccuracy = -1;
 
-    this.candidates(state).forEach((candidate: Candidate) => {
+    this.candidatesToTry(state).forEach((candidate: Candidate) => {
       const model = this.buildModel(state, candidate);
       const predictedLabels = this.predictRows(
         model,
@@ -150,6 +152,15 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     });
 
     return best;
+  }
+
+  private candidatesToTry(state: RootState): Candidate[] {
+    const levelHyperparameters = state.mode?.hyperparameters;
+    const levelCandidate =
+      levelHyperparameters && this.candidateFor(levelHyperparameters);
+    return levelCandidate === undefined
+      ? this.candidates(state)
+      : [levelCandidate];
   }
 
   // ml-knn throws on an empty matrix; ml-cart returns no predictions.
