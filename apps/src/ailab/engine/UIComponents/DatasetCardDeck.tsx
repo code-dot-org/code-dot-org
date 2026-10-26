@@ -6,6 +6,7 @@ import classNames from 'classnames';
 import React, {type CSSProperties, type KeyboardEvent} from 'react';
 
 import {useAppDispatch, useAppSelector} from '../hooks';
+import {getData} from '../selectors';
 import {setDatasetCardRow} from '../redux';
 
 import DatasetRowCard from './DatasetRowCard';
@@ -22,7 +23,7 @@ interface DatasetCardDeckProps {
 
 const DatasetCardDeck = ({rows}: DatasetCardDeckProps) => {
   const dispatch = useAppDispatch();
-  const data = useAppSelector(state => state.data);
+  const data = useAppSelector(getData);
   const currentRow = useAppSelector(state => state.datasetCardRow);
   const total = rows.length;
   // A filter that drops the current row moves the deck to its first card.

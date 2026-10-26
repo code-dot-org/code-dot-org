@@ -7,6 +7,7 @@ import {getColumnRole} from '../helpers/columnDetails';
 import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
+import {getData, getDatasetId} from '../selectors';
 import {useProject} from '../ProjectContext';
 import {getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
@@ -38,8 +39,8 @@ const NodeRowsTable = ({
 }: NodeRowsTableProps) => {
   const {columns} = view;
   const {project} = useProject();
-  const data = useAppSelector(state => state.data);
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const data = useAppSelector(getData);
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const idColumn = useAppSelector(getIdColumn);
   const showPrediction = prediction !== undefined;
   const shownRows = view.rows.slice(0, DATA_TABLE_ROW_LIMIT);

@@ -10,7 +10,7 @@ import type {Grade} from '../helpers/displayTreeNodeContent';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {setResultsTab} from '../redux';
-import {getIdColumn} from '../selectors';
+import {getData, getIdColumn} from '../selectors';
 import {useGradedView} from '../useGradedView';
 import {useResultsTableView} from '../useResultsTableView';
 
@@ -31,7 +31,7 @@ const ResultsDetails = () => {
   const resultsTab = useAppSelector(state => state.resultsTab);
   const dispatch = useAppDispatch();
   const [showAllColumns, setShowAllColumns] = useState(false);
-  const data = useAppSelector(state => state.data);
+  const data = useAppSelector(getData);
   const idColumn = useAppSelector(getIdColumn);
   const results = useAppSelector(
     state => getAllResults(state, project),

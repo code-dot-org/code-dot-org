@@ -15,7 +15,13 @@ import {
   sortByColumnOrder,
 } from './helpers/projectColumns';
 import {useAppSelector} from './hooks';
-import {getSelectableColumns} from './selectors';
+import {
+  getColumnsByDataType,
+  getData,
+  getInvalidData,
+  getSelectableColumns,
+  getSelectedCsv,
+} from './selectors';
 import type {TrainingRun} from './trainers/types';
 import {defaultProject, type AilabProject} from './types';
 import {useResetSignal} from './useResetSignal';
@@ -69,17 +75,17 @@ export const ProjectProvider = ({
     AilabProject | undefined
   >();
   const datasetSelectionPending = useAppSelector(
-    state => !!state.csvfile && !state.invalidData
+    state => !!getSelectedCsv(state) && !getInvalidData(state)
   );
   const isProjectLoading =
     pendingProject !== undefined && datasetSelectionPending;
   const isDefaultProject = project === defaultProject;
-  const data = useAppSelector(state => state.data);
+  const data = useAppSelector(getData);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
-  const columnsByDataType = useAppSelector(state => state.columnsByDataType);
+  const columnsByDataType = useAppSelector(getColumnsByDataType);
   const datasetDescribed =
     data.length > 0 &&
     Object.keys(data[0]).every(column => columnsByDataType[column]);

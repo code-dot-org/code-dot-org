@@ -13,6 +13,13 @@ import {shallowEqual, useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {useProject} from '../ProjectContext';
 import {setCurrentPanel} from '../redux';
+import {
+  getData,
+  getMetadata,
+  getRemovedRowsCount,
+  getSelectedCsv,
+  getSelectedName,
+} from '../selectors';
 
 import EmptyState from './EmptyState';
 import SampleRow from './SampleRow';
@@ -44,13 +51,15 @@ const DataCard = () => {
   const canUseDataset = useAppSelector(state =>
     isPanelEnabled(state, project, 'datasetView')
   );
-  const hasSelection = useAppSelector(state => state.csvfile !== undefined);
-  const name = useAppSelector(state => state.name);
+  const hasSelection = useAppSelector(
+    state => getSelectedCsv(state) !== undefined
+  );
+  const name = useAppSelector(getSelectedName);
   const uploadedFileName = useAppSelector(getUploadedFileName);
-  const metadata = useAppSelector(state => state.metadata);
+  const metadata = useAppSelector(getMetadata);
   const datasetDetails = useAppSelector(getDatasetDetails, shallowEqual);
-  const dataLength = useAppSelector(state => state.data.length);
-  const removedRowsCount = useAppSelector(state => state.removedRowsCount);
+  const dataLength = useAppSelector(state => getData(state).length);
+  const removedRowsCount = useAppSelector(getRemovedRowsCount);
 
   const card =
     Object.keys(metadata.card).length > 0 ? metadata.card : undefined;

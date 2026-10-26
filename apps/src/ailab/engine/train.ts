@@ -18,7 +18,7 @@ import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
 } from './redux';
-import {getSelectedCategoricalColumns} from './selectors';
+import {getData, getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
 import type {Trainer, TrainerOutput, TrainingRun} from './trainers/types';
 import type {AilabProject, DataRow, TrainedModel} from './types';
@@ -129,14 +129,15 @@ const prepareTrainingData = (
   accuracyCheckRowIndices: number[]
 ): void => {
   const state = store.getState();
+  const data = getData(state);
   const {trained, accuracyCheck} = splitRowIndices(
-    state.data.length,
+    data.length,
     accuracyCheckRowIndices
   );
   const examplesFor = (rows: number[]) =>
-    rows.map(row => extractTrainingExamples(state, project, state.data[row]));
+    rows.map(row => extractTrainingExamples(state, project, data[row]));
   const labelsFor = (rows: number[]) =>
-    rows.map(row => extractTrainingLabel(state, project, state.data[row]));
+    rows.map(row => extractTrainingLabel(state, project, data[row]));
 
   store.dispatch(setTrainingExamples(examplesFor(trained)));
   store.dispatch(setTrainingLabels(labelsFor(trained)));
@@ -190,7 +191,7 @@ const init = (store: Store<RootState>, project: AilabProject): void => {
   prepare(
     store,
     project,
-    reserveRowIndices(state.data.length, state.reserveLocation)
+    reserveRowIndices(getData(state).length, state.reserveLocation)
   );
 };
 
@@ -234,7 +235,7 @@ const refit = (
   if (
     !hyperparameters ||
     !accuracyCheckRowIndices ||
-    !describesDataset(accuracyCheckRowIndices, store.getState().data.length)
+    !describesDataset(accuracyCheckRowIndices, getData(store.getState()).length)
   ) {
     return undefined;
   }

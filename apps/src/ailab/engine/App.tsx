@@ -19,6 +19,7 @@ import {
   saveModel,
   setCurrentPanel,
 } from './redux';
+import {getData, getInvalidData, getSelectedCsv} from './selectors';
 import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
@@ -267,7 +268,10 @@ const App = ({
   usePretrainOnLoad(restoringModel);
 
   const datasetPending = useAppSelector(
-    state => !!state.csvfile && state.data.length === 0 && !state.invalidData
+    state =>
+      !!getSelectedCsv(state) &&
+      getData(state).length === 0 &&
+      !getInvalidData(state)
   );
   /*
     Datasets load while on the select dataset panel, don't hide that panel

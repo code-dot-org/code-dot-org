@@ -1,5 +1,6 @@
 import I18n from '../i18n';
 import type {RootState} from '../redux';
+import {getData, getMetadata, getSelectedCsv} from '../selectors';
 import type {DatasetDetails} from '../types';
 
 /* Helper functions for getting information about the selected dataset. */
@@ -10,9 +11,9 @@ import type {DatasetDetails} from '../types';
 // object, so that dedupes the reference and avoids unnecessary rerenders.
 export function getDatasetDetails(state: RootState): DatasetDetails {
   const datasetDetails: DatasetDetails = {
-    name: state.metadata?.name || '',
+    name: getMetadata(state)?.name || '',
     description: getDatasetDescription(state),
-    numRows: state.data.length,
+    numRows: getData(state).length,
     isUserUploaded: isUserUploadedDataset(state),
     potentialUses: getPotentialUses(state),
     potentialMisuses: getPotentialMisuses(state),
@@ -24,18 +25,15 @@ function getCardContextAttr(
   state: RootState,
   attr: string
 ): string | undefined {
+  const metadata = getMetadata(state);
   if (
-    state.metadata?.name &&
-    state.metadata?.card?.context &&
-    state.metadata.card.context[
-      attr as keyof typeof state.metadata.card.context
-    ]
+    metadata?.name &&
+    metadata?.card?.context &&
+    metadata.card.context[attr as keyof typeof metadata.card.context]
   ) {
-    const datasetId = state.metadata.name;
+    const datasetId = metadata.name;
     const fallback =
-      state.metadata.card.context[
-        attr as keyof typeof state.metadata.card.context
-      ]!;
+      metadata.card.context[attr as keyof typeof metadata.card.context]!;
     return I18n.t(attr, {
       scope: ['datasets', datasetId, 'card', 'context'],
       default: fallback,
@@ -53,9 +51,10 @@ function getPotentialMisuses(state: RootState): string | undefined {
 
 export function getDatasetDescription(state: RootState): string {
   // If this a dataset from the internal collection that already has a description, use that.
-  if (state.metadata?.name && state.metadata?.card?.description) {
-    const datasetId = state.metadata.name;
-    const fallback = state.metadata.card.description;
+  const metadata = getMetadata(state);
+  if (metadata?.name && metadata?.card?.description) {
+    const datasetId = metadata.name;
+    const fallback = metadata.card.description;
     return (
       I18n.t('description', {
         scope: ['datasets', datasetId, 'card'],
@@ -72,9 +71,11 @@ export function getDatasetDescription(state: RootState): string {
 export function isUserUploadedDataset(state: RootState): boolean {
   // The csvfile for internally curated datasets are strings; those uploaded by
   // users are objects. Use data type as a proxy to know which case we're in.
-  return typeof state.csvfile === 'object' && state.csvfile !== null;
+  const csvfile = getSelectedCsv(state);
+  return typeof csvfile === 'object' && csvfile !== null;
 }
 
 export function getUploadedFileName(state: RootState): string | undefined {
-  return typeof state.csvfile === 'object' ? state.csvfile.name : undefined;
+  const csvfile = getSelectedCsv(state);
+  return typeof csvfile === 'object' ? csvfile.name : undefined;
 }

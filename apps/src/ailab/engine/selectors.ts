@@ -35,6 +35,16 @@ export const getLabelColumn = (
 export const getMetadata = (state: RootState): Metadata => state.metadata;
 export const getDatasetId = (state: RootState): string | undefined =>
   state.metadata && state.metadata.name;
+export const getRemovedRowsCount = (state: RootState): number =>
+  state.removedRowsCount;
+export const getInvalidData = (state: RootState): string | undefined =>
+  state.invalidData;
+/* The chosen dataset's display name, which an upload does not have. */
+export const getSelectedName = (state: RootState): string | undefined =>
+  state.name;
+/* The chosen CSV: a path for one of ours, the file itself for an upload. */
+export const getSelectedCsv = (state: RootState): string | File | undefined =>
+  state.csvfile;
 export const getTrainedModelDetails = (
   state: RootState
 ): TrainedModelDetailsSave => state.trainedModelDetails;

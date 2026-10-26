@@ -11,6 +11,7 @@ import {
   uniqLabelFeaturesSelected,
   prevNextButtons,
 } from './helpers/navigationValidation';
+import {getData} from './selectors';
 import {getTrainedModelDataToSave} from './selectors/saveSelectors';
 import type {
   AilabProject,
@@ -526,6 +527,6 @@ export function getTableData(
   if (useResultsData) {
     return getResultsDataInDataTableForm(state, project);
   } else {
-    return state.data;
+    return getData(state);
   }
 }
