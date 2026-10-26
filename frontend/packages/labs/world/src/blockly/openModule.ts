@@ -1,0 +1,128 @@
+// Opening the file behind a block.
+//
+// `use rule Has Gravity` and `use trait Affected by Gravity` name things that
+// are, in this project, files: `rules/gravity.rule` declares both. A learner who
+// wants to know what "Has Gravity" actually does has no way to get there from
+// the block that says it — they have to know it is a rule, know rules live in
+// `rules/`, and find the right one. The button this backs takes them there.
+//
+// Only where there is something to open. A built-in rule's implementation is
+// engine code the project does not contain, and a level may want the button gone
+// even when there is (a first lesson about *using* gravity is not a lesson about
+// reading it), so both the project's files and the level's wishes are registered
+// here and the field asks.
+//
+// The same shape as `ruleImport` and `effectImport`: a Blockly field cannot
+// reach React context or the project's files, so the editor registers a handler
+// while it is mounted and the field asks through it.
+
+import type {MultiFileSource} from '@code-dot-org/core/api';
+
+import {filePath} from '../runtime/projectFiles';
+
+/**
+ * The file kinds a module path can name, in the order resolution tries them.
+ *
+ * ONE LIST, because there are two questions and they must not be able to
+ * disagree: which paths get an open button (`setOpenableModules` filters the project's
+ * files by this) and which file the open button then opens (`fileIdForModule` tries
+ * these suffixes in turn). They were separate lists, and `.actor` was added to
+ * the first and not the second — so the open button appeared on `create ⟨Coin⟩ in map`
+ * and clicking it did nothing at all.
+ *
+ * Ordered, because the first three follow the compiler's own resolution: a
+ * module path is tried as `.rule`, then `.js`, then `.ts`, so the file the open button
+ * opens is the file the project would compile.
+ * `.actor` is a module with a namespace of its own. `.map` is last and is not
+ * a module at all — a map is data a world names — but it has an editor, and
+ * the open button opens FILES. `.png` is the same: a picture `set sprite`
+ * names, opened in the image editor (specs/SHELL_FINISH_PLAN.md, step 5).
+ */
+export const OPENABLE_EXTENSIONS = [
+  'rule',
+  'js',
+  'ts',
+  'actor',
+  'map',
+  'png',
+] as const;
+
+/** Opens the project file a module path names. */
+export type ModuleOpener = (modulePath: string) => void;
+
+let opener: ModuleOpener | null = null;
+let openable: ReadonlySet<string> = new Set();
+let offeredByLevel = true;
+
+/**
+ * Register the opener. Called by the Blockly editor while it is mounted, and
+ * with `null` on unmount so a stale closure over a dead workspace cannot run.
+ */
+export function setModuleOpener(next: ModuleOpener | null): void {
+  opener = next;
+}
+
+/**
+ * The module paths the project has files for — extension-less, as a block names
+ * them. Refreshed with the rest of the project's registries.
+ */
+export function setOpenableModules(modules: Iterable<string>): void {
+  openable = new Set(modules);
+}
+
+/**
+ * Whether the level offers the button at all.
+ *
+ * Off is a deliberate choice a level makes, not a default: a project a learner
+ * owns should let them read anything in it.
+ */
+export function setModuleOpeningOffered(offered: boolean): void {
+  offeredByLevel = offered;
+}
+
+/**
+ * Whether a block naming `modulePath` should show its open button: the level
+ * allows it, the project has the file, and something is listening.
+ */
+export function canOpenModule(modulePath: string | undefined): boolean {
+  return (
+    offeredByLevel &&
+    opener !== null &&
+    modulePath !== undefined &&
+    openable.has(modulePath)
+  );
+}
+
+/** Open the file for `modulePath`, if anything can. */
+export function openModule(modulePath: string): void {
+  if (canOpenModule(modulePath)) {
+    opener?.(modulePath);
+  }
+}
+
+/**
+ * The file a module path names — `rules/gravity` → `rules/gravity.rule`.
+ *
+ * A module path has no extension, which is what makes it a module path: the
+ * compiler's own resolution tries `.rule`, then `.js`, then `.ts`, and this
+ * follows it so the file a block opens is the file the project would compile.
+ *
+ * `.map` is tried last and is not part of that resolution — a map is data a
+ * world names, not a module anything imports. It is here because the open button opens
+ * FILES, and a map has an editor like the rest.
+ */
+export function fileIdForModule(
+  source: MultiFileSource,
+  modulePath: string,
+): string | undefined {
+  for (const extension of OPENABLE_EXTENSIONS.map(kind => `.${kind}`)) {
+    const wanted = `${modulePath}${extension}`;
+    const found = Object.keys(source.files).find(
+      id => filePath(source, id) === wanted,
+    );
+    if (found) {
+      return found;
+    }
+  }
+  return undefined;
+}

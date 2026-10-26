@@ -1,0 +1,12 @@
+/* The generation workspace injects a real (but offscreen) Blockly workspace so
+   its JavaScript generator is available; it is never seen. A definite size lets
+   Blockly inject and measure. */
+.offscreen {
+  position: absolute;
+  left: -100000px;
+  top: 0;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  pointer-events: none;
+}

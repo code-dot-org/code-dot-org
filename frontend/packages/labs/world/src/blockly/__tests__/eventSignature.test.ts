@@ -1,0 +1,670 @@
+// An event's phrasing, the filter in it (specs/ENUMS.md step 4), and what it
+// carries (specs/EVENT_VALUES_PLAN.md).
+//
+// `define event` is designed like `define block`: labels are its wording, and a
+// parameter is a value the event carries — which a handler may also FILTER on
+// when it is one of a named set of choices. The hat shows those choices with
+// `(any)` at the front, and generates the guard a learner would otherwise
+// write themselves — which is the difference between
+//
+//   when any Player a key is pressed / if (event value) = (key ⟨space⟩) / …
+//
+// and
+//
+//   when any Player ⟨space⟩ is pressed / …
+
+import {afterEach, describe, expect, it} from 'vitest';
+
+import {Blockly} from '@code-dot-org/blockly';
+
+import {inputRule} from '../../rules/stock/input';
+import {buildDomainPalette} from '../domainBlocks';
+import {eventFlyoutBlocks} from '../extensions/eventActorToolbox';
+import {setProjectActors} from '../moduleOptions';
+import {parseRuleMeta} from '../ruleMeta';
+import {registerProjectRules} from '../ruleRegistry';
+import {shadowsFor} from '../valueShadow';
+
+afterEach(() => setProjectActors([]));
+
+/**
+ * Build the palette for a rule, and register it.
+ *
+ * The two go together and always did: `refreshProjectDropdowns` registers the
+ * project's rules and the palette is built from the same list, in the same
+ * breath. Saying so matters now, because a member block whose rule the registry
+ * cannot find generates NOTHING — that is how a deleted rule stops taking the
+ * whole project down with it (domainBlocks, `refResolves`) — and a test that
+ * built blocks without registering was asking for code from a rule it had
+ * declared does not exist.
+ */
+const paletteFor = (
+  metas: Parameters<typeof buildDomainPalette>[0],
+  options?: Parameters<typeof buildDomainPalette>[1],
+) => {
+  registerProjectRules([...metas]);
+  return buildDomainPalette(metas, options);
+};
+/** A `.rule` whose one event carries the given phrasing. */
+const ruleWithEvent = (
+  event: {parts: unknown[]},
+  variables: Array<{id: string; name: string; type: string}> = [],
+) =>
+  parseRuleMeta(
+    'rules/keys',
+    JSON.stringify({
+      variables,
+      blocks: {
+        blocks: [
+          {
+            type: 'world_rule',
+            fields: {NAME: 'Keys', ABILITY: 'Responds to Keys'},
+            next: {
+              block: {
+                type: 'world_rule_event',
+                extraState: {parts: event.parts},
+              },
+            },
+          },
+        ],
+      },
+    }),
+  )!;
+
+const PRESSED = {
+  parts: [
+    {kind: 'param', type: 'enum:Engine#Key', var: 'k'},
+    {kind: 'label', text: 'is pressed'},
+  ],
+};
+const KEY_VAR = [{id: 'k', name: 'key', type: 'String'}];
+
+/** The hat block this rule's event makes (the built-ins' hats are in there too). */
+const hatFor = (meta: ReturnType<typeof ruleWithEvent>) => {
+  const {blocks} = paletteFor([meta]);
+  return blocks.find(block => block.type.startsWith('world_on_Keys_')) as {
+    type: string;
+    message0: string;
+    args0: Array<{
+      type: string;
+      name: string;
+      options?: Array<[string, string]>;
+    }>;
+    generator: {
+      javascript: (block: unknown, generator: unknown, env: unknown) => string;
+    };
+  };
+};
+
+/** Generate the hat's code with `filter` picked in its dropdown. */
+const codeFor = (
+  hat: ReturnType<typeof hatFor>,
+  filter: string,
+  body = 'log("hi");\n',
+) =>
+  hat.generator.javascript(
+    {
+      getFieldValue: (name: string) => (name === 'FILTER0' ? filter : null),
+      getNextBlock: () => ({}),
+    },
+    {
+      valueToCode: () => 'Player',
+      blockToCode: () => body,
+      definitions_: {},
+    },
+    {},
+  );
+
+/** The block that RAISES this rule's event. */
+const emitFor = (meta: ReturnType<typeof ruleWithEvent>) => {
+  const {blocks} = paletteFor([meta]);
+  return blocks.find(block => block.type.startsWith('world_emit_Keys_')) as {
+    type: string;
+    message0: string;
+    args0: Array<{type: string; name: string; check?: string}>;
+    generator: {
+      javascript: (block: unknown, generator: unknown, env: unknown) => string;
+    };
+  };
+};
+
+describe('an event with a designed phrasing', () => {
+  it('is named by its labels, not by the whole phrase', () => {
+    const meta = ruleWithEvent(PRESSED, KEY_VAR);
+
+    expect(meta.events[0].name).toBe('is pressed');
+    expect(meta.events[0].parts).toEqual([
+      {kind: 'param', name: 'key', type: 'enum:Engine#Key'},
+      {kind: 'label', text: 'is pressed'},
+    ]);
+  });
+
+  it('puts the choices on the hat, with `(any)` first', () => {
+    // Declared on the RULE, so it is the world's: no actor socket, and the
+    // filter is the first argument rather than the second.
+    const hat = hatFor(ruleWithEvent(PRESSED, KEY_VAR));
+
+    expect(hat.message0).toBe('when %1 is pressed');
+    expect(hat.args0[0]).toMatchObject({
+      type: 'field_dropdown',
+      name: 'FILTER0',
+    });
+    // `(any)` leads, because "fires for every key" has to be sayable — and as
+    // an emptied socket it would be a thing a learner found by deleting a block.
+    expect(hat.args0[0].options?.[0]).toEqual(['(any)', '']);
+    expect(hat.args0[0].options).toContainEqual(['space', 'space']);
+  });
+
+  it('generates the guard the learner would have written', () => {
+    const hat = hatFor(ruleWithEvent(PRESSED, KEY_VAR));
+
+    const code = codeFor(hat, 'space');
+
+    expect(code).toContain('if (eventValue !== "space") return;');
+    expect(code).toContain('log("hi");');
+    // The guard is INSIDE the handler, before the body — a filter, not a
+    // different registration.
+    expect(code.indexOf('eventValue !==')).toBeLessThan(code.indexOf('log('));
+  });
+
+  it('generates no guard for `(any)`', () => {
+    // Which is what an event with no filter has always done, so the two are one
+    // block with a different word in it.
+    const hat = hatFor(ruleWithEvent(PRESSED, KEY_VAR));
+
+    // The handler still RECEIVES the value — its closure takes one either way,
+    // and `event value` reads it. What `(any)` drops is the guard.
+    const code = codeFor(hat, '');
+    expect(code).not.toContain('eventValue !==');
+    expect(code).toContain('(world, eventValue)');
+  });
+
+  it('registers a world event on the world, with no actor', () => {
+    // The whole of what an event's scope decides. This one is declared on the
+    // rule, so it is about the WORLD — there is nobody it happened to, and a
+    // handler is handed nobody. `rules/input` used to raise its key events once
+    // per actor per frame purely to have a subject to raise them for.
+    const code = codeFor(hatFor(ruleWithEvent(PRESSED, KEY_VAR)), '');
+
+    expect(code).toContain('world.on(Keys_IsPressedEvent, (world, eventValue)');
+    expect(code).not.toContain('actor');
+  });
+});
+
+describe('raising an event that carries a choice', () => {
+  it('takes it through a SOCKET, where the hat gives it a field', () => {
+    // The distinction the two sides genuinely have: a hat picks one of the
+    // choices to wait for, an emit supplies whichever the code worked out.
+    // `rules/input` is the case in point — it raises its event once per key it
+    // is looping over, so a dropdown has to be droppable-over here.
+    const emit = emitFor(ruleWithEvent(PRESSED, KEY_VAR));
+
+    // No `for ⟨actor⟩`: a world event happened to the world, and naming a
+    // subject would be inventing one.
+    expect(emit.message0).toBe('emit %1 is pressed');
+    expect(emit.args0[0]).toMatchObject({
+      type: 'input_value',
+      name: 'VALUE',
+      check: 'String',
+    });
+    expect(shadowsFor(emit.type)?.[0]?.shadow).toMatchObject({
+      type: 'world_choice_Engine_Key',
+    });
+  });
+
+  it('passes what is plugged in as the event’s value', () => {
+    const emit = emitFor(ruleWithEvent(PRESSED, KEY_VAR));
+
+    const code = emit.generator.javascript(
+      {getFieldValue: () => null} as never,
+      {
+        definitions_: {},
+        valueToCode: (_block: unknown, name: string) =>
+          name === 'ACTOR' ? 'each' : 'key',
+      } as never,
+      {} as never,
+    ) as string;
+
+    // Once, however many actors are in the world.
+    expect(code).toBe('world.emitToWorld(Keys_IsPressedEvent, key);\n');
+  });
+});
+
+describe('where a world event\u2019s hat may be placed', () => {
+  // It generates `world.on(…)` at the top of the module it sits in, and only a
+  // `.world` binds `world` there — it is the builder. An `.actor` module is
+  // `const actor = …` and nothing else, so the same hat is a ReferenceError as
+  // soon as the file is imported: the whole project stops running, over one
+  // block dragged out of a category that offered it.
+
+  /** The blocks a rule's own toolbox category lists, for a given file kind. */
+  const offered = (
+    meta: ReturnType<typeof ruleWithEvent>,
+    fileKind?: 'actor' | 'world' | 'rule',
+  ): string[] => {
+    const {toolbox} = paletteFor([meta], {fileKind});
+    const category = (toolbox as Array<{name: string; blocks?: string[]}>).find(
+      entry => entry.name === meta.name,
+    );
+    return category?.blocks ?? [];
+  };
+
+  /** Every block the palette DEFINES, offered or not. */
+  const defined = (
+    meta: ReturnType<typeof ruleWithEvent>,
+    fileKind?: 'actor' | 'world' | 'rule',
+  ): string[] => paletteFor([meta], {fileKind}).blocks.map(block => block.type);
+
+  it('is not an actor file, for an event the rule declares', () => {
+    // `ruleWithEvent` hangs its event off the rule root, so it is the world's.
+    const meta = ruleWithEvent(PRESSED, KEY_VAR);
+    const hat = 'world_on_Keys_IsPressedEvent';
+
+    expect(offered(meta, 'world')).toContain(hat);
+    expect(offered(meta, 'actor')).not.toContain(hat);
+  });
+
+  it('is still DEFINED in an actor file, so one already there loads', () => {
+    // The same arrangement `emit` has. Withholding the definition would turn a
+    // file that already holds the block from wrong into unopenable.
+    const meta = ruleWithEvent(PRESSED, KEY_VAR);
+
+    expect(defined(meta, 'actor')).toContain('world_on_Keys_IsPressedEvent');
+  });
+
+  it('offers everything when no file kind is given', () => {
+    // The headless generator has no one file, and a block it fails to define
+    // is a project that will not compile — so absent means offer.
+    expect(offered(ruleWithEvent(PRESSED, KEY_VAR))).toContain(
+      'world_on_Keys_IsPressedEvent',
+    );
+  });
+
+  it('is not a rule file, which binds neither world nor actor', () => {
+    // A rule module is `const rule = new RuleBuilder(…)`, and
+    // `extractRuleBodies` matches a hat against none of its three roots — so a
+    // hat there, and everything a learner chained under it, is dropped without
+    // a word. A rule says when it acts with `during <phase>`.
+    const meta = ruleWithEvent(PRESSED, KEY_VAR);
+    const hat = 'world_on_Keys_IsPressedEvent';
+
+    expect(offered(meta, 'rule')).not.toContain(hat);
+    expect(defined(meta, 'rule')).toContain(hat);
+  });
+});
+
+describe('an actor event\u2019s hat, in the same rule', () => {
+  // `rules/input` declares its key events TWICE — on the rule, where they are
+  // the world's, and under a trait, where they are an actor's. Only the first
+  // kind is withheld from an `.actor`, and the starter player's jump handler is
+  // the second kind, so getting this wrong takes the jump out of the palette.
+  const input = parseRuleMeta('rules/input', inputRule)!;
+
+  const offered = (
+    fileKind?: 'actor' | 'world' | 'rule',
+    ownRuleModule?: string,
+  ) => {
+    const {toolbox} = paletteFor([input], {fileKind, ownRuleModule});
+    const category = (toolbox as Array<{name: string; blocks?: string[]}>).find(
+      entry => entry.name === 'Input',
+    );
+    return category?.blocks ?? [];
+  };
+
+  it('is offered in an actor file, where the world\u2019s is not', () => {
+    const inActor = offered('actor');
+
+    expect(inActor).toContain('world_on_Input_PressesEvent');
+    expect(inActor).toContain('world_on_Input_ReleasesEvent');
+    expect(inActor).not.toContain('world_on_Input_IsPressedEvent');
+    expect(inActor).not.toContain('world_on_Input_IsReleasedEvent');
+  });
+
+  it('and a world file gets both', () => {
+    const inWorld = offered('world');
+
+    expect(inWorld).toContain('world_on_Input_PressesEvent');
+    expect(inWorld).toContain('world_on_Input_IsPressedEvent');
+  });
+
+  it('and a rule file gets neither, but keeps the blocks that RAISE them', () => {
+    // The category is not simply empty here — `emit` is offered while a rule is
+    // being written, and declaring an event is a rule-authoring act. So the
+    // hats are absent from a category that has plenty in it, which is the
+    // distinction worth pinning: a rule says what happened, not what to do.
+    const inRule = offered('rule', 'rules/input');
+
+    expect(inRule).not.toContain('world_on_Input_PressesEvent');
+    expect(inRule).not.toContain('world_on_Input_IsPressedEvent');
+    expect(inRule).toContain('world_emit_Input_PressesEvent');
+    expect(inRule).toContain('world_emit_Input_IsPressedEvent');
+  });
+});
+
+describe('an event that carries an ACTOR', () => {
+  // A hat for one filters by KIND, and the dropdown is built by a function
+  // that is handed the field. That handing is the whole of whether it has
+  // anything in it: a world's own `define actor` kinds are found through the
+  // field's workspace, and a world that defines its actors inline is every
+  // lesson and the starter — so the filter offered `(any)` and a placeholder,
+  // and no kinds at all, until it was passed.
+  const TOUCHED = {
+    parts: [
+      {kind: 'label', text: 'is touched by'},
+      {kind: 'param', name: 'other', type: 'actor'},
+    ],
+  };
+  /** A workspace holding a world; the kinds come from the project's files. */
+  const fieldInAWorld = () => {
+    const blocks = [
+      {id: 'w1', type: 'world_world', getFieldValue: () => 'My World'},
+    ];
+    return {
+      getTopBlocks: () => blocks,
+      getBlockById: (id: string) => blocks.find(block => block.id === id),
+    };
+  };
+
+  it('offers the kinds the project holds, and only `(any)` beside them', () => {
+    setProjectActors([
+      ['Key', 'actors/key'],
+      ['Door', 'actors/door'],
+    ]);
+    // Through the EXTENSION, which is where the live list lives: the
+    // definition carries a snapshot taken before any project existed, and what
+    // a learner sees is what the field answers with once it is on a block.
+    const hat = hatFor(ruleWithEvent(TOUCHED)) as unknown as {
+      extensions: Array<{name: string; extension: () => void}>;
+    };
+    const field = new Blockly.FieldDropdown(() => [['(any)', '']]);
+    const block = {
+      getField: (name: string) => (name === 'FILTER0' ? field : null),
+      workspace: fieldInAWorld(),
+    };
+    // Stubbed rather than `setSourceBlock`, which wants a real block: what the
+    // live list asks the field for is where it is (`moduleOptions.liveDropdown`).
+    (field as unknown as {getSourceBlock: () => unknown}).getSourceBlock = () =>
+      block;
+    // The extension is what a block gets on creation, and it is what binds the
+    // live list to the field.
+    hat.extensions
+      .find(extension => extension.name === 'world_event_kind_FILTER0')!
+      .extension.call(block as never);
+
+    const shown = field.getOptions(false) as Array<[string, string]>;
+
+    expect(shown[0]).toEqual(['(any)', '']);
+    expect(shown.map(([label]) => label)).toContain('Key');
+    expect(shown.map(([label]) => label)).toContain('Door');
+    // …and NOT `(none)`, which is `orNone`'s way of saying a list is empty and
+    // carries the same empty value `(any)` does. Two entries, one meaning.
+    expect(shown.map(([label]) => label)).not.toContain('(none)');
+  });
+});
+
+// What an event CARRIES, once its signature may name more than one thing
+// (specs/EVENT_VALUES_PLAN.md). The hat filters on what a filter can be
+// written over, says the rest in words, hands every value to the handler, and
+// offers a block per value behind its `+`.
+describe('an event that carries several values', () => {
+  /** `define event ⟨damaged by⟩ ⟨who: actor⟩ ⟨amount: number⟩`. */
+  const DAMAGED = {
+    parts: [
+      {kind: 'label', text: 'is damaged by'},
+      {kind: 'param', name: 'who', type: 'actor', var: 'w'},
+      {kind: 'param', name: 'amount', type: 'number', var: 'a'},
+    ],
+  };
+  const DAMAGE_VARS = [
+    {id: 'w', name: 'who', type: 'Actor'},
+    {id: 'a', name: 'amount', type: 'Number'},
+  ];
+
+  /**
+   * The hat's code, with `names` the variables the FILE happens to hold.
+   *
+   * What a hat binds is looked up on its own workspace by name and flavour,
+   * so a file that never dragged a getter out of the `+` has nothing to bind
+   * and gets no binding lines.
+   */
+  const codeWithLocals = (
+    hat: ReturnType<typeof hatFor>,
+    names: ReadonlyArray<{name: string; type: string; id: string}>,
+  ) =>
+    hat.generator.javascript(
+      {
+        type: hat.type,
+        getFieldValue: () => null,
+        getNextBlock: () => ({}),
+        workspace: {
+          getVariableMap: () => ({
+            getVariable: (name: string, type: string) => {
+              const found = names.find(
+                one => one.name === name && one.type === type,
+              );
+              return found ? {getId: () => found.id} : null;
+            },
+          }),
+        },
+      },
+      {
+        valueToCode: () => 'Player',
+        blockToCode: () => 'log("hi");\n',
+        // The same mapping the getter uses, so the two agree by construction.
+        getVariableName: (id: string) =>
+          names.find(one => one.id === id)?.name ?? id,
+        definitions_: {},
+      },
+      {},
+    );
+
+  it('names the values it cannot filter on, so the hat reads as a sentence', () => {
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    // The kind dropdown for the actor, the WORD for the number — a filter is a
+    // dropdown of named choices and a number has no such set, but the hat
+    // still carries the value and the name is how it says so.
+    expect(hat.message0).toContain('is damaged by');
+    expect(hat.message0).toContain('amount');
+    expect(hat.args0.filter(arg => arg.type === 'field_dropdown')).toHaveLength(
+      1,
+    );
+  });
+
+  it('hands the handler one parameter per value', () => {
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = codeFor(hat, '');
+
+    // Declared on the rule, so it is the WORLD's and there is no subject in
+    // front of the values (`EventMeta.scope`).
+    expect(code).toContain('(world, eventValue, eventValue$2)');
+  });
+
+  it('filters on the value the filter is FOR', () => {
+    // The kind filter is the FIRST value here, and a guard comparing
+    // `eventValue` would have been right by luck. The next test is the one
+    // that could not have passed before.
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = codeFor(hat, 'actors/brick');
+
+    expect(code).toContain('if (eventValue?.type !== "actors/brick") return;');
+  });
+
+  it('…and on the SECOND value when that is the filtered one', () => {
+    const meta = ruleWithEvent(
+      {
+        parts: [
+          {kind: 'label', text: 'is pressed on'},
+          {kind: 'param', name: 'amount', type: 'number', var: 'a'},
+          {kind: 'param', type: 'enum:Engine#Key', var: 'k'},
+        ],
+      },
+      [
+        {id: 'a', name: 'amount', type: 'Number'},
+        {id: 'k', name: 'key', type: 'String'},
+      ],
+    );
+
+    const code = codeFor(hatFor(meta), ' ');
+
+    expect(code).toContain('if (eventValue$2 !== " ") return;');
+    expect(code).not.toContain('if (eventValue !==');
+  });
+
+  it('offers the ordinary getter for each value, named and typed', () => {
+    // NOT A BLOCK OF ITS OWN. What an event hands over is a local like any
+    // other, so what reads it is the block that reads every local — bound by
+    // NAME, because the handler is in another file from the declaration and
+    // the name is all the two ends share.
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS)) as unknown as {
+      type: string;
+      extensions: Array<{name: string}>;
+    };
+
+    expect(hat.extensions.map(extension => extension.name)).toContain(
+      'world_event_values_toolbox',
+    );
+    expect(eventFlyoutBlocks(hat.type)).toEqual([
+      {
+        type: 'variables_get_Actor',
+        fields: {VAR: {name: 'who', type: 'Actor'}},
+      },
+      {
+        type: 'variables_get_Number',
+        fields: {VAR: {name: 'amount', type: 'Number'}},
+      },
+    ]);
+  });
+
+  it('binds no local for a lone actor, which `event actor` names', () => {
+    // Every contact hat in the library. Two names for one value is worse
+    // than either alone, and of the two `event actor` is the one the lessons
+    // point at and the one that draws the kind it was filtered to.
+    const hat = hatFor(
+      ruleWithEvent({
+        parts: [
+          {kind: 'label', text: 'is touched by'},
+          {kind: 'param', name: 'other', type: 'actor'},
+        ],
+      }),
+    ) as unknown as {type: string; extensions: Array<{name: string}>};
+
+    expect(hat.extensions.map(extension => extension.name)).toContain(
+      'world_event_actor_toolbox',
+    );
+    expect(eventFlyoutBlocks(hat.type)).toEqual([]);
+  });
+
+  it('opens the handler by binding each name to its value', () => {
+    // Positional at the boundary, named inside: what crosses the queue is a
+    // list, and what the body reads is a local of the author's name.
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = codeWithLocals(hat, [
+      {name: 'who', type: 'Actor', id: 'w1'},
+      {name: 'amount', type: 'Number', id: 'a1'},
+    ]);
+
+    expect(code).toContain('let who = eventValue;');
+    expect(code).toContain('let amount = eventValue$2;');
+  });
+
+  it('binds only the names the file actually has', () => {
+    // A getter enters a file by being dragged out of the `+`; until then the
+    // name is Blockly's "potential" variable and the file has none.
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = codeWithLocals(hat, [
+      {name: 'amount', type: 'Number', id: 'a1'},
+    ]);
+
+    expect(code).toContain('let amount = eventValue$2;');
+    expect(code).not.toContain('let who');
+  });
+
+  it('binds nothing at all when the file reads none of them', () => {
+    const hat = hatFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    expect(codeWithLocals(hat, [])).not.toContain('let ');
+  });
+
+  it('gives a kind filter and a choice filter different fields', () => {
+    // One field, two fields' worth of meaning: both were `FILTER0` while an
+    // enum filter was numbered among the enum filters alone.
+    const hat = hatFor(
+      ruleWithEvent(
+        {
+          parts: [
+            {kind: 'label', text: 'is hit by'},
+            {kind: 'param', name: 'who', type: 'actor', var: 'w'},
+            {kind: 'param', type: 'enum:Engine#Key', var: 'k'},
+          ],
+        },
+        [
+          {id: 'w', name: 'who', type: 'Actor'},
+          {id: 'k', name: 'key', type: 'String'},
+        ],
+      ),
+    );
+
+    const fields = hat.args0
+      .filter(arg => arg.type === 'field_dropdown')
+      .map(arg => arg.name);
+
+    expect(new Set(fields).size).toBe(fields.length);
+  });
+
+  it('starts the `emit` socket at the default its author gave', () => {
+    // An event designed with a `let` says what a raiser gets when it is left
+    // alone, exactly as a `define block`'s argument does. Dropping that on
+    // the way through `ruleMeta` made the row do nothing.
+    const emit = emitFor(
+      ruleWithEvent(
+        {
+          parts: [
+            {kind: 'label', text: 'is damaged by'},
+            {
+              kind: 'param',
+              name: 'amount',
+              type: 'number',
+              var: 'a',
+              shadow: {shadow: {type: 'math_number', fields: {NUM: 5}}},
+            },
+          ],
+        },
+        [{id: 'a', name: 'amount', type: 'Number'}],
+      ),
+    );
+
+    expect(shadowsFor(emit.type)?.[0]?.shadow).toMatchObject({
+      type: 'math_number',
+      fields: {NUM: 5},
+    });
+  });
+
+  it('raises them all, in order, through the `emit` block', () => {
+    const emit = emitFor(ruleWithEvent(DAMAGED, DAMAGE_VARS));
+
+    const code = emit.generator.javascript(
+      {
+        getFieldValue: () => null,
+        getInputTargetBlock: () => null,
+      },
+      {
+        valueToCode: (_block: unknown, name: string) =>
+          name === 'WHO' ? 'theBrick' : name === 'AMOUNT' ? '3' : 'Player',
+        blockToCode: () => '',
+        definitions_: {},
+      },
+      {},
+    );
+
+    // The actor is narrowed to one, as every actor socket is; the number goes
+    // as it was written. Both reach the queue, which is what the engine
+    // change was for.
+    expect(code).toContain('WorldLab.one(theBrick)');
+    expect(code).toContain(', 3)');
+  });
+});

@@ -1,0 +1,93 @@
+// Turns the `(import…)` row of a sprite or animation dropdown into an import.
+//
+// The same shape as `ruleImportField`, and the same reasoning: the row is not a
+// value. Choosing it means "go and fetch me one", so the validator REJECTS the
+// sentinel — returning null leaves the field as it was — and kicks off the
+// import, writing the result back when the picker resolves.
+//
+// Wraps whatever validator is already on the field rather than replacing it,
+// since a field holds exactly one; list this extension AFTER any other that
+// installs one.
+
+import type {Block, FieldDropdown} from 'blockly';
+
+import {defineExtension, type Extension} from '@code-dot-org/blockly';
+
+import {
+  IMPORT_BACKGROUND_VALUE,
+  IMPORT_SPRITE_VALUE,
+  requestAppearanceImport,
+  type AppearanceKind,
+} from '../../appearance/appearanceImport';
+
+const KINDS: ReadonlyArray<{
+  extension: string;
+  field: string;
+  sentinel: string;
+  kind: AppearanceKind;
+}> = [
+  {
+    extension: 'world_sprite_import_field',
+    field: 'SPRITE',
+    sentinel: IMPORT_SPRITE_VALUE,
+    kind: 'sprite',
+  },
+  {
+    extension: 'world_background_import_field',
+    field: 'BACKGROUND',
+    sentinel: IMPORT_BACKGROUND_VALUE,
+    kind: 'background',
+  },
+];
+
+const importField = ({
+  extension,
+  field: fieldName,
+  sentinel,
+  kind,
+}: (typeof KINDS)[number]): Extension =>
+  defineExtension(extension, {
+    extension() {
+      const block = this as unknown as Block;
+      const field = block.getField(fieldName) as FieldDropdown | null;
+      if (!field) {
+        return;
+      }
+
+      const inner = field.getValidator();
+      field.setValidator(function (this: unknown, value: string) {
+        if (value !== sentinel) {
+          return inner ? inner.call(this, value) : value;
+        }
+
+        void requestAppearanceImport(kind).then(imported => {
+          // Cancelled, or the editor went away while the picker was open.
+          if (!imported || block.isDisposed()) {
+            return;
+          }
+          // Rebuild the option list before the value lands, so the field
+          // cannot end up right in the generated code and wrong on the block.
+          //
+          // BELT AND BRACES on today's fields, not load-bearing: every dropdown
+          // with an `(import…)` row is bound by `bindLiveOptions`, which
+          // replaces `getOptions` with a call to the registry and takes no
+          // `useCache` argument at all — there is no cache left to rebuild
+          // (`liveDropdowns.test`). The three sibling extensions omit this and
+          // are not broken. It stays because it is correct for a field that is
+          // NOT live-bound, and costs one registry read for one that is.
+          field.getOptions(false);
+          field.setValue(imported);
+          field.forceRerender();
+        });
+
+        // Reject the sentinel: the field keeps whatever it held while the
+        // picker is open, and is never left holding a row that is not a value.
+        return null;
+      });
+    },
+  });
+
+// No `play animation` row: an animation is the actor's own, added to it in
+// the Actor Editor, not a file a block can fetch (specs/ANIMATION_PLAN.md).
+export const [spriteImportFieldExtension, backgroundImportFieldExtension] =
+  KINDS.map(importField);

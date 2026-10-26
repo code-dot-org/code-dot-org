@@ -1,0 +1,162 @@
+import {afterEach, describe, expect, it} from 'vitest';
+
+import {Blockly} from '@code-dot-org/blockly';
+
+import {addActorThumbnails, setActorThumbnails} from '../actorThumbnails';
+import {
+  actorFieldOptions,
+  actorOptions,
+  backgroundOptions,
+  bindLiveOptions,
+  mapOptions,
+  placementOptions,
+  setCurrentPlacements,
+  setProjectActors,
+  soundImportOptions,
+  spriteOptions,
+} from '../moduleOptions';
+
+// Registries are module state; reset between cases.
+afterEach(() => {
+  setProjectActors([]);
+  setCurrentPlacements([]);
+  setActorThumbnails({});
+});
+
+const PIXEL = 'data:image/png;base64,AAAA';
+
+describe('moduleOptions', () => {
+  it('offers each placement of the open map as its own label and value', () => {
+    // A name is what the map's author typed, and what the block says back;
+    // the list is the one map's, set by whoever opened it.
+    setCurrentPlacements(['Resume', 'Quit']);
+    expect(placementOptions()).toEqual([
+      ['Resume', 'Resume'],
+      ['Quit', 'Quit'],
+    ]);
+  });
+
+  it('returns the actor options it was given', () => {
+    setProjectActors([
+      ['Player', 'actors/player'],
+      ['Ground', 'actors/ground'],
+    ]);
+    expect(actorOptions()).toEqual([
+      ['Player', 'actors/player'],
+      ['Ground', 'actors/ground'],
+    ]);
+  });
+
+  it('names what is missing when empty, rather than offering a choice', () => {
+    // Not "(none)": a project with no actors did not CHOOSE to have none, and
+    // a row reading as a choice says it did (`orNone`). The value is the empty
+    // string either way, so an unfinished block still generates nothing.
+    expect(actorOptions()).toEqual([['(no actors yet)', '']]);
+  });
+});
+
+describe('an empty dropdown', () => {
+  /**
+   * Every list of the project's OWN FILES says what is missing.
+   *
+   * "(none)" reads as a choice, and for a file list it is not one: a project
+   * with no sprites did not choose to draw nothing. The line is drawn in
+   * `orNone`'s header — a state of the project, or an answer a learner might
+   * mean — and this is the half of it that is checkable. Trait, rule and
+   * property dropdowns are the other half and keep "(none)" on purpose.
+   */
+  it('names what the project has not got yet', () => {
+    // Nothing registered: `afterEach` clears the actors, and no test in this
+    // file ever sets the other four.
+    const empties: Array<[string, Array<[unknown, string]>]> = [
+      ['actors', actorOptions()],
+      ['sprites', spriteOptions() as Array<[unknown, string]>],
+      ['backgrounds', backgroundOptions() as Array<[unknown, string]>],
+      // …and the two with a shelf, which is where the wording came from.
+      // Their import row is listed after the fallback, never instead of it.
+      ['maps', mapOptions().slice(0, 1)],
+      ['placements', placementOptions()],
+      ['sounds', soundImportOptions().slice(0, 1)],
+    ];
+
+    for (const [what, options] of empties) {
+      expect(options.length, what).toBe(1);
+      const [label, value] = options[0];
+      expect(String(label), what).toMatch(/^\(no .+ yet\)$/);
+      // The VALUE does not change with the words: an unfinished block
+      // generates nothing, whatever its one row says.
+      expect(value, what).toBe('');
+    }
+  });
+});
+
+describe('a live dropdown', () => {
+  // What a list looks like while a file is still loading: the block is built,
+  // its value is set, and the thing that value names has not been read yet.
+  let listed: Array<[string, string]> = [];
+  const field = () => {
+    const made = new Blockly.FieldDropdown([['(none)', '']]);
+    bindLiveOptions(made, () => listed);
+    return made;
+  };
+
+  it('asks for the options every time, rather than trusting a cache', () => {
+    // Blockly caches the generated list and hands the CACHED one to
+    // `doValueUpdate_`, which is where the label comes from. A live list
+    // generated at block-construction time is a snapshot of a half-loaded file.
+    const dropdown = field();
+    listed = [['Player', 'actors/player']];
+    expect(dropdown.getOptions(true)).toEqual([['Player', 'actors/player']]);
+    listed = [['Coin', 'actors/coin']];
+    expect(dropdown.getOptions(true)).toEqual([['Coin', 'actors/coin']]);
+  });
+
+  it('names the value it holds once something explains it', () => {
+    // The reported bug: a `create ⟨actor⟩ in map` naming an actor the list
+    // had not yet heard of drew the FIRST actor's name. The value was right —
+    // the game ran with the right actor, and the menu opened on the right row
+    // — and only the label was wrong, because Blockly resolves it once,
+    // against the list as it was, and leaves it alone when it misses.
+    listed = [['Player', 'actors/player']];
+    const dropdown = field();
+    dropdown.setValue('actors/player');
+    expect(dropdown.getText()).toBe('Player');
+
+    // Loaded before the actor file it names is listed…
+    dropdown.setValue('actors/blob');
+    expect(dropdown.getText()).toBe('Player');
+
+    // …and read again once it is.
+    listed = [
+      ['Blob', 'actors/blob'],
+      ['Player', 'actors/player'],
+    ];
+    expect(dropdown.getText()).toBe('Blob');
+  });
+
+  it('keeps the name it had for a value nothing explains', () => {
+    // A value naming something genuinely gone. Showing the raw value or an
+    // empty chip would be worse than a stale name: the block still says what it
+    // was set to, and the menu is where the truth is.
+    listed = [['Player', 'actors/player']];
+    const dropdown = field();
+    dropdown.setValue('actors/player');
+    listed = [['Coin', 'actors/coin']];
+
+    expect(dropdown.getValue()).toBe('actors/player');
+    expect(dropdown.getText()).toBe('Player');
+  });
+});
+
+describe('actorFieldOptions', () => {
+  it('still keys a module actor by its path', () => {
+    setProjectActors([['Player', 'actors/player']]);
+    addActorThumbnails({'actors/player': PIXEL});
+    const [option] = actorFieldOptions();
+
+    expect(option).toEqual([
+      {src: PIXEL, width: 24, height: 24, alt: 'Player'},
+      'actors/player',
+    ]);
+  });
+});

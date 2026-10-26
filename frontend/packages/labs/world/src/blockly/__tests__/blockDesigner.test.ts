@@ -1,0 +1,517 @@
+// `define block` — the generalized rule member, designed as the block it makes.
+//
+// What matters is that ONE authored signature drives three things that used to
+// be derived separately: the member's name, its parameters, and the shape of
+// the call-site block. If they can drift, the block a learner designs is not
+// the block they get.
+
+import {describe, expect, it} from 'vitest';
+
+import {
+  buildDomainPalette,
+  DOMAIN_BLOCKS,
+  SIGNATURE_CATEGORY,
+} from '../domainBlocks';
+import {
+  isActorScoped,
+  paramTypeOf,
+  SIGNATURE_ARGUMENT,
+} from '../extensions/blockDesigner';
+import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
+import {registerProjectRules} from '../ruleRegistry';
+import {shadowsFor} from '../valueShadow';
+
+// The palette and the registry go together and always did: the editor
+// registers the project's rules and builds the palette from the same list, in
+// the same breath. It has to be said now, because a member block whose rule the
+// registry cannot find generates NOTHING — that is how a deleted rule stops
+// taking the whole project down with it (domainBlocks, `refResolves`).
+const paletteFor = (meta: ReturnType<typeof parseRuleMeta>) => {
+  registerProjectRules(meta ? [meta] : []);
+  return buildDomainPalette(meta ? [meta] : []);
+};
+
+/** A `.rule` whose only member is a designed block. */
+const designed = (
+  parts: unknown[],
+  returns = 'none',
+  variables: Array<{id: string; name: string; type: string}> = [],
+  description = '',
+) =>
+  parseRuleMeta(
+    'rules/push',
+    JSON.stringify({
+      variables,
+      blocks: {
+        blocks: [
+          {
+            type: 'world_rule',
+            fields: {NAME: 'Push', ABILITY: 'Has Push'},
+            next: {
+              block: {
+                type: 'world_rule_block',
+                fields: {RETURNS: returns, DESCRIPTION: description},
+                extraState: {parts},
+              },
+            },
+          },
+        ],
+      },
+    }),
+  )!;
+
+const PUSH_PARTS = [
+  {kind: 'label', text: 'push'},
+  {kind: 'param', type: 'number', var: 'a'},
+  {kind: 'label', text: 'toward'},
+  {kind: 'param', type: 'actor', var: 'b'},
+];
+const PUSH_VARS = [
+  {id: 'a', name: 'amount', type: 'Number'},
+  {id: 'b', name: 'target', type: 'Actor'},
+];
+
+describe('a designed block', () => {
+  it('is named by its labels, joined', () => {
+    // There is no NAME field: the name IS the fixed wording of the block it
+    // draws, which is what makes the definition look like the thing defined.
+    const meta = designed(PUSH_PARTS, 'none', PUSH_VARS);
+    expect(meta.actions[0].name).toBe('push toward');
+    expect(meta.actions[0].id).toBe('push_toward');
+  });
+
+  it('takes its parameters from the param parts, in order', () => {
+    const meta = designed(PUSH_PARTS, 'none', PUSH_VARS);
+    expect(meta.actions[0].params).toEqual([
+      {name: 'amount', type: 'number'},
+      {name: 'target', type: 'actor'},
+    ]);
+  });
+
+  it('is an action or a query, by its RETURNS field alone', () => {
+    // The one thing `define action` and `define query` differed in.
+    expect(designed(PUSH_PARTS, 'none', PUSH_VARS).queries).toHaveLength(0);
+    const asQuery = designed(PUSH_PARTS, 'boolean', PUSH_VARS);
+    expect(asQuery.actions).toHaveLength(0);
+    expect(asQuery.queries[0].returns).toBe('boolean');
+  });
+
+  it('keeps the whole arrangement, not just the name and the params', () => {
+    // The call site is built from this, so "label param label param" survives.
+    expect(designed(PUSH_PARTS, 'none', PUSH_VARS).actions[0].parts).toEqual([
+      {kind: 'label', text: 'push'},
+      {kind: 'param', name: 'amount', type: 'number'},
+      {kind: 'label', text: 'toward'},
+      {kind: 'param', name: 'target', type: 'actor'},
+    ]);
+  });
+
+  it('builds a call-site block that reads like the design', () => {
+    // `push %1 toward %2 on %3` — the arrangement, not `name arg arg`.
+    const meta = designed(PUSH_PARTS, 'none', PUSH_VARS);
+    const {blocks} = paletteFor(meta);
+    const call = blocks.find(
+      b => b.type === 'world_do_Push_PushTowardAction',
+    ) as {message0?: string} | undefined;
+    expect(call?.message0).toMatch(/^push %\d toward %\d$/);
+  });
+
+  it('gives a position parameter one socket, typed as an x and a y', () => {
+    // The third way to say a two-number value, and the only one that gives up
+    // nothing. `vector` is one socket that takes any vector, but its literal
+    // is an arrow grid — a direction, not a place. `point` is an x and a y a
+    // learner can type, but they are two INDEPENDENT number sockets, so
+    // nothing reporting a whole vector can be dropped in.
+    //
+    // A position is a VECTOR socket wearing `vector x ⟨⟩ y ⟨⟩` as its shadow:
+    // typed as two numbers, and still replaceable by anything that reports a
+    // vector. It is what `let position` in an arguments row declares.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'go to'},
+        {kind: 'param', type: 'position', var: 'p', default: {x: 3, y: 4}},
+      ],
+      'none',
+      [{id: 'p', name: 'where', type: 'Vector'}],
+    );
+    const {blocks} = paletteFor(meta);
+    const type = 'world_do_Push_GoToAction';
+    const call = blocks.find(b => b.type === type) as
+      | {args0?: Array<{type: string; name?: string; check?: string}>}
+      | undefined;
+
+    // ONE socket, and it takes a vector — not two number sockets.
+    expect(call?.args0).toHaveLength(1);
+    expect(call?.args0?.[0]).toMatchObject({
+      type: 'input_value',
+      name: 'VALUE',
+      check: 'Vector',
+    });
+    // …wearing the x/y builder, with the author's default in each socket.
+    expect(shadowsFor(type)).toEqual([
+      {
+        name: 'VALUE',
+        shadow: {
+          type: 'world_vector_of',
+          inputs: {
+            X: {shadow: {type: 'math_number', fields: {NUM: 3}}},
+            Y: {shadow: {type: 'math_number', fields: {NUM: 4}}},
+          },
+        },
+      },
+    ]);
+  });
+
+  it('starts a call site with whatever the author built, not just a value', () => {
+    // The general form of a default. `argument` can only carry what a field
+    // holds — a number, a word, a choice — so the shapes in `typedValueInputs`
+    // chose a shadow to put it in. An argument declared by a `let` carries the
+    // whole BLOCK that was plugged into it, so a default is anything the author
+    // could make: `this actor`, `any ⟨Coin⟩`, or an arithmetic tree.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'nudge'},
+        {
+          kind: 'param',
+          type: 'number',
+          var: 'n',
+          // The SOCKET as the author left it — a block they plugged in,
+          // which stays a block on the row and is flattened into a shadow
+          // only here, where it becomes a default.
+          shadow: {
+            block: {
+              type: 'math_arithmetic',
+              fields: {OP: 'ADD'},
+              inputs: {
+                A: {block: {type: 'math_number', fields: {NUM: 2}}},
+                B: {shadow: {type: 'math_number', fields: {NUM: 3}}},
+              },
+            },
+          },
+        },
+      ],
+      'none',
+      [{id: 'n', name: 'amount', type: 'Number'}],
+    );
+    const type = 'world_do_Push_NudgeAction';
+    paletteFor(meta);
+
+    expect(shadowsFor(type)).toEqual([
+      {
+        name: 'VALUE',
+        shadow: {
+          type: 'math_arithmetic',
+          fields: {OP: 'ADD'},
+          inputs: {
+            A: {shadow: {type: 'math_number', fields: {NUM: 2}}},
+            B: {shadow: {type: 'math_number', fields: {NUM: 3}}},
+          },
+        },
+      },
+    ]);
+  });
+
+  it('still gives that socket the type check its parameter asks for', () => {
+    // The author-built shadow goes into the same socket the shapes below would
+    // have made, and a socket that accepted anything would take a number where
+    // an actor was meant.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'chase'},
+        {
+          kind: 'param',
+          type: 'actor',
+          var: 'a',
+          shadow: {shadow: {type: 'world_this_actor'}},
+        },
+      ],
+      'none',
+      [{id: 'a', name: 'who', type: 'Actor'}],
+    );
+    const {blocks} = paletteFor(meta);
+    const call = blocks.find(b => b.type === 'world_do_Push_ChaseAction') as
+      | {args0?: Array<{check?: string}>}
+      | undefined;
+
+    expect(call?.args0?.[0]).toMatchObject({check: 'Actor'});
+  });
+
+  it('gives an enum parameter the dropdown itself, not a socket', () => {
+    // A parameter typed by an enum (specs/ENUMS.md) is a FIELD on the block:
+    // the choices are the whole of what the argument can be, so there is
+    // nothing for a socket to accept that a dropdown cannot say. Naming a
+    // choice where a socket IS wanted — a comparison, an `emit … with` — is
+    // what the enum's own chip block is for.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'press'},
+        {kind: 'param', type: 'enum:Engine#Key', var: 'k'},
+      ],
+      'none',
+      [{id: 'k', name: 'key', type: 'String'}],
+    );
+    const {blocks} = paletteFor(meta);
+    const call = blocks.find(b => b.type === 'world_do_Push_PressAction') as
+      | {args0?: Array<{type: string; name?: string; check?: string}>}
+      | undefined;
+
+    expect(call?.args0?.[0]).toMatchObject({
+      type: 'field_dropdown',
+      name: 'VALUE',
+    });
+    expect(
+      (call?.args0?.[0] as {options?: Array<[string, string]>}).options,
+    ).toContainEqual(['space', 'space']);
+    // No socket, so nothing to seed.
+    expect(shadowsFor('world_do_Push_PressAction') ?? []).toEqual([]);
+  });
+
+  it('emits the chosen word from the field', () => {
+    // The choice is read off the block, not pulled through a socket, and what
+    // it stands for is the word itself — an enum is strings by the time any
+    // code runs.
+    const meta = designed(
+      [
+        {kind: 'label', text: 'press'},
+        {kind: 'param', type: 'enum:Engine#Key', var: 'k'},
+      ],
+      'none',
+      [{id: 'k', name: 'key', type: 'String'}],
+    );
+    const {blocks} = paletteFor(meta);
+    const call = blocks.find(b => b.type === 'world_do_Push_PressAction') as {
+      generator: {
+        javascript: (
+          block: unknown,
+          generator: unknown,
+          env: unknown,
+        ) => string;
+      };
+    };
+
+    const code = call.generator.javascript(
+      {getFieldValue: (name: string) => (name === 'VALUE' ? 'up arrow' : null)},
+      {valueToCode: () => '', definitions_: {}},
+      {},
+    );
+
+    expect(code).toContain('"up arrow"');
+  });
+
+  it('offers a dropdown of the enum’s choices on that chip', () => {
+    // The chip is one block per enum, built with the palette. Its options are
+    // the enum's, so what the argument offers is what the enum declares.
+    const chip = DOMAIN_BLOCKS.find(
+      b => b.type === 'world_choice_Engine_Key',
+    ) as
+      | {args0?: Array<{options?: Array<[string, string]>}>; output?: string}
+      | undefined;
+
+    expect(chip?.output).toBe('String');
+    expect(chip?.args0?.[0]?.options).toContainEqual(['space', 'space']);
+    expect(chip?.args0?.[0]?.options).toContainEqual(['A', 'a']);
+  });
+
+  it('declares the member in the generated module', () => {
+    const meta = designed(PUSH_PARTS, 'none', PUSH_VARS);
+    expect(ruleMetaToModule(meta)).toContain(
+      'export const PushTowardAction = rule.addAction("push_toward"',
+    );
+  });
+
+  it('builds a query’s call site from the design too, not just an action’s', () => {
+    // A query used to be assembled as "<first argument> name <rest>", which is a
+    // sensible default and not what somebody who arranged the block asked for.
+    // `<faller> rest height of <ground>` is the arrangement gravity authors.
+    const meta = designed(
+      [
+        {kind: 'param', type: 'actor', var: 'a'},
+        {kind: 'label', text: 'rest height of'},
+        {kind: 'param', type: 'actor', var: 'b'},
+      ],
+      'number',
+      [
+        {id: 'a', name: 'faller', type: 'Actor'},
+        {id: 'b', name: 'ground', type: 'Actor'},
+      ],
+    );
+    const {blocks} = paletteFor(meta);
+    const call = blocks.find(
+      b => b.type === 'world_query_Push_RestHeightOfQuery',
+    ) as {message0?: string} | undefined;
+    expect(call?.message0).toMatch(/^%\d rest height of %\d$/);
+  });
+
+  it('leads an actor query with its subject, then the design', () => {
+    // The arrangement describes the block's own words; who it is asked of is
+    // the socket in front of them — "this actor is on the ground?".
+    const meta = parseRuleMeta(
+      'rules/push',
+      JSON.stringify({
+        variables: [],
+        blocks: {
+          blocks: [
+            {type: 'world_rule', fields: {NAME: 'Push', ABILITY: 'Has Push'}},
+            {
+              type: 'world_rule_trait',
+              fields: {NAME: 'Pushable'},
+              next: {
+                block: {
+                  type: 'world_rule_block',
+                  fields: {RETURNS: 'boolean'},
+                  extraState: {
+                    parts: [{kind: 'label', text: 'is on the ground?'}],
+                  },
+                },
+              },
+            },
+          ],
+        },
+      }),
+    )!;
+    const {blocks} = paletteFor(meta);
+    const call = blocks.find(
+      b => b.type === 'world_query_Push_IsOnTheGroundQuery',
+    ) as {message0?: string} | undefined;
+    expect(call?.message0).toBe('%1 is on the ground?');
+  });
+
+  it('gives the block it defines the description its author wrote', () => {
+    // The tooltip someone reads when they hover it in the toolbox months later,
+    // having forgotten what "push toward" meant. The definition is the only
+    // place that knows.
+    const meta = designed(
+      PUSH_PARTS,
+      'none',
+      PUSH_VARS,
+      'Shove an actor toward another one.',
+    );
+    expect(meta.actions[0].description).toBe(
+      'Shove an actor toward another one.',
+    );
+    const {blocks} = paletteFor(meta);
+    const call = blocks.find(
+      b => b.type === 'world_do_Push_PushTowardAction',
+    ) as {tooltip?: string} | undefined;
+    expect(call?.tooltip).toBe('Shove an actor toward another one.');
+  });
+
+  it('falls back to the member’s own name when there is no description', () => {
+    const meta = designed(PUSH_PARTS, 'none', PUSH_VARS);
+    expect(meta.actions[0].description).toBeUndefined();
+    const {blocks} = paletteFor(meta);
+    const call = blocks.find(
+      b => b.type === 'world_do_Push_PushTowardAction',
+    ) as {tooltip?: string} | undefined;
+    expect(call?.tooltip).toBe('push toward');
+  });
+
+  it('knows whether it is defining a member with a subject', () => {
+    // Placement decides it: under a `define trait` the block it makes is asked
+    // OF an actor and grows a socket nobody wrote into the signature — which is
+    // what the drawn preview has to show, or the preview is a different block
+    // from the one being defined.
+    expect(
+      isActorScoped({getRootBlock: () => ({type: 'world_rule_trait'})}),
+    ).toBe(true);
+    expect(isActorScoped({getRootBlock: () => ({type: 'world_rule'})})).toBe(
+      false,
+    );
+    // A definition floating on its own workspace is its own root.
+    expect(
+      isActorScoped({getRootBlock: () => ({type: 'world_rule_block'})}),
+    ).toBe(false);
+  });
+
+  it('answers for an event too, which decides its hat’s shape', () => {
+    // It used to return false for `define event` unconditionally, on the
+    // grounds that a hat's subject is the hat's rather than part of the
+    // phrasing. The preview then drew `when ⟨this actor⟩ …` for every event —
+    // including one declared on the RULE, whose hat takes no actor at all
+    // because the event is about the world (`EventMeta.scope`).
+    expect(
+      isActorScoped({
+        type: 'world_rule_event',
+        getRootBlock: () => ({type: 'world_rule_trait'}),
+      }),
+    ).toBe(true);
+    expect(
+      isActorScoped({
+        type: 'world_rule_event',
+        getRootBlock: () => ({type: 'world_rule'}),
+      }),
+    ).toBe(false);
+  });
+
+  it('offers only item blocks that are actually registered', () => {
+    // Blockly builds a flyout by TYPE NAME and throws on one it cannot find —
+    // at the moment the drawer is opened, not at startup. This is the check
+    // that a renamed or dropped item block is caught here instead.
+    const registered = new Set(DOMAIN_BLOCKS.map(block => block.type));
+    for (const type of SIGNATURE_CATEGORY.blocks ?? []) {
+      expect(registered.has(type as string), String(type)).toBe(true);
+    }
+  });
+
+  it('reads the argument item back as the type its dropdown names', () => {
+    // The arguments row is the only writer of a signature, so this mapping is
+    // what makes a design survive being opened and closed. The type is a
+    // FIELD, so the block is read rather than just its type.
+    for (const type of ['number', 'boolean', 'string', 'vector', 'actor']) {
+      expect(
+        paramTypeOf({
+          type: 'world_signature_argument',
+          getFieldValue: () => type,
+        }),
+      ).toBe(type);
+    }
+  });
+
+  it('reads an enum-typed argument as that enum, whichever enum', () => {
+    // No item of its own: an enum-typed parameter is an argument whose type
+    // happens to be a named set of words, and the dropdown holds them all.
+    expect(
+      paramTypeOf({
+        type: 'world_signature_argument',
+        getFieldValue: () => 'enum:Engine#Key',
+      }),
+    ).toBe('enum:Engine#Key');
+    // …and a label is a parameter of no type at all.
+    expect(
+      paramTypeOf({type: 'world_signature_text', getFieldValue: () => null}),
+    ).toBeUndefined();
+  });
+
+  it('ignores a signature with no wording at all', () => {
+    // Parameters alone give nothing to call the member, and nothing to read.
+    expect(
+      designed([{kind: 'param', type: 'number', var: 'a'}]).actions,
+    ).toEqual([]);
+  });
+});
+
+describe('the argument block’s type', () => {
+  // `define block` writes its signature as `argument ⟨type⟩ ⟨name⟩` blocks, and
+  // the dropdown stores the PARAMETER TYPE itself — plain or `enum:`-prefixed.
+  // Nothing infers which kind it is, because inferring was the bug:
+  // `enumParamType` prefixes whatever it is handed, so asking it about
+  // `number` answered `enum:number`. A parameter whose type is wrong rebinds
+  // to a new variable, and the body's getters stop pointing at it.
+  const item = (type: string) => ({
+    type: SIGNATURE_ARGUMENT,
+    getFieldValue: (name: string) => (name === 'TYPE' ? type : null),
+  });
+
+  it('reads a plain type as itself', () => {
+    expect(paramTypeOf(item('number'))).toBe('number');
+    expect(paramTypeOf(item('actor'))).toBe('actor');
+  });
+
+  it('reads an enum type as itself, already prefixed', () => {
+    expect(paramTypeOf(item('enum:Engine#Key'))).toBe('enum:Engine#Key');
+  });
+
+  it('is not a parameter at all when nothing is chosen', () => {
+    expect(paramTypeOf(item(''))).toBeUndefined();
+  });
+});

@@ -1,0 +1,105 @@
+.editor {
+  padding: 6px;
+  user-select: none;
+  touch-action: none;
+}
+
+.dial {
+  display: block;
+  cursor: crosshair;
+  border-radius: 50%;
+}
+
+/* SVG colors via `var()` (theme-reactive) — resolved through the CSS stroke/fill
+   properties, which SVG presentation attributes cannot do. */
+
+/* The ring of common angles around the outside — one part per multiple of 45. */
+.segment {
+  fill: var(--background-neutral-secondary);
+  stroke: var(--borders-neutral-solid);
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+.segment:hover {
+  fill: var(--background-neutral-tertiary);
+}
+
+/* The browser's own outline is a rectangle around the bounding box, which for a
+   wedge is mostly not the wedge. `focusRing` below is drawn in its place. */
+.segment:focus,
+.segment:focus-visible {
+  outline: none;
+}
+
+/* One shape, painted after the whole ring so no neighbour covers its edges. */
+.focusRing {
+  fill: none;
+  stroke: var(--background-brand-purple-primary);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+/* The one the angle is currently sitting on, when it is one of them. */
+.segmentOn {
+  fill: var(--background-brand-purple-primary);
+}
+
+.seat {
+  fill: var(--text-neutral-secondary);
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.face {
+  fill: var(--background-neutral-tertiary);
+  stroke: var(--borders-neutral-solid);
+  stroke-width: 1;
+}
+
+.tick {
+  stroke: var(--borders-neutral-primary);
+  stroke-width: 1;
+}
+
+/* Every quarter turn, so the four directions read at a glance. */
+.quarter {
+  stroke: var(--borders-neutral-strong);
+  stroke-width: 2;
+}
+
+.arrow {
+  stroke: var(--background-brand-purple-primary);
+  fill: var(--background-brand-purple-primary);
+  stroke-width: 2;
+}
+
+.handle {
+  fill: var(--background-brand-purple-primary);
+  stroke: var(--background-neutral-primary);
+  stroke-width: 2;
+}
+
+/* Direct entry below the dial. */
+.inputs {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--text-neutral-primary);
+}
+
+.inputs input {
+  width: 56px;
+  box-sizing: border-box;
+  padding: 2px 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font: inherit;
+  text-align: right;
+}

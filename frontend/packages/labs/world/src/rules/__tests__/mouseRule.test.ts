@@ -1,0 +1,128 @@
+// "Reads the Mouse" — the keyboard's rule, one noun along.
+//
+// The point of these is the PARITY. `rules/input.rule` is checked in
+// blockly/__tests__/inputRule, and everything here has a line there answering
+// to it: two world events for the thing that happened to nobody, a trait for
+// the actors that asked to hear it, and one step in `sense`. What is checked is
+// that the mouse really is the same shape and not merely described as it —
+// because if it drifts, a learner who has read one rule has to read the other.
+
+import {describe, expect, it} from 'vitest';
+
+import {parseRuleMeta, ruleMetaToModule} from '../../blockly/ruleMeta';
+import {STOCK_RULES} from '../stock';
+import {mouseRule} from '../stock/mouse';
+
+const meta = parseRuleMeta('rules/mouse', mouseRule)!;
+const module_ = ruleMetaToModule(meta);
+
+describe('rules/mouse.rule', () => {
+  it('declares the button events at rule level, so they are the world’s', () => {
+    // A click belongs to nobody until somebody claims it, exactly as a keypress
+    // does: raised once a frame, handled with no actor handed over.
+    expect(meta.name).toBe('Mouse');
+    expect(meta.ability).toBe('Reads the Mouse');
+    const worldEvents = meta.events.filter(event => event.scope === 'world');
+    expect(worldEvents.map(event => event.ref.exportName)).toEqual([
+      'IsPressedEvent',
+      'IsReleasedEvent',
+    ]);
+    expect(module_).toContain('export const IsPressedEvent = rule.addEvent(');
+  });
+
+  it('signs its events with the button, so a handler filters on one', () => {
+    // The button is a parameter typed by an enum, which is what makes the hat
+    // carry a dropdown and run for that button alone (specs/ENUMS.md).
+    expect(meta.events[0].parts).toEqual([
+      {
+        kind: 'param',
+        name: 'pressed button',
+        type: 'enum:Engine#MouseButton',
+      },
+      {kind: 'label', text: 'is pressed'},
+    ]);
+  });
+
+  it('offers a trait for an actor that wants to hear them too', () => {
+    // The subscription, and the reason it exists: only the actors that elected
+    // it are walked. Without it the step would raise a click on every actor in
+    // the level every frame just to have somebody to raise it for.
+    // Three, and the third is deliberately not a fourth event on the other
+    // two: a thing you SCROLL is not a thing you click. A Button must not move
+    // when the wheel turns over it (specs/UI_ACTORS.md).
+    expect(meta.traits.map(trait => trait.name)).toEqual([
+      'Takes Mouse Input',
+      'Can Be Clicked',
+      'Can Be Scrolled',
+    ]);
+    const own = meta.events.filter(
+      event => event.ownerTraitId === 'Takes_Mouse_Input',
+    );
+    expect(own.map(event => event.name)).toEqual([
+      'presses mouse button',
+      'releases mouse button',
+    ]);
+    expect(own.map(event => event.scope)).toEqual(['actor', 'actor']);
+  });
+
+  it('offers a second trait for an actor that wants only its own clicks', () => {
+    // Two traits because they are two questions. `Takes Mouse Input` hears
+    // every press in the level — a scoreboard counting them, a gun firing
+    // wherever it is aimed. `Can Be Clicked` hears the presses that landed on
+    // this actor, which is what a button, a card, or a coin is asking.
+    const clicked = meta.events.filter(
+      event => event.ownerTraitId === 'Can_Be_Clicked',
+    );
+    expect(clicked.map(event => event.name)).toEqual(['is clicked with']);
+    expect(clicked[0].scope).toBe('actor');
+    // Signed with the button, as the other three are: `is clicked with ⟨right⟩`
+    // is one hat, not a test written inside a handler for all of them.
+    expect(clicked[0].parts).toEqual([
+      {kind: 'label', text: 'is clicked with'},
+      {kind: 'param', name: 'pressed button', type: 'enum:Engine#MouseButton'},
+    ]);
+  });
+
+  it('decides what was clicked from where the actor is and how big it is', () => {
+    // The hit test is a BOX — the pointer within half the drawn size of the
+    // middle, on both axes — which is the extent `collisions`, `bounds` and
+    // `wrap` all use. What this pins is that it reads the drawn size rather
+    // than the intrinsic one: an actor at scale 3 is clickable where it is
+    // seen, not where its unscaled picture would have been.
+    expect(mouseRule).toContain('world_mouse_position');
+    expect(mouseRule).toContain('world_get_Space_IntrinsicSizeProperty');
+    expect(mouseRule).toContain('world_get_Space_ScaleProperty');
+    // And that it is a press, not a release: a button let go somewhere else is
+    // not a click of the thing it went down on.
+    const pressBlock = mouseRule.slice(mouseRule.indexOf('"PRESSED"'));
+    const releaseBlock = mouseRule.slice(mouseRule.indexOf('"RELEASED"'));
+    expect(pressBlock).toContain('IsClickedWithEvent');
+    expect(releaseBlock).not.toContain('IsClickedWithEvent');
+  });
+
+  it('senses, before anything decides on what it found', () => {
+    // Both steps: the buttons, and the wheel beside them. Sensing is reading
+    // what the hand did, and neither decides anything about it.
+    expect(meta.steps).toHaveLength(2);
+    for (const step of meta.steps) {
+      expect(step.order).toEqual({kind: 'phase', phase: 'sense'});
+    }
+  });
+
+  it('reads the buttons that changed, not the keys', () => {
+    // The mistake this catches is a copied `forEachKey`, which would compile,
+    // run, and raise a mouse event on every keystroke.
+    expect(mouseRule).toContain('world_for_each_button');
+    expect(mouseRule).not.toContain('world_for_each_key');
+  });
+
+  it('needs no other rule, and no world needs to name it', () => {
+    // Reading the mouse is the World's, as the keyboard is, so this rule
+    // requires nothing. And no world names it: holding the file is what puts a
+    // rule in play (blockly/projectModules), which is why the flag that used
+    // to say so for the input rules alone is gone.
+    expect(meta.requires).toEqual([]);
+    const stock = STOCK_RULES.find(rule => rule.id === 'mouse');
+    expect(stock?.provides).toEqual(['Takes Mouse Input', 'Can Be Clicked']);
+  });
+});

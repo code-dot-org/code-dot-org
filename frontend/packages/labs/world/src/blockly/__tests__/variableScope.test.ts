@@ -1,0 +1,330 @@
+// Which names a block can see from where it sits.
+//
+// A Blockly variable belongs to the WORKSPACE — the map is flat, and a getter's
+// dropdown offered every name of its flavour whether or not the block could
+// reach it. That was nearly true while the only variables in the lab were the
+// ones a loop bound and the ones a rule took as parameters, because there was
+// no way to make a third kind.
+//
+// `with ⟨number n⟩ as ⟨0⟩ do` makes it false: the name exists inside one
+// mouth, and offering it outside offers a name that reads a DIFFERENT variable
+// — the module-level `var` Blockly writes for the same id.
+//
+// THE RULE IS ADDITIVE. A name a binder declares is visible inside it and
+// nowhere else; a name nobody declares is visible everywhere, because that is
+// what the stock rules' free locals are and nothing has migrated them. So
+// `with` scopes, and what was global stays global.
+
+import * as Blockly from 'blockly/core';
+import {beforeEach, describe, expect, it} from 'vitest';
+
+import {BODY_OWNER_ID} from '../bodySurfaces';
+import {idsInScope, registerEventLocals} from '../variableScope';
+
+/**
+ * The two messages Blockly's own variable menu ends with.
+ *
+ * Set here because these cases build a bare workspace rather than the editor's,
+ * and `FieldVariable` reads them the moment a field takes a value — long
+ * before anything asks what is in scope.
+ */
+const defineMessages = () => {
+  Blockly.Msg.RENAME_VARIABLE = 'Rename variable…';
+  Blockly.Msg.DELETE_VARIABLE = 'Delete the %1 variable';
+};
+
+/** A workspace with the two blocks these cases need, defined minimally. */
+const define = () => {
+  Blockly.defineBlocksWithJsonArray([
+    {
+      // THE REAL TYPE, redefined here with only the parts the scope rule
+      // reads. A block the binder table does not name binds nothing, and its
+      // variable is then a free one that everything can see — which is the
+      // additive rule working, and would make these cases pass for the wrong
+      // reason (`variableScope`).
+      type: 'world_let_number',
+      message0: 'let %1 be %2',
+      args0: [
+        {
+          type: 'field_variable',
+          name: 'VAR',
+          variableTypes: ['Number'],
+          defaultType: 'Number',
+        },
+        {type: 'input_value', name: 'VALUE'},
+      ],
+      previousStatement: true,
+      nextStatement: true,
+    },
+    {
+      type: 'reader',
+      message0: 'read',
+      previousStatement: true,
+      nextStatement: true,
+      output: null,
+    },
+    {
+      // A block that WRITES a variable, which is what makes one the file's.
+      // The map holds every default the toolbox ever drew, and a getter
+      // dragged out of the drawer carries one — so a READ cannot be what makes
+      // a name, or that getter would turn `flag` into one.
+      type: 'variables_set_Number',
+      message0: 'set %1 to something',
+      args0: [
+        {
+          type: 'field_variable',
+          name: 'VAR',
+          variableTypes: ['Number'],
+          defaultType: 'Number',
+        },
+      ],
+      previousStatement: true,
+      nextStatement: true,
+    },
+    {
+      // An event's hat, with only the part the scope rule reads: a handler's
+      // body is the chain below it, and the hat has no previous connection.
+      type: 'world_on_Test_TypedEvent',
+      message0: 'when typed',
+      nextStatement: true,
+    },
+  ]);
+};
+
+let workspace: Blockly.Workspace;
+
+/** `let ⟨name⟩ be …`, and the variable's id. */
+const withLocal = (name: string) => {
+  const block = workspace.newBlock('world_let_number');
+  const variable = workspace.getVariableMap().createVariable(name, 'Number');
+  block.setFieldValue(variable.getId(), 'VAR');
+  return {block, id: variable.getId()};
+};
+
+describe('what a block can see', () => {
+  beforeEach(() => {
+    defineMessages();
+    define();
+    workspace = new Blockly.Workspace();
+  });
+
+  it('sees a name declared by a row above it', () => {
+    const {block, id} = withLocal('n');
+    const below = workspace.newBlock('reader');
+    block.nextConnection!.connect(below.previousConnection!);
+
+    expect(idsInScope(below).has(id)).toBe(true);
+  });
+
+  it('does not see it from another stack', () => {
+    // The whole claim. Before the scope rule this name was on the workspace
+    // and therefore in every dropdown in the file.
+    const {id} = withLocal('n');
+    const elsewhere = workspace.newBlock('reader');
+
+    expect(idsInScope(elsewhere).has(id)).toBe(false);
+  });
+
+  it('does not see it in the value it starts from', () => {
+    // `let n = n` is a different bug in every language that allows it.
+    const {block, id} = withLocal('n');
+    const seed = workspace.newBlock('reader');
+    block.getInput('VALUE')!.connection!.connect(seed.outputConnection!);
+
+    expect(idsInScope(seed).has(id)).toBe(false);
+  });
+
+  it('sees it from a row further down, not just the next one', () => {
+    const {block, id} = withLocal('n');
+    const first = workspace.newBlock('reader');
+    const second = workspace.newBlock('reader');
+    block.nextConnection!.connect(first.previousConnection!);
+    first.nextConnection!.connect(second.previousConnection!);
+
+    expect(idsInScope(second).has(id)).toBe(true);
+  });
+
+  it('sees every name declared above it, and none declared below', () => {
+    // Order is the whole of a declaration's scope. A row that could read a
+    // name made below it would generate a reference into the dead zone, which
+    // JavaScript throws on rather than answering undefined.
+    const first = withLocal('first');
+    const second = withLocal('second');
+    const below = workspace.newBlock('reader');
+    first.block.nextConnection!.connect(second.block.previousConnection!);
+    second.block.nextConnection!.connect(below.previousConnection!);
+
+    expect(idsInScope(below).has(first.id)).toBe(true);
+    expect(idsInScope(below).has(second.id)).toBe(true);
+    expect(idsInScope(second.block).has(first.id)).toBe(true);
+    expect(idsInScope(first.block).has(second.id)).toBe(false);
+  });
+
+  it('does not see a name nothing in the file writes', () => {
+    // THE TOOLBOX PUTS NAMES IN THE MAP. Every `let` and every getter in the
+    // flyout carries a default name, and Blockly makes the variable so the
+    // flyout can draw it — so the workspace's map holds `amount`, `flag`,
+    // `text` and the rest before a learner has dragged anything out.
+    //
+    // The additive rule offered them all, because a name no binder declares is
+    // one this treats as the file's own. A name NOTHING WRITES is not the
+    // file's own — and reading one cannot be what makes it, or a getter
+    // dragged out of the drawer would make `flag` a name by carrying it.
+    const ghost = workspace.getVariableMap().createVariable('amount', 'Number');
+    const block = workspace.newBlock('reader');
+
+    expect(idsInScope(block).has(ghost.getId())).toBe(false);
+  });
+
+  it('sees a name nothing declares, from anywhere', () => {
+    // The additive half, and the reason this could ship without migrating
+    // anything: every stock rule sets and reads free locals in its step
+    // bodies, and a strict scope would have taken them out of the dropdown of
+    // the rule that owns them.
+    const free = workspace.getVariableMap().createVariable('total', 'Number');
+    // …WRITTEN by a block, which is what a rule's free local is: set in a step
+    // body, and declared by nothing.
+    workspace
+      .newBlock('variables_set_Number')
+      .setFieldValue(free.getId(), 'VAR');
+    const {block} = withLocal('n');
+    const below = workspace.newBlock('reader');
+    block.nextConnection!.connect(below.previousConnection!);
+    const elsewhere = workspace.newBlock('reader');
+
+    expect(idsInScope(below).has(free.getId())).toBe(true);
+    expect(idsInScope(elsewhere).has(free.getId())).toBe(true);
+  });
+});
+
+describe('a `define block`’s parameters', () => {
+  /** The real type, with only the parts the scope rule reads. */
+  const defineHost = () => {
+    if (!Blockly.Blocks['world_rule_block']) {
+      Blockly.defineBlocksWithJsonArray([
+        {
+          type: 'world_rule_block',
+          message0: 'define block %1 do %2',
+          args0: [
+            {type: 'input_statement', name: 'ARGUMENTS'},
+            {type: 'input_statement', name: 'DO'},
+          ],
+          previousStatement: true,
+          nextStatement: true,
+        },
+      ]);
+    }
+  };
+
+  /** A head carrying one parameter, and a reader wherever the caller says. */
+  const withHead = (id: string, place: 'DO' | 'next') => {
+    defineMessages();
+    define();
+    defineHost();
+    const workspace = new Blockly.Workspace();
+    const where = workspace.getVariableMap().createVariable('where', 'Number');
+    const head = workspace.newBlock('world_rule_block', id);
+    // The parts a `define block` carries; the scope rule reads them off
+    // `saveExtraState`, which the real mutator provides.
+    (head as unknown as {saveExtraState: () => unknown}).saveExtraState =
+      () => ({
+        parts: [
+          {kind: 'param', type: 'number', var: where.getId(), name: 'where'},
+        ],
+      });
+    const reader = workspace.newBlock('reader');
+    if (place === 'DO') {
+      head.getInput('DO')?.connection?.connect(reader.previousConnection!);
+    } else {
+      head.nextConnection?.connect(reader.previousConnection!);
+    }
+    return {reader, id: where.getId()};
+  };
+
+  it('reach the body in the mouth it sits in, in the file', () => {
+    const {reader, id} = withHead('someMember', 'DO');
+    expect(idsInScope(reader).has(id)).toBe(true);
+  });
+
+  it('reach the body a SURFACE hangs off the head, which is its `next`', () => {
+    // The bug this closes, and it made every getter in every `define block`
+    // implementation draw `???`. A body surface does not nest the
+    // implementation in the head's mouth — it chains it below
+    // (`bodySurfaces.bodyOf`) — so parameters bound only over `DO` were in
+    // scope of a mouth that surface leaves empty.
+    const {reader, id} = withHead(BODY_OWNER_ID, 'next');
+    expect(idsInScope(reader).has(id)).toBe(true);
+  });
+
+  it('do NOT reach what follows the head anywhere else', () => {
+    // On the interface that same `next` is the member list — what the rule
+    // declares AFTER this one — so one member's parameters must not be in
+    // scope of the next member's body. The identity is what tells them apart.
+    const {reader, id} = withHead('someMember', 'next');
+    expect(idsInScope(reader).has(id)).toBe(false);
+  });
+});
+
+// What an event hands its handler is a LOCAL of the author's name, bound by
+// the hat over the rows below it (specs/EVENT_VALUES_PLAN.md). Matched on the
+// hat's own workspace by NAME, because the declaration is in another file and
+// there is no shared variable id.
+describe('what an event hat binds', () => {
+  beforeEach(() => {
+    defineMessages();
+    define();
+    workspace = new Blockly.Workspace();
+    registerEventLocals('world_on_Test_TypedEvent', [
+      {name: 'character', type: 'Number'},
+    ]);
+  });
+
+  it('is seen from the handler body', () => {
+    const hat = workspace.newBlock('world_on_Test_TypedEvent');
+    const variable = workspace
+      .getVariableMap()
+      .createVariable('character', 'Number');
+    const body = workspace.newBlock('reader');
+    hat.nextConnection!.connect(body.previousConnection!);
+
+    expect(idsInScope(body).has(variable.getId())).toBe(true);
+  });
+
+  it('is not seen anywhere else in the file', () => {
+    // The whole point of it being a local. A name the hat binds is the hat's,
+    // and a getter in another stack reads a different variable by that id.
+    const hat = workspace.newBlock('world_on_Test_TypedEvent');
+    const variable = workspace
+      .getVariableMap()
+      .createVariable('character', 'Number');
+    const body = workspace.newBlock('reader');
+    hat.nextConnection!.connect(body.previousConnection!);
+    const elsewhere = workspace.newBlock('reader');
+
+    expect(idsInScope(elsewhere).has(variable.getId())).toBe(false);
+  });
+
+  it('binds nothing when the file has no such name', () => {
+    // A getter enters a file by being dragged out of the hat's `+`. Until
+    // then the name is one of Blockly's potential variables and the file
+    // holds none, which is not a fault and not a warning.
+    const hat = workspace.newBlock('world_on_Test_TypedEvent');
+    const body = workspace.newBlock('reader');
+    hat.nextConnection!.connect(body.previousConnection!);
+
+    expect(idsInScope(body).size).toBe(0);
+  });
+
+  it('binds by flavour as well as by name', () => {
+    // `character` the word and `character` the actor are two variables, and
+    // the hat hands over the one its signature typed.
+    const hat = workspace.newBlock('world_on_Test_TypedEvent');
+    const other = workspace
+      .getVariableMap()
+      .createVariable('character', 'String');
+    const body = workspace.newBlock('reader');
+    hat.nextConnection!.connect(body.previousConnection!);
+
+    expect(idsInScope(body).has(other.getId())).toBe(false);
+  });
+});

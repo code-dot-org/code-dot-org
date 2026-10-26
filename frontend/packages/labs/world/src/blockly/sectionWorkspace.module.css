@@ -1,0 +1,14 @@
+/* The list-of-sections button, over the workspace's top right corner and
+   clear of its vertical scrollbar. It paints its own ground: an outlined
+   button is transparent, and the blocks scroll underneath it. */
+.outlineButton {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  z-index: 1;
+  background: var(--background-neutral-primary);
+}
+
+.outlineButton:hover {
+  background: var(--background-neutral-secondary, #f2f2f2);
+}

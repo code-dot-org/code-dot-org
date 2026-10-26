@@ -1,0 +1,76 @@
+.editor {
+  padding: 6px;
+  user-select: none;
+  touch-action: none;
+}
+
+/* The grid and the zoom-button column sit side by side. */
+.stage {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.grid {
+  display: block;
+  cursor: crosshair;
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-solid);
+}
+
+/* SVG colors via `var()` (theme-reactive) — resolved through the CSS stroke/fill
+   properties, which SVG presentation attributes cannot do. */
+.bg {
+  fill: var(--background-neutral-tertiary);
+}
+
+.line {
+  stroke: var(--borders-neutral-primary);
+  stroke-width: 1;
+}
+
+.axis {
+  stroke: var(--borders-neutral-primary);
+  stroke-width: 2;
+}
+
+.arrow {
+  stroke: var(--background-brand-purple-primary);
+  fill: var(--background-brand-purple-primary);
+}
+
+/* Plus / reset / minus, stacked vertically to the right of the grid. */
+.zoom {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Direct x/y entry below the grid — two compact fields, centered. */
+.inputs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.field {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--text-neutral-primary);
+}
+
+/* Keep the popup about as wide as the grid, not the input's browser default. */
+.field input {
+  width: 52px;
+  box-sizing: border-box;
+  padding: 2px 4px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font: inherit;
+}

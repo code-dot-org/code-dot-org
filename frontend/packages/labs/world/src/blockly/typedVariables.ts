@@ -1,0 +1,231 @@
+// The typed Blockly variables World Lab uses — the flavour of a value a variable
+// holds, so a getter of one type only plugs into a matching socket. Two consumers
+// share these, which is why they live in their own module (avoiding a cycle):
+//   • the `for each` loop's actor variable (domainBlocks), and
+//   • action/query PARAMETERS (the params mutator), which are variables the
+//     mutator manages so the body reads them with the matching typed getter.
+//
+// `actor` is one flavour reused by both a loop variable and an actor parameter —
+// a single `Actor` tag / `variables_get_Actor` getter, never duplicated.
+
+import {createTypedVariable, type TypedVariable} from '@code-dot-org/blockly';
+
+import {enumRefOfParamType} from './enums';
+import {scopedVariableDefaultExtension} from './extensions/scopedVariableDefault';
+import {
+  registerScopedVariableField,
+  SCOPED_VARIABLE_FIELD,
+} from './fields/scopedVariable';
+import {registerVariableNameField} from './fields/variableName';
+
+// BEFORE ANY FLAVOUR IS MADE, because each names this field in the JSON of the
+// blocks it defines, and a block naming a field Blockly has not been told
+// about fails to build at all.
+registerScopedVariableField();
+registerVariableNameField();
+
+/**
+ * What every flavour here has in common: a dropdown that offers the names the
+ * block can actually see.
+ *
+ * A Blockly variable belongs to the workspace, so the stock field lists every
+ * one of its flavour whether or not the block could reach it. That was nearly
+ * true while the only variables in the lab were the ones a loop bound and the
+ * ones a rule took as parameters; `with ⟨number n⟩ as ⟨0⟩ do` makes it false
+ * (`blockly/variableScope`).
+ */
+const scoped = {
+  readerFieldType: SCOPED_VARIABLE_FIELD,
+  // …and the rule that keeps `???` meaning ONE thing: a reader takes the first
+  // name it can see rather than none, so the empty answer is reserved for a
+  // scope that really is empty (`extensions/scopedVariableDefault`).
+  // THE OBJECT, not its name: an extension is registered by being handed to
+  // the driver with the block that carries it, so a block naming one by string
+  // alone fails to build with "Extension not found".
+  readerExtensions: [scopedVariableDefaultExtension],
+};
+
+/** The actor variable — a `for each` loop's binding, or an `actor` parameter. */
+export const ActorVariable: TypedVariable = createTypedVariable({
+  ...scoped,
+  type: 'Actor',
+  style: 'sprite_blocks',
+  // Not `actor`: the principal actor generates as the bare identifier `actor`, so
+  // a variable named `actor` would shadow it. The generator also reserves it.
+  defaultName: 'other',
+  tooltip:
+    'An actor held in a variable — e.g. the one a “for each” loop is on.',
+});
+
+// One flavour per parameter value type. EXPORTED as well as listed below,
+// because a list's loop binds one directly: `for each number ⟨n⟩ in ⟨scores⟩`
+// is a Number variable bound by a block that is not a parameter row. Each getter's output is checked to the
+// type, so reading a `number` parameter only fits a Number socket. The `type` is
+// the authored value type (matches an {@link ArgType}); the flavour's tag is its
+// PascalCase form (`variables_get_Number`).
+export const NumberVariable: TypedVariable = createTypedVariable({
+  ...scoped,
+  type: 'Number',
+  style: 'math_blocks',
+  defaultName: 'amount',
+  tooltip: 'A number passed to this action or query.',
+});
+export const BooleanVariable: TypedVariable = createTypedVariable({
+  ...scoped,
+  type: 'Boolean',
+  style: 'logic_blocks',
+  defaultName: 'flag',
+  tooltip: 'A true/false value passed to this action or query.',
+});
+export const StringVariable: TypedVariable = createTypedVariable({
+  ...scoped,
+  type: 'String',
+  style: 'text_blocks',
+  defaultName: 'text',
+  tooltip: 'Text passed to this action or query.',
+});
+/**
+ * A list of plain values — a loop's source, a rule's own scratch, a parameter.
+ *
+ * Its own flavour rather than a shape of another, because a list is the one
+ * thing in the language that a socket of another type must refuse: `⟨x⟩ + ⟨the
+ * high scores⟩` means nothing, where `⟨x⟩ + ⟨a number variable⟩` is the whole
+ * point of one (specs/LISTS.md).
+ */
+export const ListVariable: TypedVariable = createTypedVariable({
+  ...scoped,
+  type: 'List',
+  // `Array` is Blockly's own name for this check, and the reason to take it is
+  // `lists_create_with`: the literal with the mutator, which reports `Array`
+  // and which this lab reuses rather than building a mutator to say the same
+  // thing (specs/LISTS.md). The check is a string two sockets agree on and
+  // nothing a learner reads; the blocks all say "list".
+  check: 'Array',
+  // The color of the blocks that make and read one, which are the list blocks
+  // rather than any existing family.
+  style: 'sprite_blocks',
+  defaultName: 'items',
+  tooltip: 'A list of values — numbers, words or vectors.',
+});
+
+export const VectorVariable: TypedVariable = createTypedVariable({
+  ...scoped,
+  type: 'Vector',
+  style: 'location_blocks',
+  defaultName: 'vec',
+  tooltip: 'A vector passed to this action or query.',
+});
+
+/**
+ * The parameter flavours, keyed by authored value type — the order is the type
+ * dropdown's order. A param row binds `field_variable` to the flavour of its
+ * chosen type; the body reads it with `flavour.getterBlock`.
+ */
+export const PARAM_FLAVOURS: ReadonlyArray<{
+  type: string;
+  variable: TypedVariable;
+}> = [
+  {type: 'number', variable: NumberVariable},
+  {type: 'boolean', variable: BooleanVariable},
+  {type: 'string', variable: StringVariable},
+  {type: 'vector', variable: VectorVariable},
+  {type: 'actor', variable: ActorVariable},
+  {type: 'list', variable: ListVariable},
+];
+
+/**
+ * Look up a parameter flavour by its authored value type.
+ *
+ * An ENUM parameter is a string parameter (`blockly/enums`). Its choices decide
+ * what a dropdown offers; they do not make it a different kind of value, so the
+ * variable the body reads it with, and the type check on the socket it arrives
+ * through, are a string's — and everything downstream of here needs no notion
+ * of an enum at all.
+ */
+export const paramFlavour = (type: string): TypedVariable => {
+  // A KIND parameter is a string parameter for the same reason an enum one is:
+  // what the body is handed is the module path of the kind that was chosen, and
+  // the dropdown is about what may be chosen rather than about what arrives.
+  // …and a MAP parameter is the same again, holding a map file's path.
+  // …and a POSITION parameter is a vector parameter: the type says how the
+  // call site is drawn — an x and a y rather than an arrow grid
+  // (`typedValueInputs`) — and what arrives is a vector either way, read with
+  // the vector getter.
+  // …and an ANGLE parameter is a number parameter, for the same reason a
+  // position is a vector one: the type says the call site starts with a dial
+  // rather than a plain number, and what arrives is a number either way.
+  const wanted =
+    enumRefOfParamType(type) || type === 'kind' || type === 'map'
+      ? 'string'
+      : type === 'position'
+        ? 'vector'
+        : type === 'angle'
+          ? 'number'
+          : type;
+  return (PARAM_FLAVOURS.find(f => f.type === wanted) ?? PARAM_FLAVOURS[0])
+    .variable;
+};
+
+/**
+ * The parameter type dropdown's `[label, value]` options.
+ *
+ * The flavours, and then `kind` — which is not one, because it needs no
+ * variable of its own: it arrives as a string and is read with the string
+ * getter (`paramFlavour`). What makes it its own TYPE is the socket, which is a
+ * dropdown of the project's actor kinds rather than a text box, so a block can
+ * say `spends a ⟨Key ▾⟩` and mean the kind rather than the word.
+ */
+export const PARAM_TYPE_OPTIONS: Array<[string, string]> = [
+  ...PARAM_FLAVOURS.map(({type}) => [type, type] as [string, string]),
+  ['kind', 'kind'],
+  // …and a MAP, for the same reason and in the same shape: it arrives as the
+  // path of a file, and what makes it its own type is the socket, which is a
+  // dropdown of the project's maps rather than a text box. A rule that takes
+  // a screen to go to is what asked for it (specs/SCREENS_PLAN.md).
+  ['map', 'map'],
+];
+
+/** The getter blocks that read a parameter — one per flavour. */
+export const PARAM_GETTER_BLOCKS = PARAM_FLAVOURS.map(
+  ({variable}) => variable.getterBlock,
+);
+
+/** The getter block types, for a toolbox that offers reading a parameter. */
+export const PARAM_GETTER_TYPES = PARAM_FLAVOURS.map(
+  ({variable}) => variable.getterType,
+);
+
+/**
+ * The setter blocks — `set <var> to <value>`, one per flavour.
+ *
+ * A variable used to be BINDABLE but not assignable: a `for each` loop bound
+ * one, a parameter row bound one, and nothing else could put a value in. That
+ * left a body unable to keep anything across two statements, which is why
+ * gravity's landing step had to be decomposed into three members that each
+ * recompute what the last one knew (specs/RULES.md).
+ *
+ * Each setter's value socket carries the same check its getter reports, so what
+ * a `Vector` variable accepts is exactly what reading one can be plugged into.
+ */
+export const PARAM_SETTER_BLOCKS = PARAM_FLAVOURS.map(
+  ({variable}) => variable.setterBlock,
+);
+
+/** The setter block types, for a toolbox that offers assigning a variable. */
+export const PARAM_SETTER_TYPES = PARAM_FLAVOURS.map(
+  ({variable}) => variable.setterType,
+);
+
+/**
+ * Both halves, paired by flavour — `get number` / `set number`, then boolean,
+ * and so on.
+ *
+ * Paired rather than all-gets-then-all-sets because the question a learner
+ * arrives with is "how do I keep a vector?", not "where are the getters": the
+ * type is what they scan for, and both blocks for it should be together when
+ * they find it. This is the order the Variables toolbox category uses.
+ */
+export const PARAM_VARIABLE_TYPES = PARAM_FLAVOURS.flatMap(({variable}) => [
+  variable.getterType,
+  variable.setterType,
+]);

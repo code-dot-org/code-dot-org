@@ -1,0 +1,1106 @@
+// What a map is, as data.
+//
+// A map is a list of placements — an actor type, an instance id, and whatever
+// per-instance property overrides that instance carries. The editors read and
+// write this shape; the engine reads the same one (`WorldBuilder.loadMap`), and
+// a `.map` file is it, serialized.
+//
+// Split out of `MapEditor` when the canvas grew a second caller, a block's
+// popup that is gone now; what holds a document today is a `.map` file's
+// editor and a world's, over its main map (specs/MAIN_MAP_PLAN.md). Both need
+// these types and these accessors; neither should own them.
+
+import type {BlocklySerialization} from '@code-dot-org/blockly';
+
+import type {
+  CameraValue,
+  MainCameraSettings,
+  PlacementCamera,
+} from '../blockly/placementCameras';
+import {isLayout, type LayoutNode} from '../engine/core/layout';
+import {TILE_SIZE, VIEWPORT_TILES} from '../runtime/viewport';
+
+/** The grid a placement snaps to, in world pixels. */
+export const DEFAULT_TILE = TILE_SIZE;
+
+/**
+ * How big a map is, in TILES — the region the editor draws and fits to.
+ *
+ * Distinct from {@link Tile}, which is how big ONE tile is in world pixels.
+ * The two multiply to the map's extent ({@link extentOf}).
+ *
+ * A map used to be exactly the viewport, ten tiles each way, because that was
+ * the only size anything had (runtime/viewport). A map may now be any size the
+ * author says — but the GAME still runs at the fixed viewport, so a map bigger
+ * than it has actors the player will not see. That is the editor's business to
+ * make visible, not this file's.
+ */
+export interface MapSize {
+  width: number;
+  height: number;
+}
+
+/** What a map is when it does not say — the viewport, as every map was. */
+export const DEFAULT_MAP_SIZE: MapSize = {
+  width: VIEWPORT_TILES,
+  height: VIEWPORT_TILES,
+};
+
+/**
+ * Bounds on a map's dimensions, in tiles.
+ *
+ * One tile is the smallest thing that is still a map. The upper bound is not a
+ * limit anyone should reach — it is there because the grid is drawn a line per
+ * tile, and a map sized from a typo (a pasted `100000`) would hang the canvas
+ * rather than look wrong.
+ */
+export const MIN_MAP_TILES = 1;
+export const MAX_MAP_TILES = 200;
+
+export interface Tile {
+  width: number;
+  height: number;
+}
+export interface Vec {
+  x: number;
+  y: number;
+}
+export interface Placement {
+  type: string;
+  id: string;
+  /** Per-instance overrides, keyed by owner (trait) id then property id. */
+  properties?: Record<string, Record<string, unknown>>;
+  /**
+   * What this one placed instance does: a whole workspace serialization, the
+   * shape an actor file holds, or nothing (specs/MAP_FIRST.md, "The file").
+   */
+  blocks?: WorkspaceState;
+  /** The layer it is on, by id; absent, the default (specs/LAYERS_PLAN.md). */
+  layer?: string;
+  /**
+   * The edge it holds on to when the window is not the map's shape — one of
+   * nine named places, or absent for a plain position
+   * (specs/ANCHORS_PLAN.md).
+   */
+  anchor?: string;
+  /**
+   * A Viewport's own cameras, made in the map editor and nowhere else — data
+   * the compiler turns into their declarations (`blockly/placementCameras`).
+   */
+  cameras?: PlacementCamera[];
+}
+
+/** The id of the layer every map has, and an unlayered placement is on. */
+export const DEFAULT_LAYER = 'main';
+
+/** One of a layer's two images: which, how it fills, where it sits. */
+export interface MapSlotDoc {
+  /** The image's file name in `backgrounds/` — `sky.png`. */
+  sprite?: string;
+  /** Tiled across the map rather than stretched over it. */
+  repeat?: boolean;
+  offset?: Vec;
+}
+
+/**
+ * A layer as the map states it (specs/LAYERS_PLAN.md): back to front in the
+ * document's list, which is draw order. The id is minted and never changes,
+ * so a placement's `layer` survives a rename; the name is the learner's.
+ */
+export interface MapLayerDoc {
+  id: string;
+  name?: string;
+  /** How much of the camera's motion it takes, per axis; `(1, 1)` unless said. */
+  parallax?: Vec;
+  /** Fixed to the screen: it does not consult the camera at all. */
+  fit?: boolean;
+  background?: MapSlotDoc;
+}
+
+/**
+ * The map's layers, back to front, with the default among them — at the
+ * back when the document did not place it, which is where the engine puts
+ * it (`layersOfMap`).
+ */
+export const layersOf = (doc: MapDoc): MapLayerDoc[] => {
+  const stated = doc.layers ?? [];
+  return stated.some(layer => layer.id === DEFAULT_LAYER)
+    ? stated
+    : [{id: DEFAULT_LAYER}, ...stated];
+};
+
+/** What a layer is called: its name, or for the default, "Main". */
+export const layerName = (layer: MapLayerDoc): string =>
+  layer.name?.trim() || (layer.id === DEFAULT_LAYER ? 'Main' : layer.id);
+
+/** The layer a placement is on. */
+export const layerOfPlacement = (placement: Placement): string =>
+  placement.layer ?? DEFAULT_LAYER;
+
+/**
+ * The layers in front of `id`, which the editor leaves undrawn while `id`
+ * is edited, so that what is in front does not cover what is being worked
+ * on (SIMPLE_INTERFACE.md, "Map Layers"). Nothing for the front layer, or
+ * for a layer the map has not got.
+ */
+export function layersInFrontOf(doc: MapDoc, id: string): Set<string> {
+  const layers = layersOf(doc);
+  const at = layers.findIndex(layer => layer.id === id);
+  return new Set(at < 0 ? [] : layers.slice(at + 1).map(layer => layer.id));
+}
+
+/** A new layer in front of the rest, and its id: the lowest `layerN` free. */
+export function addLayer(doc: MapDoc): {doc: MapDoc; id: string} {
+  const layers = layersOf(doc);
+  const taken = new Set(layers.map(layer => layer.id));
+  let n = 1;
+  while (taken.has(`layer${n}`)) {
+    n++;
+  }
+  const id = `layer${n}`;
+  return {doc: {...doc, layers: [...layers, {id, name: `Layer ${n}`}]}, id};
+}
+
+/**
+ * The map without a layer; what was on it falls back to the default, which
+ * is the one layer that cannot be removed.
+ */
+export function removeLayer(doc: MapDoc, id: string): MapDoc {
+  if (id === DEFAULT_LAYER) {
+    return doc;
+  }
+  return {
+    ...doc,
+    layers: layersOf(doc).filter(layer => layer.id !== id),
+    actors: doc.actors.map(actor =>
+      actor.layer === id ? withPlacementLayer(actor, DEFAULT_LAYER) : actor,
+    ),
+  };
+}
+
+/** The map with a layer one place nearer the front (+1) or the back (−1). */
+export function moveLayer(doc: MapDoc, id: string, by: 1 | -1): MapDoc {
+  const layers = [...layersOf(doc)];
+  const at = layers.findIndex(layer => layer.id === id);
+  const to = at + by;
+  if (at < 0 || to < 0 || to >= layers.length) {
+    return doc;
+  }
+  [layers[at], layers[to]] = [layers[to], layers[at]];
+  return {...doc, layers};
+}
+
+/** The map with one layer's own values changed. */
+export function withLayer(
+  doc: MapDoc,
+  id: string,
+  change: Partial<Omit<MapLayerDoc, 'id'>>,
+): MapDoc {
+  return {
+    ...doc,
+    layers: layersOf(doc).map(layer =>
+      layer.id === id ? {...layer, ...change} : layer,
+    ),
+  };
+}
+
+/** The map with one layer's background changed; an empty one is dropped. */
+export function withBackground(
+  doc: MapDoc,
+  id: string,
+  change: Partial<MapSlotDoc>,
+): MapDoc {
+  const layer = layersOf(doc).find(held => held.id === id);
+  const next: MapSlotDoc = {...layer?.background, ...change};
+  if (!next.sprite) {
+    delete next.sprite;
+  }
+  const empty =
+    !next.sprite && !next.repeat && !(next.offset?.x || next.offset?.y);
+  return withLayer(doc, id, {background: empty ? undefined : next});
+}
+
+/** A placement on a layer; the default is said by saying nothing. */
+export function withPlacementLayer(
+  placement: Placement,
+  id: string,
+): Placement {
+  const rest: Placement = {...placement};
+  delete rest.layer;
+  return id === DEFAULT_LAYER ? rest : {...rest, layer: id};
+}
+
+/** A placement's anchor; holding on to nothing is said by saying nothing. */
+export function withPlacementAnchor(
+  placement: Placement,
+  anchor: string,
+): Placement {
+  const rest: Placement = {...placement};
+  delete rest.anchor;
+  return anchor ? {...rest, anchor} : rest;
+}
+
+/**
+ * The placements in the order they are drawn: by their layer's depth, then
+ * as the document lists them — what the engine does, since a layer is a
+ * container and placement order is draw order within one.
+ */
+export function drawOrder(doc: MapDoc): Placement[] {
+  const depth = new Map(layersOf(doc).map((layer, index) => [layer.id, index]));
+  return doc.actors
+    .map((actor, index) => ({actor, index}))
+    .sort(
+      (a, b) =>
+        (depth.get(layerOfPlacement(a.actor)) ?? 0) -
+          (depth.get(layerOfPlacement(b.actor)) ?? 0) || a.index - b.index,
+    )
+    .map(({actor}) => actor);
+}
+
+/** A Blockly workspace as serialized — `{blocks: {blocks: […]}, …}`. */
+export type WorkspaceState = BlocklySerialization;
+
+/** Whether a stored workspace holds anything at all. */
+export const hasScript = (state: WorkspaceState | undefined): boolean =>
+  Boolean(state?.blocks?.blocks?.length);
+
+/**
+ * The document with every `the ⟨from⟩` renamed to `the ⟨to⟩`, in every
+ * placement's workspace and the map's own.
+ *
+ * A rename in the inspector would otherwise leave the blocks that name the
+ * placement pointing at a name no entry has (specs/MAP_FIRST.md, "Two
+ * edges"). The walk is over the serialization as data — a `world_placement`
+ * block is `{type, fields: {NAME}}` wherever it sits — so it needs no
+ * workspace. Untouched objects are returned as they were, so a map with no
+ * such block is the same map.
+ */
+export function renamePlacementReferences(
+  doc: MapDoc,
+  from: string,
+  to: string,
+): MapDoc {
+  const rename = (value: unknown): unknown => {
+    if (Array.isArray(value)) {
+      return value.map(rename);
+    }
+    if (!value || typeof value !== 'object') {
+      return value;
+    }
+    const record = value as Record<string, unknown>;
+    const fields = record.fields as Record<string, unknown> | undefined;
+    const renamed: Record<string, unknown> = {};
+    for (const [key, held] of Object.entries(record)) {
+      renamed[key] = rename(held);
+    }
+    if (record.type === 'world_placement' && fields?.NAME === from) {
+      renamed.fields = {...fields, NAME: to};
+    }
+    return renamed;
+  };
+  return {
+    ...doc,
+    ...(doc.blocks ? {blocks: rename(doc.blocks) as WorkspaceState} : {}),
+    actors: doc.actors.map(actor =>
+      actor.blocks
+        ? {...actor, blocks: rename(actor.blocks) as WorkspaceState}
+        : actor,
+    ),
+  };
+}
+
+/** The map without the placement `id`. */
+export function withoutPlacement(doc: MapDoc, id: string): MapDoc {
+  return {...doc, actors: doc.actors.filter(a => a.id !== id)};
+}
+/** An actor's resolved transform, with engine defaults (scale 1, rotation 0). */
+export interface Transform {
+  pos: Vec;
+  scale: Vec;
+  rotation: number;
+  /** Vertical skew in degrees — a shear about the actor's center (0 = none). */
+  skew: number;
+}
+export interface MapDoc {
+  type: 'map';
+  /** How many tiles across and down (see {@link MapSize}). */
+  size: MapSize;
+  tile: Tile;
+  actors: Placement[];
+  /**
+   * Whether loading this map COVERS what is already there.
+   *
+   * A screen says yes and an overlay says no: while a modal map is on, input
+   * stops at it and nothing under it can be clicked, tabbed to or typed at
+   * (`World.canReach`, specs/MODALITY_PLAN.md). Absent reads as false, which
+   * is every map written before the flag existed and every HUD since.
+   */
+  modal?: boolean;
+  /**
+   * The theme everything this map places is painted out of, by module path.
+   *
+   * THE MIDDLE OF THREE. A drawing names a class and never a file; which file
+   * cascades — the world sets the base, this overrides it for the map, and a
+   * placement overrides that (specs/STYLES_PLAN.md). Absent takes the
+   * world's, which is every map written before this.
+   *
+   * Beside `modal` because it is the same kind of fact: something true of the
+   * map rather than of any one thing on it, and edited in the same panel.
+   */
+  theme?: string;
+  /**
+   * The map's own workspace: its `define map` root, and the two map hats.
+   * Optional because a map written before the root existed has none
+   * (specs/MAP_EVENTS_PLAN.md).
+   */
+  blocks?: WorkspaceState;
+  /** The map's layers, back to front; absent, the one default. */
+  layers?: MapLayerDoc[];
+  /**
+   * The grid layout its placements dock into (`engine/core/layout`,
+   * specs/DOCKING_PLAN.md). A Screen's; absent, everything floats.
+   */
+  layout?: LayoutNode;
+  // NO CAMERA ON A LEVEL. A map is data: it says where things are and nothing
+  // about how the view onto it behaves. A Viewport decides that, and the
+  // world is the main Viewport (specs/SPACE_CAMERAS_PLAN.md) — which is the
+  // same argument that took a map's own events off it
+  // (specs/MAP_EVENTS_PLAN.md), since a hundred level maps should no more
+  // each configure a camera than each mint a `complete`.
+  //
+  // A WORLD'S MAIN MAP is the one exception, and for that same reason: it is
+  // where the main Viewport is edited, so the world's cameras live on it, as
+  // a Viewport's live on its placement (`blockly/placementCameras`).
+  /** The world's main camera's traits and values, on its main map only. */
+  mainCamera?: MainCameraSettings;
+  /** The world's own cameras, on its main map only. */
+  cameras?: PlacementCamera[];
+  /**
+   * Which camera the world starts looking through, as `look through camera`
+   * names one — `main`, or `camera:<block id>` — on its main map only.
+   * Absent, the world's code decides.
+   */
+  startingCamera?: string;
+}
+/** The camera: screen_px = world * scale + offset (offset in CSS pixels). */
+export interface View {
+  scale: number;
+  x: number;
+  y: number;
+}
+export interface Size {
+  w: number;
+  h: number;
+}
+
+/**
+ * A tile count that can be drawn: a whole number within the bounds.
+ *
+ * Applied on the way IN rather than trusted, because the value has been through
+ * a text file — a hand-edited `.map`, a half-typed number in the editor's own
+ * field. `NaN` reaches this from `Number('')`, and `NaN` tiles is a grid loop
+ * that never terminates.
+ */
+export const clampTiles = (value: unknown): number | undefined => {
+  // Ahead of `Number`, which answers 0 for all three of these — so a field the
+  // author has just cleared to type into would read as a size, and the map
+  // would collapse to one tile between two keystrokes.
+  if (value === null || (typeof value === 'string' && value.trim() === '')) {
+    return undefined;
+  }
+  const n = Math.floor(Number(value));
+  if (!Number.isFinite(n)) {
+    return undefined;
+  }
+  return Math.max(MIN_MAP_TILES, Math.min(MAX_MAP_TILES, n));
+};
+
+export function parseMap(contents: string): MapDoc {
+  if (!contents.trim()) {
+    return mapFromRaw({});
+  }
+  try {
+    return mapFromRaw(JSON.parse(contents) as Partial<MapDoc>);
+  } catch {
+    return mapFromRaw({});
+  }
+}
+
+/** A map from whatever was stored, with defaults for what was not. */
+export function mapFromRaw(raw: Partial<MapDoc>): MapDoc {
+  return {
+    type: 'map',
+    // A map written before maps had a size is the size every map was.
+    size: {
+      width: clampTiles(raw.size?.width) ?? DEFAULT_MAP_SIZE.width,
+      height: clampTiles(raw.size?.height) ?? DEFAULT_MAP_SIZE.height,
+    },
+    tile: {
+      width: raw.tile?.width ?? DEFAULT_TILE,
+      height: raw.tile?.height ?? DEFAULT_TILE,
+    },
+    actors: Array.isArray(raw.actors) ? raw.actors : [],
+    ...(raw.blocks ? {blocks: raw.blocks} : {}),
+    ...(Array.isArray(raw.layers) && raw.layers.length
+      ? {
+          layers: raw.layers.filter(
+            layer => layer && typeof layer.id === 'string',
+          ),
+        }
+      : {}),
+    // …and the facts about the map as a whole, which were left behind here
+    // once: the editor read a map without them, and its next save wrote the
+    // map back without them, so a screen stopped covering what was under it
+    // and a theme went back to the world's.
+    ...(raw.modal === true ? {modal: true} : {}),
+    ...(isLayout(raw.layout) ? {layout: raw.layout} : {}),
+    ...(typeof raw.theme === 'string' && raw.theme ? {theme: raw.theme} : {}),
+    ...(raw.mainCamera && Array.isArray(raw.mainCamera.traits)
+      ? {mainCamera: raw.mainCamera}
+      : {}),
+    ...(Array.isArray(raw.cameras) && raw.cameras.length
+      ? {cameras: raw.cameras}
+      : {}),
+    ...(typeof raw.startingCamera === 'string' && raw.startingCamera
+      ? {startingCamera: raw.startingCamera}
+      : {}),
+  };
+}
+
+/** A map's extent in world pixels — its tile counts times its tile size. */
+export const extentOf = (map: MapDoc): Size => ({
+  w: map.size.width * map.tile.width,
+  h: map.size.height * map.tile.height,
+});
+
+// Overrides arrive as `unknown` (the generic property bag); coerce to what the
+// canvas needs, falling back when a value is absent or malformed.
+export const asVec = (v: unknown): Vec | undefined =>
+  v && typeof (v as Vec).x === 'number' && typeof (v as Vec).y === 'number'
+    ? {x: (v as Vec).x, y: (v as Vec).y}
+    : undefined;
+export const asNum = (v: unknown): number | undefined =>
+  typeof v === 'number' ? v : undefined;
+
+/** Read a placement's override for `owner.prop` (undefined if unset). */
+export const propValue = (
+  actor: Placement,
+  ownerId: string,
+  propId: string,
+): unknown => actor.properties?.[ownerId]?.[propId];
+
+export const positionOf = (actor: Placement): Vec | undefined =>
+  asVec(propValue(actor, 'positional', 'position'));
+
+/**
+ * Resolve an actor's transform, filling the defaults.
+ *
+ * THE KIND'S SCALE IS A DEFAULT, not one. A placement stores only what it
+ * OVERRIDES, so an actor whose file says `set scale of this to x 1 y 2` has
+ * nothing under `positional.scale` here — and filling in one, which is what
+ * this did, drew every such actor as though it had never been scaled. It is
+ * the engine's default for an actor that sets none, not for one that sets its
+ * own (`engine/core/World.scaleOf`).
+ *
+ * An override still wins outright, because that is what it does in the game:
+ * setting the property replaces the value rather than multiplying it.
+ */
+export const transformOf = (actor: Placement, kindScale?: Vec): Transform => ({
+  pos: asVec(propValue(actor, 'positional', 'position')) ?? {x: 0, y: 0},
+  scale: asVec(propValue(actor, 'positional', 'scale')) ??
+    kindScale ?? {x: 1, y: 1},
+  rotation: asNum(propValue(actor, 'positional', 'rotation')) ?? 0,
+  skew: asNum(propValue(actor, 'positional', 'skew')) ?? 0,
+});
+
+// ── Parenting (specs/PARENTING.md) ──────────────────────────────────────────
+//
+// A placement's stored `position`, `rotation` and `scale` are in its PARENT'S
+// frame when it has one — the same slot the engine keeps local values in —
+// and its place on the canvas is worked out through the chain of parents,
+// exactly as the engine works out the world position. So dragging a parent
+// moves its children, because nothing about the children changed; and a child
+// dragged is stored back in its parent's frame.
+
+/** The id of the placement this one is carried by, if any. */
+export const parentIdOf = (actor: Placement): string | undefined => {
+  const value = propValue(actor, 'positional', 'parent');
+  return typeof value === 'string' && value !== '' ? value : undefined;
+};
+
+const DEG = Math.PI / 180;
+
+/** A component-wise division that answers 0 where the parent's scale is 0. */
+const unscale = (v: Vec, by: Vec): Vec => ({
+  x: by.x === 0 ? 0 : v.x / by.x,
+  y: by.y === 0 ? 0 : v.y / by.y,
+});
+
+/**
+ * A child's world transform from its parent's and its local one — the
+ * engine's `compose` (`core/parenting`), over the editor's own shapes.
+ * Skew is the child's own and is not composed.
+ */
+export const composeTransforms = (
+  parent: Transform,
+  local: Transform,
+): Transform => {
+  const scaled = {
+    x: local.pos.x * parent.scale.x,
+    y: local.pos.y * parent.scale.y,
+  };
+  const cos = Math.cos(parent.rotation * DEG);
+  const sin = Math.sin(parent.rotation * DEG);
+  return {
+    pos: {
+      x: parent.pos.x + scaled.x * cos - scaled.y * sin,
+      y: parent.pos.y + scaled.x * sin + scaled.y * cos,
+    },
+    scale: {
+      x: parent.scale.x * local.scale.x,
+      y: parent.scale.y * local.scale.y,
+    },
+    rotation: parent.rotation + local.rotation,
+    skew: local.skew,
+  };
+};
+
+/** The local position that puts a child at `world` under `parent`. */
+export const toLocalPosition = (world: Vec, parent: Transform): Vec => {
+  const dx = world.x - parent.pos.x;
+  const dy = world.y - parent.pos.y;
+  const cos = Math.cos(-parent.rotation * DEG);
+  const sin = Math.sin(-parent.rotation * DEG);
+  return unscale(
+    {x: dx * cos - dy * sin, y: dx * sin + dy * cos},
+    parent.scale,
+  );
+};
+
+/**
+ * Where a placement is on the canvas: its own transform composed onto its
+ * parent's, all the way up. A root's is its own; a parent the map does not
+ * hold, or a cycle, ends the chain where it is rather than nowhere.
+ */
+export function worldTransformOf(
+  actor: Placement,
+  actors: readonly Placement[],
+  scales?: Record<string, Vec>,
+  seen: ReadonlySet<string> = new Set(),
+): Transform {
+  const local = transformOf(actor, scales?.[actor.type]);
+  const parentId = parentIdOf(actor);
+  if (!parentId || seen.has(actor.id)) {
+    return local;
+  }
+  const parent = actors.find(other => other.id === parentId);
+  if (!parent) {
+    return local;
+  }
+  return composeTransforms(
+    worldTransformOf(parent, actors, scales, new Set([...seen, actor.id])),
+    local,
+  );
+}
+
+/** Whether `candidate` is `actor` or is carried, at any depth, by it. */
+export const isCarriedBy = (
+  candidate: Placement,
+  actor: Placement,
+  actors: readonly Placement[],
+): boolean => {
+  const seen = new Set<string>();
+  for (
+    let at: Placement | undefined = candidate;
+    at && !seen.has(at.id);
+    at = actors.find(other => other.id === parentIdOf(at!))
+  ) {
+    if (at.id === actor.id) {
+      return true;
+    }
+    seen.add(at.id);
+  }
+  return false;
+};
+
+/**
+ * A copy of `actor` carried by `parentId` (or by nobody), KEEPING ITS PLACE
+ * ON THE CANVAS: the stored position, rotation and scale are rewritten in
+ * the new parent's frame from where the actor already is, which is what the
+ * engine's `set parent` does and what somebody dragging a button onto a
+ * panel meant. A cycle changes nothing.
+ */
+export function withParent(
+  actor: Placement,
+  parentId: string | undefined,
+  actors: readonly Placement[],
+  scales?: Record<string, Vec>,
+): Placement {
+  const parent = parentId
+    ? actors.find(other => other.id === parentId)
+    : undefined;
+  if (parentId && (!parent || isCarriedBy(parent, actor, actors))) {
+    return actor;
+  }
+  const world = worldTransformOf(actor, actors, scales);
+  const frame = parent
+    ? worldTransformOf(parent, actors, scales)
+    : {pos: {x: 0, y: 0}, scale: {x: 1, y: 1}, rotation: 0, skew: 0};
+  const local: Transform = {
+    pos: toLocalPosition(world.pos, frame),
+    rotation: world.rotation - frame.rotation,
+    scale: unscale(world.scale, frame.scale),
+    skew: world.skew,
+  };
+  let next = withProperty(actor, 'positional', 'parent', parent?.id ?? '');
+  next = withProperty(next, 'positional', 'position', local.pos);
+  // Rotation and scale are written only where they say something: a
+  // placement stores what it overrides, and a child of an unturned,
+  // unscaled parent overrides neither more than it did.
+  const stored = (id: string) =>
+    propValue(actor, 'positional', id) !== undefined;
+  if (stored('rotation') || local.rotation !== 0) {
+    next = withProperty(next, 'positional', 'rotation', local.rotation);
+  }
+  if (stored('scale') || local.scale.x !== 1 || local.scale.y !== 1) {
+    next = withProperty(next, 'positional', 'scale', local.scale);
+  }
+  return next;
+}
+
+/** A copy of `actor` with `owner.prop` set to `value`. */
+export const withProperty = (
+  actor: Placement,
+  ownerId: string,
+  propId: string,
+  value: unknown,
+): Placement => ({
+  ...actor,
+  properties: {
+    ...actor.properties,
+    [ownerId]: {...actor.properties?.[ownerId], [propId]: value},
+  },
+});
+
+/**
+ * The placements an actor-typed property may be pointed at.
+ *
+ * A map is JSON and JSON holds no actors, so what a placement stores is
+ * another placement's ID, resolved by `WorldBuilder.loadMap` once every entry
+ * exists. This is the list the inspector offers, and it is the one thing the
+ * sandbox cannot supply: it introspects actor KINDS, and which of them a
+ * particular map holds is the editor's to know.
+ *
+ * ITSELF EXCLUDED. An actor pointed at itself is a thing a learner could pick
+ * and nothing sensible would come of it — a health bar showing its own health,
+ * a rider attached to where it already is.
+ *
+ * An entry with no id is left out because there would be nothing to store: a
+ * reference is a name, and an anonymous placement has none.
+ */
+export const placementChoices = (
+  actors: readonly Placement[],
+  selfId: string | undefined,
+): Array<{value: string; text: string}> =>
+  actors
+    .filter(actor => actor.id && actor.id !== selfId)
+    .map(actor => ({value: actor.id as string, text: actor.id as string}));
+
+/** One placement pointing at another, and the property that says so. */
+export interface PlacementLink {
+  /** The property's label, drawn beside the line. */
+  name: string;
+  /** The entry id it names. */
+  targetId: string;
+}
+
+/**
+ * Which placements the selected one points at, and what it calls each.
+ *
+ * A reference is invisible in a map: the value is a string in a panel, and the
+ * actor it names is somewhere else on a canvas that may be scrolled away from
+ * it. So the canvas draws them — and this is the part with a decision in it,
+ * kept out of the drawing so it can be checked.
+ *
+ * The SCHEMA is what says which properties are references, because the map
+ * itself cannot: a placement's value is a string either way, and `"Hero"` is a
+ * name to resolve or a word to display depending on a type the map does not
+ * record.
+ *
+ * A reference to nothing is left out rather than drawn as a stub. The map
+ * keeps it — a placement may name one that has since been deleted, and
+ * `loadMap` leaves such a property unset rather than failing — but there is
+ * nothing on the canvas to draw a line to.
+ */
+/**
+ * The ids a set-valued reference names, in the order the map lists them.
+ *
+ * A placement's value is whatever JSON held, so this is also the guard: a
+ * property that has never been set holds nothing, and a set that holds nothing
+ * is empty rather than broken.
+ */
+export const chosenActors = (
+  actor: Placement,
+  ownerId: string,
+  propId: string,
+): string[] => {
+  const value = propValue(actor, ownerId, propId);
+  return Array.isArray(value) ? (value as string[]) : [];
+};
+
+/**
+ * What a reference becomes when a placement is picked for it.
+ *
+ * THE ONE DECISION IN PICKING, and the only place the difference between the
+ * two shapes lives: a set is added to, a single reference is replaced. Kept
+ * out of the click handler for the reason `linksFrom` is kept out of the
+ * drawing — it is a rule, and a rule can be checked.
+ *
+ * Naming the same actor twice adds nothing. A set holds a thing or it does
+ * not, and a list with it in twice would draw two outlines on one actor and
+ * offer two Removes that do different things.
+ */
+export const withPicked = (
+  current: unknown,
+  pickedId: string,
+  isSet: boolean,
+): string | string[] => {
+  if (!isSet) {
+    return pickedId;
+  }
+  const already = Array.isArray(current) ? (current as string[]) : [];
+  return already.includes(pickedId) ? already : [...already, pickedId];
+};
+
+export const linksFrom = (
+  actor: Placement,
+  schema: ReadonlyArray<{
+    props: ReadonlyArray<{
+      ownerId: string;
+      propId: string;
+      name: string;
+      type: string;
+    }>;
+  }>,
+  actors: readonly Placement[],
+): PlacementLink[] =>
+  schema
+    .flatMap(group => group.props)
+    .filter(prop => prop.type === 'actor' || prop.type === 'actors')
+    // A child's parent is shown by where the child sits — drawn through the
+    // parent, moved with it — and a line to it on top of that says the same
+    // thing twice (specs/PARENTING.md). Every other reference is invisible
+    // without its line.
+    .filter(
+      prop => !(prop.ownerId === 'positional' && prop.propId === 'parent'),
+    )
+    .flatMap(prop => {
+      const value = propValue(actor, prop.ownerId, prop.propId);
+      // A SET is the same thing several times over, and drawing every one of
+      // them is what makes such a property readable at all: "going to" holding
+      // three names says nothing until the three are outlined on the canvas.
+      const ids = Array.isArray(value) ? value : [value];
+      return ids.flatMap(targetId =>
+        typeof targetId === 'string' &&
+        targetId !== '' &&
+        actors.some(other => other.id === targetId)
+          ? [{name: prop.name, targetId}]
+          : [],
+      );
+    });
+
+/**
+ * A placement with a section added to its own workspace: an event's hat, at
+ * the TOP of its column (specs/LAZY_WORKSPACE_PLAN.md, "Adding a section").
+ *
+ * First, so it is in view the moment the placement's code opens, with
+ * nothing to scroll to: above everything the workspace already holds, which
+ * is what the editor's layout reads a saved workspace's order off. What the
+ * hat's sockets hold (`this actor` in a placement's own script) is the
+ * block's to fill as it is built.
+ */
+export function withEventHandler(actor: Placement, type: string): Placement {
+  const held = actor.blocks?.blocks?.blocks ?? [];
+  const highest = held.reduce(
+    (least, block) =>
+      Math.min(least, typeof block.y === 'number' ? block.y : 0),
+    0,
+  );
+  return {
+    ...actor,
+    blocks: {
+      ...actor.blocks,
+      blocks: {
+        ...actor.blocks?.blocks,
+        blocks: [{type, x: 20, y: highest - 1000}, ...held],
+      },
+    },
+  };
+}
+
+// ── A Viewport's cameras (`blockly/placementCameras`) ─────────────────────
+
+/** The Viewport property that names the camera it looks through. */
+const SHOWS_THROUGH = {owner: 'showsMap', prop: 'showsThrough'} as const;
+
+/** Which camera a Viewport looks through, by name; empty is its main one. */
+export const showsThroughOf = (actor: Placement): string => {
+  const held = actor.properties?.[SHOWS_THROUGH.owner]?.[SHOWS_THROUGH.prop];
+  return typeof held === 'string' ? held : '';
+};
+
+/** The map with one placement changed by `change`. */
+const withPlacement = (
+  doc: MapDoc,
+  id: string,
+  change: (actor: Placement) => Placement,
+): MapDoc => ({
+  ...doc,
+  actors: doc.actors.map(actor => (actor.id === id ? change(actor) : actor)),
+});
+
+/** The map with one of a placement's cameras changed by `change`. */
+const withCamera = (
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+  change: (camera: PlacementCamera) => PlacementCamera,
+): MapDoc =>
+  withPlacement(doc, actorId, actor => ({
+    ...actor,
+    cameras: (actor.cameras ?? []).map(camera =>
+      camera.id === cameraId ? change(camera) : camera,
+    ),
+  }));
+
+/** The map with the Viewport looking through `name`, or its main camera. */
+export const withShowsThrough = (
+  doc: MapDoc,
+  actorId: string,
+  name: string,
+): MapDoc =>
+  withPlacement(doc, actorId, actor =>
+    withProperty(actor, SHOWS_THROUGH.owner, SHOWS_THROUGH.prop, name),
+  );
+
+/**
+ * The map with a camera added to a Viewport, and its id: named after the
+ * cameras it already has, with an id none of them uses.
+ */
+export function addPlacementCamera(
+  doc: MapDoc,
+  actorId: string,
+): {doc: MapDoc; id: string} {
+  const held = doc.actors.find(actor => actor.id === actorId)?.cameras ?? [];
+  let n = held.length + 2;
+  while (held.some(camera => camera.name === `Camera ${n}`)) {
+    n++;
+  }
+  let id = `camera${n}`;
+  for (let k = 2; held.some(camera => camera.id === id); k++) {
+    id = `camera${n}_${k}`;
+  }
+  const camera: PlacementCamera = {
+    id,
+    name: `Camera ${n}`,
+    traits: [],
+    values: [],
+  };
+  return {
+    doc: withPlacement(doc, actorId, actor => ({
+      ...actor,
+      cameras: [...(actor.cameras ?? []), camera],
+    })),
+    id,
+  };
+}
+
+/**
+ * The map without one of a Viewport's cameras — looking through its main
+ * one again if it was looking through this.
+ */
+export function removePlacementCamera(
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+): MapDoc {
+  return withPlacement(doc, actorId, actor => {
+    const gone = actor.cameras?.find(camera => camera.id === cameraId);
+    const cameras = (actor.cameras ?? []).filter(
+      camera => camera.id !== cameraId,
+    );
+    const next: Placement = {...actor, cameras};
+    if (!cameras.length) {
+      delete next.cameras;
+    }
+    return gone && showsThroughOf(actor) === gone.name
+      ? withProperty(next, SHOWS_THROUGH.owner, SHOWS_THROUGH.prop, '')
+      : next;
+  });
+}
+
+/**
+ * The map with a Viewport's camera renamed — and the Viewport still looking
+ * through it, if it was: `shows through` names a camera by its name.
+ */
+export function renamePlacementCamera(
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+  name: string,
+): MapDoc {
+  const actor = doc.actors.find(each => each.id === actorId);
+  const was = actor?.cameras?.find(camera => camera.id === cameraId)?.name;
+  const renamed = withCamera(doc, actorId, cameraId, camera => ({
+    ...camera,
+    name,
+  }));
+  return actor && was !== undefined && showsThroughOf(actor) === was
+    ? withShowsThrough(renamed, actorId, name)
+    : renamed;
+}
+
+/** The map with a Viewport's camera electing a trait, or no longer. */
+export const withPlacementCameraTrait = (
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+  trait: string,
+  elected: boolean,
+): MapDoc =>
+  withCamera(doc, actorId, cameraId, camera => ({
+    ...camera,
+    traits: elected
+      ? [...camera.traits.filter(each => each !== trait), trait]
+      : camera.traits.filter(each => each !== trait),
+  }));
+
+/**
+ * The map with a Viewport's camera setting one property; an empty actor
+ * value takes it away, which leaves the camera following nobody.
+ */
+export const withPlacementCameraValue = (
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+  value: CameraValue,
+): MapDoc =>
+  withCamera(doc, actorId, cameraId, camera => ({
+    ...camera,
+    values: [
+      ...camera.values.filter(each => each.setter !== value.setter),
+      ...(value.type === 'actor' && !value.value ? [] : [value]),
+    ],
+  }));
+
+// ── A world's cameras, on its main map ───────────────────────────────────
+
+/** The map with its cameras changed by `change`; none left drops the key. */
+const withMapCameras = (
+  doc: MapDoc,
+  change: (cameras: PlacementCamera[]) => PlacementCamera[],
+): MapDoc => {
+  const cameras = change(doc.cameras ?? []);
+  const next: MapDoc = {...doc, cameras};
+  if (!cameras.length) {
+    delete next.cameras;
+  }
+  return next;
+};
+
+/** A camera added to the world, named after the ones it has, and its id. */
+export function addMapCamera(
+  doc: MapDoc,
+  taken: readonly string[] = [],
+): {doc: MapDoc; id: string} {
+  const held = doc.cameras ?? [];
+  const names = new Set([...held.map(camera => camera.name), ...taken]);
+  let n = held.length + taken.length + 2;
+  while (names.has(`Camera ${n}`)) {
+    n++;
+  }
+  let id = `worldCamera${n}`;
+  for (let k = 2; held.some(camera => camera.id === id); k++) {
+    id = `worldCamera${n}_${k}`;
+  }
+  return {
+    doc: withMapCameras(doc, cameras => [
+      ...cameras,
+      {id, name: `Camera ${n}`, traits: [], values: []},
+    ]),
+    id,
+  };
+}
+
+/** The world without a camera — starting through its main one again if so. */
+export function removeMapCamera(doc: MapDoc, id: string): MapDoc {
+  const next = withMapCameras(doc, cameras =>
+    cameras.filter(camera => camera.id !== id),
+  );
+  if (doc.startingCamera === `camera:${id}`) {
+    delete next.startingCamera;
+  }
+  return next;
+}
+
+/**
+ * The world with one of its cameras changed by `change` — its MAIN camera
+ * too, whose traits and values are stored apart from the cameras it adds,
+ * since nothing declares it (`blockly/placementCameras`).
+ */
+const withMapCamera = (
+  doc: MapDoc,
+  id: string,
+  change: (camera: PlacementCamera) => PlacementCamera,
+): MapDoc => {
+  if (id === MAIN_CAMERA_ID) {
+    const held = doc.mainCamera ?? {traits: [], values: []};
+    const {traits, values} = change({id, name: '', ...held});
+    const next: MapDoc = {...doc, mainCamera: {traits, values}};
+    if (!traits.length && !values.length) {
+      delete next.mainCamera;
+    }
+    return next;
+  }
+  return withMapCameras(doc, cameras =>
+    cameras.map(camera => (camera.id === id ? change(camera) : camera)),
+  );
+};
+
+/** The id the main camera goes by, as `look through camera` names it. */
+const MAIN_CAMERA_ID = 'main';
+
+export const renameMapCamera = (doc: MapDoc, id: string, name: string) =>
+  withMapCamera(doc, id, camera => ({...camera, name}));
+
+export const withMapCameraTrait = (
+  doc: MapDoc,
+  id: string,
+  trait: string,
+  elected: boolean,
+): MapDoc =>
+  withMapCamera(doc, id, camera => ({
+    ...camera,
+    traits: elected
+      ? [...camera.traits.filter(each => each !== trait), trait]
+      : camera.traits.filter(each => each !== trait),
+  }));
+
+export const withMapCameraValue = (
+  doc: MapDoc,
+  id: string,
+  value: CameraValue,
+): MapDoc =>
+  withMapCamera(doc, id, camera => ({
+    ...camera,
+    values: [
+      ...camera.values.filter(each => each.setter !== value.setter),
+      ...(value.type === 'actor' && !value.value ? [] : [value]),
+    ],
+  }));
+
+/** The world starting through a camera: `main` or `camera:<block id>`. */
+export const withStartingCamera = (doc: MapDoc, camera: string): MapDoc => ({
+  ...doc,
+  startingCamera: camera,
+});

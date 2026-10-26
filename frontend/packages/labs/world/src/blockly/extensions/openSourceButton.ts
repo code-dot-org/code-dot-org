@@ -1,0 +1,193 @@
+// The open button on a `use rule` / `use trait` block: open the file that defines it.
+// On `set sprite` too, which names a picture: open it in the image editor.
+//
+// A block that names a rule is a block that names a FILE, when the rule is the
+// project's own — and until now the only route from one to the other was
+// knowing that rules live under `rules/` and guessing which file. The button
+// removes the guess. It appears on the right of the block, after the dropdown,
+// and only when there is something to open (see `openModule`): a built-in rule's
+// implementation is engine code the project does not have, and a level can turn
+// the whole affordance off.
+//
+// It is added and removed rather than shown and hidden, because a hidden field
+// still occupies its row: Blockly lays a block out from the fields it has.
+
+import type {Block, BlockSvg, Input} from 'blockly';
+import * as Blockly from 'blockly/core';
+
+import {defineExtension, type Extension} from '@code-dot-org/blockly';
+import {FieldButton} from '@code-dot-org/blockly/fields/fieldButton';
+
+import {SPRITES_FOLDER} from '../../files/folderMenus';
+import {canOpenModule, openModule} from '../openModule';
+import {refFromValue, refModule, ruleLocation} from '../ruleRegistry';
+import {parseSpriteRef} from '../spriteCells';
+
+import {glyphIcon} from './glyphIcon';
+import {addOnChange} from './onChange';
+
+export const OPEN_SOURCE_BUTTON_EXTENSION = 'world_open_source_button';
+
+/** The field's name on the block — how it is found again to remove it. */
+const FIELD_NAME = 'OPEN_SOURCE';
+
+/**
+ * FontAwesome's `arrow-up-right-from-square`, drawn as an SVG glyph the way
+ * CDO's own fields do it.
+ *
+ * `arrow-up-right-from-square` (f08e): a box with an arrow leaving it, which is
+ * what every application means by "open this somewhere else". In the free
+ * package as well as the pro one — see `glyphIcon`, which is what makes that
+ * matter.
+ *
+ * IT WAS AN EYE (f06e), and the open button had to move because sight is a better
+ * picture for something else. `define property` uses `eye` / `eye-slash` for
+ * whether the setter it makes is offered outside the rule that owns it, and two
+ * eyes a few blocks apart meaning "look at this file" and "this is visible"
+ * would be one picture for two ideas. This one is not about seeing at all — it
+ * is about going somewhere — so the two stop competing.
+ */
+const OPEN = '';
+
+/**
+ * The module a `use rule` / `use trait` block names, if it names one.
+ *
+ * `use rule` holds a rule's NAME, which the registry resolves to the module the
+ * rule currently lives in — or, for a hand-written `.js` rule, the module path
+ * itself, since a `.js` rule declares no name to be looked up by. `use trait`
+ * holds `<RuleName>#<Export>`, which resolves the same way. `load map` holds
+ * the path itself.
+ */
+export function moduleNamedBy(block: Block): string | undefined {
+  const rule = block.getFieldValue('RULE');
+  if (typeof rule === 'string' && rule) {
+    const located = ruleLocation(rule);
+    if (located) {
+      return located.source === 'project' ? located.modulePath : undefined;
+    }
+    // Not a name the registry knows: a `.js` rule, named by its module.
+    return rule.includes('/') ? rule : undefined;
+  }
+  const trait = block.getFieldValue('TRAIT');
+  if (typeof trait === 'string' && trait) {
+    return refModule(refFromValue(trait));
+  }
+  // A map names its file directly — there is no rule registry in between,
+  // because a map is not a module and declares nothing to be looked up by.
+  const map = block.getFieldValue('MAP');
+  if (typeof map === 'string' && map) {
+    return map;
+  }
+  // An actor, named the same direct way: `add actor ⟨actors/coin⟩`, and `is a
+  // ⟨actors/crate⟩` on the field it calls TYPE.
+  //
+  // ONLY A PATH. The same TYPE field on `world_rule_property` holds a kind
+  // of value ("number") and not a module at all. A module path always names
+  // its folder, so the slash is what tells them apart.
+  for (const name of ['ACTOR', 'TYPE']) {
+    const value = block.getFieldValue(name);
+    if (typeof value === 'string' && value.includes('/')) {
+      return value;
+    }
+  }
+  // A picture, named by its file in `sprites/` — `hero.png`, or one cell of a
+  // sheet, `coinSpin.png#3`, which opens the whole sheet.
+  const sprite = block.getFieldValue('SPRITE');
+  if (typeof sprite === 'string' && sprite) {
+    const {sprite: file} = parseSpriteRef(sprite);
+    return `${SPRITES_FOLDER}/${file.replace(/\.png$/, '')}`;
+  }
+  return undefined;
+}
+
+/** The input the button rides on: the last one, after the dropdown. */
+function lastInput(block: Block): Input | undefined {
+  return block.inputList[block.inputList.length - 1];
+}
+
+/** Add or remove the button so it matches what the block currently names. */
+function syncButton(block: Block): void {
+  const wanted = canOpenModule(moduleNamedBy(block));
+  const present = block.getField(FIELD_NAME) !== null;
+  if (wanted === present) {
+    return;
+  }
+  const input = lastInput(block);
+  if (!input) {
+    return;
+  }
+  if (wanted) {
+    input.appendField(
+      new FieldButton({
+        value: '',
+        onClick: () => {
+          const modulePath = moduleNamedBy(block);
+          if (!modulePath) {
+            return;
+          }
+          // After this click is finished with, not during it. Opening a file
+          // swaps the editor — this workspace is disposed — and Blockly is
+          // still inside its own gesture and focus handling for the press
+          // ("Attempted to focus unregistered node" if it comes back to a
+          // workspace that has gone).
+          setTimeout(() => openModule(modulePath), 0);
+        },
+        icon: glyphIcon(OPEN),
+        // A read-only workspace can still be read — that is all this does.
+        allowReadOnlyClick: true,
+      }),
+      FIELD_NAME,
+    );
+    const field = block.getField(FIELD_NAME);
+    field?.setTooltip('Open the file this comes from');
+    // NOT saved. `FieldButton` sets `SERIALIZABLE = true`, so the open button was
+    // written into every file that had one — and read back into blocks that do
+    // not, since the button is added and removed by context rather than being
+    // part of the block. Blockly then said so, once per block, on every load:
+    //   Ignoring non-existant field OPEN_SOURCE in block world_use_rule
+    //
+    // BOTH flags. Blockly serializes an EDITABLE field whether or not it is
+    // marked serializable, warning as it goes ("Detected an editable field that
+    // was not serializable … Proceeding with serialization anyway") — so
+    // clearing one flag alone trades one warning for another and still writes
+    // the field. A button is not editable in the sense the flag means: it has
+    // no value a learner sets. Its click runs through `onMouseDown_` and
+    // `allowReadOnlyClick`, neither of which consults `EDITABLE`.
+    if (field) {
+      field.SERIALIZABLE = false;
+      field.EDITABLE = false;
+    }
+  } else {
+    input.removeField(FIELD_NAME);
+  }
+  (block as BlockSvg).queueRender?.();
+}
+
+/**
+ * Keep the open button in step with the block's dropdown.
+ *
+ * Per block instance, because whether there is a file to open is a fact about
+ * the value this block holds — "Has Gravity" has one, "Has Space" does not.
+ */
+export const openSourceButtonExtension: Extension = defineExtension(
+  OPEN_SOURCE_BUTTON_EXTENSION,
+  {
+    extension() {
+      const block = this as unknown as Block;
+      syncButton(block);
+      addOnChange(block, event => {
+        // The value changing is the obvious one; FINISHED_LOADING is the other:
+        // a block deserialized before the project's registries were filled asks
+        // again once they are.
+        const change = event as Blockly.Events.BlockChange;
+        const mine =
+          event.type === Blockly.Events.BLOCK_CHANGE &&
+          change.blockId === block.id &&
+          change.element === 'field';
+        if (mine || event.type === Blockly.Events.FINISHED_LOADING) {
+          syncButton(block);
+        }
+      });
+    },
+  },
+);

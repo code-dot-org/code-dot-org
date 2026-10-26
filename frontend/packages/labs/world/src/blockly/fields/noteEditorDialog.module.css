@@ -1,0 +1,46 @@
+/* Source and rendering side by side, so a change is seen where it lands. */
+.panes {
+  display: flex;
+  gap: 12px;
+  min-width: 620px;
+}
+
+.pane {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.label {
+  color: var(--text-neutral-secondary, #6c6c6c);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.source {
+  min-height: 260px;
+  padding: 8px;
+  border: 1px solid var(--border-neutral, #ccc);
+  border-radius: 4px;
+  font-family: var(--font-family-mono, monospace);
+  font-size: 13px;
+  line-height: 1.45;
+  resize: vertical;
+}
+
+/* The block's own proportions, so the preview is not a different size from
+ * the thing it is previewing. */
+.preview {
+  min-height: 260px;
+  max-height: 320px;
+  padding: 8px;
+  overflow: auto;
+  border: 1px solid var(--border-neutral, #ccc);
+  border-radius: 4px;
+
+  /* The block's own class paints the background; this only frames it. */
+  font-size: 13px;
+  line-height: 1.45;
+}
