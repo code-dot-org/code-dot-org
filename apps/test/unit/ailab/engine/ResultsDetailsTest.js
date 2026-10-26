@@ -1,11 +1,13 @@
 import {fireEvent, screen, waitFor, within} from '@testing-library/react';
 import {createElement} from 'react';
 
+import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
   setAccuracyCheckPredictedLabels,
+  setColumnsByDataType,
   setImportedData,
 } from '@cdo/apps/ailab/engine/redux';
 import ResultsDetails from '@cdo/apps/ailab/engine/UIComponents/ResultsDetails';
@@ -31,6 +33,14 @@ function renderScorecard({
   const store = levelStore(mode);
   if (data) {
     store.dispatch(setImportedData(data, false));
+    Object.keys(data[0]).forEach(column =>
+      store.dispatch(
+        setColumnsByDataType(
+          column,
+          column === 'legs' ? ColumnTypes.NUMERICAL : ColumnTypes.CATEGORICAL
+        )
+      )
+    );
   }
   store.dispatch(setAccuracyCheckExamples(examples));
   store.dispatch(setAccuracyCheckLabels(labels));

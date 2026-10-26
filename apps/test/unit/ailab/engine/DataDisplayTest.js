@@ -7,7 +7,7 @@ import {resetState, setCurrentColumn} from '@cdo/apps/ailab/engine/redux';
 import ColumnAnalysis from '@cdo/apps/ailab/engine/UIComponents/ColumnAnalysis';
 import DataDisplay from '@cdo/apps/ailab/engine/UIComponents/DataDisplay';
 
-import {ANIMALS, levelProject, levelStore} from './levelStore';
+import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 function renderDisplay() {
@@ -270,10 +270,11 @@ describe('DataDisplay', () => {
       ...row,
       name: `pet ${index + 1}`,
     }));
+    const NAMED_COLUMNS = {...ANIMAL_COLUMNS, name: ColumnTypes.CATEGORICAL};
 
     const renderNamed = () =>
       renderWithProviders(createElement(DataDisplay), {
-        store: levelStore({idColumn: 'name'}, NAMED),
+        store: levelStore({idColumn: 'name'}, NAMED, NAMED_COLUMNS),
         project: levelProject(),
       });
 
@@ -307,10 +308,11 @@ describe('DataDisplay', () => {
 
     test('names a row with a blank id by its row number', () => {
       renderWithProviders(createElement(DataDisplay), {
-        store: levelStore({idColumn: 'name'}, [
-          {...NAMED[0], name: ''},
-          ...NAMED.slice(1),
-        ]),
+        store: levelStore(
+          {idColumn: 'name'},
+          [{...NAMED[0], name: ''}, ...NAMED.slice(1)],
+          NAMED_COLUMNS
+        ),
         project: levelProject(),
       });
       expect(screen.getByRole('rowheader', {name: 'Row 1'})).toBeTruthy();

@@ -459,6 +459,21 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             disabled={isSubmitting}
           />
         );
+      // TODO: replace with a MultipleSelectQuestionContainer.
+      case 'MultipleSelectQuestion':
+        return (
+          <AttemptCard
+            key={question.id}
+            label={questionLabel}
+            title={question.questionTitle}
+            headingRef={headingRef}
+          >
+            <Typography variant="body2">
+              Multiple select questions are not available yet.
+            </Typography>
+          </AttemptCard>
+        );
+      // TODO: replace with a MatchQuestionContainer.
       case 'MatchQuestion':
         return (
           <MatchQuestionContainer
