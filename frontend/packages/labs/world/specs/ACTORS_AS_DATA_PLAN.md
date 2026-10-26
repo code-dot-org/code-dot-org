@@ -215,14 +215,33 @@ deleted. The lesson-check tests' `editingWorld` edits an actor through its
 view and folds it back (`throughView`), or through `actorEdits` where a
 learner would use the panel.
 
-### 6. The definition rows leave the toolbox
+### 6. The toolbox keeps what code does
 
-The Actor drawer loses `define actor`, `use trait`, `acts like`,
-`is a record`, and `define property` as an actor row; `use trait` stays
-where a trait requires another, under `define trait`. The code rows stay
-where the "+" offers them. The two tiles that unlock these blocks unlock the
-panel affordances instead, or nothing, and the unlock list says so
-(`progression/TileDetail`).
+A block leaves the toolbox when an editor already establishes what it
+says and code has no reason to say it again; a block that changes
+something while the game runs stays. Each workspace's toolbox is gone
+through by that rule; a first pass:
+
+- **Leaves, the Actor Editor's:** `define actor`, `use trait` as an
+  actor's row, `acts like`, `is a record`, `show as`, and `define
+property` as an actor's row. `use trait` stays under `define trait`.
+- **Leaves, the Screen and map editors':** `define world`, of which a
+  project has one; `use theme`, a Screen's and a Map's property; `define
+camera`, the Viewport's inspector; `define layer`, `layer parallax` and
+  `layer fixed`, the map editor's layers; and `define property` in the
+  World drawer, the game-wide values of All maps.
+- **Stays:** the background setters and effects, which a game switches
+  in play; loading and unloading maps; adding and removing actors;
+  moving and using cameras; adding and removing effects, which code and
+  animations turn on and off; the code rows, offered by the "+".
+- **To settle when this step is built:** `world_map` and
+  `world_placement`, and whether `set map size` and `set view size` are
+  ever said at runtime or only as definitions.
+
+The tiles that unlock blocks which leave unlock the editor affordances
+instead, or nothing, and the unlock list says so
+(`progression/TileDetail`). What `define world`'s rows hold moving to the
+Screen and the maps is not this step's; only the blocks leave.
 
 ### 7. The lessons
 
@@ -241,6 +260,7 @@ on the first frame, and a lesson from start to finish.
 
 ## Not in this phase
 
-- `define world`'s rows, which the spec moves to the Screen and the maps.
+- Moving what `define world`'s rows hold to the Screen and the maps;
+  step 6 only takes its blocks out of the toolbox.
 - A rule's or a trait's own workspace, which stays blocks.
 - Easing, and the other animation work ANIMATION_PLAN.md left.
