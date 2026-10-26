@@ -2627,6 +2627,7 @@ __metadata:
     "@code-dot-org/oceans-lab": "workspace:*"
     "@code-dot-org/python-lab": "workspace:*"
     "@code-dot-org/users": "workspace:*"
+    "@code-dot-org/world-lab": "workspace:*"
     "@emotion/react": "catalog:"
     "@emotion/styled": "catalog:"
     "@mui/material": "catalog:"
@@ -2746,7 +2747,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/world-lab@workspace:packages/labs/world":
+"@code-dot-org/world-lab@workspace:*, @code-dot-org/world-lab@workspace:packages/labs/world":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/world-lab@workspace:packages/labs/world"
   dependencies:

@@ -13,6 +13,7 @@ const LabEntrypoints: LabEntrypointMap = {
   // sizing algorithm (16:9, clamped, proportional font size).
   ['oceans']: lazy(() => import('@/modules/labs/oceans')),
   ['python']: lazy(() => import('@code-dot-org/python-lab')),
+  ['world']: lazy(() => import('@code-dot-org/world-lab')),
 };
 
 /**
