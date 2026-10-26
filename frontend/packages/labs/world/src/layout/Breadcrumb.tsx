@@ -9,6 +9,8 @@ import {useCodebridgeConfig} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useSources} from '@code-dot-org/lab/contexts';
 
+import {memberName} from '../actors/actorData';
+
 import styles from './breadcrumb.module.css';
 import type {TrailStep} from './trail';
 import {useTrail} from './TrailContext';
@@ -27,10 +29,13 @@ export const Breadcrumb = () => {
    * Screen's or Map's own code as Code.
    */
   const nameOf = (step: TrailStep): string => {
+    const file = currentSources.source.files[step.fileId];
+    if (step.script?.kind === 'member') {
+      return memberName(file?.contents, step.script.id);
+    }
     if (step.script) {
       return step.script.kind === 'placement' ? step.script.id : 'Code';
     }
-    const file = currentSources.source.files[step.fileId];
     return file ? (config.fileLabel?.(file) ?? file.name) : '';
   };
 

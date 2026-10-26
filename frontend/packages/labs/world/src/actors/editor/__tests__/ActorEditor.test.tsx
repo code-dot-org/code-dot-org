@@ -45,18 +45,28 @@ const saved: {
   onChange?: (contents: string) => void;
   contents?: string;
   actorCode?: boolean;
+  memberBody?: {id: string; parts: unknown[]};
 } = {};
 vi.mock('../../../blockly/BlocklyFileEditor', () => ({
   BlocklyFileEditor: (props: {
     initialContents: string;
     onChange: (contents: string) => void;
     actorCode?: boolean;
+    memberBody?: {id: string; parts: unknown[]};
   }) => {
     saved.onChange = props.onChange;
     saved.contents = props.initialContents;
     saved.actorCode = props.actorCode;
+    saved.memberBody = props.memberBody;
     return <div data-testid="blocks" />;
   },
+}));
+// A member's picture is a Blockly workspace, which jsdom cannot lay out; what
+// it is called is what is asked about.
+vi.mock('../MemberPicture', () => ({
+  MemberPicture: ({label}: {label: string}) => (
+    <span role="img" aria-label={label} />
+  ),
 }));
 const requestActorEnhance = vi.fn();
 vi.mock('../../enhance/actorEnhance', () => ({
@@ -543,5 +553,88 @@ describe('Look and Blocks (specs/ACTOR_BLOCKS_PLAN.md, step 2)', () => {
     expect(screen.queryByLabelText('Looks like')).toBeNull();
     expect(screen.getByRole('region', {name: 'Events'})).toBeInTheDocument();
     expect(screen.getByRole('region', {name: 'Blocks'})).toBeInTheDocument();
+  });
+});
+
+describe('an event or block of its own (specs/ACTOR_BLOCKS_PLAN.md, step 3)', () => {
+  const blocks = () =>
+    fireEvent.click(screen.getByRole('tab', {name: 'Blocks'}));
+
+  it('is made from New event, and opened on its page', () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New event'}));
+
+    expect(written().members).toEqual([
+      {id: 'event-1', kind: 'event', parts: [{kind: 'label', text: 'happens'}]},
+    ]);
+    const heading = screen.getByRole('heading', {name: 'Event: happens'});
+    expect(document.activeElement).toBe(heading);
+    // An event has nothing to do, so no implementation is asked for.
+    expect(screen.queryByTestId('blocks')).toBeNull();
+  });
+
+  it('is renamed by its words, which the data takes', () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New event'}));
+
+    fireEvent.change(screen.getByRole('textbox', {name: 'Word, part 1'}), {
+      target: {value: 'is hurt'},
+    });
+
+    expect(written().members[0].parts).toEqual([
+      {kind: 'label', text: 'is hurt'},
+    ]);
+  });
+
+  it('writes nothing while the design has a problem', () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New event'}));
+    onChange.mockClear();
+
+    fireEvent.change(screen.getByRole('textbox', {name: 'Word, part 1'}), {
+      target: {value: ''},
+    });
+
+    expect(onChange).not.toHaveBeenCalled();
+    expect(screen.getByRole('alert')).toHaveTextContent(/needs a word/);
+  });
+
+  it('opens a block with what it does below its design', () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New block'}));
+
+    expect(
+      screen.getByRole('heading', {name: 'Block: do something'}),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('region', {name: 'What it does'})).toContainElement(
+      screen.getByTestId('blocks'),
+    );
+    expect(saved.memberBody?.id).toBe('block-1');
+    expect(saved.actorCode).toBe(true);
+    // The implementation's workspace is the actor's code and this block.
+    const roots = JSON.parse(saved.contents!).blocks.blocks as Array<{
+      type: string;
+      id?: string;
+    }>;
+    expect(roots.at(-1)).toMatchObject({
+      type: 'world_rule_block',
+      id: 'block-1',
+    });
+  });
+
+  it('goes back to the Blocks tab, with focus on its Edit', () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New event'}));
+
+    fireEvent.click(screen.getByRole('button', {name: 'Actor'}));
+
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'Edit when Player happens'}),
+    );
   });
 });

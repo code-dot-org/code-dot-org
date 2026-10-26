@@ -8961,7 +8961,7 @@ const worldRuleEnumOption = defineBlock({
  * Its name is the name of the VARIABLE the body reads, so typing here renames
  * it everywhere the implementation already uses it.
  */
-const argumentTypeOptions = (): Array<[string, string]> => [
+export const argumentTypeOptions = (): Array<[string, string]> => [
   // A MIXED LIST, and the halves are translated differently. `number`, `text`,
   // `actor` are the lab's words for its own types; the enums after them are
   // whatever the learner called them, and a name is not translated in any

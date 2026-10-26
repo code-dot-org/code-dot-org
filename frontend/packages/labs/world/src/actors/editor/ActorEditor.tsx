@@ -109,6 +109,8 @@ import {
 import {ActorIconPicker} from './ActorIconPicker';
 import {AddFramesDialog} from './AddFramesDialog';
 import {AnimationRow} from './AnimationRow';
+import {addMember, newMember} from './memberEdits';
+import {MemberPage} from './MemberPage';
 import {MembersTab} from './MembersTab';
 import {MomentPanel} from './MomentPanel';
 import {SelfProperty} from './SelfProperty';
@@ -215,6 +217,14 @@ export const ActorEditor = (props: CustomEditorProps) => {
       write(JSON.stringify(next, null, 2));
     }
   };
+  /** A change made to the data as the file now holds it, not as last drawn. */
+  const update = (change: (now: ActorData) => ActorData) => {
+    const now = parse(written.current);
+    const next = now && change(now);
+    if (now && next !== now) {
+      write(JSON.stringify(next, null, 2));
+    }
+  };
 
   const [script, setScript, onTrail] = useScriptStep(fileId);
   const [tab, setTab] = useState<'traits' | 'effects'>('traits');
@@ -223,6 +233,12 @@ export const ActorEditor = (props: CustomEditorProps) => {
     parse(initialContents)?.isData ? 'blocks' : 'look',
   );
   const sectionTabs = `actor-sections-${fileId}`;
+  /** The member whose Edit focus goes back to, once its page is left. */
+  const [returnTo, setReturnTo] = useState<string | null>(null);
+  const openMember = (id: string) => {
+    setReturnTo(id);
+    setScript({kind: 'member', id});
+  };
   const [enhanceAt, setEnhanceAt] = useState<HTMLElement | null>(null);
   const {promptForName, confirm} = usePrompts();
   const [effectAt, setEffectAt] = useState<HTMLElement | null>(null);
@@ -504,6 +520,42 @@ export const ActorEditor = (props: CustomEditorProps) => {
     setLookAt(null);
     act();
   };
+
+  const opened =
+    script?.kind === 'member'
+      ? data?.members?.find(member => member.id === script.id)
+      : undefined;
+  if (data && opened) {
+    return (
+      <div className={styles.code}>
+        {!onTrail && (
+          <div className={styles.codeHeader}>
+            <Button
+              variant="text"
+              size="extraSmall"
+              startIcon={
+                <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
+              }
+              onClick={() => setScript(null)}
+            >
+              Actor
+            </Button>
+          </div>
+        )}
+        <MemberPage
+          key={opened.id}
+          data={data}
+          member={opened}
+          contents={contents}
+          modulePath={modulePath}
+          fileId={fileId}
+          boxed={data.traits?.includes(BOX_TRAIT) ?? false}
+          isReadOnly={isReadOnly}
+          onUpdate={update}
+        />
+      </div>
+    );
+  }
 
   if (script?.kind === 'code') {
     return (
@@ -1070,6 +1122,14 @@ export const ActorEditor = (props: CustomEditorProps) => {
                 contents={contents}
                 modulePath={modulePath}
                 isReadOnly={isReadOnly}
+                onEdit={member => openMember(member.id)}
+                onNew={kind => {
+                  const member = newMember(data, kind);
+                  edit(addMember(data, member));
+                  openMember(member.id);
+                }}
+                focusEdit={returnTo}
+                onFocused={() => setReturnTo(null)}
               />
             ) : (
               <>

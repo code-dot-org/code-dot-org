@@ -19,6 +19,7 @@ import {
   foldActor,
   CREATED_HAT,
   isActorData,
+  memberName,
   viewOf,
   type ActorData,
 } from '../actorData';
@@ -281,6 +282,21 @@ describe('an actor’s own blocks and events, folded', () => {
       const data = stock(id);
       expect(fold(JSON.stringify(actorView(data))), id).toEqual(data);
     }
+  });
+
+  it('names a member on the trail by its words', () => {
+    const contents = JSON.stringify(stock('toggle'));
+    const [first] = stock('toggle').members!;
+    expect(memberName(contents, first.id)).toBe('turned on');
+    expect(
+      memberName(
+        JSON.stringify({
+          ...stock('toggle'),
+          members: [{id: 'm', kind: 'block', parts: []}],
+        }),
+        'm',
+      ),
+    ).toBe('New block');
   });
 
   it('keeps a block that reports a value as code', () => {

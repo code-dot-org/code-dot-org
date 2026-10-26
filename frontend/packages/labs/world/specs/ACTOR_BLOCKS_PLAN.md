@@ -73,9 +73,16 @@ default?}`. A value's `var` is a workspace variable, which is what a
   start or the end, or after another break, does nothing in the block: it
   may sit there while the parts are arranged, and is dropped when the
   design is saved.
-- **Arranging is `@dnd-kit/sortable`**, which World already uses. Its
-  keyboard sensor makes the same list sortable from the keys, so dragging
-  and the keyboard are one mechanism, not two.
+- **A pointer arranges with `@dnd-kit`; the keys arrange by place.**
+  dnd-kit's own keyboard sensor moves by geometry, and in a surface that
+  wraps "the chip to the right" is sometimes the start of the next line.
+  The grip's keys move a chip one place earlier or later in the list,
+  which is what the block reads as. DONE in step 3.
+- **An actor file may still hold either block.** Neither is offered in
+  its drawer, and both are listed in `ESTABLISHED_ELSEWHERE`, which says
+  what a file may hold without offering it; the head of a member's page
+  is one, and the misplaced-blocks check otherwise disables it and its
+  body.
 - **Rules keep their blocks.** A rule's `define block` and `define event`
   stay as they are. The page takes parts and gives parts back, so a rule
   can use it later.
@@ -148,7 +155,7 @@ Edit opens the member's page, a script step on the trail
   room for: a value's type and its starting value, for a type that has
   one, and Remove. Choosing is pressing a chip or focusing it.
 - **What it is for**, the description, one line.
-- **Shown to others**, the eye, as a checkbox.
+- **Shown to other files**, the eye, as a checkbox.
 - For a block, **What it does**: the implementation's surface, as the
   pencil opens it now, with the description, returns and arguments rows
   hidden, since the page above holds them. An event's page ends at the
@@ -214,13 +221,15 @@ Built in as the phase goes, not after it. What the page must do:
   named "Line break, part 4 of 5", and "does nothing here" when it does
   not. The text field's keys stay the text field's; the grip has the
   moving keys.
-- **Moving from the keys** is dnd-kit's: Space on a grip picks the chip
-  up, the arrows move it through the list, Space drops it, Escape puts it
-  back. Delete on a grip removes the chip.
+- **Moving from the keys**: Space or Enter on a grip picks the chip up
+  (`aria-pressed`), any arrow moves it one place, Space drops it, Escape
+  puts it back. Delete on a grip removes the chip. The grips share one
+  description saying so.
 - **Dragging is never the only way** (2.5.7): every chip is added by
   pressing it in the palette and moved by its grip's keys.
-- **Every change is said** (4.1.3). dnd-kit's announcements are replaced
-  with ours, which name the line as well as the place ("amount picked up,
+- **Every change is said** (4.1.3), through the page's polite region;
+  dnd-kit's own announcements are silenced and its empty region stays.
+  Ours name the line as well as the place ("amount picked up,
   part 3 of 5, line 2"; "amount moved to part 4, line 2"; "amount dropped,
   part 4 of 5"); adding and removing go through the same polite region
   ("Number value added, part 6 of 6"; "toward removed").

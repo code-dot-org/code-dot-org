@@ -3,7 +3,7 @@
 // step 2).
 
 import {Button, Typography} from '@mui/material';
-import {useMemo} from 'react';
+import {useEffect, useMemo, useRef} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
@@ -26,6 +26,9 @@ export interface MembersTabProps {
   onEdit?: (member: ActorMember) => void;
   onDelete?: (member: ActorMember) => void;
   onNew?: (kind: ActorMember['kind']) => void;
+  /** The member whose Edit takes focus, coming back from its page. */
+  focusEdit?: string | null;
+  onFocused?: () => void;
 }
 
 const GROUPS: ReadonlyArray<{
@@ -60,7 +63,17 @@ export const MembersTab = ({
   onEdit,
   onDelete,
   onNew,
+  focusEdit,
+  onFocused,
 }: MembersTabProps) => {
+  const edits = useRef(new Map<string, HTMLButtonElement>());
+  useEffect(() => {
+    const button = focusEdit ? edits.current.get(focusEdit) : undefined;
+    if (button) {
+      button.focus();
+      onFocused?.();
+    }
+  }, [focusEdit, onFocused]);
   const members = data.members ?? [];
   // By the file's text: the data is parsed afresh on every render, and
   // minting a palette is not cheap.
@@ -97,6 +110,13 @@ export const MembersTab = ({
                     isReadOnly={isReadOnly}
                     onEdit={onEdit}
                     onDelete={onDelete}
+                    editRef={element => {
+                      if (element) {
+                        edits.current.set(member.id, element);
+                      } else {
+                        edits.current.delete(member.id);
+                      }
+                    }}
                   />
                 ))}
               </ul>
@@ -128,6 +148,7 @@ interface MemberRowProps {
   isReadOnly: boolean;
   onEdit?: (member: ActorMember) => void;
   onDelete?: (member: ActorMember) => void;
+  editRef: (element: HTMLButtonElement | null) => void;
 }
 
 const MemberRow = ({
@@ -137,13 +158,19 @@ const MemberRow = ({
   isReadOnly,
   onEdit,
   onDelete,
+  editRef,
 }: MemberRowProps) => {
   const reading = memberReading(member, actorName);
   const type = palette.typeOf(member);
   return (
     <li className={styles.memberRow}>
       {type ? (
-        <MemberPicture palette={palette} type={type} label={reading} />
+        <MemberPicture
+          key={JSON.stringify(member.parts)}
+          palette={palette}
+          type={type}
+          label={reading}
+        />
       ) : (
         <Typography variant="body3" component="p" className={styles.note}>
           {reading
@@ -160,6 +187,7 @@ const MemberRow = ({
         <div className={styles.memberActions}>
           {onEdit && (
             <Button
+              ref={editRef}
               variant="text"
               size="small"
               aria-label={`Edit ${reading}`}

@@ -1,0 +1,126 @@
+/* The parts of a designed block, as chips (`MemberParts`). */
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* A chip is round: words, values and the palette's alike. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-height: 2rem;
+  padding: 0.125rem 0.75rem;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 999px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-body-sm);
+}
+
+button.chip {
+  cursor: grab;
+}
+
+button.chip:focus-visible {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+}
+
+.chip-value {
+  border-color: var(--borders-brand-teal-primary);
+  background: var(--background-brand-teal-extra-light);
+}
+
+.chip-label {
+  background: var(--background-neutral-secondary);
+}
+
+/* A break is a mark at the end of its line, not a pill. */
+.chip-row {
+  padding: 0 0.25rem;
+  border-style: dashed;
+  background: transparent;
+}
+
+.surface {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-height: 3rem;
+  margin: 0;
+  padding: 0.75rem;
+  list-style: none;
+  border: 1px dashed var(--borders-neutral-primary);
+  border-radius: 8px;
+}
+
+.surfaceOver {
+  border-color: var(--borders-brand-teal-primary);
+}
+
+/* What comes after a break starts the next line. */
+.lineEnd {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.idle {
+  opacity: 0.5;
+}
+
+.lifted,
+.chosen {
+  box-shadow: 0 0 0 2px var(--borders-brand-teal-primary);
+}
+
+.dragging {
+  opacity: 0.6;
+}
+
+.grip {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+}
+
+/* A field as wide as what is typed in it, not as a form's. */
+.chip .chipField {
+  min-width: 0;
+}
+
+.chip .chipField input {
+  field-sizing: content;
+  min-width: 4ch;
+  max-width: 16rem;
+}
+
+.chipType {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--font-size-body-xs);
+}
+
+.problem {
+  color: var(--text-error-primary);
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 0.75rem;
+  border: var(--lab-border-default);
+  border-radius: 4px;
+}

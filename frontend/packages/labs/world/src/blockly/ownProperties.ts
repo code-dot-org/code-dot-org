@@ -65,6 +65,8 @@ interface ActorBlock {
       kind?: string;
       text?: string;
       var?: string;
+      /** A value's name, for one that names no variable (`actors/actorData`). */
+      name?: string;
       type?: string;
       /** What a call site starts with — a value, or the whole block. */
       default?: unknown;
@@ -425,7 +427,7 @@ function designedBlock(
       return [
         {
           kind: 'param',
-          name: (part.var && variables.get(part.var)) || 'value',
+          name: (part.var && variables.get(part.var)) || part.name || 'value',
           type: (part.type ?? 'number') as ParamType,
         },
       ];
@@ -501,7 +503,7 @@ function designedEvent(
           // `value`, not `choice`: an event's parameter was a filter over a
           // set of choices and is a VALUE THE EVENT CARRIES now, of whatever
           // type its author gave it (specs/EVENT_VALUES_PLAN.md).
-          name: (part.var && variables.get(part.var)) || 'value',
+          name: (part.var && variables.get(part.var)) || part.name || 'value',
           type: (part.type ?? 'string') as ParamType,
           // What the `emit` socket starts with, as a rule's own events carry
           // one (`ruleMeta.addEvent`).

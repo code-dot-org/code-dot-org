@@ -84,4 +84,13 @@ describe('a script on the trail', () => {
     // Opening the level itself again is going back to it, not to its script.
     expect(follow(onward, LEVEL, MAIN)).toEqual(onLevel);
   });
+
+  it('opens one of an actor’s own blocks by its id', () => {
+    const onHero: Trail = [{fileId: MAIN}, {fileId: HERO}];
+    const heal = withScript(onHero, HERO, {kind: 'member', id: 'block-1'});
+    const hurt = withScript(heal, HERO, {kind: 'member', id: 'event-1'});
+    expect(scriptOf(heal, HERO)).toEqual({kind: 'member', id: 'block-1'});
+    expect(scriptOf(hurt, HERO)).toEqual({kind: 'member', id: 'event-1'});
+    expect(hurt).toHaveLength(3);
+  });
 });

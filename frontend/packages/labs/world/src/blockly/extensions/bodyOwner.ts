@@ -122,7 +122,7 @@ export const bodySurfaceExtension: Extension = defineExtension(
  * "undeletable" in the rule it belongs to, only in the surface that is
  * currently implementing it.
  */
-export function anchorBodyOwner(block: Block): void {
+export function anchorBodyOwner(block: Block, designHere = true): void {
   // No way in from inside: the pencil opens this surface, and it is up.
   removeBodyButton(block);
   block.setMovable(false);
@@ -133,8 +133,13 @@ export function anchorBodyOwner(block: Block): void {
     block.setPreviousStatement(false);
   }
   // The rows the interface stopped drawing are drawn HERE, and this is the
-  // only place they can be changed. `bodySurfaces` carries what they say back
-  // into the file.
+  // only place they can be changed — unless a page around the surface holds
+  // them, as an actor's member page does (`designHere`). `bodySurfaces`
+  // carries what they say back into the file.
+  if (!designHere) {
+    (block as BlockSvg).render?.();
+    return;
+  }
   for (const name of BODY_SURFACE_ROWS[block.type] ?? []) {
     block.getInput(name)?.setVisible(true);
   }

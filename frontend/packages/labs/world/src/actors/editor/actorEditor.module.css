@@ -483,3 +483,57 @@
 .memberNew {
   margin-top: 0.25rem;
 }
+
+/* A member's page (specs/ACTOR_BLOCKS_PLAN.md, step 3). */
+.memberPage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  overflow: auto;
+  padding: 1.5rem;
+}
+
+/* Taller than the pane, it scrolls: nothing in it is squeezed to fit. */
+.memberPage > * {
+  flex-shrink: 0;
+}
+
+.memberHeading:focus-visible {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+}
+
+.memberShown {
+  min-height: 3rem;
+}
+
+.memberPage .memberDescription {
+  width: 100%;
+  max-width: 40rem;
+}
+
+.memberPage .memberDescription input {
+  width: 100%;
+}
+
+.memberBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 24rem;
+  flex: 1;
+}
+
+.memberBody .codeBlocks {
+  border: var(--lab-border-default);
+}
+
+.announcer {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

@@ -482,7 +482,7 @@ const isPart = (part: unknown): part is ActorMemberPart =>
  * cannot hold whole: a block that reports a value, which an actor cannot
  * define yet, or a row with anything the data has no key for.
  */
-function readMember(row: Block, made: number): ActorMember | undefined {
+export function readMember(row: Block, made: number): ActorMember | undefined {
   const kind =
     row.type === MEMBER_ROWS.block
       ? 'block'
@@ -533,8 +533,29 @@ function readMember(row: Block, made: number): ActorMember | undefined {
   };
 }
 
+/**
+ * What a member is called on the trail: its words, or what it is while it
+ * has none.
+ */
+export function memberName(contents: string | undefined, id: string): string {
+  let member: ActorMember | undefined;
+  try {
+    const held = JSON.parse(contents ?? '') as unknown;
+    member = isActorData(held)
+      ? held.members?.find(one => one.id === id)
+      : undefined;
+  } catch {
+    member = undefined;
+  }
+  const words = (member?.parts ?? [])
+    .flatMap(part => (part.kind === 'label' ? [part.text.trim()] : []))
+    .filter(Boolean)
+    .join(' ');
+  return words || (member?.kind === 'event' ? 'New event' : 'New block');
+}
+
 /** The row a member stands for. */
-function writeMember(member: ActorMember): Block {
+export function writeMember(member: ActorMember): Block {
   const extraState = {parts: member.parts};
   if (member.kind === 'event') {
     return {type: MEMBER_ROWS.event, id: member.id, extraState};
