@@ -41,38 +41,42 @@ export const Breadcrumb = () => {
 
   const last = trail.trail.length - 1;
   return (
-    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-      <ol className={styles.steps}>
-        {trail.trail.map((step, at) => (
-          <Fragment key={`${step.fileId}:${at}`}>
-            {at > 0 && (
-              <li className={styles.separator} aria-hidden>
-                ›
-              </li>
-            )}
-            <li className={styles.step}>
-              {at === last ? (
-                <Typography
-                  component="span"
-                  variant="label2"
-                  aria-current="page"
-                  className={styles.here}
-                >
-                  {nameOf(step)}
-                </Typography>
-              ) : (
-                <Button
-                  variant="text"
-                  size="extraSmall"
-                  onClick={() => trail.goTo(at)}
-                >
-                  {nameOf(step)}
-                </Button>
+    <div className={styles.bar}>
+      <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+        <ol className={styles.steps}>
+          {trail.trail.map((step, at) => (
+            <Fragment key={`${step.fileId}:${at}`}>
+              {at > 0 && (
+                <li className={styles.separator} aria-hidden>
+                  ›
+                </li>
               )}
-            </li>
-          </Fragment>
-        ))}
-      </ol>
-    </nav>
+              <li className={styles.step}>
+                {at === last ? (
+                  <Typography
+                    component="span"
+                    variant="label2"
+                    aria-current="page"
+                    className={styles.here}
+                  >
+                    {nameOf(step)}
+                  </Typography>
+                ) : (
+                  <Button
+                    variant="text"
+                    size="extraSmall"
+                    onClick={() => trail.goTo(at)}
+                  >
+                    {nameOf(step)}
+                  </Button>
+                )}
+              </li>
+            </Fragment>
+          ))}
+        </ol>
+      </nav>
+      {/* The open page's actions (`TrailActions`). */}
+      <div ref={trail.setActionsHost} className={styles.actions} />
+    </div>
   );
 };

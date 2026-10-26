@@ -167,9 +167,10 @@ const WorldLayout = () => {
       setTrail(withScript(trailRef.current, fileId, script)),
     [],
   );
+  const [actionsHost, setActionsHost] = useState<HTMLElement | null>(null);
   const trailContext = useMemo<TrailContextValue>(
-    () => ({trail, goTo, setScript}),
-    [trail, goTo, setScript],
+    () => ({trail, goTo, setScript, actionsHost, setActionsHost}),
+    [trail, goTo, setScript, actionsHost],
   );
   const [instructionsWidth, setInstructionsWidth] = useState(
     INSTRUCTIONS.initial,

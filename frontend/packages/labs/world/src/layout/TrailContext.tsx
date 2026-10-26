@@ -4,7 +4,8 @@
 // map editor opening a placement's code — keeps that place on the trail
 // rather than in state of its own, so the breadcrumb can go back from it.
 
-import {createContext, useContext, useState} from 'react';
+import {createContext, useContext, useState, type ReactNode} from 'react';
+import {createPortal} from 'react-dom';
 
 import {scriptOf, type ScriptStep, type Trail} from './trail';
 
@@ -14,6 +15,9 @@ export interface TrailContextValue {
   goTo: (index: number) => void;
   /** Open `script` in `fileId`, or close the one open there. */
   setScript: (fileId: string, script: ScriptStep | null) => void;
+  /** Where the breadcrumb bar holds the open page's actions (`TrailActions`). */
+  actionsHost?: HTMLElement | null;
+  setActionsHost?: (host: HTMLElement | null) => void;
 }
 
 export const TrailContext = createContext<TrailContextValue | null>(null);
@@ -39,3 +43,20 @@ export function useScriptStep(
     true,
   ];
 }
+
+/**
+ * The open page's own actions, at the end of the breadcrumb bar: always in
+ * the same place, and before the page in the tab order. Without the bar —
+ * a test, an editor on its own — they are drawn where this stands, inside
+ * `fallback`.
+ */
+export const TrailActions = ({
+  children,
+  fallback,
+}: {
+  children: ReactNode;
+  fallback: (children: ReactNode) => ReactNode;
+}) => {
+  const host = useTrail()?.actionsHost;
+  return host ? createPortal(children, host) : fallback(children);
+};
