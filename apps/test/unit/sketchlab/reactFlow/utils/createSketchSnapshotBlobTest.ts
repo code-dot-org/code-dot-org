@@ -102,7 +102,7 @@ describe('createSketchSnapshotBlob', () => {
     expect(mockToBlob).toHaveBeenCalledTimes(1);
   });
 
-  it('gives up on a capture that never settles and lets the next one run', async () => {
+  it('gives up on an export that hangs forever and lets the next one run', async () => {
     jest.useFakeTimers();
     try {
       const viewport = document.querySelector('.react-flow__viewport')!;
