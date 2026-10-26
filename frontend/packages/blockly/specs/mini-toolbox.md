@@ -32,8 +32,10 @@ that the flyout has a row of its own.
 
 MT-3. It registers with the workspace, under the key
 `flyout_<type>_<id>` (`FieldFlyout.flyoutIdFor`), the flyout's contents:
-one block of each type in `blocks`, in order, each with
-`extraState: {miniToolboxSourceId}` naming the block that opened it. Only a
+one block for each entry in `blocks`, in order, each with
+`extraState: {miniToolboxSourceId}` naming the block that opened it. An entry
+is a block type, or `{type, fields}` for a block that arrives with its fields
+set, written as a toolbox entry writes them. Only a
 block type that reads extra state keeps that id. The key names the block,
 not its type, so two blocks of one type have flyouts of their own.
 

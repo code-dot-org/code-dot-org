@@ -98,6 +98,40 @@ describe('mini-toolbox.md: addMiniToolbox', () => {
     expect(callback().map(item => item.type)).toEqual([OFFERED]);
   });
 
+  it('MT-3: passes on the fields an entry carries', () => {
+    // A getter offered already naming its variable: the entry's fields reach
+    // the flyout as a toolbox entry's would, and the source id still rides
+    // along.
+    const block = workspace.newBlock(HAT) as Blockly.BlockSvg;
+    block.initSvg();
+    addMiniToolbox(block, {
+      blocks: [OFFERED, {type: OFFERED, fields: {NAME: 'speed'}}],
+    });
+
+    const callback = (
+      workspace as unknown as {
+        toolboxCategoryCallbacks: Map<
+          string,
+          () => Array<{kind: string; type: string; fields?: unknown}>
+        >;
+      }
+    ).toolboxCategoryCallbacks.get(`flyout_${HAT}_${block.id}`)!;
+
+    expect(callback()).toEqual([
+      {
+        kind: 'block',
+        type: OFFERED,
+        extraState: {miniToolboxSourceId: block.id},
+      },
+      {
+        kind: 'block',
+        type: OFFERED,
+        fields: {NAME: 'speed'},
+        extraState: {miniToolboxSourceId: block.id},
+      },
+    ]);
+  });
+
   it('MT-1: is applied once, however many times it is asked for', () => {
     // An extension can run again on a block that is reloaded; a second toggle
     // would sit beside the first and open a flyout the first cannot close.
