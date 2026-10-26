@@ -1,0 +1,1781 @@
+import {Button, Typography} from '@mui/material';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+
+import {
+  Blockly,
+  BlocklyProvider,
+  BlocklyWorkspace,
+  RectangleInputPlugin,
+  ScrollBlockDragger,
+  TopLeftMetricsManager,
+  TriangleInputPlugin,
+  type BlocklySerialization,
+  type Toolbox,
+} from '@code-dot-org/blockly';
+import DisableOrphansPlugin from '@code-dot-org/blockly/plugins/disableOrphans';
+import ScrollOptionsPlugin from '@code-dot-org/blockly/plugins/scrollOptions';
+import ToolboxTrashcanPlugin from '@code-dot-org/blockly/plugins/toolboxTrashcan';
+import {activateFile} from '@code-dot-org/codebridge';
+import type {CustomEditorProps} from '@code-dot-org/codebridge';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import type {MultiFileSource} from '@code-dot-org/core/api';
+import {useLocalization} from '@code-dot-org/core/plugins/localization';
+import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
+
+import {APP_HIDDEN_BLOCKS} from '../appBuilder';
+import {requestAppearanceImport} from '../appearance/appearanceImport';
+import {isBackgroundPath} from '../appearance/backgroundsFolder';
+import {projectSheets} from '../appearance/sheetFile';
+import {
+  SpritePickerDialog,
+  type PickedSprite,
+} from '../appearance/SpritePickerDialog';
+import {sizesOfImages, useProjectImages} from '../appearance/useProjectImages';
+import {setRevealer, waitFor} from '../callouts/reveal';
+import {
+  buildsApps,
+  hiddenToolboxCategories,
+  showsRuleSource,
+  usesSimpleColors,
+  type WorldLevelProperties,
+} from '../levelData';
+import {gameModuleOf} from '../mainWorld';
+import {useMaybeProgression} from '../progression/progressionContext';
+import {shelvedToolbox} from '../progression/toolboxShelf';
+import {resolveRuleContents} from '../rules/ruleReference';
+import {projectImageSizes} from '../runtime/imageSize';
+import {
+  filePath,
+  projectFiles,
+  projectImagePaths,
+  projectSoundPaths,
+} from '../runtime/projectFiles';
+import {useWorldRuntime} from '../runtime/WorldRuntimeContext';
+
+// One copy, shared with the shelves that do the same thing after a write
+// (`library/refreshRegistries`).
+
+import {refreshActorPictures} from './actorAbout';
+import {projectActorIcons} from './actorIconMeta';
+import {addActorThumbnails, setActorIcons} from './actorThumbnails';
+import styles from './blocklyFileEditor.module.css';
+import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
+import {actorCodeChoices, rootCodeRows} from './codeRoots';
+import {documentExtras, withDocumentExtras} from './documentExtras';
+import {buildDomainPalette, heldNotOffered} from './domainBlocks';
+import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
+import {movedItself} from './editorEvents';
+import {type EventChoice} from './eventChoices';
+import {refreshBlockDesigns} from './extensions/blockDesigner';
+import {setBodyOpener} from './extensions/bodyButton';
+import {anchorBodyOwner} from './extensions/bodyOwner';
+import {refreshMissingRuleWarnings} from './extensions/missingRule';
+import {setSimpleColors} from './fields/FieldColorPicker';
+import {FieldMarkdown, setMarkdownOpener} from './fields/FieldMarkdown';
+import {NoteEditorDialog} from './fields/NoteEditorDialog';
+import {fileKindOf} from './fileKind';
+import {eventsNarrowerFor, eventsUnheardBy} from './kindEvents';
+import {registerLessonButtons} from './lessonFlyoutButton';
+import {localizeBlocks, localizeText, localizeToolbox} from './localizeBlocks';
+import {
+  MisplacedBlocksPlugin,
+  setFileContext,
+  typesOffered,
+} from './misplacedBlocks';
+import {redrawLiveDropdowns} from './moduleOptions';
+import {
+  fileIdForModule,
+  setModuleOpener,
+  setModuleOpeningOffered,
+} from './openModule';
+import {PasteAcrossTabsPlugin} from './pasteShortcut';
+import {refreshProjectDropdowns} from './projectDropdowns';
+import {setProjectImages} from './projectImages';
+import {
+  projectActorOptions,
+  projectOwnMetas,
+  projectRuleMetas,
+  projectWorldOptions,
+} from './projectModules';
+import {
+  duplicateMemberKeys,
+  memberKeys,
+  renameMemberInSource,
+  renameMemberReferences,
+  renamedMember,
+  renameRuleInSource,
+  renameRuleReferences,
+  type MemberKey,
+} from './renameRule';
+import {revealInToolbox, type ToolboxHost} from './revealInToolbox';
+import {designedName, parseRuleMeta} from './ruleMeta';
+import {ruleByName} from './ruleRegistry';
+import {blockOwners, rulesOutOfScope} from './rulesInScope';
+import {parseSpriteRef} from './spriteCells';
+import {setSpritePickHandler} from './spritePick';
+import {standInBlocks} from './standInBlocks';
+import {toolboxForSurface, type Surface} from './surfaceToolbox';
+import {
+  withoutBlocks,
+  withoutCategories,
+  withoutEmptyHeadings,
+} from './toolboxFilter';
+import {DesignSystemToolboxPlugin, withAddRules} from './toolboxStyle';
+import {useSectionWorkspace} from './useSectionWorkspace';
+import {useWorldBlocklyTheme} from './worldBlocklyTheme';
+
+// Distinct connector nubs for the lab's own value types, so they read apart from
+// the puzzle-tab of numbers/strings: a triangle for `Actor` (`this actor`, every
+// `of …` socket) and a square for `Vector` (directional values — velocity, a
+// force, gravity's direction).
+const plugins = [
+  ToolboxTrashcanPlugin,
+  ScrollOptionsPlugin,
+  DisableOrphansPlugin,
+  // …and the orphan's second shape: a root this kind of file cannot hold,
+  // grey with a reason rather than compiled to nothing (`misplacedBlocks`).
+  MisplacedBlocksPlugin,
+  // A paste lands in the tab on screen, not the tab it was copied in
+  // (specs/PASTE.md).
+  PasteAcrossTabsPlugin,
+  TriangleInputPlugin('Actor'),
+  RectangleInputPlugin('Vector'),
+  // The category list, drawn like the lab's other navigation (toolboxStyle).
+  DesignSystemToolboxPlugin,
+];
+
+// A `.rule` / `.actor` file is a Blockly workspace stored as serialized JSON
+// (INTERFACE.md). This is the editor Codebridge mounts for those languages via
+// the `editorComponents` seam. It reads the file's JSON into a Blockly
+// workspace and writes the workspace back out on every change — through the
+// same `onChange` seam the CodeMirror editor uses, so persistence is identical.
+//
+// The toolbox is the World Lab domain blocks (Actor / Traits / Events); passing
+// `DOMAIN_BLOCKS` registers them (and their world-lab generators) on this
+// workspace, the same definitions the generator uses.
+
+/**
+ * The rule rename this event is, if it is one.
+ *
+ * A committed edit of a `define rule` block's NAME — `BLOCK_CHANGE`, which
+ * Blockly fires when the field editor closes. Typing into the field fires
+ * `block_field_intermediate_change` instead, and must not be acted on: a rename
+ * rewrites the project and reloads this workspace, which is not a thing to do
+ * between two keystrokes.
+ */
+function ruleRename(
+  event: Blockly.Events.Abstract,
+  workspace: Blockly.WorkspaceSvg,
+): {from: string; to: string; block: Blockly.Block} | undefined {
+  if (event.type !== Blockly.Events.BLOCK_CHANGE) {
+    return undefined;
+  }
+  const change = event as Blockly.Events.BlockChange;
+  if (change.element !== 'field' || change.name !== 'NAME') {
+    return undefined;
+  }
+  const block = change.blockId
+    ? workspace.getBlockById(change.blockId)
+    : undefined;
+  if (!block || block.type !== 'world_rule') {
+    return undefined;
+  }
+  const from = String(change.oldValue ?? '');
+  const to = String(change.newValue ?? '');
+  return from && to && from !== to ? {from, to, block} : undefined;
+}
+
+/**
+ * Whether this event is a name being TYPED, rather than named.
+ *
+ * Blockly writes a text field on every keystroke, as an intermediate change, so
+ * that blocks resize while you type. For most fields persisting that is
+ * harmless. For the ones a `.rule` declares things with it is not: the file
+ * would declare "M", "Mo", "Moo"… in turn, each of them a name nothing refers
+ * to and one of which may collide with something real — and the name a rename
+ * starts FROM would be gone before the rename happened. So the keystrokes are
+ * shown and not saved; the commit is what the project hears about.
+ */
+function isTypingDeclaration(
+  event: Blockly.Events.Abstract,
+  workspace: Blockly.WorkspaceSvg,
+): boolean {
+  if (event.type !== Blockly.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE) {
+    return false;
+  }
+  const change = event as Blockly.Events.BlockFieldIntermediateChange;
+  const block = change.blockId
+    ? workspace.getBlockById(change.blockId)
+    : undefined;
+  return !!block?.type.startsWith('world_rule');
+}
+
+/**
+ * Whether this event opens or closes a signature bubble, and which.
+ *
+ * A `define block`'s wording lives in its mutator, and Blockly recomposes the
+ * block on every keystroke there — so the member's name changes letter by
+ * letter, as a mutation rather than a field edit. Reconciling on each of those
+ * would rewrite the project and reload the workspace out from under the bubble
+ * being typed into. Closing it is the commit.
+ */
+function bubbleToggle(event: Blockly.Events.Abstract): boolean | undefined {
+  if (event.type !== Blockly.Events.BUBBLE_OPEN) {
+    return undefined;
+  }
+  const bubble = event as Blockly.Events.BubbleOpen;
+  return bubble.bubbleType === 'mutator' ? bubble.isOpen : undefined;
+}
+
+/**
+ * What a rule's members are called as the editor opens it.
+ *
+ * The state the first edit is compared against — without it, a member renamed
+ * before anything else in the session would look like one member leaving and
+ * another arriving out of nowhere, which is not a rename anybody can follow.
+ */
+function initialMemberKeys(
+  modulePath: string | undefined,
+  contents: string,
+): MemberKey[] {
+  const meta = modulePath ? parseRuleMeta(modulePath, contents) : undefined;
+  return meta ? memberKeys(meta) : [];
+}
+
+/** Parse a file's contents into workspace state; empty/invalid → a blank workspace. */
+function parseWorkspace(contents: string): BlocklySerialization {
+  if (!contents.trim()) {
+    return {};
+  }
+  try {
+    return JSON.parse(contents) as BlocklySerialization;
+  } catch {
+    return {};
+  }
+}
+
+export interface BlocklyFileEditorProps extends CustomEditorProps {
+  /**
+   * The contents are an actor's code workspace, not a whole file: its
+   * handlers and its code rows, which stand as roots, and no `define actor`
+   * (`codeRoots`, specs/ACTOR_EDITOR_PLAN.md step 4c).
+   */
+  actorCode?: boolean;
+  /**
+   * The actor has a box, so a drawing added to its code starts as big as
+   * the box (`codeRoots.actorCodeChoices`). Read with `actorCode`.
+   */
+  boxed?: boolean;
+}
+
+export const BlocklyFileEditor = ({
+  fileId,
+  initialContents: storedContents,
+  isReadOnly,
+  onChange,
+  actorCode = false,
+  boxed = false,
+}: BlocklyFileEditorProps) => {
+  // What this file SAYS, which is not always what it holds.
+  //
+  // A rule the learner has not edited is stored as a reference to the
+  // library's (rules/ruleReference) — everything else in the lab reads a
+  // project through `projectFiles`, which resolves one, but the editor is
+  // handed a file's own contents by the host. Unresolved, opening any unedited
+  // rule parsed a reference as a workspace and drew an EMPTY one.
+  //
+  // Identity for every other file, and for a rule already edited. What is
+  // saved back is the whole workspace, which is how a reference becomes a copy
+  // the first time somebody moves a block.
+  const initialContents = useMemo(
+    () => resolveRuleContents(storedContents),
+    [storedContents],
+  );
+  const workspaceRef = useRef<Blockly.WorkspaceSvg | null>(null);
+  // The sandbox, for the map popup: what the actors look like, and what they
+  // can be given.
+  const {getActorInfo, hasCompiled} = useWorldRuntime();
+
+  // Populate the project-derived dropdowns (actors/worlds/animations) BEFORE the
+  // workspace deserializes below: a dropdown drops a serialized value that isn't
+  // among its options, so the registry must be current first. This runs during
+  // render, ahead of the workspace's load effect. (WorldRuntimeContext also
+  // refreshes these for the generator; the calls are idempotent.)
+  // What this level asks of the editor: which affordances it offers, and which
+  // toolbox categories it leaves out (levelData).
+  const levelProperties = useMaybeLevelProperties<WorldLevelProperties>();
+  const {currentSources, updateSources, sourcesEpoch} =
+    useSources<MultiFileSource>();
+  const files = useMemo(
+    () => projectFiles(currentSources.source),
+    [currentSources],
+  );
+  // The symbols actors elected, pushed to the fields that draw them. Read from
+  // the files rather than rendered by the sandbox, so unlike a thumbnail this
+  // is there the first time a dropdown is drawn — it is text in a file. Set on
+  // every change rather than merged, so a `show as` row DELETED stops being an
+  // icon (`actorThumbnails`).
+  useEffect(() => {
+    setActorIcons(projectActorIcons(files));
+  }, [files]);
+  // Names for the pickers (a block stores a name, and the decoded images are
+  // keyed by one); paths for the dropdown registries, which have to tell a
+  // backdrop from a sprite and the folder is the only thing that says so.
+  const imagePaths = useMemo(
+    () => projectImagePaths(currentSources.source),
+    [currentSources],
+  );
+  // The picture palette's pool, which is the sprites and not the backdrops: a
+  // sky is not something to dress an actor in (BACKGROUNDS.md §5). Derived from
+  // the paths rather than from the names, because a name cannot say where a
+  // file lives.
+  const images = useMemo(
+    () =>
+      imagePaths
+        .filter(path => !isBackgroundPath(path))
+        .map(path => path.split('/').pop() as string),
+    [imagePaths],
+  );
+  // How big those images are, where the editor can tell: what says how many
+  // cells a spritesheet holds (blockly/spriteCells).
+  // For the pickers: the project's grids, and its images decoded to draw.
+  const sheets = useMemo(() => projectSheets(files), [files]);
+  const decoded = useProjectImages(currentSources.source);
+  // An uploaded image is a URL, so its size cannot be read from the project —
+  // only from the image itself, once it has decoded. Those measurements join
+  // the ones read out of the `data:` URLs the project carries.
+  const imageSizes = useMemo(
+    () => ({
+      ...projectImageSizes(currentSources.source),
+      ...sizesOfImages(decoded),
+    }),
+    [currentSources, decoded],
+  );
+  // …and the sounds, told from the images by extension rather than by folder
+  // (specs/SOUND.md) — a sound a learner dragged out of `sounds/` is still one.
+  const soundPaths = useMemo(
+    () => projectSoundPaths(currentSources.source),
+    [currentSources],
+  );
+  useMemo(
+    () => refreshProjectDropdowns(files, imagePaths, imageSizes, soundPaths),
+    [files, imagePaths, imageSizes, soundPaths],
+  );
+  // …and the images themselves, for the two dropdowns whose subject IS a
+  // picture. Decoded already, for the pickers; a field cannot reach a context,
+  // so it is pushed the way the actor thumbnails are (`projectImages`).
+  useEffect(() => {
+    setProjectImages(
+      Object.fromEntries(
+        Object.entries(decoded).map(([name, image]) => [name, image.src]),
+      ),
+    );
+  }, [decoded]);
+
+  // Read at import time rather than captured, so a write lands against the
+  // project as it stands when the learner chooses, not as it stood when the
+  // dialog opened.
+  const sourcesRef = useRef(currentSources);
+  sourcesRef.current = currentSources;
+  // And the write itself, through a ref for the same reason Codebridge's own
+  // editor keeps one: `onChange` is `saveFile` bound to the project as it was
+  // at that render, and the workspace's change listener outlives the render it
+  // was made in. Calling the captured one writes the file into a project from
+  // BEFORE anything else changed — which is how an imported background arrived
+  // and then vanished, undone by the very edit that named it.
+  const onChangeRef = useRef(onChange);
+  onChangeRef.current = onChange;
+
+  /**
+   * The `set sprite` picker: one palette of everything the project can draw.
+   *
+   * The field asks (blockly/spritePick) and waits. A spritesheet is shown as
+   * its cells, so choosing a drawing is one question and one answer — the value
+   * is `player.png`, or `coinSpin.png#3` for a cell. Importing is the other
+   * door out, and lands back in the same flow.
+   */
+  const [pickingSprite, setPickingSprite] = useState(false);
+  const [pickCurrent, setPickCurrent] = useState<PickedSprite | undefined>();
+  const resolvePick = useRef<((value: string | undefined) => void) | null>(
+    null,
+  );
+
+  useEffect(() => {
+    setSpritePickHandler(
+      current =>
+        new Promise<string | undefined>(resolve => {
+          resolvePick.current = resolve;
+          const {sprite, cell} = parseSpriteRef(current);
+          setPickCurrent(sprite ? {sprite, cell} : undefined);
+          setPickingSprite(true);
+        }),
+    );
+    return () => setSpritePickHandler(null);
+  }, []);
+
+  const finishPick = useCallback((value: string | undefined) => {
+    setPickingSprite(false);
+    resolvePick.current?.(value);
+    resolvePick.current = null;
+  }, []);
+
+  /** A tile was chosen: the field takes its name, with the cell if it has one. */
+  const choosePicture = useCallback(
+    (picked: PickedSprite) => {
+      finishPick(
+        picked.cell === undefined
+          ? picked.sprite
+          : `${picked.sprite}#${picked.cell}`,
+      );
+    },
+    [finishPick],
+  );
+
+  // The world whose module the popup introspects: the file being edited when it
+  // is a world (its own actors are in it), else the project's first.
+  const worldPath = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    return path?.endsWith('.world')
+      ? path.replace(/\.world$/, '')
+      : (gameModuleOf(files) ?? projectWorldOptions(files)[0]?.[1] ?? '');
+  }, [currentSources.source, fileId, files]);
+
+  /**
+   * Keep the actor thumbnails the map field draws with.
+   *
+   * The sandbox renders them, and a Blockly field cannot ask it — it is not in
+   * the React tree — so they are pushed into a registry the field reads
+   * (`blockly/actorThumbnails`), the same way the project dropdowns are fed.
+   *
+   * Once per world file, after the first compile: the manifest build is cached,
+   * and an actor dropdown with names instead of pictures is usable but not
+   * much fun.
+   */
+  // A fresh closure on every render, held in a ref so this effect does not
+  // re-run for every one — the same guard MapEditor's fetch already uses.
+  //
+  // Without it a single engine error during the manifest run became a hang: the
+  // error is reported by pushing a console line, that is state, the render it
+  // causes makes a new `getActorInfo`, the dependency changes, the effect fires
+  // and errors again. A stack thousands of frames deep, all of it one bug.
+  const infoFn = useRef(getActorInfo);
+  infoFn.current = getActorInfo;
+  useEffect(() => {
+    if (!hasCompiled || !worldPath) {
+      return;
+    }
+    let alive = true;
+    void infoFn
+      .current(
+        projectActorOptions(files).map(([, path]) => path),
+        worldPath,
+      )
+      .then(info => {
+        if (alive) {
+          addActorThumbnails(info.thumbnails);
+          // The pictures have only just arrived, and the dropdowns that show
+          // them were drawn before they did (moduleOptions.redrawLiveDropdowns).
+          if (workspaceRef.current) {
+            redrawLiveDropdowns(workspaceRef.current);
+            // …and the pictures ON blocks, which arrive by the same post
+            // (`actorAbout`): `this actor` shows the kind it is about.
+            refreshActorPictures(workspaceRef.current);
+          }
+        }
+      });
+    return () => {
+      alive = false;
+    };
+  }, [hasCompiled, worldPath, files]);
+
+  // A block naming a rule the project no longer has says so on its own face
+  // (extensions/missingRule). Deleting a rule is not an event on THIS
+  // workspace — it happens in a dialog, to a file — so the blocks here would
+  // otherwise go on looking fine while quietly generating nothing.
+  useEffect(() => {
+    refreshMissingRuleWarnings(workspaceRef.current);
+  }, [files]);
+
+  // The block palette + toolbox for this project: the built-ins, extended with
+  // the project's own declarative `.rule` rules (their blocks and categories).
+  // Keyed per file, so switching to this editor picks up rules edited elsewhere.
+  // The `.rule` being edited, as the module path its members carry — so the
+  // palette can offer `set` blocks for THIS rule's own read-only properties and
+  // no others (see generateRulePalette). Undefined for every other file type.
+  const ownRuleModule = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    return path?.endsWith('.rule') ? path.replace(/\.rule$/, '') : undefined;
+  }, [currentSources.source, fileId]);
+
+  // …and which `.actor` it is, for the same reason one step over: `this actor`
+  // in an actor file is that actor, and the workspace is the only thing that
+  // knows which file it is in (`actorAbout`).
+  const ownActorModule = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    return path?.endsWith('.actor') ? path.replace(/\.actor$/, '') : undefined;
+  }, [currentSources.source, fileId]);
+
+  // …and which `.world`, for the one thing that asks: a world declaring state
+  // of its own gets a drawer for it exactly as an actor does, and while that
+  // world is open, that drawer is the one being worked in and belongs at the
+  // top of the strip (`domainBlocks`, `CURRENT_HEADING`).
+  const ownWorldModule = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    return path?.endsWith('.world') ? path.replace(/\.world$/, '') : undefined;
+  }, [currentSources.source, fileId]);
+
+  // The properties this actor declares for itself, if it is one. Parsed from
+  // the file as saved rather than from the live workspace: the palette is
+  // rebuilt when the sources change, which is exactly when a declaration was
+  // added or renamed. A file mid-edit parses to undefined and leaves the blocks
+  // it already had alone, rather than dropping them while a name is half typed.
+  //
+  // EVERY actor's and world's, not only the open file's. A property declared
+  // in `healthBar.actor` exists to be set from somewhere ELSE — that is what a
+  // property on an interface element is for — so its block has to be in the
+  // palette of the file doing the setting. Scoped to the open file, a world
+  // had no way to say `set subject of ⟨any ⟨Health Bar⟩⟩`.
+  //
+  // They land in the Actor category rather than one of their own
+  // (`withOwnProperties`), which is what keeps this from becoming a category
+  // per actor.
+  const ownActorProperties = useMemo(() => projectOwnMetas(files), [files]);
+
+  // What kind of file this is, where that decides what may be placed in it — a
+  // world event's hat needs a `world` at module scope and only a `.world` has
+  // one, and a definition root decides what the file COMPILES to (`eventHats`,
+  // `ROOT_HOMES`). Read through the same `fileKindOf` the generator routes on,
+  // so the palette and the compiler cannot disagree about what a file is.
+  const fileKind = useMemo(() => {
+    return fileKindOf(filePath(currentSources.source, fileId));
+  }, [currentSources.source, fileId]);
+
+  // The level may leave categories out of the toolbox. Only the toolbox: the
+  // blocks stay defined, so a workspace that already holds one still renders.
+  const hiddenCategories = hiddenToolboxCategories(levelProperties);
+  // …and in App Builder, the blocks for what an app is not offered: layers,
+  // cameras, Viewports (`appBuilder`). The same bargain: hidden, still defined.
+  const app = buildsApps(levelProperties);
+  // …and, when the level gates the shelf, the toolbox offers only what this
+  // learner has unlocked plus what the lesson they are doing teaches
+  // (progression/toolboxShelf). Off by default, and identity when off.
+  const progression = useMaybeProgression();
+  const shelf = useMemo(
+    () => (progression?.gated ? {holds: progression.holds} : undefined),
+    [progression?.gated, progression?.holds],
+  );
+  // The file's own contents, for the one question the palette asks OF it: which
+  // rules it says it depends on. Read from the saved sources like
+  // `ownActorProperties` beside it, and for the same reason — the palette is
+  // rebuilt when the sources change, which is exactly when a `use trait` or a
+  // `use rule` was added.
+  const ownContents = useMemo(() => {
+    const path = filePath(currentSources.source, fileId);
+    return path ? files[path] : undefined;
+  }, [currentSources.source, fileId, files]);
+
+  const {blocks, toolbox, holdable} = useMemo(() => {
+    const rules = projectRuleMetas(files);
+    const palette = buildDomainPalette(rules, {
+      ownRuleModule,
+      fileKind,
+      ownProperties: ownActorProperties,
+      // …and which of those actors is the one being edited, which decides
+      // whose `emit` blocks are listed: an actor's events are heard anywhere
+      // and raised only at home (`domainBlocks`).
+      ownActorModule,
+      ownWorldModule,
+    });
+    // …and a definition for every block type the project's files hold that
+    // this palette does not mint. That is what a deleted rule leaves behind,
+    // and without one Blockly refuses to deserialize the file at all — the
+    // editor throws and nothing renders (blockly/standInBlocks).
+    const known = new Set(palette.blocks.map(block => block.type));
+    // A `.rule` and an `.actor` are offered only the rules they say they
+    // depend on, and what those depend on in turn (`rulesInScope`). A world
+    // still gets every one, because it runs every one. Hidden the same way a
+    // level's excluded categories are, and with the same bargain: the blocks
+    // stay defined, so a file already holding one renders and compiles.
+    const narrowed = rulesOutOfScope(
+      {kind: fileKind, module: ownRuleModule, contents: ownContents},
+      rules,
+      blockOwners(palette.toolbox, rules),
+    );
+    // …and in an actor's own file, no hat for an event that actor cannot
+    // hear: its handlers are about it and nobody else (`kindEvents`).
+    const unheard = ownActorModule
+      ? eventsUnheardBy(
+          palette.toolbox,
+          palette.blocks,
+          eventsNarrowerFor(files),
+          ownActorModule,
+        )
+      : new Set<string>();
+    const offered = withoutBlocks(
+      withoutCategories(palette.toolbox, [...hiddenCategories, ...narrowed]),
+      new Set([...(app ? APP_HIDDEN_BLOCKS : []), ...unheard]),
+    );
+    const shelved = shelf ? shelvedToolbox(offered, shelf) : offered;
+    return {
+      blocks: [
+        ...palette.blocks,
+        ...standInBlocks(Object.values(files), known),
+      ],
+      // …and LAST, after everything that can empty a group: the headings were
+      // decided while the toolbox was built, and any of the three filters
+      // above can leave one standing over nothing (`toolboxFilter`).
+      toolbox: withAddRules(withoutEmptyHeadings(shelved)),
+      // What this kind of file may HOLD, which is the whole palette for it.
+      // Every filter above is advice about what to offer — a rule out of
+      // scope, a level's hidden drawers, an app's, a hat this actor cannot
+      // hear, a lesson's shelf — and none of them makes a block that is
+      // already in the file wrong to be there. Asking the shelved toolbox
+      // instead disabled `define world` itself in any lesson opened before
+      // `origin/first-world` was done, and a disabled world compiles to
+      // `export default world` and nothing else (`misplacedBlocks`).
+      // …and what no drawer offers because an editor says it, which a file
+      // written before is still right to hold (`heldNotOffered`).
+      holdable: new Set([
+        ...typesOffered(palette.toolbox),
+        ...heldNotOffered(fileKind),
+      ]),
+    };
+  }, [
+    files,
+    ownContents,
+    ownRuleModule,
+    ownActorModule,
+    ownWorldModule,
+    fileKind,
+    hiddenCategories,
+    app,
+    ownActorProperties,
+    shelf,
+  ]);
+
+  /**
+   * The implementations this file holds and the workspace does not (§8).
+   *
+   * The editor has no other way to serialize: `readFile` is how the file is
+   * read and `showFile` how one is put on screen, because those are the two
+   * places the split is put back together. Calling `workspaces.save` directly
+   * would not throw — it would hand out a rule whose every step is empty.
+   */
+  const seam = useRef(createBodySeam()).current;
+
+  // Parsed once: Codebridge keys this component by file id, so it remounts (and
+  // re-reads `initialContents`) when the active file changes.
+  // `useState` with an initialiser, not `useRef(seam.show(…))`: a ref's
+  // argument is evaluated on every render and only the first result kept, so
+  // the split would re-run and remint the ids its bodies are keyed by while
+  // the workspace kept the first set.
+  /** Which surface the workspace is actually showing. */
+  const surfaceRef = useRef<string | null>(null);
+  /** The toolbox of the surface shown, for the add-a-section menu. */
+  const surfaceToolboxRef = useRef<Toolbox>([]);
+  // THE FILE AS SECTIONS (`useSectionWorkspace`, specs/LAZY_WORKSPACE_PLAN.md):
+  // its top blocks in a column, collapsible, reordered by dragging, added
+  // from the "+" between them. Not on a body surface, which is one member's
+  // implementation.
+  // In an actor's own file the "+" offers what that actor can hear, as the
+  // map's quick add does for a placed one (`kindEvents`).
+  const narrowEvents = useMemo(() => {
+    if (!ownActorModule) {
+      return undefined;
+    }
+    const narrow = eventsNarrowerFor(files);
+    return (choices: EventChoice[]) => narrow(choices, ownActorModule);
+  }, [files, ownActorModule]);
+  const codeChoices = useMemo(() => actorCodeChoices(boxed), [boxed]);
+  const sections = useSectionWorkspace({
+    memoryKey: fileId,
+    definitions: blocks,
+    getToolbox: () => surfaceToolboxRef.current,
+    narrowEvents,
+    ...(actorCode ? {moreChoices: codeChoices} : {}),
+    isReadOnly,
+    workspaceRef,
+    isShowingSections: () => surfaceRef.current === null,
+  });
+  /**
+   * An actor's code rows made roots, after every load and arrival — on the
+   * file's own surface, never on one member's body (`codeRoots`).
+   */
+  const rootCode = useCallback(
+    (workspace: Blockly.Workspace) => {
+      if (actorCode && surfaceRef.current === null) {
+        rootCodeRows(workspace);
+      }
+    },
+    [actorCode],
+  );
+  const {
+    prepare: stripCollapsed,
+    save: saveSections,
+    layOut,
+    layOutRef,
+    onInject: injectSections,
+    handleEvent: sectionEvent,
+  } = sections;
+
+  const [startBlocks] = useState(() => {
+    const document = parseWorkspace(initialContents);
+    // As this file was left this session, or — for one not yet opened —
+    // collapsed when it is too big to read at once.
+    return sections.prepareFirst(HIDE_BODIES ? seam.show(document) : document);
+  });
+
+  // What the file holds beside its workspace — a world's main map — kept
+  // from the contents this opened on and put back on every save
+  // (`documentExtras`). Re-read when the lab hands over a different document.
+  const extras = useRef(documentExtras(initialContents));
+
+  /** The FILE: what the workspace shows, with its bodies put back. */
+  const readFile = useCallback(
+    (workspace: Blockly.Workspace) => {
+      // …with every collapsed body put back where it was taken from: the file
+      // a collapsed workspace writes is the file a built one would.
+      const saved = saveSections(workspace);
+      return withDocumentExtras(
+        HIDE_BODIES ? seam.read(saved) : saved,
+        extras.current,
+      );
+    },
+    [seam, saveSections],
+  );
+
+  /**
+   * The member whose body is on screen, if one is.
+   *
+   * ONE workspace, loaded in place — the same thing the rename and epoch
+   * effects below do, with events off. Re-keying the `BlocklyWorkspace` to
+   * swap `startBlocks` was the first attempt and the body came up empty;
+   * loading is what this file already knows how to do.
+   */
+  const [editing, setEditing] = useState<{
+    id: string;
+    label: string;
+    /** Which toolbox this surface wants — an event's is not a body's. */
+    kind: Surface;
+  } | null>(null);
+  /** The interface, held while a body has its place. */
+  const interfaceRef = useRef<BlocklySerialization | null>(null);
+
+  /** What the pencil on a `define …` block does. */
+  const openBody = useCallback((blockId: string) => {
+    const workspace = workspaceRef.current;
+    if (!workspace) {
+      return;
+    }
+    // Saved, not re-read from the file: the learner may have renamed a
+    // property since, and going back should show what they left.
+    // With the collapsed bodies put back: going Back strips them out again,
+    // and a save made from the body surface writes the interface whole.
+    interfaceRef.current = saveSections(workspace);
+    // `define block` has no NAME field — what it is called is the signature
+    // the learner designed, which is where every other reader of the file gets
+    // it from too (`ruleMeta.addDesignedBlock`).
+    const block = workspace.getBlockById(blockId);
+    const designed = designedName(
+      (
+        block as unknown as {
+          saveExtraState?: () => {
+            parts?: Array<{kind?: string; text?: string}>;
+          };
+        }
+      )?.saveExtraState?.()?.parts,
+    );
+    setEditing({
+      id: blockId,
+      label: block?.getFieldValue('NAME') || designed || 'this',
+      // `define event` has a surface but no implementation, so what it offers
+      // is its phrasing and nothing else; a drawing's is a body plus the one
+      // drawer that can only be used there; a `define block`'s is a body with
+      // the signature drawer moved to the front, because this is the only
+      // place a signature can be edited (`surfaceToolbox`).
+      kind:
+        block?.type === 'world_rule_event'
+          ? 'event'
+          : block?.type === 'world_define_drawing'
+            ? 'drawing'
+            : block?.type === 'world_rule_block'
+              ? 'block'
+              : 'body',
+    });
+  }, []);
+
+  /** The note being written, if one is. */
+  const [note, setNote] = useState<{
+    field: FieldMarkdown;
+    value: string;
+  } | null>(null);
+
+  // The same arrangement the pencil uses: a Blockly field has no route to
+  // React state, so the editor installs itself while it is mounted.
+  useEffect(() => {
+    setMarkdownOpener(field =>
+      setNote({field, value: (field.getValue() as string) ?? ''}),
+    );
+    return () => setMarkdownOpener(null);
+  }, []);
+
+  const closeBody = useCallback(() => {
+    // Back to the FILE, not to the snapshot taken when the body opened. The
+    // head has been drawing `RETURNS` since then, and it is the only place
+    // that field exists — so the interface is rebuilt from what the file now
+    // says, which also lets the seam forget what the head was holding.
+    const held = interfaceRef.current;
+    if (held && HIDE_BODIES) {
+      interfaceRef.current = seam.show(seam.read(held));
+    }
+    setEditing(null);
+  }, [seam]);
+
+  // A Blockly field has no route to React state, so the editor installs
+  // itself while it is mounted — `setModuleOpener` and `setLessonOpener` are
+  // the same arrangement.
+  useEffect(() => {
+    setBodyOpener(openBody);
+    return () => setBodyOpener(null);
+  }, [openBody]);
+
+  /** Show a whole document: keep its bodies, render its interface. */
+  const showFile = useCallback(
+    (document: BlocklySerialization, workspace: Blockly.WorkspaceSvg) => {
+      const shown = HIDE_BODIES ? seam.show(document) : document;
+      Blockly.serialization.workspaces.load(stripCollapsed(shown), workspace);
+      rootCode(workspace);
+      // Handed back because the caller may be reloading UNDER an open body,
+      // and the body is built from the interface, not from the workspace.
+      // WHOLE, collapsed bodies and all: it is what a save from the body
+      // surface writes.
+      return shown;
+    },
+    [seam, stripCollapsed, rootCode],
+  );
+
+  // The toolbox the surface in front of the learner can actually use. Kept
+  // apart from the `blocks` memo above on purpose: `blocks` re-registers every
+  // definition and is watched by the effect that swaps surfaces, so folding
+  // this into it would rebuild the palette every time a body opened.
+  const surfaceToolbox = useMemo(
+    () => toolboxForSurface(toolbox, editing?.kind ?? 'interface'),
+    [toolbox, editing],
+  );
+  surfaceToolboxRef.current = surfaceToolbox;
+
+  // The words on the blocks, in the reader's language.
+  //
+  // Done to the DEFINITIONS rather than to the workspace: Blockly has no
+  // notion of localization, and a translation that reached the SVG would be
+  // text rewritten under its layout. `localizeBlocks` translates what is read
+  // and leaves every identifier — block types, argument names, what a dropdown
+  // STORES — exactly as it was.
+  const locale = useLocalization();
+  const localizedBlocks = useMemo(
+    // `locale` is not read; it is the signal. The plugin fires `change` when
+    // LocalizeJS arrives and on every switch after, and the translation is
+    // synchronous, so re-running it is the whole of following a locale.
+    () => localizeBlocks(blocks),
+    [blocks, locale],
+  );
+
+  // …and the drawers they sit in. The toolbox is inside the `notranslate`
+  // container with the workspace, so nothing else would translate it.
+  //
+  // LAST, after `toolboxForSurface` and the two filters above it: all three
+  // select categories by name, and would stop matching a name in another
+  // language. See `localizeToolbox`.
+  const localizedToolbox = useMemo(
+    () => localizeToolbox(surfaceToolbox),
+    [surfaceToolbox, locale],
+  );
+
+  const options = useMemo(
+    () => ({
+      readOnly: isReadOnly,
+      trashcan: false,
+      move: {wheel: true, drag: true, scrollbars: true},
+      plugins: {
+        metricsManager: TopLeftMetricsManager,
+        blockDragger: ScrollBlockDragger,
+      },
+    }),
+    [isReadOnly],
+  );
+
+  // A workspace to reload once the palette has caught up (see `carry`).
+  const pendingReload = useRef<BlocklySerialization | null>(null);
+  // The workspace whose load has finished. Blockly reports what it creates while
+  // loading — the variables a rule declares, the blocks themselves — as ordinary
+  // change events, and saving those writes the file back the moment it is
+  // opened: an edit nobody made, a project marked dirty, and a full recompile
+  // for byte-identical output.
+  //
+  // Per WORKSPACE, not per editor: this component keeps its state while the
+  // workspace beneath it is re-injected (see the `readOnly` key below), and the
+  // lab is read-only for a moment while the project loads — so every file open
+  // was followed by a second load whose events looked like edits. Worse, they
+  // were edits to the sources as they stood BEFORE the project arrived, so the
+  // enqueued save wrote the starter project over the learner's work half a
+  // minute later.
+  const loadedWorkspace = useRef<Blockly.WorkspaceSvg | null>(null);
+  // Whether a `define block`'s signature is being typed into (see `bubbleToggle`).
+  const signatureBubbleOpen = useRef(false);
+  // The keys this rule's members are referred to by, as of the last state the
+  // project agreed on. What the next commit is compared against.
+  const memberState = useRef<MemberKey[]>(
+    initialMemberKeys(ownRuleModule, initialContents),
+  );
+
+  /**
+   * Write a rename through the project, and reload this workspace.
+   *
+   * `renamed` is the project with the references rewritten; `self` is this
+   * file's own workspace rewritten from the LIVE one, because what is on disk
+   * for it is an edit behind — the rename is in the workspace being handled.
+   *
+   * Writing everything in one `updateSources` rather than letting the ordinary
+   * per-file save follow: `saveFile` closes over the sources of the render that
+   * made it, and would put the other files back.
+   */
+  const carry = useCallback(
+    (renamed: MultiFileSource, self: string): void => {
+      const sources = sourcesRef.current;
+      const file = renamed.files[fileId];
+      updateSources({
+        ...sources,
+        source: {
+          ...renamed,
+          files: {...renamed.files, [fileId]: {...file, contents: self}},
+        },
+      });
+      // The blocks in THIS workspace carry the old name in their types, and a
+      // block's type cannot be changed in place. The palette rebuilds from the
+      // sources we just wrote; the workspace is reloaded from the rewritten
+      // state once it has (see the effect below).
+      pendingReload.current = JSON.parse(self) as BlocklySerialization;
+    },
+    [fileId, updateSources],
+  );
+
+  /**
+   * Carry a renamed MEMBER through the project.
+   *
+   * A member is referred to by the export name its own name derives, so
+   * renaming a trait, a property, an event, a step, or the wording of a designed
+   * block is the same kind of edit as renaming the rule: every reference to it
+   * has to follow. What was renamed is worked out by comparing the rule's
+   * members with the last state the project agreed on — not by reading the edit
+   * — because the edits that rename a member are various (a NAME field, a label
+   * in a mutator) and what they have in common is only the result.
+   */
+  const reconcileMembers = useCallback(
+    (contents: string): void => {
+      if (!ownRuleModule) {
+        return;
+      }
+      const meta = parseRuleMeta(ownRuleModule, contents);
+      if (!meta) {
+        return;
+      }
+      const keys = memberKeys(meta);
+      const before = memberState.current;
+      memberState.current = keys;
+      const rename = renamedMember(before, keys);
+      if (!rename) {
+        return;
+      }
+      // Two members with one key is a reference with two meanings — and unlike a
+      // rule's name, there is no one field to put back (a designed block's name
+      // is its whole signature). So it is left as written, said out loud on the
+      // rule, and not carried: rewriting references to a key that names two
+      // things would only spread the ambiguity.
+      const duplicated = duplicateMemberKeys(keys);
+      const [rule] = workspaceRef.current?.getBlocksByType('world_rule') ?? [];
+      rule?.setWarningText(
+        duplicated.length
+          ? localizeText(
+              'Two of this rule\u2019s members are both called \u201c%1\u201d.',
+              [duplicated[0]],
+            )
+          : null,
+      );
+      if (duplicated.length) {
+        return;
+      }
+      const self = renameMemberReferences(
+        contents,
+        meta.name,
+        rename.from,
+        rename.to,
+      );
+      carry(
+        renameMemberInSource(
+          sourcesRef.current.source,
+          meta.name,
+          rename.from,
+          rename.to,
+        ),
+        self ?? contents,
+      );
+    },
+    [carry, ownRuleModule],
+  );
+
+  /**
+   * Carry a rule's new name through the project.
+   *
+   * Every reference to a rule is its name, so renaming one is an edit to every
+   * file that mentions it — and to this one, whose own members' block types are
+   * built from the name too. Returns true when it has written the project
+   * itself, so the ordinary per-file save is skipped: `saveFile` closes over the
+   * sources of the render that made it, and would put the other files back.
+   */
+  const handleRename = useCallback(
+    (
+      rename: {from: string; to: string; block: Blockly.Block},
+      contents: string,
+    ): boolean => {
+      // A name two rules answer to is a reference with two meanings, so a taken
+      // one is refused rather than carried: the field goes back to what it was
+      // and the block says why.
+      //
+      // Refusing has to mean the edit did not happen at all. Letting the name
+      // stand while the references keep the old one would strand the rule —
+      // nothing would name it, and the NEXT rename would carry the name nothing
+      // refers to, leaving no rename that could ever put it right.
+      const taken = ruleByName(rename.to);
+      if (taken && taken.modulePath !== ownRuleModule) {
+        // Silently: the revert is not an edit, and an event for it would come
+        // back through here as a rename in the other direction.
+        Blockly.Events.disable();
+        try {
+          rename.block.setFieldValue(rename.from, 'NAME');
+        } finally {
+          Blockly.Events.enable();
+        }
+        rename.block.setWarningText(
+          `Another rule is already called \u201c${rename.to}\u201d. ` +
+            'Rules are referred to by name, so this one needs its own.',
+        );
+        return true;
+      }
+      rename.block.setWarningText(null);
+
+      const self = renameRuleReferences(contents, rename.from, rename.to);
+      carry(
+        renameRuleInSource(sourcesRef.current.source, rename.from, rename.to),
+        self ?? contents,
+      );
+      return true;
+    },
+    [carry, ownRuleModule],
+  );
+
+  /**
+   * The toolbox's blocks, at the height the workspace draws them.
+   *
+   * THE FLYOUT IS ITS OWN WORKSPACE with its own renderer and its own copy of
+   * the font metrics, and the effect below refreshes the main workspace's and
+   * not those. So a page whose font arrived after injection ends up with two
+   * answers — measured, 20/16 in the workspace against 17/14 in the flyout —
+   * and every block in the toolbox is drawn to a different height than the one
+   * you get when you drag it out. Which way it is wrong depends on which face
+   * stood in, so it reads as "too tall" or "too short" depending on the
+   * machine.
+   *
+   * The main workspace is the authority here because it is the one that gets
+   * reloaded; the flyout only has to agree with it. Unlike a workspace, a
+   * flyout redraws its blocks from the refreshed constants straight away —
+   * nothing has to be reloaded — so this is the whole of the fix.
+   */
+  const syncFlyoutMetrics = useCallback(
+    (workspace: Blockly.WorkspaceSvg): void => {
+      const flyout = workspace.getFlyout()?.getWorkspace();
+      if (!flyout) {
+        return;
+      }
+      const metric = (one: Blockly.WorkspaceSvg): number =>
+        (
+          one.getRenderer().getConstants() as unknown as {
+            FIELD_TEXT_HEIGHT?: number;
+          }
+        ).FIELD_TEXT_HEIGHT ?? 0;
+      if (metric(flyout) !== metric(workspace)) {
+        flyout.refreshTheme();
+      }
+    },
+    [],
+  );
+
+  /**
+   * Ask every block on the workspace to work out its own size.
+   *
+   * A LOAD DOES NOT ALWAYS LAY OUT WHAT IT BUILT. Opening `use the pad` on
+   * Teleport — eighty-eight blocks, seventeen of them values nested inside
+   * other values — left those seventeen reporting a height and width of zero
+   * while claiming to be rendered and holding an SVG root. A block with no
+   * size draws as nothing, and a dropdown on one draws as an arrow with no
+   * block around it, which is what it looks like from the front.
+   *
+   * `finishQueuedRenders` alone does not help, and that is the tell: nothing
+   * had been queued. So they are queued here, by name, and then flushed.
+   *
+   * Cheap enough to do after every load — a block that already knows its size
+   * re-renders to the same numbers — and worth doing there rather than only
+   * where it was noticed, since which blocks get missed is not something this
+   * code decides.
+   */
+  /** Sections, and the "How this works" button in a rule's drawer. */
+  const onInject = useCallback(
+    (workspace: Blockly.WorkspaceSvg) => {
+      injectSections(workspace);
+      registerLessonButtons(workspace);
+    },
+    [injectSections],
+  );
+
+  const handleChange = useCallback(
+    (event: Blockly.Events.Abstract) => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      // Before anything else, and before the UI events are dropped: opening a
+      // category is exactly when the flyout's metrics have to be right, and
+      // asking here needs no guess about when the font arrived. A no-op once
+      // the two workspaces agree, which is every time after the first.
+      if (event.type === Blockly.Events.TOOLBOX_ITEM_SELECT) {
+        syncFlyoutMetrics(workspace);
+      }
+      // Before the layout below sees it: a code row loaded, dragged in or
+      // let go of at the top of an actor's code is a root there.
+      if (
+        event.type === Blockly.Events.FINISHED_LOADING ||
+        event.type === Blockly.Events.BLOCK_CREATE ||
+        event.type === Blockly.Events.BLOCK_MOVE
+      ) {
+        rootCode(workspace);
+      }
+      // Opening a file is not editing it.
+      if (loadedWorkspace.current !== workspace) {
+        if (event.type === Blockly.Events.FINISHED_LOADING) {
+          loadedWorkspace.current = workspace;
+          // The first load of this workspace goes through `BlocklyWorkspace`'s
+          // own seeding and not through either of the reload effects, so this
+          // is the only place it can be measured and arranged.
+          layOut(workspace);
+        }
+        return;
+      }
+      sectionEvent(event, workspace);
+      // A BODY's edits are not the file's. The workspace holds one member's
+      // implementation, so what it saves is that body — put back in the seam,
+      // and the file is the interface this editor set aside, merged with it.
+      //
+      // Safe against the empty surface that broke the first attempt: the swap
+      // above loads with events off, so nothing arrives here until a person
+      // has done something, and `surfaceRef` says which surface they did it
+      // on.
+      if (editing && surfaceRef.current === editing.id) {
+        if (event.isUiEvent) {
+          return;
+        }
+        // A KEYSTROKE IS NOT AN EDIT, and on this surface that is not a
+        // nicety. Blockly writes a text field on every keypress as an
+        // intermediate change, so that the block resizes as you type. Down
+        // this path the member's name is its signature: persisting those
+        // would rename it to "c", then "cl", then "cla" — and a rename
+        // rewrites the project, which reloads this workspace, which throws
+        // away the very block whose field is open. Typing `clamped between 0
+        // and 1` over `kept between 0 and 1` lost the field editor within the
+        // first few letters and left the member called `cla`.
+        //
+        // So the keystrokes are shown and not saved; the commit — the
+        // BLOCK_CHANGE Blockly fires when the editor closes, from the value
+        // it opened with — is what the project hears about. Same discipline
+        // as `isTypingDeclaration` on the file surface, which this branch
+        // returns before reaching.
+        if (event.type === Blockly.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE) {
+          return;
+        }
+        // The signature is blocks on the head, and the FILE is the parts they
+        // stand for — so the stack is read back before anything is saved.
+        // Idempotent, and it has to be: this runs on every edit, and a rebuild
+        // binds variables, which fires events that arrive back here.
+        (
+          workspace.getBlockById(BODY_OWNER_ID) as unknown as {
+            readArguments_?: () => void;
+          } | null
+        )?.readArguments_?.();
+        seam.setBody(
+          editing.id,
+          Blockly.serialization.workspaces.save(
+            workspace,
+          ) as BlocklySerialization,
+        );
+        const held = interfaceRef.current;
+        if (held && !isReadOnly) {
+          const contents = JSON.stringify(seam.read(held), null, 2);
+          // EVERY change on this surface, not only ones to the head.
+          //
+          // A member's name is its signature, and the signature is edited as
+          // blocks in the `arguments` row — so retyping a word changes what
+          // the rule OFFERS, and the change event carries the id of the little
+          // `text` block that was typed into, not the head's. Gated on the
+          // head, this never ran for the one edit that most needs it: the
+          // member was renamed, its callers were left pointing at the old
+          // name, and `standInBlocks` minted a definition for the dangling
+          // type so that everything still drew and quietly did nothing.
+          //
+          // `reconcileMembers` is its own guard — it compares the member keys
+          // against the snapshot and returns unless one was renamed — so
+          // calling it on every edit costs a parse and changes nothing else.
+          reconcileMembers(contents);
+          // …and when it carried one, the project has already been written —
+          // by `carry`, from the sources of this moment. `saveFile` closes
+          // over the sources of the render that made it, so saving again here
+          // would put the other files back, references and all. The file
+          // surface skips the save for the same reason.
+          if (pendingReload.current) {
+            return;
+          }
+          onChangeRef.current(contents);
+        }
+        return;
+      }
+      // Ignore pure UI events (selection, viewport) — only persist real edits,
+      // except a mutator bubble closing, which commits a signature.
+      const bubble = bubbleToggle(event);
+      if (bubble !== undefined) {
+        signatureBubbleOpen.current = bubble;
+        if (bubble) {
+          return;
+        }
+        // Closing it commits the session: a designed block's name is its whole
+        // signature, so what was typed into the bubble is only finished now.
+        const edited = JSON.stringify(readFile(workspace), null, 2);
+        reconcileMembers(edited);
+        if (!pendingReload.current) {
+          onChangeRef.current(edited);
+        }
+        return;
+      }
+      // An open bubble recomposes its block on every keystroke, so saving those
+      // would put a half-renamed member in front of the compiler — which reports
+      // it, having been handed a rule whose own body no longer names what it
+      // declares. The session is written when it closes, above.
+      if (
+        event.isUiEvent ||
+        movedItself(event) ||
+        signatureBubbleOpen.current ||
+        isTypingDeclaration(event, workspace)
+      ) {
+        return;
+      }
+      const state = readFile(workspace);
+      const contents = JSON.stringify(state, null, 2);
+      const rename = ruleRename(event, workspace);
+      if (rename && handleRename(rename, contents)) {
+        return;
+      }
+      // A member's name may have changed with this edit — but not while its
+      // signature is being typed into, which recomposes the block per keystroke.
+      if (!signatureBubbleOpen.current) {
+        reconcileMembers(contents);
+        if (pendingReload.current) {
+          return;
+        }
+      }
+      onChangeRef.current(contents);
+    },
+    // `editing` among them, and it is not optional: without it this closure
+    // keeps the value it had when the editor mounted — null — and a body's
+    // edits fall through to the path that writes the whole file, which for a
+    // workspace holding one implementation is not the file at all.
+    [
+      handleRename,
+      reconcileMembers,
+      editing,
+      seam,
+      isReadOnly,
+      readFile,
+      syncFlyoutMetrics,
+      layOut,
+      sectionEvent,
+      rootCode,
+    ],
+  );
+
+  // The open button on a `use rule` / `use trait` block, and what it does. The handler
+  // turns the module path the field hands back into the file the browser would
+  // have opened; whether it is offered at all is the level's call.
+  useEffect(() => {
+    setModuleOpeningOffered(showsRuleSource(levelProperties));
+  }, [levelProperties]);
+
+  // How much of the color picker a level wants offered. A field has no route to
+  // React state, which is what these module-level installers are for.
+  useEffect(() => {
+    setSimpleColors(usesSimpleColors(levelProperties));
+  }, [levelProperties]);
+
+  useEffect(() => {
+    setModuleOpener(modulePath => {
+      const sources = sourcesRef.current;
+      const fileId = fileIdForModule(sources.source, modulePath);
+      if (!fileId) {
+        // The button is only drawn when the project holds the file
+        // (`canOpenModule`), so getting here means the two disagree about what
+        // "holds" means — which is what happened when `.actor` was registered
+        // as openable and not listed among the extensions tried here. The
+        // button did nothing at all, and nothing anywhere said why.
+        console.warn(
+          `World Lab: nothing to open for \`${modulePath}\`. The button offered ` +
+            'it, so the openable registry and this resolver disagree.',
+        );
+        return;
+      }
+      updateSources({
+        ...sources,
+        source: activateFile(sources.source, fileId),
+      });
+    });
+    // Cleared on unmount so a field on a disposed workspace cannot open a file
+    // through an editor that is gone.
+    return () => setModuleOpener(null);
+  }, [updateSources]);
+
+  // "Show me" on a block or a drawer (`callouts/reveal`): this editor's
+  // toolbox, while this editor is the one on screen. Blockly's own focus is
+  // what points at a block, so that a keyboard and a screen reader are
+  // pointed at it too (`revealInToolbox`).
+  useEffect(() => {
+    setRevealer('toolbox', async step => {
+      // A workspace is INJECTED after the editor holding it has mounted, so
+      // a reveal that has just brought this file to the front arrives before
+      // there is a toolbox to open. Waited for here, where what is waited on
+      // is known, rather than by the caller guessing a delay.
+      const workspace = await waitFor(() => workspaceRef.current);
+      if (!workspace) {
+        return false;
+      }
+      try {
+        return revealInToolbox(
+          workspace as unknown as ToolboxHost,
+          step,
+          node =>
+            Blockly.getFocusManager().focusNode(node as Blockly.IFocusableNode),
+          // Once the flyout has laid its blocks out, so the block's place
+          // is its real one.
+          act => void Blockly.renderManagement.finishQueuedRenders().then(act),
+        );
+      } catch {
+        // Pointing is a second channel: a Blockly that objects to being
+        // steered from outside costs the ring, never the lesson.
+        return false;
+      }
+    });
+    return () => setRevealer('toolbox', null);
+  }, []);
+
+  // Which rule this workspace is, so `use rule` can leave it out of its own list.
+  // After mount rather than during: the workspace is created by a child, whose
+  // effects run first. A block deserialized before this lands keeps whatever it
+  // was saved with, which is the right way round — a dropdown that cannot offer
+  // a value drops it.
+  useEffect(() => {
+    if (workspaceRef.current) {
+      setEditingRule(workspaceRef.current, ownRuleModule);
+      setEditingActor(workspaceRef.current, ownActorModule);
+      // …and which FILE it is at all, which is what an act on the file needs:
+      // a world's own `define actor` can be enhanced, and the patch lands in
+      // the world (`extensions/enhanceButton`).
+      setEditingFile(
+        workspaceRef.current,
+        filePath(currentSources.source, fileId)?.replace(/\.[^./]+$/, ''),
+      );
+      // …and what kind of file, and what it offers, which is what says a
+      // block pasted here from another tab cannot be here (`misplacedBlocks`).
+      setFileContext(
+        workspaceRef.current,
+        fileKind ? {kind: fileKind, offered: holdable} : undefined,
+      );
+      // …and now that the workspace knows which file it is, the blocks that
+      // draw the actor they are about can say so. HERE rather than only on
+      // creation, because a block is created before it is connected and a
+      // SHADOW is created without announcing itself at all — so the first ask
+      // of "what am I about" can come before there is anything to answer with.
+      refreshActorPictures(workspaceRef.current);
+    }
+  }, [
+    ownRuleModule,
+    ownActorModule,
+    currentSources.source,
+    fileId,
+    fileKind,
+    holdable,
+  ]);
+
+  // Reload after a rename, once `blocks` carries the renamed member types —
+  // BlocklyProvider registers them in its own effect, which runs before this one
+  // because it is deeper in the tree. Loading with events off: the sources
+  // already hold this state, and re-saving it would be a second write of the
+  // file for the same edit.
+  useEffect(() => {
+    const workspace = workspaceRef.current;
+    const state = pendingReload.current;
+    if (!workspace || !state) {
+      return;
+    }
+    pendingReload.current = null;
+    const {scrollX, scrollY} = workspace;
+    Blockly.Events.disable();
+    try {
+      // THE HELD INTERFACE IS PART OF THE RELOAD, and forgetting that is how
+      // a rename made from a body surface undid itself. The body is rebuilt
+      // from this snapshot (`seam.bodyOf`), which was taken when the pencil
+      // was clicked — so a snapshot left alone still says the old signature,
+      // and `seam.show` above has just dropped the head state that was the
+      // only other record of the new one. The surface came back saying what
+      // the learner had typed OVER, one keystroke's work silently undone.
+      interfaceRef.current = showFile(state, workspace);
+    } finally {
+      Blockly.Events.enable();
+    }
+    refreshActorPictures(workspace);
+    refreshBlockDesigns(workspace);
+    layOut(workspace);
+    workspace.scroll(scrollX, scrollY);
+  }, [blocks, showFile, layOut]);
+
+  // Swap the surface, and keep it swapped.
+  //
+  // NOT one-shot on `editing` changing. `BlocklyWorkspace` re-seeds itself
+  // from `startBlocks` when its `blocks` prop changes, and `blocks` is
+  // rebuilt whenever the project's files change — which a body's own edit
+  // does. So the interface reappeared underneath an open body, and the next
+  // edit stored THAT as the body. This runs on `blocks` too and asks the
+  // workspace what it is actually showing.
+  //
+  // The question it asks: a member's block lives on the interface and never
+  // inside its own body, so finding it means the interface is up.
+  useEffect(() => {
+    const workspace = workspaceRef.current;
+    if (!workspace) {
+      return;
+    }
+    const want = editing?.id ?? null;
+    const showingInterface = Boolean(want && workspace.getBlockById(want));
+    if (surfaceRef.current === want && !showingInterface) {
+      return;
+    }
+    surfaceRef.current = want;
+    const held = interfaceRef.current ?? startBlocks;
+    const document = editing
+      ? seam.bodyOf(editing.id, held)
+      : stripCollapsed(held);
+    Blockly.Events.disable();
+    try {
+      Blockly.serialization.workspaces.load(document, workspace);
+      rootCode(workspace);
+      if (editing) {
+        // Inside the quiet, not after it: anchoring changes the block, and a
+        // change event here would be read as the learner editing the body and
+        // written straight back to the file.
+        const head = workspace.getBlockById(BODY_OWNER_ID);
+        if (head) {
+          anchorBodyOwner(head);
+          // The viewport is wherever the interface left it, which for a rule
+          // wider than the screen is not where this is. To the ORIGIN rather
+          // than centered on the head: the head is as wide as the signature it
+          // draws, and centring a wide block puts its left edge behind the
+          // toolbox.
+        }
+      }
+    } finally {
+      Blockly.Events.enable();
+    }
+    if (editing) {
+      // To the ORIGIN, which is where the head is: `bodyOf` places it at the
+      // same offset every other workspace in the lab puts its root, and the
+      // viewport is otherwise still wherever the interface was left. Opening a
+      // body from a rule scrolled to the right put the head behind the
+      // toolbox, off the side of the screen.
+      workspace.scroll(0, 0);
+    }
+    refreshActorPictures(workspace);
+    // …and every `define block` redraws the block it defines. The load above
+    // is SILENT, so `FINISHED_LOADING` — which is what the designer rebuilds
+    // on, because the serializer applies `extraState` before fields — never
+    // arrives. Without this a query is drawn as an action, every time.
+    refreshBlockDesigns(workspace);
+    layOut(workspace);
+  }, [editing, blocks, seam, startBlocks, layOut, stripCollapsed, rootCode]);
+
+  /**
+   * Re-seed when the lab is handed a different document.
+   *
+   * Loading the project, restoring a version, starting over — `sourcesEpoch`
+   * counts those and nothing else (SourcesContext), so this never has to work
+   * out whether a change was its own. Its own edits do not bump it.
+   */
+  const seenEpoch = useRef(sourcesEpoch);
+  useEffect(() => {
+    const workspace = workspaceRef.current;
+    if (!workspace || seenEpoch.current === sourcesEpoch) {
+      return;
+    }
+    seenEpoch.current = sourcesEpoch;
+    extras.current = documentExtras(initialContents);
+    const {scrollX, scrollY} = workspace;
+    // With events off, like the rename reload: the sources already hold this
+    // state, and re-saving it would be a second write for an edit nobody made.
+    Blockly.Events.disable();
+    try {
+      showFile(parseWorkspace(initialContents), workspace);
+    } finally {
+      Blockly.Events.enable();
+    }
+    refreshActorPictures(workspace);
+    refreshBlockDesigns(workspace);
+    workspace.scroll(scrollX, scrollY);
+  }, [sourcesEpoch, initialContents, showFile]);
+
+  // Blocks already on screen were built with the words of the old locale.
+  //
+  // Re-registering the definitions changes what the NEXT block made of a type
+  // will say, and nothing about the ones already made — a block keeps the
+  // fields it was created with. So the workspace is loaded back into itself,
+  // which is the same thing a file switch does and the same thing the font
+  // re-measure below does.
+  //
+  // Not on the first render: `useLocalization` reports a locale immediately,
+  // and reloading a workspace that was just built in that locale is a reload
+  // for nothing.
+  const localeShown = useRef<string | null>(null);
+  useEffect(() => {
+    const workspace = workspaceRef.current;
+    if (!workspace) {
+      return;
+    }
+    if (localeShown.current === null) {
+      localeShown.current = locale;
+      return;
+    }
+    if (localeShown.current === locale) {
+      return;
+    }
+    localeShown.current = locale;
+    const {scrollX, scrollY} = workspace;
+    const state = Blockly.serialization.workspaces.save(workspace);
+    Blockly.Events.disable();
+    try {
+      Blockly.serialization.workspaces.load(state, workspace);
+      rootCode(workspace);
+      const head = workspace.getBlockById(BODY_OWNER_ID);
+      if (head) {
+        anchorBodyOwner(head);
+      }
+    } finally {
+      Blockly.Events.enable();
+    }
+    workspace.scroll(scrollX, scrollY);
+    refreshActorPictures(workspace);
+    refreshBlockDesigns(workspace);
+    // The reload made every block anew, and the show/hide control is not part
+    // of the file, so it is put back with the layout (`syncToggles`).
+    layOut(workspace);
+  }, [locale, localizedBlocks, layOut, rootCode]);
+
+  // Re-measure when the web fonts land.
+  //
+  // A renderer measures the font ONCE, when the workspace is injected, and
+  // keeps the answer in its constants: `FIELD_TEXT_HEIGHT` and
+  // `FIELD_TEXT_BASELINE`. The first workspace of a page load is injected
+  // before the web font has arrived, so those are measured in the fallback
+  // face and every row is a few pixels out for the life of that workspace —
+  // measured here, 17 and 14 against the 20 and 16 the same file gets when it
+  // is opened again. Which way it is wrong depends on which font stood in.
+  //
+  // Nothing recovers it but REBUILDING the blocks. `refreshTheme` recomputes
+  // the constants, and re-rendering does not use them: a block keeps the
+  // layout it was built with, and `queueRender` with the renders flushed
+  // leaves it exactly as tall as it was. Loading the workspace back into
+  // itself is what a file switch does, which is why switching has always been
+  // the cure.
+  //
+  // `loadingdone` rather than `fonts.ready`: that promise settles for whatever
+  // was pending when it was asked, and more faces start loading after — it
+  // resolved a second before these blocks existed. The event fires once per
+  // batch, a handful of times, and never in a steady state; and the guard
+  // below means a batch that changes no metric costs a measurement and stops.
+  useEffect(() => {
+    const fonts = document.fonts;
+    if (!fonts?.addEventListener) {
+      return;
+    }
+    const textHeight = (workspace: Blockly.WorkspaceSvg): number =>
+      (
+        workspace.getRenderer().getConstants() as unknown as {
+          FIELD_TEXT_HEIGHT?: number;
+        }
+      ).FIELD_TEXT_HEIGHT ?? 0;
+
+    const remeasure = (): void => {
+      const workspace = workspaceRef.current;
+      if (!workspace) {
+        return;
+      }
+      const before = textHeight(workspace);
+      workspace.refreshTheme();
+      if (textHeight(workspace) === before) {
+        return;
+      }
+      const {scrollX, scrollY} = workspace;
+      const state = Blockly.serialization.workspaces.save(workspace);
+      // Silently: a font arriving is not an edit, and this must not write the
+      // file back — least of all a body surface, whose workspace is one
+      // member's implementation and not the file at all.
+      Blockly.Events.disable();
+      try {
+        Blockly.serialization.workspaces.load(state, workspace);
+        rootCode(workspace);
+        // The head is anchored imperatively, so a reload hands back a plain
+        // block: draggable, deletable, wearing a pencil into itself.
+        const head = workspace.getBlockById(BODY_OWNER_ID);
+        if (head) {
+          anchorBodyOwner(head);
+        }
+      } finally {
+        Blockly.Events.enable();
+      }
+      workspace.scroll(scrollX, scrollY);
+      refreshActorPictures(workspace);
+      refreshBlockDesigns(workspace);
+      // …and the show/hide controls, which the reload took away: they are not
+      // part of the file, so a reload builds blocks without them. On a fresh
+      // page the fonts land after the file has opened, which is why a large
+      // file showed its headers with no way to open them until a tab switch
+      // reloaded it with the fonts already there.
+      layOutRef.current(workspace);
+    };
+    fonts.addEventListener('loadingdone', remeasure);
+    return () => fonts.removeEventListener('loadingdone', remeasure);
+  }, []);
+
+  // The selected block-color theme (its dark variant when the app is in dark
+  // mode). `BlocklyWorkspace` applies live updates via its `theme` prop.
+  const {theme} = useWorldBlocklyTheme();
+
+  return (
+    <div className={styles.editor}>
+      {pickingSprite && (
+        <SpritePickerDialog
+          sprites={images}
+          images={decoded}
+          sheets={sheets}
+          current={pickCurrent}
+          onPick={choosePicture}
+          onImport={async () => {
+            // The same handover, and the same reason it is an await: an import
+            // from inside the picker continues the picking. The learner asked
+            // for a picture and now the project has one, so it goes back to the
+            // palette rather than straight to the field — an imported
+            // spritesheet still has to say WHICH cell.
+            setPickingSprite(false);
+            const value = await requestAppearanceImport('sprite');
+            if (value) {
+              setPickCurrent({sprite: value});
+            }
+            setPickingSprite(true);
+          }}
+          onCancel={() => finishPick(undefined)}
+        />
+      )}
+      {editing && (
+        // The body has the workspace's place; this says whose it is and how
+        // to get back. A header rather than a modal's chrome, because the
+        // pane is the same pane and what changed is what is in it.
+        <div className={styles.bodyHeader}>
+          {/* The same button the Preview's "Restart" and the Console's
+              "Clear" are — a text button at `extraSmall` with an icon in
+              front. This bar sits directly under the panel header those live
+              in, so anything else would read as a different kind of control. */}
+          <Button
+            variant="text"
+            size="extraSmall"
+            startIcon={
+              <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
+            }
+            onClick={closeBody}
+          >
+            Back
+          </Button>
+          {/* `label2` is the type scale's name-of-a-thing: 14px, semibold.
+              Not an overline, which is what the panel header above uses —
+              that is a LABEL and is uppercased, and this is the member's own
+              name, which a learner wrote and should read back as they typed
+              it. */}
+          <Typography component="span" variant="label2">
+            {editing.label}
+          </Typography>
+        </div>
+      )}
+      {note && (
+        <NoteEditorDialog
+          value={note.value}
+          onCancel={() => setNote(null)}
+          onSave={markdown => {
+            // Through the FIELD, so Blockly raises the change event the file is
+            // written from — the same path typing in any other field takes.
+            note.field.setValue(markdown);
+            setNote(null);
+          }}
+        />
+      )}
+      {/* LocalizeJS sweeps the DOM and rewrites text nodes. Inside a
+          workspace that is Blockly's own SVG, laid out from measurements it
+          took itself, so the sweep is kept out and the words are translated
+          in the definitions instead. Blockly's widget and dropdown divs mount
+          on `document.body` and are outside this, which is the same caveat
+          the effect editor's theme records. */}
+      <div className={styles.blocks} data-notranslate>
+        <BlocklyProvider
+          blocks={localizedBlocks}
+          plugins={plugins}
+          theme={theme}
+        >
+          <BlocklyWorkspace
+            // Blockly reads `readOnly` when the workspace is INJECTED and never
+            // again: a read-only injection has no toolbox, no dragging and no
+            // edits, for the life of that workspace. The lab is read-only for a
+            // moment while the project loads, and the file open at that moment
+            // got a workspace that stayed dead — no categories, nothing
+            // clickable — until you opened another file and came back, which
+            // remounted it. Keying on the answer re-injects once, when it
+            // changes.
+            key={isReadOnly ? 'read-only' : 'editable'}
+            className={styles.workspace}
+            // What the "How this works" button at the top of a rule's drawer
+            // does (blockly/lessonFlyoutButton). Registered at injection, so a
+            // toolbox rebuilt for any of the several reasons it is rebuilt still
+            // finds its callbacks.
+            onInject={onInject}
+            startBlocks={startBlocks}
+            toolbox={localizedToolbox}
+            options={options}
+            theme={theme}
+            workspaceRef={workspaceRef}
+            onChange={handleChange}
+          />
+        </BlocklyProvider>
+        {sections.menu}
+        {!editing && sections.outlineButton}
+      </div>
+    </div>
+  );
+};
+
+export default BlocklyFileEditor;
