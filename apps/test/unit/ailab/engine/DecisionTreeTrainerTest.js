@@ -107,7 +107,6 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
 });
 
 describe('DecisionTreeTrainer: the maxDepth sweep', () => {
-  // jest.config.js clears mocks between tests but does not restore them.
   afterEach(() => jest.restoreAllMocks());
 
   /*
