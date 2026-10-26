@@ -819,16 +819,37 @@ export const ActorEditor = (props: CustomEditorProps) => {
                     <Typography variant="body2" component="h3">
                       {trait.name}
                     </Typography>
-                    {!isReadOnly && (
-                      <Button
-                        variant="text"
-                        size="extraSmall"
-                        aria-label={`Remove ${trait.name}`}
-                        onClick={() => edit(removeTrait(data, trait))}
-                      >
-                        Remove
-                      </Button>
-                    )}
+                    <div className={styles.groupActions}>
+                      {/* Where the trait is written: its rule, opened as a
+                          step on the trail, which is how a learner reads
+                          what a trait does and changes it
+                          (specs/ACTORS_AS_DATA_PLAN.md, step 7). */}
+                      {trait.rulePath && (
+                        <Button
+                          variant="text"
+                          size="extraSmall"
+                          aria-label={`Open the ${trait.rule} rule`}
+                          onClick={() =>
+                            void requestFileAct({
+                              act: 'open',
+                              path: `${trait.rulePath}.rule`,
+                            })
+                          }
+                        >
+                          Rule
+                        </Button>
+                      )}
+                      {!isReadOnly && (
+                        <Button
+                          variant="text"
+                          size="extraSmall"
+                          aria-label={`Remove ${trait.name}`}
+                          onClick={() => edit(removeTrait(data, trait))}
+                        >
+                          Remove
+                        </Button>
+                      )}
+                    </div>
                   </div>
                   {trait.description && (
                     <Typography

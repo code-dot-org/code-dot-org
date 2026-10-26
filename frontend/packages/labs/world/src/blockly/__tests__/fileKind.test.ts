@@ -73,12 +73,13 @@ describe('which definition roots a file may hold', () => {
     expect(categoryNames('world')).not.toContain('Rule');
   });
 
-  it('keeps `use trait` when the Rule category goes', () => {
-    // Listed in Actor as well, until the lessons that ask for it are
-    // rewritten for the panel's Add trait (specs/ACTORS_AS_DATA_PLAN.md,
-    // step 7). If it went before them, this fails rather than a lesson
-    // quietly asking for a block nobody can find.
-    expect(offeredTypes('actor')).toContain('world_use_trait');
+  it('offers `use trait` to a rule alone: an actor’s traits are its panel’s', () => {
+    // A rule's trait may require another; an actor's traits are added from
+    // Enhance Actor (specs/ACTORS_AS_DATA_PLAN.md, step 7). An actor file
+    // that holds one still may.
+    expect(offeredTypes('rule')).toContain('world_use_trait');
+    expect(offeredTypes('actor')).not.toContain('world_use_trait');
+    expect(heldNotOffered('actor')).toContain('world_use_trait');
   });
 
   it('offers `each frame` wherever there is an owner to name', () => {

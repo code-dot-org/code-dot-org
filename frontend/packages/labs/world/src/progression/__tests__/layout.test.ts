@@ -253,13 +253,16 @@ describe('what a tile unlocks', () => {
     // `get`/`set ⟨property ▾⟩ of ⟨actor⟩` pair, which was the only way to reach
     // such a property before an actor had a drawer of its own; that pair is no
     // longer offered anywhere, and granting a block nobody is shown would be
-    // a grant in name only. What it hands over is in `offers`: the block that
-    // DECLARES one.
+    // a grant in name only. Nor is there a block that DECLARES one to offer:
+    // an actor's own property is added in its Self, which is never withheld
+    // (specs/ACTORS_AS_DATA_PLAN.md, step 7). It gives a way of thinking.
     const givesNothing = new Set(['arcade/bricks', 'memory/actor-state']);
     for (const t of TILES) {
       if (givesNothing.has(t.id)) {
         expect(t.unlocks, t.id).toEqual([]);
-        expect(t.offers?.length ?? 0, t.id).toBeGreaterThan(0);
+        if (t.id !== 'memory/actor-state') {
+          expect(t.offers?.length ?? 0, t.id).toBeGreaterThan(0);
+        }
         continue;
       }
       expect(t.unlocks.length, `${t.id} unlocks nothing`).toBeGreaterThan(0);

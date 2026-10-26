@@ -180,6 +180,8 @@ below, and are listed last.
   in the map inspector alike, never typed; the one held is said even when
   the project no longer has it. Not done: the list names files, and says
   nothing of what is in them.
+- **A trait's Rule button** is named for the rule it opens ("Open the
+  Jumping rule"), beside a Remove named for the trait.
 - **The confirm prompt** asked before making an actor an interface's is
   not exposed as a dialog (`role="dialog"` is missing on the shared
   prompt, `usePrompts`); found here, not made here.

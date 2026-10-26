@@ -117,8 +117,8 @@ of thing this project has. It has one, the **Hero**.
 2. Run it. Two Heroes, from one kind: the map says how many there are and
    where, and nothing on the map says what a Hero IS.
 3. Click a Hero on the map and press
-   [Open Hero](#clickable=map.openKind:Hero). These blocks are the answer: **define actor ⟨Hero⟩**, in \`hero.actor\`, and under it one
-   picture and nothing else.
+   [Open Hero](#clickable=map.openKind:Hero). This is the answer: a Hero, which
+   looks like one picture and does nothing else.
 4. Change the picture with **set sprite**, go back to the \`main.world\` tab
    and run it again. Both change, because both are Heroes.
 
@@ -165,9 +165,8 @@ by itself: an actor has to *elect* what it offers.
 2. Run it. It walks in every direction — which is what a game seen from above
    wants and a platformer does not.
 3. Now see what the tick did. Press
-   [Open Hero](#clickable=map.openKind:Hero): under
-   \`define actor ⟨Hero⟩\` there are new rows, and two of them are
-   **use trait ⟨Moves Across⟩** and **use trait ⟨Moves Down⟩**. That is
+   [Open Hero](#clickable=map.openKind:Hero): among its traits there are new
+   ones, and two of them are **Moves Across** and **Moves Down**. That is
    electing, and it is all the tick was.
 4. Pull the **Moves Down** row out of the stack — drag it aside, do not throw
    it away — and run it. Left and right work; up and down do not. Snap it
@@ -249,21 +248,21 @@ const speed: WorldScenario = {
 
 The Hero crosses the screen, and it does it the way everybody writes first:
 **every frame, put it two pixels further right**. Press
-[Open Hero](#clickable=map.openKind:Hero) and read the \`each frame\` under
-\`define actor ⟨Hero⟩\`, which is the whole of how it does it.
+[Open Hero](#clickable=map.openKind:Hero), press **Code**, and read its
+\`each frame\`, which is the whole of how it does it.
 
 That works, and it is not how things move. It ties the speed to the frame rate,
 it cannot be pushed, and nothing else can affect it.
 
 ### What you do
 
-1. In the Hero's blocks, add **use trait ⟨Can Move⟩** — that is the Physics
+1. Give the Hero **Can Move** from **Enhance Actor** — that is the Physics
    rule.
 2. Go back to the [Map](#clickable=view.map) and click the Hero. It has a
    **Can Move** group in its properties now, with a **Velocity** in it. Put
    **2** in the first box.
-3. **Delete the whole \`each frame\` handler** in the Hero's blocks. It should
-   still cross the screen.
+3. **Delete the whole \`each frame\`** in the Hero's code. It should still
+   cross the screen.
 
 Nothing is moving it now. It has a speed, and having a speed is what moving is.
 The speed is on THAT Hero, not on Heroes: a second one placed beside it stands
@@ -321,9 +320,9 @@ and nothing has elected it.
    [Open Hero](#clickable=map.openKind:Hero), add
    [when this actor stops falling](#clickable=toolbox.block:world_on_Gravity_StopsFallingEvent@Hero),
    and print something in it, so you can see the moment.
-5. Click the **open** button on \`use trait ⟨Affected by Gravity⟩\` to open the
-   rule itself, and find the number that says how hard it pulls. Change it and
-   run again — it is your copy.
+5. Press **Rule** on the Hero's **Affected by Gravity** to open the rule
+   itself, and find the number that says how hard it pulls. Change it and run
+   again — it is your copy.
 `.trim(),
 };
 
@@ -362,7 +361,7 @@ const sprite: WorldScenario = {
   instructions: `
 ## A picture is a file
 
-The Hero is a gray box because that is what \`hero.actor\` says to draw.
+The Hero is a gray box because that is what the Hero says to draw.
 Nothing in this lab is built in: a picture is a **file** the project holds,
 and until it holds one there is nothing to draw but shapes.
 
@@ -455,8 +454,8 @@ actor's own.
 
 ### What you do
 
-1. Find the second **draw rectangle** — the green one — under
-   \`define actor ⟨Bar⟩\`, in the \`bar.actor\` tab.
+1. Open the Bar and press **Code**, then the pencil on its drawing, and find
+   the second **draw rectangle** — the green one.
 2. Put **96 × ⟨fraction of ⟨this actor⟩⟩** in its **size** where the 96 is.
 3. Run it. One Bar is full and one is a third full, from one drawing.
 4. Change the track color, or add an outline. It is your picture.
@@ -603,9 +602,8 @@ the entire view.
 
 ### What you do
 
-1. In \`coin.actor\`, add **add effect ⟨…⟩ to ⟨this actor⟩** under
-   \`define actor ⟨Coin⟩\`, and use the \`(import…)\` row to bring one in from
-   the library.
+1. Open the Coin, and on its **Effects** tab choose **Add Effect** and
+   **Import…** to bring one in from the library.
 2. Run it. The Coin is painted through the recipe and the Hero is not — one
    effect, on one actor.
 3. Now add **add effect ⟨…⟩ to the world**. Everything goes through it, the
@@ -700,8 +698,9 @@ you lean on the button.
 
 ### What you do
 
-1. Give the Hero **use trait ⟨Takes Keyboard Input⟩**. On its own it does
-   nothing: it is the Hero electing to be told about keys at all.
+1. Open the Hero and give it **Takes Keyboard Input** from **Enhance
+   Actor**. On its own it does nothing: it is the Hero electing to be told
+   about keys at all.
 2. Add a **when ⟨any Hero⟩ hears ⟨space⟩ pressed** handler, and put a **write to console**
    inside it.
 3. Run it and hold space down for a few seconds. One line, not two hundred.
@@ -739,7 +738,7 @@ so an actor can be told about its own clicks and nobody else's.
 
 ### What you do
 
-1. Give the Target **use trait ⟨Can Be Clicked⟩**.
+1. Open the Target and give it **Can Be Clicked** from **Enhance Actor**.
 2. Add a **when ⟨any Target⟩ is clicked** handler and **write to console** something in it.
 3. Click the Target, then click the empty space beside it. Only one of those
    says anything.
@@ -749,8 +748,8 @@ so an actor can be told about its own clicks and nobody else's.
 A click that lands on you is one question. Where the pointer IS is the other,
 and it is not an event — it is a block you can ask at any moment.
 
-4. Give the Target **use trait ⟨Takes Mouse Input⟩** as well. Now it hears
-   every press, wherever it landed.
+4. Give the Target **Takes Mouse Input** as well. Now it hears every press,
+   wherever it landed.
 5. Add a **when ⟨any Target⟩ presses mouse button** handler, and inside it **set
    position of ⟨this actor⟩** — with **x of ⟨mouse position⟩** in the x socket
    and **y of ⟨mouse position⟩** in the y. **mouse position** is in the
@@ -804,11 +803,10 @@ the way it is pointing.
    **Drives like a car**, and press **Enhance**.
 2. Run it. Left and right turn it AND walk it sideways: two rules reading the
    same four keys, each doing exactly what it says. Both at once is neither.
-3. Press [Open Ship](#clickable=map.openKind:Ship) and delete the
-   **use trait ⟨Moves Across⟩** row. Run it again: left and right turn, up
-   thrusts, and letting go leaves it coasting, because nothing in space slows
-   down.
-4. Add **use trait ⟨Slows Down⟩** under the others and watch it become a car
+3. Press [Open Ship](#clickable=map.openKind:Ship) and **Remove**
+   **Moves Across**. Run it again: left and right turn, up thrusts, and
+   letting go leaves it coasting, because nothing in space slows down.
+4. Give it **Slows Down** from **Enhance Actor** and watch it become a car
    instead.
 `.trim(),
 };
@@ -999,8 +997,8 @@ given is a **Velocity** of 2.5, and nothing takes it away.
 
 ### What you do
 
-1. Press [Open Ball](#clickable=map.openKind:Ball) and add
-   **use trait ⟨Slows Down⟩**.
+1. Press [Open Ball](#clickable=map.openKind:Ball) and give it
+   **Slows Down** from **Enhance Actor**.
 2. Run it. It coasts to a halt instead of going round for ever.
 3. Find the trait's own numbers and make it slippery, then make it sticky.
 4. Change the Ball's **Velocity** on the map and watch how much further a
@@ -1140,7 +1138,8 @@ that said it wanted to be asked. What to DO about it is a separate matter, and
 
 ### What you do
 
-1. Give the Wall **use trait ⟨Solid⟩**. Run it: the Ball stops dead against it.
+1. Open the Wall and give it **Solid** from **Enhance Actor**. Run it: the
+   Ball stops dead against it.
 2. Add a **when ⟨any Ball⟩ starts touching** handler and print something, so you can
    see the moment rather than only its consequence.
 3. Take the Ball's **⟨Can Collide⟩** off and watch it sail through again. Both
@@ -1227,8 +1226,8 @@ The world is 320 pixels down, so halfway down is 160.
 
 ### What you do
 
-1. Find the **if**, in the \`each frame\` under \`define actor ⟨Ball⟩\` in the
-   \`ball.actor\` tab.
+1. Open the Ball and press **Code**, and find the **if** in its
+   \`each frame\`.
 2. Wrap its question in an **and**, and add a second question: is
    **⟨get position y of this actor⟩** greater than **160**?
 3. Run it. The low Ball stops in the middle; the high one carries on and leaves.
@@ -1357,8 +1356,8 @@ once; the arrangement says where they are.
 2. Pick **Ground** from the strip along the top, and paint a floor along the
    bottom of the room and walls up both sides.
 3. Run it. Every tile you painted is a Ground, and you wrote no block.
-4. Paint some more, and run it again. You never opened \`ground.actor\` —
-   what a Ground is and where the Grounds are are two different questions.
+4. Paint some more, and run it again. You never opened the Ground — what a
+   Ground is and where the Grounds are are two different questions.
 `.trim(),
 };
 
@@ -1674,8 +1673,8 @@ on a map can carry **code** of its own, which is blocks about THIS one.
    by the name the map gives it, and the Sign is called Sign.
 4. Go **Back** to the map and do the same for BLUE. Each button now has a
    small mark on its corner, which says it has code of its own.
-5. Run it. Two Buttons of one kind, doing two different things — and
-   \`button.actor\` has not changed at all.
+5. Run it. Two Buttons of one kind, doing two different things — and the
+   Button has not changed at all.
 `.trim(),
 };
 
@@ -1740,8 +1739,8 @@ count. That is what the **Jumping** rule holds.
 
 ### What you do
 
-1. Give the Hero **use trait ⟨Jumps⟩**, and swap the \`set velocity\` in the
-   handler for **make ⟨this actor⟩ jump**.
+1. Open the Hero and give it **Jumps** from **Enhance Actor**, and swap the
+   \`set velocity\` in the handler for **make ⟨this actor⟩ jump**.
 2. Run it. It jumps once, from the ground, and pressing again in the air does
    nothing — asking is separate from jumping, and the answer is sometimes no.
 3. Walk off the edge of the floor and press space a moment later. It still
@@ -1749,8 +1748,8 @@ count. That is what the **Jumping** rule holds.
    platformer that feels fair and one that does not.
 4. Set **jumps allowed** to 2. Now there is a second jump, in the air, and
    still not a third.
-5. Add a ledge above the Hero with **use trait ⟨Acts as Ground⟩** and nothing
-   else, and jump into it from underneath. You go straight through, and then
+5. Add a ledge above the Hero with **Acts as Ground** and nothing else, and
+   jump into it from underneath. You go straight through, and then
    you land on top of it coming down — because landing is about the direction
    you are going, and rising is not landing. That is a **one-way platform**,
    and it is what the Ground under your feet would be if it were not **Solid**
@@ -1828,7 +1827,8 @@ in between are the rule's business.
 
 ### What you do
 
-1. Give the Hero **use trait ⟨Flies with a Jetpack⟩**.
+1. Open the Hero and give it **Flies with a Jetpack** from **Enhance
+   Actor**.
 2. Leave the jump where it is and add **start ⟨this actor⟩ flying** under it,
    on the same press. Then handle
    **when ⟨any Hero⟩ releases ⟨space⟩ → stop ⟨this actor⟩ flying**.
@@ -1935,10 +1935,11 @@ next frame puts it back. That is what **Climbs Ladders** is for.
 
 ### What you do
 
-1. Give the Ladder **use trait ⟨Can Be Climbed⟩**. That is the whole of a
-   ladder — it has no speed and no opinion about who climbs it.
-2. Give the Hero **use trait ⟨Climbs⟩**, then click the sparkles on it and
-   choose **Climbs ladders with the arrow keys**. Up and down now climb, and
+1. Open the Ladder and give it **Can Be Climbed** from **Enhance Actor**.
+   That is the whole of a ladder — it has no speed and no opinion about who
+   climbs it.
+2. Give the Hero **Climbs**, then choose **Enhancements…** from
+   **Enhance Actor** and tick **Climbs ladders with the arrow keys**. Up and down now climb, and
    only while it is touching a ladder: walk off the ladder and press up, and
    nothing happens.
 3. Hold up. Past the top rung the climb ends by itself and the Hero drops on
@@ -1949,7 +1950,8 @@ next frame puts it back. That is what **Climbs Ladders** is for.
 5. The switch doing the work is **ignores ground**, and it belongs to *Gravity*
    rather than to this rule. On its own it is what "hold down to drop through
    the platform" would be built from.
-6. Now read what the sparkles wrote: four handlers, not a loop. **presses up
+6. Now press **Code** on the Hero and read what the enhancement wrote: four
+   handlers, not a loop. **presses up
    arrow** starts a climb and **releases up arrow** ends it, and the same
    pair for down. Nothing asks a question sixty times a second — the frames
    between the press and the release belong to the rule.
@@ -2075,14 +2077,15 @@ things a tile can be, and one thing a walker is.
 
 ### What you do
 
-1. Give the Hero **use trait ⟨Stands on Surfaces⟩**. Nothing changes yet: it
-   is the thing that listens, and no floor is saying anything.
-2. Give the Belt **use trait ⟨Conveys⟩**. Now walk on to it and stop. You are
+1. Open the Hero and give it **Stands on Surfaces** from **Enhance Actor**.
+   Nothing changes yet: it is the thing that listens, and no floor is saying
+   anything.
+2. Give the Belt **Conveys**. Now walk on to it and stop. You are
    carried. Walk *into* it and you still make headway, slowly, because a belt
    ADDS to what you asked for rather than deciding for you.
-3. Give the Sludge **use trait ⟨Slows⟩**. Two fifths of the speed you asked
+3. Give the Sludge **Slows**. Two fifths of the speed you asked
    for — a multiplier, so it drags what you were doing instead of replacing it.
-4. Give the Ice **use trait ⟨Slippery⟩**. Step on it moving and try to turn
+4. Give the Ice **Slippery**. Step on it moving and try to turn
    round. You cannot: ice keeps the speed you arrived with, because "you
    cannot stop or change direction" is a statement about a speed you are no
    longer choosing.
@@ -2535,8 +2538,8 @@ floor has never heard of a shovel.
 
 ### What you do
 
-1. Give the Soil **use trait ⟨Can Be Dug⟩**. Hold down again: the block under
-   you stops being there and you fall through it.
+1. Open the Soil and give it **Can Be Dug** from **Enhance Actor**. Hold down
+   again: the block under you stops being there and you fall through it.
 2. Wait where you land. It comes back — that is the fuse, and it is the
    difference between a shovel and a hole in the drawing.
 3. Stand under it while it closes. It fills in **on** you, and says so; what
@@ -2642,9 +2645,9 @@ beat and it spends half its life pressed against the end.
 
 ### What you do
 
-1. Give the Ball **use trait ⟨Turns When It Hits Something⟩**. It rolls to
-   the wall and comes back, and it comes back at the same place every time,
-   because the wall is what turned it.
+1. Open the Ball and give it **Turns When It Hits Something** from
+   **Enhance Actor**. It rolls to the wall and comes back, and it comes back at
+   the same place every time, because the wall is what turned it.
 2. Watch where it turns. Now change **travel speed** and watch again: it
    turns in the same two places, because neither of them is a time.
 3. Now take **⟨Affected by Gravity⟩** off it and set **turn by** to 90. It
@@ -2816,11 +2819,11 @@ pursuit, and in a room it is a machine pressed against a ceiling.
 
 ### What you do
 
-1. Take **⟨Chases⟩** off the Robot and give it **use trait ⟨Prowls⟩**
-   instead, then swap **set actor to chase** for **set actor to hunt** in the
-   step below it — the same answer to a different question.
-   That step is where it is for a reason worth knowing: **any ⟨Hero⟩** has to
-   be read once there IS a Hero, and the rows beside the traits run before
+1. Open the Robot, **Remove** **Chases**, and give it **Prowls** from
+   **Enhance Actor** instead; then, in its code, swap **set actor to chase**
+   for **set actor to hunt** — the same answer to a different question.
+   That row is in its code for a reason worth knowing: **any ⟨Hero⟩** has to
+   be read once there IS a Hero, and a value set in the panel is set before
    anything has been put in the world.
 2. Watch it. It goes the way it is going and reconsiders only where
    reconsidering is possible — when it lands, when it reaches the ladder, when
@@ -2940,9 +2943,10 @@ not a hard enemy, it is an enemy with nothing to play against.
 
 ### What you do
 
-1. Take **⟨Chases⟩** off the Bat and give it **use trait ⟨Flaps and Glides⟩**
-   instead, then swap **set actor to chase** for **set actor to hunt** in the
-   step below it — the same answer to a different question.
+1. Open the Bat, **Remove** **Chases**, and give it **Flaps and Glides**
+   from **Enhance Actor** instead; then, in its code, swap
+   **set actor to chase** for **set actor to hunt** — the same answer to a
+   different question.
 2. Watch it fly. It has two phases and they take turns: a few short flutters,
    each one upward and a little towards you, and then a long straight glide.
 3. The glide is the whole rule. It takes its aim ONCE, at where you were when
@@ -3014,8 +3018,8 @@ Collected**. Neither knows about the other.
 
 ### What you do
 
-1. Give the Hero **use trait ⟨Collects⟩** and each Coin
-   **use trait ⟨Can Be Collected⟩**.
+1. From **Enhance Actor**, give the Hero **Collects** and the Coin
+   **Can Be Collected**.
 2. Run it. Each Coin vanishes as the Hero reaches it — taken out of the world,
    and into the Hero's \`collected\`.
 3. Add **when ⟨any Hero⟩ collects** and **print ⟨count of ⟨Coin⟩ in ⟨collected
@@ -3080,16 +3084,16 @@ damaged by anything.
 
 ### What you do
 
-1. Give the Hero **use trait ⟨Has Health⟩** and the Spike
-   **use trait ⟨Deals Damage⟩**.
+1. From **Enhance Actor**, give the Hero **Has Health** and the Spike
+   **Deals Damage**.
 2. Add **when ⟨any Hero⟩ is damaged → print ⟨health of ⟨this actor⟩⟩**, and
    walk into the Spike. One line. Lean on it as long as you like: still one
    line, because being damaged happens when the touch STARTS.
 3. Back off and walk in again. A second one — unless you were quick, and then
    nothing, because of **mercy time**: half a second in which the Hero cannot
    be damaged again. Set it to 2 and try to take two.
-4. Give the Spike **use trait ⟨Patrols Across⟩**. Now it walks about damaging
-   whatever it meets, and nothing about it mentions the Hero.
+4. Give the Spike **Patrols Across**. Now it walks about damaging whatever it
+   meets, and nothing about it mentions the Hero.
 `.trim(),
 };
 
@@ -3198,8 +3202,8 @@ because it is not a fact about either of them.
 
 ### What you do
 
-1. At the top of \`main.world\` there is **define boolean won with default
-   false**, and nothing sets it.
+1. The world keeps a value, **won**, which starts false, and nothing sets
+   it.
 2. Add **when ⟨any Hero⟩ starts touching**, and inside it ask
    **if ⟨event actor⟩ is a ⟨Flag⟩** — the same question the Ball asked about
    Coins and Spikes.
@@ -3364,8 +3368,9 @@ number if the Paddle ever changes size. Or you could say what you actually mean.
 
 1. Delete the whole \`each frame\` handler. The Paddle now walks off the screen
    entirely, which is honest.
-2. Give it **use trait ⟨Stays Across⟩**. Hold left again: it stops with its
-   EDGE against the side, and nothing anywhere says 48.
+2. Open it and give it **Stays Across** from **Enhance Actor**. Hold left
+   again: it stops with its EDGE against the side, and nothing anywhere says
+   48.
 3. Make the drawing wider and run it again. It still stops at the edge — the
    rule reads the size the Paddle actually is.
 `.trim(),
@@ -3427,13 +3432,14 @@ Two halves are missing, and the second is the one everybody forgets.
 
 ### What you do
 
-1. Give the Ship **use trait ⟨Zaps⟩**, and change the press handler to
-   **make ⟨this actor⟩ zap**.
+1. Open the Ship and give it **Zaps** from **Enhance Actor**, and change the
+   press handler to **make ⟨this actor⟩ zap**.
 2. Add **when ⟨any Ship⟩ zaps**, and move the \`add actor ⟨Energy Ball⟩\` into
    it. Hit the key fast now: one ball every quarter second however quickly you
    press, because that is the recharge time and the answer to the rest was no.
-3. Give the Energy Ball **use trait ⟨Expires⟩** and **set lifetime of ⟨this
-   actor⟩ to ⟨1⟩**. Zap for a while and then stop: the world empties itself.
+3. Open the Energy Ball, give it **Expires** from **Enhance Actor**, and set
+   its **Lifetime** to 1. Zap for a while and then stop: the world empties
+   itself.
 4. Set the recharge time to a tenth and zap again. More balls, and still a
    count rather than a stream.
 `.trim(),
@@ -3681,8 +3687,8 @@ setting **text** does: it is the words the box is showing, and it shows them
 the moment they are set.
 
 **Saying** a line is the other thing. The Speech Box puts the sentence away
-whole and lets it out a few letters at a time — open \`speechBox.actor\` and
-the typewriter is all there: **the whole line** is what is being said, a timer
+whole and lets it out a few letters at a time — open the Speech Box and its
+**Code**, and the typewriter is all there: **the whole line** is what is being said, a timer
 brings one letter per firing, and \`text\` is however much has arrived.
 
 ### What you do
@@ -3692,7 +3698,7 @@ brings one letter per firing, and \`text\` is however much has arrived.
    pace.
 2. Change **letters a second** and run it again.
 3. A reader who has read it faster than you are typing it wants to skip. Give
-   the Box **use trait ⟨Can Be Clicked⟩**, and in a
+   the Box **Can Be Clicked** from **Enhance Actor**, and in a
    **when ⟨any Speech Box⟩ is clicked** handler put
    **show all of it on ⟨this actor⟩**.
 `.trim(),
@@ -3750,8 +3756,8 @@ sound, a question — because it is blocks rather than a string in a table.
 
 ### What you do
 
-1. Give the Speech Box **use trait ⟨Has a Conversation⟩** and
-   **set how many lines of ⟨this actor⟩ to ⟨3⟩**.
+1. Open the Speech Box, give it **Has a Conversation** from
+   **Enhance Actor**, and set its **How many lines** to 3.
 2. Swap the \`print\` in the click handler for
    **make ⟨this actor⟩ say the next thing**.
 3. Add **when ⟨any Speech Box⟩ moves to a line**, and in it ask
@@ -4218,16 +4224,16 @@ is happy at.
 
 ### What you do
 
-1. Give the Chaser **use trait ⟨Chases⟩** and
-   **set actor to chase of ⟨any Chaser⟩ to ⟨any Player⟩**.
-2. Give the Fleer **use trait ⟨Flees⟩** and
+1. Open the Chaser and give it **Chases** from **Enhance Actor**, and in the
+   world **set actor to chase of ⟨any Chaser⟩ to ⟨any Player⟩**.
+2. Give the Fleer **Flees** the same way, and
    **set actor to avoid of ⟨any Fleer⟩ to ⟨any Player⟩**.
 3. Run it and walk. One closes in, one keeps away — and neither of them was
    told which way that is, because which way depends on where you are standing.
 4. Set **keep distance** on the Chaser to 60. It now follows without ever
    arriving, which is most of what a companion in a game does.
-5. Now put something in the way — a Wall with **use trait ⟨Solid⟩**, between
-   you and the Chaser. It walks into it and stays there, and nothing is wrong:
+5. Now put something in the way — a Wall that is **Solid**, between you and
+   the Chaser. It walks into it and stays there, and nothing is wrong:
    toward is all it was ever told. Going AROUND is a different question and a
    different rule, which is **Path** — the same two blocks, and it works out
    where to step instead of which way to face.
@@ -4403,13 +4409,13 @@ idea from moving.
 
 ### What you do
 
-1. Take **Moves Across** and **Moves Down** off the Player — that is the
-   sliding — and give it **use trait ⟨Steps on the Grid⟩**.
+1. Open the Player and **Remove** **Moves Across** and **Moves Down** — that
+   is the sliding — and give it **Steps on the Grid** from **Enhance Actor**.
 2. Add a handler per arrow key: **when ⟨any Player⟩ presses ⟨left⟩ → step left
    ⟨this actor⟩**, and the same for the other three.
 3. Run it. One tile per press, and it lands on the square rather than between
    two.
-4. Give the Walls **use trait ⟨Fills a Tile⟩** and walk into one. Nothing
+4. Give the Wall **Fills a Tile** and walk into one. Nothing
    happens — a step into an occupied tile is not a step that fails halfway, it
    is a step that never starts.
 `.trim(),
@@ -4479,13 +4485,14 @@ A sokoban is that with one word changed.
 
 ### What you do
 
-1. Give the Crate **use trait ⟨Can Be Pushed⟩** as well.
+1. Open the Crate and give it **Can Be Pushed** from **Enhance Actor** as
+   well.
 2. Walk into it. It moves one tile, you take the tile it left, and neither of
    those is something you wrote.
 3. Push it into a Wall and try again. It stops, and so do you — a push that
    cannot happen is a step that does not.
-4. Click the **open** button on \`use trait ⟨Can Be Pushed⟩\` and find out why
-   one word was enough. The stepping trait asks what is in the tile it is going
+4. Press **Rule** on the Crate's **Can Be Pushed** and find out why one word
+   was enough. The stepping trait asks what is in the tile it is going
    to; if that thing can be pushed, the step becomes two steps, and both of them
    have to be possible.
 `.trim(),
@@ -4664,8 +4671,7 @@ nothing anywhere else changes when you change it.
 ### What you do
 
 1. Open \`rules/patrol.rule\` — from **Rules in Play** under the toolbox's Add
-   Rules, or the open button on
-   \`use trait ⟨Patrols Across⟩\`.
+   Rules, or **Rule** on the Guard's **Patrols Across**.
 2. Find **define number across time with default 1.5** and make it 0.5. The
    Guard turns three times as often.
 3. Start a new project, take the Patrol rule again, and look: 1.5. You changed
@@ -4795,7 +4801,8 @@ other.
    the foot of the toolbox), add a second **define trait**, called **Sinks**.
 2. Give it \`use trait ⟨Positional⟩\` and an **each frame** that adds to the
    position's **y** rather than its **x**.
-3. In \`stone.actor\`, give the Stone **Sinks** instead of **Blown**.
+3. Open the Stone, **Remove** **Blown**, and give it **Sinks** from
+   **Enhance Actor**.
 4. Run it. One rule, two abilities, two kinds of thing — and neither trait
    mentions the other or the actors that took it.
 `.trim(),
@@ -4887,8 +4894,8 @@ const ownRule: WorldScenario = {
   instructions: `
 ## Shared, without a copy
 
-A Fish and a Bird, both bobbing, and the bob is written twice — once in
-\`fish.actor\` and once in \`bird.actor\`. Change your mind about how it should
+A Fish and a Bird, both bobbing, and the bob is written twice — once in the
+Fish's code and once in the Bird's. Change your mind about how it should
 feel and you have two files to change, and a third the day something else
 bobs.
 
@@ -4908,8 +4915,8 @@ under the trait — so what is left to you is what goes in the mouth.
    **Write a new rule…**, and call it **Bob**. It opens on the three blocks
    above, in \`rules/bob.rule\`.
 2. Move the bobbing into the **each frame** under the trait.
-3. Take the \`each frame\` out of both actors and give each
-   **use trait ⟨Bob⟩** instead.
+3. Take the \`each frame\` out of both actors' code and give each **Bob**
+   from **Enhance Actor** instead.
 4. Change the bob once. Both change.
 `.trim(),
 };
@@ -5019,7 +5026,8 @@ them.
 
 ### What you do
 
-1. Click the **open** button on \`use trait ⟨Affected by Gravity⟩\`. It opens.
+1. Open the actor, and press **Rule** on its **Affected by Gravity**. It
+   opens.
 2. Read the top of it. There are two numbers there that belong to the WORLD
    rather than to any actor, and one of them says how hard gravity pulls.
 3. Put that number in **how hard it pulls** at the top of \`main.world\`, so
@@ -5251,8 +5259,8 @@ lift rides every lift.
 
 ### What you do
 
-1. Give the Platform **use trait ⟨Carries⟩**.
-2. Give the Hero **use trait ⟨Rides⟩**.
+1. Open the Platform and give it **Carries** from **Enhance Actor**.
+2. Give the Hero **Rides** the same way.
 3. Run it, and do not touch the keys. The Hero goes with the Platform.
 4. Now walk while it moves. You are steering on a moving floor, which is two
    things happening to one actor and neither of them written by you.
@@ -5840,7 +5848,8 @@ restarts, the Boids stay where they are, and what changes is what happens next.
 
 ### What you do
 
-1. In the world, add **define number property ⟨too close⟩ with default ⟨30⟩**.
+1. On the **Map**, with nothing selected, add a **New value** called
+   **too close**, a **number**, with **Add value**, and set it to 30.
 2. Put **get too close** into the first loop's **within** socket, where the 30
    is now.
 3. Run it, wait for the flock to form, and then change the default to 200 while
@@ -6040,8 +6049,8 @@ cannot wind itself: only your game knows what counts as a move.
 
 ### What you do
 
-1. Give the **Enemy** the ability **takes a turn**, and take away **has a
-   timer**.
+1. Open the Enemy, give it **Takes a Turn** from **Enhance Actor**, and
+   **Remove** **Has a Timer**.
 2. Change its handler's hat from **timer fires** to **takes its turn**. The
    Enemy still steps right; it no longer decides when.
 3. Add **when ⟨any Player⟩ finishes a step → end the turn**.
@@ -6124,8 +6133,8 @@ and when a move happens — it cannot guess either. A move is not a frame.
 
 ### What you do
 
-1. Give the **Player** and the **Crate** the ability **remembers where it was**.
-   Undo puts back what remembers; a Crate that forgets stays where it was
+1. From **Enhance Actor**, give the Player and the Crate **Remembers Where It
+   Was**. Undo puts back what remembers; a Crate that forgets stays where it was
    pushed while the Player walks back without it.
 2. In BOTH key handlers, put **remember this move** above the step. The tape is
    a record of where things WERE, and it is written before the move it is
@@ -6166,10 +6175,10 @@ axis you want them on is the whole question.
 
 ### What you do
 
-1. Give the Ball **use trait ⟨Stays Across⟩**. It stops at the right-hand wall
-   and slides down it.
-2. Give it **use trait ⟨Wraps Down⟩**. When it leaves the bottom it comes back
-   at the top.
+1. Open the Ball and give it **Stays Across** from **Enhance Actor**. It
+   stops at the right-hand wall and slides down it.
+2. Give it **Wraps Down**. When it leaves the bottom it comes back at the
+   top.
 3. Try **Stays Down** as well, and watch what happens: the two answers on one
    axis are not both — the first one to act is the only one you see.
 `.trim(),
@@ -6289,8 +6298,8 @@ thing that can happen.
 
 ### What you do
 
-1. At the top of \`main.world\`, under \`define world\`, add
-   **define number lives with default 3**.
+1. On the **Map**, with nothing selected, add a **New value** called
+   **lives**, a **number**, with **Add value**, and set it to 3.
 2. Set each Label's text to **join ⟨"Lives: "⟩ ⟨lives⟩** — the *lives* block
    is in the Actor drawer, and it appeared the moment you declared it.
 3. Run it. Both say the same thing.
@@ -6369,15 +6378,14 @@ An actor's is the opposite on purpose: declared in the **actor's own file**,
 every Lamp gets its own copy, and that is what makes two of a kind two things
 rather than one thing drawn twice.
 
-The same \`define property\` block works in both places. Declared under
-\`define world\`, what it remembers is this world's; declared under
-\`define actor\`, it belongs to the KIND, and every copy the world places
+A value can be kept in either place. The world's is this world's; one in an
+actor's **Self** belongs to the KIND, and every copy the world places
 carries one of its own.
 
 ### What you do
 
-1. Open the \`lamp.actor\` tab. Under \`define actor\`, add
-   **define number id with default 1**.
+1. Open the Lamp. Under **Self**, type **id** as a **New property**, leave
+   its kind **number**, press **Add property**, and set it to 1.
 2. In \`main.world\`, in each \`add actor\` body, **set id of ⟨this actor⟩** —
    1 for the first, 2 for the second — before the text is set.
 3. Change both Labels to read **join ⟨"lamp "⟩ ⟨id of this actor⟩**, the Lamp's

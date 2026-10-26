@@ -314,9 +314,9 @@ describe('an actor’s own blocks', () => {
     ).toEqual([]);
     expect(general?.blocks).not.toContain('world_get_number_property');
     expect(general?.blocks).not.toContain('world_set_actor_property');
-    // `use trait` stays until the lessons that ask for it are rewritten
-    // (specs/ACTORS_AS_DATA_PLAN.md, step 7); `acts like` is the panel's.
-    expect(general?.blocks).toContain('world_use_trait');
+    // What an actor is — its traits, what it acts like — is the panel's
+    // (specs/ACTORS_AS_DATA_PLAN.md, steps 6 and 7).
+    expect(general?.blocks).not.toContain('world_use_trait');
     expect(general?.blocks).not.toContain('world_acts_like');
   });
 

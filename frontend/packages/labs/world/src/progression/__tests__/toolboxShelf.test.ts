@@ -41,16 +41,16 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // …and step five, which writes what the event carried rather than a word of
   // the learner's — the same block either way, since it takes a value and
   // wears a text shadow (`domainBlocks.worldPrint`).
-  'input/press': ['world_use_trait', 'world_print', 'world_event_value'],
-  'input/mouse': ['world_use_trait', 'world_print'],
-  'input/two-hands': ['world_use_trait'],
-  'motion/speed': ['world_use_trait'],
+  'input/press': ['world_print', 'world_event_value'],
+  'input/mouse': ['world_print'],
+  'input/two-hands': [],
+  'motion/speed': [],
   // Two ticks in Enhance, then the blocks half: a hat of the Gravity rule's,
   // which nothing gates, and something to say in it.
   'motion/gravity': ['world_on_Gravity_StopsFallingEvent', 'world_print'],
   'motion/force': [],
   'motion/units': [],
-  'motion/drag': ['world_use_trait'],
+  'motion/drag': [],
   'motion/tween': [
     'world_play_tween_here',
     'world_set_position',
@@ -63,7 +63,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'logic_compare',
     'world_get_Space_PositionProperty',
   ],
-  'logic/collision': ['world_use_trait', 'world_print'],
+  'logic/collision': ['world_print'],
   'logic/and-or': ['logic_operation', 'world_get_Space_PositionProperty'],
   'look/sprite': ['world_set_sprite'],
   'place/position': ['world_set_position', 'world_random_place', 'math_number'],
@@ -92,8 +92,8 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'variables_get_List',
     'text',
   ],
-  'memory/world-state': ['world_rule_property', 'world_as_text', 'text'],
-  'memory/actor-state': ['world_rule_property'],
+  'memory/world-state': ['world_as_text', 'text'],
+  'memory/actor-state': [],
   'memory/score': ['world_print', 'math_number'],
   'look/drawing': ['math_arithmetic'],
   'look/background': [
@@ -104,7 +104,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   ],
   'look/animation': ['world_play_animation'],
   'look/effect': ['world_add_effect', 'world_add_world_effect'],
-  'place/edges': ['world_use_trait'],
+  'place/edges': [],
   'place/map': [],
   // Both made in the map editor's camera inspector, which asks for no block.
   'place/camera': [],
@@ -115,38 +115,38 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // (`toolboxShelf.generatedElsewhere`), so it is not a thing to list.
   'place/script': ['world_on_Mouse_IsClickedWithEvent', 'world_placement'],
   // Nothing from the toolbox: the lesson is done in the map editor's layer
-  // strip. The blocks that say the same are granted, and mentioned, and not
-  // what the steps ask for.
+  // strip, and no toolbox offers a block that defines a layer.
   'place/layers': [],
-  'platformer/jump': ['world_use_trait'],
+  'platformer/jump': [],
   'platformer/jetpack': [
-    'world_use_trait',
     // The release is the half of the switch the lesson before it never
     // needed: a jump is a press and nothing else.
     'world_on_Input_ReleasesEvent',
   ],
-  // Two `use trait` rows and nothing else: the control scheme is a trait, so
-  // the four handlers a project would otherwise write are not written.
-  'platformer/ladders': ['world_use_trait'],
-  // Four `use trait` rows and one number: everything the lesson asks for is
-  // already on screen or in the rule's own drawer.
-  'platformer/surfaces': ['world_use_trait'],
-  'platformer/enemies': ['world_use_trait'],
-  // Only the trait rows: naming what to hunt reuses the value block the
+  // Two traits, from Enhance Actor, and nothing else: the control scheme is a
+  // trait, so the four handlers a project would otherwise write are not
+  // written. A trait is the panel's, not the toolbox's
+  // (specs/ACTORS_AS_DATA_PLAN.md, step 7), as in every lesson below.
+  'platformer/ladders': [],
+  // Four traits and one number: everything the lesson asks for is in the
+  // panel or in the rule's own drawer.
+  'platformer/surfaces': [],
+  'platformer/enemies': [],
+  // Only the traits: naming what to hunt reuses the value block the
   // starter's chaser already has on screen. `first actor in` is unlocked on
   // another branch, so a lesson that sent somebody for one would be asking
   // for a block they have not got.
-  'platformer/hunter': ['world_use_trait'],
-  'platformer/flier': ['world_use_trait'],
+  'platformer/hunter': [],
+  'platformer/flier': [],
   'platformer/pads': [],
   'platformer/walls': [],
-  'platformer/digging': ['world_use_trait'],
-  'platformer/ground': ['world_use_trait'],
-  'platformer/pickups': ['world_use_trait', 'world_print'],
-  'platformer/hazards': ['world_use_trait', 'world_print'],
+  'platformer/digging': [],
+  'platformer/ground': [],
+  'platformer/pickups': ['world_print'],
+  'platformer/hazards': ['world_print'],
   'arcade/bounce': [],
-  'arcade/paddle': ['world_use_trait'],
-  'arcade/zap': ['world_use_trait'],
+  'arcade/paddle': [],
+  'arcade/zap': [],
   'arcade/bricks': [
     'world_trait_step',
     'controls_if',
@@ -182,7 +182,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'world_print',
     'world_count_actors',
   ],
-  'simulation/steering': ['world_use_trait'],
+  'simulation/steering': [],
   // A Making lesson is spent in a `.rule` file, whose palette is the rule
   // author's rather than the world's — the toolbox this table checks is the
   // world's, and what the learner reaches for there is the generated setter,
@@ -195,9 +195,9 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'making/rule': [],
   'making/read': [],
   'making/block': [],
-  'puzzle/grid': ['world_use_trait'],
-  'puzzle/push': ['world_use_trait'],
-  'puzzle/turns': ['world_use_trait'],
+  'puzzle/grid': [],
+  'puzzle/push': [],
+  'puzzle/turns': [],
   // Not `any ⟨Dot⟩`: the new block's source socket wears one already, so the
   // one trip to the toolbox is for the block itself.
   'simulation/neighbors': ['world_actors_within'],
@@ -212,7 +212,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   ],
   // Only the declaration: the getter it mints does not exist until the
   // property does, so it cannot be in a toolbox built from the starter.
-  'simulation/dials': ['world_rule_property'],
+  'simulation/dials': [],
   'simulation/emergent': [
     'world_set_Physics_VelocityProperty',
     'world_get_Physics_VelocityProperty',
@@ -223,7 +223,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // Nothing but the number: the kind is picked on the hat, so the two handlers
   // are a hat and one block each.
   'puzzle/goal': ['math_number'],
-  'puzzle/undo': ['world_use_trait', 'world_on_Input_PressesEvent'],
+  'puzzle/undo': ['world_on_Input_PressesEvent'],
   'adventure/world': ['world_set_background', 'world_set_background_repeat'],
   'adventure/people': ['world_add_trait'],
   'adventure/errand': ['math_arithmetic', 'world_count_of_kind'],

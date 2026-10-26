@@ -11625,11 +11625,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
   {
     name: 'Actor',
     blocks: [
-      // STILL HERE UNTIL THE LESSONS STOP ASKING FOR IT: some thirty send a
-      // learner to drag `use trait` under `define actor`, and they are
-      // rewritten for the panel's Add trait in the step that takes this out
-      // (specs/ACTORS_AS_DATA_PLAN.md, step 7).
-      'world_use_trait',
       // NOT THE GENERAL PROPERTY PAIR any more, and taking it out is the whole
       // of what shortened this drawer. `get ⟨property ▾⟩ of ⟨actor⟩` is twelve
       // blocks — one get and one set per kind — and each of them opens a
@@ -11709,9 +11704,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // looking for it had no reason to open that drawer. It belongs beside the
       // block that answers the other question a handler asks.
       'world_event_value',
-      // Declaring state this kind carries — until the lessons that teach it
-      // use Self (step 7, as `use trait` above).
-      'world_rule_property',
       // Work this KIND of actor does every frame. A rule is still the answer when the work is shared between
       // kinds, elected, or answerable by `has trait`; this is for when it is
       // none of those (ActorBuilder.defineStep).
@@ -11744,9 +11736,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
   {
     name: 'World',
     blocks: [
-      // State this world carries — until the lessons that teach it use All
-      // maps' values (step 7, as the Actor drawer's `use trait`).
-      'world_rule_property',
       // The VOCABULARY the world carries: the words its maps raise. A map used
       // to declare its own, which meant a hundred level maps minted a hundred
       // different `complete` events and a hundred drawers to hold them; the
@@ -12608,6 +12597,8 @@ function generateRulePalette(
  */
 export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_actor',
+  'world_use_trait',
+  'world_rule_property',
   'world_acts_like',
   'world_actor_is_data',
   'world_world',

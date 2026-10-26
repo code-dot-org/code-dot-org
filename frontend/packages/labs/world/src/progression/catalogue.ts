@@ -89,7 +89,6 @@ export const TILES: readonly Tile[] = [
       // Not `define actor` or `define world`, which no toolbox offers: an
       // actor is made in the Actor Editor and a project has one world
       // (specs/ACTORS_AS_DATA_PLAN.md, step 6).
-      {kind: 'block', type: 'world_use_trait'},
       {kind: 'block', type: 'world_this_actor'},
       {kind: 'block', type: 'world_add_actor'},
       {kind: 'block', type: 'world_set_position'},
@@ -732,8 +731,9 @@ export const TILES: readonly Tile[] = [
     teaches: 'A value that belongs to the game rather than to anything in it.',
     task: 'Two Labels disagree about how many lives are left. Make it one number they both read.',
     requires: ['memory/variable'],
+    // A world's own value is added on the Map, in All maps' values; no block
+    // declares one in a toolbox (specs/ACTORS_AS_DATA_PLAN.md, step 7).
     unlocks: [
-      {kind: 'block', type: 'world_rule_property'},
       // The Label, which is where the words are now: `text`, its size, its
       // color and its anchor were the Writing rule's, and are this actor's own
       // declarations (specs/UI_ACTORS.md).
@@ -789,8 +789,9 @@ export const TILES: readonly Tile[] = [
     // nothing gates them and nothing needs to unlock them
     // (`toolboxShelf.generatedElsewhere`). What the lesson hands over is the
     // block that DECLARES one, below.
+    // …and an actor's own is added in its Self; no block declares one in a
+    // toolbox (specs/ACTORS_AS_DATA_PLAN.md, step 7).
     unlocks: [],
-    offers: [{kind: 'block', type: 'world_rule_property'}],
     check: {
       kind: 'outcome',
       says: 'The two Lamps say different things, from a number the Lamp itself holds.',
@@ -3335,10 +3336,8 @@ export const TILES: readonly Tile[] = [
     task: 'A flock that works, and five numbers typed where nobody can turn them.',
     requires: ['simulation/neighbors', 'simulation/emergent'],
     unlocks: [{kind: 'template', id: 'simulation'}],
-    // `define property` is `memory/world-state`'s to grant, and the Simulation
-    // side of the map does not pass through Memory. Lent for the one lesson
-    // that is entirely about declaring one.
-    offers: [{kind: 'block', type: 'world_rule_property'}],
+    // A world's own value is added on the Map, as `memory/world-state`
+    // teaches; no block is lent for it (specs/ACTORS_AS_DATA_PLAN.md, step 7).
     check: {
       kind: 'outcome',
       says: 'The flock forms, the dial is turned while it runs, and it comes apart — with nothing restarted.',

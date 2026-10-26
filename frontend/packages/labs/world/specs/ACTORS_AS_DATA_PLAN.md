@@ -389,6 +389,43 @@ trait` and an actor's and a world's `define property` leave the toolbox
 (step 6), and the lesson test that every block a lesson asks for is
 offered says the rewrites are whole.
 
+BUILT. Forty-four lessons' steps were rewritten: twenty-eight that sent
+a learner to `use trait` or to an actor's or a world's `define property`,
+and the others that spoke of `define actor`, an actor's file or its
+blocks. A trait is given from **Enhance Actor** ("Open the Hero and give
+it **Jumps** from **Enhance Actor**") and taken off with its **Remove**;
+a trait's own value is its field ("set its **Lifetime** to 1"); an
+actor's code is read and changed with **Code**; an actor's own property
+is a **New property** in **Self**; a world's own value is a **New value**
+on the Map with nothing selected. An effect is added from the Effects
+tab's **Add Effect**. Rules are still blocks, so `use trait` under
+`define trait` and a rule's `define property` are taught as they were;
+and a world is still blocks, so a world value is deleted where it is
+written, in the World tab.
+
+Four lessons sent a learner to "the open button on `use trait`" to read
+or change the rule behind a trait. That button went with the block, so
+each trait in the panel has a **Rule** button beside **Remove**, which
+opens the rule's file as a step on the trail (`TraitChoice.rulePath`).
+
+With them, `use trait` and an actor's and a world's `define property`
+left the toolbox, joining `ESTABLISHED_ELSEWHERE`, and the tiles that
+granted them for those uses no longer do: `origin/first-world`,
+`memory/world-state`, `memory/actor-state` and `simulation/dials`.
+`memory/actor-state` now gives nothing at all, and says why where the
+tiles that give nothing are named: an actor's Self is never withheld. The
+table of what each lesson's steps ask for (`ASKS_FOR`) lost the two
+blocks, and the test that every one is offered passes for every lesson.
+
+Corrected on the way: `platformer/hunter` said a chase target is set in
+its code because "the rows beside the traits run before anything has
+been put in the world"; it says a value set in the panel is. The ladders
+lesson read "what the sparkles wrote", which is now the Hero's **Code**.
+
+In the browser: `input/press`, step 1 as written — the Hero opened, Enhance
+Actor offered Takes Keyboard Input, and it arrived in the panel with Rule
+and Remove; no page errors.
+
 ### 8. Documents, the browser, and the ledger
 
 SIMPLE_INTERFACE.md lists the phase, GLOSSARY.md and the README say what an

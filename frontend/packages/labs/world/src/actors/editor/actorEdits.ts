@@ -52,6 +52,8 @@ export interface TraitChoice {
   value: string;
   name: string;
   rule: string;
+  /** The rule's module path (`rules/gravity`), where the trait is written. */
+  rulePath?: string;
   description?: string;
   properties: TraitProperty[];
 }
@@ -86,6 +88,7 @@ export function actorTraitChoices(
           value: memberValue(trait.ref),
           name: trait.name,
           rule: rule.name,
+          ...(rule.modulePath ? {rulePath: rule.modulePath} : {}),
           ...(description ? {description} : {}),
           properties: rule.properties
             .filter(

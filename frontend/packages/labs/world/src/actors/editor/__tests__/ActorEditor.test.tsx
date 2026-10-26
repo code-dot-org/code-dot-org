@@ -394,6 +394,20 @@ describe('the Actor Editor', () => {
     expect(written().traits).not.toContain('Jumping#JumpsTrait');
   });
 
+  it('opens the rule a trait is written in', () => {
+    const acts = vi.fn(async () => undefined);
+    setFileActHandler(acts);
+    open();
+    const jumps = screen.getByRole('region', {name: 'Jumps'});
+    fireEvent.click(
+      within(jumps).getByRole('button', {name: /^Open the .* rule$/}),
+    );
+    expect(acts).toHaveBeenCalledWith(
+      expect.objectContaining({act: 'open', path: 'rules/jump.rule'}),
+    );
+    setFileActHandler(null);
+  });
+
   it('offers the traits it does not take, and the enhancements', () => {
     open();
     fireEvent.click(screen.getByRole('button', {name: 'Enhance Actor'}));
