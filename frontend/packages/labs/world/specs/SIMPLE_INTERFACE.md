@@ -565,8 +565,9 @@ on and off while the game runs; the stored flag is how it starts.
 ### Interface, game, or both
 
 Every stock rule and enhancement says whether it is for interfaces, for
-games, or for both; every actor says interfaces or games, never both
-(ACTORS_AS_DATA_PLAN.md, step 3). An interface actor is drawn and shown by
+games, or for both; every actor says interfaces or games, never both,
+and says it from when it is made: the Actor Editor shows it and does not
+change it (ACTORS_AS_DATA_PLAN.md, step 3 and "Decided after"). An interface actor is drawn and shown by
 its icon, and either tab is open on a Screen and on a Map, so a Health Bar
 is an interface actor placed in a level. Whether a level with no game
 offers one is a separate list (`appBuilder`), which leaves out the

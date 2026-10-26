@@ -393,3 +393,8 @@
   width: 24px;
   height: 24px;
 }
+
+/* What the actor is for, said beside its name: decided when it was made. */
+.purpose {
+  color: var(--text-neutral-secondary, #5b5f66);
+}

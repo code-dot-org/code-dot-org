@@ -486,35 +486,16 @@ describe('what it is for (specs/ACTORS_AS_DATA_PLAN.md, step 3)', () => {
     );
   });
 
-  it('asks before an actor with pictures is made an interface’s', () => {
+  it('says what it is for, and offers no way to change it', () => {
+    // Decided when it is made (specs/ACTORS_AS_DATA_PLAN.md).
     open();
-    showDialog.mockResolvedValueOnce({type: 'cancel', args: ''});
-    fireEvent.change(screen.getByLabelText('For'), {
-      target: {value: 'interface'},
-    });
-    return vi.waitFor(() => {
-      expect(showDialog).toHaveBeenCalled();
-      expect(onChange).not.toHaveBeenCalled();
-    });
+    expect(screen.getByText('Game actor')).toBeInTheDocument();
+    expect(screen.queryByLabelText('For')).toBeNull();
   });
 
-  it('makes it an interface’s when told to, drawn and without pictures', async () => {
-    open();
-    showDialog.mockResolvedValueOnce({type: 'confirm', args: ''});
-    fireEvent.change(screen.getByLabelText('For'), {
-      target: {value: 'interface'},
-    });
-    await vi.waitFor(() => expect(onChange).toHaveBeenCalled());
-    const data = written();
-    expect(data.for).toBe('interface');
-    // The Player's Main pulses as well as showing its picture: the pulse
-    // stays, the picture goes.
-    expect(Object.keys(data.animations.Main.tracks)).toEqual(['drawnScale']);
-    expect(
-      data.blocks.blocks.blocks.some(
-        (root: {type: string}) => root.type === 'world_define_drawing',
-      ),
-    ).toBe(true);
+  it('says so of an interface actor too', () => {
+    open(as({for: 'interface'}));
+    expect(screen.getByText('Interface actor')).toBeInTheDocument();
   });
 
   it('acts like another of the project’s actors', () => {

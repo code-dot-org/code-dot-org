@@ -72,7 +72,6 @@ import {
   withMainAnimation,
   type ActorData,
 } from '../actorData';
-import type {ActorPurpose} from '../actorPurpose';
 import {requestActorEnhance} from '../enhance/actorEnhance';
 
 import styles from './actorEditor.module.css';
@@ -83,7 +82,6 @@ import {
   addAnimation,
   addAnimationFrames,
   addTrait,
-  losesToInterface,
   setActsLike,
   setIcon,
   setIsRecord,
@@ -102,7 +100,6 @@ import {
   setEffectSetting,
   switchEffect,
   setLook,
-  setPurpose,
   setValue,
   takesValue,
   valueText,
@@ -490,24 +487,6 @@ export const ActorEditor = (props: CustomEditorProps) => {
   // Drawn and shown by its icon, with no pictures to choose
   // (specs/ACTORS_AS_DATA_PLAN.md, step 3).
   const isInterface = data?.for === 'interface';
-  // An interface actor is drawn (`setPurpose`): what that takes away is
-  // said first.
-  const choosePurpose = async (purpose: ActorPurpose) => {
-    if (
-      data &&
-      (purpose === 'game' ||
-        !losesToInterface(data) ||
-        (await confirm({
-          title: 'Make it an interface actor',
-          message:
-            'An interface actor is drawn, not given pictures. Its pictures ' +
-            'come off its animations, and it gets a box and a drawing to ' +
-            'start from if it has none.',
-        })))
-    ) {
-      edit(setPurpose(data, purpose));
-    }
-  };
   // What it may act like: the project's other actors.
   const others = useMemo(
     () => projectActorOptions(files).filter(([, path]) => path !== modulePath),
@@ -574,20 +553,14 @@ export const ActorEditor = (props: CustomEditorProps) => {
             Rename
           </Button>
         )}
-        <SimpleDropdown
-          name="actor-purpose"
-          labelText="For"
-          size="s"
-          disabled={isReadOnly}
-          selectedValue={data.for ?? 'game'}
-          items={[
-            {value: 'game', text: 'Games'},
-            {value: 'interface', text: 'Interfaces'},
-          ]}
-          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-            void choosePurpose(event.target.value as ActorPurpose)
-          }
-        />
+        {/* WHAT IT IS FOR IS SAID, NOT CHOSEN. It is decided when the actor
+            is made — by the palette tab its Add New Actor was under, or by
+            the library — and never changed: a game actor wears pictures and
+            an interface actor is drawn, and turning one into the other would
+            take away what it has (specs/ACTORS_AS_DATA_PLAN.md). */}
+        <Typography variant="body3" component="p" className={styles.purpose}>
+          {isInterface ? 'Interface actor' : 'Game actor'}
+        </Typography>
         <Button
           variant="outlined"
           color="secondary"

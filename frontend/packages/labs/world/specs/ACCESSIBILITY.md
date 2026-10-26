@@ -182,9 +182,11 @@ below, and are listed last.
   nothing of what is in them.
 - **A trait's Rule button** is named for the rule it opens ("Open the
   Jumping rule"), beside a Remove named for the trait.
-- **The confirm prompt** asked before making an actor an interface's is
-  not exposed as a dialog (`role="dialog"` is missing on the shared
-  prompt, `usePrompts`); found here, not made here.
+- **The confirm prompt** — asked before deleting an animation, among
+  others — is not exposed as a dialog (`role="dialog"` is missing on the
+  shared prompt, `usePrompts`); found here, not made here.
+- **What an actor is for** is said as text beside its name, not offered as
+  a control, since it does not change.
 
 ## Not yet done for any phase
 

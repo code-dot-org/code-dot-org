@@ -213,10 +213,10 @@ animations. An interface actor has the **Icon** picker
 pressed when chosen, pressed again for none) where Looks like and
 Pictures are, no Add frames, and no Picture field at the playhead. A
 game actor has no icon field. Made an interface's, an actor that would
-lose something is asked first; then its picture keys come off every
-animation, a Main that was only a picture goes, and one with no drawing
-gets the box and drawing a new interface actor starts with (`setPurpose`,
-`losesToInterface`). The creation wizard already asked an interface
+lose something was asked first, then lost its picture keys and gained a
+box and a drawing; that switch was taken out after the phase, and the
+purpose is fixed when an actor is made ("Decided after", below). The
+creation wizard already asked an interface
 actor nothing about a picture.
 
 Departure: the plan said the icon picker was the creation wizard's.
@@ -460,11 +460,17 @@ it. Left for its own investigation.
 
 - **Check my work in the browser checks an empty world** (step 8): found
   here, older than this phase.
-- **Whether an actor's purpose may change after it is made.** Step 3
-  lets the purpose dropdown switch it, converting a game actor to a drawn
-  one. Fixed when the actor is made would leave nothing to convert or
-  explain, and `setPurpose`'s conversion would go. Recommended; not
-  decided.
+
+## Decided after
+
+- **An actor's purpose is fixed when it is made.** Step 3 let the purpose
+  dropdown switch it, converting a game actor to a drawn one and asking
+  first. Decided against, October 2026: the purpose is set by the palette
+  tab Add New Actor was under, or by the library, and the Actor Editor
+  says it ("Game actor", "Interface actor") beside the name rather than
+  offering it. `setPurpose`, `losesToInterface` and the conversion are
+  deleted. A game actor and an interface actor differ in what they have —
+  pictures, or a drawing and an icon — and nothing is taken from either.
 
 ## Not in this phase
 

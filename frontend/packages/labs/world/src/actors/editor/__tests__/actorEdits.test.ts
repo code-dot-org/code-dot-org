@@ -27,11 +27,9 @@ import {
   removeAnimation,
   renameAnimation,
   addAnimationFrames,
-  losesToInterface,
   setActsLike,
   setIcon,
   setIsRecord,
-  setPurpose,
   moveAnimationKey,
   removeAnimationKey,
   setAnimationKey,
@@ -356,51 +354,7 @@ describe('its animations', () => {
   });
 });
 
-describe('what it is for, and what kind it is', () => {
-  /** A Bobber: a picture as its Main, and a hop that moves and shows a frame. */
-  const BOBBER: ActorData = {
-    type: 'actor',
-    name: 'Bobber',
-    animations: {
-      Main: {loop: true, tracks: {sprite: [{at: 0, value: 'b.png'}]}},
-      Hop: {
-        tracks: {
-          sprite: [{at: 0, value: 'b.png'}],
-          drawnOffset: [{at: 0, value: {x: 0, y: -4}}],
-        },
-      },
-    },
-  };
-  const drawings = (data: ActorData) =>
-    (data.blocks?.blocks?.blocks ?? []).filter(
-      root => root.type === 'world_define_drawing',
-    );
-
-  it('as an interface’s, is drawn: no picture keys, and a box and a drawing', () => {
-    expect(losesToInterface(BOBBER)).toBe(true);
-    const made = setPurpose(BOBBER, 'interface');
-    expect(made.for).toBe('interface');
-    // Main was only a picture, and goes; Hop keeps what else it moves.
-    expect(made.animations).toEqual({
-      Hop: {tracks: {drawnOffset: [{at: 0, value: {x: 0, y: -4}}]}},
-    });
-    expect(drawings(made)).toHaveLength(1);
-    expect(made.traits).toContain('Boxed#HasABoxTrait');
-    expect(made.values!.map(value => value.setter)).toEqual([
-      'world_set_Boxed_WidthProperty',
-      'world_set_Boxed_HeightProperty',
-    ]);
-    // …and once it is drawn, nothing more is lost.
-    expect(losesToInterface(made)).toBe(false);
-    expect(drawings(setPurpose(made, 'interface'))).toHaveLength(1);
-  });
-
-  it('as a game’s, loses nothing', () => {
-    const made = setPurpose(setPurpose(BOBBER, 'interface'), 'game');
-    expect(made.for).toBe('game');
-    expect(drawings(made)).toHaveLength(1);
-  });
-
+describe('what kind it is', () => {
   it('acts like another actor, or like nothing', () => {
     expect(setActsLike(PLAYER, 'actors/label').actsLike).toBe('actors/label');
     expect(
