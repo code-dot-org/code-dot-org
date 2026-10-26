@@ -40,6 +40,12 @@
  * and a camera trait never sees it. A rule-level step has no subject and may
  * name any of them — that is where the work that fits no single actor lives
  * (reading the keyboard, walking every pair of bodies).
+ *
+ * A WORLD phase is every subject's. `sense` is the one, and it is the one a
+ * paused game still runs (`World.pause`), so a trait's step there is work that
+ * has to go on through a pause: a pause menu taking the keyboard from a field
+ * behind it. Work that must stop for a pause goes in a later phase, or asks
+ * whether the game is paused.
  */
 export type PhaseSubject = 'world' | 'actor' | 'camera';
 
@@ -61,7 +67,8 @@ export const PHASES: readonly PhaseDef[] = [
     id: 'sense',
     name: 'sense',
     subject: 'world',
-    summary: 'Read the outside world — keys, pointer, timers.',
+    summary:
+      'Read the outside world — keys and pointer. Runs while the game is paused.',
   },
   {
     id: 'decide',
@@ -169,4 +176,6 @@ export const phaseIndex = (id: string): number | undefined => INDEX.get(id);
 export const phasesFor = (subject: PhaseSubject): readonly PhaseDef[] =>
   subject === 'world'
     ? PHASES
-    : PHASES.filter(phase => phase.subject === subject);
+    : PHASES.filter(
+        phase => phase.subject === subject || phase.subject === 'world',
+      );

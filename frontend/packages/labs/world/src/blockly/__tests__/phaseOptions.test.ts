@@ -71,7 +71,7 @@ describe('what a step’s phase list is about', () => {
 });
 
 describe('what the dropdown offers', () => {
-  it('gives a camera trait only the camera’s moments', () => {
+  it('gives a camera trait the camera’s moments, and the world’s', () => {
     expect(
       labels(
         phaseOptions(
@@ -81,10 +81,18 @@ describe('what the dropdown offers', () => {
           }),
         ),
       ),
-    ).toEqual(['choose', 'aim', 'steady', 'smooth', 'confine', 'view']);
+    ).toEqual([
+      'sense',
+      'choose',
+      'aim',
+      'steady',
+      'smooth',
+      'confine',
+      'view',
+    ]);
   });
 
-  it('gives an actor trait only the actor’s', () => {
+  it('gives an actor trait the actor’s, and the world’s', () => {
     expect(
       labels(
         phaseOptions(
@@ -94,7 +102,16 @@ describe('what the dropdown offers', () => {
           }),
         ),
       ),
-    ).toEqual(['decide', 'push', 'move', 'adjust', 'touch', 'settle', 'react']);
+    ).toEqual([
+      'sense',
+      'decide',
+      'push',
+      'move',
+      'adjust',
+      'touch',
+      'settle',
+      'react',
+    ]);
   });
 
   it('gives a rule-level step all of them', () => {

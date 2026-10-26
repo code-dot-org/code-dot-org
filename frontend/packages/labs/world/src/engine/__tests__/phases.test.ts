@@ -148,10 +148,12 @@ describe('the frame’s named moments', () => {
 });
 
 describe('which moments a subject takes part in', () => {
-  it('offers a camera only the camera’s', () => {
+  it('offers a camera the camera’s, and the world’s', () => {
     // `push` is not a thing a camera does, so a camera trait never sees it —
-    // the nonsense is absent rather than discouraged.
+    // the nonsense is absent rather than discouraged. `sense` is everybody's:
+    // it is the moment a paused game still runs.
     expect(phasesFor('camera').map(phase => phase.id)).toEqual([
+      'sense',
       'choose',
       'aim',
       'steady',
@@ -161,8 +163,9 @@ describe('which moments a subject takes part in', () => {
     ]);
   });
 
-  it('offers an actor only the actor’s', () => {
+  it('offers an actor the actor’s, and the world’s', () => {
     expect(phasesFor('actor').map(phase => phase.id)).toEqual([
+      'sense',
       'decide',
       'push',
       'move',
