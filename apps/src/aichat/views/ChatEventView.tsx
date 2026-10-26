@@ -139,7 +139,10 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
         commitDescription,
       } = event;
 
-      if (notificationType === 'welcomeMessage') {
+      if (
+        notificationType === 'welcomeMessage' ||
+        notificationType === 'hostMessage'
+      ) {
         return (
           <div
             ref={ref}
