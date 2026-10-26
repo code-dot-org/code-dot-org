@@ -26,7 +26,11 @@ export interface MembersTabProps {
   onEdit?: (member: ActorMember) => void;
   onDelete?: (member: ActorMember) => void;
   onNew?: (kind: ActorMember['kind']) => void;
-  /** The member whose Edit takes focus, coming back from its page. */
+  /**
+   * The member whose Edit takes focus, coming back from its page or after
+   * the one before it was deleted; `new-event` or `new-block` for that
+   * button.
+   */
   focusEdit?: string | null;
   onFocused?: () => void;
 }
@@ -123,6 +127,11 @@ export const MembersTab = ({
             )}
             {onNew && !isReadOnly && (
               <Button
+                ref={element => {
+                  if (element) {
+                    edits.current.set(`new-${group.kind}`, element);
+                  }
+                }}
                 variant="text"
                 size="small"
                 className={styles.memberNew}

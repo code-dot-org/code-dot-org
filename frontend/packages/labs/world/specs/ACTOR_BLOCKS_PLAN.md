@@ -176,13 +176,27 @@ A member's call, hat and raise are named after its words, as a property's
 get and set are (`selfProperties`). Changing the words rewrites every use
 in every file; Delete first says where it is used, then leaves those
 blocks meaning nothing, as a property's delete does (`memberUses`,
-`renameMember`, `deleteMember`, beside `propertyUses`).
+`renameMember`, beside `propertyUses`).
 
-A value renamed in an event is two more rewrites, since both halves match
-it by name (EVENT_VALUES_PLAN.md): the raise block's socket, when the
-event carries more than one value, and the getters of that name under
-each of its hats. A block's value is a variable, so its implementation
-follows the rename by id; a call's sockets are by position.
+The rewrite is made once, when the page is left. A rename replaces the
+project, which loads the implementation open on the page again, and doing
+that on every keystroke would take the workspace from under the learner.
+Until then the uses elsewhere keep the old block types and the game does
+not compile; the page is the only place that is true.
+
+A value renamed is matched by its place among the values, and only when
+there are as many after as before: one added or taken away is a different
+design, whose uses say so in their own editors. A value renamed is two
+more rewrites. A block that takes more than one value names a socket for
+each (`NAME`, or `NAME_X` and `NAME_Y`), on a call and on a raise alike.
+And a handler reads what its event carries as a local of that name below
+its hat (EVENT_VALUES_PLAN.md): those getters are moved to a variable of
+the new name, made if the file has none, rather than the variable being
+renamed, since a variable is shared across the file. A block's value is a
+variable of the implementation, so the implementation follows by id.
+
+DONE: rename on leaving, Delete with the question, and focus after a
+delete on the row that took its place, else New event or New block.
 
 ### 5. Documents and the browser
 

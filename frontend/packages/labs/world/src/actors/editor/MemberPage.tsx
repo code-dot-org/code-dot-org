@@ -52,6 +52,13 @@ export interface MemberPageProps {
   isReadOnly: boolean;
   /** Change the actor's data as the file now holds it. */
   onUpdate: (change: (data: ActorData) => ActorData) => void;
+  /**
+   * The page is left: the member as it was opened and as it is now, so its
+   * uses elsewhere can follow (`renameMember`). Once, on leaving, because a
+   * rename rewrites the project, and the implementation open here would be
+   * loaded again under the learner on every keystroke.
+   */
+  onLeave: (before: ActorMember, after: ActorMember) => void;
 }
 
 /** The arranged parts with what the data has bound since: a new value's variable. */
@@ -91,7 +98,21 @@ export const MemberPage = ({
   boxed,
   isReadOnly,
   onUpdate,
+  onLeave,
 }: MemberPageProps) => {
+  const opened = useRef(member);
+  const latest = useRef(member);
+  latest.current = member;
+  const leave = useRef(onLeave);
+  leave.current = onLeave;
+  useEffect(
+    () => () => {
+      if (latest.current !== opened.current) {
+        leave.current(opened.current, latest.current);
+      }
+    },
+    [],
+  );
   const keys = useRef(0);
   const mintKey = () => `part-${(keys.current += 1)}`;
   const [arranged, setArranged] = useState<readonly Arranged[]>(() =>

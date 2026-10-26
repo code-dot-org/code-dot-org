@@ -72,6 +72,7 @@ import {
   MAIN_ANIMATION,
   withMainAnimation,
   type ActorData,
+  type ActorMember,
 } from '../actorData';
 import {requestActorEnhance} from '../enhance/actorEnhance';
 
@@ -109,8 +110,10 @@ import {
 import {ActorIconPicker} from './ActorIconPicker';
 import {AddFramesDialog} from './AddFramesDialog';
 import {AnimationRow} from './AnimationRow';
-import {addMember, newMember} from './memberEdits';
+import {addMember, newMember, removeMember} from './memberEdits';
 import {MemberPage} from './MemberPage';
+import {memberReading} from './memberPalette';
+import {memberUses, renameMember} from './memberRename';
 import {MembersTab} from './MembersTab';
 import {MomentPanel} from './MomentPanel';
 import {SelfProperty} from './SelfProperty';
@@ -180,6 +183,9 @@ const capitalize = (text: string) =>
 export const ActorEditor = (props: CustomEditorProps) => {
   const {fileId, initialContents, isReadOnly, onChange} = props;
   const {currentSources, replaceSources} = useSources<MultiFileSource>();
+  // The project as it is when a page is left, which is after its last render.
+  const sources = useRef(currentSources);
+  sources.current = currentSources;
   // Whether this level offers a way to the file behind a trait: the same
   // call the `use rule` block's open button answers to (`levelData`).
   const ruleSource = showsRuleSource(
@@ -494,6 +500,33 @@ export const ActorEditor = (props: CustomEditorProps) => {
       setChosen(name.trim());
     }
   };
+  /** A member gone, once its uses are said; focus to whatever took its row. */
+  const deleteOne = async (member: ActorMember) => {
+    if (!data) {
+      return;
+    }
+    const reading = memberReading(member, data.name);
+    const uses = memberUses(currentSources.source, modulePath, member).map(id =>
+      fileLabel(currentSources.source.files[id]),
+    );
+    if (
+      !(await confirm({
+        title: `Delete ${member.kind === 'event' ? 'event' : 'block'}`,
+        message: uses.length
+          ? `Delete “${reading}”? The code in ${uses.join(', ')} uses it, ` +
+            'and will stop working where it does.'
+          : `Delete “${reading}”? No code uses it.`,
+      }))
+    ) {
+      return;
+    }
+    const mine = (data.members ?? []).filter(one => one.kind === member.kind);
+    const at = mine.findIndex(one => one.id === member.id);
+    const next = mine[at + 1] ?? mine[at - 1];
+    edit(removeMember(data, member.id));
+    setReturnTo(next?.id ?? `new-${member.kind}`);
+  };
+
   const removeOne = async (name: string) => {
     if (
       data &&
@@ -552,6 +585,13 @@ export const ActorEditor = (props: CustomEditorProps) => {
           boxed={data.traits?.includes(BOX_TRAIT) ?? false}
           isReadOnly={isReadOnly}
           onUpdate={update}
+          onLeave={(before, after) => {
+            const now = sources.current;
+            const source = renameMember(now.source, modulePath, before, after);
+            if (source !== now.source) {
+              replaceSources({...now, source});
+            }
+          }}
         />
       </div>
     );
@@ -1123,6 +1163,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
                 modulePath={modulePath}
                 isReadOnly={isReadOnly}
                 onEdit={member => openMember(member.id)}
+                onDelete={member => void deleteOne(member)}
                 onNew={kind => {
                   const member = newMember(data, kind);
                   edit(addMember(data, member));

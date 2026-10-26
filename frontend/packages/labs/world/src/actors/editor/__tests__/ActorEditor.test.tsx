@@ -1,6 +1,12 @@
 // The Actor Editor (specs/ACTOR_EDITOR_PLAN.md, step 4).
 
-import {fireEvent, render, screen, within} from '@testing-library/react';
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+} from '@testing-library/react';
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
@@ -636,5 +642,71 @@ describe('an event or block of its own (specs/ACTOR_BLOCKS_PLAN.md, step 3)', ()
     expect(document.activeElement).toBe(
       screen.getByRole('button', {name: 'Edit when Player happens'}),
     );
+  });
+
+  it('is deleted once its uses are said, focus going to New', async () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New event'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Actor'}));
+    showDialog.mockClear();
+
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Delete when Player happens'}),
+    );
+
+    await waitFor(() => expect(written().members).toBeUndefined());
+    expect(showDialog.mock.calls[0][0]).toMatchObject({
+      title: 'Delete event',
+      message: 'Delete “when Player happens”? No code uses it.',
+    });
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'New event'}),
+    );
+  });
+
+  it('takes its uses to its new words when its page is left', () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New event'}));
+    fireEvent.change(screen.getByRole('textbox', {name: 'Word, part 1'}), {
+      target: {value: 'is hurt'},
+    });
+    // A world that heard the event by its first words.
+    const worldId = 'heard';
+    const before = SOURCE;
+    SOURCE = {
+      ...SOURCE,
+      files: {
+        ...SOURCE.files,
+        [PLAYER_ID]: {
+          ...SOURCE.files[PLAYER_ID],
+          contents: JSON.stringify(written()),
+        },
+        [worldId]: {
+          id: worldId,
+          name: 'heard.world',
+          folderId: '0',
+          language: 'world',
+          contents: JSON.stringify({
+            blocks: {
+              languageVersion: 0,
+              blocks: [{type: 'world_on_ActorsPlayer_HappensEvent'}],
+            },
+          }),
+        },
+      },
+    };
+    replaceSources.mockClear();
+
+    try {
+      fireEvent.click(screen.getByRole('button', {name: 'Actor'}));
+      const renamed = replaceSources.mock.calls[0][0].source.files[worldId];
+      expect(JSON.parse(renamed.contents).blocks.blocks[0].type).toBe(
+        'world_on_ActorsPlayer_IsHurtEvent',
+      );
+    } finally {
+      SOURCE = before;
+    }
   });
 });
