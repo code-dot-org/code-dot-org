@@ -26,7 +26,7 @@ export type HostNotification = Pick<
   notificationType: 'hostMessage' | 'success' | 'error';
 };
 
-/** What a host can do with a chat once it is up. */
+/** Actions the chat host may take once the chat is ready. */
 export interface ChatHandle {
   post(notification: HostNotification): void;
   /** Calls `listener` for each build the student accepts from now on. Returns the unsubscribe. */

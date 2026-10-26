@@ -18,7 +18,7 @@ import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
  * These requests are only used to inform the model of the request history and aren't used elsewhere.
  */
 
-/** The request id of a message made up for the model's history, which no request produced. */
+/** Used for synthetic messages that weren't created from actual model requests, but are included in the model's history. */
 export const NO_REQUEST_ID = -1;
 
 export function buildMessagesForModelHistory(

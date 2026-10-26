@@ -1,7 +1,3 @@
-// The builds a student accepted from the tutor, read off the chat. Each
-// accept notification carries the files the AI changed, and the messages
-// since the previous accept are the exchange that produced it.
-
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 
 import {
@@ -13,7 +9,10 @@ import {
 
 import {AcceptedBuild} from './ChatHostContext';
 
-/** Every accepted build in the chat, oldest first. */
+/**
+ * Produces a list of accepted builds from chat events; each carries the files
+ * the AI changed, and the series of chat messages that produced it.
+ */
 export function acceptedBuilds(events: ChatEvent[]): AcceptedBuild[] {
   const builds: AcceptedBuild[] = [];
   let lines: string[] = [];

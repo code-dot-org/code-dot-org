@@ -326,8 +326,9 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
       });
     }, [dispatch, previousParameters, modelParameters]);
 
-    // The host's handle on this chat: posts come in as messages from the
-    // tutor, and each build the student accepts from now on goes out.
+    // Sets up the chat host's handle, if there is one. Posts get added as
+    // notifications and each build the student accepts gets emitted through
+    // the listener.
     const host = useChatHost();
     const buildListeners = useRef(new Set<(build: AcceptedBuild) => void>());
     const lastBuildAt = useRef(Date.now());
