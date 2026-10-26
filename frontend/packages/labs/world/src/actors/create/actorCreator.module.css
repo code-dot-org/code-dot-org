@@ -1,0 +1,157 @@
+/* The Actor Creator's CONTENT. The dialog itself — surface, width, padding,
+   the button row — is the design system's `Dialog`. */
+
+/* ONE WIDTH FOR ALL THREE STEPS. The design system's `Dialog` sizes itself to
+   its content between 39.375rem and 50rem, so a wizard that let each step ask
+   for its own width resized as you walked through it — and grew sideways again
+   the first time a row in step three was opened, which reads as something
+   going wrong rather than as a row opening. Settled here rather than on any
+   one step: the widest thing differs per step, and a step that fills the
+   dialog can only do so if the dialog has stopped moving. */
+.body {
+  display: flex;
+  width: 45rem;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+/* Which step this is, in words. A wizard that does not say where you are is a
+   sequence of dialogs that happen to follow each other. */
+.progress {
+  color: var(--text-neutral-secondary);
+}
+
+/* The three doors, side by side: one question, three answers, no scrolling. */
+.doors {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.door {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  text-transform: none;
+}
+
+.doorName {
+  font-weight: 600;
+}
+
+/* NO COLOUR OF ITS OWN. The design system's Button decides what colour its
+   text is — dark on a plain card, light on the chosen one — and a rule here
+   saying "secondary grey" won that argument and left the chosen door reading
+   dark-grey on dark-grey. Dimming is done with opacity, which composes with
+   whatever the button chose. */
+.doorWhat {
+  opacity: 0.8;
+}
+
+/* What the chosen door asks next, under it: which of mine, or which of theirs.
+   The same reading the enhancement shelf gives a row that has a question
+   (`enhance/EnhanceActorDialog`). */
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 40vh;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.choice {
+  display: flex;
+  min-width: 4.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 0.4rem;
+  text-transform: none;
+}
+
+/* The picture, on the dark ground a world is drawn against — so a white sprite
+   is a sprite rather than a hole. The actors' own grid says the same. */
+.picture {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #101020;
+  overflow: hidden;
+}
+
+.picture img {
+  max-width: 48px;
+  max-height: 48px;
+  image-rendering: pixelated;
+}
+
+.initial {
+  color: #e8eaed;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.choiceName {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.empty {
+  padding: 0.25rem 0;
+  color: var(--text-neutral-secondary);
+}
+
+/* "Add this", under the abilities rows. Its own button rather than the
+   dialog's, because the dialog's says what happens to the WIZARD — on to the
+   next step, or make the actor — and this says what happens to the actor. A
+   step that took one ability and moved on would make a Crawler two visits. */
+
+/* The way into the drawing panel, under the pictures a project already has —
+   which are the likelier answer, so this is a door rather than a field. */
+.describe {
+  align-self: flex-start;
+  text-transform: none;
+}
+
+/* The step, and the way out of it. */
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Quiet, because the steps after this one are worth walking through — and
+   visible, because an offer you cannot decline is a demand. */
+.now {
+  padding: 0;
+  text-transform: none;
+}
