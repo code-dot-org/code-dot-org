@@ -57,6 +57,25 @@ export type QuizQuestionDraft =
   | FreeResponseDraft
   | MatchDraft;
 
+export function isChoiceQuestionDraft(
+  draft: QuizQuestionDraft
+): draft is ChoiceQuestionDraft {
+  return (
+    draft.type === 'MultipleChoiceQuestion' ||
+    draft.type === 'MultipleSelectQuestion'
+  );
+}
+
+export function isMultipleSelectDraft(
+  draft: QuizQuestionDraft
+): draft is MultipleSelectDraft {
+  return draft.type === 'MultipleSelectQuestion';
+}
+
+export function isMatchDraft(draft: QuizQuestionDraft): draft is MatchDraft {
+  return draft.type === 'MatchQuestion';
+}
+
 // A question as the builder endpoints return it (GET /levels/:id/
 // quiz_configuration and a placement create): the QuizQuestion model's
 // fields plus the placement and cross-quiz usage context that

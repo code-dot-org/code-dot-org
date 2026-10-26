@@ -10,7 +10,7 @@ import React, {useId} from 'react';
 import {formatChoiceLetter} from '../../utils';
 import AddItemButton from '../AddItemButton';
 import {QUESTION_TYPE_LABELS_ICONS} from '../constants';
-import {ChoiceQuestionDraft} from '../types';
+import {ChoiceQuestionDraft, isMultipleSelectDraft} from '../types';
 
 import styles from './quiz-question-card.module.scss';
 
@@ -32,7 +32,7 @@ function nextChoiceId(existingIds: string[]): string {
 }
 
 function correctChoiceIdsOf(draft: ChoiceQuestionDraft): string[] {
-  if (draft.type === 'MultipleSelectQuestion') {
+  if (isMultipleSelectDraft(draft)) {
     return draft.correctChoiceIds;
   }
   return draft.correctChoiceId === null ? [] : [draft.correctChoiceId];
@@ -88,7 +88,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
   // Radios group by name across the page, so each editor needs its own.
   const markerName = useId();
   const correctChoiceIds = correctChoiceIdsOf(draft);
-  const isMultipleSelect = draft.type === 'MultipleSelectQuestion';
+  const isMultipleSelect = isMultipleSelectDraft(draft);
 
   const setCorrectChoiceIds = (ids: string[]) =>
     onChange(withCorrectChoiceIds(draft, draft.type, ids));

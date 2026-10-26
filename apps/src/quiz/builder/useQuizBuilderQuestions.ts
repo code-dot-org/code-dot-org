@@ -128,8 +128,6 @@ export default function useQuizBuilderQuestions(
         const response = isPendingQuestionId(id)
           ? await HttpClient.post(
               `/levels/${levelId}/quiz_question_placements`,
-              // The draft's type, not the question's: a choice question can
-              // be switched between MC and multi-select before it's saved.
               JSON.stringify({...payload, page: question?.page ?? 1}),
               true,
               {'Content-Type': 'application/json'}
