@@ -6,8 +6,8 @@ import classNames from 'classnames';
 import React, {type CSSProperties, type KeyboardEvent} from 'react';
 
 import {useAppDispatch, useAppSelector} from '../hooks';
-import {getData} from '../selectors';
 import {setDatasetCardRow} from '../redux';
+import {getData} from '../selectors';
 
 import DatasetRowCard from './DatasetRowCard';
 import PagerButton from './PagerButton';

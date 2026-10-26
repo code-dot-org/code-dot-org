@@ -7,9 +7,8 @@ import {getColumnRole} from '../helpers/columnDetails';
 import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
-import {getData, getDatasetId} from '../selectors';
 import {useProject} from '../ProjectContext';
-import {getIdColumn} from '../selectors';
+import {getData, getDatasetId, getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
 
 import CellText from './CellText';

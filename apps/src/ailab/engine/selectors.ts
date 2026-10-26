@@ -123,7 +123,7 @@ export const getIdColumn = createSelector(
   [
     getData,
     (state: RootState) => state.mode?.idColumn,
-    (state: RootState) => state.metadata.defaultIdColumn,
+    (state: RootState) => getMetadata(state).defaultIdColumn,
   ],
   (
     data: DataRow[],
