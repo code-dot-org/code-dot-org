@@ -1,0 +1,140 @@
+// Importing an actor, and then being able to read it.
+//
+// The gap this closes, end to end: in a level with the file browser hidden,
+// importing a Coin wrote `actors/coin.actor` and left no way to open it. There
+// was no list to find it in, and the blocks that named it — `add actor
+// ⟨Coin⟩`, `is a ⟨Coin⟩` — carried no eye, because `.actor` was not a kind of
+// file the openable registry knew about.
+//
+// Two halves, and each was silent on its own: the registry not holding the
+// path, and the block not asking about the field.
+
+import {beforeEach, describe, expect, it} from 'vitest';
+
+import {importStockActor} from '../../actors/importStockActor';
+import {stockActorById} from '../../actors/stock';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {projectFiles} from '../../runtime/projectFiles';
+import {moduleNamedBy} from '../extensions/openSourceButton';
+import {
+  canOpenModule,
+  fileIdForModule,
+  setModuleOpener,
+  setModuleOpeningOffered,
+  OPENABLE_EXTENSIONS,
+} from '../openModule';
+import {refreshProjectDropdowns} from '../projectDropdowns';
+
+const block = (fields: Record<string, string>) =>
+  ({getFieldValue: (name: string) => fields[name] ?? null}) as never;
+
+beforeEach(() => {
+  setModuleOpener(() => {});
+  setModuleOpeningOffered(true);
+});
+
+describe('a Coin just imported', () => {
+  const withACoin = () =>
+    importStockActor(EMPTY_WORLD_PROJECT, stockActorById('coin')!).source;
+
+  it('can be opened from a block that names it', () => {
+    refreshProjectDropdowns(projectFiles(withACoin()), [], {}, []);
+
+    expect(canOpenModule(moduleNamedBy(block({ACTOR: 'actors/coin'})))).toBe(
+      true,
+    );
+  });
+
+  it('brings its rules along, which were already openable', () => {
+    // Not a regression test so much as the shape of the thing: the import
+    // writes several files, and every one of them is now reachable from the
+    // block that mentions it.
+    refreshProjectDropdowns(projectFiles(withACoin()), [], {}, []);
+
+    expect(canOpenModule('rules/collect')).toBe(true);
+  });
+
+  it('offers nothing for an actor the project has not got', () => {
+    refreshProjectDropdowns(projectFiles(EMPTY_WORLD_PROJECT), [], {}, []);
+
+    expect(canOpenModule(moduleNamedBy(block({ACTOR: 'actors/coin'})))).toBe(
+      false,
+    );
+  });
+});
+
+// The half that shipped broken, and why the tests above did not notice.
+//
+// They asked whether a block could be opened — the registry's question — and
+// never whether anything WOULD open, which is a different list in a different
+// file. `.actor` went into the first and not the second, so the button appeared
+// on `create ⟨Coin⟩ in map ⟨…⟩` and clicking it did nothing whatsoever.
+//
+// The lists are now one list. This checks that every kind it names is a kind
+// the project can actually hold, so adding a sixth cannot quietly offer an eye
+// over a file that does not exist.
+describe('the kinds a module path can name', () => {
+  it('covers the Blockly files a project holds', () => {
+    // If a kind is registered as openable it must be resolvable, and the only
+    // way to keep that true is for one list to answer both.
+    expect([...OPENABLE_EXTENSIONS]).toEqual(
+      expect.arrayContaining(['rule', 'actor']),
+    );
+  });
+
+  it('tries a rule before a script, as the compiler does', () => {
+    // Resolution order is load-bearing: the file the button opens should be the
+    // file the project would compile.
+    const order = [...OPENABLE_EXTENSIONS];
+
+    expect(order.indexOf('rule')).toBeLessThan(order.indexOf('js'));
+    expect(order.indexOf('js')).toBeLessThan(order.indexOf('ts'));
+  });
+
+  it('resolves an imported actor to its actual file', () => {
+    // The end of the chain, and the assertion the button's promise rests on.
+    const source = importStockActor(
+      EMPTY_WORLD_PROJECT,
+      stockActorById('coin')!,
+    ).source;
+    const held = projectFiles(source);
+
+    const resolved = OPENABLE_EXTENSIONS.map(
+      kind => `actors/coin.${kind}`,
+    ).find(path => path in held);
+
+    expect(resolved).toBe('actors/coin.actor');
+  });
+});
+
+// A picture `set sprite` names, opened in the image editor
+// (specs/SHELL_FINISH_PLAN.md, step 5): with the folder buttons gone, the
+// block is the way to it for an actor still written in blocks.
+describe('a picture a block names', () => {
+  it('can be opened once the project has it, a sheet’s cell by its sheet', () => {
+    refreshProjectDropdowns(
+      {},
+      ['sprites/hero.png', 'backgrounds/cave.png'],
+      {},
+      [],
+    );
+
+    expect(canOpenModule(moduleNamedBy(block({SPRITE: 'hero.png'})))).toBe(
+      true,
+    );
+    expect(moduleNamedBy(block({SPRITE: 'hero.png#3'}))).toBe('sprites/hero');
+    expect(canOpenModule(moduleNamedBy(block({SPRITE: 'crab.png'})))).toBe(
+      false,
+    );
+  });
+
+  it('is found by its file, as a module path names one', () => {
+    const source = {
+      folders: {s: {id: 's', name: 'sprites', parentId: '0'}},
+      files: {
+        p: {id: 'p', name: 'hero.png', language: 'png', folderId: 's'},
+      },
+    } as never;
+    expect(fileIdForModule(source, 'sprites/hero')).toBe('p');
+  });
+});

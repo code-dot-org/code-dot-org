@@ -1,0 +1,504 @@
+// The projects the demo can load, one per thing worth showing.
+//
+// A lab is only as demonstrable as the projects it can be pointed at, and until
+// now it could be pointed at one: the starter. Everything else — a breakout
+// board, a meteor field, whatever the next rule needs to prove itself —
+// lived as a temporary edit to `constants.ts` that had to be reverted before
+// committing. Which means it was written once, verified once, and thrown away,
+// and the next person to touch that rule wrote it again.
+//
+// So they live here, named, and the demo picks one (src/main.tsx). The same
+// catalogue the mock API serves, so a scenario a person can select is a
+// scenario a test can activate by tag.
+//
+// A scenario is a PROJECT and its instructions, nothing else. It says what a
+// learner would have on screen, not what the lab does with it — the level
+// properties around it are the same for all of them and are written once, in
+// ./index.
+//
+// This is the interim shape, deliberately matching what `packages/users` does
+// for account scenarios: a tag list, a record keyed by it, and a dropdown in
+// the dev host. What it wants to become is a resource-panel tab that can also
+// create and edit these, at which point the catalogue stops being a source file
+// and this module becomes its seed.
+
+import type {MultiFileSource} from '@code-dot-org/core/api';
+
+import {inDataShape} from '../actors/actorData';
+import {importStockActor} from '../actors/importStockActor';
+import {stockActorById} from '../actors/stock';
+import {
+  buildProject,
+  DEFAULT_PROJECT,
+  gameScreen,
+  type ProjectSpec,
+} from '../constants';
+import type {WorldLevelData} from '../levelData';
+import {importStockMap} from '../maps/importStockMap';
+import {stockMapById} from '../maps/stock';
+
+import {notesApp} from './app';
+import {BREAKOUT_SPEC} from './breakout';
+import {FLAPPY_SPEC} from './flappy';
+import {interfaceKit} from './interfaceKit';
+import {JETPACK_SPEC} from './jetpack';
+import {METEORS_SPEC} from './meteors';
+import {NOVEL} from './novel';
+import {SOKOBAN} from './sokoban';
+import {TAPPER_PROJECT} from './tapper';
+
+/**
+ * Every scenario's tag, in the order the switcher offers them.
+ *
+ * The tag is also the channel id the studio route carries
+ * (`/projects/world/<tag>/edit`), so it is url-shaped: lower case, hyphens.
+ */
+export const WORLD_SCENARIO_TAGS = [
+  // `simple` rather than `platformer`, which is what the switcher calls it.
+  // The tag is the channel id a studio route carries, and this one has been
+  // that since before the catalogue existed; renaming it would break the links
+  // people already have for the sake of a tidier list.
+  'simple',
+  'breakout',
+  'meteors',
+  'flappy',
+  'jetpack',
+  'tapper',
+  'sokoban',
+  'novel',
+  'interface',
+  'app',
+  'empty',
+] as const;
+
+export type WorldScenarioTag = (typeof WORLD_SCENARIO_TAGS)[number];
+
+/** The scenario the demo loads when nothing says otherwise. */
+export const DEFAULT_SCENARIO_TAG: WorldScenarioTag = 'simple';
+
+export interface WorldScenario {
+  /** What the switcher shows. Title case, a few words. */
+  name: string;
+  /** What this one is FOR — the switcher's subtitle, and the reason it exists. */
+  description: string;
+  /** The project a learner opens into. */
+  source: MultiFileSource;
+  /** The level's instructions panel, as markdown. */
+  instructions: string;
+  /**
+   * What this level says about the editor, if anything (../levelData).
+   *
+   * Everything in it is a teaching decision rather than a preference, which is
+   * why it is a level's to make and not the lab's. Omitted by a scenario that
+   * wants the editor's defaults, which is most of them.
+   */
+  levelData?: WorldLevelData;
+}
+
+/**
+ * An empty project: the folders and one world that does nothing.
+ *
+ * The folders are there and empty on purpose — the same eight the starter has,
+ * because a folder is what gives a file its meaning here (an image under
+ * `backgrounds/` is a backdrop, one under `sprites/` is not), and a learner
+ * starting from nothing should not have to know that before they can upload a
+ * picture.
+ */
+const EMPTY_WORLD = JSON.stringify({
+  blocks: {
+    blocks: [{type: 'world_world', x: 20, y: 20, fields: {NAME: 'My World'}}],
+  },
+});
+
+/**
+ * …as a world: what a test about an actor or an enhancement writes a world
+ * into. It goes when the `.world` shape does (specs/SCREEN_MAP_PLAN.md).
+ */
+const EMPTY_WORLD_SPEC: ProjectSpec = {
+  folders: [
+    'rules',
+    'worlds',
+    'actors',
+    'sprites',
+    'backgrounds',
+    'maps',
+    'effects',
+  ],
+  files: {
+    main: {
+      name: 'main.world',
+      language: 'world',
+      contents: EMPTY_WORLD,
+      folderId: 'worlds',
+      active: true,
+      open: true,
+    },
+  },
+  open: ['main'],
+};
+
+/** The empty project as a world (`EMPTY_WORLD_SPEC`). */
+export const EMPTY_WORLD_PROJECT: MultiFileSource =
+  buildProject(EMPTY_WORLD_SPEC).source;
+
+/**
+ * An empty app: a Main Screen with nothing on it and no Viewport, which the
+ * two apps write their screens into (specs/SCREEN_MAP_PLAN.md).
+ */
+const EMPTY_APP_SPEC: ProjectSpec = {
+  folders: [
+    'rules',
+    'screens',
+    'actors',
+    'sprites',
+    'backgrounds',
+    'maps',
+    'effects',
+  ],
+  files: {
+    main: {
+      name: 'main.screen',
+      language: 'screen',
+      contents: JSON.stringify({type: 'map', name: 'Main', actors: []}),
+      folderId: 'screens',
+      active: true,
+      open: true,
+    },
+  },
+  open: ['main'],
+};
+
+/**
+ * An empty game: a Main Screen whose Viewport shows an empty level
+ * (specs/SCREEN_MAP_PLAN.md). What a learner starting from scratch sees.
+ */
+const EMPTY_SPEC: ProjectSpec = {
+  folders: [
+    'rules',
+    'screens',
+    'actors',
+    'sprites',
+    'backgrounds',
+    'maps',
+    'effects',
+  ],
+  files: {
+    main: {
+      name: 'main.screen',
+      language: 'screen',
+      contents: gameScreen('My Game'),
+      folderId: 'screens',
+      active: true,
+      open: true,
+    },
+    level: {
+      name: 'main.map',
+      language: 'map',
+      contents: JSON.stringify({type: 'map', actors: []}, null, 2),
+      folderId: 'maps',
+    },
+  },
+  open: ['main'],
+};
+
+/**
+ * A project with the stock Viewport its Main Screen shows the level in, and
+ * the rules the Viewport requires (specs/SCREEN_MAP_PLAN.md).
+ */
+const withViewport = (source: MultiFileSource): MultiFileSource =>
+  importStockActor(source, stockActorById('viewport')!).source;
+
+/**
+ * The scenarios as they are written, their actors as `define actor`
+ * workspaces: what a test of the data shape compares against.
+ */
+export const SCENARIOS_AS_WRITTEN: Record<WorldScenarioTag, WorldScenario> = {
+  simple: {
+    name: 'Platformer',
+    description:
+      'The starter project: gravity, arrow keys, and a room with coins to ' +
+      'collect — two on the floor and one that has to be jumped for — a ' +
+      'score to reach, and something walking about that will damage you.',
+    source: DEFAULT_PROJECT.source,
+    instructions:
+      '## World Lab\n\nBuild a game in code. The level is `maps/main.map`, ' +
+      'shown on the Main Screen; the actors are under `actors/`.\n\n' +
+      '- The preview runs your game as you edit\n' +
+      '- Click the preview, then use the arrow keys to move the player, and space to jump\n' +
+      '- Walk into a coin to take it: the coin is `Can Be Collected` and the ' +
+      'player `Collects`, the Scoreboard adds ten, and the Console counts ' +
+      'what it has\n' +
+      '- Take all three and you win; the Scoreboard says so\n' +
+      '- Avoid the Crawler, which walks its beat and takes a heart off you ' +
+      'each time it touches — watch the bar at the top right, and three and ' +
+      'it is over\n' +
+      '- The coin spins and the player bobs: each is the actor\u2019s own ' +
+      'animation, its Main, chosen under Looks like in the Actor Editor\n' +
+      '- `console.log` output appears in the Console\n' +
+      '- Try changing the player’s start position, gravity, or move speed — or ' +
+      'make the ball collectible too, which is one row in `ball.actor`',
+  },
+  breakout: {
+    name: 'Breakout',
+    description:
+      'A paddle, a bouncing ball, and two rows of bricks to clear. Every ' +
+      'mechanic in it is a stock rule.',
+    // …with the stock pause menu, imported the way a project imports one.
+    // …and the stock Viewport its level is played in.
+    source: importStockActor(
+      importStockMap(
+        buildProject(BREAKOUT_SPEC).source,
+        stockMapById('pauseMenu')!,
+      ).source,
+      stockActorById('viewport')!,
+    ).source,
+    instructions:
+      '## Breakout\n\nClear the bricks without losing the ball.\n\n' +
+      '- Click the preview, then use the left and right arrow keys\n' +
+      '- The bricks are `Can Be Collected` and the ball `Collects` them — the ' +
+      'Console counts what it has taken\n' +
+      '- The room is open at the bottom: `when ⟨Ball⟩ leaves the map` is how ' +
+      'it notices\n' +
+      '- The level is `maps/main.map`, played inside the Viewport on ' +
+      'the Main Screen: select it there to see which map it holds\n' +
+      '- Press P to pause: the stock Pause Menu map loads over the game, ' +
+      'which stops moving and keeps listening. Resume takes it away; Quit ' +
+      'loads the level into the Viewport again. Open `maps/pauseMenu.map` ' +
+      'to move it\n' +
+      '- Try a bouncier ball, a wider paddle, or a third row of bricks',
+  },
+  meteors: {
+    name: 'Meteors',
+    description:
+      'A ship that turns and thrusts, rocks that drift and wrap, and a zapper ' +
+      'with a recharge. Arrow Drive, Screen Wrap, Zapping and Expiry.',
+    source: withViewport(buildProject(METEORS_SPEC).source),
+    instructions:
+      '## Meteors\n\nTurn, thrust, and zap the rocks.\n\n' +
+      '- Click the preview, then left and right to TURN and up to thrust — ' +
+      'there is no friction, so you drift\n' +
+      '- Space zaps. `make ⟨this actor⟩ zap` asks; the recharge time answers\n' +
+      '- A zap sends whatever the `zaps` handler makes — look in ' +
+      '`ship.actor`\n' +
+      '- Everything wraps at the edges, which is what makes a small map a ' +
+      'whole world',
+  },
+  flappy: {
+    name: 'Flappy',
+    description:
+      'A bird that only falls, a key that un-falls it, and a level 48 tiles ' +
+      'wide — the first scenario whose map is bigger than the screen, so the ' +
+      'camera has something to do.',
+    // …with the stock Viewport the level is played in.
+    source: withViewport(buildProject(FLAPPY_SPEC).source),
+    instructions:
+      '## Flappy\n\nFly through the gaps. The up arrow is the only control.\n\n' +
+      '- Click the preview, then press up to flap — the bird is always ' +
+      'falling and always moving right\n' +
+      '- The level is **48 tiles wide** and the screen is ten, so most of it ' +
+      'is off to the right. `Camera Follow` brings it to you and ' +
+      '`Camera Confined` stops the view at the ends\n' +
+      '- The flap **sets** the speed rather than pushing: a push would add up, ' +
+      'and every flap should be the same height\n' +
+      '- A coin in each gap is the score. Touching a pipe says so and lets ' +
+      'you fly on — there is no restart yet\n' +
+      '- Try a wider gap, a heavier bird (`amount of gravity`), or a look ' +
+      'offset on the camera so it shows more of what is coming',
+  },
+  jetpack: {
+    name: 'Jetpack',
+    description:
+      'A room 26 by 16 with all of it on screen at once, and a tank that ' +
+      'empties while you fly around it — the first level that is a place ' +
+      'rather than a corridor, and the first with something that runs out.',
+    source: withViewport(buildProject(JETPACK_SPEC).source),
+    instructions:
+      '## Jetpack\n\nHold space to fly. Arrows to walk. Land on the cans.\n\n' +
+      '- Click the preview, then HOLD space — the jetpack is a **force**, so ' +
+      'you sink for a moment before you rise, and you keep rising after you ' +
+      'let go\n' +
+      '- The bar over the ceiling is the tank. Four seconds of holding empties ' +
+      'it, and then the same key is only a weak hop\n' +
+      '- A big can fills it; a small one is half. Nothing here knows a can is ' +
+      'fuel except the Pilot — the can only knows it can be collected\n' +
+      '- The press does BOTH `make jump` and `start flying`, with no question ' +
+      'round either: `start flying` does nothing on an empty tank, so the hop ' +
+      'is what is left\n' +
+      '- The whole room is on screen because the Main Screen is 26 by 16 ' +
+      'and its Viewport fills it. There is no camera in this project\n' +
+      '- **Three gems** are what the level is about. Take all three and the ' +
+      'door at the far right opens; walk into it and you are out\n' +
+      '- Coins are points and gems are the way out, and they are the SAME ' +
+      'rule: both elect `Can Be Collected` and neither knows what it is ' +
+      'worth. One handler makes a coin a point\n' +
+      '- The door keeps no state. "Unlocked" is "there are no gems left", ' +
+      'which the world can be asked at any moment — so the door watches the ' +
+      'count and the Pilot asks again when it walks in\n' +
+      '- The belt carries you if you stand still, the ice will not let you ' +
+      'turn round, and the sludge is the slow way across\n' +
+      '- Try `thrust`, `top flying speed` and `fuel per second` on the Pilot — ' +
+      'those three numbers are the whole feel of it',
+  },
+  tapper: {
+    name: 'Tapper',
+    description:
+      'Click the coins. The mouse is the only input that can say WHERE as ' +
+      'well as when, and this is the smallest game that needs the difference.',
+    source: TAPPER_PROJECT.source,
+    instructions:
+      '## Tapper\n\nClick the coins to take them.\n\n' +
+      '- Click the preview first, then click a coin — the coin elects `Can Be ' +
+      'Clicked`, and that one row is the whole of what makes it clickable\n' +
+      '- The count is the WORLD\u2019s: `define property ⟨score⟩` sits in ' +
+      '`define world`, so it outlives the coin that raised the event, and the ' +
+      'Label is told what to say\n' +
+      '- One press is told three times. `when ⟨left⟩ is pressed` is the ' +
+      'WORLD\u2019s: it happened to nobody, so the handler has to ask where — ' +
+      'watch it print a point for the clicks that hit nothing too\n' +
+      '- `is clicked with` is the COIN\u2019s: it landed on that coin, so the ' +
+      'handler already knows who, and `this actor` is it\n' +
+      '- `presses mouse button` is the scoreboard\u2019s: it elected `Takes ' +
+      'Mouse Input`, so it hears every press wherever it landed and prints ' +
+      'which button — try the right one\n' +
+      '- `mouse position` is not an event at all: it is where the pointer is ' +
+      'IN THE WORLD, a different number from where it is on the screen as soon ' +
+      'as the camera moves, and it answers whenever you ask\n' +
+      '- `crosshair.actor` follows the pointer with `each frame`, which is work ' +
+      'a KIND of actor does without a rule to do it in — open it and change ' +
+      'which moment of the frame it runs in',
+  },
+  novel: {
+    name: 'Visual Novel',
+    description:
+      'A conversation with a portrait and a choice. The only scenario here ' +
+      'with no game in it — what happens is what somebody says next.',
+    source: NOVEL.source,
+    instructions:
+      '## A conversation\n\nRead it, and answer her.\n\n' +
+      '- Space moves on. At the question, the LEFT and RIGHT arrows answer ' +
+      'it — that is `send to line`, and it is the whole of branching\n' +
+      '- Open `main.world` and look at `moves to a line`: one branch per ' +
+      'line, and each line is BLOCKS, so line one brings the portrait on and ' +
+      'the last one takes her away\n' +
+      '- The box types itself out on a timer of its own — open ' +
+      '`speechBox.actor` and read it. `Has a Conversation` is the only ' +
+      'ability it is given here, and all it does is keep the place\n' +
+      '- Notice what the branches cost: the space bar needs a guard, because ' +
+      'the line after the yes-answer is the no-answer',
+  },
+  sokoban: {
+    name: 'Sokoban',
+    description:
+      'Push the crates onto the marks. The only game here with no speeds in ' +
+      'it — a thing is on a square or crossing to the next one, and never ' +
+      'anywhere else.',
+    source: withViewport(SOKOBAN.source),
+    instructions:
+      '## Sokoban\n\nPush both crates onto the two marks.\n\n' +
+      '- Arrow keys. You move one square at a time, and cannot stop between ' +
+      'squares — that is `Moves on a Grid`, and it is what makes this a ' +
+      'puzzle rather than a driving game\n' +
+      '- A crate moves when you walk into it, IF the square past it is free. ' +
+      'Nothing in this project says so: pushing belongs to the rule, because ' +
+      'deciding whether a step is legal is the same question as deciding ' +
+      'whether a crate can go\n' +
+      '- Open `crate.actor` to see the three traits that make a crate, and ' +
+      'the one thing this project does write — the win, counted as the ' +
+      'crates that are NOT on a mark\n' +
+      '- Watch the console for `Solved!`',
+  },
+  interface: {
+    name: 'Interface Kit',
+    description:
+      'Every interface actor on one screen, answering each other — a Label, ' +
+      'a field you can type into, a Button, a bar and a Speech Box.',
+    source: interfaceKit(buildProject(EMPTY_APP_SPEC).source),
+    // An app, as Notes is: controls on a phone-shaped screen, and nothing
+    // a game wants on offer (`appBuilder`).
+    levelData: {mode: 'app'},
+    instructions:
+      '## The interface kit\n\nType your name and press the button.\n\n' +
+      '- The Main Screen is a MAP. The title, the ' +
+      'field, the button, the bar and the box are placements on a ' +
+      'phone-shaped canvas; the words on the title and the button are ' +
+      'property overrides on their placements, in the inspector\n' +
+      '- Click the FIELD before you type. Clicking one brings the keyboard ' +
+      'to it and takes it from whatever had it, which is how two of them on ' +
+      'a screen stay apart — and it is the Tab Navigation rule doing it, ' +
+      'not the field. Tab moves between them and Escape lets go\n' +
+      '- The bar follows what you type, because the field raises `changed` ' +
+      'and the screen\u2019s code answers it. That event is the FIELD\u2019s own, ' +
+      'declared in `textInput.actor` — an actor may say something happened ' +
+      'without a rule in between\n' +
+      '- The box says its line a letter at a time, on a timer it holds. Open ' +
+      '`speechBox.actor` and the whole typewriter is six rows\n' +
+      '- Every one of these ACTS LIKE the Label: open one and the first row ' +
+      'says so. What each adds is one idea — an edge and a click, a panel ' +
+      'and a clock, a focus and two handlers',
+  },
+  app: {
+    name: 'Notes',
+    description:
+      'An app rather than a game: two screens, a form with an on-screen ' +
+      'keyboard, a list of what you wrote, and it is all still there after a ' +
+      'reload.',
+    source: notesApp(buildProject(EMPTY_APP_SPEC).source),
+    // App Builder: no game rules or actors on offer, and no layers or
+    // cameras in the map editor (`appBuilder`, specs/APPS.md).
+    levelData: {mode: 'app'},
+    instructions:
+      '## Notes\n\nWrite something down. Come back tomorrow and it is ' +
+      'still there.\n\n' +
+      '- Every piece of this was built on its own and this is where they ' +
+      'meet: two SCREENS, a FORM, a KEYBOARD, a LIST, ANCHORING and ' +
+      'SAVING (specs/APPS.md)\n' +
+      '- NEW NOTE is `go to screen`, which puts a map over what is showing; ' +
+      'SAVE and CANCEL are `go back`, twice, because the keyboard went on ' +
+      'over the form and comes off with it\n' +
+      '- The keys type. None of them names the field — each one raises what ' +
+      'a real keyboard raises, so the field that has the focus is the one ' +
+      'that fills, and you can use your own keyboard instead\n' +
+      '- The notes are a game-wide value, kept in the Main Screen, so ' +
+      '`save what the world remembers` is one block and not a format. ' +
+      'Reload the preview and ' +
+      'they come back, because `when ⟨…⟩ is created` does the `load`\n' +
+      '- The Main Screen is home: the header holds the TOP and the button holds ' +
+      'the BOTTOM, so the list takes whatever room is left on a window that ' +
+      'is not the shape this was drawn at\n' +
+      '- The write screen\u2019s buttons raise `save` and `cancel`, which ' +
+      'the Main Screen declares and its code answers, so moving a button ' +
+      'rewires nothing',
+  },
+  empty: {
+    name: 'Empty',
+    description:
+      'A screen showing an empty level, and the folders to put things in. ' +
+      'What a learner starting from scratch sees.',
+    source: withViewport(buildProject(EMPTY_SPEC).source),
+    instructions:
+      '## An empty game\n\nNothing is in it yet.\n\n' +
+      '- Import a rule to give the game an ability, then `use trait` to give ' +
+      'an actor a share of it\n' +
+      '- Actors are files under `actors/`; add one and place it in ' +
+      '`maps/main.map`, the level the screen shows\n' +
+      '- Upload a picture into `sprites/` to draw with, or `backgrounds/` for a backdrop',
+  },
+};
+
+/**
+ * The scenarios, each with its actors in the data shape
+ * (specs/ACTOR_EDITOR_PLAN.md, step 5). Written as `define actor`
+ * workspaces, since that is how most of them were built, and folded here.
+ */
+export const WORLD_SCENARIOS: Record<WorldScenarioTag, WorldScenario> =
+  Object.fromEntries(
+    Object.entries(SCENARIOS_AS_WRITTEN).map(([tag, scenario]) => [
+      tag,
+      {...scenario, source: inDataShape(scenario.source)},
+    ]),
+  ) as Record<WorldScenarioTag, WorldScenario>;
+
+/** Whether a string names a scenario — for reading one out of a URL. */
+export function isScenarioTag(tag: string | null): tag is WorldScenarioTag {
+  return (WORLD_SCENARIO_TAGS as readonly string[]).includes(tag ?? '');
+}
