@@ -140,7 +140,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     expect(run.hyperparameters).toEqual({maxDepth: 1});
   });
 
-  // The reserved rows, a B and a C, take two splits to tell apart.
+  // A depth-1 tree splits on x, so it gets one of the last two rows wrong.
   function setUpTwoSplitLabel(mode) {
     const combinations = [
       {label: 'A', x: '0', y: '0'},
