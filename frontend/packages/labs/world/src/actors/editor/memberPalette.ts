@@ -91,5 +91,7 @@ export function memberReading(member: ActorMember, actorName: string): string {
     )
     .filter(Boolean)
     .join(' ');
-  return member.kind === 'event' ? `when ${actorName} ${words}` : words;
+  return member.kind === 'event'
+    ? ['when', actorName, words].filter(Boolean).join(' ')
+    : words;
 }

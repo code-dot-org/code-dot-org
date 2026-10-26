@@ -17,6 +17,7 @@ import {Button, IconButton, Typography} from '@mui/material';
 import {useEffect, useMemo, useRef, useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
@@ -36,7 +37,11 @@ import {
   withMemberDocument,
   withValueNames,
 } from './memberEdits';
-import {memberPalette, memberReading} from './memberPalette';
+import {
+  memberPalette,
+  memberReading,
+  type MemberPalette,
+} from './memberPalette';
 import {
   MemberParts,
   MoveHelp,
@@ -64,6 +69,18 @@ export interface MemberPageProps {
    * loaded again under the learner on every keystroke.
    */
   onLeave: (before: ActorMember, after: ActorMember) => void;
+  /**
+   * The blocks the member's picture is drawn from; an actor's own by
+   * default. A rule's page hands its own (`rules/ruleMembers`).
+   */
+  palette?: MemberPalette;
+  /** The kind of file its implementation is written in, for its drawers. */
+  language?: 'actor' | 'rule';
+  /**
+   * What a block may report, offered in its design; absent, it does
+   * something and reports nothing, as an actor's blocks do.
+   */
+  reports?: readonly string[];
 }
 
 /** The arranged parts with what the data has bound since: a new value's variable. */
@@ -104,6 +121,9 @@ export const MemberPage = ({
   isReadOnly,
   onUpdate,
   onLeave,
+  palette: given,
+  language = 'actor',
+  reports,
 }: MemberPageProps) => {
   const opened = useRef(member);
   const latest = useRef(member);
@@ -133,10 +153,11 @@ export const MemberPage = ({
   const name = designedName(parts);
   const reading = memberReading({...member, parts}, data.name);
 
-  const palette = useMemo(
-    () => memberPalette(modulePath, contents),
-    [modulePath, contents],
+  const own = useMemo(
+    () => (given ? undefined : memberPalette(modulePath, contents)),
+    [given, modulePath, contents],
   );
+  const palette = given ?? own!;
   const type = palette.typeOf(member);
 
   const isBlock = member.kind === 'block';
@@ -146,10 +167,7 @@ export const MemberPage = ({
   // any other opens on what it does. An event is only its design.
   const [designOpen, setDesignOpen] = useState(
     () =>
-      !isBlock ||
-      isNew ||
-      Boolean(problems.design) ||
-      problems.values.size > 0,
+      !isBlock || isNew || Boolean(problems.design) || problems.values.size > 0,
   );
   // Opening, the design's heading has focus, or the toggle when it is shut;
   // shut, focus goes back to the toggle.
@@ -260,7 +278,9 @@ export const MemberPage = ({
           ref={toggle}
           variant="text"
           size="extraSmall"
-          startIcon={<FontAwesomeV6Icon iconName="pen-ruler" iconStyle="solid" />}
+          startIcon={
+            <FontAwesomeV6Icon iconName="pen-ruler" iconStyle="solid" />
+          }
           aria-expanded={designOpen}
           aria-controls={designId}
           onClick={() => showDesign(!designOpen)}
@@ -299,6 +319,27 @@ export const MemberPage = ({
           <div className={styles.memberDesignParts}>{chips}</div>
           <div className={styles.memberDesignSettings}>
             {purpose}
+            {reports && (
+              <SimpleDropdown
+                name="member-reports"
+                labelText="Reports"
+                size="s"
+                disabled={isReadOnly}
+                selectedValue={member.returns ?? ''}
+                items={[
+                  {value: '', text: 'nothing: it does something'},
+                  ...reports.map(type => ({value: type, text: `a ${type}`})),
+                ]}
+                onChange={event => {
+                  const rest = without(member, 'returns');
+                  write(
+                    event.target.value
+                      ? {...rest, returns: event.target.value}
+                      : rest,
+                  );
+                }}
+              />
+            )}
             <Checkbox
               name="member-shown"
               label="Shown to other files"
@@ -320,7 +361,7 @@ export const MemberPage = ({
         <BlocklyFileEditor
           key={member.id}
           fileId={fileId}
-          language="actor"
+          language={language}
           isReadOnly={isReadOnly}
           initialContents={bodyDocument}
           memberHead={{parts: headParts}}
