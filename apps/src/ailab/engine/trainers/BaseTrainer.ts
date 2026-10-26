@@ -91,8 +91,6 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     const state = this.store.getState();
     const candidate = this.candidateFor(hyperparameters);
 
-    // Against what training would have tried, which a level's own
-    // hyperparameters replace: ml-knn throws on a k below one.
     if (
       candidate === undefined ||
       !this.candidatesToTry(state).includes(candidate)
