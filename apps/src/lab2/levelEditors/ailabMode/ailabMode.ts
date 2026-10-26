@@ -32,6 +32,11 @@ export const BOOLEAN_MODE_KEYS: BooleanModeKey[] = [
 export const TRAINER_FAMILIES = ['knn', 'decisionTree'];
 export const DEFAULT_TRAINER = 'knn';
 
+const HYPERPARAMETER_KEYS: Record<string, string> = {
+  knn: 'k',
+  decisionTree: 'maxDepth',
+};
+
 export const MIN_ACCURACY = 0;
 export const MAX_ACCURACY = 100;
 
@@ -44,9 +49,45 @@ export function isValidAccuracy(value: unknown): boolean {
   );
 }
 
+export function isValidHyperparameter(value: unknown): boolean {
+  return typeof value === 'number' && Number.isInteger(value) && value >= 1;
+}
+
+export function getHyperparameterKey(mode: ModeObject): string {
+  return HYPERPARAMETER_KEYS[
+    (mode.trainer as string | undefined) ?? DEFAULT_TRAINER
+  ];
+}
+
+export function getHyperparameter(mode: ModeObject): number | undefined {
+  const hyperparameters = mode.hyperparameters as
+    | Record<string, number>
+    | undefined;
+  return hyperparameters?.[getHyperparameterKey(mode)];
+}
+
+export function setHyperparameter(
+  mode: ModeObject,
+  value: number | undefined
+): ModeObject {
+  return setJsonObjectValue(
+    mode,
+    'hyperparameters',
+    value === undefined ? undefined : {[getHyperparameterKey(mode)]: value}
+  );
+}
+
+export function setTrainer(mode: ModeObject, trainer: string): ModeObject {
+  return setHyperparameter(
+    setJsonObjectValue(mode, 'trainer', trainer),
+    undefined
+  );
+}
+
 function isValidModeValue(
   key: string,
   value: unknown,
+  mode: ModeObject,
   knownDatasetIds: string[]
 ): boolean {
   if (key === 'datasets') {
@@ -58,6 +99,14 @@ function isValidModeValue(
   }
   if (key === 'trainer') {
     return typeof value === 'string' && TRAINER_FAMILIES.includes(value);
+  }
+  if (key === 'hyperparameters') {
+    return (
+      typeof value === 'object' &&
+      value !== null &&
+      Object.keys(value).length === 1 &&
+      isValidHyperparameter(getHyperparameter(mode))
+    );
   }
   if (key === 'requireAccuracy') {
     return isValidAccuracy(value);
@@ -90,7 +139,7 @@ export function cleanMode(
   const cleaned: ModeObject = {};
   const removed: string[] = [];
   Object.entries(mode).forEach(([key, value]) => {
-    if (isValidModeValue(key, value, knownDatasetIds)) {
+    if (isValidModeValue(key, value, mode, knownDatasetIds)) {
       cleaned[key] = value;
     } else {
       removed.push(`${key}: ${JSON.stringify(value)}`);

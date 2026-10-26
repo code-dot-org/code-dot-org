@@ -21,10 +21,12 @@ import {
   needsDataset,
   setDataset,
   setHideTestingView,
+  setTrainer,
   withoutLabelInFeatures,
 } from './ailabMode';
 import {DatasetFiles, withoutIdColumn} from './datasetColumns';
 import FeaturesField from './FeaturesField';
+import HyperparameterField from './HyperparameterField';
 import IdColumnField from './IdColumnField';
 import LabelField from './LabelField';
 import PretrainedField from './PretrainedField';
@@ -259,10 +261,15 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           name="ailab_mode_trainer"
           items={TRAINER_ITEMS}
           selectedValue={selectedTrainer}
-          onChange={e =>
-            changeMode(setJsonObjectValue(mode, 'trainer', e.target.value))
-          }
+          onChange={e => changeMode(setTrainer(mode, e.target.value))}
           size="s"
+        />
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <HyperparameterField
+          key={selectedTrainer}
+          mode={mode}
+          onChange={changeMode}
         />
       </div>
       <div className={moduleStyles.fieldArea}>

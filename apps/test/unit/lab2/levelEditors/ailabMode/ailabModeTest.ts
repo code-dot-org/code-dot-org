@@ -1,6 +1,7 @@
 import {
   cleanMode,
   getSelectedDataset,
+  setTrainer,
   withDefaultTrainer,
 } from '@cdo/apps/lab2/levelEditors/ailabMode/ailabMode';
 
@@ -11,6 +12,7 @@ describe('ailabMode', () => {
     it('keeps valid values in their original order', () => {
       const mode = {
         trainer: 'decisionTree',
+        hyperparameters: {maxDepth: 3},
         datasets: ['zoo'],
         requireAccuracy: 80,
         hideSave: false,
@@ -69,6 +71,31 @@ describe('ailabMode', () => {
         expect(cleanMode(bad, KNOWN).mode).toEqual({});
       });
     });
+
+    it("keeps only a whole-number hyperparameter of the mode's trainer", () => {
+      expect(cleanMode({hyperparameters: {k: 3}}, KNOWN).mode).toEqual({
+        hyperparameters: {k: 3},
+      });
+      [
+        {hyperparameters: {maxDepth: 3}},
+        {trainer: 'decisionTree', hyperparameters: {k: 3}},
+        {hyperparameters: {k: 0}},
+        {hyperparameters: {k: 2.5}},
+        {hyperparameters: {k: '3'}},
+        {hyperparameters: {k: 3, maxDepth: 3}},
+        {hyperparameters: [3]},
+        {hyperparameters: 3},
+        {hyperparameters: null},
+      ].forEach(bad => {
+        expect(cleanMode(bad, KNOWN).mode.hyperparameters).toBeUndefined();
+      });
+    });
+  });
+
+  it("setTrainer drops the previous trainer's hyperparameter", () => {
+    expect(
+      setTrainer({trainer: 'knn', hyperparameters: {k: 3}}, 'decisionTree')
+    ).toEqual({trainer: 'decisionTree'});
   });
 
   it('getSelectedDataset returns the one dataset', () => {

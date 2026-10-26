@@ -366,6 +366,61 @@ describe('EditAilabMode', () => {
     });
   });
 
+  it("sets the trainer's hyperparameter and clears it when the trainer changes", () => {
+    const savedMode = renderEditor(null);
+    fireEvent.change(
+      screen.getByRole('spinbutton', {name: /Number of neighbors \(k\)/}),
+      {target: {value: '5'}}
+    );
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      hyperparameters: {k: 5},
+    });
+
+    fireEvent.change(screen.getByRole('combobox', {name: 'Trainer'}), {
+      target: {value: 'decisionTree'},
+    });
+    const maxDepth = screen.getByRole('spinbutton', {
+      name: /Maximum tree depth/,
+    });
+    expect(maxDepth).toHaveValue(null);
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'decisionTree'});
+
+    fireEvent.change(maxDepth, {target: {value: '3'}});
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'decisionTree',
+      hyperparameters: {maxDepth: 3},
+    });
+  });
+
+  it('shows a saved hyperparameter', () => {
+    renderEditor(
+      '{"trainer": "decisionTree", "hyperparameters": {"maxDepth": 4}}'
+    );
+    expect(
+      screen.getByRole('spinbutton', {name: /Maximum tree depth/})
+    ).toHaveValue(4);
+  });
+
+  it('does not save a hyperparameter that is not a whole number of at least 1', () => {
+    const savedMode = renderEditor('{"hyperparameters": {"k": 5}}');
+    const k = screen.getByRole('spinbutton', {
+      name: /Number of neighbors \(k\)/,
+    });
+    ['2.5', '0'].forEach(value => {
+      fireEvent.change(k, {target: {value}});
+      expect(
+        screen.getByText('Enter a whole number of at least 1.')
+      ).toBeInTheDocument();
+      expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+    });
+
+    fireEvent.change(k, {target: {value: ''}});
+    expect(
+      screen.queryByText('Enter a whole number of at least 1.')
+    ).not.toBeInTheDocument();
+  });
+
   it('lets students choose a dataset when none is set', () => {
     const savedMode = renderEditor('{"hideSave": true}');
     expect(datasetDropdown()).toHaveValue('');
