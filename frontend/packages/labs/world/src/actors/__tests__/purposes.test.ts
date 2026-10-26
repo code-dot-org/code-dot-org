@@ -3,8 +3,9 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {APP_ACTORS} from '../../appBuilder';
 import {STOCK_RULES} from '../../rules/stock';
-import type {ActorPurpose} from '../actorPurpose';
+import type {OfferedTo} from '../actorPurpose';
 import {ENHANCEMENTS} from '../enhance/enhancements';
 import {STOCK_ACTORS} from '../stock';
 
@@ -15,7 +16,7 @@ describe('what the shelves hold is for', () => {
     for (const rule of STOCK_RULES) {
       expect(PURPOSES.has(rule.for), rule.name).toBe(true);
     }
-    const of = (purpose: ActorPurpose) =>
+    const of = (purpose: OfferedTo) =>
       STOCK_RULES.filter(rule => rule.for === purpose).map(rule => rule.name);
     expect(of('interface')).toEqual(['Screens', 'Tab Navigation']);
     expect(of('both')).toEqual([
@@ -75,17 +76,20 @@ describe('what the shelves hold is for', () => {
   });
 
   it('agrees with each stock actor about the rules it needs', () => {
-    // A game actor needing an interface's rule, or the other way round, is a
-    // mistake in one of the two flags.
+    // A game actor needing an interface's rule is a mistake in one of the
+    // two flags, and so is an interface actor an app is offered needing a
+    // game's: an app has no game rules to bring. An interface actor that is
+    // only ever where a game is — the Viewport, the game's window on a
+    // Screen — may need what steers the game's camera (`appBuilder`).
     const mismatched = STOCK_ACTORS.flatMap(actor =>
       actor.requires
         .map(name => STOCK_RULES.find(rule => rule.name === name))
         .filter(
           rule =>
             rule &&
-            actor.for !== 'both' &&
             rule.for !== 'both' &&
-            rule.for !== actor.for,
+            rule.for !== actor.for &&
+            (actor.for === 'game' || APP_ACTORS.has(actor.id)),
         )
         .map(
           rule =>

@@ -121,10 +121,10 @@ describe('the starter project', () => {
     // with a single hurtable thing in it. This is the file a learner gets by
     // importing, so the starter is a worked example of the shelf rather than a
     // thing beside it.
-    // …said to be for both, so it is under the Interface tab of the screen
-    // it is on as well as the Game tab of a level (`actorPurpose`).
+    // …for an interface, since it is drawn; placed in a level from that
+    // tab as on a screen (`actorPurpose`).
     expect(starterFile('healthBar').contents).toBe(
-      withPurpose(healthBarActor, 'both'),
+      withPurpose(healthBarActor, 'interface'),
     );
 
     // It is on the Main Screen, docked in the HUD bar over the Viewport

@@ -938,7 +938,7 @@ export const STARTER_SPEC: ProjectSpec = {
       name: 'healthBar.actor',
       language: 'actor',
       // For both: a HUD on the Main Screen, and a bar a game may place.
-      contents: withPurpose(healthBarActor, 'both'),
+      contents: withPurpose(healthBarActor, 'interface'),
       folderId: 'actors',
     },
     crawler: {
@@ -959,7 +959,7 @@ export const STARTER_SPEC: ProjectSpec = {
     scoreboard: {
       name: 'scoreboard.actor',
       language: 'actor',
-      contents: withPurpose(SCOREBOARD_ACTOR, 'both'),
+      contents: withPurpose(SCOREBOARD_ACTOR, 'interface'),
       folderId: 'actors',
     },
     ball: {

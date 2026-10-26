@@ -195,6 +195,40 @@ actor, and Label, Progress Bar, Health Bar, Viewport, Image and the
 starter's Health Bar and Scoreboard say interface. Each is an edit in
 `actorEdits` with its test.
 
+BUILT. An actor is for a game or an interface: `ActorPurpose` lost both,
+and `OfferedTo` (game, interface or both) is what a rule or an enhancement
+says. Label, Progress Bar, Health Bar, Viewport and Image, and the
+starter's Health Bar and Scoreboard, say interface; the purpose dropdown
+offers Games and Interfaces. `asTab` went with both. The agreement test
+between stock actors and the rules they need now reads: a game actor
+needs no interface's rule, and an interface actor an app is offered needs
+no game's (`APP_ACTORS`); the Viewport, which an app is never offered —
+the game's window on a Screen — may need the camera rules.
+
+The Traits tab opens on "What it is": **Acts like**, the project's other
+actors or nothing, and **Is a record**, with a line on what one is. A
+record's preview column says it is never drawn, in place of its look and
+animations. An interface actor has the **Icon** picker
+(`ActorIconPicker`, the sixteen of `blockly/actorIcons`, each a button
+pressed when chosen, pressed again for none) where Looks like and
+Pictures are, no Add frames, and no Picture field at the playhead. A
+game actor has no icon field. Made an interface's, an actor that would
+lose something is asked first; then its picture keys come off every
+animation, a Main that was only a picture goes, and one with no drawing
+gets the box and drawing a new interface actor starts with (`setPurpose`,
+`losesToInterface`). The creation wizard already asked an interface
+actor nothing about a picture.
+
+Departure: the plan said the icon picker was the creation wizard's.
+There was none; the wizard asks no interface actor for a look, and an
+icon was set only by a stock actor's file or an enhancement. The picker
+is new.
+
+In the browser: the Interface Kit's Label opens with the icon picker and
+no Looks like; Jetpack's Pilot, made an interface's, asked, then showed
+the icon picker, its Fly and Climb with their pictures gone, and Main
+gone; no page errors.
+
 ### 4. Image and Portrait, drawn
 
 A `picture` property type — a project picture, chosen in the inspector from
@@ -260,6 +294,10 @@ on the first frame, and a lesson from start to finish.
 
 ## Not in this phase
 
+- Scrolling in an interface. The Scroll View elects the Viewport's trait
+  and scrolls by moving a camera over a map: an interface's scrolling runs
+  on a game's machinery, where a Screen might hold it. A design question
+  of its own.
 - Moving what `define world`'s rows hold to the Screen and the maps;
   step 6 only takes its blocks out of the toolbox.
 - A rule's or a trait's own workspace, which stays blocks.

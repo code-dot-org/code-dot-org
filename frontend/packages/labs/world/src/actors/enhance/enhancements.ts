@@ -61,7 +61,7 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
-import type {ActorPurpose} from '../actorPurpose';
+import type {OfferedTo} from '../actorPurpose';
 
 import {cameraFollowEnhancement} from './cameraFollow';
 import {carriesEnhancement} from './carries';
@@ -113,12 +113,13 @@ export interface Enhancement {
   /** What it is called, on the shelf — a sentence about the thing, not a file. */
   name: string;
   /**
-   * What it is for: a game, an interface, or both (`actors/actorPurpose`),
+   * Which kinds of actor it is offered to: a game's, an interface's, or both
+   * (`actors/actorPurpose`, `OfferedTo`),
    * which decides what the checklist offers where. Given here, in one place
    * beside the groups, rather than in each enhancement's file
    * (`PURPOSES`, specs/PURPOSE_PLAN.md).
    */
-  for?: ActorPurpose;
+  for?: OfferedTo;
   /** One line on what it gives that thing. */
   description: string;
   /**
@@ -354,7 +355,7 @@ const AS_WRITTEN: readonly EnhancementGroup[] = [
  * missing from this table is a game's, and a test lists every enhancement so
  * a new one is a choice made rather than a default taken.
  */
-const PURPOSES: Readonly<Record<string, ActorPurpose>> = {
+const PURPOSES: Readonly<Record<string, OfferedTo>> = {
   typesOutText: 'interface',
   scoreboard: 'both',
 };

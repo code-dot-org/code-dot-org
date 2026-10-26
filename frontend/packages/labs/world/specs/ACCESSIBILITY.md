@@ -168,6 +168,18 @@ below, and are listed last.
   (each cell a button saying which frame it becomes); its frame rate is a
   labelled field that says what it will take when it will not.
 
+### Actors only as data (ACTORS_AS_DATA_PLAN.md)
+
+- **The icon picker is a labelled list of buttons**, each named for its
+  icon and pressed when chosen; the picture in each is hidden from a
+  screen reader, the name says it. A group of sixteen tab stops, where a
+  radio group would be one: noted, not changed.
+- **What it is** is a named group: Acts like is a labelled dropdown, Is a
+  record a checkbox with its meaning in a line of text after it.
+- **The confirm prompt** asked before making an actor an interface's is
+  not exposed as a dialog (`role="dialog"` is missing on the shared
+  prompt, `usePrompts`); found here, not made here.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

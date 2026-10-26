@@ -7,7 +7,7 @@ import {ActorPalette, type PaletteActor} from '../ActorPalette';
 
 const ACTORS: PaletteActor[] = [
   {name: 'Player', path: 'actors/player', purpose: 'game'},
-  {name: 'Label', path: 'actors/label', purpose: 'both'},
+  {name: 'Label', path: 'actors/label', purpose: 'interface'},
   {name: 'Viewport', path: 'actors/viewport', purpose: 'interface'},
 ];
 
@@ -36,9 +36,9 @@ const names = (tab: string) =>
     .map(button => button.textContent);
 
 describe('the Actor Palette', () => {
-  it('shows each tab its own actors, and one for both under each', () => {
+  it('shows each tab its own actors', () => {
     renderPalette();
-    expect(names('Game')).toEqual(['Player', 'Label']);
+    expect(names('Game')).toEqual(['Player']);
 
     fireEvent.click(screen.getByRole('button', {name: 'Interface'}));
     expect(names('Interface')).toEqual(['Label', 'Viewport']);
@@ -94,14 +94,16 @@ describe('dragging an actor out', () => {
     effectAllowed: '',
   });
 
-  it('lets an actor for an interface, or both, be dragged, and says which', () => {
+  it('lets an actor for an interface be dragged, and says which', () => {
     const onDragOut = vi.fn();
     const props = renderPalette({onDragOut});
-    const label = screen.getByRole('button', {name: 'Label'});
-    expect(label).toHaveAttribute('draggable', 'true');
+    // A game's is the brush only.
     expect(screen.getByRole('button', {name: 'Player'})).not.toHaveAttribute(
       'draggable',
     );
+    fireEvent.click(screen.getByRole('button', {name: 'Interface'}));
+    const label = screen.getByRole('button', {name: 'Label'});
+    expect(label).toHaveAttribute('draggable', 'true');
 
     fireEvent.dragStart(label, {dataTransfer: transfer()});
     expect(onDragOut).toHaveBeenLastCalledWith('actors/label');
@@ -112,7 +114,11 @@ describe('dragging an actor out', () => {
   });
 
   it('drags nothing in a read-only project', () => {
-    renderPalette({onDragOut: vi.fn(), isReadOnly: true});
+    renderPalette({
+      onDragOut: vi.fn(),
+      isReadOnly: true,
+      startTab: 'interface',
+    });
     expect(screen.getByRole('button', {name: 'Label'})).not.toHaveAttribute(
       'draggable',
     );

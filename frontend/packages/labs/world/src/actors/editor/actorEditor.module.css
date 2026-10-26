@@ -364,3 +364,32 @@
   display: flex;
   gap: 0.5rem;
 }
+
+/* An interface actor's icon, where a game actor's Looks like is
+   (`ActorIconPicker`). */
+.icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.iconList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.iconChoice {
+  gap: 0.375rem;
+  text-transform: none;
+}
+
+.iconChoice img {
+  width: 24px;
+  height: 24px;
+}

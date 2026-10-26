@@ -560,8 +560,13 @@ on and off while the game runs; the stored flag is how it starts.
 
 ### Interface, game, or both
 
-Every stock actor, rule and enhancement says whether it is for interfaces,
-for games, or for both. A Health Bar is both. The flag decides which tab of
+Every stock rule and enhancement says whether it is for interfaces, for
+games, or for both; every actor says interfaces or games, never both
+(ACTORS_AS_DATA_PLAN.md, step 3). An interface actor is drawn and shown by
+its icon, and either tab is open on a Screen and on a Map, so a Health Bar
+is an interface actor placed in a level. Whether a level with no game
+offers one is a separate list (`appBuilder`), which leaves out the
+Viewport, the Health Bar and the Portrait. The flag decides which tab of
 the Actor Palette an actor is under, which of the two wizards makes it, and
 what each import dialog offers in that context. It decides what is offered
 FIRST and never what can be used: each dialog lists what fits and keeps the

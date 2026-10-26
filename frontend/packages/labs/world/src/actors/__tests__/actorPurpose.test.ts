@@ -19,11 +19,17 @@ describe('what an actor is for', () => {
     expect(Object.keys(JSON.parse(written))).toEqual(['for', 'blocks']);
     expect(purposeOf(written)).toBe('interface');
     // Written again, it replaces what was there.
-    expect(purposeOf(withPurpose(written, 'both'))).toBe('both');
-    expect(withPurpose('not json', 'both')).toBe('not json');
+    expect(purposeOf(withPurpose(written, 'game'))).toBe('game');
+    expect(withPurpose('not json', 'game')).toBe('not json');
   });
 
-  it('puts one for both under each tab', () => {
+  it('is never both: an actor is for one or the other', () => {
+    // A rule or an enhancement may be offered to both; an actor is drawn or
+    // wears pictures (specs/ACTORS_AS_DATA_PLAN.md, step 3).
+    expect(purposeOf('{"for": "both"}')).toBe('game');
+  });
+
+  it('puts a rule or enhancement for both under each tab', () => {
     expect(isUnder('both', 'game')).toBe(true);
     expect(isUnder('both', 'interface')).toBe(true);
     expect(isUnder('game', 'interface')).toBe(false);
@@ -34,7 +40,9 @@ describe('what an actor is for', () => {
     expect(purposeOf(importedContents(stockActorById('button')!))).toBe(
       'interface',
     );
-    expect(purposeOf(importedContents(stockActorById('label')!))).toBe('both');
+    expect(purposeOf(importedContents(stockActorById('label')!))).toBe(
+      'interface',
+    );
     expect(purposeOf(importedContents(stockActorById('coin')!))).toBe('game');
     for (const actor of STOCK_ACTORS) {
       expect(purposeOf(importedContents(actor)), actor.id).toBe(actor.for);

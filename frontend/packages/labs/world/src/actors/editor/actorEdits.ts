@@ -34,6 +34,7 @@ import type {
 } from '../actorData';
 import {MAIN_ANIMATION, withLookOf} from '../actorData';
 import type {ActorPurpose} from '../actorPurpose';
+import {newActorFile} from '../create/newActor';
 
 /** One property of a trait, as the panel edits it. */
 export interface TraitProperty {
@@ -427,11 +428,131 @@ export function setAnimationLoop(
   return {...data, animations: {...data.animations, [name]: next}};
 }
 
-/** The data for a game, an interface, or both (`actorPurpose`). */
+/**
+ * The data for a game or an interface (`actorPurpose`).
+ *
+ * AN INTERFACE ACTOR IS DRAWN (specs/ACTORS_AS_DATA_PLAN.md, step 3): its
+ * look is mostly its size and its properties, and its icon says what it is.
+ * So one made an interface's loses its picture keys — an animation keeps
+ * what else it moves, and a Main that only showed a picture goes — and one
+ * with no drawing gets the box and the drawing a new interface actor starts
+ * with (`create/newActor`). Made a game's, nothing is taken away.
+ */
 export const setPurpose = (
   data: ActorData,
   purpose: ActorPurpose,
-): ActorData => ({...data, for: purpose});
+): ActorData => {
+  if (purpose === 'game') {
+    return {...data, for: purpose};
+  }
+  const drawn = asInterface(data);
+  return {...drawn, for: purpose};
+};
+
+/** Whether making `data` an interface's would take something away. */
+export const losesToInterface = (data: ActorData): boolean =>
+  Object.values(data.animations ?? {}).some(
+    timeline => (timeline.tracks.sprite?.length ?? 0) > 0,
+  ) || !hasDrawing(data);
+
+/** Whether the actor has a drawing of its own. */
+const hasDrawing = (data: ActorData): boolean =>
+  (data.blocks?.blocks?.blocks ?? []).some(
+    root => root.type === 'world_define_drawing',
+  );
+
+/** `data` without picture keys, and with a box and a drawing if it had none. */
+function asInterface(data: ActorData): ActorData {
+  const animations = Object.fromEntries(
+    Object.entries(data.animations ?? {})
+      .map(([name, timeline]): [string, Timeline] => {
+        const tracks = {...timeline.tracks};
+        delete tracks.sprite;
+        return [name, {...timeline, tracks}];
+      })
+      // A Main left with nothing to do was only ever a picture.
+      .filter(
+        ([name, timeline]) =>
+          name !== MAIN_ANIMATION || Object.keys(timeline.tracks).length > 0,
+      ),
+  );
+  const next: ActorData = {...data};
+  if (Object.keys(animations).length > 0) {
+    next.animations = animations;
+  } else {
+    delete next.animations;
+  }
+  if (hasDrawing(data)) {
+    return next;
+  }
+  const starter = JSON.parse(newActorFile(data.name, 'interface')) as ActorData;
+  const traits = [...(next.traits ?? [])];
+  for (const trait of starter.traits ?? []) {
+    if (!traits.includes(trait)) {
+      traits.push(trait);
+    }
+  }
+  const values = [...(next.values ?? [])];
+  for (const value of starter.values ?? []) {
+    if (!values.some(one => one.setter === value.setter)) {
+      values.push(value);
+    }
+  }
+  const roots = [
+    ...(starter.blocks?.blocks?.blocks ?? []).filter(
+      root => root.type === 'world_define_drawing',
+    ),
+    ...(next.blocks?.blocks?.blocks ?? []),
+  ];
+  return {
+    ...next,
+    traits,
+    values,
+    blocks: {
+      ...next.blocks,
+      blocks: {languageVersion: 0, ...next.blocks?.blocks, blocks: roots},
+    },
+  };
+}
+
+/** The data acting like `path`, another actor's module, or like nothing. */
+export const setActsLike = (
+  data: ActorData,
+  path: string | undefined,
+): ActorData => {
+  const next = {...data};
+  if (path) {
+    next.actsLike = path;
+  } else {
+    delete next.actsLike;
+  }
+  return next;
+};
+
+/** The data as a record — fields, and nowhere to be — or not. */
+export const setIsRecord = (data: ActorData, isRecord: boolean): ActorData => {
+  const next = {...data};
+  if (isRecord) {
+    next.isData = true;
+  } else {
+    delete next.isData;
+  }
+  return next;
+};
+
+/** The data shown by `icon` (`blockly/actorIcons`), or by nothing. */
+export const setIcon = (
+  data: ActorData,
+  icon: string | undefined,
+): ActorData => {
+  const next = {...data};
+  if (icon) {
+    next.icon = icon;
+  } else {
+    delete next.icon;
+  }
+  return next;
+};
 
 // ── Effects ─────────────────────────────────────────────────────────────
 

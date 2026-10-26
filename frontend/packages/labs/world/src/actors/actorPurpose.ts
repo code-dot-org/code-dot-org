@@ -1,21 +1,31 @@
-// What an actor is for: a game, an interface, or both (SIMPLE_INTERFACE.md,
+// What an actor is for: a game or an interface (SIMPLE_INTERFACE.md,
 // "Interface, game, or both"). It decides which tab of the Actor Palette the
-// actor is under (specs/SHELL_PLAN.md, step 2).
+// actor is under (specs/SHELL_PLAN.md, step 2), what the shelves and the
+// enhancements offer it, and whether a level with no game offers it at all.
+//
+// NEVER BOTH (specs/ACTORS_AS_DATA_PLAN.md, step 3). An interface actor is
+// drawn and shown by its icon, a game actor wears pictures; and either tab is
+// open on a Screen and on a Map, so an interface actor is placed in a level
+// as it is. A rule or an enhancement may be for both: that is which kinds of
+// actor it is OFFERED to (`OfferedTo`).
 //
 // Kept in the actor's file as a top-level key beside its workspace, which
 // the Blockly editor carries through an edit (`blockly/documentExtras`). A
 // file that says nothing is a game actor: everything a learner made before
 // the flag existed was made for a game.
 
-export type ActorPurpose = 'game' | 'interface' | 'both';
+export type ActorPurpose = 'game' | 'interface';
 
-/** The palette's two tabs. */
-export type PaletteTab = 'game' | 'interface';
+/** The palette's two tabs, which are the two purposes. */
+export type PaletteTab = ActorPurpose;
+
+/** Which kinds of actor a rule or an enhancement is offered to. */
+export type OfferedTo = ActorPurpose | 'both';
 
 /** The key an actor file keeps its purpose under. */
 export const PURPOSE_KEY = 'for';
 
-const PURPOSES = new Set<string>(['game', 'interface', 'both']);
+const PURPOSES = new Set<string>(['game', 'interface']);
 
 /** What an actor file says it is for, or `game` when it says nothing. */
 export function purposeOf(contents: string | undefined): ActorPurpose {
@@ -52,6 +62,6 @@ export function withPurpose(contents: string, purpose: ActorPurpose): string {
   }
 }
 
-/** Whether an actor for `purpose` is under `tab`. One for both is under each. */
-export const isUnder = (purpose: ActorPurpose, tab: PaletteTab): boolean =>
+/** Whether a thing for `purpose` is under `tab`. One for both is under each. */
+export const isUnder = (purpose: OfferedTo, tab: PaletteTab): boolean =>
   purpose === 'both' || purpose === tab;

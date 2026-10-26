@@ -367,8 +367,8 @@ export const TimelineStrip = ({
       </div>
       {tracks.length === 0 && (
         <Typography variant="body3" component="p" className={styles.note}>
-          Nothing moves yet. Change a picture or a property with the playhead
-          where it should happen.
+          Nothing moves yet. Put the playhead where something should happen, and
+          change a value below.
         </Typography>
       )}
     </div>

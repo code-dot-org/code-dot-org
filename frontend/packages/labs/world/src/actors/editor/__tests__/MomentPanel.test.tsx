@@ -97,6 +97,20 @@ describe('the values at the playhead', () => {
     expect(onSet).toHaveBeenCalledWith('effect:effects/glow', false);
   });
 
+  it('has no Picture field for an interface actor, which is drawn', () => {
+    render(
+      <MomentPanel
+        timeline={GROW}
+        time={0}
+        effects={[]}
+        onSet={vi.fn()}
+        isReadOnly={false}
+      />,
+    );
+    expect(screen.queryByLabelText('Picture')).toBeNull();
+    expect(field('Scale')).toBeInTheDocument();
+  });
+
   it('changes nothing read only', () => {
     show(0, true);
     expect(field('Scale')).toBeDisabled();

@@ -17,7 +17,7 @@ import {fileIdAt} from '../runtime/projectFiles';
 import {
   isUnder,
   purposeOf,
-  type ActorPurpose,
+  type OfferedTo,
   type PaletteTab,
 } from './actorPurpose';
 import type {EnhanceTarget} from './enhance/enhancements';
@@ -25,7 +25,7 @@ import type {EnhanceTarget} from './enhance/enhancements';
 /**
  * The purpose a shelf opened here is for: the open actor's own, a Screen's
  * an interface's, a level's or a world's a game's. Nothing for anything else,
- * or for an actor for both, which offers everything.
+ * which offers everything.
  */
 export function purposeHere(source: MultiFileSource): PaletteTab | undefined {
   const file = getActiveFileForSource(source);
@@ -33,7 +33,7 @@ export function purposeHere(source: MultiFileSource): PaletteTab | undefined {
     return undefined;
   }
   if (file.name.endsWith('.actor')) {
-    return asTab(purposeOf(file.contents));
+    return purposeOf(file.contents);
   }
   if (file.name.endsWith('.screen')) {
     return 'interface';
@@ -56,25 +56,19 @@ export function purposeOfTarget(
     return undefined;
   }
   const id = fileIdAt(source, `${target.path}.actor`);
-  return id === undefined
-    ? undefined
-    : asTab(purposeOf(source.files[id].contents));
+  return id === undefined ? undefined : purposeOf(source.files[id].contents);
 }
-
-/** A purpose as a shelf is opened for one: both is no narrowing at all. */
-export const asTab = (purpose: ActorPurpose): PaletteTab | undefined =>
-  purpose === 'both' ? undefined : purpose;
 
 /**
  * Whether a shelf shows a thing for `of`, and the box that shows the rest.
  * With no purpose, everything, and no box.
  */
 export function usePurposeFilter(purpose: PaletteTab | undefined): {
-  shows: (of: ActorPurpose) => boolean;
+  shows: (of: OfferedTo) => boolean;
   toggle: React.ReactNode;
 } {
   const [everything, setEverything] = useState(false);
-  const shows = (of: ActorPurpose) =>
+  const shows = (of: OfferedTo) =>
     !purpose || everything || isUnder(of, purpose);
   const toggle = purpose ? (
     <Checkbox

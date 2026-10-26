@@ -48,6 +48,7 @@ import {useProjectImages} from '../../appearance/useProjectImages';
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
 import {WORKSPACE_KEYS} from '../../blockly/documentExtras';
 import {requestEffectImport} from '../../blockly/effectImport';
+import {projectActorOptions} from '../../blockly/projectModules';
 import {parseEffectDocument} from '../../effect/model/schema';
 import type {EffectParameter} from '../../effect/model/types';
 import {DEFAULT_BACKDROP_COLOR} from '../../engine';
@@ -81,6 +82,10 @@ import {
   addAnimation,
   addAnimationFrames,
   addTrait,
+  losesToInterface,
+  setActsLike,
+  setIcon,
+  setIsRecord,
   animationNameProblem,
   animationNames,
   effectSettings,
@@ -102,6 +107,7 @@ import {
   valueText,
   type TraitChoice,
 } from './actorEdits';
+import {ActorIconPicker} from './ActorIconPicker';
 import {AddFramesDialog} from './AddFramesDialog';
 import {AnimationRow} from './AnimationRow';
 import {MomentPanel} from './MomentPanel';
@@ -475,6 +481,33 @@ export const ActorEditor = (props: CustomEditorProps) => {
     }
   };
 
+  // Drawn and shown by its icon, with no pictures to choose
+  // (specs/ACTORS_AS_DATA_PLAN.md, step 3).
+  const isInterface = data?.for === 'interface';
+  // An interface actor is drawn (`setPurpose`): what that takes away is
+  // said first.
+  const choosePurpose = async (purpose: ActorPurpose) => {
+    if (
+      data &&
+      (purpose === 'game' ||
+        !losesToInterface(data) ||
+        (await confirm({
+          title: 'Make it an interface actor',
+          message:
+            'An interface actor is drawn, not given pictures. Its pictures ' +
+            'come off its animations, and it gets a box and a drawing to ' +
+            'start from if it has none.',
+        })))
+    ) {
+      edit(setPurpose(data, purpose));
+    }
+  };
+  // What it may act like: the project's other actors.
+  const others = useMemo(
+    () => projectActorOptions(files).filter(([, path]) => path !== modulePath),
+    [files, modulePath],
+  );
+
   const lookAct = (act: () => void) => () => {
     setLookAt(null);
     act();
@@ -544,10 +577,9 @@ export const ActorEditor = (props: CustomEditorProps) => {
           items={[
             {value: 'game', text: 'Games'},
             {value: 'interface', text: 'Interfaces'},
-            {value: 'both', text: 'Both'},
           ]}
           onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-            edit(setPurpose(data, event.target.value as ActorPurpose))
+            void choosePurpose(event.target.value as ActorPurpose)
           }
         />
         <Button
@@ -681,6 +713,44 @@ export const ActorEditor = (props: CustomEditorProps) => {
             </div>
           ) : (
             <div className={styles.groups}>
+              {/* What kind of thing it is, beyond its traits. */}
+              <section className={styles.group} aria-label="What it is">
+                <SimpleDropdown
+                  name="actor-acts-like"
+                  labelText="Acts like"
+                  size="s"
+                  disabled={isReadOnly}
+                  selectedValue={data.actsLike ?? ''}
+                  items={[
+                    {value: '', text: '(nothing else)'},
+                    ...others.map(([name, path]) => ({
+                      value: path,
+                      text: name,
+                    })),
+                    // Named even when it is not in the project, so the field
+                    // never says otherwise.
+                    ...(data.actsLike &&
+                    !others.some(([, path]) => path === data.actsLike)
+                      ? [{value: data.actsLike, text: data.actsLike}]
+                      : []),
+                  ]}
+                  onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+                    edit(setActsLike(data, event.target.value || undefined))
+                  }
+                />
+                <Checkbox
+                  name="actor-is-record"
+                  label="Is a record"
+                  checked={Boolean(data.isData)}
+                  disabled={isReadOnly}
+                  onChange={(event: ChangeEvent<HTMLInputElement>) =>
+                    edit(setIsRecord(data, event.target.checked))
+                  }
+                />
+                <Typography variant="body3" className={styles.note}>
+                  A record is fields to keep and find, with nowhere to be drawn.
+                </Typography>
+              </section>
               <section className={styles.group} aria-label="Self">
                 <Typography variant="body2" component="h3">
                   Self
@@ -962,243 +1032,301 @@ export const ActorEditor = (props: CustomEditorProps) => {
           )}
         </div>
         <div className={styles.preview}>
-          <div
-            className={styles.picture}
-            style={{background: DEFAULT_BACKDROP_COLOR}}
-          >
-            {/* The chosen animation at its start, painted here from the
+          {data.isData ? (
+            <Typography variant="body3" className={styles.note}>
+              {data.name} is a record: it is kept and found by code, and is
+              never drawn, so it has no look and no animations.
+            </Typography>
+          ) : (
+            <>
+              <div
+                className={styles.picture}
+                style={{background: DEFAULT_BACKDROP_COLOR}}
+              >
+                {/* The chosen animation at its start, painted here from the
                 project's pictures; the sandbox's picture of the actor when
                 there is none to paint (`TimelineThumb`). */}
-            {shown ? (
-              <span
-                role="img"
-                aria-label={`${data.name}, ${selected} at ${
-                  Math.round(time * 10) / 10
-                } seconds`}
-              >
-                <TimelineThumb
-                  timeline={shown}
-                  imageFor={imageFor}
-                  size={PREVIEW_SIZE}
-                  playing={false}
-                  at={time}
+                {shown ? (
+                  <span
+                    role="img"
+                    aria-label={`${data.name}, ${selected} at ${
+                      Math.round(time * 10) / 10
+                    } seconds`}
+                  >
+                    <TimelineThumb
+                      timeline={shown}
+                      imageFor={imageFor}
+                      size={PREVIEW_SIZE}
+                      playing={false}
+                      at={time}
+                    />
+                  </span>
+                ) : picture ? (
+                  <img src={picture} alt={`${data.name}, as it is drawn`} />
+                ) : (
+                  <Typography variant="body3" className={styles.note}>
+                    {data.name}
+                  </Typography>
+                )}
+              </div>
+              {isInterface ? (
+                // Drawn, and shown by its icon (specs/ACTORS_AS_DATA_PLAN.md,
+                // step 3): no pictures to choose.
+                <ActorIconPicker
+                  selected={data.icon}
+                  onChange={icon => edit(setIcon(data, icon))}
+                  isReadOnly={isReadOnly}
                 />
-              </span>
-            ) : picture ? (
-              <img src={picture} alt={`${data.name}, as it is drawn`} />
-            ) : (
-              <Typography variant="body3" className={styles.note}>
-                {data.name}
-              </Typography>
-            )}
-          </div>
-          <SimpleDropdown
-            name="actor-look"
-            labelText="Looks like"
-            size="s"
-            disabled={isReadOnly}
-            selectedValue={lookValue}
-            items={looks}
-            onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-              if (event.target.value === ANIMATED) {
-                return;
-              }
-              if (event.target.value === FROM_LIBRARY) {
-                fromLibrary();
-                return;
-              }
-              const value = event.target.value.replace(/^sprite:/, '');
-              edit(setLook(data, value ? {sprite: value} : undefined));
-            }}
-          />
-          {/* THE WAY TO ITS PICTURES, where the picture is
+              ) : (
+                <>
+                  <SimpleDropdown
+                    name="actor-look"
+                    labelText="Looks like"
+                    size="s"
+                    disabled={isReadOnly}
+                    selectedValue={lookValue}
+                    items={looks}
+                    onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                      if (event.target.value === ANIMATED) {
+                        return;
+                      }
+                      if (event.target.value === FROM_LIBRARY) {
+                        fromLibrary();
+                        return;
+                      }
+                      const value = event.target.value.replace(/^sprite:/, '');
+                      edit(setLook(data, value ? {sprite: value} : undefined));
+                    }}
+                  />
+                  {/* THE WAY TO ITS PICTURES, where the picture is
               (specs/SHELL_FINISH_PLAN.md, step 4): Edit opens the one it
               looks like, as a step on the trail; the menu makes, brings in,
               renames and deletes them. */}
-          <div className={styles.lookActions}>
-            {lookFile && (
-              <Button
-                variant="text"
-                size="small"
-                startIcon={
-                  <FontAwesomeV6Icon
-                    iconName="pen-to-square"
-                    iconStyle="solid"
-                  />
-                }
-                onClick={() =>
-                  void requestFileAct({act: 'open', fileId: lookFile.id})
-                }
-              >
-                Edit picture
-              </Button>
-            )}
-            {!isReadOnly && (
-              <Button
-                variant="text"
-                size="small"
-                aria-haspopup="menu"
-                aria-expanded={lookAt !== null}
-                endIcon={
-                  <FontAwesomeV6Icon
-                    iconName="chevron-down"
-                    iconStyle="solid"
-                  />
-                }
-                onClick={event => setLookAt(event.currentTarget)}
-              >
-                Pictures
-              </Button>
-            )}
-            {lookAt && (
-              <Menu open anchorEl={lookAt} onClose={() => setLookAt(null)}>
-                <MenuItem
-                  onClick={lookAct(() =>
-                    lookThen(
-                      () =>
-                        requestFileAct({
-                          act: 'make',
-                          folder: 'sprites',
-                          open: false,
-                        }),
-                      {open: true},
-                    ),
-                  )}
-                >
-                  <ListItemText>New picture…</ListItemText>
-                </MenuItem>
-                <MenuItem onClick={lookAct(fromLibrary)}>
-                  <ListItemText>Animation from the library…</ListItemText>
-                </MenuItem>
-                <MenuItem
-                  onClick={lookAct(
-                    () =>
-                      void requestFileAct({act: 'upload', folder: 'sprites'}),
-                  )}
-                >
-                  <ListItemText>Upload a picture…</ListItemText>
-                </MenuItem>
-                <MenuItem
-                  onClick={lookAct(() =>
-                    lookThen(
-                      () => requestFileAct({act: 'draw', folder: 'sprites'}),
-                      {open: false},
-                    ),
-                  )}
-                >
-                  <ListItemText>Draw a picture with AI…</ListItemText>
-                </MenuItem>
-                {lookFile && <Divider />}
-                {lookFile && (
-                  <MenuItem
-                    onClick={lookAct(
-                      () =>
-                        void requestFileAct({
-                          act: 'rename',
-                          fileId: lookFile.id,
-                        }),
+                  <div className={styles.lookActions}>
+                    {lookFile && (
+                      <Button
+                        variant="text"
+                        size="small"
+                        startIcon={
+                          <FontAwesomeV6Icon
+                            iconName="pen-to-square"
+                            iconStyle="solid"
+                          />
+                        }
+                        onClick={() =>
+                          void requestFileAct({
+                            act: 'open',
+                            fileId: lookFile.id,
+                          })
+                        }
+                      >
+                        Edit picture
+                      </Button>
                     )}
-                  >
-                    <ListItemText>Rename {fileLabel(lookFile)}…</ListItemText>
-                  </MenuItem>
-                )}
-                {lookFile && (
-                  <MenuItem
-                    onClick={lookAct(
-                      () =>
-                        void requestFileAct({
-                          act: 'clone',
-                          fileId: lookFile.id,
-                        }),
+                    {!isReadOnly && (
+                      <Button
+                        variant="text"
+                        size="small"
+                        aria-haspopup="menu"
+                        aria-expanded={lookAt !== null}
+                        endIcon={
+                          <FontAwesomeV6Icon
+                            iconName="chevron-down"
+                            iconStyle="solid"
+                          />
+                        }
+                        onClick={event => setLookAt(event.currentTarget)}
+                      >
+                        Pictures
+                      </Button>
                     )}
-                  >
-                    <ListItemText>Clone {fileLabel(lookFile)}…</ListItemText>
-                  </MenuItem>
-                )}
-                {lookFile && (
-                  <MenuItem
-                    onClick={lookAct(
-                      () =>
-                        void requestFileAct({
-                          act: 'delete',
-                          fileId: lookFile.id,
-                        }),
+                    {lookAt && (
+                      <Menu
+                        open
+                        anchorEl={lookAt}
+                        onClose={() => setLookAt(null)}
+                      >
+                        <MenuItem
+                          onClick={lookAct(() =>
+                            lookThen(
+                              () =>
+                                requestFileAct({
+                                  act: 'make',
+                                  folder: 'sprites',
+                                  open: false,
+                                }),
+                              {open: true},
+                            ),
+                          )}
+                        >
+                          <ListItemText>New picture…</ListItemText>
+                        </MenuItem>
+                        <MenuItem onClick={lookAct(fromLibrary)}>
+                          <ListItemText>
+                            Animation from the library…
+                          </ListItemText>
+                        </MenuItem>
+                        <MenuItem
+                          onClick={lookAct(
+                            () =>
+                              void requestFileAct({
+                                act: 'upload',
+                                folder: 'sprites',
+                              }),
+                          )}
+                        >
+                          <ListItemText>Upload a picture…</ListItemText>
+                        </MenuItem>
+                        <MenuItem
+                          onClick={lookAct(() =>
+                            lookThen(
+                              () =>
+                                requestFileAct({
+                                  act: 'draw',
+                                  folder: 'sprites',
+                                }),
+                              {open: false},
+                            ),
+                          )}
+                        >
+                          <ListItemText>Draw a picture with AI…</ListItemText>
+                        </MenuItem>
+                        {lookFile && <Divider />}
+                        {lookFile && (
+                          <MenuItem
+                            onClick={lookAct(
+                              () =>
+                                void requestFileAct({
+                                  act: 'rename',
+                                  fileId: lookFile.id,
+                                }),
+                            )}
+                          >
+                            <ListItemText>
+                              Rename {fileLabel(lookFile)}…
+                            </ListItemText>
+                          </MenuItem>
+                        )}
+                        {lookFile && (
+                          <MenuItem
+                            onClick={lookAct(
+                              () =>
+                                void requestFileAct({
+                                  act: 'clone',
+                                  fileId: lookFile.id,
+                                }),
+                            )}
+                          >
+                            <ListItemText>
+                              Clone {fileLabel(lookFile)}…
+                            </ListItemText>
+                          </MenuItem>
+                        )}
+                        {lookFile && (
+                          <MenuItem
+                            onClick={lookAct(
+                              () =>
+                                void requestFileAct({
+                                  act: 'delete',
+                                  fileId: lookFile.id,
+                                }),
+                            )}
+                          >
+                            <ListItemText>
+                              Delete {fileLabel(lookFile)}…
+                            </ListItemText>
+                          </MenuItem>
+                        )}
+                      </Menu>
                     )}
-                  >
-                    <ListItemText>Delete {fileLabel(lookFile)}…</ListItemText>
-                  </MenuItem>
-                )}
-              </Menu>
-            )}
-          </div>
-          <AnimationRow
-            names={names}
-            selected={selected}
-            loop={Boolean(selected && data.animations?.[selected]?.loop)}
-            onSelect={setChosen}
-            onAdd={() => void newAnimation()}
-            onRename={name => void renameOne(name)}
-            onRemove={name => void removeOne(name)}
-            onLoop={(name, loop) => edit(setAnimationLoop(data, name, loop))}
-            isReadOnly={isReadOnly}
-          />
-          {selected && chosenTimeline && (
-            <>
-              <TimelineStrip
-                name={selected}
-                timeline={chosenTimeline}
-                time={time}
-                onTime={setTime}
-                effectName={path => effectNamed(path)}
-                selectedKey={selectedKey}
-                onSelectKey={setSelectedKey}
-                onMoveKey={
-                  isReadOnly
-                    ? undefined
-                    : (property, from, to) => {
-                        edit(
-                          moveAnimationKey(data, selected, property, from, to),
-                        );
-                        setSelectedKey({property, at: to});
-                      }
-                }
-                onDeleteKey={
-                  isReadOnly
-                    ? undefined
-                    : (property, at) => {
-                        edit(removeAnimationKey(data, selected, property, at));
-                        setSelectedKey(undefined);
-                      }
-                }
-                onAddFrames={
-                  isReadOnly ? undefined : () => setAddingFrames(true)
-                }
-                onLength={
-                  isReadOnly
-                    ? undefined
-                    : length => edit(setAnimationLength(data, selected, length))
-                }
-              />
-              <MomentPanel
-                timeline={chosenTimeline}
-                time={time}
-                pictures={pictureNames}
-                effects={(data.effects ?? []).map(effect => ({
-                  path: effect.effect,
-                  name: effectNamed(effect.effect),
-                }))}
-                onSet={(property, value) =>
-                  edit(setAnimationKey(data, selected, property, time, value))
+                  </div>
+                </>
+              )}
+              <AnimationRow
+                names={names}
+                selected={selected}
+                loop={Boolean(selected && data.animations?.[selected]?.loop)}
+                onSelect={setChosen}
+                onAdd={() => void newAnimation()}
+                onRename={name => void renameOne(name)}
+                onRemove={name => void removeOne(name)}
+                onLoop={(name, loop) =>
+                  edit(setAnimationLoop(data, name, loop))
                 }
                 isReadOnly={isReadOnly}
               />
-              {Object.keys(chosenTimeline.tracks).some(track =>
-                track.startsWith('effect:'),
-              ) && (
-                // A shader, which only the game runs.
-                <Typography variant="body3" className={styles.note}>
-                  Effects are not shown here. Run the game to see them.
-                </Typography>
+              {selected && chosenTimeline && (
+                <>
+                  <TimelineStrip
+                    name={selected}
+                    timeline={chosenTimeline}
+                    time={time}
+                    onTime={setTime}
+                    effectName={path => effectNamed(path)}
+                    selectedKey={selectedKey}
+                    onSelectKey={setSelectedKey}
+                    onMoveKey={
+                      isReadOnly
+                        ? undefined
+                        : (property, from, to) => {
+                            edit(
+                              moveAnimationKey(
+                                data,
+                                selected,
+                                property,
+                                from,
+                                to,
+                              ),
+                            );
+                            setSelectedKey({property, at: to});
+                          }
+                    }
+                    onDeleteKey={
+                      isReadOnly
+                        ? undefined
+                        : (property, at) => {
+                            edit(
+                              removeAnimationKey(data, selected, property, at),
+                            );
+                            setSelectedKey(undefined);
+                          }
+                    }
+                    onAddFrames={
+                      isReadOnly || isInterface
+                        ? undefined
+                        : () => setAddingFrames(true)
+                    }
+                    onLength={
+                      isReadOnly
+                        ? undefined
+                        : length =>
+                            edit(setAnimationLength(data, selected, length))
+                    }
+                  />
+                  <MomentPanel
+                    timeline={chosenTimeline}
+                    time={time}
+                    pictures={isInterface ? undefined : pictureNames}
+                    effects={(data.effects ?? []).map(effect => ({
+                      path: effect.effect,
+                      name: effectNamed(effect.effect),
+                    }))}
+                    onSet={(property, value) =>
+                      edit(
+                        setAnimationKey(data, selected, property, time, value),
+                      )
+                    }
+                    isReadOnly={isReadOnly}
+                  />
+                  {Object.keys(chosenTimeline.tracks).some(track =>
+                    track.startsWith('effect:'),
+                  ) && (
+                    // A shader, which only the game runs.
+                    <Typography variant="body3" className={styles.note}>
+                      Effects are not shown here. Run the game to see them.
+                    </Typography>
+                  )}
+                </>
               )}
             </>
           )}

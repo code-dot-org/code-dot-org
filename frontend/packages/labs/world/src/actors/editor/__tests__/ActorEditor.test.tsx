@@ -433,3 +433,80 @@ describe('the Actor Editor', () => {
     expect(saved.actorCode).toBe(true);
   });
 });
+
+describe('what it is for (specs/ACTORS_AS_DATA_PLAN.md, step 3)', () => {
+  /** The Player, said to be for something else. */
+  const as = (change: Record<string, unknown>) =>
+    JSON.stringify({...JSON.parse(PLAYER), ...change});
+
+  it('offers a game actor its pictures and no icon', () => {
+    open();
+    expect(screen.getByLabelText('Looks like')).toBeInTheDocument();
+    expect(screen.queryByRole('heading', {name: 'Icon'})).toBeNull();
+  });
+
+  it('offers an interface actor its icon and no pictures', () => {
+    open(as({for: 'interface'}));
+    expect(screen.queryByLabelText('Looks like')).toBeNull();
+    expect(screen.queryByRole('button', {name: /Pictures/})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'button'}));
+    expect(written().icon).toBe('button');
+    expect(screen.getByRole('button', {name: 'button'})).toHaveAttribute(
+      'aria-pressed',
+      'true',
+    );
+  });
+
+  it('asks before an actor with pictures is made an interface’s', () => {
+    open();
+    showDialog.mockResolvedValueOnce({type: 'cancel', args: ''});
+    fireEvent.change(screen.getByLabelText('For'), {
+      target: {value: 'interface'},
+    });
+    return vi.waitFor(() => {
+      expect(showDialog).toHaveBeenCalled();
+      expect(onChange).not.toHaveBeenCalled();
+    });
+  });
+
+  it('makes it an interface’s when told to, drawn and without pictures', async () => {
+    open();
+    showDialog.mockResolvedValueOnce({type: 'confirm', args: ''});
+    fireEvent.change(screen.getByLabelText('For'), {
+      target: {value: 'interface'},
+    });
+    await vi.waitFor(() => expect(onChange).toHaveBeenCalled());
+    const data = written();
+    expect(data.for).toBe('interface');
+    // The Player's Main pulses as well as showing its picture: the pulse
+    // stays, the picture goes.
+    expect(Object.keys(data.animations.Main.tracks)).toEqual(['drawnScale']);
+    expect(
+      data.blocks.blocks.blocks.some(
+        (root: {type: string}) => root.type === 'world_define_drawing',
+      ),
+    ).toBe(true);
+  });
+
+  it('acts like another of the project’s actors', () => {
+    open();
+    const field = screen.getByLabelText('Acts like');
+    const paths = [...field.querySelectorAll('option')].map(one => one.value);
+    // Not itself.
+    expect(paths).not.toContain('actors/player');
+    const other = paths.find(path => path !== '')!;
+    fireEvent.change(field, {target: {value: other}});
+    expect(written().actsLike).toBe(other);
+  });
+
+  it('is a record, which has no look at all', () => {
+    open();
+    fireEvent.click(screen.getByRole('checkbox', {name: 'Is a record'}));
+    expect(written().isData).toBe(true);
+    onChange.mockClear();
+    open(as({isData: true}));
+    expect(
+      screen.getAllByText(/is a record: it is kept and found/),
+    ).not.toHaveLength(0);
+  });
+});

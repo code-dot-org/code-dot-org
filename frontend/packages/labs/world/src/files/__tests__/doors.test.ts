@@ -30,7 +30,7 @@ const AUDIT: ReadonlyArray<[item: string, doors: readonly Door[]]> = [
   [
     'the image editor, for a sprite',
     [
-      [ACTOR_EDITOR, /act: 'open', fileId: lookFile\.id/],
+      [ACTOR_EDITOR, /act: 'open',\s+fileId: lookFile\.id/],
       ['blockly/extensions/openSourceButton.ts', /getFieldValue\('SPRITE'\)/],
     ],
   ],
@@ -57,7 +57,10 @@ const AUDIT: ReadonlyArray<[item: string, doors: readonly Door[]]> = [
   ['a new theme', [[THEME_FIELD, /act: 'make',\s+folder: 'styles'/]]],
   ['a new rule', [[SHELVES, /act: 'make', folder: 'rules'/]]],
   // 3. Uploading.
-  ['uploading a sprite', [[ACTOR_EDITOR, /act: 'upload', folder: 'sprites'/]]],
+  [
+    'uploading a sprite',
+    [[ACTOR_EDITOR, /act: 'upload',\s+folder: 'sprites'/]],
+  ],
   [
     'uploading a background',
     [[BACKGROUND_FIELD, /act: 'upload',\s+folder: BACKGROUNDS_FOLDER/]],

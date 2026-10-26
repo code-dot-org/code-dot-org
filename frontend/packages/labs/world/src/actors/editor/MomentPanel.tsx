@@ -30,8 +30,11 @@ export interface MomentPanelProps {
   timeline: Timeline;
   /** Where the playhead is, in seconds. */
   time: number;
-  /** The project's pictures an actor may wear, by file name. */
-  pictures: readonly string[];
+  /**
+   * The project's pictures an actor may wear, by file name; none for an
+   * interface actor, which is drawn and has no Picture field.
+   */
+  pictures?: readonly string[];
   /** The actor's effects: each one's path and what it is called. */
   effects: ReadonlyArray<{path: string; name: string}>;
   /** Set `property` to `value` at the playhead: a key there. */
@@ -128,28 +131,30 @@ export const MomentPanel = ({
       className={`${styles.moment} ${fields.narrow}`}
       aria-label={`At ${Math.round(time * 10) / 10} seconds`}
     >
-      <SimpleDropdown
-        name="moment-sprite"
-        labelText="Picture"
-        size="s"
-        disabled={isReadOnly}
-        selectedValue={pictureValue}
-        items={[
-          // Nothing said: the actor's own picture, which the animation
-          // leaves alone until its first picture key.
-          ...(picture ? [] : [{value: '', text: '(as it is)'}]),
-          ...pictures.map(file => ({value: file, text: file})),
-          // One cell of a strip, which a whole picture is not.
-          ...(picture?.cell
-            ? [{value: pictureValue, text: `${picture.file} (one frame)`}]
-            : []),
-        ]}
-        onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-          if (event.target.value && event.target.value !== pictureValue) {
-            onSet('sprite', event.target.value);
-          }
-        }}
-      />
+      {pictures && (
+        <SimpleDropdown
+          name="moment-sprite"
+          labelText="Picture"
+          size="s"
+          disabled={isReadOnly}
+          selectedValue={pictureValue}
+          items={[
+            // Nothing said: the actor's own picture, which the animation
+            // leaves alone until its first picture key.
+            ...(picture ? [] : [{value: '', text: '(as it is)'}]),
+            ...pictures.map(file => ({value: file, text: file})),
+            // One cell of a strip, which a whole picture is not.
+            ...(picture?.cell
+              ? [{value: pictureValue, text: `${picture.file} (one frame)`}]
+              : []),
+          ]}
+          onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+            if (event.target.value && event.target.value !== pictureValue) {
+              onSet('sprite', event.target.value);
+            }
+          }}
+        />
+      )}
       <div className={styles.momentPair}>
         {number(
           'offset-x',

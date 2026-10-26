@@ -88,7 +88,7 @@ export interface StockActor {
 export const STOCK_ACTORS: readonly StockActor[] = [
   {
     id: 'label',
-    for: 'both',
+    for: 'interface',
     name: 'Label',
     description:
       'A word on the screen. Give it text, a size, a color and an anchor, and it draws them — the smallest way for a game to say anything to the player.',
@@ -100,7 +100,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'progressBar',
-    for: 'both',
+    for: 'interface',
     name: 'Progress Bar',
     description:
       'A bar that fills up. Set its fraction between 0 and 1 and it draws that much of itself — health, a loading bar, how close a boss is to waking. Attach it to an actor to have it ride above one.',
@@ -113,7 +113,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'healthBar',
-    for: 'both',
+    for: 'interface',
     name: 'Health Bar',
     description:
       'A bar that fills itself in. Point it at an actor with “subject” and it shows how much health that actor has left. Put it in the corner for a HUD, or set its parent to have it ride above the actor it is about.',
@@ -266,7 +266,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     id: 'viewport',
     // Both: the window a Screen shows its game through, and a minimap or a
     // picture-in-picture inside a level; and its own camera is a game's.
-    for: 'both',
+    for: 'interface',
     name: 'Viewport',
     description:
       'A window onto a map of its own. Set its map and the level shows inside it, with a camera of its own; what is around the window stays put — a level inside its interface.',
@@ -279,7 +279,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
   },
   {
     id: 'image',
-    for: 'both',
+    for: 'interface',
     name: 'Image',
     description:
       'A picture in a box you decide the size of — a thumbnail in a row, an avatar beside a name. Give it a width, a height and a picture and it fits the picture to them; turn on “stretches” to fill the box exactly instead.',

@@ -10,7 +10,7 @@
 // rule any more (see `builtinMeta`): "Has Gravity" is one of these, and the
 // default project is a project that imported it.
 
-import type {ActorPurpose} from '../../actors/actorPurpose';
+import type {OfferedTo} from '../../actors/actorPurpose';
 
 import {arrowsRule} from './arrows';
 import {boundsRule} from './bounds';
@@ -97,10 +97,11 @@ export interface StockRule {
    */
   subject?: 'camera';
   /**
-   * What it is for: a game, an interface, or both (`actors/actorPurpose`),
+   * Which kinds of actor it is offered to: a game's, an interface's, or both
+   * (`actors/actorPurpose`, `OfferedTo`),
    * which decides what the rule shelf offers where (specs/PURPOSE_PLAN.md).
    */
-  for: ActorPurpose;
+  for: OfferedTo;
   /** The `.rule` workspace JSON, copied verbatim on import. */
   contents: string;
 }
