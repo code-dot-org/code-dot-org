@@ -155,6 +155,8 @@ export interface ActorMember {
   description?: string;
   /** The eye shut: offered in this actor's own file and nowhere else. */
   hidden?: true;
+  /** What a block reports, by its type; absent for one that does something. */
+  returns?: string;
   body?: Block;
 }
 
@@ -479,10 +481,15 @@ const isPart = (part: unknown): part is ActorMemberPart =>
 
 /**
  * `define block` or `define event` as data, or nothing for one the data
- * cannot hold whole: a block that reports a value, which an actor cannot
- * define yet, or a row with anything the data has no key for.
+ * cannot hold whole: a row with anything the data has no key for, or a
+ * block that reports a value unless `reports` allows one. An actor cannot
+ * define one yet; a rule can (`rules/ruleData`).
  */
-export function readMember(row: Block, made: number): ActorMember | undefined {
+export function readMember(
+  row: Block,
+  made: number,
+  {reports = false}: {reports?: boolean} = {},
+): ActorMember | undefined {
   const kind =
     row.type === MEMBER_ROWS.block
       ? 'block'
@@ -514,7 +521,8 @@ export function readMember(row: Block, made: number): ActorMember | undefined {
     !Object.keys(fields).every(key =>
       ['RETURNS', 'DESCRIPTION', 'ACCESS'].includes(key),
     ) ||
-    (fields.RETURNS ?? 'none') !== 'none' ||
+    (fields.RETURNS !== undefined && typeof fields.RETURNS !== 'string') ||
+    (!reports && (fields.RETURNS ?? 'none') !== 'none') ||
     !Object.keys(inputs).every(key => key === 'DO') ||
     (inputs.DO !== undefined &&
       !(isObject(inputs.DO) && only(inputs.DO, ['block'])))
@@ -529,6 +537,9 @@ export function readMember(row: Block, made: number): ActorMember | undefined {
       ? {description: fields.DESCRIPTION}
       : {}),
     ...(fields.ACCESS === 'private' ? {hidden: true as const} : {}),
+    ...(typeof fields.RETURNS === 'string' && fields.RETURNS !== 'none'
+      ? {returns: fields.RETURNS}
+      : {}),
     ...(body ? {body} : {}),
   };
 }
@@ -564,7 +575,7 @@ export function writeMember(member: ActorMember): Block {
     type: MEMBER_ROWS.block,
     id: member.id,
     fields: {
-      RETURNS: 'none',
+      RETURNS: member.returns ?? 'none',
       DESCRIPTION: member.description ?? '',
       ACCESS: member.hidden ? 'private' : 'shared',
     },

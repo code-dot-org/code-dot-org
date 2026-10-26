@@ -115,11 +115,29 @@ reads the learner's files only.
 
 ### 1. A rule as data
 
-`RuleData`: name, ability, description, uses, properties, members
-(events and blocks, as an actor's `ActorMember`), steps, and traits, each
-with the same, its subject and its uses. `readRule` and `writeRule`, and
-`ruleView` for the compiler. Every stock rule read and viewed again
-compares equal to what it was, which is the safety net for the rest.
+DONE. `rules/ruleData`: `RuleData` holds the name, ability, description,
+the rules it uses, its properties, its members (events and blocks, as an
+actor's `ActorMember`, which now carries what a block `returns`), its steps
+(a `when tick` is one with no phase), its traits with the same and their
+subject, and the workspace's variables. `foldRule` turns a `define rule`
+workspace into data, and refuses one it cannot say whole: a note anywhere
+but first under the rule, a loose root, a row it does not know. `ruleView`
+turns data back, listing each definition's uses, properties, members and
+steps in that order. `resolveRuleContents`, which every reader of a project
+goes through, serves a data-shaped rule as its view.
+
+The safety net: every stock rule folds, its view is the rule again (where
+its roots stand, and a member's id and open eye, aside), the view folds to
+the same data, `parseRuleMeta` reads the two alike, and the generator writes
+the same code for both, byte for byte (`ruleData`, `ruleDataCompiles`).
+
+Four stock chains interleaved their kinds and three carried a second note,
+so their scripts were put in that order and the notes folded into the
+description beside them: Gestures' tuning numbers and Screens' `screens`
+into the rule's, Tab Navigation's sentence into Can Be Focused's.
+
+No file is stored as data yet: the Rule Editor that would write one is
+step 2, and until then a rule opened in blocks would be saved as blocks.
 
 ### 2. The editor's frame
 

@@ -30,6 +30,7 @@
 // edited: the save writes blocks where the reference was. There is no
 // promotion step to get wrong, and no state in which a file is half of each.
 
+import {ruleViewOf} from './ruleData';
 import {stockRule, type StockRule} from './stock';
 
 /** What a `.rule` file holds when it is still the library's. */
@@ -144,11 +145,12 @@ export function parseRuleReference(
 }
 
 /**
- * A rule file's contents with a reference resolved to the rule it names.
+ * A rule file's contents with a reference resolved to the rule it names, and
+ * a data-shaped rule as the workspace it stands for (`ruleData`).
  *
- * Identity for a file the learner has edited, which is every file that is not
- * a reference — so this is safe to run over a whole project and costs a
- * `startsWith` per file.
+ * Identity for a file the learner has edited in blocks, which is every file
+ * that is neither — so this is safe to run over a whole project and costs a
+ * `startsWith` and a search per file.
  *
  * A reference to a rule THAT IS NO LONGER ON THE SHELF resolves to nothing,
  * and nothing is what an empty rule file already means everywhere else: the
@@ -161,9 +163,9 @@ export function parseRuleReference(
 export function resolveRuleContents(contents: string): string {
   const reference = parseRuleReference(contents);
   if (!reference) {
-    return contents;
+    return ruleViewOf(contents);
   }
-  return stockRule(reference.stock)?.contents ?? '';
+  return ruleViewOf(stockRule(reference.stock)?.contents ?? '');
 }
 
 /**
