@@ -16,8 +16,6 @@ import {getDeferredPromise, type DeferredPromiseObject} from '../utils';
 
 import type {DialogTypeType, AnyDialogType} from '../dialogs/types';
 
-import moduleStyles from '../dialogs/components/dialog-manager.module.scss';
-
 export interface DialogControlInterface {
   closeDialog: DialogCloseFunctionType;
   showDialog: (args: TypedDialogProps) => Promise<DialogClosePromiseReturnType>;
@@ -104,11 +102,8 @@ export const DialogControlProvider: React.FunctionComponent<
         setPromiseArgs,
       }}
     >
-      {DialogView && (
-        <div className={moduleStyles.dialogContainer}>
-          <DialogView {...activeDialog?.dialogArgs} />
-        </div>
-      )}
+      {/* The dialog brings its own backdrop. */}
+      {DialogView && <DialogView {...activeDialog?.dialogArgs} />}
       {children}
     </DialogControlContext.Provider>
   );

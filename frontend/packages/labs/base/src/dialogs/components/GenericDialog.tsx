@@ -1,13 +1,9 @@
-import {FocusTrap} from 'focus-trap-react';
+import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import type {FunctionComponent, ReactNode} from 'react';
 import {useMemo} from 'react';
 
-import Button from '@code-dot-org/component-library/button';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 
 import {useDialogControl} from '../../contexts/DialogControlContext';
 import {useEnterKeyboardTrap, useEscapeKeyboardTrap} from '../../hooks';
@@ -17,15 +13,9 @@ export type ButtonType = 'confirm' | 'cancel' | 'neutral';
 
 export type dialogCallback = (args?: unknown) => void;
 
-type GenericDialogTitleProps =
-  | {
-      title?: never;
-      titleComponent?: ReactNode;
-    }
-  | {
-      title?: string;
-      titleComponent?: never;
-    };
+type GenericDialogTitleProps = {
+  title?: string;
+};
 
 export type GenericDialogBodyProps =
   | {
@@ -53,17 +43,20 @@ export type GenericDialogProps = GenericDialogTitleProps &
 import moduleStyles from './generic-dialog.module.scss';
 
 /**
- * Generic root dialog used in Lab2 labs.
- * Allows a title component or title message
- * a body component or message
- * a list of up to three buttons - confirm, cancel, neutral
- * each button takes up to four args - a callback (if not a default will be provided), a label,
- * a disabled flag, and a destructive flag. The confirm button is the only one that can be destructive,
- * and it will be styled as such (red) to provide extra visual warning when attempting to delete something.
- * An accept button is always added, with the default "OK" text if not provided.
- * dialogs maintain a context, which can provide data to any of the callbacks.
- * The title, message, and confirm button text can be customized.
- * If no confirm button text is provided, the default text is "OK" (translatable).
+ * Generic dialog for the labs, on the design system's Dialog.
+ *
+ * A title, a message or a body component, and up to three buttons: confirm,
+ * cancel and neutral. Each button takes a label, a callback, a disabled flag
+ * and a destructive flag; a destructive confirm is drawn red. The confirm
+ * button is always there, labelled "OK" unless told otherwise. With all three
+ * buttons, cancel moves to the content below the others.
+ *
+ * Mirrors `apps/src/lab2/views/dialogs/GenericDialog.tsx`, with one
+ * difference kept on purpose: ENTER CONFIRMS. A prompt here is typed into and
+ * submitted with Enter (`GenericPrompt` has no key handling of its own), and
+ * the labs on this package rely on that.
+ *
+ * Dialogs close through DialogControlContext.
  */
 
 export type GetButtonCallbackArgs = {
@@ -96,17 +89,18 @@ const useButtonCallback = ({
     [closeDialog, closeType, callback, disabled, getButtonCallback],
   );
 
+// Escape when there is no cancel button; the dialog's own close button
+// answers it when there is.
+const noop = () => {};
+
 const GenericDialog: FunctionComponent<GenericDialogProps> = ({
   buttons,
   title,
-  titleComponent,
   message,
   bodyComponent,
   getButtonCallback = defaultGetButtonCallback,
 }) => {
   const dialogControl = useDialogControl();
-
-  const {theme} = useTheme();
 
   const cancelCallback = useButtonCallback({
     closeDialog: dialogControl.closeDialog,
@@ -132,71 +126,64 @@ const GenericDialog: FunctionComponent<GenericDialogProps> = ({
     getButtonCallback,
   });
 
-  useEscapeKeyboardTrap(cancelCallback);
+  // An alert has no cancel button and so no close button, but Escape has
+  // always dismissed it.
+  useEscapeKeyboardTrap(buttons?.cancel ? noop : cancelCallback);
   useEnterKeyboardTrap(confirmCallback);
 
-  const hasBodyComponent = !!bodyComponent;
+  const isDestructive = buttons?.confirm?.destructive;
 
   return (
-    <FocusTrap>
-      <div className={moduleStyles['genericDialog-' + theme]}>
-        {titleComponent ? (
-          titleComponent
-        ) : title ? (
-          <Heading3 className={moduleStyles.title}>{title}</Heading3>
-        ) : null}
-        <div
-          className={
-            hasBodyComponent
-              ? moduleStyles.bodyComponent
-              : moduleStyles.bodyText
-          }
-        >
-          {hasBodyComponent ? (
-            bodyComponent
-          ) : (
-            <BodyTwoText>{message}</BodyTwoText>
-          )}
-        </div>
-        <div className={moduleStyles.buttonContainer}>
-          <div className={moduleStyles.outerButtonContainer}>
-            {buttons?.cancel ? (
-              <Button
-                onClick={cancelCallback}
-                className={moduleStyles.cancel}
-                type="secondary"
-                disabled={buttons.cancel.disabled}
-                color={theme === 'Dark' ? 'white' : 'gray'}
-                text={buttons.cancel.text || 'Cancel'}
-              />
-            ) : (
-              <div />
-            )}
-            <div className={moduleStyles.innerButtonContainer}>
-              {buttons?.neutral && (
-                <Button
-                  onClick={neutralCallback}
-                  type="secondary"
-                  disabled={buttons.neutral.disabled}
-                  color={
-                    buttons?.neutral?.destructive ? 'destructive' : 'white'
-                  }
-                  text={buttons.neutral.text}
-                />
-              )}
-              <Button
-                onClick={confirmCallback}
-                disabled={buttons?.confirm?.disabled}
-                type="primary"
-                color={buttons?.confirm?.destructive ? 'destructive' : 'purple'}
-                text={buttons?.confirm?.text || 'OK'}
-                id="uitest-generic-dialog-ok"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </FocusTrap>
+    <Dialog
+      title={title}
+      customContent={
+        <div id="dsco-dialog-description">{bodyComponent || message}</div>
+      }
+      customBottomContent={
+        buttons?.neutral && buttons?.cancel ? (
+          <MuiButton
+            variant="text"
+            color="primary"
+            size="medium"
+            disabled={buttons.cancel.disabled}
+            onClick={cancelCallback}
+            type="button"
+          >
+            {buttons.cancel.text || 'Cancel'}
+          </MuiButton>
+        ) : undefined
+      }
+      onClose={buttons?.cancel ? cancelCallback : undefined}
+      className={classNames(
+        moduleStyles.genericDialog,
+        isDestructive && moduleStyles.destructive,
+        moduleStyles.dialogOnlyStyle,
+      )}
+      primaryButtonProps={{
+        onClick: confirmCallback,
+        disabled: buttons?.confirm?.disabled,
+        color: isDestructive ? 'error' : 'primary',
+        children: buttons?.confirm?.text || 'OK',
+        id: 'uitest-generic-dialog-ok',
+      }}
+      secondaryButtonProps={
+        buttons?.neutral
+          ? {
+              onClick: neutralCallback,
+              disabled: buttons.neutral.disabled,
+              color: isDestructive ? 'error' : 'tertiary',
+              children: buttons.neutral.text,
+            }
+          : buttons?.cancel
+            ? {
+                onClick: cancelCallback,
+                disabled: buttons.cancel.disabled,
+                color: 'tertiary',
+                children: buttons.cancel.text || 'Cancel',
+              }
+            : undefined
+      }
+    />
   );
 };
 
