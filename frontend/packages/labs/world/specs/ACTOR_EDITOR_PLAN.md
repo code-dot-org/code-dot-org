@@ -31,6 +31,9 @@ Interface Actor are later phases.
   | `define event`                      | code                  |
   | `every frame` (`world_trait_step`)  | code                  |
 
+  `define block` and `define event` are data since ACTOR_BLOCKS_PLAN.md:
+  an actor's members, designed on pages of their own.
+
   Every `set` row's value is a literal: a number, a word, a color, a truth
   value, a list of words, or an x and a y (scale, size). None is computed.
 

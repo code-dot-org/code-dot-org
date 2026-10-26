@@ -1,6 +1,6 @@
 # Plan: an actor's own blocks and events, designed in the Actor Editor
 
-STATUS: PROPOSED, October 2026.
+STATUS: BUILT, October 2026. The working record, as the other plans are.
 
 An actor is data and events (SIMPLE_INTERFACE.md), and since
 ACTORS_AS_DATA_PLAN.md nothing an actor IS is written as blocks, except
@@ -267,11 +267,44 @@ Built in as the phase goes, not after it. What the page must do:
   nothing, not only drawn paler; the colours come from the semantic
   tokens.
 
+## Found while building
+
+- **The mini toolbox could not be given by an extension.** Since the
+  rebase onto `ngfp/codebridge-package`, `addMiniToolbox` saves whether
+  its flyout is open by adding `saveExtraState` to the block, and Blockly
+  throws when an extension that is not a mutator does that. World's two
+  hat extensions do, so any file holding a contact hat, or a hat whose
+  event carries values, took the lab down when it opened. Fixed in the
+  blockly package (`remembersOpen: false`, mini-toolbox.md MT-7) and in
+  World's extensions.
+- **The misplaced-blocks check reads the drawers.** Taking `define block`
+  out of the actor's drawer made it something an actor file could not
+  hold, and the head of a member's page was disabled with its body. Both
+  definitions are listed in `ESTABLISHED_ELSEWHERE`.
+- **An inline Blockly drawing measures nothing.** `BlocklyMarkdown` draws
+  off the page, where text has no width, and a hat's words came out on
+  top of each other. The pictures are read-only workspaces on the page.
+- **A design's type is its words.** A value added leaves the block's name,
+  and so its type, as they were; the picture is drawn anew for each
+  design rather than for each type.
+
+## In the browser
+
+Checked headless, on the dev server: the Blocks tab of the Text Input
+and the List; a List block opened, a break, a word and a value added and
+the picture, the head and the trail following; a palette chip dragged on
+and a chip dragged by its grip; going back by the trail with focus on
+Edit; the Text Input's `changed` renamed, its uses found under the new
+name once the page was left; a new event with a value, offered in the
+actor's own drawer as a hat and a raise. Not yet checked by hand: an
+implementation edited on the page and run, and the keys with a screen
+reader.
+
 ## Open
 
-- **How a line looks.** A faint rule under each line, an indent after a
-  break, or both: tried in the browser, and the plainest that reads as
-  the block reads kept.
+- **How a line looks.** So far a break's mark ends its line and nothing
+  more. A faint rule under each line, or an indent after a break, has not
+  been tried.
 
 ## Not in this phase
 

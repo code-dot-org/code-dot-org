@@ -189,6 +189,53 @@ below, and are listed last.
 - **What an actor is for** is said as text beside its name, not offered as
   a control, since it does not change.
 
+### An actor's own blocks and events (ACTOR_BLOCKS_PLAN.md)
+
+- **Look and Blocks are tabs**: the design system's `tablist`, each panel a
+  `tabpanel` named by its tab. They do not move between tabs by arrow key,
+  so each tab is a stop of its own. Noted, not changed.
+- **A member is drawn as an image named by how it reads** ("when Text
+  Input changed", "move the highlight by ⟨rows⟩"). The drawing is a
+  read-only Blockly workspace, which brings focusable groups and roles of
+  its own, so it is hidden and made `inert`. Each row's Edit and Delete are
+  named for the reading. The row has no heading of its own; the image's
+  name is what says which member it is.
+- **The page takes focus on its heading** when it opens, and going back,
+  by the trail or Back, puts focus on the Edit it was opened from. A member
+  deleted puts focus on the row that took its place, else on New event or
+  New block. For these doors, the gap "a door that opens a file leaves
+  focus behind" is closed.
+- **The palette is a toolbar** ("Parts to add"): one stop, the arrows,
+  Home and End move along it, and each chip is a button named for what it
+  adds ("Add a number value", "Add a line break"). Dragging one onto the
+  surface is the pointer's other way.
+- **The surface is an ordered list** ("Parts of heal"). Each chip's grip
+  is a button named for the part, its place and its line ("rows, number
+  value, part 2 of 5, line 1"), and "does nothing here" for a break that
+  ends nothing; the text field beside it is labelled ("Word, part 1",
+  "Name of number value, part 2"). Space or Enter on a grip picks the chip
+  up (`aria-pressed`), any arrow moves it one place, Space drops it, Escape
+  puts it back, and Delete removes it; one hidden sentence describes each
+  grip with those keys. Dragging is never the only way (2.5.7).
+- **Every add, move and removal is said** through the page's polite
+  region, with the line ("Number added, part 5 of 5, line 2."); typing
+  says nothing. dnd-kit keeps an empty live region of its own beside it,
+  with its announcements silenced.
+- **A problem is said where it is.** A value's is on its field
+  (`aria-invalid`, and the message as its description: "Two values are
+  called amount; rename one."); one of the whole design ("A design needs a
+  word in it.") is an alert. Nothing is written until it is fixed.
+- **Not by colour alone**: a value chip writes its type beside its name,
+  with an icon, and a break that does nothing is named so as well as
+  faded.
+- **What it does is Blockly**, as it was behind the pencil. A value's
+  getter can still be dragged off the head's picture with a pointer; from
+  the keyboard it is the Variables drawer's, as any local's is.
+- **Untested**: none of this has been through a screen reader, and the
+  keys have been driven only by tests and a headless browser, not by
+  hand. Target sizes are the small IconButton's and the design system's
+  small TextField; neither has been measured against 24 pixels.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the
