@@ -9,6 +9,11 @@ export function getKeyByValue(
   return Object.keys(object).find(key => object[key] === value);
 }
 
+export function rowCountText(shown: number, total: number): string {
+  const totalText = `${total} ${total === 1 ? 'row' : 'rows'}`;
+  return shown === total ? totalText : `${shown} of ${totalText}`;
+}
+
 export function isEmpty(object: Record<string, unknown>): boolean {
   return Object.keys(object).length === 0;
 }
