@@ -7,6 +7,7 @@ import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
 import type {ActorMember} from '../../actorData';
 import {
+  actorSlug,
   memberKey,
   memberTypes,
   memberUses,
@@ -112,20 +113,26 @@ const world = (source: MultiFileSource) =>
 describe('a member’s blocks', () => {
   it('are named after its words', () => {
     expect(memberKey(hurt)).toBe('IsHurtByFromEvent');
-    expect(memberTypes('actors/hero', hurt)).toEqual([HAT, EMIT]);
-    expect(memberTypes('actors/hero', heal)).toEqual([CALL]);
+    expect(memberTypes(actorSlug('actors/hero'), hurt)).toEqual([HAT, EMIT]);
+    expect(memberTypes(actorSlug('actors/hero'), heal)).toEqual([CALL]);
   });
 
   it('are used where a file holds one', () => {
-    expect(memberUses(project(), 'actors/hero', hurt)).toEqual(['w']);
-    expect(memberUses(project(), 'actors/hero', heal)).toEqual(['w']);
+    expect(memberUses(project(), actorSlug('actors/hero'), hurt)).toEqual([
+      'w',
+    ]);
+    expect(memberUses(project(), actorSlug('actors/hero'), heal)).toEqual([
+      'w',
+    ]);
   });
 });
 
 describe('a member renamed', () => {
   it('is the same project when nothing that names a block changed', () => {
     const source = project();
-    expect(renameMember(source, 'actors/hero', hurt, {...hurt})).toBe(source);
+    expect(
+      renameMember(source, actorSlug('actors/hero'), hurt, {...hurt}),
+    ).toBe(source);
   });
 
   it('takes its uses to its new words', () => {
@@ -133,8 +140,9 @@ describe('a member renamed', () => {
       ...heal,
       parts: [{kind: 'label', text: 'mend by'}, heal.parts[1]],
     };
-    const roots = world(renameMember(project(), 'actors/hero', heal, after))
-      .blocks.blocks;
+    const roots = world(
+      renameMember(project(), actorSlug('actors/hero'), heal, after),
+    ).blocks.blocks;
     expect(roots[2].type).toBe('world_do_ActorsHero_MendByAction');
   });
 
@@ -147,7 +155,9 @@ describe('a member renamed', () => {
           : part,
       ),
     };
-    const next = world(renameMember(project(), 'actors/hero', hurt, after));
+    const next = world(
+      renameMember(project(), actorSlug('actors/hero'), hurt, after),
+    );
     const [handler, step] = next.blocks.blocks;
     const print = handler.next.block;
     const emit = print.next.block;
@@ -163,7 +173,9 @@ describe('a member renamed', () => {
 
   it('leaves a value taken away to say so where it was used', () => {
     const after: ActorMember = {...hurt, parts: hurt.parts.slice(0, 3)};
-    const next = world(renameMember(project(), 'actors/hero', hurt, after));
+    const next = world(
+      renameMember(project(), actorSlug('actors/hero'), hurt, after),
+    );
     expect(next.blocks.blocks[0].type).toBe(
       'world_on_ActorsHero_IsHurtByFromEvent',
     );

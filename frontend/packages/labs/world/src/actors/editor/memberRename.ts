@@ -5,7 +5,9 @@
 // name: `heal by` on `actors/hero` is called by `world_do_ActorsHero_HealByAction`,
 // and `is hurt` is heard by `world_on_ActorsHero_IsHurtEvent` and raised by
 // `world_emit_…`. So new words are new block types, and every use is
-// rewritten to follow them.
+// rewritten to follow them. The segment after `world_do_` is the owner's:
+// an actor's path (`pathSlug`), or a rule's name (`ruleSlug`), whose blocks
+// may also report a value and are then asked as `world_query_…`.
 //
 // A VALUE is matched by its name in two more places. A block that takes more
 // than one names a socket for each (`NAME`, or `NAME_X` and `NAME_Y`); and a
@@ -23,16 +25,22 @@ import {viewOf, type ActorMember} from '../actorData';
 /** What a member's blocks are named by: `heal by` → `HealByAction`. */
 export const memberKey = (member: ActorMember): string =>
   `${pascal(designedName(member.parts))}${
-    member.kind === 'event' ? 'Event' : 'Action'
+    member.kind === 'event' ? 'Event' : member.returns ? 'Query' : 'Action'
   }`;
 
-/** The block types a member makes: a hat and a raise, or a call. */
-export function memberTypes(modulePath: string, member: ActorMember): string[] {
-  const at = `${pathSlug(modulePath)}_${memberKey(member)}`;
+/**
+ * The block types a member makes, its owner named by `slug`: a hat and a
+ * raise, or a call, or a question for a block that reports a value.
+ */
+export function memberTypes(slug: string, member: ActorMember): string[] {
+  const at = `${slug}_${memberKey(member)}`;
   return member.kind === 'event'
     ? [`world_on_${at}`, `world_emit_${at}`]
-    : [`world_do_${at}`];
+    : [`${member.returns ? 'world_query' : 'world_do'}_${at}`];
 }
+
+/** An actor's segment in its members' block types: `actors/hero` → `ActorsHero`. */
+export const actorSlug = (modulePath: string): string => pathSlug(modulePath);
 
 type Node = Record<string, unknown>;
 
@@ -59,10 +67,10 @@ function eachBlock(value: unknown, visit: (block: Node) => void): void {
 /** The files whose code uses the member, by file id. */
 export function memberUses(
   source: MultiFileSource,
-  modulePath: string,
+  slug: string,
   member: ActorMember,
 ): string[] {
-  const types = new Set(memberTypes(modulePath, member));
+  const types = new Set(memberTypes(slug, member));
   return Object.entries(source.files)
     .filter(([, file]) => WORKSPACE_FILE.test(file.name))
     .filter(([, file]) => {
@@ -96,15 +104,15 @@ const valueNames = (member: ActorMember): string[] =>
  */
 export function renameMember(
   source: MultiFileSource,
-  modulePath: string,
+  slug: string,
   before: ActorMember,
   after: ActorMember,
 ): MultiFileSource {
   if (before.kind !== after.kind || !designedName(after.parts)) {
     return source;
   }
-  const fromTypes = memberTypes(modulePath, before);
-  const toTypes = memberTypes(modulePath, after);
+  const fromTypes = memberTypes(slug, before);
+  const toTypes = memberTypes(slug, after);
   const typeOf = new Map(fromTypes.map((type, at) => [type, toTypes[at]]));
   const from = valueNames(before);
   const to = valueNames(after);

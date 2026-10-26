@@ -113,7 +113,7 @@ import {AnimationRow} from './AnimationRow';
 import {addMember, newMember, removeMember} from './memberEdits';
 import {MemberPage} from './MemberPage';
 import {memberReading} from './memberPalette';
-import {memberUses, renameMember} from './memberRename';
+import {actorSlug, memberUses, renameMember} from './memberRename';
 import {MembersTab} from './MembersTab';
 import {MomentPanel} from './MomentPanel';
 import {SelfProperty} from './SelfProperty';
@@ -508,9 +508,11 @@ export const ActorEditor = (props: CustomEditorProps) => {
       return;
     }
     const reading = memberReading(member, data.name);
-    const uses = memberUses(currentSources.source, modulePath, member).map(id =>
-      fileLabel(currentSources.source.files[id]),
-    );
+    const uses = memberUses(
+      currentSources.source,
+      actorSlug(modulePath),
+      member,
+    ).map(id => fileLabel(currentSources.source.files[id]));
     if (
       !(await confirm({
         title: `Delete ${member.kind === 'event' ? 'event' : 'block'}`,
@@ -589,7 +591,12 @@ export const ActorEditor = (props: CustomEditorProps) => {
           onUpdate={update}
           onLeave={(before, after) => {
             const now = sources.current;
-            const source = renameMember(now.source, modulePath, before, after);
+            const source = renameMember(
+              now.source,
+              actorSlug(modulePath),
+              before,
+              after,
+            );
             if (source !== now.source) {
               replaceSources({...now, source});
             }
