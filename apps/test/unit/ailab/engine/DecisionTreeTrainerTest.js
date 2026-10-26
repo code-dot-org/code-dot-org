@@ -107,6 +107,9 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
 });
 
 describe('DecisionTreeTrainer: the maxDepth sweep', () => {
+  // jest.config.js clears mocks between tests but does not restore them.
+  afterEach(() => jest.restoreAllMocks());
+
   /*
     One feature separates the label completely, so a depth of 1 is already
     perfect. Every candidate with a greater depth ties with it. The sweep must keep the
@@ -243,8 +246,6 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     };
 
     expect(trainer.rebuild({maxDepth: 4})).toBeUndefined();
-
-    jest.restoreAllMocks();
   });
 });
 
