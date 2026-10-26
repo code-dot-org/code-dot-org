@@ -30,14 +30,14 @@ import {DraggableOptions} from './DraggableOptions';
 import styles from './question.module.scss';
 import sortStyles from './sort.module.scss';
 
-interface DropZoneProps {
-  id: string;
+interface DroppableProps {
+  data: {id: string};
   className: string;
   children: ReactNode;
 }
 
-const DropZone: FC<DropZoneProps> = ({id, className, children}) => {
-  const {setNodeRef} = useDroppable({id});
+const Droppable: FC<DroppableProps> = ({data, className, children}) => {
+  const {setNodeRef} = useDroppable({id: data.id, data});
   return (
     <div ref={setNodeRef} className={className}>
       {children}
@@ -119,7 +119,11 @@ const PracticeSort: FC<PracticeSortProps> = ({
       >
         <div className={sortStyles.optionsRows}>
           {droppableMatches.map(match => (
-            <DropZone key={match} id={match} className={sortStyles.dropZone}>
+            <Droppable
+              key={match}
+              data={{id: match}}
+              className={sortStyles.dropZone}
+            >
               <span className={sortStyles.cardLabel}>{match}</span>
               {dragAndDropPairs
                 .filter(sol => sol.correct === match)
@@ -137,7 +141,7 @@ const PracticeSort: FC<PracticeSortProps> = ({
                     showAnswer={submitted}
                   />
                 ))}
-            </DropZone>
+            </Droppable>
           ))}
         </div>
         <div
