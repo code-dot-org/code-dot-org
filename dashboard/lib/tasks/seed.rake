@@ -175,24 +175,48 @@ namespace :seed do
     end
   end
 
-  SCRIPTS_DEPENDENCIES = [
+  # Quiz levels look up their questions by key, so quiz_questions precedes the
+  # custom levels.
+  BASE_SCRIPTS_DEPENDENCIES = [
     :environment,
     :check_migrations,
     :games,
     :deprecated_blockly_levels,
-    :child_dsls,
     :quiz_questions,
-    :custom_levels,
     :standalone_project_levels,
-    :parent_dsls,
     :code_docs,
     :blocks,
     :standards,
     :shared_blockly_functions,
-    :libraries,
-    :course_offerings,
-    :jit_pl_concepts
+    :libraries
   ].freeze
+
+  # The UI test units resolve their course offerings and levels out of the UI
+  # test tree, apart from deprecated blockly levels, so the UI test seed reads
+  # that tree in place of config/levels, config/scripts and
+  # config/course_offerings. The deprecated blockly levels and the standalone
+  # project tree are seeded for both; see dashboard/test/ui/config/README.md.
+  PRODUCTION_CONTENT_DEPENDENCIES = [
+    :child_dsls,
+    :custom_levels,
+    :parent_dsls,
+    :course_offerings
+  ].freeze
+
+  UI_TEST_CONTENT_DEPENDENCIES = [
+    :child_dsls_ui_tests,
+    :custom_levels_ui_tests,
+    :parent_dsls_ui_tests,
+    :course_offerings_ui_tests
+  ].freeze
+
+  # jit_pl_concepts comes last: in levelbuilder mode, loading the JIT PL course
+  # writes its course offering's file, which course_offerings must read first.
+  PRODUCTION_SCRIPTS_DEPENDENCIES =
+    (BASE_SCRIPTS_DEPENDENCIES + PRODUCTION_CONTENT_DEPENDENCIES + [:jit_pl_concepts]).freeze
+
+  UI_TEST_SCRIPTS_DEPENDENCIES =
+    (BASE_SCRIPTS_DEPENDENCIES + UI_TEST_CONTENT_DEPENDENCIES + [:jit_pl_concepts]).freeze
 
   # Do the minimum amount of work to seed a single script or glob, without
   # seeding levels or other dependencies. For use in development. Examples:
@@ -207,35 +231,9 @@ namespace :seed do
     update_scripts(script_files: script_files)
   end
 
-  timed_task_with_logging scripts: SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts: PRODUCTION_SCRIPTS_DEPENDENCIES do
     update_scripts(incremental: true)
   end
-
-  # The UI test units resolve their course offerings and levels out of the UI
-  # test tree, apart from deprecated blockly levels, so the UI test seed reads
-  # that tree in place of config/levels, config/scripts and
-  # config/course_offerings rather than after them. The standalone project
-  # tree and the blockly levels stay, through SCRIPTS_DEPENDENCIES; see
-  # dashboard/test/ui/config/README.md.
-  PRODUCTION_CONTENT_DEPENDENCIES = [
-    :child_dsls,
-    :custom_levels,
-    :parent_dsls,
-    :course_offerings,
-  ].freeze
-
-  UI_TEST_CONTENT_DEPENDENCIES = [
-    :child_dsls_ui_tests,
-    :custom_levels_ui_tests,
-    :parent_dsls_ui_tests,
-    :course_offerings_ui_tests,
-  ].freeze
-
-  # Development seeds both lists. Rake runs each task once per process, at the
-  # first position it appears in, so the production tasks dropped here still run
-  # under :scripts, ahead of these.
-  UI_TEST_SCRIPTS_DEPENDENCIES =
-    (SCRIPTS_DEPENDENCIES - PRODUCTION_CONTENT_DEPENDENCIES + UI_TEST_CONTENT_DEPENDENCIES).freeze
 
   timed_task_with_logging scripts_ui_tests: UI_TEST_SCRIPTS_DEPENDENCIES do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
@@ -249,7 +247,7 @@ namespace :seed do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
-  timed_task_with_logging scripts_adhoc: SCRIPTS_DEPENDENCIES do
+  timed_task_with_logging scripts_adhoc: PRODUCTION_SCRIPTS_DEPENDENCIES do
     update_scripts(script_files: ADHOC_SCRIPTS)
   end
 
