@@ -14,7 +14,6 @@ import type {RootState} from './redux';
 import type {
   AilabProject,
   DataRow,
-  Dataset,
   Metadata,
   TrainedModelDetailsSave,
 } from './types';
@@ -28,8 +27,6 @@ const NO_ROWS: DataRow[] = Object.freeze([]) as unknown as DataRow[];
 const NO_COLUMN_TYPES: Record<string, string> = Object.freeze({});
 const NO_METADATA: Metadata = Object.freeze({card: Object.freeze({})});
 
-export const getDataset = (state: RootState): Dataset | undefined =>
-  state.dataset;
 export const getData = (state: RootState): DataRow[] =>
   state.dataset?.rows ?? NO_ROWS;
 export const getColumnsByDataType = (
@@ -52,14 +49,6 @@ export const getDatasetId = (state: RootState): string | undefined =>
   state.dataset?.metadata.name;
 export const getRemovedRowsCount = (state: RootState): number =>
   state.dataset?.removedRowsCount ?? 0;
-export const getInvalidData = (state: RootState): string | undefined =>
-  state.invalidData;
-/* The chosen dataset's display name, which an upload does not have. */
-export const getSelectedName = (state: RootState): string | undefined =>
-  state.name;
-/* The chosen CSV: a path for one of ours, the file itself for an upload. */
-export const getSelectedCsv = (state: RootState): string | File | undefined =>
-  state.csvfile;
 
 export type DatasetStatus = 'none' | 'loading' | 'failed' | 'loaded';
 

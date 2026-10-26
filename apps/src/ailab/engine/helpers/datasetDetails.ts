@@ -1,6 +1,6 @@
 import I18n from '../i18n';
 import type {RootState} from '../redux';
-import {getData, getMetadata, getSelectedCsv} from '../selectors';
+import {getData, getMetadata} from '../selectors';
 import type {DatasetDetails} from '../types';
 
 /* Helper functions for getting information about the selected dataset. */
@@ -71,11 +71,11 @@ export function getDatasetDescription(state: RootState): string {
 export function isUserUploadedDataset(state: RootState): boolean {
   // The csvfile for internally curated datasets are strings; those uploaded by
   // users are objects. Use data type as a proxy to know which case we're in.
-  const csvfile = getSelectedCsv(state);
+  const csvfile = state.csvfile;
   return typeof csvfile === 'object' && csvfile !== null;
 }
 
 export function getUploadedFileName(state: RootState): string | undefined {
-  const csvfile = getSelectedCsv(state);
+  const csvfile = state.csvfile;
   return typeof csvfile === 'object' ? csvfile.name : undefined;
 }

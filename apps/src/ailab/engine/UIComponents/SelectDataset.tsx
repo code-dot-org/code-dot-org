@@ -17,7 +17,6 @@ import {
   resetState as resetStateAction,
   getSpecifiedDatasets,
 } from '../redux';
-import {getInvalidData, getSelectedCsv, getSelectedName} from '../selectors';
 
 import DatasetTile from './DatasetTile';
 import UploadedFileChip from './UploadedFileChip';
@@ -27,9 +26,9 @@ import styles from './selectDataset.module.scss';
 const SelectDataset = () => {
   const dispatch = useAppDispatch();
   const specifiedDatasets = useAppSelector(getSpecifiedDatasets);
-  const name = useAppSelector(getSelectedName);
-  const csvfile = useAppSelector(getSelectedCsv);
-  const invalidData = useAppSelector(getInvalidData);
+  const name = useAppSelector(state => state.name);
+  const csvfile = useAppSelector(state => state.csvfile);
+  const invalidData = useAppSelector(state => state.invalidData);
   // Held only while the picker is open, so moving on with one of our datasets
   // drops the upload.
   const [uploadedFile, setUploadedFile] = useState(() =>

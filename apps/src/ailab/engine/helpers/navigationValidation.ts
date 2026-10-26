@@ -1,6 +1,6 @@
 import I18n from '../i18n';
 import type {RootState} from '../redux';
-import {getData, getInvalidData} from '../selectors';
+import {getData} from '../selectors';
 import type {AilabProject, NavButton, PrevNextButtons} from '../types';
 
 import {areArraysEqual} from './utils';
@@ -81,7 +81,7 @@ function isPanelAvailable(state: RootState, panelId: string): boolean {
 }
 
 function isDataUploaded(state: RootState): boolean {
-  return getData(state).length > 0 && !getInvalidData(state);
+  return getData(state).length > 0 && !state.invalidData;
 }
 
 export function uniqLabelFeaturesSelected(project: AilabProject): boolean {
