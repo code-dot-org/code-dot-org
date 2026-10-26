@@ -6,20 +6,30 @@ export function itemsOn(matchSets: MatchSets, side: MatchSide): MatchItem[] {
   return matchSets[side === 'start' ? 0 : 1];
 }
 
-// Pairing two items replaces any pair either was already in, so each item
-// has at most one partner. Pairing two items that are already partners
-// unpairs them instead.
-export function toggleMatch(
+export function hasPair(
+  pairs: MatchPairs,
+  [startId, endId]: [string, string]
+): boolean {
+  return pairs.some(([start, end]) => start === startId && end === endId);
+}
+
+// Removes any pair either item was already in, so each item has at most
+// one partner.
+export function setPair(
   pairs: MatchPairs,
   [startId, endId]: [string, string]
 ): MatchPairs {
-  const isExisting = pairs.some(
-    ([start, end]) => start === startId && end === endId
-  );
-  const others = pairs.filter(
-    ([start, end]) => start !== startId && end !== endId
-  );
-  return isExisting ? others : [...others, [startId, endId]];
+  return [
+    ...pairs.filter(([start, end]) => start !== startId && end !== endId),
+    [startId, endId],
+  ];
+}
+
+export function removePair(
+  pairs: MatchPairs,
+  [startId, endId]: [string, string]
+): MatchPairs {
+  return pairs.filter(([start, end]) => !(start === startId && end === endId));
 }
 
 export function partnerOf(pairs: MatchPairs, id: string): string | undefined {

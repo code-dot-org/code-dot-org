@@ -7,7 +7,7 @@ import QuestionDescription from '../QuestionDescription';
 
 import MatchColumn from './MatchColumn';
 import {MatchPairs, MatchSets, MatchSide} from './types';
-import {labelOf, toggleMatch} from './utils';
+import {hasPair, labelOf, removePair, setPair} from './utils';
 
 import styles from './match-question-container.module.scss';
 
@@ -101,19 +101,18 @@ const MatchQuestionContainer: React.FunctionComponent<
       setSelected(selected?.id === id ? null : {side, id});
       return;
     }
-    const [startId, endId]: [string, string] =
+    const pair: [string, string] =
       side === 'end' ? [selected.id, id] : [id, selected.id];
-    const isUnmatch = pairs.some(
-      ([start, end]) => start === startId && end === endId
-    );
-    const startLabel = labelOf(matchSets, startId);
-    const endLabel = labelOf(matchSets, endId);
+    // Choosing a pair that already exists unmatches it.
+    const isUnmatch = hasPair(pairs, pair);
+    const startLabel = labelOf(matchSets, pair[0]);
+    const endLabel = labelOf(matchSets, pair[1]);
     setAnnouncement(
       isUnmatch
         ? `Unmatched ${startLabel} from ${endLabel}.`
         : `Matched ${startLabel} with ${endLabel}.`
     );
-    onChangePairs(toggleMatch(pairs, [startId, endId]));
+    onChangePairs(isUnmatch ? removePair(pairs, pair) : setPair(pairs, pair));
     setSelected(null);
   };
 

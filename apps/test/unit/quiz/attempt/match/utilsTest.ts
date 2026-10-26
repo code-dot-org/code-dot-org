@@ -1,25 +1,26 @@
-import {partnerOf, toggleMatch} from '@cdo/apps/quiz/attempt/match/utils';
+import {
+  hasPair,
+  partnerOf,
+  removePair,
+  setPair,
+} from '@cdo/apps/quiz/attempt/match/utils';
 
-describe('toggleMatch', () => {
-  it('adds a new pair', () => {
-    expect(toggleMatch([], ['a', 'x'])).toEqual([['a', 'x']]);
+describe('hasPair', () => {
+  it('is true only for an existing pair, in [start, end] order', () => {
+    expect(hasPair([['a', 'x']], ['a', 'x'])).toBe(true);
+    expect(hasPair([['a', 'x']], ['a', 'y'])).toBe(false);
+    expect(hasPair([['a', 'x']], ['x', 'a'])).toBe(false);
   });
+});
 
-  it('removes a pair that already exists', () => {
-    expect(
-      toggleMatch(
-        [
-          ['a', 'x'],
-          ['b', 'y'],
-        ],
-        ['a', 'x']
-      )
-    ).toEqual([['b', 'y']]);
+describe('setPair', () => {
+  it('adds a new pair', () => {
+    expect(setPair([], ['a', 'x'])).toEqual([['a', 'x']]);
   });
 
   it("replaces either item's previous pair", () => {
     expect(
-      toggleMatch(
+      setPair(
         [
           ['a', 'x'],
           ['b', 'y'],
@@ -27,6 +28,20 @@ describe('toggleMatch', () => {
         ['a', 'y']
       )
     ).toEqual([['a', 'y']]);
+  });
+});
+
+describe('removePair', () => {
+  it('removes only that pair', () => {
+    expect(
+      removePair(
+        [
+          ['a', 'x'],
+          ['b', 'y'],
+        ],
+        ['a', 'x']
+      )
+    ).toEqual([['b', 'y']]);
   });
 });
 
