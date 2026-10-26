@@ -433,3 +433,14 @@ describe('train.refit', () => {
     });
   });
 });
+
+describe('train.onClickTrain', () => {
+  test("a level's k replaces the sweep, which never tries 2", () => {
+    const {run} = trainAndSave(
+      {hyperparameters: {k: 2}},
+      TestDataLocations.END
+    );
+
+    expect(run.hyperparameters).toEqual({k: 2});
+  });
+});

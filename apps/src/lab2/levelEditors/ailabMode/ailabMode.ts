@@ -259,6 +259,7 @@ export function setPretrained(
 const SET_BY_HIDDEN_TESTING: ModeObject = {
   requireAccuracy: undefined,
   hideSave: undefined,
+  hyperparameters: undefined,
 };
 
 export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {

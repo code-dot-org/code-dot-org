@@ -259,7 +259,7 @@ describe('EditAilabMode', () => {
 
   it('drops the training options saved with the testing view hidden', () => {
     const savedMode = renderEditor(
-      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true}'
+      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}}'
     );
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
@@ -268,27 +268,32 @@ describe('EditAilabMode', () => {
   });
 
   it('clears and locks the training options while the testing view is hidden', () => {
-    const savedMode = renderEditor('{"requireAccuracy": 70, "hideSave": true}');
+    const savedMode = renderEditor(
+      '{"requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}}'
+    );
     const accuracy = screen.getByRole('spinbutton', {
       name: /Required accuracy/,
     });
     const hideSave = screen.getByRole('checkbox', {
       name: 'Hide the save model step',
     });
+    const k = () =>
+      screen.getByRole('spinbutton', {name: /Number of neighbors \(k\)/});
     const hideTestingView = screen.getByRole('checkbox', {
       name: 'Hide training and testing so students only explore the dataset',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave].forEach(field => expect(field).toBeDisabled());
-    expect(accuracy).toHaveValue(null);
+    [accuracy, hideSave, k()].forEach(field => expect(field).toBeDisabled());
+    [accuracy, k()].forEach(field => expect(field).toHaveValue(null));
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
       trainer: 'knn',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave].forEach(field => expect(field).toBeEnabled());
+    [accuracy, hideSave, k()].forEach(field => expect(field).toBeEnabled());
+    expect(k()).toHaveValue(null);
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 

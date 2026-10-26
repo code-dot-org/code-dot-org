@@ -140,10 +140,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     expect(run.hyperparameters).toEqual({maxDepth: 1});
   });
 
-  /*
-    `x` separates A from {B, C} but cannot tell B from C, so one split scores
-    50% and two score 100%. The reserved rows are the last two, one B and one C.
-  */
+  // One split separates A; two are needed to tell the reserved B and C apart.
   function setUpTwoSplitLabel(mode) {
     const combinations = [
       {label: 'A', x: '0', y: '0'},
@@ -168,10 +165,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     );
   }
 
-  /*
-    The complement of the tie case, and the reason it is not enough on its own:
-    a sweep that always returned the first candidate would pass that test.
-  */
+  // The tie case alone would pass a sweep that always kept the first candidate.
   test('a deeper tree wins when one split cannot separate the label', () => {
     const {store, trainer} = setUpTwoSplitLabel();
 

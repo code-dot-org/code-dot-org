@@ -18,12 +18,13 @@ const isBlank = (text: string) => text.trim() === '';
 
 interface HyperparameterFieldProps {
   mode: ModeObject;
+  disabled: boolean;
   onChange: (mode: ModeObject) => void;
 }
 
 const HyperparameterField: React.FunctionComponent<
   HyperparameterFieldProps
-> = ({mode, onChange}) => {
+> = ({mode, disabled, onChange}) => {
   const [text, setText] = useState(() => String(getHyperparameter(mode) ?? ''));
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,6 +52,7 @@ const HyperparameterField: React.FunctionComponent<
       step={1}
       value={text}
       onChange={handleChange}
+      disabled={disabled}
       helperMessage="The model is built with this value. Leave blank to try several and keep the most accurate."
       errorMessage={error}
       size="s"

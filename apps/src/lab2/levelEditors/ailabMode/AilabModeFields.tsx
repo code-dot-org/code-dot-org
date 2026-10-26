@@ -99,6 +99,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
 
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
+  const hyperparameterLocked = isSetByHiddenTesting(mode, 'hyperparameters');
 
   let columnsHelperMessage: string | undefined;
   if (!selectedDataset) {
@@ -267,8 +268,9 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
       </div>
       <div className={moduleStyles.fieldArea}>
         <HyperparameterField
-          key={selectedTrainer}
+          key={`${selectedTrainer}:${hyperparameterLocked}`}
           mode={mode}
+          disabled={hyperparameterLocked}
           onChange={changeMode}
         />
       </div>

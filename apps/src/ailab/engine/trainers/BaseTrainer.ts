@@ -55,10 +55,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
 
   protected abstract hyperparameters(candidate: Candidate): Hyperparameters;
 
-  /*
-    The inverse of hyperparameters(), so a saved run or a level's values can be
-    built exactly. Undefined when the values belong to another algorithm.
-  */
+  // Inverts hyperparameters(); undefined for another algorithm's values.
   protected abstract candidateFor(
     hyperparameters: Hyperparameters
   ): Candidate | undefined;
