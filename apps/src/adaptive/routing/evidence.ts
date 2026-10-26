@@ -20,34 +20,20 @@ type EvidencePointer = {kind: EvidenceSource; stepId: string} & (
 interface EvidenceObservation {
   skillId: string;
   evidenceLevel: number;
-  source: EvidenceSource;
   from: EvidencePointer;
 }
 
 /** What has been shown about one skill. */
 interface SkillEvidence {
   skillId: string;
-  /** The highest evidence level the standing source showed; 0 is no evidence. */
+  /** The highest evidence level any observation showed; 0 is no evidence. */
   evidenceLevel: number;
-  /** The strongest source that showed anything for this skill. */
-  source: EvidenceSource;
-  /** That source's observations at this evidence level. */
+  /** The observations at that evidence level, whatever made them. */
   from: EvidencePointer[];
 }
 
 /** All the evidence one pathway holds for a student, by skill id. A skill nothing has measured is absent. */
 export type PathwayEvidence = {[skillId: string]: SkillEvidence};
-
-/**
- * How much each source outranks the others. Where two show the same skill
- * the higher-ranked one's evidence stands whatever its evidence level,
- * since what a student did outranks what they answered. Sources of equal
- * rank are weighed by evidence level, as observations within one source are.
- */
-const SOURCE_RANK: {[source in EvidenceSource]: number} = {
-  validation: 2,
-  questions: 1,
-};
 
 /** The default target for a skill a checkpoint lists but sets no target for. */
 const DEFAULT_TARGET_EVIDENCE_LEVEL = 1;
@@ -75,25 +61,18 @@ export function computeEvidence(
 }
 
 /**
- * Folds one observation into the evidence map. A stronger source replaces
- * what a weaker one showed; the same source keeps the higher evidence level,
- * with the pointers of every observation that showed it; a weaker source or
- * a lower evidence level changes nothing.
+ * Folds one observation into the evidence map: the skill keeps its highest
+ * evidence level, with the pointers of every observation that showed it.
+ * Evidence never goes down, whatever made the lower observation.
  */
 function addObservation(
   evidence: PathwayEvidence,
-  {skillId, evidenceLevel, source, from}: EvidenceObservation
+  {skillId, evidenceLevel, from}: EvidenceObservation
 ): void {
   const prior = evidence[skillId];
-  const rank = SOURCE_RANK[source];
-  const priorRank = prior ? SOURCE_RANK[prior.source] : 0;
-  const higher =
-    !prior ||
-    rank > priorRank ||
-    (rank === priorRank && evidenceLevel > prior.evidenceLevel);
-  if (higher) {
-    evidence[skillId] = {skillId, evidenceLevel, source, from: [from]};
-  } else if (rank === priorRank && evidenceLevel === prior.evidenceLevel) {
+  if (!prior || evidenceLevel > prior.evidenceLevel) {
+    evidence[skillId] = {skillId, evidenceLevel, from: [from]};
+  } else if (evidenceLevel === prior.evidenceLevel) {
     evidence[skillId] = {...prior, from: [...prior.from, from]};
   }
 }
@@ -127,7 +106,6 @@ function levelStepEvidence(
   return (entry?.validationHistory ?? []).map(attempt => ({
     skillId,
     evidenceLevel: attempt.evidenceLevel,
-    source: 'validation',
     from: {kind: 'validation', stepId: step.id, at: attempt.at},
   }));
 }
@@ -156,7 +134,6 @@ function questionsStepEvidence(
     observations.push({
       skillId: question.measures.skillId,
       evidenceLevel,
-      source: 'questions',
       from: {kind: 'questions', stepId: step.id, questionId: question.id},
     });
   }

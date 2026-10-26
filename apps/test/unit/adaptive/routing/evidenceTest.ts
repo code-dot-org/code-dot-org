@@ -171,7 +171,6 @@ describe('computeEvidence', () => {
       build: {
         skillId: 'build',
         evidenceLevel: 2,
-        source: 'questions',
         from: [question('intro-check', 1)],
       },
     });
@@ -236,7 +235,6 @@ describe('computeEvidence', () => {
       build: {
         skillId: 'build',
         evidenceLevel: 2,
-        source: 'validation',
         from: [validation('build-page', '2026-10-22T10:01:00Z')],
       },
     });
@@ -251,16 +249,27 @@ describe('computeEvidence', () => {
     });
   });
 
-  it("lets a check of the student's work outrank what they answered, at any evidence level", () => {
+  it('keeps the highest evidence level whatever showed it, so a check never lowers what answers showed, nor the reverse', () => {
     const progress: Progress = {
       steps: {
         ...answered({'intro-check': {1: ['c']}}).steps,
         ...checked('build-page', [1]).steps,
       },
     };
-    expect(computeEvidence(pathway, progress).build).toMatchObject({
-      evidenceLevel: 1,
-      source: 'validation',
+    expect(computeEvidence(pathway, progress).build).toEqual({
+      skillId: 'build',
+      evidenceLevel: 2,
+      from: [question('intro-check', 1)],
+    });
+    const checkedHigher: Progress = {
+      steps: {
+        ...answered({'intro-check': {1: ['b']}}).steps,
+        ...checked('build-page', [2]).steps,
+      },
+    };
+    expect(computeEvidence(pathway, checkedHigher).build).toMatchObject({
+      evidenceLevel: 2,
+      from: [validation('build-page', '2026-10-22T10:00:00Z')],
     });
   });
 
@@ -284,7 +293,6 @@ describe('isDemonstrated', () => {
     build: {
       skillId: 'build',
       evidenceLevel: build,
-      source: 'questions',
       from: [],
     },
   });
