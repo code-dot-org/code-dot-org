@@ -3,6 +3,7 @@ import {z} from 'zod';
 import {
   InstructionTypes,
   InstructorAudiences,
+  LessonGroupSchema,
   LessonGroupSummarySchema,
   LessonSchema,
   LessonSummarySchema,
@@ -18,6 +19,7 @@ import {
 } from './courses.schemata';
 
 export type LessonGroupSummary = z.infer<typeof LessonGroupSummarySchema>;
+export type LessonGroup = z.infer<typeof LessonGroupSchema>;
 export type UnitSummary = z.infer<typeof UnitSummarySchema>;
 export type UnitShortSummary = z.infer<typeof UnitShortSummarySchema>;
 export type Lesson = z.infer<typeof LessonSchema>;

@@ -163,6 +163,8 @@ export const UnitLevelDefinitionSchema = z.object({
   uses_lab2: z.boolean(),
   is_validated: z.boolean(),
   can_have_feedback: z.boolean(),
+  // The progression a level belongs to, grouping adjacent levels in a lesson.
+  progression: z.string().optional(),
   progression_display_name: z.string().optional(),
   name: z.string().optional(),
   sublevels: z.array(SublevelSchema).optional(),
@@ -198,6 +200,7 @@ export const LessonDefinitionSchema = z.object({
   description_student: z.string(),
   description_teacher: z.string(),
   unplugged: z.boolean().nullable(),
+  lessonTutorPath: z.string().nullable().optional(),
   lessonEditPath: z.string(),
   lessonStartUrl: z.string(),
   duration: z.number(),
@@ -213,6 +216,21 @@ export const LessonDefinitionSchema = z.object({
 });
 
 export const LessonSchema = LessonDefinitionSchema.transform(data =>
+  camelcaseKeys(data, {deep: true}),
+);
+
+/** A unit's lesson group, as LessonGroup#summarize gives it. */
+export const LessonGroupDefinitionSchema = z.object({
+  id: z.number(),
+  key: z.string(),
+  display_name: z.string(),
+  description: z.string().nullable(),
+  big_questions: z.string().nullable(),
+  user_facing: z.boolean(),
+  position: z.number(),
+});
+
+export const LessonGroupSchema = LessonGroupDefinitionSchema.transform(data =>
   camelcaseKeys(data, {deep: true}),
 );
 

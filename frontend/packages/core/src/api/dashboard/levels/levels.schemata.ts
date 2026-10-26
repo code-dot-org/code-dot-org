@@ -24,6 +24,34 @@ export const LevelPredictSettingsSchema = z.object({
   isMultiSelect: z.boolean().optional(),
 });
 
+/**
+ * One condition of a Lab2 validation. What `name` means is up to the lab's
+ * validator; `value` is a count, a string such as 'true', or absent.
+ */
+export const ConditionSchema = z
+  .object({
+    name: z.string(),
+    value: z.union([z.string(), z.number()]).nullable().optional(),
+  })
+  // One level file stores null; read it as absent.
+  .transform(({name, value}): {name: string; value?: string | number} =>
+    value === null || value === undefined ? {name} : {name, value},
+  );
+
+/**
+ * A levelbuilder-written Lab2 validation: when every condition holds, show
+ * `message`, and let the student continue if `next`. Java Lab and Python Lab
+ * derive a single PASSED_ALL_TESTS validation server side, with no `key`.
+ */
+export const ValidationSchema = z.object({
+  conditions: z.array(ConditionSchema),
+  message: z.string(),
+  next: z.boolean(),
+  key: z.string().optional(),
+  callout: z.string().optional(),
+  comment: z.string().optional(),
+});
+
 export const ExemplarSettingsSchema = z.object({
   playerEnabled: z.boolean().optional(),
   validationEnabled: z.boolean(),
@@ -79,6 +107,7 @@ export const LevelPropertiesBaseSchema = z
     teacherMarkdown: z.string().optional(),
     predictSettings: LevelPredictSettingsSchema.optional(),
     exemplarSettings: ExemplarSettingsSchema.optional(),
+    validations: z.array(ValidationSchema).optional(),
     submittable: z.boolean().optional(),
     disableEditRunForSubmission: z.boolean().optional(),
     skipUrl: z.string().optional(),
