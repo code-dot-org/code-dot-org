@@ -18,12 +18,8 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   PreSkillsCheck: () => <div>pre-skills-check</div>,
   TutorSummaryBox: () => <div>tutor-summary</div>,
   NextStepPicker: () => <div>next-step</div>,
+  ReflectionBox: () => <div>reflection</div>,
 }));
-
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox',
-  () => ({__esModule: true, default: () => <div>reflection</div>})
-);
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox',

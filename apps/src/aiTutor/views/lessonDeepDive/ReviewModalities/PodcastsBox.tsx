@@ -1,4 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {ReflectionData} from '@code-dot-org/lesson-deep-dive';
 import React, {
   FC,
   useCallback,
@@ -8,10 +9,7 @@ import React, {
   useState,
 } from 'react';
 
-import {
-  LessonDeepDiveData,
-  ReflectionData,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 

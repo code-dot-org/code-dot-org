@@ -1,6 +1,11 @@
 import {type Mock, describe, expect, it, vi} from 'vitest';
 
-import {listChallenges} from '../api';
+import {
+  generatePodcast,
+  listChallenges,
+  saveLessonObjectiveReflection,
+  saveLessonReflection,
+} from '../api';
 
 const makeTransport = () => {
   const request: Mock = vi.fn();
@@ -48,5 +53,50 @@ describe('listChallenges', () => {
         whiteboard_starter_image_url: null,
       },
     ]);
+  });
+});
+
+describe('saveLessonReflection', () => {
+  it('should post the lesson reflection', async () => {
+    const {transport, request} = makeTransport();
+    request.mockResolvedValue({});
+
+    await saveLessonReflection(transport, 42, 'Loops', 'Recursion');
+
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/user_lesson_reflections',
+      body: {lesson_id: 42, success: 'Loops', struggle: 'Recursion'},
+    });
+  });
+});
+
+describe('saveLessonObjectiveReflection', () => {
+  it('should post the objective reflection', async () => {
+    const {transport, request} = makeTransport();
+    request.mockResolvedValue({});
+
+    await saveLessonObjectiveReflection(transport, '7', 'unsure');
+
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/user_lesson_objective_reflections',
+      body: {objective_id: '7', reflection: 'unsure'},
+    });
+  });
+});
+
+describe('generatePodcast', () => {
+  it('should post the lesson and the objectives to cover', async () => {
+    const {transport, request} = makeTransport();
+    request.mockResolvedValue({});
+
+    await generatePodcast(transport, 42, ['1', '2']);
+
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/ai_student_podcasts/generate_podcast',
+      body: {lesson_id: 42, objective_ids: ['1', '2']},
+    });
   });
 });
