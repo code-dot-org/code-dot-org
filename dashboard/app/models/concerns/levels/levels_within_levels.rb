@@ -216,9 +216,10 @@ module Levels
     end
 
     # Of the given child level names, those in a different partition from
-    # this level. Ignores nil entries.
+    # this level. Ignores blank entries, which the edit form submits for an
+    # empty project template field.
     def cross_partition_child_names(child_names)
-      child_names.compact.reject {|child_name| Policies::LevelFiles.same_partition?(child_name, name)}
+      child_names.compact_blank.reject {|child_name| Policies::LevelFiles.same_partition?(child_name, name)}
     end
 
     def cross_partition_children_message(offending_child_names)

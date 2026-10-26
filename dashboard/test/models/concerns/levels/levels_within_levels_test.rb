@@ -297,4 +297,13 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     project.reload.project_template_level_name = subproject.name
     assert project.valid?
   end
+
+  test 'can create level with blank child level names' do
+    ['New LevelsWithinLevels Blank Project', 'UI Test LevelsWithinLevels blank parent', 'LevelsWithinLevels blank parent'].each do |name|
+      level = create(:level, name: name)
+      level.project_template_level_name = ''
+      level.contained_level_names = ['']
+      assert level.valid?, level.errors.full_messages.inspect
+    end
+  end
 end
