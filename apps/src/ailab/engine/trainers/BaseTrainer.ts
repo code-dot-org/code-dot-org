@@ -1,7 +1,6 @@
 /*
-  The training flow shared by every trainer: sweep a list of candidate
-  hyperparameters, or only the level's if it sets them, keep the model that
-  grades best, and return it.
+  The training flow shared by every trainer: build the level's hyperparameters
+  if it sets them, else sweep the candidates and keep the most accurate model.
 
   A subclass supplies only what differs between algorithms — which candidates
   to try, how to build a model from one, and how to name it for the saved

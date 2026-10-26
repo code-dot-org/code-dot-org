@@ -7,7 +7,6 @@ export type Hyperparameters = {k: number} | {maxDepth: number};
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;
-  // Builds only this model instead of keeping the most accurate of several.
   hyperparameters?: Hyperparameters;
   label?: string;
   features?: string[];

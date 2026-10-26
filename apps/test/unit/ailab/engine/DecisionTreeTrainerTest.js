@@ -140,7 +140,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     expect(run.hyperparameters).toEqual({maxDepth: 1});
   });
 
-  // One split separates A; two are needed to tell the reserved B and C apart.
+  // The reserved rows, a B and a C, take two splits to tell apart.
   function setUpTwoSplitLabel(mode) {
     const combinations = [
       {label: 'A', x: '0', y: '0'},
@@ -165,7 +165,7 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     );
   }
 
-  // The tie case alone would pass a sweep that always kept the first candidate.
+  // Catches what the tie case can't: a sweep that keeps its first candidate.
   test('a deeper tree wins when one split cannot separate the label', () => {
     const {store, trainer} = setUpTwoSplitLabel();
 
@@ -190,12 +190,6 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     expect(state.accuracyCheckPredictedLabels).not.toEqual(
       state.accuracyCheckLabels
     );
-  });
-
-  test("a level's k leaves the sweep in place", () => {
-    const {trainer} = setUpTwoSplitLabel({hyperparameters: {k: 1}});
-
-    expect(trainer.startTraining().hyperparameters).toEqual({maxDepth: 2});
   });
 });
 

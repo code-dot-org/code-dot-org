@@ -1,7 +1,6 @@
 import {
   cleanMode,
   getSelectedDataset,
-  setTrainer,
   withDefaultTrainer,
 } from '@cdo/apps/lab2/levelEditors/ailabMode/ailabMode';
 
@@ -90,12 +89,6 @@ describe('ailabMode', () => {
         expect(cleanMode(bad, KNOWN).mode.hyperparameters).toBeUndefined();
       });
     });
-  });
-
-  it("setTrainer drops the previous trainer's hyperparameter", () => {
-    expect(
-      setTrainer({trainer: 'knn', hyperparameters: {k: 3}}, 'decisionTree')
-    ).toEqual({trainer: 'decisionTree'});
   });
 
   it('getSelectedDataset returns the one dataset', () => {

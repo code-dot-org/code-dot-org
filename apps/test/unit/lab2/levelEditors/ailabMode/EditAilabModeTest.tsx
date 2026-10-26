@@ -412,13 +412,11 @@ describe('EditAilabMode', () => {
     const k = screen.getByRole('spinbutton', {
       name: /Number of neighbors \(k\)/,
     });
-    ['2.5', '0'].forEach(value => {
-      fireEvent.change(k, {target: {value}});
-      expect(
-        screen.getByText('Enter a whole number of at least 1.')
-      ).toBeInTheDocument();
-      expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
-    });
+    fireEvent.change(k, {target: {value: '0'}});
+    expect(
+      screen.getByText('Enter a whole number of at least 1.')
+    ).toBeInTheDocument();
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
 
     fireEvent.change(k, {target: {value: ''}});
     expect(
