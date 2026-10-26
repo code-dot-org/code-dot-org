@@ -10,6 +10,7 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {asActorData, isDataShaped, viewOf} from '../actors/actorData';
+import {asRuleData} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 
 /**
@@ -107,11 +108,18 @@ export function mapWorkspaces(
     // and what changed there is folded back (`actors/actorData`).
     const held = resolveRuleContents(file.contents);
     const data = isDataShaped(held);
+    // A rule held as data, or as a reference, is read as its view and written
+    // back as data (`rules/ruleData`); one written in blocks stays in blocks.
+    const ruleData = file.name.endsWith('.rule') && held !== file.contents;
     const renamed = rewrite(data ? viewOf(held) : held);
     if (renamed !== undefined) {
       files[id] = {
         ...file,
-        contents: data ? asActorData(renamed, held) : renamed,
+        contents: data
+          ? asActorData(renamed, held)
+          : ruleData
+            ? asRuleData(renamed)
+            : renamed,
       };
       changed = true;
     }

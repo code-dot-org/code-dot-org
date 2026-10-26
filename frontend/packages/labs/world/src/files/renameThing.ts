@@ -33,6 +33,7 @@ import {namedRootOf} from '../blockly/topBlocks';
 import {ENTRY_FILE} from '../constants';
 import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {writeScreenName} from '../mapEditor/screenProperties';
+import {asRuleData} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 
 import {fileStem, renamed} from './newThing';
@@ -218,7 +219,13 @@ export function renameThing(
   // …and resolved again: `renameRuleInSource` materializes the reference on
   // its way through, but it does not run when the declared name is already
   // the new one, and there would be nothing here to rewrite.
-  const named = renamed(resolveRuleContents(current.contents ?? ''), name);
+  const held = resolveRuleContents(current.contents ?? '');
+  // A rule held as data or as a reference is renamed in its view and kept
+  // as data (`rules/ruleData`).
+  const named =
+    wasRule && held !== (current.contents ?? '')
+      ? asRuleData(renamed(held, name))
+      : renamed(held, name);
   // …and a screen's own key, which the Main Screen keeps its name in and
   // which one never renamed does not hold yet (`mapEditor/screenProperties`).
   const contents = file.name.endsWith('.screen')

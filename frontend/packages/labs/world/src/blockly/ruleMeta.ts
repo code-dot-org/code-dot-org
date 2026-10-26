@@ -19,6 +19,7 @@ import type {
   WorldAction,
   WorldQuery,
 } from '../engine';
+import {ruleViewOf} from '../rules/ruleData';
 
 import type {ParamType, EnumMeta} from './enums';
 import type {SocketState} from './extensions/blockDesigner';
@@ -654,7 +655,8 @@ export function parseRuleMeta(
   // block's VAR field is a variable id); resolve id → name to label params.
   const variableNames = new Map<string, string>();
   try {
-    const parsed = JSON.parse(contents) as {
+    // A data-shaped rule is read as the workspace it stands for.
+    const parsed = JSON.parse(ruleViewOf(contents)) as {
       blocks?: {blocks?: RuleBlock[]};
       variables?: ReadonlyArray<{id?: string; name?: string}>;
     };

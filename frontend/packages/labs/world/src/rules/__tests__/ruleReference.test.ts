@@ -122,10 +122,11 @@ describe('the moment a rule becomes the learner’s', () => {
     expect(isRuleReference(starterFile('gravityRule').contents)).toBe(true);
   });
 
-  it('is a workspace once it has been renamed', () => {
+  it('is the learner’s own once it has been renamed, and kept as data', () => {
     const after = contentsOf('gravityRule');
 
     expect(isRuleReference(after)).toBe(false);
+    expect(JSON.parse(after).type).toBe('rule');
     expect(parseRuleMeta('rules/gravity', after)?.name).toBe('Moon Gravity');
   });
 
