@@ -17,7 +17,7 @@ import {shelvedToolbox} from '../../progression/toolboxShelf';
 import {collisionsRule} from '../../rules/stock/collisions';
 import {inputRule} from '../../rules/stock/input';
 import BlocklyGenerator from '../BlocklyGenerator';
-import {buildDomainPalette} from '../domainBlocks';
+import {buildDomainPalette, heldNotOffered} from '../domainBlocks';
 import {SUBJECT_FIELD} from '../eventSubject';
 import type {FileKind} from '../fileKind';
 import {
@@ -42,11 +42,20 @@ beforeAll(async () => {
   await new Promise(resolve => setTimeout(resolve, 50));
 });
 
-/** A workspace told it is editing a file of `kind`, with that kind's toolbox. */
+/**
+ * What a file of `kind` may hold, as the editor works it out: its toolbox,
+ * and what no drawer offers because an editor says it (`BlocklyFileEditor`).
+ */
+const holds = (kind: FileKind): Set<string> =>
+  new Set([
+    ...typesOffered(buildDomainPalette(RULES, {fileKind: kind}).toolbox),
+    ...heldNotOffered(kind),
+  ]);
+
+/** A workspace told it is editing a file of `kind`. */
 const fileOf = (kind: FileKind): Blockly.Workspace => {
   const workspace = new Blockly.Workspace();
-  const {toolbox} = buildDomainPalette(RULES, {fileKind: kind});
-  setFileContext(workspace, {kind, offered: typesOffered(toolbox)});
+  setFileContext(workspace, {kind, offered: holds(kind)});
   return workspace;
 };
 
@@ -96,12 +105,7 @@ describe('a definition with a home elsewhere', () => {
 
     // Moved to where it may be: a world file told it is an actor file is the
     // cheapest way to say so without a second workspace.
-    setFileContext(world, {
-      kind: 'actor',
-      offered: typesOffered(
-        buildDomainPalette(RULES, {fileKind: 'actor'}).toolbox,
-      ),
-    });
+    setFileContext(world, {kind: 'actor', offered: holds('actor')});
     expect(actor.hasDisabledReason(MISPLACED)).toBe(false);
     expect(row.hasDisabledReason(MISPLACED)).toBe(false);
   });

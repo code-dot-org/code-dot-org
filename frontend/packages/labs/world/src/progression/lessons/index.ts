@@ -1603,8 +1603,8 @@ far has moved together. A map's layers are listed beside it, front at the top.
    Hills on it. They now drift slower than the floor, which is what makes
    them look far away.
 
-The same can be said in blocks — **define layer** and the two rows that go in
-one — and that is how a layer is changed while the game runs.
+An actor added while the game runs goes on a layer with **within layer ⟨…⟩
+do**; the layers themselves are the map's, and are made here.
 `.trim(),
 };
 

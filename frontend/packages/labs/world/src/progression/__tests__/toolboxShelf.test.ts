@@ -386,7 +386,9 @@ describe('a gated first lesson', () => {
     // Hero's own file offers `define actor`, which is the other half.
     const offered = offeredAt('origin/first-world');
     expect(offered.has('world_add_actor')).toBe(true);
-    expect(offered.has('world_world')).toBe(true);
+    // Not `define world`, which no toolbox offers: a project has one world,
+    // and the lesson's is there (specs/ACTORS_AS_DATA_PLAN.md, step 6).
+    expect(offered.has('world_world')).toBe(false);
   });
 });
 

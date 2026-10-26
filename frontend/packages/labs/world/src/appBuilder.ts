@@ -75,15 +75,11 @@ export const APP_ENHANCEMENTS: ReadonlySet<string> = new Set(['typesOutText']);
  * for one would name a thing the learner has no way to make.
  */
 export const APP_HIDDEN_BLOCKS: ReadonlySet<string> = new Set([
-  // Layers.
-  'world_define_layer',
-  'world_layer_parallax',
-  'world_layer_fixed',
+  // Layers. (Defining one is the map editor's, and no toolbox offers it.)
   'world_within_layer',
   'world_add_layer_effect',
   'world_remove_layer_effect',
-  // Cameras.
-  'world_define_camera',
+  // Cameras. (Defining one is the Viewport inspector's.)
   'world_use_camera',
   'world_move_camera',
   'world_camera',

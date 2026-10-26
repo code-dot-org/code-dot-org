@@ -65,21 +65,15 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
     'variables_get_Actor',
     'world_kind_of',
     'world_actor_age',
-    'world_acts_like',
     'world_define_drawing',
   ],
   // The world's drawer, and the topics it was split into
   // (specs/TOOLBOX_TOPICS.md): the same blocks the one World drawer hid,
   // filed where they now live.
-  World: [
-    'world_set_view_size',
-    'world_actor_kind',
-    'world_remove_world_effect',
-  ],
+  World: ['world_actor_kind', 'world_remove_world_effect'],
   // Withheld whole: a world's cameras are made in the map editor, so the
   // camera lessons teach the camera inspector rather than these.
   Cameras: [
-    'world_define_camera',
     'world_use_camera',
     'world_move_camera',
     'world_camera',

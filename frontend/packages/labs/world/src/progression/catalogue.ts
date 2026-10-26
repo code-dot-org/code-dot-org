@@ -83,13 +83,14 @@ export const TILES: readonly Tile[] = [
       // below are still what it grants, and what the World view's toolbox
       // holds for anybody who looks.
       {kind: 'affordance', id: 'map-open-kind'},
-      // The seven blocks this lesson is done with, and not the drawers they
-      // live in: a first lesson that opened the whole Actor drawer would offer
+      // The blocks this lesson is done with, and not the drawers they live
+      // in: a first lesson that opened the whole Actor drawer would offer
       // forty-two blocks to somebody who has met three (progression/toolboxShelf).
-      {kind: 'block', type: 'world_actor'},
+      // Not `define actor` or `define world`, which no toolbox offers: an
+      // actor is made in the Actor Editor and a project has one world
+      // (specs/ACTORS_AS_DATA_PLAN.md, step 6).
       {kind: 'block', type: 'world_use_trait'},
       {kind: 'block', type: 'world_this_actor'},
-      {kind: 'block', type: 'world_world'},
       {kind: 'block', type: 'world_add_actor'},
       {kind: 'block', type: 'world_set_position'},
       {kind: 'block', type: 'world_set_sprite'},
@@ -1143,9 +1144,9 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_load_map_named'},
       {kind: 'block', type: 'world_unload_newest_map'},
       {kind: 'rule', id: 'screens'},
-      // How big the level is, and how a world with no map says so. Both are
-      // ideas about a world BIGGER than the view, which is `place/camera`.
-      {kind: 'block', type: 'world_set_map_size'},
+      // How big the level is, which is an idea about a world BIGGER than the
+      // view (`place/camera`). Read here; said by the map editor's Width and
+      // Height, which is where it is set.
       {kind: 'block', type: 'world_map_size'},
     ],
     check: {
@@ -1222,12 +1223,10 @@ export const TILES: readonly Tile[] = [
       // Where a layer is made: the map editor's strip, a layer's inspector,
       // and the layer a placement is on (specs/CURRICULUM_PLAN.md)…
       {kind: 'affordance', id: 'map-layers'},
-      // …and the blocks that say the same, which are how a layer changes
-      // while the game runs.
-      {kind: 'block', type: 'world_define_layer'},
+      // …and the one block that asks about a layer while the game runs.
+      // Defining one is the map editor's, and no toolbox offers that
+      // (specs/ACTORS_AS_DATA_PLAN.md, step 6).
       {kind: 'block', type: 'world_within_layer'},
-      {kind: 'block', type: 'world_layer_fixed'},
-      {kind: 'block', type: 'world_layer_parallax'},
     ],
     check: {
       kind: 'shape',
@@ -2701,17 +2700,10 @@ export const TILES: readonly Tile[] = [
       // find two screens, a form, a keyboard and a list already talking to
       // each other (`fixtures/app`, specs/APPS.md).
       {kind: 'template', id: 'app'},
-      // …and how the whole kit LOOKS, which is a file rather than an edit to
-      // every control: the drawings name a role — "button face", "field" —
-      // and this says which theme those roles are looked up in
-      // (specs/STYLES_PLAN.md). `use style` itself needs no grant; it is a pen
-      // block and arrives with the Drawing drawer at `look/drawing`.
-      //
-      // HERE FOR THE SAME REASON SAVING IS, and it should re-home with it: a
-      // theme is not what this lesson teaches, but it is the first lesson at
-      // which a learner has enough controls on the screen for one to mean
-      // anything (specs/APPS.md, "What is not taught").
-      {kind: 'block', type: 'world_use_theme'},
+      // NOT `use theme`, which no toolbox offers: which theme a Screen is
+      // painted in is the Screen's Theme field (specs/STYLES_PLAN.md,
+      // specs/ACTORS_AS_DATA_PLAN.md, step 6). `use style` needs no grant;
+      // it is a pen block and arrives with the Drawing drawer.
       // …and the two blocks an on-screen keyboard is built out of. A key
       // TYPES rather than reaching into a field, which is what lets one
       // keyboard fill any form (specs/KEYBOARD_PLAN.md); `press the ⟨…⟩ key`
@@ -2734,10 +2726,9 @@ export const TILES: readonly Tile[] = [
       // …and RECORDS, which is what an app keeps once one field is not
       // enough: a kind's actors, with the properties that kind declares
       // (specs/RECORDS_PLAN.md).
-      // …and the kind that IS a record: fields, and nowhere to be. Granted
-      // with the blocks that keep them, since one without the other is half
-      // a sentence (specs/RECORDS_PLAN.md).
-      {kind: 'block', type: 'world_actor_is_data'},
+      // …and the kind that IS a record — fields, and nowhere to be — is the
+      // Actor Editor's Is a record, which needs no grant
+      // (specs/ACTORS_AS_DATA_PLAN.md, step 3).
       {kind: 'block', type: 'world_remember_actors'},
       {kind: 'block', type: 'world_recall_actors'},
       // …and what a saved thing is usually saved WITH: the wall clock, which

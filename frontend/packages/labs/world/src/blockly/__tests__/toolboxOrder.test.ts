@@ -314,7 +314,10 @@ describe('an actor’s own blocks', () => {
     ).toEqual([]);
     expect(general?.blocks).not.toContain('world_get_number_property');
     expect(general?.blocks).not.toContain('world_set_actor_property');
+    // `use trait` stays until the lessons that ask for it are rewritten
+    // (specs/ACTORS_AS_DATA_PLAN.md, step 7); `acts like` is the panel's.
     expect(general?.blocks).toContain('world_use_trait');
+    expect(general?.blocks).not.toContain('world_acts_like');
   });
 
   it('gives no drawer, and no heading, to a project whose actors declare nothing', () => {

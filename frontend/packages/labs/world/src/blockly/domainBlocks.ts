@@ -11613,10 +11613,22 @@ export const DRAWING_CATEGORY: ToolboxCategory = {
 };
 
 const TOOLBOX_HEAD: ToolboxCategory[] = [
+  // NOTHING AN EDITOR ALREADY SAYS (specs/ACTORS_AS_DATA_PLAN.md, step 6). A
+  // block leaves these drawers when an editor establishes what it says and
+  // code has no reason to say it again: what an actor IS — `define actor`,
+  // `use trait`, `acts like`, `is a record`, its own `define property` — is
+  // the Actor Editor's; the world's own values are All maps'; its theme, its
+  // map and view size, its cameras and its layers are the Screen's and the
+  // map editor's. Each block stays registered, so a file that holds one
+  // loads and means what it meant. What changes something while the game
+  // runs stays: a background, an effect, a camera moved or used.
   {
     name: 'Actor',
     blocks: [
-      'world_actor',
+      // STILL HERE UNTIL THE LESSONS STOP ASKING FOR IT: some thirty send a
+      // learner to drag `use trait` under `define actor`, and they are
+      // rewritten for the panel's Add trait in the step that takes this out
+      // (specs/ACTORS_AS_DATA_PLAN.md, step 7).
       'world_use_trait',
       // NOT THE GENERAL PROPERTY PAIR any more, and taking it out is the whole
       // of what shortened this drawer. `get ⟨property ▾⟩ of ⟨actor⟩` is twelve
@@ -11697,18 +11709,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // looking for it had no reason to open that drawer. It belongs beside the
       // block that answers the other question a handler asks.
       'world_event_value',
-      // Being everything another kind of actor is, and going on being this
-      // one. The traits, the slots, the per-frame work and the picture come
-      // across; the KIND does not, so `any ⟨that one⟩` still means that one
-      // (`ActorBuilder.actsLike`).
-      'world_acts_like',
-      // Declaring state this KIND of actor carries. The same block a rule and a
-      // trait declare with: it already takes its meaning from where it sits, so
-      // a third site is what it was built for, and a separate near-identical
-      // block would invite trying the familiar one here and finding it inert.
+      // Declaring state this kind carries — until the lessons that teach it
+      // use Self (step 7, as `use trait` above).
       'world_rule_property',
-      // …and the behavior half of the same idea: work this KIND of actor does
-      // every frame. A rule is still the answer when the work is shared between
+      // Work this KIND of actor does every frame. A rule is still the answer when the work is shared between
       // kinds, elected, or answerable by `has trait`; this is for when it is
       // none of those (ActorBuilder.defineStep).
       'world_trait_step',
@@ -11723,9 +11727,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // the hat — the same block a rule declares its events with
       // (`ActorBuilder.defineEvent`).
       'world_rule_event',
-      // …and whether this kind is a RECORD at all: fields, and nowhere to be
-      // (specs/RECORDS_PLAN.md).
-      'world_actor_is_data',
       // …and the fourth: what this kind LOOKS like. A declaration like the
       // three above it and reached the same way — the pencil opens the pen and
       // the shapes on a surface of its own, which is why the Drawing drawer is
@@ -11743,12 +11744,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
   {
     name: 'World',
     blocks: [
-      'world_world',
-      // State this WORLD carries — a score, a level, a flag. The same block a
-      // rule and an actor declare with, in a fourth home, because it already
-      // takes its meaning from where it sits (specs/WORLD_STATE.md).
+      // State this world carries — until the lessons that teach it use All
+      // maps' values (step 7, as the Actor drawer's `use trait`).
       'world_rule_property',
-      // …and the VOCABULARY it carries: the words its maps raise. A map used
+      // The VOCABULARY the world carries: the words its maps raise. A map used
       // to declare its own, which meant a hundred level maps minted a hundred
       // different `complete` events and a hundred drawers to hold them; the
       // world declares them once and any map may raise them
@@ -11759,16 +11758,10 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // that projects saved with one keep loading and keep meaning what they
       // meant, and stays offered under Rule, where it is a rule's `requires`
       // and still a real statement. It goes entirely once nothing holds one.
-      // Which theme the interface is painted in — the file every `use style`
-      // in every drawing is looked up in (specs/STYLES_PLAN.md).
-      'world_use_theme',
-      // How big the level is, for anything that keeps a view inside it — and
-      // how a world without a `.map` file says so in the first place.
-      'world_set_map_size',
+      // How big the level is, and how much of it is on screen at once, for
+      // anything that keeps a view inside it. Read here; said by the map
+      // editor and the Screen.
       'world_map_size',
-      // …and how much of it is on screen at once, which is the world's to say
-      // as well: a room meant to be taken in at a glance says so here.
-      'world_set_view_size',
       'world_view_size',
       // Placing one actor at a time, where a map places many.
       'world_add_actor',
@@ -11833,8 +11826,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     // Where the view is taken from (specs/SPACE_CAMERAS_PLAN.md).
     name: 'Cameras',
     blocks: [
-      // Where the view is taken from; layers respond by their own parallax.
-      'world_define_camera',
+      // Which camera the view is taken from; layers respond by their own
+      // parallax. The cameras themselves are the Viewport's inspector's.
       'world_use_camera',
       'world_move_camera',
       // One camera by name, for a world wiring one up; and all of them, which
@@ -11870,12 +11863,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // score sharp (specs/VIEWPORT.md).
       'world_add_layer_effect',
       'world_remove_layer_effect',
-      // Grouping what is placed, and what draws in front of what.
-      'world_define_layer',
-      // The opt-in to parallax, and the separate question of whether the
-      // layer looks at the camera at all.
-      'world_layer_parallax',
-      'world_layer_fixed',
+      // Which layer an actor is in, while the game runs; the layers
+      // themselves are the map editor's.
       'world_within_layer',
     ],
   },
@@ -12611,6 +12600,38 @@ function generateRulePalette(
  * static built-in palette. Callers (BlocklyFileEditor, BlocklyGenerator) pass the
  * project's parsed rule `RuleMeta`.
  */
+/**
+ * Blocks no drawer offers, because an editor establishes what they say
+ * (specs/ACTORS_AS_DATA_PLAN.md, step 6), which a file may still HOLD: a
+ * world written with `define world`, its layers and its theme, loads and
+ * runs as it did. Not offered is not wrong to be there.
+ */
+export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
+  'world_actor',
+  'world_acts_like',
+  'world_actor_is_data',
+  'world_world',
+  'world_use_theme',
+  'world_set_map_size',
+  'world_set_view_size',
+  'world_define_camera',
+  'world_define_layer',
+  'world_layer_parallax',
+  'world_layer_fixed',
+]);
+
+/**
+ * What a `kind` of file may hold that its toolbox does not offer: each of
+ * those, unless it is a definition whose home is another kind of file.
+ */
+export const heldNotOffered = (kind: FileKind | undefined): Set<string> =>
+  new Set(
+    [...ESTABLISHED_ELSEWHERE].filter(type => {
+      const homes = ROOT_HOMES.get(type);
+      return !homes || !kind || homes.has(kind);
+    }),
+  );
+
 export function buildDomainPalette(
   projectRules: readonly RuleMeta[],
   options: {

@@ -9,7 +9,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {buildDomainPalette} from '../domainBlocks';
+import {buildDomainPalette, heldNotOffered} from '../domainBlocks';
 import {fileKindOf, moduleShape, ROOT_HOMES, type FileKind} from '../fileKind';
 
 const KINDS: FileKind[] = ['actor', 'world', 'rule', 'map', 'placement'];
@@ -52,18 +52,19 @@ describe('fileKindOf', () => {
 });
 
 describe('which definition roots a file may hold', () => {
-  it('offers `define actor` to an actor file alone', () => {
-    // Every actor is a file. A world once held its own; nothing offers one
-    // there now, and one that reaches a world anyway is refused (below).
-    expect(offeredTypes('actor')).toContain('world_actor');
-    expect(offeredTypes('world')).not.toContain('world_actor');
-    expect(offeredTypes('rule')).not.toContain('world_actor');
-  });
-
-  it('offers `define world` to a world alone', () => {
-    expect(offeredTypes('world')).toContain('world_world');
-    expect(offeredTypes('actor')).not.toContain('world_world');
-    expect(offeredTypes('rule')).not.toContain('world_world');
+  it('offers `define actor` and `define world` nowhere, and holds each at home', () => {
+    // What an actor is, is the Actor Editor's, and a project has one world
+    // (specs/ACTORS_AS_DATA_PLAN.md, step 6). A file written with one still
+    // holds it: an actor file its `define actor`, a world its `define world`.
+    for (const kind of KINDS) {
+      expect(offeredTypes(kind)).not.toContain('world_actor');
+      expect(offeredTypes(kind)).not.toContain('world_world');
+    }
+    expect(heldNotOffered('actor')).toContain('world_actor');
+    expect(heldNotOffered('world')).not.toContain('world_actor');
+    expect(heldNotOffered('world')).toContain('world_world');
+    expect(heldNotOffered('actor')).not.toContain('world_world');
+    expect(heldNotOffered('rule')).not.toContain('world_world');
   });
 
   it('gives the Rule category to a rule alone', () => {
@@ -73,9 +74,10 @@ describe('which definition roots a file may hold', () => {
   });
 
   it('keeps `use trait` when the Rule category goes', () => {
-    // It is listed in Actor as well, which is why dropping the whole category
-    // is safe. If that duplication ever went, this fails rather than an actor
-    // quietly losing the block that gives it a trait.
+    // Listed in Actor as well, until the lessons that ask for it are
+    // rewritten for the panel's Add trait (specs/ACTORS_AS_DATA_PLAN.md,
+    // step 7). If it went before them, this fails rather than a lesson
+    // quietly asking for a block nobody can find.
     expect(offeredTypes('actor')).toContain('world_use_trait');
   });
 
@@ -148,8 +150,8 @@ describe('which definition roots a file may hold', () => {
   it('offers everything when the file kind is unknown', () => {
     const anything = offeredTypes();
 
-    expect(anything).toContain('world_actor');
-    expect(anything).toContain('world_world');
+    expect(anything).toContain('world_rule');
+    expect(heldNotOffered(undefined)).toContain('world_actor');
     expect(categoryNames()).toContain('Rule');
   });
 

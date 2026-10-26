@@ -62,7 +62,7 @@ import styles from './blocklyFileEditor.module.css';
 import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
 import {actorCodeChoices, rootCodeRows} from './codeRoots';
 import {documentExtras, withDocumentExtras} from './documentExtras';
-import {buildDomainPalette} from './domainBlocks';
+import {buildDomainPalette, heldNotOffered} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {movedItself} from './editorEvents';
 import {type EventChoice} from './eventChoices';
@@ -633,7 +633,12 @@ export const BlocklyFileEditor = ({
       // instead disabled `define world` itself in any lesson opened before
       // `origin/first-world` was done, and a disabled world compiles to
       // `export default world` and nothing else (`misplacedBlocks`).
-      holdable: typesOffered(palette.toolbox),
+      // …and what no drawer offers because an editor says it, which a file
+      // written before is still right to hold (`heldNotOffered`).
+      holdable: new Set([
+        ...typesOffered(palette.toolbox),
+        ...heldNotOffered(fileKind),
+      ]),
     };
   }, [
     files,

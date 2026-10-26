@@ -338,13 +338,56 @@ instead, or nothing, and the unlock list says so
 (`progression/TileDetail`). What `define world`'s rows hold moving to the
 Screen and the maps is not this step's; only the blocks leave.
 
+BUILT, all but two. Out of the toolbox: `define actor`, `acts like` and
+`is a record` (the Actor Editor's); `define world` (a project has one);
+`use theme` (the Screen's Theme); `set map size` and `set view size` (the
+map editor's and the Screen's; the two reporters that read them stay);
+`define camera` (the Viewport's inspector); and `define layer`, `layer
+parallax` and `layer fixed` (the map editor's layers). Every one is a
+definition — `define layer` is hoisted by `define world`, and the sizes,
+the theme and the camera describe the world as it is built — so none has
+a reason to be said again while the game runs. `world_map` and
+`world_placement` stay: they name a map and a placement from a map's
+code, which runs. So do the background setters and effects.
+
+Found on the way, and the larger half of the step: a file may HOLD only
+what its palette offers (`misplacedBlocks`, `holdable`), so taking a
+block out of the toolbox would have disabled every world's own `define
+world`, its layers and its theme, and the world would have compiled to
+nothing. What a file holds is now its toolbox and `heldNotOffered`: the
+blocks taken out (`ESTABLISHED_ELSEWHERE`), less a definition whose home
+is another kind of file.
+
+The tiles that granted the blocks taken out grant them no longer:
+`origin/first-world` (`define actor`, `define world`), `place/map` (`set
+map size`), `place/layers` (the three layer blocks; `within layer`
+stays, and the lesson names it where it said blocks change a layer while
+the game runs, which they did not), and `story/form` (`use theme`, `is a
+record`). App Builder's hidden list loses the four no toolbox shows.
+
+Not yet: `use trait` and `define property` as an actor's or a world's.
+Some thirty lessons send a learner to drag `use trait`, and four teach
+`define property` under `define actor` or `define world` — the plan
+counted thirteen, by looking for `define actor` in their words — and a
+lesson asking for a block nobody can find is worse than a block still
+offered. They leave with step 7's rewrites, `use trait` staying under
+`define trait` and `define property` in a rule.
+
+In the browser: `place/layers`' world, whose `set size of map` no drawer
+offers now, opens with `define world` and that row enabled, and runs.
+
 ### 7. The lessons
 
-The thirteen are rewritten for the panel: a trait is added with Add trait, a
+Every lesson that sends a learner to `use trait`, `define property` on an
+actor or the world, or `define actor` — about thirty, not the thirteen
+first counted — is rewritten for the panel: a trait is added with Add trait, a
 property in Self, a value in its field, code with Code and the "+", and what
-happens when an actor is made in its `is created` handler. Their checks
-watch the running game and stay as they are; the tests that solve them edit
-data.
+happens when an actor is made in its `is created` handler; a world's own
+value is added in All maps' values. Their checks watch the running game and
+stay as they are; the tests that solve them edit data. With them, `use
+trait` and an actor's and a world's `define property` leave the toolbox
+(step 6), and the lesson test that every block a lesson asks for is
+offered says the rewrites are whole.
 
 ### 8. Documents, the browser, and the ledger
 
