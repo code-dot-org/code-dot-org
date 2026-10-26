@@ -141,15 +141,12 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
         : undefined,
     });
     const own = levelProperties.levelSystemPrompt;
-    const stepHasAiTutor =
-      levelProperties.aiTutorAvailable ||
-      (levelProperties.aiTutorPromptSettings?.answerTypes?.length ?? 0) > 0;
     return {
       // Default to pinning, but let the level override if needed.
       showInstructionsInAiTutor: true,
       ...levelProperties,
       hideShareAndRemix: true,
-      hideNonInstructionTabs: stepHasAiTutor,
+      hideNonInstructionTabs: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
     };
@@ -164,31 +161,25 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     instructions,
   ]);
 
-  const stepHasAiTutor =
-    levelProperties.aiTutorAvailable ||
-    (levelProperties.aiTutorPromptSettings?.answerTypes?.length ?? 0) > 0;
-
-  // When the level has an AI tutor, require at least one user message this
-  // session before enabling the Continue button.
+  // Require at least one user message this session before enabling Continue.
   const hasSentChatMessage = useAppSelector(state =>
-    state.aichat.chatEventsCurrent.some(
+    (state.aichat?.chatEventsCurrent ?? []).some(
       e => isChatMessage(e) && e.role === Role.USER
     )
   );
-  const continueEnabled = !stepHasAiTutor || hasSentChatMessage;
 
   // The lab's own Continue button advances the step.
   const navigation = useMemo(
     () => ({
       label: continueLabel,
-      enabled: continueEnabled,
-      tooltip: continueEnabled
+      enabled: hasSentChatMessage,
+      tooltip: hasSentChatMessage
         ? undefined
         : 'To continue, send a message to the AI tutor',
       endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
       onContinue: onComplete,
     }),
-    [continueLabel, continueEnabled, onComplete]
+    [continueLabel, hasSentChatMessage, onComplete]
   );
 
   // Stands in for ProjectContainer's level-change reset, which steps bypass.
