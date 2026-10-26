@@ -89,47 +89,44 @@ const mockRecordedAudioBlob = new Blob(['audio-bytes'], {type: 'audio/webm'});
 // - "Start Recording" signals recording-in-progress via onIsRecordingChange(true)
 // - "Stop Recording" fires the same sequence as the real onstop handler:
 //   setRecordedBlob, onRecordingChange(true), onIsRecordingChange(false)
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/AudioRecorder',
-  () => {
-    const React = require('react');
-    return {
-      __esModule: true,
-      default: (props: {
-        onRecordingChange: (hasRecording: boolean) => void;
-        onIsRecordingChange?: (isRecording: boolean) => void;
-        setRecordedBlob: (blob: Blob | null) => void;
-        disabled?: boolean;
-      }) =>
+jest.mock('@code-dot-org/lesson-deep-dive', () => {
+  const React = require('react');
+  return {
+    ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+    AudioRecorder: (props: {
+      onRecordingChange: (hasRecording: boolean) => void;
+      onIsRecordingChange?: (isRecording: boolean) => void;
+      setRecordedBlob: (blob: Blob | null) => void;
+      disabled?: boolean;
+    }) =>
+      React.createElement(
+        'div',
+        null,
         React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'button',
-            {
-              type: 'button',
-              disabled: props.disabled,
-              onClick: () => props.onIsRecordingChange?.(true),
-            },
-            'Start Recording'
-          ),
-          React.createElement(
-            'button',
-            {
-              type: 'button',
-              disabled: props.disabled,
-              onClick: () => {
-                props.setRecordedBlob(mockRecordedAudioBlob);
-                props.onRecordingChange(true);
-                props.onIsRecordingChange?.(false);
-              },
-            },
-            'Stop Recording'
-          )
+          'button',
+          {
+            type: 'button',
+            disabled: props.disabled,
+            onClick: () => props.onIsRecordingChange?.(true),
+          },
+          'Start Recording'
         ),
-    };
-  }
-);
+        React.createElement(
+          'button',
+          {
+            type: 'button',
+            disabled: props.disabled,
+            onClick: () => {
+              props.setRecordedBlob(mockRecordedAudioBlob);
+              props.onRecordingChange(true);
+              props.onIsRecordingChange?.(false);
+            },
+          },
+          'Stop Recording'
+        )
+      ),
+  };
+});
 
 const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;

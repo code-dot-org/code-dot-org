@@ -4,6 +4,7 @@ import {
   EMPTY_PROGRESS,
   Progress,
   latestValidation,
+  stepIdToResume,
   useProgress,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
@@ -99,6 +100,51 @@ describe('routeStatusMap without evidence', () => {
       steps: {'intro-step': {timeSpent: 0, generatedInstructions}},
     };
     expect(statusMapOf(pathway, progress).intro).toBe('available');
+  });
+});
+
+describe('stepIdToResume', () => {
+  const level: Step = {id: 'try', title: 'Try', kind: 'level', level: 'x'};
+  const multi = checkpoint('multi', undefined, [
+    panels('one'),
+    panels('two'),
+    level,
+  ]);
+
+  const resume = (steps: Progress['steps']) => stepIdToResume(multi, {steps});
+
+  it('returns the first step when none are complete', () => {
+    expect(resume({})).toBe('one');
+    expect(resume({one: {status: 'started', timeSpent: 0}})).toBe('one');
+  });
+
+  it('returns the first incomplete step', () => {
+    expect(resume({one: {status: 'complete', timeSpent: 1}})).toBe('two');
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+      })
+    ).toBe('try');
+  });
+
+  it('returns undefined when all steps are complete', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+        try: {status: 'complete', timeSpent: 3},
+      })
+    ).toBeUndefined();
+  });
+
+  it('returns a started step as the next step to complete', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'started', timeSpent: 0},
+      })
+    ).toBe('two');
   });
 });
 

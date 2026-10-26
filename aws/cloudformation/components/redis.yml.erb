@@ -29,6 +29,17 @@
       SecurityGroupIds: [!ImportValue VPC-RedisSecurityGroup]
       CacheSubnetGroupName: !Ref RedisSubnetGroup
       PreferredMaintenanceWindow: sat:05:00-sat:06:00
+  # Publish the primary endpoint so Kubernetes workers can read it from Secrets
+  # Manager (synced as CDO_redis_url by the k8s-gitops standard-envtypes
+  # ExternalSecret). Legacy frontends get the same value from
+  # bootstrap_chef_stack.sh.erb. rediss:// because TransitEncryptionEnabled is
+  # true; the group has no auth token.
+  RedisUrlConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Redis primary endpoint to application configuration setting CDO.redis_url'
+      Name: !Sub "CfnStack/${AWS::StackName}/redis_url"
+      SecretString: !Sub "rediss://${RedisGroup.PrimaryEndPoint.Address}:${RedisGroup.PrimaryEndPoint.Port}"
   # CloudWatch Alarms for Redis
   #
   # Based on:

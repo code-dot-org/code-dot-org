@@ -490,7 +490,8 @@ GEM
       mixlib-shellout
       mixlib-versioning
       thor
-    mixlib-log (3.0.9)
+    mixlib-log (3.2.3)
+      ffi (>= 1.15.5)
     mixlib-shellout (3.2.8)
       chef-utils
     mixlib-versioning (1.2.12)
@@ -796,6 +797,7 @@ DEPENDENCIES
   kitchen-ec2
   kitchen-inspec
   kitchen-sync
+  mixlib-log (~> 3.2.0)
   racc
   test-kitchen
 

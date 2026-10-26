@@ -5,8 +5,9 @@ import {Store} from 'redux';
 
 import * as ailab from '@cdo/apps/ailab/engine';
 import {ACCURACY_AT_LEAST} from '@cdo/apps/ailab/lab2/AccuracyValidator';
+import {AILAB_DEFAULT_SOURCES} from '@cdo/apps/ailab/lab2/sources';
 import {AilabLevelProperties} from '@cdo/apps/ailab/lab2/types';
-import AilabView from '@cdo/apps/ailab/lab2/views/AilabView';
+import AilabWorkspace from '@cdo/apps/ailab/lab2/views/AilabWorkspace';
 import progress, {
   initProgress,
   sendSuccessReport,
@@ -51,7 +52,10 @@ jest.mock('@cdo/apps/ailab/engine', () => {
     instructionsDismissed: jest.fn(),
     loadLevel: jest.fn(),
     store: jest.requireActual('@cdo/apps/ailab/engine/store').store,
+    defaultProject: jest.requireActual('@cdo/apps/ailab/engine/types')
+      .defaultProject,
     ProjectProvider,
+    useProject,
     TrainingDataProvider,
   };
 });
@@ -97,14 +101,23 @@ const LEVELS = {
   '3': level(3),
 };
 
+const save = jest.fn();
+
 const CurrentLevel = () => {
   const {levelProperties} = useLevelProperties();
   return (
-    <AilabView levelProperties={levelProperties as AilabLevelProperties} />
+    <AilabWorkspace
+      levelProperties={levelProperties as AilabLevelProperties}
+      hasEdited={false}
+      savedSource={AILAB_DEFAULT_SOURCES.source}
+      save={save}
+      startOver={jest.fn()}
+      projectManager={null}
+    />
   );
 };
 
-describe('AilabView', () => {
+describe('AilabWorkspace', () => {
   let store: Store;
 
   beforeEach(() => {

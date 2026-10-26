@@ -1,18 +1,25 @@
 import {Typography} from '@mui/material';
-import React, {type ReactNode, useId, useMemo} from 'react';
+import React, {type ReactNode, useId, useMemo, useState} from 'react';
 
 import {dataColumnsFor} from '../helpers/columnDetails';
+import type {Grade} from '../helpers/displayTreeNodeContent';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {useDatasetTableView} from '../useTableView';
+import {getIdColumn} from '../selectors';
+import {useDatasetTableView} from '../useDatasetTableView';
+import {useGradedView} from '../useGradedView';
 
 import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
+import ResultsToggle from './ResultsToggle';
+import TableFilter from './TableFilter';
 
 import styles from './rowsPanel.module.scss';
 
-const rowCountText = (count: number) =>
-  `${count} ${count === 1 ? 'Row' : 'Rows'}`;
+const rowCountText = (shown: number, total: number) => {
+  const totalText = `${total} ${total === 1 ? 'Row' : 'Rows'}`;
+  return shown === total ? totalText : `${shown} of ${totalText}`;
+};
 
 export interface RowsPanelProps {
   description: ReactNode;
@@ -21,7 +28,7 @@ export interface RowsPanelProps {
   showAllColumns: boolean;
   onToggleColumns: () => void;
   emptyText?: string;
-  resultsToggle?: ReactNode;
+  rowsByGrade?: Record<Grade, number[]>;
   prediction?: string | number;
 }
 
@@ -32,17 +39,23 @@ const RowsPanel = ({
   showAllColumns,
   onToggleColumns,
   emptyText = 'No rows reached this step',
-  resultsToggle,
+  rowsByGrade,
   prediction,
 }: RowsPanelProps) => {
   const descriptionId = useId();
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
+  const idColumn = useAppSelector(getIdColumn);
   const columns = useMemo(
-    () => dataColumnsFor(data, project, showAllColumns),
-    [data, project, showAllColumns]
+    () => dataColumnsFor(data, project, showAllColumns, idColumn),
+    [data, project, showAllColumns, idColumn]
   );
-  const tableView = useDatasetTableView(rowIndices, columns);
+  const [grade, setGrade] = useState<Grade>('correct');
+  const {view: tableView, counts} = useGradedView(
+    useDatasetTableView(rowIndices, columns),
+    rowsByGrade,
+    grade
+  );
 
   return (
     <div className={styles.panel}>
@@ -56,16 +69,25 @@ const RowsPanel = ({
           {description}
         </Typography>
         <div className={styles.actions}>
-          {!resultsToggle && (
+          {!rowsByGrade && (
             <>
               <Typography variant="body3" component="span">
-                <strong>{rowCountText(rowIndices.length)}</strong>
+                <strong>
+                  {rowCountText(tableView.rows.length, rowIndices.length)}
+                </strong>
               </Typography>
               <span className={styles.divider} />
             </>
           )}
           <div className={styles.actionGroup}>
-            {resultsToggle}
+            {rowsByGrade && (
+              <ResultsToggle
+                grade={grade}
+                onChange={value => setGrade(value as Grade)}
+                counts={counts}
+              />
+            )}
+            <TableFilter view={tableView} />
             <ColumnsButton
               showAllColumns={showAllColumns}
               onToggle={onToggleColumns}

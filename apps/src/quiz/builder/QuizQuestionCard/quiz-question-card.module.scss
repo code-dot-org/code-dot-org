@@ -7,6 +7,33 @@
   background: var(--background-neutral-primary);
 }
 
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--text-neutral-primary);
+}
+
+// A legend floats over the fieldset border by default.
+.fieldGroupLabel {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+.optionsField {
+  align-self: stretch;
+
+  > * {
+    align-self: stretch;
+  }
+}
+
 .optionsList {
   display: flex;
   flex-direction: column;
@@ -23,19 +50,32 @@
   background: var(--background-neutral-secondary);
 }
 
-.correctToggle {
-  background: var(--background-neutral-primary);
-  border: 1px solid var(--border-neutral-secondary);
-  color: var(--text-neutral-primary);
+// The correct-answer marker sits in a box joined to the left of the text input.
+.optionInput {
+  display: flex;
+  flex: 1 0 0;
+  align-items: stretch;
+  min-width: 0;
+
+  .optionText input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
-.correctToggleSelected {
-  background: var(--background-selected-primary);
-  border-color: var(--background-selected-primary);
-  color: var(--text-selected-primary);
+.correctMarker {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  margin-right: -1px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-sm) 0 0 var(--shape-sm);
 
-  &:hover {
-    background: var(--background-selected-primary);
+  label {
+    margin: 0;
   }
 }
 
@@ -51,4 +91,28 @@
 .optionText {
   flex: 1 0 0;
   min-width: 0;
+}
+
+.pairsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pairRow {
+  // A pair's two fields grow independently, so their heights can differ.
+  align-items: flex-start;
+
+  :global(.MuiIconButton-root) {
+    align-self: center;
+  }
+}
+
+.pairText {
+  flex: 1 0 0;
+  min-width: 0;
+
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
 }

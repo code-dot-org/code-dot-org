@@ -177,6 +177,18 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     end
   end
 
+  test "show returns each step's completion status so the frontend can compute where to resume" do
+    put_step 'read', started: true, completed: true
+    put_step 'quiz', started: true
+
+    all = steps
+    assert_equal 'complete', all['read']['status']
+    assert_equal 'started',  all['quiz']['status']
+    # stepIdToResume on the frontend scans these statuses left-to-right for the
+    # first step that is not complete.  Both non-level and level steps must
+    # return a status field for that scan to work across sessions.
+  end
+
   test "validation attempts are appended with the server's time and shown with the level's state" do
     travel_to Time.utc(2026, 10, 21, 17) do
       put_validation 'try', {'pass' => false, 'evidenceLevel' => 1, 'reason' => 'No heading yet.', 'at' => 'yesterday'}

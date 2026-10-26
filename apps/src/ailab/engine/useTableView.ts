@@ -1,17 +1,8 @@
-import {useCallback, useMemo, useState} from 'react';
+import {useMemo, useState} from 'react';
 
 import {ColumnTypes} from './constants';
 import {compareText} from './helpers/utils';
-import {getLocalizedValue} from './helpers/valueDetails';
-import {useAppSelector} from './hooks';
-import {getFilterableColumns} from './selectors';
-import type {
-  ColumnFilter,
-  ColumnId,
-  DatasetTableView,
-  SortDirection,
-  TableView,
-} from './types';
+import type {ColumnFilter, ColumnId, SortDirection, TableView} from './types';
 
 interface TableSort {
   column: ColumnId;
@@ -106,9 +97,9 @@ export function useTableView({
 
   return {
     rows: shownRows,
-    totalRows: rows.length,
+    totalRowCount: rows.length,
     columns,
-    filterableColumns: columns.filter(column =>
+    shownFilterableColumns: columns.filter(column =>
       filterableColumns.includes(column)
     ),
     filter,
@@ -137,24 +128,5 @@ export function useTableView({
     filterBy: (column, values) =>
       setFilter(values.length ? {column, values} : undefined),
     clearFilter: () => setFilter(undefined),
-  };
-}
-
-export function useDatasetTableView(
-  rows: number[],
-  columns: string[]
-): DatasetTableView {
-  const data = useAppSelector(state => state.data);
-  const columnTypes = useAppSelector(state => state.columnsByDataType);
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const filterableColumns = useAppSelector(getFilterableColumns);
-  const valueAt = useCallback(
-    (row: number, column: ColumnId) =>
-      getLocalizedValue(data[row][column as string], datasetId),
-    [data, datasetId]
-  );
-  return {
-    ...useTableView({rows, columns, columnTypes, filterableColumns, valueAt}),
-    columns,
   };
 }
