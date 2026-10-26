@@ -140,9 +140,12 @@ Edit opens the member's page, a script step on the trail
 - **The block**, drawn from the parts as they are edited.
 - **The palette**, a row of chips to take from: **Word**, one per type a
   value may have (the designer's: what a `let` can hold, an actor, an
-  enum, a kind), and **Line break**. A chip is dragged from it on to the
-  surface, or pressed, which puts it after the chip with focus, else at
-  the end.
+  enum, a kind), and **Line break**. A chip is pressed, which puts it after
+  the chip with focus, else at the end; or dragged out, which makes it as
+  it leaves. The pointer then carries the chip in full, as it carries one
+  being moved, and the surface opens a faded place for it before or after
+  the chip under the pointer. Let go over the surface, it is kept there;
+  anywhere else, nothing is added.
 - **The surface**, the design's parts in order, laid out as the block
   will be: left to right, and a new line after each break, each line
   marked as one. A WORD chip is a pill holding its wording; a VALUE chip a

@@ -208,7 +208,9 @@ below, and are listed last.
 - **The palette is a toolbar** ("Parts to add"): one stop, the arrows,
   Home and End move along it, and each chip is a button named for what it
   adds ("Add a number value", "Add a line break"). Dragging one onto the
-  surface is the pointer's other way.
+  surface is the pointer's other way; the chip it carries is a picture,
+  hidden from a screen reader, and dropping it says and focuses what
+  pressing would.
 - **The surface is an ordered list** ("Parts of heal"). Each chip's grip
   is a button named for the part, its place and its line ("rows, number
   value, part 2 of 5, line 1"), and "does nothing here" for a break that

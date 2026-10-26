@@ -84,8 +84,29 @@ button.chip:focus-visible {
   box-shadow: 0 0 0 2px var(--borders-brand-teal-primary);
 }
 
+/* Where a chip is, or will be, while one is dragged: its place, faded. */
 .dragging {
-  opacity: 0.6;
+  opacity: 0.4;
+}
+
+/* The chip the pointer carries. */
+.carried {
+  cursor: grabbing;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 20%);
+}
+
+.faceGrip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+}
+
+.faceText {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
 }
 
 .grip {

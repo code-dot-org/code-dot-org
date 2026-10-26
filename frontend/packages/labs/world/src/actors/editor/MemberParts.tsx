@@ -6,15 +6,25 @@
 // left" is sometimes the end of the line above; the keys move a chip one
 // place earlier or later in the list, which is what the block reads as.
 // Dragging with a pointer is dnd-kit's, and is never the only way.
+//
+// A CHIP DRAGGED OUT OF THE PALETTE IS MADE AS IT LEAVES. The pointer carries
+// the chip itself, and the surface opens a place for it wherever it would
+// land, as it does for a chip being moved; letting go keeps it there.
 
 import {
+  closestCenter,
   DndContext,
+  DragOverlay,
+  pointerWithin,
   PointerSensor,
   useDraggable,
   useDroppable,
   useSensor,
   useSensors,
+  type CollisionDetection,
   type DragEndEvent,
+  type DragMoveEvent,
+  type DragStartEvent,
 } from '@dnd-kit/core';
 import {
   SortableContext,
@@ -94,7 +104,6 @@ export const MemberParts = ({
   isReadOnly,
 }: MemberPartsProps) => {
   const parts = arranged.map(one => one.part);
-  const lines = linesOf(parts);
   const [chosen, setChosen] = useState<string | null>(null);
   /** The chip being moved from the keys, and the arrangement before it was lifted. */
   const [lifted, setLifted] = useState<{
@@ -108,6 +117,27 @@ export const MemberParts = ({
   const [paletteAt, setPaletteAt] = useState(0);
   const sensors = useSensors(
     useSensor(PointerSensor, {activationConstraint: {distance: 4}}),
+  );
+  /**
+   * A chip being dragged out of the palette: made already, and where on the
+   * surface it would land, or nowhere while the pointer is off it.
+   */
+  const [incoming, setIncoming] = useState<{
+    made: Arranged;
+    what: string;
+    at: number | null;
+  } | null>(null);
+  /** The chip on the surface being dragged, which the pointer carries. */
+  const [dragged, setDragged] = useState<string | null>(null);
+  // What the surface shows: the parts, and a chip on its way in.
+  const shown =
+    incoming?.at == null
+      ? arranged
+      : insertAt(arranged, incoming.at, incoming.made);
+  const shownParts = shown.map(one => one.part);
+  const shownLines = linesOf(shownParts);
+  const problemOf = new Map(
+    arranged.map((one, at) => [one.key, problems.values.get(at)]),
   );
 
   // Focus where the last change said, once it has drawn.
@@ -152,11 +182,14 @@ export const MemberParts = ({
     }
   };
 
-  const add = (what: string, at = insertionPoint()) => {
+  const add = (
+    what: string,
+    at = insertionPoint(),
+    made: Arranged = {key: mintKey(), part: newPart(what, parts)},
+  ) => {
     if (isReadOnly) {
       return;
     }
-    const made = {key: mintKey(), part: newPart(what, parts)};
     const next = insertAt(arranged, at, made);
     const label = PALETTE.find(one => one.what === what)?.label ?? 'Part';
     arrange(next, `${label} added, ${describe(made.key, next).place}.`, {
@@ -252,19 +285,80 @@ export const MemberParts = ({
     }
   };
 
+  const onDragStart = ({active}: DragStartEvent) => {
+    const id = String(active.id);
+    if (id.startsWith(PALETTE_PREFIX)) {
+      const what = id.slice(PALETTE_PREFIX.length);
+      setIncoming({
+        made: {key: mintKey(), part: newPart(what, parts)},
+        what,
+        at: null,
+      });
+    } else {
+      setDragged(id);
+    }
+  };
+
+  /**
+   * Where a chip on its way in would land: before or after the one under it.
+   * On every move, not only when the chip under it changes: crossing the
+   * middle of one chip is the change that matters.
+   */
+  const onDragMove = ({active, over}: DragMoveEvent) => {
+    if (!incoming) {
+      return;
+    }
+    if (!over) {
+      if (incoming.at !== null) {
+        setIncoming({...incoming, at: null});
+      }
+      return;
+    }
+    if (over.id === incoming.made.key) {
+      return;
+    }
+    const under = arranged.findIndex(one => one.key === over.id);
+    const land = (at: number) => {
+      if (incoming.at !== at) {
+        setIncoming({...incoming, at});
+      }
+    };
+    if (under < 0) {
+      land(arranged.length);
+      return;
+    }
+    const moving = active.rect.current.translated;
+    const middle = over.rect.left + over.rect.width / 2;
+    const after =
+      moving !== null &&
+      (moving.top > over.rect.top + over.rect.height ||
+        (moving.top + moving.height > over.rect.top &&
+          moving.left + moving.width / 2 > middle));
+    land(under + (after ? 1 : 0));
+  };
+
+  const onDragCancel = () => {
+    setIncoming(null);
+    setDragged(null);
+  };
+
   const onDragEnd = ({active, over}: DragEndEvent) => {
-    if (!over || isReadOnly) {
+    const arriving = incoming;
+    onDragCancel();
+    if (isReadOnly) {
+      return;
+    }
+    if (arriving) {
+      if (arriving.at !== null) {
+        add(arriving.what, arriving.at, arriving.made);
+      }
+      return;
+    }
+    if (!over) {
       return;
     }
     const activeId = String(active.id);
     const overAt = arranged.findIndex(one => one.key === over.id);
-    if (activeId.startsWith(PALETTE_PREFIX)) {
-      add(
-        activeId.slice(PALETTE_PREFIX.length),
-        overAt < 0 ? arranged.length : overAt,
-      );
-      return;
-    }
     const from = arranged.findIndex(one => one.key === activeId);
     const to = overAt < 0 ? arranged.length - 1 : overAt;
     if (from < 0 || from === to) {
@@ -304,7 +398,11 @@ export const MemberParts = ({
   return (
     <DndContext
       sensors={sensors}
+      collisionDetection={chipUnderPointer}
+      onDragStart={onDragStart}
+      onDragMove={onDragMove}
       onDragEnd={onDragEnd}
+      onDragCancel={onDragCancel}
       accessibility={{
         // The keys are ours (`onGripKey`), and say their own; a pointer drag
         // says where it landed through `onArrange`.
@@ -341,21 +439,22 @@ export const MemberParts = ({
         </div>
         <Surface name={name}>
           <SortableContext
-            items={arranged.map(one => one.key)}
+            items={shown.map(one => one.key)}
             strategy={rectSortingStrategy}
           >
-            {arranged.map(({key, part}, at) => (
+            {shown.map(({key, part}, at) => (
               <PartChip
                 key={key}
                 id={key}
                 part={part}
-                line={lines[at]}
+                line={shownLines[at]}
                 at={at}
-                count={arranged.length}
-                idle={endsNothing(parts, at)}
+                count={shown.length}
+                idle={endsNothing(shownParts, at)}
+                arriving={key === incoming?.made.key}
                 lifted={lifted?.key === key}
                 chosen={chosen === key}
-                problem={problems.values.get(at)}
+                problem={problemOf.get(key)}
                 isReadOnly={isReadOnly}
                 lineEnds={part.kind === 'row'}
                 fieldRef={element => {
@@ -396,6 +495,13 @@ export const MemberParts = ({
             ))}
           </SortableContext>
         </Surface>
+        <DragOverlay dropAnimation={null}>
+          {incoming ? (
+            <ChipFace part={incoming.made.part} />
+          ) : dragged ? (
+            <ChipFace part={arranged.find(one => one.key === dragged)?.part} />
+          ) : null}
+        </DragOverlay>
         {problems.design && (
           <Typography
             variant="body3"
@@ -492,6 +598,63 @@ const PaletteChip = ({
 const kindOf = (what: string): string =>
   what === 'label' || what === 'row' ? what : 'value';
 
+/**
+ * The droppable a dragged chip is over: the chip under the pointer, else
+ * the nearest chip while the pointer is on the surface, else the surface.
+ */
+const chipUnderPointer: CollisionDetection = args => {
+  const within = pointerWithin(args);
+  const chip = within.find(hit => hit.id !== SURFACE);
+  if (chip) {
+    return [chip];
+  }
+  if (!within.some(hit => hit.id === SURFACE)) {
+    return [];
+  }
+  const nearest = closestCenter({
+    ...args,
+    droppableContainers: args.droppableContainers.filter(
+      container => container.id !== SURFACE,
+    ),
+  });
+  return nearest.length ? nearest.slice(0, 1) : within;
+};
+
+/** A chip as the pointer carries it: its face, with nothing to press. */
+const ChipFace = ({part}: {part?: ActorMemberPart}) =>
+  part ? (
+    <div
+      aria-hidden="true"
+      className={`${styles.chip} ${styles[`chip-${part.kind === 'param' ? 'value' : part.kind}`]} ${styles.carried}`}
+    >
+      <span className={styles.faceGrip}>
+        <FontAwesomeV6Icon
+          iconName={part.kind === 'row' ? 'turn-down-left' : 'grip-vertical'}
+          iconStyle="solid"
+        />
+      </span>
+      {part.kind !== 'row' && (
+        <span className={styles.faceText}>
+          {part.kind === 'label'
+            ? part.text || 'word'
+            : String(part.name ?? '')}
+        </span>
+      )}
+      {part.kind === 'param' && <TypeLabel type={part.type} />}
+    </div>
+  ) : null;
+
+/** A value's type, as a word and an icon. */
+const TypeLabel = ({type}: {type: string}) => (
+  <span className={styles.chipType}>
+    <FontAwesomeV6Icon
+      iconName={TYPE_ICONS[type] ?? 'list-ul'}
+      iconStyle="solid"
+    />
+    {VALUE_TYPES.find(one => one.type === type)?.label ?? 'Choice'}
+  </span>
+);
+
 interface PartChipProps {
   id: string;
   part: ActorMemberPart;
@@ -500,6 +663,8 @@ interface PartChipProps {
   line: number;
   /** A break that ends nothing where it is. */
   idle: boolean;
+  /** A chip being dragged out of the palette, not yet let go of. */
+  arriving: boolean;
   lifted: boolean;
   chosen: boolean;
   problem?: string;
@@ -520,6 +685,7 @@ const PartChip = ({
   count,
   line,
   idle,
+  arriving,
   lifted,
   chosen,
   problem,
@@ -558,10 +724,6 @@ const PartChip = ({
     part.kind === 'label'
       ? `Word, part ${at + 1}`
       : `Name of ${partKindLabel(part)}, part ${at + 1}`;
-  const typeLabel =
-    part.kind === 'param'
-      ? (VALUE_TYPES.find(one => one.type === part.type)?.label ?? 'Choice')
-      : '';
   return (
     <>
       <li
@@ -572,7 +734,7 @@ const PartChip = ({
           idle ? styles.idle : '',
           lifted ? styles.lifted : '',
           chosen ? styles.chosen : '',
-          isDragging ? styles.dragging : '',
+          isDragging || arriving ? styles.dragging : '',
         ].join(' ')}
         style={{transform: CSS.Translate.toString(transform), transition}}
       >
@@ -611,15 +773,7 @@ const PartChip = ({
             onChange={event => onText(event.target.value)}
           />
         )}
-        {part.kind === 'param' && (
-          <span className={styles.chipType}>
-            <FontAwesomeV6Icon
-              iconName={TYPE_ICONS[part.type] ?? 'list-ul'}
-              iconStyle="solid"
-            />
-            {typeLabel}
-          </span>
-        )}
+        {part.kind === 'param' && <TypeLabel type={part.type} />}
       </li>
       {lineEnds && <li aria-hidden="true" className={styles.lineEnd} />}
     </>
