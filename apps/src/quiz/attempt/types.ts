@@ -52,7 +52,9 @@ export type QuizQuestionResult = QuizQuestionResponse & {
   quizQuestionId: number;
   correct: boolean | null;
   explanation: string | null;
-  correctChoiceId: string | null;
+  // The answer key, by question type; null when hidden.
+  correctChoiceId?: string | null;
+  correctChoiceIds?: string[] | null;
 };
 
 // Unanswered questions are omitted.
