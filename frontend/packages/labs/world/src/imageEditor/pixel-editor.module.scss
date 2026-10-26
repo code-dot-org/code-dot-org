@@ -1,0 +1,275 @@
+// Self-contained styles for the pixel editor. Ported from apps/src/pixelEditor,
+// where it is a modal; here it is the editor pane for a `.png` file, so the
+// dialog shell (and its Save/Cancel footer — a file editor saves as you draw)
+// is gone and the rest is unchanged.
+
+$border-subtle: rgb(255 255 255 / 12%);
+
+// The editor as an editor PANE rather than a modal: it fills the file editor's
+// area and scrolls inside it. The dark surface is kept — this is a canvas for
+// pixel art, and a light one hides the transparency checkerboard.
+.panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  // Nothing overflows: the canvas is fitted to the space this pane has.
+  overflow: hidden;
+  background-color: #333a47;
+  color: #f0f2f6;
+}
+
+// The header is about the FILE — whether it is a spritesheet, and which cell is
+// being drawn — so it sits on the lab's own surface with design-system controls
+// and looks like the rest of the site. The dark drawing board starts below it.
+.header {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--borders-neutral-light, #e4e4e4);
+  background-color: var(--background-neutral-primary, #fff);
+  color: var(--text-neutral-primary, #1a1a1a);
+}
+
+.sheetControls {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+// DSCO's FormFieldWrapper (a <label>) defaults to min-width 18.75rem — a form's
+// width, not a number's. These hold values under four digits.
+.sheetControls .sheetNumber {
+  width: 6.5rem;
+  min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+.sheetCount {
+  padding-block-end: 6px;
+  color: var(--text-neutral-secondary, #555);
+}
+
+// Which cell is being drawn, and the way back to the whole sheet.
+.regionBar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-block-end: 2px;
+}
+
+.body {
+  display: flex;
+  gap: 12px;
+  // Fills what the panel gives it; the canvas area inside takes the rest of the
+  // row and the canvas is fitted to that.
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  padding: 12px;
+}
+
+// The tool grid at the top, undo/redo pushed to the bottom of the column.
+.toolbar {
+  display: flex;
+  flex-direction: column;
+}
+
+// Two columns; TOOLS order pairs them (pen/fill, erase/eyedrop, circles,
+// rectangles), then the four brush sizes as two more rows, then the color.
+.toolGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 34px);
+  gap: 4px;
+  align-content: start;
+  justify-items: center;
+}
+
+.toolButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: #cdd3de;
+  cursor: pointer;
+
+  i {
+    font-size: 15px;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: rgb(255 255 255 / 8%);
+  }
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+}
+
+.toolActive {
+  border-color: rgb(255 255 255 / 35%);
+  background-color: rgb(255 255 255 / 14%);
+  color: #fff;
+}
+
+.toolbarDivider {
+  grid-column: 1 / -1;
+  justify-self: stretch;
+  height: 1px;
+  margin: 4px 0;
+  background-color: rgb(255 255 255 / 15%);
+}
+
+.brushDot {
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+// Pixel-mode swatches are square because the brush stamps hard squares.
+.brushDotSquare {
+  border-radius: 1px;
+}
+
+// Undo/redo, anchored to the bottom of the toolbar column.
+.historyRow {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.canvasArea {
+  display: flex;
+  // Takes the rest of the row, and is allowed to be smaller than its content
+  // (min-width/height: 0) so the canvas is fitted to it rather than the other
+  // way round.
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  // The canvas is fitted to this box, so ordinarily there is nothing to scroll.
+  // The exception is a pane squeezed below the canvas's minimum size, where
+  // scrolling beats a canvas too small to draw on.
+  overflow: auto;
+  border: 1px solid $border-subtle;
+  border-radius: 6px;
+  // The transparency checkerboard is painted INTO the display canvas (so it
+  // can align with the art-pixel grid); the surround stays quiet.
+  background-color: #2b313d;
+}
+
+.displayCanvas {
+  display: block;
+  // Rendered size is set in JS (fills the modal's available vertical space,
+  // aspect preserved, viewport-bounded); the internal resolution is an
+  // integer upscale of the image. Pointer mapping uses the rendered rect,
+  // so fractional scaling is fine; pixelated keeps it crisp.
+  image-rendering: pixelated;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.loadError {
+  padding: 40px;
+  color: #ff9d9d;
+}
+
+// Spans both toolbar columns; the popover offset below is measured from its
+// full-row width.
+.colorPicker {
+  display: flex;
+  position: relative;
+  grid-column: 1 / -1;
+  justify-self: stretch;
+
+  // The swatch is the only in-flow child; stretch it to the toolbar width.
+  > * {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.swatch {
+  box-sizing: border-box;
+  // Fills the toolbar's width (the picker row spans both columns).
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgb(255 255 255 / 60%);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+// A small checkerboard stands in for "no color" on transparent swatches.
+.swatchTransparent {
+  background: repeating-conic-gradient(
+      rgb(160 166 178) 0% 25%,
+      rgb(255 255 255) 0% 50%
+    )
+    0 0 / 10px 10px;
+}
+
+// The recently-used row, under the spectrum: transparent first, then
+// most-recent colors.
+.recentRow {
+  display: flex;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.recentSwatch {
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 4px;
+  box-shadow: none;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgb(255 255 255 / 90%);
+  }
+}
+
+.spectrumPopover {
+  position: absolute;
+  bottom: 0;
+  // The picker row spans the full toolbar width, so 100% + the 12px body gap
+  // + 4px lands just inside the image.
+  left: calc(100% + 16px);
+  z-index: 10;
+  padding: 6px;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: 8px;
+  background-color: #262c36;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 45%);
+
+  canvas {
+    display: block;
+    border-radius: 4px;
+    cursor: crosshair;
+    touch-action: none;
+  }
+}

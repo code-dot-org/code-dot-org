@@ -1,0 +1,1262 @@
+import {Button, Typography} from '@mui/material';
+import classNames from 'classnames';
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ChangeEvent,
+  type FunctionComponent,
+  type PointerEvent as ReactPointerEvent,
+} from 'react';
+
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
+
+import type {SheetFile} from '../appearance/sheetFile';
+import {cellIndex, sheetCells, type CellRect} from '../appearance/sheetFrames';
+
+import ColorPicker from './ColorPicker';
+import PickCellDialog from './PickCellDialog';
+import {crispScaleFor, downsampleToGrid, upscaleNearest} from './pixelArt';
+import PixelTooltip from './PixelTooltip';
+import {TOOLS, toolTitle, type PixelTool} from './toolDefinitions';
+import {
+  BRUSH_SIZES,
+  drawCircle,
+  drawRect,
+  floodFill,
+  stamp,
+  stampLine,
+  TRANSPARENT,
+  type Raster,
+  type RGBA,
+} from './tools';
+import {undoDepthFor} from './undoBudget';
+
+import moduleStyles from './pixel-editor.module.scss';
+
+// Internal display-canvas resolution: integer upscale of the backing image,
+// as large as fits this budget. The rendered (CSS) size is independent: the
+// canvas fills this fraction of the viewport, capped, aspect preserved.
+const MAX_DISPLAY_SIZE = 640;
+// Caps only: the canvas fits the pane it is given (see `fit`), and these stop a
+// wide editor from scaling one 32-pixel sprite to the size of a wall.
+const MAX_CSS_HEIGHT_PX = 720;
+const MAX_CSS_WIDTH_PX = 900;
+// Breathing room between the canvas and the edge of its box.
+const CANVAS_MARGIN_PX = 12;
+// The canvas never shrinks below this, however narrow the pane gets: past it
+// the image is not something anyone could draw on, and scrolling is the better
+// answer than a canvas the size of a word.
+const MIN_CANVAS_PX = 64;
+
+// Transparency checkerboard: cell size in display px outside pixel mode, the
+// smallest legible cell in pixel mode (art-pixel cells are grouped up to it),
+// and the tint drawn over the white base.
+const CHECKER_CELL_PX = 16;
+const MIN_CHECKER_CELL_PX = 4;
+const CHECKER_COLOR = 'rgb(128 128 128 / 16%)';
+
+// Dark navy ink.
+const DEFAULT_COLOR: RGBA = [31, 41, 71, 255];
+
+// The spritesheet grid, drawn over the image. Bright enough to read against
+// pixel art of any color, thin enough not to be mistaken for drawn pixels.
+const GRID_COLOR = 'rgb(0 200 255 / 70%)';
+
+// How long drawing must settle before the file is written. Long enough that a
+// flurry of strokes is one save, short enough that the game shows the change
+// while the learner still remembers making it.
+const COMMIT_DEBOUNCE_MS = 600;
+
+// Summed per-channel difference a pixel may have from the clicked color and
+// still flood-fill: AI-generated "solid" regions carry small variations that
+// exact matching splinters into unfilled specks. Small enough that
+// anti-aliased edges (which differ by far more) still stop the fill.
+const FILL_TOLERANCE = 32;
+
+// Shape previews drawn in the picked color would be invisible when that
+// color is transparent; the preview layer uses this stand-in instead. The
+// committed shape uses the real color.
+const PREVIEW_STANDIN: RGBA = [128, 128, 128, 140];
+
+// Recently used colors, shown as one row in the color picker. The caller
+// seeds them and persists the updated list handed back on save.
+const RECENT_COLORS_MAX = 8;
+
+const SHAPE_TOOLS: ReadonlySet<PixelTool> = new Set([
+  'circle',
+  'filledCircle',
+  'rect',
+  'filledRect',
+]);
+
+// Brush-size swatch dot: rendered edge in px for brush size N.
+const brushDotPx = (size: number) => 3 + size * 1.6;
+
+export interface PixelEditorSaveMeta {
+  pixelGridSize?: number;
+  // Recently used colors after this session, most recent first; the caller
+  // persists them (e.g. in the image's project data) and seeds them back via
+  // initialRecentColors next time.
+  recentColors?: RGBA[];
+}
+
+interface PixelEditorProps {
+  title: string;
+  // The image to edit (dataURI or URL; must be canvas-readable).
+  imageUrl: string;
+  // Physical pixels per art pixel, when the image is known pixel art (e.g.
+  // recorded at generation time). > 1 opens the editor at the image's
+  // LOGICAL resolution. Absent/1 = edit at native resolution; the editor
+  // does no detection of its own.
+  knownPixelGrid?: number;
+  // Seed for the recently-used-colors row (see PixelEditorSaveMeta).
+  initialRecentColors?: RGBA[];
+  // Nothing may be drawn (a level with a locked workspace).
+  isReadOnly?: boolean;
+  /**
+   * The grid this image is cut into, if it is a spritesheet — the `.sheet`
+   * beside it (appearance/sheetFile). Undefined for a plain picture.
+   */
+  sheet?: SheetFile;
+  /**
+   * The grid changed: a new cell size, or `undefined` for "this is a picture,
+   * not a sheet". The caller writes or deletes the `.sheet` file.
+   */
+  onSheetChange?: (sheet: SheetFile | undefined) => void;
+  /**
+   * A completed edit, as a PNG data URI.
+   *
+   * Called after drawing settles, not on a Save button: this is a file editor,
+   * and a file editor saves what you did — the same bargain the text editor
+   * makes. Undo and redo are edits too, and commit like any other.
+   */
+  onCommit: (dataURI: string, meta: PixelEditorSaveMeta) => void;
+}
+
+/**
+ * A small, self-contained pixel editor in a modal. Edits happen on a backing
+ * canvas at the image's native resolution; the display canvas scales it up
+ * with nearest-neighbor sampling. Tools: pen, eraser, tolerant bucket fill,
+ * eyedropper, outline/solid circles and rectangles, four brush sizes, one
+ * color (full-spectrum picker with per-image recents and transparent), and
+ * memory-bounded undo/redo. Save hands back a PNG dataURI; Cancel discards.
+ * Both close the modal.
+ */
+const PixelEditor: FunctionComponent<PixelEditorProps> = ({
+  title,
+  imageUrl,
+  knownPixelGrid,
+  initialRecentColors,
+  isReadOnly = false,
+  sheet,
+  onSheetChange,
+  onCommit,
+}) => {
+  const [tool, setTool] = useState<PixelTool>('pen');
+  const [brushSize, setBrushSize] = useState(BRUSH_SIZES[1]);
+  const [color, setColor] = useState<RGBA>(DEFAULT_COLOR);
+  const [loaded, setLoaded] = useState(false);
+  const [loadError, setLoadError] = useState(false);
+  // Editing at the image's logical resolution (see knownPixelGrid).
+  const [pixelMode, setPixelMode] = useState(false);
+  // Mirror for the stable repaint callback (which runs on every stroke).
+  const pixelModeRef = useRef(false);
+
+  const displayRef = useRef<HTMLCanvasElement | null>(null);
+  // The box the canvas is fitted into — watched for resizes.
+  const canvasAreaRef = useRef<HTMLDivElement | null>(null);
+  /**
+   * The part of the image on screen: one cell of the sheet, or the whole image.
+   *
+   * Editing a spritesheet cell by cell is the point of a cell picker — a frame
+   * of a walk cycle is a drawing, and drawing it inside a strip of six means
+   * aiming at a sixth of the canvas. The BACKING is still the whole image (the
+   * tools, the undo stack and the saved PNG never know about this); only what is
+   * displayed, and where a pointer lands, are narrowed to the region.
+   */
+  const [region, setRegion] = useState<CellRect | undefined>(undefined);
+  const regionRef = useRef(region);
+  regionRef.current = region;
+  const [pickingCell, setPickingCell] = useState(false);
+  // The grid, for `repaint` — which is a stable callback and cannot close over
+  // a prop. Editing the cell size repaints through the effect below.
+  const sheetRef = useRef<SheetFile | undefined>(sheet);
+  sheetRef.current = sheet;
+  // Backing canvas at native image resolution: the single source of truth.
+  const backingRef = useRef<HTMLCanvasElement | null>(null);
+  // Circle preview: drawn over the backing on the display until pointer-up.
+  const previewRef = useRef<HTMLCanvasElement | null>(null);
+  const scaleRef = useRef(1);
+  const drawingRef = useRef(false);
+  const lastPointRef = useRef<{x: number; y: number} | null>(null);
+  // Anchor corner/center of the shape being dragged (circle or rectangle).
+  const shapeStartRef = useRef<{x: number; y: number} | null>(null);
+
+  // Undo/redo: snapshots of the backing's pixels, one per completed
+  // operation, in refs (they change on every stroke). historyVersion only
+  // exists to re-render the buttons' disabled state.
+  const undoStackRef = useRef<Uint8ClampedArray[]>([]);
+  const redoStackRef = useRef<Uint8ClampedArray[]>([]);
+  const [historyVersion, setHistoryVersion] = useState(0);
+
+  // Recently used colors, most recent first (transparent excluded: it has a
+  // permanent swatch of its own in the picker). Handed back on save for the
+  // caller to persist.
+  const [recentColors, setRecentColors] = useState<RGBA[]>(
+    () => initialRecentColors ?? [],
+  );
+  const recordColorUse = useCallback((used: RGBA) => {
+    if (used[3] === 0) {
+      return;
+    }
+    setRecentColors(prev =>
+      [used, ...prev.filter(c => !c.every((v, i) => v === used[i]))].slice(
+        0,
+        RECENT_COLORS_MAX,
+      ),
+    );
+  }, []);
+
+  // Snapshot the backing before a mutating operation. How deep the stack may
+  // go is a question about the picture's size rather than about drawing
+  // (./undoBudget). A new operation invalidates the redo stack.
+  const pushUndo = useCallback(() => {
+    const backing = backingRef.current;
+    const ctx = backing?.getContext('2d');
+    if (!backing || !ctx) {
+      return;
+    }
+    const stack = undoStackRef.current;
+    stack.push(
+      new Uint8ClampedArray(
+        ctx.getImageData(0, 0, backing.width, backing.height).data,
+      ),
+    );
+    const maxDepth = undoDepthFor(backing.width, backing.height);
+    while (stack.length > maxDepth) {
+      stack.shift();
+    }
+    redoStackRef.current = [];
+    setHistoryVersion(v => v + 1);
+  }, []);
+
+  const restoreSnapshot = useCallback((pixels: Uint8ClampedArray) => {
+    const backing = backingRef.current;
+    const ctx = backing?.getContext('2d');
+    if (!backing || !ctx) {
+      return;
+    }
+    ctx.putImageData(
+      new ImageData(new Uint8ClampedArray(pixels), backing.width),
+      0,
+      0,
+    );
+  }, []);
+
+  const currentPixels = useCallback(() => {
+    const backing = backingRef.current;
+    const ctx = backing?.getContext('2d');
+    if (!backing || !ctx) {
+      return null;
+    }
+    return new Uint8ClampedArray(
+      ctx.getImageData(0, 0, backing.width, backing.height).data,
+    );
+  }, []);
+
+  // Composite the transparency checkerboard, the backing, and (while
+  // dragging a circle) the preview to the display. The checker lives in the
+  // canvas so it aligns with the image: in pixel mode one checker cell is one
+  // art pixel (grouped to stay legible at tiny zooms), matching how dedicated
+  // pixel editors show transparency.
+  const repaint = useCallback(() => {
+    const display = displayRef.current;
+    const backing = backingRef.current;
+    if (!display || !backing) {
+      return;
+    }
+    const ctx = display.getContext('2d');
+    if (!ctx) {
+      return;
+    }
+    ctx.imageSmoothingEnabled = false;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, display.width, display.height);
+    const scale = scaleRef.current;
+    const cell = pixelModeRef.current
+      ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
+      : CHECKER_CELL_PX;
+    ctx.fillStyle = CHECKER_COLOR;
+    for (let y = 0; y * cell < display.height; y++) {
+      for (let x = y % 2; x * cell < display.width; x += 2) {
+        ctx.fillRect(x * cell, y * cell, cell, cell);
+      }
+    }
+    // The region, or the whole image: one `drawImage` source rectangle is the
+    // entire difference between editing a sheet and editing one of its cells.
+    const view = regionRef.current ?? {
+      x: 0,
+      y: 0,
+      width: backing.width,
+      height: backing.height,
+    };
+    ctx.drawImage(
+      backing,
+      view.x,
+      view.y,
+      view.width,
+      view.height,
+      0,
+      0,
+      display.width,
+      display.height,
+    );
+    if (previewRef.current) {
+      ctx.drawImage(
+        previewRef.current,
+        view.x,
+        view.y,
+        view.width,
+        view.height,
+        0,
+        0,
+        display.width,
+        display.height,
+      );
+    }
+    // The spritesheet grid, over everything: it is not part of the picture, it
+    // is a statement ABOUT the picture, and the learner is choosing where the
+    // frames fall while looking at what falls inside them. Each cell is drawn as
+    // its own rectangle rather than as full-length rules, so the padding around
+    // the grid and the gap between cells show up as the moat they are.
+    const grid = regionRef.current ? undefined : sheetRef.current;
+    if (grid) {
+      const across = display.width / backing.width;
+      const down = display.height / backing.height;
+      ctx.save();
+      ctx.strokeStyle = GRID_COLOR;
+      ctx.lineWidth = 1;
+      for (const cellRect of sheetCells(backing, grid)) {
+        ctx.strokeRect(
+          Math.round(cellRect.x * across) + 0.5,
+          Math.round(cellRect.y * down) + 0.5,
+          Math.round(cellRect.width * across) - 1,
+          Math.round(cellRect.height * down) - 1,
+        );
+      }
+      ctx.restore();
+    }
+  }, []);
+
+  // Abandon any in-progress stroke or shape drag. Losing the window
+  // mid-press swallows the pointerup (and pointercancel isn't reliably
+  // fired), so without this, returning to the editor keeps painting with
+  // no button held.
+  const cancelInteraction = useCallback(() => {
+    if (!drawingRef.current) {
+      return;
+    }
+    drawingRef.current = false;
+    lastPointRef.current = null;
+    shapeStartRef.current = null;
+    const preview = previewRef.current;
+    preview?.getContext('2d')?.clearRect(0, 0, preview.width, preview.height);
+    repaint();
+  }, [repaint]);
+
+  useEffect(() => {
+    window.addEventListener('blur', cancelInteraction);
+    return () => window.removeEventListener('blur', cancelInteraction);
+  }, [cancelInteraction]);
+
+  const undo = useCallback(() => {
+    if (isReadOnly) {
+      return;
+    }
+    const previous = undoStackRef.current.pop();
+    if (!previous) {
+      return;
+    }
+    const current = currentPixels();
+    if (current) {
+      redoStackRef.current.push(current);
+    }
+    restoreSnapshot(previous);
+    repaint();
+    setHistoryVersion(v => v + 1);
+  }, [isReadOnly, currentPixels, restoreSnapshot, repaint]);
+
+  const redo = useCallback(() => {
+    if (isReadOnly) {
+      return;
+    }
+    const next = redoStackRef.current.pop();
+    if (!next) {
+      return;
+    }
+    const current = currentPixels();
+    if (current) {
+      undoStackRef.current.push(current);
+    }
+    restoreSnapshot(next);
+    repaint();
+    setHistoryVersion(v => v + 1);
+  }, [isReadOnly, currentPixels, restoreSnapshot, repaint]);
+  // Refs so the window keydown listener below can stay mounted once.
+  const undoRef = useRef(undo);
+  undoRef.current = undo;
+  const redoRef = useRef(redo);
+  redoRef.current = redo;
+
+  // Load the image into the backing canvas (at logical resolution when
+  // knownPixelGrid applies) and size the display. Decode via
+  // createImageBitmap (native async decode, off the main thread), falling
+  // back to an Image element. Canvases we read back get willReadFrequently
+  // to stay CPU-side — GPU readback stalls.
+  useEffect(() => {
+    let canceled = false;
+    const finish = (
+      source: CanvasImageSource,
+      width: number,
+      height: number,
+    ) => {
+      if (canceled) {
+        return;
+      }
+      let backing = document.createElement('canvas');
+      backing.width = width;
+      backing.height = height;
+      const ctx = backing.getContext('2d', {willReadFrequently: true});
+      ctx?.drawImage(source, 0, 0);
+      // Trust the metadata only when it divides the image cleanly (a resize
+      // elsewhere would otherwise smear the downsample).
+      const grid =
+        knownPixelGrid &&
+        knownPixelGrid > 1 &&
+        width % knownPixelGrid === 0 &&
+        height % knownPixelGrid === 0
+          ? knownPixelGrid
+          : null;
+      const raster = grid ? ctx?.getImageData(0, 0, width, height) : null;
+      if (raster && grid) {
+        const logical = downsampleToGrid(raster, {
+          sizeX: grid,
+          sizeY: grid,
+          offsetX: 0,
+          offsetY: 0,
+          confidence: 1,
+        });
+        backing = document.createElement('canvas');
+        backing.width = logical.width;
+        backing.height = logical.height;
+        backing
+          .getContext('2d', {willReadFrequently: true})
+          ?.putImageData(
+            new ImageData(
+              new Uint8ClampedArray(logical.data),
+              logical.width,
+              logical.height,
+            ),
+            0,
+            0,
+          );
+        setPixelMode(true);
+        pixelModeRef.current = true;
+      } else {
+        setPixelMode(false);
+        pixelModeRef.current = false;
+      }
+      backingRef.current = backing;
+      const preview = document.createElement('canvas');
+      preview.width = backing.width;
+      preview.height = backing.height;
+      // The circle preview is also read back per pointer-move.
+      preview.getContext('2d', {willReadFrequently: true});
+      previewRef.current = preview;
+      scaleRef.current = Math.max(
+        1,
+        Math.floor(MAX_DISPLAY_SIZE / Math.max(backing.width, backing.height)),
+      );
+      setLoaded(true);
+    };
+    const loadViaImage = () => {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => finish(img, img.naturalWidth, img.naturalHeight);
+      img.onerror = () => {
+        if (!canceled) {
+          setLoadError(true);
+        }
+      };
+      img.src = imageUrl;
+    };
+    // Always through an `<img>`, never through the API client.
+    //
+    // The URL is one the PROJECT holds — a `data:` URL, or an asset path the
+    // upload wrote — not an endpoint. Handing it to the API client sent it at
+    // the dashboard's origin instead of the lab's, where the demo's mock
+    // service worker (which is scoped to this page) never saw it and the
+    // request escaped to a host that need not be running:
+    // `GET http://localhost-studio.code.org:3000/v3/assets/… ERR_CONNECTION_REFUSED`.
+    // An image element resolves it the way every other picture in Codebridge is
+    // resolved, and needs no credentials to read what it was already shown.
+    loadViaImage();
+    return () => {
+      canceled = true;
+    };
+  }, [imageUrl, knownPixelGrid]);
+
+  // Single-key shortcuts (shown in the tooltips): letters pick tools, digits
+  // 1-4 pick brush sizes. Ctrl/Cmd+Z undoes, with Shift (or Ctrl+Y) redoes;
+  // other modifier combos pass through so browser shortcuts keep working.
+  //
+  // Undo and redo need no guard of their own here: they go through the same
+  // callbacks the buttons do, which refuse on a locked level.
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      const key = e.key.toLowerCase();
+      if (
+        (e.metaKey || e.ctrlKey) &&
+        !e.altKey &&
+        (key === 'z' || key === 'y')
+      ) {
+        e.preventDefault();
+        if (key === 'y' || e.shiftKey) {
+          redoRef.current();
+        } else {
+          undoRef.current();
+        }
+        return;
+      }
+      if (e.metaKey || e.ctrlKey || e.altKey) {
+        return;
+      }
+      const target = e.target as HTMLElement | null;
+      if (
+        target &&
+        (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')
+      ) {
+        return;
+      }
+      const match = TOOLS.find(t => t.shortcut === e.key.toLowerCase());
+      if (match) {
+        setTool(match.id);
+        return;
+      }
+      const digit = parseInt(e.key, 10);
+      if (digit >= 1 && digit <= BRUSH_SIZES.length) {
+        setBrushSize(BRUSH_SIZES[digit - 1]);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
+
+  // Layout effect: size and paint the canvas BEFORE the browser paints the
+  // newly-mounted panel, or its first frame flashes default-sized.
+  //
+  // The rendered size fits the SPACE THIS EDITOR HAS, aspect preserved — not a
+  // fraction of the viewport, which is what it took when it was a modal that
+  // owned the screen. Here it is one pane of a split editor, and a wide strip
+  // sized against the window ran off the side of it. `image-rendering:
+  // pixelated` covers the fractional remainder over the integer-upscaled
+  // internal resolution.
+  //
+  // Re-runs whenever the pane changes size (a ResizeObserver below), because a
+  // learner dragging the split is asking for exactly that.
+  const fit = useCallback(() => {
+    const display = displayRef.current;
+    const backing = backingRef.current;
+    const area = canvasAreaRef.current;
+    if (!display || !backing || !area) {
+      return;
+    }
+    const view = regionRef.current ?? {
+      width: backing.width,
+      height: backing.height,
+    };
+    display.width = view.width * scaleRef.current;
+    display.height = view.height * scaleRef.current;
+    const aspect = view.width / view.height;
+    // The box the canvas may fill, less the breathing room around it — and
+    // never smaller than something a person could draw in. A pane squeezed
+    // below that scrolls (see `.canvasArea`) rather than leaving the canvas at
+    // whatever size it happened to have, which is how it came to overflow.
+    const available = {
+      width: Math.max(MIN_CANVAS_PX, area.clientWidth - CANVAS_MARGIN_PX * 2),
+      height: Math.max(MIN_CANVAS_PX, area.clientHeight - CANVAS_MARGIN_PX * 2),
+    };
+    let cssW = Math.min(available.width, MAX_CSS_WIDTH_PX);
+    let cssH = cssW / aspect;
+    const maxH = Math.min(available.height, MAX_CSS_HEIGHT_PX);
+    if (cssH > maxH) {
+      cssH = maxH;
+      cssW = cssH * aspect;
+    }
+    display.style.width = `${Math.round(cssW)}px`;
+    display.style.height = `${Math.round(cssH)}px`;
+    repaint();
+  }, [repaint]);
+
+  useLayoutEffect(() => {
+    if (!loaded) {
+      return;
+    }
+    fit();
+    const area = canvasAreaRef.current;
+    if (!area || typeof ResizeObserver !== 'function') {
+      return;
+    }
+    const observer = new ResizeObserver(fit);
+    observer.observe(area);
+    return () => observer.disconnect();
+  }, [loaded, fit]);
+
+  // Map a pointer event to backing-canvas pixel coordinates.
+  const toPixel = useCallback((e: ReactPointerEvent<HTMLCanvasElement>) => {
+    const display = displayRef.current;
+    const backing = backingRef.current;
+    if (!display || !backing) {
+      return null;
+    }
+    const view = regionRef.current ?? {
+      x: 0,
+      y: 0,
+      width: backing.width,
+      height: backing.height,
+    };
+    const rect = display.getBoundingClientRect();
+    // Into the region first, then into the image: the tools write to the
+    // backing, which is always the whole picture.
+    const x =
+      view.x + Math.floor(((e.clientX - rect.left) / rect.width) * view.width);
+    const y =
+      view.y + Math.floor(((e.clientY - rect.top) / rect.height) * view.height);
+    if (
+      x < view.x ||
+      y < view.y ||
+      x >= view.x + view.width ||
+      y >= view.y + view.height
+    ) {
+      return null;
+    }
+    return {x, y};
+  }, []);
+
+  // Run an operation against the backing canvas's pixels, then repaint.
+  const withRaster = useCallback(
+    (target: HTMLCanvasElement, op: (raster: Raster) => void) => {
+      const ctx = target.getContext('2d');
+      if (!ctx) {
+        return;
+      }
+      const imageData = ctx.getImageData(0, 0, target.width, target.height);
+      op(imageData);
+      ctx.putImageData(imageData, 0, 0);
+      repaint();
+    },
+    [repaint],
+  );
+
+  // Draw the active shape tool between its anchor and the current point.
+  const drawShape = useCallback(
+    (
+      raster: Raster,
+      start: {x: number; y: number},
+      end: {x: number; y: number},
+      size: number,
+      shapeColor: RGBA,
+    ) => {
+      if (tool === 'circle' || tool === 'filledCircle') {
+        const radius = Math.hypot(end.x - start.x, end.y - start.y);
+        drawCircle(
+          raster,
+          start.x,
+          start.y,
+          radius,
+          size,
+          shapeColor,
+          tool === 'filledCircle',
+        );
+      } else {
+        drawRect(
+          raster,
+          start.x,
+          start.y,
+          end.x,
+          end.y,
+          size,
+          shapeColor,
+          tool === 'filledRect',
+        );
+      }
+    },
+    [tool],
+  );
+
+  // Read the backing pixel under the pointer into the active color. The
+  // spectrum picker has no alpha axis, so partial alpha snaps to opaque;
+  // fully transparent picks the transparent color.
+  const pickColorAt = useCallback((p: {x: number; y: number}) => {
+    const ctx = backingRef.current?.getContext('2d');
+    if (!ctx) {
+      return;
+    }
+    const [r, g, b, a] = ctx.getImageData(p.x, p.y, 1, 1).data;
+    setColor(a === 0 ? TRANSPARENT : [r, g, b, 255]);
+  }, []);
+
+  const handlePointerDown = useCallback(
+    (e: ReactPointerEvent<HTMLCanvasElement>) => {
+      // A LOCKED WORKSPACE IS A VIEWER. Refused here and nowhere else,
+      // because the move and the release both return unless a gesture is in
+      // progress — so declining to start one is the whole of it.
+      //
+      // It used to be refused only at the SAVE, which meant a learner on a
+      // locked level could draw, watch the marks appear, and lose every one
+      // of them without being told. Nothing was written either way; what was
+      // missing was saying so at the moment it mattered.
+      if (isReadOnly) {
+        return;
+      }
+      const p = toPixel(e);
+      const backing = backingRef.current;
+      if (!p || !backing) {
+        return;
+      }
+      e.currentTarget.setPointerCapture(e.pointerId);
+      drawingRef.current = true;
+      if (tool === 'eyedropper') {
+        pickColorAt(p);
+      } else if (tool === 'pen' || tool === 'eraser') {
+        pushUndo();
+        if (tool === 'pen') {
+          recordColorUse(color);
+        }
+        lastPointRef.current = p;
+        withRaster(backing, raster =>
+          stamp(raster, p.x, p.y, brushSize, tool === 'pen' ? color : null),
+        );
+      } else if (tool === 'bucket') {
+        pushUndo();
+        recordColorUse(color);
+        withRaster(backing, raster =>
+          floodFill(raster, p.x, p.y, color, FILL_TOLERANCE),
+        );
+      } else {
+        shapeStartRef.current = p;
+      }
+    },
+    [
+      isReadOnly,
+      tool,
+      brushSize,
+      color,
+      toPixel,
+      withRaster,
+      pushUndo,
+      recordColorUse,
+      pickColorAt,
+    ],
+  );
+
+  const handlePointerMove = useCallback(
+    (e: ReactPointerEvent<HTMLCanvasElement>) => {
+      if (!drawingRef.current) {
+        return;
+      }
+      if ((e.buttons & 1) === 0) {
+        // The press ended somewhere we couldn't see it (window switch mid
+        // stroke); a buttonless move must not paint.
+        cancelInteraction();
+        return;
+      }
+      const p = toPixel(e);
+      const backing = backingRef.current;
+      const preview = previewRef.current;
+      if (!p || !backing) {
+        return;
+      }
+      if (tool === 'eyedropper') {
+        pickColorAt(p);
+      } else if (tool === 'pen' || tool === 'eraser') {
+        const last = lastPointRef.current || p;
+        lastPointRef.current = p;
+        withRaster(backing, raster =>
+          stampLine(
+            raster,
+            last.x,
+            last.y,
+            p.x,
+            p.y,
+            brushSize,
+            tool === 'pen' ? color : null,
+          ),
+        );
+      } else if (SHAPE_TOOLS.has(tool) && shapeStartRef.current && preview) {
+        const start = shapeStartRef.current;
+        preview
+          .getContext('2d')
+          ?.clearRect(0, 0, preview.width, preview.height);
+        withRaster(preview, raster =>
+          drawShape(
+            raster,
+            start,
+            p,
+            brushSize,
+            color[3] === 0 ? PREVIEW_STANDIN : color,
+          ),
+        );
+      }
+    },
+    [
+      tool,
+      brushSize,
+      color,
+      toPixel,
+      withRaster,
+      drawShape,
+      pickColorAt,
+      cancelInteraction,
+    ],
+  );
+
+  const handlePointerUp = useCallback(
+    (e: ReactPointerEvent<HTMLCanvasElement>) => {
+      if (!drawingRef.current) {
+        return;
+      }
+      drawingRef.current = false;
+      lastPointRef.current = null;
+      if (tool === 'eyedropper') {
+        // The pick is final on release (a drag samples continuously until
+        // then); hand the pen back so the picked color is immediately
+        // usable.
+        setTool('pen');
+        return;
+      }
+      const backing = backingRef.current;
+      const preview = previewRef.current;
+      if (
+        SHAPE_TOOLS.has(tool) &&
+        shapeStartRef.current &&
+        backing &&
+        preview
+      ) {
+        const p = toPixel(e);
+        const start = shapeStartRef.current;
+        shapeStartRef.current = null;
+        preview
+          .getContext('2d')
+          ?.clearRect(0, 0, preview.width, preview.height);
+        if (p) {
+          pushUndo();
+          recordColorUse(color);
+          withRaster(backing, raster =>
+            drawShape(raster, start, p, brushSize, color),
+          );
+        } else {
+          repaint();
+        }
+      }
+    },
+    [
+      tool,
+      brushSize,
+      color,
+      toPixel,
+      withRaster,
+      repaint,
+      drawShape,
+      pushUndo,
+      recordColorUse,
+    ],
+  );
+
+  const commit = useCallback(() => {
+    const backing = backingRef.current;
+    if (!backing) {
+      return;
+    }
+    if (pixelMode) {
+      // Store crisp: nearest-neighbor upscale of the logical pixels, so the
+      // runtime renders sharply without engine smoothing changes.
+      const ctx = backing.getContext('2d');
+      if (ctx) {
+        const logical = ctx.getImageData(0, 0, backing.width, backing.height);
+        const crispScale = crispScaleFor(backing.width, backing.height);
+        const crisp = upscaleNearest(logical, crispScale);
+        const out = document.createElement('canvas');
+        out.width = crisp.width;
+        out.height = crisp.height;
+        out
+          .getContext('2d')
+          ?.putImageData(
+            new ImageData(
+              new Uint8ClampedArray(crisp.data),
+              crisp.width,
+              crisp.height,
+            ),
+            0,
+            0,
+          );
+        onCommit(out.toDataURL('image/png'), {
+          pixelGridSize: crispScale,
+          recentColors,
+        });
+        return;
+      }
+    }
+    onCommit(backing.toDataURL('image/png'), {recentColors});
+  }, [onCommit, pixelMode, recentColors]);
+
+  useEffect(() => {
+    if (loaded) {
+      fit();
+    }
+  }, [sheet, region, loaded, fit]);
+
+  // Commit after the drawing settles. `historyVersion` bumps once per completed
+  // operation (a finished stroke, an undo, a redo), so this coalesces a burst of
+  // strokes into one save without ever missing the last one.
+  //
+  // Opening a file is not editing it: the version at mount is the baseline, and
+  // nothing is written until it moves. (Loading rewrote the file on open in the
+  // Blockly editor for months; the same trap is here.)
+  const baseline = useRef(historyVersion);
+  useEffect(() => {
+    if (isReadOnly || !loaded || historyVersion === baseline.current) {
+      return;
+    }
+    const handle = window.setTimeout(commit, COMMIT_DEBOUNCE_MS);
+    return () => window.clearTimeout(handle);
+  }, [historyVersion, loaded, isReadOnly, commit]);
+
+  // The cells this sheet declares, against the image as loaded. Empty for a
+  // picture; recomputed rather than stored, since both halves are already state.
+  const cells = useMemo(
+    () =>
+      loaded && backingRef.current ? sheetCells(backingRef.current, sheet) : [],
+    [loaded, sheet],
+  );
+
+  // A grid that has stopped containing the cell being edited (its size changed,
+  // or it stopped being a sheet) leaves the region pointing at nothing.
+  useEffect(() => {
+    if (region && cellIndex(cells, region) < 0) {
+      setRegion(undefined);
+    }
+  }, [cells, region]);
+
+  // historyVersion re-renders this component whenever the stacks change; the
+  // stacks themselves live in refs.
+  const canUndo = historyVersion >= 0 && undoStackRef.current.length > 0;
+  const canRedo = historyVersion >= 0 && redoStackRef.current.length > 0;
+  // Nothing that changes the picture is offered on a locked level: a control
+  // that is present and inert is the same silent nothing the pointer used to
+  // be. The canvas is still shown, and still scrolls and zooms — looking is
+  // the whole of what a viewer does.
+  const canEdit = !isReadOnly && loaded;
+
+  if (!loaded && !loadError) {
+    return null;
+  }
+
+  return (
+    // The file's name is on the tab above and in the browser beside; a third
+    // copy of it here would be a heading that says nothing new.
+    <div className={moduleStyles.panel} aria-label={title}>
+      <div className={moduleStyles.header}>
+        {onSheetChange && (
+          <SheetControls
+            sheet={sheet}
+            width={backingRef.current?.width ?? 0}
+            height={backingRef.current?.height ?? 0}
+            disabled={isReadOnly || !loaded}
+            cellCount={cells.length}
+            onChange={onSheetChange}
+            onPickCell={() => setPickingCell(true)}
+          />
+        )}
+        {region && (
+          <div className={moduleStyles.regionBar}>
+            <Typography variant="body4">
+              {`Cell ${cellIndex(cells, region) + 1} of ${cells.length}`}
+            </Typography>
+            <Button
+              variant="text"
+              size="extraSmall"
+              onClick={() => setRegion(undefined)}
+            >
+              Show whole sheet
+            </Button>
+          </div>
+        )}
+      </div>
+      <div className={moduleStyles.body}>
+        <div className={moduleStyles.toolbar}>
+          <div className={moduleStyles.toolGrid}>
+            {TOOLS.map((t, index) => (
+              <PixelTooltip
+                key={t.id}
+                tooltipId={`pixel-tool-${t.id}-tooltip`}
+                text={toolTitle(t)}
+                fromLeftColumn={index % 2 === 0}
+              >
+                <button
+                  type="button"
+                  aria-label={toolTitle(t)}
+                  aria-pressed={tool === t.id}
+                  className={classNames(
+                    moduleStyles.toolButton,
+                    tool === t.id && moduleStyles.toolActive,
+                  )}
+                  disabled={!canEdit}
+                  onClick={() => setTool(t.id)}
+                >
+                  {t.icon}
+                </button>
+              </PixelTooltip>
+            ))}
+            <div className={moduleStyles.toolbarDivider} />
+            {BRUSH_SIZES.map((size, index) => (
+              <PixelTooltip
+                key={size}
+                tooltipId={`pixel-brush-${size}-tooltip`}
+                text={`Brush size ${size} (${index + 1})`}
+                fromLeftColumn={index % 2 === 0}
+              >
+                <button
+                  type="button"
+                  aria-label={`Brush size ${size} (${index + 1})`}
+                  aria-pressed={brushSize === size}
+                  className={classNames(
+                    moduleStyles.toolButton,
+                    brushSize === size && moduleStyles.toolActive,
+                  )}
+                  disabled={!canEdit}
+                  onClick={() => setBrushSize(size)}
+                >
+                  <span
+                    className={classNames(
+                      moduleStyles.brushDot,
+                      pixelMode && moduleStyles.brushDotSquare,
+                    )}
+                    style={{
+                      width: brushDotPx(size),
+                      height: brushDotPx(size),
+                    }}
+                  />
+                </button>
+              </PixelTooltip>
+            ))}
+            <div className={moduleStyles.toolbarDivider} />
+            <ColorPicker
+              color={color}
+              onChange={setColor}
+              recentColors={recentColors}
+              disabled={!canEdit}
+            />
+          </div>
+          <div className={moduleStyles.historyRow}>
+            <PixelTooltip
+              tooltipId="pixel-undo-tooltip"
+              text="Undo (Ctrl+Z)"
+              fromLeftColumn
+            >
+              <button
+                type="button"
+                aria-label="Undo (Ctrl+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canUndo || isReadOnly}
+                onClick={undo}
+              >
+                <FontAwesomeV6Icon iconName="rotate-left" />
+              </button>
+            </PixelTooltip>
+            <PixelTooltip
+              tooltipId="pixel-redo-tooltip"
+              text="Redo (Ctrl+Shift+Z)"
+            >
+              <button
+                type="button"
+                aria-label="Redo (Ctrl+Shift+Z)"
+                className={moduleStyles.toolButton}
+                disabled={!canRedo || isReadOnly}
+                onClick={redo}
+              >
+                <FontAwesomeV6Icon iconName="rotate-right" />
+              </button>
+            </PixelTooltip>
+          </div>
+        </div>
+        {pickingCell && backingRef.current && (
+          <PickCellDialog
+            image={backingRef.current}
+            cells={cells}
+            current={region}
+            onPick={cell => {
+              setRegion(cell);
+              setPickingCell(false);
+            }}
+            onCancel={() => setPickingCell(false)}
+          />
+        )}
+        <div className={moduleStyles.canvasArea} ref={canvasAreaRef}>
+          {loadError ? (
+            <div className={moduleStyles.loadError}>
+              This image couldn't be loaded for editing.
+            </div>
+          ) : (
+            <canvas
+              ref={displayRef}
+              className={moduleStyles.displayCanvas}
+              onPointerDown={handlePointerDown}
+              onPointerMove={handlePointerMove}
+              onPointerUp={handlePointerUp}
+              onPointerCancel={handlePointerUp}
+            />
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/**
+ * Whether this image is a spritesheet, how big its cells are, and how far apart.
+ *
+ * The whole of what a `.sheet` says. Turning it on writes the file; turning it
+ * off deletes it — an image with no grid is a picture, and a grid nobody can
+ * see is not a decision anyone made.
+ *
+ * Design-system controls on the lab's own surface: this row is about the FILE,
+ * and it should look like the rest of the site rather than like the drawing
+ * board below it.
+ */
+const SheetControls = ({
+  sheet,
+  width,
+  height,
+  disabled,
+  cellCount,
+  onChange,
+  onPickCell,
+}: {
+  sheet?: SheetFile;
+  /** The image's own size, for the default grid. */
+  width: number;
+  height: number;
+  disabled: boolean;
+  /** How many cells the grid currently holds. */
+  cellCount: number;
+  onChange: (sheet: SheetFile | undefined) => void;
+  /** Open the cell picker (only when there is more than one cell). */
+  onPickCell?: () => void;
+}) => {
+  const cell = sheet?.cell;
+  // A first guess a learner will usually accept: square cells the height of the
+  // image, which is what a strip of frames in a row is.
+  const suggested = Math.max(1, Math.min(height || 32, width || 32));
+
+  /** One number of the grid, kept sane: a cell has size, a moat may be zero. */
+  const set = (
+    part: 'width' | 'height' | 'padding' | 'gap',
+    raw: string,
+  ): void => {
+    if (!sheet || !cell) {
+      return;
+    }
+    const value = Math.round(Number(raw));
+    if (!Number.isFinite(value) || value < 0) {
+      return;
+    }
+    if (part === 'width' || part === 'height') {
+      if (value < 1) {
+        return;
+      }
+      onChange({...sheet, cell: {...cell, [part]: value}});
+      return;
+    }
+    // Zero is the ordinary case, and the file says nothing rather than nothing
+    // twice: `padding: 0` and no padding at all mean the same, so only one of
+    // them is ever written.
+    const next = {...sheet, [part]: value || undefined};
+    if (!next.padding) {
+      delete next.padding;
+    }
+    if (!next.gap) {
+      delete next.gap;
+    }
+    onChange(next);
+  };
+
+  const number = (
+    label: string,
+    value: number,
+    part: 'width' | 'height' | 'padding' | 'gap',
+    min: number,
+  ) => (
+    <TextField
+      className={moduleStyles.sheetNumber}
+      name={`sheet-${part}`}
+      label={label}
+      inputType="number"
+      size="s"
+      min={min}
+      value={String(value)}
+      disabled={disabled}
+      onChange={(event: ChangeEvent<HTMLInputElement>) =>
+        set(part, event.target.value)
+      }
+    />
+  );
+
+  return (
+    <div className={moduleStyles.sheetControls}>
+      <Checkbox
+        name="sheet-on"
+        label="Spritesheet"
+        checked={Boolean(sheet)}
+        disabled={disabled}
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          onChange(
+            event.target.checked
+              ? {type: 'sheet', cell: {width: suggested, height: suggested}}
+              : undefined,
+          )
+        }
+      />
+      {sheet && cell && (
+        <>
+          {number('Cell width', cell.width, 'width', 1)}
+          {number('Cell height', cell.height, 'height', 1)}
+          {number('Padding', sheet.padding ?? 0, 'padding', 0)}
+          {number('Gap', sheet.gap ?? 0, 'gap', 0)}
+          <Typography variant="body4" className={moduleStyles.sheetCount}>
+            {cellCount === 1 ? '1 cell' : `${cellCount} cells`}
+          </Typography>
+          {onPickCell && cellCount > 1 && (
+            <Button
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
+              disabled={disabled}
+              onClick={onPickCell}
+            >
+              Edit one cell
+            </Button>
+          )}
+        </>
+      )}
+    </div>
+  );
+};
+
+export default PixelEditor;
