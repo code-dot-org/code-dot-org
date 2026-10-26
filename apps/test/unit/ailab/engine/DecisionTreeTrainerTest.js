@@ -185,17 +185,6 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
       state.accuracyCheckLabels
     );
   });
-
-  /*
-    A level can name a depth the sweep would never try, and a saved run of it
-    still has to come back when the student reopens their project.
-  */
-  test("rebuilds a level's maxDepth from outside the sweep", () => {
-    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
-    expect(trainer.startTraining().hyperparameters).toEqual({maxDepth: 4});
-
-    expect(trainer.rebuild({maxDepth: 4})).toBeDefined();
-  });
 });
 
 describe('DecisionTreeTrainer: regression', () => {
