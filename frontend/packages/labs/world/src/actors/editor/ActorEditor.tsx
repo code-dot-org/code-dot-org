@@ -36,7 +36,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
-import {useSources} from '@code-dot-org/lab/contexts';
+import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
 import {requestAppearanceImport} from '../../appearance/appearanceImport';
 import {isBackgroundPath} from '../../appearance/backgroundsFolder';
@@ -55,6 +55,7 @@ import {DEFAULT_BACKDROP_COLOR} from '../../engine';
 import {requestFileAct} from '../../files/fileActs';
 import {fileLabel} from '../../files/fileLabel';
 import {useScriptStep} from '../../layout/TrailContext';
+import {showsRuleSource, type WorldLevelProperties} from '../../levelData';
 import {gameModuleOf} from '../../mainWorld';
 import {useAfterImport} from '../../mapEditor/useAfterImport';
 import {
@@ -178,6 +179,11 @@ const capitalize = (text: string) =>
 export const ActorEditor = (props: CustomEditorProps) => {
   const {fileId, initialContents, isReadOnly, onChange} = props;
   const {currentSources, replaceSources} = useSources<MultiFileSource>();
+  // Whether this level offers a way to the file behind a trait: the same
+  // call the `use rule` block's open button answers to (`levelData`).
+  const ruleSource = showsRuleSource(
+    useMaybeLevelProperties<WorldLevelProperties>(),
+  );
   const files = useMemo(
     () => projectFiles(currentSources.source),
     [currentSources],
@@ -824,7 +830,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
                           step on the trail, which is how a learner reads
                           what a trait does and changes it
                           (specs/ACTORS_AS_DATA_PLAN.md, step 7). */}
-                      {trait.rulePath && (
+                      {ruleSource && trait.rulePath && (
                         <Button
                           variant="text"
                           size="extraSmall"

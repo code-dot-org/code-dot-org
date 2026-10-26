@@ -5,8 +5,8 @@ This is a set of official terms for common concepts within the system.
 ## World
 
 A **World** is the encapsulation of all laws that exist in the simulated environment, together with
-the Actors living under them. It is the whole of a running game: the Rules in play, the Animations
-registered, and every Actor placed.
+the Actors living under them. It is the whole of a running game: the Rules in play and every
+Actor placed.
 
 There is no separate "scene" concept. An arrangement of Actors is a Map, and a World loads as many
 Maps as it likes — one for the level, another for the UI — so a Map serves the role a Scene would
@@ -16,6 +16,17 @@ operation on the World it held.
 ## Actor
 
 An **Actor** is any entity that can act in the World.
+
+An actor is **for a game or for an interface**, never both. A game actor wears pictures; an
+interface actor is drawn by a drawing routine, the size of its box, and is shown in the palette by
+an icon.
+
+An actor's file is **data and events**. The data is what it is — what it is for, what it acts like,
+whether it is a record, its traits and their values, its own properties, its effects, its
+animations — and is made in the Actor Editor. The events are what it does: its handlers, its own
+blocks and events, its every-frame work and its drawing, in its code. What it does on being made
+is its **is created** handler, which runs once it exists and before it is first drawn. No actor is
+written as a `define actor` block; that is only how the compiler reads one.
 
 ## Rule
 
@@ -68,9 +79,11 @@ represent multiple sprites via a **Spritesheet**.
 
 ## Animation
 
-An **Animation** is a description of a set of Sprites with a delay between each frame that will
-represent an animated routine. These can be applied to an Actor to represent them visually. An
-Animation may just be a single image, of course, for simpler Actors.
+An **Animation** is an actor's own: a timeline of keys, each saying at some moment which picture
+(or which rectangle of one) to show, where it is drawn against the actor, how large, turned how
+far, how solid, and which effects are on. Between two keys a number is worked out; a picture is
+held. The one called **Main** plays when the actor is made, and a still picture is a Main of one
+key. A flipbook and a tween are the same thing.
 
 ## Map
 

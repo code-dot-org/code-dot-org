@@ -45,6 +45,20 @@ An `.effect` is a node graph that compiles to a GLSL fragment shader — see
 `src/effect/README.md` and `specs/EFFECT_EDITOR.md`. It travels through the
 bundle as data and is compiled to GLSL in the preview surface, where Phaser is.
 
+## What an actor is
+
+An actor's file is **data and events** (`src/actors/actorData.ts`): what it is
+— for a game or an interface, what it acts like, whether it is a record, its
+traits and their values, its own properties, its effects, its animations — as
+keys, made in the Actor Editor, and what it does as an event workspace behind
+its **Code**: its handlers, its own blocks and events, its every-frame work and
+its drawing. What it does on being made is its `is created` handler, which runs
+once it exists and before it is first drawn (`World.settleCreations`). The
+compiler reads an actor as the `define actor` workspace its data stands for
+(`actorView`); no file is written or opened in that shape. A game actor wears
+pictures; an interface actor is drawn by its drawing routine and shown by an
+icon (specs/ACTORS_AS_DATA_PLAN.md).
+
 ## Where a picture comes from
 
 Nothing is built in. A game draws only what its project holds: an image is a
@@ -71,9 +85,9 @@ Most of a World level is its starting project, but a few of the editor's
 affordances are teaching decisions rather than preferences, and those live in
 the level's own data (`src/levelData.ts`):
 
-| `levelData` field | Default | What turning it off does                                                  |
-| ----------------- | ------- | ------------------------------------------------------------------------- |
-| `showRuleSource`  | on      | Removes the eye on `use rule` / `use trait` that opens the file behind it |
+| `levelData` field | Default | What turning it off does                                                                                                 |
+| ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `showRuleSource`  | on      | Removes the eye on `use rule` / `use trait`, and a trait's Rule button in the Actor Editor, that open the file behind it |
 
 Level properties are validated on the way in and **zod drops keys it was not
 told about**, so a field only reaches the lab because `src/schema.ts` declares

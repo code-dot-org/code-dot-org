@@ -259,8 +259,8 @@ it cannot be pushed, and nothing else can affect it.
 1. Give the Hero **Can Move** from **Enhance Actor** — that is the Physics
    rule.
 2. Go back to the [Map](#clickable=view.map) and click the Hero. It has a
-   **Can Move** group in its properties now, with a **Velocity** in it. Put
-   **2** in the first box.
+   **Can Move** group in its properties now, with a **Velocity** in it. Open
+   the Velocity and put **2** in the first box.
 3. **Delete the whole \`each frame\`** in the Hero's code. It should still
    cross the screen.
 

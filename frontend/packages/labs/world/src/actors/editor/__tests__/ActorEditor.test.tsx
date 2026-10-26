@@ -23,6 +23,9 @@ let SOURCE: MultiFileSource = {
 };
 
 const replaceSources = vi.fn();
+/** The level's properties, which a test may set. */
+let levelProperties: unknown = undefined;
+
 /** The prompt and confirm dialogs: answered with what a test says. */
 const showDialog = vi.fn<
   (dialog: unknown) => Promise<{type: string; args: unknown}>
@@ -31,6 +34,7 @@ vi.mock('@code-dot-org/lab/contexts', () => ({
   // Read when called: a test may hand the project a changed file.
   useSources: () => ({currentSources: {source: SOURCE}, replaceSources}),
   useDialogControl: () => ({showDialog}),
+  useMaybeLevelProperties: () => levelProperties,
 }));
 vi.mock('../../../runtime/WorldRuntimeContext', () => ({
   useWorldRuntime: () => ({getActorInfo: vi.fn(), hasCompiled: false}),
@@ -406,6 +410,15 @@ describe('the Actor Editor', () => {
       expect.objectContaining({act: 'open', path: 'rules/jump.rule'}),
     );
     setFileActHandler(null);
+  });
+
+  it('offers no Rule button where the level hides rule sources', () => {
+    levelProperties = {levelData: {showRuleSource: false}};
+    open();
+    expect(
+      screen.queryByRole('button', {name: /^Open the .* rule$/}),
+    ).toBeNull();
+    levelProperties = undefined;
   });
 
   it('offers the traits it does not take, and the enhancements', () => {

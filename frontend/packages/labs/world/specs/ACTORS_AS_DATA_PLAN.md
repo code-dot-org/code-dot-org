@@ -1,6 +1,6 @@
 # Plan: actors only as data (SIMPLE_INTERFACE.md, phase eight)
 
-STATUS: IN PROGRESS.
+STATUS: BUILT, October 2026.
 
 The spec settled that "no `define actor` block is shown anywhere": an
 actor's file is data and an event workspace, and the Actor Editor is where
@@ -433,8 +433,33 @@ actor file is and that an interface actor is drawn, and the ledger notes the
 new fields and the picture property's chooser. In the browser: a health bar
 on the first frame, and a lesson from start to finish.
 
+BUILT. SIMPLE_INTERFACE.md lists the phase and says the lessons are done
+for actors; GLOSSARY.md says an actor is for a game or an interface and is
+data and events, and that an Animation is the actor's own timeline (it
+still said a world registers Animations, and that one is a list of
+Sprites with delays); the README says what an actor is. A level that turns
+`showRuleSource` off now hides a trait's Rule button in the Actor Editor
+too, which is the same door, and the README's `levelData` table says so.
+
+In the browser, `motion/speed` from its start: the Hero opened from the
+Map, Can Move from Enhance Actor, its `each frame` deleted in its Code; on
+the Map the Hero chosen with the arrow keys, its Can Move group opened,
+and its Velocity set to 2 — and the Hero crossed the screen when the game
+was restarted. One wording fixed on the way: the Velocity is a dial, and
+its first box is behind it, so the step says to open it.
+
+Found, and not this phase's: **Check my work** in the browser builds the
+world it checks with no actors in it — every probe reads nothing, so every
+lesson whose check watches an actor fails. The build before this phase
+(`0270436cd5e`) does the same, checked by running both with a count of
+the actors the check sees. The lesson checks in the tests run the same
+checks against `compileProject` and pass, which is why nothing caught
+it. Left for its own investigation.
+
 ## Open
 
+- **Check my work in the browser checks an empty world** (step 8): found
+  here, older than this phase.
 - **Whether an actor's purpose may change after it is made.** Step 3
   lets the purpose dropdown switch it, converting a game actor to a drawn
   one. Fixed when the actor is made would leave nothing to convert or

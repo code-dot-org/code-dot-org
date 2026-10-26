@@ -36,7 +36,11 @@ while one is edited, a Viewport's cameras in its own inspector, a way in
 for every kind of file where it is used, and the folder buttons gone
 (SHELL_FINISH_PLAN.md), then animations as the actor's own timelines,
 edited in the Actor Editor, with `.anim` files retired
-(ANIMATION_PLAN.md). The accessibility gaps each phase opened or closed
+(ANIMATION_PLAN.md), then actors only as data: an actor told it was made
+before it is first drawn, what it is for deciding how it is drawn, every
+actor opened in the Actor Editor, and the blocks an editor establishes out
+of the toolbox, with the lessons rewritten (ACTORS_AS_DATA_PLAN.md). The
+accessibility gaps each phase opened or closed
 are kept in ACCESSIBILITY.md.
 
 ## World Editor is now a Screen Editor
@@ -611,6 +615,11 @@ The lessons teach the current shape of the lab: `define world` rows,
 carry over; their starting projects and instructions do not. Nothing has
 shipped, so they are rewritten for the new shape rather than migrated, and
 after the rest is built.
+
+Done for actors (ACTORS_AS_DATA_PLAN.md, step 7): forty-four lessons give
+traits from Enhance Actor, keep an actor's own values in Self and a world's
+on the Map, and read an actor's code behind Code. `define world`'s rows
+remain, and so do the lessons that teach them.
 
 ### First, the game inside a Viewport
 
