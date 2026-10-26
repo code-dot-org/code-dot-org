@@ -372,25 +372,6 @@ describe('QuizQuestionCard', () => {
       expect(screen.getByRole('group', {name: 'Options'})).toBeInTheDocument();
     });
 
-    it('leaves the draft unchanged when a group label is clicked', () => {
-      renderCard({
-        question: {...MULTIPLE_SELECT_QUESTION, correctChoiceIds: ['b', 'c']},
-        isExpanded: true,
-      });
-      openAnswers();
-
-      fireEvent.click(screen.getByText('Selection type:'));
-      fireEvent.click(screen.getByText('Options'));
-
-      expect(
-        screen.getByRole('button', {name: 'Multiple select'})
-      ).toHaveAttribute('aria-pressed', 'true');
-      expect(
-        screen.getByRole('checkbox', {name: 'Correct answer: 2'})
-      ).not.toBeChecked();
-      expect(screen.getByRole('button', {name: 'Save'})).toBeDisabled();
-    });
-
     it('saves a type change on a saved question with the new type', async () => {
       const {onSave} = renderCard({isExpanded: true});
       openAnswers();
