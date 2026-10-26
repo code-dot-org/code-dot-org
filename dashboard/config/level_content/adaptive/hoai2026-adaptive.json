@@ -6,7 +6,7 @@
   "map": { "layout": "destinations" },
   "project": {
     "templateLevel": "adaptive-HoAI26-template-main-project",
-    "description": "TODO"
+    "description": "Work on your final project here!"
   },
   "skills": {
     "build": {
@@ -47,6 +47,7 @@
       "id": "intro",
       "title": "Intro",
       "description": "Intro panels",
+      "routeAfterCompletion": true,
       "steps": [
         {
           "id": "intro-panels",
@@ -178,6 +179,10 @@
       "description": "Writes a prompt with 2 or more specific details, or a follow-up that changes one thing.",
       "skillIds": ["build"],
       "requires": ["intro"],
+      "targetEvidenceLevels": {
+        "build": 2
+      },
+      "skippable": true,
       "steps": [
         {
           "id": "steer-it-video",
@@ -233,6 +238,10 @@
       "description": "Names a block of their page and what it is for.",
       "skillIds": ["language"],
       "requires": ["intro"],
+      "targetEvidenceLevels": {
+        "language": 2
+      },
+      "skippable": true,
       "steps": [
         {
           "id": "use-the-lingo-video",
@@ -355,6 +364,10 @@
       "description": "Reports a problem with what was expected, what happened and where.",
       "skillIds": ["debug"],
       "requires": ["intro"],
+      "targetEvidenceLevels": {
+        "debug": 2
+      },
+      "skippable": true,
       "steps": [
         {
           "id": "give-context-video",
