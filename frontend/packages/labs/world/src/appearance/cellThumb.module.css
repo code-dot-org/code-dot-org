@@ -1,0 +1,34 @@
+/* A drawn cell, and the button shape both cell pickers put around one. Shared
+   so the two pickers cannot drift apart on what a selected cell looks like. */
+
+.cell {
+  display: block;
+  image-rendering: pixelated;
+}
+
+.cellButton {
+  position: relative;
+  display: block;
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-color: #101020;
+  cursor: pointer;
+}
+
+.cellButton:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.cellButton:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.cellChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+.cellButton:disabled {
+  cursor: default;
+}

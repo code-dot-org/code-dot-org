@@ -1,0 +1,70 @@
+/* The picture palette's CONTENT. The dialog itself — surface, width, padding,
+   the button row — is the design system's `Dialog`. */
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* Everything the project can draw, as one wrapped run of tiles: pictures and
+   the cells of every spritesheet, in the order the project holds them. No
+   names — the point is to recognise the drawing, not read about it. */
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 100%;
+  max-height: 50vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* A fixed square whatever the art's shape: a palette of ragged tiles is a
+   palette nobody can scan. Wide or tall art is drawn to fit inside it. */
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  width: 56px;
+  height: 56px;
+  padding: 2px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-color: #101020;
+  cursor: pointer;
+}
+
+.tile:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.tile:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+/* The ways to get another picture, drawn as tiles so they are where the eye
+   already is — outlined rather than filled, because they are not pictures. */
+.action {
+  flex-direction: column;
+  gap: 4px;
+  border-color: var(--borders-neutral-primary, #d4dae1);
+  border-style: dashed;
+  background-color: transparent;
+  color: var(--text-neutral-primary);
+}
+
+.action:hover {
+  border-style: solid;
+}
+
+.tileChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+}

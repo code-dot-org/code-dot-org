@@ -1,0 +1,167 @@
+/* Describing a picture: a view of its own rather than a row under a grid.
+   Shared by the Actor Creator's picture step and the backdrop shelf
+   (specs/IMAGE_GENERATION.md). */
+
+.panel {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* One labelled thing per line — the shape, the words, the picture — so the
+   panel has room for the next question without being redesigned. */
+.field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prompt {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 4.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+  font: inherit;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.draw {
+  text-transform: none;
+}
+
+/* The way back to the pictures the project already has, which is the likelier
+   answer and must not become hard to reach for having been left. */
+.back {
+  padding: 0;
+  text-transform: none;
+  text-decoration: underline;
+}
+
+/* WHAT CAME BACK, big. A picture chosen at thumbnail size is a picture nobody
+   looked at, and the whole reason to wait half a minute for one is to see it. */
+.preview {
+  display: flex;
+  width: 100%;
+  min-height: 10rem;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: 1px dashed var(--borders-neutral-primary, #d4dae1);
+  border-radius: 6px;
+  background-color: #101020;
+}
+
+.preview img {
+  max-width: 100%;
+  max-height: 14rem;
+}
+
+.waiting,
+.nothing {
+  color: var(--text-neutral-secondary);
+}
+
+.keep {
+  text-transform: none;
+}
+
+.problem {
+  color: var(--text-danger, #c0392b);
+}
+
+/* WHAT IT IS, where the call site cannot tell. Side by side rather than a
+   dropdown: there are two of them and the difference is worth reading, which a
+   collapsed list hides behind a press. */
+.kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kind {
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  flex: 1 1 12rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  text-transform: none;
+}
+
+.kindName {
+  font-weight: 600;
+}
+
+/* Dimmed with opacity rather than a colour, so the chosen card — which the
+   design system paints light-on-dark — does not end up grey on grey. */
+.kindWhat {
+  opacity: 0.8;
+}
+
+/* A surface that has to repeat, repeated. One copy says nothing about whether
+   it joins; several say it at a glance. Fixed in pixels rather than a fraction
+   of the box, so the seams stay the same size whatever the dialog is. */
+.tiled {
+  width: 100%;
+  min-height: 13rem;
+  align-self: stretch;
+  background-position: center;
+  image-rendering: auto;
+}
+
+.repeated {
+  color: var(--text-neutral-secondary);
+}
+
+/* Which way it repeats: a compact row, because it is a refinement of the kind
+   above rather than a question of its own rank. One line of explanation under
+   it, for whichever is chosen — three lines at once would out-weigh the
+   question. */
+.wayWhat {
+  color: var(--text-neutral-secondary);
+}
+
+/* The ground behind a picture that is meant to have holes in it.
+   A flat dark panel makes a see-through picture read as a hole rather than as
+   a picture with a hole in it — which is the one thing the learner asked for
+   and the one thing they could not check. Every image editor draws this same
+   chequer for the same reason. */
+.through {
+  background-color: #f3f4f6;
+  background-image: linear-gradient(
+      45deg,
+      #cfd4db 25%,
+      transparent 25%,
+      transparent 75%,
+      #cfd4db 75%
+    ),
+    linear-gradient(
+      45deg,
+      #cfd4db 25%,
+      transparent 25%,
+      transparent 75%,
+      #cfd4db 75%
+    );
+  background-position:
+    0 0,
+    8px 8px;
+  background-size: 16px 16px;
+}
