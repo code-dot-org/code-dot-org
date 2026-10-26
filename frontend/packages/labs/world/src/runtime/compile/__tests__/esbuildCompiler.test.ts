@@ -1,0 +1,124 @@
+// @vitest-environment node
+// esbuild-wasm requires the real Node TextEncoder/Uint8Array realm; jsdom's
+// (the package's default) trips its environment invariant, so run this in Node.
+import {afterAll, describe, expect, it} from 'vitest';
+
+import {CompileError, WorldCompiler} from '../esbuildCompiler';
+
+// esbuild-wasm runs in Node here (no wasmURL); the browser path is exercised by
+// spikes/milestone-2. One shared compiler — `initialize` is a one-per-thread
+// singleton.
+const compiler = new WorldCompiler();
+
+afterAll(() => compiler.dispose());
+
+const PROJECT: Record<string, string> = {
+  'worlds/main.ts': `
+    import {WorldBuilder} from 'world-lab';
+    import Platform from 'worlds/platform';
+    import label from './label';
+    const world = Platform;
+    const tag: string = label;
+    console.log('built', tag);
+    export default world;
+  `,
+  'worlds/label.ts': `export default 'v1';`,
+  'worlds/platform.js': `
+    import {WorldBuilder} from 'world-lab';
+    import config from 'worlds/platform.config.json';
+    export default new WorldBuilder({id: config.id, name: config.name});
+  `,
+  'worlds/platform.config.json': `{"id":"platform","name":"Platform World"}`,
+};
+
+describe('WorldCompiler', () => {
+  it('bundles a multi-file project to one ESM module', async () => {
+    const code = await compiler.compile(PROJECT, 'worlds/main.ts');
+    // world-lab is rewritten to its self-hosted URL (external), not bundled.
+    expect(code).toMatch(/from ?["']\/vendor\/world-lab\.mjs["']/);
+    expect(code).not.toContain('WorldBuilder =');
+    // Root-relative + relative + JSON imports were inlined.
+    expect(code).toContain('Platform World');
+    expect(code).toContain('v1');
+    // TypeScript annotations are gone.
+    expect(code).not.toMatch(/: string =/);
+  });
+
+  it('bundles an imported `.effect` file as data, resolving the extension', async () => {
+    // An `.effect` is a shader graph. It travels through the bundle as JSON and
+    // is compiled to GLSL in the preview surface, where Phaser is — so what
+    // must appear in the bundle is the document, not a shader.
+    const project: Record<string, string> = {
+      'worlds/main.ts': `
+        import {WorldBuilder} from 'world-lab';
+        import EffectsRipple from 'effects/ripple';
+        const world = new WorldBuilder({id: 'g', name: 'G'});
+        console.log(EffectsRipple.name);
+        export default world;
+      `,
+      'effects/ripple.effect': `{"version":1,"name":"Ripple","parameters":[],"nodes":[{"id":"sample-1","type":"sample","position":{"x":0,"y":0}}],"edges":[],"functions":[]}`,
+    };
+    const code = await compiler.compile(project, 'worlds/main.ts');
+    expect(code).toContain('name: "Ripple"');
+    expect(code).toContain('type: "sample"');
+  });
+
+  it('reflects an edit on a subsequent (warm) rebuild', async () => {
+    await compiler.compile(PROJECT, 'worlds/main.ts');
+    const edited = {...PROJECT, 'worlds/label.ts': `export default 'v2';`};
+    const code = await compiler.compile(edited, 'worlds/main.ts');
+    expect(code).toContain('v2');
+    expect(code).not.toContain("'v1'");
+  });
+
+  it('emits an untouched module identically when another file changes', async () => {
+    // The hot-reload reconciler hashes FUNCTION SOURCE to notice an edited rule
+    // or handler (`ruleIds.ts`, `Actor.handlerIds`). That only works if a
+    // module the learner did not touch comes out of the bundler the same way
+    // every time — otherwise every edit anywhere would read as "the rules
+    // changed" and restart the game, which is the feature turned inside out.
+    //
+    // The case to fear is a name collision: two modules bundled into one file,
+    // both declaring `speed`, one of them necessarily renamed.
+    const rule = `
+      const speed = 3;
+      export function step(world) { world.x = speed * 2; }
+    `;
+    const main = (extra: string) => `
+      import {step} from 'rules/thing';
+      ${extra}
+      export default {step};
+    `;
+    const stepSource = (code: string) => {
+      const at = code.indexOf('function step(');
+      return code.slice(at, code.indexOf('}', at) + 1);
+    };
+
+    const before = await compiler.compile(
+      {'worlds/main.ts': main(`console.log('a');`), 'rules/thing.ts': rule},
+      'worlds/main.ts',
+    );
+    const after = await compiler.compile(
+      {
+        'worlds/main.ts': main(`const speed = 99; console.log(speed);`),
+        'rules/thing.ts': rule,
+      },
+      'worlds/main.ts',
+    );
+
+    expect(stepSource(before)).toContain('speed * 2');
+    expect(stepSource(after)).toBe(stepSource(before));
+  });
+
+  it('throws a CompileError with a location for an unresolved import', async () => {
+    const broken = {
+      'worlds/main.ts': `import x from 'worlds/missing'; export default x;`,
+    };
+    await expect(compiler.compile(broken, 'worlds/main.ts')).rejects.toThrow(
+      CompileError,
+    );
+    await expect(compiler.compile(broken, 'worlds/main.ts')).rejects.toThrow(
+      /cannot resolve 'worlds\/missing'/,
+    );
+  });
+});

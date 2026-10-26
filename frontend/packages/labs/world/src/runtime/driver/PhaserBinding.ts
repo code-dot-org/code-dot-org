@@ -1,0 +1,1672 @@
+// Turns a built World into a running Phaser 4 game (specs/PLAN.md §10). One
+// Phaser.Game with a single Scene bridges to our World: on each frame it ticks
+// the engine with the real delta (ENGINE.md's real-time requirement) and
+// reconciles every positional actor's transform onto a GameObject.
+//
+// This is DRIVER code — it runs on the preview surface and imports `phaser` at
+// runtime. It imports `world-lab` only for TYPES (erased at build), and reads
+// the world through `renderSnapshot()` / `tick()` — methods on the *learner's*
+// engine instance — so there is exactly one engine instance and no Property
+// identity to marshal across a module boundary.
+//
+// Appearance: the ENGINE owns animation timing (rules/animation.ts) and resolves
+// each actor's current frame; `renderSnapshot` hands it over as a `frame`
+// descriptor and this binding just blits it — a textured Image cropped to the
+// frame's spritesheet cell (or a whole single image), else a plain rectangle for
+// an actor with no appearance. Phaser is a renderer, not the animator. Every
+// texture comes from the project itself (`projectAssets`), loaded as a plain
+// image; a frame's cell rectangle becomes a named texture frame on first use.
+//
+// Renderer: WebGL. The game runs on `Phaser.WEBGL` outright rather than `AUTO`,
+// because Effects (specs/EFFECTS_PLAN.md) are compiled GLSL registered as filter
+// render nodes, and `renderer.renderNodes` exists only on the WebGL renderer. A
+// browser that cannot give us WebGL is told so at boot (`assertWebGL`), not at
+// the first effect.
+//
+// Input: DOM key listeners on the focusable `#game` parent keep a live set of
+// held keys (by name — every key, not just arrows), handed to the World each
+// frame (`setInput`) before ticking, so the Input rule can move controlled actors
+// and raise its key-pressed/released events. Listening on `#game` (not the window)
+// with `autoFocus` off means the game responds to keys only while the learner has
+// focused it (click or tab) — and a hot restart never steals focus back from the
+// editor. preview.html rings `#game` while it is focused.
+
+import Phaser from 'phaser';
+
+import type {Actor, BackdropState, RenderState, World} from 'world-lab';
+
+// Straight from the source, not through `world-lab`: that specifier is the
+// LEARNER's name for the vendored engine bundle, and this is our own code.
+// `core/keys` imports nothing, so nothing of the engine comes with it.
+import {keyName} from '../../engine/core/keys';
+import {buttonName} from '../../engine/core/pointer';
+import {isSoundFile} from '../../sound/soundFiles';
+import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../viewport';
+
+import {
+  layerShift,
+  placementParallax,
+  stretchedPlacement,
+  tiledPlacement,
+} from './backdropPlacement';
+import {DrawingTextures} from './drawingTextures';
+import {EffectRegistry, type EffectErrorReporter} from './effects';
+import {RENDER_SCALE} from './renderScale';
+import {installSkewHook, type RenderStepInternals} from './skew';
+import {SoundChannel} from './sound';
+import {browserTextMetrics} from './textMetrics';
+
+const ACTOR_SIZE = 24;
+// How much WORLD is on screen at startup, before the world has been built and
+// can say how much of itself it wants (`World.setViewSize`, `set size of view`,
+// and `syncViewSize` below). A world that says nothing keeps this, which is the
+// ten-tile square every existing project was authored against.
+const VIEW_WIDTH = VIEWPORT_WIDTH;
+const VIEW_HEIGHT = VIEWPORT_HEIGHT;
+
+// …and how many pixels that is drawn with, which is a different question and
+// used to be answered with the same number (`renderScale`). The canvas is made
+// at the render scale and the camera is zoomed by it (`fitCamera`), so a world
+// coordinate means exactly what it meant before and every one of them is drawn
+// three times as finely.
+//
+// Still native, not on-screen: the Scale Manager's FIT mode letterboxes and
+// centers the canvas within the preview pane, scaling it up or down. With
+// `pixelArt` that scaling is nearest-neighbor, which is right for 32-pixel art
+// and is why the factor wants to be whole.
+const GAME_WIDTH = VIEW_WIDTH * RENDER_SCALE;
+const GAME_HEIGHT = VIEW_HEIGHT * RENDER_SCALE;
+
+/**
+ * How far the view has moved from where a camera rests.
+ *
+ * A camera's position is the point it shows at the MIDDLE of the view
+ * (core/Camera), and its resting position is the middle of the world's own
+ * rectangle — so a camera that has not been moved is an offset of zero, and the
+ * world draws where it always did.
+ *
+ * Subtracting here rather than after the parallax factor is deliberate: a layer
+ * at factor 0 must not move AT ALL, and `(center - camera) * 0` is zero where
+ * `center - camera * 0` is half a screen. It also leaves every slot image where
+ * it is placed, centered in the viewport, with nothing to compensate for.
+ */
+const cameraOffset = (
+  view: {position: {x: number; y: number}} | undefined,
+  /** How much of the world is on screen — `World.viewSize`, in pixels. */
+  size: {x: number; y: number},
+) => ({
+  x: (view?.position.x ?? size.x / 2) - size.x / 2,
+  y: (view?.position.y ?? size.y / 2) - size.y / 2,
+});
+const DEGREES_TO_RADIANS = Math.PI / 180;
+// Depths WITHIN one layer's container. The container itself carries the layer's
+// place in the stack, so these two are all the ordering a layer needs: its
+// background behind its actors. Something in front of them is a layer above.
+const BACKGROUND_DEPTH = 0;
+const ACTOR_DEPTH = 1;
+
+/**
+ * The name of a texture frame for `cell`, registering it on first use.
+ *
+ * Phaser reads a sub-rectangle of an image through a named frame, which a
+ * spritesheet load would normally create up front from a fixed cell size. There
+ * is no fixed cell size here — an animation's frames carry their own rectangles,
+ * and the image they read is just an image — so each rectangle becomes a frame
+ * the first time it is drawn, named by the rectangle itself.
+ */
+function cellFrame(
+  scene: Phaser.Scene,
+  sprite: string,
+  cell: {x: number; y: number; width: number; height: number},
+): string {
+  const name = `${cell.x},${cell.y},${cell.width},${cell.height}`;
+  const texture = scene.textures.get(sprite);
+  if (texture && !texture.has(name)) {
+    texture.add(name, 0, cell.x, cell.y, cell.width, cell.height);
+  }
+  return name;
+}
+
+/**
+ * A drawn image slot: stretched (an Image) or tiled (a TileSprite).
+ *
+ * Two objects rather than one with a flag, because Phaser draws them
+ * differently — only a TileSprite wraps its texture.
+ */
+type SlotObject = Phaser.GameObjects.Image | Phaser.GameObjects.TileSprite;
+
+/** A drawn actor — a textured image or the fallback rectangle. */
+type GameObject = Phaser.GameObjects.Image | Phaser.GameObjects.Rectangle;
+
+/**
+ * Fail at boot, with a sentence, rather than at the first effect with a stack.
+ *
+ * The game asks for `Phaser.WEBGL` outright (not `AUTO`): an effect is a
+ * compiled GLSL shader and has no canvas fallback, so a game silently downgraded
+ * to Canvas would boot fine and then throw from inside the driver the moment an
+ * actor used one. The preview surface catches this and reports it as an engine
+ * error, which is where a learner will actually see it.
+ */
+function assertWebGL(): void {
+  const probe = document.createElement('canvas');
+  const gl =
+    probe.getContext('webgl') ?? probe.getContext('experimental-webgl');
+  if (!gl) {
+    throw new Error(
+      'This browser cannot run WebGL, which the world preview needs to draw.',
+    );
+  }
+  // Contexts are a scarce per-page resource; hand this one back immediately.
+  (gl as WebGLRenderingContext)
+    .getExtension('WEBGL_lose_context')
+    ?.loseContext();
+}
+
+/**
+ * Where a throw out of the learner's own code goes.
+ *
+ * Separate from {@link EffectErrorReporter} because they are different failures
+ * with different remedies: an effect that will not compile leaves the game
+ * running without it, while a body that throws stops the simulation.
+ */
+export type RuntimeErrorReporter = (message: string, stack?: string) => void;
+
+// Keys whose browser default (scrolling the page) we suppress while the game
+// has focus, so arrows/space drive the game instead of the page.
+/**
+ * A wheel notch in PIXELS, whichever unit the browser chose to report.
+ *
+ * `deltaMode` is 0 for pixels, 1 for lines and 2 for pages. The line and page
+ * figures are what browsers themselves use when they turn a wheel into a
+ * scroll, and they are approximations either way — a wheel has no true size.
+ */
+const WHEEL_UNIT: Record<number, number> = {0: 1, 1: 16, 2: 400};
+
+const SCROLL_KEYS = new Set([
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight',
+  ' ',
+]);
+
+/**
+ * The mouse buttons held right now, by OUR names (`engine/core/pointer`).
+ *
+ * Read off the pointer's state each frame rather than accumulated from events,
+ * which is the opposite of what the keyboard does — and the reason is that
+ * Phaser already keeps this for the mouse and does not for the keyboard (its
+ * own keyboard input is off, see the config). A held-state read also cannot
+ * leave a button stuck down after a release the page never saw.
+ */
+const buttonsDown = (pointer: Phaser.Input.Pointer): string[] => {
+  const held: string[] = [];
+  if (pointer.leftButtonDown()) {
+    held.push(buttonName(0));
+  }
+  if (pointer.middleButtonDown()) {
+    held.push(buttonName(1));
+  }
+  if (pointer.rightButtonDown()) {
+    held.push(buttonName(2));
+  }
+  return held;
+};
+
+export class PhaserBinding {
+  private readonly game: Phaser.Game;
+  private readonly parent: HTMLElement;
+  /** What is playing, so that stopping the game stops it (specs/SOUND.md). */
+  private readonly sound: SoundChannel;
+  /** Set by the first throw out of the learner's code; nothing ticks after. */
+  private halted = false;
+  private readonly focusOnPointerDown: () => void;
+  // Broad keyboard capture: DOM listeners on the (focusable) `#game` parent keep
+  // a live set of pressed DOM key names. Attached to the parent — not window — so
+  // keys only register while the game is focused, and removed in stop().
+  private readonly onKeyDown: (event: KeyboardEvent) => void;
+  private readonly onWheel: (event: WheelEvent) => void;
+  private readonly onKeyUp: (event: KeyboardEvent) => void;
+  private readonly onBlur: () => void;
+  /** Fires when the game's element takes the keyboard — see the constructor. */
+  private readonly onFocus: () => void;
+
+  constructor(
+    world: World,
+    parent: HTMLElement,
+    // The project's textures as `{fileName: dataURL}`; an animation frame
+    // references one by its file name (see projectAssets / UPLOADS.md). There
+    // is no other source: a game draws what its project holds.
+    projectAssets: Record<string, string> = {},
+    // Where an effect that will not compile is reported. It happens inside the
+    // render loop — long after the constructor's caller could have caught it —
+    // so the message needs a way out that is not a throw.
+    onEffectError: EffectErrorReporter = () => {},
+    // Where a throw from the learner's own code is reported. Same reason: the
+    // simulation runs inside Phaser's loop, so an error in a rule's step body
+    // has no caller left to catch it.
+    onRuntimeError: RuntimeErrorReporter = () => {},
+  ) {
+    // LEND THE WORLD THE MEASURING TAPE, once, before anything runs. The
+    // engine has no font and no canvas; a caret has to sit after the last
+    // letter, and only this half knows where that is (`textMetrics`). A
+    // browser with no 2D context hands back nothing and the world measures
+    // zero, which is a caret at the left margin rather than a throw.
+    const metrics = browserTextMetrics();
+    if (metrics) {
+      world.useTextMetrics(metrics);
+    }
+    // …AND SOMEWHERE TO REMEMBER THINGS, on the same terms
+    // (specs/SAVING_PLAN.md). This is the sandbox origin's storage, which is
+    // deliberately isolated from the lab's session: the learner's own game
+    // data, reaching nothing of theirs.
+    //
+    // Reading `localStorage` at all can THROW where site data is blocked, so
+    // the test is the access and not a property check; a world lent nothing
+    // saves nothing and says so.
+    try {
+      if (typeof localStorage !== 'undefined') {
+        localStorage.getItem('world-lab.probe');
+        world.useStorage(localStorage);
+      }
+    } catch {
+      // No storage here. The blocks answer false, which is what they are for.
+    }
+    // …and the clock, lent the same way and for the same reason: the engine
+    // half has no machine and no locale (specs/CLOCK_PLAN.md). Seconds, since
+    // everything else in the lab is in seconds; and the zone as minutes to ADD
+    // to UTC, which is the sign a person writes and the opposite of what
+    // `getTimezoneOffset` reports.
+    world.useClock(() => Date.now() / 1000, -new Date().getTimezoneOffset());
+    // Whether the game's element was focused by a click rather than by a Tab
+    // from the page. Read and cleared by the focus handler below.
+    let viaPointer = false;
+    const objects = new Map<Actor, GameObject>();
+    /**
+     * One Container per actor that CARRIES others (specs/PARENTING.md): the
+     * actor's own image is its first child, at the origin, and each child's
+     * object follows, at the child's local transform. The Container carries
+     * the parent's world transform, its opacity and its effects, so those are
+     * the group's, exactly as a layer's are its Container's. An actor with no
+     * children is a plain object, as ever.
+     */
+    const groups = new Map<Actor, Phaser.GameObjects.Container>();
+    /**
+     * One Container and one Phaser camera per Viewport's space
+     * (specs/VIEWPORT_PLAN.md). The container holds the space's actors, at
+     * the top level of the scene; the camera draws it alone, into the
+     * Viewport's rectangle on the canvas, scrolled to the space's camera —
+     * and the main camera ignores it. Keyed by the space's id, as the frame
+     * names it.
+     *
+     * A camera rather than a mask, because in this Phaser a mask is a filter
+     * and `setMask` does nothing in WebGL; and rather than a container
+     * shifted like a layer's, because the clip has to come from somewhere,
+     * and a camera's viewport is exactly that.
+     */
+    const spaceHosts = new Map<
+      string,
+      {
+        inner: Phaser.GameObjects.Container;
+        camera: Phaser.Cameras.Scene2D.Camera;
+        /**
+         * The camera that draws what the root holds IN FRONT of this
+         * Viewport — a score, a menu loaded over the game — after the
+         * space's camera has drawn, so that it lands on top. See `band`.
+         */
+        over: Phaser.Cameras.Scene2D.Camera;
+        /**
+         * The space this box MIRRORS, by id, or undefined for a box with a
+         * scene of its own (specs/MIRRORING_PLAN.md). A mirror's `camera`
+         * draws the target's display list rather than `inner`, which stays
+         * empty; the ignore lists are set at creation from this, so a change
+         * to it takes the host down to be made again.
+         */
+        mirrors: string | undefined;
+        /**
+         * The space's own layers, back to front (specs/LAYERS_PLAN.md): a
+         * container each inside `inner`, and the backgrounds' images by
+         * layer index, as the world's are kept.
+         */
+        layers: Array<Phaser.GameObjects.Container | undefined>;
+        backdrops: Array<SlotObject | undefined>;
+      }
+    >();
+    // The backdrop layers' images, by layer index — created on demand, because
+    // a world may be told about its background mid-game.
+    /**
+     * One Phaser Container per engine layer, in stack order.
+     *
+     * A container rather than a depth range, because a layer is a thing effects
+     * attach TO — `blur the game and leave the HUD sharp` has nothing to filter
+     * unless the game's drawing is one object.
+     *
+     * A Container and not a `GameObjects.Layer`, which is the other grouping
+     * Phaser offers: a Layer carries depth and filters but NOT a transform, and
+     * a layer that cannot be moved cannot do parallax. Container has both, and
+     * its children's coordinates become relative to it — which is exactly what
+     * is wanted here, since actors are positioned in world space and the
+     * container carries the view offset.
+     *
+     * Children are sorted by depth on demand rather than every frame: a
+     * Container draws in insertion order until told otherwise, and actors
+     * arrive whenever they are placed, so a background added after them would
+     * otherwise cover them.
+     */
+    const containers: Array<Phaser.GameObjects.Container | undefined> = [];
+    const unsorted = new Set<Phaser.GameObjects.Container>();
+    const containerFor = (
+      scene: Phaser.Scene,
+      index: number,
+    ): Phaser.GameObjects.Container => {
+      let container = containers[index];
+      if (!container) {
+        container = scene.add.container(0, 0);
+        container.setDepth(index);
+        containers[index] = container;
+        // A layer is the main camera's; every space camera looks past it.
+        for (const host of spaceHosts.values()) {
+          host.camera.ignore(container);
+        }
+      }
+      return container;
+    };
+    /** Put a new child in its layer, and remember the order needs redoing. */
+    const intoLayer = (
+      scene: Phaser.Scene,
+      index: number,
+      child: Phaser.GameObjects.GameObject,
+    ) => {
+      const container = containerFor(scene, index);
+      container.add(child);
+      unsorted.add(container);
+    };
+
+    const backdrops: Array<SlotObject | undefined> = [];
+    // Every key currently held (by our name, `engine/core/keys`); fed to the
+    // engine each frame. `update` reads it; the listeners below keep it current.
+    const downKeys = new Set<string>();
+    // …and what was TYPED since the last frame, in order. A QUEUE and not a
+    // set: "aa" is two characters and "ab" is not "ba", both of which a set
+    // loses (`World.addTyped`).
+    const typed: string[] = [];
+
+    /**
+     * Run a frame's worth of simulation, and stop simulating if it throws.
+     *
+     * A rule's step body is the learner's code, called from Phaser's loop. A
+     * throw there — a query that no longer exists, a property read off nothing —
+     * escapes into `requestAnimationFrame`, where nobody catches it, and comes
+     * back on the very next frame: sixty identical errors a second, none of them
+     * in the lab's console, and a game that is on screen but no longer running.
+     *
+     * So the first one is reported and the simulation halts. The canvas stays
+     * (an empty pane says less than a frozen one), the scene keeps drawing the
+     * last good frame, and the next build restarts everything.
+     */
+    const guard = (frame: () => void): void => {
+      if (this.halted) {
+        return;
+      }
+      try {
+        frame();
+      } catch (error) {
+        this.halted = true;
+        onRuntimeError(
+          error instanceof Error ? error.message : String(error),
+          error instanceof Error ? error.stack : undefined,
+        );
+      }
+    };
+
+    // Vertical skew (positional.skew) is a shear Phaser's transform pipeline does
+    // not model natively (its per-object matrix is position·rotation·scale only).
+    // `installSkewHook` (./skew) wraps each object's WebGL render function so its
+    // renderer receives M = T(c)·shear·T(-c) — a shear about the actor's center c
+    // — as the parent matrix it would otherwise not have. This module owns the
+    // matrices: each skewed object has one, rebuilt every frame in `sync`; an
+    // unskewed one has no entry and renders through the normal path.
+    // Compiled shaders for this game, keyed by effect path. It lives as long as
+    // the binding does: a restart builds a new renderer, and render nodes
+    // registered with the old one mean nothing to it.
+    const effectRegistry = new EffectRegistry(Phaser, onEffectError);
+    // The textures rasterized from kinds that describe their own picture. Lives
+    // as long as the binding does, for the same reason the effect registry
+    // does: its textures belong to this scene's texture manager, and a restart
+    // builds a new one.
+    const drawings = new DrawingTextures();
+    // Sound. The decision — one-shots always, a track only when it changes —
+    // is `SoundChannel`'s and is tested without a browser; this is the port it
+    // calls, and the only part of sound that knows what Phaser is.
+    //
+    // A name the project no longer holds is SAID ONCE and then ignored. It is
+    // reachable by deleting a sound a block still names, and a per-frame step
+    // raising it would otherwise fill the console with one line per frame — the
+    // same bargain `Traited` makes about the messages it says once.
+    const missingSounds = new Set<string>();
+    let scene: Phaser.Scene | undefined;
+    const useScene = (made: Phaser.Scene): void => {
+      scene = made;
+    };
+    let track: Phaser.Sound.BaseSound | undefined;
+    const loaded = (name: string): boolean => {
+      if (scene?.cache.audio.exists(name)) {
+        return true;
+      }
+      if (!missingSounds.has(name)) {
+        missingSounds.add(name);
+        console.warn(`world lab: no sound named "${name}" in this project.`);
+      }
+      return false;
+    };
+    const sound = new SoundChannel({
+      play: name => {
+        if (loaded(name)) {
+          scene?.sound.play(name);
+        }
+      },
+      startMusic: name => {
+        if (!loaded(name) || !scene) {
+          return;
+        }
+        track = scene.sound.add(name, {loop: true});
+        track.play();
+      },
+      stopMusic: () => {
+        // Destroyed as well as stopped: a restart builds a new scene, and a
+        // sound object holding the old one is a leak with a voice.
+        track?.stop();
+        track?.destroy();
+        track = undefined;
+      },
+      stopAll: () => {
+        // Phaser's own, which stops every voice the scene owns — the one-shots
+        // this binding never kept a handle on, and the track it did. The track
+        // is destroyed here as well, for the reason `stopMusic` gives.
+        scene?.sound.stopAll();
+        track?.destroy();
+        track = undefined;
+      },
+    });
+    this.sound = sound;
+
+    const skewMatrices = new WeakMap<
+      GameObject,
+      Phaser.GameObjects.Components.TransformMatrix
+    >();
+    const shear = new Phaser.GameObjects.Components.TransformMatrix();
+    // The parent's matrix with the shear applied, rebuilt per render call and
+    // never held past it: one scratch matrix for every skewed object.
+    const composed = new Phaser.GameObjects.Components.TransformMatrix();
+    // Build (or clear) an object's shear matrix M = T(c)·shear·T(-c) about its
+    // drawn center c; the render hook feeds M to the object's WebGL renderer.
+    const applySkew = (
+      object: GameObject,
+      cx: number,
+      cy: number,
+      degrees: number,
+    ) => {
+      if (!degrees) {
+        skewMatrices.delete(object);
+        return;
+      }
+      let matrix = skewMatrices.get(object);
+      if (!matrix) {
+        matrix = new Phaser.GameObjects.Components.TransformMatrix();
+        skewMatrices.set(object, matrix);
+      }
+      const b = Math.tan(degrees * DEGREES_TO_RADIANS);
+      matrix.applyITRS(cx, cy, 0, 1, 1); // T(center)
+      matrix.multiply(shear.setTransform(1, b, 0, 1, 0, 0)); // ·shear
+      matrix.translate(-cx, -cy); // ·T(-center)
+    };
+
+    // The engine resolves each actor's current appearance; the driver just draws
+    // it. A kind that describes its own picture gets a texture rasterized from
+    // that description and wins (specs/DRAWING.md); otherwise an actor with a
+    // frame gets a textured Image, and one without gets the fallback rectangle. The Image's texture/cell is
+    // refreshed every tick, so an animation's frames — same spritesheet, changing
+    // cell — update in place.
+    const create = (scene: Phaser.Scene, state: RenderState): GameObject => {
+      const drawn = state.drawing
+        ? drawings.acquire(scene, state.actor, state.drawing)
+        : undefined;
+      const object = drawn
+        ? scene.add.image(state.x, state.y, drawn)
+        : state.frame && scene.textures.exists(state.frame.sprite)
+          ? scene.add.image(state.x, state.y, state.frame.sprite)
+          : // The appearance-less fallback: a plain rectangle placeholder.
+            scene.add.rectangle(
+              state.x,
+              state.y,
+              ACTOR_SIZE,
+              ACTOR_SIZE,
+              0x33cc66,
+            );
+      // Give either object kind a skew-aware render hook up front; it is a no-op
+      // cost until the actor actually carries a non-zero skew.
+      installSkewHook(
+        object as unknown as RenderStepInternals,
+        (_hooked, parentMatrix) => {
+          const skew = skewMatrices.get(object);
+          if (!skew) {
+            return undefined;
+          }
+          if (!parentMatrix) {
+            return skew;
+          }
+          // ONTO the parent's matrix, not in place of it: the parent is the
+          // layer's container, shifted by the camera, or the actor's own
+          // parent's group (specs/PARENTING.md), and the shear is about the
+          // actor's centre in that frame.
+          composed.copyFrom(parentMatrix);
+          composed.multiply(skew);
+          return composed;
+        },
+      );
+      return object;
+    };
+
+    /**
+     * Draw what is behind everything: the backdrop layers (BACKGROUNDS.md §4).
+     *
+     * Reconciled every frame like the actors, because a backdrop can change
+     * mid-game — an event handler saying `set background to …`, or the
+     * hot-reload patch after the learner edits their `.world` file.
+     *
+     * Each layer's image is STRETCHED to the viewport: the stock backdrops are
+     * square and larger than it, so fitting would letterbox a square into a
+     * square, and a learner's own small drawing should become a background when
+     * they say it is one rather than a stamp in the middle of a dark field.
+     *
+     * The images sit at a negative depth rather than relying on being created
+     * first. Creation order would be enough for a background set before the game
+     * starts, but not for one set during it — that image would be made after the
+     * actors' and would cover them.
+     */
+    /**
+     * Draw one list of image slots: the layers' backgrounds.
+     *
+     * A slot is an Image when it stretches and a TileSprite when it repeats,
+     * because those are two different Phaser objects and only the second can
+     * wrap. Toggling `repeat` therefore rebuilds the object; that is a rare
+     * authoring act, and the alternative is a stretched image sliding off its
+     * own edge.
+     */
+    const syncSlots = (
+      scene: Phaser.Scene,
+      slots: readonly BackdropState[],
+      images: Array<SlotObject | undefined>,
+      depth: number,
+      /** How far the camera has slid this slot's layer — see `layerShift`. */
+      shiftOf: (index: number) => {x: number; y: number},
+      /** That layer's factor, zero when it is fixed — `placementParallax`. */
+      parallaxOf: (index: number) => {x: number; y: number},
+      /** How big the level is, which is what a stretched slot covers. */
+      mapSize: {x: number; y: number},
+      /** How much of it is on screen — `World.viewSize`, in pixels. */
+      viewSize: {x: number; y: number},
+      /**
+       * Where a new slot image goes: the world's layer by default, or a
+       * space's own layer container (specs/LAYERS_PLAN.md).
+       */
+      host: (index: number, image: SlotObject) => void = (index, image) =>
+        intoLayer(scene, index, image),
+    ) => {
+      slots.forEach((slot, index) => {
+        let image = images[index];
+        const sprite = slot.sprite;
+        if (sprite === undefined || !scene.textures.exists(sprite)) {
+          // No image, or one the project no longer holds: nothing to draw.
+          image?.destroy();
+          images[index] = undefined;
+          return;
+        }
+        const wantsTile = slot.repeat;
+        const isTile = image instanceof Phaser.GameObjects.TileSprite;
+        if (image && wantsTile !== isTile) {
+          effectRegistry.release(image);
+          image.destroy();
+          image = undefined;
+        }
+        if (!image) {
+          image = wantsTile
+            ? scene.add.tileSprite(
+                viewSize.x / 2,
+                viewSize.y / 2,
+                viewSize.x,
+                viewSize.y,
+                sprite,
+              )
+            : scene.add.image(viewSize.x / 2, viewSize.y / 2, sprite);
+          image.setDepth(depth);
+          host(index, image);
+          images[index] = image;
+        }
+        image.setTexture(sprite);
+        if (image instanceof Phaser.GameObjects.TileSprite) {
+          // A tiled slot stays put over the VIEWPORT and scrolls its texture
+          // under itself, so it covers the surface at every offset. That is the
+          // whole promise of tiling, and the reason it takes two steps rather
+          // than one: the slot is a child of its layer's container, and the
+          // camera slides that container (see `layerShift`). Left alone, a
+          // finite rectangle of one view rides along with it and runs out — a
+          // quarter-view pan puts a quarter-view band of bare clear-color on
+          // screen.
+          //
+          // So the shift is canceled on the way in and re-applied to the
+          // TEXTURE. The picture ends up exactly where riding along would have
+          // put it, out of a surface with no edge to reach.
+          const {position, tile} = tiledPlacement(
+            shiftOf(index),
+            slot.offset,
+            viewSize,
+          );
+          image.setSize(viewSize.x, viewSize.y);
+          image.setPosition(position.x, position.y);
+          image.setTilePosition(tile.x, tile.y);
+        } else {
+          // A stretched slot moves bodily, which is why an offset on one leaves
+          // a gap at the edge — legal, and almost always a sign that `repeat`
+          // was wanted.
+          const {position, size} = stretchedPlacement(
+            slot.offset,
+            mapSize,
+            parallaxOf(index),
+            viewSize,
+          );
+          image.setDisplaySize(size.x, size.y);
+          image.setPosition(position.x, position.y);
+        }
+        // A slot's effects filter its own pixels — unlike a world effect,
+        // which filters the camera and so covers the actors too.
+        effectRegistry.reconcile(scene, image, slot.effects);
+      });
+
+      // Layers the world dropped: their images go with them.
+      for (let index = slots.length; index < images.length; index++) {
+        images[index]?.destroy();
+        images[index] = undefined;
+      }
+    };
+
+    const syncBackdrops = (scene: Phaser.Scene) => {
+      // One sky, the world's: a color on any layer but the bottom is behind
+      // the layer under it and can never be seen (BACKGROUNDS.md).
+      const [r, g, b, a] = world.backdropColor();
+      const byte = (channel: number) => Math.round(channel * 255);
+      scene.cameras.main.setBackgroundColor(
+        Phaser.Display.Color.GetColor32(byte(r), byte(g), byte(b), byte(a)),
+      );
+
+      // The layers themselves. Their containers are made on demand by whatever
+      // first draws into them, so this both creates any that are empty (a layer
+      // with an effect and nothing in it yet is still a layer) and brings each
+      // one's filters in line.
+      const layers = world.layerSnapshot();
+      // Where the view is taken from: the ACTIVE camera. A world may hold
+      // several — a game camera and an overview, say — and cutting between them
+      // is a value change rather than a reload, so this is read every frame.
+      const cameras = world.cameraSnapshot();
+      const view = cameras.find(camera => camera.active) ?? cameras[0];
+      // Read every frame like the camera is, and for the same reason: a world
+      // may resize its view while it runs, and the backdrops have to be drawn
+      // against the window as it is now rather than as it started.
+      const viewSize = world.viewSize();
+      const offset = cameraOffset(view, viewSize);
+      /**
+       * How far the camera has slid one layer's container, in screen pixels.
+       *
+       * The single statement of it, read twice: the loop below MOVES each
+       * container by it, and a tiled slot inside one has to undo exactly that
+       * to stay over the viewport. Two spellings would drift, and the drift
+       * would look like a background that lags the world it belongs to.
+       */
+      const shiftOfLayer = (index: number) => layerShift(layers[index], offset);
+      const parallaxOfLayer = (index: number) =>
+        placementParallax(layers[index]);
+      const mapSize = world.mapBounds();
+
+      syncSlots(
+        scene,
+        world.backdropSnapshot() as BackdropState[],
+        backdrops,
+        BACKGROUND_DEPTH,
+        shiftOfLayer,
+        parallaxOfLayer,
+        mapSize,
+        viewSize,
+      );
+
+      layers.forEach((layer, index) => {
+        const container = containerFor(scene, index);
+        effectRegistry.reconcile(scene, container as never, layer.effects);
+        // The whole of what a layer's parallax means: move the container
+        // opposite the camera, scaled per axis. `(1, 1)` moves with the view,
+        // `(0.2, 0)` is a sky that shifts as the player walks and stays put
+        // when they jump, and `fit` does not consult the camera at all — which
+        // is what makes an interface layer an interface layer.
+        //
+        // Measured from the camera's RESTING position, not from the world
+        // origin, because a camera's position is the point it shows at the
+        // middle of the view (core/Camera). Folding the center in HERE, before
+        // the parallax factor, is what keeps the rest of the driver unchanged:
+        // a layer at factor 0 gets a translation of exactly 0 whatever the
+        // camera does, so the slot images stay centered in the viewport where
+        // they are placed, and a resting camera moves nothing at all.
+        const shift = shiftOfLayer(index);
+        container.setPosition(-shift.x, -shift.y);
+        if (unsorted.has(container)) {
+          container.sort('depth');
+          unsorted.delete(container);
+        }
+      });
+      // Layers the world dropped take their container — and every child still
+      // in it — with them.
+      for (let index = layers.length; index < containers.length; index++) {
+        const container = containers[index];
+        if (container) {
+          effectRegistry.release(container);
+          container.destroy(true);
+          containers[index] = undefined;
+        }
+      }
+    };
+
+    /**
+     * The canvas is the WORLD's size, which the world may state for itself.
+     *
+     * Ten tiles square unless a world says otherwise (`World.setViewSize`), and
+     * a world that says so does it while it is being described — so this asks
+     * every frame and resizes when the answer changes, rather than reading once
+     * before there is a world to ask.
+     *
+     * FIT then scales that into the `#game` box, and the box is told the shape
+     * to be. Without the second half the box keeps whatever shape the page gave
+     * it and FIT letterboxes inside it: a 26-by-16 room in a square box is bars
+     * top and bottom, and the box's border — a box-shadow on this element, set
+     * by the COLORS message — is drawn around the bars rather than around the
+     * game. The host page turns the ratio into a size (`sandbox/preview.html`);
+     * a page that does not use it is unaffected, since it is a custom property
+     * and nothing inherits a meaning for it.
+     */
+    /**
+     * Point the camera at the world's own rectangle, at the render scale.
+     *
+     * The canvas is `RENDER_SCALE` times the world each way, so without this a
+     * camera resting at the middle of a 960-pixel canvas would be looking at
+     * world coordinates 320 to 640 — off the end of a 320-pixel world. Zoom by
+     * the scale and center on the middle of the VIEW, and the visible rectangle
+     * is exactly the world's own: Phaser's camera shows `width / zoom` about
+     * `scroll + width / 2` (`Camera.preRender`), which is `view` about
+     * `view / 2`.
+     *
+     * Re-done after every resize, because the camera is resized with the game
+     * and comes back centered on the canvas rather than on the world.
+     */
+    const fitCamera = (
+      scene: Phaser.Scene,
+      view: {x: number; y: number},
+      camera: Phaser.Cameras.Scene2D.Camera = scene.cameras.main,
+    ) => {
+      camera.setZoom(RENDER_SCALE);
+      camera.centerOn(view.x / 2, view.y / 2);
+    };
+
+    let shown = {x: VIEW_WIDTH, y: VIEW_HEIGHT};
+    const syncViewSize = (scene: Phaser.Scene) => {
+      const view = world.viewSize();
+      if (view.x === shown.x && view.y === shown.y) {
+        return;
+      }
+      shown = {x: view.x, y: view.y};
+      // Three things in this order, and each of them is load-bearing.
+      //
+      // The BOX gets the shape first, so that the fit below has the rectangle
+      // it is fitting into. Fitting first and reshaping after leaves the canvas
+      // sized to the old shape — the right pixels drawn into the wrong
+      // rectangle, which is a game that ignores half its own clicks.
+      //
+      // Then the RATIO, which `resize` does not set. Phaser's `displaySize` is
+      // a `Size` in FIT mode, and a FIT-mode `Size.setSize` honours the aspect
+      // ratio it already holds rather than taking a new one from its arguments
+      // — so a game resized from 320x320 to 832x512 goes on being fitted as a
+      // square, and the canvas comes out square with the world squashed into
+      // it. `setAspectRatio` is the documented way to override it.
+      //
+      // Then the SIZE, which sets the backing store and re-fits. `refresh`
+      // afterwards re-measures the box: the property set above changed the
+      // layout, and `getParentBounds` is what reads it back.
+      parent.style.setProperty('--aspect', String(view.x / view.y));
+      this.game.scale.displaySize.setAspectRatio(view.x / view.y);
+      // The BUFFER, which is the view at the render scale. The aspect ratio
+      // above is the view's own, and is unaffected: a square world is a square
+      // canvas whatever it is drawn with.
+      this.game.scale.resize(view.x * RENDER_SCALE, view.y * RENDER_SCALE);
+      this.game.scale.refresh();
+      fitCamera(scene, view);
+    };
+
+    /**
+     * Who draws what the root holds, when a Viewport is among it.
+     *
+     * A space is drawn by a camera of its own, and Phaser draws a scene
+     * camera by camera: everything the main camera sees, then everything the
+     * next sees. With the main camera drawing the whole root, a space lands
+     * on top of all of it, and a score or a menu placed over a Viewport is
+     * drawn under the level it was placed over.
+     *
+     * So the root is cut into BANDS at each Viewport, in draw order: what
+     * comes before the first Viewport, that Viewport included, is the main
+     * camera's; what comes after it and up to the next is its `over`
+     * camera's, which is the main camera again — same rectangle, same fit —
+     * drawn after the space's. The scene's cameras are put in that order:
+     * main, then each Viewport's pair. A layer's container is seen by every
+     * one of them, and each of its children by exactly one: a container asks
+     * each child whether it will render for the camera in hand, and a
+     * child's `cameraFilter` is the set of cameras it will not.
+     *
+     * A Viewport carried by a parent cuts the root where the parent's group
+     * is; what the group holds stays under the space. A Viewport inside
+     * another space cuts nothing, since it is not in the root.
+     *
+     * Run while any space lives, and once more after the last one goes, so
+     * that what an `over` camera drew goes back to the main one.
+     */
+    let banded = false;
+    const band = (
+      scene: Phaser.Scene,
+      spaces: ReadonlyArray<{id: string; owner: string}>,
+      byId: ReadonlyMap<string, RenderState>,
+      stateOf: ReadonlyMap<unknown, RenderState>,
+    ) => {
+      if (!spaceHosts.size && !banded) {
+        return;
+      }
+      banded = spaceHosts.size > 0;
+      // Where each Viewport cuts: the top-level object it is, or is in.
+      const cuts = new Map<unknown, string[]>();
+      for (const space of spaces) {
+        let top = byId.get(space.owner);
+        while (top?.parent && stateOf.get(top.parent)) {
+          top = stateOf.get(top.parent);
+        }
+        if (!top || top.space || !spaceHosts.has(space.id)) {
+          continue;
+        }
+        const marker = groups.get(top.actor) ?? objects.get(top.actor);
+        cuts.set(marker, [...(cuts.get(marker) ?? []), space.id]);
+      }
+      const main = scene.cameras.main;
+      let every = main.id;
+      for (const host of spaceHosts.values()) {
+        every |= host.over.id;
+      }
+      const ordered: string[] = [];
+      let drawnBy = main;
+      for (const container of containers) {
+        for (const child of container?.list ?? []) {
+          (child as {cameraFilter: number}).cameraFilter = every & ~drawnBy.id;
+          for (const id of cuts.get(child) ?? []) {
+            ordered.push(id);
+            drawnBy = spaceHosts.get(id)!.over;
+          }
+        }
+      }
+      // The scene's cameras in band order, in place: the manager draws its
+      // list front to back and looks cameras up in it.
+      const list = (scene.cameras as {cameras?: unknown[]}).cameras;
+      if (list) {
+        const placed = new Set<unknown>([main]);
+        const next: unknown[] = [main];
+        for (const id of ordered) {
+          const host = spaceHosts.get(id)!;
+          next.push(host.camera, host.over);
+          placed.add(host.camera).add(host.over);
+        }
+        next.push(...list.filter(camera => !placed.has(camera)));
+        list.length = 0;
+        list.push(...next);
+      }
+      for (const host of spaceHosts.values()) {
+        host.over.setViewport(
+          0,
+          0,
+          shown.x * RENDER_SCALE,
+          shown.y * RENDER_SCALE,
+        );
+        fitCamera(scene, shown, host.over);
+      }
+    };
+
+    const sync = (scene: Phaser.Scene) => {
+      syncViewSize(scene);
+      syncBackdrops(scene);
+
+      // Viewport-wide effects, applied to the camera rather than to any one
+      // object — everything it has drawn gets filtered. Reconciled each frame
+      // like an actor's, so a world effect can be added and removed while the
+      // game runs.
+      effectRegistry.reconcileCamera(
+        scene,
+        scene.cameras.main,
+        world.effects(),
+      );
+
+      const snapshot = world.renderSnapshot() as RenderState[];
+
+      // Actors that have left the world (`World.removeActor`) take their
+      // drawing with them. Without this the sprite stays on screen — still
+      // filtered, still lit — belonging to nothing.
+      if (objects.size > snapshot.length) {
+        const present = new Set(snapshot.map(state => state.actor));
+        for (const [actor, object] of [...objects]) {
+          if (!present.has(actor)) {
+            effectRegistry.release(object);
+            // …and its share of whatever texture it was drawing. Without this
+            // a picture nothing draws any more stays in the texture manager
+            // for the life of the game.
+            drawings.release(scene, actor);
+            // A group goes with its actor, and its children's objects go with
+            // it — Phaser destroys a Container's children — which is right,
+            // since a removed parent's children are removed too. A child's
+            // own turn in this loop then finds an object already gone, which
+            // Phaser's `destroy` treats as nothing to do.
+            const group = groups.get(actor);
+            if (group) {
+              effectRegistry.release(group);
+              group.destroy();
+              groups.delete(actor);
+            }
+            object.destroy();
+            objects.delete(actor);
+          }
+        }
+      }
+
+      const stateOf = new Map(snapshot.map(state => [state.actor, state]));
+      /** Move `child` into `host`, if it is not already there. */
+      const into = (
+        host: Phaser.GameObjects.Container,
+        child: GameObject | Phaser.GameObjects.Container,
+        depthSorted: boolean,
+      ) => {
+        const current = (
+          child as {parentContainer?: {remove?: (what: unknown) => void}}
+        ).parentContainer;
+        if (current === host) {
+          return;
+        }
+        // Whatever held it lets go first; a Container's `add` would otherwise
+        // leave the object listed in two. Duck-typed rather than `instanceof`,
+        // which the tests' stand-in Phaser has no Container class for.
+        current?.remove?.(child);
+        host.add(child);
+        if (depthSorted) {
+          unsorted.add(host);
+        }
+      };
+      /** The actor's own object, made from this frame's state if new. */
+      const objectFor = (state: RenderState): GameObject => {
+        let object = objects.get(state.actor);
+        if (!object) {
+          object = create(scene, state);
+          object.setDepth(ACTOR_DEPTH);
+          objects.set(state.actor, object);
+        }
+        return object;
+      };
+      /**
+       * The Container an actor's things go into: its parent's group, or its
+       * layer's container. A parent's group is made on the first child that
+       * asks, taking the parent's own image in as its first child.
+       */
+      /** The group `parent` carries its children in, made on first ask. */
+      const groupOf = (parent: RenderState): Phaser.GameObjects.Container => {
+        let group = groups.get(parent.actor);
+        if (!group) {
+          group = scene.add.container(0, 0);
+          group.setDepth(ACTOR_DEPTH);
+          groups.set(parent.actor, group);
+          // The parent's image had the parent's effects; they belong to the
+          // group now, and the image is re-reconciled with none below.
+          const own = objectFor(parent);
+          // The group takes the PLACE its image had among its siblings, not
+          // the end of the list: everything in a layer is at one depth, so
+          // the list's order is the draw order, and a parent that jumped to
+          // the front on its first child would be drawn over what was placed
+          // after it — and would cut the root's bands (`band`) in the wrong
+          // place when it is a Viewport.
+          const held = (
+            own as {parentContainer?: Phaser.GameObjects.Container | null}
+          ).parentContainer;
+          const index = held?.list ? held.list.indexOf(own) : -1;
+          effectRegistry.release(own);
+          into(group, own, false);
+          const host = hostFor(parent);
+          if (held && held === host && index >= 0) {
+            host.addAt(group, index);
+            unsorted.add(host);
+          } else {
+            into(host, group, true);
+          }
+        }
+        return group;
+      };
+      const hostFor = (state: RenderState): Phaser.GameObjects.Container => {
+        const parent = state.parent && stateOf.get(state.parent);
+        if (parent) {
+          return groupOf(parent);
+        }
+        // An actor in a Viewport's space draws inside that Viewport, in the
+        // space's own layer at its depth.
+        const space = state.space ? spaceHosts.get(state.space) : undefined;
+        return space
+          ? (space.layers[state.layer] ?? space.inner)
+          : containerFor(scene, state.layer);
+      };
+
+      // The spaces, BEFORE the actors: an actor in one goes into its
+      // container, so that has to exist (specs/VIEWPORT_PLAN.md).
+      const byId = new Map(snapshot.map(state => [state.actor.id, state]));
+      const liveSpaces = new Set<string>();
+      const owners = new Set<unknown>();
+      const spaces = world.spaceSnapshot();
+      for (const space of spaces) {
+        const owner = byId.get(space.owner);
+        if (!owner) {
+          continue;
+        }
+        liveSpaces.add(space.id);
+        // The Viewport draws through a group even with no children, since
+        // the group's world transform is where its rectangle is read from
+        // — made at the Viewport's turn among the actors below, so that it
+        // lands where the Viewport is in the draw order.
+        owners.add(owner.actor);
+        let host = spaceHosts.get(space.id);
+        // A box that now mirrors something else — or has stopped — has ignore
+        // lists that say otherwise. Phaser keeps those as bits on the objects
+        // and offers no un-ignore, so the host is taken down and made again.
+        if (host && host.mirrors !== space.mirrors) {
+          scene.cameras.remove(host.camera);
+          scene.cameras.remove(host.over);
+          host.inner.destroy();
+          spaceHosts.delete(space.id);
+          host = undefined;
+        }
+        if (!host) {
+          const inner = scene.add.container(0, 0);
+          const camera = scene.cameras.add(0, 0, 1, 1);
+          camera.setZoom(RENDER_SCALE);
+          const over = scene.cameras.add(0, 0, 1, 1);
+          // WHICH SCENE THE BOX'S CAMERA DRAWS. A box with a scene of its own
+          // draws its own container and nothing else — not the layers, not
+          // another space. A MIRROR draws the scene it mirrors instead
+          // (specs/MIRRORING_PLAN.md): the world's layers for a mirror of the
+          // root, or the target's container for a mirror of another box —
+          // and its own container, which stays empty, is nobody's to draw.
+          // `band` leaves a mirror's camera out of the bits it hands root
+          // objects, so a root mirror sees every one of them, including what
+          // sits in front of some other Viewport.
+          //
+          // The main and `over` cameras never draw a space's container, a
+          // mirror's included.
+          // Told by the engine rather than compared against its root id: the
+          // driver reads the engine as types only — `world-lab` is the
+          // sandbox's bundle, not a module this can import a value from — and
+          // a root id spelled twice is the silent-name failure this lab keeps
+          // meeting.
+          const mirrorsRoot = space.mirrorsRoot;
+          scene.cameras.main.ignore(inner);
+          over.ignore(inner);
+          if (!mirrorsRoot) {
+            for (const container of containers) {
+              if (container) {
+                camera.ignore(container);
+              }
+            }
+          }
+          // A mirror's own container stays empty and is nobody's to draw; a
+          // box with a scene of its own draws exactly that container, and
+          // ignoring it here left every plain Viewport — a Scroll View — blank.
+          if (space.mirrors) {
+            camera.ignore(inner);
+          }
+          for (const [otherId, other] of spaceHosts) {
+            // A mirror of `other` draws `other`'s container; anything else
+            // does not. And `other` draws THIS container only if it mirrors
+            // this space, which a box made later can find already waiting.
+            if (space.mirrors !== otherId) {
+              camera.ignore(other.inner);
+            }
+            over.ignore(other.inner);
+            if (other.mirrors !== space.id) {
+              other.camera.ignore(inner);
+            }
+            other.over.ignore(inner);
+          }
+          host = {
+            inner,
+            camera,
+            over,
+            mirrors: space.mirrors,
+            layers: [],
+            backdrops: [],
+          };
+          spaceHosts.set(space.id, host);
+        }
+        // The space's own layers: a container each, in the space's
+        // container, at its depth. The space camera scrolls by the whole
+        // offset, where the world's camera never moves and its layers are
+        // shifted instead; so a layer at factor `f` is given back what it
+        // should NOT have moved, `offset − offset × f`, and nets the same
+        // `−offset × f` the world's gets. A slot inside it is then placed
+        // by the same arithmetic (`backdropPlacement`).
+        const held = host;
+        const offset = {
+          x: space.camera.x - space.view.x / 2,
+          y: space.camera.y - space.view.y / 2,
+        };
+        const shiftOf = (index: number) =>
+          layerShift(space.layers[index], offset);
+        space.layers.forEach((_layer, index) => {
+          let container = held.layers[index];
+          if (!container) {
+            container = scene.add.container(0, 0);
+            container.setDepth(index);
+            held.inner.add(container);
+            held.layers[index] = container;
+            unsorted.add(held.inner);
+          }
+          const shift = shiftOf(index);
+          container.setPosition(offset.x - shift.x, offset.y - shift.y);
+          if (unsorted.has(container)) {
+            container.sort('depth');
+            unsorted.delete(container);
+          }
+        });
+        for (
+          let index = space.layers.length;
+          index < held.layers.length;
+          index++
+        ) {
+          held.layers[index]?.destroy();
+          held.layers[index] = undefined;
+        }
+        held.layers.length = space.layers.length;
+        const intoSpaceLayer = (index: number, image: SlotObject) => {
+          const container = held.layers[index] ?? held.inner;
+          container.add(image);
+          unsorted.add(container);
+        };
+        const parallaxOf = (index: number) =>
+          placementParallax(space.layers[index]);
+        syncSlots(
+          scene,
+          space.layers.map(layer => layer.background),
+          held.backdrops,
+          BACKGROUND_DEPTH,
+          shiftOf,
+          parallaxOf,
+          space.bounds,
+          space.view,
+          intoSpaceLayer,
+        );
+        if (unsorted.has(host.inner)) {
+          host.inner.sort('depth');
+          unsorted.delete(host.inner);
+        }
+      }
+      // A space gone — its Viewport removed — takes its camera and container
+      // with it. The actors it held were removed with it and swept above.
+      for (const [id, host] of [...spaceHosts]) {
+        if (!liveSpaces.has(id)) {
+          scene.cameras.remove(host.camera);
+          scene.cameras.remove(host.over);
+          host.inner.destroy();
+          spaceHosts.delete(id);
+        }
+      }
+
+      for (const state of snapshot) {
+        const object = objectFor(state);
+        const group = owners.has(state.actor)
+          ? groupOf(state)
+          : groups.get(state.actor);
+        // What carries this actor's transform: its group when it has one,
+        // else its own object; and which transform — its local one inside
+        // its parent's group, else its world one.
+        const carrier: GameObject | Phaser.GameObjects.Container =
+          group ?? object;
+        into(hostFor(state), carrier, !state.parent);
+        const base = state.parent
+          ? state.local!
+          : {
+              x: state.x,
+              y: state.y,
+              scaleX: state.scaleX,
+              scaleY: state.scaleY,
+              rotation: state.rotation,
+            };
+        // Effects are reconciled every frame, not applied once at creation: an
+        // event handler can add or remove one while the game runs, and the
+        // engine's list is re-read here each tick. `reconcile` attaches only
+        // what is new and detaches what is gone (attaching twice would stack a
+        // second filter), and returns immediately for the common case of an
+        // actor with no effects. On the GROUP for a parent, so they apply to
+        // its children as a layer's apply to everything in it.
+        effectRegistry.reconcile(scene, carrier as never, state.effects);
+        if (group) {
+          group.setPosition(base.x, base.y);
+          group.setScale(base.scaleX, base.scaleY);
+          group.setRotation(base.rotation * DEGREES_TO_RADIANS);
+          group.setAlpha(state.opacity);
+          into(group, object, false);
+        }
+        // The actor's own image: at the group's origin when it has one, so
+        // its picture, its frame's fit and its shear are its own and the
+        // group carries the rest.
+        const own = group
+          ? {x: 0, y: 0, scaleX: 1, scaleY: 1, rotation: 0}
+          : base;
+
+        const frame = state.frame;
+        // The picture where an animation has it, against the actor's own
+        // transform (specs/ANIMATION_PLAN.md): moved, scaled and turned
+        // further. Only this image — the children were placed above, from
+        // the actor's transform.
+        const drawn = state.drawn;
+        const x = own.x + (drawn?.x ?? 0);
+        const y = own.y + (drawn?.y ?? 0);
+        const scaleX = own.scaleX * (drawn?.scale ?? 1);
+        const scaleY = own.scaleY * (drawn?.scale ?? 1);
+        const rotation = own.rotation + (drawn?.turn ?? 0);
+        if (state.drawing && object instanceof Phaser.GameObjects.Image) {
+          // `acquire` is what notices a change: the key is computed from the
+          // commands, so this is a map lookup on every frame where the picture
+          // is the same, and a rasterization on exactly the frames it is not.
+          object.setTexture(
+            drawings.acquire(scene, state.actor, state.drawing),
+          );
+          object.setPosition(x, y);
+          // DIVIDED BY THE RENDER SCALE, because a drawing's texture is made at
+          // it (`drawingTextures.rasterize`). The picture is three times as
+          // many pixels and the same number of world units, which is the whole
+          // point: a label is sharp instead of being three nearest-neighbor
+          // copies of a small one.
+          object.setScale(scaleX / RENDER_SCALE, scaleY / RENDER_SCALE);
+          object.setRotation(rotation * DEGREES_TO_RADIANS);
+          applySkew(object, x, y, state.skew);
+        } else if (frame && object instanceof Phaser.GameObjects.Image) {
+          // A cell is a source rectangle in the image, named and registered on
+          // the texture the first time it is drawn (`cellFrame`); no cell ⇒ the
+          // whole image. Every texture is loaded as a plain image, so a
+          // spritesheet is not a kind of asset here — it is an image that some
+          // animation happens to read rectangles out of.
+          object.setTexture(
+            frame.sprite,
+            frame.cell ? cellFrame(scene, frame.sprite, frame.cell) : undefined,
+          );
+          object.setPosition(x + frame.offset.x, y + frame.offset.y);
+          object.setScale(scaleX * frame.scale, scaleY * frame.scale);
+          object.setRotation(rotation * DEGREES_TO_RADIANS);
+          // Shear about the drawn center (position plus the frame's offset).
+          applySkew(object, x + frame.offset.x, y + frame.offset.y, state.skew);
+        } else {
+          object.setPosition(x, y);
+          object.setScale(scaleX, scaleY);
+          object.setRotation(rotation * DEGREES_TO_RADIANS);
+          // The rectangle is centered on its position; shear about that point.
+          applySkew(object, x, y, state.skew);
+        }
+        // AFTER the branches, because all three want it and none of them
+        // differs about it: a drawing, a sprite frame and a plain rectangle are
+        // three ways to have a picture, and how solid that picture is is the
+        // same question in each. An actor with no appearance reports 1.
+        // …and on the group when there is one, where it fades the children
+        // too; the image inside is then left solid, or the group's would
+        // be counted twice.
+        object.setAlpha(group ? 1 : state.opacity);
+      }
+
+      // The space cameras LAST, once every group is where this frame put
+      // it. Each draws into the Viewport's rectangle on the canvas: the
+      // Viewport's group's world transform gives its middle, half its size
+      // up and left of that is its corner, and the main camera maps the
+      // world onto the canvas at the render scale from the origin
+      // (`fitCamera`) — so a Viewport carried by a parent, or on a scrolled
+      // layer, is still drawn where it is. The camera is then pointed at
+      // the space's own camera, which the engine keeps inside the map.
+      for (const space of spaces) {
+        const host = spaceHosts.get(space.id);
+        const owner = byId.get(space.owner);
+        const group = owner && groups.get(owner.actor);
+        if (!host || !group) {
+          continue;
+        }
+        const matrix = group.getWorldTransformMatrix();
+        const width = space.view.x * Math.abs(matrix.scaleX);
+        const height = space.view.y * Math.abs(matrix.scaleY);
+        host.camera.setViewport(
+          (matrix.tx - width / 2) * RENDER_SCALE,
+          (matrix.ty - height / 2) * RENDER_SCALE,
+          width * RENDER_SCALE,
+          height * RENDER_SCALE,
+        );
+        host.camera.setZoom(RENDER_SCALE * Math.abs(matrix.scaleX));
+        host.camera.centerOn(space.camera.x, space.camera.y);
+        // The space's own sky, painted inside its rectangle; none leaves the
+        // box see-through, as it always was (`World.setBackgroundColor`).
+        const [r, g, b, a] = space.clearColor ?? [0, 0, 0, 0];
+        const byte = (channel: number) => Math.round(channel * 255);
+        host.camera.setBackgroundColor(
+          Phaser.Display.Color.GetColor32(byte(r), byte(g), byte(b), byte(a)),
+        );
+      }
+      band(scene, spaces, byId, stateOf);
+    };
+
+    // The game must never steal focus: it runs in the preview iframe, and Phaser's
+    // default `autoFocus` calls window.focus() on every boot — so each hot restart
+    // would yank focus out of the editor mid-edit. With it off, the game only takes
+    // focus when the learner clicks/tabs to it (parent is a focusable `#game`, see
+    // preview.html), and its keyboard listens on that element, so keys reach the
+    // game only while it is focused.
+    parent.tabIndex = parent.tabIndex < 0 ? 0 : parent.tabIndex;
+    // Focus the game on click. Phaser preventDefaults the canvas pointerdown, which
+    // suppresses the browser's focus-on-click, so we focus the parent ourselves —
+    // a click starts play by routing the keyboard to the game, and the focus ring
+    // (preview.html) then signals it. Removed in stop() so a hot restart doesn't
+    // stack listeners.
+    this.parent = parent;
+    //
+    // …AND REMEMBER THAT IT WAS A CLICK. Arriving at the game by TABBING onto
+    // it brings the focus to its first control; arriving by clicking should
+    // not, because a click says where it landed. The DOM focus event cannot
+    // tell them apart, so the pointer says so on its way past — `focus` fires
+    // from inside this handler, so the flag is always set before it is read.
+    this.focusOnPointerDown = () => {
+      viaPointer = true;
+      parent.focus();
+    };
+    parent.addEventListener('pointerdown', this.focusOnPointerDown);
+    // WHAT ARRIVING MEANS TO THE WORLD. A rule that moves focus between the
+    // game's own controls has to tell coming IN from moving ON, and nothing in
+    // the pressed keys can: the Tab that carried the player here was pressed
+    // while the page still had the keyboard (`World.gainedKeyboard`,
+    // `rules/tabNavigation`). A world with no such rule ignores it.
+    this.onFocus = () => {
+      if (!viaPointer) {
+        world.gainedKeyboard();
+      }
+      viaPointer = false;
+    };
+    parent.addEventListener('focus', this.onFocus);
+    // THE WHEEL, IN PIXELS, which is the one unit the world is told in.
+    //
+    // A browser reports its wheel in whichever of three units it feels like —
+    // `deltaMode` says pixels, LINES or PAGES, and which you get depends on
+    // the OS, the browser and whether the hand is on a mouse or a trackpad. A
+    // world told "3" without being told of what would scroll three pixels on
+    // one machine and three pages on another, so the conversion happens at the
+    // door, exactly as a key's name does (`core/keys`).
+    //
+    // NOT PREVENTED unless the world takes it: a canvas that swallowed every
+    // wheel would trap the page's own scroll under a game that does not use
+    // one. `preventDefault` is called only when something in the world is
+    // under the pointer and asked for it (`World.wantsWheel`).
+    this.onWheel = (event: WheelEvent) => {
+      const by = event.deltaY * WHEEL_UNIT[event.deltaMode];
+      if (world.wantsWheel()) {
+        event.preventDefault();
+      }
+      world.scrollWheel(by);
+    };
+    parent.addEventListener('wheel', this.onWheel, {passive: false});
+    // WHAT THE GAME SAYS ABOUT ITSELF to a reader who arrives by keyboard and
+    // is told nothing by a canvas. `application` is honest here — the thing
+    // takes the arrows and space, and a screen reader treating it as a
+    // document would eat them.
+    //
+    // The label states the contract in both directions, and the half that
+    // matters is the way OUT: a player who cannot find it is in a trap, which
+    // is worse than a game that is hard to reach. Left alone if the page
+    // already labelled the element, since the page knows what game it is.
+    parent.setAttribute('role', 'application');
+    if (!parent.hasAttribute('aria-label')) {
+      parent.setAttribute(
+        'aria-label',
+        'Game. Press Tab to move between the controls in the game, and ' +
+          'Escape to leave the game.',
+      );
+    }
+    // Read the keyboard ourselves (Phaser's keyboard is disabled below): capture
+    // every key by DOM name into `downKeys` while `#game` is focused.
+    // Translated at the door (`engine/core/keys`): the DOM's names are the
+    // DOM's business, and everything inland — the pressed set, `key … is down`,
+    // an event's value, the JavaScript a learner reads — says `space` and
+    // `up arrow`. The scroll check stays on the DOM name because that is what
+    // the browser is about to act on.
+    this.onKeyDown = (event: KeyboardEvent) => {
+      downKeys.add(keyName(event.key));
+      // …AND WHAT WAS TYPED, which is a different list from what is held. The
+      // DOM says it plainly: `key` is one character exactly when a character
+      // was produced, and is a word — "Shift", "Backspace", "ArrowLeft" — when
+      // it was not. So shift, a dead key and an IME all arrive here as the
+      // letter they made, and the keys that make no letter stay the key
+      // events' business (`rules/input`, specs/UI_ACTORS.md).
+      if (event.key.length === 1 && !event.ctrlKey && !event.metaKey) {
+        typed.push(event.key);
+      }
+      // WHAT THE BROWSER MAY STILL DO WITH THIS KEY. `SCROLL_KEYS` is the
+      // floor — the keys a game always wants, so a platformer does not scroll
+      // the page out from under itself. Everything else the world asks for
+      // (`World.captureKey`) is a fact about the MOMENT rather than a
+      // constant: Tab belongs to the game only while one of its own controls
+      // holds the focus, and belongs to the page the rest of the time, or the
+      // canvas is somewhere a keyboard user can enter and not leave
+      // (specs/UI_ACTORS.md). Escape is never in that set.
+      if (
+        SCROLL_KEYS.has(event.key) ||
+        world.capturedKeys().has(keyName(event.key))
+      ) {
+        event.preventDefault();
+      }
+    };
+    this.onKeyUp = (event: KeyboardEvent) =>
+      downKeys.delete(keyName(event.key));
+    // A blur mid-press never sees the keyup; clear so keys don't stick down.
+    this.onBlur = () => downKeys.clear();
+    parent.addEventListener('keydown', this.onKeyDown);
+    parent.addEventListener('keyup', this.onKeyUp);
+    parent.addEventListener('blur', this.onBlur);
+    assertWebGL();
+    this.game = new Phaser.Game({
+      // WebGL, not AUTO — see assertWebGL. Effects are compiled GLSL shaders
+      // registered as Phaser filter render nodes, and `renderNodes` exists only
+      // on the WebGL renderer.
+      type: Phaser.WEBGL,
+      parent,
+      autoFocus: false,
+      // NEAREST-NEIGHBOUR, because the art is 32-pixel tiles and the canvas is
+      // always scaled UP to whatever room the preview pane has. Phaser's
+      // default is linear filtering, which is right for photographs and wrong
+      // for pixel art: a coin drawn at 32 and shown at 48 came out soft, and
+      // every straight edge in the library came with it. `pixelArt` also turns
+      // on `roundPixels`, so a sprite at a fractional position lands on a whole
+      // one rather than being resampled across two.
+      pixelArt: true,
+      // Keyboard comes from the DOM listeners above (all keys); Phaser's own
+      // keyboard input is off so it neither double-handles nor preventDefaults.
+      input: {
+        keyboard: false,
+        // NOT THE PAGE'S CLICKS. With window events on, Phaser listens for
+        // `mousedown`/`mouseup` on `window.top` when it can reach it, to see
+        // a release outside the canvas — and a same-origin sandbox (the pages
+        // build) can reach it, so every click in the EDITOR arrived as a
+        // click in the game, at wherever the editor's coordinates fell on the
+        // canvas. Notes, on a laptop-sized window, had a click on a toolbox
+        // drawer press NEW NOTE and the next few press keys on its keyboard.
+        // Nothing is lost by turning it off: `buttonsDown` reads the pointer,
+        // and Phaser sets the pointer's buttons from every move, so a release
+        // the canvas missed is corrected by the next move over it.
+        windowEvents: false,
+      },
+      scale: {
+        // FIT sizes the canvas to the CSS-sized `#game` box, so its scale —
+        // and thus input mapping — stays correct. The box is given the world's
+        // own shape (`syncViewSize`), so there is normally nothing to
+        // letterbox. No autoCenter: CSS already centers `#game`, and
+        // CENTER_BOTH would measure the parent and apply a margin to the canvas
+        // on every (re)load.
+        mode: Phaser.Scale.FIT,
+        width: GAME_WIDTH,
+        height: GAME_HEIGHT,
+      },
+      // Only ever visible for the instant before the scene's first `create`,
+      // which sets the camera's color from the world (`syncBackdrops`). Kept in
+      // step with the engine's DEFAULT_BACKDROP_COLOR by hand: this module
+      // imports `world-lab` for types only.
+      backgroundColor: '#101020',
+      banner: false,
+      // Audio ON. It was off while nothing made a noise; `play sound` and
+      // `set music to` are what turn it back on (specs/SOUND.md). Phaser's
+      // WebAudio manager starts LOCKED until the surface it lives in sees a
+      // gesture, and installs its own unlock listeners to deal with that —
+      // which means the first sound of a game nobody has clicked on yet may be
+      // dropped by the browser, not by us.
+      audio: {disableWebAudio: false},
+      scene: {
+        preload(this: Phaser.Scene) {
+          // The project's own images, keyed by file name (data URLs — no
+          // network, and nothing built in: an image a game draws is a file the
+          // project holds, whether the learner drew it or imported it).
+          for (const [name, dataUrl] of Object.entries(projectAssets)) {
+            // Told apart by the file's name, which is the only thing that tells
+            // a sound from a sprite here — both are bytes on a `url`
+            // (sound/soundFiles). A `data:` URL either way: the loader takes
+            // one for audio as it does for an image, and the sandbox fetches
+            // nothing.
+            if (isSoundFile(name)) {
+              this.load.audio(name, dataUrl);
+            } else {
+              this.load.image(name, dataUrl);
+            }
+          }
+        },
+        create(this: Phaser.Scene) {
+          // What the sound port plays through. Handed over here rather than
+          // closed over at construction, because the scene does not exist until
+          // Phaser makes one — and passed as an argument, like `sync(this)`
+          // below, rather than assigned from `this`.
+          useScene(this);
+          // Before the first `sync`: `syncViewSize` only re-fits when the view
+          // has CHANGED, and a world that keeps the default never changes it.
+          fitCamera(this, world.viewSize());
+          // A game may want the right button, and the browser's answer to one
+          // is a context menu over the canvas. Turned off here rather than in
+          // the page, because it is the GAME's claim on the button.
+          this.input.mouse?.disableContextMenu();
+          guard(() => sync(this));
+        },
+        update(this: Phaser.Scene, _time: number, delta: number) {
+          guard(() => {
+            // Feed this frame's held keys in before advancing the simulation.
+            world.setInput(downKeys);
+            // Handed over and cleared together: the world drains what it was
+            // given each tick, so anything left here would be typed twice.
+            if (typed.length > 0) {
+              world.addTyped(typed);
+              typed.length = 0;
+            }
+            // And the mouse, which — unlike the keyboard — is read from Phaser
+            // rather than from listeners of our own. `pointer.x/y` are already
+            // in the CANVAS's coordinates: the canvas is FIT-scaled to whatever
+            // the preview pane allows, and undoing that transform by hand here
+            // would be reimplementing the Scale Manager against itself.
+            //
+            // The canvas is the view at the render scale, though, and
+            // `setPointer` takes VIEW pixels — so the one transform that is
+            // ours to undo is ours. Without it every click landed three times
+            // too far right and three times too far down. The engine converts
+            // from there to a place in the world, because that needs the camera
+            // (`World.mousePosition`).
+            const pointer = this.input.activePointer;
+            world.setPointer(
+              {x: pointer.x / RENDER_SCALE, y: pointer.y / RENDER_SCALE},
+              buttonsDown(pointer),
+            );
+            // Phaser's delta is milliseconds; the engine ticks in seconds.
+            world.tick(delta / 1000);
+            // After the tick, so a sound a step or a handler raised this frame
+            // is heard this frame. Draining is what empties the queue, so a
+            // frame that throws before here replays its sounds next frame
+            // rather than losing them.
+            sound.sync(world.drainSounds(), world.music());
+            sync(this);
+          });
+        },
+      },
+    });
+
+    // THE LAST STEP TO THE SCREEN IS SMOOTH, and it has to be said here
+    // because Phaser writes the opposite inline: `pixelArt` above implies
+    // `antialias: false`, and a canvas made without antialiasing is given
+    // `image-rendering: pixelated`.
+    //
+    // That was right when the buffer was the world's own size and the browser
+    // was blowing it up 1.4 to 4.4 times — a hard-edged upscale beats a smeared
+    // one. It is wrong now. The buffer is three times the world (`renderScale`)
+    // and the pane is 460 pixels, so the browser's job is a DOWNSCALE of about
+    // a half, and point-sampling a downscale throws away half the pixels that
+    // were just drawn — arriving back at the ragged 1.44 it replaced, having
+    // rendered three times as many pixels to get there.
+    //
+    // The two settings are about different steps and want different answers.
+    // Inside the buffer, sampling stays nearest: a 32-pixel sprite drawn at 96
+    // is nine hard squares per pixel, which is what pixel art should be.
+    // Getting that buffer onto the screen is a resample of an image that is
+    // already at three times the detail it needs, which is supersampling, and
+    // supersampling is exactly what a smooth filter is for.
+    this.game.canvas.style.imageRendering = 'auto';
+  }
+
+  /**
+   * Tear the game down: stops the loop and releases the canvas.
+   *
+   * Never throws, and never returns with a canvas still in the pane. Both
+   * matter because the caller stops a game in order to start another one: a
+   * `destroy` that throws (which a game whose scene died mid-`create` can do)
+   * used to abandon the teardown, leaving the dead canvas in the DOM and the
+   * new game's canvas stacked on top of it — the "phantom canvas" a learner
+   * sees after a crash.
+   */
+  stop(): void {
+    this.halted = true;
+    const forgive = (step: () => void) => {
+      try {
+        step();
+      } catch {
+        // Whatever is left is being thrown away; the sweep below is what has
+        // to happen either way.
+      }
+    };
+    forgive(() =>
+      this.parent.removeEventListener('pointerdown', this.focusOnPointerDown),
+    );
+    forgive(() => this.parent.removeEventListener('focus', this.onFocus));
+    forgive(() => this.parent.removeEventListener('keydown', this.onKeyDown));
+    forgive(() => this.parent.removeEventListener('keyup', this.onKeyUp));
+    forgive(() => this.parent.removeEventListener('blur', this.onBlur));
+    forgive(() => this.parent.removeEventListener('wheel', this.onWheel));
+    // Before the game goes: a track nobody stopped plays under the game that
+    // replaces it, which is what "the music kept going after Restart" is.
+    forgive(() => this.sound.stop());
+    forgive(() => this.game.destroy(true));
+    // Phaser removes its own canvas on a clean destroy; this is for the other
+    // case. Anything still under the pane belongs to a game that is gone.
+    for (const canvas of [...this.parent.querySelectorAll('canvas')]) {
+      canvas.remove();
+    }
+  }
+}
