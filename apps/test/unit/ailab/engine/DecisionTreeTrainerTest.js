@@ -202,6 +202,50 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
 
     expect(trainer.rebuild({maxDepth: 4})).toBeDefined();
   });
+
+  // Pinning a depth does not strand the runs students saved before it.
+  test('rebuilds a swept depth after the level pinned another', () => {
+    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
+    trainer.startTraining();
+
+    expect(trainer.rebuild({maxDepth: 2})).toBeDefined();
+  });
+
+  test('rebuilds any whole depth, the sweep being only what it tries first', () => {
+    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
+    trainer.startTraining();
+
+    expect(trainer.rebuild({maxDepth: 7})).toBeDefined();
+  });
+
+  test.each([
+    ['below one', 0],
+    ['negative', -1],
+    ['fractional', 1.5],
+  ])('declines a depth that is %s', (_name, maxDepth) => {
+    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
+    trainer.startTraining();
+
+    expect(trainer.rebuild({maxDepth})).toBeUndefined();
+  });
+
+  /*
+    The range check cannot know every value an algorithm will refuse, so a
+    throw from one has to reach the student as a retrain, not a blank lab.
+  */
+  test('declines rather than throwing when the build fails', () => {
+    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
+    trainer.startTraining();
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+    // Own property, so the shared prototype survives this test.
+    trainer.buildModel = () => {
+      throw new TypeError('the algorithm refused this one');
+    };
+
+    expect(trainer.rebuild({maxDepth: 4})).toBeUndefined();
+
+    jest.restoreAllMocks();
+  });
 });
 
 describe('DecisionTreeTrainer: regression', () => {
