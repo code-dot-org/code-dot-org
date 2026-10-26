@@ -53,7 +53,7 @@ const HyperparameterField: React.FunctionComponent<
       value={text}
       onChange={handleChange}
       disabled={disabled}
-      helperMessage="The model is built with this value. Leave blank to try several and keep the most accurate."
+      helperMessage="The model is built with this value. If left blank, the most accurate value will be chosen automatically."
       errorMessage={error}
       size="s"
     />
