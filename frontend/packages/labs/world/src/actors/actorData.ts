@@ -3,9 +3,9 @@
 //
 // A data-shaped actor file is a document, as a map is: what the actor IS —
 // its traits, its own properties, the values set on it, its look, its icon,
-// what it acts like — as keys, and what it DOES as an event workspace, whose
-// roots are its handlers and its code (its drawing, its own blocks and
-// events, its every-frame work).
+// what it acts like, the blocks and events it adds to the language — as keys,
+// and what it DOES as an event workspace, whose roots are its handlers and its
+// code (its drawing, its every-frame work).
 //
 // The rest of the lab reads actors as `define actor` workspaces, and goes on
 // doing so: `actorView` turns the data back into the workspace it stands for,
@@ -119,6 +119,8 @@ export interface ActorData {
   properties?: ActorProperty[];
   values?: ActorValue[];
   effects?: ActorEffect[];
+  /** The blocks and events it adds to the language (specs/ACTOR_BLOCKS_PLAN.md). */
+  members?: ActorMember[];
   /** The handlers and the code, as roots of the workspace. */
   blocks?: SavedWorkspace;
   [key: string]: unknown;
@@ -127,8 +129,40 @@ export interface ActorData {
 export type Block = Record<string, unknown> & {type?: string};
 
 /**
+ * One piece of a member's design: a word, a value, or a line break. The
+ * designer's own parts (`blockly/extensions/blockDesigner`), whose value
+ * names a workspace variable by `var`: a block's implementation reads it
+ * through that variable, which the workspace's `variables` declare.
+ */
+export type ActorMemberPart =
+  | {kind: 'label'; text: string}
+  | {kind: 'row'}
+  | ({kind: 'param'; type: string; var: string; name?: string} & Record<
+      string,
+      unknown
+    >);
+
+/**
+ * A block or an event the actor adds to the language: `define block` or
+ * `define event`, as data. `id` is the id of the row it stands for, kept so
+ * the editor can name it across saves; `body` is a block's implementation,
+ * the chain in its `do`.
+ */
+export interface ActorMember {
+  id: string;
+  kind: 'event' | 'block';
+  parts: ActorMemberPart[];
+  description?: string;
+  /** The eye shut: offered in this actor's own file and nowhere else. */
+  hidden?: true;
+  body?: Block;
+}
+
+/**
  * Rows that are code: what the actor does, rather than what it is. In the
- * data shape each is a root of the workspace, where the "+" offers it.
+ * data shape each is a root of the workspace. `define block` and `define
+ * event` are members (`readMember`), and code only when the data cannot hold
+ * one whole.
  */
 export const CODE_ROWS: ReadonlySet<string> = new Set([
   'world_define_drawing',
@@ -433,6 +467,91 @@ function readEffect(row: Block): ActorEffect | undefined {
 const writeEffect = (effect: ActorEffect): Block =>
   effect.row ?? {type: ADD_EFFECT, fields: {EFFECT: effect.effect}};
 
+const MEMBER_ROWS = {block: 'world_rule_block', event: 'world_rule_event'};
+
+const isPart = (part: unknown): part is ActorMemberPart =>
+  isObject(part) &&
+  ((part.kind === 'label' && typeof part.text === 'string') ||
+    (part.kind === 'row' && only(part, ['kind'])) ||
+    (part.kind === 'param' &&
+      typeof part.type === 'string' &&
+      typeof part.var === 'string'));
+
+/**
+ * `define block` or `define event` as data, or nothing for one the data
+ * cannot hold whole: a block that reports a value, which an actor cannot
+ * define yet, or a row with anything the data has no key for.
+ */
+function readMember(row: Block, made: number): ActorMember | undefined {
+  const kind =
+    row.type === MEMBER_ROWS.block
+      ? 'block'
+      : row.type === MEMBER_ROWS.event
+        ? 'event'
+        : undefined;
+  const state = row.extraState;
+  if (
+    !kind ||
+    !isObject(state) ||
+    !only(state, ['parts']) ||
+    !Array.isArray(state.parts) ||
+    !state.parts.every(isPart)
+  ) {
+    return undefined;
+  }
+  const id = typeof row.id === 'string' ? row.id : `${kind}-${made}`;
+  const parts = state.parts.map(part => ({...part}));
+  if (kind === 'event') {
+    return only(row, ['type', 'extraState', 'next'])
+      ? {id, kind, parts}
+      : undefined;
+  }
+  const fields = fieldsOf(row);
+  const inputs = isObject(row.inputs) ? row.inputs : {};
+  const body = inSocket(inputs.DO);
+  if (
+    !only(row, ['type', 'fields', 'extraState', 'inputs', 'next']) ||
+    !Object.keys(fields).every(key =>
+      ['RETURNS', 'DESCRIPTION', 'ACCESS'].includes(key),
+    ) ||
+    (fields.RETURNS ?? 'none') !== 'none' ||
+    !Object.keys(inputs).every(key => key === 'DO') ||
+    (inputs.DO !== undefined &&
+      !(isObject(inputs.DO) && only(inputs.DO, ['block'])))
+  ) {
+    return undefined;
+  }
+  return {
+    id,
+    kind,
+    parts,
+    ...(typeof fields.DESCRIPTION === 'string' && fields.DESCRIPTION
+      ? {description: fields.DESCRIPTION}
+      : {}),
+    ...(fields.ACCESS === 'private' ? {hidden: true as const} : {}),
+    ...(body ? {body} : {}),
+  };
+}
+
+/** The row a member stands for. */
+function writeMember(member: ActorMember): Block {
+  const extraState = {parts: member.parts};
+  if (member.kind === 'event') {
+    return {type: MEMBER_ROWS.event, id: member.id, extraState};
+  }
+  return {
+    type: MEMBER_ROWS.block,
+    id: member.id,
+    fields: {
+      RETURNS: 'none',
+      DESCRIPTION: member.description ?? '',
+      ACCESS: member.hidden ? 'private' : 'shared',
+    },
+    extraState,
+    ...(member.body ? {inputs: {DO: {block: member.body}}} : {}),
+  };
+}
+
 /** The row that declares an actor's animations and plays its Main. */
 export const ANIMATIONS_ROW = 'world_actor_animations';
 
@@ -570,6 +689,7 @@ const DATA_KEYS = new Set([
   'properties',
   'values',
   'effects',
+  'members',
   'blocks',
 ]);
 
@@ -596,6 +716,7 @@ export function foldActor(
   const properties: ActorProperty[] = [];
   const values: ActorValue[] = [];
   const effects: ActorEffect[] = [];
+  const members: ActorMember[] = [];
   // What the actor does on being made: rows that are not data, kept in
   // order for its `is created` handler.
   const creation: Block[] = [];
@@ -610,6 +731,7 @@ export function foldActor(
     const property = readProperty(row);
     const value = readValue(row);
     const effect = readEffect(row);
+    const member = readMember(row, members.length);
     if (trait !== undefined) {
       traits.push(trait);
     } else if (parent !== undefined && data.actsLike === undefined) {
@@ -638,6 +760,8 @@ export function foldActor(
       values.push(value);
     } else if (effect && !effects.some(one => one.effect === effect.effect)) {
       effects.push(effect);
+    } else if (member && !members.some(one => one.id === member.id)) {
+      members.push(member);
     } else if (typeof row.type === 'string' && CODE_ROWS.has(row.type)) {
       code.push(alone(row));
     } else if (
@@ -654,6 +778,7 @@ export function foldActor(
   if (properties.length) data.properties = properties;
   if (values.length) data.values = values;
   if (effects.length) data.effects = effects;
+  if (members.length) data.members = members;
 
   const workspace: SavedWorkspace = {};
   const extras: Record<string, unknown> = {};
@@ -730,6 +855,7 @@ export function actorView(data: ActorData): Record<string, unknown> {
     ...(data.properties ?? []).map(writeProperty),
     ...(data.values ?? []).map(writeValue),
     ...(data.effects ?? []).filter(effect => effect.on).map(writeEffect),
+    ...(data.members ?? []).map(writeMember),
     ...code.map(alone),
   ];
   const first = chained(rows);

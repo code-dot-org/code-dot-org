@@ -250,12 +250,12 @@ describe('an actor that declares its own event', () => {
 
     expect(blocks).toContain('world_on_ActorsBeacon_FlashesEvent');
     expect(blocks).toContain('world_emit_ActorsBeacon_FlashesEvent');
-    // …and `define event` itself is offered in an `.actor`, which is what
-    // makes any of the above reachable — a declaration nobody can drag in
-    // declares nothing (`ROOT_HOMES`).
+    // …and `define event` itself is NOT offered in an actor's code: an
+    // actor's events are designed in the Actor Editor
+    // (specs/ACTOR_BLOCKS_PLAN.md).
     expect(
       categories.find(category => category.name === 'Actor')?.blocks,
-    ).toContain('world_rule_event');
+    ).not.toContain('world_rule_event');
     // …and the hat is a ROOT, so the generator does not chain the block after
     // it into the handler's body.
     expect(rootTypes.has('world_on_ActorsBeacon_FlashesEvent')).toBe(true);

@@ -126,3 +126,11 @@ describe('a drawing added by the "+"', () => {
     expect(drawing(false)?.state).toBeUndefined();
   });
 });
+
+describe('what the "+" offers in an actor’s code', () => {
+  it('is no block or event of its own: those are designed in its editor', () => {
+    const types = ACTOR_CODE_CHOICES.map(choice => choice.type);
+    expect(types).not.toContain('world_rule_block');
+    expect(types).not.toContain('world_rule_event');
+  });
+});

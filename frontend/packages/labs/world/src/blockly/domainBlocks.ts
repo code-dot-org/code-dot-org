@@ -11748,22 +11748,13 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // Work this KIND of actor does every frame. A rule is still the answer when the work is shared between
       // kinds, elected, or answerable by `has trait`; this is for when it is
       // none of those (ActorBuilder.defineStep).
+      //
+      // Its own blocks and events are not here: they are designed in the
+      // Actor Editor (specs/ACTOR_BLOCKS_PLAN.md).
       'world_trait_step',
-      // …and the third: a NAMED thing this kind does, which is what a learner
-      // reaches for on finding they have written the same six blocks twice.
-      // The same block a rule designs its own with — where it sits decides
-      // whose it is (`ActorBuilder.defineAction`).
-      'world_rule_block',
-      // …and the fourth: something that HAPPENS to this kind, which is how it
-      // tells the rest of the project about a moment without a rule in
-      // between. It raises the event with `emit` and anything may hear it with
-      // the hat — the same block a rule declares its events with
-      // (`ActorBuilder.defineEvent`).
-      'world_rule_event',
-      // …and the fourth: what this kind LOOKS like. A declaration like the
-      // three above it and reached the same way — the pencil opens the pen and
-      // the shapes on a surface of its own, which is why the Drawing drawer is
-      // not in this toolbox (specs/DRAWING.md).
+      // …and what this kind LOOKS like. A declaration reached the same way —
+      // the pencil opens the pen and the shapes on a surface of its own, which
+      // is why the Drawing drawer is not in this toolbox (specs/DRAWING.md).
       'world_define_drawing',
     ],
   },
@@ -12655,6 +12646,10 @@ export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_define_layer',
   'world_layer_parallax',
   'world_layer_fixed',
+  // An actor's own blocks and events are designed in the Actor Editor
+  // (specs/ACTOR_BLOCKS_PLAN.md), whose member page holds the one it opens.
+  'world_rule_block',
+  'world_rule_event',
 ]);
 
 /**

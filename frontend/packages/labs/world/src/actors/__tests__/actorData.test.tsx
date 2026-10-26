@@ -229,6 +229,78 @@ describe('an actor folded into data', () => {
   });
 });
 
+describe('an actor’s own blocks and events, folded', () => {
+  const stock = (id: string) =>
+    fold(STOCK_ACTORS.find(actor => actor.id === id)!.contents);
+  const codeTypes = (data: ActorData) =>
+    (data.blocks?.blocks?.blocks ?? []).map(root => root.type);
+
+  it('makes a declared event a member, and no root of the code', () => {
+    const data = stock('toggle');
+
+    expect(data.members?.map(member => member.kind)).toEqual([
+      'event',
+      'event',
+    ]);
+    expect(codeTypes(data)).not.toContain('world_rule_event');
+  });
+
+  it('keeps words and values in order', () => {
+    const data = stock('list');
+    const events = data.members!.filter(member => member.kind === 'event');
+
+    expect(
+      events.map(event =>
+        event.parts.map(part =>
+          part.kind === 'label'
+            ? part.text
+            : part.kind === 'row'
+              ? '|'
+              : `[${String(part.name)}]`,
+        ),
+      ),
+    ).toEqual([
+      ['is chosen', '[word]', 'at', '[place]'],
+      ['loses', '[word]', 'at', '[place]'],
+    ]);
+  });
+
+  it('keeps a block’s description, its eye and what it does', () => {
+    const data = stock('textArea');
+    const blocks = data.members!.filter(member => member.kind === 'block');
+
+    expect(blocks.length).toBeGreaterThan(0);
+    expect(blocks.some(block => block.hidden)).toBe(true);
+    expect(blocks.every(block => block.description)).toBe(true);
+    expect(blocks.every(block => block.body?.type)).toBe(true);
+    expect(codeTypes(data)).not.toContain('world_rule_block');
+  });
+
+  it('views and folds back to the same members, ids and all', () => {
+    for (const id of ['toggle', 'list', 'textArea']) {
+      const data = stock(id);
+      expect(fold(JSON.stringify(actorView(data))), id).toEqual(data);
+    }
+  });
+
+  it('keeps a block that reports a value as code', () => {
+    // An actor's block cannot report yet (`actorBlockReports`), so the data
+    // has no way to say one; it stays as the row it was.
+    const data = fold(
+      actorFile('Asker', [
+        {
+          type: 'world_rule_block',
+          fields: {RETURNS: 'number', DESCRIPTION: '', ACCESS: 'shared'},
+          extraState: {parts: [{kind: 'label', text: 'how far'}]},
+        },
+      ]),
+    );
+
+    expect(data.members).toBeUndefined();
+    expect(codeTypes(data)).toContain('world_rule_block');
+  });
+});
+
 // Every actor the lab ships or teaches with: the stock library, each
 // scenario's project, and each lesson's.
 const PROJECTS: Array<[string, Record<string, string>]> = [

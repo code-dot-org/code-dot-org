@@ -1,9 +1,9 @@
 // An actor's code rows as roots of its code workspace
 // (specs/ACTOR_EDITOR_PLAN.md, step 4c).
 //
-// A data-shaped actor keeps its drawing, its own blocks and events and its
-// every-frame steps as roots of its workspace, beside its handlers; under a
-// `define actor` they are rows. The block types are the rows' own — every
+// A data-shaped actor keeps its drawing and its every-frame steps as roots
+// of its workspace, beside its handlers; under a `define actor` they are
+// rows. The block types are the rows' own — every
 // part of the lab that finds one by its type finds it here too — and what
 // makes one a root is that it has nothing to attach above or below it.
 //
@@ -48,20 +48,11 @@ export function rootCodeRows(workspace: Blockly.Workspace): void {
 
 /**
  * What the "+" offers besides the events in an actor's code: what it does
- * (SIMPLE_INTERFACE.md, "An actor is data and events").
+ * (SIMPLE_INTERFACE.md, "An actor is data and events"). Its own blocks and
+ * events are designed in the Actor Editor (specs/ACTOR_BLOCKS_PLAN.md).
  */
 export const ACTOR_CODE_CHOICES: readonly EventChoice[] = [
   {type: 'world_trait_step', label: 'every frame', drawer: 'What it does'},
-  {
-    type: 'world_rule_block',
-    label: 'a block of its own',
-    drawer: 'What it does',
-  },
-  {
-    type: 'world_rule_event',
-    label: 'an event of its own',
-    drawer: 'What it does',
-  },
   {type: 'world_define_drawing', label: 'its drawing', drawer: 'What it does'},
 ];
 
