@@ -275,3 +275,29 @@ describe('mini-toolbox.md: saving', () => {
     });
   });
 });
+
+describe('mini-toolbox.md: from an extension', () => {
+  it('MT-7: may be applied by one when it remembers nothing', () => {
+    // Blockly checks that an extension which is not a mutator leaves the
+    // block's serialization hooks as it found them.
+    Blockly.Extensions.register('test_mini_toolbox', function (this: unknown) {
+      addMiniToolbox(this as Blockly.BlockSvg, {
+        blocks: [OFFERED],
+        remembersOpen: false,
+      });
+    });
+    Blockly.defineBlocksWithJsonArray([
+      {
+        type: 'test_extended_hat',
+        message0: 'when something else happens',
+        nextStatement: null,
+        extensions: ['test_mini_toolbox'],
+      },
+    ]);
+
+    const block = workspace.newBlock('test_extended_hat') as Blockly.BlockSvg;
+
+    expect(toggleField(block)).toBeDefined();
+    expect(block.saveExtraState).toBeUndefined();
+  });
+});

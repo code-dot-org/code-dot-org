@@ -18,7 +18,8 @@ be dragged out, so it cannot do this.
 
 ## Requirements
 
-MT-1. `addMiniToolbox(block, {blocks, tooltip?})`, called from a block's
+MT-1. `addMiniToolbox(block, {blocks, tooltip?, remembersOpen?})`, called
+from a block's
 `init` or an extension, puts a toggle button (FLD-12) at the front of the
 block's first input, as a field named `MINI_TOOLBOX_FLYOUT_TOGGLE` with
 `tooltip`. It does nothing for a block with no inputs, for one that already
@@ -63,7 +64,9 @@ extra state, and a block loaded with it opens its flyout. A shut flyout
 adds nothing. A block's own `saveExtraState` and `loadExtraState` are kept
 and receive their own state; a block with only XML mutation hooks
 (`mutationToDom`) is left without this, since a JSON hook would replace
-them.
+them. With `remembersOpen: false` none of this is done and the flyout opens
+shut. An extension passes it: Blockly throws when an extension that is not a
+mutator adds `saveExtraState` or `loadExtraState`.
 
 ## Test vectors
 

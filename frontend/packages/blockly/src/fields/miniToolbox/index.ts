@@ -62,6 +62,12 @@ export interface MiniToolboxOptions {
   blocks: readonly MiniToolboxBlock[];
   /** Tooltip on the toggle. */
   tooltip?: string;
+  /**
+   * Whether an open flyout is saved, and loaded open (MT-7). False from an
+   * extension: Blockly refuses one that adds `saveExtraState`, which only a
+   * mutator may.
+   */
+  remembersOpen?: boolean;
 }
 
 /**
@@ -73,7 +79,7 @@ export interface MiniToolboxOptions {
  */
 export function addMiniToolbox(
   block: Blockly.BlockSvg,
-  {blocks, tooltip}: MiniToolboxOptions,
+  {blocks, tooltip, remembersOpen = true}: MiniToolboxOptions,
 ): void {
   // Nothing to draw on, already done, or nowhere to draw: the headless
   // generator workspace renders nothing and reads no field of this, so it can
@@ -123,7 +129,9 @@ export function addMiniToolbox(
   if (tooltip) {
     toggle.setTooltip(tooltip);
   }
-  saveOpenState(block, toggle);
+  if (remembersOpen) {
+    saveOpenState(block, toggle);
+  }
 }
 
 /**
