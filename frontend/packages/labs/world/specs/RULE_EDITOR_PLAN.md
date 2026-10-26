@@ -63,7 +63,18 @@ Within a phase, steps run in the order they are declared, a rule's own
 before its traits' (`Scheduler`, ties by insertion). Moving a step onto
 its trait moves it later only among its own rule's steps in the same
 phase, and of the ten that is one: Tab Navigation's `coveredLosesFocus`
-runs before `focusKeys`, both in `sense`.
+ran before `focusKeys`, both in `sense`. Nothing within a phase is
+promised (`engine/core/phases`), and read from the code, the two differ
+only when Tab is pressed on the very frame a dialog covers the focused
+field: focus should then land on the dialog's first control rather than
+its second. Not checked by running it.
+
+Five of the ten were in `sense`, which a trait's step was not offered.
+`sense` is the one phase a paused game runs. So a trait's step may name it
+now, for work that has to go on through a pause; work a pause should stop
+goes in a later phase, or asks whether the game is paused. Event handlers
+run after every step of a frame (`World.tick`), so a step moved from
+`sense` to `decide` is heard in the same frame.
 
 ## Decisions
 
@@ -90,11 +101,17 @@ runs before `focusKeys`, both in `sense`.
 
 ### 0. Trait steps for the ten
 
-Each of the ten becomes an `each frame during` under its trait, its loop
-taken off and the loop's variable read as `this actor`. Tab Navigation's
-two keep their order by an explicit `before`. A test pins the per-phase
-order of every stock rule's steps before and after, and the stock games
-are played in the browser: Physics, Gravity and Path most of all.
+DONE. Each of the ten is an `each frame during` under its trait, its loop
+taken off and the loop's variable read as `this actor`. Physics'
+`reposition`, Gravity's two and Path's two kept their phases. Physics'
+note of where each body starts, Time's and Spawner's ticks and Digging's
+filling of holes moved from `sense` to `decide`: a timer is game time,
+which a pause stops, and nothing moves a body or reads its starting place
+before `push`. Tab Navigation's `coveredLosesFocus` stays in `sense`, which
+a pause menu needs. The pipeline's order is pinned (`stockPipeline`), and
+every moved rule is played by `stockRulesRun`. The speed lesson's check
+read every file for a hand-written move, and Physics now makes one, so it
+reads the learner's files only.
 
 ### 1. A rule as data
 
