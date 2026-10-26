@@ -1,11 +1,11 @@
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
-import {QuizQuestionSummary} from '../types';
+import {QuizQuestionSummary} from '../../types';
+import AttemptCard from '../AttemptCard';
+import QuestionDescription from '../QuestionDescription';
 
-import AttemptCard from './AttemptCard';
 import MatchColumn from './MatchColumn';
 import {MatchPairs, MatchSets, MatchSide, toggleMatch} from './matchPairing';
-import QuestionDescription from './QuestionDescription';
 
 import styles from './match-question-container.module.scss';
 

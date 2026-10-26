@@ -1,4 +1,4 @@
-import {formatChoiceLetter} from '../utils';
+import {formatChoiceLetter} from '../../utils';
 
 export interface MatchItem {
   id: string;
