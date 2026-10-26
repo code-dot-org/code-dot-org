@@ -2,10 +2,10 @@
 
 Post-lesson review flow for AI Tutor+ students.
 
-The feature's source still lives at `apps/src/aiTutor/views/lessonDeepDive/`.
-This package currently ships nothing; it hosts a dev shell that renders that
-code in a browser without Rails and without webpack, ahead of moving the views
-in.
+The teacher gallery and the student flow's leaf views live here. The student
+flow's container and remaining views still live at
+`apps/src/aiTutor/views/lessonDeepDive/`, and the dev shell renders them in a
+browser without Rails and without webpack.
 
 ## Dev shell
 
