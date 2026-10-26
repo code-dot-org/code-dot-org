@@ -3,6 +3,8 @@
   keeps only the keys and values Lab 2 AI Lab understands; anything else is
   dropped when the level is next saved.
 */
+import {isValidHyperparameter} from '@cdo/apps/ailab/engine';
+
 import {setJsonObjectValue} from '../jsonUtils';
 
 export type ModeObject = Record<string, unknown>;
@@ -47,10 +49,6 @@ export function isValidAccuracy(value: unknown): boolean {
     value >= MIN_ACCURACY &&
     value <= MAX_ACCURACY
   );
-}
-
-export function isValidHyperparameter(value: unknown): boolean {
-  return typeof value === 'number' && Number.isInteger(value) && value >= 1;
 }
 
 export function getHyperparameterKey(mode: ModeObject): string {

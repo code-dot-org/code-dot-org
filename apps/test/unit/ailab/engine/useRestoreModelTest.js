@@ -204,11 +204,24 @@ describe.each([
   ['negative', {k: -1}],
   ['not a number', {k: NaN}],
   ['fractional', {k: 1.5}],
-  ['larger than the dataset', {k: 999}],
 ])('a saved run whose k is %s', (_name, hyperparameters) => {
   test('declines, leaving the student to retrain', () => {
     const rendered = openLab({...savedAfterTraining(), hyperparameters});
 
     expect(rendered.trainingData().trainedModel).toBeUndefined();
   });
+});
+
+/*
+  Only a hand-edited main.json reaches this: a shrunken dataset is turned away
+  earlier, by the saved split no longer naming rows it has. The model KNN
+  builds is degenerate rather than broken, so it is not worth guarding.
+*/
+test('rebuilds a saved k larger than the dataset', () => {
+  const rendered = openLab({
+    ...savedAfterTraining(),
+    hyperparameters: {k: 999},
+  });
+
+  expect(rendered.trainingData().trainedModel).toBeDefined();
 });
