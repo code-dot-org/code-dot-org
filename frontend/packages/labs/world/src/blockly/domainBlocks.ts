@@ -132,6 +132,7 @@ import {
   registerEventFlyout,
 } from './extensions/eventActorToolbox';
 import {installIfPlusMinus} from './extensions/ifPlusMinus';
+import {lessonButtonExtension} from './extensions/lessonButton';
 import {mapImportFieldExtension} from './extensions/mapImportField';
 import {missingRuleExtension} from './extensions/missingRule';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
@@ -173,6 +174,7 @@ import {
   layerPlan,
   type LayerPlanEntry,
 } from './layers';
+import {lessonFlyoutButton} from './lessonFlyoutButton';
 import {localizeText} from './localizeBlocks';
 import {layerDeclarations, type MainMapLayer} from './mainMapLayers';
 import {registerManyActorBlock, yieldsMany} from './manyActors';
@@ -612,6 +614,9 @@ const worldUseTrait = defineBlock({
     traitOptionsExtension,
     traitContextExtension,
     openSourceButtonExtension,
+    // …and the way back to the lesson it was met in
+    // (extensions/lessonButton).
+    lessonButtonExtension,
     // …and, when the rule that declares this trait has been deleted, a warning
     // saying so — since the generator's answer to that is to write nothing.
     missingRuleExtension,
@@ -6607,6 +6612,9 @@ const worldAddActor = defineBlock({
     // being wrapped by it (see `actorImportField`).
     actorImportFieldExtension,
     openSourceButtonExtension,
+    // …and the way back to the lesson it was met in
+    // (extensions/lessonButton).
+    lessonButtonExtension,
   ],
   // Optional `as ⟨…⟩`, which is what lets a body reach the actor that DID the
   // placing: unticked the new actor is `this actor` as it always was, ticked it
@@ -7539,6 +7547,9 @@ const worldUseRule = defineBlock({
     useRuleOptionsExtension,
     ruleImportFieldExtension,
     openSourceButtonExtension,
+    // …and the way back to the lesson it was met in
+    // (extensions/lessonButton).
+    lessonButtonExtension,
   ],
   style: 'behavior_blocks',
   tooltip:
@@ -12559,7 +12570,14 @@ function generateRulePalette(
       ...(ALSO_LISTED[rule.name] ?? []),
     ];
     if (categoryBlocks.length > 0) {
-      categories.push({name: rule.name, blocks: categoryBlocks});
+      // …and, at the top, the way back to the lesson this rule was met in
+      // (lessonFlyoutButton). Nothing for a rule the learner wrote, and nothing
+      // when there is no progression mounted to open.
+      const lesson = lessonFlyoutButton(rule.name);
+      categories.push({
+        name: rule.name,
+        blocks: lesson ? [lesson, ...categoryBlocks] : categoryBlocks,
+      });
     }
   }
   return {blocks, categories, eventTypes, worldEventTypes};
