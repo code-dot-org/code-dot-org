@@ -1,0 +1,141 @@
+import {act, fireEvent, render, screen, within} from '@testing-library/react';
+import {expect, it, vi} from 'vitest';
+
+import {
+  QueryClientProvider,
+  type LevelProperties,
+} from '@code-dot-org/core/api';
+import {RootStateProvider} from '@code-dot-org/core/redux';
+import {Lab} from '@code-dot-org/lab/host';
+
+import WorldLab from '../App';
+
+// World Lab does not use the Codebridge xterm console, but importing the shell's
+// barrel evaluates it; xterm needs a real browser, so stub it for jsdom.
+vi.mock('@xterm/xterm', () => ({
+  Terminal: class {
+    options = {};
+    open() {}
+    write() {}
+    writeln() {}
+    clear() {}
+    scrollToBottom() {}
+    focus() {}
+    loadAddon() {}
+    onData() {}
+    attachCustomKeyEventHandler() {}
+    dispose() {}
+  },
+}));
+vi.mock('@xterm/addon-fit', () => ({
+  FitAddon: class {
+    fit() {}
+  },
+}));
+vi.mock('@xterm/addon-image', () => ({ImageAddon: class {}}));
+
+// Any Blockly editor is stubbed. Blockly needs a real browser (injects CSS/observers
+// jsdom can't handle), like xterm above — stub it; this smoke test asserts the
+// shell composes, not Blockly's rendering (covered by the blockly/ tests).
+vi.mock('../blockly/BlocklyFileEditor', () => ({
+  BlocklyFileEditor: () => <div>blockly editor</div>,
+}));
+// The Main Screen opens in the screen editor, which is the map editor over
+// it (specs/SCREEN_MAP_PLAN.md).
+vi.mock('../mapEditor/ScreenEditor', () => ({
+  ScreenEditor: () => <div>screen editor</div>,
+}));
+
+// Stub the info panel: it renders the base ResourcePanel, which calls the
+// dashboard API (via useApiClient) and needs the host's ApiClientProvider.
+// That's base's concern and is exercised in the dev demo; here we only assert
+// the shell composes.
+vi.mock('@code-dot-org/codebridge', async () => {
+  const actual = await vi.importActual<
+    typeof import('@code-dot-org/codebridge')
+  >('@code-dot-org/codebridge');
+  return {...actual, InfoPanel: () => <div>instructions</div>};
+});
+
+const renderLab = () =>
+  render(
+    <RootStateProvider>
+      {/*
+        The layout asks who is signed in (`useWorldTutor` -> `useCurrentUser`)
+        to decide whether the AI Tutor tab belongs here. Every real host
+        provides a query client.
+      */}
+      <QueryClientProvider>
+        <Lab levelId="1" levelPropertiesMap={{'1': {} as LevelProperties}}>
+          <WorldLab />
+        </Lab>
+      </QueryClientProvider>
+    </RootStateProvider>,
+  );
+
+it('renders the World Lab shell from the default project', async () => {
+  renderLab();
+  // Flush the setCurrentLevelId effect so level properties resolve and the
+  // default project renders.
+  await act(async () => {});
+
+  // No file tabs: the breadcrumb stands where they were, and names the open
+  // file what the screen in it is called — the word its blocks use
+  // (`worldConfig.fileLabel`, specs/SHELL_PLAN.md).
+  const trail = await screen.findByRole('navigation', {name: 'Breadcrumb'});
+  expect(within(trail).getByText('Platform World')).toHaveAttribute(
+    'aria-current',
+    'page',
+  );
+  expect(screen.queryByRole('tab', {name: 'Platform World'})).toBeNull();
+  // No folder buttons before it: each kind of file is reached where it is
+  // used (specs/SHELL_FINISH_PLAN.md, step 5).
+  expect(screen.queryByRole('button', {name: 'World'})).toBeNull();
+  expect(screen.queryByRole('button', {name: 'Actors'})).toBeNull();
+  // …and there is no file tree, nor a way to bring one back: a tree could
+  // rename a FILE, which for an actor strands every reference to it
+  // (`layout/WorldLayout`).
+  expect(screen.queryByText('actors')).toBeNull();
+  expect(screen.queryByRole('button', {name: /file manager/i})).toBeNull();
+  // The active file is the Main Screen, so its (stubbed) editor mounts.
+  expect(screen.getByText('screen editor')).toBeTruthy();
+  // The preview view toggle rendered.
+  expect(screen.getByText('Preview')).toBeTruthy();
+  // No sandbox is configured under jsdom, so the preview says so.
+  expect(screen.getByText(/no sandbox origin is configured/i)).toBeTruthy();
+});
+
+it('swaps the editor for the JavaScript it makes, and back', async () => {
+  // What a World project does not otherwise show: the file is blocks, and the
+  // program it becomes is made on the way to the compiler. It takes the
+  // editor's place rather than opening beside it, which is the shape the lab
+  // already uses for a `define block`'s body — the pane is the same pane and
+  // what changed is what is in it (`debug/orShowCode`).
+  renderLab();
+  await act(async () => {});
+
+  // The default project opens on `main.screen`, whose (stubbed) editor is up.
+  expect(screen.getByText('screen editor')).toBeTruthy();
+  expect(
+    screen.queryByRole('region', {name: 'Generated JavaScript'}),
+  ).toBeNull();
+
+  fireEvent.click(screen.getByRole('button', {name: 'JavaScript'}));
+  expect(
+    screen.getByRole('region', {name: 'Generated JavaScript'}),
+  ).toBeTruthy();
+  // …in the editor's PLACE, which is the whole of what changed from a panel
+  // below it.
+  expect(screen.queryByText('screen editor')).toBeNull();
+  // …and the breadcrumb is still there, which is why the swap is around each
+  // editor rather than around Codebridge's whole workspace: a reader can move
+  // between files without leaving the code first.
+  expect(screen.getByRole('navigation', {name: 'Breadcrumb'})).toBeTruthy();
+
+  // The view's own way out, beside the button that opened it.
+  fireEvent.click(screen.getByRole('button', {name: 'Back'}));
+  expect(screen.getByText('screen editor')).toBeTruthy();
+  expect(
+    screen.queryByRole('region', {name: 'Generated JavaScript'}),
+  ).toBeNull();
+});

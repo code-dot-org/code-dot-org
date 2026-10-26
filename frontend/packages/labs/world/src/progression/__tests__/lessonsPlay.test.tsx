@@ -1,0 +1,317 @@
+// Every lesson's starting project, built and ticked.
+//
+// A lesson is a project a learner opens into, and the failure to fear is not a
+// broken assertion but a broken PROJECT: a wrong block type, a socket named
+// something else, an actor whose rule never arrived. All of those compile — the
+// generator mints a stand-in for a block type nothing defines, so the file
+// loads and does nothing (AGENTS.md) — so nothing but running it says whether
+// a lesson works.
+//
+// The same bargain `scenariosPlay` makes for the demo scenarios, and the same
+// cost: a second or so per project, in exchange for a lesson that cannot be
+// shipped in a state where it fails to build, place, or tick.
+
+import {describe, expect, it} from 'vitest';
+
+import {
+  compileProject,
+  type CompiledProject,
+} from '../../__tests__/support/compileProject';
+import {isActorData} from '../../actors/actorData';
+import {PositionProperty} from '../../engine';
+import {SpriteProperty} from '../../engine/rules/animation';
+import {projectFiles} from '../../runtime/projectFiles';
+import {TILES_BY_ID} from '../index';
+import {LESSONS} from '../lessons';
+import type {TileId} from '../types';
+
+const ids = Object.keys(LESSONS) as TileId[];
+
+const built = async (id: TileId): Promise<CompiledProject> =>
+  compileProject(projectFiles(LESSONS[id].source));
+
+describe('every lesson', () => {
+  it('belongs to a tile that exists', () => {
+    for (const id of ids) {
+      expect(TILES_BY_ID.has(id), id).toBe(true);
+    }
+  });
+
+  it('keeps every actor as data, never as a define actor', () => {
+    // An actor is data and events, opened in the Actor Editor
+    // (specs/ACTORS_AS_DATA_PLAN.md, step 5).
+    for (const [id, lesson] of Object.entries(LESSONS)) {
+      for (const file of Object.values(lesson.source.files)) {
+        if (file.name.endsWith('.actor')) {
+          expect(
+            isActorData(JSON.parse(file.contents)),
+            `${id}: ${file.name}`,
+          ).toBe(true);
+        }
+      }
+    }
+  });
+
+  it('says what it is, in the words the switcher shows', () => {
+    for (const id of ids) {
+      expect(LESSONS[id].name.length, id).toBeGreaterThan(2);
+      expect(LESSONS[id].description.length, id).toBeGreaterThan(20);
+      expect(LESSONS[id].instructions, id).toContain('### What you do');
+    }
+  });
+});
+
+describe.each(ids)('the %s lesson', id => {
+  it('builds, and puts something in the world', async () => {
+    // A world that builds EMPTY is the quiet failure: `add actor` names a file
+    // by path, and a path nothing matches places nothing and says nothing.
+    const {world} = await built(id);
+    expect([...world.actors].length).toBeGreaterThan(0);
+  });
+
+  it('ticks for a second without throwing', async () => {
+    const {world} = await built(id);
+    expect(() => {
+      for (let frame = 0; frame < 60; frame++) {
+        world.tick(1 / 60);
+      }
+    }).not.toThrow();
+  });
+
+  it('keeps its actors somewhere real', async () => {
+    // NaN propagates: one bad frame of vector arithmetic and a position is NaN
+    // for the rest of the run, which reads as an actor that is simply not drawn.
+    const {world} = await built(id);
+    for (let frame = 0; frame < 60; frame++) {
+      world.tick(1 / 60);
+    }
+    for (const actor of world.actors) {
+      const at = actor.get(PositionProperty);
+      expect(Number.isFinite(at.x), `${id}: ${actor.id} x`).toBe(true);
+      expect(Number.isFinite(at.y), `${id}: ${actor.id} y`).toBe(true);
+    }
+  });
+});
+
+// ── The values a lesson's dropdowns hold ────────────────────────────────────
+//
+// Blockly's dropdowns FALL BACK. A saved block naming an option the field does
+// not offer keeps the block, drops the value, and takes whatever option happens
+// to be first — so `sin of ⟨time × 360⟩` loaded as a SQUARE ROOT, which never
+// comes back down, and both bobbing lessons showed a world with nothing in it.
+// (SIN is `math_trig`'s; `math_single` holds abs, root, ln and friends.)
+//
+// It says so, once, on the console, and nothing was listening. This listens.
+
+describe('every dropdown a lesson fills in', () => {
+  it('holds a value its block offers', async () => {
+    const complaints: string[] = [];
+    const warn = console.warn;
+    const error = console.error;
+    const watch = (message: unknown) => {
+      if (String(message).includes('unavailable option')) {
+        complaints.push(String(message));
+      }
+    };
+    console.warn = watch;
+    console.error = watch;
+    try {
+      for (const id of ids) {
+        const before = complaints.length;
+        await built(id);
+        for (const complaint of complaints.slice(before)) {
+          complaints[complaints.indexOf(complaint)] = `${id}: ${complaint}`;
+        }
+      }
+    } finally {
+      console.warn = warn;
+      console.error = error;
+    }
+    expect([...new Set(complaints)].sort()).toEqual([]);
+  }, 300_000);
+});
+
+// ── The words a lesson leaves on screen ─────────────────────────────────────
+//
+// Three stock actors ship with a placeholder in their `text`, so that one
+// dragged onto a map says something before anybody has typed anything and the
+// picker has a picture to show. A lesson that places one and never sets its
+// text leaves that placeholder on screen — and "Once upon a time…" in the
+// middle of a story about a knock at the door is a line from somebody else's.
+//
+// It is not always wrong: `story/reveal` is ABOUT a box that has been given
+// its words, and the ones that have not are the ones that need looking at. So
+// the check is per lesson, and the list is written down.
+
+describe('a stock actor a lesson places', () => {
+  it('does not sit there saying the words it shipped with', async () => {
+    const placeholders = new Set(['Once upon a time…', 'Label', 'Button']);
+    const showing: string[] = [];
+    for (const id of ids) {
+      const {world} = await built(id);
+      for (const actor of world.actors) {
+        for (const trait of actor.traits()) {
+          for (const property of Object.values(trait.properties)) {
+            if (
+              property.id === 'text' &&
+              placeholders.has(String(actor.get(property)))
+            ) {
+              showing.push(`${id}: ${actor.get(property)}`);
+            }
+          }
+        }
+      }
+    }
+    expect([...new Set(showing)].sort()).toEqual([]);
+  }, 300_000);
+});
+
+// ── The pictures a lesson names ─────────────────────────────────────────────
+//
+// A sprite is not a project FILE the way a world or a rule is — it is bytes,
+// imported by name (`lessonSource`'s `sprites:`), and an actor names it as a
+// string. So a lesson that says `set sprite ⟨player⟩` and forgets to import
+// `player` compiles, ticks, places its actors and passes every test above: the
+// property holds `player.png` and the driver, finding nothing of that name,
+// draws the default green box.
+//
+// Which is what `adventure/rooms` did, in the lesson whose task is walking a
+// Player into a Door — two identical green squares, and no way to tell which
+// was which. Nothing but a browser saw it, so this is the test that would have.
+
+describe('every picture a lesson names', () => {
+  it('is a file the project holds', async () => {
+    const missing: string[] = [];
+    for (const id of ids) {
+      const {files} = LESSONS[id].source as unknown as {
+        files: Record<string, {name: string}>;
+      };
+      const held = new Set(Object.values(files).map(file => file.name));
+      const {world} = await built(id);
+      for (const actor of world.actors) {
+        const sprite = String(actor.get(SpriteProperty) ?? '');
+        if (sprite && !held.has(sprite)) {
+          missing.push(`${id} draws ${sprite}, which it does not hold`);
+        }
+      }
+    }
+    expect([...new Set(missing)].sort()).toEqual([]);
+  }, 300_000);
+
+  // The other half, and the reason the sweep above is not enough: an actor the
+  // STARTER never places is never asked what it draws. `adventure/rooms` keeps
+  // a Chest in room two, which the learner loads and the test cannot.
+  it('is held even where the starter places nobody', () => {
+    const missing: string[] = [];
+    for (const id of ids) {
+      const {files} = LESSONS[id].source as unknown as {
+        files: Record<string, {name: string; contents?: string}>;
+      };
+      const held = new Set(Object.values(files).map(file => file.name));
+      for (const file of Object.values(files)) {
+        for (const [named] of (file.contents ?? '').matchAll(/[\w.-]+\.png/g)) {
+          if (!held.has(named)) {
+            missing.push(`${id}: ${file.name} names ${named}`);
+          }
+        }
+      }
+    }
+    expect([...new Set(missing)].sort()).toEqual([]);
+  });
+});
+
+// The two lessons that make a claim about what the starting project DOES, as
+// opposed to what it holds. Both claims are the first line of the instructions,
+// and both would be silently false if the project were subtly wrong.
+describe('what a lesson starts out doing', () => {
+  it('has the speed lesson crossing the screen by hand', async () => {
+    const {world} = await built('motion/speed');
+    const hero = [...world.actors][0];
+    const from = hero.get(PositionProperty).x;
+    for (let frame = 0; frame < 60; frame++) {
+      world.tick(1 / 60);
+    }
+    // Two pixels a frame, sixty frames — the handler the lesson asks them to
+    // delete. Loose bounds: what matters is that it moved, and rightwards.
+    expect(hero.get(PositionProperty).x).toBeGreaterThan(from + 60);
+  });
+
+  it('has the gravity lesson hanging in the air', async () => {
+    const {world} = await built('motion/gravity');
+    const before = [...world.actors].map(a => a.get(PositionProperty).y);
+    for (let frame = 0; frame < 60; frame++) {
+      world.tick(1 / 60);
+    }
+    const after = [...world.actors].map(a => a.get(PositionProperty).y);
+    // Nothing has elected `Affected by Gravity` yet, so nothing falls. If this
+    // starts failing, the lesson has been given away in its own starter.
+    expect(after).toEqual(before);
+  });
+});
+
+// ── A way to every file a lesson names ────────────────────────────────────
+//
+// There is no list of a project's files to browse (specs/SHELL_FINISH_PLAN.md,
+// step 5). A lesson that sends the learner to a file has to say how they get
+// there: Rules in Play for a rule, the open button on the block that names
+// it, the switcher for a map.
+
+/** A path a learner would once have used the file browser to reach. */
+const PATHS = /`(actors|rules|sprites|worlds|backgrounds|maps|effects)\//;
+
+/** The ways in a lesson may name instead. */
+const DOORS =
+  /Rules in Play|\*\*open\*\* button|open button|Screens and Maps|switcher|Open [A-Z]/;
+
+describe('the view a lesson’s world opens on', () => {
+  // A world opens on its map, and a lesson's task is nearly always a block
+  // (specs/CURRICULUM_PLAN.md). The two ways this rots: a lesson that opens on
+  // a canvas it never mentions, and one that opens on a map it does not have.
+  const onTheMap = ids.filter(id => LESSONS[id].levelData?.worldView === 'map');
+
+  it('is the workspace unless the lesson is about the map', () => {
+    for (const id of ids) {
+      expect(LESSONS[id].levelData?.worldView, id).toBeDefined();
+    }
+    expect(onTheMap.sort()).toEqual([
+      'input/arrows',
+      'input/two-hands',
+      'look/background',
+      'look/sprite',
+      'motion/drag',
+      'motion/gravity',
+      'motion/speed',
+      'motion/units',
+      'origin/first-world',
+      'place/layers',
+      'place/map',
+      'place/position',
+      'place/script',
+    ]);
+  });
+
+  it.each(onTheMap)('%s has a map to open on, and says so', id => {
+    const world = projectFiles(LESSONS[id].source)['worlds/main.world'];
+    expect((JSON.parse(world) as {map?: object}).map).toBeDefined();
+    expect(LESSONS[id].instructions).toMatch(/\bmap\b/i);
+  });
+});
+
+describe('a lesson that names a file', () => {
+  const naming = ids.filter(id => PATHS.test(LESSONS[id].instructions));
+
+  it.each(naming)('%s says how to get to it', id => {
+    expect(LESSONS[id].instructions).toMatch(DOORS);
+  });
+});
+
+describe('every lesson', () => {
+  it('defines no actor inside its world', () => {
+    // An actor is a file. A `define actor` among a world's own roots was the
+    // old way of keeping a lesson to one file, and nothing reads it now.
+    for (const id of ids) {
+      const world = projectFiles(LESSONS[id].source)['worlds/main.world'];
+      expect(world, id).not.toContain('"type": "world_actor"');
+    }
+  });
+});

@@ -1,0 +1,128 @@
+// The stock appearance library and the drawings behind it.
+//
+// Nothing here is loaded at runtime: a project draws only what it holds, and the
+// library is a shelf to copy from. What still has to agree is the shelf and the
+// generator — a stock sprite whose image was never drawn is a row in the picker
+// that imports a broken file, and a strip animation whose frame count does not
+// match its drawing reads squares that are not there.
+
+import {describe, expect, it} from 'vitest';
+
+import * as generator from '../../scripts/generate-sprites.mjs';
+import {
+  spriteFileName,
+  STOCK_ANIMATIONS,
+  STOCK_CELL,
+  STOCK_SPRITES,
+} from '../appearance/stock';
+import {STOCK_IMAGES} from '../appearance/stockImages';
+
+describe('the stock appearance library', () => {
+  it('offers exactly the drawings the generator draws', () => {
+    const drawn = [
+      ...generator.SPRITE_NAMES,
+      ...Object.keys(generator.ANIMATION_SPECS),
+    ];
+    expect(STOCK_SPRITES.map(sprite => sprite.id).sort()).toEqual(
+      [...drawn].sort(),
+    );
+    expect(STOCK_CELL).toBe(generator.SPRITE_SIZE);
+  });
+
+  it('carries the bytes of every one of them', () => {
+    // `stockImages.ts` is generated (scripts/write-stock-assets.mjs); a sprite
+    // added to the library without re-running it would import an empty file.
+    for (const sprite of STOCK_SPRITES) {
+      expect(STOCK_IMAGES[sprite.id], sprite.id).toMatch(
+        /^data:image\/png;base64,/,
+      );
+      expect(sprite.dataUrl).toBe(STOCK_IMAGES[sprite.id]);
+    }
+  });
+
+  it('carries bytes the right shape for what was drawn', () => {
+    // The check that catches a STALE bake. The prefix test above only says a
+    // data URL is there; it would pass happily if a drawing's frame count had
+    // changed and `write-stock-assets.mjs` had not been re-run, and the picker
+    // would then import a strip whose last cells are empty.
+    //
+    // A PNG's IHDR is at a fixed offset, so the width and height are the first
+    // sixteen bytes after the signature — no decoder needed.
+    const sizeOf = (dataUrl: string): {width: number; height: number} => {
+      const bytes = Buffer.from(dataUrl.split(',')[1], 'base64');
+      return {
+        width: bytes.readUInt32BE(16),
+        height: bytes.readUInt32BE(20),
+      };
+    };
+
+    for (const sprite of STOCK_SPRITES) {
+      const spec = generator.ANIMATION_SPECS[sprite.id];
+      const frames = spec ? spec.frames : 1;
+
+      expect(sizeOf(sprite.dataUrl), sprite.id).toEqual({
+        width: STOCK_CELL * frames,
+        height: STOCK_CELL,
+      });
+    }
+  });
+
+  it('marks the grids as grids, and nothing else', () => {
+    // A drawing is a grid exactly when the generator drew it as a strip of
+    // frames; that is what its `.sheet` says on import (appearance/sheetFile),
+    // and an unmarked strip is a wide picture with no cells to pick.
+    for (const sprite of STOCK_SPRITES) {
+      const drawnAsStrip = sprite.id in generator.ANIMATION_SPECS;
+      expect(Boolean(sprite.sheet), sprite.id).toBe(drawnAsStrip);
+      if (sprite.sheet) {
+        expect(sprite.sheet.cell, sprite.id).toEqual({
+          width: STOCK_CELL,
+          height: STOCK_CELL,
+        });
+      }
+    }
+  });
+
+  /** The sprite keys of an animation, as file and rectangle. */
+  const keysOf = (animation: (typeof STOCK_ANIMATIONS)[number]) =>
+    (animation.timeline.tracks.sprite ?? []).map(key =>
+      typeof key.value === 'string'
+        ? {sprite: key.value, cell: undefined}
+        : (key.value as {sprite: string; cell?: {x: number; width: number}}),
+    );
+
+  it('reads as many frames out of a strip as the strip has', () => {
+    for (const animation of STOCK_ANIMATIONS) {
+      const strip = keysOf(animation).filter(key => key.cell);
+      if (strip.length === 0) {
+        continue; // a scaling animation, not a strip
+      }
+      const spec = generator.ANIMATION_SPECS[animation.id];
+      expect(spec, animation.id).toBeDefined();
+      // Every cell once, and the last again: the closing key that gives the
+      // last picture its frame (specs/ANIMATION_PLAN.md, step 1).
+      expect(strip.length).toBe(spec.frames + 1);
+      // Every rectangle lands inside the drawing.
+      for (const key of strip) {
+        expect(key.cell!.x + key.cell!.width).toBeLessThanOrEqual(
+          spec.frames * STOCK_CELL,
+        );
+      }
+    }
+  });
+
+  it('names the image file each animation reads, and ships it', () => {
+    for (const animation of STOCK_ANIMATIONS) {
+      const named = new Set(keysOf(animation).map(key => key.sprite));
+      expect([...named].sort()).toEqual(
+        animation.sprites.map(spriteFileName).sort(),
+      );
+      for (const id of animation.sprites) {
+        expect(
+          STOCK_SPRITES.some(sprite => sprite.id === id),
+          id,
+        ).toBe(true);
+      }
+    }
+  });
+});

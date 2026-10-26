@@ -1,0 +1,431 @@
+// Standalone dev harness for World Lab: `yarn dev` serves this. It is NOT part
+// of the library build (the lib entry is src/index.ts). It mounts the App
+// through the same host path the studio uses — `LabHost` drives the load against
+// the MSW mock API (see ./fixtures), so there is no Rails backend.
+//
+// The world preview is a placeholder until the Phaser 4 runtime is wired in;
+// everything else — instructions, file browser, editor — is real.
+
+// Design-system fonts and CSS variables (colors, primitives).
+import '@code-dot-org/fonts/brands/code.org/index.css';
+import '@code-dot-org/component-library-styles/fontVariables.css';
+import '@code-dot-org/component-library-styles/primitiveColors.css';
+import '@code-dot-org/component-library-styles/colors.css';
+// …and the brand's own tokens over the top of them. "Import once, immediately
+// after colors.css" is that file's own instruction, and the layering is the
+// whole of why: `colors.css` declares the legacy tokens at `:root`, and this
+// re-declares them under `[data-brand=…]`, which wins by specificity for the
+// brand actually on the page. Without it every `var(--…)` falls through to the
+// legacy value and the harness renders in the old palette whatever `data-brand`
+// says (`component-library-styles/brandOverrides.css`).
+import '@code-dot-org/component-library-styles/brandOverrides.css';
+
+// Lab CSS variables (borders, z-indices) used by base components like PanelContainer.
+import '@code-dot-org/lab/styles/variables.scss';
+
+import {GlobalStyles, StyledEngineProvider, ThemeProvider} from '@mui/material';
+import {createRoot} from 'react-dom/client';
+
+import {getMuiThemeForBrand} from '@code-dot-org/component-library/themes';
+import {initializeCore} from '@code-dot-org/core';
+import {
+  ApiClientProvider,
+  DashboardApiClient,
+  QueryClientProvider,
+} from '@code-dot-org/core/api';
+import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
+import {RootStateProvider} from '@code-dot-org/core/redux';
+import {
+  injectFontAwesome,
+  setFontAwesomeStylesheets,
+} from '@code-dot-org/fonts';
+import {LabHost} from '@code-dot-org/lab/host';
+
+import App from './App';
+import {useFreeIcons} from './blockly/extensions/glyphIcon';
+import {mountBootBadge} from './demoBootBadge';
+import {
+  DEFAULT_SCENARIO_TAG,
+  fixtureLabel,
+  isFixtureTag,
+  isScenarioTag,
+  WORLD_LAB_KEY,
+  WORLD_SCENARIOS,
+  WORLD_SCENARIO_TAGS,
+} from './fixtures';
+import {freeIconShimCss, reportMissingIcons} from './freeIconShims';
+import {lessonChannel, setLessonHref} from './progression/lessonRoute';
+import {
+  getSandboxUrl,
+  setAssetBaseUrl,
+  setBackgroundBaseUrl,
+  setDemoBaseUrl,
+  setSoundBaseUrl,
+  setSandboxUrl,
+} from './runtime/worldConfig';
+
+initializeCore({plugins: [localizationPlugin]});
+
+// Icons: the design system's FontAwesome Pro from `dsco.code.org`, or this
+// build's own copy of the Free distribution (`WORLD_DEMO_ICONS=free`).
+//
+// The CDN is right for a code.org origin and useless anywhere else: it answers
+// CORS for code.org hosts only, and a webfont is ALWAYS a CORS request, so a
+// deployment elsewhere loads the stylesheets, applies them, and draws every
+// icon as an empty box. The Free copy is same-origin, so nothing can refuse it.
+//
+// Set before rendering, and as the source rather than an argument, because
+// `<Lab>` injects on mount too (labs/base) and would otherwise pull the CDN's
+// copy alongside this one.
+if (import.meta.env.VITE_WORLD_ICONS === 'free') {
+  const base = `${import.meta.env.BASE_URL}vendor/fontawesome/css/`;
+  setFontAwesomeStylesheets([
+    `${base}fontawesome.min.css`,
+    `${base}solid.min.css`,
+    `${base}regular.min.css`,
+    `${base}brands.min.css`,
+    `${base}v4-shims.min.css`,
+  ]);
+  // What Free does not draw, drawn as something (src/freeIconShims.ts). Last in
+  // the head, so it wins over the sheets it patches.
+  const shims = document.createElement('style');
+  shims.textContent = freeIconShimCss();
+  document.head.appendChild(shims);
+  // And what no CSS can reach: a Pro-only codepoint drawn straight into a
+  // block (`blockly/extensions/glyphIcon`).
+  useFreeIcons();
+}
+injectFontAwesome();
+
+/** A base URL a relative path can be resolved against, which needs the slash. */
+const withSlash = (url: string): string =>
+  url.endsWith('/') ? url : `${url}/`;
+
+/** Where this build is served from, absolute (`https://host/world/`). */
+const here = withSlash(
+  new URL(import.meta.env.BASE_URL, window.location.href).href,
+);
+
+// The demo's own copies of what the studio host would otherwise supply: the
+// sandbox's vendored assets (esbuild-wasm, Phaser, the bundled engine) and the
+// stock backdrops, both fetched into `public/` by `yarn setup:world`.
+//
+// Paths, not absolute URLs, and deliberately: the asset base is handed to the
+// sandbox surfaces on their iframe URL and fetched THERE, so it has to resolve
+// against whichever origin is serving them. Made absolute against the lab, a
+// two-origin deployment sends the sandbox to fetch 14MB of wasm across origins
+// and it fails CORS — "Failed to fetch", and a blank preview. The base path is
+// still needed: a build at `/world/` has no claim on the origin root.
+setAssetBaseUrl(`${import.meta.env.BASE_URL}vendor/`);
+setBackgroundBaseUrl(`${import.meta.env.BASE_URL}backgrounds/`);
+setSoundBaseUrl(`${import.meta.env.BASE_URL}sounds/`);
+setDemoBaseUrl(`${import.meta.env.BASE_URL}demos/`);
+
+// Where the sandbox is served from, when the URL does not say — an explicit
+// `?world-sandbox=` always wins (getSandboxUrl reads it). This is the BASE the
+// surfaces sit under, never a surface itself; the managers resolve
+// `sandbox/preview.html` and `sandbox/compile.html` against it.
+//
+//   VITE_WORLD_SANDBOX=https://world-sandbox.example/   a second origin, which
+//                                                       is what the design wants
+//   VITE_WORLD_SANDBOX=same-origin                      this deployment serves
+//                                                       the sandbox surfaces too
+//   (unset)                                             the `dev:sandbox` port,
+//                                                       in a dev build only
+//
+// `same-origin` is the shortcut for a host that gives out one origin per
+// account rather than per site (GitHub Pages). It runs learner code on the
+// lab's own origin, which specs/SANDBOX.md forbids in production: the origin
+// split is the boundary, and this is the build that has none. It is defensible
+// only for a demo that holds no session and none of anyone else's work — so
+// nothing chooses it silently, a build has to say it.
+const SAME_ORIGIN = 'same-origin';
+const configured = import.meta.env.VITE_WORLD_SANDBOX?.trim();
+if (!getSandboxUrl()) {
+  if (configured === SAME_ORIGIN) {
+    setSandboxUrl(here);
+  } else if (configured) {
+    setSandboxUrl(withSlash(new URL(configured, here).href));
+  } else if (import.meta.env.DEV) {
+    setSandboxUrl('http://localhost:5202/');
+  }
+}
+
+// WHICH PROJECT the demo opens (src/fixtures/scenarios).
+//
+// Three ways to say it, in the order they win:
+//
+//   ?scenario=empty    the switcher below, and the one to reach for in a test
+//                      or a shared link — it survives any base path
+//   the channel id     `/frontend-studio/projects/world/<tag>/edit`, the studio
+//                      route, which is where the tag comes from in production
+//   nothing            the starter
+//
+// The query wins because it is the thing a person just clicked. A tag that
+// names no scenario falls through rather than loading an empty mock: a typo in
+// a URL should show the starter, not a lab with no project in it.
+/** What the switcher shows while a LESSON is loaded, which it cannot switch to. */
+const LESSON_OPTION = '__lesson__';
+
+const scenarioFromPath = window.location.pathname.match(
+  /^\/frontend-studio\/projects\/world\/([^/]+)\/edit$/,
+)?.[1];
+const scenarioFromQuery = new URLSearchParams(window.location.search).get(
+  'scenario',
+);
+// `isFixtureTag`, not `isScenarioTag`: a LESSON has a channel here too
+// (progression/lessonRoute), served by the same mock through the same
+// `fixtureFor`, and `?scenario=lesson-motion-speed` should open it.
+const channelId = isFixtureTag(scenarioFromQuery)
+  ? (scenarioFromQuery as string)
+  : isFixtureTag(scenarioFromPath ?? null)
+    ? (scenarioFromPath as string)
+    : DEFAULT_SCENARIO_TAG;
+
+/**
+ * Which brand's tokens the page wears.
+ *
+ * IN STUDIO THIS COMES FROM RAILS, which puts `data-brand` on `<html>` from
+ * `Cdo::Brand` (`dashboard/app/views/layouts/application.html.haml`). Nothing
+ * does that here — this harness is a Vite page with no Rails behind it — so it
+ * says so itself, defaulting to what production defaults to. Without the
+ * attribute the brand's token rules match nothing and every colour falls
+ * through to the legacy `:root` values, which is the old theme wearing the new
+ * name.
+ *
+ * `?brand=` overrides it, which is how the two are compared side by side:
+ * `?brand=codeai-audit` paints every DSCO token pink, so a surface that bypassed
+ * the token system stands out (`lib/cdo/brand.rb`). Anything unrecognised falls
+ * back to the legacy palette, the same as `getMuiThemeForBrand` does.
+ *
+ * ON `<html>`, because the token rules are descendant selectors —
+ * `[data-brand='codeai-next'] [data-theme='Dark']` — and the `data-theme` div
+ * they need to contain is the one the component library renders inside `#root`
+ * (`ThemeContext`). Put on any element below that div and it matches nothing.
+ *
+ * The same value goes to MUI, whose palette is a second copy of the brand that
+ * has to agree (`getMuiThemeForBrand`).
+ */
+const brand =
+  new URLSearchParams(window.location.search).get('brand') ?? 'codeai-next';
+document.documentElement.dataset.brand = brand;
+
+// Where a lesson opens, in this host. The default is the studio's project route
+// (`progression/lessonRoute`); the demo has no router and answers the query
+// parameter its mock API is keyed by. `cdoMockReset` because the store is
+// written through and survives a reload, so a lesson started twice would
+// otherwise open the copy the last attempt left behind.
+setLessonHref(
+  tile =>
+    `${import.meta.env.BASE_URL}?scenario=${lessonChannel(tile.id)}&cdoMockReset=1`,
+);
+
+// Start the mock API and register World Lab's fixtures before rendering, so the
+// host's level_properties / app_options / channel / sources requests are served.
+// The progression map, on its own: `?map` (specs/PROGRESSION_UI.md, milestone
+// 2). It has no project, no host and no API behind it, so everything below that
+// exists to serve one — the mock worker, the tutor transport — is skipped.
+//
+// `?map` AND NOT `?tree`, which is what it was until the loop was walked end to
+// end. `?tree=<tileId>` is what the MODAL writes to the URL so a region can be
+// linked to, so a reload after opening the map swapped the whole lab for this
+// harness — one parameter with two meanings, and the second one silently wins.
+const showTree = new URLSearchParams(window.location.search).has('map');
+
+async function enableMocks() {
+  const {
+    startMockWorker,
+    registerLabFixtures,
+    registerMockFixture,
+    setActiveScenario,
+    maybeResetFromUrl,
+  } = await import('@code-dot-org/core/api/mocks');
+  const {WorldFixtures} = await import('./fixtures');
+  const {SIGNED_IN_STUDENT} = await import('./aiTutor/signedInUser');
+
+  maybeResetFromUrl();
+  registerLabFixtures(WORLD_LAB_KEY, WorldFixtures);
+
+  // Core answers `/api/v1/users/current` as SIGNED OUT by default, which is
+  // right for a general harness and wrong for this one: the AI Tutor's access
+  // rules read the current user and read silence as no permission. Registered
+  // the way core's own handler prescribes — a wildcard route ahead of the
+  // default.
+  registerMockFixture({
+    method: 'get',
+    path: '*/api/v1/users/current',
+    respond: SIGNED_IN_STUDENT,
+  });
+  setActiveScenario({labKey: WORLD_LAB_KEY, tag: channelId});
+
+  // The worker script is served from this build's base, like everything else it
+  // owns; its default is the origin root, which a `/world/` deployment has no
+  // claim on. Scope follows the script, and a scope of `/world/` still controls
+  // this page — so its API calls to `/api/…` are intercepted all the same.
+  await startMockWorker({
+    serviceWorker: {url: `${import.meta.env.BASE_URL}mockServiceWorker.js`},
+  });
+}
+
+if (!showTree) {
+  await enableMocks();
+}
+
+// No Rails behind the mock API, so the AI Tutor answers from a real model when
+// this harness was started with a key —
+//
+//     ANTHROPIC_API_KEY=sk-... yarn dev
+//
+// — and from a recording otherwise (`aiTutor/transport`).
+if (!showTree) {
+  const {chooseHarnessTutor} = await import('./aiTutor/transport');
+  const tutor = await chooseHarnessTutor();
+  console.log(
+    tutor.kind === 'live'
+      ? `🤖 AI Tutor: live, ${tutor.model}`
+      : `🤖 AI Tutor: recorded (${tutor.reason ?? 'no ANTHROPIC_API_KEY'})`,
+  );
+}
+
+// Global tweaks for the standalone harness:
+// - The base `<Lab>` wraps content in the component-library ThemeProvider's
+//   `<div data-theme>`, which has no intrinsic height. The studio host sizes
+//   labs via its own layout CSS; here we make that wrapper fill the viewport so
+//   the lab's flex layout has a height to divide. Scoped to `#root` so it does
+//   NOT match `<div data-theme>` menus/dialogs that portal to `<body>` (those
+//   also carry `data-theme`, and a `height: 100%` would stretch them to the
+//   whole window).
+// - The DSCO tooltip portals to `<body>` with `height: fit-content`, which
+//   Chromium resolves against the full-height viewport here (stretching it to
+//   the whole window). `max-content` renders it at its content height, as
+//   intended. Scoped to the portaled tooltip (`_tooltip_` name prefix), not the
+//   `_tooltipOverlay_` wrapper.
+const fullHeight = (
+  <GlobalStyles
+    styles={{
+      '#root div[data-theme]': {height: '100%'},
+      'body > [class*="_tooltip_"]': {height: 'max-content'},
+    }}
+  />
+);
+
+/**
+ * Which project the demo is showing, and a way to change it.
+ *
+ * Bottom right, above the boot badge, which is the corner this harness uses
+ * for things the lab itself does not have — a lab with a dev control in its
+ * own chrome would be a lab that ships one. The RIGHT corner because the left
+ * one belongs to the instructions panel's icon strip, whose bottom buttons
+ * (settings, the progression map) this used to cover. `?devChrome=off` takes
+ * it away for screenshots and visual tests, the same opt-out `packages/users`
+ * uses.
+ *
+ * A full reload rather than a re-render: the scenario decides what the mock API
+ * serves, and the API is chosen before the first fetch. Swapping it live would
+ * mean tearing down a loaded project mid-edit, which is a bigger promise than a
+ * dev switch should make.
+ */
+function ScenarioSwitcher({value}: {value: string}) {
+  if (new URLSearchParams(window.location.search).get('devChrome') === 'off') {
+    return null;
+  }
+  return (
+    <label
+      style={{
+        position: 'fixed',
+        bottom: 72,
+        right: 8,
+        zIndex: 99999,
+        maxWidth: 260,
+        background: 'rgba(0,0,0,0.78)',
+        color: '#eaeaea',
+        borderRadius: 6,
+        padding: '6px 9px',
+        font: '12px/1.4 ui-monospace, monospace',
+      }}
+    >
+      project{' '}
+      <select
+        value={isScenarioTag(value) ? value : LESSON_OPTION}
+        onChange={event => {
+          const params = new URLSearchParams(window.location.search);
+          params.set('scenario', event.target.value);
+          // The store is written through and survives a reload, so a project
+          // edited under one scenario would otherwise follow you to the next.
+          params.set('cdoMockReset', '1');
+          window.location.search = params.toString();
+        }}
+      >
+        {/* A lesson is a channel here too, and it is not in this list: the
+            list is the demo's projects, and the lessons are reached from the
+            progression map. Shown as one disabled row so the select is not
+            claiming to be on a project the harness is not showing. */}
+        {!isScenarioTag(value) && (
+          <option value={LESSON_OPTION} disabled>
+            {fixtureLabel(value)?.name ?? value}
+          </option>
+        )}
+        {WORLD_SCENARIO_TAGS.map(tag => (
+          <option key={tag} value={tag}>
+            {WORLD_SCENARIOS[tag].name}
+          </option>
+        ))}
+      </select>
+      <div style={{marginTop: 4, opacity: 0.75}}>
+        {fixtureLabel(value)?.description}
+      </div>
+    </label>
+  );
+}
+
+const rootElement = document.getElementById('root');
+if (rootElement && showTree) {
+  const {ProgressionMapDemo, PROGRESSION_DEMO_CSS} = await import(
+    './progression/ProgressionMapDemo'
+  );
+  const sheet = document.createElement('style');
+  sheet.textContent = PROGRESSION_DEMO_CSS;
+  document.head.appendChild(sheet);
+  createRoot(rootElement).render(<ProgressionMapDemo />);
+} else if (rootElement) {
+  // No <StrictMode>: it double-invokes effects in dev, which races xterm's
+  // async render against the console's dispose/remount (a benign 'dimensions'
+  // error). The lab's own tests still run under React's strict behavior.
+  createRoot(rootElement).render(
+    <StyledEngineProvider injectFirst>
+      <ThemeProvider theme={getMuiThemeForBrand(brand)}>
+        {fullHeight}
+        <RootStateProvider>
+          <QueryClientProvider>
+            <ApiClientProvider client={DashboardApiClient}>
+              <ScenarioSwitcher value={channelId} />
+              <div style={{height: '100vh'}}>
+                <LabHost
+                  LabEntrypoint={App}
+                  standaloneProjectType="world"
+                  channelId={channelId}
+                />
+              </div>
+            </ApiClientProvider>
+          </QueryClientProvider>
+        </RootStateProvider>
+      </ThemeProvider>
+    </StyledEngineProvider>,
+  );
+  // Demo-only: show the real boot time on-page so it can be read with DevTools
+  // closed (see demoBootBadge for why that matters).
+  mountBootBadge();
+
+  // Icons Free cannot draw are silent — the element renders, sized and empty —
+  // so the build that uses Free says so instead. Watching rather than sampling:
+  // most of this lab's icons live in menus and dialogs that do not exist until
+  // they are opened, and a single pass at startup would miss every one.
+  if (import.meta.env.VITE_WORLD_ICONS === 'free') {
+    const look = () => reportMissingIcons();
+    setTimeout(look, 2_000);
+    new MutationObserver(look).observe(rootElement, {
+      childList: true,
+      subtree: true,
+    });
+  }
+}

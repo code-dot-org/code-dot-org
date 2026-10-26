@@ -1,0 +1,192 @@
+/* The stock-rule picker's CONTENT — a grid of what each rule DOES, under the
+   heading of the part of the map it comes from. The dialog itself is the
+   design system's, so this shapes only what is inside it. */
+
+.body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* Everything on the shelf, scrolled as one: the headings go with their rules
+   rather than pinning, because a learner scanning for "the jumping one" reads
+   past the headings rather than at them. */
+.shelf {
+  max-height: 46vh;
+  margin: 0;
+  padding: 2px;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.region {
+  margin-block: 6px 2px;
+  color: var(--text-neutral-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.region:first-child {
+  margin-block-start: 0;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Layout only — the border, hover and focus ring take the design system's
+   colors. The picture's width fixes the tile's, so every tile is one size
+   whatever its ability is called. */
+.tile {
+  display: flex;
+  width: var(--demo-width);
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+  text-align: center;
+}
+
+.tile:hover {
+  border-color: var(--borders-neutral-primary, #d4dae1);
+}
+
+.tile:focus-visible {
+  outline: 2px solid var(--borders-brand-primary, #0093a4);
+  outline-offset: 2px;
+}
+
+.tileChosen {
+  border-color: var(--borders-brand-primary, #0093a4);
+}
+
+/* Not yet earned. Dimmed rather than disabled, because it is still a control:
+   pressing it goes to the lesson that grants it (specs/PROGRESSION_UI.md). */
+.tileLocked .demo,
+.tileLocked .base {
+  opacity: 0.45;
+  filter: grayscale(1);
+}
+
+.lock {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--background-neutral-primary, #fff);
+  color: var(--text-neutral-secondary, #5b6770);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+  pointer-events: none;
+}
+
+.holder {
+  position: relative;
+}
+
+/* Two lines, always two lines. "Moves with Arrow Keys" does not fit on one at
+   this width and "Slows Down" does, and a grid whose tiles are different
+   heights depending on how a rule is named reads as a grid that broke. */
+.ability {
+  display: -webkit-box;
+  width: 100%;
+  min-height: 2.4em;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.2;
+}
+
+/* Which lesson grants it, said on the tile rather than only on the way in. */
+.unlockedBy {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: var(--text-neutral-secondary);
+}
+
+/* What the chosen one IS, under the shelf: the sentence, what else it brings,
+   and what it gives actors. On a tile there is no room for any of it, and in a
+   grid of forty-five there is no room for forty-five. */
+.detail {
+  display: flex;
+  min-height: 4rem;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+  border-top: 1px solid var(--borders-neutral-tertiary, #e5e7eb);
+  padding-top: 8px;
+}
+
+/* A rule with no demo, and none coming: a BASE, which does nothing visible on
+   its own because something else stands on it. Drawn as a card rather than as
+   an empty picture, so it reads as a different kind of thing rather than as a
+   demo that failed to load. */
+.base {
+  display: flex;
+  width: var(--demo-width);
+  height: var(--demo-height);
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: 1px dashed var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--text-neutral-secondary);
+}
+
+/* A rule's demonstration: one strip PNG, frame one showing until the tile is
+   looked at (specs/RULE_DEMOS.md). Scaled down from the recording's own size
+   by the custom properties, so a grid of forty-five fits on a screen and a
+   half rather than four. */
+.demo {
+  width: var(--demo-width);
+  height: var(--demo-height);
+  flex: none;
+  border-radius: 4px;
+  background-image: var(--demo);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: calc(var(--demo-width) * var(--frames)) var(--demo-height);
+}
+
+/* Play while the tile is being LOOKED at — hovered, focused, or selected. */
+.playing,
+.tile:hover .demo,
+.tile:focus-within .demo {
+  animation: rule-demo-strip calc(var(--frames) * 1s / 12) steps(var(--frames))
+    infinite;
+}
+
+@keyframes rule-demo-strip {
+  to {
+    background-position: calc(-1 * var(--demo-width) * var(--frames)) 0;
+  }
+}
+
+/* Held, for a reader who has asked for less motion: the still is frame one
+   either way, so what they lose is the animation and not the picture. */
+@media (prefers-reduced-motion: reduce) {
+  .playing,
+  .tile:hover .demo,
+  .tile:focus-within .demo {
+    animation: none;
+  }
+}

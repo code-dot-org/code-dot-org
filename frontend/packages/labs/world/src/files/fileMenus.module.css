@@ -1,0 +1,5 @@
+/* The file picker's input: opened by an upload a door asked for, never
+   seen. */
+.hiddenInput {
+  display: none;
+}

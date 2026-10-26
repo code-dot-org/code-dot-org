@@ -1,0 +1,700 @@
+// The Text Input, PLAYED: typed at, backspaced, and told to let go.
+//
+// It is the first actor that takes something other than a press, and every
+// part of that is behavior: what it holds is what was TYPED, backspace is a
+// KEY because it makes no character, and which of two fields is listening is
+// decided by a clear and a set in one frame (specs/UI_ACTORS.md).
+//
+// TWO OF THEM, because one field cannot show that the focus goes anywhere. A
+// field that simply took every character would pass every test a single field
+// can be given, and would put both halves of a form into whichever one was
+// placed last.
+
+import {describe, expect, it} from 'vitest';
+
+import {compileProject} from '../../__tests__/support/compileProject';
+import type {Actor} from '../../engine';
+import {RotationProperty} from '../../engine';
+import {
+  keyName,
+  KEY_REPEAT_DELAY,
+  KEY_REPEAT_INTERVAL,
+} from '../../engine/core/keys';
+import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {projectFiles} from '../../runtime/projectFiles';
+import {importStockActor} from '../importStockActor';
+import type {StockActor} from '../stock';
+import {stockActorById} from '../stock';
+
+const me = () => ({block: {type: 'world_this_actor'}});
+const number = (value: number) => ({
+  block: {type: 'math_number', fields: {NUM: value}},
+});
+
+/** `add actor ⟨Text Input⟩ do set position …` */
+const place = (x: number, y: number) => ({
+  type: 'world_add_actor',
+  fields: {ACTOR: 'actors/textInput'},
+  inputs: {
+    DO: {
+      block: {
+        type: 'world_set_position',
+        inputs: {ACTOR: me(), X: number(x), Y: number(y)},
+      },
+    },
+  },
+});
+
+/** Two fields, well apart, so a click can only be on one of them. */
+const WORLD = JSON.stringify({
+  blocks: {
+    blocks: [
+      {
+        type: 'world_world',
+        fields: {NAME: 'My World'},
+        next: {block: {...place(80, 60), next: {block: place(80, 200)}}},
+      },
+    ],
+  },
+});
+
+/**
+ * The shelf entry, read off the shelf rather than written here.
+ *
+ * It used to be written out: the actor was finished and not shipped, because a
+ * lesson that teaches typing needs a check that can TYPE and the trace format
+ * had no step for it. It has one now (`runtime/checks`, `type`), so the actor
+ * is on the shelf and this reads what a learner would get.
+ */
+const TEXT_INPUT: StockActor = stockActorById('textInput')!;
+
+/**
+ * Six pixels a character at twelve, which is a font nobody has.
+ *
+ * A driver lends the World a real one built from the painter's own font
+ * (`runtime/driver/textMetrics`); a test lends it arithmetic, so what the
+ * caret does can be asserted exactly without a canvas anywhere.
+ */
+const sixPerCharacter = (words: string, size: number) =>
+  words.length * (size / 2);
+
+const play = async (measure?: (words: string, size: number) => number) => {
+  const source = importStockActor(EMPTY_WORLD_PROJECT, TEXT_INPUT).source;
+  const main = Object.values(source.files).find(
+    file => file.name === 'main.world',
+  )!;
+  const {world, modules} = await compileProject(
+    projectFiles({
+      ...source,
+      files: {...source.files, [main.id]: {...main, contents: WORLD}},
+    }),
+  );
+  // Lent BEFORE anything is drawn, as a driver lends it at set-up. Without
+  // one the world measures zero and the caret sits at the left margin, which
+  // is the headless case and is asserted below too.
+  if (measure) {
+    world.useTextMetrics(measure);
+  }
+  const text = modules['actors/label'].TextProperty;
+  const own = (name: string) => modules['actors/textInput'][name] as never;
+  const [top, bottom] = [...world.actors];
+  return {
+    world,
+    top,
+    bottom,
+    /** One of the field's own events, for a handler to listen on. */
+    event: (name: string) => own(name),
+    /** One of the field's own properties, read or written. */
+    get: (one: Actor, name: string) => one.get(own(name)) as unknown,
+    set: (one: Actor, name: string, value: unknown) =>
+      one.set(own(name), value as never),
+    /** Every word the picture draws for this field, in order. */
+    linesOf: (one: Actor) => {
+      const state = [...world.renderSnapshot()].find(
+        entry => entry.actor === one,
+      );
+      return (state?.drawing?.commands ?? []).flatMap(command =>
+        command.op === 'text' ? [command.text] : [],
+      );
+    },
+    /**
+     * Every edge colour the picture draws with, in order.
+     *
+     * An outline is not a command: it is the PAINT a shape is drawn with, so
+     * it arrives as `stroke` on the rectangles themselves (`core/drawing`).
+     */
+    edgesOf: (one: Actor) => {
+      const state = [...world.renderSnapshot()].find(
+        entry => entry.actor === one,
+      );
+      return (state?.drawing?.commands ?? []).flatMap(command =>
+        'stroke' in command && command.stroke ? [command.stroke] : [],
+      );
+    },
+    says: (one: typeof world.actors extends Iterable<infer T> ? T : never) =>
+      one.get(text as never) as unknown as string,
+    /** A click at a point, which is a press and then the frame that reads it. */
+    clickAt: (x: number, y: number) => {
+      world.setPointer({x, y}, ['left']);
+      world.tick(1 / 60);
+      world.setPointer({x, y}, []);
+      world.tick(1 / 60);
+    },
+    type: (characters: string[]) => {
+      world.addTyped(characters);
+      world.tick(1 / 60);
+    },
+    /**
+     * The player tabs onto the game, which is not a Tab press.
+     *
+     * The Tab that carried them here was pressed while the page still had the
+     * keyboard, so the driver reports the arrival itself and the rule brings
+     * the focus to the first control (`World.gainedKeyboard`).
+     */
+    arrive: () => {
+      world.gainedKeyboard();
+      world.tick(1 / 60);
+    },
+    /** Let `seconds` pass at sixty frames to the second. */
+    wait: (seconds: number) => {
+      for (let frame = 0; frame < Math.round(seconds * 60); frame += 1) {
+        world.tick(1 / 60);
+      }
+    },
+    /**
+     * Where one field's caret is, or nothing when it is not drawn.
+     *
+     * The bar is the only two-pixel-wide rectangle in the picture — the panel
+     * is the width of the whole actor — so it is found by that rather than by
+     * counting commands, which would break the day a field grows a decoration.
+     */
+    caretOf: (one: Actor) => {
+      const state = [...world.renderSnapshot()].find(
+        entry => entry.actor === one,
+      );
+      const bar = state?.drawing?.commands.find(
+        command => command.op === 'rectangle' && command.width === 2,
+      );
+      return bar?.op === 'rectangle' ? bar.x : undefined;
+    },
+    /** Where the words start, which slides left to keep the caret in view. */
+    wordsOf: (one: Actor) => {
+      const state = [...world.renderSnapshot()].find(
+        entry => entry.actor === one,
+      );
+      const line = state?.drawing?.commands.find(
+        command => command.op === 'text',
+      );
+      return line?.op === 'text' ? line.x : undefined;
+    },
+    /**
+     * A key, named as the BROWSER names it and translated at the door.
+     *
+     * `keyName` is what the driver calls on the way in, and going round it is
+     * how this test came to pass while backspace did not work at all: the
+     * table had no `Backspace`, so the real driver produced `Backspace` where
+     * the field listened for `backspace`, and a test that handed the engine
+     * the engine's own name never met the gap (`engine/core/keys`).
+     */
+    press: (domKey: string) => {
+      world.setInput([keyName(domKey)]);
+      world.tick(1 / 60);
+      world.setInput([]);
+      world.tick(1 / 60);
+    },
+    /** Hold a key for `seconds`, at sixty frames a second. */
+    hold: (domKey: string, seconds: number) => {
+      for (let at = 0; at < seconds; at += 1 / 60) {
+        world.setInput([keyName(domKey)]);
+        world.tick(1 / 60);
+      }
+      world.setInput([]);
+      world.tick(1 / 60);
+    },
+  };
+};
+
+describe('a Text Input', () => {
+  it('keeps nothing until it is clicked', async () => {
+    // A field nobody has chosen is not the field the typing goes to. It ships
+    // empty as well, where a Label ships saying "Label": words nobody typed
+    // are words whose first keystroke has to delete them.
+    const it_ = await play();
+    it_.type(['n', 'o']);
+
+    expect(it_.says(it_.top)).toBe('');
+    expect(it_.says(it_.bottom)).toBe('');
+  });
+
+  it('takes what is typed at the one that was clicked', async () => {
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['h', 'i']);
+
+    expect(it_.says(it_.top)).toBe('hi');
+    // …AND ONLY THAT ONE. A field that took every character would pass every
+    // test one field can be given and put a whole form into the last one
+    // placed.
+    expect(it_.says(it_.bottom)).toBe('');
+  });
+
+  it('hands the typing over when the other one is clicked', async () => {
+    // The clear and the set, in one frame: `presses mouse button` reaches
+    // every field wherever the pointer is, and `is clicked with` reaches the
+    // one under it — announced afterwards (`rules/mouse`).
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['a']);
+    it_.clickAt(80, 200);
+    it_.type(['b']);
+
+    expect(it_.says(it_.top)).toBe('a');
+    expect(it_.says(it_.bottom)).toBe('b');
+  });
+
+  it('keeps the typing when the click lands on neither', async () => {
+    // IT USED TO LET GO, and it deliberately does not now. Clicking the
+    // background blurred because the field heard every press and cleared
+    // itself; the focus is the rule's now, and one block moves it. Escape is
+    // the release, everywhere — it is what hands Tab back to the page as well
+    // (`rules/tabNavigation`, specs/UI_ACTORS.md).
+    //
+    // A field that also blurred on any press would raise a loss and a gain
+    // every time the FOCUSED field was clicked, which is the churn the rule's
+    // idempotence guard exists to prevent.
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.clickAt(300, 300);
+    it_.type(['x']);
+
+    expect(it_.says(it_.top)).toBe('x');
+  });
+
+  it('lets go on Escape, which is the one way out', async () => {
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['a']);
+
+    it_.press('Escape');
+    it_.type(['b']);
+
+    expect(it_.says(it_.top)).toBe('a');
+  });
+
+  it('is reachable by the keyboard alone', async () => {
+    // THE WHOLE POINT OF THE MIGRATION. A field nobody can click is a field a
+    // keyboard user cannot fill in, and no arrangement of mouse handlers was
+    // ever going to fix that — tabbing between two fields is not a thing
+    // either field can work out.
+    const it_ = await play();
+
+    it_.arrive();
+    it_.type(['h', 'i']);
+    expect(it_.says(it_.top)).toBe('hi');
+
+    it_.press('Tab');
+    it_.type(['t', 'w', 'o']);
+    expect(it_.says(it_.bottom)).toBe('two');
+    // …and the first one kept what was put in it.
+    expect(it_.says(it_.top)).toBe('hi');
+  });
+
+  it('goes on backspacing while the key is HELD', async () => {
+    // A key raises `presses` once however long it is down, so a field that
+    // only heard the press took one character for a key held all day. Holding
+    // backspace is how anybody clears a field (`World.repeatingKeys`).
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['a', 'b', 'c', 'd', 'e', 'f']);
+    expect(it_.says(it_.top)).toBe('abcdef');
+
+    it_.hold('Backspace', KEY_REPEAT_DELAY + KEY_REPEAT_INTERVAL * 4);
+
+    // Several gone, not one — and not all six, which would mean the repeat had
+    // become "every frame".
+    const left = it_.says(it_.top).length;
+    expect(left).toBeLessThan(5);
+    expect(left).toBeGreaterThan(0);
+  });
+
+  it('takes ONE character for a tap, however the repeat is set', async () => {
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['a', 'b', 'c']);
+
+    it_.press('Backspace');
+
+    expect(it_.says(it_.top)).toBe('ab');
+  });
+
+  it('backspaces, which is a key and not a character', async () => {
+    // Backspace makes no character, so it never arrives as one: it is heard as
+    // a KEY, which is the division that keeps either event from pretending
+    // about the other.
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['a', 'b', 'c']);
+    it_.press('Backspace');
+
+    expect(it_.says(it_.top)).toBe('ab');
+
+    // …and an empty field backspaced is still an empty field.
+    it_.press('Backspace');
+    it_.press('Backspace');
+    it_.press('Backspace');
+    expect(it_.says(it_.top)).toBe('');
+  });
+});
+
+describe('its caret', () => {
+  // WHY THERE CAN BE ONE AT ALL. A caret belongs after the last letter, and
+  // where that is is a fact about the font — which the engine deliberately has
+  // none of (specs/DRAWING.md). The World is lent a measuring tape by whatever
+  // is driving it (`World.useTextMetrics`), and `width of ⟨text⟩ at size ⟨n⟩`
+  // is what borrows it. These play the field with a toy tape so the pixels can
+  // be asserted rather than eyeballed.
+
+  it('is drawn only in the field that is being typed at', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.clickAt(80, 60);
+
+    expect(it_.caretOf(it_.top)).toBeDefined();
+    // The other field is not merely unfocused, it has no bar at all: two
+    // carets on a screen is two fields claiming the keyboard.
+    expect(it_.caretOf(it_.bottom)).toBeUndefined();
+  });
+
+  it('stands after the last letter, measured rather than guessed', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.clickAt(80, 60);
+    it_.type(['h', 'i']);
+
+    // Eight pixels of inset, then two letters at six: the arithmetic is the
+    // measurer's, which is the point. A caret placed by character COUNT would
+    // agree with this test and disagree with every real font.
+    expect(it_.caretOf(it_.top)).toBe(8 + 12);
+
+    it_.type(['!']);
+    expect(it_.caretOf(it_.top)).toBe(8 + 18);
+  });
+
+  it('sits at the margin when nothing can measure', async () => {
+    // The headless case, and it is a real one: `runtime/playCheck` runs a
+    // world with no canvas anywhere. Zero is visibly nothing rather than
+    // invisibly wrong, which is what a guess from a character count would be.
+    const it_ = await play();
+    it_.clickAt(80, 60);
+    it_.type(['h', 'i']);
+
+    expect(it_.caretOf(it_.top)).toBe(8);
+  });
+
+  it('blinks, on the world’s clock', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.clickAt(80, 60);
+
+    // A caret that does not blink reads as a picture of a caret. Half of every
+    // second, off the world's own time — so every field on a screen blinks
+    // together rather than from its own timer.
+    expect(it_.caretOf(it_.top)).toBeDefined();
+    it_.wait(0.5);
+    expect(it_.caretOf(it_.top)).toBeUndefined();
+    it_.wait(0.5);
+    expect(it_.caretOf(it_.top)).toBeDefined();
+  });
+
+  it('slides the words so the caret stays in the box', async () => {
+    // A field is 96 wide with 8 of inset either side, so 80 pixels of room.
+    // Twenty characters at six is 120, which is 40 too many.
+    const it_ = await play(sixPerCharacter);
+    it_.clickAt(80, 60);
+    it_.type('abcdefghijklmnopqrst'.split(''));
+    // One more frame, because the slide is worked out by a step and the
+    // picture is drawn from what the step left.
+    it_.wait(1 / 60);
+
+    expect(it_.wordsOf(it_.top)).toBe(8 - 40);
+    // …and the caret lands on the right-hand inset, which is what "in the box"
+    // means: 8 − 40 + 120.
+    expect(it_.caretOf(it_.top)).toBe(96 - 8);
+  });
+
+  it('does not slide while what is typed still fits', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.clickAt(80, 60);
+    it_.type(['h', 'i']);
+    it_.wait(1 / 60);
+
+    expect(it_.wordsOf(it_.top)).toBe(8);
+  });
+});
+
+describe('its insertion point', () => {
+  // WHERE THE TYPING GOES is a number now, and everything else about editing
+  // is arithmetic on it. It used to be the end of the text and nothing else,
+  // which reads as a text field right up until somebody wants to fix a typo in
+  // the middle of what they typed (specs/UI_ACTORS.md).
+  //
+  // The field is 96 wide at (80, 60), so its left edge is at 32 and its words
+  // start at 40. Six pixels a character, so a click at 40 + n is n pixels into
+  // the line.
+  const WORDS = 40;
+
+  const typed = async (letters: string) => {
+    const it_ = await play(sixPerCharacter);
+    it_.clickAt(80, 60);
+    it_.type(letters.split(''));
+    return it_;
+  };
+
+  it('lands where the click did, at the nearest boundary', async () => {
+    // Six characters, 36 pixels. A click 15 pixels in is between the second
+    // and the third — nearer the third, since 15 is past the midpoint of the
+    // character that starts at 12. A field that put the caret at the end
+    // would pass every test written before this one.
+    const it_ = await typed('abcdef');
+
+    it_.clickAt(WORDS + 15, 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abcXdef');
+  });
+
+  it('rounds to the nearer side of a letter, not to the left of it', async () => {
+    // Nine pixels in is past the midpoint of the second character, so the bar
+    // goes after it. Rounding down would put it after the first and this would
+    // read `aXbcdef`.
+    const it_ = await typed('abcdef');
+
+    it_.clickAt(WORDS + 9, 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abXcdef');
+  });
+
+  it('goes to the start when the click is left of the words', async () => {
+    // Left of the WORDS but still on the field — its box starts at 32 and its
+    // words at 40, so the inset is clickable and belongs to the first letter.
+    const it_ = await typed('abcdef');
+
+    it_.clickAt(WORDS - 4, 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('Xabcdef');
+  });
+
+  it('reads the click along its OWN x when it is turned', async () => {
+    // THE FOURTH TIME THIS LAB HAS MADE THIS MISTAKE. `pointer x − middle x`
+    // is the right arithmetic only while the actor is upright; turned, it
+    // measures along the screen's axis and the bar lands somewhere else
+    // entirely. The List and the Dropdown both had it, and `alongX` is what
+    // the two of them arrived at: ask in the ACTOR's frame, where its local
+    // +x is `(cos, sin)` (`actors/stock/workspace`).
+    //
+    // Half a turn makes the cosine negative, so the field's own left is the
+    // screen's right: the same fifteen pixels into the words is fifteen to
+    // the LEFT of the middle on screen.
+    const it_ = await typed('abcdef');
+    it_.top.set(RotationProperty, 180);
+    it_.world.tick(1 / 60);
+
+    it_.clickAt(160 - (WORDS + 15), 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abcXdef');
+  });
+
+  it('goes to the end when the click is past them', async () => {
+    const it_ = await typed('abc');
+
+    it_.clickAt(WORDS + 90, 60);
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abcX');
+  });
+
+  it('is walked by the arrow keys', async () => {
+    const it_ = await typed('abcd');
+
+    it_.press('ArrowLeft');
+    it_.press('ArrowLeft');
+    it_.type(['X']);
+    expect(it_.says(it_.top)).toBe('abXcd');
+
+    it_.press('ArrowRight');
+    it_.type(['Y']);
+    expect(it_.says(it_.top)).toBe('abXcYd');
+  });
+
+  it('stops at both ends rather than running past them', async () => {
+    // A caret that went negative would put every later sum out by one, and say
+    // nothing about it.
+    const it_ = await typed('ab');
+
+    for (let at = 0; at < 5; at += 1) {
+      it_.press('ArrowLeft');
+    }
+    it_.type(['X']);
+    expect(it_.says(it_.top)).toBe('Xab');
+
+    for (let at = 0; at < 9; at += 1) {
+      it_.press('ArrowRight');
+    }
+    it_.type(['Y']);
+    expect(it_.says(it_.top)).toBe('XabY');
+  });
+
+  it('backspaces the character before it, not the last one', async () => {
+    const it_ = await typed('abcd');
+
+    it_.press('ArrowLeft');
+    it_.press('Backspace');
+
+    expect(it_.says(it_.top)).toBe('abd');
+  });
+
+  it('deletes the character after it, and stays where it is', async () => {
+    // The same edit read the other way. Two keys because they are two
+    // intentions, and the bar moves for one of them and not the other.
+    const it_ = await typed('abcd');
+
+    it_.press('ArrowLeft');
+    it_.press('ArrowLeft');
+    it_.press('Delete');
+    it_.type(['X']);
+
+    expect(it_.says(it_.top)).toBe('abXd');
+  });
+
+  it('brings the words back when the line no longer fills the box', async () => {
+    // The case the two-branch slide could not do: it only ever pushed LEFT, so
+    // a field scrolled to the end of a long line stayed scrolled after the
+    // line was deleted, showing an empty box with its words off to the left.
+    const it_ = await typed('abcdefghijklmnopqrst');
+    it_.wait(1 / 60);
+    expect(it_.wordsOf(it_.top)).toBe(8 - 40);
+
+    for (let at = 0; at < 20; at += 1) {
+      it_.press('Backspace');
+    }
+    it_.wait(1 / 60);
+
+    expect(it_.says(it_.top)).toBe('');
+    expect(it_.wordsOf(it_.top)).toBe(8);
+  });
+
+  it('carries the words along when the bar walks off the left', async () => {
+    // A caret walked back into a line that is scrolled has to bring the line
+    // with it, which is what makes the slide about the CARET rather than about
+    // the end of the text.
+    const it_ = await typed('abcdefghijklmnopqrst');
+    it_.wait(1 / 60);
+
+    for (let at = 0; at < 20; at += 1) {
+      it_.press('ArrowLeft');
+    }
+    it_.wait(1 / 60);
+
+    // The words, not the bar: forty ticks of arrow presses land in the dark
+    // half of the blink, and where the WORDS are is the claim anyway — they
+    // came back because the bar walked, which is the whole difference from a
+    // slide that watched the end of the text.
+    expect(it_.wordsOf(it_.top)).toBe(8);
+  });
+});
+
+// What a FORM asks of a field, which is everything after being able to type
+// into one (specs/FIELDS_PLAN.md).
+describe('a Text Input in a form', () => {
+  it('says what belongs in it while it is empty, and stops when it is not', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.set(it_.top, 'HintProperty', 'your name');
+
+    it_.world.tick(1 / 60);
+    expect(it_.linesOf(it_.top)).toContain('your name');
+
+    it_.clickAt(80, 60);
+    it_.type(['a']);
+
+    // The hint is DRAWN and never held: the field's own value is what was
+    // typed, and the hint is gone rather than needing to be deleted.
+    expect(it_.says(it_.top)).toBe('a');
+    expect(it_.linesOf(it_.top)).not.toContain('your name');
+  });
+
+  it('takes digits and refuses letters when it is a number field', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.set(it_.top, 'OnlyNumbersProperty', true);
+    it_.clickAt(80, 60);
+
+    it_.type(['1']);
+    it_.type(['a']);
+    it_.type(['2']);
+
+    expect(it_.says(it_.top)).toBe('12');
+  });
+
+  it('takes a minus and a dot, because −2 and 1.5 are numbers', async () => {
+    // A number field that cannot say them is a counting field wearing the
+    // wrong name.
+    const it_ = await play(sixPerCharacter);
+    it_.set(it_.top, 'OnlyNumbersProperty', true);
+    it_.clickAt(80, 60);
+
+    it_.type(['-']);
+    it_.type(['1']);
+    it_.type(['.']);
+    it_.type(['5']);
+
+    expect(it_.says(it_.top)).toBe('-1.5');
+  });
+
+  it('takes anything when nobody said otherwise', async () => {
+    const it_ = await play(sixPerCharacter);
+    it_.clickAt(80, 60);
+
+    it_.type(['a']);
+    it_.type(['1']);
+
+    expect(it_.says(it_.top)).toBe('a1');
+  });
+
+  it('shows a red edge once a project has called the answer wrong', async () => {
+    // The field has no idea what an email is. What it owns is saying so once
+    // somebody has decided.
+    const it_ = await play(sixPerCharacter);
+    it_.world.tick(1 / 60);
+    expect(it_.edgesOf(it_.top)).not.toContain('#e06c75');
+
+    it_.set(it_.top, 'LooksWrongProperty', true);
+    it_.world.tick(1 / 60);
+
+    expect(it_.edgesOf(it_.top)).toContain('#e06c75');
+  });
+
+  it('says it is done on Enter, and keeps the answer', async () => {
+    const it_ = await play(sixPerCharacter);
+    let done = 0;
+    it_.top.on(it_.event('IsDoneEvent'), () => void (done += 1));
+    it_.clickAt(80, 60);
+    it_.type(['h', 'i']);
+
+    it_.press('Enter');
+
+    expect(done).toBe(1);
+    // A field that emptied itself would take the answer away before a
+    // handler could read it.
+    expect(it_.says(it_.top)).toBe('hi');
+  });
+
+  it('says nothing on Enter when the typing is going elsewhere', async () => {
+    const it_ = await play(sixPerCharacter);
+    let done = 0;
+    it_.top.on(it_.event('IsDoneEvent'), () => void (done += 1));
+    it_.clickAt(80, 200);
+
+    it_.press('Enter');
+
+    expect(done).toBe(0);
+  });
+});

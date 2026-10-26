@@ -1,0 +1,402 @@
+import {Button} from '@mui/material';
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+} from 'react';
+
+import {
+  activateFile,
+  getActiveFileForSource,
+  InfoPanel,
+  shouldShowFile,
+  Workspace,
+} from '@code-dot-org/codebridge';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import type {MultiFileSource} from '@code-dot-org/core/api';
+import {
+  PanelContainer,
+  ResizeHandle,
+  WorkspaceHeader,
+} from '@code-dot-org/lab/components';
+import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
+import {useAppSelector} from '@code-dot-org/lab/redux';
+import type {Setting} from '@code-dot-org/lab/resourcePanel';
+
+import {useWorldTutor} from '../aiTutor/useWorldTutor';
+import {setActiveAppBuilder} from '../appBuilder';
+import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
+import {CalloutAnnouncer} from '../callouts/CalloutAnnouncer';
+import {pointAt} from '../callouts/pointAt';
+import {setRevealer} from '../callouts/reveal';
+import {fileToReveal} from '../callouts/revealFile';
+import {ViewMode, type ViewModeType} from '../constants';
+import {ConsolePanel} from '../debug/ConsolePanel';
+import {ShowCodeContext} from '../debug/showCode';
+import {FileMenus} from '../files/FileMenus';
+import {buildsApps, type WorldLevelProperties} from '../levelData';
+import {LibraryImports} from '../library/LibraryImports';
+import {entryFileOf} from '../mainWorld';
+import {WorldPreview} from '../preview/WorldPreview';
+import {ProgressionButton} from '../progression/ProgressionButton';
+import {fileIdAt, projectFiles} from '../runtime/projectFiles';
+
+import {Breadcrumb} from './Breadcrumb';
+import {follow, withScript, type ScriptStep, type Trail} from './trail';
+import {TrailContext, type TrailContextValue} from './TrailContext';
+import styles from './worldLayout.module.css';
+
+const clamp = (value: number, min: number, max: number) =>
+  Math.max(min, Math.min(max, value));
+
+const INSTRUCTIONS = {initial: 320, min: 200, max: 640};
+const PREVIEW = {initial: 460, min: 240, max: 900};
+
+/**
+ * The World Lab workspace, mirroring web-lab's `WebLayout`: the instructions /
+ * resource panel on the far left, and beside it a single workspace column.
+ *
+ * The editor and the preview are two panes *inside* that column, under one
+ * shared header. The header's segmented buttons collapse the split to either
+ * pane alone.
+ *
+ * ```
+ * ┌─────────────┬───────────────────────────────────────┐
+ * │             │ [Code|Preview|Split]   header         │
+ * │ instructions├───────────────────┬───────────────────┤
+ * │             │ editor            │ world preview     │
+ * │             │                   ├───────────────────┤
+ * │             │                   │ console           │
+ * └─────────────┴───────────────────┴───────────────────┘
+ * ```
+ *
+ * The Console/Debugger box follows the running game: it sits under the preview
+ * pane in split / preview-only view, and under the editor pane when the editor
+ * is the only pane. It is not a full-width bar under both (web-lab's shape).
+ */
+/** What a clickable in the instructions does: point at the place it names. */
+const showMe = (name: string) => void pointAt(name);
+
+const WorldLayout = () => {
+  const level = useMaybeLevelProperties<WorldLevelProperties>();
+  // Whether this is App Builder, for the code that is not a component — the
+  // AI tutor's context (`appBuilder`, `activeAppBuilder`).
+  const app = buildsApps(level);
+  useEffect(() => {
+    setActiveAppBuilder(app);
+    return () => setActiveAppBuilder(false);
+  }, [app]);
+
+  const {currentSources, updateSources} = useSources<MultiFileSource>();
+
+  // "Show me" for a place in another FILE. Only the active file's editor is
+  // mounted, so until the file is in front nobody answers for what is in it
+  // (`callouts/reveal`). Answered here because this is what is always
+  // mounted, and what has the project. A lesson names the actor, not a path:
+  // the Hero is whichever file declares an actor called Hero.
+  const sourcesRef = useRef(currentSources);
+  sourcesRef.current = currentSources;
+  const updateRef = useRef(updateSources);
+  updateRef.current = updateSources;
+  useEffect(() => {
+    setRevealer('file', step => {
+      const source = sourcesRef.current.source;
+      const fileId = fileToReveal(source, step);
+      if (!fileId) {
+        return false;
+      }
+      if (!source.files[fileId]?.active) {
+        updateRef.current({
+          ...sourcesRef.current,
+          source: activateFile(source, fileId),
+        });
+      }
+      return true;
+    });
+    return () => setRevealer('file', null);
+  }, []);
+  const entryFileId = useMemo(
+    () =>
+      fileIdAt(
+        currentSources.source,
+        entryFileOf(projectFiles(currentSources.source)),
+      ),
+    [currentSources],
+  );
+
+  // THE TRAIL, from the entry to the file in front, which the breadcrumb
+  // draws where the tabs were (specs/SHELL_PLAN.md, step 1). It follows the
+  // active file rather than being told where the learner went, and is
+  // brought up to date as this renders, so no editor below ever reads one a
+  // file behind.
+  const [storedTrail, setTrail] = useState<Trail>([]);
+  const source = currentSources.source;
+  const trail = follow(
+    storedTrail,
+    getActiveFileForSource(source)?.id,
+    entryFileId,
+    fileId => shouldShowFile(source.files[fileId]),
+  );
+  if (trail !== storedTrail) {
+    setTrail(trail);
+  }
+  const trailRef = useRef(trail);
+  trailRef.current = trail;
+  const goTo = useCallback((index: number) => {
+    const step = trailRef.current[index];
+    if (!step) {
+      return;
+    }
+    // Cut back first, so the step's own script, if it is one, stays open
+    // once its file is in front: the two land in one render.
+    setTrail(trailRef.current.slice(0, index + 1));
+    const now = sourcesRef.current;
+    if (!now.source.files[step.fileId]?.active) {
+      updateRef.current({
+        ...now,
+        source: activateFile(now.source, step.fileId),
+      });
+    }
+  }, []);
+  const setScript = useCallback(
+    (fileId: string, script: ScriptStep | null) =>
+      setTrail(withScript(trailRef.current, fileId, script)),
+    [],
+  );
+  const trailContext = useMemo<TrailContextValue>(
+    () => ({trail, goTo, setScript}),
+    [trail, goTo, setScript],
+  );
+  const [instructionsWidth, setInstructionsWidth] = useState(
+    INSTRUCTIONS.initial,
+  );
+  const [previewWidth, setPreviewWidth] = useState(PREVIEW.initial);
+  const [viewMode, setViewMode] = useState<ViewModeType>(ViewMode.SPLIT);
+  // Whether the editor pane is showing the JavaScript the open file compiles
+  // to, in place of its blocks (`debug/showCode`). Off by default: a learner
+  // authoring in blocks is not owed a pane they did not ask for, and the ones
+  // who want it are asking a question ("what does this mean?") that a button
+  // answers.
+  const [showGeneratedCode, setShowGeneratedCode] = useState(false);
+  // The editors are rendered by Codebridge, inside this tree but well below it
+  // (`config.editorComponents`), so the answer reaches them through a context
+  // rather than a prop. `hide` is what the code view's own "Back" calls.
+  const showCode = useMemo(
+    () => ({
+      showing: showGeneratedCode,
+      hide: () => setShowGeneratedCode(false),
+    }),
+    [showGeneratedCode],
+  );
+
+  // The base ResourcePanel collapses to its icon strip; when it does, the
+  // instructions resize seam has nothing to size, so hide it.
+  const isInstructionsCollapsed = useAppSelector(
+    state => state.labView?.isStandaloneCollapsed ?? false,
+  );
+
+  // A "Block Color Theme" dropdown in the settings pane. The context applies the
+  // choice (and its dark variant) to the Blockly editors.
+  const {options, selectedBase, setSelectedBase} = useWorldBlocklyTheme();
+  const blocklyThemeSetting = useMemo<Setting>(
+    () => ({
+      id: 'blocklyTheme',
+      label: 'Block Color Theme',
+      options: [...options],
+      selectedValue: selectedBase,
+      onChange: setSelectedBase,
+    }),
+    [options, selectedBase, setSelectedBase],
+  );
+
+  // The AI Tutor tab. `undefined` when the access rules say it should not be
+  // here at all, which is what `ResourcePanel` reads as "no tab".
+  const aiTutor = useWorldTutor();
+
+  const showEditor = viewMode !== ViewMode.PREVIEW;
+  const showPreview = viewMode !== ViewMode.CODE;
+  const isSplit = showEditor && showPreview;
+
+  return (
+    <TrailContext.Provider value={trailContext}>
+      <ShowCodeContext.Provider value={showCode}>
+        {/* The instructions width rides on a custom property so it can land on the
+        ResourcePanel itself (which takes a className but no style prop). */}
+        <div
+          className={styles.layout}
+          style={
+            {'--instructions-width': `${instructionsWidth}px`} as CSSProperties
+          }
+        >
+          <InfoPanel
+            className={styles.instructions}
+            documentationUrl="/docs/ide/world"
+            hasConsole={false}
+            // Read-only: it reads the generated code and the console, and answers
+            // in blocks. It offers no file edits, because a model cannot author a
+            // Blockly workspace safely (`aiTutor/useWorldTutor`).
+            aiTutor={aiTutor}
+            // "Show me": a link in a lesson's instructions names a place, and
+            // pressing it points there (`callouts/pointAt`).
+            onInstructionsTextClick={showMe}
+            extraSettings={[blocklyThemeSetting]}
+            // The way into the progression map, in the panel's bottom icon strip
+            // (specs/PROGRESSION_UI.md).
+            extraLinks={<ProgressionButton />}
+          />
+          {!isInstructionsCollapsed && (
+            <ResizeHandle
+              axis="x"
+              ariaLabel="Resize instructions"
+              value={instructionsWidth}
+              min={INSTRUCTIONS.min}
+              max={INSTRUCTIONS.max}
+              onDelta={dx =>
+                setInstructionsWidth(w =>
+                  clamp(w + dx, INSTRUCTIONS.min, INSTRUCTIONS.max),
+                )
+              }
+              onReset={() => setInstructionsWidth(INSTRUCTIONS.initial)}
+            />
+          )}
+
+          <div className={styles.workspaceColumn}>
+            <PanelContainer
+              id="world-workspace"
+              className={styles.workspacePanel}
+              headerContent={<WorkspaceHeader />}
+              rightHeaderContent={
+                // NOT IN PREVIEW-ONLY VIEW, where there is no editor pane to
+                // swap: a button that visibly does nothing is worse than no
+                // button.
+                //
+                // "JavaScript" and not "Show Code": the segmented buttons beside
+                // this one already call the blocks editor "Code", and a lab with
+                // two controls using that word for two different panes is a lab
+                // nobody can be told about.
+                showEditor ? (
+                  <Button
+                    variant="text"
+                    size="extraSmall"
+                    startIcon={
+                      <FontAwesomeV6Icon
+                        iconName="file-code"
+                        iconStyle="solid"
+                      />
+                    }
+                    aria-pressed={showGeneratedCode}
+                    onClick={() => setShowGeneratedCode(shown => !shown)}
+                  >
+                    JavaScript
+                  </Button>
+                ) : undefined
+              }
+              leftHeaderContent={
+                <SegmentedButtons
+                  size="xs"
+                  selectedButtonValue={viewMode}
+                  onChange={value => setViewMode(value as ViewModeType)}
+                  buttons={[
+                    {
+                      value: ViewMode.CODE,
+                      label: 'Code',
+                      ariaLabel: 'View code editor only',
+                      iconLeft: {iconName: 'code', iconStyle: 'solid'},
+                    },
+                    {
+                      value: ViewMode.PREVIEW,
+                      label: 'Preview',
+                      ariaLabel: 'View world preview only',
+                      iconLeft: {iconName: 'eye', iconStyle: 'solid'},
+                    },
+                    {
+                      value: ViewMode.SPLIT,
+                      label: 'Split View',
+                      ariaLabel: 'View code and world preview side by side',
+                      iconLeft: {iconName: 'table-columns', iconStyle: 'solid'},
+                    },
+                  ]}
+                />
+              }
+            >
+              <div className={styles.editorAndPreview}>
+                {/* The import shelves, mounted beside the workspace rather than
+                inside an editor: they are asked for from a block's `(import…)`
+                row AND from the map editor and the Actor Editor, whatever is
+                open (`library/LibraryImports`). */}
+                <LibraryImports />
+                {/* Where Show me says what it pointed at, and the ring's style. */}
+                <CalloutAnnouncer />
+                {showEditor && (
+                  <div className={styles.editorPane}>
+                    <div className={styles.editorMain}>
+                      <Workspace
+                        // NO FILE TREE, and no folder buttons either: each kind
+                        // of file is reached where it is used — a picture from
+                        // the look that shows it, a rule from Rules in Play
+                        // (specs/SHELL_FINISH_PLAN.md). The tree could also do a
+                        // thing nothing here will: rename a FILE, which for an
+                        // actor leaves every reference pointing at a path that is
+                        // not there any more.
+                        hideFileBrowser
+                        // NO TABS EITHER: one place at a time, and the
+                        // breadcrumb is the way back to the ones before it
+                        // (specs/SHELL_PLAN.md).
+                        tabStrip={<Breadcrumb />}
+                        // The host of the file acts, which draws nothing of its
+                        // own: every door asks it (`files/FileMenus`). Here
+                        // because it needs what the workspace provides.
+                        tabBarStart={<FileMenus />}
+                      />
+                    </div>
+                    {/* Code-only view: the console falls back to under the editor. */}
+                    {!showPreview && <ConsolePanel />}
+                  </div>
+                )}
+                {isSplit && (
+                  <ResizeHandle
+                    axis="x"
+                    ariaLabel="Resize preview"
+                    value={previewWidth}
+                    min={PREVIEW.min}
+                    max={PREVIEW.max}
+                    // Dragging right shrinks the preview: it is the trailing pane,
+                    // so its width moves opposite to the pointer.
+                    onDelta={dx =>
+                      setPreviewWidth(w =>
+                        clamp(w - dx, PREVIEW.min, PREVIEW.max),
+                      )
+                    }
+                    onReset={() => setPreviewWidth(PREVIEW.initial)}
+                  />
+                )}
+                {showPreview && (
+                  // Alone, the preview takes the whole column; split, it is sized by
+                  // the divider and the editor takes what is left.
+                  <div
+                    className={
+                      isSplit
+                        ? styles.previewPane
+                        : `${styles.previewPane} ${styles.previewPaneFull}`
+                    }
+                    style={isSplit ? {width: previewWidth} : undefined}
+                  >
+                    <WorldPreview />
+                    {/* The console lives under the preview whenever it is shown. */}
+                    <ConsolePanel />
+                  </div>
+                )}
+              </div>
+            </PanelContainer>
+          </div>
+        </div>
+      </ShowCodeContext.Provider>
+    </TrailContext.Provider>
+  );
+};
+
+export default WorldLayout;

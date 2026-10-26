@@ -1,0 +1,33 @@
+/* The trail, in the row the file tabs had. A long one scrolls sideways
+   rather than wrapping, so the row keeps its height. */
+.breadcrumb {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 0;
+  padding: 0 8px;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  color: var(--text-neutral-secondary, var(--text-neutral-primary));
+}
+
+.here {
+  padding-inline: 6px;
+  color: var(--text-neutral-primary);
+}

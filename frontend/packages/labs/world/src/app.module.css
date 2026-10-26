@@ -1,0 +1,47 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+
+  /* Grow to fill a flex-column host container. The studio host renders the lab
+     in a flex column bounded only by `min-height: calc(100vh - header)`, which
+     gives no definite height for our `height: 100%` to resolve against; the
+     flex-grow makes the lab fill that space instead of collapsing to content
+     height. Inert (harmless) in the standalone demo, whose wrapper already has a
+     definite 100vh height. Matches music's / web's `.app`. */
+  flex: 1 1 0;
+}
+
+/* CodebridgeLab wraps the layout in the component-library ThemeProvider's
+   `<div data-theme>`, which is a plain block with no height. Pass our (now
+   definite) height through it so WorldLayout's `height: 100%` resolves and the
+   panels fill the lab instead of collapsing to content height. Matches music's
+   / web's `.app > div`. */
+.app > div {
+  height: 100%;
+}
+
+/* The design-system tooltip, lifted above the Blockly workspace it points at.
+ *
+ * A tooltip PORTALS to `<body>` and sits at `z-index: 10` (component-library
+ * `tooltip.module.scss`). Blockly's own layers are above that — measured in
+ * this lab: the toolbox at 70, flyout and workspace layers at 20 to 80 — so a
+ * tooltip on any control beside the workspace was drawn behind the blocks. The
+ * file menus' buttons are that case, and they were not the first.
+ *
+ * 1200 clears all of it and stays under `blocklyWidgetDiv` (99999), which is
+ * the field editor a learner is typing into: a tooltip that covered THAT would
+ * be a worse bug than the one this fixes. It is the number the image editor
+ * already picked to clear a modal overlay (`pixel-editor.module.scss`).
+ *
+ * ONE RULE FOR THE LAB, rather than a class per site: every tooltip here shares
+ * the hazard, and the file menus' buttons were the second place to lift their
+ * own (the image editor's toolbar was the first, for a different overlay — its
+ * rule stays, since it also positions the bubble). Matched the way the demo
+ * harness already matches a portaled tooltip: by the module's name prefix,
+ * since the class itself is hashed.
+ */
+:global(body > [class*='_tooltip_']) {
+  z-index: 1200;
+}

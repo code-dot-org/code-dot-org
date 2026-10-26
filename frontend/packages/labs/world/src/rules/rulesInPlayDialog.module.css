@@ -1,0 +1,82 @@
+/* The rules panel's CONTENT. The dialog itself — surface, width, padding, the
+   button row — is the design system's `Dialog`, so this stays out of its way
+   and shapes only the list inside it.
+
+   Deliberately the same metrics as `importRuleDialog.module.css`: the two are
+   seen one after the other, and a list that changed shape between them would
+   read as a different place. That one's rows ARE design-system buttons, so it
+   gets its border and colors for free; these rows are not — nothing is being
+   chosen here, and a row that was a button would be a button with a button
+   inside it. So the frame is drawn here, from the same semantic colors the
+   system would have used (component-library-styles/colors.css), which is what
+   keeps it following the lab's Light/Dark setting.
+
+   Everything a learner READS is still a design-system `Typography`. Layout and
+   frame here; type and color there. */
+
+.list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* One row per rule: what it is on the left, what you may do about it on the
+   right. The padding and radius are the picker's row exactly. */
+.rule {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid var(--borders-neutral-primary, #d4dae1);
+  border-radius: 4px;
+}
+
+/* The engine's own rules, which have no file and no button. Tinted rather than
+   outlined, because the row is a statement rather than a choice — and the
+   difference should be visible before reading a word of it. */
+.base {
+  border-color: transparent;
+  background-color: var(--background-neutral-secondary, #f0f2f5);
+}
+
+.what {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+/* The confirm state replaces the row's buttons rather than opening a second
+   dialog over the first: a modal on a modal is a place with no obvious way
+   back, and the question here is small enough to ask in the row it is about. */
+.decide {
+  display: flex;
+  flex: none;
+  gap: 8px;
+  align-items: center;
+}
+
+.warning {
+  display: block;
+  margin-top: 4px;
+}
+
+/* Nothing held. The panel still opens — "which rules does this world run?" is
+   a question worth being able to ask and get "only the built-in ones" for —
+   and this is where that answer goes. */
+.empty {
+  padding: 12px 0;
+  text-align: center;
+}
+
+/* Write a new rule, over the list: the making beside the shelf. */
+.newRule {
+  align-self: flex-start;
+}

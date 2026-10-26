@@ -1,0 +1,161 @@
+import {javascript} from '@codemirror/lang-javascript';
+import {json} from '@codemirror/lang-json';
+import {markdown} from '@codemirror/lang-markdown';
+
+import type {CodebridgeConfig} from '@code-dot-org/codebridge';
+
+import {ActorFileEditor} from './actors/editor/ActorEditor';
+import {followImages} from './appearance/sheetCompanions';
+import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
+import {orShowCode} from './debug/orShowCode';
+import {EffectFileEditor} from './effect/EffectFileEditor';
+import {FILE_ICONS} from './fileIcons';
+import {fileLabel} from './files/fileLabel';
+import {ImageFileEditor} from './imageEditor/ImageFileEditor';
+import {MapEditor} from './mapEditor/MapEditor';
+import {followPlaces, PICTURE_EXTENSION} from './mapEditor/placePicture';
+import {ScreenEditor} from './mapEditor/ScreenEditor';
+import {WorldEditor} from './mapEditor/WorldEditor';
+import {whyKeepFile} from './rules/deleteGuard';
+import {StyleFileEditor} from './styles/StyleFileEditor';
+
+/**
+ * World Lab's Codebridge configuration. A World project is the game defined by
+ * its `worlds` / `actors` / `rules` / `maps` — code, not a web page. There is
+ * no editable `index.html`: the preview sandbox serves a fixed host shell and
+ * imports the compiled bundle (SANDBOX.md, PLAN §6).
+ *
+ * Text types (JS/TS/JSON/MD/TXT) edit in CodeMirror. `rule`, `actor`, and
+ * `world` are Blockly-authored; `map` is a world-population document and
+ * `effect` a shader graph — both JSON on disk with no CodeMirror language.
+ * `editorComponents` routes each to its custom editor (the Blockly workspace
+ * editor, the visual map editor, or the effect graph editor). An animation is
+ * not a file: it is the actor's own (specs/ANIMATION_PLAN.md). Images (`png`) are supported (shown in the tree,
+ * handed to the game) but not edited.
+ */
+export const WORLD_EDITABLE_FILE_TYPES = [
+  'js',
+  'ts',
+  'json',
+  'md',
+  'txt',
+  'rule',
+  'actor',
+  'world',
+  // A `.screen` is a map document that is shown on the display: the Main
+  // Screen is the game (specs/SCREEN_MAP_PLAN.md).
+  'screen',
+  // A `.map` is a world-population document, edited in the visual map editor.
+  'map',
+  // An `.effect` is a node graph that compiles to a GLSL shader, edited in the
+  // effect editor (specs/EFFECT_EDITOR.md).
+  'effect',
+  // A `.sheet` says how to cut the image of the same name into cells — what
+  // makes a PNG a spritesheet (appearance/sheetFile). JSON, and small enough to
+  // read and edit as text.
+  'sheet',
+];
+const IMAGE_FILE_TYPES = ['png'];
+
+export const worldConfig: Partial<CodebridgeConfig> = {
+  editableFileTypes: WORLD_EDITABLE_FILE_TYPES,
+  supportedFileTypes: [...WORLD_EDITABLE_FILE_TYPES, ...IMAGE_FILE_TYPES],
+  // Learners can upload PNG sprites and their own sounds; both are stored in
+  // the assets backend and referenced by URL (the game resolves them for the
+  // preview — see UPLOADS.md and specs/SOUND.md).
+  //
+  // The audio types are the ones a browser will play and a learner is likely to
+  // have. `soundFiles.isSoundFile` decides the same question by extension for
+  // the dropdowns and the driver; the two lists are allowed to differ, and this
+  // is the narrower one — a MIME type is what a file picker filters on, and
+  // offering a format we cannot name is worse than not offering it.
+  validMimeTypes: [
+    'image/png',
+    'audio/mpeg',
+    'audio/wav',
+    'audio/ogg',
+    'audio/mp4',
+    'audio/webm',
+  ],
+  // 2MB. There was no cap on anything before sounds, and this is the first
+  // (specs/SOUND.md): roughly two minutes of ordinary mp3 — generous for
+  // anything one-shot, enough for a loop, and short of the point where a
+  // project stops loading. It applies to every upload, not only to sounds,
+  // because a size limit that depended on the kind of file would be a second
+  // rule to explain.
+  maxUploadBytes: 2 * 1024 * 1024,
+  // A `.sheet` belongs to the `.png` of the same name: the image editor writes
+  // it when an image is made a spritesheet and deletes it when it stops being
+  // one, so it is not a file to open (appearance/sheetFile).
+  hiddenFileTypes: ['sheet', PICTURE_EXTENSION],
+  // A `.sheet` is hidden, so nothing can move, rename or delete it by hand: it
+  // goes wherever its `.png` goes, in the same write (appearance/sheetCompanions).
+  // …and a Screen's or Map's `.picture` goes wherever its place goes
+  // (mapEditor/placePicture).
+  reconcileSource: (next, previous) =>
+    followPlaces(followImages(next, previous), previous),
+  // The tree's delete asks what the rules panel asks: a rule another rule
+  // requires cannot go, and the refusal says which (rules/deleteGuard). Two
+  // routes to the same act, one answer.
+  blockFileDeletion: whyKeepFile,
+  languageMapping: {
+    js: 'javascript',
+    ts: 'javascript',
+    json: 'json',
+    md: 'markdown',
+    rule: 'rule',
+    actor: 'actor',
+    world: 'world',
+    screen: 'screen',
+    map: 'map',
+    effect: 'effect',
+    style: 'style',
+    sheet: 'json',
+  },
+  languageExtensions: {
+    javascript: javascript(),
+    json: json(),
+    markdown: markdown(),
+  },
+  // Blockly-authored file types open in the Blockly editor (Codebridge's
+  // per-language editor seam), not CodeMirror.
+  editorComponents: {
+    // A `.png` is bytes, not text: the image editor reads and writes them
+    // through the file's `url` (imageEditor/ImageFileEditor).
+    png: ImageFileEditor,
+    // The four kinds that are authored in blocks and RUN as JavaScript are the
+    // four that can show it in place of themselves (`debug/orShowCode`). Here
+    // rather than inside each editor because it is one decision about all of
+    // them, and because an editor that had to know about it would be an editor
+    // that could get it wrong.
+    rule: orShowCode(BlocklyFileEditor),
+    // An actor in the data shape opens in the Actor Editor, one still in
+    // blocks in the file editor (specs/ACTOR_EDITOR_PLAN.md).
+    actor: orShowCode(ActorFileEditor),
+    // A world opens on its main map, with its workspace one switch away
+    // (specs/MAP_FIRST.md, "The editor's modes").
+    world: orShowCode(WorldEditor),
+    map: orShowCode(MapEditor),
+    screen: orShowCode(ScreenEditor),
+    effect: EffectFileEditor,
+    // A theme: values, and what each control is made of (specs/STYLES_PLAN.md).
+    style: StyleFileEditor,
+  },
+  /**
+   * What a TAB calls a file: the name the file declares.
+   *
+   * `main.world` holds a world called "Platform World", and that is the word on
+   * its blocks, in every dropdown that offers it, and in the menu the learner
+   * opened it from (`files/FileMenus`) — so a tab reading `main.world` was the
+   * one place in the lab saying something else. One rule, one answer:
+   * `authoredName`, falling back to the file's own stem titled, which is what
+   * every dropdown does for a file that declares nothing.
+   *
+   * The file BROWSER still shows file names, and should: it is a view of files.
+   */
+  fileLabel,
+  // File-browser icons for World's own extensions (all FontAwesome solid). The
+  // built-in types (js/json/png/…) keep their defaults; these give each World
+  // file type a distinct, meaningful glyph.
+  fileIcons: FILE_ICONS,
+};
