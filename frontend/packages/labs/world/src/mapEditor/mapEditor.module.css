@@ -1,0 +1,579 @@
+/* THE DESIGN SYSTEM'S FONT, set at each root this editor has: the map, a
+   world around it, and one actor's code. Nothing above them in the lab sets
+   one, so text here fell to the browser's default — Times for a bare label,
+   Arial for a button, which does not inherit a font unless told to. Every
+   control styled below says `font: inherit` for that reason, and a size or
+   weight set here is one of the design system's type-scale variables
+   (`fontVariables.css`), not a number of our own. */
+.editor,
+.worldEditor,
+.script {
+  font-family: var(--font-family-main, sans-serif);
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  background: var(--background-neutral-primary);
+}
+
+/* The strip over the stage and the palette: the map's name and size. */
+.picker {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  overflow-x: auto;
+  flex-shrink: 0;
+  border-bottom: var(--lab-border-default);
+}
+
+/* How big the map is, in tiles. */
+.sizeField {
+  flex-shrink: 0;
+  width: 4.5rem;
+}
+
+.sizeUnit {
+  align-self: flex-end;
+  padding-bottom: 0.35rem;
+  margin-right: 0.25rem;
+  flex-shrink: 0;
+  color: var(--text-neutral-secondary, var(--text-neutral-primary));
+}
+
+/* Undo and redo, after the size. */
+.history {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: var(--lab-border-default);
+}
+
+/* A control a gated lab withholds: there, focusable, and not to be used.
+   Dimmed, and never by that alone — the note beside it says which lesson
+   brings it (`WithheldNote`). */
+.withheld,
+.withheld:hover {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* The palette and the stage, side by side under the strip. */
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* The map stage: the canvas fills it; the camera draws the bordered map space
+   somewhere inside. Positioned so the toolbar can overlay a corner. */
+.stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  image-rendering: pixelated;
+  cursor: grab; /* the empty space pans */
+  touch-action: none; /* pointer pan/zoom own the gesture */
+}
+
+/* Focusable so Delete/Backspace reach it. Match the design system's keyboard
+   focus ring (component-library-styles mixins.focus-styles), shown only for
+   keyboard focus so click-to-select doesn't ring. The offset is pulled INWARD
+   (the DS uses +0.125rem): the canvas is full-bleed inside an overflow-hidden
+   stage, so an outward ring would be clipped. */
+.canvas:focus {
+  outline: none;
+}
+
+.canvas:focus-visible {
+  outline: var(--borders-brand-teal-primary) solid 2px;
+  outline-offset: -0.125rem;
+}
+
+.canvas.placing {
+  cursor: crosshair;
+}
+
+/* An actor sits under the cursor (select mode): a hand signals it is grabbable. */
+.canvas.hovering {
+  cursor: pointer;
+}
+
+.canvas.panning {
+  cursor: grabbing;
+}
+
+/* Over a line between docked sides, or a docked edge's grip: the cursor says
+   which way it drags. */
+.canvas.resizeAcross {
+  cursor: col-resize;
+}
+
+.canvas.resizeDown {
+  cursor: row-resize;
+}
+
+/* Arming a reference: the click chooses an actor rather than grabbing one, and
+   the crosshair is the cursor that already means exactly that.
+   LAST, because it has to beat `.hovering` — an armed click over an actor is
+   still a choice, and the hand would say it was about to be picked up. */
+.canvas.picking {
+  cursor: crosshair;
+}
+
+/* Floating view controls (zoom readout + reset), top-right of the stage. */
+.toolbar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.4rem;
+  border-radius: 6px;
+  background: color-mix(
+    in srgb,
+    var(--background-neutral-primary) 80%,
+    transparent
+  );
+  border: var(--lab-border-default);
+}
+
+.zoom {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-neutral-secondary, var(--text-neutral-primary));
+  min-width: 3ch;
+  text-align: right;
+}
+
+/* The column down the left of the canvas: the panels at its top, and the
+   open inspector at its foot. One column, so the two cannot overlap — when
+   each was positioned on its own, a tall inspector covered the camera list.
+   Clicks pass through its empty middle to the canvas. */
+.leftColumn {
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+/* Inspector for whatever is selected — at the foot of the left column,
+   opposite the toolbar. It takes the height the panels leave and scrolls
+   within it rather than running up over them. */
+.inspector {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 15rem;
+  min-height: 0;
+  margin-top: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: auto;
+  padding: 0.6rem;
+  border-radius: 6px;
+  background: color-mix(
+    in srgb,
+    var(--background-neutral-primary) 92%,
+    transparent
+  );
+  border: var(--lab-border-default);
+  color: var(--text-neutral-primary);
+}
+
+.inspectorHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  text-transform: capitalize;
+}
+
+/* The inspector's actions, as icons, at the right of its head row
+   (`IconAction`). Delete stands a little apart from the rest, so a press
+   meant for the one beside it does not land on it. */
+.inspectorActions {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  text-transform: none;
+}
+
+.inspectorDelete {
+  margin-left: 0.4rem;
+}
+
+/* The vector pairs (Pos X/Y, Scale X/Y) two-up, each half width. */
+.inspectorGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+/* A color property: the hex, then the swatch that picks it. The field takes
+   the row and the swatch is a fixed square after it, so this row's field
+   starts where every other row's does whatever the panel's width — leading
+   with the picker indented the color rows by its width and left the rest
+   where they were. */
+.inspectorColor {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+/* A reference field: the exact way to say it and the quick one, side by side.
+   The dropdown names any placement in the map and is the only one a keyboard
+   can reach; the button beside it arms a click on the canvas, which is what
+   anybody with a pointer will actually do once a level has thirty things in
+   it. Bottom-aligned like the color row above, so the control lines up with
+   the field rather than with its label. */
+.inspectorPick {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.inspectorPick .inspectorDropdown {
+  flex: 1;
+  min-width: 0;
+}
+
+/* One trait's property fields, inside its accordion panel. */
+.inspectorGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.inspectorGroup label.inspectorDropdown {
+  width: 100%;
+}
+
+.inspectorGroup label.inspectorDropdown div {
+  width: 100%;
+}
+
+/* A camera's traits, as one closed list of checkboxes. It fills the panel,
+   and its menu opens IN the panel's flow rather than over it: the panel
+   scrolls, so a menu positioned absolutely inside it is clipped at its foot.
+   Under `.inspector` to outrank the design system's fixed width without
+   leaning on load order. The menu has no class of its own to name, so it is
+   found by the one its module gives it. */
+.inspector .traitPicker,
+.inspector .traitPicker > button {
+  width: 100%;
+}
+
+.inspector .traitPicker [class*='dropdownMenuContainer'] {
+  position: static;
+  float: none;
+}
+
+/* The trait accordion fills the panel width; each collapsible section is a
+   native <details> the DSCO Accordion styles. */
+.inspectorAccordion {
+  width: 100%;
+  gap: 0.25rem;
+}
+
+/* Doubling class here to ensure it overrides base styles */
+.inspectorAccordion.inspectorAccordion details summary {
+  padding: 0.125rem 0.5rem;
+}
+
+.inspectorAccordion.inspectorAccordion details summary strong {
+  font-size: var(--font-size-body-xs);
+}
+
+/* A set-valued reference: its members listed, each with a way out of the set.
+   Laid out as a block rather than a row because the list grows, and a label
+   beside a growing list drifts away from the thing it names. */
+.inspector-set {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inspector-set-label {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.inspector-set-empty {
+  opacity: 0.65;
+}
+
+.inspector-set-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inspector-set-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+/* A line across the inspector's two-column grid: where a child's stored,
+   parent-relative position lands on the canvas (specs/PARENTING.md). */
+.inspectorNote {
+  grid-column: 1 / -1;
+  color: var(--text-neutral-secondary, #5b5f66);
+}
+
+/* A list in the inspector — a set of references, or a list of words or
+   numbers: one row per item with its own Remove, and an Add below. */
+.inspectorSetList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inspectorSetItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.inspectorSetItem > :first-child {
+  flex: 1;
+  min-width: 0;
+}
+
+/* The third view: a placement's or the map's workspace, in the editor's place.
+   A header says whose it is and the way back (the same bar a member's body
+   gets in the Blockly editor), and the workspace takes the rest. */
+.script {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.scriptHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--borders-neutral-light);
+  background: var(--background-neutral-primary);
+}
+
+/* The workspace's box, under the header: the list-of-sections button is
+   placed against it, so it sits over the blocks and not over the header. */
+.scriptBlocks {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.scriptWorkspace {
+  flex: 1;
+  min-height: 0;
+}
+
+/* A world: the view bar, then whichever view is up, filling the rest. */
+.worldEditor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.viewBar {
+  padding: 0 0.5rem;
+  border-bottom: 1px solid var(--borders-neutral-light);
+  background: var(--background-neutral-primary);
+}
+
+/* The view under the tabs, filling the rest. */
+.viewPanel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* The open panels — layers, cameras, records — top-left, opposite the
+   toolbar, above the inspector. One column, so two open at once stack rather
+   than lying on top of each other; the layers and cameras start closed behind
+   their toolbar buttons. Clicks fall through the column's empty space to the
+   map. */
+.panels {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 0.5rem;
+  max-height: 45%;
+  overflow-y: auto;
+  pointer-events: none;
+}
+
+/* One panel in that column: the layer strip, the records.
+ * The records are a class of their own, beside the canvas because they are
+ * nowhere on it (specs/RECORDS_PLAN.md), and share this rule rather than
+ * `composes` it, which this package's stylelint does not know. */
+.layers,
+.records {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 0.35rem;
+  width: 11rem;
+  pointer-events: auto;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: color-mix(
+    in srgb,
+    var(--background-neutral-primary) 92%,
+    transparent
+  );
+  border: var(--lab-border-default);
+  color: var(--text-neutral-primary);
+}
+
+.layerList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.layerRow {
+  font: inherit;
+  width: 100%;
+  text-align: left;
+  font-size: var(--font-size-body-sm);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-neutral-primary);
+  cursor: pointer;
+}
+
+.layerRow[aria-pressed='true'] {
+  border-color: var(--borders-neutral-light);
+  background: var(--background-neutral-secondary);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.layerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+/*
+ * Where the stage says what just happened.
+ *
+ * OFF SCREEN RATHER THAN HIDDEN. `display: none` and `visibility: hidden` are
+ * both removed from the accessibility tree, so a live region written that way
+ * announces nothing at all — which is the usual way this is got wrong. This
+ * clips it to a pixel instead, which leaves it readable and unseen.
+ */
+.announcer {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* What kind a record is, beside its name and quieter than it. */
+.recordKind {
+  margin-left: 0.5em;
+  opacity: 0.6;
+}
+
+/* A vector or angle property: the block face's direction dial as the
+   control, and the block field's own editor in a popover behind it
+   (`DialInput`). The wrapper is the same one a text field's label comes
+   from, so the label sits where every other row's does. */
+.inspectorVector {
+  width: 100%;
+}
+
+.inspectorDial {
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.inspectorDial:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+/* The popover's surface is the lab's, as the block's dropdown is
+   (`FieldVector.dropdownStyle`), rather than MUI's paper. */
+.inspectorDialPopover {
+  padding: 8px;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+}
+
+/* The selected placement's Code button, floated just outside its top-right
+   corner on the canvas (`stageGeometry.scriptButtonAt`). Placed by the stage
+   in pixels, so it follows a pan, a zoom and a drag; sized to the constant the
+   stage clamps with (`SCRIPT_BUTTON`). */
+.scriptFloat {
+  position: absolute;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 25%);
+}
+
+/* Docked: said, with the way to undock beside it (specs/DOCKING_PLAN.md). */
+
+/* The cameras of a Viewport, or of the world, as a section of its
+   inspector (`CameraList`). */
+.cameraList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inspectorDocked {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* The Theme field, with Edit and New under it (`ThemeField`). */
+.themeField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}

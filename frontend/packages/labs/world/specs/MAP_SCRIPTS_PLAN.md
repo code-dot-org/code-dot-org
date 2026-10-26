@@ -1,0 +1,192 @@
+# Plan: map scripts (MAP_FIRST.md, step 1)
+
+STATUS: BUILT, pending a look in the browser. The first build step of
+specs/MAP_FIRST.md: a placed
+actor gets a workspace of its own in the map editor, a map gets one for its
+own events, and the pause menu becomes a scripted map. This file is the
+working record: the plan as set out before building, then each commit as it
+lands, and what was decided or learned on the way. The design is in
+MAP_FIRST.md; this is how it is being built.
+
+SUPERSEDED IN ONE PART, as MAP_FIRST.md is: a map's own `define event` rows
+are gone. The world declares the events and the map's workspace holds a
+`define map` root saying which of them it raises; the map exports nothing, so
+`assembleMapModule` has no events section any more
+(specs/MAP_EVENTS_PLAN.md).
+
+## What is being built
+
+- **A `.map` is a generated module.** It was data loaded as JSON. It keeps
+  its JSON on disk and gains a `blocks` workspace per placement and one for
+  the map; the generator turns the file into a module exporting the
+  arrangement, the map's own events, and a script.
+- **A placement's workspace** holds hats about that one instance, with
+  `this actor` as their subject, and compiles to registrations on the actor
+  the load placed under that id.
+- **The map's workspace** holds `define event` rows and the `when this map
+loads / unloads` hats.
+- **Three blocks**: `the ⟨placement⟩`, an actor value naming another
+  placement of the same map; `unload this map`; and the two map hats. The
+  minted `when ⟨event⟩` and `emit ⟨event⟩` for a map's events come from the
+  same factories an actor's own events use.
+- **The engine** runs a map's script once per load with the placed actors
+  and a handle that can unload the load and hear its own unloading.
+- **The editor**: a Script button in a placement's inspector that switches
+  the map editor to that placement's workspace and back; a corner icon on
+  any placement whose workspace holds a block, with a toolbar toggle; and
+  the map's own workspace reached with nothing selected.
+  (Since Oct 2026 the canvas is a door too: a button floats just
+  outside the selection's top-right corner, clear of the grips; a
+  double-click on a placement selects it and opens its script; and Enter
+  opens the selection's. All three follow `map-scripts` as the inspector's
+  button does, and none of them acts while a kind is being placed, where a
+  double-click is two placements. `stageGeometry.scriptButtonAt` places
+  the button.)
+  (Both buttons — the floating one and the inspector's — are labelled
+  **Code** since Oct 2026, which is what a learner calls what is behind
+  them; "Script" elsewhere in these specs is that button. The inspector's
+  is an icon now, a puzzle piece, in one row with Enhance (sparkles), Open
+  (box and arrow) and Delete (trash), each named in words for a screen
+  reader and in a tooltip (`mapEditor/IconAction`). The toolbar's
+  Map code and the camera list's Open code followed, as did every word a
+  learner reads about a map's or a placement's script; the files, types
+  and specs keep "script", which is what the code calls them.)
+- **Retired**: the named-actor block and its engine registry, the Pause
+  Menu actor. The stock pause menu is a Panel, a Label and two Buttons with
+  scripts, and Breakout hears its `quit`.
+
+## Decisions taken before building
+
+Each came from reading the code rather than from the design, and MAP_FIRST.md
+should be read with them.
+
+- **A map event is WORLD-scoped.** The own-event factories branch on
+  `scope !== 'world'` to add a subject socket; a map has no actor to be the
+  subject, so its events take the world branch. The hat reads `when quit`
+  under a category named for the map, and generates `world.on(…)`; the emit
+  reads `emit quit` and generates `world.emitToWorld(…)`. The design's
+  `emit ⟨quit⟩ for this map` loses its `for this map`, which the category
+  already says.
+- **The script's handle is called `map`, the placed table `placed`.** Both
+  are reserved words in the generator beside `actor`, `world`, `eventValue`
+  and `delta`. The module's own data object is `mapData`, so the two never
+  read as one thing.
+- **A placement's hats compile inside a block that binds `actor`.**
+  `{ const actor = placed["Resume"]; actor.on(…); }` — so every actor-file
+  generator (`this actor`, own-property get and set, the hats) works
+  unchanged. The instance workspace IS an actor file's shape for one thing.
+- **One `generate` call, several workspaces.** The headless generator loads
+  each placement's workspace in turn into the same workspace and merges the
+  import definitions across them before `finish`, rather than generating
+  separate modules and stitching text.
+- **`the ⟨placement⟩` generates `placed["Door"]`.** A deleted placement
+  leaves `undefined`, and a block over it throws at run time. Rename rewrites
+  the values that name it (MAP_FIRST.md, "Two edges"); delete is confirmed
+  when a workspace is not empty. Nothing softer is built now.
+- **`fileKindOf('maps/x.map')` is `'map'`, and `'placement'` is a palette
+  kind that no file has.** `ROOT_HOMES` admits `define event` to `map`;
+  event hats are `actorOnly` for a placement and `none` for a map's own
+  workspace. The runtime's split between generated and raw files follows
+  `fileKindOf`, so a `.map` is generated by the same change, and the bundler
+  loads it as JS rather than JSON.
+- **The dropdown of placements is set by whoever is generating or editing.**
+  The generator sets it per map before loading a placement's workspace, as
+  it refreshes the project dropdowns before a file; the editor sets it when
+  it opens a placement's workspace. A stored value the list does not hold is
+  rejected by Blockly on load, which is why the list must be set first.
+
+## Order of work
+
+1. Engine: `WorldMap.script`, the load handle, `unload`, tests.
+2. File kind, module shape, the map generator and assembler, the three
+   blocks, map own-metas and the minted hats and emits, the runtime split
+   and loader, tests.
+3. Retire the named-actor code and the Pause Menu actor; the pause menu as a
+   scripted map; Breakout on `quit`; fixtures, stock index, catalogue.
+4. Editor: the placement workspace mode, the Script button, the icons and
+   their toggle, the map's own workspace.
+5. Specs: MAP_FIRST.md brought in step with what was built; MAPS.md and
+   UI_ACTORS.md pointers.
+
+## Commits
+
+- `bec9485202a` — this plan.
+- `8fc39fd43f2` — engine: `WorldMap.script`, `MapLoad` with `unload` and
+  `onUnload`, called once per load after every reference is followed.
+- `102832e2613` — generator and blocks: `.map` as a generated module; the
+  map assembler; `the ⟨placement⟩`, `unload this map`, the two map hats;
+  map own-events as world-scoped own metas; the bundler loads `.map` as JS;
+  the manifest stubs maps before generation. The named-actor block, its
+  engine registry and the Pause Menu actor retired; the stock pause menu
+  scripted; Breakout on `quit`.
+- `f77851d4020` — the plan and MAP_FIRST.md brought in step with the file
+  shape.
+- `6b686502bac` — editor: `PlacementScriptEditor`, the Script and Map
+  script buttons, the corner marks and their toggle, rename rewriting the
+  blocks that name a placement, `blocks` on the map model.
+
+## Learned while building
+
+- **A placement's `blocks` is a whole workspace serialization**, the same
+  shape an actor file holds — `{blocks: {blocks: […]}, variables: […]}` —
+  not the inner block list. The first cut stored the inner list and Blockly
+  refused it on load with "a is not iterable"; the plan's file example and
+  MAP_FIRST.md's were corrected to match.
+- **The map branch must come before the file is loaded as a workspace.**
+  `generate` cleared and loaded the file into the headless workspace before
+  deciding its shape; a map's JSON is no workspace. The branch now sits
+  right after the reserved words are declared.
+- **The thumbnail manifest stubs SOURCE, not generated output.** It used to
+  replace generated files, which was fine while a map was JSON either way;
+  a JSON stub handed to a bundler that now loads `.map` as JS is a syntax
+  error. The thumbnail path stubs the project's files first and generates
+  after, so a placement edit is a cache hit in both the generator and the
+  compile, and a map's events still export.
+- **The root types a map's hats need are the palette's, not the constant.**
+  A placement's hats are minted per project (`world_on_ActorsButton_…`),
+  so the map generator takes the live root-type set the generator component
+  holds rather than `ROOT_BLOCK_TYPES`.
+- **A built-in actor hat makes the generator test self-contained.** A
+  Button's click is a rule's event and needs the project's rules registered;
+  `when this actor leaves the map` is built in and has the same shape, so the
+  module-text test uses it and the end-to-end test keeps the click.
+- **The instance workspace is its own component, not the file editor
+  refactored.** The plan said "pull the workspace out of the file editor".
+  Read closely, that editor is 1,700 lines keyed to a file id — rule
+  renames, body surfaces, member reconciliation, five module-level opener
+  singletons — and none of it applies to a subtree of a JSON document. The
+  shared parts (definitions, palette, theme, localization, stand-ins,
+  options, the "opening is not editing" guard) are a hundred lines, and
+  `PlacementScriptEditor` is those. MAP_FIRST.md says so now.
+- **Who sets the placement dropdown.** The generator sets it per map before
+  loading a workspace; the editor sets it when the workspace opens. The
+  first cut set it only in the editor and the headless generator rejected
+  every `the ⟨…⟩` value on load, since Blockly validates a dropdown's value
+  against its options as the block is made.
+- **The canvas test records `fillStyle` now.** The stage's recording
+  context kept only `strokeStyle`; the corner mark is a fill, so the log
+  gained the other property.
+
+## Not built, and known
+
+- The confirmation before deleting a placement whose workspace holds
+  blocks. The map editor has no confirming dialog; a browser prompt is not
+  the lab's.
+- The Events section in the inspector, listing a kind's events with counts
+  and making a hat from one. The Script button is the door for now.
+- Selection and hat highlighting each other across the two views.
+- Hiding the map's own workspace when a map has nothing to declare: the
+  button is always offered.
+- A placement's workspace under `misplacedBlocks`: the placement palette
+  omits the definition roots, but a root pasted in is not greyed with a
+  reason as it is in a file.
+
+## What to look at in the browser
+
+The tests cover the generated module, the engine, the model and the two
+views with the workspace mocked. What they cannot: the placement palette as
+drawn (the Map category with the four blocks, the map's own drawer with its
+`emit`, the kind's own properties), the dropdown of `the ⟨placement⟩`
+filling, a hat dragged out and saved landing on the placement in the file,
+the corner mark and its toggle on a real canvas, and the stock pause menu
+imported into a project and opened in the editor.

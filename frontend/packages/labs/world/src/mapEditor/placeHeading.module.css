@@ -1,0 +1,18 @@
+/* The name and its actions, at the head of the strip over the stage. */
+.heading {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  gap: 0.125rem;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+  border-right: var(--lab-border-default);
+}
+
+.name {
+  max-width: 14rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

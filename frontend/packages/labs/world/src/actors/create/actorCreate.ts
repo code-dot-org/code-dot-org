@@ -1,0 +1,29 @@
+// Asking for the Actor Creator from somewhere that does not own it.
+//
+// The Creator is the file acts' host's: it is built from a dozen things it holds —
+// the kinds that can be copied, the stock templates, the project's pictures
+// decoded, the fold that writes an actor with its picture and abilities — so
+// it stays there (`files/FileMenus`). The MAP EDITOR's palette wants it too:
+// a lesson told on the map makes a new kind from the map
+// (specs/KINDS_FROM_THE_MAP_PLAN.md).
+//
+// The same seam the import shelves and Enhance use (`blockly/libraryImport`):
+// a request resolves with the new actor's MODULE PATH, or with nothing — when
+// the learner cancelled, and when nobody is listening, which is a test or the
+// headless generator and is ordinary rather than an error.
+//
+// WHAT THE ASKER GETS BACK BESIDES THE PATH: the tab it was on. The Creator
+// opens the file it writes, which is wrong from a canvas — a learner who asked
+// from the map wants the new kind on the palette, not to be taken to its
+// blocks — so the host puts the active tab back.
+
+import {importSeam} from '../../blockly/libraryImport';
+import type {PaletteTab} from '../actorPurpose';
+
+// …AND WHICH WIZARD: the Actor Palette asks with its tab, so a learner on the
+// Interface tab is offered interface templates and makes an interface actor
+// (specs/PURPOSE_PLAN.md). A folder's menu asks with nothing.
+const seam = importSeam<[purpose?: PaletteTab]>();
+
+export const setActorCreateHandler = seam.register;
+export const requestActorCreate = seam.request;
