@@ -1,0 +1,1100 @@
+import {DEFAULT_FOLDER_ID} from '@code-dot-org/codebridge';
+import type {
+  MultiFileSource,
+  ProjectFile,
+  ProjectSources,
+} from '@code-dot-org/core/api';
+
+import {inDataShape} from './actors/actorData';
+import {withPurpose} from './actors/actorPurpose';
+import {importStockActor} from './actors/importStockActor';
+import {stockActorById} from './actors/stock';
+import {coinActor} from './actors/stock/coin';
+import {groundActor} from './actors/stock/ground';
+import {healthBarActor} from './actors/stock/healthBar';
+import {labelActor} from './actors/stock/label';
+import {progressBarActor} from './actors/stock/progressBar';
+import {
+  actsLike,
+  drawText,
+  fill,
+  looksLike,
+  showAs,
+  textOf,
+} from './actors/stock/workspace';
+import {serializeSheetFile, sheetFileName} from './appearance/sheetFile';
+import {
+  spriteFileName,
+  STOCK_ANIMATIONS,
+  STOCK_SPRITES,
+} from './appearance/stock';
+import {serializeEffectDocument} from './effect/model';
+import {rippleEffect} from './effect/stock';
+import {MAIN_WORLD_PATH} from './mainWorld';
+import {referenceToStock} from './rules/ruleReference';
+import {TILE_SIZE, VIEWPORT_TILES} from './runtime/viewport';
+
+/**
+ * The world the game starts in — the driver's compile + run entry point
+ * (PLAN §6). Fixed for the slice; later a level/appOptions field selects it.
+ */
+export const ENTRY_FILE = `${MAIN_WORLD_PATH}.world`;
+
+/**
+ * The default project for a new World Lab: a small gravity game across the
+ * conventional directories. The learner imports the engine as `world-lab`; the
+ * compiler resolves that to the self-hosted engine, and the preview runs the
+ * default-exported World. There is no `index.html` — the host page is the
+ * sandbox's fixed shell (PLAN §6).
+ */
+// The actors are TEMPLATES — a set of traits and appearance, but no position:
+// the world (main.world, authored in Blockly) places each instance and sets its
+// per-instance position. All four are `.actor` files, which is to say Blockly
+// workspaces: a learner who wants to know what a ground tile IS opens it and
+// reads three rows, rather than reading JavaScript they have not been taught.
+//
+// They were JS `ActorBuilder` modules until the blocks could say everything the
+// builders said. A project can still hold one — the compiler treats every
+// module alike, and `blockly/projectModules` scans `.js` and `.ts` beside the
+// block files — but nothing in the starter is one, and a starter is read before
+// it is understood.
+//
+// What none of them elects is being POSITIONED or having an APPEARANCE: every
+// actor has those (`ActorBuilder`'s foundation), so what a template lists is
+// what makes it that kind of actor and nothing else.
+
+// Blockly workspace helpers. A `.actor` / `.world` file is a Blockly
+// workspace stored as serialized JSON (INTERFACE.md); the lab generates
+// world-lab code from it before compiling. `nextBlock` chains statement blocks;
+// `onEvent` builds a floating event-handler block (its own workspace root, so it
+// sits beside the actor rather than chained inside it).
+const nextBlock = (block: object, next?: object) =>
+  next ? {...block, next: {block: next}} : block;
+
+/**
+ * A straight stack of blocks, first to last.
+ *
+ * Nesting `nextBlock` calls to build a long chain is a trap: it OVERWRITES the
+ * `next` of whatever it is given, so wrapping a block that already had one drops
+ * everything below it — silently, since the file still parses and the world
+ * still loads, just without those rules. This takes the list.
+ */
+export const stack = (blocks: object[]): object =>
+  blocks.reduceRight((next, block) => nextBlock(block, next));
+
+/**
+ * `use trait ⟨Rule#Trait⟩` — the row that gives an actor a share of a rule.
+ *
+ * The dropdown stores a trait as its rule's NAME and the export name its own
+ * name derives (`traitOptions`), so "Acts as Ground" declared by the rule named
+ * "Gravity" is `Gravity#ActsAsGroundTrait`. Not a module path: the rule is
+ * found by name wherever its file sits, and a value that names nothing falls
+ * back to the first option rather than failing.
+ */
+export const useTrait = (trait: string) => ({
+  type: 'world_use_trait',
+  fields: {TRAIT: trait},
+});
+
+/**
+ * A one-block `.actor` file: a `define actor` root and the body under it.
+ *
+ * Three of the starter's four are exactly this. The player is not, because it
+ * also has event handlers, and a handler is its own top-level block rather than
+ * something chained inside the definition.
+ */
+/** `set text of ⟨this actor⟩ to …` — the scoreboard's only verb. */
+const setText = (value: object) => ({
+  type: 'world_set_ActorsLabel_TextProperty',
+  inputs: {
+    ACTOR: {block: {type: 'world_this_actor'}},
+    VALUE: {block: value},
+  },
+});
+
+const actorFile = (name: string, rows: object[]) =>
+  JSON.stringify(
+    {
+      blocks: {
+        blocks: [
+          {
+            type: 'world_actor',
+            x: 20,
+            y: 20,
+            fields: {NAME: name},
+            next: {block: stack(rows)},
+          },
+        ],
+      },
+    },
+    null,
+    2,
+  );
+
+// Each event has its own cap-hat block (`world_on_<event>`); the handler body
+// attaches below it as the next statement, not nested in a `do` input.
+const onEvent = (event: string, x: number, y: number, message: string) => ({
+  type: `world_on_${event}`,
+  x,
+  y,
+  next: {
+    block: {
+      type: 'world_print',
+      inputs: {VALUE: {shadow: {type: 'text', fields: {TEXT: message}}}},
+    },
+  },
+});
+
+// A Map is the raw world-population document (WorldBuilder.loadMap): each
+// entry places an instance of an actor template by its module path, with an
+// optional id and property overrides keyed by owner (trait) id then property id
+// — `positional.position` is the actor's start position. A dedicated map editor
+// will author these; for now it is edited as JSON.
+/** One actor in a map: a kind, an instance id, and where it starts. */
+export const place = (type: string, id: string, x: number, y: number) => ({
+  type,
+  id,
+  properties: {positional: {position: {x, y}}},
+});
+// The middle of tile `column`/`row` on the world's 10 × 10 grid — the point a
+// placed actor's position names. Everything in the starter level is on the grid,
+// because "the floor is the bottom row" should be true of the numbers as well as
+// of the picture.
+export const tileCenter = (index: number) => index * TILE_SIZE + TILE_SIZE / 2;
+
+/** A run of ground tiles along `row`, one per column in `columns`. */
+const ground = (name: string, row: number, columns: readonly number[]) =>
+  columns.map(column =>
+    place(
+      'actors/ground',
+      `${name}${column}`,
+      tileCenter(column),
+      tileCenter(row),
+    ),
+  );
+
+/** A column of ground tiles down `column`, one per row in `rows`. */
+const wall = (name: string, column: number, rows: readonly number[]) =>
+  rows.map(row =>
+    place(
+      'actors/ground',
+      `${name}${row}`,
+      tileCenter(column),
+      tileCenter(row),
+    ),
+  );
+
+const ALL_COLUMNS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const WALL_ROWS = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+
+// The starter level, laid out on the grid (runtime/viewport):
+//
+//   # . . . . . . . . #   0   #  wall
+//   # . . . . . . . . #   1
+//   # . . B . . . . . #   2   B  ball, floating
+//   # . . . . . . C . #   3   C  a coin, over the platform
+//   # . P . . . . . . #   4   P  player, which falls to the floor
+//   # . . . . . . . . #   5
+//   # . . . . = = = . #   6   =  a platform, three tiles, one jump up
+//   # . . . . . . . . #   7
+//   # . . . C . . . C #   8      …and two on the floor, where walking finds them
+//   # # # # # # # # # #   9   #  the floor
+//
+// A room, on purpose. A jump clears about four tiles, so the platform is
+// comfortably reachable from the floor and the third coin sits over it; the
+// walls mean the first thing a learner does — hold an arrow key — bumps into
+// something rather than walking out of the world, which in ten columns takes a
+// second and a half. Leaving the world is a thing to build deliberately.
+//
+// THREE coins rather than one, because the console prints how many have been
+// taken: with a single coin that number is only ever 1, and a count that cannot
+// count reads as a decoration on the block rather than as the question it is.
+// Two of them are on the walking path, so the first thing a learner does also
+// shows them the mechanic; the third asks for the jump they have just been told
+// about.
+/**
+ * What the starter level places, in the order the map lists it.
+ *
+ * Exported so a test can hold the shipped `.map` to this list, which is
+ * where the board is written down.
+ */
+export const LEVEL1_ACTORS = [
+  place('actors/player', 'Player', tileCenter(2), tileCenter(4)),
+  ...ground('Floor', 9, ALL_COLUMNS),
+  ...wall('WallLeft', 0, WALL_ROWS),
+  ...wall('WallRight', 9, WALL_ROWS),
+  ...ground('Platform', 6, [5, 6, 7]),
+  // Three coins, in the order a learner will meet them: two on the floor
+  // that walking right takes, and one that has to be jumped for.
+  place('actors/coin', 'Coin1', tileCenter(4), tileCenter(8)),
+  place('actors/coin', 'Coin2', tileCenter(8), tileCenter(8)),
+  place('actors/coin', 'Coin3', tileCenter(6), tileCenter(3)),
+  place('actors/ball', 'Ball', tileCenter(3), tileCenter(2)),
+  // On the floor between the two coins, walking its beat across them.
+  place('actors/crawler', 'Crawler', tileCenter(6), tileCenter(8)),
+];
+
+// The level, `maps/main.map`: what the Main Screen's Viewport shows.
+//
+// The HUD — the Scoreboard and the Health Bar — is not in it: it is on the
+// Main Screen, docked above the Viewport (`STARTER_HUD`).
+const MAIN_MAP = JSON.stringify(
+  {
+    type: 'map',
+    // Said out loud rather than left to the default, so the shipped map is a
+    // worked example of the field: how many tiles across and down (the map
+    // editor's Width/Height), against `tile`, which is how big ONE is.
+    size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
+    tile: {width: TILE_SIZE, height: TILE_SIZE},
+    actors: LEVEL1_ACTORS,
+  },
+  null,
+  2,
+);
+
+/**
+ * A game's Main Screen: one Viewport the size of the screen, showing the
+ * level (specs/SCREEN_MAP_PLAN.md). What a new project opens on.
+ *
+ * NO RULES NAMED. The rules in play are the ones under `rules/` — gravity,
+ * the arrow keys, collection, and the four those pull in through their own
+ * `requires` — and the project holds them, which is the whole of saying so
+ * (blockly/projectModules). Animations go the same way.
+ */
+export const gameScreen = (
+  name: string,
+  data: Record<string, unknown> = {},
+  size: {width: number; height: number} = {
+    width: VIEWPORT_TILES,
+    height: VIEWPORT_TILES,
+  },
+  /**
+   * An interface beside the game: its placements, and the layout they dock
+   * in with the Viewport, which is called `Game` (specs/DOCKING_PLAN.md).
+   */
+  hud?: {actors: object[]; layout: object},
+): string => {
+  const width = size.width * TILE_SIZE;
+  const height = size.height * TILE_SIZE;
+  return JSON.stringify(
+    {
+      type: 'map',
+      name,
+      size,
+      tile: {width: TILE_SIZE, height: TILE_SIZE},
+      ...data,
+      // The Viewport docked to the whole screen, so it is the screen's size
+      // in any window and an interface docked beside it takes its share
+      // (specs/DOCKING_PLAN.md).
+      layout: hud?.layout ?? {dock: 'Game'},
+      actors: [
+        {
+          type: 'actors/viewport',
+          id: 'Game',
+          properties: {
+            positional: {position: {x: width / 2, y: height / 2}},
+            Label: {text: ''},
+            hasABox: {width, height},
+            showsMap: {map: 'maps/main'},
+          },
+        },
+        ...(hud?.actors ?? []),
+      ],
+    },
+    null,
+    2,
+  );
+};
+
+/** How tall the starter's HUD bar is: one tile. */
+const HUD_HEIGHT = TILE_SIZE;
+/** …and how much of it the Health Bar takes, at its right. */
+const HEALTH_BAR_WIDTH = 96;
+
+/**
+ * The starter's HUD: the Scoreboard and the Health Bar, in a bar docked
+ * above the Viewport, the Health Bar fixed at the right and the Scoreboard
+ * taking the rest (specs/DOCKING_PLAN.md, step 6). Their positions are where
+ * the editor first draws them; docked, the layout places them.
+ *
+ * The Health Bar watches the Player, who is in the level the Viewport
+ * shows, a map this one cannot name a placement in. So it names the KIND,
+ * and watches the first Player there is. `Health_Bar` is the actor's own id,
+ * which is what an own property is filed under.
+ */
+const STARTER_HUD = {
+  actors: [
+    place('actors/scoreboard', 'Scoreboard', tileCenter(3), tileCenter(0)),
+    {
+      ...place('actors/healthBar', 'HealthBar', tileCenter(8), tileCenter(0)),
+      properties: {
+        positional: {position: {x: tileCenter(8), y: tileCenter(0)}},
+        Health_Bar: {subject: 'actors/player'},
+      },
+    },
+  ],
+  layout: {
+    split: 'down',
+    fixed: 'first',
+    size: HUD_HEIGHT,
+    first: {
+      split: 'across',
+      fixed: 'second',
+      size: HEALTH_BAR_WIDTH,
+      first: {dock: 'Scoreboard'},
+      second: {dock: 'HealthBar'},
+    },
+    second: {dock: 'Game'},
+  },
+};
+
+const MAIN_SCREEN = gameScreen(
+  'Platform World',
+  {
+    // Three coins at ten each. Set HERE rather than left to the rule's
+    // default of nothing, because a target of zero is a game that can be
+    // played and not won — and the level has an ending in it.
+    rules: [
+      {
+        setter: 'world_set_Scoring_TargetScoreProperty',
+        type: 'number',
+        value: '30',
+      },
+    ],
+  },
+  // A tile taller than the level, for the HUD bar over it, so the Viewport
+  // shows the whole room.
+  {width: VIEWPORT_TILES, height: VIEWPORT_TILES + 1},
+  STARTER_HUD,
+);
+
+const PLAYER_ACTOR = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Player'},
+          next: {
+            block: stack([
+              useTrait('Gravity#AffectedByGravityTrait'),
+              // Something to lose. Without it the Crawler is scenery that
+              // walks — `Deals Damage` needs somebody with health to deal it
+              // to, and the two halves live in different files on purpose.
+              useTrait('Health#HasHealthTrait'),
+              // Jumping requires being affected by gravity, which is why it
+              // sits under it here: a jump is a push AWAY from a ground, and
+              // an actor nothing pulls down has no ground to push away from.
+              useTrait('Jumping#JumpsTrait'),
+              useTrait('Arrow Keys#MovesAcrossTrait'),
+              // Hearing the keyboard is something an actor ELECTS. The world's
+              // own key events are raised once a frame whatever is in it; this
+              // trait is what makes `rules/input` also tell THIS actor, and it
+              // is why that broadcast walks one player rather than every coin.
+              useTrait('Input#TakesKeyboardInputTrait'),
+              // The other side of the coin's "Can Be Collected": what makes
+              // walking into one take it. The player names no kind here — the
+              // rule takes whatever it touches that says it can be taken, so
+              // making a second kind of thing collectible is an edit to that
+              // thing and not to this file.
+              useTrait('Collection#CollectsTrait'),
+              // Looks like the library's bob, which is its own Main animation
+              // (specs/ANIMATION_PLAN.md). Position is set by the map when
+              // the world places this actor, not here.
+              //
+              // No `use trait Has Appearance` above it any more: every actor
+              // has that, and being positioned, without electing either
+              // (ActorBuilder's foundation). What is left are the traits that
+              // make this actor a PLAYER rather than a coin.
+              looksLike('playerBob'),
+            ]),
+          },
+        },
+        // Space to jump. WHICH key is on the hat — `rules/input` declares its
+        // trait's events as "presses ⟨a key⟩", so the handler is registered for
+        // the space bar and never runs for anything else (specs/ENUMS.md).
+        //
+        // The TRAIT's event, not the world's. A world event is handed no actor
+        // and registers on the world, which an `.actor` module has no binding
+        // for — "this actor presses space" is the statement an actor can make.
+        //
+        // ONE BLOCK INSIDE, and it used to be four. This handler was
+        //
+        //     if ⟨this actor⟩ is on the ground?
+        //       apply force ⟨0, -5⟩ on ⟨this actor⟩
+        //
+        // which is a jump, and is also the jump `rules/jump` was written
+        // because of. It refuses a late press by a single frame — walk off a
+        // ledge and the space bar does nothing — and it pushes rather than
+        // sets, so a jump taken while already rising goes higher than one
+        // taken from standing. `make ⟨who⟩ jump` owns both of those, along
+        // with the count that turns `jumps allowed: 2` into a double jump.
+        //
+        // The old shape is not lost: it is in the rule's own header, as the
+        // thing the rule exists to replace.
+        {
+          type: 'world_on_Input_PressesEvent',
+          fields: {FILTER0: 'space'},
+          x: 20,
+          y: 440,
+          next: {
+            block: {
+              type: 'world_do_Jumping_MakeJumpAction',
+              inputs: {VALUE: {block: {type: 'world_this_actor'}}},
+            },
+          },
+        },
+        onEvent(
+          'Gravity_StartsFallingEvent',
+          20,
+          200,
+          'Player started falling',
+        ),
+        // The ending the starter did not have. Health raises `runs out of
+        // health` and removes nothing — running out is a fact, not a policy —
+        // so what it MEANS is this handler, and here it means the board says
+        // so.
+        //
+        // It reaches another actor to say it, which is the only block in the
+        // starter that does: `any ⟨Scoreboard⟩` names the kind, and an actor
+        // socket handed several takes the first. A game with two scoreboards
+        // would want a rule; a game with one wants this.
+        {
+          type: 'world_on_Health_RunsOutOfHealthEvent',
+          x: 20,
+          y: 560,
+          next: {
+            block: {
+              type: 'world_set_ActorsLabel_TextProperty',
+              inputs: {
+                ACTOR: {
+                  block: {
+                    type: 'world_actor_kind',
+                    fields: {ACTOR: 'actors/scoreboard'},
+                  },
+                },
+                VALUE: {block: {type: 'text', fields: {TEXT: 'GAME OVER'}}},
+              },
+            },
+          },
+        },
+        onEvent('Gravity_StopsFallingEvent', 20, 320, 'Player landed!'),
+        // Taking the coin is the RULE's business — this handler is only told
+        // that it happened, which is why the coin is already out of the world
+        // by the time anything reads the count.
+        //
+        // TWO THINGS, and they answer different questions. `add 10 to the
+        // score` is the game's number: shared, shown on the Scoreboard, and
+        // the thing the target is measured against. The print below it is the
+        // learner's — `collected` is a LIST of what was taken rather than a
+        // tally, so "how many coins" is a question asked of it, and so is "and
+        // how many of the other thing", without a second counter to keep
+        // agreeing.
+        //
+        // Collection knows nothing about points and Scoring knows nothing
+        // about coins. This handler is where the starter says they are the
+        // same event, and it is one block.
+        {
+          type: 'world_on_Collection_CollectsEvent',
+          x: 20,
+          y: 620,
+          next: {
+            block: {
+              type: 'world_do_Scoring_AddToTheScoreAction',
+              inputs: {
+                VALUE: {block: {type: 'math_number', fields: {NUM: 10}}},
+              },
+              next: {
+                block: {
+                  type: 'world_print',
+                  inputs: {
+                    VALUE: {
+                      block: {
+                        type: 'world_count_of_kind',
+                        fields: {TYPE: 'actors/coin'},
+                        inputs: {
+                          LIST: {
+                            block: {
+                              type: 'world_get_Collection_CollectedProperty',
+                              inputs: {
+                                ACTOR: {block: {type: 'world_this_actor'}},
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      ],
+    },
+  },
+  null,
+  2,
+);
+
+// A ground tile: landable ("Acts as Ground", from the project's own gravity
+// rule) and a wall ("Solid", from its own solid-bodies rule), drawn with the
+// project's own "ground.png". A normal tile is both.
+//
+// Both traits come from rules the project HOLDS, and that is the whole of what
+// this file has to get right: gravity's ground loop matches its own trait, so a
+// tile electing some other rule's would compile, run, and hold nothing up.
+// Naming a trait by rule name rather than by module is what makes that hard to
+// get wrong — there is only one "Gravity" in play.
+const GROUND_ACTOR = groundActor;
+
+// A coin spinning — the library's Coin Spin, its Main animation — and
+// electing to be takeable.
+//
+// "Can Be Collected" is the whole of the coin's side of collecting: it does not
+// know what a player is, and the player does not know what a coin is. That is
+// the point of the rule having two traits rather than one — a game says which
+// kinds of thing can be picked up, and which kinds pick things up, and the two
+// lists have nothing to do with each other.
+//
+// Being touchable is not among the rows, because "Can Be Collected" requires
+// "Can Collide" and a trait brings its own dependencies. A coin that could be
+// taken but could not be touched would be a rule that silently does nothing.
+// …and it is the STOCK Coin, not a copy of one. The starter's images are
+// already copies of what the picker hands out, so that "the starter project
+// cannot drift from what a learner would get by importing one"
+// (`starterSprites`). The same argument applies to the actor made of them, and
+// more strongly: a learner who opens the starter's Coin and then imports one
+// should get the same file, or the library is lying about what it holds.
+const COIN_ACTOR = coinActor;
+
+// The scoreboard: a Label, which is what an actor with text and no body is.
+//
+// It is where the starter's score BECOMES visible, and it is an actor because
+// that is the only thing text can go on (`rules/writing`). Two traits and two
+// handlers: it shows text, it asked to hear the score, and it answers.
+//
+// The handlers are the ACTOR's events rather than the world's, which is what
+// "Watches the Score" exists for. An `.actor` file has no binding for a world
+// event, so `when the score changes` — the rule's other, world-scoped copy of
+// this — could only be written in `main.world`, and would then have to reach
+// back out for whichever actor is the scoreboard.
+/** The scoreboard's canvas, shared with the single-world telling of it. */
+export const SCOREBOARD_WIDTH = 96;
+export const SCOREBOARD_HEIGHT = 24;
+
+const SCOREBOARD_ACTOR = JSON.stringify(
+  {
+    blocks: {
+      blocks: [
+        {
+          type: 'world_actor',
+          x: 20,
+          y: 20,
+          fields: {NAME: 'Scoreboard'},
+          next: {
+            block: stack([
+              // A Label that watches the score. The words, their size and
+              // color, and the box they fill all come across
+              // (`ActorBuilder.actsLike`); what this adds is the watching.
+              actsLike('actors/label'),
+              useTrait('Scoring#WatchesTheScoreTrait'),
+              // The picker's symbol, which is not the picture — that is the
+              // drawing below (blockly/actorIconMeta).
+              showAs('text'),
+              // Something to read before the first coin. Without it the board
+              // is blank until the score moves, which looks like a broken
+              // scoreboard rather than a score of nothing.
+              setText({type: 'text', fields: {TEXT: 'SCORE 0'}}),
+              // THE DRAWING, and without it this actor is a plain rectangle.
+              //
+              // `Shows Text` has no steps and draws nothing: it declares what an
+              // actor's words ARE and leaves the drawing to the actor that elects it
+              // (specs/DRAWING.md). An actor with the trait, the text and no drawing
+              // is an actor nothing knows how to paint, so the driver paints the
+              // fallback box — which is exactly what this shipped as at first.
+              //
+              // Two commands, the same two `actors/stock/label` uses: ink of
+              // whatever color the actor carries, then the words at the middle of
+              // the canvas. Every part of the text is READ off the actor rather than
+              // typed here, which is what makes the trait worth having.
+              {
+                type: 'world_define_drawing',
+                inputs: {
+                  WIDTH: {
+                    shadow: {
+                      type: 'math_number',
+                      fields: {NUM: SCOREBOARD_WIDTH},
+                    },
+                  },
+                  HEIGHT: {
+                    shadow: {
+                      type: 'math_number',
+                      fields: {NUM: SCOREBOARD_HEIGHT},
+                    },
+                  },
+                  DO: {
+                    block: stack([
+                      fill(textOf('TextColorProperty')),
+                      drawText(SCOREBOARD_WIDTH / 2, SCOREBOARD_HEIGHT / 2),
+                    ]),
+                  },
+                },
+              },
+            ]),
+          },
+        },
+        {
+          type: 'world_on_Scoring_SeesTheScoreChangeEvent',
+          x: 20,
+          y: 200,
+          next: {
+            block: setText({
+              type: 'text',
+              fields: {TEXT: 'SCORE '},
+              inputs: {
+                ADD: {
+                  block: {
+                    type: 'world_as_text',
+                    inputs: {
+                      VALUE: {
+                        block: {type: 'world_get_Scoring_ScoreProperty'},
+                      },
+                    },
+                  },
+                },
+              },
+            }),
+          },
+        },
+        {
+          type: 'world_on_Scoring_SeesTheGameWonEvent',
+          x: 20,
+          y: 320,
+          next: {
+            block: setText({type: 'text', fields: {TEXT: 'YOU WIN'}}),
+          },
+        },
+      ],
+    },
+  },
+  null,
+  2,
+);
+
+// What being hurt LOOKS like — and it is the STOCK Health Bar, verbatim.
+//
+// The starter used to carry a bar of its own that asked the world for the
+// first actor with health. That worked for exactly one game: the one with a
+// single hurtable thing in it. The stock one carries the actor it is about
+// (`actors/stock/healthBar`), which is the same picture pointed rather than
+// guessing — and it is the file a learner gets by importing, so the starter
+// is now a worked example of the shelf rather than a thing beside it.
+//
+// WHO IT IS ABOUT IS SET IN THE MAP, which is the whole of the wiring and no
+// blocks at all: a placement holds the id of another placement and `loadMap`
+// resolves it once every entry exists (specs/MAPS.md). Select the bar in the
+// map editor and the line to the Player is drawn.
+
+// The one thing in the starter that can go wrong.
+//
+// Everything else here is a reward: coins to take, a platform to reach, a
+// score that only goes up. A game in which nothing can go wrong is a stroll,
+// and half the shelf — Health, and now Patrol — had no user at all.
+//
+// It PATROLS rather than chasing, which is the difference between a level and
+// an ambush: it walks its beat whether or not anybody is watching, so a
+// learner can see what it does before having to avoid it. Steering is the
+// other rule and the other feeling.
+//
+// `Deals Damage` and nothing else about hurting: what a hit costs is Health's
+// business, and the mercy time that stops a touch being thirty hits is too.
+//
+// Drawn as a CRAWLER, which it had not been: it wore `asteroid.png` from the
+// day Patrol was written, and a rock pacing a corridor reads as a rock nobody
+// stopped. The picture is the only thing that says a thing is dangerous before
+// it has hurt you.
+const CRAWLER_ACTOR = actorFile('Crawler', [
+  useTrait('Patrol#PatrolsAcrossTrait'),
+  useTrait('Health#DealsDamageTrait'),
+  {type: 'world_set_sprite', fields: {SPRITE: 'crawler.png'}},
+]);
+
+// A ball pulsing — the library's Pulse, its Main animation.
+const BALL_ACTOR = actorFile('Ball', [looksLike('pulse')]);
+
+/**
+ * A starter file as written below: no id, and naming its folder rather than
+ * pointing at one. {@link buildProject} supplies both.
+ */
+type StarterFile = Omit<ProjectFile, 'id'>;
+
+/** What the starter is written as, before it has any ids. */
+/**
+ * A project written the way a person would describe one: folders by name, files
+ * by a readable key, and which of them start open.
+ *
+ * Exported because the starter is no longer the only project the demo can load
+ * — the fixture catalogue (src/fixtures) describes one per game it shows off,
+ * and each of them wants to be written like this rather than as a table of
+ * numeric ids.
+ */
+export interface ProjectSpec {
+  /** Folder names, all at the project root. */
+  folders: readonly string[];
+  /** Files by a readable key, each naming its folder in `folderId`. */
+  files: Record<string, StarterFile>;
+  /** Which files start open, by key. The first is the active tab. */
+  open: readonly string[];
+}
+
+/**
+ * The starter project, numbered.
+ *
+ * Ids in a Codebridge project are stringified integers: `getNextFileId` and
+ * `getNextFolderId` are max-plus-one arithmetic over them, and an id that is
+ * not an integer makes every id they hand out afterwards `"NaN"` — so two
+ * files written in a row both land on `"NaN"` and the second replaces the
+ * first. (The helpers now skip non-integers rather than choking on them, but a
+ * project that keeps to the contract is the point; this is where world's ids
+ * come from.)
+ *
+ * Numbers are also unreadable, and the starter is a document people edit. So
+ * it is written by name — `main`, `sprite-coin`, `rules` — and numbered here on
+ * the way out, with the names resolved to the ids they were given. Nothing
+ * outside this file should ever name a starter file by id; tests use
+ * {@link starterFile}.
+ */
+export function buildProject(spec: ProjectSpec): {
+  source: MultiFileSource;
+  /** The id each file was given, by the key it is written under. */
+  ids: ReadonlyMap<string, string>;
+} {
+  const folderIds = new Map(
+    spec.folders.map((name, index) => [name, String(index + 1)]),
+  );
+  const fileIds = new Map(
+    Object.keys(spec.files).map((key, index) => [key, String(index + 1)]),
+  );
+
+  const folders: MultiFileSource['folders'] = {};
+  for (const [name, id] of folderIds) {
+    folders[id] = {id, name, parentId: DEFAULT_FOLDER_ID};
+  }
+
+  const files: MultiFileSource['files'] = {};
+  for (const [key, file] of Object.entries(spec.files)) {
+    const folderId = folderIds.get(file.folderId);
+    if (!folderId) {
+      throw new Error(
+        `starter file “${key}” is in “${file.folderId}”, which is not a starter folder`,
+      );
+    }
+    files[fileIds.get(key) as string] = {
+      ...file,
+      id: fileIds.get(key) as string,
+      folderId,
+    };
+  }
+
+  return {
+    source: {
+      files,
+      folders,
+      openFiles: spec.open.map(key => {
+        const id = fileIds.get(key);
+        if (!id) {
+          throw new Error(
+            `starter opens “${key}”, which is not a starter file`,
+          );
+        }
+        return id;
+      }),
+    },
+    ids: fileIds,
+  };
+}
+
+/**
+ * The stock images the starter project ships copies of, as project files.
+ *
+ * Written here rather than pasted as base64: they are the same bytes the import
+ * dialog hands out (`appearance/stock`), so the starter project cannot drift
+ * from what a learner would get by importing one.
+ */
+export function starterSprites(ids: readonly string[]) {
+  const files: Record<string, StarterFile> = {};
+  for (const id of ids) {
+    const sprite = STOCK_SPRITES.find(entry => entry.id === id);
+    if (!sprite) {
+      continue;
+    }
+    files[`sprite-${id}`] = {
+      name: spriteFileName(id),
+      language: 'png',
+      contents: '',
+      folderId: 'sprites',
+      url: sprite.dataUrl,
+      mimeType: 'image/png',
+    };
+    // A grid ships with the file that says it is one, the same as an import
+    // writes it — without the `.sheet`, `coinSpin.png` is a wide picture with
+    // no cells to cut.
+    if (sprite.sheet) {
+      const name = sheetFileName(spriteFileName(id));
+      files[`sheet-${id}`] = {
+        name,
+        language: 'json',
+        contents: serializeSheetFile(sprite.sheet),
+        folderId: 'sprites',
+      };
+    }
+  }
+  return files;
+}
+
+/**
+ * The pictures several stock animations read.
+ *
+ * An animation names a strip and reads squares out of it, so an actor given
+ * one without its picture plays an animation of nothing — which draws as a
+ * black square and says so nowhere. The animation itself is the actor's own
+ * (`stock/workspace.animationsRow`); these are the files it needs.
+ */
+export function starterAnimationPictures(
+  ids: readonly string[],
+): Record<string, StarterFile> {
+  return starterSprites(
+    ids.flatMap(
+      id => STOCK_ANIMATIONS.find(entry => entry.id === id)?.sprites ?? [],
+    ),
+  );
+}
+
+/**
+ * The starter, written out.
+ *
+ * Exported for the tests that read the starter by name rather than by id.
+ */
+export const STARTER_SPEC: ProjectSpec = {
+  folders: [
+    'rules',
+    'screens',
+    'actors',
+    'sprites',
+    // Empty until something is imported into it, and present anyway: the
+    // folder is what makes an image a backdrop (BACKGROUNDS.md §5), so a
+    // learner who uploads a sky needs somewhere to put it that means that.
+    'backgrounds',
+    'maps',
+    'effects',
+  ],
+  files: {
+    main: {
+      name: 'main.screen',
+      language: 'screen',
+      contents: MAIN_SCREEN,
+      folderId: 'screens',
+      active: true,
+      open: true,
+    },
+    level: {
+      name: 'main.map',
+      language: 'map',
+      contents: MAIN_MAP,
+      folderId: 'maps',
+    },
+    player: {
+      name: 'player.actor',
+      language: 'actor',
+      contents: PLAYER_ACTOR,
+      folderId: 'actors',
+    },
+    ground: {
+      name: 'ground.actor',
+      language: 'actor',
+      contents: GROUND_ACTOR,
+      folderId: 'actors',
+    },
+    coin: {
+      name: 'coin.actor',
+      language: 'actor',
+      contents: COIN_ACTOR,
+      folderId: 'actors',
+    },
+    // The bar the Health Bar ACTS LIKE. `acts like` names a module path, and a
+    // path naming a file the project does not hold inherits nothing at all —
+    // no trait, no picture — so the parent is here beside the child
+    // (`actors/stock/healthBar`).
+    progressBar: {
+      name: 'progressBar.actor',
+      language: 'actor',
+      contents: progressBarActor,
+      folderId: 'actors',
+    },
+    healthBar: {
+      name: 'healthBar.actor',
+      language: 'actor',
+      // For both: a HUD on the Main Screen, and a bar a game may place.
+      contents: withPurpose(healthBarActor, 'interface'),
+      folderId: 'actors',
+    },
+    crawler: {
+      name: 'crawler.actor',
+      language: 'actor',
+      contents: CRAWLER_ACTOR,
+      folderId: 'actors',
+    },
+    // The Label the Scoreboard ACTS LIKE. `acts like` names a module path, and
+    // a path naming a file the project does not hold inherits nothing at all —
+    // no words, no box, no picture (`actors/stock/label`).
+    label: {
+      name: 'label.actor',
+      language: 'actor',
+      contents: labelActor,
+      folderId: 'actors',
+    },
+    scoreboard: {
+      name: 'scoreboard.actor',
+      language: 'actor',
+      contents: withPurpose(SCOREBOARD_ACTOR, 'interface'),
+      folderId: 'actors',
+    },
+    ball: {
+      name: 'ball.actor',
+      language: 'actor',
+      contents: BALL_ACTOR,
+      folderId: 'actors',
+    },
+    jumpRule: {
+      name: 'jump.rule',
+      language: 'rule',
+      contents: referenceToStock('jump'),
+      folderId: 'rules',
+    },
+    gravityRule: {
+      name: 'gravity.rule',
+      language: 'rule',
+      contents: referenceToStock('gravity'),
+      folderId: 'rules',
+    },
+    arrowsRule: {
+      name: 'arrows.rule',
+      language: 'rule',
+      contents: referenceToStock('arrows'),
+      folderId: 'rules',
+    },
+    inputRule: {
+      name: 'input.rule',
+      language: 'rule',
+      contents: referenceToStock('input'),
+      folderId: 'rules',
+    },
+    motionRule: {
+      name: 'motion.rule',
+      language: 'rule',
+      contents: referenceToStock('motion'),
+      folderId: 'rules',
+    },
+    collisionsRule: {
+      name: 'collisions.rule',
+      language: 'rule',
+      contents: referenceToStock('collisions'),
+      folderId: 'rules',
+    },
+    solidRule: {
+      name: 'solid.rule',
+      language: 'rule',
+      contents: referenceToStock('solid'),
+      folderId: 'rules',
+    },
+    healthRule: {
+      name: 'health.rule',
+      language: 'rule',
+      contents: referenceToStock('health'),
+      folderId: 'rules',
+    },
+    patrolRule: {
+      name: 'patrol.rule',
+      language: 'rule',
+      contents: referenceToStock('patrol'),
+      folderId: 'rules',
+    },
+    scoreRule: {
+      name: 'score.rule',
+      language: 'rule',
+      contents: referenceToStock('score'),
+      folderId: 'rules',
+    },
+    collectRule: {
+      name: 'collect.rule',
+      language: 'rule',
+      contents: referenceToStock('collect'),
+      folderId: 'rules',
+    },
+    // A starter shader graph, so `effects/` is not an empty folder and the
+    // effect editor opens on something worth reading. Deliberately not
+    // applied to anything: the tutorial is about gravity and input, and a
+    // permanently rippling player would be a distraction from it. Dragging
+    // Dragging `add effect` under an actor is how a learner tries it.
+    rippleEffect: {
+      name: 'ripple.effect',
+      language: 'effect',
+      contents: serializeEffectDocument(rippleEffect),
+      folderId: 'effects',
+    },
+    // The images. A project draws only what it holds, so the four the starter
+    // level uses are files in it — copies of the stock drawings, exactly as
+    // importing them would leave them, and editable from here on.
+    ...starterSprites([
+      'player',
+      'ground',
+      'coin',
+      'ball',
+      'crawler',
+      'coinSpin',
+    ]),
+  },
+  open: ['main'],
+};
+
+const STARTER = buildProject(STARTER_SPEC);
+
+export const DEFAULT_PROJECT: ProjectSources<MultiFileSource> = {
+  // …with the stock Viewport the level is played in, and what it needs.
+  // Its actors in the data shape (specs/ACTOR_EDITOR_PLAN.md, step 5).
+  source: inDataShape(
+    importStockActor(STARTER.source, stockActorById('viewport')!).source,
+  ),
+};
+
+/**
+ * A starter file by the name it is written under in {@link buildProject}.
+ *
+ * The project's ids are numbers, so a caller that wants `gravity.rule` cannot
+ * reasonably ask for it by id. Throws rather than returning undefined: every
+ * caller is asserting something about a file it believes is there, and a typo
+ * should say so rather than read as an empty file.
+ */
+export function starterFile(key: string): ProjectFile {
+  const id = STARTER.ids.get(key);
+  const file = id === undefined ? undefined : STARTER.source.files[id];
+  if (!file) {
+    throw new Error(`no starter file called “${key}”`);
+  }
+  return file;
+}
+
+/**
+ * Which of the workspace's two panes are showing. Mirrors web-lab's `ViewMode`;
+ * the segmented buttons in the workspace header switch between them.
+ */
+export const ViewMode = {
+  SPLIT: 'split',
+  CODE: 'code',
+  PREVIEW: 'preview',
+} as const;
+
+export type ViewModeType = (typeof ViewMode)[keyof typeof ViewMode];

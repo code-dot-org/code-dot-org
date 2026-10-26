@@ -1,0 +1,366 @@
+// The default project's `rules/gravity.rule` — the first rule authored in
+// Blockly rather than shimmed from the engine.
+//
+// It is checked here rather than left to the browser because it is the proof
+// that a `.rule` can be a real rule: parse the shipped file, and assert the
+// module that comes out declares what the built-in `GravityRule` declares.
+// Everything a `.actor` or `.world` in the same project references by name —
+// the traits, the properties, the events — has to survive that round trip, or
+// the default project does not load.
+
+import {describe, expect, it} from 'vitest';
+
+import {starterFile} from '../../constants';
+import {resolveRuleContents} from '../../rules/ruleReference';
+import {buildDomainPalette} from '../domainBlocks';
+import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
+
+import {registerDefaultProjectRules} from './defaultProjectRules';
+
+// Its `use rule`s name other rules of this project, which have to be registered
+// before a module can be generated from it — the same call the editor makes.
+registerDefaultProjectRules();
+
+// Through the same resolution production uses: the starter holds a
+// REFERENCE to the library's rule, not a copy of it (rules/ruleReference,
+// specs/NEXT.md §2), and `projectFiles` is what resolves one everywhere
+// else. What is asserted below is the rule, either way.
+const source = resolveRuleContents(starterFile('gravityRule').contents);
+const meta = parseRuleMeta('rules/gravity', source)!;
+const module_ = ruleMetaToModule(meta);
+
+describe('rules/gravity.rule', () => {
+  it('ships as a .rule, not a shim', () => {
+    expect(starterFile('gravityRule').name).toBe('gravity.rule');
+    expect(source).not.toContain('world-lab');
+  });
+
+  it('parses to the rule the built-in declares', () => {
+    expect(meta.name).toBe('Gravity');
+    expect(meta.ability).toBe('Has Gravity');
+    // `Collisions` is named because Gravity uses it — `contacts` and `Can
+    // Collide` — and used to arrive only transitively, through Solid Bodies
+    // requiring it. `Solid Bodies` is named although Gravity calls nothing of
+    // it: that edge is a promise about what importing gravity hands a learner,
+    // not a call, and `importStockRule` states the promise in four tests.
+    expect(meta.requires).toEqual(['Physics', 'Collisions', 'Solid Bodies']);
+    expect(meta.traits.map(trait => trait.ref.exportName)).toEqual([
+      'AffectedByGravityTrait',
+      'ActsAsGroundTrait',
+    ]);
+    // The two world properties say what they are OF: a block reading `set
+    // amount of gravity to ⟨9⟩` needs no other context, where `set world
+    // strength to ⟨9⟩` was strength of what. The export names derive from those
+    // names, which is why they are this long.
+    expect(meta.properties.map(property => property.ref.exportName)).toEqual([
+      'DirectionOfGravityProperty',
+      'AmountOfGravityProperty',
+      'GravityScaleProperty',
+      'FallingProperty',
+      'IgnoresGroundProperty',
+    ]);
+    expect(meta.events.map(event => event.ref.exportName)).toEqual([
+      'StartsFallingEvent',
+      'StopsFallingEvent',
+    ]);
+  });
+
+  it('names its world properties in blocks that read on their own', () => {
+    // The blocks a learner actually sees. `set amount of gravity to ⟨9⟩` and
+    // `set direction of gravity to ⟨0, 1⟩` say what they are of; `set world
+    // strength to ⟨9⟩` was strength of what. The `world` prefix is gone with
+    // them — an actor property names its subject (`… of ⟨this actor⟩`) and a
+    // world property has none, so the word answered nothing.
+    const palette = buildDomainPalette([meta], {
+      ownRuleModule: 'rules/gravity',
+    });
+    const message = (type: string) =>
+      (
+        palette.blocks.find(block => block.type === type) as
+          | {message0: string}
+          | undefined
+      )?.message0;
+
+    expect(message('world_set_Gravity_AmountOfGravityProperty')).toBe(
+      'set amount of gravity to %1',
+    );
+    expect(message('world_get_Gravity_AmountOfGravityProperty')).toBe(
+      'get amount of gravity',
+    );
+    expect(message('world_set_Gravity_DirectionOfGravityProperty')).toBe(
+      'set direction of gravity to %1',
+    );
+
+    // The contrast: an actor property still says whose it is.
+    expect(message('world_set_Gravity_GravityScaleProperty')).toBe(
+      'set gravity scale of %1 to %2',
+    );
+  });
+
+  it('explains each block it defines', () => {
+    for (const member of [...meta.queries, ...meta.actions]) {
+      expect(member.description, member.name).toMatch(/\w+ \w+/);
+    }
+  });
+
+  it('marks `falling` read-only, because a step owns it', () => {
+    // The property the landing step writes. Without this the palette offers a
+    // `set falling` block whose value the next tick overwrites.
+    const falling = meta.properties.find(p => p.id === 'falling');
+    expect(falling?.readonly).toBe(true);
+    expect(module_).toContain('readonly: true');
+  });
+
+  it('says it is a force, and names no other rule', () => {
+    // It used to say `before Physics ▸ reposition`, which is TRUE and is not
+    // what it means: gravity must add to velocity before velocity becomes
+    // position, and that is what `push` is (engine/core/phases). Saying it the
+    // old way meant a learner writing a second force had to discover Physics
+    // first, and pick the right one of its steps.
+    const [step] = meta.steps;
+    expect(step.order.kind).toBe('phase');
+    expect(step.order.phase).toBe('push');
+    expect(module_).toContain('rule.addStepIn("applyVelocity", "push"');
+    expect(module_).not.toContain('Motion.steps');
+  });
+
+  it('names its members where the rest of the project reaches for them', () => {
+    // `player.actor` carries `Gravity#AffectedByGravityTrait` and handles
+    // `world_on_Gravity_StartsFallingEvent`. Both are built from the rule's NAME
+    // and its members' export names, so renaming either here — the rule in its
+    // `define rule` block, or a member — silently unhooks the tutorial.
+    const player = starterFile('player').contents;
+    expect(player).toContain('Gravity#AffectedByGravityTrait');
+    expect(player).toContain('world_on_Gravity_StartsFallingEvent');
+  });
+
+  it('declares the query that reads its read-only property', () => {
+    // `falling` is step-owned, so it has no `set` block — but it must still be
+    // READABLE, and this query is how. (Generating the getter only for settable
+    // properties made a read-only one unreadable even from its own rule.)
+    //
+    // Only the DECLARATION is checked here: an action's or query's body is
+    // generated from live blocks, not from this static parse, so `module_`
+    // carries an empty one. The bodies are verified in the browser.
+    const query = meta.queries.find(q => q.id.startsWith('is_on_the_ground'));
+    expect(query?.scope).toBe('actor');
+    expect(query?.ownerTraitId).toBe('Affected_by_Gravity');
+    expect(query?.returns).toBe('boolean');
+    expect(module_).toContain('AffectedByGravityTrait.addQuery(');
+  });
+
+  it('declares the invert action on the rule, not on a trait', () => {
+    // Gravity's direction is world-scoped, so inverting it is the world's to do.
+    const action = meta.actions.find(a => a.id === 'Invert_Gravity');
+    expect(action?.scope).toBe('world');
+    expect(module_).toContain('rule.addAction("Invert_Gravity", (world) =>');
+  });
+
+  it('names its own members locally, not through an import of itself', () => {
+    // The self-reference case: a rule's body referencing its own member uses
+    // the local `export const`. Importing the module into itself would be a
+    // cycle that resolves to undefined.
+    expect(module_).not.toContain("from 'rules/gravity'");
+  });
+
+  it('declares the landing step as a consequence', () => {
+    // The step that lands actors and raises the falling transitions. It sees
+    // where things ENDED — after they moved and after they were pushed out of
+    // solids — which is what `react` is. One rule, two steps, two moments:
+    // the reason a phase belongs to a step and not to a rule.
+    const step = meta.steps.find(s => s.id === 'handleCollisions');
+    expect(step?.order.kind).toBe('phase');
+    expect(step?.order.phase).toBe('react');
+  });
+
+  it('puts its looping members at rule scope, where a world exists', () => {
+    // An actor-scoped member is invoked as `(actor, …args)`; it reaches the
+    // world through `actor.world`, but these take the subject as a parameter
+    // because they are questions about the world asked of a pair.
+    for (const id of ['is_resting_on', 'land_on_ground_', 'rest_height_of']) {
+      expect(meta.queries.find(q => q.id === id)?.scope).toBe('world');
+    }
+  });
+
+  it('lands and reports in one walk of the grounds', () => {
+    // `land on ground?` both snaps the actor and answers whether it did, so the
+    // step walks the grounds once. It used to be an action that landed and a
+    // query that re-walked them to answer — two passes for one question,
+    // because a body could not hold the answer between them.
+    expect(meta.queries.map(q => q.id)).not.toContain('is_on_a_ground_');
+    expect(meta.actions.map(a => a.id)).not.toContain('land_on_grounds');
+    expect(meta.queries.find(q => q.id === 'land_on_ground_')?.returns).toBe(
+      'boolean',
+    );
+  });
+
+  it('handles gravity in either direction with one test', () => {
+    // The sign of gravity's direction lives in a variable, so the resting test
+    // is written once rather than mirrored for the inverted case — which is
+    // what the built-in does, and what a body without variables forced.
+    const doc = JSON.parse(source) as {
+      variables?: Array<{name: string; type: string}>;
+    };
+    expect(doc.variables).toContainEqual(
+      expect.objectContaining({name: 'sign', type: 'Number'}),
+    );
+    expect(meta.queries.find(q => q.id === 'rest_height_of')?.returns).toBe(
+      'number',
+    );
+  });
+
+  it('grounds the ground actor on ITS OWN trait, not the engine’s', () => {
+    // `actors/ground` kept electing the built-in `GroundTrait` after the rule
+    // moved into the project, so the authored rule's ground loop matched
+    // nothing: the player fell, was held up by collision, and never landed.
+    //
+    // Harder to get wrong now that the file is blocks — a trait is named by
+    // its RULE's name (`traitOptions`), and there is one "Gravity" in play, so
+    // the dropdown cannot offer the engine's copy. Still checked, because what
+    // it is checking is a fact about the project rather than about the file:
+    // the trait the tile elects is the one this rule loops over.
+    const ground = starterFile('ground').contents;
+    expect(ground).toContain('Gravity#ActsAsGroundTrait');
+    expect(meta.traits.map(trait => trait.name)).toContain('Acts as Ground');
+  });
+
+  it('holds the resting answer in a variable rather than asking twice', () => {
+    // The first use of a variable SETTER in the shipped project. Before it
+    // existed a body could bind a variable (a loop's, a parameter's) but never
+    // assign one, so the landing step had to call `is on a ground?` once per
+    // branch and pay for the ground walk twice.
+    expect(source).toContain('variables_set_Boolean');
+    const doc = JSON.parse(source) as {
+      variables?: Array<{name: string; type: string}>;
+    };
+    expect(doc.variables).toContainEqual(
+      expect.objectContaining({name: 'resting', type: 'Boolean'}),
+    );
+  });
+
+  /** The rule's own members: the chain hanging off `define rule`. */
+  type Member = {
+    type: string;
+    fields?: Record<string, string>;
+    inputs?: Record<string, {block?: unknown}>;
+  };
+  const members = (json: string): Member[] => {
+    const doc = JSON.parse(json) as {
+      blocks: {blocks: Array<Record<string, unknown>>};
+    };
+    const rule = doc.blocks.blocks.find(b => b.type === 'world_rule');
+    const out: Member[] = [];
+    let at = (rule?.next as {block?: Record<string, unknown>})?.block;
+    while (at) {
+      out.push(at as unknown as Member);
+      at = (at.next as {block?: Record<string, unknown>})?.block;
+    }
+    return out;
+  };
+
+  it('declares its traits as top blocks and its steps as members', () => {
+    // A trait is a definition of its own — a separate stack a learner can move
+    // and read alone. A step used to be one too, because its body was the
+    // chain below it and hundreds of blocks long; the body is on its own
+    // surface now, so a step is one row in the rule's own list like every
+    // other member.
+    const doc = JSON.parse(source) as {
+      blocks: {blocks: Array<{type: string}>};
+    };
+
+    expect(doc.blocks.blocks.map(b => b.type)).toEqual([
+      'world_rule',
+      'world_rule_trait',
+      'world_rule_trait',
+    ]);
+    expect(members(source).map(b => b.type)).toContain('world_rule_step_in');
+  });
+
+  it('carries a step’s ordering in its block type, not a field', () => {
+    // `during ⟨push⟩` and `when tick` are different KINDS of step, not one
+    // block with a setting — which is why no dropdown has to be hidden when it
+    // would be meaningless. The PHASE field is the phase itself, not a mode
+    // switch.
+    const steps = members(source).filter(b => b.type === 'world_rule_step_in');
+
+    expect(steps.map(b => b.fields?.PHASE)).toEqual(['push', 'react']);
+    expect(steps[0].fields?.STEP).toBeUndefined();
+    expect(steps[0].fields?.ORDER).toBeUndefined();
+  });
+
+  it('puts a step’s body in its mouth, not the chain below it', () => {
+    // The chain below a member is the member AFTER it. Reading it as the body
+    // would put the rest of the rule inside the step.
+    const [step] = members(source).filter(b => b.type === 'world_rule_step_in');
+
+    expect(step.inputs?.DO?.block).toBeTruthy();
+  });
+
+  it('chains a trait’s members below it, not inside a `do`', () => {
+    const tops = (
+      JSON.parse(source) as {
+        blocks: {
+          blocks: Array<{type: string; next?: unknown; inputs?: unknown}>;
+        };
+      }
+    ).blocks.blocks;
+    const trait = tops.find(b => b.type === 'world_rule_trait')!;
+    expect(trait.next).toBeDefined();
+    expect(trait.inputs).toBeUndefined();
+  });
+
+  it('asks Collisions what it is touching, rather than scanning the world', () => {
+    // The whole point of splitting detection out (specs/COLLISION.md): landing
+    // used to walk every actor in the world looking for grounds, once per
+    // falling actor, re-deriving overlaps that Collisions had already worked
+    // out. Now the loop's SOURCE is this actor's contacts, and what is left in
+    // the loop is gravity's own question — is this ground under me?
+    const sources: string[] = [];
+    const walk = (node: unknown): void => {
+      if (Array.isArray(node)) {
+        node.forEach(walk);
+        return;
+      }
+      if (!node || typeof node !== 'object') {
+        return;
+      }
+      const block = node as {
+        type?: string;
+        inputs?: Record<string, {block?: {type?: string}}>;
+      };
+      if (block.type === 'world_for_each') {
+        const walked = block.inputs?.SOURCE?.block;
+        // A filter is a lens on a list, not a list of its own: what the loop
+        // WALKS is what the filter was given (specs/ACTOR_LISTS.md).
+        sources.push(
+          (walked?.type === 'world_filter_actors'
+            ? (walked as {inputs?: Record<string, {block?: {type?: string}}>})
+                .inputs?.SOURCE?.block?.type
+            : walked?.type) ?? '(all actors)',
+        );
+      }
+      Object.values(node as Record<string, unknown>).forEach(walk);
+    };
+    walk(JSON.parse(source));
+
+    expect(sources).toContain('world_get_Collisions_ContactsProperty');
+    // Its two per-tick steps still walk every actor gravity pulls on and every
+    // actor that might have landed — but they now say so in the SOURCE rather
+    // than by testing each of the world's actors in the loop. It is the INNER
+    // loop, over one faller's grounds, that had a shorter list all along.
+    expect(sources.filter(s => s === 'world_actors_with_trait')).toHaveLength(
+      2,
+    );
+    expect(sources).not.toContain('(all actors)');
+  });
+
+  it('is in play because the project holds it', () => {
+    // It used to be a `use rule Has Gravity` row in the world, resolved by
+    // name to whichever file declared it. The file IS the statement now, and
+    // the world says nothing about rules at all — so what makes the starter a
+    // game with gravity in it is this entry and nothing else
+    // (blockly/projectModules).
+    expect(starterFile('gravityRule').name).toBe('gravity.rule');
+    expect(starterFile('main').contents).not.toContain('world_use_rule');
+  });
+});
