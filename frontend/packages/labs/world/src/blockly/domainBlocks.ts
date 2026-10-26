@@ -10013,6 +10013,68 @@ const worldTextAnchor = defineBlock({
   },
 });
 
+/**
+ * `draw image ⟨picture⟩ in x y width height, fitted|stretched`: a picture
+ * from a value — a property, most often — drawn into a box
+ * (specs/ACTORS_AS_DATA_PLAN.md, step 4).
+ *
+ * Beside `draw image`, not instead of it: that one names a picture in a
+ * field, so a sheet's cell is resolved where the `.sheet` files are known,
+ * and draws it at its own size. This one is what an interface actor that
+ * SHOWS a picture draws with — an Image whose picture is chosen per
+ * placement, fitted to whatever box it was given. Fitted keeps the
+ * picture's shape inside the box; stretched fills it.
+ */
+const worldDrawPicture = defineBlock({
+  type: 'world_draw_picture',
+  message0: 'draw image %1 in x %2 y %3 width %4 height %5 %6',
+  args0: [
+    {type: 'input_value', name: 'PICTURE', check: PICTURE_CHECK},
+    numberArg('X'),
+    numberArg('Y'),
+    numberArg('WIDTH'),
+    numberArg('HEIGHT'),
+    {
+      type: 'field_dropdown',
+      name: 'FIT',
+      options: [
+        ['fitted', 'fit'],
+        ['stretched', 'stretch'],
+      ],
+    },
+  ],
+  inputsInline: true,
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [drawingContextExtension, valueShadowExtension],
+  style: 'sprite_blocks',
+  tooltip:
+    'Draw a picture into a box: fitted inside it, keeping its shape, or ' +
+    'stretched to fill it.',
+  generator: {
+    javascript(block, generator) {
+      const picture = generator.valueToCode(block, 'PICTURE', Order.NONE);
+      if (!picture) {
+        return '';
+      }
+      const at = (name: string, fallback: string) =>
+        generator.valueToCode(block, name, Order.NONE) || fallback;
+      return (
+        `pen.picture(${picture}, ${at('X', '0')}, ${at('Y', '0')}, ` +
+        `${at('WIDTH', '32')}, ${at('HEIGHT', '32')}, ` +
+        `${block.getFieldValue('FIT') === 'stretch'});\n`
+      );
+    },
+  },
+});
+registerValueShadows('world_draw_picture', [
+  {name: 'PICTURE', shadow: {type: PICTURE_BLOCK}},
+  {name: 'X', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 0}}},
+  {name: 'WIDTH', shadow: {type: 'math_number', fields: {NUM: 32}}},
+  {name: 'HEIGHT', shadow: {type: 'math_number', fields: {NUM: 32}}},
+]);
+
 const worldDrawImage = defineBlock({
   type: 'world_draw_image',
   message0: 'draw image %1 at x %2 y %3',
@@ -11451,6 +11513,7 @@ export const DOMAIN_BLOCKS = [
   worldDrawParagraph,
   worldTextAnchor,
   worldDrawImage,
+  worldDrawPicture,
   worldRuleStepTick,
   worldKey,
   worldForEachKey,
@@ -11544,6 +11607,8 @@ export const DRAWING_CATEGORY: ToolboxCategory = {
     'world_draw_paragraph',
     'world_text_anchor',
     'world_draw_image',
+    // …and a picture from a value, into a box.
+    'world_draw_picture',
   ],
 };
 

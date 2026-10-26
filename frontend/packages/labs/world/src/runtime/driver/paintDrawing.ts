@@ -154,6 +154,50 @@ function rectanglePath(
   context.rect(x, y, width, height);
 }
 
+/** A source's own size, however it says it. */
+const sizeOfSource = (
+  source: CanvasImageSource,
+): {width: number; height: number} => {
+  const sized = source as {
+    naturalWidth?: number;
+    naturalHeight?: number;
+    width?: number | {baseVal?: {value: number}};
+    height?: number | {baseVal?: {value: number}};
+  };
+  const side = (natural?: number, plain?: unknown) =>
+    Number(natural || (typeof plain === 'number' ? plain : 0)) || 0;
+  return {
+    width: side(sized.naturalWidth, sized.width),
+    height: side(sized.naturalHeight, sized.height),
+  };
+};
+
+/**
+ * Where a picture of `size` goes in a box: the whole box, stretched; or as
+ * large as fits, keeping its shape, centered in it.
+ */
+export function placeInBox(
+  size: {width: number; height: number},
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  stretch: boolean,
+): [number, number, number, number] {
+  if (stretch || size.width <= 0 || size.height <= 0) {
+    return [x, y, width, height];
+  }
+  const scale = Math.min(width / size.width, height / size.height);
+  const drawnWidth = size.width * scale;
+  const drawnHeight = size.height * scale;
+  return [
+    x + (width - drawnWidth) / 2,
+    y + (height - drawnHeight) / 2,
+    drawnWidth,
+    drawnHeight,
+  ];
+}
+
 /** Draw one command. Every command carries its own paint, so nothing persists. */
 function draw(
   context: CanvasRenderingContext2D,
@@ -180,6 +224,20 @@ function draw(
         command.y,
         cell.width,
         cell.height,
+      );
+      return;
+    }
+    if (command.width !== undefined && command.height !== undefined) {
+      context.drawImage(
+        source,
+        ...placeInBox(
+          sizeOfSource(source),
+          command.x,
+          command.y,
+          command.width,
+          command.height,
+          command.stretch ?? false,
+        ),
       );
       return;
     }

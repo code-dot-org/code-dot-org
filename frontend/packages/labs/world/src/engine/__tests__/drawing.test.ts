@@ -195,6 +195,30 @@ describe('the pen', () => {
   });
 });
 
+describe('a picture in a box', () => {
+  it('is drawn into the box, fitted unless stretched', () => {
+    const {world} = drawnWorld((_actor, pen) => {
+      pen.picture('ace.png', 2, 4, 30, 20, false);
+      pen.picture('king.png', 0, 0, 64, 16, true);
+      // No picture, or no box, is nothing to draw.
+      pen.picture('', 0, 0, 10, 10, false);
+      pen.picture('ace.png', 0, 0, 0, 10, false);
+    });
+    expect(world.renderSnapshot()[0].drawing!.commands).toEqual([
+      {op: 'image', sprite: 'ace.png', x: 2, y: 4, width: 30, height: 20},
+      {
+        op: 'image',
+        sprite: 'king.png',
+        x: 0,
+        y: 0,
+        width: 64,
+        height: 16,
+        stretch: true,
+      },
+    ]);
+  });
+});
+
 describe('a corner, a shadow and a weight', () => {
   const commandsOf = (routine: Parameters<typeof drawnWorld>[0]) =>
     drawnWorld(routine).world.renderSnapshot()[0].drawing!.commands;

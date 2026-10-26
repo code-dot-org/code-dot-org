@@ -132,6 +132,16 @@ export type DrawCommand =
       /** One rectangle of a spritesheet, resolved where the project's `.sheet`
        *  files are known; absent means the whole picture. */
       cell?: {x: number; y: number; width: number; height: number};
+      /**
+       * A box to draw it into, from `x` and `y`; absent, it is drawn at its
+       * own size. The picture is fitted inside the box, keeping its shape
+       * and centered, or `stretch`ed to fill it — worked out where it is
+       * painted, which is where the picture's size is known
+       * (specs/ACTORS_AS_DATA_PLAN.md, step 4).
+       */
+      width?: number;
+      height?: number;
+      stretch?: boolean;
     };
 
 /**
@@ -173,6 +183,15 @@ export interface Pen {
     wrapWidth?: number,
   ): void;
   image(sprite: string, x: number, y: number, cell?: Cell): void;
+  /** A picture into a box: fitted inside it, or stretched to fill it. */
+  picture(
+    sprite: string,
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    stretch: boolean,
+  ): void;
 }
 
 /** One rectangle of a spritesheet. */
@@ -436,6 +455,29 @@ export class CommandPen implements Pen {
 
   image(sprite: string, x: number, y: number, cell?: Cell): void {
     this.commands.push({op: 'image', sprite, x, y, ...(cell ? {cell} : {})});
+  }
+
+  picture(
+    sprite: string,
+    x: number,
+    y: number,
+    width: number,
+    height: number,
+    stretch: boolean,
+  ): void {
+    // No picture, or no box, is nothing to draw.
+    if (!sprite || !(width > 0) || !(height > 0)) {
+      return;
+    }
+    this.commands.push({
+      op: 'image',
+      sprite: String(sprite),
+      x,
+      y,
+      width,
+      height,
+      ...(stretch ? {stretch: true} : {}),
+    });
   }
 }
 

@@ -392,6 +392,39 @@ describe('readDrawing, over the shelf', () => {
   });
 });
 
+describe('readDrawing, a picture in a box', () => {
+  it('reads the picture its socket holds, and the box', () => {
+    const files: Files = {
+      'actors/card.actor': drawnActor('Card', [
+        {
+          type: 'world_draw_picture',
+          fields: {FIT: 'stretch'},
+          inputs: {
+            PICTURE: {
+              shadow: {type: 'world_picture', fields: {SPRITE: 'ace.png#2'}},
+            },
+            X: num(1),
+            Y: num(2),
+            WIDTH: num(30),
+            HEIGHT: num(40),
+          },
+        },
+      ]),
+    };
+    expect(readDrawing(files, 'actors/card')!.commands).toEqual([
+      {
+        op: 'image',
+        sprite: 'ace.png',
+        x: 1,
+        y: 2,
+        width: 30,
+        height: 40,
+        stretch: true,
+      },
+    ]);
+  });
+});
+
 describe('readDrawing, the vocabulary', () => {
   it('reads a circle, a line, an image and a lifted pen', () => {
     const files: Files = {

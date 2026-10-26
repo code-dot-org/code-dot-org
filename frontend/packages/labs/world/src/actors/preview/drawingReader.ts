@@ -33,6 +33,7 @@ import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseActorOwnMeta} from '../../blockly/ownProperties';
 import {parseRuleMeta, type PropertyMeta} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
+import {parseSpriteRef} from '../../blockly/spriteCells';
 import {cssColor} from '../../engine/core/color';
 import type {DrawCommand, Shadow, TextAnchor} from '../../engine/core/drawing';
 import {
@@ -285,6 +286,9 @@ class Reading {
       }
       case 'colour_picker':
         return String(field(node, 'COLOUR') ?? '#000000');
+      // One of the project's pictures: the file, as the block reports it.
+      case 'world_picture':
+        return parseSpriteRef(String(field(node, 'SPRITE') ?? '')).sprite;
       // …and the other colour block, which is the one with an ALPHA and
       // therefore the one a shadow is written in. Through the engine's own
       // `cssColor` rather than a second spelling of the same arithmetic: a
@@ -746,6 +750,23 @@ export function readDrawing(
             ...paint(),
           });
           break;
+        case 'world_draw_picture': {
+          const sprite = reading.text(socket(row, 'PICTURE'));
+          const width = number(row, 'WIDTH', 32);
+          const height = number(row, 'HEIGHT', 32);
+          if (sprite && width > 0 && height > 0) {
+            commands.push({
+              op: 'image',
+              sprite,
+              x: number(row, 'X'),
+              y: number(row, 'Y'),
+              width,
+              height,
+              ...(field(row, 'FIT') === 'stretch' ? {stretch: true} : {}),
+            });
+          }
+          break;
+        }
         case 'world_draw_image': {
           const sprite = field(row, 'SPRITE');
           if (typeof sprite === 'string' && sprite) {

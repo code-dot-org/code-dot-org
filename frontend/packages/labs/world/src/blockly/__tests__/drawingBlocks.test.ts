@@ -259,6 +259,26 @@ describe('a picture', () => {
   });
 });
 
+describe('a picture drawn into a box', () => {
+  it('draws the picture its socket holds, fitted or stretched', () => {
+    const values = {
+      PICTURE: 'face',
+      X: '0',
+      Y: '0',
+      WIDTH: 'width',
+      HEIGHT: '48',
+    };
+    expect(codeFor('world_draw_picture', {fields: {FIT: 'fit'}, values})).toBe(
+      'pen.picture(face, 0, 0, width, 48, false);\n',
+    );
+    expect(
+      codeFor('world_draw_picture', {fields: {FIT: 'stretch'}, values}),
+    ).toBe('pen.picture(face, 0, 0, width, 48, true);\n');
+    // …and nothing for an empty socket.
+    expect(codeFor('world_draw_picture', {values: {}})).toBe('');
+  });
+});
+
 describe('the Drawing category', () => {
   it('is shown on a drawing’s own surface and in no file', () => {
     // The pen and the shapes can be used in exactly one place — `pen` is bound
