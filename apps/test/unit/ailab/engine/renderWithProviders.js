@@ -53,7 +53,7 @@ function applyRun({trainingData, project}, run) {
 
 // Seeds a run made outside the module, and keeps both context values reachable.
 // eslint-disable-next-line react/prop-types
-const ContextProbe = ({trainingRun, report}) => {
+const ContextProbe = ({trainingRun, awaitOpen, report}) => {
   const trainingData = useTrainingData();
   const project = useProject();
   const contexts = {trainingData, project};
@@ -64,15 +64,37 @@ const ContextProbe = ({trainingRun, report}) => {
   // rather than whichever render scheduled the effect.
   const contextsRef = useRef(contexts);
   contextsRef.current = contexts;
+  const seeded = useRef(false);
 
-  // Seeds once per run.
+  /*
+    Seeds once per run, and not before a project handed to the provider has
+    been opened: that happens in the provider's own effect, which runs after
+    this one and would otherwise replace the run with the project alone.
+  */
   useEffect(() => {
-    if (trainingRun) {
-      applyRun(contextsRef.current, trainingRun);
+    if (
+      seeded.current ||
+      !trainingRun ||
+      (awaitOpen && !project.isProjectLoaded)
+    ) {
+      return;
     }
-  }, [trainingRun]);
+    seeded.current = true;
+    applyRun(contextsRef.current, trainingRun);
+  }, [trainingRun, awaitOpen, project.isProjectLoaded]);
 
   return null;
+};
+
+/*
+  A saved project reaches the lab once its dataset has, so the panels get an
+  empty project first. App holds the lab back until then; a panel rendered on
+  its own needs the same logic.
+*/
+// eslint-disable-next-line react/prop-types
+const WhenOpen = ({awaitOpen, children}) => {
+  const {isProjectLoaded} = useProject();
+  return !awaitOpen || isProjectLoaded ? children : null;
 };
 
 export function renderWithProviders(
@@ -87,15 +109,16 @@ export function renderWithProviders(
         {store},
         createElement(
           ProjectProvider,
-          {project},
+          {initialProject: project},
           createElement(
             TrainingDataProvider,
             null,
             createElement(ContextProbe, {
               trainingRun,
+              awaitOpen: !!project,
               report: value => (contexts = value),
             }),
-            element
+            createElement(WhenOpen, {awaitOpen: !!project}, element)
           )
         )
       )

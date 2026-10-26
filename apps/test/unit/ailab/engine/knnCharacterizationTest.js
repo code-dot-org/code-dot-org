@@ -34,7 +34,7 @@ import {
 import {getTrainedModelDataToSave} from '@cdo/apps/ailab/engine/selectors/saveSelectors';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 import {projectFromRun} from './renderWithProviders';
 
@@ -65,7 +65,7 @@ function load(id, features) {
     fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8')
   );
 
-  store.dispatch(resetState(/*keepsPendingProject*/ false));
+  store.dispatch(resetState());
   train.reset();
   // A string here is what makes `isUserUploaded` false, as it is for a level.
   store.dispatch(setSelectedCSV(`${id}.csv`));
@@ -82,7 +82,7 @@ function load(id, features) {
   store.dispatch(setReserveLocation(TestDataLocations.END));
 
   const project = {
-    ...initialProject,
+    ...defaultProject,
     labelColumn: metadata.defaultLabelColumn,
     selectedFeatures:
       features ||

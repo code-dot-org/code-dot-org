@@ -24,7 +24,13 @@ type AnswerTypeGroup = {
 const ANSWER_TYPE_GROUPS: AnswerTypeGroup[] = [
   {
     heading: '### Build Modes (produce code now)',
-    answerTypes: ['buildCSS', 'buildHTML', 'buildJavaScript', 'buildJSON'],
+    answerTypes: [
+      'buildPage',
+      'buildCSS',
+      'buildHTML',
+      'buildJavaScript',
+      'buildJSON',
+    ],
   },
   {
     heading: '### Tutoring Modes (no runnable JS)',
@@ -45,6 +51,10 @@ const ANSWER_TYPE_GROUPS: AnswerTypeGroup[] = [
   },
 ];
 
+// The answer types that write runnable JavaScript.
+const allowsJavaScript = (answerTypes: AiTutorAnswerType[]) =>
+  answerTypes.includes('buildJavaScript') || answerTypes.includes('buildPage');
+
 const generateFinalAnswerTypeList = (
   answerTypes: AiTutorAnswerType[]
 ): AiTutorAnswerType[] => {
@@ -53,15 +63,16 @@ const generateFinalAnswerTypeList = (
     finalAnswerTypes = DEFAULT_ANSWER_TYPES;
   }
   // Remove any hard-coded refusal modes since we derive the refusal mode
-  // based on whether buildJavaScript is included.
+  // based on whether the list writes JavaScript.
   finalAnswerTypes = finalAnswerTypes.filter(
     answerType =>
       answerType !== 'refusal' && answerType !== 'refusalJavaScriptSnippets'
   );
-  // If the answer type list includes buildJavaScript, we will only include the generic
+  // If the answer type list writes JavaScript, we will only include the generic
   // refusal answer type. Otherwise, we also include the refusal answer type to reject JavaScript snippets.
-  const hasBuildJavaScript = finalAnswerTypes.includes('buildJavaScript');
-  const refusalAnswerTypes: AiTutorAnswerType[] = hasBuildJavaScript
+  const refusalAnswerTypes: AiTutorAnswerType[] = allowsJavaScript(
+    finalAnswerTypes
+  )
     ? ['refusal']
     : ['refusal', 'refusalJavaScriptSnippets'];
   finalAnswerTypes.push(...refusalAnswerTypes);
@@ -94,7 +105,7 @@ export const generateAiTutorPrompt = (
       return customization ? `${baseContract}\n${customization}` : baseContract;
     })
     .join('\n\n');
-  const allowJs = parsedAnswerTypes.includes('buildJavaScript');
+  const allowJs = allowsJavaScript(parsedAnswerTypes);
 
   return [
     environmentPrompt.trim(),

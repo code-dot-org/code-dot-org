@@ -18,7 +18,7 @@ import {
 import {getDisplayTree} from '@cdo/apps/ailab/engine/selectors/visualizationSelectors';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 import {projectFromRun} from './renderWithProviders';
 
@@ -38,7 +38,7 @@ export function trainDataset(
     fs.readFileSync(path.join(DIR, `${id}.json`), 'utf8')
   );
 
-  store.dispatch(resetState(/*keepsPendingProject*/ false));
+  store.dispatch(resetState());
   train.reset();
   store.dispatch(setMode(mode));
   store.dispatch(setSelectedCSV(`${id}.csv`));
@@ -53,7 +53,7 @@ export function trainDataset(
   store.dispatch(setReserveLocation(reserveLocation));
   const labelColumn = label || metadata.defaultLabelColumn;
   const project = {
-    ...initialProject,
+    ...defaultProject,
     labelColumn,
     selectedFeatures:
       features ||

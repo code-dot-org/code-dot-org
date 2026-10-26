@@ -8,18 +8,18 @@
   "properties": {
     "encrypted": "false",
     "title": "Recycling Robot",
-    "long_instructions": "##Recycling Robot Decision Tree\r\nIf you could add one **node** to the Recycling Robot, what would it be?\r\n\r\n",
+    "long_instructions": "##Recycling Robot Decision Tree\r\nIf you could add one **question** to the Recycling Robot to help it sort better, what would it be?\r\n\r\n*Click the [**Add/Remove Attachments**] and upload your copy of your Sketch Lab canvas.*",
     "stay_on_level_after_submit": "true",
     "height": "200",
     "allow_user_uploads": "true",
-    "submittable": "false",
+    "submittable": "true",
     "peer_reviewable": "false",
     "optional": "false",
     "allow_multiple_attempts": "true",
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-21 19:41:43 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-10-21 19:41:43 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:19:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:20:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:21:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 19:22:27 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 19:22:33 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

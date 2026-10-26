@@ -26,8 +26,6 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-        "buildHTML",
-        "buildCSS",
         "ask",
         "hint",
         "debug",
@@ -35,7 +33,8 @@
         "explainCode",
         "documentation",
         "pseudocode",
-        "testCase"
+        "testCase",
+        "buildPage"
       ],
       "answerTypeCustomizations": {
       }
@@ -71,9 +70,10 @@
         "2",
         "3"
       ]
-    }
+    },
+    "long_instructions": "Finally, in this interactive class planner - a student spotted a real need for her classmates and built a solution. She built an app that allows students to visualize their schedule.  \r\n\r\nReflect a little on what kind of information she needed to provide to make this possible.  \r\n\r\nClick on split view to see the code behind the scenes and get ready to start building!"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-19T21:15:07.196+00:00\",\"changed\":[\"cloned from \\\"adaptive-HoAI26-intro-second-look\\\"\"],\"cloned_from\":\"adaptive-HoAI26-intro-second-look\"},{\"changed_at\":\"2026-10-19 21:15:08 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 18:29:21 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 18:31:17 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 18:31:23 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-19T21:15:07.196+00:00\",\"changed\":[\"cloned from \\\"adaptive-HoAI26-intro-second-look\\\"\"],\"cloned_from\":\"adaptive-HoAI26-intro-second-look\"},{\"changed_at\":\"2026-10-19 21:15:08 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 18:29:21 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 18:31:17 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 18:31:23 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 00:04:00 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 20:34:25 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-23 21:41:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-23 22:11:52 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-23 22:12:06 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Weblab2>

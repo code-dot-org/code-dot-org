@@ -239,6 +239,8 @@ dashboard_sentry_dsn: !Secret
 frontend_apps_sentry_dsn: !Secret
 # DSN for the frontend/apps/studio Vite app Sentry project.
 frontend_studio_sentry_dsn: !Secret
+# Organization auth token with the project:releases scope; aws/ci_build records each deploy with it.
+sentry_releases_token: !Secret
 
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
@@ -561,6 +563,8 @@ devinternal_db_writer: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
 db_cluster_id: !StackSecret
+# 'proxysql', 'rdsproxy', or 'none'. Unset keeps whatever this deployment connects through today.
+db_proxy: !StackSecret
 db_endpoint_writer: !StackSecret
 db_endpoint_writer_port: !StackSecret
 db_endpoint_proxy_writer: !StackSecret
@@ -635,6 +639,7 @@ openai_evaluate_rubric_api_key: !Secret
 openai_student_learning_api_key: !Secret
 openai_measures_of_learning_api_key: !Secret
 openai_lesson_summaries_api_key: !Secret
+openai_lesson_deep_dive_api_key: !Secret
 elevenlabs_api_key: !Secret
 
 # Credentials for Langfuse API

@@ -88,6 +88,19 @@ export interface Progress {
 
 export const EMPTY_PROGRESS: Progress = {steps: {}};
 
+/**
+ * The step id to resume in a checkpoint: the first step that is not yet
+ * complete. Returns undefined when all steps are complete.
+ */
+export function stepIdToResume(
+  checkpoint: Checkpoint,
+  progress: Progress
+): string | undefined {
+  return checkpoint.steps.find(
+    step => progress.steps[step.id]?.status !== 'complete'
+  )?.id;
+}
+
 /** Whether the student finished the checkpoint: its last step is complete. */
 export const isComplete = (checkpoint: Checkpoint, progress: Progress) => {
   const last = checkpoint.steps[checkpoint.steps.length - 1];
