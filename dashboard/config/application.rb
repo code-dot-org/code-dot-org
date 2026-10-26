@@ -293,5 +293,16 @@ module Dashboard
     initializer 'dashboard.legacy_apis', after: :load_config_initializers do |app|
       app.config.middleware.insert_after RedisSessionStore, Middleware::LegacyApiStack
     end
+
+    console do |app|
+      # Set after boot: database.yml and initializers, evaluated earlier, still see nil.
+      CDO.execution_context = :console
+      role = CDO.console_active_record_role.presence&.to_sym
+      # A sandbox keeps its writes in an open transaction on the writer, which reads from a replica cannot see.
+      next if role.nil? || role == :writing || app.sandbox?
+      # Unlike connected_to, connecting_to is not forced to :writing by ReadReplicaHelper's Gatekeeper check.
+      ActiveRecord::Base.connecting_to(role: role, prevent_writes: true)
+      puts "ActiveRecord queries use the :#{role} role; wrap writes in ActiveRecord::Base.connected_to(role: :writing)"
+    end
   end
 end
