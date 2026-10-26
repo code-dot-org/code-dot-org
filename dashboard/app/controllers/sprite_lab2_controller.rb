@@ -22,7 +22,9 @@ class SpriteLab2Controller < ApplicationController
       next if user == current_user
       channel, sources = project_sources_for(user, level, script_id)
       next unless sources
-      initial = user.family_name&.first if first_name_counts[user.short_name] > 1
+      initial = if first_name_counts[user.short_name] > 1
+                  (user.family_name.presence || user.name.to_s.split.drop(1).last)&.first
+                end
       owner_name = initial ? "#{user.short_name} #{initial}." : user.short_name
       (sources['scenes'] || []).each do |scene|
         next unless scene['id'] && scene['name']
