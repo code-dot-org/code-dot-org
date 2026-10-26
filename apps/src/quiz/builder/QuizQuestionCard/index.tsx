@@ -35,14 +35,19 @@ function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
     description: question.description,
     explanation: question.explanation,
   };
-  return question.type === 'MultipleChoiceQuestion'
-    ? {
+  switch (question.type) {
+    case 'MultipleChoiceQuestion':
+      return {
         ...shared,
         type: question.type,
         choices: question.choices,
         correctChoiceId: question.correctChoiceId,
-      }
-    : {...shared, type: question.type};
+      };
+    case 'FreeResponseQuestion':
+      return {...shared, type: question.type};
+    case 'MatchQuestion':
+      return {...shared, type: question.type, pairs: question.pairs};
+  }
 }
 
 // One row of the quiz outline. Collapsed, it's a read-only preview; expanded,

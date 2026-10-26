@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-22 20:18:26 UTC",
+    "serialized_at": "2026-10-23 20:02:32 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -270,6 +270,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026"
       }
+    },
+    {
+      "key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
     }
   ],
   "activity_sections": [
@@ -441,6 +453,17 @@
       "seeding_key": {
         "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a",
         "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342"
+      }
+    },
+    {
+      "key": "d18a9768-b7e9-4693-99c4-ea6d2f03250e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pixel Plaza Chat"
+      },
+      "seeding_key": {
+        "activity_section.key": "d18a9768-b7e9-4693-99c4-ea6d2f03250e",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
       }
     }
   ],
@@ -664,6 +687,28 @@
       "level_keys": [
         "data-makes-ai-lesson2-vocab-matching"
       ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Pixel Plaza Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson3-pixel-plaza"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d18a9768-b7e9-4693-99c4-ea6d2f03250e"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson3-pixel-plaza"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -785,6 +830,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "f480674c-90b7-45e9-8397-16b4f20da42a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson3-pixel-plaza",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson3-pixel-plaza"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d18a9768-b7e9-4693-99c4-ea6d2f03250e"
       }
     }
   ],

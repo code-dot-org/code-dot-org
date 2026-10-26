@@ -10,10 +10,17 @@ export interface FreeResponseQuestionResponse {
   responseData: {answerText?: string};
 }
 
+// Each pair is two item ids, one from each set, in either order.
+export interface MatchQuestionResponse {
+  questionType: 'MatchQuestion';
+  responseData: {pairs?: [string, string][]};
+}
+
 // Narrow with the type guards below to read responseData.
 export type QuizQuestionResponse =
   | MultipleChoiceQuestionResponse
-  | FreeResponseQuestionResponse;
+  | FreeResponseQuestionResponse
+  | MatchQuestionResponse;
 
 export type QuizQuestionResponseData = QuizQuestionResponse['responseData'];
 
