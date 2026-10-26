@@ -179,6 +179,12 @@ describe('a line break', () => {
       'Line break, part 4 of 4, line 2, does nothing here',
     ]);
   });
+
+  it('ends its line only where it ends something', () => {
+    render(<Harness start={[row, word('heal'), row, row, word('now'), row]} />);
+    const surface = screen.getByRole('list', {name: 'Parts of heal'});
+    expect(surface.querySelectorAll('li[aria-hidden="true"]')).toHaveLength(1);
+  });
 });
 
 describe('a problem', () => {

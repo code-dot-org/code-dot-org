@@ -147,12 +147,13 @@ Edit opens the member's page, a script step on the trail
   the chip under the pointer. Let go over the surface, it is kept there;
   anywhere else, nothing is added.
 - **The surface**, the design's parts in order, laid out as the block
-  will be: left to right, and a new line after each break, each line
-  marked as one. A WORD chip is a pill holding its wording; a VALUE chip a
+  will be: left to right, and a new line after each break, below a faint
+  rule. A line that only wraps for want of room has no rule, so it still
+  reads as one line. A WORD chip is a pill holding its wording; a VALUE chip a
   pill holding its name, with its type beside it as a word and an icon. A
   BREAK is not a pill: a small return mark at the end of its line, since
   it has nothing to edit. One that does nothing where it is is drawn
-  faded. Every chip but a break has a grip, which is what is dragged.
+  faded, and neither ends its line nor draws a rule. Every chip but a break has a grip, which is what is dragged.
   Removing a break joins its line to the one before.
 - **The chosen chip's details**, under the surface, for what a pill has no
   room for: a value's type and its starting value, for a type that has
@@ -305,9 +306,9 @@ reader.
 
 ## Open
 
-- **How a line looks.** So far a break's mark ends its line and nothing
-  more. A faint rule under each line, or an indent after a break, has not
-  been tried.
+- **A narrow surface.** In a window about 1000px wide, the surface is some
+  170px across, and a long word's chip is cut off at its edge rather than
+  shrunk.
 
 ## Not in this phase
 

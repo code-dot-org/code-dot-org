@@ -69,10 +69,14 @@ button.chip:focus-visible {
   border-color: var(--borders-brand-teal-primary);
 }
 
-/* What comes after a break starts the next line. */
+/*
+ * What comes after a break starts the next line, below a faint rule; a line
+ * that only wraps for want of room has none.
+ */
 .lineEnd {
   flex-basis: 100%;
   height: 0;
+  border-top: 1px solid var(--borders-neutral-light);
 }
 
 .idle {

@@ -456,7 +456,6 @@ export const MemberParts = ({
                 chosen={chosen === key}
                 problem={problemOf.get(key)}
                 isReadOnly={isReadOnly}
-                lineEnds={part.kind === 'row'}
                 fieldRef={element => {
                   if (element) {
                     fields.current.set(key, element);
@@ -669,8 +668,6 @@ interface PartChipProps {
   chosen: boolean;
   problem?: string;
   isReadOnly: boolean;
-  /** A break: what follows starts the next line. */
-  lineEnds: boolean;
   fieldRef: (element: HTMLInputElement | null) => void;
   gripRef: (element: HTMLButtonElement | null) => void;
   onChoose: () => void;
@@ -690,7 +687,6 @@ const PartChip = ({
   chosen,
   problem,
   isReadOnly,
-  lineEnds,
   fieldRef,
   gripRef,
   onChoose,
@@ -775,7 +771,9 @@ const PartChip = ({
         )}
         {part.kind === 'param' && <TypeLabel type={part.type} />}
       </li>
-      {lineEnds && <li aria-hidden="true" className={styles.lineEnd} />}
+      {part.kind === 'row' && !idle && (
+        <li aria-hidden="true" className={styles.lineEnd} />
+      )}
     </>
   );
 };
