@@ -82,14 +82,6 @@ describe('DataCard', () => {
     expect(screen.queryByText('Sample row')).toBeNull();
   });
 
-  test('omits the sample row while curated metadata loads', () => {
-    renderCard(store => {
-      selectCurated(store);
-      store.dispatch(setImportedData(ANIMALS, false));
-    });
-    expect(screen.queryByText('Sample row')).toBeNull();
-  });
-
   test('moves on to the dataset when enabled', () => {
     const store = renderCard(upload);
     fireEvent.click(useButton());

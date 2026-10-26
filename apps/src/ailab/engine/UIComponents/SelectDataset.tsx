@@ -5,12 +5,12 @@ import classNames from 'classnames';
 import React, {useRef, useState} from 'react';
 
 import {getAssetPath} from '../assetPath';
-import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
+import {MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
 import {invalidatePendingDatasetLoads} from '../datasetLoad';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {loadDataset} from '../loadDataset';
+import {loadDataset, loadUploadedDataset} from '../loadDataset';
 import {
   setSelectedName as setSelectedNameAction,
   setSelectedCSV as setSelectedCSVAction,
@@ -78,7 +78,7 @@ const SelectDataset = () => {
     resetState();
     setSelectedCSV(file);
     invalidatePendingDatasetLoads();
-    parseCSV(file as unknown as string, false, true);
+    loadUploadedDataset(file);
   };
 
   const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -103,18 +103,21 @@ const SelectDataset = () => {
   };
 
   const getInvalidDataMessage = () => {
-    if (invalidData === 'tooFewRows') {
-      return I18n.t('selectDatasetErrorTooFewRows', {
-        count: MIN_CSV_ROWS,
-        fileType: 'CSV',
-      });
-    } else if (invalidData === 'tooFewColumns') {
-      return I18n.t('selectDatasetErrorTooFewColumns', {
-        count: MIN_CSV_COLUMNS,
-        fileType: 'CSV',
-      });
-    } else {
-      return null;
+    switch (invalidData) {
+      case 'tooFewRows':
+        return I18n.t('selectDatasetErrorTooFewRows', {
+          count: MIN_CSV_ROWS,
+          fileType: 'CSV',
+        });
+      case 'tooFewColumns':
+        return I18n.t('selectDatasetErrorTooFewColumns', {
+          count: MIN_CSV_COLUMNS,
+          fileType: 'CSV',
+        });
+      case 'loadFailed':
+        return 'This dataset could not be loaded. Try another one.';
+      default:
+        return null;
     }
   };
 

@@ -1,26 +1,110 @@
-import {parseCSV} from './csvReaderWrapper';
-import {parseJSON} from './jsonReaderWrapper';
-import {setPresetColumns} from './redux';
-import {getSelectableColumns} from './selectors';
-import {store} from './store';
+/*
+  Loading a dataset, from either of the two places one can come from: ours,
+  described by a metadata file, or a CSV the student uploaded. Both assemble
+  the whole dataset before writing any of it, so nothing downstream can see
+  rows whose columns have no type yet.
+*/
 
-// TODO: update dataset loading to be a single signal rather than
-// separate CSV and JSON parsing that puts things in the store at different times.
-// This will prevent a class of bugs where the project is reconciled against an incomplete/outdated dataset.
+import {fetchCsv, inferColumnTypes, parseCsvFile} from './csvReaderWrapper';
+import {getDatasetLoadId, isCurrentDatasetLoad} from './datasetLoad';
+import {selectableColumns} from './helpers/columnDetails';
+import {columnTypesFromMetadata, fetchMetadata} from './jsonReaderWrapper';
+import {
+  setColumnsByDataType,
+  setImportedData,
+  setImportedMetadata,
+  setInvalidData,
+  setPresetColumns,
+  setRemovedRowsCount,
+} from './redux';
+import {store} from './store';
+import type {
+  DataRow,
+  DatasetError,
+  Metadata,
+  Mode,
+  PresetColumns,
+} from './types';
+
+interface LoadedDataset {
+  rows: DataRow[];
+  metadata: Metadata;
+  columnsByDataType: Record<string, string>;
+  removedRowsCount: number;
+  userUploadedData: boolean;
+}
+
 export const loadDataset = async (
   csvPath: string,
   jsonPath: string
 ): Promise<void> => {
-  await Promise.all([parseCSV(csvPath, true, false), parseJSON(jsonPath)]);
-  applyModeColumns();
+  const loadId = getDatasetLoadId();
+  const [csv, meta] = await Promise.all([
+    fetchCsv(csvPath),
+    fetchMetadata(jsonPath),
+  ]);
+  if (!isCurrentDatasetLoad(loadId)) {
+    return;
+  }
+  if (!csv.ok) {
+    reportFailure(csv.reason);
+  } else if (!meta.ok) {
+    reportFailure(meta.reason);
+  } else {
+    apply({
+      rows: csv.rows,
+      metadata: meta.metadata,
+      columnsByDataType: columnTypesFromMetadata(meta.metadata),
+      removedRowsCount: csv.removedRowsCount,
+      userUploadedData: false,
+    });
+  }
 };
 
-const applyModeColumns = (): void => {
-  const state = store.getState();
-  const {mode, metadata} = state;
-  const selectableColumns = getSelectableColumns(state);
+/* An uploaded CSV comes with no metadata, so its column types are guessed. */
+export const loadUploadedDataset = async (file: File): Promise<void> => {
+  const loadId = getDatasetLoadId();
+  const csv = await parseCsvFile(file);
+  if (!isCurrentDatasetLoad(loadId)) {
+    return;
+  }
+  if (!csv.ok) {
+    reportFailure(csv.reason);
+    return;
+  }
+  apply({
+    rows: csv.rows,
+    metadata: {card: {}},
+    columnsByDataType: inferColumnTypes(csv.rows),
+    removedRowsCount: csv.removedRowsCount,
+    userUploadedData: true,
+  });
+};
+
+const reportFailure = (reason: DatasetError): void => {
+  store.dispatch(setInvalidData(reason));
+};
+
+// Nothing may await between these dispatches: together they are one dataset.
+const apply = (dataset: LoadedDataset): void => {
+  const {rows, metadata, columnsByDataType, removedRowsCount} = dataset;
+  store.dispatch(setRemovedRowsCount(removedRowsCount));
+  store.dispatch(setImportedData(rows, dataset.userUploadedData));
+  store.dispatch(setImportedMetadata(metadata));
+  Object.entries(columnsByDataType).forEach(([column, dataType]) =>
+    store.dispatch(setColumnsByDataType(column, dataType))
+  );
+  store.dispatch(setPresetColumns(modeColumns(store.getState().mode, dataset)));
+};
+
+/* The columns a level fixes for the student, against the dataset that loaded. */
+const modeColumns = (
+  mode: Mode | undefined,
+  {rows, metadata, columnsByDataType}: LoadedDataset
+): PresetColumns => {
+  const selectable = selectableColumns(rows, columnsByDataType);
   const isSelectable = (column: string): boolean => {
-    if (selectableColumns.includes(column)) {
+    if (selectable.includes(column)) {
       return true;
     }
     console.error(
@@ -38,13 +122,11 @@ const applyModeColumns = (): void => {
       ? namedLabel
       : undefined;
 
-  store.dispatch(
-    setPresetColumns({
-      labelColumn,
-      // A column can't be both the label and a feature.
-      selectedFeatures: labelColumn
-        ? features?.filter(feature => feature !== labelColumn)
-        : features,
-    })
-  );
+  return {
+    labelColumn,
+    // A column can't be both the label and a feature.
+    selectedFeatures: labelColumn
+      ? features?.filter(feature => feature !== labelColumn)
+      : features,
+  };
 };

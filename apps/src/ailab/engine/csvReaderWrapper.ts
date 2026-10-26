@@ -1,55 +1,86 @@
 import Papa, {type ParseResult} from 'papaparse';
 
 import {ColumnTypes} from './constants';
-import {getDatasetLoadId, isCurrentDatasetLoad} from './datasetLoad';
 import {containsOnlyNumbers} from './helpers/columnDetails';
-import {
-  setImportedData,
-  setInvalidData,
-  setColumnsByDataType,
-  setRemovedRowsCount,
-} from './redux';
-import {store} from './store';
-import type {DataRow} from './types';
-
-// If a newer load starts first, the promise never resolves.
-export const parseCSV = (
-  csvfile: string,
-  download: boolean,
-  useDefaultColumnDataType: boolean
-): Promise<void> =>
-  new Promise(resolve => {
-    // `csvfile` is either a URL to fetch (download) or a raw CSV string. These
-    // are distinct papaparse overloads — `download: true` selects the remote
-    // config, a plain string selects the local config — so the runtime branch
-    // is also what lets each call type-check (a single config carrying a
-    // non-literal `download` matches neither overload).
-    const loadId = getDatasetLoadId();
-    const complete = (result: ParseResult<Record<string, string>>) => {
-      if (!isCurrentDatasetLoad(loadId)) {
-        return;
-      }
-      updateData(result, useDefaultColumnDataType, !download);
-      resolve();
-    };
-    if (download) {
-      Papa.parse(csvfile, {
-        complete,
-        header: true,
-        download: true,
-        skipEmptyLines: true,
-      });
-    } else {
-      Papa.parse<Record<string, string>>(csvfile, {
-        complete,
-        header: true,
-        skipEmptyLines: true,
-      });
-    }
-  });
+import type {DataRow, DatasetError} from './types';
 
 export const MIN_CSV_ROWS = 2;
 export const MIN_CSV_COLUMNS = 2;
+
+export type CsvResult =
+  | {ok: true; rows: DataRow[]; removedRowsCount: number}
+  | {ok: false; reason: DatasetError};
+
+/*
+  Three ways in, because the input decides both the papaparse overload and
+  whether there is anything to wait for. None of them touch the store: the
+  caller holds the rows until the rest of the dataset is ready.
+*/
+
+/* CSV text, which papaparse reads without yielding. */
+export const parseCsvText = (csv: string): CsvResult =>
+  readRows(Papa.parse<Record<string, string>>(csv, PARSE_OPTIONS));
+
+/* A CSV of ours. Resolves even when the fetch fails. */
+export const fetchCsv = (url: string): Promise<CsvResult> =>
+  new Promise(resolve =>
+    Papa.parse(url, {
+      ...PARSE_OPTIONS,
+      download: true,
+      complete: completeWith(resolve),
+      error: failWith(resolve),
+    })
+  );
+
+/* A CSV the student uploaded, which papaparse reads through a FileReader. */
+export const parseCsvFile = (file: File): Promise<CsvResult> =>
+  new Promise(resolve =>
+    Papa.parse<Record<string, string>>(file as unknown as string, {
+      ...PARSE_OPTIONS,
+      complete: completeWith(resolve),
+      error: failWith(resolve),
+    })
+  );
+
+const PARSE_OPTIONS = {header: true, skipEmptyLines: true} as const;
+
+type Resolve = (result: CsvResult) => void;
+
+// Declared apart from the config so the remote overload accepts it too.
+const completeWith =
+  (resolve: Resolve) => (result: ParseResult<Record<string, string>>) =>
+    resolve(readRows(result));
+
+const failWith = (resolve: Resolve) => () =>
+  resolve({ok: false, reason: 'loadFailed' as const});
+
+/* The type each column looks like, for a dataset that came without metadata. */
+export const inferColumnTypes = (rows: DataRow[]): Record<string, string> =>
+  Object.fromEntries(
+    Object.keys(rows[0] ?? {}).map(column => [
+      column,
+      containsOnlyNumbers(rows, column)
+        ? ColumnTypes.NUMERICAL
+        : ColumnTypes.CATEGORICAL,
+    ])
+  );
+
+const readRows = (result: ParseResult<Record<string, string>>): CsvResult => {
+  const data = result.data;
+  const cleanedData = cleanData(data);
+
+  if (cleanedData.length < MIN_CSV_ROWS) {
+    return {ok: false, reason: 'tooFewRows'};
+  } else if (Object.keys(cleanedData[0]).length < MIN_CSV_COLUMNS) {
+    return {ok: false, reason: 'tooFewColumns'};
+  }
+
+  return {
+    ok: true,
+    rows: cleanedData,
+    removedRowsCount: data.length - cleanedData.length,
+  };
+};
 
 const cleanData = (data: Record<string, string>[]): DataRow[] => {
   const cleanedData: DataRow[] = [];
@@ -82,46 +113,4 @@ const getCleanedRow = (row: Record<string, string>): DataRow | null => {
 
 const isCellValid = (cell: string | undefined): boolean => {
   return cell !== undefined && cell !== '' && typeof cell === 'string';
-};
-
-const updateData = (
-  result: ParseResult<Record<string, string>>,
-  useDefaultColumnDataType: boolean,
-  userUploadedData: boolean
-): void => {
-  const data = result.data;
-  const cleanedData = cleanData(data);
-
-  if (cleanedData.length < MIN_CSV_ROWS) {
-    store.dispatch(setInvalidData('tooFewRows'));
-    return;
-  } else if (Object.keys(cleanedData[0]).length < MIN_CSV_COLUMNS) {
-    store.dispatch(setInvalidData('tooFewColumns'));
-    return;
-  }
-
-  countRemovedRows(data, cleanedData);
-  store.dispatch(setImportedData(cleanedData, userUploadedData));
-  if (useDefaultColumnDataType) {
-    setDefaultColumnDataType(cleanedData);
-  }
-};
-
-const countRemovedRows = (
-  originalData: Record<string, string>[],
-  cleanedData: DataRow[]
-): void => {
-  const removedRowsCount = originalData.length - cleanedData.length;
-  store.dispatch(setRemovedRowsCount(removedRowsCount));
-};
-
-const setDefaultColumnDataType = (data: DataRow[]): void => {
-  const columns = Object.keys(data[0]);
-  for (const column of columns) {
-    if (containsOnlyNumbers(data, column)) {
-      store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL));
-    } else {
-      store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL));
-    }
-  }
 };

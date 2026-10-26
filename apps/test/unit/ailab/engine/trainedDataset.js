@@ -2,13 +2,14 @@ import fs from 'fs';
 import path from 'path';
 
 import {ColumnTypes, TestDataLocations} from '@cdo/apps/ailab/engine/constants';
-import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
+import {parseCsvText} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {traceDisplayTree} from '@cdo/apps/ailab/engine/helpers/displayTreeTrace';
 import {getKeyByValue} from '@cdo/apps/ailab/engine/helpers/utils';
 import {convertValueForTraining} from '@cdo/apps/ailab/engine/helpers/valueConversion';
 import {
   resetState,
   setColumnsByDataType,
+  setImportedData,
   setImportedMetadata,
   setMode,
   setReserveLocation,
@@ -43,7 +44,7 @@ export function trainDataset(
   store.dispatch(setMode(mode));
   store.dispatch(setSelectedCSV(`${id}.csv`));
   store.dispatch(setSelectedJSON(`${id}.json`));
-  parseCSV(csv, false, false);
+  store.dispatch(setImportedData(parseCsvText(csv).rows, false));
   store.dispatch(setImportedMetadata(metadata));
   metadata.fields.forEach(field =>
     store.dispatch(

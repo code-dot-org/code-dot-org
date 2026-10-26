@@ -16,6 +16,7 @@ import {getTrainedModelDataToSave} from './selectors/saveSelectors';
 import type {
   AilabProject,
   DataRow,
+  DatasetError,
   Metadata,
   Mode,
   PresetColumns,
@@ -36,7 +37,7 @@ export interface RootState {
   name: string | undefined;
   csvfile: string | File | undefined;
   jsonfile: string | undefined;
-  invalidData: string | undefined;
+  invalidData: DatasetError | undefined;
   data: DataRow[];
   metadata: Metadata;
   removedRowsCount: number;
@@ -166,7 +167,7 @@ const ailabSlice = createSlice({
     setSelectedJSON(state, action: PayloadAction<string>) {
       state.jsonfile = action.payload;
     },
-    setInvalidData(state, action: PayloadAction<string>) {
+    setInvalidData(state, action: PayloadAction<DatasetError>) {
       state.invalidData = action.payload;
     },
     setImportedData: {

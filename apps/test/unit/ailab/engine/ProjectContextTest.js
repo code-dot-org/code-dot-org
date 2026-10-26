@@ -406,18 +406,6 @@ describe('ProjectContext opening a saved project', () => {
     expect(renderContext(SAVED, store).context().isProjectLoading).toBe(true);
   });
 
-  /*
-    The rows and the column types are read from two files, in either order,
-    so rows alone do not mean the dataset is here.
-  */
-  test('is loading while the rows are here and their types are not', () => {
-    const store = createStore(rootReducer);
-    store.dispatch(setSelectedCSV('animals.csv'));
-    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-
-    expect(renderContext(SAVED, store).context().isProjectLoading).toBe(true);
-  });
-
   // The picker reports the problem, so it has to be allowed to render.
   test('is not loading once the chosen dataset has failed', () => {
     const store = createStore(rootReducer);
@@ -680,17 +668,6 @@ describe('ProjectContext keeping a saved project in sync', () => {
     });
 
   // The readers dispatch the rows and then a type per column, in their own time.
-  const loadDatasetColumnByColumn = () => {
-    act(() => singletonStore.dispatch(setImportedData(DATA, false)));
-    ['a', 'b', 'c'].forEach(column =>
-      act(() =>
-        singletonStore.dispatch(
-          setColumnsByDataType(column, ColumnTypes.NUMERICAL)
-        )
-      )
-    );
-  };
-
   test('reports nothing until the saved project has been opened', () => {
     const {save} = renderSync();
 
@@ -704,15 +681,6 @@ describe('ProjectContext keeping a saved project in sync', () => {
 
     expect(context().project).toEqual(SAVED_COLUMNS);
     expect(save).toHaveBeenCalledWith(SAVED_COLUMNS);
-  });
-
-  test('waits for every column of the dataset to be described', () => {
-    const {save, context} = renderSync();
-
-    loadDatasetColumnByColumn();
-
-    expect(context().project).toEqual(SAVED_COLUMNS);
-    expect(save).toHaveBeenCalledTimes(1);
   });
 
   test('does not open against the dataset the last level left behind', () => {

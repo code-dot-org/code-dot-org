@@ -4,6 +4,9 @@ export type TrainerFamily = 'knn' | 'decisionTree';
 
 export type Hyperparameters = {k: number} | {maxDepth: number};
 
+/* Why a dataset could not be loaded. */
+export type DatasetError = 'tooFewRows' | 'tooFewColumns' | 'loadFailed';
+
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;

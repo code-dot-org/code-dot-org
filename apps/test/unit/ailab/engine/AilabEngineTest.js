@@ -13,8 +13,7 @@ import {store} from '@cdo/apps/ailab/engine/store';
 
 import {renderWithProviders} from './renderWithProviders';
 
-jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
-jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
+jest.mock('@cdo/apps/ailab/engine/loadDataset');
 
 afterEach(() => I18n.reset());
 

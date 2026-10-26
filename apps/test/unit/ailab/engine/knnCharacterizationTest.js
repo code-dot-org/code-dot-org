@@ -20,12 +20,13 @@ import KNN from 'ml-knn';
 import path from 'path';
 
 import {ColumnTypes, TestDataLocations} from '@cdo/apps/ailab/engine/constants';
-import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
+import {parseCsvText} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {getPercentCorrect} from '@cdo/apps/ailab/engine/helpers/accuracy';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {
   resetState,
   setColumnsByDataType,
+  setImportedData,
   setImportedMetadata,
   setReserveLocation,
   setSelectedCSV,
@@ -70,7 +71,7 @@ function load(id, features) {
   // A string here is what makes `isUserUploaded` false, as it is for a level.
   store.dispatch(setSelectedCSV(`${id}.csv`));
   store.dispatch(setSelectedJSON(`${id}.json`));
-  parseCSV(csv, false, false);
+  store.dispatch(setImportedData(parseCsvText(csv).rows, false));
   store.dispatch(setImportedMetadata(metadata));
   metadata.fields.forEach(field =>
     store.dispatch(
