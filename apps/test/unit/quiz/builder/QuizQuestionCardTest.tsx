@@ -241,9 +241,9 @@ describe('QuizQuestionCard', () => {
       openAnswers();
 
       expect(
-        screen.getByRole('radio', {name: 'Option B is correct'})
+        screen.getByRole('radio', {name: 'Correct answer: 4'})
       ).toBeChecked();
-      fireEvent.click(screen.getByRole('radio', {name: 'Option A is correct'}));
+      fireEvent.click(screen.getByRole('radio', {name: 'Correct answer: 3'}));
       await act(async () => {
         fireEvent.click(screen.getByRole('button', {name: 'Save'}));
       });
@@ -254,6 +254,19 @@ describe('QuizQuestionCard', () => {
       );
     });
 
+    it('names each option by its position until it has text', () => {
+      renderCard({isExpanded: true});
+      openAnswers();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Add option'}));
+
+      expect(
+        screen.getByRole('radio', {name: 'Correct answer: option 3'})
+      ).toBeInTheDocument();
+      expect(screen.getByLabelText('Option 3 text')).toHaveValue('');
+      expect(screen.getByLabelText('Option 1 text')).toHaveValue('3');
+    });
+
     it('marks any number of correct choices of a multiple select question with checkboxes', async () => {
       const {onSave} = renderCard({
         question: MULTIPLE_SELECT_QUESTION,
@@ -262,10 +275,10 @@ describe('QuizQuestionCard', () => {
       openAnswers();
 
       expect(
-        screen.getByRole('checkbox', {name: 'Option A is correct'})
+        screen.getByRole('checkbox', {name: 'Correct answer: 2'})
       ).toBeChecked();
       fireEvent.click(
-        screen.getByRole('checkbox', {name: 'Option C is correct'})
+        screen.getByRole('checkbox', {name: 'Correct answer: 4'})
       );
       await act(async () => {
         fireEvent.click(screen.getByRole('button', {name: 'Save'}));
@@ -310,7 +323,7 @@ describe('QuizQuestionCard', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Multiple select'}));
 
       expect(
-        screen.getByRole('checkbox', {name: 'Option B is correct'})
+        screen.getByRole('checkbox', {name: 'Correct answer: 4'})
       ).toBeChecked();
       await act(async () => {
         fireEvent.click(screen.getByRole('button', {name: 'Save'}));
@@ -338,10 +351,10 @@ describe('QuizQuestionCard', () => {
       fireEvent.click(screen.getByRole('button', {name: 'Multiple choice'}));
 
       expect(
-        screen.getByRole('radio', {name: 'Option C is correct'})
+        screen.getByRole('radio', {name: 'Correct answer: 4'})
       ).toBeChecked();
       expect(
-        screen.getByRole('radio', {name: 'Option A is correct'})
+        screen.getByRole('radio', {name: 'Correct answer: 2'})
       ).not.toBeChecked();
     });
 
@@ -373,7 +386,7 @@ describe('QuizQuestionCard', () => {
         screen.getByRole('button', {name: 'Multiple select'})
       ).toHaveAttribute('aria-pressed', 'true');
       expect(
-        screen.getByRole('checkbox', {name: 'Option A is correct'})
+        screen.getByRole('checkbox', {name: 'Correct answer: 2'})
       ).not.toBeChecked();
       expect(screen.getByRole('button', {name: 'Save'})).toBeDisabled();
     });

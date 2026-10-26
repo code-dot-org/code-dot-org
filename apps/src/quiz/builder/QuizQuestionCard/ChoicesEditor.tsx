@@ -7,7 +7,6 @@ import {IconButton, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useId} from 'react';
 
-import {formatChoiceLetter} from '../../utils';
 import AddItemButton from '../AddItemButton';
 import {QUESTION_TYPE_LABELS_ICONS} from '../constants';
 import {ChoiceQuestionDraft, isMultipleSelectDraft} from '../types';
@@ -128,9 +127,11 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
         <div className={styles.optionsList}>
           {draft.choices.map((choice, index) => {
             const isCorrect = correctChoiceIds.includes(choice.id);
-            const markerLabel = `Option ${formatChoiceLetter(
-              index
-            )} is correct`;
+            const position = index + 1;
+            // Named by the option's text; a new option has none yet.
+            const markerLabel = `Correct answer: ${
+              choice.text.trim() || `option ${position}`
+            }`;
             return (
               <div key={choice.id} className={styles.optionRow}>
                 <div className={styles.optionInput}>
@@ -158,7 +159,7 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
                   </div>
                   <TextField
                     name={`choice-${choice.id}`}
-                    aria-label="Choice text"
+                    aria-label={`Option ${position} text`}
                     size="s"
                     color="gray"
                     className={classNames(
