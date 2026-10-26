@@ -5,11 +5,6 @@ export type MetadataResult =
   | {ok: true; metadata: Metadata}
   | {ok: false; reason: 'loadFailed'};
 
-/*
-  Fetches a dataset's metadata without touching the store. Always resolves: a
-  missing file, an unreadable one, or a load the caller has since abandoned all
-  have to reach the caller, or it would wait forever.
-*/
 export const fetchMetadata = (jsonfile: string): Promise<MetadataResult> =>
   new Promise(resolve => {
     const failed = () => resolve({ok: false, reason: 'loadFailed'});
@@ -35,7 +30,7 @@ export const fetchMetadata = (jsonfile: string): Promise<MetadataResult> =>
     rawFile.send(null);
   });
 
-/* The type each column is described as. A field with none is categorical. */
+/* The type each column is described as. A field with no type falls back to categorical. */
 export const columnTypesFromMetadata = (
   metadata: Metadata
 ): Record<string, string> =>

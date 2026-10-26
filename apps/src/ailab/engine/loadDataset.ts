@@ -1,8 +1,6 @@
 /*
-  Loading a dataset, from either of the two places one can come from: ours,
-  described by a metadata file, or a CSV the student uploaded. Both assemble
-  the whole dataset before writing any of it, so nothing downstream can see
-  rows whose columns have no type yet.
+  Helpers for loading a dataset, from either of the two places one can come from: ours,
+  described by a metadata file, or a CSV the student uploaded.
 */
 
 import {fetchCsv, inferColumnTypes, parseCsvFile} from './csvReaderWrapper';
@@ -40,7 +38,6 @@ export const loadDataset = async (
   }
 };
 
-/* An uploaded CSV comes with no metadata, so its column types are guessed. */
 export const loadUploadedDataset = async (file: File): Promise<void> => {
   const loadId = getDatasetLoadId();
   const csv = await parseCsvFile(file);
@@ -51,7 +48,6 @@ export const loadUploadedDataset = async (file: File): Promise<void> => {
     reportFailure(csv.reason);
     return;
   }
-  // No preset columns: a level's chosen columns describe our dataset, not this.
   apply({
     rows: csv.rows,
     metadata: {card: {}},
@@ -68,7 +64,7 @@ const apply = (dataset: Dataset, presetColumns?: PresetColumns): void => {
   store.dispatch(setDatasetLoaded({dataset, presetColumns}));
 };
 
-/* The columns a level fixes for the student, against the dataset that loaded. */
+/* Apply any pre-selected columns based on the level's mode and dataset. */
 const modeColumns = (
   mode: Mode | undefined,
   {rows, metadata, columnsByDataType}: Dataset

@@ -11,17 +11,11 @@ export type CsvResult =
   | {ok: true; rows: DataRow[]; removedRowsCount: number}
   | {ok: false; reason: DatasetError};
 
-/*
-  Three ways in, because the input decides both the papaparse overload and
-  whether there is anything to wait for. None of them touch the store: the
-  caller holds the rows until the rest of the dataset is ready.
-*/
-
-/* CSV text, which papaparse reads without yielding. */
+/* Parses CSV text, only used for tests. */
 export const parseCsvText = (csv: string): CsvResult =>
   readRows(Papa.parse<Record<string, string>>(csv, PARSE_OPTIONS));
 
-/* A CSV of ours. Resolves even when the fetch fails. */
+/* Fetches a csv we own. Resolves even when the fetch fails. */
 export const fetchCsv = (url: string): Promise<CsvResult> =>
   new Promise(resolve =>
     Papa.parse(url, {
@@ -32,7 +26,7 @@ export const fetchCsv = (url: string): Promise<CsvResult> =>
     })
   );
 
-/* A CSV the student uploaded, which papaparse reads through a FileReader. */
+/* Parses a CSV the student uploaded. */
 export const parseCsvFile = (file: File): Promise<CsvResult> =>
   new Promise(resolve =>
     Papa.parse<Record<string, string>>(file as unknown as string, {
@@ -46,15 +40,15 @@ const PARSE_OPTIONS = {header: true, skipEmptyLines: true} as const;
 
 type Resolve = (result: CsvResult) => void;
 
-// Declared apart from the config so the remote overload accepts it too.
+// Papaparse helper functions for handling completion and failure of parsing.
+// Declared separately for TypeScript purposes.
 const completeWith =
   (resolve: Resolve) => (result: ParseResult<Record<string, string>>) =>
     resolve(readRows(result));
 
 const failWith = (resolve: Resolve) => () =>
-  resolve({ok: false, reason: 'loadFailed' as const});
+  resolve({ok: false, reason: 'loadFailed'});
 
-/* The type each column looks like, for a dataset that came without metadata. */
 export const inferColumnTypes = (rows: DataRow[]): Record<string, string> =>
   Object.fromEntries(
     Object.keys(rows[0] ?? {}).map(column => [

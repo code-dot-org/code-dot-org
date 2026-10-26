@@ -18,10 +18,6 @@ export interface Extrema {
   range: number;
 }
 
-/*
-  This module is upstream of selectors.ts, so it reads the dataset off the
-  state rather than through getData and friends.
-*/
 const rowsOf = (state: RootState): DataRow[] => state.dataset?.rows ?? [];
 
 export function isColumnCategorical(state: RootState, column: string): boolean {

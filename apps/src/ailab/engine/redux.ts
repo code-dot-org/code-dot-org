@@ -37,7 +37,6 @@ export interface RootState {
   name: string | undefined;
   csvfile: string | File | undefined;
   invalidData: DatasetError | undefined;
-  /* Absent until a whole one has loaded; read through the selectors. */
   dataset: Dataset | undefined;
   featureNumberKey: Record<string, Record<string, number>>;
   trainingExamples: number[][];
