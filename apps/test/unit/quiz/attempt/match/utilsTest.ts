@@ -1,7 +1,4 @@
-import {
-  partnerOf,
-  toggleMatch,
-} from '@cdo/apps/quiz/attempt/match/matchPairing';
+import {partnerOf, toggleMatch} from '@cdo/apps/quiz/attempt/match/utils';
 
 describe('toggleMatch', () => {
   it('adds a new pair', () => {

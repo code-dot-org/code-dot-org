@@ -1,22 +1,10 @@
 import {formatChoiceLetter} from '../../utils';
 
-export interface MatchItem {
-  id: string;
-  text: string;
-}
-
-export type MatchSets = [MatchItem[], MatchItem[]];
-
-// A column, by reading order: start is the left column in left-to-right
-// languages. The start column shows the first set, whose items are lettered.
-export type MatchSide = 'start' | 'end';
+import {MatchItem, MatchPairs, MatchSets, MatchSide} from './types';
 
 export function itemsOn(matchSets: MatchSets, side: MatchSide): MatchItem[] {
   return matchSets[side === 'start' ? 0 : 1];
 }
-
-// A pair is [start id, end id].
-export type MatchPairs = [string, string][];
 
 // Pairing two items replaces any pair either was already in, so each item
 // has at most one partner. Pairing two items that are already partners

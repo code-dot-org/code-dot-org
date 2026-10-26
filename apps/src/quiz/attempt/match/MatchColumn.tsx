@@ -2,15 +2,8 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {
-  itemsOn,
-  labelOf,
-  letterOf,
-  MatchPairs,
-  MatchSets,
-  MatchSide,
-  partnerOf,
-} from './matchPairing';
+import {MatchPairs, MatchSets, MatchSide} from './types';
+import {itemsOn, labelOf, letterOf, partnerOf} from './utils';
 
 import styles from './match-question-container.module.scss';
 

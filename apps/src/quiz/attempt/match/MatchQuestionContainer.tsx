@@ -5,7 +5,8 @@ import AttemptCard from '../AttemptCard';
 import QuestionDescription from '../QuestionDescription';
 
 import MatchColumn from './MatchColumn';
-import {MatchPairs, MatchSets, MatchSide, toggleMatch} from './matchPairing';
+import {MatchPairs, MatchSets, MatchSide} from './types';
+import {toggleMatch} from './utils';
 
 import styles from './match-question-container.module.scss';
 

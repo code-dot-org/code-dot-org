@@ -2,8 +2,8 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React, {useState} from 'react';
 
-import {MatchPairs, MatchSets} from '@cdo/apps/quiz/attempt/match/matchPairing';
 import MatchQuestionContainer from '@cdo/apps/quiz/attempt/match/MatchQuestionContainer';
+import {MatchPairs, MatchSets} from '@cdo/apps/quiz/attempt/match/types';
 
 const MATCH_SETS: MatchSets = [
   [
