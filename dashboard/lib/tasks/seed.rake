@@ -176,23 +176,22 @@ namespace :seed do
   end
 
   # The tasks to run before seeding the units of the given partition
-  # (:production or :ui_test), in the order rake runs them: the tasks both
-  # partitions share, then the partition's own levels and course offerings,
-  # then jit_pl_concepts. The order follows from these dependencies:
+  # (:production or :ui_test). The order follows from these dependencies:
   #
-  # - The UI test units resolve their course offerings and levels out of the
-  #   UI test tree, apart from deprecated blockly levels, so the UI test seed
-  #   reads that tree in place of config/levels, config/scripts and
-  #   config/course_offerings. The deprecated blockly levels and the
-  #   standalone project tree are seeded for both; see
-  #   dashboard/test/ui/config/README.md.
-  # - Quiz levels look up their questions by key, so quiz_questions must
-  #   precede the custom levels.
-  # - Standalone project levels depend on :games, but do not have parent/child
-  #   relationships with production or ui test levels.
-  # - jit_pl_concepts comes last: in levelbuilder mode, loading the JIT PL
-  #   course writes its course offering's file, which course_offerings must
-  #   read first.
+  # - Course offerings, courses, units and most custom/dsl levels are separated
+  #   into production and UI test partitions so they can be seeded independently
+  #   from each other. The deprecated blockly levels and standalone project
+  #   levels are needed by both partitions. See dashboard/config/PARTITIONS.md.
+  # - standalone_project_levels must run after games, but does not have an
+  #   ordering dependency on production or ui test levels because there are no
+  #   parent/child level relationships across partitions.
+  # - quiz_questions must run before custom levels, because Quiz levels are
+  #   custom levels and depend on quiz_questions.
+  # - jit_pl_concepts must run after course_offerings, because loading the JIT
+  #   PL course also writes that course's offering file in levelbuilder mode.
+  #   If the two run in the other order, the seed can overwrite
+  #   course_offerings/just-in-time-pl.json with the database's stale copy
+  #   before course_offerings ever reads the file.
   def get_scripts_dependencies(partition: :production)
     content_dependencies =
       case partition
