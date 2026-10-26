@@ -30,6 +30,7 @@ import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
 import SiteHeader from '@/components/header';
+import PageFlash from '@/components/pageFlash';
 import {isMobileBuild} from '@/config/buildMode';
 import {
   fetchAuthOutcome,
@@ -95,6 +96,7 @@ function RootContent() {
           the content arrives. Layout-level concern shared by every async route;
           the offset approximates the header height. */}
       <Box sx={{minHeight: 'calc(100vh - 50px)'}}>
+        <PageFlash />
         {renderRouteArea(auth, onRetry)}
       </Box>
       {siteChrome && !hideFooter && <StudioFooter />}
