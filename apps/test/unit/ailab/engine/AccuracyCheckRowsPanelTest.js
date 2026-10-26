@@ -31,7 +31,8 @@ describe('AccuracyCheckRowsPanel', () => {
   test('counts every tested row when not split by grade', () => {
     renderPanel(false);
 
-    expect(screen.getByText('5 Rows')).toBeTruthy();
+    expect(screen.getByText('5 rows')).toBeTruthy();
+    expect(screen.queryByRole('group', {name: 'Show rows'})).toBeNull();
     expect(rowNumbers()).toEqual(['1', '2', '3', '4', '5']);
   });
 
@@ -39,6 +40,7 @@ describe('AccuracyCheckRowsPanel', () => {
     renderPanel(true);
     expect(screen.getByRole('button', {name: 'Correct (3)'})).toBeTruthy();
     expect(screen.getByRole('button', {name: 'Incorrect (2)'})).toBeTruthy();
+    expect(screen.queryByText(/^\d+ (of \d+ )?rows?$/)).toBeNull();
     expect(rowNumbers()).toEqual(['1', '2', '3']);
 
     fireEvent.click(screen.getByRole('button', {name: 'Filter'}));

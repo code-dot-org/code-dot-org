@@ -10,6 +10,7 @@
   min-height: mixins.$table-action-row-height;
   padding: 4px;
   border-bottom: 1px solid var(--border-neutral-primary);
+  z-index: 3;
 }
 
 .controls {

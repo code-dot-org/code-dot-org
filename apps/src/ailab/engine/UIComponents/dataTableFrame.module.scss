@@ -2,20 +2,13 @@
 
 $visible-rows: 10;
 $min-visible-rows: 2;
-
-@function frame-height($rows) {
-  $table-height: ($rows + 1) * mixins.$data-table-row-height;
-
-  @return mixins.$table-action-row-height + $table-height;
-}
+$visible-table-height: ($visible-rows + 1) * mixins.$data-table-row-height;
 
 .frame {
   position: relative;
   display: flex;
-  flex: 0 1 frame-height($visible-rows);
+  flex: 0 1 mixins.$table-action-row-height + $visible-table-height;
   flex-direction: column;
-  min-height: frame-height($min-visible-rows);
-  overflow: clip;
   border-radius: var(--shape-md);
 
   // The border. A border on the frame itself would sit under the sticky headers.
@@ -34,8 +27,10 @@ $min-visible-rows: 2;
   }
 }
 
+// A zero basis keeps the frame's automatic minimum at the action row, however it wraps, plus these rows.
 .scroller {
-  flex: 1;
-  min-height: 0;
+  flex: 1 1 0;
+  min-height: ($min-visible-rows + 1) * mixins.$data-table-row-height;
   overflow: auto;
+  border-radius: 0 0 var(--shape-md) var(--shape-md);
 }

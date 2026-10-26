@@ -141,12 +141,12 @@ describe('NodeModal', () => {
   it('lists the rows tested on that reach the node, then the rows trained on', () => {
     fireEvent.click(root());
 
-    expect(within(dialog()).getByText('1 Row')).toBeTruthy();
+    expect(within(dialog()).getByText('1 row')).toBeTruthy();
     expect(shownRows()).toEqual([['10', '4', 'dog']]);
 
     fireEvent.click(within(dialog()).getByRole('tab', {name: 'Training rows'}));
 
-    expect(within(dialog()).getByText('9 Rows')).toBeTruthy();
+    expect(within(dialog()).getByText('9 rows')).toBeTruthy();
     expect(shownRows().map(([number]) => number)).toEqual([
       '1',
       '2',
@@ -225,7 +225,7 @@ describe('NodeModal', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Done (1)'}));
 
     await waitFor(() =>
-      expect(within(dialog()).getByText('3 of 9 Rows')).toBeTruthy()
+      expect(within(dialog()).getByText('3 of 9 rows')).toBeTruthy()
     );
     expect(shownRows().map(([number]) => number)).toEqual(['1', '4', '7']);
   });

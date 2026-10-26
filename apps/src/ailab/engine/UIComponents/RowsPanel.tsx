@@ -3,6 +3,7 @@ import React, {type ReactNode, useId, useMemo, useState} from 'react';
 
 import {dataColumnsFor} from '../helpers/columnDetails';
 import type {Grade} from '../helpers/displayTreeNodeContent';
+import {rowCountText} from '../helpers/utils';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getIdColumn} from '../selectors';
@@ -14,11 +15,6 @@ import ResultsToggle from './ResultsToggle';
 import TableActionRow from './TableActionRow';
 
 import styles from './rowsPanel.module.scss';
-
-const rowCountText = (shown: number, total: number) => {
-  const totalText = `${total} ${total === 1 ? 'Row' : 'Rows'}`;
-  return shown === total ? totalText : `${shown} of ${totalText}`;
-};
 
 export interface RowsPanelProps {
   description: ReactNode;
