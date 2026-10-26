@@ -362,12 +362,15 @@ const writeProperty = (property: ActorProperty): Block => ({
   },
 });
 
-/** A row of one string field and nothing else, read as that string. */
+/** A row's one string field that matters, read as that string. */
 const oneField = (row: Block, type: string, field: string) => {
   const fields = fieldsOf(row);
+  // AS LENIENT AS BLOCKLY about fields: one the block does not have is one
+  // Blockly drops as it loads it, and says nothing. Read strictly for it,
+  // the row was a declaration the fold could not take, which it drops
+  // (`DECLARATION_ROWS`).
   return row.type === type &&
     only(row, ['type', 'fields', 'next']) &&
-    Object.keys(fields).length === 1 &&
     typeof fields[field] === 'string'
     ? (fields[field] as string)
     : undefined;

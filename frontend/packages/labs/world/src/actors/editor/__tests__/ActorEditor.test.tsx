@@ -90,10 +90,12 @@ describe('the Actor Editor', () => {
     expect(screen.queryByTestId('blocks')).toBeNull();
   });
 
-  it('leaves an actor still in blocks to the file editor', () => {
+  it('never opens an actor as a define actor', () => {
+    // An actor is data and events (specs/ACTORS_AS_DATA_PLAN.md, step 5): a
+    // file that is not data is not one it can read, and says so.
     open(viewOf(PLAYER));
-    expect(screen.getByTestId('blocks')).toBeInTheDocument();
-    expect(screen.queryByTestId('actor-editor')).toBeNull();
+    expect(screen.queryByTestId('blocks')).toBeNull();
+    expect(screen.getByText(/cannot be read/)).toBeInTheDocument();
   });
 
   it('says what it looks like, and changes it', () => {

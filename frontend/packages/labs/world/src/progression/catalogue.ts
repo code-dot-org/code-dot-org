@@ -50,6 +50,7 @@
 // `requires` names a neighbor, that no two tiles share a cell, that every tile
 // is reachable from Origin, and that a region's tiles touch each other.
 
+import {viewOf} from '../actors/actorData';
 import {stockRule} from '../rules/stock';
 
 import {sectorCell, type Axial} from './hex';
@@ -799,7 +800,11 @@ export const TILES: readonly Tile[] = [
         trace: [{seconds: 0.1}],
       },
       inspect: files =>
-        (files['actors/lamp.actor'] ?? '').includes('world_rule_property') &&
+        // The Lamp is data; what it declares is read where its view says it
+        // (specs/ACTORS_AS_DATA_PLAN.md, step 5).
+        viewOf(files['actors/lamp.actor'] ?? '').includes(
+          'world_rule_property',
+        ) &&
         (files['worlds/main.world'] ?? '').includes('world_get_ActorsLamp_'),
       passes: ({samples}) => {
         const said = lastList<string>(samples.said);

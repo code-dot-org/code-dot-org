@@ -11,6 +11,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {asActorData, viewOf} from '../../actors/actorData';
 import {buildDomainPalette} from '../../blockly/domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {clickableNames, placeNamed} from '../../callouts/places';
@@ -430,7 +431,11 @@ describe('a property the learner just declared', () => {
   // is the one thing a lesson about declaring properties cannot survive.
   const declaring = (id: TileId, path: string, root: string): Set<string> => {
     const files = {...projectFiles(LESSONS[id]!.source)};
-    const workspace = JSON.parse(files[path]) as {
+    // An actor is data: declared through its view, and folded back
+    // (specs/ACTORS_AS_DATA_PLAN.md, step 5).
+    const written = files[path];
+    const actor = path.endsWith('.actor');
+    const workspace = JSON.parse(actor ? viewOf(written) : written) as {
       blocks: {blocks: {type?: string; next?: unknown}[]};
     };
     const at = workspace.blocks.blocks.find(block => block.type === root)!;
@@ -446,7 +451,9 @@ describe('a property the learner just declared', () => {
         next: at.next,
       },
     };
-    files[path] = JSON.stringify(workspace);
+    files[path] = actor
+      ? asActorData(JSON.stringify(workspace), written)
+      : JSON.stringify(workspace);
     const {toolbox} = buildDomainPalette(projectRuleMetas(files), {
       fileKind: 'world',
       ownProperties: projectOwnMetas(files),

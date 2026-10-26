@@ -18,7 +18,6 @@
 // What is written is milestone 4 of specs/PROGRESSION_UI.md and then some: all
 // six FOUNDATIONS, and Arcade, Story and Making whole after them.
 
-import {inDataShape} from '../../actors/actorData';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {LABEL_PROPERTIES} from '../../actors/stock/label';
 import {
@@ -522,28 +521,24 @@ the game is running. What you set here is where it STARTS.
 const animation: WorldScenario = {
   name: 'Pictures in a row',
   description: 'A Hero that slides along without ever moving its legs.',
-  // The Hero as data, so it opens in the Actor Editor: an animation is made
-  // there, on its timeline, and no block makes one (specs/ANIMATION_PLAN.md).
-  source: inDataShape(
-    lessonSource({
-      world: worldFile({
-        name: 'My World',
-        rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
-        actors: [
-          {
-            id: 'hero',
-            name: 'Hero',
-            rows: [
-              useTrait('Arrow Keys#MovesAcrossTrait'),
-              setSprite('player.png'),
-            ],
-          },
-        ],
-      }),
-      sprites: ['player'],
-      rules: ['arrows'],
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [addActor(actorPath('hero'), [placeAt(160, 160)])],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+      ],
     }),
-  ),
+    sprites: ['player'],
+    rules: ['arrows'],
+  }),
   instructions: `
 ## Pictures in a row
 

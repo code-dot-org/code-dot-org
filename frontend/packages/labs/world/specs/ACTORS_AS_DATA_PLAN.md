@@ -283,6 +283,33 @@ deleted. The lesson-check tests' `editingWorld` edits an actor through its
 view and folds it back (`throughView`), or through `actorEdits` where a
 learner would use the panel.
 
+BUILT. `lessonSource` hands back its project with every actor as data
+(`inDataShape`), as the scenarios and the starter are; a lesson still
+writes its actors as workspaces, which is how they are easiest to write.
+`ActorFileEditor` is the Actor Editor, and the blocks branch is gone; a
+file that is not data says it cannot be read. A test finds every lesson's
+actors data. New actors, stock imports and enhancements were data
+already.
+
+The tests that solve a lesson edit an actor through its view and fold it
+back, as a writer of the view does (`editing`, `editingWorld`,
+`toolboxShelf`'s `declaring`). Doing so found three things. The
+actor-state check read the Lamp's file for `world_rule_property`, which
+a data-shaped file does not say; it reads the Lamp's view. A test that
+changed "the first row under Stone" found the picture there, the view
+putting rows in a fixed order; it finds the `use trait` row. And the
+fold read a declaration only if it had exactly the one field it needed,
+so a `use trait` carrying a field the block does not have — which
+Blockly drops on loading — was a row the fold could not take, and since
+step 2 dropped it; it reads the field it needs and ignores the rest, as
+Blockly does.
+
+The thirteen lessons whose instructions speak of `define actor` still do,
+until step 7; their actors now open in the Actor Editor.
+
+In the browser: `motion/speed`'s Hero, which opened as blocks, opens in
+the Actor Editor; no page errors.
+
 ### 6. The toolbox keeps what code does
 
 A block leaves the toolbox when an editor already establishes what it

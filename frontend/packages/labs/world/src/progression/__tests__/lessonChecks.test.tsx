@@ -17,7 +17,9 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import {
+  asActorData,
   isActorData,
+  viewOf,
   withMainAnimation,
   type ActorData,
 } from '../../actors/actorData';
@@ -93,6 +95,21 @@ const editing = (
     throw new Error(`no file called ${name}`);
   }
   const [id, file] = entry;
+  // An actor is data, and is edited here through the `define actor` it
+  // stands for, folded back after: what a writer of the view does
+  // (`actorData.throughView`, specs/ACTORS_AS_DATA_PLAN.md, step 5).
+  if (name.endsWith('.actor')) {
+    return {
+      ...source,
+      files: {
+        ...source.files,
+        [id]: {
+          ...file,
+          contents: asActorData(change(viewOf(file.contents)), file.contents),
+        },
+      },
+    };
+  }
   // Resolved first, the way the editor resolves one to put it on screen: a
   // rule the learner has not touched is stored as a reference to the library's
   // (rules/ruleReference, specs/NEXT.md §2), and there is nothing in a
@@ -132,7 +149,8 @@ const editingWorld = (
   // designed block's parameters are — goes back with its roots.
   const parsedActors = new Map<string, Parsed>();
   for (const [id, file] of actors) {
-    const parsed = parse(file.contents);
+    // Its `define actor`, which is what these edits are written against.
+    const parsed = parse(viewOf(file.contents));
     parsedActors.set(id, parsed);
     for (const root of parsed.blocks.blocks) {
       merged.blocks.blocks.push({...root, [FROM]: id} as Row);
@@ -164,7 +182,7 @@ const editingWorld = (
         id,
         name: `${stem}.actor`,
         language: 'actor',
-        contents: JSON.stringify({blocks: {blocks: [root]}}),
+        contents: asActorData(JSON.stringify({blocks: {blocks: [root]}})),
         folderId: folderId ?? '0',
       };
     } else {
@@ -178,10 +196,14 @@ const editingWorld = (
   for (const [id, file] of actors) {
     files[id] = {
       ...file,
-      contents: JSON.stringify({
-        ...parsedActors.get(id),
-        blocks: {blocks: roots.get(id) ?? []},
-      }),
+      // …and folded back into data, keeping what the view does not carry.
+      contents: asActorData(
+        JSON.stringify({
+          ...parsedActors.get(id),
+          blocks: {blocks: roots.get(id) ?? []},
+        }),
+        file.contents,
+      ),
     };
   }
   return {...source, files};
@@ -1872,11 +1894,24 @@ describe('the animation lesson’s check', () => {
     // the animation as its own Main (specs/ANIMATION_PLAN.md).
     const walk = stockAnimation('playerWalk')!;
     const imported = importStockAnimation(lesson.source, walk);
-    const solved = editing(imported.source, 'hero.actor', contents =>
-      JSON.stringify(
-        withMainAnimation(JSON.parse(contents) as ActorData, walk.timeline),
-      ),
-    );
+    const hero = Object.entries(imported.source.files).find(
+      ([, file]) => file.name === 'hero.actor',
+    )!;
+    const solved = {
+      ...imported.source,
+      files: {
+        ...imported.source.files,
+        [hero[0]]: {
+          ...hero[1],
+          contents: JSON.stringify(
+            withMainAnimation(
+              JSON.parse(hero[1].contents) as ActorData,
+              walk.timeline,
+            ),
+          ),
+        },
+      },
+    };
     const {passes, result} = await check('look/animation', solved);
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
@@ -4189,8 +4224,12 @@ describe('the own-trait lesson’s check', () => {
     const solved = editing(declared, 'main.world', contents => {
       const workspace = JSON.parse(contents) as {blocks: {blocks: Row[]}};
       // The Stone elects the OTHER one, which is the whole of the change.
-      actorIn(workspace, 'Stone').next!.block!.fields!.TRAIT =
-        'Weather#SinksTrait';
+      // Its `use trait` row, wherever the view puts it among the others.
+      let row = actorIn(workspace, 'Stone').next?.block;
+      while (row && row.type !== 'world_use_trait') {
+        row = row.next?.block;
+      }
+      row!.fields!.TRAIT = 'Weather#SinksTrait';
       return JSON.stringify(workspace);
     });
     const {passes, result} = await check('making/trait', solved);

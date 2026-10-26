@@ -1359,12 +1359,8 @@ export const ActorEditor = (props: CustomEditorProps) => {
 };
 
 /**
- * An actor's file, in the editor its shape calls for: a data-shaped one in
- * the Actor Editor, and one still in blocks in the file editor, as before.
+ * An actor's file. Always the Actor Editor: an actor is data and events,
+ * and no actor is opened as a `define actor` (specs/ACTORS_AS_DATA_PLAN.md,
+ * step 5). A file that is not data says it cannot be read.
  */
-export const ActorFileEditor = (props: CustomEditorProps) =>
-  parse(props.initialContents) ? (
-    <ActorEditor {...props} />
-  ) : (
-    <BlocklyFileEditor {...props} />
-  );
+export const ActorFileEditor = ActorEditor;

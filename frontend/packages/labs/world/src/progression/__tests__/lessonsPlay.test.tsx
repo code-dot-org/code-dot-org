@@ -17,6 +17,7 @@ import {
   compileProject,
   type CompiledProject,
 } from '../../__tests__/support/compileProject';
+import {isActorData} from '../../actors/actorData';
 import {PositionProperty} from '../../engine';
 import {SpriteProperty} from '../../engine/rules/animation';
 import {projectFiles} from '../../runtime/projectFiles';
@@ -33,6 +34,21 @@ describe('every lesson', () => {
   it('belongs to a tile that exists', () => {
     for (const id of ids) {
       expect(TILES_BY_ID.has(id), id).toBe(true);
+    }
+  });
+
+  it('keeps every actor as data, never as a define actor', () => {
+    // An actor is data and events, opened in the Actor Editor
+    // (specs/ACTORS_AS_DATA_PLAN.md, step 5).
+    for (const [id, lesson] of Object.entries(LESSONS)) {
+      for (const file of Object.values(lesson.source.files)) {
+        if (file.name.endsWith('.actor')) {
+          expect(
+            isActorData(JSON.parse(file.contents)),
+            `${id}: ${file.name}`,
+          ).toBe(true);
+        }
+      }
     }
   });
 

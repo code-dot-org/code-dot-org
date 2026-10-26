@@ -8,6 +8,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {viewOf} from '../../actors/actorData';
 import {
   clickableNames,
   parsePlaceName,
@@ -28,8 +29,9 @@ const kindsOf = (id: TileId): string[] =>
     .filter(([path]) => path.endsWith('.actor'))
     .flatMap(([, contents]) => {
       try {
+        // An actor is data; its name is read where its view says it.
         const roots = (
-          JSON.parse(contents) as {
+          JSON.parse(viewOf(contents)) as {
             blocks?: {blocks?: Array<{type: string; fields?: {NAME?: string}}>};
           }
         ).blocks?.blocks;

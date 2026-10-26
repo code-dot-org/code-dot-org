@@ -15,6 +15,7 @@
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
+import {inDataShape} from '../../actors/actorData';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import {
@@ -168,7 +169,11 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
       need(stockAnimation(id), 'animation', id),
     ).source;
   }
-  return source;
+  // Every actor as data, as the scenarios' are: an actor's file is data and
+  // events, made in the Actor Editor, and no actor is opened as a `define
+  // actor` (specs/ACTORS_AS_DATA_PLAN.md, step 5). A lesson writes its
+  // actors as workspaces because that is how they are easiest to write.
+  return inDataShape(source);
 };
 
 /** A stock item, or a thrown error naming what was asked for. */
