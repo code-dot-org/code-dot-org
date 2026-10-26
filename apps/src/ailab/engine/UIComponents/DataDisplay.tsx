@@ -4,9 +4,11 @@ import {Typography} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
+import {withIdColumnFirst} from '../helpers/columnDetails';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
-import {useDatasetTableView} from '../useTableView';
+import {getIdColumn} from '../selectors';
+import {useDatasetTableView} from '../useDatasetTableView';
 
 import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';
@@ -19,8 +21,12 @@ const DataDisplay = () => {
   const data = useAppSelector(state => state.data);
   const datasetName = useAppSelector(state => state.name);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
+  const idColumn = useAppSelector(getIdColumn);
   const rows = useMemo(() => [...data.keys()], [data]);
-  const columns = useMemo(() => Object.keys(data[0] ?? {}), [data]);
+  const columns = useMemo(
+    () => withIdColumnFirst(Object.keys(data[0] ?? {}), idColumn),
+    [data, idColumn]
+  );
   const tableView = useDatasetTableView(rows, columns);
 
   const rowCount = data.length;
@@ -29,7 +35,7 @@ const DataDisplay = () => {
   }
 
   const isTable = datasetLayout === 'table';
-  const shownCount = isTable ? tableView.rows.length : rowCount;
+  const shownCount = tableView.rows.length;
   const totalText = `${rowCount} ${rowCount === 1 ? 'row' : 'rows'}`;
   const rowCountText =
     shownCount === rowCount ? totalText : `${shownCount} of ${totalText}`;
@@ -61,7 +67,7 @@ const DataDisplay = () => {
           </Typography>
         </div>
         <div className={styles.actions}>
-          {isTable && <TableFilter view={tableView} />}
+          <TableFilter view={tableView} />
           <div
             role="group"
             aria-label="Dataset view"
@@ -92,7 +98,7 @@ const DataDisplay = () => {
           <DataTable view={tableView} />
         </div>
       ) : (
-        <DatasetCardDeck />
+        <DatasetCardDeck rows={tableView.rows} />
       )}
     </div>
   );

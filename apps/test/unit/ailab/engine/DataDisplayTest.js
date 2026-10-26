@@ -7,7 +7,7 @@ import {resetState, setCurrentColumn} from '@cdo/apps/ailab/engine/redux';
 import ColumnAnalysis from '@cdo/apps/ailab/engine/UIComponents/ColumnAnalysis';
 import DataDisplay from '@cdo/apps/ailab/engine/UIComponents/DataDisplay';
 
-import {ANIMALS, levelProject, levelStore} from './levelStore';
+import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 function renderDisplay() {
@@ -37,7 +37,7 @@ describe('DataDisplay', () => {
     renderDisplay();
     expect(screen.getByRole('table')).toBeTruthy();
     expect(button('Table').getAttribute('aria-pressed')).toBe('true');
-    expect(screen.queryByLabelText('Next row')).toBeNull();
+    expect(screen.queryByLabelText('Next card')).toBeNull();
   });
 
   test('cards shows one dataset row and steps to the next', () => {
@@ -45,18 +45,18 @@ describe('DataDisplay', () => {
     fireEvent.click(button('Cards'));
 
     expect(screen.queryByRole('table')).toBeNull();
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
+    expect(screen.getByText('Card 1 of 10')).toBeTruthy();
     expect(screen.getByText('bird')).toBeTruthy();
-    expect(button('Previous row').getAttribute('aria-disabled')).toBe('true');
-    fireEvent.click(button('Previous row'));
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
+    expect(button('Previous card').getAttribute('aria-disabled')).toBe('true');
+    fireEvent.click(button('Previous card'));
+    expect(screen.getByText('Card 1 of 10')).toBeTruthy();
 
-    fireEvent.click(button('Next row'));
-    expect(screen.getByText('Row 2 of 10')).toBeTruthy();
+    fireEvent.click(button('Next card'));
+    expect(screen.getByText('Card 2 of 10')).toBeTruthy();
     expect(screen.getByText('dog')).toBeTruthy();
 
-    fireEvent.keyDown(button('Next row'), {key: 'ArrowLeft'});
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
+    fireEvent.keyDown(button('Next card'), {key: 'ArrowLeft'});
+    expect(screen.getByText('Card 1 of 10')).toBeTruthy();
   });
 
   test('marks the label and the features for screen readers', () => {
@@ -71,22 +71,22 @@ describe('DataDisplay', () => {
   test('next stays focused and inert on the last row', () => {
     renderDisplay();
     fireEvent.click(button('Cards'));
-    const next = button('Next row');
+    const next = button('Next card');
     next.focus();
     fireEvent.keyDown(next, {key: 'End'});
 
-    expect(screen.getByText('Row 10 of 10')).toBeTruthy();
+    expect(screen.getByText('Card 10 of 10')).toBeTruthy();
     expect(next.getAttribute('aria-disabled')).toBe('true');
     expect(document.activeElement).toBe(next);
 
     fireEvent.click(next);
-    expect(screen.getByText('Row 10 of 10')).toBeTruthy();
+    expect(screen.getByText('Card 10 of 10')).toBeTruthy();
   });
 
   test('a new level or dataset starts the deck on its first row', () => {
     const store = renderDisplay();
     fireEvent.click(button('Cards'));
-    fireEvent.click(button('Next row'));
+    fireEvent.click(button('Next card'));
     expect(store.getState().datasetCardRow).toBe(1);
 
     act(() => store.dispatch(resetState()));
@@ -96,7 +96,7 @@ describe('DataDisplay', () => {
   test('only the front card is in the tab order', () => {
     renderDisplay();
     fireEvent.click(button('Cards'));
-    fireEvent.click(button('Next row'));
+    fireEvent.click(button('Next card'));
     const tabIndexes = [...document.querySelectorAll('dl')].map(
       list => list.tabIndex
     );
@@ -199,7 +199,7 @@ describe('DataDisplay', () => {
     expect(screen.queryByRole('button', {name: 'Filter'})).toBeNull();
   });
 
-  test('closing the filter focuses its tag, and cards show every row', async () => {
+  test('closing the filter focuses its tag, and cards show only the matching rows', async () => {
     renderDisplay();
     button('Filter').focus();
     fireEvent.click(button('Filter'));
@@ -211,11 +211,9 @@ describe('DataDisplay', () => {
     );
 
     fireEvent.click(button('Cards'));
-    expect(screen.getByText('10 rows')).toBeTruthy();
-    expect(screen.getByText('Row 1 of 10')).toBeTruthy();
-    expect(
-      screen.queryByRole('button', {name: 'Filter by animal: dog'})
-    ).toBeNull();
+    expect(screen.getByText('4 of 10 rows')).toBeTruthy();
+    expect(screen.getByText('Card 1 of 4')).toBeTruthy();
+    expect(screen.getByText('Row 2')).toBeTruthy();
   });
 
   test('clearing the tag shows every row and focuses the filter button', async () => {
@@ -265,5 +263,63 @@ describe('DataDisplay', () => {
     expect(document.activeElement).toBe(
       within(menu).getByRole('button', {name: /^animal/})
     );
+  });
+
+  describe('with an id column', () => {
+    const NAMED = ANIMALS.map((row, index) => ({
+      ...row,
+      name: `pet ${index + 1}`,
+    }));
+    const NAMED_COLUMNS = {...ANIMAL_COLUMNS, name: ColumnTypes.CATEGORICAL};
+
+    const renderNamed = () =>
+      renderWithProviders(createElement(DataDisplay), {
+        store: levelStore({idColumn: 'name'}, NAMED, NAMED_COLUMNS),
+        project: levelProject(),
+      });
+
+    test('follows the row number and heads each row', () => {
+      renderNamed();
+      expect(
+        screen
+          .getAllByRole('columnheader')
+          .map(header => header.getAttribute('aria-label'))
+      ).toEqual(['Row', 'name', 'animal', 'legs']);
+      expect(
+        Array.from(
+          screen.getAllByRole('row')[1].cells,
+          cell => cell.textContent
+        )
+      ).toEqual(['1', 'pet 1', 'bird', '2']);
+      expect(rowNumbers().slice(0, 3)).toEqual(['pet 1', 'pet 2', 'pet 3']);
+      expect(button('Sort by name A-Z')).toBeTruthy();
+    });
+
+    test('titles each card above its row number, and leaves the list', () => {
+      renderNamed();
+      fireEvent.click(button('Cards'));
+      fireEvent.click(button('Next card'));
+
+      const card = screen.getByRole('group', {name: 'pet 2 Row 2'});
+      expect(
+        Array.from(card.querySelectorAll('dt'), term => term.textContent)
+      ).toEqual(['animal, used as the label', 'legs, used as a feature']);
+    });
+
+    test('names a row with a blank id by its row number', () => {
+      renderWithProviders(createElement(DataDisplay), {
+        store: levelStore(
+          {idColumn: 'name'},
+          [{...NAMED[0], name: ''}, ...NAMED.slice(1)],
+          NAMED_COLUMNS
+        ),
+        project: levelProject(),
+      });
+      expect(screen.getByRole('rowheader', {name: 'Row 1'})).toBeTruthy();
+
+      fireEvent.click(button('Cards'));
+
+      expect(screen.getByRole('group', {name: 'Row 1'})).toBeTruthy();
+    });
   });
 });

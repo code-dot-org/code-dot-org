@@ -93,6 +93,20 @@ describe('dataColumnsFor', () => {
       'animal',
     ]);
   });
+
+  test('the id column first, collapsed or expanded', () => {
+    expect(dataColumnsFor(data, project, false, 'name')).toEqual([
+      'name',
+      'legs',
+      'animal',
+    ]);
+    const idLast = [{legs: 4, animal: 'dog', name: 'Fido'}];
+    expect(dataColumnsFor(idLast, project, true, 'name')).toEqual([
+      'name',
+      'legs',
+      'animal',
+    ]);
+  });
 });
 
 describe('filter columns by datatype', () => {
