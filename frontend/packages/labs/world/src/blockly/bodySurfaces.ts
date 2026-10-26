@@ -98,6 +98,19 @@ export const hasSurface = (type: string): boolean =>
 export const BODY_OWNER_ID = 'body-owner';
 
 /**
+ * An actor's own block on its member page: the block being made, with its
+ * implementation below it (`memberHead`). Named here, beside the other head,
+ * for the readers that cannot import the block.
+ */
+export const MEMBER_HEAD = 'world_member_head';
+
+/** The one member head on the page. */
+export const MEMBER_HEAD_ID = 'member-head';
+
+/** The socket a member head's `at`th value fills with its getter. */
+export const memberValueSocket = (at: number): string => `VALUE${at}`;
+
+/**
  * What a body surface's head owns, by the id of the block it stands in for.
  *
  * The head draws `returns` and the `arguments` stack — the interface draws

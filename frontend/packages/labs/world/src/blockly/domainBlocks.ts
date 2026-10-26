@@ -52,6 +52,7 @@ import {SHOW_AS} from './actorIconMeta';
 import {ACTOR_ICON_OPTIONS} from './actorIcons';
 import {actorInputExtension, cameraInputExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
+import {MEMBER_HEAD} from './bodySurfaces';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {
   cameraId,
@@ -180,6 +181,7 @@ import {lessonFlyoutButton} from './lessonFlyoutButton';
 import {localizeText} from './localizeBlocks';
 import {layerDeclarations, type MainMapLayer} from './mainMapLayers';
 import {registerManyActorBlock, yieldsMany} from './manyActors';
+import {memberHead} from './memberHead';
 import {
   actorFieldOptions,
   actorParentOptions,
@@ -11514,6 +11516,7 @@ export const DOMAIN_BLOCKS = [
   signatureText,
   signatureArgument,
   signatureRow,
+  memberHead,
   worldDoc,
   worldReturn,
   worldRuleStepIn,
@@ -12651,9 +12654,11 @@ export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_layer_parallax',
   'world_layer_fixed',
   // An actor's own blocks and events are designed in the Actor Editor
-  // (specs/ACTOR_BLOCKS_PLAN.md), whose member page holds the one it opens.
+  // (specs/ACTOR_BLOCKS_PLAN.md), whose member page writes a block under
+  // the head it makes for it.
   'world_rule_block',
   'world_rule_event',
+  MEMBER_HEAD,
 ]);
 
 /**

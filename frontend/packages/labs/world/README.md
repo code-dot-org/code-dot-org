@@ -53,8 +53,8 @@ traits and their values, its own properties, its effects, its animations — as
 keys, made in the Actor Editor, and what it does as an event workspace behind
 its **Code**: its handlers, its every-frame work and its drawing. Its own
 events and blocks are data too, each designed on a page of its own from the
-Actor Editor's Blocks tab, a block's implementation below its design
-(`specs/ACTOR_BLOCKS_PLAN.md`). What it does on being made is its `is created` handler, which runs
+Actor Editor's Blocks tab; a block's page is its implementation, headed by
+the block itself, with its design opened above (`specs/ACTOR_BLOCKS_PLAN.md`). What it does on being made is its `is created` handler, which runs
 once it exists and before it is first drawn (`World.settleCreations`). The
 compiler reads an actor as the `define actor` workspace its data stands for
 (`actorView`); no file is written or opened in that shape. A game actor wears

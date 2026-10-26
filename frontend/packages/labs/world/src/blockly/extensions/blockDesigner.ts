@@ -392,6 +392,64 @@ export const partsName = (parts: readonly BlockPart[]): string =>
     .join(' ');
 
 /**
+ * Bind every parameter to a variable, creating and renaming to match the
+ * names the design gives them.
+ *
+ * A parameter IS a variable — the body reads it with an ordinary getter — so
+ * naming one in the design has to be a variable rename, which is what makes
+ * the name change everywhere the body already uses it.
+ *
+ * A name is made free of both the workspace's other variables and this
+ * signature's earlier parameters: two inputs sharing a name would generate a
+ * function with a duplicated argument, which is a syntax error, and one
+ * shadowing a rule-level variable would silently cut the body off from it.
+ */
+export function bindParams(
+  map: Blockly.IVariableMap<Blockly.IVariableModel<Blockly.IVariableState>>,
+  parts: BlockPart[],
+): void {
+  const used = new Set<string>();
+  for (const part of parts) {
+    if (part.kind !== 'param') {
+      continue;
+    }
+    const tag = paramFlavour(part.type).type;
+    let variable = part.var ? map.getVariableById(part.var) : null;
+    // A variable's type is fixed, so a retyped part rebinds rather than
+    // carrying a variable of the wrong type into the body's getters.
+    if (variable && variable.getType() !== tag) {
+      variable = null;
+    }
+    // The bound variable's own name comes before the type, or a signature
+    // saved before names were cached would rename `amount` to `number` on
+    // the next rebuild — silently, and everywhere the body uses it.
+    const wanted =
+      (part.name ?? '').trim() || variable?.getName() || (tag as string);
+    const free = (candidate: string): boolean =>
+      !used.has(candidate.toLowerCase()) &&
+      !map
+        .getAllVariables()
+        .some(
+          other =>
+            other.getId() !== variable?.getId() &&
+            other.getName().toLowerCase() === candidate.toLowerCase(),
+        );
+    let name = wanted;
+    for (let suffix = 2; !free(name); suffix++) {
+      name = `${wanted}${suffix}`;
+    }
+    if (!variable) {
+      variable = map.createVariable(name, tag);
+    } else if (variable.getName() !== name) {
+      map.renameVariable(variable, name);
+    }
+    used.add(name.toLowerCase());
+    part.var = variable.getId();
+    part.name = name;
+  }
+}
+
+/**
  * The designer itself: the signature, the preview, and the variable each
  * parameter binds to.
  *
@@ -471,60 +529,8 @@ const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
     }
   },
 
-  /**
-   * Bind every parameter to a variable, creating and renaming to match the
-   * names typed in the bubble.
-   *
-   * A parameter IS a variable — the body reads it with an ordinary getter — so
-   * naming one in the bubble has to be a variable rename, which is what makes
-   * the name change everywhere the body already uses it.
-   *
-   * A name is made free of both the workspace's other variables and this
-   * signature's earlier parameters: two inputs sharing a name would generate a
-   * function with a duplicated argument, which is a syntax error, and one
-   * shadowing a rule-level variable would silently cut the body off from it.
-   */
   bindParts_: function (): void {
-    const map = this.designWorkspace_().getVariableMap();
-    const used = new Set<string>();
-    for (const part of this.parts_ ?? []) {
-      if (part.kind !== 'param') {
-        continue;
-      }
-      const tag = paramFlavour(part.type).type;
-      let variable = part.var ? map.getVariableById(part.var) : null;
-      // A variable's type is fixed, so a retyped part rebinds rather than
-      // carrying a variable of the wrong type into the body's getters.
-      if (variable && variable.getType() !== tag) {
-        variable = null;
-      }
-      // The bound variable's own name comes before the type, or a signature
-      // saved before names were cached would rename `amount` to `number` on
-      // the next rebuild — silently, and everywhere the body uses it.
-      const wanted =
-        (part.name ?? '').trim() || variable?.getName() || (tag as string);
-      const free = (candidate: string): boolean =>
-        !used.has(candidate.toLowerCase()) &&
-        !map
-          .getAllVariables()
-          .some(
-            other =>
-              other.getId() !== variable?.getId() &&
-              other.getName().toLowerCase() === candidate.toLowerCase(),
-          );
-      let name = wanted;
-      for (let suffix = 2; !free(name); suffix++) {
-        name = `${wanted}${suffix}`;
-      }
-      if (!variable) {
-        variable = map.createVariable(name, tag);
-      } else if (variable.getName() !== name) {
-        map.renameVariable(variable, name);
-      }
-      used.add(name.toLowerCase());
-      part.var = variable.getId();
-      part.name = name;
-    }
+    bindParams(this.designWorkspace_().getVariableMap(), this.parts_ ?? []);
   },
 
   buildDesignShape_: function (): void {

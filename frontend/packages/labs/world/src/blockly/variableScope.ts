@@ -22,7 +22,11 @@
 
 import type {Block, Workspace} from 'blockly';
 
-import {BODY_OWNER_ID} from './bodySurfaces';
+import {
+  BODY_OWNER_ID,
+  MEMBER_HEAD,
+  memberValueSocket,
+} from './bodySurfaces';
 import {indexedBlocks, type IndexedBlock} from './workspaceIndex';
 
 /**
@@ -178,6 +182,12 @@ function bindingsOf(block: Block | IndexedBlock): {
   ids: string[];
   over: readonly string[];
 } {
+  // A member page's head binds its values below it, and in its own sockets,
+  // where each value's getter is fixed (`memberHead`).
+  if (block.type === MEMBER_HEAD) {
+    const ids = paramIds(block);
+    return {ids, over: [REST, ...ids.map((_, at) => memberValueSocket(at))]};
+  }
   if (block.type === PARAMS_BLOCK) {
     return {
       ids: paramIds(block),

@@ -245,6 +245,8 @@ export const ActorEditor = (props: CustomEditorProps) => {
     setReturnTo(id);
     setScript({kind: 'member', id});
   };
+  /** The member just made, whose page opens on its design. */
+  const [fresh, setFresh] = useState<string | null>(null);
   const [enhanceAt, setEnhanceAt] = useState<HTMLElement | null>(null);
   const {promptForName, confirm} = usePrompts();
   const [effectAt, setEffectAt] = useState<HTMLElement | null>(null);
@@ -582,7 +584,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
           contents={contents}
           modulePath={modulePath}
           fileId={fileId}
-          boxed={data.traits?.includes(BOX_TRAIT) ?? false}
+          isNew={opened.id === fresh}
           isReadOnly={isReadOnly}
           onUpdate={update}
           onLeave={(before, after) => {
@@ -1167,6 +1169,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
                 onNew={kind => {
                   const member = newMember(data, kind);
                   edit(addMember(data, member));
+                  setFresh(member.id);
                   openMember(member.id);
                 }}
                 focusEdit={returnTo}

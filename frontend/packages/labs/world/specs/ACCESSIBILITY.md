@@ -200,7 +200,10 @@ below, and are listed last.
   its own, so it is hidden and made `inert`. Each row's Edit and Delete are
   named for the reading. The row has no heading of its own; the image's
   name is what says which member it is.
-- **The page takes focus on its heading** when it opens, and going back,
+- **An event's page takes focus on its heading** when it opens. A block's
+  page is its workspace, with its design above it: focus goes to the
+  design's heading when the design opens with the page (a new block, or
+  one whose design is wrong), else to "Edit design". Going back,
   by the trail or Back, puts focus on the Edit it was opened from. A member
   deleted puts focus on the row that took its place, else on New event or
   New block. For these doors, the gap "a door that opens a file leaves
@@ -230,8 +233,15 @@ below, and are listed last.
 - **Not by colour alone**: a value chip writes its type beside its name,
   with an icon, and a break that does nothing is named so as well as
   faded.
-- **What it does is Blockly**, as it was behind the pencil. A value's
-  getter can still be dragged off the head's picture with a pointer; from
+- **"Edit design" is a disclosure** at the end of the breadcrumb bar
+  (`aria-expanded`, `aria-controls`): in the same place on every page and
+  before the page in the tab order. Shutting the design, by it or by the
+  design's "Close design", leaves focus on it. The design is a region
+  named by its heading, before the workspace in the tab order. The
+  workspace keeps a heading for a screen reader ("Block: heal by"),
+  hidden from sight.
+- **What it does is Blockly**, under a head that is the block itself. A
+  value's getter is dragged out of the head's socket with a pointer; from
   the keyboard it is the Variables drawer's, as any local's is.
 - **Untested**: none of this has been through a screen reader, and the
   keys have been driven only by tests and a headless browser, not by

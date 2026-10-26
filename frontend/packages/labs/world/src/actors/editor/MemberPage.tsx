@@ -1,26 +1,30 @@
 // One of an actor's events or blocks, designed (specs/ACTOR_BLOCKS_PLAN.md,
-// step 3): a step on the trail, "Hero › push".
+// steps 3 and 6): a step on the trail, "Hero › push".
 //
-// The block at the top, drawn from the parts as they are arranged; the parts
-// as chips; what it is for; and, for a block, what it does — the editor's
-// own surface for its implementation, below the design rather than behind a
-// pencil.
+// A BLOCK'S PAGE IS WHAT IT DOES: a workspace, as any code is written, with
+// the block itself at its head (`memberHead`) and its implementation below.
+// Its design — the parts as chips, what it is for, whether other files see
+// it — opens above that, from "Edit design" in the breadcrumb bar, and the
+// head just below redraws as the chips are moved. An event does nothing of its own, so
+// its page is its design.
 //
 // THE ARRANGEMENT IS THE PAGE'S, THE DESIGN IS THE DATA'S. A break that ends
 // nothing may sit where it is while the parts are moved about, and is left
 // out of what is written (`setMember`); a design with a problem is not
 // written at all until the problem is fixed.
 
-import {Typography} from '@mui/material';
+import {Button, IconButton, Typography} from '@mui/material';
 import {useEffect, useMemo, useRef, useState} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
 import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
 import {settledParts} from '../../blockly/designParts';
 import {argumentTypeOptions} from '../../blockly/domainBlocks';
 import {designedName} from '../../blockly/ruleMeta';
+import {TrailActions} from '../../layout/TrailContext';
 import type {ActorData, ActorMember, ActorMemberPart} from '../actorData';
 
 import styles from './actorEditor.module.css';
@@ -48,7 +52,8 @@ export interface MemberPageProps {
   contents: string;
   modulePath: string;
   fileId: string;
-  boxed: boolean;
+  /** Just made: its design is open, since that is what there is to do. */
+  isNew: boolean;
   isReadOnly: boolean;
   /** Change the actor's data as the file now holds it. */
   onUpdate: (change: (data: ActorData) => ActorData) => void;
@@ -95,7 +100,7 @@ export const MemberPage = ({
   contents,
   modulePath,
   fileId,
-  boxed,
+  isNew,
   isReadOnly,
   onUpdate,
   onLeave,
@@ -134,8 +139,28 @@ export const MemberPage = ({
   );
   const type = palette.typeOf(member);
 
+  const isBlock = member.kind === 'block';
   const heading = useRef<HTMLHeadingElement>(null);
-  useEffect(() => heading.current?.focus(), []);
+  const toggle = useRef<HTMLButtonElement>(null);
+  // A new block opens on its design, and so does one whose design is wrong;
+  // any other opens on what it does. An event is only its design.
+  const [designOpen, setDesignOpen] = useState(
+    () =>
+      !isBlock ||
+      isNew ||
+      Boolean(problems.design) ||
+      problems.values.size > 0,
+  );
+  // Opening, the design's heading has focus, or the toggle when it is shut;
+  // shut, focus goes back to the toggle.
+  const focusDesign = useRef(designOpen);
+  useEffect(() => {
+    (focusDesign.current ? heading : toggle).current?.focus();
+  }, [designOpen]);
+  const showDesign = (open: boolean) => {
+    focusDesign.current = open;
+    setDesignOpen(open);
+  };
 
   const write = (next: ActorMember) =>
     onUpdate(now => withValueNames(setMember(now, next)));
@@ -152,37 +177,27 @@ export const MemberPage = ({
 
   // Read once: the editor takes its contents when it mounts.
   const [bodyDocument] = useState(() =>
-    member.kind === 'block' ? memberDocument(data, member) : '',
+    isBlock ? memberDocument(data, member) : '',
   );
-  const bodyParts = useMemo(() => settledParts(member.parts), [member.parts]);
+  const headParts = useMemo(() => settledParts(member.parts), [member.parts]);
 
-  return (
-    <div className={styles.memberPage}>
-      <Typography
-        ref={heading}
-        tabIndex={-1}
-        variant="h4"
-        component="h2"
-        className={styles.memberHeading}
-      >
-        {member.kind === 'event' ? 'Event' : 'Block'}: {name || 'no words yet'}
-      </Typography>
-      <div className={styles.memberShown}>
-        {type ? (
-          // Drawn anew for each design: a value added leaves the block's
-          // name, and so its type, as they were.
-          <MemberPicture
-            key={JSON.stringify(member.parts)}
-            palette={palette}
-            type={type}
-            label={reading}
-          />
-        ) : (
-          <Typography variant="body3" component="p" className={styles.note}>
-            Nothing to draw until the design is fixed.
-          </Typography>
-        )}
-      </div>
+  const picture = type ? (
+    // Drawn anew for each design: a value added leaves the block's name, and
+    // so its type, as they were.
+    <MemberPicture
+      key={JSON.stringify(member.parts)}
+      palette={palette}
+      type={type}
+      label={reading}
+    />
+  ) : (
+    <Typography variant="body3" component="p" className={styles.note}>
+      Nothing to draw until the design is fixed.
+    </Typography>
+  );
+
+  const chips = (
+    <>
       <MoveHelp />
       <MemberParts
         arranged={arranged}
@@ -193,57 +208,127 @@ export const MemberPage = ({
         typeOptions={argumentTypeOptions()}
         isReadOnly={isReadOnly}
       />
-      <TextField
-        name="member-description"
-        label="What it is for"
-        size="s"
-        readOnly={isReadOnly}
-        value={member.description ?? ''}
-        className={styles.memberDescription}
-        onChange={event => {
-          const text = event.target.value;
-          const rest = without(member, 'description');
-          write(text ? {...rest, description: text} : rest);
-        }}
-      />
-      {member.kind === 'block' && (
-        <Checkbox
-          name="member-shown"
-          label="Shown to other files"
-          size="s"
-          disabled={isReadOnly}
-          checked={!member.hidden}
-          onChange={event => {
-            const rest = without(member, 'hidden');
-            write(event.target.checked ? rest : {...rest, hidden: true});
-          }}
-        />
-      )}
-      {member.kind === 'block' && (
-        <section
-          className={styles.memberBody}
-          aria-labelledby={`${member.id}-does`}
+    </>
+  );
+  const purpose = (
+    <TextField
+      name="member-description"
+      label="What it is for"
+      size="s"
+      readOnly={isReadOnly}
+      value={member.description ?? ''}
+      className={styles.memberDescription}
+      onChange={event => {
+        const text = event.target.value;
+        const rest = without(member, 'description');
+        write(text ? {...rest, description: text} : rest);
+      }}
+    />
+  );
+
+  const title = `${isBlock ? 'Block' : 'Event'}: ${name || 'no words yet'}`;
+
+  if (!isBlock) {
+    return (
+      <div className={styles.memberPage}>
+        <Typography
+          ref={heading}
+          tabIndex={-1}
+          variant="h4"
+          component="h2"
+          className={styles.memberHeading}
         >
-          <Typography variant="h5" component="h3" id={`${member.id}-does`}>
-            What it does
+          {title}
+        </Typography>
+        <div className={styles.memberShown}>{picture}</div>
+        {chips}
+        {purpose}
+        <div className={styles.announcer} aria-live="polite" role="status">
+          {said}
+        </div>
+      </div>
+    );
+  }
+
+  const designId = `${member.id}-design`;
+  return (
+    <div className={styles.memberSplit}>
+      <TrailActions
+        fallback={button => <div className={styles.codeHeader}>{button}</div>}
+      >
+        <Button
+          ref={toggle}
+          variant="text"
+          size="extraSmall"
+          startIcon={<FontAwesomeV6Icon iconName="pen-ruler" iconStyle="solid" />}
+          aria-expanded={designOpen}
+          aria-controls={designId}
+          onClick={() => showDesign(!designOpen)}
+        >
+          Edit design
+        </Button>
+      </TrailActions>
+      {/* Above what it does, and before it in the tab order: the head the
+          chips arrange is just below them. */}
+      <section
+        id={designId}
+        hidden={!designOpen}
+        aria-labelledby={`${designId}-heading`}
+        className={styles.memberDesign}
+      >
+        <div className={styles.memberDesignHeader}>
+          <Typography
+            ref={heading}
+            id={`${designId}-heading`}
+            tabIndex={-1}
+            variant="h5"
+            component="h2"
+            className={styles.memberHeading}
+          >
+            Design
           </Typography>
-          <div className={styles.codeBlocks}>
-            <BlocklyFileEditor
-              key={member.id}
-              fileId={fileId}
-              language="actor"
-              isReadOnly={isReadOnly}
-              actorCode
-              boxed={boxed}
-              initialContents={bodyDocument}
-              memberBody={{id: member.id, parts: bodyParts}}
-              onChange={saved =>
-                onUpdate(now => withMemberDocument(now, member.id, saved))
-              }
+          <IconButton
+            size="small"
+            aria-label="Close design"
+            onClick={() => showDesign(false)}
+          >
+            <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
+          </IconButton>
+        </div>
+        <div className={styles.memberDesignBody}>
+          <div className={styles.memberDesignParts}>{chips}</div>
+          <div className={styles.memberDesignSettings}>
+            {purpose}
+            <Checkbox
+              name="member-shown"
+              label="Shown to other files"
+              size="s"
+              disabled={isReadOnly}
+              checked={!member.hidden}
+              onChange={event => {
+                const rest = without(member, 'hidden');
+                write(event.target.checked ? rest : {...rest, hidden: true});
+              }}
             />
           </div>
-        </section>
-      )}
+        </div>
+      </section>
+      <div className={styles.memberCode}>
+        <Typography component="h2" className={styles.announcer}>
+          {title}
+        </Typography>
+        <BlocklyFileEditor
+          key={member.id}
+          fileId={fileId}
+          language="actor"
+          isReadOnly={isReadOnly}
+          initialContents={bodyDocument}
+          memberHead={{parts: headParts}}
+          onChange={saved =>
+            onUpdate(now => withMemberDocument(now, member.id, saved))
+          }
+        />
+      </div>
       <div className={styles.announcer} aria-live="polite" role="status">
         {said}
       </div>

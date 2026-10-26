@@ -8,9 +8,9 @@ the blocks and events it adds to the language. Those are still roots of
 its Code: `define event`, a phrasing and the values it carries, and
 `define block`, a phrasing, the values it takes and what it does. This
 phase makes both data, shown in the Actor Editor as the blocks they make,
-and designed on a page of their own: the block drawn at the top, its parts
-as a row of editable chips under it, and, for a block, the workspace of
-what it does below that.
+and designed on a page of their own. A block's page is the workspace of
+what it does, headed by the block itself, with its design, a row of
+editable chips, opened above it (step 6); an event's page is its design.
 
 It is the first of the `define` blocks to go. The order after it is in
 "Not in this phase".
@@ -135,7 +135,9 @@ come from the same code as the toolbox's.
 ### 3. The page
 
 Edit opens the member's page, a script step on the trail
-(`{kind: 'member', id}`): "Hero › push". Top to bottom:
+(`{kind: 'member', id}`): "Hero › push". As first built, top to bottom;
+step 6 turned a block's page into its workspace, with this design above
+it:
 
 - **The block**, drawn from the parts as they are edited.
 - **The palette**, a row of chips to take from: **Word**, one per type a
@@ -153,8 +155,9 @@ Edit opens the member's page, a script step on the trail
   pill holding its name, with its type beside it as a word and an icon. A
   BREAK is not a pill: a small return mark at the end of its line, since
   it has nothing to edit. One that does nothing where it is is drawn
-  faded, and neither ends its line nor draws a rule. Every chip but a break has a grip, which is what is dragged.
-  Removing a break joins its line to the one before.
+  faded, and neither ends its line nor draws a rule. Every chip but a
+  break has a grip, which is what is dragged. Removing a break joins its
+  line to the one before.
 - **The chosen chip's details**, under the surface, for what a pill has no
   room for: a value's type and its starting value, for a type that has
   one, and Remove. Choosing is pressing a chip or focusing it.
@@ -216,6 +219,38 @@ carrying a number; a New block, `heal by [amount]`, its implementation
 written on its page and called from a rule; each renamed, its handler,
 raise and calls following; each deleted, the question naming its uses.
 
+### 6. What it does, as the page
+
+The implementation is what a block is for, and the page put it under the
+fold. So a block's page is now its workspace, as any code is written, and
+`define block` is not on it.
+
+- **The head is the block being made** (`memberHead`): drawn as a caller
+  sees it, less the `on ⟨actor⟩` a call takes at its end, since inside
+  the implementation the actor is `this actor`. It is a hat, fixed at the
+  top left, and what it does hangs below it. It is made only on the page:
+  `memberDocument` writes it from the member and `withMemberDocument`
+  reads the parts and what hangs below it back, so the file keeps its
+  `define block` row and nothing downstream changes.
+- **Each value's socket holds its getter**, fixed there. Pressing one
+  drags out a new getter for that value (`beginGetterDrag`, as
+  `define block`'s drawing did); the one in the socket stays. Blockly
+  offers no drop into an input held by a block that cannot move, so
+  nothing else goes in.
+- **The design opens above the workspace**, from "Edit design" at the
+  end of the breadcrumb bar (`TrailActions`), and shuts from that or from
+  its own close button. It holds the palette and the chips, and beside
+  them what it is for and "Shown to other files", which replaces the eye.
+  The head just below redraws as the chips move. It is open on a new
+  block and on one whose design is wrong, and shut otherwise; no taller
+  than half the page.
+- **The breadcrumb bar takes the open page's actions.** A page puts them
+  there through `TrailActions`, and draws them in place where there is no
+  bar.
+
+First tried as a split beside the workspace; that crowded both, and the
+head is better arranged by chips just above it.
+
 ## Accessibility
 
 Built in as the phase goes, not after it. What the page must do:
@@ -254,8 +289,9 @@ Built in as the phase goes, not after it. What the page must do:
 - **Focus is placed, never dropped** (2.4.3). A chip added: its text
   field, or a break's grip. A chip moved: its grip, where it now is. A
   chip removed: the grip of the chip that took its place, else the one
-  before it, else the palette. Opening the page:
-  its heading, the member's name. Back on the trail: the Edit it was
+  before it, else the palette. Opening an event's page: its heading, the
+  member's name. Opening a block's: the design's heading when the design
+  opens with it, else "Edit design". Back on the trail: the Edit it was
   opened from. A member deleted: the row that took its place, else New
   event or New block. This page closes, for itself, the ledger's "a door
   that opens a file leaves focus behind".
@@ -264,8 +300,16 @@ Built in as the phase goes, not after it. What the page must do:
   values are called amount; rename one").
 - **Targets are at least 24 pixels** (2.5.8), the grip and the break's
   mark included.
+- **"Edit design" is a disclosure** (`aria-expanded`, `aria-controls`)
+  in the breadcrumb bar, so it is in the same place on every page and
+  before the page in the tab order. Shutting the design, by it or by the
+  design's "Close design", leaves focus on it. The design is a region
+  named by its heading, and before the workspace in the tab order.
 - **What it does is Blockly**, reached by Tab into the workspace and
-  walked by Blockly's own keys; nothing new is added there.
+  walked by Blockly's own keys; nothing new is added there. The head's
+  getters are dragged out by pointer only, as a drawer's blocks are; a
+  value's getter is also in the Variables drawer. The page keeps a
+  heading, "Block: push", for a screen reader, hidden from sight.
 - **Not by colour alone** (1.4.1): a value chip's type is written beside
   its name and shown by an icon, and a faded break is named as doing
   nothing, not only drawn paler; the colours come from the semantic
@@ -292,6 +336,18 @@ Built in as the phase goes, not after it. What the page must do:
   and so its type, as they were; the picture is drawn anew for each
   design rather than for each type.
 
+- **A block that turns events off must turn them back on.** The head
+  first disabled events and re-enabled them only if they had been on;
+  loading runs with them off, so the count never came down and the
+  workspace went silent: no finished-loading event, and no saves.
+- **Section folding took the head's body.** The editor folds a large
+  hat's chain on opening (`useSectionWorkspace.prepareFirst`); a member
+  page is one stack and is not folded.
+- **The getters are not made while loading.** A workspace the editor saves
+  and loads again brings them with it, plugged in after `loadExtraState`;
+  one made there first was knocked out of its socket. The editor fills
+  the sockets once the page has loaded and when the parts change.
+
 ## In the browser
 
 Checked headless, on the dev server: the Blocks tab of the Text Input
@@ -300,15 +356,21 @@ the picture, the head and the trail following; a palette chip dragged on
 and a chip dragged by its grip; going back by the trail with focus on
 Edit; the Text Input's `changed` renamed, its uses found under the new
 name once the page was left; a new event with a value, offered in the
-actor's own drawer as a hat and a raise. Not yet checked by hand: an
-implementation edited on the page and run, and the keys with a screen
-reader.
+actor's own drawer as a hat and a raise. Step 6: the List's block opened
+on its workspace headed by `move the highlight by ⟨rows⟩`; a getter
+dragged out of the head, the head keeping its own; one dropped into the
+body; a break and a word added from the design, the head redrawn; all of
+it there again after leaving and reopening. Not yet checked by hand: an
+implementation edited on the page and run, the keys with a screen reader,
+and the page at phone width, where the lab's preview covers the palette
+before the page can be reached headless.
 
 ## Open
 
-- **A narrow surface.** In a window about 1000px wide, the surface is some
-  170px across, and a long word's chip is cut off at its edge rather than
-  shrunk.
+- **A getter dragged out loose reads `???`**: outside the head's stack
+  its value is not in scope, which is right, and says so only by that.
+- **The head's getters draw a dropdown arrow** though they cannot be
+  changed.
 
 ## Not in this phase
 
@@ -319,5 +381,7 @@ reader.
 - The world file as data, retiring `define world`.
 - A Screen's events, which are data already (`ScreenEvent`) and would take
   the same page.
-- A rule's `define block` and `define event` on this page.
+- A rule's `define block` and `define event` on this page. When rules keep
+  their members as data too, `define block`, its designer and its drawing
+  can be deleted outright.
 - Blocks that report a value.

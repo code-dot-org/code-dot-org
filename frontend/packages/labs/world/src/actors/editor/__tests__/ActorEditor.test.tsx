@@ -51,19 +51,19 @@ const saved: {
   onChange?: (contents: string) => void;
   contents?: string;
   actorCode?: boolean;
-  memberBody?: {id: string; parts: unknown[]};
+  memberHead?: {parts: unknown[]};
 } = {};
 vi.mock('../../../blockly/BlocklyFileEditor', () => ({
   BlocklyFileEditor: (props: {
     initialContents: string;
     onChange: (contents: string) => void;
     actorCode?: boolean;
-    memberBody?: {id: string; parts: unknown[]};
+    memberHead?: {parts: unknown[]};
   }) => {
     saved.onChange = props.onChange;
     saved.contents = props.initialContents;
     saved.actorCode = props.actorCode;
-    saved.memberBody = props.memberBody;
+    saved.memberHead = props.memberHead;
     return <div data-testid="blocks" />;
   },
 }));
@@ -608,28 +608,47 @@ describe('an event or block of its own (specs/ACTOR_BLOCKS_PLAN.md, step 3)', ()
     expect(screen.getByRole('alert')).toHaveTextContent(/needs a word/);
   });
 
-  it('opens a block with what it does below its design', () => {
+  it('opens a new block on its design, above what it does', () => {
     open();
     blocks();
     fireEvent.click(screen.getByRole('button', {name: 'New block'}));
 
+    const design = screen.getByRole('region', {name: 'Design'});
+    expect(document.activeElement).toBe(
+      within(design).getByRole('heading', {name: 'Design'}),
+    );
+    expect(screen.getByRole('button', {name: 'Edit design'})).toHaveAttribute(
+      'aria-expanded',
+      'true',
+    );
     expect(
       screen.getByRole('heading', {name: 'Block: do something'}),
     ).toBeInTheDocument();
-    expect(screen.getByRole('region', {name: 'What it does'})).toContainElement(
-      screen.getByTestId('blocks'),
-    );
-    expect(saved.memberBody?.id).toBe('block-1');
-    expect(saved.actorCode).toBe(true);
-    // The implementation's workspace is the actor's code and this block.
+    expect(saved.memberHead?.parts).toEqual([
+      {kind: 'label', text: 'do something'},
+    ]);
+    expect(saved.actorCode).toBeUndefined();
+    // The implementation's workspace is the block, at its head, alone.
     const roots = JSON.parse(saved.contents!).blocks.blocks as Array<{
       type: string;
       id?: string;
     }>;
-    expect(roots.at(-1)).toMatchObject({
-      type: 'world_rule_block',
-      id: 'block-1',
-    });
+    expect(roots).toEqual([
+      expect.objectContaining({type: 'world_member_head', id: 'member-head'}),
+    ]);
+  });
+
+  it('shuts its design, focus going back to Edit design', () => {
+    open();
+    blocks();
+    fireEvent.click(screen.getByRole('button', {name: 'New block'}));
+
+    fireEvent.click(screen.getByRole('button', {name: 'Close design'}));
+
+    const toggle = screen.getByRole('button', {name: 'Edit design'});
+    expect(toggle).toHaveAttribute('aria-expanded', 'false');
+    expect(document.activeElement).toBe(toggle);
+    expect(screen.queryByRole('region', {name: 'Design'})).toBeNull();
   });
 
   it('goes back to the Blocks tab, with focus on its Edit', () => {

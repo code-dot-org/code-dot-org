@@ -28,8 +28,8 @@ its handlers, its every-frame work and its drawing, in its code.
 
 A **member** is an event or a block an actor adds to the language: the hat that hears it and the
 block that raises it, or the block that calls it. It is designed from chips — words, values and
-line breaks — on its own page in the Actor Editor, and a block's implementation is written there
-too (ACTOR_BLOCKS_PLAN.md). What it does on being made
+line breaks — on its own page in the Actor Editor; a block's page is its implementation, written
+under a head that is the block itself (ACTOR_BLOCKS_PLAN.md). What it does on being made
 is its **is created** handler, which runs once it exists and before it is first drawn. No actor is
 written as a `define actor` block; that is only how the compiler reads one.
 

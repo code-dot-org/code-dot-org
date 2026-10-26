@@ -149,21 +149,27 @@ describe('a block’s implementation, on its own workspace', () => {
     body: {type: 'world_print'},
   };
 
-  it('is the actor’s code with the block among its roots', () => {
+  it('is the block at its head, what it does below, and the variables', () => {
     const document = JSON.parse(memberDocument(hero([block]), block));
-    expect(
-      document.blocks.blocks.map((root: {type: string}) => root.type),
-    ).toEqual(['world_on_x', 'world_rule_block']);
+    expect(document.blocks.blocks).toEqual([
+      expect.objectContaining({
+        type: 'world_member_head',
+        id: 'member-head',
+        extraState: {parts: block.parts},
+        next: {block: {type: 'world_print'}},
+      }),
+    ]);
     expect(document.variables).toEqual(hero().blocks!.variables);
   });
 
   it('comes back as the member’s body and parts, the page’s words kept', () => {
     const data = hero([block]);
     const saved = JSON.parse(memberDocument(data, block));
-    const row = saved.blocks.blocks[1];
-    row.inputs = {DO: {block: {type: 'world_say'}}};
-    row.fields.DESCRIPTION = 'stale';
-    row.extraState.parts = [...block.parts, {kind: 'row'}, word('now')];
+    const head = saved.blocks.blocks[0];
+    head.next = {block: {type: 'world_say'}};
+    // The getters the page plugs in are not the member's.
+    head.inputs = {VALUE0: {block: {type: 'variables_get_Number'}}};
+    head.extraState.parts = [...block.parts, {kind: 'row'}, word('now')];
     saved.variables.push({id: 'v2', name: 'more', type: 'Number'});
 
     const next = withMemberDocument(data, 'block-1', JSON.stringify(saved));
@@ -173,9 +179,18 @@ describe('a block’s implementation, on its own workspace', () => {
       parts: [...block.parts, {kind: 'row'}, word('now')],
       body: {type: 'world_say'},
     });
-    expect(next.blocks?.blocks?.blocks?.map(root => root.type)).toEqual([
-      'world_on_x',
-    ]);
+    // The actor's own code is left as it was.
+    expect(next.blocks?.blocks).toEqual(data.blocks?.blocks);
     expect(next.blocks?.variables).toHaveLength(2);
+  });
+
+  it('loses what it does when nothing hangs below the head', () => {
+    const data = hero([block]);
+    const saved = JSON.parse(memberDocument(data, block));
+    delete saved.blocks.blocks[0].next;
+
+    const next = withMemberDocument(data, 'block-1', JSON.stringify(saved));
+
+    expect(next.members![0].body).toBeUndefined();
   });
 });

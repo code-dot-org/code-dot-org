@@ -517,16 +517,73 @@
   width: 100%;
 }
 
-.memberBody {
+/*
+ * A block's page: what it does fills it, and its design opens above that
+ * (specs/ACTOR_BLOCKS_PLAN.md, step 6).
+ */
+.memberSplit {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  min-height: 24rem;
   flex: 1;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
 }
 
-.memberBody .codeBlocks {
-  border: var(--lab-border-default);
+.memberCode {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 12rem;
+}
+
+/* No taller than half the page: the head it arranges stays in view below. */
+.memberDesign {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 0.75rem;
+  max-height: 50%;
+  overflow: auto;
+  padding: 0.75rem 1rem 1rem;
+  border-bottom: var(--lab-border-default);
+  background: var(--background-neutral-primary);
+}
+
+.memberDesign[hidden] {
+  display: none;
+}
+
+.memberDesignHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/* The parts, and beside them what is said about the block; one above the
+   other when there is no room for both. */
+.memberDesignBody {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem 2rem;
+}
+
+.memberDesignParts {
+  flex: 2 1 26rem;
+  min-width: 0;
+}
+
+.memberDesignSettings {
+  display: flex;
+  flex: 1 1 16rem;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.memberDesign .memberDescription,
+.memberDesign .memberDescription input {
+  width: 100%;
 }
 
 .announcer {

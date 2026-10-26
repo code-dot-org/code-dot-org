@@ -59,7 +59,12 @@ import {refreshActorPictures} from './actorAbout';
 import {projectActorIcons} from './actorIconMeta';
 import {addActorThumbnails, setActorIcons} from './actorThumbnails';
 import styles from './blocklyFileEditor.module.css';
-import {BODY_OWNER_ID, createBodySeam, HIDE_BODIES} from './bodySurfaces';
+import {
+  BODY_OWNER_ID,
+  createBodySeam,
+  HIDE_BODIES,
+  MEMBER_HEAD_ID,
+} from './bodySurfaces';
 import {actorCodeChoices, rootCodeRows} from './codeRoots';
 import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette, heldNotOffered} from './domainBlocks';
@@ -267,12 +272,12 @@ export interface BlocklyFileEditorProps extends CustomEditorProps {
    */
   boxed?: boolean;
   /**
-   * The implementation half of an actor's member page
-   * (specs/ACTOR_BLOCKS_PLAN.md, step 3): the body of the `define block`
-   * with this id is opened at once and never closed here, and its design is
-   * the page's, so the head draws none of it and takes `parts` as given.
+   * An actor's member page (specs/ACTOR_BLOCKS_PLAN.md, step 6): the
+   * contents are the block being made, with what it does below it
+   * (`memberHead`), and its design is the page's, handed to the head as
+   * `parts`.
    */
-  memberBody?: {id: string; parts: readonly BlockPart[]};
+  memberHead?: {parts: readonly BlockPart[]};
 }
 
 export const BlocklyFileEditor = ({
@@ -282,10 +287,11 @@ export const BlocklyFileEditor = ({
   onChange,
   actorCode = false,
   boxed = false,
-  memberBody,
+  memberHead,
 }: BlocklyFileEditorProps) => {
-  const memberBodyRef = useRef(memberBody);
-  memberBodyRef.current = memberBody;
+  const memberHeadRef = useRef(memberHead);
+  memberHeadRef.current = memberHead;
+  const isMemberPage = Boolean(memberHead);
   // What this file SAYS, which is not always what it holds.
   //
   // A rule the learner has not edited is stored as a reference to the
@@ -705,7 +711,9 @@ export const BlocklyFileEditor = ({
     ...(actorCode ? {moreChoices: codeChoices} : {}),
     isReadOnly,
     workspaceRef,
-    isShowingSections: () => surfaceRef.current === null,
+    // A member page is one block and what it does: no sections to fold.
+    isShowingSections: () =>
+      surfaceRef.current === null && !memberHeadRef.current,
   });
   /**
    * An actor's code rows made roots, after every load and arrival — on the
@@ -732,6 +740,10 @@ export const BlocklyFileEditor = ({
     const document = parseWorkspace(initialContents);
     // As this file was left this session, or — for one not yet opened —
     // collapsed when it is too big to read at once.
+    // A member page is one stack, and what hangs below its head is the page.
+    if (memberHeadRef.current) {
+      return document;
+    }
     return sections.prepareFirst(HIDE_BODIES ? seam.show(document) : document);
   });
 
@@ -803,11 +815,8 @@ export const BlocklyFileEditor = ({
       // drawer that can only be used there; a `define block`'s is a body with
       // the signature drawer moved to the front, because this is the only
       // place a signature can be edited (`surfaceToolbox`).
-      // On a member page the signature is the page's, so its drawer is not
-      // offered here.
-      kind: memberBodyRef.current
-        ? 'body'
-        : block?.type === 'world_rule_event'
+      kind:
+        block?.type === 'world_rule_event'
           ? 'event'
           : block?.type === 'world_define_drawing'
             ? 'drawing'
@@ -849,16 +858,17 @@ export const BlocklyFileEditor = ({
   // binds a new value to a variable of its own and renames one renamed,
   // which is what the body's getters follow. The events that fires save the
   // file, and the page reads the bound parts back from it.
-  const memberParts = memberBody?.parts;
+  const memberParts = memberHead?.parts;
   useEffect(() => {
-    const head = workspaceRef.current?.getBlockById(BODY_OWNER_ID) as
+    const head = workspaceRef.current?.getBlockById(MEMBER_HEAD_ID) as
       | (Blockly.Block & {
           saveExtraState?: () => {parts?: BlockPart[]};
           loadExtraState?: (state: {parts: BlockPart[]}) => void;
+          fill_?: () => void;
         })
       | null
       | undefined;
-    if (!memberParts || !editing || !head?.loadExtraState) {
+    if (!memberParts || !head?.loadExtraState) {
       return;
     }
     const unbound = (parts: readonly BlockPart[]) =>
@@ -872,7 +882,8 @@ export const BlocklyFileEditor = ({
       return;
     }
     head.loadExtraState({parts: memberParts.map(part => ({...part}))});
-  }, [memberParts, editing]);
+    head.fill_?.();
+  }, [memberParts]);
 
   // A Blockly field has no route to React state, so the editor installs
   // itself while it is mounted — `setModuleOpener` and `setLessonOpener` are
@@ -902,8 +913,12 @@ export const BlocklyFileEditor = ({
   // definition and is watched by the effect that swaps surfaces, so folding
   // this into it would rebuild the palette every time a body opened.
   const surfaceToolbox = useMemo(
-    () => toolboxForSurface(toolbox, editing?.kind ?? 'interface'),
-    [toolbox, editing],
+    () =>
+      toolboxForSurface(
+        toolbox,
+        editing?.kind ?? (isMemberPage ? 'body' : 'interface'),
+      ),
+    [toolbox, editing, isMemberPage],
   );
   surfaceToolboxRef.current = surfaceToolbox;
 
@@ -1209,10 +1224,33 @@ export const BlocklyFileEditor = ({
           // own seeding and not through either of the reload effects, so this
           // is the only place it can be measured and arranged.
           layOut(workspace);
-          if (memberBodyRef.current) {
-            openBody(memberBodyRef.current.id);
-          }
+          (
+            workspace.getBlockById(MEMBER_HEAD_ID) as unknown as {
+              fill_?: () => void;
+            } | null
+          )?.fill_?.();
         }
+        return;
+      }
+      // A member page's workspace is the member: saved whole, as the page
+      // reads it (`memberEdits.withMemberDocument`). Keystrokes are shown and
+      // not saved, as on a body surface, and for its reason: a value's name
+      // is the block's, and a rename rewrites the project.
+      if (memberHeadRef.current) {
+        if (
+          event.isUiEvent ||
+          event.type === Blockly.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE ||
+          isReadOnly
+        ) {
+          return;
+        }
+        onChangeRef.current(
+          JSON.stringify(
+            Blockly.serialization.workspaces.save(workspace),
+            null,
+            2,
+          ),
+        );
         return;
       }
       sectionEvent(event, workspace);
@@ -1250,15 +1288,11 @@ export const BlocklyFileEditor = ({
         // stand for — so the stack is read back before anything is saved.
         // Idempotent, and it has to be: this runs on every edit, and a rebuild
         // binds variables, which fires events that arrive back here.
-        // …unless a member page holds the signature, and the stack was never
-        // written out to be read.
-        if (!memberBodyRef.current) {
-          (
-            workspace.getBlockById(BODY_OWNER_ID) as unknown as {
-              readArguments_?: () => void;
-            } | null
-          )?.readArguments_?.();
-        }
+        (
+          workspace.getBlockById(BODY_OWNER_ID) as unknown as {
+            readArguments_?: () => void;
+          } | null
+        )?.readArguments_?.();
         seam.setBody(
           editing.id,
           Blockly.serialization.workspaces.save(
@@ -1355,7 +1389,6 @@ export const BlocklyFileEditor = ({
       layOut,
       sectionEvent,
       rootCode,
-      openBody,
     ],
   );
 
@@ -1537,7 +1570,7 @@ export const BlocklyFileEditor = ({
         // written straight back to the file.
         const head = workspace.getBlockById(BODY_OWNER_ID);
         if (head) {
-          anchorBodyOwner(head, !memberBodyRef.current);
+          anchorBodyOwner(head);
           // The viewport is wherever the interface left it, which for a rule
           // wider than the screen is not where this is. To the ORIGIN rather
           // than centered on the head: the head is as wide as the signature it
@@ -1627,7 +1660,7 @@ export const BlocklyFileEditor = ({
       rootCode(workspace);
       const head = workspace.getBlockById(BODY_OWNER_ID);
       if (head) {
-        anchorBodyOwner(head, !memberBodyRef.current);
+        anchorBodyOwner(head);
       }
     } finally {
       Blockly.Events.enable();
@@ -1697,7 +1730,7 @@ export const BlocklyFileEditor = ({
         // block: draggable, deletable, wearing a pencil into itself.
         const head = workspace.getBlockById(BODY_OWNER_ID);
         if (head) {
-          anchorBodyOwner(head, !memberBodyRef.current);
+          anchorBodyOwner(head);
         }
       } finally {
         Blockly.Events.enable();
@@ -1745,7 +1778,7 @@ export const BlocklyFileEditor = ({
           onCancel={() => finishPick(undefined)}
         />
       )}
-      {editing && !memberBody && (
+      {editing && (
         // The body has the workspace's place; this says whose it is and how
         // to get back. A header rather than a modal's chrome, because the
         // pane is the same pane and what changed is what is in it.
@@ -1823,7 +1856,7 @@ export const BlocklyFileEditor = ({
           />
         </BlocklyProvider>
         {sections.menu}
-        {!editing && sections.outlineButton}
+        {!editing && !isMemberPage && sections.outlineButton}
       </div>
     </div>
   );

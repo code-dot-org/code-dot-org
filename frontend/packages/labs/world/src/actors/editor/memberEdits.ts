@@ -5,12 +5,10 @@
 // them back changed. Parts are edited as they are ARRANGED, breaks that end
 // nothing included; what is written to the data is settled (`designParts`).
 
+import {MEMBER_HEAD, MEMBER_HEAD_ID} from '../../blockly/bodySurfaces';
 import {settledParts} from '../../blockly/designParts';
-import {WORKSPACE_KEYS} from '../../blockly/documentExtras';
 import {designedName} from '../../blockly/ruleMeta';
 import {
-  readMember,
-  writeMember,
   type ActorData,
   type ActorMember,
   type ActorMemberPart,
@@ -245,23 +243,28 @@ export function withValueNames(data: ActorData): ActorData {
 }
 
 /**
- * The workspace a block's implementation is written on: the actor's code,
- * and the block's `define block` among its roots, whose body the editor
- * opens (`BlocklyFileEditor`, `memberBody`).
+ * The workspace a block's implementation is written on: the block being made
+ * at its head (`memberHead`), what it does below it, and the actor's
+ * variables, which hold each value's.
  */
 export function memberDocument(data: ActorData, member: ActorMember): string {
-  const workspace = data.blocks ?? {};
+  const variables = data.blocks?.variables;
   return JSON.stringify(
     {
-      ...workspace,
       blocks: {
         languageVersion: 0,
-        ...workspace.blocks,
         blocks: [
-          ...(workspace.blocks?.blocks ?? []),
-          {...writeMember(member), x: 20, y: 20},
+          {
+            type: MEMBER_HEAD,
+            id: MEMBER_HEAD_ID,
+            x: 20,
+            y: 20,
+            extraState: {parts: member.parts},
+            ...(member.body ? {next: {block: member.body}} : {}),
+          },
         ],
       },
+      ...(variables ? {variables} : {}),
     },
     null,
     2,
@@ -269,48 +272,52 @@ export function memberDocument(data: ActorData, member: ActorMember): string {
 }
 
 /**
- * The data with what that workspace saved: the actor's code, and the
- * member's implementation and parts. The parts come from the workspace,
- * which gives a new value its variable; what the block is for and whether
- * it is shown stay as the page has them.
+ * The data with what that workspace saved: the member's parts and what it
+ * does, and the actor's variables. The parts come from the workspace, which
+ * gives a new value its variable; what the block is for and whether it is
+ * shown stay as the page has them. What the head's sockets hold is not read:
+ * those are its getters, made for the page.
  */
 export function withMemberDocument(
   data: ActorData,
   id: string,
   saved: string,
 ): ActorData {
-  let document: Record<string, unknown>;
+  let document: {
+    blocks?: {blocks?: SavedHead[]};
+    variables?: NonNullable<ActorData['blocks']>['variables'];
+  };
   try {
-    document = JSON.parse(saved) as Record<string, unknown>;
+    document = JSON.parse(saved);
   } catch {
     return data;
   }
-  const blocks = document.blocks as
-    | {blocks?: Array<Record<string, unknown>>}
-    | undefined;
-  const roots = blocks?.blocks ?? [];
-  const row = roots.find(root => root.id === id);
+  const head = (document.blocks?.blocks ?? []).find(
+    root => root.type === MEMBER_HEAD,
+  );
   const current = (data.members ?? []).find(member => member.id === id);
-  // A root is placed; a row is not, and that is what is read.
-  const read = row && readMember(without(without(row, 'x'), 'y'), 0);
-  if (!current || !read) {
+  const parts = head?.extraState?.parts;
+  if (!current || !parts) {
     return data;
   }
-  const kept = without(current, 'body');
+  const body = head.next?.block;
   const member: ActorMember = {
-    ...kept,
-    parts: read.parts,
-    ...(read.body ? {body: read.body} : {}),
+    ...without(current, 'body'),
+    parts,
+    ...(body ? {body} : {}),
   };
-  const workspace = Object.fromEntries(
-    Object.entries(document).filter(([key]) => WORKSPACE_KEYS.has(key)),
-  );
   return {
     ...data,
-    blocks: {
-      ...workspace,
-      blocks: {...blocks, blocks: roots.filter(root => root !== row)},
-    },
+    ...(document.variables
+      ? {blocks: {...data.blocks, variables: document.variables}}
+      : {}),
     members: (data.members ?? []).map(one => (one.id === id ? member : one)),
   };
+}
+
+/** A member head as a workspace saves it, as far as it is read. */
+interface SavedHead {
+  type: string;
+  extraState?: {parts?: ActorMemberPart[]};
+  next?: {block?: ActorMember['body']};
 }
