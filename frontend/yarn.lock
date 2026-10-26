@@ -1686,6 +1686,62 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blockly/block-shareable-procedures@npm:^6.0.10":
+  version: 6.0.12
+  resolution: "@blockly/block-shareable-procedures@npm:6.0.12"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/8821968add5e96c7c9569270fa37a62e096e9820ee447ea947059a69d328c62fae7abbb031491864251684fc5591bd05540e6b2ee95067da942ffaab438ec51c
+  languageName: node
+  linkType: hard
+
+"@blockly/field-colour@npm:^6.0.4":
+  version: 6.0.12
+  resolution: "@blockly/field-colour@npm:6.0.12"
+  dependencies:
+    "@blockly/field-grid-dropdown": "npm:^6.0.10"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/e20e84ab8645a3d440a9e07142660a1fa83471806ac79fd8364ffe82044aa0c14854e7d402fac3d1f3bbcbc07103b5c78b43c04141101022dd5d9e4b949255aa
+  languageName: node
+  linkType: hard
+
+"@blockly/field-grid-dropdown@npm:^6.0.10":
+  version: 6.0.10
+  resolution: "@blockly/field-grid-dropdown@npm:6.0.10"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/bcd16b2d12548946ed2f9c7c1d6141aa863cd0ea820715d2db0f3793c56b47d85a94787dc03531028f2be9cb2c5ca307ea80e1d9f46b6131d789047cad330be1
+  languageName: node
+  linkType: hard
+
+"@blockly/plugin-scroll-options@npm:^13.1.0":
+  version: 13.4.0
+  resolution: "@blockly/plugin-scroll-options@npm:13.4.0"
+  peerDependencies:
+    blockly: ^13.2.0
+  checksum: 10c0/274fd9617d2a407901d35802260aa18f6240dc92f3cab35f5c7332d796f84c39234416559a8c2edba337ab221b580199dc46094731cb3b626fd7d0e9f6581f5d
+  languageName: node
+  linkType: hard
+
+"@blockly/theme-dark@npm:^8.0.3":
+  version: 8.0.4
+  resolution: "@blockly/theme-dark@npm:8.0.4"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/c9a956df5628d42d9a3d8e2c90d7cfee8a7908889f3cd4ce6b4ff89abc12b58fd324fa308d6b40e84a2aab44c1d9d78c96e46ce127e831deb66aca58eb6baffb
+  languageName: node
+  linkType: hard
+
+"@blockly/theme-highcontrast@npm:^7.0.3":
+  version: 7.0.4
+  resolution: "@blockly/theme-highcontrast@npm:7.0.4"
+  peerDependencies:
+    blockly: ^12.0.0
+  checksum: 10c0/860b8afc0bab67bc41574fd2046d95e78c1add780d36b943df7d338f6fef735287f67a074c1a1c0455e479ff93fbc137d684630f16d25fe1b64c497ff2b60b59
+  languageName: node
+  linkType: hard
+
 "@code-dot-org/audio@workspace:packages/audio":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/audio@workspace:packages/audio"
@@ -1716,6 +1772,60 @@ __metadata:
     "@emotion/styled": ^11.0.0
     "@mui/material": ^7.0.0
     react: ^18.0.0 || ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@code-dot-org/blockly@workspace:packages/blockly":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/blockly@workspace:packages/blockly"
+  dependencies:
+    "@blockly/block-shareable-procedures": "npm:^6.0.10"
+    "@blockly/field-colour": "npm:^6.0.4"
+    "@blockly/plugin-scroll-options": "npm:^13.1.0"
+    "@blockly/theme-dark": "npm:^8.0.3"
+    "@blockly/theme-highcontrast": "npm:^7.0.3"
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/component-library-styles": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/markdown": "workspace:*"
+    "@eslint/js": "catalog:"
+    "@mantine/hooks": "npm:^8.3.13"
+    "@mui/material": "catalog:"
+    "@testing-library/jest-dom": "catalog:"
+    "@testing-library/react": "catalog:"
+    "@types/hast": "npm:^3.0.4"
+    "@types/node": "catalog:"
+    "@types/react": "catalog:"
+    "@types/react-dom": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
+    "@vitest/browser-playwright": "catalog:"
+    blockly: "npm:^13.1.0"
+    classnames: "catalog:"
+    eslint: "catalog:"
+    eslint-plugin-react-hooks: "catalog:"
+    eslint-plugin-react-refresh: "catalog:"
+    events: "npm:^3.3.0"
+    globals: "catalog:"
+    hast-util-to-html: "npm:^9.0.5"
+    jsdom: "catalog:"
+    playwright: "catalog:"
+    prettier: "catalog:"
+    react: "catalog:"
+    react-dom: "catalog:"
+    rimraf: "catalog:"
+    stylelint: "catalog:"
+    typed-emitter: "npm:^2.1.0"
+    typescript: "catalog:"
+    typescript-eslint: "catalog:"
+    vite: "catalog:"
+    vite-plugin-dts: "catalog:"
+    vite-plugin-externalize-deps: "catalog:"
+    vitest: "catalog:"
+  peerDependencies:
+    classnames: ^2.5.1
+    react: ">=16"
+    react-dom: ">=16"
   languageName: unknown
   linkType: soft
 
@@ -2081,7 +2191,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/markdown@workspace:packages/markdown":
+"@code-dot-org/markdown@workspace:*, @code-dot-org/markdown@workspace:packages/markdown":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/markdown@workspace:packages/markdown"
   dependencies:
@@ -5160,6 +5270,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/hooks@npm:^8.3.13":
+  version: 8.3.18
+  resolution: "@mantine/hooks@npm:8.3.18"
+  peerDependencies:
+    react: ^18.x || ^19.x
+  checksum: 10c0/3767cb33a3e1c4469f18f12536c4c6e42d714ebf5f6da032c8b38ebb24db9ad399978437c69e263c5689a61ea97f17f145719dfe2cdcfa1aa70270711d993b19
+  languageName: node
+  linkType: hard
+
 "@mapbox/hast-util-table-cell-style@npm:^0.1.3":
   version: 0.1.3
   resolution: "@mapbox/hast-util-table-cell-style@npm:0.1.3"
@@ -7370,6 +7489,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/hast@npm:^3.0.4":
+  version: 3.0.5
+  resolution: "@types/hast@npm:3.0.5"
+  dependencies:
+    "@types/unist": "npm:*"
+  checksum: 10c0/f3af8594a6903a507ed191eda944af18099198d6708c29102ae17118c3e20779f6929e91ed37e033541fd28d58055d8a5910a4366dbdf976cf81b13a464741fb
+  languageName: node
+  linkType: hard
+
 "@types/http-cache-semantics@npm:*":
   version: 4.0.4
   resolution: "@types/http-cache-semantics@npm:4.0.4"
@@ -9541,6 +9669,15 @@ __metadata:
     buffers: "npm:~0.1.1"
     chainsaw: "npm:~0.1.0"
   checksum: 10c0/752c2c2ff9f23506b3428cc8accbfcc92fec07bf8a31a1953e9c7e2193eb5db8a67252034ab93e8adab2a1c43f3eeb3da0bacae0320e9814f3ca127942c55871
+  languageName: node
+  linkType: hard
+
+"blockly@npm:^13.1.0":
+  version: 13.4.0
+  resolution: "blockly@npm:13.4.0"
+  peerDependencies:
+    jsdom: ">=27.4.0 <31.0.0"
+  checksum: 10c0/c59c9732a7c289fe84007f24364727f95ad5e0f4d465829a95bc4225ba5ecc19ed63b394a319183b855c9b1ce406e1d95a441ca9b9f0ae380530aa35b96e85ea
   languageName: node
   linkType: hard
 
@@ -13985,6 +14122,25 @@ __metadata:
     unist-util-is: "npm:^2.0.0"
     xtend: "npm:^4.0.1"
   checksum: 10c0/60d25f2c6b502fcb06193720efcba8b013d64bbe4e52c66c10f0312b3717613b3c8a35bea326aad20f379cad4007ed6d4e296f6fa325935b8077e90853c2597b
+  languageName: node
+  linkType: hard
+
+"hast-util-to-html@npm:^9.0.5":
+  version: 9.0.5
+  resolution: "hast-util-to-html@npm:9.0.5"
+  dependencies:
+    "@types/hast": "npm:^3.0.0"
+    "@types/unist": "npm:^3.0.0"
+    ccount: "npm:^2.0.0"
+    comma-separated-tokens: "npm:^2.0.0"
+    hast-util-whitespace: "npm:^3.0.0"
+    html-void-elements: "npm:^3.0.0"
+    mdast-util-to-hast: "npm:^13.0.0"
+    property-information: "npm:^7.0.0"
+    space-separated-tokens: "npm:^2.0.0"
+    stringify-entities: "npm:^4.0.0"
+    zwitch: "npm:^2.0.4"
+  checksum: 10c0/b7a08c30bab4371fc9b4a620965c40b270e5ae7a8e94cf885f43b21705179e28c8e43b39c72885d1647965fb3738654e6962eb8b58b0c2a84271655b4d748836
   languageName: node
   linkType: hard
 
@@ -20527,6 +20683,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rxjs@npm:*":
+  version: 7.8.2
+  resolution: "rxjs@npm:7.8.2"
+  dependencies:
+    tslib: "npm:^2.1.0"
+  checksum: 10c0/1fcd33d2066ada98ba8f21fcbbcaee9f0b271de1d38dc7f4e256bfbc6ffcdde68c8bfb69093de7eeb46f24b1fb820620bf0223706cff26b4ab99a7ff7b2e2c45
+  languageName: node
+  linkType: hard
+
 "rxjs@npm:^7.8.1":
   version: 7.8.1
   resolution: "rxjs@npm:7.8.1"
@@ -22820,6 +22985,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typed-emitter@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "typed-emitter@npm:2.1.0"
+  dependencies:
+    rxjs: "npm:*"
+  dependenciesMeta:
+    rxjs:
+      optional: true
+  checksum: 10c0/01fc354ba8e87bd39b1bf4fe1c96fe7ecff7fde83161003b0f8c7f4b285a368052e185ba655dd8c102c4445301b7a1e032c8972f181b440fc95bd810450f1314
+  languageName: node
+  linkType: hard
+
 "typed-query-selector@npm:^2.12.0":
   version: 2.12.0
   resolution: "typed-query-selector@npm:2.12.0"
@@ -24456,7 +24633,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zwitch@npm:^2.0.0":
+"zwitch@npm:^2.0.0, zwitch@npm:^2.0.4":
   version: 2.0.4
   resolution: "zwitch@npm:2.0.4"
   checksum: 10c0/3c7830cdd3378667e058ffdb4cf2bb78ac5711214e2725900873accb23f3dfe5f9e7e5a06dcdc5f29605da976fc45c26d9a13ca334d6eea2245a15e77b8fc06e
