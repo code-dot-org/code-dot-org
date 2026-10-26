@@ -514,9 +514,34 @@ describe('what it is for (specs/ACTORS_AS_DATA_PLAN.md, step 3)', () => {
     fireEvent.click(screen.getByRole('checkbox', {name: 'Is a record'}));
     expect(written().isData).toBe(true);
     onChange.mockClear();
-    open(as({isData: true}));
+    const record = within(open(as({isData: true})).container);
+    // …so it opens on what it adds, and Look says why it is empty.
+    expect(record.getByRole('tab', {name: 'Blocks'})).toHaveAttribute(
+      'aria-selected',
+      'true',
+    );
+    fireEvent.click(record.getByRole('tab', {name: 'Look'}));
     expect(
-      screen.getAllByText(/is a record: it is kept and found/),
+      record.getAllByText(/is a record: it is kept and found/),
     ).not.toHaveLength(0);
+  });
+});
+
+describe('Look and Blocks (specs/ACTOR_BLOCKS_PLAN.md, step 2)', () => {
+  it('opens on Look, and Blocks shows its events and blocks', () => {
+    open();
+    expect(screen.getByRole('tab', {name: 'Look'})).toHaveAttribute(
+      'aria-selected',
+      'true',
+    );
+    expect(screen.getByRole('tabpanel')).toHaveAccessibleName('Look');
+    expect(screen.getByLabelText('Looks like')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('tab', {name: 'Blocks'}));
+
+    expect(screen.getByRole('tabpanel')).toHaveAccessibleName('Blocks');
+    expect(screen.queryByLabelText('Looks like')).toBeNull();
+    expect(screen.getByRole('region', {name: 'Events'})).toBeInTheDocument();
+    expect(screen.getByRole('region', {name: 'Blocks'})).toBeInTheDocument();
   });
 });

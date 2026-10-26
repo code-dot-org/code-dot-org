@@ -34,6 +34,7 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
+import Tabs from '@code-dot-org/component-library/tabs';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
@@ -108,6 +109,7 @@ import {
 import {ActorIconPicker} from './ActorIconPicker';
 import {AddFramesDialog} from './AddFramesDialog';
 import {AnimationRow} from './AnimationRow';
+import {MembersTab} from './MembersTab';
 import {MomentPanel} from './MomentPanel';
 import {SelfProperty} from './SelfProperty';
 import {TimelineStrip} from './TimelineStrip';
@@ -216,6 +218,11 @@ export const ActorEditor = (props: CustomEditorProps) => {
 
   const [script, setScript, onTrail] = useScriptStep(fileId);
   const [tab, setTab] = useState<'traits' | 'effects'>('traits');
+  // A record has no look, so it opens on what it adds.
+  const [section, setSection] = useState<'look' | 'blocks'>(() =>
+    parse(initialContents)?.isData ? 'blocks' : 'look',
+  );
+  const sectionTabs = `actor-sections-${fileId}`;
   const [enhanceAt, setEnhanceAt] = useState<HTMLElement | null>(null);
   const {promptForName, confirm} = usePrompts();
   const [effectAt, setEffectAt] = useState<HTMLElement | null>(null);
@@ -1033,305 +1040,369 @@ export const ActorEditor = (props: CustomEditorProps) => {
             </div>
           )}
         </div>
-        <div className={styles.preview}>
-          {data.isData ? (
-            <Typography variant="body3" className={styles.note}>
-              {data.name} is a record: it is kept and found by code, and is
-              never drawn, so it has no look and no animations.
-            </Typography>
-          ) : (
-            <>
-              <div
-                className={styles.picture}
-                style={{background: DEFAULT_BACKDROP_COLOR}}
-              >
-                {/* The chosen animation at its start, painted here from the
-                project's pictures; the sandbox's picture of the actor when
-                there is none to paint (`TimelineThumb`). */}
-                {shown ? (
-                  <span
-                    role="img"
-                    aria-label={`${data.name}, ${selected} at ${
-                      Math.round(time * 10) / 10
-                    } seconds`}
-                  >
-                    <TimelineThumb
-                      timeline={shown}
-                      imageFor={imageFor}
-                      size={PREVIEW_SIZE}
-                      playing={false}
-                      at={time}
-                    />
-                  </span>
-                ) : picture ? (
-                  <img src={picture} alt={`${data.name}, as it is drawn`} />
-                ) : (
-                  <Typography variant="body3" className={styles.note}>
-                    {data.name}
-                  </Typography>
-                )}
-              </div>
-              {isInterface ? (
-                // Drawn, and shown by its icon (specs/ACTORS_AS_DATA_PLAN.md,
-                // step 3): no pictures to choose.
-                <ActorIconPicker
-                  selected={data.icon}
-                  onChange={icon => edit(setIcon(data, icon))}
-                  isReadOnly={isReadOnly}
-                />
-              ) : (
-                <>
-                  <SimpleDropdown
-                    name="actor-look"
-                    labelText="Looks like"
-                    size="s"
-                    disabled={isReadOnly}
-                    selectedValue={lookValue}
-                    items={looks}
-                    onChange={(event: ChangeEvent<HTMLSelectElement>) => {
-                      if (event.target.value === ANIMATED) {
-                        return;
-                      }
-                      if (event.target.value === FROM_LIBRARY) {
-                        fromLibrary();
-                        return;
-                      }
-                      const value = event.target.value.replace(/^sprite:/, '');
-                      edit(setLook(data, value ? {sprite: value} : undefined));
-                    }}
-                  />
-                  {/* THE WAY TO ITS PICTURES, where the picture is
-              (specs/SHELL_FINISH_PLAN.md, step 4): Edit opens the one it
-              looks like, as a step on the trail; the menu makes, brings in,
-              renames and deletes them. */}
-                  <div className={styles.lookActions}>
-                    {lookFile && (
-                      <Button
-                        variant="text"
-                        size="small"
-                        startIcon={
-                          <FontAwesomeV6Icon
-                            iconName="pen-to-square"
-                            iconStyle="solid"
-                          />
-                        }
-                        onClick={() =>
-                          void requestFileAct({
-                            act: 'open',
-                            fileId: lookFile.id,
-                          })
-                        }
-                      >
-                        Edit picture
-                      </Button>
-                    )}
-                    {!isReadOnly && (
-                      <Button
-                        variant="text"
-                        size="small"
-                        aria-haspopup="menu"
-                        aria-expanded={lookAt !== null}
-                        endIcon={
-                          <FontAwesomeV6Icon
-                            iconName="chevron-down"
-                            iconStyle="solid"
-                          />
-                        }
-                        onClick={event => setLookAt(event.currentTarget)}
-                      >
-                        Pictures
-                      </Button>
-                    )}
-                    {lookAt && (
-                      <Menu
-                        open
-                        anchorEl={lookAt}
-                        onClose={() => setLookAt(null)}
-                      >
-                        <MenuItem
-                          onClick={lookAct(() =>
-                            lookThen(
-                              () =>
-                                requestFileAct({
-                                  act: 'make',
-                                  folder: 'sprites',
-                                  open: false,
-                                }),
-                              {open: true},
-                            ),
-                          )}
-                        >
-                          <ListItemText>New picture…</ListItemText>
-                        </MenuItem>
-                        <MenuItem onClick={lookAct(fromLibrary)}>
-                          <ListItemText>
-                            Animation from the library…
-                          </ListItemText>
-                        </MenuItem>
-                        <MenuItem
-                          onClick={lookAct(
-                            () =>
-                              void requestFileAct({
-                                act: 'upload',
-                                folder: 'sprites',
-                              }),
-                          )}
-                        >
-                          <ListItemText>Upload a picture…</ListItemText>
-                        </MenuItem>
-                        <MenuItem
-                          onClick={lookAct(() =>
-                            lookThen(
-                              () =>
-                                requestFileAct({
-                                  act: 'draw',
-                                  folder: 'sprites',
-                                }),
-                              {open: false},
-                            ),
-                          )}
-                        >
-                          <ListItemText>Draw a picture with AI…</ListItemText>
-                        </MenuItem>
-                        {lookFile && <Divider />}
-                        {lookFile && (
-                          <MenuItem
-                            onClick={lookAct(
-                              () =>
-                                void requestFileAct({
-                                  act: 'rename',
-                                  fileId: lookFile.id,
-                                }),
-                            )}
-                          >
-                            <ListItemText>
-                              Rename {fileLabel(lookFile)}…
-                            </ListItemText>
-                          </MenuItem>
-                        )}
-                        {lookFile && (
-                          <MenuItem
-                            onClick={lookAct(
-                              () =>
-                                void requestFileAct({
-                                  act: 'clone',
-                                  fileId: lookFile.id,
-                                }),
-                            )}
-                          >
-                            <ListItemText>
-                              Clone {fileLabel(lookFile)}…
-                            </ListItemText>
-                          </MenuItem>
-                        )}
-                        {lookFile && (
-                          <MenuItem
-                            onClick={lookAct(
-                              () =>
-                                void requestFileAct({
-                                  act: 'delete',
-                                  fileId: lookFile.id,
-                                }),
-                            )}
-                          >
-                            <ListItemText>
-                              Delete {fileLabel(lookFile)}…
-                            </ListItemText>
-                          </MenuItem>
-                        )}
-                      </Menu>
-                    )}
-                  </div>
-                </>
-              )}
-              <AnimationRow
-                names={names}
-                selected={selected}
-                loop={Boolean(selected && data.animations?.[selected]?.loop)}
-                onSelect={setChosen}
-                onAdd={() => void newAnimation()}
-                onRename={name => void renameOne(name)}
-                onRemove={name => void removeOne(name)}
-                onLoop={(name, loop) =>
-                  edit(setAnimationLoop(data, name, loop))
-                }
+        <div className={styles.main}>
+          {/* WHAT IT LOOKS LIKE AND WHAT IT ADDS TO THE LANGUAGE, the two
+              things about an actor that need room (specs/ACTOR_BLOCKS_PLAN.md,
+              step 2). The panel stays what it is. */}
+          <div className={styles.mainTabs}>
+            <Tabs
+              name={sectionTabs}
+              type="secondary"
+              size="s"
+              hidePanels
+              defaultSelectedTabValue={section}
+              onChange={value => setSection(value as typeof section)}
+              tabs={[
+                {value: 'look', text: 'Look', tabContent: null},
+                {value: 'blocks', text: 'Blocks', tabContent: null},
+              ]}
+            />
+          </div>
+          <div
+            role="tabpanel"
+            id={`${sectionTabs}-panel-${section}`}
+            aria-labelledby={`${sectionTabs}-tab-${section}`}
+            className={section === 'look' ? styles.preview : styles.blocksPanel}
+          >
+            {section === 'blocks' ? (
+              <MembersTab
+                data={data}
+                contents={contents}
+                modulePath={modulePath}
                 isReadOnly={isReadOnly}
               />
-              {selected && chosenTimeline && (
-                <>
-                  <TimelineStrip
-                    name={selected}
-                    timeline={chosenTimeline}
-                    time={time}
-                    onTime={setTime}
-                    effectName={path => effectNamed(path)}
-                    selectedKey={selectedKey}
-                    onSelectKey={setSelectedKey}
-                    onMoveKey={
-                      isReadOnly
-                        ? undefined
-                        : (property, from, to) => {
+            ) : (
+              <>
+                {data.isData ? (
+                  <Typography variant="body3" className={styles.note}>
+                    {data.name} is a record: it is kept and found by code, and
+                    is never drawn, so it has no look and no animations.
+                  </Typography>
+                ) : (
+                  <>
+                    <div
+                      className={styles.picture}
+                      style={{background: DEFAULT_BACKDROP_COLOR}}
+                    >
+                      {/* The chosen animation at its start, painted here from the
+                      project's pictures; the sandbox's picture of the actor when
+                      there is none to paint (`TimelineThumb`). */}
+                      {shown ? (
+                        <span
+                          role="img"
+                          aria-label={`${data.name}, ${selected} at ${
+                            Math.round(time * 10) / 10
+                          } seconds`}
+                        >
+                          <TimelineThumb
+                            timeline={shown}
+                            imageFor={imageFor}
+                            size={PREVIEW_SIZE}
+                            playing={false}
+                            at={time}
+                          />
+                        </span>
+                      ) : picture ? (
+                        <img
+                          src={picture}
+                          alt={`${data.name}, as it is drawn`}
+                        />
+                      ) : (
+                        <Typography variant="body3" className={styles.note}>
+                          {data.name}
+                        </Typography>
+                      )}
+                    </div>
+                    {isInterface ? (
+                      // Drawn, and shown by its icon (specs/ACTORS_AS_DATA_PLAN.md,
+                      // step 3): no pictures to choose.
+                      <ActorIconPicker
+                        selected={data.icon}
+                        onChange={icon => edit(setIcon(data, icon))}
+                        isReadOnly={isReadOnly}
+                      />
+                    ) : (
+                      <>
+                        <SimpleDropdown
+                          name="actor-look"
+                          labelText="Looks like"
+                          size="s"
+                          disabled={isReadOnly}
+                          selectedValue={lookValue}
+                          items={looks}
+                          onChange={(event: ChangeEvent<HTMLSelectElement>) => {
+                            if (event.target.value === ANIMATED) {
+                              return;
+                            }
+                            if (event.target.value === FROM_LIBRARY) {
+                              fromLibrary();
+                              return;
+                            }
+                            const value = event.target.value.replace(
+                              /^sprite:/,
+                              '',
+                            );
                             edit(
-                              moveAnimationKey(
+                              setLook(
+                                data,
+                                value ? {sprite: value} : undefined,
+                              ),
+                            );
+                          }}
+                        />
+                        {/* THE WAY TO ITS PICTURES, where the picture is
+                    (specs/SHELL_FINISH_PLAN.md, step 4): Edit opens the one it
+                    looks like, as a step on the trail; the menu makes, brings in,
+                    renames and deletes them. */}
+                        <div className={styles.lookActions}>
+                          {lookFile && (
+                            <Button
+                              variant="text"
+                              size="small"
+                              startIcon={
+                                <FontAwesomeV6Icon
+                                  iconName="pen-to-square"
+                                  iconStyle="solid"
+                                />
+                              }
+                              onClick={() =>
+                                void requestFileAct({
+                                  act: 'open',
+                                  fileId: lookFile.id,
+                                })
+                              }
+                            >
+                              Edit picture
+                            </Button>
+                          )}
+                          {!isReadOnly && (
+                            <Button
+                              variant="text"
+                              size="small"
+                              aria-haspopup="menu"
+                              aria-expanded={lookAt !== null}
+                              endIcon={
+                                <FontAwesomeV6Icon
+                                  iconName="chevron-down"
+                                  iconStyle="solid"
+                                />
+                              }
+                              onClick={event => setLookAt(event.currentTarget)}
+                            >
+                              Pictures
+                            </Button>
+                          )}
+                          {lookAt && (
+                            <Menu
+                              open
+                              anchorEl={lookAt}
+                              onClose={() => setLookAt(null)}
+                            >
+                              <MenuItem
+                                onClick={lookAct(() =>
+                                  lookThen(
+                                    () =>
+                                      requestFileAct({
+                                        act: 'make',
+                                        folder: 'sprites',
+                                        open: false,
+                                      }),
+                                    {open: true},
+                                  ),
+                                )}
+                              >
+                                <ListItemText>New picture…</ListItemText>
+                              </MenuItem>
+                              <MenuItem onClick={lookAct(fromLibrary)}>
+                                <ListItemText>
+                                  Animation from the library…
+                                </ListItemText>
+                              </MenuItem>
+                              <MenuItem
+                                onClick={lookAct(
+                                  () =>
+                                    void requestFileAct({
+                                      act: 'upload',
+                                      folder: 'sprites',
+                                    }),
+                                )}
+                              >
+                                <ListItemText>Upload a picture…</ListItemText>
+                              </MenuItem>
+                              <MenuItem
+                                onClick={lookAct(() =>
+                                  lookThen(
+                                    () =>
+                                      requestFileAct({
+                                        act: 'draw',
+                                        folder: 'sprites',
+                                      }),
+                                    {open: false},
+                                  ),
+                                )}
+                              >
+                                <ListItemText>
+                                  Draw a picture with AI…
+                                </ListItemText>
+                              </MenuItem>
+                              {lookFile && <Divider />}
+                              {lookFile && (
+                                <MenuItem
+                                  onClick={lookAct(
+                                    () =>
+                                      void requestFileAct({
+                                        act: 'rename',
+                                        fileId: lookFile.id,
+                                      }),
+                                  )}
+                                >
+                                  <ListItemText>
+                                    Rename {fileLabel(lookFile)}…
+                                  </ListItemText>
+                                </MenuItem>
+                              )}
+                              {lookFile && (
+                                <MenuItem
+                                  onClick={lookAct(
+                                    () =>
+                                      void requestFileAct({
+                                        act: 'clone',
+                                        fileId: lookFile.id,
+                                      }),
+                                  )}
+                                >
+                                  <ListItemText>
+                                    Clone {fileLabel(lookFile)}…
+                                  </ListItemText>
+                                </MenuItem>
+                              )}
+                              {lookFile && (
+                                <MenuItem
+                                  onClick={lookAct(
+                                    () =>
+                                      void requestFileAct({
+                                        act: 'delete',
+                                        fileId: lookFile.id,
+                                      }),
+                                  )}
+                                >
+                                  <ListItemText>
+                                    Delete {fileLabel(lookFile)}…
+                                  </ListItemText>
+                                </MenuItem>
+                              )}
+                            </Menu>
+                          )}
+                        </div>
+                      </>
+                    )}
+                    <AnimationRow
+                      names={names}
+                      selected={selected}
+                      loop={Boolean(
+                        selected && data.animations?.[selected]?.loop,
+                      )}
+                      onSelect={setChosen}
+                      onAdd={() => void newAnimation()}
+                      onRename={name => void renameOne(name)}
+                      onRemove={name => void removeOne(name)}
+                      onLoop={(name, loop) =>
+                        edit(setAnimationLoop(data, name, loop))
+                      }
+                      isReadOnly={isReadOnly}
+                    />
+                    {selected && chosenTimeline && (
+                      <>
+                        <TimelineStrip
+                          name={selected}
+                          timeline={chosenTimeline}
+                          time={time}
+                          onTime={setTime}
+                          effectName={path => effectNamed(path)}
+                          selectedKey={selectedKey}
+                          onSelectKey={setSelectedKey}
+                          onMoveKey={
+                            isReadOnly
+                              ? undefined
+                              : (property, from, to) => {
+                                  edit(
+                                    moveAnimationKey(
+                                      data,
+                                      selected,
+                                      property,
+                                      from,
+                                      to,
+                                    ),
+                                  );
+                                  setSelectedKey({property, at: to});
+                                }
+                          }
+                          onDeleteKey={
+                            isReadOnly
+                              ? undefined
+                              : (property, at) => {
+                                  edit(
+                                    removeAnimationKey(
+                                      data,
+                                      selected,
+                                      property,
+                                      at,
+                                    ),
+                                  );
+                                  setSelectedKey(undefined);
+                                }
+                          }
+                          onAddFrames={
+                            isReadOnly || isInterface
+                              ? undefined
+                              : () => setAddingFrames(true)
+                          }
+                          onLength={
+                            isReadOnly
+                              ? undefined
+                              : length =>
+                                  edit(
+                                    setAnimationLength(data, selected, length),
+                                  )
+                          }
+                        />
+                        <MomentPanel
+                          timeline={chosenTimeline}
+                          time={time}
+                          pictures={isInterface ? undefined : pictureNames}
+                          effects={(data.effects ?? []).map(effect => ({
+                            path: effect.effect,
+                            name: effectNamed(effect.effect),
+                          }))}
+                          onSet={(property, value) =>
+                            edit(
+                              setAnimationKey(
                                 data,
                                 selected,
                                 property,
-                                from,
-                                to,
+                                time,
+                                value,
                               ),
-                            );
-                            setSelectedKey({property, at: to});
+                            )
                           }
-                    }
-                    onDeleteKey={
-                      isReadOnly
-                        ? undefined
-                        : (property, at) => {
-                            edit(
-                              removeAnimationKey(data, selected, property, at),
-                            );
-                            setSelectedKey(undefined);
-                          }
-                    }
-                    onAddFrames={
-                      isReadOnly || isInterface
-                        ? undefined
-                        : () => setAddingFrames(true)
-                    }
-                    onLength={
-                      isReadOnly
-                        ? undefined
-                        : length =>
-                            edit(setAnimationLength(data, selected, length))
-                    }
-                  />
-                  <MomentPanel
-                    timeline={chosenTimeline}
-                    time={time}
-                    pictures={isInterface ? undefined : pictureNames}
-                    effects={(data.effects ?? []).map(effect => ({
-                      path: effect.effect,
-                      name: effectNamed(effect.effect),
-                    }))}
-                    onSet={(property, value) =>
-                      edit(
-                        setAnimationKey(data, selected, property, time, value),
-                      )
-                    }
-                    isReadOnly={isReadOnly}
-                  />
-                  {Object.keys(chosenTimeline.tracks).some(track =>
-                    track.startsWith('effect:'),
-                  ) && (
-                    // A shader, which only the game runs.
-                    <Typography variant="body3" className={styles.note}>
-                      Effects are not shown here. Run the game to see them.
-                    </Typography>
-                  )}
-                </>
-              )}
-            </>
-          )}
+                          isReadOnly={isReadOnly}
+                        />
+                        {Object.keys(chosenTimeline.tracks).some(track =>
+                          track.startsWith('effect:'),
+                        ) && (
+                          // A shader, which only the game runs.
+                          <Typography variant="body3" className={styles.note}>
+                            Effects are not shown here. Run the game to see
+                            them.
+                          </Typography>
+                        )}
+                      </>
+                    )}
+                  </>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
       {addingFrames && selected && (

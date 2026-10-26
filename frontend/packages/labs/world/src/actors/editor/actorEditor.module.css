@@ -398,3 +398,88 @@
 .purpose {
   color: var(--text-neutral-secondary, #5b5f66);
 }
+
+/* The main area: Look and Blocks (specs/ACTOR_BLOCKS_PLAN.md, step 2). */
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTabs {
+  padding: 0.5rem 1rem 0;
+  border-bottom: var(--lab-border-default);
+}
+
+.blocksPanel {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 1.5rem;
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 48rem;
+}
+
+.memberGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.memberList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-self: stretch;
+}
+
+.memberRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  border: var(--lab-border-default);
+  border-radius: 4px;
+}
+
+.memberPicture {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Sized to the block it holds (`MemberPicture`). */
+.memberDrawing {
+  display: block;
+  height: 2.5rem;
+}
+
+.memberDrawing > div {
+  width: 100%;
+  height: 100%;
+}
+
+.memberDrawing :global(.blocklyMainBackground) {
+  fill: transparent;
+  stroke: none;
+}
+
+.memberActions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.memberNew {
+  margin-top: 0.25rem;
+}

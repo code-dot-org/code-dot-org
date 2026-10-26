@@ -553,7 +553,7 @@ const defineEnumValueBlock = (meta: EnumMeta) => {
 const ENUM_VALUE_BLOCKS = ENGINE_ENUMS.map(defineEnumValueBlock);
 
 /** The toolbox/registry type for the block that handles `event`. */
-const eventBlockType = (event: EventMeta): string =>
+export const eventBlockType = (event: EventMeta): string =>
   `world_on_${memberKey(event.ref)}`;
 
 // Derive a module/instance id from an authored name: spaces (and any other
@@ -3289,6 +3289,10 @@ for (const rule of AUTHORING_RULES) {
 /** The registry/toolbox type for the block that runs `action`. */
 const actionBlockType = (exportName: string): string =>
   `world_do_${exportName}`;
+
+/** …and that type for an action as its metadata names it. */
+export const callBlockType = (action: ActionMeta): string =>
+  actionBlockType(memberKey(action.ref));
 
 /** The input names a typed argument (an action/query param) occupies, derived
  * from its declared name (a vector uses `<NAME>_X`/`<NAME>_Y`). */
