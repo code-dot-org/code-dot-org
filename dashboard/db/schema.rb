@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_10_09_170000) do
+ActiveRecord::Schema[7.0].define(version: 2026_10_26_120000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -1363,6 +1363,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_09_170000) do
     t.bigint "objective_id", null: false
     t.index ["objective_id", "practice_problem_id"], name: "index_practice_prob_objectives_on_objective_and_prob_ids", unique: true
     t.index ["practice_problem_id", "objective_id"], name: "index_practice_prob_objectives_on_prob_and_objective_ids", unique: true
+  end
+
+  create_table "objectives_script_levels", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "script_level_id", null: false
+    t.integer "objective_id", null: false
+    t.index ["objective_id"], name: "index_objectives_script_levels_on_objective_id"
+    t.index ["script_level_id", "objective_id"], name: "index_objectives_script_levels_on_sl_and_objective_ids", unique: true
   end
 
   create_table "paired_user_levels", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
