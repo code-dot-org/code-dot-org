@@ -31,33 +31,6 @@ function nextChoiceId(existingIds: string[]): string {
   return String(n);
 }
 
-function correctChoiceIdsOf(draft: ChoiceQuestionDraft): string[] {
-  if (isMultipleSelectDraft(draft)) {
-    return draft.correctChoiceIds;
-  }
-  return draft.correctChoiceId === null ? [] : [draft.correctChoiceId];
-}
-
-// Multiple choice keeps only the first correct choice.
-function withCorrectChoiceIds(
-  draft: ChoiceQuestionDraft,
-  type: ChoiceQuestionDraft['type'],
-  correctChoiceIds: string[]
-): ChoiceQuestionDraft {
-  const {questionName, questionTitle, description, explanation, choices} =
-    draft;
-  const shared = {
-    questionName,
-    questionTitle,
-    description,
-    explanation,
-    choices,
-  };
-  return type === 'MultipleSelectQuestion'
-    ? {...shared, type, correctChoiceIds}
-    : {...shared, type, correctChoiceId: correctChoiceIds[0] ?? null};
-}
-
 // Labels a group of controls; each control keeps its own accessible name.
 const FieldGroup: React.FunctionComponent<{
   label: string;
@@ -87,11 +60,11 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
 }) => {
   // Radios group by name across the page, so each editor needs its own.
   const markerName = useId();
-  const correctChoiceIds = correctChoiceIdsOf(draft);
+  const {correctChoiceIds} = draft;
   const isMultipleSelect = isMultipleSelectDraft(draft);
 
   const setCorrectChoiceIds = (ids: string[]) =>
-    onChange(withCorrectChoiceIds(draft, draft.type, ids));
+    onChange({...draft, correctChoiceIds: ids});
 
   const toggleCorrect = (id: string) => {
     if (!isMultipleSelect) {
@@ -113,13 +86,11 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
   };
 
   const removeChoice = (id: string) => {
-    onChange(
-      withCorrectChoiceIds(
-        {...draft, choices: draft.choices.filter(choice => choice.id !== id)},
-        draft.type,
-        correctChoiceIds.filter(other => other !== id)
-      )
-    );
+    onChange({
+      ...draft,
+      choices: draft.choices.filter(choice => choice.id !== id),
+      correctChoiceIds: correctChoiceIds.filter(other => other !== id),
+    });
   };
 
   const addChoice = () => {
@@ -133,15 +104,18 @@ const ChoicesEditor: React.FunctionComponent<ChoicesEditorProps> = ({
         <SegmentedButtons
           size="s"
           selectedButtonValue={draft.type}
-          onChange={type =>
-            onChange(
-              withCorrectChoiceIds(
-                draft,
-                type as ChoiceQuestionDraft['type'],
-                correctChoiceIds
-              )
-            )
-          }
+          onChange={value => {
+            const type = value as ChoiceQuestionDraft['type'];
+            // Multiple choice keeps only the first correct choice.
+            onChange({
+              ...draft,
+              type,
+              correctChoiceIds:
+                type === 'MultipleChoiceQuestion'
+                  ? correctChoiceIds.slice(0, 1)
+                  : correctChoiceIds,
+            });
+          }}
           buttons={CHOICE_TYPES.map(type => ({
             value: type,
             label: QUESTION_TYPE_LABELS_ICONS[type].label,

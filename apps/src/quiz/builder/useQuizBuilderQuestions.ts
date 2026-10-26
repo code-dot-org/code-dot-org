@@ -10,7 +10,7 @@ import {
   isPendingQuestionId,
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
-  QuizQuestionDraft,
+  QuizQuestionPayload,
 } from './types';
 
 const NEW_QUESTION_DEFAULTS = {
@@ -120,7 +120,7 @@ export default function useQuizBuilderQuestions(
   // forks a question that's used in a published unit, or whose type
   // changed, rather than editing it in place.
   const saveQuestion = useCallback(
-    async (id: number, payload: QuizQuestionDraft) => {
+    async (id: number, payload: QuizQuestionPayload) => {
       setError(null);
       setErrorQuestionId(null);
       try {

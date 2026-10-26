@@ -21,20 +21,27 @@ interface QuizQuestionSharedFields {
   explanation: string | null;
 }
 
-export interface MultipleChoiceDraft extends QuizQuestionSharedFields {
+// The server's shapes for the choice types; a card edits either as a
+// ChoiceQuestionDraft.
+export interface MultipleChoiceFields extends QuizQuestionSharedFields {
   type: 'MultipleChoiceQuestion';
   choices: QuizQuestionItem[];
   correctChoiceId: string | null;
 }
 
-export interface MultipleSelectDraft extends QuizQuestionSharedFields {
+export interface MultipleSelectFields extends QuizQuestionSharedFields {
   type: 'MultipleSelectQuestion';
   choices: QuizQuestionItem[];
   correctChoiceIds: string[];
 }
 
-// The two choice types share an editor and can be switched between.
-export type ChoiceQuestionDraft = MultipleChoiceDraft | MultipleSelectDraft;
+// Both choice types keep their correct ids in one list, so switching type
+// only changes `type`. Multiple choice holds at most one id.
+export interface ChoiceQuestionDraft extends QuizQuestionSharedFields {
+  type: 'MultipleChoiceQuestion' | 'MultipleSelectQuestion';
+  choices: QuizQuestionItem[];
+  correctChoiceIds: string[];
+}
 
 export interface FreeResponseDraft extends QuizQuestionSharedFields {
   type: 'FreeResponseQuestion';
@@ -50,10 +57,16 @@ export interface MatchDraft extends QuizQuestionSharedFields {
   pairs: MatchPair[];
 }
 
-// A question card's unsaved working copy; Save sends it as the request body.
+// A question's type-specific fields as the server sends and receives them.
+export type QuizQuestionPayload =
+  | MultipleChoiceFields
+  | MultipleSelectFields
+  | FreeResponseDraft
+  | MatchDraft;
+
+// A question card's unsaved working copy.
 export type QuizQuestionDraft =
-  | MultipleChoiceDraft
-  | MultipleSelectDraft
+  | ChoiceQuestionDraft
   | FreeResponseDraft
   | MatchDraft;
 
@@ -66,9 +79,7 @@ export function isChoiceQuestionDraft(
   );
 }
 
-export function isMultipleSelectDraft(
-  draft: QuizQuestionDraft
-): draft is MultipleSelectDraft {
+export function isMultipleSelectDraft(draft: QuizQuestionDraft): boolean {
   return draft.type === 'MultipleSelectQuestion';
 }
 
@@ -80,7 +91,7 @@ export function isMatchDraft(draft: QuizQuestionDraft): draft is MatchDraft {
 // quiz_configuration and a placement create): the QuizQuestion model's
 // fields plus the placement and cross-quiz usage context that
 // QuizQuestionSerialization#quiz_question_json adds.
-export type QuizBuilderQuestion = QuizQuestionDraft & {
+export type QuizBuilderQuestion = QuizQuestionPayload & {
   id: number;
   // TODO: move to QuizQuestionSharedFields when we allow editing standards.
   standards: StandardSummary[];
@@ -116,7 +127,7 @@ export interface QuizBuilderQuestionsState {
   // showing the user's unsaved edits.
   saveQuestion: (
     id: number,
-    payload: QuizQuestionDraft
+    payload: QuizQuestionPayload
   ) => Promise<number | undefined>;
   // For a pending question, just drops it from local state. Otherwise
   // detaches it from the quiz server-side first.
