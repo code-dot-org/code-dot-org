@@ -1,6 +1,7 @@
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
-import {QuizQuestionSummary} from '../../types';
+import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
+
 import AttemptCard from '../AttemptCard';
 import QuestionDescription from '../QuestionDescription';
 

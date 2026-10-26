@@ -1,4 +1,4 @@
-import {formatChoiceLetter} from '../../utils';
+import {formatChoiceLetter} from '@cdo/apps/quiz/utils';
 
 import {MatchItem, MatchPairs, MatchSets, MatchSide} from './types';
 
