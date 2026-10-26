@@ -1,0 +1,96 @@
+import {position} from './builtins.mjs';
+import {Aimed, goal} from './camera.mjs';
+import {
+  add,
+  anyOf,
+  defineRule,
+  doc,
+  inThisSpace,
+  moduleFor,
+  thisCamera,
+  when,
+} from './dsl.mjs';
+
+const rule = defineRule({
+  name: 'Camera Follow',
+  ability: 'Follows an Actor',
+  purpose: `**Camera Follow** points the camera at an actor and keeps it there.
+
+The one you almost always want: give a camera **Follows**, say which actor to
+watch, and the view goes where that actor goes. An offset lets you sit the
+player low on the screen so there is more room to see ahead.
+
+It needs **Has a Camera**, which is what actually moves the view.`,
+  header: `// "Follows an Actor" — the worked example of a camera rule.
+//
+// One step, in the \`aim\` moment: put the goal where the followed actor is.
+// It does not move the camera; Camera's \`take the view\` does that in \`view\`,
+// and anything smoothing or confining the goal runs in between. So this rule
+// names no other rule's step, and adding easing later changes nothing here.
+//
+// \`actor to follow\` holds a LIST, as every \`actors\` property does — reading a
+// position off it takes the first, which is what a value read of several means
+// (specs/ACTOR_LISTS.md). It starts EMPTY, so the step is guarded: a camera
+// that has elected the trait and not yet been given anything to follow is the
+// state every such camera is in for at least one frame.
+//
+// \`look offset\` shifts where it aims — negative y to look UP the level, which
+// is how a camera shows what a player is about to jump onto. It is added HERE,
+// into the goal, rather than to the position at the end: everything downstream
+// then reads the point actually being framed, so a deadzone measures its
+// slack against that point and \`confine\` keeps THAT inside the map. Add it
+// last and looking up at the top of a level would show off the top of it.
+//
+// It has no easing of its own, deliberately. A change to it is a change to the
+// goal like any other, so a camera with the Ease trait drifts to the new
+// framing for free (see Camera Ease's header) and one without snaps, which is
+// the same choice the rest of following already offers. What this cannot do is
+// ease the offset at a DIFFERENT rate from the follow — a tight follow with a
+// slow look-up ramp — and that is the thing that would make this a trait of
+// its own, with a moment between \`aim\` and \`steady\` to run in.`,
+});
+rule.uses('Camera');
+
+const follows = rule
+  .trait('Follows', 'camera')
+  .describe('Keeps an actor in view as it moves about.');
+follows.uses(Aimed);
+/**
+ * ONE actor, and the type says so.
+ *
+ * It was `actors`, because a list was the only actor-shaped property there was.
+ * Saying `actor` changes nothing about how it is held — still a list, still
+ * read through `WorldLab.one`, since `set actor to follow to ⟨any Player⟩` is a
+ * reasonable thing to write and has to do something reasonable. What it changes
+ * is that `add ⟨…⟩ to actor to follow` is no longer generated: a block that
+ * works, does something, and means nothing.
+ */
+const target = follows.actor('actor to follow');
+/** Where to look RELATIVE to the actor: up the level is negative y. */
+const look = follows.point('look offset', {x: 0, y: 0});
+
+follows.step('aim at the actor', 'aim', [
+  doc(
+    'Where the camera WANTS to be: the actor it follows, plus whatever `look` offset the project set — ahead of a runner, or above a jumper.\n\nOnly an actor IN THIS CAMERA’S SPACE counts. `any Pilot` is every Pilot in the world, and a camera in a Viewport following one in the main map would track a place that means nothing where it is looking; with none in its own space it stays where it is.\n\nThis only sets the goal. What actually happens to the view is the rest of the camera pipeline: a deadzone may ignore it, easing may approach it slowly, and being confined to the map may refuse part of it.',
+  ),
+  when([
+    [
+      anyOf(inThisSpace(target.of(thisCamera()))),
+      [
+        goal.set(
+          thisCamera(),
+          add(
+            position.x(inThisSpace(target.of(thisCamera()))),
+            look.x(thisCamera()),
+          ),
+          add(
+            position.y(inThisSpace(target.of(thisCamera()))),
+            look.y(thisCamera()),
+          ),
+        ),
+      ],
+    ],
+  ]),
+]);
+
+export default () => moduleFor(rule, 'cameraFollow');

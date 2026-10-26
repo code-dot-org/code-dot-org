@@ -1,0 +1,1388 @@
+// A way to write a stock `.rule` that is not 20KB of escaped JSON.
+//
+// A `.rule` file IS a Blockly workspace, and the six rules a human authored in
+// the editor stay that way — this is not a decompiler and nothing works
+// backward. What it is for is the rules we maintain in code: the source is a
+// module here, the workspace is generated, and the generated file is committed
+// so nothing changes at run time.
+//
+// The point is not that the source is shorter. It is that the BLOCK TYPES ARE
+// DERIVED. A property's blocks are named from its rule and its export
+// (`world_get_Camera_GoalProperty`), a designed block's call is named from its
+// wording, and a socket is named from its parameter — and every one of those
+// was a string I guessed and checked by hand while writing the camera rules.
+// Guessing a block type fails loudly; guessing a SOCKET name leaves an empty
+// hole and no error at all. Here, one declaration produces both sides.
+
+const PASCAL = id =>
+  id
+    .split(/[^A-Za-z0-9]+/)
+    .filter(Boolean)
+    .map(part => part[0].toUpperCase() + part.slice(1))
+    .join('');
+
+/** How `parseRuleMeta` ids a member: non-alphanumerics become underscores. */
+const SLUG = text => text.replaceAll(/[^A-Za-z0-9_]/g, '_');
+
+/** How a block type names the rule it belongs to: nothing but alphanumerics. */
+const RULE_SLUG = name => name.replace(/[^A-Za-z0-9]/g, '');
+
+/**
+ * A socket's contents.
+ *
+ * A SHADOW is the grayed-in default a block is seeded with — deleting whatever
+ * is plugged in reveals it again — where a plain block is something an author
+ * put there. The two serialize differently and Blockly treats them differently,
+ * so `shadow()` marks one rather than leaving it to guesswork.
+ */
+const value = block =>
+  block && block[SHADOW] ? {shadow: bare(block)} : {block};
+
+/** The marker itself, so it cannot collide with a block's own keys. */
+const SHADOW = Symbol('shadow');
+
+/** The block without its marker — a Symbol key is not serialized anyway, but
+ *  dropping it keeps what is written and what is held the same shape. */
+const bare = block => {
+  const rest = {...block};
+  delete rest[SHADOW];
+  return rest;
+};
+
+/** Mark a value as the socket's default rather than something put there. */
+export const shadow = block => ({...block, [SHADOW]: true});
+
+/** A block, with `inputs` left off entirely when it has none — as Blockly writes it. */
+const withInputs = (block, inputs) =>
+  Object.keys(inputs).length ? {...block, inputs} : block;
+
+/** The variable type a parameter of this kind binds to in the workspace. */
+const VARIABLE_TYPE = type =>
+  // A `kind` is a String for the same reason an enum choice is: the dropdown is
+  // about what may be CHOSEN, and what the body is handed is the name of the
+  // kind that was. A `map` is the same again, holding a map file's path.
+  //
+  // THE FALLBACK IS A NUMBER, so a type this does not know is bound to a
+  // Number variable and the body's getter refuses to connect — which is how a
+  // `map` parameter failed the moment one existed, at workspace load and not
+  // at authoring time.
+  type.startsWith('enum:') ||
+  type === 'string' ||
+  type === 'kind' ||
+  type === 'map'
+    ? 'String'
+    : type === 'actor'
+      ? 'Actor'
+      : type === 'vector' || type === 'point'
+        ? 'Vector'
+        : type === 'boolean'
+          ? 'Boolean'
+          : 'Number';
+
+// ── Expressions ──────────────────────────────────────────────────────────────
+
+export const n = num => ({type: 'math_number', fields: {NUM: num}});
+
+const arith = (op, a, b) => ({
+  type: 'math_arithmetic',
+  fields: {OP: op},
+  inputs: {A: value(a), B: value(b)},
+});
+export const add = (a, b) => arith('ADD', a, b);
+export const minus = (a, b) => arith('MINUS', a, b);
+export const times = (a, b) => arith('MULTIPLY', a, b);
+export const over = (a, b) => arith('DIVIDE', a, b);
+export const power = (a, b) => arith('POWER', a, b);
+
+/**
+ * `sign of ⟨n⟩` — 1 when it is zero or more, -1 when it is less.
+ *
+ * Three rules wrote this out by hand: a local set to 1, an `if` below zero
+ * setting it to -1, and the local read a few times. It is one block now
+ * (`blockly/domainBlocks.worldSign`), and zero counts as positive there for
+ * the reason it has to: a factor of zero is a rule that stops working the
+ * moment a value settles exactly on the line.
+ */
+export const signOf = a => ({
+  type: 'world_sign',
+  inputs: {NUM: value(a)},
+});
+
+/**
+ * `⟨n⟩ kept between ⟨low⟩ and ⟨high⟩` — Blockly's clamp, in this lab's words.
+ *
+ * Two rules wrote this one out as well, and had independently agreed on the
+ * wording, which is why the block wears it (`blockly/colorMessages`).
+ */
+export const keptBetween = (a, low, high) => ({
+  type: 'math_constrain',
+  inputs: {VALUE: value(a), LOW: value(low), HIGH: value(high)},
+});
+
+/**
+ * `remainder of <a> ÷ <b>` — Blockly's own modulo block.
+ *
+ * Not one of `math_arithmetic`'s operators, which is why it is separate: it is
+ * a block of its own with its own two sockets.
+ */
+export const remainder = (a, b) => ({
+  type: 'math_modulo',
+  inputs: {DIVIDEND: value(a), DIVISOR: value(b)},
+});
+
+const compare = (op, a, b) => ({
+  type: 'logic_compare',
+  fields: {OP: op},
+  inputs: {A: value(a), B: value(b)},
+});
+export const lessThan = (a, b) => compare('LT', a, b);
+export const moreThan = (a, b) => compare('GT', a, b);
+
+export const thisCamera = () => ({type: 'world_this_camera'});
+export const thisActor = () => ({type: 'world_this_actor'});
+export const frameTime = () => ({type: 'world_step_delta'});
+/** The world's clock in seconds — what a delay or a cooldown measures against. */
+export const time = () => ({type: 'world_time'});
+export const mapSize = () => ({type: 'world_map_size'});
+export const viewSize = () => ({type: 'world_view_size'});
+
+export const axisOf = (which, vector) => ({
+  type: 'world_vector_component',
+  fields: {COMPONENT: which},
+  inputs: {VEC: value(vector)},
+});
+
+/** `vector x ⟨…⟩ y ⟨…⟩` — two numbers made into one value. */
+export const vectorOf = (x, y) => ({
+  type: 'world_vector_of',
+  inputs: {X: value(x), Y: value(y)},
+});
+
+export const anyOf = list => ({
+  type: 'world_any_actors',
+  inputs: {LIST: value(list)},
+});
+
+/** `<list> in this space` — only those in the space of the thing in hand. */
+export const inThisSpace = list => ({
+  type: 'world_in_this_space',
+  inputs: {SOURCE: value(list)},
+});
+
+/** `how many actors in <list>`. */
+export const countOf = list => ({
+  type: 'world_count_actors',
+  inputs: {ACTOR: value(list)},
+});
+
+export const give = v => ({type: 'world_return', inputs: {VALUE: value(v)}});
+
+/** How many characters `words` has. */
+export const textLength = words => ({
+  type: 'text_length',
+  inputs: {VALUE: value(words)},
+});
+
+/**
+ * The first `count` characters of `words`.
+ *
+ * Blockly's own substring block, pinned to the one shape a world has a use for
+ * — from the start, to a count — so a rule says "the first n letters" rather
+ * than choosing two ends and two directions every time.
+ *
+ * `AT1` is 1-based, which is Blockly's convention and not ours: character one
+ * is the first. A count of zero gives the empty string, which is what a line
+ * nobody has begun reading should look like.
+ */
+export const firstCharacters = (words, count) => ({
+  type: 'text_getSubstring',
+  fields: {WHERE1: 'FROM_START', WHERE2: 'FROM_START'},
+  inputs: {STRING: value(words), AT1: value(n(1)), AT2: value(count)},
+});
+
+export const note = text => ({type: 'world_comment', fields: {TEXT: text}});
+
+/**
+ * `doc` — a paragraph of documentation, drawn as markdown.
+ *
+ * A `note` is one line and is shown as typed, so a sentence longer than one
+ * became three notes and read as three. This is the paragraph itself: headings,
+ * lists and emphasis, laid out as prose on the block (`FieldMarkdown`).
+ *
+ * It changes nothing about what runs — the generator writes it out as `//`
+ * lines, exactly as a note is written out.
+ */
+export const doc = markdown => ({
+  type: 'world_doc',
+  fields: {DOC: markdown},
+});
+
+/** `last of <list>` — the end a stack is read from. */
+export const lastOf = list => ({
+  type: 'world_list_last',
+  inputs: {LIST: value(list)},
+});
+
+/** `an empty list` — what a list is set back to. */
+export const emptyList = () => ({type: 'lists_create_empty'});
+
+/** `how many in <list>`. */
+export const countIn = list => ({
+  type: 'lists_length',
+  inputs: {VALUE: value(list)},
+});
+
+/**
+ * `kind of <actor>` — which kind a thing is, as a name.
+ *
+ * What a rule compares a `kind` parameter against. `is a <Coin>` is the
+ * question a PROJECT asks and one a rule cannot: that block's dropdown names
+ * the project's own kinds, and a rule has never seen them.
+ */
+export const kindOf = subject => ({
+  type: 'world_kind_of',
+  inputs: {ACTOR: value(subject)},
+});
+
+export const yes = () => ({type: 'logic_boolean', fields: {BOOL: 'TRUE'}});
+export const no = () => ({type: 'logic_boolean', fields: {BOOL: 'FALSE'}});
+export const not = a => ({type: 'logic_negate', inputs: {BOOL: value(a)}});
+const logic = (op, a, b) => ({
+  type: 'logic_operation',
+  fields: {OP: op},
+  inputs: {A: value(a), B: value(b)},
+});
+export const both = (a, b) => logic('AND', a, b);
+export const either = (a, b) => logic('OR', a, b);
+export const equals = (a, b) => compare('EQ', a, b);
+export const atLeast = (a, b) => compare('GTE', a, b);
+export const atMost = (a, b) => compare('LTE', a, b);
+
+/** `<test> ? <then> : <otherwise>` — a value, where `when` is a statement. */
+export const pick = (test, then, otherwise) => ({
+  type: 'logic_ternary',
+  inputs: {IF: value(test), THEN: value(then), ELSE: value(otherwise)},
+});
+
+const single = (op, a) => ({
+  type: 'math_single',
+  fields: {OP: op},
+  inputs: {NUM: value(a)},
+});
+export const absolute = a => single('ABS', a);
+
+/**
+ * `sin ⟨n⟩` and `cos ⟨n⟩`, in DEGREES — which is what every angle in this lab
+ * is, so nothing has to convert (`math_trig` takes degrees too).
+ */
+const trig = (op, a) => ({
+  type: 'math_trig',
+  fields: {OP: op},
+  inputs: {NUM: value(a)},
+});
+export const sine = a => trig('SIN', a);
+export const cosine = a => trig('COS', a);
+
+export const negated = a => single('NEG', a);
+export const root = a => single('ROOT', a);
+
+/** `<a> <plus|minus|toward…> <b>` on whole vectors. */
+const vectorOp = (method, a, b) => ({
+  type: 'world_vector_math',
+  fields: {OP: method},
+  inputs: {A: value(a), B: value(b)},
+});
+export const vectorPlus = (a, b) => vectorOp('ADD', a, b);
+export const vectorMinus = (a, b) => vectorOp('SUBTRACT', a, b);
+export const vectorTimes = (a, b) => vectorOp('MULTIPLY', a, b);
+export const vectorOver = (a, b) => vectorOp('DIVIDE', a, b);
+
+/** `length of <v>` — how long a vector is. */
+export const vectorLength = v => ({
+  type: 'world_vector_length',
+  inputs: {VECTOR: value(v)},
+});
+
+/** `direction of <v>` — which way it points, in degrees (0 right, 90 down). */
+export const vectorDirection = v => ({
+  type: 'world_vector_direction',
+  inputs: {VECTOR: value(v)},
+});
+
+/** `<length> in direction <degrees>°` — the inverse of the two above. */
+export const vectorFromAngle = (length, degrees) => ({
+  type: 'world_vector_from_angle',
+  inputs: {LENGTH: value(length), DEGREES: value(degrees)},
+});
+
+export const rotated = (v, degrees) => ({
+  type: 'world_vector_rotate',
+  inputs: {VECTOR: value(v), DEGREES: value(degrees)},
+});
+
+export const vector = (x, y) => ({
+  type: 'world_vector_of',
+  inputs: {X: value(x), Y: value(y)},
+});
+
+/**
+ * One choice of an enum, as a VALUE — `⟨tab ▾⟩` (specs/ENUMS.md).
+ *
+ * The block an enum-typed socket carries as its shadow, written out so a rule
+ * can compare against one. `keyDown` below takes a key as a FIELD, which is
+ * how a rule asks whether one is held; this is how a rule asks whether the key
+ * it was just handed is that one.
+ */
+export const choice = (ref, option) => ({
+  type: `world_choice_${ref.replace(/[^A-Za-z0-9]+/g, '_')}`,
+  fields: {VALUE: option},
+});
+
+export const keyDown = key => ({
+  type: 'world_is_key_down',
+  fields: {KEY: key},
+});
+
+/** `capture the <key> key` — ask the browser to leave it to the game. */
+export const captureKey = key => ({
+  type: 'world_capture_key',
+  fields: {KEY: key},
+});
+
+/** `wheel turned` — how far the wheel moved this frame, in pixels. */
+export const wheelTurned = () => ({type: 'world_wheel_turned'});
+
+/** `use the wheel <yes|no>` — whether the page's own scroll is suppressed. */
+export const useWheel = wanted => ({
+  type: 'world_use_wheel',
+  inputs: {VALUE: value(wanted)},
+});
+
+/** `release the <key> key` — hand it back. */
+export const releaseKey = key => ({
+  type: 'world_release_key',
+  fields: {KEY: key},
+});
+
+/** `the game just got the keyboard` — true for the frame it arrived. */
+export const keyboardArrived = () => ({type: 'world_keyboard_arrived'});
+
+export const pixelsPerUnit = () => ({type: 'world_pixels_per_unit'});
+
+/** Where the pointer is, as a place in the world (`World.mousePosition`). */
+export const mousePosition = () => ({type: 'world_mouse_position'});
+
+/**
+ * `<subject> can be reached` — false while something modal covers it.
+ *
+ * Every rule that DELIVERS input asks this, and the three that do are the
+ * three that had to be edited for it: the pointer's hit test, the keyboard's
+ * trait walk and the tab route (specs/MODALITY_PLAN.md).
+ */
+export const canBeReached = subject => ({
+  type: 'world_can_reach',
+  inputs: {ACTOR: value(subject)},
+});
+
+/** `<subject> has trait <Rule#Trait>`. */
+/** `add <actor> to <list>` — the list is a VARIABLE, named in a field. */
+export const pushActor = (list, actor) => ({
+  type: 'world_push_actor',
+  fields: {LIST: {...list.field, type: list.type}},
+  inputs: {ACTOR: value(actor)},
+});
+
+/** `age of <subject>` — seconds since it was placed in the world. */
+export const age = subject => ({
+  type: 'world_actor_age',
+  inputs: {ACTOR: value(subject)},
+});
+
+/** `remove actor <subject>` — gone at the end of this tick, not mid-frame. */
+export const removeActor = subject => ({
+  type: 'world_remove_actor',
+  inputs: {ACTOR: value(subject)},
+});
+
+/** `empty <list>`. */
+export const clearActors = list => ({
+  type: 'world_clear_actors',
+  fields: {LIST: {...list.field, type: list.type}},
+});
+
+/** `<actor> is in <list>` — membership in a set of actors. */
+export const isIn = (actor, list) => ({
+  type: 'world_is_in_actors',
+  inputs: {ACTOR: value(actor), LIST: value(list)},
+});
+
+export const hasTrait = (subject, traitRef) => ({
+  type: 'world_has_trait',
+  fields: {TRAIT: traitRef},
+  inputs: {ACTOR: value(subject)},
+});
+
+/** Chain statements through `next`, the way a body hangs together. */
+const chain = blocks =>
+  blocks
+    .filter(Boolean)
+    .reduceRight(
+      (next, block) => ({...block, ...(next ? {next: {block: next}} : {})}),
+      undefined,
+    );
+
+/**
+ * `when <test> do <…>`, with any number of further tests and an optional else.
+ *
+ * Blockly counts the extra branches in `extraState`; getting that wrong loads a
+ * block with sockets nothing is plugged into, so it is counted here rather than
+ * written down.
+ */
+export const when = (branches, otherwise) => {
+  const inputs = {};
+  branches.forEach(([test, body], i) => {
+    inputs[`IF${i}`] = value(test);
+    inputs[`DO${i}`] = value(chain(body));
+  });
+  if (otherwise) {
+    inputs.ELSE = value(chain(otherwise));
+  }
+  // Blockly's own shape for this mutator: how many extra tests, and whether
+  // there is an else. Both are written when there is an else, even a zero.
+  const extra = {};
+  if (branches.length > 1 || otherwise) {
+    extra.elseIfCount = branches.length - 1;
+  }
+  if (otherwise) {
+    extra.hasElse = true;
+  }
+  return {
+    type: 'controls_if',
+    ...(Object.keys(extra).length ? {extraState: extra} : {}),
+    inputs,
+  };
+};
+
+/**
+ * A local variable: the getter, the setter, and the field a loop binds it in.
+ *
+ * Made through `rule.local` rather than on its own, because a workspace has to
+ * DECLARE its variables as well as use them — a block referring to one that is
+ * not in the map loads with an empty field.
+ *
+ * Blockly resolves a variable by ID and treats the name on a block as a hint,
+ * so both live here — the committed `cameraConfined` had the two disagreeing,
+ * which showed up nowhere because the map won.
+ */
+/**
+ * The `let` block that DECLARES each flavour, by the variable type it binds.
+ *
+ * `List` has none: the lab offers no `let list`, so a rule wanting one still
+ * writes it the old way and `let` is simply not available to it.
+ */
+const LET_BLOCK = {
+  Number: 'world_let_number',
+  String: 'world_let_word',
+  Boolean: 'world_let_boolean',
+  Vector: 'world_let_vector',
+  Actor: 'world_let_actor',
+};
+
+function makeLocal(id, name, type) {
+  const field = {id, name};
+  return {
+    id,
+    name,
+    type,
+    field,
+    get: () => ({type: `variables_get_${type}`, fields: {VAR: field}}),
+    set: v => ({
+      type: `variables_set_${type}`,
+      fields: {VAR: field},
+      inputs: {VALUE: value(v)},
+    }),
+    /**
+     * `let <name> be <v>` — the row that MAKES the name, rather than one that
+     * writes a name from somewhere else.
+     *
+     * Every working value in this library used to be a `set`, and a `set` does
+     * not declare anything: Blockly hoists an undeclared name to module scope,
+     * so a rule's scratch value was a `var` shared by every body in the file.
+     * Nothing had gone wrong — a body runs to completion and nothing re-enters
+     * — but it was not a thing a learner could BUILD. A getter only offers the
+     * names in scope (`blockly/variableScope`), and nothing put one there, so
+     * a rule read a name its own dropdown would not have offered.
+     *
+     * The first write becomes this and the rest stay `set`. Where the first
+     * write is inside an `if` and the reads are outside it, the `let` is
+     * hoisted to the top of the body with a starting value instead — a scope
+     * has to cover its readers, and a declaration buried in a branch does not.
+     *
+     * The FIELD IS THE BARE ID, not the `{id, name}` a getter's field takes:
+     * `let`'s name field is a text box over a variable and stores what it
+     * points at (`blockly/fields/variableName`), where `field_variable`
+     * stores a whole model.
+     */
+    let: v => {
+      const block = LET_BLOCK[type];
+      if (!block) {
+        throw new Error(`no \`let\` block declares a ${type} (${name})`);
+      }
+      return {
+        type: block,
+        fields: {VAR: id},
+        // NOTHING TO START FROM is a real answer, and the only one an actor has:
+        // there is no literal actor to seed a socket with, so the name is made
+        // holding nobody and the rows below fill it in.
+        ...(v === undefined ? {} : {inputs: {VALUE: value(v)}}),
+      };
+    },
+  };
+}
+
+/**
+ * `the actors <var> in <list> where <test>` — a filtered list, as a value.
+ *
+ * The loop's `where` used to live on the loop. It is a value of its own now
+ * (specs/ACTOR_LISTS.md), so a rule that walks only some of a list walks a list
+ * that is only some of it.
+ */
+export const filter = (variable, {from, where}) => ({
+  type: 'world_filter_actors',
+  fields: {VAR: variable.field},
+  inputs: {
+    ...(from ? {SOURCE: value(from)} : {}),
+    WHERE: value(where),
+  },
+});
+
+/**
+ * `all actors with trait <T>` — the filter this library writes more than every
+ * other put together.
+ *
+ * Ten of the eighteen filtered loops here tested exactly this, and the engine
+ * has answered it since before there were lists (`ActorCollection.with`). Said
+ * with the general filter it costs a nesting and a second variable field
+ * showing the same name; said with this the loop is SHORTER than the
+ * `for each … where` it replaces.
+ */
+export const allWithTrait = traitRef => ({
+  type: 'world_actors_with_trait',
+  fields: {TRAIT: traitRef},
+});
+
+/** `the actor <var> in <list> with the <least|most> <key>`. */
+export const extremeActor = (variable, {from, end = 'least', key}) => ({
+  type: 'world_extreme_actor',
+  fields: {VAR: variable.field, END: end},
+  inputs: {
+    ...(from ? {SOURCE: value(from)} : {}),
+    KEY: value(key),
+  },
+});
+
+/**
+ * `the actors <var> in <list> ordered by <key>` — a sorted list, as a value.
+ *
+ * STABLE, which is the whole reason to reach for it here: actors the key
+ * cannot tell apart keep the order they were added in. A `tab order` everybody
+ * leaves at zero therefore reads as placement order rather than as a tie
+ * nothing breaks (`core/actorValue.ordered`).
+ */
+export const orderedActors = (variable, {from, key, end = 'least'}) => ({
+  type: 'world_ordered_actors',
+  fields: {VAR: variable.field, END: end},
+  inputs: {
+    ...(from ? {SOURCE: value(from)} : {}),
+    KEY: value(key),
+  },
+});
+
+/**
+ * `the actors with <trait> within <distance> of <place>` — asked of the WORLD.
+ *
+ * The indexed question (`core/spatialIndex`), and the one a search has to use:
+ * `filter` over `all actors` measures every one of them, and a flood asking
+ * four hundred times in a row cannot afford that.
+ */
+export const withTraitNear = (traitRef, distance, place) => ({
+  type: 'world_near_place_trait',
+  fields: {TRAIT: traitRef},
+  inputs: {DISTANCE: value(distance), PLACE: value(place)},
+});
+
+/** `repeat <times> do <body>` — a bounded loop, since there is no `while`. */
+export const repeatTimes = (times, body) => ({
+  type: 'controls_repeat_ext',
+  inputs: {TIMES: value(times), DO: value(chain(body))},
+});
+
+/** `for each place <var> in <list> do <body>`. */
+export const forEachPlace = (variable, {from, body}) => ({
+  type: 'world_for_each_place',
+  fields: {VAR: variable.field},
+  inputs: {LIST: value(from), DO: value(chain(body))},
+});
+
+/**
+ * `make a list of <…>` — the growable literal, with its mutator set.
+ *
+ * Blockly counts the sockets in `extraState`; getting that wrong loads a block
+ * with inputs nothing is plugged into, which is the same trap `when` documents
+ * for its extra branches.
+ */
+export const makeList = items => ({
+  type: 'lists_create_with',
+  extraState: {itemCount: items.length},
+  inputs: Object.fromEntries(
+    items.map((item, index) => [`ADD${index}`, value(item)]),
+  ),
+});
+
+/** `stop the loop` — out of the innermost one, and on with what follows it. */
+export const stopLoop = () => ({
+  type: 'controls_flow_statements',
+  fields: {FLOW: 'BREAK'},
+});
+
+/** `add <item> to <list>` — a list VARIABLE, at the back. */
+export const addToList = (item, list) => ({
+  type: 'world_list_add',
+  fields: {LIST: list.field},
+  inputs: {ITEM: value(item)},
+});
+
+/** `take the first off <list>` — the front, removed and handed back. */
+export const takeFirstOf = list => ({
+  type: 'world_list_take_first',
+  fields: {LIST: list.field},
+});
+
+/** `empty <list>`. */
+export const emptyOut = list => ({
+  type: 'world_list_empty',
+  fields: {LIST: list.field},
+});
+
+/** `<list> has <item>` — a lookup, not a walk (`core/lists`). */
+export const listHolds = (list, item) => ({
+  type: 'world_list_has',
+  inputs: {LIST: value(list), ITEM: value(item)},
+});
+
+/** `first actor in <list>`. */
+export const firstActor = from => ({
+  type: 'world_first_actor',
+  inputs: {...(from ? {SOURCE: value(from)} : {})},
+});
+
+/** `<a> is <b>` — whether two actor values are the same actor. */
+export const sameActor = (a, b) => ({
+  type: 'world_same_actor',
+  inputs: {A: value(a), B: value(b)},
+});
+
+/** `any actor in <list>` — one of them, picked afresh each time. */
+export const anyActor = from => ({
+  type: 'world_any_actor',
+  inputs: {...(from ? {SOURCE: value(from)} : {})},
+});
+
+/** `for each actor <var> in <list> do <…>`. */
+export const forEach = (variable, {from, body, ...rest}) => {
+  // The loop took a `where` until the filter became a value of its own. A
+  // leftover one would be dropped in silence and the body would run over
+  // everything, so it is an error rather than a quiet change of meaning.
+  const left = Object.keys(rest);
+  if (left.length) {
+    throw new Error(
+      `forEach no longer takes ${left.join(', ')} — wrap the source in ` +
+        `filter(variable, {from, where}) or allWithTrait(ref)`,
+    );
+  }
+  return {
+    type: 'world_for_each',
+    fields: {VAR: variable.field},
+    inputs: {
+      ...(from ? {SOURCE: value(from)} : {}),
+      DO: value(chain(body)),
+    },
+  };
+};
+
+/** `for each newly <pressed|released> key <var> do <…>`. */
+export const forEachKey = (edge, variable, body) => ({
+  type: 'world_for_each_key',
+  fields: {EDGE: edge, VAR: variable.field},
+  inputs: {DO: value(chain(body))},
+});
+
+/** `for each character typed <var> do <…>` — what was typed this frame. */
+export const forEachTyped = (variable, body) => ({
+  type: 'world_for_each_typed',
+  fields: {VAR: variable.field},
+  inputs: {DO: value(chain(body))},
+});
+
+/** `for each newly <pressed|released> mouse button <var> do <…>`. */
+export const forEachButton = (edge, variable, body) => ({
+  type: 'world_for_each_button',
+  fields: {EDGE: edge, VAR: variable.field},
+  inputs: {DO: value(chain(body))},
+});
+
+// ── Members ──────────────────────────────────────────────────────────────────
+
+/** A parameter of a designed block: a socket, named from the parameter. */
+export const param = (name, type = 'number') => ({kind: 'param', name, type});
+
+/**
+ * A property, and the blocks that read and write it.
+ *
+ * `point` is two axes: its getter picks one with a dropdown and its setter takes
+ * both. Everything else is a single value.
+ */
+/** The types whose default is an empty list, whatever anyone writes down. */
+const EMPTY_BY_NATURE = new Set([
+  'actor',
+  'actors',
+  'numbers',
+  'words',
+  'vectors',
+]);
+
+function property(ruleName, traitId, {name, type, value: initial, readonly}) {
+  const exportName = `${PASCAL(name)}Property`;
+  const key = `${RULE_SLUG(ruleName)}_${exportName}`;
+  // A world property belongs to the rule and has nobody to name, so its blocks
+  // take no subject socket; everything else says whose it is.
+  const scoped = traitId !== undefined;
+  const subject = who => (scoped ? {ACTOR: value(who)} : {});
+  const self = {
+    name,
+    type,
+    traitId,
+    declaration: {
+      type: 'world_rule_property',
+      // TYPE FIRST, and it matters. `define property` puts the editor for the
+      // default in the slot the TYPE calls for — the arrow grid for a vector,
+      // an x and a y for a point — and Blockly applies a saved block's fields
+      // in the order the file lists them, so the type has to arrive before the
+      // value it decides the shape of.
+      fields: {
+        TYPE: type,
+        ACCESS: readonly ? 'readonly' : 'writable',
+        NAME: name,
+        // A vector is one field holding both axes, the same `{x, y}` its own
+        // `world_vector` literal saves; a point is two number fields, the same
+        // two numbers its setter takes. An actor property and the list types
+        // have NO default field: they start empty whatever is written down, so
+        // the block does not ask and nothing is saved. Everything else is one
+        // value, as text.
+        ...(EMPTY_BY_NATURE.has(type)
+          ? {}
+          : type === 'vector'
+            ? {DEFAULT: {x: initial?.x ?? 0, y: initial?.y ?? 0}}
+            : type === 'point'
+              ? {DEFAULT: initial?.x ?? 0, DEFAULT_Y: initial?.y ?? 0}
+              : {DEFAULT: String(initial ?? '')}),
+      },
+    },
+    /** `get <name> of <subject>` — for everything but a point. */
+    of: who => withInputs({type: `world_get_${key}`}, {...subject(who)}),
+    /** `get <name> <x|y> of <subject>` — a point reports one axis. */
+    axis: (which, who) =>
+      withInputs(
+        {type: `world_get_${key}`, fields: {COMPONENT: which}},
+        {...subject(who)},
+      ),
+    set: (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return {
+        type: `world_set_${key}`,
+        inputs:
+          type === 'point'
+            ? {...subject(who), X: value(args[0]), Y: value(args[1])}
+            : {...subject(who), VALUE: value(args[0])},
+      };
+    },
+  };
+  self.x = who => self.axis('x', who);
+  self.y = who => self.axis('y', who);
+  if (type === 'numbers' || type === 'words' || type === 'vectors') {
+    /** `add <value> to <name> of <subject>`. */
+    self.push = (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return {
+        type: `world_push_${key}`,
+        inputs: {...subject(who), ITEM: value(args[0])},
+      };
+    };
+    /** `take the last off <name> of <subject>` — the pop of a stack. */
+    self.takeLast = (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return withInputs({type: `world_drop_${key}`}, {...subject(who)});
+    };
+  }
+  if (type === 'actors') {
+    /** `add <actor> to <name> of <subject>` — only a LIST has these. */
+    self.push = (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return {
+        type: `world_push_${key}`,
+        inputs: {...subject(who), ITEM: value(args[0])},
+      };
+    };
+    /** `remove <actor> from <name> of <subject>`. */
+    self.drop = (...args) => {
+      const who = scoped ? args.shift() : undefined;
+      return {
+        type: `world_drop_${key}`,
+        inputs: {...subject(who), ITEM: value(args[0])},
+      };
+    };
+  }
+  return self;
+}
+
+/**
+ * Declare a designed block, and hand back the call that uses it.
+ *
+ * Reporting something makes it a QUERY and reporting nothing makes it an
+ * ACTION, which is the same distinction `world_rule_block`'s RETURNS field
+ * makes — and it decides the call block's type, so it is read here rather than
+ * written down twice.
+ */
+function declareBlock(ruleSlug, into, variables, spec, scoped) {
+  const {returns = 'number', description, say, body} = spec;
+  const params = say.filter(part => typeof part !== 'string');
+  const refs = {};
+  params.forEach(part => {
+    const id = `${ruleSlug}_${SLUG(part.name)}`;
+    const type = VARIABLE_TYPE(part.type);
+    if (!variables.some(v => v.id === id)) {
+      variables.push({id, name: part.name, type});
+    }
+    refs[part.name] = makeLocal(id, part.name, type);
+  });
+  const wording = say
+    .filter(part => typeof part === 'string')
+    .join(' ')
+    .trim();
+  const reports = returns && returns !== 'none';
+  const exportName = `${PASCAL(wording)}${reports ? 'Query' : 'Action'}`;
+
+  into.push({
+    type: 'world_rule_block',
+    fields: {RETURNS: returns, DESCRIPTION: description},
+    extraState: {
+      parts: say.map(part =>
+        typeof part === 'string'
+          ? {kind: 'label', text: part}
+          : {
+              kind: 'param',
+              type: part.type,
+              var: `${ruleSlug}_${SLUG(part.name)}`,
+              name: part.name,
+            },
+      ),
+    },
+    inputs: {DO: value(chain(body(refs)))},
+  });
+
+  /**
+   * Calling it: sockets are named from the parameters, uppercased — EXCEPT a
+   * lone argument to an action, which keeps the default `VALUE`.
+   *
+   * That exception is `defineActionBlock`'s (`labeled = params.length > 1`),
+   * made so the built-in single-argument actions kept the sockets they always
+   * had. Two places therefore have to agree about one name, and they did not:
+   * Health's `take ⟨amount⟩ damage` was emitted with an `AMOUNT` socket the
+   * block does not have, so the rule failed to load with "missing a(n) AMOUNT"
+   * — which no test saw, because nothing in the suite ran a rule.
+   *
+   * A query always uses its parameter names, however many it has.
+   */
+  const kind = reports ? 'query' : 'do';
+  const socketOf = part =>
+    !reports && params.length === 1 ? 'VALUE' : part.name.toUpperCase();
+  return (args = {}, subject) => ({
+    type: `world_${kind}_${ruleSlug}_${exportName}`,
+    inputs: {
+      ...Object.fromEntries(
+        params.map(part => [socketOf(part), value(args[part.name])]),
+      ),
+      ...(scoped && subject !== undefined ? {ACTOR: value(subject)} : {}),
+    },
+  });
+}
+
+/**
+ * Declare an event and hand back the block that raises it.
+ *
+ * The emit's type is built from the event's wording, exactly as the hat's is —
+ * one declaration, so raising an event a rule declares needs no string.
+ */
+function declareEvent(rule, ruleSlug, into, say, scope, variables) {
+  // AS MANY VALUES AS THE SIGNATURE NAMES. This used to refuse a second value
+  // that was not a set of choices, because the transport was a single
+  // `eventValue` and a second name would have been a second name for the same
+  // thing. The queue carries a list now and a handler reads each value by the
+  // name its author gave it (specs/EVENT_VALUES_PLAN.md), so there is nothing
+  // left to refuse.
+  const parts = say.map(part => {
+    if (typeof part === 'string') {
+      return {kind: 'label', text: part};
+    }
+    // Its parameter is a workspace variable like any other, and two events
+    // naming the same one share it — which is what `rules/input` does, its
+    // trait's events carrying the same key as the world's.
+    const id = `${ruleSlug}_${SLUG(part.name)}`;
+    if (!variables.some(v => v.id === id)) {
+      variables.push({id, name: part.name, type: VARIABLE_TYPE(part.type)});
+    }
+    return {kind: 'param', type: part.type, var: id};
+  });
+  into.push({type: 'world_rule_event', extraState: {parts}});
+  const wording = say
+    .filter(part => typeof part === 'string')
+    .join(' ')
+    .trim();
+  const exportName = `${PASCAL(wording)}Event`;
+  const params = say.filter(part => typeof part !== 'string');
+  /** `emit <…>` — `for <subject>` only when the event has one. */
+  return (carried = {}, subject) => ({
+    type: `world_emit_${ruleSlug}_${exportName}`,
+    inputs: {
+      ...Object.fromEntries(
+        params.map(part => [
+          params.length > 1 ? part.name.toUpperCase() : 'VALUE',
+          value(carried[part.name]),
+        ]),
+      ),
+      ...(scope === 'world' ? {} : {ACTOR: value(subject)}),
+    },
+  });
+}
+
+// ── The rule ─────────────────────────────────────────────────────────────────
+
+export function defineRule({name, ability, header, purpose}) {
+  const ruleSlug = RULE_SLUG(name);
+  const chainMembers = [];
+  // WHAT THIS RULE IS FOR, at the top of the rule, where a learner opening it
+  // arrives. `header` is the other paragraph and it is not this one: that is a
+  // comment on the generated `.ts`, written for whoever maintains the mechanic,
+  // and it reaches nobody who opens the workspace (specs/NEXT.md §3). This is
+  // the first thing on the surface, before the traits and the properties —
+  // markdown in a `world_doc`, drawn on the page rather than on a block.
+  //
+  // First because a rule's members are a chain and this is a member: pushed
+  // here, at construction, so nothing an author writes afterwards can get in
+  // front of it.
+  if (purpose) {
+    chainMembers.push(doc(purpose));
+  }
+  const traits = [];
+  const variables = [];
+
+  const rule = {
+    name,
+    ability,
+    header,
+
+    /**
+     * A variable this rule's bodies use — a loop's subject, a working value.
+     *
+     * Declared here so it reaches the workspace's variable map. Blockly resolves
+     * one by ID and treats the name on a block as a hint, so a variable used
+     * without being declared loads with nothing in its field.
+     */
+    local(varName, type = 'Actor') {
+      const id = `${ruleSlug}_${SLUG(varName)}`;
+      // Deduped: a working variable and a designed block's parameter may share
+      // a name, and they are then the same variable — which is what the
+      // workspace means by one ID.
+      if (!variables.some(v => v.id === id)) {
+        variables.push({id, name: varName, type});
+      }
+      return makeLocal(id, varName, type);
+    },
+
+    /**
+     * A page of prose among the rule's members.
+     *
+     * `purpose` is the one at the top and is written into every rule; this is
+     * for a second, further down — beside the properties it is about. A rule
+     * that DECLARES rather than does (Progress, Writing) has no step to put an
+     * explanation in, and would otherwise carry none at all.
+     */
+    doc(markdown) {
+      chainMembers.push(doc(markdown));
+      return rule;
+    },
+
+    /** `use rule <other>` — by NAME, which is how every reference works. */
+    uses(other) {
+      chainMembers.push({type: 'world_use_rule', fields: {RULE: other}});
+      return rule;
+    },
+
+    /**
+     * A block this rule adds, and the call that uses it.
+     *
+     * `say` is its wording: strings are labels, `param()`s are sockets. The
+     * name it is filed under is the labels joined, which is also what the call
+     * block's type is built from — so declaring it here is what makes calling
+     * it possible without writing that string down twice.
+     */
+    block: spec => declareBlock(ruleSlug, chainMembers, variables, spec, false),
+
+    /**
+     * An event, and the block that raises it.
+     *
+     * Declared on the RULE it is the world's — raised once, handled with no
+     * actor. Declared under a trait it is that subject's. Where it is chained
+     * decides which, so `event` here and `trait.event` are different members.
+     */
+    event(say) {
+      return declareEvent(
+        rule,
+        ruleSlug,
+        chainMembers,
+        say,
+        'world',
+        variables,
+      );
+    },
+
+    /**
+     * A property of the RULE — the world's, not any subject's.
+     *
+     * Its blocks take no `of <…>` socket: there is nobody to name, which is
+     * what world-scoped means. Gravity's direction and strength are these.
+     */
+    property(spec) {
+      const made = property(name, undefined, spec);
+      chainMembers.push(made.declaration);
+      return made;
+    },
+    number: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'number', value: initial, ...opts}),
+    // A number said as a DIRECTION: the same value, with a dial in the socket
+    // that sets it and on the `with default` slot that declares it.
+    angle: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'angle', value: initial, ...opts}),
+    point: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'point', value: initial, ...opts}),
+    vector: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'vector', value: initial, ...opts}),
+    boolean: (propName, initial, opts) =>
+      rule.property({name: propName, type: 'boolean', value: initial, ...opts}),
+
+    /**
+     * A per-tick step of the RULE's own — a top block beside it, not chained
+     * inside, and run once with `(world, delta)` rather than per subject.
+     *
+     * Where work goes that fits no single actor: reading the keyboard, walking
+     * every pair of bodies. A step that IS about one subject belongs under the
+     * trait that elects it (`trait.step`), which walks them for you.
+     */
+    step(stepName, phase, body) {
+      // A MEMBER of the rule, chained with the properties and the blocks it
+      // declares — and its body in a `do` mouth, because a member's `next` is
+      // the member after it. It used to be a root with the body chained below,
+      // which is what a step had to be while that body was hundreds of blocks
+      // long; the body lives on its own surface now.
+      chainMembers.push({
+        type: 'world_rule_step_in',
+        fields: {NAME: stepName, PHASE: phase},
+        ...(body.length ? {inputs: {DO: {block: chain(body)}}} : {}),
+      });
+      return rule;
+    },
+
+    /** A trait, and the members that belong to whatever elects it. */
+    trait(traitName, subject = 'actor') {
+      const traitId = SLUG(traitName);
+      const members = [];
+      /** What it is for, in one line: the tooltip wherever it is chosen. */
+      let description = '';
+      const self = {
+        /** Say what this trait is for — `define trait`'s description. */
+        describe(text) {
+          description = text;
+          return self;
+        },
+        /** A page of prose among this trait's members — see `rule.doc`. */
+        doc(markdown) {
+          members.push(doc(markdown));
+          return self;
+        },
+        /** What this trait needs, as `<Rule>#<Export>Trait`. */
+        uses(dep) {
+          members.push({type: 'world_use_trait', fields: {TRAIT: dep}});
+          return self;
+        },
+        property(spec) {
+          const made = property(name, traitId, spec);
+          members.push(made.declaration);
+          return made;
+        },
+        number: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'number',
+            value: initial,
+            ...opts,
+          }),
+        angle: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'angle',
+            value: initial,
+            ...opts,
+          }),
+        point: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'point',
+            value: initial,
+            ...opts,
+          }),
+        vector: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'vector',
+            value: initial,
+            ...opts,
+          }),
+        boolean: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'boolean',
+            value: initial,
+            ...opts,
+          }),
+        /** Words. */
+        string: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'string',
+            value: initial,
+            ...opts,
+          }),
+        /** A color, `#rrggbb`. Held as a string and asked about as its own
+         *  kind: its socket takes a swatch and the map editor's inspector
+         *  shows a picker (engine/core/types). */
+        color: (propName, initial, opts) =>
+          self.property({
+            name: propName,
+            type: 'color',
+            value: initial,
+            ...opts,
+          }),
+        actors: (propName, opts) =>
+          self.property({name: propName, type: 'actors', value: '', ...opts}),
+        /**
+         * A list of plain values — numbers, words or places (specs/LISTS.md).
+         *
+         * Unlike `actors`, one of these is SNAPSHOTTED: it is plain data, so a
+         * hot reload carries it and patches it live. Its blocks are the ones a
+         * stack wants — `add … to`, `take the last off` — because that is what
+         * asked for them.
+         */
+        numbers: (propName, opts) =>
+          self.property({name: propName, type: 'numbers', value: '', ...opts}),
+        words: (propName, opts) =>
+          self.property({name: propName, type: 'words', value: '', ...opts}),
+        vectors: (propName, opts) =>
+          self.property({name: propName, type: 'vectors', value: '', ...opts}),
+        /**
+         * ONE actor, not a list — a camera's actor to follow. The difference
+         * is what gets generated around it: a list also has `add`/`remove`,
+         * and offering those for one actor would let a learner name a second
+         * that nothing reads.
+         */
+        actor: (propName, opts) =>
+          self.property({name: propName, type: 'actor', value: '', ...opts}),
+        /** Runs once a frame for each subject that has this trait. */
+        /** A block this trait adds, asked OF whatever elected it. */
+        block: spec => declareBlock(ruleSlug, members, variables, spec, true),
+        /** An event about whatever elected this trait. */
+        event(say) {
+          return declareEvent(rule, ruleSlug, members, say, 'actor', variables);
+        },
+        step(stepName, phase, body) {
+          members.push({
+            type: 'world_trait_step',
+            fields: {PHASE: phase, NAME: stepName},
+            inputs: {DO: value(chain(body))},
+          });
+          return self;
+        },
+      };
+      traits.push({
+        reference: `${name}#${PASCAL(traitName)}Trait`,
+        root: () => ({
+          type: 'world_rule_trait',
+          fields: {
+            NAME: traitName,
+            ...(subject === 'actor' ? {} : {SUBJECT: subject}),
+            ...(description ? {DESCRIPTION: description} : {}),
+          },
+          ...(members.length ? {next: {block: chain(members)}} : {}),
+        }),
+      });
+      return self;
+    },
+
+    /** What another rule names this one's trait by. */
+    traitRef: traitName => `${name}#${PASCAL(traitName)}Trait`,
+
+    workspace() {
+      const roots = [
+        {
+          type: 'world_rule',
+          fields: {NAME: name, ABILITY: ability},
+          ...(chainMembers.length ? {next: {block: chain(chainMembers)}} : {}),
+        },
+        ...traits.map(trait => trait.root()),
+      ];
+      return {
+        // What Blockly itself writes at the top of a serialized workspace. It
+        // reads it back and a file without one still loads, but a generated
+        // workspace should be the shape the editor would have saved.
+        blocks: {languageVersion: 0, blocks: layout(roots)},
+        ...(variables.length ? {variables} : {}),
+      };
+    },
+  };
+  return rule;
+}
+
+// ── Layout ───────────────────────────────────────────────────────────────────
+
+/** A row is about this tall once Blockly has drawn it. Generous on purpose. */
+const ROW = 34;
+/**
+ * And the clear space between one root and the next.
+ *
+ * Was 60, which was not quite enough: `mouse`'s first trait draws thirteen
+ * pixels into its second, because a row is an estimate and some rows are
+ * taller than the estimate. Nobody had noticed, because nothing measured it
+ * until `spikes/rule-surfaces/check-layout.mjs`.
+ *
+ * Raised rather than made exact. A gap costs a little scrolling; an overlap
+ * covers whatever was at the bottom of the block above, which since rules
+ * carry prose is usually a sentence.
+ */
+const GAP = 84;
+
+/**
+ * How tall a page of prose draws, in rows.
+ *
+ * A `world_doc` is not a row. It is markdown rendered at 320px wide
+ * (`FieldMarkdown`), so its height is however far the words wrap — Patrol's
+ * three paragraphs come to 346px, which is ten rows where `rows` counted one.
+ * Counted as one, the trait roots below were placed on top of it: the layout
+ * puts each root under the last, and the last was three hundred pixels shorter
+ * than it drew.
+ *
+ * Estimated rather than measured, because this runs in node with no browser to
+ * ask. About 46 characters fit a line at 13px, a line is 19px, a paragraph
+ * carries 6px under it, and the field pads 8px each side. Over-counting costs
+ * a gap and under-counting costs an overlap, so it rounds up everywhere.
+ */
+const CHARS_PER_LINE = 46;
+const LINE = 19;
+const PARAGRAPH_GAP = 6;
+
+function docRows(markdown) {
+  const paragraphs = String(markdown)
+    .split(/\n\s*\n/)
+    .filter(text => text.trim().length > 0);
+  let height = PAD_BOTH;
+  for (const paragraph of paragraphs) {
+    const text = paragraph.replace(/\s+/g, ' ').trim();
+    height += Math.max(1, Math.ceil(text.length / CHARS_PER_LINE)) * LINE;
+    height += PARAGRAPH_GAP;
+  }
+  return Math.ceil(height / ROW);
+}
+
+/** What `FieldMarkdown` leaves around the prose, top and bottom. */
+const PAD_BOTH = 16;
+
+/**
+ * How many rows a stack occupies: itself, its statement inputs, and whatever is
+ * chained after it. Value inputs sit inline and add none.
+ */
+function rows(block) {
+  if (!block || typeof block !== 'object') {
+    return 0;
+  }
+  if (block.type === 'world_doc') {
+    // Plus one for the chrome the block draws around the page.
+    return docRows(block.fields?.DOC ?? '') + 1 + rows(block.next?.block);
+  }
+  let total = 1;
+  for (const [key, held] of Object.entries(block)) {
+    if (key === 'fields' || key === 'extraState') {
+      continue;
+    }
+    if (key === 'next') {
+      total += rows(held.block);
+      continue;
+    }
+    if (key === 'inputs') {
+      for (const [socket, input] of Object.entries(held)) {
+        // Statement sockets stack; a value socket is drawn on the same row.
+        if (/^(DO|ELSE|STACK)/.test(socket)) {
+          total += rows(input.block ?? input.shadow) + 1;
+        }
+      }
+    }
+  }
+  return total;
+}
+
+/**
+ * Place each root below the one before it.
+ *
+ * Hand-authored rules carry the positions the editor gave them when a person
+ * dragged the blocks about; a generated one has to work them out, and round
+ * numbers are a guess that holds until a rule grows. Measured from the stack's
+ * own height, so adding a member pushes what follows down instead of landing
+ * on top of it.
+ */
+function layout(roots) {
+  let y = 20;
+  return roots.map(root => {
+    const placed = {...root, x: 20, y};
+    y += rows(root) * ROW + GAP;
+    return placed;
+  });
+}
+
+// ── Output ───────────────────────────────────────────────────────────────────
+
+/** JSON.stringify, then escape non-ASCII — how these files store a workspace. */
+const store = obj =>
+  `${JSON.stringify(obj, null, 2).replace(
+    /[-￿]/g,
+    c => `\\u${c.charCodeAt(0).toString(16).padStart(4, '0')}`,
+  )}\n`;
+
+const asLiteral = json =>
+  `'${json.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n')}'`;
+
+/** The `.ts` file that holds one stock rule. */
+export function moduleFor(rule, constName) {
+  return `${rule.header}
+
+/** The \`rules/${constName}.rule\` workspace. GENERATED — edit scripts/rules/${constName}.mjs. */
+export const ${constName}Rule =
+  ${asLiteral(store(rule.workspace()))};
+`;
+}

@@ -1,0 +1,138 @@
+import {CanCollide, contacts} from './collisions.mjs';
+import {
+  both,
+  defineRule,
+  doc,
+  filter,
+  forEach,
+  hasTrait,
+  moduleFor,
+  not,
+  note,
+  param,
+  removeActor,
+  thisActor,
+  yes,
+} from './dsl.mjs';
+
+const rule = defineRule({
+  name: 'Collection',
+  ability: 'Collects Things',
+  purpose: `**Collection** is walking into a coin and having it.
+
+Two abilities, because collecting has two sides. The actor that picks things up
+elects **Collects**; anything that can be picked up elects **Can Be
+Collected** — so a coin is collectible and a brick is not, and neither has to
+know about the player.
+
+What a collector has taken is a list you can count, test and empty.`,
+  header: `// "Collects Things" — walk into a coin and have it.
+//
+// TWO abilities, because collecting has two sides and a game names them
+// separately: the actor that PICKS THINGS UP elects "Collects", and the thing
+// that CAN BE PICKED UP elects "Can Be Collected". Which is what makes "certain
+// kinds of actor are collectible" sayable at all — a coin is, a brick is not,
+// and neither has to know about the player.
+//
+// Both sides also need "Can Collide", because collecting happens on contact and
+// contact is Collisions' answer. Declared as a trait dependency rather than
+// left to the learner: an actor that elects "Can Be Collected" and is never
+// touched by anything would be a rule that silently does nothing.
+//
+// It reads \`contacts\` — who is touching NOW, written in \`touch\` — rather than
+// \`newly touching\`, which is written in \`react\` where this also runs. Steps in
+// one phase are unordered and must commute, so reading another rule's \`react\`
+// output would be a race that works until the day the load order changes.
+//
+// Which leaves the job \`newly touching\` would have done: not taking the same
+// coin sixty times while standing on it. \`taken\` does it instead, and does it
+// better — it is claimed the instant the coin is taken, so two players touching
+// one coin in the same frame cannot both have it. Removal is deferred to the
+// end of the tick (\`remove actor\`), so without a claim the coin is still there
+// and still collectible for the rest of the frame.
+//
+// WHAT WAS COLLECTED, not how many. \`collected\` is the list of things taken,
+// which answers "how many" for every kind at once — \`how many actors in ⟨every
+// actor … where ⟨it is a ⟨Coin⟩⟩⟩\` — where a counter would answer it for one
+// kind and need a second counter for the second kind. The list holds actors
+// that have left the world, which is what an inventory IS: a record of what was
+// picked up, not of what is still standing there.
+//
+// \`collected\` is an ACTORS property and so has \`add … to\` and \`remove …
+// from\` generated for it, which is what this step uses. It was written before
+// those existed and had to read the list out, append, and write the whole thing
+// back every frame — an inventory-sized copy per collector per frame to say
+// "and this one too".`,
+});
+rule.uses('Collisions');
+
+const collects = rule
+  .trait('Collects')
+  .describe('Picks up the things it walks into.');
+collects.uses(CanCollide);
+const collectible = rule
+  .trait('Can Be Collected')
+  .describe('Can be picked up by something that collects.');
+collectible.uses(CanCollide);
+
+export const Collects = rule.traitRef('Collects');
+export const CanBeCollected = rule.traitRef('Can Be Collected');
+
+/**
+ * What this actor has picked up, oldest first.
+ *
+ * Read-only: a step owns it. What a learner does with it is ask questions —
+ * how many, of which kind, was this one of them.
+ */
+const collected = collects.actors('collected', {readonly: true});
+
+/**
+ * Whether this thing has already been taken.
+ *
+ * Not "is it gone" — it is still in the world for the rest of the tick, since
+ * `remove actor` lands at the end of one. This is the claim on it, and it is
+ * what stops a second collector taking the same coin in the same frame.
+ */
+const taken = collectible.boolean('taken', false, {readonly: true});
+
+/** `when ⟨Player⟩ collects ⟨Coin⟩` — the collector's side. */
+export const collectsItem = collects.event([
+  'collects',
+  param('item', 'actor'),
+]);
+
+/** `when ⟨Coin⟩ is collected by ⟨Player⟩` — the item's side. */
+export const isCollected = collectible.event([
+  'is collected by',
+  param('collector', 'actor'),
+]);
+
+const item = rule.local('item', 'Actor');
+
+collects.step('pick things up', 'react', [
+  doc(
+    '**Take everything touchable that has not already been taken.**\n\nThe list of things being touched comes from Collisions; this narrows it to the ones that can be collected and are not yet claimed, and takes those.\n\nTHE ORDER INSIDE THE LOOP IS THE WHOLE OF IT. The item is marked taken *first*, so that two collectors reaching the same coin on the same frame cannot both have it — the second finds it already claimed and passes over. Then the thing taken is told, while it is still in the world and can still say something. The collector is told next. Only then is it removed, at the end of the tick, so both handlers found something real to talk about.\n\nIn `react`, after everything has moved: you collect what you ended the frame touching.',
+  ),
+  note('Anything it is touching that can be taken and has not been.'),
+  forEach(item, {
+    from: filter(item, {
+      from: contacts.of(thisActor()),
+      where: both(
+        hasTrait(item.get(), CanBeCollected),
+        not(taken.of(item.get())),
+      ),
+    }),
+    body: [
+      note('Claim it first: nobody else may take this one now.'),
+      taken.set(item.get(), yes()),
+      collected.push(thisActor(), item.get()),
+      note('The thing taken is told first, while it is still in the world.'),
+      isCollected({collector: thisActor()}, item.get()),
+      collectsItem({item: item.get()}, thisActor()),
+      note('Gone at the end of the tick, so both handlers still find it.'),
+      removeActor(item.get()),
+    ],
+  }),
+]);
+
+export default () => moduleFor(rule, 'collect');
