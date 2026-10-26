@@ -17,6 +17,7 @@ import {
   actorView,
   asActorData,
   foldActor,
+  CREATED_HAT,
   isActorData,
   viewOf,
   type ActorData,
@@ -29,6 +30,17 @@ import {
   swatch,
   useTrait,
 } from '../stock/workspace';
+
+/** The types down a hat's chain, top to bottom. */
+const chainTypes = (hat: Record<string, unknown>): string[] => {
+  const types: string[] = [];
+  let row = (hat.next as {block?: {type: string; next?: unknown}})?.block;
+  while (row) {
+    types.push(row.type);
+    row = (row.next as {block?: {type: string; next?: unknown}})?.block;
+  }
+  return types;
+};
 
 const fold = (contents: string): ActorData =>
   foldActor(JSON.parse(contents) as Record<string, unknown>)!;
@@ -95,8 +107,9 @@ describe('an actor folded into data', () => {
     expect(isActorData(data)).toBe(true);
   });
 
-  it('keeps as setup what it cannot say as data', () => {
-    // A second look, and a `set` of something computed.
+  it('makes what it cannot say as data its creation handler', () => {
+    // A second look, and a `set` of something computed: what the actor does
+    // on being made (specs/ACTORS_AS_DATA_PLAN.md, step 2).
     const computed = {
       type: 'world_set_ActorsLabel_SizeProperty',
       inputs: {
@@ -114,12 +127,53 @@ describe('an actor folded into data', () => {
     expect(data.animations).toEqual({
       Main: {loop: true, tracks: {sprite: [{at: 0, value: 'a.png'}]}},
     });
-    expect(data.setup!.map(row => row.type)).toEqual([
+    const [hat] = data.blocks!.blocks!.blocks!;
+    expect(hat.type).toBe(CREATED_HAT);
+    expect(chainTypes(hat)).toEqual([
       'world_set_sprite',
       'world_set_ActorsLabel_SizeProperty',
     ]);
-    // …and the view puts them back.
+    // …and the view, folded again, is the same data.
     expect(fold(JSON.stringify(actorView(data)))).toEqual(data);
+  });
+
+  it('puts them first in the creation handler it already has', () => {
+    const workspace = JSON.parse(
+      actorFile('Odd', [
+        {type: 'world_set_sprite', fields: {SPRITE: 'a.png'}},
+        {type: 'world_set_sprite', fields: {SPRITE: 'b.png'}},
+      ]),
+    ) as {blocks: {blocks: object[]}};
+    workspace.blocks.blocks.push({
+      type: CREATED_HAT,
+      x: 300,
+      y: 20,
+      next: {block: {type: 'world_say', next: {block: {type: 'world_wait'}}}},
+    });
+    const data = foldActor(workspace)!;
+    const hats = data.blocks!.blocks!.blocks!.filter(
+      root => root.type === CREATED_HAT,
+    );
+    expect(hats).toHaveLength(1);
+    expect(hats[0]).toMatchObject({x: 300, y: 20});
+    expect(chainTypes(hats[0])).toEqual([
+      'world_set_sprite',
+      'world_say',
+      'world_wait',
+    ]);
+  });
+
+  it('drops a declaration the data already makes', () => {
+    // A second `acts like` says nothing the first does not, and means
+    // nothing in a handler.
+    const data = fold(
+      actorFile('Odd', [
+        {type: 'world_acts_like', fields: {ACTOR: 'actors/label'}},
+        {type: 'world_acts_like', fields: {ACTOR: 'actors/panel'}},
+      ]),
+    );
+    expect(data.actsLike).toBe('actors/label');
+    expect(data.blocks!.blocks!.blocks).toEqual([]);
   });
 
   it('is nothing for a file with no define actor', () => {
@@ -210,8 +264,18 @@ describe('every actor, folded and viewed again', () => {
         : written;
       const data = fold(contents);
       expect(data, path).toBeDefined();
-      // Every row a shipped actor holds is data or code; none is kept aside.
-      expect(data.setup, path).toBeUndefined();
+      // Every row a shipped actor holds is data or code; none is moved to
+      // a creation handler, so the code it compiles to is the same.
+      expect(
+        (data.blocks?.blocks?.blocks ?? []).filter(
+          root => root.type === CREATED_HAT,
+        ).length,
+        path,
+      ).toBe(
+        (
+          JSON.parse(contents) as {blocks: {blocks: Array<{type: string}>}}
+        ).blocks.blocks.filter(root => root.type === CREATED_HAT).length,
+      );
       // The data, viewed and folded again, is the same data.
       expect(fold(JSON.stringify(actorView(data))), path).toEqual(data);
       const before = ref.current!.generate(contents, path);

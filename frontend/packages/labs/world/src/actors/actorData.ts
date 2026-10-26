@@ -117,12 +117,6 @@ export interface ActorData {
   properties?: ActorProperty[];
   values?: ActorValue[];
   effects?: ActorEffect[];
-  /**
-   * Rows under the root that are neither data nor code a "+" offers: a
-   * second look, a `set` of something computed. None of the shipped actors
-   * has one; they are kept, in order, so that a fold loses nothing.
-   */
-  setup?: Block[];
   /** The handlers and the code, as roots of the workspace. */
   blocks?: SavedWorkspace;
   [key: string]: unknown;
@@ -142,6 +136,28 @@ export const CODE_ROWS: ReadonlySet<string> = new Set([
 ]);
 
 const ROOT = 'world_actor';
+
+/**
+ * `when ⟨this actor⟩ is created`: where a row that is neither data nor code
+ * goes (specs/ACTORS_AS_DATA_PLAN.md, step 2). It runs once the actor exists
+ * and before it is first drawn (`World.settleCreations`).
+ */
+export const CREATED_HAT = 'world_on_Space_CreatedEvent';
+
+/**
+ * Rows that DECLARE something about the kind, which the data says once. One
+ * the fold could not take — a second `acts like`, a property it cannot read
+ * — says nothing the data does not, and means nothing in a handler, so it
+ * is dropped rather than moved there.
+ */
+const DECLARATION_ROWS: ReadonlySet<string> = new Set([
+  'world_use_trait',
+  'world_acts_like',
+  'world_actor_is_data',
+  'world_show_as',
+  'world_rule_property',
+  'world_actor_animations',
+]);
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
   Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -543,7 +559,6 @@ const DATA_KEYS = new Set([
   'properties',
   'values',
   'effects',
-  'setup',
   'blocks',
 ]);
 
@@ -570,7 +585,9 @@ export function foldActor(
   const properties: ActorProperty[] = [];
   const values: ActorValue[] = [];
   const effects: ActorEffect[] = [];
-  const setup: Block[] = [];
+  // What the actor does on being made: rows that are not data, kept in
+  // order for its `is created` handler.
+  const creation: Block[] = [];
   const code: Block[] = [];
   let animations: Record<string, Timeline> | undefined;
   let sawAnimationsRow = false;
@@ -612,8 +629,11 @@ export function foldActor(
       effects.push(effect);
     } else if (typeof row.type === 'string' && CODE_ROWS.has(row.type)) {
       code.push(alone(row));
-    } else {
-      setup.push(alone(row));
+    } else if (
+      typeof row.type !== 'string' ||
+      !DECLARATION_ROWS.has(row.type)
+    ) {
+      creation.push(alone(row));
     }
   }
   if (animations && Object.keys(animations).length) {
@@ -623,7 +643,6 @@ export function foldActor(
   if (properties.length) data.properties = properties;
   if (values.length) data.values = values;
   if (effects.length) data.effects = effects;
-  if (setup.length) data.setup = setup;
 
   const workspace: SavedWorkspace = {};
   const extras: Record<string, unknown> = {};
@@ -634,7 +653,10 @@ export function foldActor(
       extras[key] = held;
     }
   }
-  const handlers = roots.filter((_, index) => index !== at);
+  const handlers = withCreation(
+    roots.filter((_, index) => index !== at),
+    creation,
+  );
   workspace.blocks = {
     ...(file.blocks as SavedWorkspace['blocks']),
     languageVersion:
@@ -649,9 +671,31 @@ export function foldActor(
 }
 
 /**
+ * The handlers, with `rows` at the top of the actor's `is created` handler —
+ * the one it has, or a new one. First, because under `define actor` they
+ * ran before anything a handler did.
+ */
+function withCreation(handlers: Block[], rows: readonly Block[]): Block[] {
+  if (rows.length === 0) {
+    return handlers;
+  }
+  const at = handlers.findIndex(root => root.type === CREATED_HAT);
+  const hat = at < 0 ? {type: CREATED_HAT, x: 20, y: 20} : handlers[at];
+  // The rows, chained down onto whatever the handler already did.
+  const first = rows.reduceRight<Block | undefined>(
+    (next, row) => ({...alone(row), ...(next ? {next: {block: next}} : {})}),
+    (hat.next as {block?: Block} | undefined)?.block,
+  );
+  const settled = {...hat, next: {block: first}};
+  return at < 0
+    ? [...handlers, settled]
+    : handlers.map((root, index) => (index === at ? settled : root));
+}
+
+/**
  * The `define actor` workspace the data stands for, as a file holds one:
  * a root whose chain is the definition rows, in a fixed order, then the
- * kept setup and the code; the handlers beside it.
+ * code; the handlers beside it.
  */
 export function actorView(data: ActorData): Record<string, unknown> {
   const roots = (data.blocks?.blocks?.blocks ?? []) as Block[];
@@ -675,7 +719,6 @@ export function actorView(data: ActorData): Record<string, unknown> {
     ...(data.properties ?? []).map(writeProperty),
     ...(data.values ?? []).map(writeValue),
     ...(data.effects ?? []).filter(effect => effect.on).map(writeEffect),
-    ...(data.setup ?? []).map(alone),
     ...code.map(alone),
   ];
   const first = chained(rows);

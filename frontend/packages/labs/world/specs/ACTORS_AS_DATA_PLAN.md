@@ -163,6 +163,21 @@ view writes under `define actor` is data or a code row, a fold of a view is
 the same data. The round-trip test over every actor (scenarios, lessons,
 stock) says so.
 
+BUILT. A row under `define actor` that is neither data nor a code row is
+chained, in order, at the top of the actor's `when ⟨this actor⟩ is
+created` handler (`CREATED_HAT`) — the one it has, whose own rows follow,
+or a new one. A row that declares something the data says once (`use
+trait`, `acts like`, `is a record`, `show as`, `define property`, the
+animations row) and that the fold could not take is dropped: a second
+`acts like` says nothing the first does not, and would mean nothing in a
+handler. `setup` is gone from the shape, the view and `DATA_KEYS`. The
+tests say both moves and the drop, and that a view folds to the same
+data; the round trip over every shipped actor finds no creation handler
+the fold made, so each compiles to the same lines as before.
+
+Nothing a learner sees changes here: no shipped actor had a setup row, and
+the creation handler is in the Code view with the other handlers.
+
 ### 3. The panel by what the actor is for
 
 **Acts like**, a dropdown of the project's other actors or nothing, and **Is
