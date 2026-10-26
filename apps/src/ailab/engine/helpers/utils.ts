@@ -49,3 +49,11 @@ export function getNiceAxisStep(max: number, intervals: number): number {
 export function prefersReducedMotion(): boolean {
   return !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 }
+
+/*
+  Both hyperparameters count something — neighbours, or splits — so both are
+  whole numbers of at least one.
+*/
+export function isValidHyperparameter(value: unknown): boolean {
+  return typeof value === 'number' && Number.isInteger(value) && value >= 1;
+}
