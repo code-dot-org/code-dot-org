@@ -23,19 +23,6 @@ export const CAPTURE_TIMEOUT_MS = 30_000;
 
 type SnapshotResult = {blob?: Blob; error?: string};
 
-const withTimeout = <T>(promise: Promise<T>, timeoutMs: number): Promise<T> => {
-  let timer: number | undefined;
-  const timeout = new Promise<never>((_, reject) => {
-    timer = window.setTimeout(
-      () => reject(new Error(`capture timed out after ${timeoutMs} ms`)),
-      timeoutMs
-    );
-  });
-  return Promise.race([promise, timeout]).finally(() =>
-    window.clearTimeout(timer)
-  );
-};
-
 let captureInFlight: Promise<SnapshotResult> | undefined;
 
 // Overlapping captures would each save the other's temporary DOM edits as
@@ -110,9 +97,21 @@ const captureSketch = async (
   };
 
   const restoreSvgStyles = inlineSvgStylesForExport(viewport);
+  let timer: number | undefined;
   let blob: Blob | null;
   try {
-    blob = await withTimeout(renderBlob(), CAPTURE_TIMEOUT_MS);
+    blob = await Promise.race([
+      renderBlob(),
+      new Promise<never>((_, reject) => {
+        timer = window.setTimeout(
+          () =>
+            reject(
+              new Error(`capture timed out after ${CAPTURE_TIMEOUT_MS} ms`)
+            ),
+          CAPTURE_TIMEOUT_MS
+        );
+      }),
+    ]);
   } catch (cause) {
     const captureError = new SketchCaptureError(cause, {
       elements: contentRects.length,
@@ -125,6 +124,7 @@ const captureSketch = async (
       .logError('Sketch snapshot error', captureError, captureError.details);
     return {error: CAPTURE_ERROR};
   } finally {
+    window.clearTimeout(timer);
     restoreSvgStyles();
   }
 
