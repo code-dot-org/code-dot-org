@@ -1,6 +1,6 @@
 import {QuizQuestionType} from '../types';
 
-export interface QuizQuestionChoice {
+export interface QuizQuestionItem {
   id: string;
   text: string;
 }
@@ -23,7 +23,7 @@ interface QuizQuestionSharedFields {
 
 export interface MultipleChoiceDraft extends QuizQuestionSharedFields {
   type: 'MultipleChoiceQuestion';
-  choices: QuizQuestionChoice[];
+  choices: QuizQuestionItem[];
   correctChoiceId: string | null;
 }
 
@@ -31,8 +31,21 @@ export interface FreeResponseDraft extends QuizQuestionSharedFields {
   type: 'FreeResponseQuestion';
 }
 
+export interface MatchPair {
+  id: string;
+  items: [QuizQuestionItem, QuizQuestionItem];
+}
+
+export interface MatchDraft extends QuizQuestionSharedFields {
+  type: 'MatchQuestion';
+  pairs: MatchPair[];
+}
+
 // A question card's unsaved working copy; Save sends it as the request body.
-export type QuizQuestionDraft = MultipleChoiceDraft | FreeResponseDraft;
+export type QuizQuestionDraft =
+  | MultipleChoiceDraft
+  | FreeResponseDraft
+  | MatchDraft;
 
 // A question as the builder endpoints return it (GET /levels/:id/
 // quiz_configuration and a placement create): the QuizQuestion model's

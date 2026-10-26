@@ -62,7 +62,10 @@ function isValidModeValue(
   if (key === 'requireAccuracy') {
     return isValidAccuracy(value);
   }
-  if (key === 'label') {
+  if (key === 'idColumn' && value === null) {
+    return true;
+  }
+  if (key === 'label' || key === 'idColumn') {
     return typeof value === 'string' && value !== '';
   }
   if (key === 'features') {
@@ -104,12 +107,14 @@ export function setDataset(mode: ModeObject, datasetId: string): ModeObject {
   const newMode = setJsonObjectValue(mode, 'datasets', [datasetId]);
   delete newMode.label;
   delete newMode.features;
+  delete newMode.idColumn;
   return newMode;
 }
 
 const SET_BY_DATASET = [
   'label',
   'features',
+  'idColumn',
   'hideSelectLabel',
   'lockFeatures',
   'pretrained',
@@ -139,6 +144,16 @@ export function getStartingLabel(
     (mode.label as string | undefined) ??
     (mode.hideSelectLabel === true ? defaultLabel : undefined)
   );
+}
+
+// null turns off the dataset's default id column.
+export function getLevelIdColumn(
+  mode: ModeObject,
+  defaultIdColumn: string | undefined
+): string | undefined {
+  return mode.idColumn === null
+    ? undefined
+    : (mode.idColumn as string | undefined) ?? defaultIdColumn;
 }
 
 export function setFeatures(mode: ModeObject, features: string[]): ModeObject {
