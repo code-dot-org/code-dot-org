@@ -1,0 +1,101 @@
+// What a level says about this lab.
+//
+// A World Lab level is mostly its starting project, but some of the editor's
+// affordances are teaching decisions rather than preferences: a first lesson
+// about *using* gravity is not a lesson about reading how gravity works, and a
+// level that is about reading it wants the way in. Those choices live here, in
+// the level's own data, so a curriculum author sets them per level rather than
+// every project getting the same editor.
+//
+// Shaped like the other labs' (`MusicLevelProperties`): the lab's data hangs off
+// `levelData`, and `LevelProperties<T>` intersects it with the base properties
+// every level has.
+
+import type {z} from 'zod';
+
+import type {LevelProperties} from '@code-dot-org/core/api';
+
+import type {WorldLevelDataSchema} from './schema';
+
+/**
+ * The lab's own per-level settings, inferred from the schema that lets them
+ * through — so the type and the validation cannot disagree about a field.
+ */
+export type WorldLevelData = z.infer<typeof WorldLevelDataSchema>;
+
+export interface WorldData {
+  levelData?: WorldLevelData;
+}
+
+export type WorldLevelProperties = LevelProperties<WorldData>;
+
+/** Whether this level offers the "open the file behind this block" button. */
+export function showsRuleSource(
+  properties: WorldLevelProperties | undefined,
+): boolean {
+  return properties?.levelData?.showRuleSource !== false;
+}
+
+/**
+ * Which view a world's file opens on in this level: its map, unless the
+ * level says its work is in the workspace (specs/CURRICULUM_PLAN.md).
+ */
+export function worldOpensOn(
+  properties: WorldLevelProperties | undefined,
+): 'map' | 'world' {
+  return properties?.levelData?.worldView ?? 'map';
+}
+
+/** Toolbox categories this level leaves out, by their displayed name. */
+export function hiddenToolboxCategories(
+  properties: WorldLevelProperties | undefined,
+): readonly string[] {
+  return properties?.levelData?.hiddenToolboxCategories ?? [];
+}
+
+/**
+ * Whether the stock libraries offer only what this learner has unlocked.
+ *
+ * Off unless a level says otherwise. The unlock is only real if a New Project
+ * cannot simply take everything (specs/PROGRESSION.md) — and it is only fair if
+ * saying no to that is one setting away, which is what this is.
+ */
+/**
+ * Whether the color picker shows its named swatches and nothing else.
+ *
+ * Off unless a level says otherwise. Sixteen colors and the whole range under
+ * them is the picker worth having; this is for the lesson where the range is
+ * the distraction rather than the point.
+ */
+export function usesSimpleColors(
+  properties: WorldLevelProperties | undefined,
+): boolean {
+  return properties?.levelData?.simpleColors === true;
+}
+
+/** Whether this level is App Builder: an app, not a game (`appBuilder`). */
+export function buildsApps(
+  properties: WorldLevelProperties | undefined,
+): boolean {
+  return properties?.levelData?.mode === 'app';
+}
+
+export function gatesShelf(
+  properties: WorldLevelProperties | undefined,
+): boolean {
+  return properties?.levelData?.gateShelf === true;
+}
+
+/**
+ * Which tree of lessons this level is on, by its catalogue id.
+ *
+ * Absent means the original one, which is every level written before there
+ * was more than one. It decides what the map draws, what the shelf holds and
+ * where the learner's finished tiles are filed — two trees are two sets of
+ * progress (`progression/catalogues`, specs/APPS.md).
+ */
+export function catalogueName(
+  properties: WorldLevelProperties | undefined,
+): string | undefined {
+  return properties?.levelData?.catalogue;
+}

@@ -1,0 +1,116 @@
+{
+  "name": "@code-dot-org/world-lab",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Code.org World Lab, built on the Codebridge shell",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/world/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/labs/world"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./mocks": {
+      "types": "./dist/fixtures/index.d.ts",
+      "import": "./dist/fixtures/index.mjs",
+      "require": "./dist/fixtures/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "build:demo": "yarn setup:world && vite build --mode demo",
+    "build:demos": "vitest --run --config vitest.record.config.ts",
+    "build:effect-stills": "node scripts/build-effect-stills.mjs",
+    "build:pages": "WORLD_DEMO_BASE=/world-lab/ WORLD_DEMO_ICONS=free VITE_WORLD_SANDBOX=same-origin yarn build:demo",
+    "build:rules": "node scripts/build-stock-rules.mjs",
+    "dev": "yarn setup:world && vite --port 5139 --strictPort",
+    "dev:isolated": "yarn setup:world && concurrently -k -n app,sandbox -c blue,magenta \"vite --port 5139 --strictPort\" \"vite --port 5202 --strictPort\"",
+    "dev:sandbox": "yarn setup:world && vite --port 5202 --strictPort",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "preview": "vite preview",
+    "preview:demo": "concurrently -k -n app,sandbox -c blue,magenta \"vite preview --outDir dist-demo --port 5139 --strictPort\" \"vite preview --outDir dist-demo --port 5202 --strictPort\"",
+    "setup:world": "node scripts/setup-world-assets.mjs",
+    "test": "vitest --run",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@blockly/field-colour": "^6.0.4",
+    "@code-dot-org/aitutor": "workspace:*",
+    "@code-dot-org/blockly": "workspace:*",
+    "@code-dot-org/codebridge": "workspace:*",
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/lab": "workspace:*",
+    "@codemirror/lang-html": "^6.4.9",
+    "@codemirror/lang-javascript": "^6.2.3",
+    "@codemirror/lang-json": "^6.0.2",
+    "@codemirror/lang-markdown": "^6.3.2",
+    "@codemirror/state": "^6.5.2",
+    "@dnd-kit/core": "^6.3.0",
+    "@dnd-kit/sortable": "^8.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@emotion/react": "catalog:",
+    "@emotion/styled": "catalog:",
+    "@mui/material": "catalog:",
+    "@xyflow/react": "^12.11.2",
+    "blockly": "^13.1.0",
+    "esbuild-wasm": "^0.28.1",
+    "phaser": "^4.2.1",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@testing-library/dom": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@types/node": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "concurrently": "^9.1.0",
+    "eslint": "catalog:",
+    "jsdom": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "sass": "^1.85.0",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vitest": "catalog:",
+    "vitest-axe": "^0.1.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@mui/material": "^7.0.0",
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "world-lab": ["src/engine/index.ts"]
+    }
+  },
+  "include": ["src"]
+}
