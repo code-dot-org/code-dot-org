@@ -1,0 +1,119 @@
+/* The stock-effect picker's CONTENT. The dialog itself — surface, width,
+   padding, the button row — is the design system's `Dialog`, so this stays out
+   of its way and shapes only the list inside it. The rows are design-system
+   buttons, so their colors follow the lab's Light/Dark setting like every
+   other button. */
+
+.list {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 55vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* One row per effect: a whole-row button, so the target is the size of the
+   thing being chosen rather than a word inside it. Layout only — the colors,
+   the border, the hover and the focus ring are the design system's, because a
+   row here should read as the same kind of thing as a button anywhere else.
+   A picture and its words, side by side: the picture is a fixed square so
+   every row lines up and the eye can compare straight down the column. */
+.effect {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+
+  /* A button centers its content; the old column layout never showed it,
+     because the column was already stretched. In a row it leaves a gutter and,
+     worse, the squares stop lining up with the reference one above them —
+     which is the comparison the whole arrangement exists to make. */
+  justify-content: flex-start;
+  padding: 10px 12px;
+  text-align: start;
+  text-transform: none;
+}
+
+/* Never let the flex row squeeze the picture: it is a square of a known size,
+   and a squashed preview is a lie about what the effect does.
+   A one-cell grid, because the still and the live canvas are stacked in it —
+   both in row 1 / column 1, the still painted over the canvas until the canvas
+   has drawn. Grid rather than absolute positioning so the cell is still sized
+   by its contents. */
+.preview {
+  display: grid;
+  flex: none;
+  grid-template: 1fr / 1fr;
+}
+
+.preview > * {
+  grid-area: 1 / 1;
+}
+
+.words {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+}
+
+/* The untouched sample above the list. Deliberately NOT a button — there is
+   nothing to choose — so it carries none of the row styling, only the same
+   left-hand alignment so its square sits under the ones below it. */
+.reference {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  opacity: 0.75;
+}
+
+/* The still and the live canvas occupy the same box, so promoting a row to a
+   running shader shifts nothing. A square, because the sample is one and a
+   stretched preview is a lie about what the effect does. */
+.square {
+  display: block;
+  border-radius: 4px;
+  object-fit: cover;
+
+  /* NO transition. Both handovers are exact — the still is the same size the
+     canvas renders at, and leaving puts back the very frame that was on screen
+     — so a fade has nothing to hide and everything to expose: it would show the
+     picture arriving out of nothing in the frames before the bitmap decodes. */
+}
+
+/* The live canvas, made to occupy EXACTLY the box the still does.
+   `PreviewCanvas` is dressed for the effect editor: a 1px border and a dark
+   transparency checkerboard, against a dark panel. Both are wrong here, and
+   the border is wrong twice — it sits outside the declared size, so promoting
+   a row on hover grew the picture by two pixels and nudged the words. Dropping
+   the backdrop matters as much: `fade` is transparency, and it would have read
+   against dark gray while hovered and against the dialog everywhere else.
+
+   Written as a descendant so it BEATS the wrapper's own rule. One class against
+   one class is a tie, and a tie is settled by which stylesheet the bundler put
+   last — which is not a thing to depend on. Scoped to `.parked`, which is where
+   the live canvas lives now: left scoped to the row it used to sit in, the
+   border came back and sat the picture one pixel off the one it covers. */
+.parked .live {
+  border: none;
+  background: none;
+  border-radius: 4px;
+}
+
+/* The one live canvas, parked over a row. Absolute inside the scrolling list,
+   so it travels with the content; `translate` and `opacity` only, because both
+   are compositor properties — moving it neither relayouts the list nor rebuilds
+   the layer, which is the flicker this replaced. */
+.parked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
