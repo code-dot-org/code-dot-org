@@ -3,14 +3,12 @@ import {CanCollide, passable} from './collisions.mjs';
 import {
   absolute,
   add,
-  allWithTrait,
   axisOf,
   both,
   countOf,
   defineRule,
   doc,
   extremeActor,
-  forEach,
   lessThan,
   minus,
   moduleFor,
@@ -171,7 +169,6 @@ export const Digs = rule.traitRef('Digs');
 const target = rule.local('target', 'Vector');
 const block = rule.local('block', 'Actor');
 const found = rule.local('found', 'Actor');
-const closing = rule.local('closing', 'Actor');
 
 /**
  * `⟨who⟩ dig towards ⟨direction⟩` — the whole of the player's half.
@@ -304,31 +301,27 @@ digger.step('line up with what it dug', 'adjust', [
   ]),
 ]);
 
-rule.step('fill the holes back in', 'sense', [
+// In `decide`, for the reason Time's step gives: a pause stops game time.
+diggable.step('fill the holes back in', 'decide', [
   doc(
-    'The block owns its own clock, so this asks every hole rather than every digger: a hole outlives whoever made it, and closes on time whether or not that actor is still in the world.',
+    "The block owns its own clock, so this is the hole's step rather than the digger's: a hole outlives whoever made it, and closes on time whether or not that actor is still in the world.",
   ),
-  forEach(closing, {
-    from: allWithTrait(CanBeDug),
-    body: [
-      when([
-        [
-          both(
-            open.of(closing.get()),
-            not(lessThan(time(), closesAt.of(closing.get()))),
-          ),
-          [
-            passable.set(closing.get(), no()),
-            open.set(closing.get(), no()),
-            doc(
-              'And whoever is standing in it is told about — see the header on why this rule does not decide what that costs.',
-            ),
-            filled({}, closing.get()),
-          ],
-        ],
-      ]),
+  when([
+    [
+      both(
+        open.of(thisActor()),
+        not(lessThan(time(), closesAt.of(thisActor()))),
+      ),
+      [
+        passable.set(thisActor(), no()),
+        open.set(thisActor(), no()),
+        doc(
+          'And whoever is standing in it is told about — see the header on why this rule does not decide what that costs.',
+        ),
+        filled({}, thisActor()),
+      ],
     ],
-  }),
+  ]),
 ]);
 
 export default () => moduleFor(rule, 'digging');

@@ -294,23 +294,19 @@ const focusFirst = rule.block({
  *
  * In `sense`, the first moment of the frame: a screen is loaded in a handler,
  * which runs after every step, so this catches it on the frame after — the
- * same one frame everything else about a click is late by.
+ * same one frame everything else about a click is late by. And `sense` runs
+ * while the game is paused, which is when a pause menu opens over a field.
  */
-rule.step('coveredLosesFocus', 'sense', [
+focusable.step('coveredLosesFocus', 'sense', [
   doc(
     'Whoever is holding the keyboard from behind a screen in front lets go, and the front of the route takes it. The route only has what can be reached, so "the front" is the first thing on the screen that is showing.',
   ),
-  forEach(other, {
-    from: allWithTrait(rule.traitRef('Can Be Focused')),
-    body: [
-      when([
-        [
-          both(focused.of(other.get()), not(canBeReached(other.get()))),
-          [focusFirst({})],
-        ],
-      ]),
+  when([
+    [
+      both(focused.of(thisActor()), not(canBeReached(thisActor()))),
+      [focusFirst({})],
     ],
-  }),
+  ]),
 ]);
 
 /**

@@ -2,10 +2,8 @@ import {
   add,
   atLeast,
   both,
-  allWithTrait,
   defineRule,
   doc,
-  forEach,
   give,
   moduleFor,
   no,
@@ -118,37 +116,24 @@ timed.block({
   ],
 });
 
-const each = rule.local('each', 'Actor');
-
-// A RULE step rather than a trait's, and the phase is why. `sense` is where the
-// outside world is read — its own summary says "keys, pointer, timers" — and it
-// is a WORLD moment: `phasesFor` offers a trait step only the ACTOR phases, so
-// a trait step naming `sense` names something the editor would never have
-// offered. It survives a round trip only because a live dropdown keeps a value
-// its options lack, and then draws a label for a different phase.
-//
-// So the loop is written out, the way Gravity's two steps write theirs out, and
-// the step goes where the frame says it belongs.
-rule.step('tick', 'sense', [
+// In `decide`, not `sense`: `sense` runs while the game is paused, and a timer
+// is game time, which a pause stops. What it raises is handled after every
+// step of the frame, so it is heard in the same frame either way.
+timed.step('tick', 'decide', [
   note('Due, and running? Then it is time.'),
-  forEach(each, {
-    from: allWithTrait(rule.traitRef('Has a Timer')),
-    body: [
-      when([
-        [
-          both(runs.of(each.get()), atLeast(time(), nextAt.of(each.get()))),
-          [
-            doc(
-              'Schedule the next one BEFORE saying anything, so a handler that restarts or stops it has the last word, not this.',
-            ),
-            nextAt.set(each.get(), add(time(), period.of(each.get()))),
-            when([[not(repeats.of(each.get())), [runs.set(each.get(), no())]]]),
-            fires({}, each.get()),
-          ],
-        ],
-      ]),
+  when([
+    [
+      both(runs.of(thisActor()), atLeast(time(), nextAt.of(thisActor()))),
+      [
+        doc(
+          'Schedule the next one BEFORE saying anything, so a handler that restarts or stops it has the last word, not this.',
+        ),
+        nextAt.set(thisActor(), add(time(), period.of(thisActor()))),
+        when([[not(repeats.of(thisActor())), [runs.set(thisActor(), no())]]]),
+        fires({}, thisActor()),
+      ],
     ],
-  }),
+  ]),
 ]);
 
 /** Seconds it takes to be ready again. */

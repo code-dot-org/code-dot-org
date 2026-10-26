@@ -112,16 +112,15 @@ describe('rules/motion.rule', () => {
   });
 
   it('writes down where every mover is before anything moves it', () => {
-    // The record behind `position before`, in `sense` — the first moment —
-    // and it has to be that early: `push` is where a teleport pad sets a
-    // traveler down, and a record taken after that would say the traveler
-    // had always stood at the far pad. The rule's own step rather than the
-    // trait's, because `sense` is a moment of the WORLD and a trait's step may
-    // only name the moments its subject takes part in (engine/core/phases).
+    // The record behind `position before`, in `decide`, the first of an
+    // actor's moments — and it has to be before `push`, where a teleport pad
+    // sets a traveler down: a record taken after that would say the traveler
+    // had always stood at the far pad. A step of `Can Move`, so it is taken
+    // for every mover without a loop.
     const step = meta.steps.find(s => s.id === 'note_where_each_body_starts');
     expect(step?.order.kind).toBe('phase');
-    expect(step?.order.phase).toBe('sense');
-    expect(step?.scope).toBe('world');
+    expect(step?.order.phase).toBe('decide');
+    expect(step?.scope).toBe('actor');
   });
 
   it('explains each block it defines', () => {

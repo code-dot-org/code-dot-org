@@ -1,11 +1,9 @@
 import {Positional, position, setPosition} from './builtins.mjs';
 import {
   add,
-  allWithTrait,
   axisOf,
   defineRule,
   doc,
-  forEach,
   frameTime,
   moduleFor,
   note,
@@ -194,28 +192,21 @@ export const placed = canMove.block({
   ],
 });
 
-const each = rule.local('each', 'Actor');
 const travel = rule.local('travel', 'Vector');
 
-// The rule's own step rather than the trait's, because `sense` is a moment of
-// the WORLD and a trait's step may only name the moments its subject takes
-// part in (engine/core/phases). It has to be this early: `push` is where a
-// teleport pad sets a traveler down, and a record taken after that would say
-// the traveler had always stood at the far pad.
-rule.step('note where each body starts', 'sense', [
-  forEach(each, {
-    from: allWithTrait(CanMove),
-    body: [
-      doc(
-        'Before anything moves: where is everybody? Written down so that the rest of the frame can ask, whatever moves them meanwhile.',
-      ),
-      positionBefore.set(
-        each.get(),
-        position.x(each.get()),
-        position.y(each.get()),
-      ),
-    ],
-  }),
+// In `decide`, the first moment anything of an actor's runs. It has to be this
+// early: `push` is where a teleport pad sets a traveler down, and a record
+// taken after that would say the traveler had always stood at the far pad.
+// Nothing moves a body before `push`, and nothing reads this until then.
+canMove.step('note where each body starts', 'decide', [
+  doc(
+    'Before anything moves: where is everybody? Written down so that the rest of the frame can ask, whatever moves them meanwhile.',
+  ),
+  positionBefore.set(
+    thisActor(),
+    position.x(thisActor()),
+    position.y(thisActor()),
+  ),
 ]);
 
 canMove.step('reposition', 'move', [

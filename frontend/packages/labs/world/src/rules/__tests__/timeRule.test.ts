@@ -59,23 +59,17 @@ describe('rules/time.rule', () => {
     expect(next?.default).toBe(0);
   });
 
-  it('writes its own loop, because `sense` is a world moment', () => {
-    // `phasesFor` offers a TRAIT step only the actor phases, so a trait step
-    // naming `sense` names something the editor would never have offered — it
-    // survives a round trip only because a live dropdown keeps a value its
-    // options lack, and then draws a label for a different phase. Gravity
-    // writes its loops out for the same reason.
-    expect(timeRule).toContain('world_actors_with_trait');
-    expect(timeRule).not.toContain('world_trait_step');
+  it('ticks as a step of the timer, which walks the timers for it', () => {
+    expect(timeRule).toContain('world_trait_step');
+    expect(timeRule).not.toContain('world_actors_with_trait');
   });
 
-  it('senses the time before anything decides or moves', () => {
-    // `sense` is where the mouse works out which buttons changed, and its own
-    // summary names timers. A timer is the same shape of fact — something the
-    // frame noticed — and firing it later would mean a handler's effects
-    // landed a frame after the beat.
+  it('ticks in `decide`, which a paused game does not run', () => {
+    // A timer is game time, and a pause stops it. What it raises is handled
+    // after every step of the frame, so firing here rather than in `sense` is
+    // heard in the same frame.
     expect(meta.steps).toHaveLength(1);
-    expect(meta.steps[0].order).toMatchObject({phase: 'sense'});
+    expect(meta.steps[0].order).toMatchObject({phase: 'decide'});
   });
 
   it('answers a cooldown with a question and a start', () => {

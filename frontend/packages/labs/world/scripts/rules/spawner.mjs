@@ -1,12 +1,10 @@
 import {
   add,
-  allWithTrait,
   atLeast,
   both,
   defineRule,
   doc,
   either,
-  forEach,
   lessThan,
   moduleFor,
   n,
@@ -135,49 +133,36 @@ sends.block({
   body: () => [sending.set(thisActor(), no())],
 });
 
-const each = rule.local('each', 'Actor');
-
-// A RULE step rather than a trait's, and in `sense`, for the reason Time's step
-// gives at length: `sense` is the world moment where clocks are read, and
-// `phasesFor` never offers a trait step a world phase.
-rule.step('tick', 'sense', [
+// In `decide`, for the reason Time's step gives: a pause stops game time, and
+// `sense` is the moment that runs through one.
+sends.step('tick', 'decide', [
   doc(
-    '**One clock, walked over every spawner in the world.**\n\nThree questions have to be yes: it is switched on, its `next` time has arrived, and it has some left to send. A total of 0 means "keep going", so a limit only bites once it is set.\n\nLike Patrol\'s beat, the next time is booked from when this one was DUE rather than from now, so a slow frame does not push the whole wave later. And what is raised is an EVENT: the rule owns the *when* and your handler owns the *what*, which is what lets a stock rule send an actor it has never heard of.\n\nA rule step rather than a trait\'s, and in `sense` — the world moment where clocks are read, before anything has decided or moved.',
+    '**Each spawner\'s own clock.**\n\nThree questions have to be yes: it is switched on, its `next` time has arrived, and it has some left to send. A total of 0 means "keep going", so a limit only bites once it is set.\n\nLike Patrol\'s beat, the next time is booked from when this one was DUE rather than from now, so a slow frame does not push the whole wave later. And what is raised is an EVENT: the rule owns the *when* and your handler owns the *what*, which is what lets a stock rule send an actor it has never heard of.',
   ),
   note('Sending, due, and with some left to send?'),
-  forEach(each, {
-    from: allWithTrait(rule.traitRef('Sends Things')),
-    body: [
-      when([
-        [
-          both(
-            both(
-              sending.of(each.get()),
-              atLeast(time(), nextAt.of(each.get())),
-            ),
-            // Zero is "keep going", so a limit only bites when it is set.
-            either(
-              lessThan(total.of(each.get()), n(1)),
-              lessThan(sent.of(each.get()), total.of(each.get())),
-            ),
-          ),
-          [
-            note(
-              'Schedule and count BEFORE saying anything, so a handler that',
-            ),
-            note('stops or restarts it has the last word, not this.'),
-            nextAt.set(each.get(), add(time(), gap.of(each.get()))),
-            gap.set(
-              each.get(),
-              times(gap.of(each.get()), closer.of(each.get())),
-            ),
-            sent.set(each.get(), add(sent.of(each.get()), n(1))),
-            sendsSomething({}, each.get()),
-          ],
-        ],
-      ]),
+  when([
+    [
+      both(
+        both(sending.of(thisActor()), atLeast(time(), nextAt.of(thisActor()))),
+        // Zero is "keep going", so a limit only bites when it is set.
+        either(
+          lessThan(total.of(thisActor()), n(1)),
+          lessThan(sent.of(thisActor()), total.of(thisActor())),
+        ),
+      ),
+      [
+        note('Schedule and count BEFORE saying anything, so a handler that'),
+        note('stops or restarts it has the last word, not this.'),
+        nextAt.set(thisActor(), add(time(), gap.of(thisActor()))),
+        gap.set(
+          thisActor(),
+          times(gap.of(thisActor()), closer.of(thisActor())),
+        ),
+        sent.set(thisActor(), add(sent.of(thisActor()), n(1))),
+        sendsSomething({}, thisActor()),
+      ],
     ],
-  }),
+  ]),
 ]);
 
 export default () => moduleFor(rule, 'spawner');
