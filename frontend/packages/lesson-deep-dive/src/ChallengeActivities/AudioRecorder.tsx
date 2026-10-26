@@ -1,6 +1,15 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
-import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import {
+  type Dispatch,
+  type FC,
+  type SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import styles from './audio-recorder.module.scss';
 
@@ -24,8 +33,8 @@ const CountdownRing: FC<CountdownRingProps> = ({
     timeRemaining <= 5
       ? '#ff4444'
       : timeRemaining <= 10
-      ? '#ffd600'
-      : '#ffffff';
+        ? '#ffd600'
+        : '#ffffff';
 
   return (
     <div
@@ -84,7 +93,7 @@ interface AudioRecorderProps {
   // caller can bring its `isRecording` state back in sync.
   onIsRecordingChange?: (isRecording: boolean) => void;
   recordedBlob: Blob | null;
-  setRecordedBlob: React.Dispatch<React.SetStateAction<Blob | null>>;
+  setRecordedBlob: Dispatch<SetStateAction<Blob | null>>;
   timeLimitSeconds?: number;
   disabled?: boolean;
 }
@@ -119,7 +128,7 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
     if (!navigator.mediaDevices?.getUserMedia) {
       setError(
         'Microphone recording is not available on this page. ' +
-          'Try opening the page over HTTPS.'
+          'Try opening the page over HTTPS.',
       );
       return;
     }
@@ -130,7 +139,7 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
     } catch {
       setError(
         'Microphone access was denied. ' +
-          'Please allow access in your browser settings and try again.'
+          'Please allow access in your browser settings and try again.',
       );
     }
   }, []);
@@ -141,7 +150,6 @@ const AudioRecorder: FC<AudioRecorderProps> = ({
       streamRef.current?.getTracks().forEach(t => t.stop());
     };
     // run once on mount; startStream is stable
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Derive the preview URL from the recorded Blob, revoking the previous one

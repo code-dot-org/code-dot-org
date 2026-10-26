@@ -563,6 +563,8 @@ devinternal_db_writer: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
 db_cluster_id: !StackSecret
+# 'proxysql', 'rdsproxy', or 'none'. Unset keeps whatever this deployment connects through today.
+db_proxy: !StackSecret
 db_endpoint_writer: !StackSecret
 db_endpoint_writer_port: !StackSecret
 db_endpoint_proxy_writer: !StackSecret

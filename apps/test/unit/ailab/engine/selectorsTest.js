@@ -14,6 +14,8 @@ import {
   getExtremaByColumn,
   getSelectableColumns,
   getFilterableColumns,
+  getIdColumn,
+  getTrainableColumns,
 } from '@cdo/apps/ailab/engine/selectors';
 
 import {
@@ -102,7 +104,7 @@ describe('getting extrema', () => {
   });
 });
 
-describe('getSelectableColumns', () => {
+describe('getTrainableColumns', () => {
   const tooManyOptions = Array.from({length: UNIQUE_OPTIONS_MAX + 1}, (_, i) =>
     String(i)
   );
@@ -121,14 +123,49 @@ describe('getSelectableColumns', () => {
   };
 
   test('keeps numbers-only numerical and small categorical columns', () => {
-    expect(getSelectableColumns.resultFunc(data, columnsByDataType)).toEqual([
+    expect(getTrainableColumns.resultFunc(data, columnsByDataType)).toEqual([
       'count',
       'color',
     ]);
   });
 
   test('returns nothing when there is no data', () => {
-    expect(getSelectableColumns.resultFunc([], columnsByDataType)).toEqual([]);
+    expect(getTrainableColumns.resultFunc([], columnsByDataType)).toEqual([]);
+  });
+});
+
+describe('getSelectableColumns', () => {
+  test('leaves out the id column', () => {
+    expect(
+      getSelectableColumns.resultFunc(['count', 'color'], 'color')
+    ).toEqual(['count']);
+  });
+});
+
+describe('getIdColumn', () => {
+  const data = [{name: 'Fido', legs: '4'}];
+
+  test("is the mode's id column when the dataset has it", () => {
+    expect(getIdColumn.resultFunc(data, 'name')).toBe('name');
+  });
+
+  test('is undefined when the dataset lacks it or the mode sets none', () => {
+    expect(getIdColumn.resultFunc(data, 'nope')).toBeUndefined();
+    expect(getIdColumn.resultFunc([], 'name')).toBeUndefined();
+    expect(getIdColumn.resultFunc(data, undefined)).toBeUndefined();
+  });
+
+  test("falls back to the dataset's default when the mode sets none", () => {
+    expect(getIdColumn.resultFunc(data, undefined, 'name')).toBe('name');
+    expect(getIdColumn.resultFunc(data, 'legs', 'name')).toBe('legs');
+  });
+
+  test('is undefined when the mode turns off the default', () => {
+    expect(getIdColumn.resultFunc(data, null, 'name')).toBeUndefined();
+  });
+
+  test('ignores names inherited by every object', () => {
+    expect(getIdColumn.resultFunc(data, 'constructor')).toBeUndefined();
   });
 });
 
