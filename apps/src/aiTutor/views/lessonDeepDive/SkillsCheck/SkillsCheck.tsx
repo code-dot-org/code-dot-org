@@ -1,13 +1,13 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
+  Match,
   MatchSolution,
+  MultipleChoice,
   MultiSolution,
-  PracticeMatch,
-  PracticeMultipleChoice,
   PracticeProblem,
-  PracticeScramble,
-  PracticeSort,
+  Scramble,
   ScrambleSolution,
+  Sort,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {
   FC,
@@ -316,13 +316,13 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
     switch (problem.type) {
       case PracticeProblemTypes.MULTIPLE_CHOICE_SINGLE:
       case PracticeProblemTypes.MULTIPLE_CHOICE_MULTI:
-        return <PracticeMultipleChoice {...sharedProps} />;
+        return <MultipleChoice {...sharedProps} />;
       case PracticeProblemTypes.SCRAMBLE:
-        return <PracticeScramble {...sharedProps} />;
+        return <Scramble {...sharedProps} />;
       case PracticeProblemTypes.MATCH:
-        return <PracticeMatch {...sharedProps} />;
+        return <Match {...sharedProps} />;
       case PracticeProblemTypes.SORT:
-        return <PracticeSort {...sharedProps} />;
+        return <Sort {...sharedProps} />;
     }
   };
 
