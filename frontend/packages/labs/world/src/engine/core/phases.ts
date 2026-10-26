@@ -1,0 +1,172 @@
+// The named moments of one frame, in the order they happen.
+//
+// A step used to say when it ran by naming a NEIGHBOUR — `before Physics ▸
+// reposition`. That is the right thing to say when a rule genuinely knows its
+// neighbor, and the wrong thing for a pipeline: five of the seven steps the
+// stock rules ship carried a cross-rule anchor, so a learner writing a new
+// force had to discover that Physics existed and pick the right one of its
+// steps before their rule could work. What they wanted to say was "this is a
+// force", and there was no way to say it.
+//
+// So the anchors the stock rules already hand-wired are given names, and that
+// list is this file. Nothing here is new behavior — `applyVelocity` before
+// `reposition` before `find` before `resolve` before `handleCollisions` is the
+// order those rules already produce. It is the same pipeline, sayable.
+//
+// A phase is not a subdivision of anything. There are no sub-phases, and no
+// gaps between: the camera moments sit in the one list beside the physical
+// ones, because a frame is one sequence and the camera occupies five of its
+// moments the way physics occupies five of them.
+//
+// A step names a moment and nothing else. There was briefly a way to sit in the
+// gap either side of one — for work the list had not anticipated, of which
+// `adjust` was the motivating example: wrapping at the screen edge has to
+// happen after positions integrate and before contacts are found. Naming that
+// moment is better than leaving a gap for it. A named moment is in the dropdown
+// where a learner finds it; a gap is invisible until you already know you need
+// it. So when something does not fit, the answer is another entry here.
+//
+// `steady` is that having happened. A deadzone and an easing rule both wanted
+// `smooth`, and they do not commute: a deadzone reads how far the aim has moved
+// from where the camera IS, so easing first shrinks that gap and the deadzone
+// almost never fires. Two moments, because there were two — adjusting the aim
+// is not the same act as deciding how fast to follow it.
+
+/**
+ * Which subject a phase is about, and so which steps may name it.
+ *
+ * A step declared under a trait knows its subject, so the editor offers only
+ * the phases that subject takes part in: `push` is not a thing a camera does,
+ * and a camera trait never sees it. A rule-level step has no subject and may
+ * name any of them — that is where the work that fits no single actor lives
+ * (reading the keyboard, walking every pair of bodies).
+ */
+export type PhaseSubject = 'world' | 'actor' | 'camera';
+
+/** One named moment, and what it is for. */
+export interface PhaseDef {
+  readonly id: string;
+  /** The label a learner reads in the dropdown. */
+  readonly name: string;
+  readonly subject: PhaseSubject;
+  readonly summary: string;
+}
+
+/**
+ * Every phase, in the order they run. INDEX IS MEANING here: the list is the
+ * schedule, and moving an entry changes what a world does.
+ */
+export const PHASES: readonly PhaseDef[] = [
+  {
+    id: 'sense',
+    name: 'sense',
+    subject: 'world',
+    summary: 'Read the outside world — keys, pointer, timers.',
+  },
+  {
+    id: 'decide',
+    name: 'decide',
+    subject: 'actor',
+    summary:
+      'Turn intent into motion: what the player asked for, what an ' +
+      'enemy chose.',
+  },
+  {
+    id: 'push',
+    name: 'push',
+    subject: 'actor',
+    summary: 'Add forces to velocity — gravity, wind, a magnet.',
+  },
+  {
+    id: 'move',
+    name: 'move',
+    subject: 'actor',
+    summary: 'Turn velocity into position.',
+  },
+  {
+    id: 'adjust',
+    name: 'adjust',
+    subject: 'actor',
+    summary:
+      'Correct a position after moving — wrap at the edges, clamp to the ' +
+      'map, snap to a grid.',
+  },
+  {
+    id: 'touch',
+    name: 'touch',
+    subject: 'actor',
+    summary: 'Work out what is against what.',
+  },
+  {
+    id: 'settle',
+    name: 'settle',
+    subject: 'actor',
+    summary: 'Push overlapping bodies apart.',
+  },
+  {
+    id: 'react',
+    name: 'react',
+    subject: 'actor',
+    summary:
+      'Respond to what happened — landing, damage, scoring, which ' +
+      'animation to play.',
+  },
+  {
+    id: 'choose',
+    name: 'choose the camera',
+    subject: 'camera',
+    summary: 'Decide which camera the view is taken through.',
+  },
+  {
+    id: 'aim',
+    name: 'aim',
+    subject: 'camera',
+    summary: 'Choose where the camera wants to look.',
+  },
+  {
+    id: 'steady',
+    name: 'steady the aim',
+    subject: 'camera',
+    summary:
+      'Adjust WHERE it is looking before deciding how fast to get there — a ' +
+      'deadzone the subject may move inside, or leading where it is going.',
+  },
+  {
+    id: 'smooth',
+    name: 'smooth',
+    subject: 'camera',
+    summary: 'Soften the approach — how much of the way to travel this frame.',
+  },
+  {
+    id: 'confine',
+    name: 'confine',
+    subject: 'camera',
+    summary: 'Keep the view somewhere legal — inside the map, on one axis.',
+  },
+  {
+    id: 'view',
+    name: 'take the view',
+    subject: 'camera',
+    summary: 'Commit the choice: the camera moves to where it decided to look.',
+  },
+];
+
+/** A phase id, for the `StepOrder` that names one. */
+export type PhaseId = (typeof PHASES)[number]['id'];
+
+const INDEX = new Map(PHASES.map((phase, at) => [phase.id, at]));
+
+/**
+ * Where a phase sits in the frame, or `undefined` if nothing is named.
+ *
+ * Undefined rather than a fallback index: a step naming a phase that does not
+ * exist has said something meaningless, and putting it at the front by accident
+ * would be a worse answer than leaving it unordered.
+ */
+export const phaseIndex = (id: string): number | undefined => INDEX.get(id);
+
+/** The phases a subject may take part in — what the editor offers. */
+export const phasesFor = (subject: PhaseSubject): readonly PhaseDef[] =>
+  subject === 'world'
+    ? PHASES
+    : PHASES.filter(phase => phase.subject === subject);

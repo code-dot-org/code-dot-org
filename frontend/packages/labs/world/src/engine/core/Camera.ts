@@ -1,0 +1,241 @@
+// A camera: where the view is taken from (specs/VIEWPORT.md).
+//
+// A POSE, and nothing else. Its position is the point it shows at the MIDDLE of
+// the view — the same meaning an actor's position has (an actor is drawn centered
+// on its own), which it must have, because the two are literally the same
+// `PositionProperty`. A camera whose position meant the top-left corner would be
+// one property meaning two things by whoever held it, and `set position of
+// ⟨camera⟩ to ⟨get position of ⟨player⟩⟩` would put the player in the corner.
+//
+// A camera has a position and no pixels of its own —
+// the drawing exists only where a camera is applied to a surface — which is why
+// an effect "on a camera" is defined as applying to every viewport rendering
+// through it, and why a camera is not a thing that draws.
+//
+// Cameras belong to the WORLD, not to a layer. A layer says only how much of
+// whichever camera is drawing it applies to its contents (`Layer.parallax`,
+// `Layer.fit`); it does not own the pose. That separation is what lets a second
+// view of the same layer exist later — a minimap, a split screen — without the
+// contents knowing.
+//
+// Not an Actor, though it is meant to be treated like one. A camera is the actor
+// foundation MINUS APPEARANCE: it has a position, it is never drawn, and it is
+// not in `world.actors`, so no rule has to learn to skip it and nothing that
+// removes actors takes it away.
+//
+// NO ZOOM YET. The spec's `fit` and a parallax factor of `(0, 0)` differ only
+// once a camera can scale — a layer at zero still zooms, a `fit` layer does not
+// — so the distinction is carried in the model and is invisible until zoom
+// arrives. Adding it here later changes no authoring.
+
+import type {Actor} from './Actor';
+import type {Space} from './Space';
+import {SPATIAL} from './spatialKeys';
+import type {Trait} from './Trait';
+import {Traited} from './Traited';
+import type {Property} from './types';
+import {Vector} from './Vector';
+import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from './viewport';
+import type {World} from './World';
+
+/**
+ * The camera every world draws through unless something says otherwise.
+ *
+ * A real camera, not the absence of one, for the reason the default LAYER is a
+ * real layer: an engine with two kinds of view — through a camera and through
+ * none — would need every question about the view to answer twice.
+ */
+export const DEFAULT_CAMERA_ID = 'main';
+
+/**
+ * Where a camera rests: the middle of the view, so a fresh world frames the
+ * world's origin at the top-left corner exactly as it did before cameras.
+ *
+ * The consequence of a position meaning the CENTRE. A camera reporting (0, 0)
+ * would be one showing the world origin in the middle of the screen, which is
+ * half a viewport from where every map is drawn.
+ */
+const RESTING_POSITION = (): Vector =>
+  new Vector(VIEWPORT_WIDTH / 2, VIEWPORT_HEIGHT / 2);
+
+/** What a camera is asked for when it is declared. */
+export interface CameraInit {
+  id: string;
+  name?: string;
+  /**
+   * The Viewport whose space this camera looks at, or that Viewport's id.
+   *
+   * Absent means the world's own — the root space — which is every camera
+   * declared before spaces had cameras of their own
+   * (specs/SPACE_CAMERAS_PLAN.md).
+   *
+   * THE ACTOR IS WHAT THE BLOCK PASSES, because `define camera ⟨…⟩ for ⟨…⟩`
+   * belongs in the Viewport's own `on create`, where the Viewport exists and
+   * `this actor` is it. An id is accepted beside it for a caller that has one —
+   * the engine's own tests, and any code holding a name rather than a thing —
+   * and both are resolved when the call is made: nothing waits for a Viewport
+   * that is not there, because the place to declare a camera is the handler that
+   * fires when its space is made.
+   *
+   * NOT CALLED `space`, though it decides one, because {@link Camera.space} is
+   * the Space itself. One name for the thing asked for and another for the thing
+   * resolved beats one name meaning both.
+   */
+  viewport?: string | Actor;
+  /**
+   * The point it shows at the MIDDLE of the view, in world pixels; defaults to
+   * the middle of the world's own rectangle.
+   */
+  position?: Vector;
+  /** Traits it elects — how it behaves, authored in a rule. */
+  traits?: Trait[];
+  /** Initial values for the properties those traits declare. */
+  overrides?: Array<[Property, unknown]>;
+}
+
+/**
+ * Whether this is Spatial's `position` — recognised by KEY, not by import.
+ *
+ * `core` must not import `rules`, which is why `spatialKeys` exists: plain
+ * constants both sides read, so core can speak the rule's vocabulary without
+ * depending on it (`renderSnapshot` reads an actor's transform the same way).
+ *
+ * This is what makes `set position of ⟨camera⟩` work. The positional blocks
+ * generate `subject.set(WorldLab.PositionProperty, …)`, and a camera answers
+ * that call with its own pose rather than with a slot no trait gave it — which
+ * is the concrete meaning of "a camera is the actor foundation minus
+ * appearance".
+ */
+const isPosition = (property: Property): boolean =>
+  property.ownerId === SPATIAL.trait && property.id === SPATIAL.position;
+
+/**
+ * A camera, as the world holds it.
+ *
+ * A class rather than a plain object because it holds traits, and holding
+ * traits is what makes a camera something a rule can act on: "follows the
+ * player" is a trait a camera elects, and a rule's step walks the cameras that
+ * have it — exactly as gravity's step walks the actors with its own.
+ *
+ * The trait machinery is the SAME one an actor uses (core/Traited), because
+ * there is nothing actor-specific about holding traits. What a camera does not
+ * get is the rest of an Actor: no appearance, no effects of its own, no place
+ * in `world.actors`.
+ */
+export class Camera {
+  /**
+   * The world this camera is in, set when the world takes it.
+   *
+   * The same back-reference an Actor carries, for the same reason: a
+   * camera-scoped body is invoked as `(camera, …args)` — the engine has no
+   * world to hand it — and a body like "follow the player" is a question about
+   * the world asked of a camera. The generated preamble binds `const world =
+   * camera.world`, exactly as an actor's binds it from the actor.
+   */
+  world: World | undefined;
+
+  /**
+   * The space this camera looks at, for a space that owns cameras of its own.
+   *
+   * `undefined` for the world's, which look at the root — `World.spaceOf`
+   * answers with the root space for anything that names none, so the world's
+   * cameras need say nothing and behave as they always have.
+   *
+   * WHY A CAMERA NEEDS TO KNOW. A camera step runs with its camera in hand
+   * (`world.enter(camera)`, from the loop a camera-scoped trait step
+   * generates), and what the world is asked without a subject — the map's size,
+   * the size of the view — is answered for the space the thing in hand is in.
+   * So `Camera Confined to the Map` asks `map size` and gets the space's bounds
+   * and the Viewport's window rather than the world's, and confining a
+   * Viewport's camera means what it says (specs/SPACE_CAMERAS_PLAN.md).
+   */
+  space: Space | undefined;
+
+  /**
+   * The Viewport whose rectangle this camera draws into, for a camera a
+   * Viewport owns.
+   *
+   * Distinct from {@link space} once a Viewport can mirror the world
+   * (specs/MIRRORING_PLAN.md): a mirror's camera looks at the ROOT — so actor
+   * queries with it in hand answer about the root — but is seen through the
+   * Viewport's window, which is what `view size` and `Confined to the Map` have
+   * to measure by. For a Viewport with a space of its own the two agree.
+   */
+  window: Actor | undefined;
+
+  readonly id: string;
+  readonly name: string;
+  /** Mutable: moving the camera is the whole point of having one. */
+  position: Vector;
+  private readonly traited: Traited;
+
+  constructor(init: CameraInit) {
+    this.id = init.id;
+    this.name = init.name ?? init.id;
+    this.position = init.position
+      ? new Vector(init.position.x, init.position.y)
+      : RESTING_POSITION();
+    this.traited = new Traited(
+      `Camera '${init.id}'`,
+      init.traits ?? [],
+      init.overrides ?? [],
+    );
+  }
+
+  /** Whether this camera has the given trait, directly or by dependency. */
+  has(trait: Trait): boolean {
+    return this.traited.has(trait);
+  }
+
+  /**
+   * Elect a trait while the game runs, or drop one — see `core/Traited`, which
+   * owns both and explains why a dropped trait leaves its properties behind.
+   *
+   * Returns `this` so a step can chain, matching `set` and `addEffect`.
+   */
+  addTrait(trait: Trait): this {
+    this.traited.addTrait(trait);
+    return this;
+  }
+
+  removeTrait(trait: Trait): this {
+    this.traited.removeTrait(trait);
+    return this;
+  }
+
+  /** The traits in play on it, dependencies included. */
+  traits(): readonly Trait[] {
+    return this.traited.traits();
+  }
+
+  get<T>(property: Property<T>): T {
+    if (isPosition(property)) {
+      return this.position as unknown as T;
+    }
+    return this.traited.get(property);
+  }
+
+  /** Set a property; returns `this` so setup can chain, as an actor's does. */
+  set<T>(property: Property<T>, value: T): this {
+    if (isPosition(property)) {
+      // Copied, like every other write of a pose: a step that follows the
+      // player writes this every tick, and adopting the caller's Vector would
+      // let a later mutation move the view with no call at all.
+      const to = value as unknown as {x: number; y: number};
+      this.position = new Vector(to.x, to.y);
+      return this;
+    }
+    this.traited.set(property, value);
+    return this;
+  }
+
+  /** Whether the slot exists at all — distinct from what is in it. */
+  hasProperty(property: Property): boolean {
+    return isPosition(property) || this.traited.hasProperty(property);
+  }
+}
+
+/** A camera with its defaults filled in. */
+export function makeCamera(init: CameraInit): Camera {
+  return new Camera(init);
+}

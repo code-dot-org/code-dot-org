@@ -1,0 +1,521 @@
+// Describes an Actor — a set of Traits, initial property values, and event
+// handlers — and instantiates it. Applying a trait applies its dependencies and
+// adds their properties with defaults (INTERFACE.md); `set` overrides a default,
+// `on` registers a handler.
+
+import type {EffectDocument} from '../../effect/model/types';
+import {Actor} from '../core/Actor';
+import type {ActorDrawing, Pen} from '../core/drawing';
+import type {Timeline} from '../core/keyframes';
+import {Trait} from '../core/Trait';
+import type {
+  ActionParam,
+  ActorAction,
+  AppliedEffectSpec,
+  EventHandler,
+  GameEvent,
+  Property,
+  PropertyType,
+} from '../core/types';
+import type {AnimationEffect, ActorStep, World} from '../core/World';
+import {AppearanceTrait} from '../rules/animation';
+import {PositionalTrait} from '../rules/spatial';
+
+/**
+ * The traits every actor has whether or not it elects them.
+ *
+ * The foundation, one level down from `WorldBuilder`'s: the world runs Space
+ * and Appearance because a rule cannot provide them, and an actor has their
+ * traits because an actor without them is not a simpler actor. "Can Be
+ * Positioned" IS what being in the world means — `World.renderSnapshot` skips
+ * an actor that lacks it, so such an actor is not invisible, it is absent — and
+ * "Has Appearance" is what `set sprite` and `play animation` write to, which
+ * are the first two blocks a learner reaches for.
+ *
+ * The visible behavior does not change: an actor with no picture was already
+ * drawn as a plain rectangle, and still is, because a frame comes from a sprite
+ * or an animation and neither is set by default. What changes is that the two
+ * blocks work on any actor rather than failing on one that forgot a `use trait`
+ * row saying something no actor would say no to.
+ *
+ * Electing them anyway is allowed and does nothing — `Actor`'s membership is a
+ * DependencySet, so a trait is present once however many times it arrives.
+ */
+const FOUNDATION_TRAITS: readonly Trait[] = [PositionalTrait, AppearanceTrait];
+
+/**
+ * The same list as ids, for the editor.
+ *
+ * A dropdown cannot hold a `Trait` — it holds `<RuleName>#<exportName>`, which
+ * is a fact about the rule that declares the trait rather than about the trait
+ * object — so the editor matches on the id and builds its own values from the
+ * rule metadata (blockly/foundation). Exported from here so there is still ONE
+ * list: add a third foundation trait and the dropdown stops offering it in the
+ * same commit.
+ */
+export const FOUNDATION_TRAIT_IDS: readonly string[] = FOUNDATION_TRAITS.map(
+  trait => trait.id,
+);
+
+export class ActorBuilder {
+  /** The template's id — the actor's type, and the default instance id. */
+  readonly id: string;
+  private readonly name: string;
+  private traits: Trait[] = [];
+  private readonly overrides: Array<[Property, unknown]> = [];
+  private readonly handlers: Array<[GameEvent, EventHandler]> = [];
+  private readonly effects: AppliedEffectSpec[] = [];
+  private readonly steps: ActorStep[] = [];
+  private drawing: ActorDrawing | undefined;
+  private animations: Record<string, Timeline> = {};
+  private animationEffectSpecs: Record<string, AnimationEffect> = {};
+
+  constructor(opts: {id: string; name: string}) {
+    this.id = opts.id;
+    this.name = opts.name;
+  }
+
+  /**
+   * `is data` — a kind that is a RECORD and not a thing in the world.
+   *
+   * WHAT IT SUPPRESSES is the seeding below: an actor with no positional
+   * trait is not drawn, is not in the spatial index, is not hit-tested, and
+   * is walked by no step that asks for positioned actors. That was the
+   * ordinary behaviour once, and was taken away ON PURPOSE — a forgotten
+   * `use trait` row gave an actor that existed and could not be seen, which
+   * reads as a bug rather than as a decision.
+   *
+   * So it comes back as a DECLARATION rather than as an omission. Forgetting
+   * a row still gives a normal actor; only saying this gives one with no
+   * place (specs/RECORDS_PLAN.md).
+   *
+   * EVERYTHING ELSE IS UNCHANGED. It has its own properties, it has an age,
+   * it raises and hears events, it runs its own steps, and it is in
+   * `all actors` — which is how a project finds its records at all. It is a
+   * live object; it is not a LOCATED one.
+   */
+  isData(): this {
+    this.data = true;
+    return this;
+  }
+
+  /** Whether this kind is a record rather than a thing on the screen. */
+  get isRecord(): boolean {
+    return this.data;
+  }
+
+  private data = false;
+
+  useTraits(traits: Trait[]): this {
+    this.traits = [...this.traits, ...traits];
+    return this;
+  }
+
+  /**
+   * Elect camera traits, for a kind that shows a map: they go to the
+   * Viewport's own main camera (specs/SPACE_CAMERAS_PLAN.md, "simplifying").
+   *
+   * The actor HOLDS them too, so it has their property slots — `actor to
+   * follow` is then a field in the placement inspector and a `set` on the
+   * Viewport — and the world copies those values onto the camera each tick
+   * (`World.settleSpaces`). What generates this is a `use trait` naming a
+   * camera trait under `define actor`, which the palette offers only to a kind
+   * that `Shows a Map`.
+   */
+  useCameraTraits(traits: Trait[]): this {
+    this.traits = [...this.traits, ...traits];
+    this.cameraTraitList = [...this.cameraTraitList, ...traits];
+    return this;
+  }
+
+  private cameraTraitList: Trait[] = [];
+
+  /** The camera traits this kind elected, for its Viewport's main camera. */
+  get cameraTraits(): readonly Trait[] {
+    return this.cameraTraitList;
+  }
+
+  /**
+   * Named to match `Actor.addTrait` / `Actor.removeTrait`, and for the reason
+   * `addEffect` gives: ONE Blockly block serves a template body and an event
+   * handler, both bind the identifier `actor`, and the block emits
+   * `actor.addTrait(…)` either way. Without these, dragging the block above the
+   * handlers rather than inside one is `actor.addTrait is not a function`.
+   *
+   * On a template they describe what every instance is MADE with, so removing
+   * one it never elected does nothing — the same silence the live actor gives.
+   */
+  addTrait(trait: Trait): this {
+    return this.useTraits([trait]);
+  }
+
+  removeTrait(trait: Trait): this {
+    // A trait that does not exist matches nothing and removes nothing. Reading
+    // `.id` off it here would stop the game the way it used to (`core/Traited`
+    // explains); the complaint comes from there, when the template is built.
+    if (!trait) {
+      return this;
+    }
+    // Every election of it, not just the last: `useTraits` appends, so a
+    // template that elected a trait twice has it twice, and taking it away
+    // once and leaving a copy is not a thing a learner can see or reason about.
+    this.traits = this.traits.filter(held => held?.id !== trait.id);
+    return this;
+  }
+
+  /**
+   * Take everything another KIND of actor is, and go on being this one.
+   *
+   * `acts like ⟨Progress Bar⟩` — the whole of subclassing here. What comes
+   * across is the DESCRIPTION: the traits it elects, the slots its properties
+   * sit in, the work it does each frame, the picture it paints, the handlers it
+   * registers and the effects it wears. What does not is its identity.
+   *
+   * SO A KIND IS NOT INHERITED, and that is the interesting half. `is a
+   * ⟨Progress Bar⟩` compiles to `each.type === "actors/progressBar"`, and an
+   * instance carries the module it was placed from — so a Health Bar that acts
+   * like a Progress Bar is not one of `any ⟨Progress Bar⟩`. It qualifies under
+   * every TRAIT relationship instead, which is the one that asks what a thing
+   * can do rather than what it is called.
+   *
+   * AT THE MOMENT THE ROW IS READ, not at instantiate: this copies what the
+   * other builder holds NOW. Rows below it therefore have the last word — a
+   * `set` after it overrides an inherited default, because overrides are
+   * applied in order and the later one wins (`Traited`), and a `define drawing`
+   * after it replaces the inherited picture. That is what reading a file
+   * downwards should mean.
+   *
+   * The drawing is the one thing taken CONDITIONALLY, so that a child which
+   * describes its own picture first and says `acts like` afterwards keeps it.
+   */
+  actsLike(other: ActorBuilder): this {
+    this.traits = [...this.traits, ...other.traits];
+    // …its camera traits with them, or a kind acting like a Viewport would
+    // hold `Follows` and give it to no camera.
+    this.cameraTraitList = [...this.cameraTraitList, ...other.cameraTraits];
+    // …and whether it is a record. A kind acting like a data kind is one too;
+    // saying `is data` itself is the other way to become one.
+    this.data = this.data || other.data;
+    this.overrides.push(...other.overrides);
+    this.handlers.push(...other.handlers);
+    this.steps.push(...other.steps);
+    // Through `addEffect` rather than pushed, so one path is worn once: the
+    // parent RETUNES an effect the child already wears rather than adding a
+    // second copy of it, which is the rule that method already states.
+    for (const effect of other.effects) {
+      this.addEffect(effect.path, effect.document, effect.values);
+    }
+    this.drawing ??= other.drawing;
+    // …and its animations, under its own names, where this kind has none of
+    // that name: as with the drawing, what this kind said first is kept.
+    this.animations = {...other.animations, ...this.animations};
+    this.animationEffectSpecs = {
+      ...other.animationEffectSpecs,
+      ...this.animationEffectSpecs,
+    };
+    return this;
+  }
+
+  /** Override a trait property's initial value for this actor. */
+  set<T>(property: Property<T>, value: T): this {
+    this.overrides.push([property, value]);
+    return this;
+  }
+
+  /**
+   * Declare a property this KIND of actor carries, owned by no trait.
+   *
+   * The shorthand for state that needs no mechanic around it — when a Player
+   * last fired, how much ammo it has — where declaring a trait would mean
+   * declaring a rule in a file of its own. `Traited` already takes slots from
+   * two places, a trait's defaults and the overrides, so this is the second of
+   * those and not a third way for a slot to exist: the property is made here
+   * and immediately overridden with its own default, which is what puts the
+   * slot on every instance.
+   *
+   * NOT a synthesized trait, though that would also have worked. A trait is
+   * something elected, that several kinds of actor may share and that
+   * `has trait` can ask about — none of which is true here. Inventing one to
+   * satisfy a factory signature would put a trait the learner never wrote into
+   * `traits()` and into anything that introspects membership.
+   *
+   * Returns the property so the caller can read and write it; generated actor
+   * modules bind it to a const and their handlers close over it.
+   */
+  defineProperty<T>(
+    id: string,
+    type: PropertyType,
+    defaultValue: T,
+    opts: {readonly?: boolean; name?: string} = {},
+  ): Property<T> {
+    const property: Property<T> = {
+      id,
+      type,
+      default: defaultValue,
+      readonly: opts.readonly ?? false,
+      name: opts.name,
+      scope: 'actor',
+      // The actor kind that declared it, which is what an error about a missing
+      // slot needs to name. There is no trait to point at, and `ownerKind` is
+      // what says so rather than leaving a reader to infer it from the id.
+      ownerId: this.id,
+      ownerKind: 'actor',
+    };
+    this.overrides.push([property, defaultValue]);
+    return property;
+  }
+
+  /**
+   * Declare something this KIND of actor does every frame.
+   *
+   * The behavior half of `defineProperty`, and the same bargain: state a kind
+   * carries without a rule, and now work a kind does without one. A rule is
+   * still the answer when the behavior is SHARED between kinds, elected, or
+   * answerable by `has trait` — this is for the case where it is none of those
+   * and a `.rule` file is more ceremony than the thing deserves.
+   *
+   * `run` is handed the actor, so a body written in an `.actor` file means what
+   * it says: `this actor` is this one, and the step runs once per actor of the
+   * kind rather than once for the kind.
+   *
+   * NOT A SYNTHESIZED TRAIT, for the reason `defineProperty` gives: a trait is
+   * elected and shareable and askable, and this is none of them. What carries
+   * it is the World, which folds a kind's steps into the tick order the first
+   * time one of its actors is placed (`World.useActorKind`).
+   */
+  defineStep(
+    id: string,
+    phase: string,
+    run: (actor: Actor, world: World, delta: number) => void,
+  ): this {
+    this.steps.push({id, phase, run});
+    return this;
+  }
+
+  /** The per-frame bodies this kind declared, for the World to schedule. */
+  get ownSteps(): readonly ActorStep[] {
+    return this.steps;
+  }
+
+  /**
+   * Declare a thing this KIND of actor does, by name — `define block`.
+   *
+   * The third of the same bargain `defineProperty` and `defineStep` make: state
+   * a kind carries, work it does every frame, and now a NAMED thing it does.
+   * A rule is still the answer when the behavior is shared between kinds,
+   * elected, or answerable by `has trait`; this is for the case where the
+   * honest motivation is that the same six blocks were written twice.
+   *
+   * NOTHING IS REGISTERED, unlike a property, and that is worth saying: an
+   * action is stateless, and `Actor.act` simply applies the one it is handed —
+   * it does not look it up on the actor, or check that the actor has whatever
+   * declared it. So this makes an object and returns it, which the generated
+   * module binds to a `const` its handlers close over.
+   *
+   * It is a method rather than an object literal in generated code because the
+   * ownership should be stated somewhere a reader can find it, and because a
+   * `world.`/`actor.` call is what `builderSurface.test` can see.
+   */
+  defineAction(
+    id: string,
+    apply: (actor: Actor, ...args: never[]) => void,
+    opts: {name?: string; params?: readonly ActionParam[]} = {},
+  ): ActorAction {
+    return {
+      id,
+      name: opts.name,
+      // The kind that declared it, which is what an error naming it has to
+      // say. There is no trait to point at, and `ownerId` is the only thing
+      // that says where it came from.
+      ownerId: this.id,
+      params: opts.params,
+      apply: apply as ActorAction['apply'],
+    };
+  }
+
+  /**
+   * Declare what this KIND of actor looks like, by describing it.
+   *
+   * `defineStep`'s sibling and its opposite. A step is handed the world and may
+   * change it; a drawing is handed a pen and may not — it says how the actor
+   * looks GIVEN what it currently is, and nothing else. That purity is what
+   * lets the picture be identified by what it describes, which is what makes it
+   * possible to draw nine actors with one texture and to draw an unchanging
+   * actor once (specs/DRAWING.md).
+   *
+   * The canvas is declared rather than measured, and becomes the actor's
+   * `intrinsic size` — so a drawn actor's click box and collision box are the
+   * size of the picture without anything inspecting pixels.
+   *
+   * ONE PER KIND. A second `define drawing` in one file would be two answers to
+   * "what does this look like", and the block is a root that cannot be
+   * duplicated meaningfully; the last one declared wins rather than an
+   * arbitrary one, which is at least the one the author saw last.
+   */
+  defineDrawing(
+    width: number | ((actor: Actor, world: World) => number),
+    height: number | ((actor: Actor, world: World) => number),
+    run: (actor: Actor, pen: Pen, world: World) => void,
+  ): this {
+    // EITHER A NUMBER OR A QUESTION ABOUT THE ACTOR, which is the whole of
+    // what changed here. A Coin is 16 by 16 and always will be; a Button is as
+    // wide as it was made, and two of one kind are two widths. A literal is
+    // the same function answering the same way, so nothing that had a size
+    // pays for the ones that ask.
+    //
+    // THE WORLD IS PASSED IN TOO, because a size may have to ask one: a box
+    // that fits its own words needs to know how wide words are, and that is
+    // the world's answer rather than the actor's (`World.textWidth`).
+    const measure = (
+      given: number | ((actor: Actor, world: World) => number),
+    ): ((actor: unknown, world: unknown) => number) =>
+      typeof given === 'function'
+        ? (actor: unknown, world: unknown) =>
+            Number(given(actor as Actor, world as World)) || 0
+        : () => given;
+    const across = measure(width);
+    const down = measure(height);
+    this.drawing = {
+      size: (actor, world) => ({
+        width: across(actor, world),
+        height: down(actor, world),
+      }),
+      run: (actor, pen, world) => run(actor as Actor, pen, world as World),
+    };
+    return this;
+  }
+
+  /** The picture this kind describes for itself, for the World to run. */
+  get ownDrawing(): ActorDrawing | undefined {
+    return this.drawing;
+  }
+
+  /**
+   * Declare this KIND's animations, by name (specs/ANIMATION_PLAN.md).
+   *
+   * Timelines of keyframes (`core/keyframes`), kept on the kind and named
+   * within it: `play animation ⟨Walk⟩` on a Coin plays the Coin's Walk, and
+   * another kind's Walk is another animation. `effects` are the documents an
+   * effect track switches on — an animation may turn on an effect the actor
+   * does not start with, and turning one on needs its graph.
+   */
+  useAnimations(
+    animations: Readonly<Record<string, Timeline>>,
+    effects: Readonly<Record<string, AnimationEffect>> = {},
+  ): this {
+    this.animations = {...this.animations, ...animations};
+    this.animationEffectSpecs = {...this.animationEffectSpecs, ...effects};
+    return this;
+  }
+
+  /** This kind's animations, by name, for the World to play. */
+  get ownAnimations(): Readonly<Record<string, Timeline>> {
+    return this.animations;
+  }
+
+  /** The effects its animations switch on, by path. */
+  get animationEffects(): Readonly<Record<string, AnimationEffect>> {
+    return this.animationEffectSpecs;
+  }
+
+  /**
+   * Declare an event this KIND of actor raises — `define event`.
+   *
+   * The fourth of the bargain `defineProperty`, `defineStep` and `defineAction`
+   * make: state a kind carries, work it does every frame, a named thing it
+   * does, and now something that HAPPENS to it. A rule is still the answer when
+   * the event is shared between kinds or elected; this is for the case where
+   * one kind of actor has a moment worth telling the rest of the project about
+   * — a speech box finishing, a door reaching the top of its travel.
+   *
+   * NOTHING IS REGISTERED, as with `defineAction`, and for the same reason: an
+   * event is an identity and no more. `World.emit` enqueues against the object
+   * and `Actor.on` matches against it, so nothing has to have been told the
+   * event exists — which is what lets a world handle an event declared in an
+   * `.actor` file it merely imports.
+   *
+   * `ownerId` is this kind, which is what an event says about where it came
+   * from when something has to name it.
+   */
+  defineEvent(id: string, opts: {name?: string} = {}): GameEvent {
+    return {id, name: opts.name, ownerId: this.id};
+  }
+
+  /** Respond to an event raised for this actor. */
+  on(event: GameEvent, handler: EventHandler): this {
+    this.handlers.push([event, handler]);
+    return this;
+  }
+
+  /**
+   * Play an effect on this actor's image (specs/EFFECT_EDITOR.md).
+   *
+   * Sits beside `useTraits` rather than being one, because an effect is not
+   * state the simulation touches: it declares no property and runs no step. The
+   * engine only carries it out to `renderSnapshot`; the driver compiles the
+   * graph to GLSL and hands it to Phaser as a filter.
+   *
+   * Named to match `Actor.addEffect`, and identical to it in signature and in
+   * behavior. That is what lets ONE Blockly block serve both a template body
+   * and an event handler: both bind the identifier `actor`, and the block emits
+   * `actor.addEffect(…)` either way. `set` already worked like this; effects
+   * differed only by an accident of naming.
+   *
+   * @param path     the effect's module path (`effects/ripple`) — its identity
+   *   for shader registration, so the same effect on many actors is one program
+   * @param document the parsed `.effect` file, imported as JSON by the bundler
+   * @param values   values for the effect's declared parameters, by parameter
+   *   id; anything omitted falls back to that parameter's own default
+   */
+  addEffect(
+    path: string,
+    document: EffectDocument,
+    values?: Readonly<Record<string, number | number[] | boolean>>,
+  ): this {
+    // One per path, as on the live actor: an actor either wears an effect or it
+    // does not. And RETUNING one retunes it — the second call wins — because
+    // the alternative is that `add effect ⟨Ripple⟩ with ⟨strength⟩` means
+    // something different under `define actor` than it does in a handler, and
+    // one Blockly block emits both.
+    //
+    // The builder used to keep the FIRST spec while `Actor.addEffect` replaced
+    // it, under a comment claiming the two agreed. They did not: a retune was
+    // silently dropped in a template body and honoured a moment later at
+    // runtime. `World`/`WorldBuilder` had the same split and the same comment.
+    const spec = values ? {path, document, values} : {path, document};
+    const at = this.effects.findIndex(effect => effect.path === path);
+    if (at >= 0) {
+      // In place, so the effect keeps its position in the application order —
+      // retuning one should not move it above or below the others.
+      this.effects[at] = spec;
+      return this;
+    }
+    this.effects.push(spec);
+    return this;
+  }
+
+  /**
+   * Create a live Actor from this description. `instanceId` is the unique id the
+   * world assigns (defaulting to this template's id). `type` is the actor's kind
+   * — the identity `TouchingQuery` and other "actors of a type" lookups match on;
+   * the world passes the module the actor was registered under (`actors/coin`),
+   * so a template renamed via its `name` still matches. It defaults to the
+   * builder's id when the caller gives none (engine tests, ad-hoc instances). The
+   * builder is reusable — each call yields an independent actor, so one template
+   * can be spawned many times.
+   */
+  instantiate(instanceId?: string, type?: string): Actor {
+    return new Actor({
+      id: instanceId ?? this.id,
+      type: type ?? this.id,
+      name: this.name,
+      // The foundation, unless this kind said it has no place (`isData`).
+      traits: this.data
+        ? [...this.traits]
+        : [...FOUNDATION_TRAITS, ...this.traits],
+      overrides: [...this.overrides],
+      handlers: [...this.handlers],
+      effects: [...this.effects],
+    });
+  }
+}

@@ -1,0 +1,194 @@
+// A layer: a group of actors drawn together, and how that group responds to
+// the view (specs/VIEWPORT.md).
+//
+// A layer is NOT a coordinate system of its own and NOT a camera. Cameras
+// belong to the world and are applied to a viewport; a layer says only how much
+// of whatever camera is drawing it applies to its contents. Two knobs:
+//
+//   - `parallax`, a per-axis multiplier on the view's motion. `(1, 1)` moves
+//     with it, `(0.2, 0)` is the sky in a side-scroller — shifts as the player
+//     walks, stays put when they jump, which is the case a single scalar cannot
+//     say and the one that reads as broken when it is wrong.
+//   - `fit`, which ignores the view entirely and fits the layer to the surface.
+//     This is what an interface layer is, and it is why one is not a special
+//     kind of object.
+//
+// `parallax: (0, 0)` is NOT `fit`. The factor covers translation only, so a
+// layer at zero still takes the camera's SCALE — and a HUD in a world whose map
+// put the camera at quarter scale would be drawn at quarter scale. `fit` does
+// not consult the camera at all. The two look identical until a map is large
+// enough to move the camera off 1:1.
+//
+// NOTHING HERE MOVES YET. A world with no camera has a view that never moves,
+// so every parallax value produces the same picture; what layers do before
+// cameras exist is order the drawing and give effects somewhere to live. The
+// factor is carried because the layer is where it belongs, not because it is
+// read.
+
+import type {AppliedEffectSpec} from './types';
+import {Vector} from './Vector';
+
+/**
+ * The layer every actor is in unless something says otherwise.
+ *
+ * A real layer, not the absence of one. A scene graph with two kinds of actor
+ * in it — those in a layer and those in none — would need every query about
+ * layers to invent an answer for the second kind, forever.
+ */
+export const DEFAULT_LAYER_ID = 'main';
+
+/**
+ * An image drawn with a layer, behind its actors.
+ *
+ * This is what a 'backdrop' was. A world used to hold a flat stack of them at
+ * a fixed negative depth; they belong to a layer, because a layer is already
+ * the thing with a depth and (later) a parallax factor, and a slot that is part
+ * of one inherits both for free. There is nothing to name and nothing to order.
+ *
+ * No color here. There is ONE sky, and it is the world's: a color on any
+ * layer but the bottom is behind the layer under it and can never be seen
+ * (BACKGROUNDS.md).
+ */
+export interface LayerSlot {
+  /** An image file name, as a frame names one; absent means nothing drawn. */
+  sprite?: string;
+  /** Effects filtering this image's own pixels — not the whole camera. */
+  effects: AppliedEffectSpec[];
+  /**
+   * Where the image sits, in world pixels — motion the author owns.
+   *
+   * The other term in `camera position (*) parallax + offset`. A parallax
+   * factor ties an image to the camera and to nothing else, so a background on
+   * a still camera never moves however the factor is set; drifting clouds, a
+   * scrolling starfield and a conveyor texture are all motion with no camera
+   * involved, and none of them is expressible as a multiplier. Neither term
+   * says what the other says.
+   *
+   * Written every tick by a drifting layer, so it is a VALUE in the snapshot
+   * rather than structure — the line `effectValues` already draws.
+   */
+  offset: Vector;
+  /**
+   * Whether the image tiles instead of stretching to fill the surface.
+   *
+   * Pairs with {@link offset}: a stretched image slid sideways leaves a gap at
+   * the edge, a repeating one wraps. Both are legal — stretch plus offset is a
+   * mistake worth warning about rather than forbidding — but repeat plus offset
+   * is the combination that means something.
+   *
+   * Stretch is the default, because one sky filling the view is the common case
+   * and stretching is right for it.
+   */
+  repeat: boolean;
+}
+
+/** An empty slot: nothing drawn, nothing filtering it, sitting where it is. */
+export const emptySlot = (): LayerSlot => ({
+  effects: [],
+  offset: new Vector(0, 0),
+  repeat: false,
+});
+
+/** What a layer is asked for when it is declared. */
+export interface LayerInit {
+  id: string;
+  name?: string;
+  /** Per-axis multiplier on the view's motion; defaults to `(1, 1)`. */
+  parallax?: Vector;
+  /** Ignore the view and fit this layer to the surface; defaults to false. */
+  fit?: boolean;
+}
+
+/** A layer, as the world holds it. */
+export interface Layer {
+  readonly id: string;
+  readonly name: string;
+  /**
+   * How much of the camera's motion this layer takes, per axis.
+   *
+   * Mutable, and set by a block rather than declared: it is read every frame
+   * and changes nothing about the scene graph, so it is a VALUE — a rule may
+   * turn it while the game runs, and doing so must not restart anything.
+   */
+  parallax: Vector;
+  /** Whether it ignores the camera entirely. A value too, for the same reason. */
+  fit: boolean;
+  /** Drawn behind this layer's actors. Mutable: a handler may change it. */
+  readonly background: LayerSlot;
+  /**
+   * Effects filtering everything this layer draws — its actors and both its
+   * images, together.
+   *
+   * Distinct from a slot's effects, which filter one image, and from the
+   * world's, which filter the whole screen after every layer is composited.
+   * This is the one in between: blur the game and leave the HUD sharp.
+   */
+  readonly effects: AppliedEffectSpec[];
+  // NO FOREGROUND. A layer had a second slot drawn in front of its actors,
+  // and it was the background of a layer one further forward by another name:
+  // fog over the game is a layer above it with an image (specs/LAYERS_PLAN.md).
+}
+
+/** A layer with its defaults filled in. */
+/**
+ * A layer as a MAP states it (specs/LAYERS_PLAN.md): what `LayerInit` says,
+ * plus the two slots' starting values, as plain data — a map is JSON. The
+ * world's own layers are declared by `LayerInit` and their slots set by
+ * calls; a space's are made whole from this when a map is loaded into it.
+ */
+export interface MapLayer {
+  id: string;
+  name?: string;
+  parallax?: {x: number; y: number};
+  fit?: boolean;
+  background?: MapSlot;
+}
+
+/** A slot's starting values in a map: the image, how it fills, where it sits. */
+export interface MapSlot {
+  sprite?: string;
+  repeat?: boolean;
+  offset?: {x: number; y: number};
+}
+
+const slotFrom = (slot: MapSlot | undefined): LayerSlot => ({
+  ...emptySlot(),
+  ...(slot?.sprite ? {sprite: slot.sprite} : {}),
+  repeat: slot?.repeat ?? false,
+  offset: slot?.offset
+    ? new Vector(slot.offset.x, slot.offset.y)
+    : new Vector(0, 0),
+});
+
+/**
+ * The layers a map states, as layers — with the default among them, at the
+ * back, when the map did not say where it goes: an actor with no layer is
+ * on it, so it has to exist.
+ */
+export function layersOfMap(layers: readonly MapLayer[] | undefined): Layer[] {
+  const made = (layers ?? []).map(layer => ({
+    ...makeLayer({
+      id: layer.id,
+      name: layer.name,
+      parallax: layer.parallax
+        ? new Vector(layer.parallax.x, layer.parallax.y)
+        : undefined,
+      fit: layer.fit,
+    }),
+    background: slotFrom(layer.background),
+  }));
+  return made.some(layer => layer.id === DEFAULT_LAYER_ID)
+    ? made
+    : [makeLayer({id: DEFAULT_LAYER_ID}), ...made];
+}
+
+export function makeLayer(init: LayerInit): Layer {
+  return {
+    id: init.id,
+    name: init.name ?? init.id,
+    parallax: init.parallax ? Vector.from(init.parallax) : new Vector(1, 1),
+    fit: init.fit ?? false,
+    effects: [],
+    background: emptySlot(),
+  };
+}

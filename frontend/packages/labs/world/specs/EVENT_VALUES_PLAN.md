@@ -1,0 +1,280 @@
+# Plan: named, typed values on an event (EVENTS.md, ideas 1 and 2)
+
+STATUS: BUILT, not yet seen in the browser. The first two ideas of
+specs/EVENTS.md, which is otherwise deferred. The working record, as the
+other plans are.
+
+## What an event can say today, and what it cannot
+
+- **One value.** `emit(event, actor, detail?)`, a queue of
+  `{event, actor?, detail?}`, a handler of `(world, actor, eventValue)`.
+  The stock-rule DSL enforces this in so many words: `declareEvent` throws
+  if a signature carries more than one thing that is not a set of choices,
+  because "there is one `eventValue` to bind".
+- **A signature of choices.** `define event` uses the same designer
+  `define block` uses, with the arguments row restricted to the CHOICE
+  item — `surfaceToolbox` offers that item and the wording item and
+  nothing else, and `buildArguments_` writes the older per-type items
+  rather than the `let` and `argument` blocks.
+- **A hat that filters.** An enum parameter becomes a dropdown with
+  `(any)` in front; an actor parameter becomes a dropdown of the project's
+  kinds. A parameter of any OTHER type is dropped from the hat's phrasing
+  altogether — `define event ⟨damaged by⟩ ⟨number amount⟩` draws as
+  `when ⟨this actor⟩ damaged by`, and the amount has no word and no reader.
+- **An `emit` that already passes them.** `defineEmitBlock` makes a socket
+  per parameter whatever its type, and generates
+  `world.emit(Ev, actor, a, b)`. The engine takes the first and drops the
+  rest. The block half of what is asked for here is built; nothing carries
+  it.
+- **Two ways to read the one value**, neither named: `event value`, typed
+  `null` so it fits any socket, and `event actor`, the same value typed as
+  an Actor and offered in a `+` flyout on the hat that carries one.
+
+So an event that is about two things picks one and loses the other, and an
+event about a number says the number's name nowhere.
+
+## What is being built
+
+**An event carries as many values as its signature names, and a handler
+reads each one by that name, typed.**
+
+- **The engine carries a list.** `emit(event, actor, ...values)`,
+  `emitToWorld(event, ...values)`, a queue of `{event, actor?, values}`,
+  and handlers called with the values spread. One value is the same call
+  it is today, which is what every rule in the library makes.
+- **`define event` designs like `define block`.** The event surface offers
+  the signature drawer `define block`'s surface offers — the `let` blocks
+  first, then wording, then `argument` with its type dropdown — and
+  `buildArguments_` writes an event's parts as those same blocks. The
+  `choice` item stops being offered and stops being written, and is
+  retired outright with the per-type items beside it — nothing in the
+  repository holds one, and this lab has never shipped.
+- **A value the author named gets a block with that name on it.** Per
+  event, per parameter, typed by the parameter's type. (Revised below: it
+  is a local and the ordinary getter reads it.)
+- **The hat offers them behind its `+`.** The mini toolbox that today
+  holds `event actor` holds one entry per carried value instead, in
+  signature order, so the way to name what the event brought starts on the
+  block that brought it. (Revised below: the entry is the ordinary getter,
+  not a block of its own.)
+- **The hat says what it carries.** A parameter with no filter is drawn as
+  its own name, so `when ⟨this actor⟩ is damaged by ⟨amount⟩` reads as a
+  sentence rather than trailing off. The preview on `define event` draws
+  the same thing, including the kind dropdown it has never drawn.
+- **A filter compares its own value.** Today every filter guard compares
+  `eventValue`, which was right when there was one. Each filter now
+  compares the value it is the filter for.
+
+## Decisions taken before building
+
+- **Positional transport, named reading.** What crosses the queue is a
+  list; what a learner sees is a name. Binding the names at the call
+  boundary was considered and refused: a handler is in another file from
+  the declaration, so the two cannot share a variable the way a `define
+block`'s body shares one with its signature, and a generated closure
+  parameter taking the author's word for it would collide with a body
+  variable of the same name.
+- **`eventValue`, then `eventValue$2`, `eventValue$3`.** The first value
+  keeps the name it has, so every handler already written generates
+  exactly what it generated before. The rest are numbered from two, as the
+  learner counts them. The `$` is the point of the spelling: Blockly's
+  name table replaces every character outside `[A-Za-z0-9_]` when it makes
+  an identifier for a variable, so no variable a learner can name will
+  ever collide with one of these.
+- **`event value` and `event actor` keep meaning the FIRST value**, and
+  are not deprecated. They are what an undesigned event's one value is
+  called, and under a designed hat the first value is still the first
+  value.
+- **A lone actor parameter keeps `event actor` in the flyout.** That is
+  every contact hat in the library — `when ⟨this actor⟩ starts touching
+⟨Brick⟩` carries one actor, whose parameter the stock rule calls
+  `other`. Two blocks for one value is worse than either alone, and of the
+  two `event actor` is the one the lessons point at and the one that draws
+  the kind it was filtered to. Every other shape of signature offers the
+  author's names.
+- **The block type is keyed by the parameter's NAME**, not its position.
+  Renaming a parameter then loses what was plugged in, and reordering does
+  not — which is the same bargain the `emit` block's sockets already make
+  (`paramValueNames`), so the two halves of an event break in the same
+  place or not at all.
+- **The one-value guard in the stock DSL goes.** It exists because the
+  transport could not carry two. Nothing in the library needs a second
+  value today; the check would simply be false from here on.
+
+## Order of work
+
+1. The engine: queue, `emit`, `emitToWorld`, the two handler types. Tests.
+2. The designer: the event surface's drawer, and writing an event's parts
+   as `let`/`argument` items. Tests.
+3. The hat: the carried-value blocks, the `+` flyout, the unfiltered
+   parameter's word, per-value filter guards, the closure's parameters.
+   The preview, to agree with it. Tests.
+4. The `emit` side: whatever the engine change leaves to do, and an
+   event's parts keeping their defaults through `ruleMeta`. Tests.
+5. The stock DSL's guard.
+6. Specs: this record, and EVENTS.md's ideas 1 and 2 marked.
+
+## Commits
+
+- `631e6ba418e` — this plan.
+- `9c6d54f2731` — the engine: the queue carries a list, `emit` and
+  `emitToWorld` take as many values as they are given, handlers are called
+  with them spread.
+- `1d7a83bfb11` — the editor: the signature drawer on the event surface,
+  the hat's wording and per-value filters, the blocks that name what an
+  event carries and the `+` that offers them, the preview, and the stock
+  DSL's guard. The retired signature items go with it.
+- `38ed3232a0b`, `63166c7c289` — the tests that hold the two halves of the
+  designer together: both designers write the same items, and a parameter's
+  default reaches the `emit` socket.
+- `1d2407a65ba` — a mini toolbox may offer a block carrying field values,
+  which is what lets the `+` hand out a getter that already names what it
+  reads.
+- `2274f206b73` — the revision: the hat binds its values as locals, the
+  `+` offers the ordinary getter, the handler opens by binding each name
+  to its position, and the bespoke blocks are deleted.
+
+## Verified
+
+Typecheck and lint clean. The suite passes in two halves, 229 files and
+2822 tests on the first, 151 and 2612 on the second. Nothing here has been
+seen in a browser.
+
+## Learned while building
+
+- **Half of this was already built, and could never have worked.** The
+  `emit` block has made a socket per parameter of any type since
+  specs/ENUMS.md, and generated `world.emit(Ev, actor, a, b)` — every
+  value, positionally. The engine took the first and dropped the rest with
+  no complaint anywhere. The block half was right and the transport was
+  never widened to meet it.
+- **One line said the quiet part.** The stock-rule DSL refused a second
+  value outright, in `declareEvent`, with the reason written out: "there
+  is one `eventValue` to bind". Nothing else in the lab said so, which is
+  why the `emit` block could be built past it without anybody noticing.
+- **Every filter compared the same value, and was right by luck.** The
+  guard a hat generates read `eventValue` whatever parameter the filter
+  was for. With one carried value that is the only value there is; with
+  two it would have compared the wrong one. The filters carry the index of
+  the value they are for now.
+- **A value the hat could not filter on was dropped from its wording.**
+  `define event ⟨is damaged by⟩ ⟨amount: number⟩` drew as `when ⟨this
+actor⟩ is damaged by` — the sentence trailed off and the number was
+  invisible on both the hat and the `define event` preview. An unfiltered
+  value is a word on the hat now.
+- **The preview never drew an actor's kind dropdown**, though the hat has
+  drawn one since contact events were designed. The one thing a preview
+  promises is that what is designed is what turns up, and for every
+  contact hat in the library it was not.
+
+- **Two filters could be the same field.** A kind filter was numbered among
+  the kind filters and the enum filters together; an enum filter was
+  numbered among the enum filters alone. An event filtering on both gave
+  the two dropdowns the name `FILTER0`. Nothing in the library mixes them,
+  which is why it went unseen, and a signature that may name several
+  values makes mixing them ordinary. Both are numbered across both now.
+- **Blockly had already solved "a name that is not real yet".** A flyout's
+  workspace reads the target's variables and creates new ones in a
+  POTENTIAL map instead (`Flyout.init` calls `setVariableMap` then
+  `createPotentialVariableMap`), and `getOrCreateVariablePackage` looks in
+  both. So a getter offered in the hat's `+` names `character` without any
+  file having one, and the variable becomes real when somebody drags the
+  block out. That is exactly the rule this wanted, and it needed no code.
+- **Both ends agree on the identifier by construction.** The getter
+  generates `generator.getVariableName(id)` and the hat's binding line
+  calls the same function with the same id, looked up on the same
+  workspace. There is no second naming rule to keep in step.
+- **Retiring the `choice` item retired six more.** `define event` wrote its
+  parts as one item block per parameter type, and those items were in no
+  drawer — only the designer ever made one. With both designers writing the
+  same items, `world_signature_choice` and `world_signature_<type>` are
+  written by nothing and offered by nothing, so they are gone rather than
+  left registered.
+
+## Revised: a carried value is a LOCAL, read with the ordinary getter
+
+The first build gave each carried value a block of its own — a fixed label
+wearing the name, typed, offered behind the hat's `+`. That is not how the
+rest of the language reads a name, and the difference was not earning
+anything.
+
+**The lab's variables are already local and never global**
+(`blockly/variableScope`). A name is visible inside whatever binds it and
+nowhere else; a name nobody binds is visible everywhere, which is what a
+rule's free locals are. The scoped dropdown offers exactly what the block
+can see (`fields/scopedVariable`). So "the values an event hands over" is
+not a new kind of thing. It is a binder that nothing had taught the scope
+rule about.
+
+- **The hat binds its parameters' names over the rows below it.** The
+  handler body chains off the hat's `next`, which is what `REST` already
+  means, and `define block` already has the same case for its own
+  parameters over `DO`.
+- **The names are matched on the hat's OWN workspace, by name and
+  flavour.** The declaration is in another file, so there is no shared
+  variable id to carry; what is shared is the name the author wrote.
+- **Nothing is created by the hat existing.** A getter in a flyout refers
+  to a variable that is not real yet — Blockly calls these potential
+  variables and makes them real when a reference is dragged into the
+  workspace. So the name comes into the file when somebody drags the
+  getter out, and not before. A file that never reads `character` never
+  has one.
+- **The `+` offers the flavour's getter, bound by name.** Not a block of
+  its own: `variables_get_String` with `character` in it, which is the
+  same block the drawer offers and behaves like every other getter from
+  the moment it lands.
+- **The handler binds the name to the value.** The closure keeps its
+  positional parameters, and the body opens by binding each name to its
+  position, for each name the file actually has. Positional at the
+  boundary, named inside — so `event value` and `event actor` go on
+  meaning what they meant, and a getter reads the name.
+
+## Not built, and known
+
+- **A local is matched by NAME, so renaming a parameter orphans a getter.**
+  The getter goes on naming the variable it named, which is then bound by
+  nothing and out of scope — drawn as a name the block cannot see, which
+  is what the scope rule already does for a getter carried out of the
+  mouth that named it.
+- **A lone actor still says `event actor`**, so an event whose one value is
+  an actor does not show the author's name for it. Every contact hat in the
+  library is that shape.
+- **`event actor` and `event value` still mean the FIRST value**, wherever
+  they are used. Under a hat whose signature puts an actor second, the
+  actor block is wrong. It is not offered there, and nothing stops a
+  learner dragging one in from the Actor drawer.
+- **A name the file already holds is the SAME variable.** A file with its
+  own `character` of the same flavour has the hat bind that one, which
+  reads correctly under the hat and takes the name out of the menus
+  elsewhere. That is what any binder in this lab already does to a free
+  local of its name, so it is the rule working rather than a new hazard.
+- **The subject is not in the `+`.** The flyout holds what the event
+  carries; `this actor` is the default in every actor socket already and is
+  a drawer away.
+- **Nothing in the library carries two values yet.** The path is exercised
+  by tests over a project-declared event, not by a shipped rule.
+
+## What to look at in the browser
+
+In a `.rule`, `define event` → pencil: the drawer should lead with the
+`let` blocks, as a `define block`'s does, and there should be no `choice`
+item anywhere. Design `is damaged by ⟨who: actor⟩ ⟨amount: number⟩`: the
+preview row should draw a kind dropdown for `who` and the word `amount`,
+and the hat in the toolbox should match it exactly.
+
+On that hat, the `+` should open a flyout holding two ordinary getters,
+reading `who` and `amount`. Dragging `amount` out should give a getter that
+plugs into a number socket and refuses an actor one.
+
+Then the part that is the point of the revision. That name should be
+offered in the dropdown of any getter under the same hat, and in no
+dropdown anywhere else in the file. Carrying the getter out from under the
+hat should leave it naming something it can no longer see. A file that has
+never opened the `+` should have no `character` in any menu at all.
+
+The `emit` block should show two sockets. Raise it with a number in one and
+watch the handler read the same number back — the whole point, and the half
+that could not work before.
+
+On a contact hat (`starts touching`), the `+` should be unchanged: one
+block, `event actor`, and no local bound.

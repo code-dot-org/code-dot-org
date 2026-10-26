@@ -1,0 +1,332 @@
+import {describe, expect, it} from 'vitest';
+
+import type {Actor} from '../core/Actor';
+import {
+  ActorBuilder,
+  AnimationEndedEvent,
+  AnimationProperty,
+  AnimationRule,
+  AppearanceTrait,
+  FrameChangedEvent,
+  FrameProperty,
+  IntrinsicSizeProperty,
+  PositionProperty,
+  SpriteCellOriginProperty,
+  SpriteCellSizeProperty,
+  SpriteProperty,
+  Vector,
+  WorldBuilder,
+  playAnimation,
+  type Timeline,
+} from '../index';
+
+/**
+ * A strip of `frames` cells, `rate` a second: a sprite key per cell, and a
+ * closing key that gives the last its time (`core/keyframes`). The engine
+ * ships no animations — they are the actor's own — so a test about timing
+ * brings its own, as an actor would.
+ */
+const CELL = 32;
+const strip = (
+  sprite: string,
+  frames: number,
+  rate: number,
+  loop = true,
+): Timeline => {
+  const key = (index: number, at: number) => ({
+    at,
+    value: {
+      sprite,
+      cell: {x: index * CELL, y: 0, width: CELL, height: CELL},
+    },
+  });
+  return {
+    loop,
+    tracks: {
+      sprite: [
+        ...Array.from({length: frames}, (_unused, index) =>
+          key(index, Math.round((index / rate) * 1000) / 1000),
+        ),
+        key(frames - 1, Math.round((frames / rate) * 1000) / 1000),
+      ],
+    },
+  };
+};
+const coinSpin = strip('coinSpin.png', 6, 12);
+const playerWalk = strip('playerWalk.png', 4, 8);
+const oneShot = strip('s', 2, 10, false);
+
+// A world with the Animation rule and one actor that has the appearance trait.
+function makeWorld(animation = '') {
+  const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
+    AnimationRule,
+  ]);
+  const world = builder.getWorld();
+  const actor = builder.addActor(
+    new ActorBuilder({id: 'a', name: 'A'})
+      .useTraits([AppearanceTrait])
+      .useAnimations({coinSpin, playerWalk, oneShot})
+      .set(PositionProperty, new Vector(0, 0))
+      .set(AnimationProperty, animation),
+  );
+  return {world, actor};
+}
+
+/**
+ * A world holding one actor that draws `paddle.png` and nothing else — no
+ * animation, which is the case the rule used to walk straight past.
+ */
+function paintedWorld(sizes: Record<string, {width: number; height: number}>) {
+  const builder = new WorldBuilder({id: 'ww', name: 'WW'})
+    .useRules([AnimationRule])
+    .useImageSizes(sizes);
+  const world = builder.getWorld();
+  const actor = builder.addActor(
+    new ActorBuilder({id: 'aw', name: 'AW'})
+      .useTraits([AppearanceTrait])
+      .set(PositionProperty, new Vector(0, 0))
+      .set(SpriteProperty, 'paddle.png'),
+  );
+  return {world, actor};
+}
+
+describe('the Animation rule', () => {
+  it('advances the frame by each frame delay, looping', () => {
+    // Stock "coinSpin": 6 frames at 12 fps → 1000/12 ≈ 83.33 ms per frame.
+    const {world, actor} = makeWorld('coinSpin');
+    expect(actor.get(FrameProperty)).toBe(0);
+    world.tick(0.1); // 100ms → past frame 0's ~83ms, into frame 1
+    expect(actor.get(FrameProperty)).toBe(1);
+    world.tick(0.1); // +100ms → frame 2 (with carryover)
+    expect(actor.get(FrameProperty)).toBe(2);
+    // Run well past the end; a looping animation wraps, never exceeds the count.
+    for (let i = 0; i < 20; i++) {
+      world.tick(0.1);
+    }
+    expect(actor.get(FrameProperty)).toBeLessThan(6);
+    expect(actor.get(FrameProperty)).toBeGreaterThanOrEqual(0);
+  });
+
+  it('publishes the animation frame-cell size as the actor intrinsic size', () => {
+    // "coinSpin" is a 32px uniform strip; the Collision rule reads this to fit
+    // its default box to the sprite.
+    const {world, actor} = makeWorld('coinSpin');
+    // Unknown until the first tick resolves the animation.
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 0, y: 0})).toBe(true);
+    world.tick(0.01);
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 32})).toBe(true);
+  });
+
+  it('measures a whole-image sprite from what the project stated', () => {
+    // A whole image states no size the way a cell does, and the engine cannot
+    // read a PNG. The project can, and says so up front (`useImageSizes`), so
+    // an actor that draws one picture and has no animation at all still knows
+    // how big it is. Before this it did not, and since intrinsic size is what
+    // `collision size of` falls back to, every such actor — most of them —
+    // collided as a 32 by 32 square whatever shape it was.
+    const {world, actor} = paintedWorld({
+      'paddle.png': {width: 64, height: 16},
+    });
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 0, y: 0})).toBe(true);
+    world.tick(0.01);
+    // IN WORLD UNITS, not the picture's pixels: 64 is two tiles, so the paddle
+    // is fitted to one and keeps its shape — a tile across and a quarter of a
+    // tile down. That is what makes `scale` mean the same thing whatever file
+    // an actor is drawn from (specs/ACTOR_SIZE.md).
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 8})).toBe(true);
+  });
+
+  it('leaves a picture that already fits exactly as it is', () => {
+    // The whole shipped library is 32 by 32, so the fit is 1 and nothing a
+    // learner made out of stock parts can tell this was done.
+    const {world, actor} = paintedWorld({
+      'paddle.png': {width: 32, height: 32},
+    });
+    world.tick(0.01);
+
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 32})).toBe(true);
+  });
+
+  it('leaves the intrinsic size unknown for a picture nobody measured', () => {
+    // Unknown means UNMEASURED, not "has no size" — an image from outside the
+    // project is the case that stays. Zero is the honest answer, and what the
+    // rules that read it treat as "assume something".
+    const {world, actor} = paintedWorld({'other.png': {width: 64, height: 16}});
+    world.tick(0.01);
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 0, y: 0})).toBe(true);
+  });
+
+  it('takes a cell over the whole image it is cut from', () => {
+    // An actor showing one cell of a strip, with no animation running: the
+    // measurement says 192 wide (the strip) and the cell says 32 (the coin).
+    // The coin is the answer — the strip is not what is on screen.
+    const {world, actor} = paintedWorld({
+      'paddle.png': {width: 192, height: 32},
+    });
+    actor.set(SpriteCellSizeProperty, new Vector(32, 32));
+    world.tick(0.01);
+    expect(actor.get(IntrinsicSizeProperty).equals({x: 32, y: 32})).toBe(true);
+  });
+
+  it('holds the last frame and emits AnimationEnded once when a non-looping animation finishes', () => {
+    const builder = new WorldBuilder({id: 'w2', name: 'W2'}).useRules([
+      AnimationRule,
+    ]);
+    const world = builder.getWorld();
+    const actor = builder.addActor(
+      new ActorBuilder({id: 'a2', name: 'A2'})
+        .useTraits([AppearanceTrait])
+        .useAnimations({oneShot})
+        .set(PositionProperty, new Vector(0, 0))
+        .set(AnimationProperty, 'oneShot'),
+    );
+
+    let ends = 0;
+    actor.on(AnimationEndedEvent, () => {
+      ends += 1;
+    });
+    // 2 frames × 100ms = 200ms of animation; run well past it.
+    for (let i = 0; i < 10; i++) {
+      world.tick(0.1);
+    }
+    expect(actor.get(FrameProperty)).toBe(1); // holds the last frame
+    expect(ends).toBe(1); // fires exactly once
+  });
+
+  it('restarts a finished non-looping animation when it is replayed', () => {
+    const builder = new WorldBuilder({id: 'wr', name: 'WR'}).useRules([
+      AnimationRule,
+    ]);
+    const world = builder.getWorld();
+    const actor = builder.addActor(
+      new ActorBuilder({id: 'ar', name: 'AR'})
+        .useTraits([AppearanceTrait])
+        .useAnimations({oneShot})
+        .set(PositionProperty, new Vector(0, 0))
+        .set(AnimationProperty, 'oneShot'),
+    );
+
+    let ends = 0;
+    actor.on(AnimationEndedEvent, () => {
+      ends += 1;
+    });
+    // Run it to completion: it holds the last frame and fires once.
+    for (let i = 0; i < 5; i++) {
+      world.tick(0.1);
+    }
+    expect(actor.get(FrameProperty)).toBe(1);
+    expect(ends).toBe(1);
+
+    // Replaying the *same* animation restarts it from frame 0…
+    playAnimation(actor, 'oneShot');
+    world.tick(0); // the step consumes the request and resets
+    expect(actor.get(FrameProperty)).toBe(0);
+    // …and it plays through and ends again.
+    for (let i = 0; i < 5; i++) {
+      world.tick(0.1);
+    }
+    expect(actor.get(FrameProperty)).toBe(1);
+    expect(ends).toBe(2);
+  });
+
+  it('leaves a looping animation cycling when it is replayed (no hitch)', () => {
+    const {world, actor} = makeWorld('coinSpin');
+    world.tick(0.3); // advance a few frames into the loop
+    const frame = actor.get(FrameProperty);
+    expect(frame).toBeGreaterThan(0);
+    // Replaying the same looping animation must not snap it back to frame 0.
+    playAnimation(actor, 'coinSpin');
+    world.tick(0);
+    expect(actor.get(FrameProperty)).toBe(frame);
+  });
+
+  it('emits FrameChangedEvent with the new frame index on each advance', () => {
+    const {world, actor} = makeWorld('coinSpin'); // 6 frames, ~83ms each
+    const frames: unknown[] = [];
+    actor.on(FrameChangedEvent, (_world, _actor, detail) =>
+      frames.push(detail),
+    );
+    // Advance well past one loop; the first six frame changes are 1..5 then 0.
+    // In steps shorter than a frame: a timeline is sampled where it is each
+    // tick, so a tick longer than a picture's time steps over it. A game
+    // ticks sixty times a second, which no animation's frame is shorter than.
+    for (let i = 0; i < 12; i++) {
+      world.tick(0.05);
+    }
+    expect(frames.slice(0, 6)).toEqual([1, 2, 3, 4, 5, 0]);
+  });
+
+  it('resets frame state when the selected animation changes', () => {
+    const {world, actor} = makeWorld('coinSpin');
+    world.tick(0.3); // advance several frames
+    expect(actor.get(FrameProperty)).toBeGreaterThan(0);
+    actor.set(AnimationProperty, 'playerWalk'); // switch
+    world.tick(0); // step notices the switch and resets
+    expect(actor.get(FrameProperty)).toBe(0);
+  });
+
+  it('renderSnapshot reports the current animation frame cell, or the sprite, or nothing', () => {
+    const {world, actor} = makeWorld('coinSpin');
+    world.tick(0.1); // frame 1
+    const frame = world.renderSnapshot().find(s => s.actor === actor)?.frame;
+    expect(frame?.sprite).toBe('coinSpin.png');
+    expect(frame?.cell).toEqual({x: 32, y: 0, width: 32, height: 32});
+
+    // Clearing the animation and setting a static sprite reports a whole
+    // image — the cell put back, as `set sprite` does.
+    actor.set(AnimationProperty, '');
+    actor.set(SpriteProperty, 'player');
+    actor.set(SpriteCellOriginProperty, new Vector(0, 0));
+    actor.set(SpriteCellSizeProperty, new Vector(0, 0));
+    world.tick(0);
+    const still = world.renderSnapshot().find(s => s.actor === actor)?.frame;
+    expect(still?.sprite).toBe('player');
+    expect(still?.cell).toBe(undefined);
+  });
+});
+
+describe('a static sprite', () => {
+  // `set sprite` may name one cell of a spritesheet. The engine is never told
+  // about grids: the rectangle arrives on the actor, resolved by the editor
+  // when it generated the code (blockly/spriteCells).
+  const drawn = (paint: (actor: Actor) => void) => {
+    const {world, actor} = makeWorld();
+    paint(actor);
+    return world.renderSnapshot().find(state => state.actor === actor)?.frame;
+  };
+
+  it('draws the whole image by default', () => {
+    const frame = drawn(actor => {
+      actor.set(SpriteProperty, 'player.png');
+    });
+
+    expect(frame).toEqual({
+      sprite: 'player.png',
+      cell: undefined,
+      offset: {x: 0, y: 0},
+      scale: 1,
+    });
+  });
+
+  it('draws one cell when it is given a rectangle', () => {
+    const frame = drawn(actor => {
+      actor.set(SpriteProperty, 'coinSpin.png');
+      actor.set(SpriteCellOriginProperty, new Vector(96, 0));
+      actor.set(SpriteCellSizeProperty, new Vector(32, 32));
+    });
+
+    expect(frame?.cell).toEqual({x: 96, y: 0, width: 32, height: 32});
+  });
+
+  it('treats a cell of no size as the whole image', () => {
+    // What `set sprite` writes for a plain picture — and what an actor that
+    // used to draw a cell is reset to.
+    const frame = drawn(actor => {
+      actor.set(SpriteProperty, 'player.png');
+      actor.set(SpriteCellOriginProperty, new Vector(96, 0));
+      actor.set(SpriteCellSizeProperty, new Vector(0, 0));
+    });
+
+    expect(frame?.cell).toBeUndefined();
+  });
+});
