@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useRef, useState} from 'react';
+import React, {useId, useLayoutEffect, useRef, useState} from 'react';
 
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
@@ -7,7 +7,7 @@ import QuestionDescription from '../QuestionDescription';
 
 import MatchColumn from './MatchColumn';
 import {MatchPairs, MatchSets, MatchSide} from './types';
-import {toggleMatch} from './utils';
+import {labelOf, toggleMatch} from './utils';
 
 import styles from './match-question-container.module.scss';
 
@@ -53,6 +53,10 @@ const MatchQuestionContainer: React.FunctionComponent<
     id: string;
   } | null>(null);
   const [linePaths, setLinePaths] = useState<string[]>([]);
+  // Read out by a live region: a screen reader won't re-announce the name
+  // of the card that's already focused when a pairing changes it.
+  const [announcement, setAnnouncement] = useState('');
+  const instructionsId = useId();
   const boardRef = useRef<HTMLDivElement>(null);
   const dotRefs = useRef(new Map<string, HTMLElement>());
 
@@ -97,9 +101,19 @@ const MatchQuestionContainer: React.FunctionComponent<
       setSelected(selected?.id === id ? null : {side, id});
       return;
     }
-    onChangePairs(
-      toggleMatch(pairs, side === 'end' ? [selected.id, id] : [id, selected.id])
+    const [startId, endId]: [string, string] =
+      side === 'end' ? [selected.id, id] : [id, selected.id];
+    const isUnmatch = pairs.some(
+      ([start, end]) => start === startId && end === endId
     );
+    const startLabel = labelOf(matchSets, startId);
+    const endLabel = labelOf(matchSets, endId);
+    setAnnouncement(
+      isUnmatch
+        ? `Unmatched ${startLabel} from ${endLabel}.`
+        : `Matched ${startLabel} with ${endLabel}.`
+    );
+    onChangePairs(toggleMatch(pairs, [startId, endId]));
     setSelected(null);
   };
 
@@ -118,7 +132,17 @@ const MatchQuestionContainer: React.FunctionComponent<
       headingRef={headingRef}
       description={<QuestionDescription markdown={question.description} />}
     >
-      <div ref={boardRef} className={styles.board}>
+      <p id={instructionsId} className={styles.srOnly}>
+        Select an item in one column, then an item in the other column to match
+        them. Select a matched pair again to unmatch it.
+      </p>
+      <div
+        ref={boardRef}
+        className={styles.board}
+        role="group"
+        aria-label={question.questionTitle}
+        aria-describedby={instructionsId}
+      >
         <svg className={styles.lines} aria-hidden="true">
           {linePaths.map(path => (
             <path key={path} d={path} className={styles.line} />
@@ -136,6 +160,9 @@ const MatchQuestionContainer: React.FunctionComponent<
             disabled={disabled}
           />
         ))}
+      </div>
+      <div role="status" className={styles.srOnly}>
+        {announcement}
       </div>
     </AttemptCard>
   );

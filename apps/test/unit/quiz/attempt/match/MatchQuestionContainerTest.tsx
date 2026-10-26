@@ -110,4 +110,30 @@ describe('MatchQuestionContainer', () => {
     expect(onChangePairs).toHaveBeenLastCalledWith([]);
     expect(card('A. 1 + 1')).toBeInTheDocument();
   });
+
+  it('describes how to match, for screen readers', () => {
+    renderContainer();
+
+    expect(
+      screen.getByRole('group', {name: 'Match each expression to its value.'})
+    ).toHaveAccessibleDescription(
+      'Select an item in one column, then an item in the other column to match them. Select a matched pair again to unmatch it.'
+    );
+  });
+
+  it('announces each match and unmatch', () => {
+    renderContainer();
+
+    fireEvent.click(card('A. 1 + 1'));
+    fireEvent.click(card('2'));
+    expect(screen.getByRole('status')).toHaveTextContent(
+      'Matched A. 1 + 1 with 2.'
+    );
+
+    fireEvent.click(card('2, matched with A. 1 + 1'));
+    fireEvent.click(card('A. 1 + 1, matched with 2'));
+    expect(screen.getByRole('status')).toHaveTextContent(
+      'Unmatched A. 1 + 1 from 2.'
+    );
+  });
 });
