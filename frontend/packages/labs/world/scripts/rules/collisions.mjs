@@ -91,6 +91,26 @@ const contacts = canCollide.actors('contacts', {readonly: true});
 export const CanCollide = rule.traitRef('Can Collide');
 export {box as size, contacts, passable};
 
+/**
+ * How far the BIGGEST collider in the world reaches from its middle.
+ *
+ * Half its diagonal, which is what makes the question below a safe one to ask
+ * with a radius. Two boxes overlap when their middles are close on both axes,
+ * so if they overlap their middles are within `‖(ax,ay)‖ + ‖(bx,by)‖` of each
+ * other — my half-diagonal plus theirs. Nobody knows whose "theirs" until the
+ * answer comes back, so the biggest one in the world stands in for it: too wide
+ * is a longer list to sift, and too narrow would MISS a collision, which is the
+ * one thing a broadphase may never do.
+ *
+ * Worked out once a frame, in a single pass over the colliders, which is the
+ * whole of what this addition costs against the n² it removes.
+ *
+ * Read-only: the step owns it. A project setting it by hand would be telling
+ * the world a lie about how big things are, and the lie would present as
+ * collisions that stopped happening at a distance.
+ */
+const reach = rule.number('biggest reach', 0, {readonly: true});
+
 const working = rule.local('box', 'Vector');
 
 /**
@@ -181,26 +201,6 @@ const body = rule.local('body', 'Actor');
 const other = rule.local('other', 'Actor');
 const found = rule.local('found', 'Actor');
 const widest = rule.local('widest', 'Actor');
-
-/**
- * How far the BIGGEST collider in the world reaches from its middle.
- *
- * Half its diagonal, which is what makes the question below a safe one to ask
- * with a radius. Two boxes overlap when their middles are close on both axes,
- * so if they overlap their middles are within `‖(ax,ay)‖ + ‖(bx,by)‖` of each
- * other — my half-diagonal plus theirs. Nobody knows whose "theirs" until the
- * answer comes back, so the biggest one in the world stands in for it: too wide
- * is a longer list to sift, and too narrow would MISS a collision, which is the
- * one thing a broadphase may never do.
- *
- * Worked out once a frame, in a single pass over the colliders, which is the
- * whole of what this addition costs against the n² it removes.
- *
- * Read-only: the step owns it. A project setting it by hand would be telling
- * the world a lie about how big things are, and the lie would present as
- * collisions that stopped happening at a distance.
- */
-const reach = rule.number('biggest reach', 0, {readonly: true});
 
 /** Half the diagonal of an actor's collision box. */
 const halfDiagonal = who =>

@@ -259,6 +259,9 @@ export const falling = affected.boolean('falling', 'false', {readonly: true});
  */
 export const ignoresGround = affected.boolean('ignores ground', 'false');
 
+const startsFalling = affected.event(['starts falling']);
+const stopsFalling = affected.event(['stops falling']);
+
 affected.block({
   returns: 'boolean',
   description:
@@ -269,9 +272,6 @@ affected.block({
     give(not(falling.of(thisActor()))),
   ],
 });
-
-const startsFalling = affected.event(['starts falling']);
-const stopsFalling = affected.event(['stops falling']);
 
 /**
  * Something to land ON — and, on its own, something to jump UP THROUGH.

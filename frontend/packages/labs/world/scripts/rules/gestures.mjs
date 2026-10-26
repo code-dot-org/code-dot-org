@@ -45,7 +45,13 @@ The Mouse rule says a button went down. This says what happened between the
 button going down and coming up, which is what a touch screen is made of.
 
 Give an actor **Takes Gestures** to hear the gestures that BEGIN on it — a
-drag stays yours once it has started, even when the finger has moved off.`,
+drag stays yours once it has started, even when the finger has moved off.
+
+How far, and how fast, before a press counts as something: a press that never
+moves is a click, and this rule says nothing about it. Four numbers decide
+where the lines are — drag distance, swipe distance, swipe time and hold time —
+and they are numbers rather than something buried in the rule because the
+right answer differs between a mouse and a thumb.`,
   header: `// "Reads Gestures" — what a press, a movement and a release add up to.
 //
 // The Mouse rule's next sentence. Mouse says a button went down; this says
@@ -89,13 +95,6 @@ const dragging = rule.boolean('dragging', false, {readonly: true});
 const heldTold = rule.boolean('hold announced', false, {readonly: true});
 
 // ── What a project may tune ─────────────────────────────────────────────────
-
-rule.doc(`How far, and how fast, before a press counts as something.
-
-A press that never moves is a click and this rule says nothing about it. These
-four numbers decide where the lines are, and they are numbers rather than
-something buried in the rule because the right answer differs between a mouse
-and a thumb.`);
 
 const dragDistance = rule.number('drag distance', 4);
 const swipeDistance = rule.number('swipe distance', 40);

@@ -84,11 +84,9 @@ order you placed them in.`,
 
 const focusable = rule
   .trait('Can Be Focused')
-  .describe('Can hold the keyboard, and takes its turn when Tab moves along.');
-
-focusable.doc(
-  'Whatever elects this can hold the keyboard. Only one actor in a world holds it at a time, and this rule is the only thing that moves it.',
-);
+  .describe(
+    'Can hold the keyboard, and takes its turn when Tab moves along. Only one actor holds it at a time, and only this rule moves it.',
+  );
 
 /**
  * Whether the keyboard is coming here.

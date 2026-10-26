@@ -25,7 +25,12 @@ going back.
 **the screen showing** says which is in front. Nothing else has to know.
 
 Your app's home is usually your world's own map, which sits under every screen
-and is never one of them — so going back from the last screen shows home.`,
+and is never one of them — so going back from the last screen shows home.
+
+**screens** lists the screens showing, deepest first; the last one is in
+front. A project reads it to ask where it is — \`the screen showing\`, or how
+deep it has gone — and every way on and off the stack keeps it in step with
+what is actually loaded.`,
   header: `// "Shows Screens" — a stack of maps, and a way back down it.
 //
 // A screen is a MAP and always has been: \`load map\` ADDS one over what is
@@ -55,12 +60,6 @@ and is never one of them — so going back from the last screen shows home.`,
 // answer: what is underneath is the world's business, and it is a thing that
 // can be looked at rather than a state the rule pretends is impossible.`,
 });
-
-rule.doc(`The screens showing, deepest first. The last one is in front.
-
-A project reads this to ask where it is — \`the screen showing\`, or how deep
-it has gone — and every way on and off the stack keeps it in step with what is
-actually loaded.`);
 
 const showing = rule.property({
   name: 'screens',
@@ -143,9 +142,7 @@ rule.block({
   returns: 'number',
   description: 'How many screens are stacked up.',
   say: ['how many screens'],
-  body: () => [
-    {type: 'world_return', inputs: {VALUE: countIn(showing.of())}},
-  ],
+  body: () => [{type: 'world_return', inputs: {VALUE: countIn(showing.of())}}],
 });
 
 export default () => moduleFor(rule, 'screens');
