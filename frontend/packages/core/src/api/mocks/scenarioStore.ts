@@ -5,6 +5,7 @@
 // Reads return `undefined` when nothing is stored — the handler falls back
 // to fixture data, which falls back to a handler-specific default.
 
+import {clearAllAssets} from './assetStore';
 import {getActiveScenario} from './scenario';
 
 const NAMESPACE = 'cdo-mock';
@@ -40,9 +41,20 @@ export function clearResource(resource: string): void {
   window.sessionStorage.removeItem(key);
 }
 
-/** Wipes every key in the `cdo-mock:` namespace. */
+/**
+ * Wipes every key in the `cdo-mock:` namespace, and the stored assets.
+ *
+ * The assets live in IndexedDB rather than here (`assetStore`), so a reset
+ * that only swept this store would leave the uploaded bytes behind — which is
+ * the one kind of state big enough for anybody to notice.
+ *
+ * Not awaited: a reset happens before the mocks answer anything, and a caller
+ * that had to wait for it would have to be async all the way up for the sake
+ * of bytes nothing is about to ask for.
+ */
 export function resetScenarioStore(): void {
   if (typeof window === 'undefined') return;
+  void clearAllAssets();
   const prefix = `${NAMESPACE}:`;
   const toRemove: string[] = [];
   for (let i = 0; i < window.sessionStorage.length; i++) {
