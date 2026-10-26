@@ -14,8 +14,6 @@ import {
 } from '@cdo/apps/ailab/engine/ProjectContext';
 import rootReducer, {
   resetState,
-  setColumnsByDataType,
-  setImportedData,
   setInvalidData,
   setMode,
   setPresetColumns,
@@ -23,6 +21,8 @@ import rootReducer, {
 } from '@cdo/apps/ailab/engine/redux';
 import {store as singletonStore} from '@cdo/apps/ailab/engine/store';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
+
+import {seedDataset} from './levelStore';
 
 jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
 jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
@@ -41,6 +41,14 @@ const run = (accuracy, hyperparameters, accuracyCheckRowIndices) => ({
 
 const FIRST = run('80.00', {k: 1}, [8, 9]);
 const SECOND = run('90.00', {k: 3}, [0, 5]);
+
+const ROWS = [{a: '1', b: '2', c: '3'}];
+const COLUMNS = {
+  a: ColumnTypes.NUMERICAL,
+  b: ColumnTypes.NUMERICAL,
+  c: ColumnTypes.NUMERICAL,
+};
+const loadRows = store => seedDataset(store, ROWS, COLUMNS);
 
 function renderContext(initialProject, seedStore) {
   const store = seedStore ?? createStore(rootReducer);
@@ -73,10 +81,7 @@ describe('ProjectContext', () => {
   // A saved project waits for the dataset it will be reconciled against.
   test('opens with a project it is handed', () => {
     const store = createStore(rootReducer);
-    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-    ['a', 'b', 'c'].forEach(column =>
-      store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-    );
+    loadRows(store);
     const {project} = renderContext(
       {
         ...defaultProject,
@@ -181,7 +186,7 @@ describe('ProjectContext', () => {
 describe('ProjectContext column choices', () => {
   const imported = () => {
     const store = createStore(rootReducer);
-    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    seedDataset(store, ROWS, {});
     return store;
   };
 
@@ -367,10 +372,7 @@ describe('ProjectContext column choices', () => {
 describe('ProjectContext opening a saved project', () => {
   const described = () => {
     const store = createStore(rootReducer);
-    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-    ['a', 'b', 'c'].forEach(column =>
-      store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-    );
+    loadRows(store);
     return store;
   };
 
@@ -421,10 +423,7 @@ describe('ProjectContext opening a saved project', () => {
 
     act(() => {
       store.dispatch(setSelectedCSV('animals.csv'));
-      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-      );
+      loadRows(store);
     });
 
     expect(context().project.labelColumn).toBe('a');
@@ -439,10 +438,7 @@ describe('ProjectContext opening a saved project', () => {
     expect(context().isProjectLoaded).toBe(false);
 
     act(() => {
-      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-      );
+      loadRows(store);
     });
 
     expect(context().isProjectLoaded).toBe(true);
@@ -516,28 +512,8 @@ describe('ProjectContext opening a saved project', () => {
     expect(project()).toEqual(defaultProject);
 
     act(() => {
-      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-      );
+      loadRows(store);
     });
-
-    expect(project()).toEqual(SAVED);
-  });
-
-  test('waits for the column types, not just the rows', () => {
-    const store = createStore(rootReducer);
-    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-    const {project, context} = renderContext(undefined, store);
-
-    act(() => context().openProject(SAVED));
-    expect(project()).toEqual(defaultProject);
-
-    act(() =>
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-      )
-    );
 
     expect(project()).toEqual(SAVED);
   });
@@ -558,10 +534,11 @@ describe('ProjectContext opening a saved project', () => {
 
     act(() => context().openProject(SAVED));
     act(() => {
-      store.dispatch(setImportedData(crowded, true));
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL))
-      );
+      seedDataset(store, crowded, {
+        a: ColumnTypes.CATEGORICAL,
+        b: ColumnTypes.CATEGORICAL,
+        c: ColumnTypes.CATEGORICAL,
+      });
     });
 
     expect(project().labelColumn).toBeUndefined();
@@ -584,10 +561,7 @@ describe('ProjectContext opening a saved project', () => {
       store.dispatch(resetState());
     });
     act(() => {
-      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-      );
+      loadRows(store);
     });
 
     expect(project()).toEqual(SAVED);
@@ -659,12 +633,7 @@ describe('ProjectContext keeping a saved project in sync', () => {
 
   const loadDataset = () =>
     act(() => {
-      singletonStore.dispatch(setImportedData(DATA, false));
-      ['a', 'b', 'c'].forEach(column =>
-        singletonStore.dispatch(
-          setColumnsByDataType(column, ColumnTypes.NUMERICAL)
-        )
-      );
+      seedDataset(singletonStore, DATA, COLUMNS);
     });
 
   // The readers dispatch the rows and then a type per column, in their own time.

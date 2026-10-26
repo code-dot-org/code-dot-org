@@ -12,13 +12,18 @@ import reducer, {
   stepPredictionByHand,
   setMode,
   setReserveLocation,
-  setImportedData,
+  setDatasetLoaded,
+  setSelectedCSV,
   resetState,
   setSaveStatus,
   saveModel,
   setTrainingModalStep,
 } from '@cdo/apps/ailab/engine/redux';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
+
+import {dataset} from './levelStore';
+
+const DATASET = dataset([{a: '1'}], {a: ColumnTypes.NUMERICAL});
 
 describe('ailab reducer', () => {
   describe('instructionsEnabled gates the panel overlay', () => {
@@ -225,11 +230,20 @@ describe('ailab reducer', () => {
       expect(next.instructionsKey).toBe('datasetView');
     });
 
-    test('importing a dataset records uploaded vs selected', () => {
-      const uploaded = reducer(initialState, setImportedData([], true));
-      expect(uploaded.instructionsKey).toBe('uploadedDataset');
-      const selected = reducer(initialState, setImportedData([], false));
-      expect(selected.instructionsKey).toBe('selectedDataset');
+    // An upload is held as a File; one of ours is held as a path to it.
+    test('loading a dataset records uploaded vs selected', () => {
+      const loadedOver = csvfile =>
+        reducer(
+          reducer(initialState, setSelectedCSV(csvfile)),
+          setDatasetLoaded({dataset: DATASET})
+        );
+
+      expect(loadedOver(new File([''], 'mine.csv')).instructionsKey).toBe(
+        'uploadedDataset'
+      );
+      expect(loadedOver('datasets/animals.csv').instructionsKey).toBe(
+        'selectedDataset'
+      );
     });
   });
 

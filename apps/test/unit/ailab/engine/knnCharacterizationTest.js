@@ -19,15 +19,13 @@ import fs from 'fs';
 import KNN from 'ml-knn';
 import path from 'path';
 
-import {ColumnTypes, TestDataLocations} from '@cdo/apps/ailab/engine/constants';
+import {TestDataLocations} from '@cdo/apps/ailab/engine/constants';
 import {parseCsvText} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {getPercentCorrect} from '@cdo/apps/ailab/engine/helpers/accuracy';
 import I18n from '@cdo/apps/ailab/engine/i18n';
+import {columnTypesFromMetadata} from '@cdo/apps/ailab/engine/jsonReaderWrapper';
 import {
   resetState,
-  setColumnsByDataType,
-  setImportedData,
-  setImportedMetadata,
   setReserveLocation,
   setSelectedCSV,
   setSelectedJSON,
@@ -37,6 +35,7 @@ import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
+import {seedDataset} from './levelStore';
 import {projectFromRun} from './renderWithProviders';
 
 const DIR = path.join(__dirname, '../../../../static/skins/ailab/datasets');
@@ -71,12 +70,11 @@ function load(id, features) {
   // A string here is what makes `isUserUploaded` false, as it is for a level.
   store.dispatch(setSelectedCSV(`${id}.csv`));
   store.dispatch(setSelectedJSON(`${id}.json`));
-  store.dispatch(setImportedData(parseCsvText(csv).rows, false));
-  store.dispatch(setImportedMetadata(metadata));
-  metadata.fields.forEach(field =>
-    store.dispatch(
-      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL)
-    )
+  seedDataset(
+    store,
+    parseCsvText(csv).rows,
+    columnTypesFromMetadata(metadata),
+    metadata
   );
   // Set explicitly rather than relying on the initial state, so a change of
   // default cannot silently make these tests non-deterministic.

@@ -7,12 +7,16 @@ import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
   setAccuracyCheckPredictedLabels,
-  setColumnsByDataType,
-  setImportedData,
 } from '@cdo/apps/ailab/engine/redux';
 import ResultsDetails from '@cdo/apps/ailab/engine/UIComponents/ResultsDetails';
 
-import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
+import {
+  ANIMAL_COLUMNS,
+  ANIMALS,
+  levelProject,
+  levelStore,
+  seedDataset,
+} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
@@ -32,13 +36,14 @@ function renderScorecard({
 } = {}) {
   const store = levelStore(mode);
   if (data) {
-    store.dispatch(setImportedData(data, false));
-    Object.keys(data[0]).forEach(column =>
-      store.dispatch(
-        setColumnsByDataType(
+    seedDataset(
+      store,
+      data,
+      Object.fromEntries(
+        Object.keys(data[0]).map(column => [
           column,
-          column === 'legs' ? ColumnTypes.NUMERICAL : ColumnTypes.CATEGORICAL
-        )
+          column === 'legs' ? ColumnTypes.NUMERICAL : ColumnTypes.CATEGORICAL,
+        ])
       )
     );
   }

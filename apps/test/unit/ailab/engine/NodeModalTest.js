@@ -2,11 +2,17 @@ import {act, fireEvent, screen, waitFor, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '@cdo/apps/ailab/engine/i18n';
-import {setImportedData, setTestData} from '@cdo/apps/ailab/engine/redux';
+import {setTestData} from '@cdo/apps/ailab/engine/redux';
 import train from '@cdo/apps/ailab/engine/train';
 import DecisionTree from '@cdo/apps/ailab/engine/UIComponents/DecisionTree';
 
-import {ANIMALS, levelProject, levelStore} from './levelStore';
+import {
+  ANIMAL_COLUMNS,
+  ANIMALS,
+  levelProject,
+  levelStore,
+  seedDataset,
+} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 import './stubTextMeasurement';
 
@@ -161,12 +167,12 @@ describe('NodeModal', () => {
   });
 
   it("shows the model's columns, then every column with the label last", () => {
+    // `name` has no type, so it is not selectable, only shown.
     act(() =>
-      trained.store.dispatch(
-        setImportedData(
-          ANIMALS.map((row, index) => ({name: `Pet ${index + 1}`, ...row})),
-          false
-        )
+      seedDataset(
+        trained.store,
+        ANIMALS.map((row, index) => ({name: `Pet ${index + 1}`, ...row})),
+        ANIMAL_COLUMNS
       )
     );
     fireEvent.click(root());
