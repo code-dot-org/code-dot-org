@@ -25,8 +25,8 @@ export const Breadcrumb = () => {
 
   /**
    * What a step is called where the rest of the lab names it: a file as its
-   * tab was (`config.fileLabel`), a placement by its own name, and the
-   * Screen's or Map's own code as Code.
+   * tab was (`config.fileLabel`), a placement or a trait by its own name, and
+   * the Screen's or Map's own code as Code.
    */
   const nameOf = (step: TrailStep): string => {
     const file = currentSources.source.files[step.fileId];
@@ -34,7 +34,9 @@ export const Breadcrumb = () => {
       return memberName(file?.contents, step.script.id);
     }
     if (step.script) {
-      return step.script.kind === 'placement' ? step.script.id : 'Code';
+      return step.script.kind === 'placement' || step.script.kind === 'trait'
+        ? step.script.id
+        : 'Code';
     }
     return file ? (config.fileLabel?.(file) ?? file.name) : '';
   };

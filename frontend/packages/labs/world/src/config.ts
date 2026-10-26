@@ -6,7 +6,6 @@ import type {CodebridgeConfig} from '@code-dot-org/codebridge';
 
 import {ActorFileEditor} from './actors/editor/ActorEditor';
 import {followImages} from './appearance/sheetCompanions';
-import {BlocklyFileEditor} from './blockly/BlocklyFileEditor';
 import {orShowCode} from './debug/orShowCode';
 import {EffectFileEditor} from './effect/EffectFileEditor';
 import {FILE_ICONS} from './fileIcons';
@@ -17,6 +16,7 @@ import {followPlaces, PICTURE_EXTENSION} from './mapEditor/placePicture';
 import {ScreenEditor} from './mapEditor/ScreenEditor';
 import {WorldEditor} from './mapEditor/WorldEditor';
 import {whyKeepFile} from './rules/deleteGuard';
+import {RuleFileEditor} from './rules/editor/RuleEditor';
 import {StyleFileEditor} from './styles/StyleFileEditor';
 
 /**
@@ -128,7 +128,9 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     // rather than inside each editor because it is one decision about all of
     // them, and because an editor that had to know about it would be an editor
     // that could get it wrong.
-    rule: orShowCode(BlocklyFileEditor),
+    // A rule opens in the Rule Editor, as data; one the data cannot say whole
+    // opens in blocks (specs/RULE_EDITOR_PLAN.md).
+    rule: orShowCode(RuleFileEditor),
     // An actor in the data shape opens in the Actor Editor, one still in
     // blocks in the file editor (specs/ACTOR_EDITOR_PLAN.md).
     actor: orShowCode(ActorFileEditor),

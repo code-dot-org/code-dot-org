@@ -141,15 +141,44 @@ step 2, and until then a rule opened in blocks would be saved as blocks.
 
 ### 2. The editor's frame
 
-The Rule Editor in the shell, as the Actor Editor is: the side panel of
-properties and traits, and the rule's own view in the main area.
-Properties added, renamed, retyped, made read-only and given defaults
-there; a rename followed across the project, as an actor property's is.
+DONE, with a trait's view (step 3) folded in, since the frame needs one to
+open. `rules/editor/RuleEditor` opens every `.rule` file (`config`), as data:
+a stock rule held by reference becomes the learner's, as data, on its first
+edit. The side panel is headed sections: the rule's own properties under its
+name, then each trait's under the trait's, whose name opens the trait, then
+New trait. A property row (`RulePropertyRow`) sets its default with the
+Actor Editor's `ValueField`, says whether only this rule sets it, and changes
+its name or kind or is deleted, the delete saying which files use it. The
+main area is the rule's view — what using it gives, what it is for, the
+rules it uses, its events, blocks and steps — or the trait's: what it is for,
+what takes it (an actor or a camera), the traits it needs, its events,
+blocks and steps. A trait is a step on the trail (`{kind: 'trait', id}`).
+Code opens the whole rule in blocks, and what it saves is folded back into
+data, which is how a body is written until steps 4 and 5.
+
+A rule the data cannot say whole opens in blocks, as every rule did.
+
+The edits are `rules/ruleEdits`. A property's name is unique across the
+whole rule, its traits included: its blocks are named by the rule and the
+property alone. A rename rewrites the declaration and every block type and
+qualified reference to it (`renameMemberInSource`); map placements, which
+hold an override by trait and property, are not followed yet (step 6).
+
+Three readers had to learn the data shape on the way. `parseRuleMeta`
+reads a data-shaped rule through its view. A rewrite across the project
+(`mapWorkspaces`) and a rename (`renameThing`) write a rule they found as
+data, or as a reference, back as data; one written in blocks stays in
+blocks.
+
+In the browser: the starter's Gravity opens from Rules in Play; its trait
+opens with focus on its heading and the trail says so, and back puts focus
+on its name; a default changed is applied to the running game; Code shows
+the rule's blocks. The vector default's two halves did not fit the panel,
+which the actor's panel shares (`.pair`), and now share its width.
 
 ### 3. A trait's view
 
-Description, subject, the traits it needs, and its events, blocks and
-steps listed as an actor's are, each with Edit and Delete.
+DONE in step 2. A trait's rename and delete are step 6.
 
 ### 4. Members
 
@@ -185,10 +214,9 @@ a trait moves focus to its view's heading, and back puts it on the trait.
 
 ## Open
 
-- **The side panel's shape**: a tree with expanding traits, or headed
-  sections always open. Sections are simpler and every property is one
-  Tab away; a rule with many traits (Collisions, Physics) is long.
-- **Where uses are edited**: the rule's `use rule` and a trait's `use
-trait` on their views, or in the side panel beside the properties.
-- **Read-only**: what a learner sees it mean. Today it is "only this
-  rule's code may set it", which a checkbox label has to say in words.
+- **Decided**: the side panel is headed sections, always open, and uses
+  are edited on the views.
+- **Read-only** reads "Only this rule sets ⟨name⟩", which says what it
+  means; whether a learner reads it so is for a lesson to find.
+- **Description markdown.** A rule's description is markdown, edited as
+  plain text; nothing on the view draws it yet.

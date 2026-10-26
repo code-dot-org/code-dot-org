@@ -1,0 +1,183 @@
+// The Rule Editor (specs/RULE_EDITOR_PLAN.md, step 2).
+
+import {fireEvent, render, screen, within} from '@testing-library/react';
+import {beforeEach, describe, expect, it, vi} from 'vitest';
+
+import type {MultiFileSource} from '@code-dot-org/core/api';
+
+import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {foldRule, ruleView} from '../../ruleData';
+import {resolveRuleContents} from '../../ruleReference';
+
+// The starter's project, whose Gravity is the library's, held by reference.
+const SOURCE: MultiFileSource = WORLD_SCENARIOS.simple.source;
+const GRAVITY = Object.values(SOURCE.files).find(
+  file => file.name === 'gravity.rule',
+)!;
+
+const replaceSources = vi.fn();
+vi.mock('@code-dot-org/lab/contexts', () => ({
+  useSources: () => ({currentSources: {source: SOURCE}, replaceSources}),
+  useMaybeLevelProperties: () => undefined,
+}));
+// The code is the file editor over the rule's view; what it is handed and
+// what it saves are what is asked about here.
+const blocks: {
+  onChange?: (contents: string) => void;
+  contents?: string;
+} = {};
+vi.mock('../../../blockly/BlocklyFileEditor', () => ({
+  BlocklyFileEditor: (props: {
+    initialContents: string;
+    onChange: (contents: string) => void;
+  }) => {
+    blocks.onChange = props.onChange;
+    blocks.contents = props.initialContents;
+    return <div data-testid="blocks" />;
+  },
+}));
+
+const {RuleFileEditor} = await import('../RuleEditor');
+
+const onChange = vi.fn();
+beforeEach(() => {
+  onChange.mockClear();
+  replaceSources.mockClear();
+});
+
+const open = (contents = GRAVITY.contents) =>
+  render(
+    <RuleFileEditor
+      fileId={GRAVITY.id}
+      initialContents={contents}
+      language="rule"
+      isReadOnly={false}
+      onChange={onChange}
+    />,
+  );
+
+const written = () => JSON.parse(onChange.mock.calls.at(-1)![0] as string);
+
+describe('the Rule Editor', () => {
+  it('opens a rule as data, its traits in the panel', () => {
+    open();
+    expect(screen.getByTestId('rule-editor')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {name: 'Rule: Gravity'}),
+    ).toBeInTheDocument();
+    const panel = screen.getByRole('region', {name: 'Properties and traits'});
+    expect(
+      within(panel).getByRole('button', {name: 'Affected by Gravity'}),
+    ).toBeInTheDocument();
+    expect(
+      within(panel).getByRole('button', {name: 'Acts as Ground'}),
+    ).toBeInTheDocument();
+    expect(screen.queryByTestId('blocks')).toBeNull();
+  });
+
+  it('writes a default as data, the reference becoming the learner’s', () => {
+    open();
+    const field = screen.getByRole('spinbutton', {
+      name: 'Amount of gravity (number)',
+    });
+    fireEvent.change(field, {target: {value: '12'}});
+    fireEvent.blur(field);
+
+    const data = written();
+    expect(data.type).toBe('rule');
+    expect(
+      data.properties.find(
+        (one: {name: string}) => one.name === 'amount of gravity',
+      ).value,
+    ).toBe('12');
+  });
+
+  it('says a property is the rule’s alone to set', () => {
+    open();
+    fireEvent.click(
+      screen.getByRole('checkbox', {
+        name: 'Only this rule sets direction of gravity',
+      }),
+    );
+    expect(written().properties[0].access).toBe('readonly');
+  });
+
+  it('adds a property to a trait', () => {
+    open();
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: 'Add a property to Affected by Gravity',
+      }),
+    );
+    const form = screen.getByRole('group', {
+      name: 'New property for Affected by Gravity',
+    });
+    fireEvent.change(within(form).getByLabelText('Name'), {
+      target: {value: 'bounce'},
+    });
+    fireEvent.click(within(form).getByRole('button', {name: 'Add'}));
+
+    const trait = written().traits.find(
+      (one: {name: string}) => one.name === 'Affected by Gravity',
+    );
+    expect(trait.properties.at(-1)).toEqual({
+      name: 'bounce',
+      type: 'number',
+      access: 'writable',
+      value: '0',
+    });
+  });
+
+  it('opens a trait with focus on it, and goes back to its name', () => {
+    open();
+    const name = screen.getByRole('button', {name: 'Affected by Gravity'});
+    fireEvent.click(name);
+
+    const heading = screen.getByRole('heading', {
+      name: 'Trait: Affected by Gravity',
+    });
+    expect(document.activeElement).toBe(heading);
+    expect(name).toHaveAttribute('aria-current', 'true');
+    const needs = screen.getByRole('region', {name: 'Traits it needs'});
+    expect(within(needs).getByText('Can Move')).toBeInTheDocument();
+    const steps = screen.getByRole('region', {name: 'Steps'});
+    expect(
+      within(steps).getByText('applyVelocity — during push'),
+    ).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Gravity'}));
+    expect(document.activeElement).toBe(name);
+  });
+
+  it('adds a rule it uses, and takes one away', () => {
+    open();
+    const uses = screen.getByRole('region', {name: 'Rules it uses'});
+    fireEvent.click(
+      within(uses).getByRole('button', {name: 'Stop using Solid Bodies'}),
+    );
+    expect(written().uses).not.toContain('Solid Bodies');
+  });
+
+  it('opens its code in blocks, and keeps it as data when saved', () => {
+    open();
+    fireEvent.click(screen.getByRole('button', {name: 'Code'}));
+
+    const view = JSON.parse(blocks.contents!);
+    expect(view.blocks.blocks[0].type).toBe('world_rule');
+    const edited = structuredClone(view);
+    edited.blocks.blocks[0].fields.ABILITY = 'Falls Down';
+    blocks.onChange!(JSON.stringify(edited));
+
+    expect(written()).toMatchObject({type: 'rule', ability: 'Falls Down'});
+  });
+
+  it('opens a rule the data cannot say in blocks', () => {
+    const view = ruleView(
+      foldRule(JSON.parse(resolveRuleContents(GRAVITY.contents)))!,
+    ) as {blocks: {blocks: unknown[]}};
+    view.blocks.blocks.push({type: 'world_print'});
+    open(JSON.stringify(view));
+    expect(screen.getByTestId('blocks')).toBeInTheDocument();
+    expect(screen.queryByTestId('rule-editor')).toBeNull();
+  });
+});

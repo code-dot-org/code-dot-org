@@ -10,13 +10,15 @@
 /**
  * A placed actor's code, or the Screen's or Map's own, open in its file; or
  * an actor's code, open from the Actor Editor (`code`); or one of its own
- * events or blocks, being designed there (`member`, by the member's id).
+ * events or blocks, being designed there (`member`, by the member's id); or
+ * one of a rule's traits, open in the Rule Editor (`trait`, by its name).
  */
 export type ScriptStep =
   | {kind: 'placement'; id: string}
   | {kind: 'map'}
   | {kind: 'code'}
-  | {kind: 'member'; id: string};
+  | {kind: 'member'; id: string}
+  | {kind: 'trait'; id: string};
 
 /** One step: a file, or a script open within it. */
 export interface TrailStep {
@@ -28,7 +30,7 @@ export type Trail = readonly TrailStep[];
 
 const sameScript = (a?: ScriptStep, b?: ScriptStep): boolean =>
   a?.kind === b?.kind &&
-  ((a?.kind !== 'placement' && a?.kind !== 'member') ||
+  ((a?.kind !== 'placement' && a?.kind !== 'member' && a?.kind !== 'trait') ||
     a.id === (b as typeof a).id);
 
 /**

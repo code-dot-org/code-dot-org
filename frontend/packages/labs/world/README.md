@@ -33,13 +33,14 @@ file has no text contents at all: it reads and writes the bytes on the file's
 is not listed in the file browser (`hiddenFileTypes`); it belongs to the image
 of the same name, which is what writes and deletes it.
 
-| Type             | Editor                            | On disk                            |
-| ---------------- | --------------------------------- | ---------------------------------- |
-| `rule` / `world` | `src/blockly/BlocklyFileEditor`   | a Blockly workspace (JSON)         |
-| `actor`          | `src/actors/editor/ActorEditor`   | its data, and its code's workspace |
-| `map`            | `src/mapEditor/MapEditor`         | world population (JSON)            |
-| `effect`         | `src/effect/EffectFileEditor`     | a shader graph (JSON)              |
-| `png`            | `src/imageEditor/ImageFileEditor` | bytes, on the file's `url`         |
+| Type     | Editor                            | On disk                            |
+| -------- | --------------------------------- | ---------------------------------- |
+| `rule`   | `src/rules/editor/RuleEditor`     | its data, its bodies as blocks     |
+| `world`  | `src/blockly/BlocklyFileEditor`   | a Blockly workspace (JSON)         |
+| `actor`  | `src/actors/editor/ActorEditor`   | its data, and its code's workspace |
+| `map`    | `src/mapEditor/MapEditor`         | world population (JSON)            |
+| `effect` | `src/effect/EffectFileEditor`     | a shader graph (JSON)              |
+| `png`    | `src/imageEditor/ImageFileEditor` | bytes, on the file's `url`         |
 
 An `.effect` is a node graph that compiles to a GLSL fragment shader — see
 `src/effect/README.md` and `specs/EFFECT_EDITOR.md`. It travels through the

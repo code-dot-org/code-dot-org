@@ -1,0 +1,174 @@
+/* The Rule Editor (specs/RULE_EDITOR_PLAN.md, step 2): a head with the rule's
+   name, then its properties and traits beside what the rule or a trait
+   declares. The Actor Editor's shape, so the two read alike. */
+.editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  font-family: var(--font-family-main, sans-serif);
+  background: var(--background-neutral-primary);
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  flex-shrink: 0;
+  border-bottom: var(--lab-border-default);
+}
+
+.name {
+  align-self: center;
+  margin: 0;
+}
+
+.codeButton {
+  margin-left: auto;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.panel {
+  width: 16rem;
+  flex-shrink: 0;
+  min-height: 0;
+  overflow-y: auto;
+  border-right: var(--lab-border-default);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: var(--lab-border-default);
+}
+
+/* A trait's heading is the way to open it; the one open is marked. */
+.groupHead {
+  margin: 0;
+}
+
+.groupHead button {
+  justify-content: flex-start;
+  width: 100%;
+  text-align: left;
+}
+
+.open {
+  box-shadow: inset 3px 0 0 var(--borders-brand-teal-primary);
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.property {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.note {
+  margin: 0;
+  color: var(--text-neutral-secondary, var(--text-neutral-primary));
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+/* What the rule or the trait declares, one section after another. */
+.view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 48rem;
+}
+
+.view > section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.heading:focus-visible {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 2px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.prose {
+  min-height: 6rem;
+  padding: 0.5rem;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font: inherit;
+  resize: vertical;
+}
+
+.prose:focus-visible {
+  outline: 2px solid var(--borders-brand-teal-primary);
+  outline-offset: 1px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: var(--lab-border-default);
+  border-radius: 4px;
+}
+
+.code {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.codeHeader {
+  flex-shrink: 0;
+  padding: 0.25rem 0.5rem;
+  border-bottom: var(--lab-border-default);
+}
+
+.codeBlocks {
+  flex: 1;
+  min-height: 0;
+}

@@ -189,6 +189,26 @@ below, and are listed last.
 - **What an actor is for** is said as text beside its name, not offered as
   a control, since it does not change.
 
+### The Rule Editor (RULE_EDITOR_PLAN.md)
+
+- **The side panel is a region** ("Properties and traits") of headed
+  sections. Each heading is a button: the rule's name goes back to the
+  rule, a trait's opens it, and the one open is `aria-current`.
+- **Every control names its property**: a default by the property and its
+  kind ("Amount of gravity (number)"), the read-only box by the property
+  ("Only this rule sets amount of gravity"), Change and Delete by it.
+  Built so after a test found six checkboxes all called "Only this rule
+  sets it", which a list of form controls could not tell apart.
+- **Focus is placed**: opening a trait, its view's heading; back, the
+  trait's name in the panel. A new trait opens with focus on its heading.
+- **What a rule declares is listed as text**: its events, blocks and
+  steps as they read ("⟨faller⟩ is resting on ⟨ground⟩ — reports a
+  boolean"), each a list item under a heading.
+- **What it is for** is a native `textarea` with a label, there being no
+  design-system one.
+- **Untested**: no screen reader; the keys only by tests and a headless
+  browser.
+
 ### An actor's own blocks and events (ACTOR_BLOCKS_PLAN.md)
 
 - **Look and Blocks are tabs**: the design system's `tablist`, each panel a
