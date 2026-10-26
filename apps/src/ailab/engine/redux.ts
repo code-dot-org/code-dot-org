@@ -162,7 +162,6 @@ const ailabSlice = createSlice({
     ) {
       const {dataset, presetColumns} = action.payload;
       if (state.currentPanel === 'selectDataset') {
-        // Only an upload is held as a File rather than a path to one of ours.
         state.instructionsKey =
           typeof state.csvfile === 'object'
             ? 'uploadedDataset'

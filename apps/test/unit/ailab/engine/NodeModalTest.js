@@ -167,7 +167,6 @@ describe('NodeModal', () => {
   });
 
   it("shows the model's columns, then every column with the label last", () => {
-    // `name` has no type, so it is not selectable, only shown.
     act(() =>
       seedDataset(
         trained.store,
