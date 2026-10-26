@@ -182,11 +182,6 @@ describe('getFilterableColumns', () => {
   });
 });
 
-/*
-  The memoized selectors above compare their inputs by reference, so the
-  stand-ins for an absent dataset have to be the same objects every time. A
-  fresh `[]` per call would make every one of them recompute on any change.
-*/
 describe('reading a dataset that has not loaded', () => {
   const empty = {dataset: undefined};
 

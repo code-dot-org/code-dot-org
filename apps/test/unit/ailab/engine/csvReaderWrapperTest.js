@@ -1,7 +1,3 @@
-/*
-  The reader hands rows back rather than writing them to the store, so that a
-  caller can hold them until the rest of the dataset is ready.
-*/
 import Papa from 'papaparse';
 
 import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
@@ -38,7 +34,6 @@ describe('fetchCsv', () => {
     });
   });
 
-  // Nothing resolved this before, so the lab waited for it forever.
   test('resolves a failure when the download errors', async () => {
     const loading = fetchCsv('missing.csv');
     Papa.parse.mock.calls[0][1].error();

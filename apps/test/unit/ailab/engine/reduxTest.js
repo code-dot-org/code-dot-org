@@ -228,7 +228,6 @@ describe('ailab reducer', () => {
       expect(next.instructionsKey).toBe('datasetView');
     });
 
-    // An upload is held as a File; one of ours is held as a path to it.
     test('loading a dataset records uploaded vs selected', () => {
       const loadedOver = csvfile =>
         reducer(

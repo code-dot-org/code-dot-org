@@ -27,12 +27,10 @@ export const ANIMAL_COLUMNS = {
   legs: ColumnTypes.NUMERICAL,
 };
 
-/* A whole dataset, in the shape the loader hands over. */
 export function dataset(rows, columnsByDataType, metadata = {card: {}}) {
   return {rows, metadata, columnsByDataType, removedRowsCount: 0};
 }
 
-/* Loads one the way the loader does, in a single write. */
 export function seedDataset(store, rows, columnsByDataType, metadata) {
   store.dispatch(
     setDatasetLoaded({dataset: dataset(rows, columnsByDataType, metadata)})

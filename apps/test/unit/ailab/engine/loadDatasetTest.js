@@ -1,7 +1,3 @@
-/*
-  A dataset is assembled before any of it is written, so these drive the
-  readers' results rather than the order their dispatches once arrived in.
-*/
 import {fetchCsv, parseCsvFile} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {invalidatePendingDatasetLoads} from '@cdo/apps/ailab/engine/datasetLoad';
 import {fetchMetadata} from '@cdo/apps/ailab/engine/jsonReaderWrapper';
@@ -72,7 +68,6 @@ describe('loadDataset', () => {
     });
   });
 
-  // A column the last dataset had must not survive into this one.
   test('replaces the column types rather than adding to them', async () => {
     store.dispatch(
       setDatasetLoaded({
@@ -128,10 +123,6 @@ describe('loadDataset', () => {
   });
 });
 
-/*
-  A load that cannot finish still has to say so. Nothing resolved these before,
-  so the lab waited on them for as long as the page was open.
-*/
 describe('a dataset that will not load', () => {
   test('reports a failure when the rows cannot be read', async () => {
     fetchCsv.mockResolvedValue({ok: false, reason: 'tooFewRows'});
@@ -152,10 +143,6 @@ describe('a dataset that will not load', () => {
   });
 });
 
-/*
-  The guard moved from each reader to the one point that writes, so a load the
-  student has moved on from has to be dropped whichever way it ended.
-*/
 describe('a load a newer one has superseded', () => {
   const supersede = async result => {
     let finish;
@@ -194,10 +181,6 @@ describe('loadUploadedDataset', () => {
     });
   });
 
-  /*
-    A level's columns name our dataset's, so they say nothing about a file the
-    student brought, and applying them would report every one as missing.
-  */
   test("leaves the level's preset columns alone", async () => {
     store.dispatch(setMode({label: 'animal', features: ['legs']}));
 

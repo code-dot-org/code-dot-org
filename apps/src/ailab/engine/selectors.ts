@@ -52,7 +52,6 @@ export const getRemovedRowsCount = (state: RootState): number =>
 
 export type DatasetStatus = 'none' | 'loading' | 'failed' | 'loaded';
 
-/* Where the chosen dataset has got to, which is the only thing to gate on. */
 export const getDatasetStatus = (state: RootState): DatasetStatus => {
   if (state.dataset) {
     return 'loaded';
