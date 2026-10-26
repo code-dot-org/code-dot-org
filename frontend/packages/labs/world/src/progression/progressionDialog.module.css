@@ -1,0 +1,296 @@
+/* The modal around the map: a header, the map, and a reading pane beside it.
+   The map's own colors are `progressionMap.module.css`; this file is the
+   furniture.
+ *
+ * TYPE COMES FROM THE THEME, not from here. Every heading and paragraph in the
+ * dialog is a MUI `Typography` with one of the design system's own variants
+ * (`themes/code.org`), so what is left in this file is layout — margins, gaps,
+ * widths and the two or three opacities that say "quieter than the thing above
+ * it". A pixel size typed in here would be a fourth size nobody chose, and a
+ * dialog that is the lab's should read as the lab's. */
+
+.dialog {
+  /* The design system's dialog paints its own surface and leaves the text
+     color alone, so in the dark theme the content inherits the page's black
+     and lands on a dark panel at 1.55:1. Axe found it; this is the fix. */
+  color: var(--text-neutral-primary);
+  display: flex;
+  width: min(1200px, 92vw);
+  height: min(800px, 88vh);
+  max-width: none;
+  padding: 0;
+}
+
+.layout {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    'header header'
+    'map detail';
+  grid-template-columns: 1fr 360px;
+  grid-template-rows: auto 1fr;
+  min-height: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px 56px 10px 20px; /* room for the dialog's own close button */
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  gap: 14px;
+  flex-wrap: wrap;
+  grid-area: header;
+}
+
+.views {
+  margin-inline-start: auto;
+}
+
+/* Off screen, not hidden: a live region with `display: none` is announced by
+   nothing at all. */
+.announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.heading {
+  margin: 0;
+}
+
+.count {
+  max-width: 46ch;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.mapPane {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  grid-area: map;
+}
+
+.detailPane {
+  min-height: 0;
+  border-left: 1px solid var(--borders-neutral-primary);
+  grid-area: detail;
+  overflow-y: auto;
+}
+
+.detail {
+  /* THE DESIGN SYSTEM'S FONT. Every heading and paragraph here is a MUI
+     `Typography` and carries the theme's type with it, but the plain `<ul>`
+     under Unlocks is not one — it inherits from whatever is above it, which is
+     the dialog's container and not the theme. Named once, here, rather than by
+     wrapping every list item in a component. */
+  font-family: Geist, 'Noto Sans', system-ui, sans-serif;
+  padding: 16px 18px 24px;
+}
+
+.breadcrumb {
+  margin: 0;
+  opacity: 0.65;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 2px 0 10px;
+}
+
+.detail h3.heading {
+  margin: 18px 0 4px;
+  opacity: 0.7;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+/* The drawn block under an unlock: on its own line, under the words it
+   illustrates, and scrolling rather than stretching the pane when the block is
+   a wide one. */
+.blockPreview {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 4px 0 8px;
+}
+
+/* No markers anywhere in this list. A row is either a drawn block — where a
+   bullet would be a mark for a word that is not there — or an icon and a name,
+   where the icon IS the mark and two would be one too many. */
+.unlock {
+  margin-left: -18px;
+  list-style: none;
+}
+
+/* Enough room for the widest of the file icons, so the names line up in a
+   column whatever kind each row happens to be. */
+.unlockIcon {
+  display: inline-block;
+  width: 18px;
+  margin-right: 6px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* Blockly's injection div is sized for a WORKSPACE — `height: 100%` and
+   `flex: 1 1 100%` — which is right when it fills a pane and catastrophic in a
+   list: each preview took the height of the whole reading pane, so the two
+   unlocks of a lesson were the better part of a page apart. Inline mode sizes
+   the SVG itself once it has drawn; the container only has to get out of the
+   way.
+
+   `injectionDiv` is Blockly's own class rather than a hashed module one, which
+   is what makes it nameable from here at all. */
+.blockPreview :global(.injectionDiv) {
+  height: auto;
+  flex: none;
+  overflow: visible;
+}
+
+.list li {
+  margin-bottom: 2px;
+}
+
+.muted {
+  opacity: 0.65;
+}
+
+/* ── What a lesson needs ─────────────────────────────────────────────────── */
+
+/* Rows rather than bullets: each one goes somewhere, so each one is a target.
+   No list marker, because the icon is the marker and two would be one too
+   many. */
+.needs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ALIGNMENT ONLY. The border, the fill, the type and the focus ring are the
+   button theme's to decide, and every one of them written here was a second,
+   worse answer to a question the design system had already answered. What is
+   left is the one thing the theme cannot know: a row that reads as a row wants
+   its label at the left edge, not centered the way a button's caption is. */
+.need {
+  justify-content: flex-start;
+
+  /* 24px is the WCAG 2.2 floor for a pointer target; these are rows, so the
+     width is never the problem and the height is. */
+  min-height: 32px;
+  text-align: left;
+}
+
+.needIcon {
+  flex: none;
+  width: 16px;
+  text-align: center;
+}
+
+.needTitle {
+  flex: 1;
+  font-size: 14px;
+}
+
+/* The state, said in words as well as in the icon and its color — color on
+   its own is not something everybody can read. */
+.needState {
+  flex: none;
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.pending {
+  margin: 10px 0 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: color-mix(in srgb, currentcolor 7%, transparent);
+  opacity: 0.8;
+}
+
+/* A control, so it gets a control's target: 24×24 is the WCAG 2.2 floor and
+   an underlined word on its own is under it. */
+.link {
+  min-height: 24px;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: start;
+
+  /* Underlined and in the body color rather than a link blue: the underline is
+     the non-color signal (WCAG 1.4.1), and body-on-body is the one pair that
+     cannot fail contrast in either theme. */
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* The buttons in this pane carry NO styling of their own. They are MUI
+   Buttons — `contained` for the action a lesson leads with, `outlined` for the
+   one beside it — and the color, the border, the padding, the type, the
+   hover, the focus ring and the disabled state all come from the theme. There
+   was a hand-rolled blue here, and it was the one thing in the dialog that did
+   not change with the theme. */
+
+.verdict {
+  margin: 10px 0 0;
+}
+
+.verdict:empty {
+  margin: 0;
+}
+
+.empty {
+  padding: 20px 18px;
+  opacity: 0.7;
+}
+
+/* Reflow (WCAG 1.4.10). At 400% zoom, or on a narrow window, a 360px reading
+   column beside a map is two columns too many: the panes stack, and the map
+   keeps a fixed slice of the height so the words below it are reachable by
+   scrolling in one direction. */
+@media (max-width: 900px), (max-height: 560px) {
+  .layout {
+    grid-template-areas:
+      'header'
+      'map'
+      'detail';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(180px, 40%) 1fr;
+  }
+
+  .detailPane {
+    border-top: 1px solid var(--borders-neutral-primary);
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primary,
+  .secondary {
+    transition: none;
+  }
+}

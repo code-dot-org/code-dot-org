@@ -1,0 +1,304 @@
+/* The map.
+ *
+ * NO COLOR LITERALS. Every color comes in as a custom property set by
+ * `ProgressionMap` from `./palette`, which solves each one for a target
+ * LUMINANCE so the contrast ratios hold at every region hue rather than only at
+ * the one they were eyeballed against. `__tests__/palette.test.ts` measures all
+ * of them; a literal written here would be a color that test cannot see.
+ *
+ * LIGHT AND DARK ARE CHOSEN ON `[data-theme]`, which is the attribute the
+ * design system's own tokens are scoped by — so the map and the dialog it sits
+ * in cannot end up in different themes. Two earlier answers could: keying off
+ * `prefers-color-scheme` painted dark colors on a white dialog whenever the OS
+ * and the lab disagreed, and reading the React theme context put a light map
+ * inside a dark panel whenever the context and the attribute did.
+ *
+ * Everything below reads the unsuffixed name and never knows which theme it is.
+ */
+
+.map {
+  --page: var(--page-light);
+  --surface: var(--surface-light);
+  --ink: var(--ink-light);
+  --shut-fill: var(--shut-fill-light);
+  --shut-ink: var(--shut-ink-light);
+  --shut-line: var(--shut-line-light);
+  --ring: var(--ring-light);
+  --focus: var(--focus-light);
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--page);
+  touch-action: none; /* the map handles its own drag */
+  user-select: none;
+}
+
+.region {
+  --field: var(--field-light);
+  --tone: var(--tone-light);
+  --line: var(--line-light);
+  --name: var(--name-light);
+}
+
+:global([data-theme='Dark']) .map {
+  --page: var(--page-dark);
+  --surface: var(--surface-dark);
+  --ink: var(--ink-dark);
+  --shut-fill: var(--shut-fill-dark);
+  --shut-ink: var(--shut-ink-dark);
+  --shut-line: var(--shut-line-dark);
+  --ring: var(--ring-dark);
+  --focus: var(--focus-dark);
+}
+
+:global([data-theme='Dark']) .region {
+  --field: var(--field-dark);
+  --tone: var(--tone-dark);
+  --line: var(--line-dark);
+  --name: var(--name-dark);
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+/* ── Regions ─────────────────────────────────────────────────────────────── */
+
+/* Drawn at full cell size, so neighbouring cells' fills meet and the region
+   reads as one field with tiles sitting on it. */
+.regionFill {
+  fill: var(--field);
+}
+
+/* Heavier than the tiles' own strokes and fully opaque, because this is the
+   line that says where a region ENDS — and a region boundary drawn at the same
+   weight as the tiles inside it is a line nobody sees. */
+.regionOutline {
+  fill: none;
+  stroke: var(--line);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.9;
+}
+
+.regionName {
+  fill: var(--name);
+  dominant-baseline: middle;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ── Edges ───────────────────────────────────────────────────────────────── */
+
+/* Colored by the region the edge leads INTO, not out of: the two edges into a
+   genre's gate then both wear the genre's color, which is what makes them read
+   as the ways in rather than as two unrelated marks.
+ *
+ * Drawn over a halo of the page color (see the component), because a bar lies
+ * across whatever the two tiles are filled with and cannot be asked to contrast
+ * with all of them at once. */
+.edgeHalo {
+  stroke: var(--page);
+  stroke-linecap: round;
+}
+
+.edge {
+  stroke: var(--line);
+  stroke-linecap: round;
+}
+
+.edgeUnmet {
+  stroke: var(--shut-line);
+  stroke-dasharray: 3 4;
+}
+
+/* ── Tiles ───────────────────────────────────────────────────────────────── */
+
+.tile {
+  cursor: pointer;
+}
+
+.tile:focus {
+  outline: none;
+}
+
+.tileShape {
+  stroke-width: 2;
+  transition:
+    fill 120ms ease,
+    stroke 120ms ease;
+}
+
+.done .tileShape {
+  fill: var(--tone);
+  stroke: var(--line);
+}
+
+.open .tileShape {
+  fill: var(--surface);
+  stroke: var(--line);
+}
+
+/* A locked tile is gray INSIDE and its region's color AROUND, which is the
+   one thing the map could not say before: a learner looking at a region they
+   have not opened could see the tiles and not which region they were in. The
+   fill still says "shut" — that is what a state is for — and the dashes say it
+   twice. */
+.shut .tileShape {
+  fill: var(--shut-fill);
+  stroke: var(--line);
+  stroke-dasharray: 4 3;
+  opacity: 0.85;
+}
+
+.tile:hover .tileShape {
+  stroke-width: 3;
+}
+
+/* THE DESIGN SYSTEM'S FONT, named rather than inherited. An SVG `<text>` does
+   not pick up the page's type the way a `<p>` does — it falls back to the
+   browser's default serif unless a family reaches it — so the map's titles and
+   region names were the one part of this dialog set in something nobody chose.
+   `Geist` with `Noto Sans` behind it is the lab's own stack
+   (`@code-dot-org/fonts`, FONT_FAMILY_NAMES). */
+.map text {
+  font-family: Geist, 'Noto Sans', system-ui, sans-serif;
+}
+
+.label {
+  fill: var(--ink);
+  font-weight: 600;
+  pointer-events: none;
+  text-anchor: middle;
+}
+
+.shut .label {
+  fill: var(--shut-ink);
+}
+
+/* A FontAwesome glyph rather than a drawn path — see the component, which sets
+   the family and the weight inline from `glyphIcon`.
+
+   THE FAMILY IS NOT HERE, and that is the point. The rule above names one for
+   every `<text>` in the map, and `.map text` outweighs a bare `.glyph` — one
+   class and one element beats one class — so a family declared here would lose
+   to Geist and both tiles would draw an empty box, which is what they did. An
+   inline style outranks either, and it comes from the same list the block
+   buttons use rather than a second copy of it. */
+.map .glyph {
+  fill: var(--ink);
+  pointer-events: none;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.map .shut .glyph {
+  fill: var(--shut-ink);
+}
+
+/* The selection ring sits outside the tile rather than on it, so it does not
+   argue with the state stroke it would otherwise replace.
+ *
+ * HEAVY, and drawn over a halo of the page color. Two and a half pixels of
+ * ink was findable when you had just clicked the tile and invisible when you
+ * had not — and the case that matters is the second one: following a link in
+ * the detail pane moves the selection to a tile somewhere else on the map, and
+ * the whole point of the map coming along is being able to see where it went.
+ * The halo is what stops the ring disappearing into whatever region fill or
+ * edge bar happens to be under it. */
+.ringHalo {
+  fill: none;
+  stroke: var(--page);
+  stroke-width: 8;
+}
+
+/* …and a slow pulse, so a selection that ARRIVED draws the eye rather than
+   waiting to be found. Two beats and then still: an outline that never stops
+   moving is a distraction for the rest of the session. */
+@keyframes ring-arrives {
+  0%,
+  100% {
+    stroke-width: 4;
+  }
+
+  50% {
+    stroke-width: 7;
+  }
+}
+
+.ring {
+  fill: none;
+  stroke: var(--ring);
+  stroke-width: 4;
+  animation: ring-arrives 700ms ease-in-out 2;
+}
+
+/* Focus is the same ring in the accent color, and is drawn as well as the
+   selection ring rather than instead of it — they mean different things, and a
+   keyboard user moving focus over the map needs to see both. */
+.focusRing {
+  display: none;
+  fill: none;
+  stroke: var(--focus);
+  stroke-dasharray: 6 4;
+  stroke-width: 3;
+}
+
+.tile:focus-visible .focusRing {
+  display: block;
+}
+
+/* ── Controls ────────────────────────────────────────────────────────────── */
+
+.controls {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.control {
+  /* 24×24 is the WCAG 2.2 floor for a pointer target; 32 leaves room to miss.
+     Sized here rather than by MUI's `small`, which is smaller than the floor.
+     The surface and border are the MAP's rather than the theme's, because
+     these three sit on the map and have to read against whatever is under
+     them. */
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--shut-line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.control:hover {
+  border-color: var(--ink);
+  background: var(--surface);
+}
+
+.control:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring {
+    animation: none;
+  }
+
+  .tileShape {
+    transition: none;
+  }
+}
