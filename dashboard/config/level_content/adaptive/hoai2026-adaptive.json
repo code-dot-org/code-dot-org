@@ -6,7 +6,7 @@
   "map": { "layout": "destinations" },
   "project": {
     "templateLevel": "adaptive-HoAI26-template-main-project",
-    "description": "TODO"
+    "description": "Work on your final project here!"
   },
   "skills": {
     "build": {
@@ -47,6 +47,7 @@
       "id": "intro",
       "title": "Intro",
       "description": "Intro panels",
+      "routeAfterCompletion": true,
       "steps": [
         {
           "id": "intro-panels",
@@ -69,24 +70,6 @@
               "key": "adaptive-test-kickoff-a1596eb7-255e-4629-8dc8-a4a4dc65fd23",
               "imageUrl": "https://images.code.org/c8d6eae80b0e56a0ff6f77049964a597-Panel 3.png",
               "text": "###Spark your ideas.\nCheck out these examples then think about what YOU want to build!",
-              "layout": "text-bottom-right"
-            },
-            {
-              "key": "adaptive-test-kickoff-388e91e4-3f9c-4072-a12c-81dead86efd2",
-              "imageUrl": "https://images.code.org/b9499ec8e0d0089c1a804c9782dacd63-Second Helpings meal pickup dashboard.png",
-              "text": "###Second Helpings\nConnect extra food with the people who need it, before it goes to waste.",
-              "layout": "text-bottom-right"
-            },
-            {
-              "key": "adaptive-test-kickoff-8da3742a-efad-47fd-b3bd-6c3b62e712f4",
-              "imageUrl": "https://images.code.org/fdce7115752a614e912d3f6bbfea64cd-Calm Open Door teen support dashboard.png",
-              "text": "####Open Door\nMake it easier for a teen to find the right support at the right moment.",
-              "layout": "text-bottom-right"
-            },
-            {
-              "key": "adaptive-test-kickoff-3fc8f926-869c-4d76-86d0-b4041931f9f5",
-              "imageUrl": "https://images.code.org/4d73db76c6b43c86d4f2e73a172a849d-Puente_ School news in your language.png",
-              "text": "###Puente\nMake sure every family can understand what’s happening at school.",
               "layout": "text-bottom-right"
             },
             {
@@ -123,7 +106,7 @@
             {
               "id": 101,
               "type": "freeResponse",
-              "text": "TODO"
+              "text": "Explain a website you would like to make in this activity. What is the topic or theme of the site? Who is it for?"
             }
           ]
         },
@@ -196,6 +179,10 @@
       "description": "Writes a prompt with 2 or more specific details, or a follow-up that changes one thing.",
       "skillIds": ["build"],
       "requires": ["intro"],
+      "targetEvidenceLevels": {
+        "build": 2
+      },
+      "skippable": true,
       "steps": [
         {
           "id": "steer-it-video",
@@ -251,6 +238,10 @@
       "description": "Names a block of their page and what it is for.",
       "skillIds": ["language"],
       "requires": ["intro"],
+      "targetEvidenceLevels": {
+        "language": 2
+      },
+      "skippable": true,
       "steps": [
         {
           "id": "use-the-lingo-video",
@@ -373,6 +364,10 @@
       "description": "Reports a problem with what was expected, what happened and where.",
       "skillIds": ["debug"],
       "requires": ["intro"],
+      "targetEvidenceLevels": {
+        "debug": 2
+      },
+      "skippable": true,
       "steps": [
         {
           "id": "give-context-video",
