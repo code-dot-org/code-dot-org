@@ -20,10 +20,6 @@
   border-color: var(--borders-brand-purple-light);
 }
 
-.optionLetter {
-  font-weight: 600;
-}
-
 // After .optionSelected so a graded pick overrides its purple.
 .optionCorrect {
   background: var(--background-success-light);

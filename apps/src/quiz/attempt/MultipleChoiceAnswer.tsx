@@ -1,11 +1,11 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
-import {formatChoiceLetter, selectedAnswerLabel} from '../utils';
+import {selectedAnswerLabel} from '../utils';
 
+import ChoiceLabel from './ChoiceLabel';
 import {MultipleChoiceQuestionResponse, QuizQuestionResult} from './types';
 
 import styles from './multiple-choice-answer.module.scss';
@@ -66,16 +66,11 @@ const MultipleChoiceAnswer: React.FunctionComponent<{
               })}
               aria-hidden="true"
             />
-            <Typography
-              variant="body2"
-              component="span"
+            <ChoiceLabel
+              index={index}
+              text={choice.text}
               className={styles.optionText}
-            >
-              <span className={styles.optionLetter}>
-                {formatChoiceLetter(index)}.
-              </span>{' '}
-              {choice.text}
-            </Typography>
+            />
           </div>
           {status === 'correct' && (
             <>

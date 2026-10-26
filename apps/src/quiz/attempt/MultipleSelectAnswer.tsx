@@ -4,8 +4,9 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
-import {formatChoiceLetter, selectedAnswerLabel} from '../utils';
+import {selectedAnswerLabel} from '../utils';
 
+import ChoiceLabel from './ChoiceLabel';
 import {MultipleSelectQuestionResponse, QuizQuestionResult} from './types';
 
 import styles from './multiple-select-answer.module.scss';
@@ -78,16 +79,11 @@ const MultipleSelectAnswer: React.FunctionComponent<{
                     <FontAwesomeV6Icon iconName="check" iconStyle="solid" />
                   )}
                 </div>
-                <Typography
-                  variant="body2"
-                  component="span"
+                <ChoiceLabel
+                  index={index}
+                  text={choice.text}
                   className={styles.optionText}
-                >
-                  <span className={styles.optionLetter}>
-                    {formatChoiceLetter(index)}.
-                  </span>{' '}
-                  {choice.text}
-                </Typography>
+                />
               </div>
               {(status === 'correct' || status === 'missed') && (
                 <>

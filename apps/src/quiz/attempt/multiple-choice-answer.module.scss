@@ -83,8 +83,7 @@
 .optionNeutral {
   border-color: var(--border-disabled-neutral);
 
-  .optionText,
-  .optionLetter {
+  .optionText {
     color: var(--text-neutral-tertiary);
   }
 }
@@ -97,10 +96,6 @@
   height: 20px;
   border: 2px solid var(--border-disabled-neutral);
   border-radius: 50%;
-}
-
-.optionLetter {
-  font-weight: 600;
 }
 
 .optionText {

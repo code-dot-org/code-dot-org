@@ -1,12 +1,11 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
-import {formatChoiceLetter} from '../utils';
 
 import AttemptCard from './AttemptCard';
+import ChoiceLabel from './ChoiceLabel';
 import QuestionDescription from './QuestionDescription';
 
 import styles from './multi-choice-question-container.module.scss';
@@ -57,12 +56,7 @@ const MultipleSelectQuestionContainer: React.FunctionComponent<
               isSelected && styles.optionSelected
             )}
           >
-            <Typography variant="body2" component="span">
-              <span className={styles.optionLetter}>
-                {formatChoiceLetter(index)}.
-              </span>{' '}
-              {choice.text}
-            </Typography>
+            <ChoiceLabel index={index} text={choice.text} />
           </Checkbox>
         );
       })}
