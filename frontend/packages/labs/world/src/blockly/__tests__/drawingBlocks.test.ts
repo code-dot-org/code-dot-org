@@ -246,6 +246,19 @@ describe('the five things there are to draw', () => {
   });
 });
 
+describe('a picture', () => {
+  it('is one of the project’s pictures, as a value: the file, not a cell', () => {
+    // Read while the game runs, where the `.sheet` files are not known
+    // (specs/ACTORS_AS_DATA_PLAN.md, step 4).
+    const [code] = blockNamed('world_picture').generator!.javascript(
+      {getFieldValue: () => 'coin.png#3'},
+      {},
+      {},
+    ) as [string, number];
+    expect(code).toBe('"coin.png"');
+  });
+});
+
 describe('the Drawing category', () => {
   it('is shown on a drawing’s own surface and in no file', () => {
     // The pen and the shapes can be used in exactly one place — `pen` is bound

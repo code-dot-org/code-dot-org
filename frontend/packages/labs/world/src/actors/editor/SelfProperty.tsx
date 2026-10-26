@@ -36,6 +36,8 @@ export interface SelfPropertyProps {
   /** A change to the whole project: a rename reaches other files. */
   onProject: (source: MultiFileSource) => void;
   isReadOnly: boolean;
+  /** The project's pictures, for a picture property's default. */
+  pictures?: readonly string[];
 }
 
 const capitalize = (text: string) =>
@@ -50,6 +52,7 @@ export const SelfProperty = ({
   onEdit,
   onProject,
   isReadOnly,
+  pictures,
 }: SelfPropertyProps) => {
   const [mode, setMode] = useState<'show' | 'rename' | 'delete'>('show');
   const [draft, setDraft] = useState(property.name);
@@ -151,6 +154,7 @@ export const SelfProperty = ({
             : (property.value ?? '')
         }
         isReadOnly={isReadOnly || !takesValue(property.type)}
+        pictures={pictures}
         onValue={text => onEdit(setPropertyDefault(data, property.name, text))}
       />
       {!isReadOnly && (

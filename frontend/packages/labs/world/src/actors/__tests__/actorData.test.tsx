@@ -176,6 +176,30 @@ describe('an actor folded into data', () => {
     expect(data.blocks!.blocks!.blocks).toEqual([]);
   });
 
+  it('keeps a picture value as data, and writes it back', () => {
+    const data = fold(
+      actorFile('Card', [
+        {
+          type: 'world_set_Card_FaceProperty',
+          inputs: {
+            ACTOR: {block: {type: 'world_this_actor'}},
+            VALUE: {
+              shadow: {type: 'world_picture', fields: {SPRITE: 'ace.png'}},
+            },
+          },
+        },
+      ]),
+    );
+    expect(data.values).toEqual([
+      {
+        setter: 'world_set_Card_FaceProperty',
+        type: 'picture',
+        value: 'ace.png',
+      },
+    ]);
+    expect(fold(JSON.stringify(actorView(data)))).toEqual(data);
+  });
+
   it('is nothing for a file with no define actor', () => {
     expect(foldActor({blocks: {blocks: []}})).toBeUndefined();
   });

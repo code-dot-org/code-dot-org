@@ -109,6 +109,7 @@ const LITERAL: Record<string, ActorLiteral['type']> = {
   angle: 'number',
   string: 'string',
   color: 'color',
+  picture: 'picture',
   boolean: 'boolean',
   vector: 'vector',
   point: 'vector',
@@ -136,6 +137,8 @@ export function literalOf(
     }
     case 'string':
       return {type: 'string', value: text};
+    case 'picture':
+      return text ? {type: 'picture', value: text} : undefined;
     case 'color':
       return /^#[0-9a-f]{6}$/i.test(text.trim())
         ? {type: 'color', value: text.trim().toLowerCase()}

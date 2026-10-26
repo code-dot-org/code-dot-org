@@ -115,6 +115,13 @@ describe('a value', () => {
       type: 'list',
       value: ['one', 'two'],
     });
+    // One of the project's pictures, by file name; none is no value.
+    expect(literalOf('picture', 'coin.png')).toEqual({
+      type: 'picture',
+      value: 'coin.png',
+    });
+    expect(literalOf('picture', '')).toBeUndefined();
+    expect(takesValue('picture')).toBe(true);
     expect(literalOf('boolean', 'yes')).toBeUndefined();
     expect(takesValue('actor')).toBe(false);
     expect(takesValue('angle')).toBe(true);

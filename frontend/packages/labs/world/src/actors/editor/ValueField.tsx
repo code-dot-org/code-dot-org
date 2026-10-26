@@ -9,6 +9,7 @@
 import {useEffect, useState, type ChangeEvent, type KeyboardEvent} from 'react';
 
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import TextField from '@code-dot-org/component-library/textField';
 
 import {parseVectorText, vectorText} from '../../mapEditor/worldProperties';
@@ -24,6 +25,8 @@ export interface ValueFieldProps {
   value: string;
   onValue: (text: string) => void;
   isReadOnly: boolean;
+  /** The project's pictures, by file name, which a picture is one of. */
+  pictures?: readonly string[];
 }
 
 const blurOnEnter = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -39,6 +42,7 @@ export const ValueField = ({
   value,
   onValue,
   isReadOnly,
+  pictures = [],
 }: ValueFieldProps) => {
   const [draft, setDraft] = useState(value);
   // What the file says, once it says something else.
@@ -85,6 +89,28 @@ export const ValueField = ({
           />
         ))}
       </div>
+    );
+  }
+  if (type === 'picture') {
+    // One of the project's pictures, as `set sprite` names one; and the one
+    // it holds, if the project no longer has it, so the field never says
+    // otherwise.
+    return (
+      <SimpleDropdown
+        name={name}
+        labelText={label}
+        size="s"
+        disabled={isReadOnly}
+        selectedValue={value}
+        items={[
+          {value: '', text: '(none)'},
+          ...pictures.map(file => ({value: file, text: file})),
+          ...(value && !pictures.includes(value) ? [{value, text: value}] : []),
+        ]}
+        onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+          onValue(event.target.value)
+        }
+      />
     );
   }
   if (type === 'color') {

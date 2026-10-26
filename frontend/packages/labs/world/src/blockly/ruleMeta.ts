@@ -505,6 +505,9 @@ export const PROPERTY_TYPES: ReadonlySet<string> = new Set([
   // socket takes a swatch, and the map editor's inspector shows a picker
   // (engine/core/types).
   'color',
+  // One of the project's pictures, held as its file name: what a drawn
+  // actor draws (`draw image`), chosen from the project's pictures.
+  'picture',
   'vector',
   'point',
   // Lists of plain values, which unlike the actor list below are carried
@@ -595,6 +598,7 @@ export const propertyDefault = (
       );
     case 'string':
     case 'color':
+    case 'picture':
       return String(value ?? '');
     // One field holding both axes, because one field edits both.
     case 'vector': {
@@ -1231,6 +1235,7 @@ const defaultLiteral = (property: PropertyMeta): string => {
       return value ? 'true' : 'false';
     case 'string':
     case 'color':
+    case 'picture':
       return JSON.stringify(String(value ?? ''));
     case 'vector':
     case 'point': {

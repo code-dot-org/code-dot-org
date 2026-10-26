@@ -265,6 +265,8 @@ export interface MapStageProps {
    * property offers instead of a text box (specs/STYLES_PLAN.md).
    */
   themeOptions?: ReadonlyArray<readonly [string, string]>;
+  /** The project's pictures by file name, for a picture property. */
+  pictureChoices?: readonly string[];
   /**
    * How big each kind is in the world, for the kinds that declare a picture.
    *
@@ -549,6 +551,7 @@ export const MapStage = ({
   pictures,
   schemas,
   themeOptions = [],
+  pictureChoices = [],
   sizes,
   placementSizes,
   scales,
@@ -1759,6 +1762,32 @@ export const MapStage = ({
             }
             selectOption(prop, event.target.value);
           }}
+        />
+      );
+    }
+    if (prop.type === 'picture') {
+      // One of the project's pictures, as `set sprite` names one
+      // (specs/ACTORS_AS_DATA_PLAN.md, step 4); empty is the kind's own.
+      const held = draft[fieldKey(prop)] ?? '';
+      return (
+        <SimpleDropdown
+          key={fieldKey(prop)}
+          name={`prop-${fieldKey(prop)}`}
+          labelText={capitalize(prop.name)}
+          size="s"
+          className={styles.inspectorDropdown}
+          disabled={locked}
+          selectedValue={held}
+          items={[
+            {value: '', text: '(its kind’s)'},
+            ...pictureChoices.map(file => ({value: file, text: file})),
+            ...(held && !pictureChoices.includes(held)
+              ? [{value: held, text: held}]
+              : []),
+          ]}
+          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+            selectOption(prop, event.target.value)
+          }
         />
       );
     }

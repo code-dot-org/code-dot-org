@@ -170,7 +170,7 @@ const parametersOf = (contents: string): EffectParameter[] => {
 };
 
 /** The property types a new property of its own can be. */
-const NEW_TYPES = ['number', 'string', 'boolean', 'color', 'vector'];
+const NEW_TYPES = ['number', 'string', 'boolean', 'color', 'picture', 'vector'];
 
 const capitalize = (text: string) =>
   text ? text[0].toUpperCase() + text.slice(1) : text;
@@ -759,6 +759,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
                   <SelfProperty
                     key={property.name}
                     property={property}
+                    pictures={pictureNames}
                     data={data}
                     fileId={fileId}
                     modulePath={modulePath}
@@ -846,6 +847,7 @@ export const ActorEditor = (props: CustomEditorProps) => {
                         name={`trait-${property.setter}`}
                         label={capitalize(property.name)}
                         type={property.type}
+                        pictures={pictureNames}
                         value={
                           valueText(
                             (data.values ?? []).find(

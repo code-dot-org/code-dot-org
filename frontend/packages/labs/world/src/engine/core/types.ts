@@ -73,6 +73,16 @@ export type PropertyType =
    * a picker rather than six characters to type by hand.
    */
   | 'color'
+  /**
+   * One of the project's pictures, by file name (`player.png`).
+   *
+   * A string to the engine, as a color is, and its own type for the same
+   * reason: a socket takes a picture rather than words, and an inspector
+   * offers the project's pictures rather than a box to type a file name in.
+   * What a drawn actor draws with `draw image` (specs/ACTORS_AS_DATA_PLAN.md,
+   * step 4).
+   */
+  | 'picture'
   | 'vector'
   | 'point'
   /**

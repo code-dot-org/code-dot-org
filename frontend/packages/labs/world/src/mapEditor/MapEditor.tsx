@@ -596,6 +596,16 @@ export const MapEditor = ({
     [currentSources],
   );
 
+  /** …and its pictures, for a placement's picture property. */
+  const pictureChoices = useMemo(
+    () =>
+      projectImagePaths(currentSources.source)
+        .filter(path => !isBackgroundPath(path))
+        .map(path => path.split('/').pop() ?? path)
+        .sort(),
+    [currentSources],
+  );
+
   const heldMaps = useMemo(() => {
     const held: Record<string, MapDoc> = {};
     for (const actor of map.actors) {
@@ -957,6 +967,7 @@ export const MapEditor = ({
           pictures={shown.pictures}
           schemas={shownSchemas}
           themeOptions={themeOptions}
+          pictureChoices={pictureChoices}
           sizes={shown.sizes}
           placementSizes={shown.placementSizes}
           scales={scales}

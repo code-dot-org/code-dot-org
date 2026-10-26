@@ -40,6 +40,8 @@ export type ActorLiteral =
   | {type: 'number'; value: number}
   | {type: 'string'; value: string}
   | {type: 'color'; value: string}
+  /** One of the project's pictures, by file name. */
+  | {type: 'picture'; value: string}
   | {type: 'boolean'; value: boolean}
   | {type: 'list'; value: string[]}
   | {type: 'vector'; value: {x: number; y: number}};
@@ -213,6 +215,10 @@ function readLiteral(input: unknown): ActorLiteral | undefined {
       return plain && typeof fields.COLOUR === 'string'
         ? {type: 'color', value: fields.COLOUR}
         : undefined;
+    case 'world_picture':
+      return plain && typeof fields.SPRITE === 'string'
+        ? {type: 'picture', value: fields.SPRITE}
+        : undefined;
     case 'logic_boolean':
       return plain && (fields.BOOL === 'TRUE' || fields.BOOL === 'FALSE')
         ? {type: 'boolean', value: fields.BOOL === 'TRUE'}
@@ -252,6 +258,8 @@ function writeLiteral(literal: ActorLiteral): Record<string, unknown> {
       return {shadow: {type: 'text', fields: {TEXT: literal.value}}};
     case 'color':
       return {shadow: {type: 'colour_picker', fields: {COLOUR: literal.value}}};
+    case 'picture':
+      return {shadow: {type: 'world_picture', fields: {SPRITE: literal.value}}};
     case 'boolean':
       return {
         block: {

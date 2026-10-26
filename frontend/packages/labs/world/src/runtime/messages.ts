@@ -278,6 +278,8 @@ export interface PropertySchema {
     | 'boolean'
     | 'string'
     | 'color'
+    /** One of the project's pictures, by file name; offered as a list. */
+    | 'picture'
     | 'vector'
     | 'point'
     | 'actor'

@@ -1271,6 +1271,45 @@ const worldChildrenOf = defineBlock({
   },
 });
 
+/** What a picture reports, and what a picture socket takes. */
+export const PICTURE_CHECK = 'Picture';
+/** `⟨picture⟩`: one of the project's pictures, as a value. */
+export const PICTURE_BLOCK = 'world_picture';
+
+/**
+ * One of the project's pictures, as a value: what a picture property holds
+ * and `draw image` draws (specs/ACTORS_AS_DATA_PLAN.md, step 4).
+ *
+ * The same field `set sprite` names a picture with, and the same list, open
+ * button and `(import…)` row, so choosing a picture is one gesture wherever
+ * it happens. The file, not a cell of it: a value is read while the game
+ * runs, where the project's `.sheet` files are not known.
+ */
+const worldPicture = defineBlock({
+  type: PICTURE_BLOCK,
+  message0: '%1',
+  args0: [
+    {type: 'field_dropdown', name: 'SPRITE', options: spriteFieldOptions},
+  ],
+  output: PICTURE_CHECK,
+  extensions: [
+    spriteOptionsExtension,
+    spritePickExtension,
+    spriteImportFieldExtension,
+  ],
+  style: 'sprite_blocks',
+  tooltip: 'One of the project’s pictures.',
+  generator: {
+    javascript(block) {
+      const value = block.getFieldValue('SPRITE') ?? '';
+      return [str(parseSpriteRef(value).sprite), Order.ATOMIC] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+
 const worldSetSprite = defineBlock({
   type: 'world_set_sprite',
   message0: 'set sprite %1 on %2',
@@ -2207,6 +2246,7 @@ const typedValueCode = (
       return read(names.value) || (d ? 'true' : 'false');
     case 'string':
     case 'color':
+    case 'picture':
       return read(names.value) || str(String(d ?? ''));
     case 'actors':
       return read(names.value) || '[]';
@@ -2267,6 +2307,8 @@ const checkOf = (type: ParamType): string | undefined => {
       return 'Vector';
     case 'color':
       return COLOUR_CHECK;
+    case 'picture':
+      return PICTURE_CHECK;
     default:
       return undefined;
   }
@@ -2485,6 +2527,21 @@ const typedValueInputs = (
           },
         ],
       };
+    case 'picture':
+      // One of the project's pictures, from the same list `set sprite` offers.
+      return {
+        message: `%${slot}`,
+        args: [{type: 'input_value', name: names.value, check: PICTURE_CHECK}],
+        shadows: [
+          {
+            name: names.value,
+            shadow: {
+              type: PICTURE_BLOCK,
+              ...(d ? {fields: {SPRITE: String(d)}} : {}),
+            },
+          },
+        ],
+      };
     case 'color':
       // A SWATCH, not a text box. The value is the same `#rrggbb` a string
       // property would hold, and the socket takes every color block — the
@@ -2658,20 +2715,22 @@ const outputForType = (type: PropertyType): string =>
       // widened to let it (`colorCheck`).
       type === 'color'
       ? COLOUR_CHECK
-      : type === 'string'
-        ? 'String'
-        : type === 'vector'
-          ? 'Vector'
-          : // An actors property reports an ACTOR value, so it plugs into a loop's
-            // source, `is in`, `how many actors in` — every actor socket there is.
-            type === 'actors' || type === 'actor'
-            ? 'Actor'
-            : // A list of plain values reports `List`, and a socket says no
-              // more than that: what it HOLDS is the property's business
-              // (specs/LISTS.md).
-              type === 'numbers' || type === 'words' || type === 'vectors'
-              ? LIST_CHECK
-              : 'Number';
+      : type === 'picture'
+        ? PICTURE_CHECK
+        : type === 'string'
+          ? 'String'
+          : type === 'vector'
+            ? 'Vector'
+            : // An actors property reports an ACTOR value, so it plugs into a loop's
+              // source, `is in`, `how many actors in` — every actor socket there is.
+              type === 'actors' || type === 'actor'
+              ? 'Actor'
+              : // A list of plain values reports `List`, and a socket says no
+                // more than that: what it HOLDS is the property's business
+                // (specs/LISTS.md).
+                type === 'numbers' || type === 'words' || type === 'vectors'
+                ? LIST_CHECK
+                : 'Number';
 
 // A value block's style by the kind it reports: a boolean is logic, a whole
 // vector is a location, everything else (numbers, point axes) is math.
@@ -8149,6 +8208,7 @@ const PROPERTY_TYPE_OPTIONS: Array<[string, string]> = [
   ['boolean', 'boolean'],
   ['string', 'string'],
   ['color', 'color'],
+  ['picture', 'picture'],
   ['vector', 'vector'],
   ['point', 'point'],
   // Actors — what a rule works out about who is where: a contact set, a group.
@@ -11243,6 +11303,7 @@ export const DOMAIN_BLOCKS = [
   worldSetLocalScale,
   worldLocalScale,
   worldChildrenOf,
+  worldPicture,
   worldSetSprite,
   worldPlayAnimation,
   ...PROPERTY_BLOCKS,

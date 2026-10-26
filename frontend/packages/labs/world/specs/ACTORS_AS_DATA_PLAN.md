@@ -292,6 +292,14 @@ actor file is and that an interface actor is drawn, and the ledger notes the
 new fields and the picture property's chooser. In the browser: a health bar
 on the first frame, and a lesson from start to finish.
 
+## Open
+
+- **Whether an actor's purpose may change after it is made.** Step 3
+  lets the purpose dropdown switch it, converting a game actor to a drawn
+  one. Fixed when the actor is made would leave nothing to convert or
+  explain, and `setPurpose`'s conversion would go. Recommended; not
+  decided.
+
 ## Not in this phase
 
 - Scrolling in an interface. The Scroll View elects the Viewport's trait
