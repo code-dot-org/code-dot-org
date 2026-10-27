@@ -7,8 +7,6 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {Suspense, useEffect, useMemo, useState} from 'react';
 
-import {isChatMessage} from '@cdo/apps/aichat/types/chatEvents';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -19,7 +17,7 @@ import {
 } from '@cdo/apps/lab2/types';
 import {ExternalNavigationContext} from '@cdo/apps/lab2/views/components/Instructions/ExternalNavigationContext';
 import Loading from '@cdo/apps/lab2/views/Loading';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
 import {buildTutorContext} from '../../ai/tutorContext';
@@ -161,25 +159,15 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     instructions,
   ]);
 
-  // Require at least one user message this session before enabling Continue.
-  const hasSentChatMessage = useAppSelector(state =>
-    (state.aichat?.chatEventsCurrent ?? []).some(
-      e => isChatMessage(e) && e.role === Role.USER
-    )
-  );
-
   // The lab's own Continue button advances the step.
   const navigation = useMemo(
     () => ({
       label: continueLabel,
-      enabled: hasSentChatMessage,
-      tooltip: hasSentChatMessage
-        ? undefined
-        : 'To continue, send a message to the AI tutor',
+      enabled: true,
       endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
       onContinue: onComplete,
     }),
-    [continueLabel, hasSentChatMessage, onComplete]
+    [continueLabel, onComplete]
   );
 
   // Stands in for ProjectContainer's level-change reset, which steps bypass.

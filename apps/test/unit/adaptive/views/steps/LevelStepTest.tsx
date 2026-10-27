@@ -6,11 +6,6 @@ import {Store} from 'redux';
 
 import {LevelStep as LevelStepContent} from '@cdo/apps/adaptive/types';
 import LevelStep from '@cdo/apps/adaptive/views/steps/LevelStep';
-import {
-  aichatReducer,
-  addEventToChatEventsCurrent,
-} from '@cdo/apps/aichat/redux/slice';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import {
   getStore,
@@ -18,7 +13,6 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
   usePathwayContext: () => ({
@@ -86,36 +80,17 @@ jest.mock('@cdo/apps/lab2/redux/lab2ProjectRedux', () => ({
 // body would be uninitialized when the factory runs.
 jest.mock('../../../../../lab2EntryPoints', () => {
   const React = require('react');
-  const {
-    ExternalNavigationContext,
-  } = require('@cdo/apps/lab2/views/components/Instructions/ExternalNavigationContext');
-  // Exposes navigation state via a Continue button (disabled/enabled) and
-  // optional tooltip text, and renders the hideNonInstructionTabs flag as
-  // visible text — all queryable without data-testid.
+  // Renders the hideNonInstructionTabs flag as visible text for assertion.
   function TestView({
     levelProperties,
   }: {
     levelProperties: {hideNonInstructionTabs?: boolean};
   }) {
-    const nav = React.useContext(ExternalNavigationContext);
-    return React.createElement('div', null, [
-      React.createElement(
-        'p',
-        {key: 'tabs'},
-        `hide tabs: ${String(levelProperties?.hideNonInstructionTabs)}`
-      ),
-      React.createElement(
-        'button',
-        {
-          key: 'btn',
-          type: 'button',
-          disabled: !nav?.enabled,
-          onClick: nav?.onContinue,
-        },
-        'Continue'
-      ),
-      nav?.tooltip ? React.createElement('p', {key: 'tip'}, nav.tooltip) : null,
-    ]);
+    return React.createElement(
+      'p',
+      null,
+      `hide tabs: ${String(levelProperties?.hideNonInstructionTabs)}`
+    );
   }
   return {lab2EntryPoints: {weblab2: {view: TestView}}};
 });
@@ -148,7 +123,7 @@ describe('LevelStep (LevelPlayer)', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({aichat: aichatReducer});
+    registerReducers({});
     store = getStore();
   });
 
@@ -172,43 +147,5 @@ describe('LevelStep (LevelPlayer)', () => {
   it('sets hideNonInstructionTabs on viewProperties passed to the lab view', () => {
     renderStep();
     expect(screen.getByText('hide tabs: true')).toBeInTheDocument();
-  });
-
-  it('disables the Continue button when no chat messages have been sent', () => {
-    renderStep();
-    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
-    expect(
-      screen.getByText('To continue, send a message to the AI tutor')
-    ).toBeInTheDocument();
-  });
-
-  it('enables the Continue button after a user chat message is dispatched', () => {
-    renderStep();
-    store.dispatch(
-      addEventToChatEventsCurrent({
-        timestamp: 1,
-        chatMessageText: 'Hello',
-        role: Role.USER,
-        status: AiInteractionStatus.UNKNOWN,
-      })
-    );
-    expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled();
-    expect(
-      screen.queryByText('To continue, send a message to the AI tutor')
-    ).not.toBeInTheDocument();
-  });
-
-  it('does not enable the Continue button from an assistant message alone', () => {
-    renderStep();
-    store.dispatch(
-      addEventToChatEventsCurrent({
-        timestamp: 1,
-        chatMessageText: 'I can help!',
-        role: Role.ASSISTANT,
-        status: AiInteractionStatus.OK,
-        requestId: 42,
-      })
-    );
-    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
   });
 });
