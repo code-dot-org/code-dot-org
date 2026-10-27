@@ -157,7 +157,7 @@ describe('ResetProgressDialog', () => {
     await waitFor(() => expect(onClose).toHaveBeenCalledTimes(1));
 
     expect(global.fetch).toHaveBeenCalledWith(
-      '/dashboardapi/mass_progress_reset',
+      '/api/mass_progress_reset',
       expect.objectContaining({
         method: 'POST',
         headers: expect.objectContaining({'X-CSRF-TOKEN': 'a-token'}),

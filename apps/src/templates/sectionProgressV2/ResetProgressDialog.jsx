@@ -108,7 +108,7 @@ export default function ResetProgressDialog({
     });
 
     try {
-      const response = await fetch('/dashboardapi/mass_progress_reset', {
+      const response = await fetch('/api/mass_progress_reset', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

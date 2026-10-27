@@ -399,7 +399,7 @@ class ApiController < ApplicationController
     render json: student_progress.unshift(teacher_progress)
   end
 
-  # POST /dashboardapi/mass_progress_reset
+  # POST /api/mass_progress_reset
   # Deletes progress for every (student, unit) pair in the given lists. Only
   # allowed for students who are currently in one of the signed-in teacher's
   # sections.
