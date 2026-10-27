@@ -1,0 +1,36 @@
+@use '../sharedMixins' as mixins;
+
+.card {
+  @include mixins.card;
+
+  overflow: hidden;
+  border-radius: var(--shape-lg);
+}
+
+.heading {
+  display: block;
+  padding: 8px 10px;
+  color: var(--text-neutral-quaternary);
+}
+
+.row {
+  margin: 0;
+}
+
+.cell {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 10px;
+  border-top: 1px solid var(--border-neutral-primary);
+  overflow-wrap: anywhere;
+
+  dd {
+    margin: 0;
+  }
+}
+
+.value {
+  font-weight: 600;
+  text-align: end;
+}

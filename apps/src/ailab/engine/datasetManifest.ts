@@ -5,6 +5,8 @@ export interface Dataset {
   id: string;
   name: string;
   isToy?: boolean;
+  imagePath?: string;
+  rowCount: number;
   [key: string]: unknown;
 }
 

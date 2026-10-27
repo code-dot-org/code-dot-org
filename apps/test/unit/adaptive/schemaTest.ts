@@ -407,6 +407,24 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
+  it('accepts a map layout and orientation and rejects an unknown orientation', () => {
+    const raw = served();
+    raw.map = {layout: 'destinations', orientation: 'w'};
+    expect(problemsOf(raw)).toEqual([]);
+    Object.assign(raw.map, {orientation: 'nw'});
+    expect(problemsOf(raw)).toHaveLength(1);
+  });
+
+  it('accepts a destination on a checkpoint nothing requires and flags one on a checkpoint another requires', () => {
+    const raw = served();
+    raw.checkpoints[2].destination = 'Polish';
+    expect(problemsOf(raw)).toEqual([]);
+    raw.checkpoints[0].destination = 'Polish';
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.intro.destination: only a checkpoint that no other checkpoints require may have one but 'basics' requires it",
+    ]);
+  });
+
   it('flags duplicate checkpoint and step ids', () => {
     const raw = served();
     raw.checkpoints[2].id = 'basics';
@@ -668,6 +686,37 @@ describe('evidence fields', () => {
     expect(problemsOf(raw)).toEqual([
       "checkpoints.basics.targetEvidenceLevels: 'css' is not in skillIds",
     ]);
+  });
+
+  it('accepts validation on a project step measuring a checkpoint skill with evidence levels', () => {
+    const raw = withEvidence();
+    Object.assign(raw.checkpoints[1].steps[0], {
+      validation: {
+        condition: 'Adds a heading.',
+        measures: {skillId: 'prompting'},
+      },
+    });
+    expect(problemsOf(raw)).toEqual([]);
+  });
+
+  it('flags validation on a sandbox step, on a skill the checkpoint lacks, and on a skill with no evidence levels', () => {
+    const raw = withEvidence();
+    const validation = {
+      condition: 'Adds a heading.',
+      measures: {skillId: 'css'},
+    };
+    Object.assign(raw.checkpoints[1].steps[1], {validation});
+    expect(problemsOf(raw)).toEqual([
+      "checkpoints.basics.steps.practice: validation judges the student's project, so the step must be marked project",
+      "checkpoints.basics.steps.practice.validation.measures: 'css' is not in skillIds",
+    ]);
+    delete raw.skills.prompting.evidenceLevels;
+    Object.assign(raw.checkpoints[1].steps[1], {
+      validation: {...validation, measures: {skillId: 'prompting'}},
+    });
+    expect(problemsOf(raw)).toContain(
+      "checkpoints.basics.steps.practice.validation.measures: skill 'prompting' describes no evidence levels to rate on"
+    );
   });
 
   it('flags skippable on a checkpoint with no skills', () => {

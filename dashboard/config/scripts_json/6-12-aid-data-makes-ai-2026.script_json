@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-14 21:15:14 UTC",
+    "serialized_at": "2026-10-27 02:18:10 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,6 +40,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "This lesson introduces how choosing features affects the way data is sorted. Taking on the role of data scientists, students sort monster cards using yes/no questions, identify each other’s rules, and solve secret sorting challenges. Through hands-on activities and discussion, students explore how different features produce different classifications and why more data may be needed to identify a rule.",
+        "preparation": "- Print and cut one set of monster cards per groups of 2–4 students \n- Print the activity guide: one per student",
+        "student_overview": "In this lesson, you take on the role of a data scientist to learn how to use information to sort data. You will practice by sorting monsters and finding secret sorting rules."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -55,6 +58,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "In this lesson, students work as data scientists and learn to read a decision tree. A husky-or-wolf model calls a husky a wolf. Its training pictures show the shortcut it found, so students see that a prediction comes from the data. Students then trace monsters from Lesson 1 through a decision tree. In groups, they act out a human decision tree that predicts the wrong group for a platypus, and they propose one question that fixes it. In Recycling Robot Trace, each student traces four items through a tree in Sketch Lab, finds the wrong prediction and adds a question to fix it.",
+        "preparation": "- Print the Human Decision Tree Cards (one set for each group: three question cards and 10 animal data cards).\n- Put each group's animal data cards in order, with the platypus card last.\n- Read the Human Decision Tree How to Play sheet and plan a clear space for each group.",
+        "student_overview": "How does a decision tree reach an answer? You will follow items through a decision tree, one question at a time, to see how it makes a prediction. Then you'll check the tree's predictions against what each item really is."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -64,12 +70,15 @@
     },
     {
       "key": "lesson-3",
-      "name": "Instructions vs. Experience",
+      "name": "Who Writes the Rules?",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "Students act as Data Scientists and find out who writes the rules inside a computer system. Pairs first write keyword rules to block spam and keep patching them as new emails get through or get caught by mistake. Then pairs explore a simulated game chat and notice which messages it blocks or hides. Groups sort seven rule cards from the chat into human-written and computer-learned rules, using what they saw in the game as evidence. Students ultimately learn that both human-written and computer-learned rules exist within systems.",
+        "purpose": "* Print and cut out the Gaming Chat Rule Cards that students will use in a card sort activity to differentiate human-written and computer-learned rules.",
+        "student_overview": "You will act as a Data Scientist and find out who writes the rules inside a computer system. First, you will write rules to block spam from an email inbox. Then you will explore a game chat and notice which messages it blocks or hides based on rules. By the end of the lesson, you will be able to answer: who writes the rules?"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -214,22 +223,1509 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "8c208385-bde6-4d91-a8bf-020ae56c55f2",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "0929c4fc-646a-4812-aadf-609696f9febe",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0929c4fc-646a-4812-aadf-609696f9febe",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "331ea484-28ee-4eca-969c-a70aefd58342",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "20ce9651-7300-43a2-a305-c2f3c5c028d4",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity:"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "aee70778-6c24-4d28-8f28-1edbfef69918",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aee70778-6c24-4d28-8f28-1edbfef69918",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "97212326-a3de-4790-8a84-cbbc7650bca8",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97212326-a3de-4790-8a84-cbbc7650bca8",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "858c93a2-ce86-41fe-a525-814f0f8e136a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "858c93a2-ce86-41fe-a525-814f0f8e136a",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "85893d80-a092-4812-81bc-a1011a6b2377",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85893d80-a092-4812-81bc-a1011a6b2377",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "615f729a-7ff8-4021-a16e-06d34e5c50c9",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "615f729a-7ff8-4021-a16e-06d34e5c50c9",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "add902a4-7b33-43db-82c8-2fd1780fb8cb",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "add902a4-7b33-43db-82c8-2fd1780fb8cb",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b47944dc-680f-4b2d-9ac6-c9bee2b2a854",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students see that people sort the same things in different ways, based on the feature(s) they pay attention to. AI systems also use features that they recognize in order to make classifications.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the four pictures. Give students 30 seconds to pick the one that does not belong.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Look at the four pictures. Which one does not belong? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Every item can be the one that doesn't belong. It depends on what you pay attention to. Take several answers from students and push for the because each time. Try to emphasize what students might have been using to classify the objects: \"So you were paying attention to ___.\" A main takeaway is that everyone looked at the same four pictures and sorted them differently because they each chose something different to pay attention to.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why might an AI system have misclassified this dog as a muffin?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Some students will say the AI is dumb or broken. That's fine for a first impression. To encourage more critical thinking, ask the students, \"What do the dog and the muffin have in common?\" Students will likely name the tan color, the round shape, and the three dark spots. Then ask, \"What would help you tell them apart?\" Students might say fur, ears, or a paper wrapper. Point out that some details trick you because both things have them, while other details help you sort correctly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b47944dc-680f-4b2d-9ac6-c9bee2b2a854",
+        "lesson_activity.key": "e6a5ac79-bd10-420e-8ec9-f59dabcc6510"
+      }
+    },
+    {
+      "key": "822a9037-8bc8-41c3-8a73-10f7cb5b0c67",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students sort monster cards with yes/no questions. They see that the person sorting chooses the feature.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of 12 monster cards. Give each student a copy of the Sorting by Rules activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of 2–4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give groups a few minutes to explore the monster cards. The students should record their observations in the Round One section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask for volunteers to share some of their observations. Write the answers on the board. Label the list \"features.\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define feature.\n\n**Say**: Everything on our list is a feature. A feature is a characteristic you can observe about something. It can be something you can see, like a color, or it could be a quality that is harder to observe, like softness or temperature.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define data.\n\n**Say**: Our monster cards are data. Data is information that has been collected and recorded.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each group creates one secret yes/no question and sorts its monsters into a Yes group and a No group based on this rule. They should record this rule in the Round Two section of their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If a group picks a question with more than two answers (\"What color is it?\"), help them make it yes/no (\"Is it green?\").\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have two groups swap and attempt to guess each other's question. Students should record what they believe the rule to be in their activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How did you figure out the other group's sorting rule?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for something like \"We looked at what all the Yes monsters had in common.\" If a group guessed a different rule that still works for every card, make a big deal of it. Ask, \"Both rules work. What new monster would show us which rule is the real one?\" Point out that the same cards can be sorted lots of ways, and the people sorting get to decide how.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define classification.\n\n**Say**: You put each monster in a category based on one or more of its features. That is called classification.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Groups pick one of their two groups and sort it again with a second yes/no question. Students complete the Round Three section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Draw one group's sort on the board as yes/no branches. Define branching logic.\n\n**Say**: Each answer sends you a different way. That is branching logic. What you just built by hand is called a decision tree. People build them, and computers can build them too.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why might it be useful to add a second yes/no question?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students explaining that one question still leaves things mixed together. \"It makes smaller groups\" is a start, but push for more by asking \"Why would you want smaller groups?\" A stronger answer names what they wanted to separate, like \"so we can tell the spiky ones apart from the fuzzy ones.\" Students should name a real purpose behind their further sorting.\n",
+        "duration": "15",
+        "name": "Monster Sorter"
+      },
+      "seeding_key": {
+        "activity_section.key": "822a9037-8bc8-41c3-8a73-10f7cb5b0c67",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "f504f7b8-64d4-407f-b527-a2ec9938a02a",
+      "position": 2,
+      "properties": {
+        "description": "**Say**: People who build sorting systems like these as their job are called data scientists. A big part of their job is what you just did at your tables: figuring out which features matter for sorting something into the right category. For instance, a data scientist at a music streaming company asks the same question about songs: which features help predict whether a listener will skip a song? Is it the tempo? The genre? The length? Not every feature turns out to matter.\n\nIn this unit, you become the data scientists.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What do you think is the hardest part of that job? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for answers that connect to what students did today: picking which detail matters, a question that didn't sort the way they wanted, or monsters that were hard to place. When you hear one, ask \"What was hard about choosing your question today?\" to bring them back to their own experience.\n",
+        "duration": "5",
+        "name": "Career Spotlight: Data Scientist"
+      },
+      "seeding_key": {
+        "activity_section.key": "f504f7b8-64d4-407f-b527-a2ec9938a02a",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students name features they could sort by, then determine the sorting rule used in the levels. They see that with too little data, a new item could fit more than one box, and that more data helps them find the real rule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students in pairs\n\n**Say**: Each of these levels has a rule that decides what goes in each box. Your job is to determine what that rule is.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1:\n* **Level 1**: Students look at items in green, blue and red boxes and pick how they are sorted (by color).\n* **Level 2**: Students predict where a pink circle with a black border goes. Box One holds circles and Box Two holds a pink square, so it could go in either box. The best answer is \"We need more training data to know.\"\n* **Level 3**: Students click Run, then drag each item into a box. The new rule is outline color: Box One black, Box Two red, Box Three blue.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Verify students are progressing through levels and help any students that are struggling\n",
+        "duration": "15",
+        "name": "Find the Secret Rule",
+        "progression_name": "Find the Secret Rule"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "88e7638f-acbc-45e6-80d9-1d64a7531449",
+      "position": 4,
+      "properties": {
+        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 4. Pairs pick one level. Partner A sorts the items on screen with a secret rule. Partner B acts as the computer and guesses how Partner A sorted.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that Partner B doesn't watch while Partner A sorts. If Partner B guesses a different rule that also fits, ask the pair what new item would tell the two rules apart.\n",
+        "progression_name": "Your Secret Rule"
+      },
+      "seeding_key": {
+        "activity_section.key": "88e7638f-acbc-45e6-80d9-1d64a7531449",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "67e904b8-98df-4481-9f40-f618beaf9595",
+      "position": 5,
+      "properties": {
+        "description": "\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What is one question about your own life that could be answered by a sorting system?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Good examples sort things into groups, like \"Will I skip this song?\", \"Do I need a jacket?\", or \"Is this text spam?\" Some students will offer a question that doesn't sort anything, like \"What's for dinner?\" Help them reshape it by asking \"What would the two piles be?\" Strong answers also mention what the system would look at to decide, like the weather or who sent the text. Students don't have to share anything personal.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students record their responses in the Wrap Up section of the activity guide.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "67e904b8-98df-4481-9f40-f618beaf9595",
+        "lesson_activity.key": "8c208385-bde6-4d91-a8bf-020ae56c55f2"
+      }
+    },
+    {
+      "key": "de4da438-802a-45c9-938e-fbfe67f3798f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Levels 5–6:\n\n* **Level 5**: Students flip vocabulary flash cards for feature, data, classification and branching logic. They can shuffle the cards or start from the definition.\n* **Level 6**: Students drag each word to its definition, then click Submit.\n",
+        "progression_name": "Lesson Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f",
+        "lesson_activity.key": "0929c4fc-646a-4812-aadf-609696f9febe"
+      }
+    },
+    {
+      "key": "04a3e8b0-a521-4369-926a-77dacf6feeba",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<!-- Apply as a Teaching Tip callout in Level Builder -->",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students will mention details, features, or yes/no questions. Others will say something like \"it just knows.\" Both are normal today, so don't correct anyone. You'll come back to this question later in the unit, and these answers show where students are starting."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "04a3e8b0-a521-4369-926a-77dacf6feeba",
+        "lesson_activity.key": "0929c4fc-646a-4812-aadf-609696f9febe"
+      }
+    },
+    {
+      "key": "e4fe180b-269c-4197-bdad-7c58cfe956d9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the pictures. Give students 30 seconds to look.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4fe180b-269c-4197-bdad-7c58cfe956d9",
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342"
+      }
+    },
+    {
+      "key": "2c3c0c6f-0f52-4358-a1d7-83591f0b659a",
+      "position": 2,
+      "properties": {
+        "description": "Researchers built this AI system to see if people would trust it. It sorts pictures into Husky or Wolf. Look at picture C. It's a husky, but the system said Wolf. Next, we'll look at the pictures the system learned from.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2c3c0c6f-0f52-4358-a1d7-83591f0b659a",
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342"
+      }
+    },
+    {
+      "key": "38b27072-2d28-48bd-b2f3-6ace421530f3",
+      "position": 3,
+      "properties": {
+        "description": "\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What features do you think the system focused on? What features would you pick to tell a husky from a wolf?\n\nTurn and Talk: Give partners two minutes, then take two or three answers for each question.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** For the first question, students should use the training pictures as evidence. Some will name the animals' color or ears first. Ask, \"What is the same in every wolf picture?\" Listen for the snow: every wolf picture has it, and no husky picture does. For the second question, listen for features of the animal itself, like ears, eye color, fur or face shape. Point out that people picked features of the animal, but the system found a pattern in the background.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In the real study, 27 graduate students who had taken a machine learning class saw the system's results. Before they saw what it focused on, 10 of them trusted it. After they saw it used the snow, only 3 did."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "38b27072-2d28-48bd-b2f3-6ace421530f3",
+        "lesson_activity.key": "331ea484-28ee-4eca-969c-a70aefd58342"
+      }
+    },
+    {
+      "key": "74e42715-2f31-4b0f-ae66-57d91d4f874e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that the questions from Lesson 1 form a decision tree, which reaches a prediction one question at a time.\n\n",
+        "duration": "5",
+        "name": "Meet the Decision Tree"
+      },
+      "seeding_key": {
+        "activity_section.key": "74e42715-2f31-4b0f-ae66-57d91d4f874e",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "764f85b0-b1f5-4d1c-a649-d4e5cc7b4e25",
+      "position": 2,
+      "properties": {
+        "description": "In Lesson 1, you sorted monsters by asking yes/no questions. Here are two of those questions, placed in order. Each answer creates a path, to another question or to the end.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "764f85b0-b1f5-4d1c-a649-d4e5cc7b4e25",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "8ed5dcc0-b92b-467b-89e2-18361c4c2027",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which features do monsters of the same type share?\n\nTurn and Talk: Give partners one minute, then take two or three answers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should compare the monsters in each type and name features they all share. If a student names another feature, ask, \"Does every monster in that type have it?\" The takeaway is that monsters of the same type share features you can ask about."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ed5dcc0-b92b-467b-89e2-18361c4c2027",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "19dae61c-496a-410a-aaa0-a9c24447bf4b",
+      "position": 4,
+      "properties": {
+        "description": "Every monster starts at the top and ends at one type. A set of questions like this has a name: a decision tree.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "19dae61c-496a-410a-aaa0-a9c24447bf4b",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "2d16836d-74f2-40b0-9095-03b74f07c04e",
+      "position": 5,
+      "properties": {
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define label: the category that a system predicts based on its features. Connect it to the monster types.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define decision tree: a series of questions about features. Each answer leads to another question or a prediction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animation to trace Monster C's path.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define prediction: the best guess based on the data available."
+      },
+      "seeding_key": {
+        "activity_section.key": "2d16836d-74f2-40b0-9095-03b74f07c04e",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "fdf7c9e3-f60f-4fac-9a9a-764f72c88785",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that a decision tree can only use its questions, so an animal those questions don't fit gets a wrong prediction.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group three question cards and 10 animal data cards. Keep the animal data cards face down in order, with the platypus last.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of four to six. Give each group a clear space.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the Human Decision Tree video.\n\n\n",
+        "duration": "20",
+        "name": "Human Decision Tree "
+      },
+      "seeding_key": {
+        "activity_section.key": "fdf7c9e3-f60f-4fac-9a9a-764f72c88785",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "e892b06c-8494-4b3a-a7be-bc1e1f1a7c91",
+      "position": 7,
+      "properties": {
+        "description": "We just traced our first decision tree. Now we're going to be one. Some of you will be Askers. Each Asker holds a question card and asks its question. Everyone else is a Traveler. Each Traveler holds an animal data card and answers from it. Let's see how it works.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e892b06c-8494-4b3a-a7be-bc1e1f1a7c91",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "155b7be9-2283-4107-bcc0-965266e019cc",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each group pick three Askers. Each Asker takes one question card and stands in the spot shown on it. Everyone else is a Traveler.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that Askers stand two to three feet apart, in the order on their cards. Ask an Asker, \"What do you ask, and where do you send each answer?\""
+      },
+      "seeding_key": {
+        "activity_section.key": "155b7be9-2283-4107-bcc0-965266e019cc",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "cee5b0e8-18da-4a95-af28-22a9158f0d60",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have Travelers line up by the stack of animal data cards. One at a time, each Traveler takes the top card and walks to Question One.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that each Asker reads their question aloud. The Traveler answers from their animal data card and walks where the Asker points.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that when an answer leads to a prediction, the Asker says it, for example, \"You are a Bird.\" The Traveler goes back to the line and takes a new animal data card. When an answer leads to another question, the Traveler walks to that Asker.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Leave this slide up while groups play.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Bring the class together after every group has walked the platypus card. Display the facts.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The platypus card is last on purpose. The tree predicts Reptile, but a platypus is a mammal: its card says Makes Milk: Yes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cee5b0e8-18da-4a95-af28-22a9158f0d60",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "b739250f-5cc3-45d7-8b7f-5fd45a9d9956",
+      "position": 10,
+      "properties": {
+        "description": "Our tree called the platypus a Reptile. Read these facts about platypuses. What kind of animal is a platypus?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b739250f-5cc3-45d7-8b7f-5fd45a9d9956",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "d2802347-228c-4fa6-9bac-239963076f83",
+      "position": 11,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which question put the platypus on the wrong path?\n\nTurn and Talk: Groups stay where they are. Give them one minute.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students trace the platypus's path to find where the tree first went wrong. Listen for \"Does it lay eggs?\" If groups blame \"Does it have fins?\", ask, \"Where did the platypus first go a different way than the dog?\""
+      },
+      "seeding_key": {
+        "activity_section.key": "d2802347-228c-4fa6-9bac-239963076f83",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "eecff242-1f3c-4c0b-b303-b00f3123e7e5",
+      "position": 12,
+      "properties": {
+        "description": "Here's the tree with one new question. Now the platypus says Yes to \"Does it make milk?\" and reaches Mammal. The tree only uses the questions it was given. People chose these questions, so people can fix them.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "eecff242-1f3c-4c0b-b303-b00f3123e7e5",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "55108c54-14fb-4da1-a742-1ac874b817bc",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that tracing each item's path shows which question led to a wrong prediction.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1: Students trace four items through the Recycling Robot tree and move each one next to the bin it predicts. Then they add one question to fix the wrong prediction and click Download.",
+        "duration": "10",
+        "name": "Recycling Robot Trace",
+        "progression_name": "Robot Recycler"
+      },
+      "seeding_key": {
+        "activity_section.key": "55108c54-14fb-4da1-a742-1ac874b817bc",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "d6a99310-aae3-4a93-9713-9b01d75586a9",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who name a bin without following the questions. Ask, \"Which questions did the plastic bottle answer on its way to Trash?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students how to save their sketch in Level 1.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 2: Students upload their sketch and answer a question.",
+        "progression_name": "Recycling Robot Free Response"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6a99310-aae3-4a93-9713-9b01d75586a9",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "50e32087-eca9-492d-85f3-af6c3758e9eb",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If a student can't find their sketch, have them open their Downloads folder and look for the newest file.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students how to upload: click Add/Remove Attachments, then Upload File, and choose the sketch from the Downloads folder."
+      },
+      "seeding_key": {
+        "activity_section.key": "50e32087-eca9-492d-85f3-af6c3758e9eb",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "5f144931-d365-4836-b05c-dbbccb1dcb81",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Levels 3–4:\n- **Level 3:** Students flip flashcards for decision tree, prediction and label. They can shuffle the cards or start from the definition.\n- **Level 4:** Students drag each word to its definition, then click Finish.",
+        "progression_name": "Lesson Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f144931-d365-4836-b05c-dbbccb1dcb81",
+        "lesson_activity.key": "aee70778-6c24-4d28-8f28-1edbfef69918"
+      }
+    },
+    {
+      "key": "cffabd3b-c03e-48be-8a73-1ce842469b01",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "cffabd3b-c03e-48be-8a73-1ce842469b01",
+        "lesson_activity.key": "aee70778-6c24-4d28-8f28-1edbfef69918"
+      }
+    },
+    {
+      "key": "af491b0b-9ee0-40e2-bce2-e9f962e439a8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students compare following a recipe with learning from experience. This sets up the two kinds of rules they'll analyze inside computer systems today.\n\n**Say**: These two people both make great pasta, but they learned how in different ways.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Are these two chefs doing the same thing? Why or why not?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Both chefs make good pasta, but they got there differently. One follows steps someone else wrote, and the other learned from experience. Many students will stop at \"one uses a book.\" Push them to say how the chef knows what to do without one. If someone says \"she practiced,\" ask what she'd do with an ingredient she's never cooked before. That question brings out the difference: the recipe cook can only follow the steps, while the chef can adjust.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students vote with their fingers: 1 for Recipe Cook, 2 for Chef, or 3 for Both.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This vote is a prediction, not a quiz, so don't reveal an answer. Most students will pick the recipe cook, because \"computers follow instructions\" is what they already believe. Ask one or two students to defend their vote. If anyone picks Both, ask what part of a computer might be like the chef. Leave the answer open, since the lesson comes back to this vote at the end.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "af491b0b-9ee0-40e2-bce2-e9f962e439a8",
+        "lesson_activity.key": "97212326-a3de-4790-8a84-cbbc7650bca8"
+      }
+    },
+    {
+      "key": "39879ee5-cee8-4dd8-9ad1-d002d44cc4bb",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student/group a copy of the Who Writes the Rules? Activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "39879ee5-cee8-4dd8-9ad1-d002d44cc4bb",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
+      }
+    },
+    {
+      "key": "d1530018-e322-4a71-8cc2-da2d0f438d72",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students write human-written rules for blocking spam, then test them on new emails until the rules start to fail. Running into those limits is what makes computer-learned rules make sense later.\n\n**Say**: Your job is to keep junk mail out of the inbox. You'll write rules, and the computer will follow them exactly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students in pairs to work through the day's activities.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How do we know this is spam? What gives it away?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will quickly spot the clues: \"WINNER!!\", \"FREE,\" a huge prize, a deadline, and a sender name they don't recognize. Push them past spotting clues and toward writing rules a computer could check exactly. If a student says \"it sounds fake,\" ask what exact words or patterns the computer should look for. \"Sounds fake\" is a judgment, not a rule a computer can follow, and noticing that gap sets up the rest of Spam Patrol.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use this email as the guided practice for the activity and model writing two different rules in the My Rulebook section of the Activity Guide:\n\n* If the email has \"WINNER\" Junk\n* If the email has \"FREE\" Junk\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Groups test the email against their rules and add a new rule if it gets through.\n",
+        "duration": "10",
+        "name": "Spam Patrol",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "\"Fr3e\" gets past a rule that blocks \"FREE.\" That's the point of this email: spammers change their spelling to sneak around exact rules."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d1530018-e322-4a71-8cc2-da2d0f438d72",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
+      }
+    },
+    {
+      "key": "5c52218b-4e78-40d8-8981-60d8303c22e5",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Groups test the email and add a rule for suspicious links if it gets through.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Groups test the email. If their rules block it, they add an exception.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A \"WINNER\" rule blocks the teacher's real email. Every new rule can block good mail too, so the list of rules and exceptions keeps growing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5c52218b-4e78-40d8-8981-60d8303c22e5",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
+      }
+    },
+    {
+      "key": "02c5286a-181c-4c1d-9dda-04cc6175be03",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How many rules would you need to add to completely protect your email from spam?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize the rule list never ends. Spammers change their spelling, and every new rule risks blocking good mail. Some will say \"just add more rules.\" Point back to \"Fr3e\" and ask what happens tomorrow when a spammer types it a new way. If a student suggests the computer could figure out spam on its own, ask what it would need to look at to do that.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "02c5286a-181c-4c1d-9dda-04cc6175be03",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
+      }
+    },
+    {
+      "key": "d18a9768-b7e9-4693-99c4-ea6d2f03250e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students explore a game chat system as players, watching how different inputs lead to different outputs. The patterns they notice here become their evidence in the next activity, when they open up the system and sort its rules.\n\n**Say**: You just joined a fictional chat in the game Pixel Plaza. The chat has a system that decides which messages get through and which ones don't. Your job is to figure out how it decides. The message you send is the input. What the chat does with it is the output.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 to explore the simulated gaming chat app.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen in when pairs reach a \"Stop and think\" panel. Pairs who click Next without talking should answer the question out loud first. In Set 5, point out the Report button on Blaze77's message if no one has used it.\n",
+        "duration": "10",
+        "name": "Gaming Chat Rules",
+        "progression_name": "Gaming Chat Rules",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The sets build on each other. **Sets 1–3** are human-written rules (a banned word, long numbers, links). **Sets 4–5** are computer-learned (scams, put-downs). **Set 6** shows a human-written rule using a learned step's output: three hidden messages cause a mute. Students will learn and experience these rules during the chat, a follow-up card sort activity and finally a debrief."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d18a9768-b7e9-4693-99c4-ea6d2f03250e",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
+      }
+    },
+    {
+      "key": "193e1295-dd4d-4042-84b6-903582c9a989",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human-written rule\n\n**Say**: The spam rules you wrote today were human-written rules.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define computer-learned rule\n\n**Say**: Real spam filters learn from millions of emails that people mark as spam.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "193e1295-dd4d-4042-84b6-903582c9a989",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
+      }
+    },
+    {
+      "key": "89b287f1-9d23-49e5-b6e6-3115224c4d5d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Gaming chat rule cards.\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students sort the chat's steps into human-written and computer-learned, using what they saw in the gaming chat as evidence.\n\n**Say**: The Pixel Plaza gaming chat follows an algorithm, a set of step-by-step instructions. Each rule card that you have in front of you represents one step in an algorithm. Decide whether each rule is human-written or computer-learned.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students sort their rule cards into two piles: human-written & computer-learned. Students should question each card by asking, \"Did a person make up the chat's rules, or did the computer figure them out from examples?\"\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask \"What happened in Pixel Plaza that makes you think that?\" Assist students who are struggling with sorting a particular card into one category or the other.\n",
+        "duration": "10",
+        "name": "Who Wrote This Rule?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students who connect each card to something that happened in the simulated chat level are on track. Students who explain why a step behaves the way it does (\"the banned-word rule can't tell what you meant\") are going further.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "89b287f1-9d23-49e5-b6e6-3115224c4d5d",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
+      }
+    },
+    {
+      "key": "1badbd1d-7dd7-4dc1-bfdb-e897916edede",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define algorithm\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1badbd1d-7dd7-4dc1-bfdb-e897916edede",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
+      }
+    },
+    {
+      "key": "9fc22457-1e3f-4577-bc52-d00507f2f682",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students see that one system can include both kinds of steps.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Who wrote most of the steps in this chat blocking algorithm?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Most of the rules are human-written, which surprises students who assumed the whole chat was AI. Count the cards together first, then shift from how many to which ones. The computer-learned rules both had to judge what a message means. Ask a group to explain why \"take out the trash\" got blocked but \"go away no one likes u\" got hidden. A strong answer links back to Spam Patrol: exact rules can't judge meaning, so that job went to the computer.\n",
+        "duration": "5",
+        "name": "So Who Writes the Rules?"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fc22457-1e3f-4577-bc52-d00507f2f682",
+        "lesson_activity.key": "2915a4d6-bb15-4838-86ad-0aff8f41a49a"
+      }
+    },
+    {
+      "key": "fd206fe8-6de1-4c4d-ba76-b800fe26a89b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 2 to answer the Check for Understanding free response question.",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd206fe8-6de1-4c4d-ba76-b800fe26a89b",
+        "lesson_activity.key": "858c93a2-ce86-41fe-a525-814f0f8e136a"
+      }
+    },
+    {
+      "key": "2c5ceea3-9387-4857-adc0-91a42cbe1e38",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "By now, students should be able to say \"both\" and back it up with an example from the gaming chat. Bring back the warm-up vote and ask who would change their answer. If a student just says \"both,\" ask for one rule that the chat follows and one rule that it learned. Students who can name a specific card for each side are ready to start on training data in the next lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c5ceea3-9387-4857-adc0-91a42cbe1e38",
+        "lesson_activity.key": "858c93a2-ce86-41fe-a525-814f0f8e136a"
+      }
+    },
+    {
+      "key": "84a0d5e0-cb6f-4a46-b4ee-808584b77e03",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+      },
+      "seeding_key": {
+        "activity_section.key": "84a0d5e0-cb6f-4a46-b4ee-808584b77e03",
+        "lesson_activity.key": "858c93a2-ce86-41fe-a525-814f0f8e136a"
+      }
+    },
+    {
+      "key": "1c84ffc3-e06a-4897-ac61-ae3b2ce0dff0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1c84ffc3-e06a-4897-ac61-ae3b2ce0dff0",
+        "lesson_activity.key": "85893d80-a092-4812-81bc-a1011a6b2377"
+      }
+    },
+    {
+      "key": "7475c4ca-1264-454c-aa1b-6a357891f4d1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Smart Room Inspector App"
+      },
+      "seeding_key": {
+        "activity_section.key": "7475c4ca-1264-454c-aa1b-6a357891f4d1",
+        "lesson_activity.key": "615f729a-7ff8-4021-a16e-06d34e5c50c9"
+      }
+    },
+    {
+      "key": "279c6855-8308-45a0-a5f2-1cc91043ddce",
+      "position": 2,
+      "properties": {
+        "progression_name": "Room Profiles"
+      },
+      "seeding_key": {
+        "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce",
+        "lesson_activity.key": "615f729a-7ff8-4021-a16e-06d34e5c50c9"
+      }
+    },
+    {
+      "key": "66a1ef95-4fdc-4cfa-a227-d62bc00d0fb8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "66a1ef95-4fdc-4cfa-a227-d62bc00d0fb8",
+        "lesson_activity.key": "add902a4-7b33-43db-82c8-2fd1780fb8cb"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Find the Secret Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-pattern-2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Find the Secret Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-pattern-3"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Find the Secret Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-pattern-4"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Secret Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-choice-level"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "88e7638f-acbc-45e6-80d9-1d64a7531449"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-choice-level"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-vocab-flashcards-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-vocab-flashcards-2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-vocab-matching"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson1-vocab-matching"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Robot Recycler"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-sketch-lab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "55108c54-14fb-4da1-a742-1ac874b817bc"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-sketch-lab"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Recycling Robot Free Response"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-free-response"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d6a99310-aae3-4a93-9713-9b01d75586a9"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-free-response"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "5f144931-d365-4836-b05c-dbbccb1dcb81"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-vocab-flashcards"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-matching"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "5f144931-d365-4836-b05c-dbbccb1dcb81"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson2-vocab-matching"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Gaming Chat Rules"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson3-pixel-plaza"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d18a9768-b7e9-4693-99c4-ea6d2f03250e"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson3-pixel-plaza"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson3-free-response-question"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "fd206fe8-6de1-4c4d-ba76-b800fe26a89b"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson3-free-response-question"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Smart Room Inspector App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-smart-room-app"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "7475c4ca-1264-454c-aa1b-6a357891f4d1"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson5-smart-room-app"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Room Profiles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-sketch-lab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson5-sketch-lab"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-pattern-2",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-pattern-3",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-pattern-4",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-pattern-4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f3a3aa2c-dafa-4b84-840e-ba62ce839502"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-choice-level",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-choice-level"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "88e7638f-acbc-45e6-80d9-1d64a7531449"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-vocab-flashcards-2",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-vocab-flashcards-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson1-vocab-matching",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson1-vocab-matching"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "de4da438-802a-45c9-938e-fbfe67f3798f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-sketch-lab",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-sketch-lab"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "55108c54-14fb-4da1-a742-1ac874b817bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-free-response",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-free-response"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d6a99310-aae3-4a93-9713-9b01d75586a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-vocab-flashcards",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "5f144931-d365-4836-b05c-dbbccb1dcb81"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson2-vocab-matching",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson2-vocab-matching"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "5f144931-d365-4836-b05c-dbbccb1dcb81"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson3-pixel-plaza",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson3-pixel-plaza"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d18a9768-b7e9-4693-99c4-ea6d2f03250e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson3-free-response-question",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson3-free-response-question"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "fd206fe8-6de1-4c4d-ba76-b800fe26a89b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson5-smart-room-app",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-smart-room-app"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "7475c4ca-1264-454c-aa1b-6a357891f4d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson5-sketch-lab",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-sketch-lab"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] Data Makes AI - Lesson 1 - Activity Guide",
+      "url": "https://docs.google.com/document/d/110SjuWQvyoo1fT8QhIhpbz-CjmXAbq-vh1co8dz7BzA",
+      "key": "_key_data_makes_ai_-_lesson_1_-_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_makes_ai_-_lesson_1_-_activity_guide"
+      }
+    },
+    {
+      "name": "[KEY] Gaming Chat Rule Cards",
+      "url": "https://docs.google.com/document/d/1aE7FSDR2OxroKBUiSTIJewZS7hL_1OdO4S8eX9l7myY/",
+      "key": "_key_gaming_chat_rule_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_gaming_chat_rule_cards"
+      }
+    },
+    {
+      "name": "[KEY] Who Writes the Rules?",
+      "url": "https://docs.google.com/document/d/1JJT5dBudTf_O5UW2SLXmnY6WbnpQ0ifGKxdTUFO_JzU",
+      "key": "_key_who_writes_the_rules_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_who_writes_the_rules_"
+      }
+    },
+    {
+      "name": "[Optional]Human Decision Tree Student Instructions",
+      "url": "https://docs.google.com/document/d/1TEbZ_-kAxvNpgV3zm93gOrNMpGuxfACYGpCw18nAMXo",
+      "key": "_optional_human_decision_tree_student_instructions",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_human_decision_tree_student_instructions"
+      }
+    },
+    {
+      "name": "Data Makes AI - Lesson 1 - Activity Guide",
+      "url": "https://docs.google.com/document/d/1b5KGd_24BABblwPzhCet2PEhk4SAOyaN3vMgRyaINQA/",
+      "key": "data_makes_ai_-_lesson_1_-_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_makes_ai_-_lesson_1_-_activity_guide"
+      }
+    },
+    {
+      "name": "Gaming Chat Rule Cards",
+      "url": "https://docs.google.com/document/d/1JTlS98UDVZyeQE-s-3ZEXvknmuP4CDzdKeVuGAGVgFs/",
+      "key": "gaming_chat_rule_cards",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "gaming_chat_rule_cards"
+      }
+    },
+    {
+      "name": "Gaming Chat Sorting Mat",
+      "url": "https://docs.google.com/document/d/1UiMJ6EM2Ae7kW94bJvSPwC1Bk08cwfGHdt2vGb13CtI/",
+      "key": "gaming_chat_sorting_mat",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "gaming_chat_sorting_mat"
+      }
+    },
+    {
+      "name": "How Does the Model Decide?",
+      "url": "https://docs.google.com/presentation/d/18ck34UoG5dU-RxUHvs_EB4oIuOIUDiP6C6oJOM8j0co/",
+      "key": "how_does_the_model_decide_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "how_does_the_model_decide_"
+      }
+    },
+    {
+      "name": "Human Decision Tree Cards",
+      "url": "https://docs.google.com/document/d/1rLw263G8_up3i8JhU9xm4UVIGL3wt3jMIp4F9hR-F-s/",
+      "key": "human_decision_tree_cards",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "human_decision_tree_cards"
+      }
+    },
+    {
+      "name": "Human Decision Tree: Teacher Guide",
+      "url": "https://docs.google.com/document/d/1xn1pCN0jlltIvLrFdcxnd7IepkA01_VfkctGHONkRy0",
+      "key": "human_decision_tree_teacher_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "human_decision_tree_teacher_guide"
+      }
+    },
+    {
+      "name": "Monster Sorter Cards",
+      "url": "https://docs.google.com/document/d/1caQzTutqCb22SO8nqLStO8XBKezzxQV_eVLaQ0dXZ9c",
+      "key": "monster_sorter_cards",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "monster_sorter_cards"
+      }
+    },
+    {
+      "name": "Sorting by Rules",
+      "url": "https://docs.google.com/presentation/d/1ccAacsgREHijhihJ9hQmSRaDBnrysGOADpiZJ0aHG6Y",
+      "key": "sorting_by_rules",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sorting_by_rules"
+      }
+    },
+    {
+      "name": "Who Writes the Rules?",
+      "url": "https://docs.google.com/document/d/1_HgiCoQaz1YDiVE-yzNYPHajqgTtDRYiLHLGC77GvQ0/",
+      "key": "who_writes_the_rules_",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "who_writes_the_rules_"
+      }
+    },
+    {
+      "name": "Who Writes the Rules?",
+      "url": "https://docs.google.com/presentation/d/1QlSXd_WA3C4BWoK4e3g8kpTjoqXIZfTqWVUgUcSQps4/",
+      "key": "who_writes_the_rules__1",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "who_writes_the_rules__1"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_data_makes_ai_-_lesson_1_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "data_makes_ai_-_lesson_1_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "monster_sorter_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "sorting_by_rules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_optional_human_decision_tree_student_instructions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "how_does_the_model_decide_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "human_decision_tree_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "human_decision_tree_teacher_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_gaming_chat_rule_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_who_writes_the_rules_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "gaming_chat_rule_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "gaming_chat_sorting_mat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "who_writes_the_rules_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "who_writes_the_rules__1"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -238,19 +1734,272 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "algorithm",
+      "word": "algorithm",
+      "definition": "a set of instructions to accomplish a task that usually involves sequence, selection, and iteration",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "branching_logic",
+      "word": "branching logic",
+      "definition": "A way of making decisions using yes or no questions, where each answer sends you in a different direction",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "branching_logic"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "classification",
+      "definition": "Sorting something into a category based on its features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "computer_learned_rule",
+      "word": "computer-learned rule",
+      "definition": "A rule that a computer figures out by finding patterns in lots of examples.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_learned_rule"
+      }
+    },
+    {
+      "key": "data",
+      "word": "data",
+      "definition": "Information that is collected, stored, and used to understand and solve problems",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "decision_tree",
+      "word": "decision tree",
+      "definition": "a series of questions about features. Each answer leads to another question or a prediction.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decision_tree"
+      }
+    },
+    {
+      "key": "feature",
+      "word": "feature",
+      "definition": "A characteristic you can observe about something",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "feature"
+      }
+    },
+    {
+      "key": "human_written_rule",
+      "word": "human-written rule",
+      "definition": "A rule that a person decides on and writes for the computer to follow. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "human_written_rule"
+      }
+    },
+    {
+      "key": "label",
+      "word": "label",
+      "definition": "the category that a system predicts based on its features.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "label"
+      }
+    },
+    {
+      "key": "prediction",
+      "word": "prediction",
+      "definition": "the best guess based on the data available.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prediction"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "branching_logic"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "feature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "decision_tree"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "label"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "prediction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "computer_learned_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "human_written_rule"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "0f90cf07-1ddd-4d58-81f4-836001a08183",
+      "properties": {
+        "description": "Recognize that different feature choices produce different sorting outcomes."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "0f90cf07-1ddd-4d58-81f4-836001a08183"
+      }
+    },
+    {
+      "key": "14f8d1b5-f291-4812-918d-b8da16900ae6",
+      "properties": {
+        "description": "Trace the path an item follows through a decision tree to a prediction."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "14f8d1b5-f291-4812-918d-b8da16900ae6"
+      }
+    },
+    {
+      "key": "19a15d01-14df-42c1-954b-5b93929878fc",
+      "properties": {
+        "description": "Compare a decision tree prediction with the items label."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "19a15d01-14df-42c1-954b-5b93929878fc"
+      }
+    },
+    {
+      "key": "1dc11913-7862-422c-9985-2d1b8cdce293",
+      "properties": {
+        "description": "Identify a feature that can be used to sort a set of objects into two groups."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "1dc11913-7862-422c-9985-2d1b8cdce293"
+      }
+    },
+    {
+      "key": "1e2a1ad4-c4d6-44b8-bd59-c94657debc91",
+      "properties": {
+        "description": "Explain how one system can use both kinds of rules"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "1e2a1ad4-c4d6-44b8-bd59-c94657debc91"
+      }
+    },
+    {
+      "key": "841055b2-05ad-4061-ba12-944efc1c7946",
+      "properties": {
+        "description": "Sort the rules in a system into human-written and computer-learned"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "841055b2-05ad-4061-ba12-944efc1c7946"
+      }
+    },
+    {
+      "key": "ae931696-0813-43b2-bcce-c1d884b28eaa",
+      "properties": {
+        "description": "Distinguish between a feature that helps sort accurately and one that leads to a wrong result"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "ae931696-0813-43b2-bcce-c1d884b28eaa"
+      }
+    },
+    {
+      "key": "bddab86b-1034-4ed2-b961-b058406feeed",
+      "properties": {
+        "description": "Explain how a decision tree reaches a prediction."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "bddab86b-1034-4ed2-b961-b058406feeed"
+      }
+    },
+    {
+      "key": "e5dbd318-a064-418a-921e-97eeb214a1f7",
+      "properties": {
+        "description": "Propose a question that fixes a wrong prediction."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "e5dbd318-a064-418a-921e-97eeb214a1f7"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

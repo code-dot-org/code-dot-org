@@ -2,7 +2,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Typography} from '@mui/material';
-import classNames from 'classnames';
 import React from 'react';
 
 import {ColumnTypes, UNIQUE_OPTIONS_MAX} from '../constants';
@@ -26,6 +25,7 @@ import DistributionChart, {
   type DistributionBar,
   MAX_DISTRIBUTION_BARS,
 } from './DistributionChart';
+import EmptyState from './EmptyState';
 import StatCard from './StatCard';
 
 import styles from './columnAnalysis.module.scss';
@@ -143,20 +143,12 @@ const ColumnAnalysis = () => {
         </div>
         {isCategorical &&
           (bars.length > MAX_DISTRIBUTION_BARS ? (
-            <div className={classNames(styles.distribution, styles.emptyGraph)}>
-              <span className={styles.emptyGraphIcon} aria-hidden="true">
-                <FontAwesomeV6Icon iconName="chart-simple" iconStyle="solid" />
-              </span>
-              <Typography
-                component="h4"
-                variant="label1"
-                className={styles.emptyGraphTitle}
-              >
-                Too many values
-              </Typography>
-              <Typography variant="body4" className={styles.emptyGraphMessage}>
-                {`A graph is shown when there are ${MAX_DISTRIBUTION_BARS} or fewer values.`}
-              </Typography>
+            <div className={styles.distribution}>
+              <EmptyState
+                iconName="chart-simple"
+                title="Too many values"
+                message={`A graph is shown when there are ${MAX_DISTRIBUTION_BARS} or fewer values.`}
+              />
             </div>
           ) : (
             <div className={styles.distribution}>

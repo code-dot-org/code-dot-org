@@ -1,116 +1,94 @@
-// The router: a pure decision over the pathway, the status of each
-// checkpoint and the evidence derived from the student's progress. It
-// decides which checkpoints to complete by placement and where to put the
-// student next; it never changes anything itself. Every rule here is over
-// authored structure, so a decision can be explained and tested without a
-// model in the loop.
-
-import {CheckpointStatusMap} from '../progress/model';
+import {
+  CheckpointStatusMap,
+  Progress,
+  isComplete,
+  isStarted,
+} from '../progress/model';
 import {Checkpoint, Pathway} from '../types';
 
 import {PathwayEvidence, isDemonstrated} from './evidence';
 
-/** What just happened, for the router to react to. */
-export type RoutingEvent = {kind: 'checkpointComplete'; checkpointId: string};
+/**
+ * Computes the status of each checkpoint with routing applied. Complete and
+ * in-progress checkpoints come from student progress. Based on the completed
+ * checkpoints and the evidence, we skip any checkpoints that are skippable
+ * and whose target evidence levels are demonstrated, repeating as each skip
+ * unlocks more.
+ */
+export function routeStatusMap(
+  pathway: Pathway,
+  progress: Progress,
+  evidence: PathwayEvidence
+): CheckpointStatusMap {
+  const checkpointsById = new Map(pathway.checkpoints.map(c => [c.id, c]));
+  const completed = pathway.checkpoints.filter(c => isComplete(c, progress));
+  const started = new Set(
+    pathway.checkpoints.filter(c => isStarted(c, progress)).map(c => c.id)
+  );
+  const done = new Set(completed.map(c => c.id));
+  // Mark any ancestors of a completed checkpoint done, even if they aren't
+  // themselves complete (can happen if target evidence levels change after a
+  // student has already completed a later checkpoint).
+  for (const checkpoint of completed) {
+    for (const id of ancestorsOf(checkpoint, checkpointsById)) done.add(id);
+  }
+  const unlocked = (c: Checkpoint) =>
+    (c.requires || []).every(id => done.has(id));
 
-/** What the router decided. */
-export interface RoutingResult {
-  /** Checkpoints completed by placement, in the order they were passed. */
-  completedCheckpoints: string[];
-  /** The checkpoint to open next, if any is open to the student. */
-  nextCheckpoint?: string;
+  const skipped = new Set<string>();
+  const skippable = (c: Checkpoint) =>
+    !isComplete(c, progress) &&
+    !started.has(c.id) &&
+    !skipped.has(c.id) &&
+    !!c.skippable &&
+    unlocked(c) &&
+    isDemonstrated(c, evidence);
+  let passable = pathway.checkpoints.filter(skippable);
+  while (passable.length) {
+    for (const c of passable) {
+      skipped.add(c.id);
+      done.add(c.id);
+    }
+    passable = pathway.checkpoints.filter(skippable);
+  }
+
+  return Object.fromEntries(
+    pathway.checkpoints.map(c => {
+      if (isComplete(c, progress)) return [c.id, 'complete'];
+      if (started.has(c.id)) return [c.id, 'inProgress'];
+      if (skipped.has(c.id)) return [c.id, 'skipped'];
+      return [c.id, unlocked(c) ? 'available' : 'locked'];
+    })
+  );
 }
 
 /**
- * Determines routing for the student based on their evidence. Starting from
- * the checkpoints already complete or in progress, we pass every available
- * checkpoint that is skippable and whose target evidence levels have been
- * demonstrated, repeating as each pass opens more. Returns the list of
- * completed checkpoints and a checkpoint to open next, if any is available.
+ * The first checkpoint, in authored order, that is open to the student: in
+ * progress or available.
  */
-export function route(
+export function nextCheckpoint(
   pathway: Pathway,
-  statusMap: CheckpointStatusMap,
-  evidence: PathwayEvidence,
-  event: RoutingEvent
-): RoutingResult {
-  const complete = new Set(
-    pathway.checkpoints
-      .filter(c => statusMap[c.id] === 'complete')
-      .map(c => c.id)
-  );
-  const inProgress = new Set(
-    pathway.checkpoints
-      .filter(c => statusMap[c.id] === 'inProgress')
-      .map(c => c.id)
-  );
-  const completedCheckpoints = deriveRoutedCompletions(
-    pathway,
-    complete,
-    inProgress,
-    evidence
-  );
-  const routed = new Set([...complete, ...completedCheckpoints]);
-  const nextCheckpoint = pathway.checkpoints.find(
-    c => inProgress.has(c.id) || isAvailable(c, routed, inProgress)
+  statusMap: CheckpointStatusMap
+): string | undefined {
+  return pathway.checkpoints.find(c =>
+    ['inProgress', 'available'].includes(statusMap[c.id])
   )?.id;
-  return {completedCheckpoints, nextCheckpoint};
 }
 
-/**
- * Checkpoints passed by placement, in order, including those that each pass
- * makes passable.
- */
-function deriveRoutedCompletions(
-  pathway: Pathway,
-  complete: Set<string>,
-  inProgress: Set<string>,
-  evidence: PathwayEvidence
-): string[] {
-  const passable = findPassableCheckpoints(
-    pathway,
-    complete,
-    inProgress,
-    evidence
-  );
-  if (!passable.length) return [];
-  return [
-    ...passable,
-    ...deriveRoutedCompletions(
-      pathway,
-      new Set([...complete, ...passable]),
-      inProgress,
-      evidence
-    ),
-  ];
-}
-
-/** Ids of the available checkpoints the student may be placed past: skippable and demonstrated. */
-function findPassableCheckpoints(
-  pathway: Pathway,
-  complete: Set<string>,
-  inProgress: Set<string>,
-  evidence: PathwayEvidence
-): string[] {
-  return pathway.checkpoints
-    .filter(
-      c =>
-        c.skippable &&
-        isAvailable(c, complete, inProgress) &&
-        isDemonstrated(c, evidence)
-    )
-    .map(c => c.id);
-}
-
-/** Open to start: not complete, not in progress, and everything it requires complete. */
-function isAvailable(
+/** Ids of everything a checkpoint requires, through any chain. */
+function ancestorsOf(
   checkpoint: Checkpoint,
-  complete: Set<string>,
-  inProgress: Set<string>
-): boolean {
-  return (
-    !complete.has(checkpoint.id) &&
-    !inProgress.has(checkpoint.id) &&
-    (checkpoint.requires || []).every(id => complete.has(id))
-  );
+  checkpointsById: Map<string, Checkpoint>
+): Set<string> {
+  const seen = new Set<string>();
+  const visit = (c: Checkpoint) => {
+    for (const id of c.requires || []) {
+      if (seen.has(id)) continue;
+      seen.add(id);
+      const required = checkpointsById.get(id);
+      if (required) visit(required);
+    }
+  };
+  visit(checkpoint);
+  return seen;
 }

@@ -69,6 +69,45 @@
   }
 }
 
+.header.headerWithControls:not(.clickable),
+.headerWithControls .headerButton {
+  padding-right: 28px;
+}
+
+// Column sizing reads min-width: 100% as 0, so this caps the ask, not the fill.
+.headerWithControls .cellText {
+  display: block;
+  min-width: 100%;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sortControl {
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  opacity: 0;
+}
+
+.headerWithControls:hover .sortControl,
+.headerWithControls:focus-within .sortControl,
+.sortControl.sorted {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .sortControl {
+    opacity: 1;
+  }
+}
+
+.sortTooltip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .headerButton {
   display: block;
   width: 100%;
@@ -150,6 +189,38 @@
   border-top-width: 1px;
 }
 
+// Fits a 5-digit row number, so the id column can freeze right beside it.
+$frozen-index-width: 56px;
+
+// Frozen, so each row keeps its number and name as the table scrolls sideways.
+.frozenIndex,
+.idHeader,
+.idCell {
+  position: sticky;
+}
+
+.frozenIndex {
+  left: 0;
+  width: $frozen-index-width;
+  min-width: $frozen-index-width;
+}
+
+.idHeader,
+.idCell {
+  left: $frozen-index-width;
+}
+
+// Above the other headers, which scroll under them.
+.indexHeader.frozenIndex,
+.idHeader {
+  z-index: 2;
+}
+
+.idCell {
+  text-align: left;
+  color: var(--text-neutral-primary);
+}
+
 .bodyCell {
   color: var(--text-neutral-primary);
   background-color: var(--background-neutral-primary);
@@ -186,4 +257,8 @@
   .bodyCellFeature {
     background-color: var(--background-info-light);
   }
+}
+
+.emptyNote {
+  @include mixins.data-table-empty-note;
 }

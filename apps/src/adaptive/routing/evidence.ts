@@ -3,48 +3,37 @@
 // router reads evidence computed from progress on every decision, so authored
 // evidence levels can change without migrating anything.
 
-import {Answer, Progress, StepProgress} from '../progress/model';
+import type {Answer, Progress, StepProgress} from '../progress/model';
 import {Measures} from '../schema/question';
-import {Checkpoint, Pathway, QuestionsStep, Step} from '../types';
+import {Checkpoint, LevelStep, Pathway, QuestionsStep, Step} from '../types';
 
-/** What made an observation: answered questions, with judges of student work to follow. */
-type EvidenceSource = 'questions';
+/** What made an observation: answered questions, or a check of the student's work on a project step. */
+type EvidenceSource = 'questions' | 'validation';
 
 /** Where one observation of a skill came from. */
-type EvidencePointer = {
-  kind: 'question';
-  stepId: string;
-  questionId: number;
-};
+type EvidencePointer = {kind: EvidenceSource; stepId: string} & (
+  | {kind: 'questions'; questionId: number}
+  | {kind: 'validation'; at: string}
+);
 
 /** One thing a step showed about one skill. */
 interface EvidenceObservation {
   skillId: string;
   evidenceLevel: number;
-  source: EvidenceSource;
   from: EvidencePointer;
 }
 
 /** What has been shown about one skill. */
 interface SkillEvidence {
   skillId: string;
-  /** The highest evidence level the standing source showed; 0 is no evidence. */
+  /** The highest evidence level any observation showed; 0 is no evidence. */
   evidenceLevel: number;
-  /** The strongest source that showed anything for this skill. */
-  source: EvidenceSource;
-  /** That source's observations at this evidence level. */
+  /** The observations at that evidence level, whatever made them. */
   from: EvidencePointer[];
 }
 
 /** All the evidence one pathway holds for a student, by skill id. A skill nothing has measured is absent. */
 export type PathwayEvidence = {[skillId: string]: SkillEvidence};
-
-/**
- * Sources from weakest to strongest. Where two show the same skill the
- * stronger one's evidence stands whatever its evidence level, since what a
- * student did outranks what they answered.
- */
-const SOURCE_PRECEDENCE: EvidenceSource[] = ['questions'];
 
 /** The default target for a skill a checkpoint lists but sets no target for. */
 const DEFAULT_TARGET_EVIDENCE_LEVEL = 1;
@@ -72,25 +61,18 @@ export function computeEvidence(
 }
 
 /**
- * Folds one observation into the evidence map. A stronger source replaces
- * what a weaker one showed; the same source keeps the higher evidence level,
- * with the pointers of every observation that showed it; a weaker source or
- * a lower evidence level changes nothing.
+ * Folds one observation into the evidence map: the skill keeps its highest
+ * evidence level, with the pointers of every observation that showed it.
+ * Evidence never goes down, whatever made the lower observation.
  */
 function addObservation(
   evidence: PathwayEvidence,
-  {skillId, evidenceLevel, source, from}: EvidenceObservation
+  {skillId, evidenceLevel, from}: EvidenceObservation
 ): void {
   const prior = evidence[skillId];
-  const rank = SOURCE_PRECEDENCE.indexOf(source);
-  const priorRank = prior ? SOURCE_PRECEDENCE.indexOf(prior.source) : -1;
-  const higher =
-    !prior ||
-    rank > priorRank ||
-    (rank === priorRank && evidenceLevel > prior.evidenceLevel);
-  if (higher) {
-    evidence[skillId] = {skillId, evidenceLevel, source, from: [from]};
-  } else if (rank === priorRank && evidenceLevel === prior.evidenceLevel) {
+  if (!prior || evidenceLevel > prior.evidenceLevel) {
+    evidence[skillId] = {skillId, evidenceLevel, from: [from]};
+  } else if (evidenceLevel === prior.evidenceLevel) {
     evidence[skillId] = {...prior, from: [...prior.from, from]};
   }
 }
@@ -103,9 +85,29 @@ function getStepEvidence(
   switch (step.kind) {
     case 'questions':
       return questionsStepEvidence(step, entry);
+    case 'level':
+      return levelStepEvidence(step, entry);
     default:
       return [];
   }
+}
+
+/**
+ * Observations from every check of a project step's work: each shows the
+ * evidence level the judge rated the work at, in the skill the step
+ * measures. A step with no validation block shows nothing.
+ */
+function levelStepEvidence(
+  step: LevelStep,
+  entry: StepProgress | undefined
+): EvidenceObservation[] {
+  const skillId = step.validation?.measures.skillId;
+  if (!skillId) return [];
+  return (entry?.validationHistory ?? []).map(attempt => ({
+    skillId,
+    evidenceLevel: attempt.evidenceLevel,
+    from: {kind: 'validation', stepId: step.id, at: attempt.at},
+  }));
 }
 
 /**
@@ -132,8 +134,7 @@ function questionsStepEvidence(
     observations.push({
       skillId: question.measures.skillId,
       evidenceLevel,
-      source: 'questions',
-      from: {kind: 'question', stepId: step.id, questionId: question.id},
+      from: {kind: 'questions', stepId: step.id, questionId: question.id},
     });
   }
   return observations;

@@ -10,6 +10,7 @@ import {
   BooleanModeKey,
   clearDataset,
   DEFAULT_TRAINER,
+  getLevelIdColumn,
   getSelectedDataset,
   isSetByHiddenTesting,
   isSetByPretrained,
@@ -20,10 +21,13 @@ import {
   needsDataset,
   setDataset,
   setHideTestingView,
+  setTrainer,
   withoutLabelInFeatures,
 } from './ailabMode';
-import {DatasetFiles} from './datasetColumns';
+import {DatasetFiles, withoutIdColumn} from './datasetColumns';
 import FeaturesField from './FeaturesField';
+import HyperparameterField from './HyperparameterField';
+import IdColumnField from './IdColumnField';
 import LabelField from './LabelField';
 import PretrainedField from './PretrainedField';
 import {useDatasetColumns} from './useDatasetColumns';
@@ -74,8 +78,12 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const [accuracyText, setAccuracyText] = useState(() => getAccuracyText(mode));
 
   const selectedDataset = getSelectedDataset(mode);
-  const {columns, failed: columnsFailed} = useDatasetColumns(
+  const {columns: datasetColumns, failed: columnsFailed} = useDatasetColumns(
     datasets.find(dataset => dataset.id === selectedDataset)
+  );
+  const columns = withoutIdColumn(
+    datasetColumns,
+    getLevelIdColumn(mode, datasetColumns?.defaultIdColumn)
   );
 
   const datasetItems = [
@@ -91,6 +99,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
 
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
+  const hyperparameterLocked = isSetByHiddenTesting(mode, 'hyperparameters');
 
   let columnsHelperMessage: string | undefined;
   if (!selectedDataset) {
@@ -232,6 +241,17 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           onChange={changeMode}
         />
       </div>
+      <div className={moduleStyles.fieldArea}>
+        <IdColumnField
+          mode={mode}
+          columns={columns}
+          helperMessage={
+            columnsHelperMessage ??
+            'Names each row in the tables and cards. Students cannot use it as the label or a feature.'
+          }
+          onChange={changeMode}
+        />
+      </div>
 
       <Typography variant="body2" className={moduleStyles.label}>
         Other Mode Configurations
@@ -242,10 +262,16 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           name="ailab_mode_trainer"
           items={TRAINER_ITEMS}
           selectedValue={selectedTrainer}
-          onChange={e =>
-            changeMode(setJsonObjectValue(mode, 'trainer', e.target.value))
-          }
+          onChange={e => changeMode(setTrainer(mode, e.target.value))}
           size="s"
+        />
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <HyperparameterField
+          key={`${selectedTrainer}:${hyperparameterLocked}`}
+          mode={mode}
+          disabled={hyperparameterLocked}
+          onChange={changeMode}
         />
       </div>
       <div className={moduleStyles.fieldArea}>

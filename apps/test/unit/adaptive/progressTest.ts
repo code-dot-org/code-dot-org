@@ -3,11 +3,13 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {
   EMPTY_PROGRESS,
   Progress,
-  checkpointStatus,
-  getStatusMap,
+  latestValidation,
+  stepIdToResume,
   useProgress,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import {computeEvidence} from '@cdo/apps/adaptive/routing/evidence';
+import {routeStatusMap} from '@cdo/apps/adaptive/routing/route';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
 import {TestResults} from '@cdo/apps/constants';
 
@@ -52,9 +54,12 @@ const pathway = {
   ],
 } as Pathway;
 
-describe('checkpointStatus', () => {
+const statusMapOf = (p: Pathway, progress: Progress) =>
+  routeStatusMap(p, progress, computeEvidence(p, progress));
+
+describe('routeStatusMap without evidence', () => {
   const status = (index: number, progress: Progress) =>
-    checkpointStatus(pathway.checkpoints[index], pathway, progress);
+    statusMapOf(pathway, progress)[pathway.checkpoints[index].id];
 
   it('is available with no requires, locked until requires are complete', () => {
     const progress = progressOf([], []);
@@ -79,7 +84,7 @@ describe('checkpointStatus', () => {
     const multi = checkpoint('multi', undefined, [panels('one'), level]);
     const twoStep = {checkpoints: [multi]} as Pathway;
     const statusOf = (steps: Progress['steps']) =>
-      checkpointStatus(multi, twoStep, {steps});
+      statusMapOf(twoStep, {steps}).multi;
 
     expect(statusOf({one: {status: 'complete', timeSpent: 3}})).toBe(
       'inProgress'
@@ -94,15 +99,148 @@ describe('checkpointStatus', () => {
     const progress = {
       steps: {'intro-step': {timeSpent: 0, generatedInstructions}},
     };
-    expect(checkpointStatus(pathway.checkpoints[0], pathway, progress)).toBe(
-      'available'
-    );
+    expect(statusMapOf(pathway, progress).intro).toBe('available');
   });
 });
 
-describe('getStatusMap', () => {
+describe('stepIdToResume', () => {
+  const level: Step = {id: 'try', title: 'Try', kind: 'level', level: 'x'};
+  const multi = checkpoint('multi', undefined, [
+    panels('one'),
+    panels('two'),
+    level,
+  ]);
+
+  const resume = (steps: Progress['steps']) => stepIdToResume(multi, {steps});
+
+  it('returns the first step when none are complete', () => {
+    expect(resume({})).toBe('one');
+    expect(resume({one: {status: 'started', timeSpent: 0}})).toBe('one');
+  });
+
+  it('returns the first incomplete step', () => {
+    expect(resume({one: {status: 'complete', timeSpent: 1}})).toBe('two');
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+      })
+    ).toBe('try');
+  });
+
+  it('returns undefined when all steps are complete', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+        try: {status: 'complete', timeSpent: 3},
+      })
+    ).toBeUndefined();
+  });
+
+  it('returns a started step as the next step to complete', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'started', timeSpent: 0},
+      })
+    ).toBe('two');
+  });
+});
+
+describe('routeStatusMap from progress', () => {
+  it('skips a demonstrated skippable checkpoint and un-skips it once started', () => {
+    const routed = {
+      checkpoints: [
+        checkpoint('intro', undefined, [
+          {
+            id: 'check',
+            title: 'Check',
+            kind: 'questions',
+            questions: [
+              {
+                id: 1,
+                type: 'MultipleChoiceQuestion',
+                questionName: 'q1',
+                questionTitle: 'Q1',
+                choices: [
+                  {id: 'a', text: 'A'},
+                  {id: 'b', text: 'B'},
+                ],
+                measures: {skillId: 'build', evidenceLevels: {a: 0, b: 1}},
+              },
+            ],
+          } as unknown as Step,
+        ]),
+        {...checkpoint('a', ['intro']), skillIds: ['build'], skippable: true},
+        checkpoint('b', ['a']),
+      ],
+    } as unknown as Pathway;
+    const answered: Progress = {
+      steps: {
+        check: {
+          status: 'complete',
+          timeSpent: 1,
+          answers: {1: [{answerId: 'b'}]},
+        },
+      },
+    };
+    expect(statusMapOf(routed, answered)).toEqual({
+      intro: 'complete',
+      a: 'skipped',
+      b: 'available',
+    });
+    const reopened: Progress = {
+      steps: {...answered.steps, 'a-step': {status: 'started', timeSpent: 0}},
+    };
+    expect(statusMapOf(routed, reopened).a).toBe('inProgress');
+  });
+
+  it("skips a demonstrated skippable checkpoint once a project step's check shows the skill", () => {
+    const routed = {
+      checkpoints: [
+        checkpoint('intro', undefined, [
+          {
+            id: 'build-page',
+            title: 'Build',
+            kind: 'level',
+            level: 'x',
+            project: true,
+            validation: {
+              condition: 'Adds a heading.',
+              measures: {skillId: 'build'},
+            },
+          } as unknown as Step,
+        ]),
+        {
+          ...checkpoint('a', ['intro']),
+          skillIds: ['build'],
+          skippable: true,
+          targetEvidenceLevels: {build: 2},
+        },
+      ],
+    } as unknown as Pathway;
+    const checkedAt2: Progress = {
+      steps: {
+        'build-page': {
+          status: 'complete',
+          timeSpent: 1,
+          validationHistory: [
+            {
+              at: '2026-10-22T10:00:00Z',
+              pass: true,
+              evidenceLevel: 2,
+              reason: 'Done.',
+            },
+          ],
+        },
+      },
+    };
+    expect(statusMapOf(routed, checkedAt2).a).toBe('skipped');
+  });
+
   it('maps every checkpoint id to its status', () => {
-    expect(getStatusMap(pathway, progressOf(['intro', 'a'], []))).toEqual({
+    expect(statusMapOf(pathway, progressOf(['intro', 'a'], []))).toEqual({
       intro: 'complete',
       a: 'complete',
       b: 'available',
@@ -139,6 +277,7 @@ describe('useProgress', () => {
       load: jest.fn().mockResolvedValue(loaded),
       saveStep: jest.fn().mockResolvedValue(undefined),
       saveInstructions: jest.fn().mockResolvedValue(undefined),
+      saveValidation: jest.fn().mockResolvedValue(undefined),
     };
     return store as typeof store & ProgressStore;
   };
@@ -272,6 +411,31 @@ describe('useProgress', () => {
       'try',
       generatedInstructions
     );
+  });
+
+  it('appends a validation attempt, dated, without starting the step', async () => {
+    const store = fakeStore();
+    const {result, reportLevelStep} = await renderProgress(store);
+    const attempt = {pass: false, evidenceLevel: 1, reason: 'Not yet.'};
+
+    act(() => result.current.recordValidation(sandbox, attempt));
+    act(() =>
+      result.current.recordValidation(sandbox, {...attempt, pass: true})
+    );
+
+    const history = result.current.progress?.steps.try.validationHistory;
+    expect(history).toHaveLength(2);
+    expect(history?.[0]).toMatchObject(attempt);
+    expect(latestValidation(result.current.progress?.steps.try)?.pass).toBe(
+      true
+    );
+    expect(typeof history?.[1].at).toBe('string');
+    expect(result.current.statusMap.intro).toBe('available');
+    expect(store.saveValidation).toHaveBeenLastCalledWith(key, 'try', {
+      ...attempt,
+      pass: true,
+    });
+    expect(reportLevelStep).not.toHaveBeenCalled();
   });
 
   it('restores loaded generated instructions', async () => {

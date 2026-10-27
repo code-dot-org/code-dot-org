@@ -4,6 +4,12 @@ import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {
+  noteTaPanelEntryPoint,
+  sendTaEvent,
+  takeTaPanelEntryPoint,
+} from '@cdo/apps/aiTeacherDrawer/analytics';
+import {takeDrawerReopenNav} from '@cdo/apps/aiTeacherDrawer/drawerReopen';
+import {
   setChatIsOpen,
   fetchThreadMessages,
   openDrawerToNav,
@@ -134,6 +140,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       );
     }
   }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
+
+  // Deliberately not gated on canStartOpen: level pages pass that as false to
+  // stop the drawer opening on its own, but this is the tail end of a click
+  // the teacher already made (see drawerReopen). Declared after the auto-open
+  // effect above so it is not immediately undone by it on mount.
+  React.useEffect(() => {
+    const reopenNav = takeDrawerReopenNav();
+    if (reopenNav) {
+      noteTaPanelEntryPoint('student_navigation');
+      dispatch(openDrawerToNav(reopenNav));
+    }
+  }, [dispatch]);
 
   const updateUnreadNotificationCount = React.useCallback(() => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
@@ -299,6 +317,29 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButtonRight;
 
+  // Every path that opens the drawer ends in chatIsOpen going true, including
+  // the automatic open above and the teacher panel handle, which never touch
+  // handleClick. Report the open from the transition and let whoever caused it
+  // leave their name behind (see noteTaPanelEntryPoint).
+  const wasChatOpenRef = useRef<boolean | null>(null);
+  useEffect(() => {
+    const wasOpen = wasChatOpenRef.current;
+    wasChatOpenRef.current = chatIsOpen;
+    if (wasOpen === null || wasOpen === chatIsOpen || !chatIsOpen) {
+      return;
+    }
+    const entryPoint = takeTaPanelEntryPoint();
+    sendTaEvent(
+      EVENTS.AI_TA_PANEL_OPENED,
+      {
+        entry_point: entryPoint,
+        context_type: context.type,
+        script_name: scriptName,
+      },
+      entryPoint
+    );
+  }, [chatIsOpen, context.type, scriptName]);
+
   const handleClick = () => {
     if (wasDraggingRef.current) {
       wasDraggingRef.current = false;
@@ -316,6 +357,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       trySetLocalStorage(LOCAL_STORAGE_OPENED_KEY, true.toString());
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
+    }
+    if (!chatIsOpen) {
+      noteTaPanelEntryPoint(openToNav ? 'nav_shortcut' : 'fab');
     }
     if (openToNav) {
       dispatch(openDrawerToNav(openToNav));

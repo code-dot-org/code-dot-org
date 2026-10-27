@@ -17,19 +17,11 @@ import train from './train';
 import type {Mode} from './types';
 
 /**
- * Prepare the lab for a level. AilabEngine calls this once per level.
+ * Prepare the lab for a level.
  */
 export const loadLevel = function (mode?: Mode): void {
-  reload(mode, /*keepHistoricResults*/ false);
-};
-
-export const startOver = function (): void {
-  reload(store.getState().mode, /*keepHistoricResults*/ true);
-};
-
-const reload = (mode: Mode | undefined, keepHistoricResults: boolean): void => {
   invalidatePendingDatasetLoads();
-  store.dispatch(resetState(keepHistoricResults));
+  store.dispatch(resetState());
   train.reset();
   store.dispatch(setMode(mode));
   processMode(mode);

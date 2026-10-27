@@ -1,4 +1,4 @@
-import {act, fireEvent, screen, within} from '@testing-library/react';
+import {act, fireEvent, screen, waitFor, within} from '@testing-library/react';
 import {createElement} from 'react';
 
 import I18n from '@cdo/apps/ailab/engine/i18n';
@@ -141,12 +141,12 @@ describe('NodeModal', () => {
   it('lists the rows tested on that reach the node, then the rows trained on', () => {
     fireEvent.click(root());
 
-    expect(within(dialog()).getByText('1 Row')).toBeTruthy();
+    expect(within(dialog()).getByText('1 row')).toBeTruthy();
     expect(shownRows()).toEqual([['10', '4', 'dog']]);
 
     fireEvent.click(within(dialog()).getByRole('tab', {name: 'Training rows'}));
 
-    expect(within(dialog()).getByText('9 Rows')).toBeTruthy();
+    expect(within(dialog()).getByText('9 rows')).toBeTruthy();
     expect(shownRows().map(([number]) => number)).toEqual([
       '1',
       '2',
@@ -174,11 +174,13 @@ describe('NodeModal', () => {
 
     const panel = () =>
       dialog().querySelector("[role='tabpanel']:not([hidden])");
-    fireEvent.click(within(panel()).getByLabelText('Show all columns'));
+    fireEvent.click(
+      within(panel()).getByRole('button', {name: 'Expand columns'})
+    );
     expect(shownRows()).toEqual([['10', 'Pet 10', '4', 'dog']]);
 
     fireEvent.click(
-      within(panel()).getByLabelText('Show only features and label')
+      within(panel()).getByRole('button', {name: 'Collapse columns'})
     );
     expect(shownRows()).toEqual([['10', '4', 'dog']]);
   });
@@ -201,6 +203,8 @@ describe('NodeModal', () => {
 
     expect(shownHeaders()).toEqual([['', 'legs', 'animal', 'AI predicts']]);
     expect(shownRows()).toEqual([['10', '4', 'dog', 'dog']]);
+    const panel = dialog().querySelector("[role='tabpanel']:not([hidden])");
+    expect(within(panel).queryByText(/^\d+ (of \d+ )?rows?$/)).toBeNull();
 
     fireEvent.click(
       within(dialog()).getByRole('button', {name: 'Incorrect (0)'})
@@ -212,6 +216,31 @@ describe('NodeModal', () => {
     expect(
       within(dialog()).getByRole('button', {name: 'Correct (1)'})
     ).toBeTruthy();
+  });
+
+  it('filters the rows trained on and counts the ones it keeps', async () => {
+    fireEvent.click(root());
+    fireEvent.click(within(dialog()).getByRole('tab', {name: 'Training rows'}));
+    fireEvent.click(within(dialog()).getByRole('button', {name: 'Filter'}));
+    fireEvent.click(screen.getByRole('button', {name: /^animal/}));
+    fireEvent.click(screen.getByRole('checkbox', {name: 'bird'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Done (1)'}));
+
+    await waitFor(() =>
+      expect(within(dialog()).getByText('3 of 9 rows')).toBeTruthy()
+    );
+    expect(shownRows().map(([number]) => number)).toEqual(['1', '4', '7']);
+  });
+
+  it("offers no sort on an answer's single prediction", () => {
+    fireEvent.click(answer('dog'));
+
+    expect(
+      within(dialog()).getByRole('button', {name: 'Sort by legs low to high'})
+    ).toBeTruthy();
+    expect(
+      within(dialog()).queryByRole('button', {name: /^Sort by AI predicts/})
+    ).toBeNull();
   });
 
   it("leaves the AI's prediction off an answer's training rows", () => {

@@ -18,6 +18,7 @@ import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
+import type {AilabProject} from '@cdo/apps/ailab/engine/types';
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
@@ -104,7 +105,8 @@ export type Source =
   | BlocklySource
   | MultiFileSource
   | ExcalidrawSourceWithExternalFiles
-  | SketchlabReactFlowSource;
+  | SketchlabReactFlowSource
+  | AilabProject;
 
 // -- REACT FLOW SKETCH LAB -- //
 
@@ -330,8 +332,8 @@ export interface LevelProperties {
   aiTutorPromptSettings?: AiTutorPromptSettings;
   levelSystemPrompt?: string;
   /**
-   * Show the instructions in the AI Tutor tab, open above the chat to begin
-   * with, and don't show the separate Instructions tab.
+   * Show the instructions in the AI Tutor tab, pinned above the chat as a
+   * message from the tutor, and don't show the separate Instructions tab.
    */
   showInstructionsInAiTutor?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels

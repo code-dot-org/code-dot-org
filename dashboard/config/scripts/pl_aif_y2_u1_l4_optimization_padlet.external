@@ -3,124 +3,38 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Facilitating Algorithms & Pseudocode
 
-This lesson moves from paired brainstorming into individual, precise writing, then into critical evaluation of AI suggestions. Each stage has its own way for students to get stuck, and its own language to help them past it.
+## AI-901 Connection
 
-## What's Actually Happening in This Lesson
-
-<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
-  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
-    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
-    <div style="font-size: 14pt; line-height: 1.5;"><strong>What's the Vibe? warm-up:</strong> the class shouts out how someone feels based on a sentence alone, setting up sentiment analysis before it's formally defined</div>
-  </div>
-  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
-    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
-    <div style="font-size: 14pt; line-height: 1.5;"><strong>Strategy brainstorm:</strong> in pairs, students write a general strategy (in plain language, not code) for telling whether a sentence is happy or sad, using given word lists</div>
-  </div>
-  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
-    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
-    <div style="font-size: 14pt; line-height: 1.5;"><strong>Writing pseudocode:</strong> individually, each student turns their own strategy into pseudocode, then traces it by hand on sample sentences to check it actually works</div>
-  </div>
-  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
-    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">4</div>
-    <div style="font-size: 14pt; line-height: 1.5;"><strong>Swap and revise:</strong> partners trade Activity Guides and trace each other's pseudocode, revising based on where their partner got confused or stuck</div>
-  </div>
-  <div style="display: flex; align-items: flex-start; gap: 12px;">
-    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">5</div>
-    <div style="font-size: 14pt; line-height: 1.5;"><strong>Refining with AI:</strong> students individually chat with AI to refine their algorithm, then document what they changed and why, evaluating each suggestion rather than accepting it automatically</div>
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.5;">
+    <strong>&#8505; Where this shows up again:</strong> AI-901 doesn't name hill climbing specifically, but the underlying logic does resurface: when you're selecting or tuning a model in Domain 2's Foundry work, you're doing a version of the same thing students just practiced, trying an option, checking whether it performed better, and converging toward a good choice rather than guessing at the best one outright.
   </div>
 </div>
 
-<div style="background-color: #E4E2F8; border-radius: 10px; padding: 14px 18px; margin-bottom: 16px;">
-  <div style="font-size: 13.5px; color: #222222; line-height: 1.5;">
-    <strong>&#128161; Teacher tip:</strong> the Activity Guide itself says "Wait for your teacher before completing this section" between the strategy and the pseudocode. This pacing is intentional, you're the one who releases the class into pseudocode, not a self-paced flow.
-  </div>
-</div>
+## Share Your Approach
+
+Every teacher adapts an activity a little differently once it hits their own classroom. Share one way you'd adapt the hill-climbing or thermostat activity for your students, a different real-world example, a tweak to the pacing, anything that worked for you.
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/s024vis4dfoiydqw1hxz" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p></div>
 
 <hr>
 
-## The Exemplar
-
-Here's what a strong answer to the sentiment analysis task actually looks like:
-
-<div style="background-color: #F7F7FB; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
-  <div style="font-size: 13pt; font-weight: bold; color: #1F1976; margin-bottom: 6px;">Strategy</div>
-  <div style="font-size: 13.5px; color: #333; margin-bottom: 14px; line-height: 1.6;">Count up the number of happy words and sad words in the sentence. If there are more happy words, it's a happy sentence. If there are more sad words, it's a sad sentence.</div>
-  <div style="font-size: 13pt; font-weight: bold; color: #1F1976; margin-bottom: 6px;">Pseudocode</div>
-  <div style="font-size: 13.5px; color: #333; line-height: 1.7; font-family: 'Consolas', 'Courier New', monospace;">
-    For each word in the sentence:<br>
-    &nbsp;&nbsp;If the word is a happy word: add one to a happy word count<br>
-    &nbsp;&nbsp;If the word is a sad word: add one to a sad word count<br>
-    If there are more happy words than sad words: the sentence is happy<br>
-    If there are more sad words than happy words: the sentence is sad
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 24px 0 16px 0;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 20px; width: 36px; height: 36px; min-width: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">&#10003;</div>
+    <div style="font-size: 16px; color: #1F1976;">
+      <strong>Section 4 Complete</strong><br>
+      Nice work! You've finished Optimization in Action.
+    </div>
   </div>
 </div>
 
-<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
-  <div style="font-size: 14pt; color: #611D00; line-height: 1.5;">
-    <strong>&#9888; Notice what's missing:</strong> this exemplar doesn't handle ties, equal happy and sad word counts. That's not a flaw to fix, it's exactly the kind of limitation the class discussion is designed to surface. Validate students who notice this, or who raise negation ("not feeling upset") and sarcasm as other real gaps. These limitations are genuine, and they motivate the AI techniques students study later in the course.
-  </div>
+<div style="background-color: #4C42CF; color: #FFFFFF; border-radius: 8px; padding: 14px 20px; margin-bottom: 16px;">
+  <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Up Next</span><br>
+  <span style="font-size: 18px; font-weight: bold;">Section 5: Loop Basics</span>
 </div>
 
-<hr>
-
-### Watch for: Skipped Steps
-
-When students write their own pseudocode, expect some to skip steps that feel too obvious to write down.
-
-<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <div style="font-size: 13pt; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Skips the Mechanism</div>
-    <div style="font-size: 13pt; color: #611D00; line-height: 1.6;">"Count the happy and sad words, then decide."</div>
-  </div>
-  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <div style="font-size: 13pt; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Spells Out Each Step</div>
-    <div style="font-size: 13pt; color: #003F25; line-height: 1.6;">"For each word, check if it's happy or sad, then add to the right count."</div>
-  </div>
-</div>
-
-## Watch for: Syntax Anxiety
-
-Some students will stall, thinking their pseudocode needs to look like a real programming language. It doesn't.
-
-<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
-  <div style="font-size: 14pt; color: #611D00; line-height: 1.5;">
-    <strong>&#9888; Reminder:</strong> pseudocode has no required syntax. Clarity matters more than style, if a reader can follow it exactly, it's done its job.
-  </div>
-</div>
-
-<hr>
-
-## Watch for: Passive AI Acceptance
-
-During the Refining Algorithms step, expect some students to take every AI suggestion at face value.
-
-<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <div style="font-size: 13pt; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Accepts Without Question</div>
-    <div style="font-size: 13pt; color: #611D00; line-height: 1.6;">"Sure, I'll add that."</div>
-  </div>
-  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <div style="font-size: 13pt; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Evaluates the Suggestion</div>
-    <div style="font-size: 13pt; color: #003F25; line-height: 1.6;">"Does this actually handle the tie case I was worried about, or just add complexity?"</div>
-  </div>
-</div>
-
-<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <div style="font-size: 14pt; color: #222222; line-height: 1.5;">
-    <strong>&#128161; Language to borrow:</strong>
-  </div>
-  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For a skipped or vague step</div>
-  <div style="font-size: 14pt; color: #222222;">&bull; "How would someone reading this know to do that?"</div>
-
-  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For syntax anxiety</div>
-  <div style="font-size: 14pt; color: #222222;">&bull; "It doesn't need to look like any specific language, does this describe the step clearly?"</div>
-
-  <div style="font-size: 12pt; font-weight: bold; color: #4C42CF; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 8px;">For passive AI acceptance</div>
-  <div style="font-size: 14pt; color: #222222; margin-bottom: 8px;">&bull; "Why do you think the AI suggested that?"</div>
-  <div style="font-size: 14pt; color: #222222;">&bull; "Does it actually improve your algorithm, or just make it more complicated?"</div>
-</div>
 
 
 MARKDOWN

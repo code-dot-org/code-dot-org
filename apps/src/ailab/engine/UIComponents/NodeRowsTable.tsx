@@ -1,80 +1,83 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {type ReactNode} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
-import {dataColumnsFor, getColumnRole} from '../helpers/columnDetails';
+import {getColumnRole} from '../helpers/columnDetails';
 import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getIdColumn} from '../selectors';
+import type {DatasetTableView} from '../types';
 
 import CellText from './CellText';
+import DataCell from './DataCell';
 import DataTableFrame from './DataTableFrame';
+import RowNumberCell from './RowNumberCell';
 import RowsTableHeader from './RowsTableHeader';
+import TableEmptyNote from './TableEmptyNote';
 
 import tableStyles from './dataTable.module.scss';
 import styles from './nodeRowsTable.module.scss';
 
 interface NodeRowsTableProps {
   labelId: string;
-  rowIndices: number[];
+  view: DatasetTableView;
   emphasizedColumn?: string;
-  showAllColumns: boolean;
   emptyText: string;
   prediction?: string | number;
+  actionRow: ReactNode;
 }
 
 const NodeRowsTable = ({
   labelId,
-  rowIndices,
+  view,
   emphasizedColumn,
-  showAllColumns,
   emptyText,
   prediction,
+  actionRow,
 }: NodeRowsTableProps) => {
+  const {columns} = view;
   const {project} = useProject();
   const data = useAppSelector(state => state.data);
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const labelColumn = project.labelColumn || 'unknown';
+  const idColumn = useAppSelector(getIdColumn);
   const showPrediction = prediction !== undefined;
-  const columns = [
-    ...dataColumnsFor(data, project, showAllColumns),
-    labelColumn,
-  ];
-  const shownRows = rowIndices.slice(0, DATA_TABLE_ROW_LIMIT);
+  const shownRows = view.rows.slice(0, DATA_TABLE_ROW_LIMIT);
 
   return (
     <>
-      <DataTableFrame labelId={labelId}>
+      <DataTableFrame labelId={labelId} actionRow={actionRow}>
         <table className={tableStyles.table}>
           <thead>
             <RowsTableHeader
               columns={columns}
+              view={view}
               showPrediction={showPrediction}
             />
           </thead>
           <tbody>
             {shownRows.map(row => (
               <tr key={row} className={tableStyles.row}>
-                <th scope="row" className={tableStyles.indexCell}>
-                  <CellText>{row + 1}</CellText>
-                </th>
+                <RowNumberCell
+                  rowNumber={row + 1}
+                  besideIdColumn={!!idColumn}
+                />
                 {columns.map(column => {
                   const role = getColumnRole(project, column);
                   return (
-                    <td
+                    <DataCell
                       key={column}
-                      className={classNames(tableStyles.bodyCell, {
+                      isIdColumn={column === idColumn}
+                      rowNumber={row + 1}
+                      value={getLocalizedValue(data[row][column], datasetId)}
+                      className={classNames({
                         [tableStyles.bodyCellLabel]: role === 'label',
                         [tableStyles.bodyCellFeature]: role === 'feature',
                         [styles.emphasized]: column === emphasizedColumn,
                       })}
-                    >
-                      <CellText>
-                        {getLocalizedValue(data[row][column], datasetId)}
-                      </CellText>
-                    </td>
+                    />
                   );
                 })}
                 {showPrediction && (
@@ -91,17 +94,9 @@ const NodeRowsTable = ({
             ))}
           </tbody>
         </table>
-        {rowIndices.length === 0 && (
-          <Typography
-            variant="body4"
-            component="p"
-            className={styles.emptyNote}
-          >
-            {emptyText}
-          </Typography>
-        )}
+        <TableEmptyNote view={view} emptyText={emptyText} />
       </DataTableFrame>
-      {rowIndices.length > shownRows.length && (
+      {view.rows.length > shownRows.length && (
         <Typography variant="body4" component="p" className={styles.note}>
           Showing the first {shownRows.length} rows.
         </Typography>
