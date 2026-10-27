@@ -7,7 +7,7 @@ import QuestionDescription from '../QuestionDescription';
 
 import MatchColumn from './MatchColumn';
 import {MatchPairs, MatchSelection, MatchSets, MatchSide} from './types';
-import {findPartner, labelOf, pairTogether, unpairItem} from './utils';
+import {findPartner, pairTogether, getItemText, unpairItem} from './utils';
 
 import styles from './match-question-container.module.scss';
 
@@ -48,6 +48,10 @@ const MatchQuestionContainer: React.FunctionComponent<
   headingRef,
   disabled,
 }) => {
+  // The currently selected items in each column, if any.
+  // Once both are set, a pair is formed, and the selection is subsequently cleared (see handleClick).
+  // For example, {start: 'abc-123', end: undefined} means the first column has item with ID 'abc-123' selected,
+  // and the second column does not have a selected item.
   const [selection, setSelection] = useState<MatchSelection>({});
   const [linePaths, setLinePaths] = useState<string[]>([]);
   // Read out by a live region: a screen reader won't re-announce the name
@@ -98,8 +102,18 @@ const MatchQuestionContainer: React.FunctionComponent<
     const {start, end} = next;
     // Both columns have a selection: pair them.
     if (start && end) {
+      const previousPartnerId = findPartner(pairs, id);
+      const matchedAnnouncement = `Matched ${getItemText(
+        matchSets,
+        start
+      )} with ${getItemText(matchSets, end)}.`;
       setAnnouncement(
-        `Matched ${labelOf(matchSets, start)} with ${labelOf(matchSets, end)}.`
+        previousPartnerId
+          ? `${matchedAnnouncement} ${getItemText(
+              matchSets,
+              previousPartnerId
+            )} is no longer matched.`
+          : matchedAnnouncement
       );
       onChangePairs(pairTogether(pairs, [start, end]));
       setSelection({});
@@ -118,7 +132,7 @@ const MatchQuestionContainer: React.FunctionComponent<
     if (partnerId) {
       onChangePairs(unpairItem(pairs, id));
       setAnnouncement(
-        `Unmatched ${labelOf(matchSets, id)} from ${labelOf(
+        `Unmatched ${getItemText(matchSets, id)} from ${getItemText(
           matchSets,
           partnerId
         )}. Select an item in the other column to match it.`

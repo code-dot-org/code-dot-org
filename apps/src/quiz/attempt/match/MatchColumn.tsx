@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {MatchPairs, MatchSets, MatchSide} from './types';
-import {findPartner, itemsInColumn, labelOf, letterOf} from './utils';
+import {findPartner, itemsInColumn, letterOf, getItemText} from './utils';
 
 import styles from './match-question-container.module.scss';
 
@@ -46,11 +46,11 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
           aria-pressed={isSelected}
           aria-label={
             partnerId
-              ? `${labelOf(matchSets, item.id)}, matched with ${labelOf(
+              ? `${getItemText(matchSets, item.id)}, matched with ${getItemText(
                   matchSets,
                   partnerId
                 )}`
-              : labelOf(matchSets, item.id)
+              : getItemText(matchSets, item.id)
           }
           onClick={() => onClickItem(item.id)}
           disabled={disabled}

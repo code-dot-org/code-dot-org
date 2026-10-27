@@ -46,13 +46,11 @@ export function letterOf(matchSets: MatchSets, id: string): string | undefined {
   return index === -1 ? undefined : formatChoiceLetter(index);
 }
 
-// For accessible names: a start item's label leads with its letter.
-export function labelOf(matchSets: MatchSets, id: string): string | undefined {
-  const startItem = itemsInColumn(matchSets, 'start').find(
-    item => item.id === id
-  );
-  if (startItem) {
-    return `${letterOf(matchSets, id)}. ${startItem.text}`;
-  }
-  return itemsInColumn(matchSets, 'end').find(item => item.id === id)?.text;
+// For accessible names, which leave out the letter: a name already says
+// what the item is matched with.
+export function getItemText(
+  matchSets: MatchSets,
+  id: string
+): string | undefined {
+  return matchSets.flat().find(item => item.id === id)?.text;
 }
