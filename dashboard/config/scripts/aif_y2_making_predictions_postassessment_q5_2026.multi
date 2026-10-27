@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q5-2026'
+
+wrong "Model 1's predictions were closer to the actual values"
+wrong 'Model 2 was trained on more data than Model 1'
+wrong 'The two models were tested on different data'
+right "Model 2's predictions were closer to the actual values"
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Two regression models are tested on the same test data. Model 1's mean squared error is 14.6 and Model 2's is 0.03. What can you conclude from this information?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Loss Functions
+MARKDOWN

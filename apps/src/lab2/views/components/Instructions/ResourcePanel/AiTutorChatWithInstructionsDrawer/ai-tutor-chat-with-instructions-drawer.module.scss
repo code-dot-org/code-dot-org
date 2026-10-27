@@ -148,6 +148,13 @@
   transition: top 0.2s ease, opacity 0.2s ease;
 }
 
+// Pinned: the line the resize bar would draw, with no handle.
+.divider {
+  flex-shrink: 0;
+  height: 1px;
+  background-color: var(--background-neutral-quaternary);
+}
+
 .resizeBar {
   position: relative;
 }

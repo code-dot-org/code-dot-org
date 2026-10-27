@@ -1,0 +1,65 @@
+name 'pl-aif-y2-u1-l45-for-loop'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# For Loops: for/range
+
+<img src="https://images.code.org/b93a94de01d50fb6a85402e96ed7a58d-image-1793041777553.png" alt="megaphone with multiplying messages simulating a viral post" style="width: 22%; border-radius: 10px; margin: 0 0 10px 16px; float: right;">
+
+Lesson 7 opens with "Going Viral," a hands-on simulation. Students calculate, by hand, how a social media post's views grow day after day. By day five or six, the repeated arithmetic gets tedious, and that tedium is the whole point: it sets up exactly why a computer doing this for you is worth learning.
+
+<div style="clear:both;"></div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Simulation:</strong> a simplified representation of reality used to explore, explain, or predict real-world events.
+  </div>
+</div>
+
+### Loops
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Loop:</strong> a way to tell a computer to repeat a set of instructions.
+  </div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; Iteration:</strong> one repetition of a loop.
+  </div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>&#128214; For loop:</strong> a loop that can repeat code a known number of times.
+  </div>
+</div>
+
+Here's the exact code from the lesson:
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+for i in range(5):<br>
+&nbsp;&nbsp;print(f"Day {i}")
+  </div>
+  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976; line-height: 1.7;">
+Day 0<br>
+Day 1<br>
+Day 2<br>
+Day 3<br>
+Day 4
+  </div>
+</div>
+
+<code style="font-size:16px;">range(5)</code> produces five values: 0, 1, 2, 3, 4, not 1 through 5. Each one gets assigned to <code style="font-size:16px;">i</code> in turn, and the indented line underneath runs once per value, five iterations total.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> range(5) starting at 0 and stopping at 4 is the single most common source of confusion here. Keep this in your back pocket, you'll need it again shortly.
+  </div>
+</div>
+
+
+MARKDOWN

@@ -1,0 +1,13 @@
+name 'adaptive-HoAI26-a-number-and-a-rule-20'
+description ''
+question 'A rule tells a program what to do when something happens. Which of these sentences describes a \'rule\' that dictates what happens on a web page?'
+wrong 'The score is 7.'
+right 'If the score reaches 10, the round ends.'
+wrong 'The button is blue.'
+wrong 'The page has a title.'
+
+markdown <<MARKDOWN
+A rule tells a program what to do when something happens. Which of these sentences describes a 'rule' that dictates what happens on a web page?
+MARKDOWN
+
+allow_multiple_attempts true

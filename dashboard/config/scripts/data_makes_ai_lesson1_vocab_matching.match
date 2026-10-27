@@ -1,0 +1,20 @@
+name 'data-makes-ai-lesson1-vocab-matching'
+display_name 'Practice with Lesson Vocabulary'
+height '80'
+
+question 'data'
+answer 'Information that has been collected and recorded.'
+question 'feature'
+answer 'A characteristic you can observe about something.'
+question 'classification'
+answer 'Sorting something into a category based on its features.'
+question 'branching logic'
+answer 'A way of making decisions using yes or no questions, where each answer sends you in a different direction.'
+
+markdown <<MARKDOWN
+Match the vocabulary words with their correct definitions.
+Drag each term to its explanation.
+Test your knowledge!
+MARKDOWN
+
+allow_multiple_attempts true

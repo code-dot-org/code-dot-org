@@ -272,8 +272,9 @@ const config = {
   },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
+  // The d3 packages are ESM-only and reach jest untranspiled.
   transformIgnorePatterns: [
-    'node_modules/(?!vmsg|@code-dot-org/johnny-five|@code-dot-org/js-interpreter|blockly/core)',
+    'node_modules/(?!vmsg|@code-dot-org/johnny-five|@code-dot-org/js-interpreter|blockly/core|d3-(color|dispatch|drag|ease|interpolate|selection|timer|transition|zoom)/)',
   ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them

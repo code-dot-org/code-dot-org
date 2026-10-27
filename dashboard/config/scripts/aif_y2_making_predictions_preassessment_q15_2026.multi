@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q15-2026'
+
+wrong 'How many days will a listed item take to sell?'
+wrong 'What price should a listed item be given?'
+wrong 'What was the average sale price last month?'
+right 'Will a listed item sell within a week?'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Someone who sells items secondhand wants to use machine learning. Which of these questions could be framed as a classification problem?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Classification Project
+MARKDOWN

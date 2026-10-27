@@ -25,22 +25,14 @@
       "kind": "image",
       "imageType": "background",
       "imageRole": "story-background",
-      "imageUi": "explore",
-      "sentence": "place-time"
+      "sentence": "place-time",
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a background.**"
     },
-    "guide_steps": [
-      {
-        "text": "**Make a background.** Pick the words for a place and click **Generate**, or draw your own."
-      },
-      {
-        "text": "**That's your background!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "backgroundImages": 1
-        }
-      }
-    ],
-    "long_instructions": "# Make a background\nPick the words for a place and click **Generate**, or draw your own.",
+    "objectives": {
+      "title": "**Prompt AI to make a background**"
+    },
+    "long_instructions": "# Prompt AI to make a background",
     "header_label": "Make a story"
   }
 }]]></config>
