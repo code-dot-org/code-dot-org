@@ -40,6 +40,7 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {folderIn} from '../../projectWrite';
 import {fileIdAt} from '../../runtime/projectFiles';
+import {asActorData} from '../actorData';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
@@ -158,41 +159,44 @@ const writeBoard = (source: MultiFileSource): MultiFileSource => {
   // Acting like it is both smaller and correct: the words, their size and
   // color, the box and the picture all come across, and they stay the LABEL's
   // (`ActorBuilder.actsLike`).
-  const contents = addRoot(
-    JSON.stringify(
-      {
-        blocks: {
-          blocks: [
-            {
-              type: 'world_actor',
-              x: 20,
-              y: 20,
-              fields: {NAME: BOARD_NAME},
-              next: {
-                block: {
-                  type: 'world_acts_like',
-                  fields: {ACTOR: 'actors/label'},
-                  next: {
-                    block: {
-                      type: 'world_use_trait',
-                      fields: {TRAIT: WATCHES},
-                      next: {
-                        block: setText(me(), {
-                          shadow: {type: 'text', fields: {TEXT: SEED}},
-                        }),
+  // Written as rows and stored as data, as every actor is.
+  const contents = asActorData(
+    addRoot(
+      JSON.stringify(
+        {
+          blocks: {
+            blocks: [
+              {
+                type: 'world_actor',
+                x: 20,
+                y: 20,
+                fields: {NAME: BOARD_NAME},
+                next: {
+                  block: {
+                    type: 'world_acts_like',
+                    fields: {ACTOR: 'actors/label'},
+                    next: {
+                      block: {
+                        type: 'world_use_trait',
+                        fields: {TRAIT: WATCHES},
+                        next: {
+                          block: setText(me(), {
+                            shadow: {type: 'text', fields: {TEXT: SEED}},
+                          }),
+                        },
                       },
                     },
                   },
                 },
               },
-            },
-          ],
+            ],
+          },
         },
-      },
-      null,
-      2,
+        null,
+        2,
+      ),
+      watcher(),
     ),
-    watcher(),
   );
   return {
     ...placedIn.source,
