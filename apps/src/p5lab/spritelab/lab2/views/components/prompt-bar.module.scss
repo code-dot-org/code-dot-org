@@ -1,0 +1,26 @@
+@use '../sentence/sr-only' as *;
+
+.srOnly {
+  @include sr-only;
+}
+
+// A band across the bottom of the game, as classic Sprite Lab's was.
+.promptBar {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 8px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+}
+
+.answerField {
+  flex: 1;
+  min-width: 0;
+}
+
+.submitButton {
+  flex-shrink: 0;
+  // Cancel the legacy global button margin.
+  margin: 0;
+}

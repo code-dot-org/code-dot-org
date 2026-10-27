@@ -7,6 +7,7 @@ import {
   setRetainBlobsOnLoad,
   setStoreLoadedImagesAsObjectUrls,
 } from '@cdo/apps/p5lab/redux/animationList';
+import {clearPrompts} from '@cdo/apps/p5lab/redux/spritelabInput';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -903,6 +904,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.JSInterpreter) {
       this.JSInterpreter.deinitialize();
     }
+    // The new run asks its own questions; the old run's would never be answered.
+    getStore().dispatch(clearPrompts());
     this.initInterpreter(false /* attachDebugger */);
     // p5 is reused across re-runs, so re-baseline the world clock — without
     // this, "at time N" events never fire again after the first run.

@@ -143,6 +143,7 @@ import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
+import PromptBar from './components/PromptBar';
 import SceneDropdown from './components/SceneDropdown';
 import SceneMusicBar from './components/SceneMusicBar';
 import Sheet from './components/Sheet';
@@ -1119,6 +1120,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     engine.runProgram(program, referencedImages, activeSceneTypeRef.current);
     setPlayingPlatformer(engine.isPlatformScene());
   }, [dispatch, getCode, requestThumbnail]);
+
+  const pendingPrompt = useAppSelector(state => state.spritelabInputList[0]);
+  const handlePromptAnswer = useCallback(
+    (variableName: string, value: string) =>
+      engineRef.current?.onPromptAnswer(variableName, value),
+    []
+  );
 
   // Debounce re-runs so we don't restart the program on every keystroke/drag.
   const runTimer = useRef<number>();
@@ -2374,6 +2382,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   onRestartScene={event =>
                     handleRestartClick(event, handleRestartScene)
                   }
+                />
+              }
+              prompt={
+                <PromptBar
+                  prompt={pendingPrompt}
+                  onAnswer={handlePromptAnswer}
                 />
               }
               playBar={

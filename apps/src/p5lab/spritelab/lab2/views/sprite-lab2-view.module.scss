@@ -1100,6 +1100,14 @@ $z-over-blockly: 71;
   pointer-events: auto;
 }
 
+// The prompt block's answer box, hung up from the box's bottom edge. Empty,
+// it has no height, so it never covers the preview's click catcher.
+.playspacePrompt {
+  position: absolute;
+  transform: translateY(-100%);
+  pointer-events: auto;
+}
+
 .playControl {
   height: $tab-item-height;
   padding: 0 12px;

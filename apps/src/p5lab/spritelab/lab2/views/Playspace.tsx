@@ -190,6 +190,8 @@ interface PlayspaceProps {
   platformScene?: boolean;
   // Over the play area's corner, outside the box so they keep their size.
   controls?: React.ReactNode;
+  // Over the box's bottom edge, unscaled.
+  prompt?: React.ReactNode;
   // Under the box, which is placed to leave it room.
   playBar?: React.ReactNode;
   // Across the top of the column in preview; the box is placed under it.
@@ -217,6 +219,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   boxRef,
   platformScene = false,
   controls,
+  prompt,
   playBar,
   columnHeader,
   below,
@@ -533,17 +536,21 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     return () => window.clearTimeout(timer);
   }, [mode]);
   const visible = measured && !settledHidden;
-  // The bar waits unseen at its destination and fades in once the box arrives.
+  // The bar and the prompt wait unseen at their destinations and fade in once
+  // the box arrives.
   const barRef = useRef<HTMLDivElement>(null);
+  const promptRef = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
     if (animate) {
-      barRef.current?.animate?.(
-        [
-          {opacity: 0},
-          {opacity: 0, offset: SLIDE_MS / (SLIDE_MS + FADE_MS)},
-          {opacity: 1},
-        ],
-        {duration: SLIDE_MS + FADE_MS, easing: 'ease-in'}
+      [barRef, promptRef].forEach(ref =>
+        ref.current?.animate?.(
+          [
+            {opacity: 0},
+            {opacity: 0, offset: SLIDE_MS / (SLIDE_MS + FADE_MS)},
+            {opacity: 1},
+          ],
+          {duration: SLIDE_MS + FADE_MS, easing: 'ease-in'}
+        )
       );
     }
     // Only a mode change moves the bar; animate is derived for that render.
@@ -715,6 +722,21 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       </div>
       {/* Outside the box: role="application" hides what is inside it from
           screen readers, so anything to be read must sit beside it. */}
+      {prompt && (
+        <div
+          ref={promptRef}
+          className={moduleStyles.playspacePrompt}
+          style={{
+            left: x,
+            top: y + boxSide,
+            width: boxSide,
+            opacity: visible ? 1 : 0,
+            transition: `opacity ${FADE_MS}ms ease-in`,
+          }}
+        >
+          {prompt}
+        </div>
+      )}
       {mode === 'play' && platformScene && (
         <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
           Left and right arrows move. Space or up arrow jumps. In zero gravity,

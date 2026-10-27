@@ -71,6 +71,7 @@ export interface RootState {
   runState: RunState;
   sectionProgress: SectionProgressState;
   spriteLab2: SpriteLab2State;
+  spritelabInputList: SpritelabPrompt[];
   teacherPanel: TeacherPanelState;
   teacherRubric: TeacherRubricState;
   teacherSections: TeacherSectionState;
@@ -92,6 +93,14 @@ export interface LocationPickerState {
   mode: string;
   lastSelection?: {x: number; y: number};
   requestTime?: number;
+}
+
+// A question queued by the p5lab prompt blocks (redux/spritelabInput).
+export interface SpritelabPrompt {
+  promptType: 'TEXT' | 'MULTIPLE_CHOICE';
+  promptText: string;
+  variableName: string;
+  choices?: string[];
 }
 
 // Temporary type definition for the result of
