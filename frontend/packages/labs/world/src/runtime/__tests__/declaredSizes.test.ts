@@ -8,9 +8,9 @@
 import {describe, expect, it} from 'vitest';
 
 import {
-  agreedViewSize,
   declaredMapSize,
   declaredViewSize,
+  gameViewSize,
   mapSizeOf,
   viewSizeOf,
 } from '../declaredSizes';
@@ -163,28 +163,17 @@ describe('viewSizeOf', () => {
   });
 });
 
-describe('the window a project agrees on', () => {
+describe('the window a game is seen through', () => {
   const SCREEN = {w: VIEWPORT_WIDTH, h: VIEWPORT_HEIGHT};
 
-  it('is the one every world that states a view states', () => {
-    expect(agreedViewSize([seeing(26, 16), bare, seeing(26, 16)])).toEqual({
-      w: 832,
-      h: 512,
-    });
+  it('is the Main Screen’s size, in the engine’s tiles', () => {
+    expect(
+      gameViewSize(JSON.stringify({size: {width: 26, height: 16}})),
+    ).toEqual({w: 832, h: 512});
   });
 
-  it('is the standard one when nobody says', () => {
-    expect(agreedViewSize([bare, sized(30, 20)])).toEqual(SCREEN);
-  });
-
-  it('is the standard one when the worlds disagree', () => {
-    // The guide is a promise about what the player will see. Two worlds with
-    // different windows make it a promise about neither, and a dashed
-    // rectangle that could mean either is worse than the default.
-    expect(agreedViewSize([seeing(26, 16), seeing(20, 20)])).toEqual(SCREEN);
-  });
-
-  it('is the standard one for a project with no worlds at all', () => {
-    expect(agreedViewSize([])).toEqual(SCREEN);
+  it('is the standard one when the screen says nothing, or there is none', () => {
+    expect(gameViewSize(JSON.stringify({type: 'map'}))).toEqual(SCREEN);
+    expect(gameViewSize(undefined)).toEqual(SCREEN);
   });
 });

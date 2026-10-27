@@ -18,7 +18,6 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {pathSlug} from '../blockly/ruleRegistry';
 import {MAIN_SCREEN_PATH, MAIN_WORLD_PATH} from '../mainWorld';
 import {fileIdAt} from '../runtime/projectFiles';
 
@@ -50,24 +49,6 @@ function mapsFolder(source: MultiFileSource): {
   );
   return {source: next, folderId: created?.id ?? '0'};
 }
-
-/**
- * A stock map's contents with the world's events named as the Main Screen's.
- *
- * An `emit` or a hat is minted from the module the event is declared in, and
- * a stock map is written against `worlds/main` (`stock/workspace`). In a
- * project whose game is a Main Screen the same events are declared there,
- * so the block types are renamed to match — `world_emit_WorldsMain_QuitEvent`
- * becomes `world_emit_ScreensMain_QuitEvent`.
- */
-export const raisedOnTheScreen = (contents: string): string => {
-  const world = pathSlug(MAIN_WORLD_PATH);
-  const screen = pathSlug(MAIN_SCREEN_PATH);
-  return contents.replace(
-    new RegExp(`"world_(emit|on)_${world}_`, 'g'),
-    `"world_$1_${screen}_`,
-  );
-};
 
 const alreadyImported = (source: MultiFileSource, id: string): boolean =>
   Object.values(source.files).some(file => file.name === `${id}.map`);
@@ -140,9 +121,7 @@ export function importStockMap(
           id: fileId,
           name: `${map.id}.map`,
           language: 'map',
-          contents: mainScreenId(current)
-            ? raisedOnTheScreen(map.contents)
-            : map.contents,
+          contents: map.contents,
           folderId: placed.folderId,
         },
       },

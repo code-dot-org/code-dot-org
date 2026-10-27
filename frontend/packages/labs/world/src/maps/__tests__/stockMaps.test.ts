@@ -21,7 +21,7 @@ import {describe, expect, it} from 'vitest';
 import {authoredName} from '../../blockly/projectModules';
 import {pascal} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
-import {MAIN_WORLD_PATH} from '../../mainWorld';
+import {MAIN_SCREEN_PATH} from '../../mainWorld';
 import {STOCK_MAPS} from '../stock';
 
 /** Every `world_emit_…` block type anywhere in a map's JSON. */
@@ -31,7 +31,7 @@ const emitted = (contents: string): string[] => [
 
 /** The block type a raise of `name` from a map has. */
 const emitType = (name: string) =>
-  `world_emit_${pathSlug(MAIN_WORLD_PATH)}_${pascal(name)}Event`;
+  `world_emit_${pathSlug(MAIN_SCREEN_PATH)}_${pascal(name)}Event`;
 
 describe.each(STOCK_MAPS)('the stock $name map', map => {
   it('has a root, which names it what the shelf calls it', () => {
@@ -40,7 +40,7 @@ describe.each(STOCK_MAPS)('the stock $name map', map => {
     expect(authoredName(map.contents)).toBe(map.name);
   });
 
-  it('raises exactly what the import declares, out of the world’s module', () => {
+  it('raises exactly what the import declares, out of the Main Screen’s module', () => {
     expect(emitted(map.contents).sort()).toEqual(
       (map.raises ?? []).map(event => emitType(event.name)).sort(),
     );

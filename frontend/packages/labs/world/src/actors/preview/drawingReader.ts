@@ -42,6 +42,7 @@ import {
   type ResolvedTheme,
 } from '../../engine/core/theme';
 import {STYLED} from '../../engine/rules/styled';
+import {MAIN_SCREEN_PATH} from '../../mainWorld';
 import {viewOf} from '../actorData';
 
 /** A block as it sits in a saved workspace — only what is read here. */
@@ -181,21 +182,6 @@ export function defineActorIn(contents: string | undefined): Node | undefined {
     );
   } catch {
     return undefined; // mid-edit / not JSON, as everywhere else
-  }
-}
-
-/** The `define world` root of a world file, if it parses. */
-function defineWorldIn(contents: string | undefined): Node | undefined {
-  if (contents === undefined) {
-    return undefined;
-  }
-  try {
-    return (
-      (JSON.parse(contents) as {blocks?: {blocks?: Node[]}}).blocks?.blocks ??
-      []
-    ).find(root => root.type === 'world_world');
-  } catch {
-    return undefined;
   }
 }
 
@@ -468,9 +454,6 @@ function written(root: Node, into: Map<string, unknown>, reading: Reading) {
  * interface picture in the editor would fall back to the sandbox's slow path
  * (specs/STYLES_PLAN.md).
  *
- * THE FIRST WORLD THAT NAMES ONE. A project with two worlds on two themes is
- * a thing the editor cannot draw one picture for; it draws the first, which
- * is also what a palette thumbnail can mean at all.
  */
 function themeDocumentAt(files: Files, path: string): unknown {
   const contents = files[`${path}.style`];
@@ -491,8 +474,8 @@ function themeDocumentAt(files: Files, path: string): unknown {
  * THE READER SEES TWO OF THE THREE LEVELS. A still is of a KIND — the map
  * editor's palette thumbnail, the picker's picture — so there is no placement
  * to ask, and the caller passes one in when it has one (a placement being
- * drawn on the stage does). What is found here is the base: the first `use
- * theme` row under a `define world` (specs/STYLES_PLAN.md).
+ * drawn on the stage does). What is found here is the base: the theme the
+ * Main Screen gives the game (specs/STYLES_PLAN.md).
  */
 function themeOf(files: Files, override?: string): ResolvedTheme {
   const parentAt = (path: string) => themeDocumentAt(files, path);
@@ -502,25 +485,24 @@ function themeOf(files: Files, override?: string): ResolvedTheme {
       return resolveTheme(named, parentAt, [override]);
     }
   }
-  for (const [path, contents] of Object.entries(files)) {
-    if (!path.endsWith('.world')) {
-      continue;
-    }
-    const root = defineWorldIn(contents);
-    const row =
-      root &&
-      chain(root.next?.block).find(one => one.type === 'world_use_theme');
-    const named = row && field(row, 'THEME');
-    if (typeof named !== 'string' || !named) {
-      continue;
-    }
-    const document = themeDocumentAt(files, named);
-    if (document === undefined) {
-      return NO_THEME;
-    }
-    return resolveTheme(document, parentAt, [named]);
+  // The game's, which its Main Screen keeps as data (`screenData.theme`).
+  let named: unknown;
+  try {
+    named = (
+      JSON.parse(files[`${MAIN_SCREEN_PATH}.screen`] ?? '{}') as {
+        theme?: unknown;
+      }
+    ).theme;
+  } catch {
+    // A screen mid-edit says no theme.
   }
-  return NO_THEME;
+  if (typeof named !== 'string' || !named) {
+    return NO_THEME;
+  }
+  const document = themeDocumentAt(files, named);
+  return document === undefined
+    ? NO_THEME
+    : resolveTheme(document, parentAt, [named]);
 }
 
 export function readDrawing(
@@ -532,8 +514,8 @@ export function readDrawing(
    * The theme of the MAP this is being drawn on, if it is being drawn on one.
    *
    * The middle level of the cascade, and the one a reading cannot find for
-   * itself: the placement's own theme is in `overrides` and the world's is in
-   * a `.world` file, but which map a still belongs to is the caller's
+   * itself: the placement's own theme is in `overrides` and the game's is on
+   * its Main Screen, but which map a still belongs to is the caller's
    * question. A palette thumbnail belongs to no map and passes nothing
    * (specs/STYLES_PLAN.md).
    */

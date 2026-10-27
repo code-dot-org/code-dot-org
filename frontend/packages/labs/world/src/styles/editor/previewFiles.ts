@@ -7,13 +7,13 @@
 // the only thing that differs is which canvas it lands on.
 //
 // What has to be invented is the PROJECT around it, because `readDrawing`
-// reads a theme the way the game does — the first `use theme` row under a
-// `define world` (`preview/drawingReader`). The file being edited has no path
-// yet and may not be in the project at all, so this makes a world whose only
-// row names it.
+// reads a theme the way the game does — the one its Main Screen names
+// (`preview/drawingReader`). The file being edited has no path yet and may not
+// be in the project at all, so this makes a Main Screen that names it.
 
 import type {Files} from '../../actors/preview/drawingReader';
 import {STOCK_ACTORS} from '../../actors/stock';
+import {MAIN_SCREEN_PATH} from '../../mainWorld';
 import {STOCK_RULES} from '../../rules/stock';
 
 /** Where the theme under edit is mounted in the invented project. */
@@ -38,7 +38,7 @@ export const PREVIEW_KINDS = [
   'progressBar',
 ] as const;
 
-/** The stock shelf, plus a world that names the theme being edited. */
+/** The stock shelf, plus a Main Screen that names the theme being edited. */
 export function previewFiles(theme: string): Files {
   return {
     ...Object.fromEntries(
@@ -48,21 +48,11 @@ export function previewFiles(theme: string): Files {
       STOCK_RULES.map(rule => [`rules/${rule.id}.rule`, rule.contents]),
     ),
     [`${THEME_PATH}.style`]: theme,
-    'worlds/__preview.world': JSON.stringify({
-      blocks: {
-        blocks: [
-          {
-            type: 'world_world',
-            fields: {NAME: 'Preview'},
-            next: {
-              block: {
-                type: 'world_use_theme',
-                fields: {THEME: THEME_PATH},
-              },
-            },
-          },
-        ],
-      },
+    [`${MAIN_SCREEN_PATH}.screen`]: JSON.stringify({
+      type: 'map',
+      name: 'Preview',
+      actors: [],
+      theme: THEME_PATH,
     }),
   };
 }

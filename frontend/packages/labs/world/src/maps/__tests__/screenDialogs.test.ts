@@ -16,7 +16,7 @@ import type {World} from '../../engine';
 import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {declareScreenEvents} from '../declareEvents';
-import {importStockMap, raisedOnTheScreen} from '../importStockMap';
+import {importStockMap} from '../importStockMap';
 import {stockMapById} from '../stock';
 
 /** The empty scenario, its world file replaced by a bare Main Screen. */
@@ -113,20 +113,5 @@ describe('declareScreenEvents', () => {
   it('leaves the file alone when nothing is missing', () => {
     const before = JSON.stringify({events: [{name: 'quit'}]});
     expect(declareScreenEvents(before, [{name: 'quit'}])).toBe(before);
-  });
-});
-
-describe('raisedOnTheScreen', () => {
-  it("renames the world's emits and hats, and nothing else", () => {
-    const contents = JSON.stringify({
-      a: {type: 'world_emit_WorldsMain_QuitEvent'},
-      b: {type: 'world_on_WorldsMain_QuitEvent'},
-      c: {type: 'world_get_WorldsMain_ScoreProperty'},
-    });
-    const renamed = raisedOnTheScreen(contents);
-
-    expect(renamed).toContain('"world_emit_ScreensMain_QuitEvent"');
-    expect(renamed).toContain('"world_on_ScreensMain_QuitEvent"');
-    expect(renamed).toContain('"world_get_WorldsMain_ScoreProperty"');
   });
 });

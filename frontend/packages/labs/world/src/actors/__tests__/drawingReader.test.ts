@@ -157,33 +157,22 @@ describe('readDrawing, over the shelf', () => {
     }
   });
 
-  /** The shelf, every stock theme, and a world naming one of them. */
+  /** The shelf, every stock theme, and a Main Screen naming one of them. */
   const withTheme = (id: string) => ({
     ...SHELF,
     ...Object.fromEntries(
       STOCK_STYLES.map(one => [`styles/${one.id}.style`, one.contents]),
     ),
-    'worlds/my.world': JSON.stringify({
-      blocks: {
-        blocks: [
-          {
-            type: 'world_world',
-            fields: {NAME: 'My World'},
-            next: {
-              block: {
-                type: 'world_use_theme',
-                fields: {THEME: `styles/${id}`},
-              },
-            },
-          },
-        ],
-      },
+    'screens/main.screen': JSON.stringify({
+      type: 'map',
+      actors: [],
+      theme: `styles/${id}`,
     }),
   });
 
-  it('paints the stock kit out of whichever theme the world names', () => {
+  it('paints the stock kit out of whichever theme the game names', () => {
     // END TO END, through the map editor's own path: the stock Button's own
-    // rows, the stock themes, the `use theme` row on a world, and the reader
+    // rows, the stock themes, the theme on the Main Screen, and the reader
     // finding it. Nothing here is a fixture — it is the kit a learner gets.
     const face = (id: string) =>
       rectangles(readDrawing(withTheme(id), 'actors/button')!.commands)[0];

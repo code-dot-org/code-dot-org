@@ -122,30 +122,28 @@ export const viewSizeOf = (contents: string): DeclaredSize =>
   declaredViewSize(contents) ?? SCREEN;
 
 /**
- * The one window a project's worlds agree on, in PIXELS.
+ * The window a game is seen through, in PIXELS: its Main Screen's size, in
+ * the engine's tiles, or the standard one for a screen that states none.
  *
- * For the map editor's dashed guide, which is drawn on a document that belongs
- * to no world. If every world that states a view states the same one, that is
- * the window the map will be seen through; worlds that disagree, or a project
- * where none says anything, get the standard one — a guide that could mean
- * either of two things is worse than the default it replaces.
- *
- * `worlds` is the project's `.world` contents by path, as `projectFiles` holds
- * them.
+ * For the map editor's dashed guide, which is drawn on a document that
+ * belongs to no screen. The Main Screen is the game, so its size is the size
+ * the game is shown at (`BlocklyGenerator.screenSize`).
  */
-export const agreedViewSize = (
-  worlds: readonly string[],
+export const gameViewSize = (
+  screen: string | undefined,
 ): {w: number; h: number} => {
-  const stated = worlds
-    .map(contents => declaredViewSize(contents))
-    .filter(size => size !== undefined);
-  const first = stated[0];
-  const agreed =
-    first &&
-    stated.every(
-      size => size.columns === first.columns && size.rows === first.rows,
-    );
-  return agreed
-    ? {w: first.columns * TILE_SIZE, h: first.rows * TILE_SIZE}
+  let size: {width?: unknown; height?: unknown} | undefined;
+  try {
+    size = (JSON.parse(screen ?? '') as {size?: typeof size}).size;
+  } catch {
+    size = undefined;
+  }
+  const columns = Number(size?.width);
+  const rows = Number(size?.height);
+  return Number.isFinite(columns) &&
+    columns > 0 &&
+    Number.isFinite(rows) &&
+    rows > 0
+    ? {w: clamp(columns) * TILE_SIZE, h: clamp(rows) * TILE_SIZE}
     : {w: VIEWPORT_WIDTH, h: VIEWPORT_HEIGHT};
 };

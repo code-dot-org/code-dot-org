@@ -48,7 +48,6 @@ import {
   projectRuleMetas,
   projectRuleOptions,
   projectStyleFileOptions,
-  projectWorldOptions,
 } from '../blockly/projectModules';
 import {setRevealer} from '../callouts/reveal';
 import fields from '../formFields.module.css';
@@ -57,7 +56,7 @@ import {worldOpensOn, type WorldLevelProperties} from '../levelData';
 import {gameModuleOf, MAIN_SCREEN_PATH} from '../mainWorld';
 import {useMaybeProgression} from '../progression/progressionContext';
 import type {Affordance} from '../progression/types';
-import {agreedViewSize} from '../runtime/declaredSizes';
+import {gameViewSize} from '../runtime/declaredSizes';
 import {browserTextMetrics} from '../runtime/driver/textMetrics';
 import type {ActorSchema} from '../runtime/messages';
 import {
@@ -295,12 +294,9 @@ export const MapEditor = ({
     [files],
   );
 
-  /** The window this map will be seen through — see `agreedViewSize`. */
+  /** The window this map will be seen through — see `gameViewSize`. */
   const visible = useMemo(
-    () =>
-      agreedViewSize(
-        projectWorldOptions(files).map(([, path]) => files[`${path}.world`]),
-      ),
+    () => gameViewSize(files[`${MAIN_SCREEN_PATH}.screen`]),
     [files],
   );
 

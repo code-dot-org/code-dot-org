@@ -12,7 +12,7 @@
 import {stockAnimation} from '../../appearance/stock';
 import {pascal, STARTS_EMPTY} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
-import {MAIN_WORLD_PATH} from '../../mainWorld';
+import {MAIN_SCREEN_PATH} from '../../mainWorld';
 import {ANIMATIONS_ROW} from '../actorData';
 
 /**
@@ -706,9 +706,9 @@ export const defineMap = (name: string) => ({
  * `emit ⟨quit⟩` as a MAP says it — the world's event, raised from a placement.
  *
  * The block type is minted from the module the event is DECLARED in, and a
- * map's events are the world's, so this is `world_emit_WorldsMain_QuitEvent`.
- * A shipped map can name that only because a project has one world and it is
- * always at the same path (`mainWorld`).
+ * map's events are the game's, so this is `world_emit_ScreensMain_QuitEvent`.
+ * A shipped map can name that only because a game has one Main Screen and it
+ * is always at the same path (`mainWorld`).
  *
  * `carrying` is the value input for an event with a parameter — `a tab is
  * chosen ⟨"HOME"⟩` — and is left off for the events that carry nothing.
@@ -716,21 +716,21 @@ export const defineMap = (name: string) => ({
 export const emitWorldEvent = (
   name: string,
   carrying?: object,
-  owner = MAIN_WORLD_PATH,
+  owner = MAIN_SCREEN_PATH,
 ) => ({
   type: worldEventBlock('emit', name, owner),
   ...(carrying ? {inputs: {VALUE: carrying}} : {}),
 });
 
 /**
- * `when ⟨quit⟩` — the hat a WORLD hangs on one of its own events, or a Main
- * Screen when `owner` is its module path (specs/SCREEN_MAP_PLAN.md).
+ * `when ⟨quit⟩` — the hat the Main Screen hangs on one of the game's own
+ * events (specs/SCREEN_MAP_PLAN.md).
  */
-export const hearWorldEvent = (name: string, owner = MAIN_WORLD_PATH) =>
+export const hearWorldEvent = (name: string, owner = MAIN_SCREEN_PATH) =>
   worldEventBlock('on', name, owner);
 
 const worldEventBlock = (
   prefix: 'emit' | 'on',
   name: string,
-  owner = MAIN_WORLD_PATH,
+  owner = MAIN_SCREEN_PATH,
 ) => `world_${prefix}_${pathSlug(owner)}_${pascal(name)}Event`;

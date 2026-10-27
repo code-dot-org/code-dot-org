@@ -52,23 +52,6 @@ const stubMap = (contents: string): string => {
 };
 
 /**
- * A world with its main map's placements taken out (specs/MAIN_MAP_PLAN.md),
- * for the reason a `.map`'s are: a placement edit must not recompile the
- * manifest. A world with no map, or one that will not parse, is left alone.
- */
-const stubWorld = (contents: string): string => {
-  try {
-    const parsed = JSON.parse(contents) as {map?: {actors?: unknown}};
-    if (!parsed.map?.actors) {
-      return contents;
-    }
-    return JSON.stringify({...parsed, map: {...parsed.map, actors: []}});
-  } catch {
-    return contents;
-  }
-};
-
-/**
  * A screen with its placements taken out, for the same reason: the rest of
  * it is the game's name, values and events, which the manifest's world
  * declares (specs/SCREEN_MAP_PLAN.md, step 4).
@@ -102,11 +85,9 @@ export function manifestFiles(
   for (const [path, contents] of Object.entries(files)) {
     out[path] = path.endsWith('.map')
       ? stubMap(contents)
-      : path.endsWith('.world')
-        ? stubWorld(contents)
-        : path.endsWith('.screen')
-          ? stubScreen(contents)
-          : contents;
+      : path.endsWith('.screen')
+        ? stubScreen(contents)
+        : contents;
   }
   return out;
 }
