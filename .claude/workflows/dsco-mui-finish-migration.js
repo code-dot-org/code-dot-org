@@ -12,40 +12,19 @@ export const meta = {
   ],
 }
 
-// Finishes what dsco-mui-design-system-migration starts. That run moves every consumer
-// and keeps the legacy behavior the plan chose not to change, listing each such behavior
-// in the "Deferred changes" table of <component>/<COMPONENT>_MIGRATION_TO_MUI.md. This
-// run does exactly one of the remaining steps and opens one PR for it:
+// Finishes a migration after dsco-mui-design-system-migration has moved every consumer.
+// Each run takes one step and opens one PR: step 4 deletes the legacy DSCO source, and
+// step 5 hands one row of the plan doc's "Deferred changes" table to MUI.
 //
-//   - step 4, delete-legacy: remove the deprecated DSCO source and exports, give the MUI
-//     version the plain names, rewrite consumer imports with the component's codemod,
-//     and drop the eslint ban. Behavior does not change.
-//   - step 5, one table row: turn the MUI behavior on, delete what stood in for it,
-//     update the unit tests and the UI-test hooks the row names, and delete the row. The
-//     status row becomes Migrated when the table is empty.
-//
-// Eyes and the test build see a behavior change only after a push, so this run cannot
-// prove one; the PR says which runs are required before merge.
-//
-// args: the component directory name, or an object:
 //   Workflow({name: 'dsco-mui-finish-migration', args: 'dialog'})
-//   Workflow({name: 'dsco-mui-finish-migration',
-//             args: {component: 'dialog', step: 'Focus trap', jira: 'RE-216'}})
+//   Workflow({name: 'dsco-mui-finish-migration', args: {component: 'dialog', step: 'Focus trap'}})
 //
-//   component     required.
-//   step          'delete-legacy', or a Behavior cell of the Deferred changes table
-//                 (case-insensitive). Default: the next step Discover finds.
-//   base          branch the PR targets; HEAD must be at its tip (default 'staging'). A
-//                 local-only branch works with publish: false, to stack a dry run on one.
-//   branchPrefix  branch namespace (default '<owner>/mui-<component>', owner derived as in
-//                 dsco-mui-design-system-migration.js; required when none can be derived).
-//   jira          ticket key or browse URL for the commit and PR (default none).
-//   publish       false leaves one local branch: no push, no PR.
-//   maxHealAttempts  verify passes, with a heal between each (default 3, so at most two
-//                 heals); counted as in dsco-mui-design-system-migration.js.
-//
-// Run from a checkout that has apps/node_modules, frontend/node_modules and apps/build,
-// with no tracked modifications, on base.
+//   step             'delete-legacy' or a Behavior cell; default: the next step.
+//   base             branch the PR targets, with HEAD at its tip (default 'staging').
+//   branchPrefix     default '<owner>/mui-<component>'.
+//   jira             ticket key or browse URL for the commit and PR.
+//   publish          false keeps the branch local: no push, no PR.
+//   maxHealAttempts  verify passes, with a heal between each (default 3).
 const a = typeof args === 'string' ? {component: args.trim()} : args || {}
 const component = a.component
 if (!component || !/^[a-zA-Z][a-zA-Z0-9-]*$/.test(component)) {
@@ -87,7 +66,7 @@ const PLAN_DOC = `${COMPONENT_DIR}/${component.toUpperCase().replace(/-/g, '_')}
 const UI_TEST_DIRS = 'dashboard/test/ui/features, dashboard/test/ui/step_definitions and frontend/packages/e2e-tests/tests'
 const COMMIT_TRAILER = 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>'
 const PR_FOOTER = '🤖 Generated with [Claude Code](https://claude.com/claude-code)'
-// Every agent pins model and effort, so a run behaves the same whatever session starts it.
+// Pinned so a run behaves the same whatever session starts it.
 const READ_MODEL = 'sonnet'
 const WORK_MODEL = 'opus'
 const DEEP_EFFORT = 'xhigh'
@@ -95,7 +74,7 @@ const CHECK_EFFORT = 'high'
 const ROUTINE_EFFORT = 'medium'
 const componentTitle = component.charAt(0).toUpperCase() + component.slice(1)
 
-// Same contract as the migration script: agents edit; only the branch and Publish agents write to git.
+// Agents edit files; only the branch and Publish agents write to git.
 const TREE_RULES = `## Working-tree rules
 - All paths are repo-root relative; run commands from the repo root unless told otherwise.
 - Never run git checkout, stash, reset, commit, rebase, clean, or add, except where a step
@@ -248,7 +227,7 @@ if (next.kind === 'blocked') {
 }
 const row = next.kind === 'behavior' ? discover.rows.find(r => cell(r.behavior) === cell(next.behavior)) : null
 if (next.kind === 'behavior' && !row) throw new Error(`Discover picked "${next.behavior}", which is not a row of the table`)
-// Checks Discover's pick against its own facts; a wrong fact is caught only by Verify's import audit.
+// Checks the pick against Discover's own facts; Verify's import audit catches a wrong fact.
 if (next.kind === 'delete-legacy') {
   const why = [
     !discover.legacySourceFiles.length && 'no legacy source is left',
@@ -265,7 +244,7 @@ if (row) {
 const stepTitle = row ? row.behavior : 'delete the legacy DSCO source'
 const ticket = jiraKey || (row && row.ticket) || ''
 const remainingAfter = row ? discover.rows.filter(r => r !== row) : discover.rows
-// Same owner rule as dsco-mui-design-system-migration.js, so both share one namespace; refs/heads/staging blocks staging/*.
+// Same owner rule as the migration workflow; git cannot create staging/* while staging exists.
 const bo = discover.branchOwner || ''
 const owner = /^[A-Za-z0-9][A-Za-z0-9._-]*$/.test(bo) && bo !== base && bo !== 'staging' ? bo : 'mui'
 if (publish && !branchPrefixArg && owner === 'mui') throw new Error('No branch owner could be derived; pass branchPrefix')
@@ -282,7 +261,7 @@ log(`${component}: ${stepTitle}${ticket ? ` (${ticket})` : ''}; ${discover.rows.
 // ── Execute ──────────────────────────────────────────────────────────────────
 phase('Execute')
 
-// The branch exists before any edit, so a ref clash stops the run with a clean tree.
+// Branch before editing, so a name clash stops the run with a clean tree.
 const branched = await agent(
   `Run from the repo root: git checkout -b ${branch}. Run nothing else. ok is true when
 git branch --show-current then prints ${branch}; otherwise put git's message in error.`,
@@ -303,7 +282,7 @@ const TOUCHED_SCHEMA = {
   },
 }
 
-// The codemod outlives step 4 only so branches cut before it can still move their imports.
+// The codemod outlives step 4 so branches cut earlier can still move their imports.
 const codemodGoes = remainingAfter.length
   ? ''
   : `\n6. Last step: delete ${discover.codemod || 'the component codemod'}, its entry in
