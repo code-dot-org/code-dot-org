@@ -128,7 +128,7 @@
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
     cronjob at:'30 * * * *', do:deploy_dir('bin', 'cron', 'archive_failed_jobs')
     # Hourly check; the script restarts the pool only once it exceeds the
-    # DCDO-configured age, and does nothing unless a Gatekeeper flag allows it.
+    # configured age, and is disabled by default.
     cronjob at:'8 * * * *', do:deploy_dir('bin', 'cron', 'recycle_active_job_workers')
 
     # Refresh the Tutorials cache every hour (runs at the start of each hour, UTC)

@@ -3,25 +3,32 @@
 # Rolling-restart the delayed_job worker pool once it is older than the
 # configured period, bounding per-worker memory growth between deploys.
 #
-# Cron runs this hourly and the age check decides whether to act, which keeps
-# the period in DCDO rather than the crontab, so changing it needs no chef run.
+# Turning it on takes a deploy, because the period defaults to 0 and lives in
+# config; turning it off or retuning it takes effect on the next run through
+# DCDO. That asymmetry is deliberate for something that restarts production
+# workers.
+#
+# Cron runs this hourly and worker age comes from `ps`, so a run with nothing
+# to do loads neither Rails nor DCDO: both are paid only when a restart is due.
 
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
-require_relative '../../dashboard/config/environment'
+require_relative '../../deployment'
 require 'cdo/active_job_backend'
 
-DEFAULT_RESTART_PERIOD_S = 12 * 3600
-
 def main
-  return unless Gatekeeper.allows('enableActiveJobWorkerRollingRestart')
-
-  period_s = DCDO.get('active_job_worker_restart_period', DEFAULT_RESTART_PERIOD_S).to_i
-  return unless period_s > 0
+  configured_period_s = CDO.active_job_backend_worker_restart_period.to_i
+  return unless configured_period_s > 0
 
   age_s = Cdo::ActiveJobBackend.oldest_worker_age_s
-  return if age_s.nil? || age_s < period_s
+  return if age_s.nil? || age_s < configured_period_s
+
+  # Reading DCDO builds a DatastoreCache, which scans DynamoDB, so it happens
+  # only for a pool that the configured period already considers due.
+  require 'dynamic_config/dcdo'
+  period_s = DCDO.get('active_job_backend_worker_restart_period', configured_period_s).to_i
+  return unless period_s > 0 && age_s >= period_s
 
   Cdo::ActiveJobBackend.chat_client_log(
     "delayed_job: recycling workers, oldest is #{age_s}s old (period #{period_s}s)"
