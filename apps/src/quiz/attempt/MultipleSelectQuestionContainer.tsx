@@ -8,7 +8,7 @@ import AttemptCard from './AttemptCard';
 import ChoiceLabel from './ChoiceLabel';
 import QuestionDescription from './QuestionDescription';
 
-import styles from './multi-choice-question-container.module.scss';
+import styles from './choice-question-container.module.scss';
 
 export interface MultipleSelectQuestionContainerProps {
   question: Omit<QuizQuestionSummary, 'page'>;
