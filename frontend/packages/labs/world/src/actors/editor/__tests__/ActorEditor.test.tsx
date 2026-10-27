@@ -396,7 +396,14 @@ describe('the Actor Editor', () => {
         {name: 'Delete'},
       ),
     );
-    expect(written().properties).toBeUndefined();
+    // The project, as a rename writes it, so what placements set it to goes
+    // with it (`selfProperties.deletePropertyInProject`).
+    const deleted = replaceSources.mock.calls.at(-1)![0] as {
+      source: MultiFileSource;
+    };
+    expect(
+      JSON.parse(deleted.source.files[PLAYER_ID].contents).properties,
+    ).toBeUndefined();
     SOURCE = shipped;
   });
 

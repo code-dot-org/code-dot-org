@@ -5,8 +5,12 @@ import {describe, expect, it} from 'vitest';
 
 import type {MultiFileSource, ProjectFile} from '@code-dot-org/core/api';
 
+import {compileProject} from '../../../__tests__/support/compileProject';
+import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
+import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {
   deleteProperty,
+  deletePropertyInProject,
   propertyUses,
   renameProblem,
   renameProperty,
@@ -88,6 +92,62 @@ describe('a property of its own', () => {
     expect(next.files.o.contents).toBe(project().files.o.contents);
   });
 
+  it('moves what a placement set it to, in every map and screen', () => {
+    // A placement keeps the value under the kind that declared it and the
+    // property's id, which is its name — so a rename that left it there would
+    // quietly put every placed Player back to its starting lives.
+    const placed = (properties: object) => ({
+      type: 'map',
+      actors: [{type: 'actors/player', id: 'P', properties}],
+    });
+    const source = project();
+    source.files.m = {
+      ...file('m', 'level.map', placed({Player: {lives: 5}, positional: {}})),
+      folderId: 'maps',
+    };
+    source.files.s = {
+      ...file('s', 'main.screen', placed({Other: {lives: 1}})),
+      folderId: 'screens',
+    };
+    const next = renameProperty(
+      source,
+      'p',
+      'actors/player',
+      'lives',
+      'hearts',
+    );
+
+    expect(JSON.parse(next.files.m.contents).actors[0].properties).toEqual({
+      Player: {hearts: 5},
+      positional: {},
+    });
+    // Another kind's property of the same name is its own.
+    expect(next.files.s.contents).toBe(source.files.s.contents);
+  });
+
+  it('forgets what a placement set it to when it is deleted', () => {
+    const source = project();
+    source.files.m = {
+      ...file('m', 'level.map', {
+        type: 'map',
+        actors: [
+          {
+            type: 'actors/player',
+            id: 'P',
+            properties: {Player: {lives: 5}, positional: {}},
+          },
+        ],
+      }),
+      folderId: 'maps',
+    };
+    const next = deletePropertyInProject(source, 'p', 'actors/player', 'lives');
+
+    expect(JSON.parse(next.files.p.contents).properties).toBeUndefined();
+    expect(JSON.parse(next.files.m.contents).actors[0].properties).toEqual({
+      positional: {},
+    });
+  });
+
   it('refuses a name it has, or none', () => {
     const data = JSON.parse(project().files.p.contents);
     expect(renameProblem(data, 'lives', ' ')).toMatch(/needs a name/);
@@ -110,4 +170,45 @@ describe('a property of its own', () => {
     expect(gone.properties).toBeUndefined();
     expect(gone.values).toBeUndefined();
   });
+});
+
+describe('a placed actor’s own property, renamed', () => {
+  it('keeps the value its placement gave it, in the game', async () => {
+    // The key a placement's value is kept under is a guess until a game
+    // reads it: by the declaring kind's name and the property's id.
+    const source = structuredClone(WORLD_SCENARIOS.empty.source);
+    source.files.p = {
+      ...file('p', 'player.actor', {
+        type: 'actor',
+        name: 'Player',
+        properties: [{name: 'lives', type: 'number', access: 'writable'}],
+      }),
+      folderId: Object.values(source.folders).find(
+        folder => folder.name === 'actors',
+      )!.id,
+    };
+    const mapId = fileIdAt(source, 'maps/main.map')!;
+    const map = JSON.parse(source.files[mapId].contents);
+    map.actors = [
+      {type: 'actors/player', id: 'P', properties: {Player: {lives: 5}}},
+    ];
+    source.files[mapId] = {
+      ...source.files[mapId],
+      contents: JSON.stringify(map),
+    };
+    const renamed = renameProperty(
+      source,
+      'p',
+      'actors/player',
+      'lives',
+      'hearts',
+    );
+
+    const {world, modules} = await compileProject(projectFiles(renamed));
+    const {HeartsProperty} = modules['actors/player'] as unknown as {
+      HeartsProperty: never;
+    };
+    const player = [...world.actors].find(actor => actor.id === 'P')!;
+    expect(player.get(HeartsProperty)).toBe(5);
+  }, 60000);
 });

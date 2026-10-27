@@ -6,7 +6,9 @@
 // by `world_get_ActorsPlayer_LivesProperty` and set by `world_set_…`. So a
 // rename that did not follow them would leave each one meaning nothing, and
 // a delete leaves them so; the rename rewrites every one, in every file, and
-// the delete first says where they are.
+// the delete first says where they are. A placement that sets the property
+// keeps its value under the property's id, which is the name too, so the
+// rename moves those as well.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -19,6 +21,10 @@ import {
 import {pascal} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
 import {MEMBER_TYPE} from '../../files/renameThing';
+import {
+  forgetPlacedProperty,
+  renamePlacedProperty,
+} from '../../rules/rulePlacements';
 import {isActorData, type ActorData} from '../actorData';
 
 /** What a property's blocks are named by: `lives` → `LivesProperty`. */
@@ -123,20 +129,23 @@ export function renameProperty(
       [fileId]: {...file, contents: JSON.stringify(renamed, null, 2)},
     },
   };
-  const slug = pathSlug(modulePath);
+  const kind = pathSlug(modulePath);
   const fromKey = propertyKey(from);
   const toKey = propertyKey(name);
-  return mapWorkspaces(declared, contents =>
+  const blocks = mapWorkspaces(declared, contents =>
     rewriteWorkspace(contents, {
       type(type) {
         const parts = MEMBER_TYPE.exec(type);
-        return parts && parts[2] === slug && parts[3] === fromKey
-          ? `${parts[1]}_${slug}_${toKey}`
+        return parts && parts[2] === kind && parts[3] === fromKey
+          ? `${parts[1]}_${kind}_${toKey}`
           : type;
       },
       fields() {},
     }),
   );
+  // A placement keeps its value under the kind that declared the property,
+  // as it keeps a trait's under the trait (`rulePlacements`).
+  return renamePlacedProperty(blocks, data.name, from, name);
 }
 
 /**
@@ -157,4 +166,42 @@ export function deleteProperty(
   if (values.length) next.values = values;
   else delete next.values;
   return next;
+}
+
+/**
+ * The project without the actor's property: its declaration and starting
+ * value, and what every placement set it to. Its blocks are left, as
+ * `deleteProperty` says.
+ */
+export function deletePropertyInProject(
+  source: MultiFileSource,
+  fileId: string,
+  modulePath: string,
+  name: string,
+): MultiFileSource {
+  const file = source.files[fileId];
+  let data: unknown;
+  try {
+    data = JSON.parse(file?.contents ?? '');
+  } catch {
+    return source;
+  }
+  if (!isActorData(data)) {
+    return source;
+  }
+  const declared: MultiFileSource = {
+    ...source,
+    files: {
+      ...source.files,
+      [fileId]: {
+        ...file,
+        contents: JSON.stringify(
+          deleteProperty(data, modulePath, name),
+          null,
+          2,
+        ),
+      },
+    },
+  };
+  return forgetPlacedProperty(declared, data.name, name);
 }

@@ -18,7 +18,7 @@ import type {ActorData, ActorProperty} from '../actorData';
 import styles from './actorEditor.module.css';
 import {setPropertyDefault, takesValue} from './actorEdits';
 import {
-  deleteProperty,
+  deletePropertyInProject,
   propertyUses,
   renameProblem,
   renameProperty,
@@ -129,7 +129,14 @@ export const SelfProperty = ({
             size="small"
             onClick={() => {
               setMode('show');
-              onEdit(deleteProperty(data, modulePath, property.name));
+              onProject(
+                deletePropertyInProject(
+                  source,
+                  fileId,
+                  modulePath,
+                  property.name,
+                ),
+              );
             }}
           >
             Delete

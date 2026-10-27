@@ -1,5 +1,6 @@
 // What a placed actor says about a rule's traits, followed when one is
-// renamed or deleted (specs/RULE_EDITOR_PLAN.md, step 6).
+// renamed or deleted (specs/RULE_EDITOR_PLAN.md, step 6), and about a kind's
+// own properties, which a placement overrides the same way.
 //
 // A placement in a map, a screen or a world overrides a trait's properties
 // for that one instance, keyed by the trait's id and then the property's
@@ -80,14 +81,17 @@ function rewritePlaces(
   return files ? {...source, files} : source;
 }
 
-/** The project with every placement's override of a trait's property renamed. */
+/**
+ * The project with every placement's override of a property renamed: a
+ * trait's, or a kind's own, by the name of what declared it.
+ */
 export const renamePlacedProperty = (
   source: MultiFileSource,
-  trait: string,
+  declarer: string,
   from: string,
   to: string,
 ): MultiFileSource => {
-  const owner = slug(trait);
+  const owner = slug(declarer);
   const was = slug(from);
   const now = slug(to);
   return was === now
@@ -108,10 +112,10 @@ export const renamePlacedProperty = (
 /** …and without it, which a deleted property leaves nothing to say. */
 export const forgetPlacedProperty = (
   source: MultiFileSource,
-  trait: string,
+  declarer: string,
   name: string,
 ): MultiFileSource => {
-  const owner = slug(trait);
+  const owner = slug(declarer);
   const id = slug(name);
   return rewritePlaces(source, {
     overrides(overrides) {
