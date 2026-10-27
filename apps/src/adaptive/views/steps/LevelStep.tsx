@@ -144,6 +144,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       showInstructionsInAiTutor: true,
       ...levelProperties,
       hideShareAndRemix: true,
+      hideNonInstructionTabs: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
     };
