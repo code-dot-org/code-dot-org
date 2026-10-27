@@ -9,13 +9,6 @@ export function itemsInColumn(
   return matchSets[side === 'start' ? 0 : 1];
 }
 
-export function arePaired(
-  pairs: MatchPairs,
-  [startId, endId]: [string, string]
-): boolean {
-  return pairs.some(([start, end]) => start === startId && end === endId);
-}
-
 // Pairs the two items, first breaking any pair either was already in, so
 // each item has at most one partner.
 export function pairTogether(
@@ -28,14 +21,12 @@ export function pairTogether(
   ];
 }
 
-export function removePair(
-  pairs: MatchPairs,
-  [startId, endId]: [string, string]
-): MatchPairs {
-  return pairs.filter(([start, end]) => !(start === startId && end === endId));
+// Removes the pair that includes this item, whichever column it's in.
+export function unpairItem(pairs: MatchPairs, id: string): MatchPairs {
+  return pairs.filter(([start, end]) => start !== id && end !== id);
 }
 
-export function partnerOf(pairs: MatchPairs, id: string): string | undefined {
+export function findPartner(pairs: MatchPairs, id: string): string | undefined {
   for (const [start, end] of pairs) {
     if (start === id) {
       return end;

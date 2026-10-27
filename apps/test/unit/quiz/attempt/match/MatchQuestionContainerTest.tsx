@@ -101,14 +101,33 @@ describe('MatchQuestionContainer', () => {
     expect(onChangePairs).not.toHaveBeenCalled();
   });
 
-  it('unpairs two partners when they are paired again', () => {
+  it('unmatches a matched card when it is selected, and keeps it selected', () => {
     const {onChangePairs} = renderContainer([['a', 'y']]);
 
-    fireEvent.click(card('A. 1 + 1, matched with 2'));
     fireEvent.click(card('2, matched with A. 1 + 1'));
 
     expect(onChangePairs).toHaveBeenLastCalledWith([]);
-    expect(card('A. 1 + 1')).toBeInTheDocument();
+    expect(card('2')).toHaveAttribute('aria-pressed', 'true');
+    expect(card('A. 1 + 1')).toHaveAttribute('aria-pressed', 'false');
+  });
+
+  it('rematches an unmatched card with a new partner', () => {
+    const {onChangePairs} = renderContainer([['a', 'y']]);
+
+    fireEvent.click(card('A. 1 + 1, matched with 2'));
+    fireEvent.click(card('3'));
+
+    expect(onChangePairs).toHaveBeenLastCalledWith([['a', 'x']]);
+  });
+
+  it('does not restore the pair when the unmatched card is deselected', () => {
+    const {onChangePairs} = renderContainer([['a', 'y']]);
+
+    fireEvent.click(card('A. 1 + 1, matched with 2'));
+    fireEvent.click(card('A. 1 + 1'));
+
+    expect(onChangePairs).toHaveBeenCalledTimes(1);
+    expect(card('A. 1 + 1')).toHaveAttribute('aria-pressed', 'false');
   });
 
   it('describes how to match, for screen readers', () => {
@@ -117,7 +136,7 @@ describe('MatchQuestionContainer', () => {
     expect(
       screen.getByRole('group', {name: 'Match each expression to its value.'})
     ).toHaveAccessibleDescription(
-      'Select an item in one column, then an item in the other column to match them. Select a matched pair again to unmatch it.'
+      'Select an item in one column, then an item in the other column to match them. Selecting a matched item unmatches it.'
     );
   });
 
@@ -131,9 +150,8 @@ describe('MatchQuestionContainer', () => {
     );
 
     fireEvent.click(card('2, matched with A. 1 + 1'));
-    fireEvent.click(card('A. 1 + 1, matched with 2'));
     expect(screen.getByRole('status')).toHaveTextContent(
-      'Unmatched A. 1 + 1 from 2.'
+      'Unmatched 2 from A. 1 + 1. Select an item in the other column to match it.'
     );
   });
 });

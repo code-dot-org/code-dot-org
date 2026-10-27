@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {MatchPairs, MatchSets, MatchSide} from './types';
-import {itemsInColumn, labelOf, letterOf, partnerOf} from './utils';
+import {findPartner, itemsInColumn, labelOf, letterOf} from './utils';
 
 import styles from './match-question-container.module.scss';
 
@@ -29,7 +29,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
 }) => (
   <div className={styles.column}>
     {itemsInColumn(matchSets, side).map(item => {
-      const partnerId = partnerOf(pairs, item.id);
+      const partnerId = findPartner(pairs, item.id);
       const isSelected = selectedId === item.id;
       // An end item shows its partner's letter once paired.
       const letter =

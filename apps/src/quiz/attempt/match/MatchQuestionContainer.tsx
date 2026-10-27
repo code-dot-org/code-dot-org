@@ -6,8 +6,8 @@ import AttemptCard from '../AttemptCard';
 import QuestionDescription from '../QuestionDescription';
 
 import MatchColumn from './MatchColumn';
-import {MatchPairs, MatchSets, MatchSide} from './types';
-import {arePaired, labelOf, pairTogether, removePair} from './utils';
+import {MatchPairs, MatchSelection, MatchSets, MatchSide} from './types';
+import {findPartner, labelOf, pairTogether, unpairItem} from './utils';
 
 import styles from './match-question-container.module.scss';
 
@@ -48,10 +48,7 @@ const MatchQuestionContainer: React.FunctionComponent<
   headingRef,
   disabled,
 }) => {
-  const [selected, setSelected] = useState<{
-    side: MatchSide;
-    id: string;
-  } | null>(null);
+  const [selection, setSelection] = useState<MatchSelection>({});
   const [linePaths, setLinePaths] = useState<string[]>([]);
   // Read out by a live region: a screen reader won't re-announce the name
   // of the card that's already focused when a pairing changes it.
@@ -97,25 +94,37 @@ const MatchQuestionContainer: React.FunctionComponent<
   }, [pairs, matchSets]);
 
   const handleClick = (side: MatchSide, id: string) => {
-    if (!selected || selected.side === side) {
-      setSelected(selected?.id === id ? null : {side, id});
+    const next: MatchSelection = {...selection, [side]: id};
+    const {start, end} = next;
+    // Both columns have a selection: pair them.
+    if (start && end) {
+      setAnnouncement(
+        `Matched ${labelOf(matchSets, start)} with ${labelOf(matchSets, end)}.`
+      );
+      onChangePairs(pairTogether(pairs, [start, end]));
+      setSelection({});
       return;
     }
-    const pair: [string, string] =
-      side === 'end' ? [selected.id, id] : [id, selected.id];
-    // Choosing a pair that already exists unmatches it.
-    const isAlreadyPaired = arePaired(pairs, pair);
-    const startLabel = labelOf(matchSets, pair[0]);
-    const endLabel = labelOf(matchSets, pair[1]);
-    setAnnouncement(
-      isAlreadyPaired
-        ? `Unmatched ${startLabel} from ${endLabel}.`
-        : `Matched ${startLabel} with ${endLabel}.`
-    );
-    onChangePairs(
-      isAlreadyPaired ? removePair(pairs, pair) : pairTogether(pairs, pair)
-    );
-    setSelected(null);
+
+    // Item has been previously selected: tapping the selected item again deselects it.
+    if (selection[side] === id) {
+      setSelection({});
+      return;
+    }
+
+    // Item is not currently selected: the tapped item becomes the selection.
+    // A matched item is unmatched first, so it can be matched again.
+    const partnerId = findPartner(pairs, id);
+    if (partnerId) {
+      onChangePairs(unpairItem(pairs, id));
+      setAnnouncement(
+        `Unmatched ${labelOf(matchSets, id)} from ${labelOf(
+          matchSets,
+          partnerId
+        )}. Select an item in the other column to match it.`
+      );
+    }
+    setSelection({[side]: id});
   };
 
   const dotRef = (id: string, element: HTMLElement | null) => {
@@ -135,7 +144,7 @@ const MatchQuestionContainer: React.FunctionComponent<
     >
       <p id={instructionsId} className={styles.srOnly}>
         Select an item in one column, then an item in the other column to match
-        them. Select a matched pair again to unmatch it.
+        them. Selecting a matched item unmatches it.
       </p>
       <div
         ref={boardRef}
@@ -155,7 +164,7 @@ const MatchQuestionContainer: React.FunctionComponent<
             matchSets={matchSets}
             side={side}
             pairs={pairs}
-            selectedId={selected?.id}
+            selectedId={selection[side]}
             onClickItem={id => handleClick(side, id)}
             dotRef={dotRef}
             disabled={disabled}
