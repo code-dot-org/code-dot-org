@@ -8,7 +8,7 @@ JSON with the zod schema itself through validate_pathway.mjs (needs Node;
 without it, only the structure the other checks read), checks every text
 line of the JSONC carries a well-formed tag, and that the task list covers
 every level the pathway names, every placeholder image, and every TODO. Levels are looked up on
-GitHub through repo.py; offline, those checks are skipped with a note.
+GitHub through repo.py, or in LEVELS_SNAPSHOT if set; offline, those checks are skipped with a note.
 Video keys are checked against dashboard/config/videos.csv the same way.
 Exits nonzero on any PROBLEM. Prints TODO paths and task counts.
 """
@@ -228,7 +228,7 @@ def task_problems(p, tasks_path, placeholder_keys, files):
         for name in sorted(names - files.keys()):
             status = registry.get(name, ['', '', ''])[2].lower()
             if status.startswith('exists'):
-                problems.append(f'tasks: level {name} is listed as existing, but GitHub staging has no '
+                problems.append(f'tasks: level {name} is listed as existing, but {repo.LEVELS_SOURCE} has no '
                                 'level by that name; check the spelling')
             else:
                 not_found.append(name)
@@ -294,8 +294,11 @@ def main(json_path):
     print('placeholder images:', len(placeholder_keys))
     print(f'tasks: {open_count} open, {done} done')
     if not_found:
-        print('not yet on GitHub staging (normal until the nightly content push after each is created;',
-              'publishing fails its tests until they are):', ', '.join(not_found))
+        if repo.SNAPSHOT:
+            print('not in the levelbuilder snapshot (take a new one after creating them):', ', '.join(not_found))
+        else:
+            print('not yet on GitHub staging (normal until the nightly content push after each is created;',
+                  'publishing fails its tests until they are):', ', '.join(not_found))
     if files is not None:
         missing_videos = video_keys_not_on_github(p)
         if missing_videos:
