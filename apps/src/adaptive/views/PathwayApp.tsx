@@ -291,6 +291,11 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     );
   }
 
+  const hasProgress = Object.values(progress.steps).some(s => s.status);
+  const hasSkippedCheckpoints = Object.values(statusMap).some(
+    s => s === 'skipped'
+  );
+
   return (
     <div className={styles.app}>
       <AdaptiveHeader
@@ -313,6 +318,8 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           });
         }}
         onWorkOnProject={openProject}
+        isFirstVisit={!hasProgress}
+        hasSkippedCheckpoints={hasSkippedCheckpoints}
       />
     </div>
   );

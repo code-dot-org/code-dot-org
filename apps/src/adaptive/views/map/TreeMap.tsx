@@ -26,6 +26,10 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
     () => layoutCheckpoints(pathway.checkpoints),
     [pathway]
   );
+  const firstAvailableId = useMemo(
+    () => pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id,
+    [pathway.checkpoints, statusMap]
+  );
   const lines = useMemo(
     (): DrawnEdge[] =>
       layout.edges.map(edge => {
@@ -64,6 +68,11 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
             </MuiTypography>
           }
           onSelect={onSelect}
+          tourId={
+            checkpoint.id === firstAvailableId
+              ? 'adaptive-tour-first-available'
+              : undefined
+          }
         />
       ))}
     </MapBoard>

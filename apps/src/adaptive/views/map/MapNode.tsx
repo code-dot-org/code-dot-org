@@ -31,6 +31,8 @@ interface MapNodeProps {
   /** Rendered after the circle. */
   children?: React.ReactNode;
   onSelect: (id: string) => void;
+  /** DOM id for product tour targeting. */
+  tourId?: string;
 }
 
 /** A checkpoint on the map: its circle, with the layout's title around it. */
@@ -44,6 +46,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
   above,
   children,
   onSelect,
+  tourId,
 }) => (
   <div
     className={classNames(
@@ -57,6 +60,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
     {above}
     <button
       type="button"
+      id={tourId}
       className={styles.circle}
       onClick={() => onSelect(checkpoint.id)}
       aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}

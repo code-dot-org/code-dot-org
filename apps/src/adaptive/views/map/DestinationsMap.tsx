@@ -74,6 +74,10 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
     () => new Map(boxes.flatMap(b => b.ids.map(id => [id, b.side]))),
     [boxes]
   );
+  const firstAvailableId = useMemo(
+    () => pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id,
+    [pathway.checkpoints, statusMap]
+  );
   const lines = useMemo(() => {
     const trunkOf = Object.fromEntries(
       boxes.flatMap(b => b.ids.map(id => [id, b.trunk]))
@@ -116,6 +120,11 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
             circleTop={NODE_RADIUS}
             width={NODE_WIDTH}
             onSelect={onSelect}
+            tourId={
+              checkpoint.id === firstAvailableId
+                ? 'adaptive-tour-first-available'
+                : undefined
+            }
           >
             <span
               className={classNames(
