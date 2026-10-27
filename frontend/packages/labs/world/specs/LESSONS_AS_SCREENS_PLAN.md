@@ -68,16 +68,27 @@ delete the world's cameras, and then retires the `.world` file.
 
 ## What is being built
 
-### 0. Code that runs when the game starts
+### 0. Code that runs when a screen loads
 
 Three memory lessons teach statements a game runs once: `set ⟨gap⟩ to 100`
 at the top of the world (memory/variable), a `for each` at its end
 (memory/many), and rows in an `add actor` body that read the world's own
 number (memory/actor-state). A screen's workspace holds only handlers, so
-these need a hat: `when the game starts`, a world event raised once, after
-the map is loaded and before the first tick, as `when created` is for an
-actor (`World.settleCreations`). Built first, because steps 1 and 3 depend
-on it.
+these go under a hat. Two moments already exist or follow from one that
+does:
+
+- **`when ⟨Game⟩ shows a map`** (`ViewportShowsMapEvent`): raised once the
+  map's actors are in the Viewport's space, queued, with the map's path as
+  its value. Code about the level goes here, since the level's actors are
+  there to find.
+- **`when this screen loads`**: a screen's own event, raised once its
+  placements exist, the Main Screen's as the game starts and any other's
+  when the game goes to it. Code about the screen goes here. Not built yet;
+  it is the screen's counterpart of the Viewport's event, and the game
+  starting is the Main Screen loading.
+
+The converter puts a lesson's statements under the Viewport's event, and
+the screen's event is built for code that is about the screen.
 
 ### 1. The converter
 
@@ -110,10 +121,13 @@ are deleted. `define world` stays: the Main Screen compiles to it
 
 ## Open
 
-- **`when the game starts`** (step 0) is a new event. The alternative is a
-  hat each lesson already has, such as a key press, which changes what
-  those lessons are about; this plan recommends the event.
+- **Where a coded `add actor` lands.** In the root space (`World.place`),
+  which on a screen is the screen, not the level the Viewport shows. So a
+  memory lesson's actors are placed on the map, and its statements set them
+  from `when ⟨Game⟩ shows a map`: memory/variable's Posts are placed, and
+  `gap` moves them. Whether such a lesson still reads as "a box for a
+  number" is a question for step 3.
 - **The memory lessons' story.** memory/actor-state says a Lamp's text
   cannot live on its placement because an actor cannot read the world. On
-  a screen, the row moves under `when the game starts` and reads the
+  a screen, the row moves under `when ⟨Game⟩ shows a map` and reads the
   world from there; the lesson's explanation changes with it.
