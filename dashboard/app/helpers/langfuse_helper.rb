@@ -86,16 +86,6 @@ module LangfuseHelper
     Rails.logger.warn("LangfuseHelper.trace_adaptive_generation failed: #{exception.message}")
   end
 
-  # The verdict as stored, not the model's raw output: the evidence level is
-  # clamped to one the skill describes.
-  def self.score_adaptive_validation(trace_id:, pass:, evidence_level:)
-    client = adaptive_client
-    client.create_score(id: "#{trace_id}-validation_pass", trace_id: trace_id, name: "validation_pass", value: pass ? 1 : 0, data_type: "BOOLEAN")
-    client.create_score(id: "#{trace_id}-validation_evidence_level", trace_id: trace_id, name: "validation_evidence_level", value: evidence_level, data_type: "NUMERIC")
-  rescue => exception
-    Rails.logger.warn("LangfuseHelper.score_adaptive_validation failed: #{exception.message}")
-  end
-
   def self.tutor_client
     LangfuseClientHelper::Client.new(CDO.tutor_langfuse_secret_key, CDO.tutor_langfuse_public_key)
   end

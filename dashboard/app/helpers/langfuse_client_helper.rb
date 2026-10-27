@@ -113,30 +113,6 @@ module LangfuseClientHelper
       export_spans([root_span, generation_span])
     end
 
-    # Langfuse overwrites a score only when id, name and date all match, so a
-    # stable id makes a same-day resend a no-op rather than a duplicate.
-    def create_score(trace_id:, name:, value:, data_type:, id: nil)
-      HTTParty.post(
-        "#{LANGFUSE_URL}/scores",
-        basic_auth: {
-          username: @public_key,
-          password: @secret_key
-        },
-        headers: {"Content-Type" => "application/json"},
-        body: {
-          id: id,
-          traceId: trace_id,
-          name: name,
-          value: value,
-          dataType: data_type,
-          environment: langfuse_environment,
-        }.compact.to_json
-      )
-    rescue => exception
-      Rails.logger.warn("Langfuse score error: #{exception.message}")
-      nil
-    end
-
     private def otlp_span(trace_id:, span_id:, name:, start_nanos:, end_nanos:, attributes:, parent_span_id: nil)
       {
         traceId: trace_id,
