@@ -22,6 +22,7 @@ import {
   viewOf,
   withMainAnimation,
   type ActorData,
+  type Block,
 } from '../../actors/actorData';
 import {climbArrowsHandlers} from '../../actors/enhance/climbArrows';
 import {enhanceWith} from '../../actors/enhance/enhancements';
@@ -34,7 +35,10 @@ import {
 import {stockAnimation, stockSprite} from '../../appearance/stock';
 import {importStockEffect} from '../../effect/importStockEffect';
 import {stockEffect} from '../../effect/stock';
+import {seedFor} from '../../files/newThing';
 import {importStockRule} from '../../rules/importStockRule';
+import {isRuleData, type RuleData} from '../../rules/ruleData';
+import {ruleDataOf, setPropertyDefault} from '../../rules/ruleEdits';
 import {resolveRuleContents} from '../../rules/ruleReference';
 import {stockRule} from '../../rules/stock';
 import {playCheck} from '../../runtime/playCheck';
@@ -4315,6 +4319,57 @@ describe('the own-rule lesson’s check', () => {
     const {passes} = await check('making/rule', shared(false));
     expect(passes).toBe(false);
   });
+
+  it('accepts the rule as the Rule Editor writes it', async () => {
+    // `Write a new rule…` makes data: a trait of the rule's name and a step
+    // under it, which the learner writes the bob into.
+    const both = shared(true);
+    const lifted = JSON.parse(
+      (both.files.rule as {contents: string}).contents,
+    ) as {blocks: {blocks: Row[]}};
+    const step = (lifted.blocks.blocks[1].next as {block: Row}).block;
+    const seeded = JSON.parse(
+      (seedFor('rule', 'Bob') as {contents: string}).contents,
+    ) as RuleData;
+    const written: RuleData = {
+      ...seeded,
+      traits: [
+        {
+          name: 'Bob',
+          steps: [
+            {
+              name: 'do something',
+              phase: 'move',
+              body: (step.inputs as {DO: {block: Block}}).DO.block,
+            },
+          ],
+        },
+      ],
+    };
+    const {passes} = await check('making/rule', {
+      ...both,
+      files: {
+        ...both.files,
+        rule: {...both.files.rule, contents: JSON.stringify(written)},
+      },
+    });
+    expect(passes).toBe(true);
+  });
+});
+
+describe('the Making lessons’ own rules', () => {
+  it('are data, as the Rule Editor writes them', () => {
+    for (const [id, name] of [
+      ['making/property', 'wind.rule'],
+      ['making/trait', 'weather.rule'],
+      ['making/block', 'bobbing.rule'],
+    ] as const) {
+      const file = Object.values(LESSONS[id].source.files).find(
+        one => one.name === name,
+      )!;
+      expect(isRuleData(JSON.parse(file.contents)), id).toBe(true);
+    }
+  });
 });
 
 describe('the big-world lesson’s check', () => {
@@ -4419,6 +4474,23 @@ describe('the read lesson’s check', () => {
       contents.replace(
         /("NAME": "amount of gravity",\s*"DEFAULT": ")[^"]*/,
         '$14',
+      ),
+    );
+    const {passes} = await check('making/read', changed);
+    expect(passes).toBe(true);
+  });
+
+  it('follows the rule when the Rule Editor changes it', async () => {
+    // What the Rule Editor writes: the rule as data, the value in its
+    // property rather than a block's field.
+    const changed = editing(answering('4'), 'gravity.rule', contents =>
+      JSON.stringify(
+        setPropertyDefault(
+          ruleDataOf(contents)!,
+          null,
+          'amount of gravity',
+          '4',
+        ),
       ),
     );
     const {passes} = await check('making/read', changed);

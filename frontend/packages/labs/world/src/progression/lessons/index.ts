@@ -37,6 +37,7 @@ import {
   words,
 } from '../../actors/stock/workspace';
 import type {WorldScenario} from '../../fixtures/scenarios';
+import {asRuleData} from '../../rules/ruleData';
 import type {LessonProperties, TileId} from '../types';
 
 import {opensOnTheLevel} from './asScreen';
@@ -4263,45 +4264,51 @@ const heldPosition = (component: 'x' | 'y') => ({
   },
 });
 
-/** A rule a learner can read in a sitting: one trait, one step, one number. */
-const WIND_RULE = JSON.stringify(
-  {
-    blocks: {
-      blocks: [
-        {
-          type: 'world_rule',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Wind', ABILITY: 'Has Wind'},
-          next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
-        },
-        {
-          type: 'world_rule_trait',
-          x: 20,
-          y: 160,
-          fields: {NAME: 'Blown'},
-          next: {
-            block: {
-              type: 'world_use_trait',
-              fields: {TRAIT: 'Space#PositionalTrait'},
-              next: {
-                block: {
-                  type: 'world_trait_step',
-                  fields: {PHASE: 'move', NAME: 'drift'},
-                  inputs: {
-                    DO: {
-                      block: {
-                        type: 'world_set_position',
-                        inputs: {
-                          ACTOR: me(),
-                          X: {
-                            block: {
-                              type: 'math_arithmetic',
-                              fields: {OP: 'ADD'},
-                              inputs: {A: heldPosition('x'), B: num(2)},
+/**
+ * A rule a learner can read in a sitting: one trait, one step, one number.
+ * Written as the rows it stands for and stored as data, as the Rule Editor
+ * writes it.
+ */
+const WIND_RULE = asRuleData(
+  JSON.stringify(
+    {
+      blocks: {
+        blocks: [
+          {
+            type: 'world_rule',
+            x: 20,
+            y: 20,
+            fields: {NAME: 'Wind', ABILITY: 'Has Wind'},
+            next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
+          },
+          {
+            type: 'world_rule_trait',
+            x: 20,
+            y: 160,
+            fields: {NAME: 'Blown'},
+            next: {
+              block: {
+                type: 'world_use_trait',
+                fields: {TRAIT: 'Space#PositionalTrait'},
+                next: {
+                  block: {
+                    type: 'world_trait_step',
+                    fields: {PHASE: 'move', NAME: 'drift'},
+                    inputs: {
+                      DO: {
+                        block: {
+                          type: 'world_set_position',
+                          inputs: {
+                            ACTOR: me(),
+                            X: {
+                              block: {
+                                type: 'math_arithmetic',
+                                fields: {OP: 'ADD'},
+                                inputs: {A: heldPosition('x'), B: num(2)},
+                              },
                             },
+                            Y: heldPosition('y'),
                           },
-                          Y: heldPosition('y'),
                         },
                       },
                     },
@@ -4310,12 +4317,12 @@ const WIND_RULE = JSON.stringify(
               },
             },
           },
-        },
-      ],
+        ],
+      },
     },
-  },
-  null,
-  2,
+    null,
+    2,
+  ),
 );
 
 const ruleProperty: WorldScenario = {
@@ -4357,23 +4364,24 @@ always will, because the speed is the number **2**, typed into
 \`rules/wind.rule\` where nothing else can reach it.
 
 Open that file: **Rules in Play**, under Add Rules at the foot of the
-toolbox, lists it with an **Open** beside it. It is nine blocks: a rule, a trait, and a step that moves
-whatever elected the trait. Nothing in it is hidden from you, and nothing in it
-is different in kind from what you write in a world.
+toolbox, lists it with an **Open** beside it. It opens in the Rule Editor: a
+rule, one trait called **Blown**, and one step, **drift**, that moves whatever
+elected the trait. Nothing in it is hidden from you, and the step is blocks of
+the kind you write everywhere else.
 
 ### What you do
 
-1. Inside \`define trait ⟨Blown⟩\`, add
-   **define number strength with default 1**. Declared in a trait, it belongs
-   to each ACTOR that elects it.
+1. In the side panel, under **Blown**, press **Add property** and make a
+   **number** called **strength**. Give it a default of 1. Declared on a
+   trait, it belongs to each ACTOR that elects it.
 2. Look in the Wind category in the Main Screen's code. Two blocks are there
-   that were
-   not before: **get strength of ⟨…⟩** and **set strength of ⟨…⟩**. What you
-   declared became vocabulary.
-3. In the step, multiply the 2 by **strength of ⟨this actor⟩**.
+   that were not before: **get strength of ⟨…⟩** and **set strength of ⟨…⟩**.
+   What you declared became vocabulary.
+3. Open **Blown**, then **Edit** the **drift** step, and multiply the 2 by
+   **strength of ⟨this actor⟩**.
 4. On the map, click one Leaf and give it a **strength** of 3 in its
-   properties, and leave the other. One
-   wind, two speeds, and the rule did not have to know there would be two.
+   properties, and leave the other. One wind, two speeds, and the rule did not
+   have to know there would be two.
 `.trim(),
 };
 
@@ -4685,59 +4693,62 @@ nothing anywhere else changes when you change it.
 ### What you do
 
 1. Open \`rules/patrol.rule\` — from **Rules in Play** under the toolbox's Add
-   Rules, or **Rule** on the Guard's **Patrols Across**.
-2. Find **define number across time with default 1.5** and make it 0.5. The
-   Guard turns three times as often.
+   Rules, or **Rule** on the Guard's **Patrols Across**. It opens in the Rule
+   Editor.
+2. In the side panel, under **Patrols Across**, find **across time**, which
+   says 1.5, and make it 0.5. The Guard turns three times as often.
 3. Start a new project, take the Patrol rule again, and look: 1.5. You changed
    your copy and nothing else.
 4. Now think about what you could NOT have done from outside. \`across time\` is
    a property, so a project can set it — but the SHAPE of the beat, the fact
-   that it turns at all, is a step in this file, and only opening it lets you
-   argue with that.
+   that it turns at all, is the step **turn across** in this file, and only
+   opening it lets you argue with that.
 `.trim(),
 };
 
 // ── making/trait ─────────────────────────────────────────────────────────────
 
 /** A rule with ONE trait in it, which is the shape this lesson doubles. */
-const WEATHER_RULE = JSON.stringify(
-  {
-    blocks: {
-      blocks: [
-        {
-          type: 'world_rule',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Weather', ABILITY: 'Has Weather'},
-          next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
-        },
-        {
-          type: 'world_rule_trait',
-          x: 20,
-          y: 160,
-          fields: {NAME: 'Blown'},
-          next: {
-            block: {
-              type: 'world_use_trait',
-              fields: {TRAIT: 'Space#PositionalTrait'},
-              next: {
-                block: {
-                  type: 'world_trait_step',
-                  fields: {PHASE: 'move', NAME: 'drift'},
-                  inputs: {
-                    DO: {
-                      block: {
-                        type: 'world_set_position',
-                        inputs: {
-                          ACTOR: me(),
-                          X: {
-                            block: {
-                              type: 'math_arithmetic',
-                              fields: {OP: 'ADD'},
-                              inputs: {A: heldPosition('x'), B: num(2)},
+const WEATHER_RULE = asRuleData(
+  JSON.stringify(
+    {
+      blocks: {
+        blocks: [
+          {
+            type: 'world_rule',
+            x: 20,
+            y: 20,
+            fields: {NAME: 'Weather', ABILITY: 'Has Weather'},
+            next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
+          },
+          {
+            type: 'world_rule_trait',
+            x: 20,
+            y: 160,
+            fields: {NAME: 'Blown'},
+            next: {
+              block: {
+                type: 'world_use_trait',
+                fields: {TRAIT: 'Space#PositionalTrait'},
+                next: {
+                  block: {
+                    type: 'world_trait_step',
+                    fields: {PHASE: 'move', NAME: 'drift'},
+                    inputs: {
+                      DO: {
+                        block: {
+                          type: 'world_set_position',
+                          inputs: {
+                            ACTOR: me(),
+                            X: {
+                              block: {
+                                type: 'math_arithmetic',
+                                fields: {OP: 'ADD'},
+                                inputs: {A: heldPosition('x'), B: num(2)},
+                              },
                             },
+                            Y: heldPosition('y'),
                           },
-                          Y: heldPosition('y'),
                         },
                       },
                     },
@@ -4746,12 +4757,12 @@ const WEATHER_RULE = JSON.stringify(
               },
             },
           },
-        },
-      ],
+        ],
+      },
     },
-  },
-  null,
-  2,
+    null,
+    2,
+  ),
 );
 
 const ownTrait: WorldScenario = {
@@ -4811,10 +4822,13 @@ other.
 
 ### What you do
 
-1. In \`rules/weather.rule\` (open it from **Rules in Play**, under Add Rules at
-   the foot of the toolbox), add a second **define trait**, called **Sinks**.
-2. Give it \`use trait ⟨Positional⟩\` and an **each frame** that adds to the
-   position's **y** rather than its **x**.
+1. Open \`rules/weather.rule\` from **Rules in Play**, under Add Rules at the
+   foot of the toolbox. In the Rule Editor's side panel, type **Sinks** into
+   **New trait** and press **Add trait**.
+2. With **Sinks** open, add **Positional** to **Traits it needs**. Then press
+   **New step**, set it to run **during move**, and make it add to the
+   position's **y** rather than its **x** — the **drift** step under
+   **Blown** is the one to copy.
 3. Open the Stone, **Remove** **Blown**, and give it **Sinks** from
    **Enhance Actor**.
 4. Run it. One rule, two abilities, two kinds of thing — and neither trait
@@ -4919,16 +4933,18 @@ what the trait does. Gravity is one — several kinds share it, and none of them
 holds a copy.
 
 A rule is three sentences before it does anything: what it is called, what
-carrying it is called, and when it runs. A new rule file opens with all three
-written — **define rule**, a **define trait** beside it, and an **each frame**
-under the trait — so what is left to you is what goes in the mouth.
+carrying it is called, and when it runs. A new rule opens with all three
+written — the rule, a trait of the same name, and a step under the trait — so
+what is left to you is what the step does.
 
 ### What you do
 
 1. Press **Rules in Play** under Add Rules at the foot of the toolbox, then
-   **Write a new rule…**, and call it **Bob**. It opens on the three blocks
-   above, in \`rules/bob.rule\`.
-2. Move the bobbing into the **each frame** under the trait.
+   **Write a new rule…**, and call it **Bob**. It opens in the Rule Editor, as
+   \`rules/bob.rule\`, with a trait called **Bob** and a step called **do
+   something** under it.
+2. Open **Bob**, **Edit** the step, set it to run **during move**, and move
+   the bobbing into it.
 3. Take the \`each frame\` out of both actors' code and give each **Bob**
    from **Enhance Actor** instead.
 4. Change the bob once. Both change.
@@ -5035,20 +5051,21 @@ const readRule: WorldScenario = {
 The Hero falls, lands, and stays there. You have used gravity in half a dozen
 lessons and never once looked at it — and it is not a black box, it is not
 built into the lab, and it is not written in a language you have not been
-taught. **It is blocks**, in a file in your project, and you can read all of
-them.
+taught. **It is a file in your project** — its properties, its traits, and
+steps written in blocks — and you can read all of it.
 
 ### What you do
 
 1. Open the actor, and press **Rule** on its **Affected by Gravity**. It
-   opens.
-2. Read the top of it. There are two numbers there that belong to the WORLD
-   rather than to any actor, and one of them says how hard gravity pulls.
+   opens in the Rule Editor.
+2. Read the side panel. The rule's own properties come first, before any
+   trait's: they belong to the WORLD rather than to any actor, and one of them
+   says how hard gravity pulls.
 3. Put that number in **how hard it pulls**, one of
    [the game's own properties](#clickable=world.properties), so the game
    says what you found.
-4. Now change it in the rule and run again. You are editing gravity, which
-   half an hour ago was a thing that happened to you.
+4. Now change it in the rule's side panel and run again. You are editing
+   gravity, which half an hour ago was a thing that happened to you.
 `.trim(),
 };
 
@@ -5125,24 +5142,26 @@ const bobTrait = (name: string, step: string, amount: number, y: number) => ({
   },
 });
 
-const BOBBING_RULE = JSON.stringify(
-  {
-    blocks: {
-      blocks: [
-        {
-          type: 'world_rule',
-          x: 20,
-          y: 20,
-          fields: {NAME: 'Bobbing', ABILITY: 'Bobs'},
-          next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
-        },
-        bobTrait('Bobs Gently', 'bob gently', 1, 160),
-        bobTrait('Bobs Wildly', 'bob wildly', 4, 420),
-      ],
+const BOBBING_RULE = asRuleData(
+  JSON.stringify(
+    {
+      blocks: {
+        blocks: [
+          {
+            type: 'world_rule',
+            x: 20,
+            y: 20,
+            fields: {NAME: 'Bobbing', ABILITY: 'Bobs'},
+            next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
+          },
+          bobTrait('Bobs Gently', 'bob gently', 1, 160),
+          bobTrait('Bobs Wildly', 'bob wildly', 4, 420),
+        ],
+      },
     },
-  },
-  null,
-  2,
+    null,
+    2,
+  ),
 );
 
 const ownBlock: WorldScenario = {
@@ -5175,7 +5194,7 @@ const ownBlock: WorldScenario = {
 ## Your own vocabulary
 
 Open \`rules/bobbing.rule\` from **Rules in Play**, under Add Rules at the foot
-of the toolbox. Two traits, two steps, and inside them the same sum
+of the toolbox. Two traits, a step under each, and inside them the same sum
 written out twice: **sin of ⟨time × 180⟩ × ⟨a number⟩**. One says 1 and the other
 says 4, and everything else about them is identical.
 
@@ -5183,15 +5202,16 @@ Reading it, you have to work out twice that it is a wave. Changing how the
 bobbing feels means changing it in both places and hoping you did the same
 thing to each.
 
-A **define block** is a name for a sum, with the parts that vary as
+A **block** of your own is a name for a sum, with the parts that vary as
 **parameters** — which is what makes it different from copying.
 
 ### What you do
 
-1. Add **define block** to the rule, phrased **bob by ⟨amount⟩**, returning a
-   number.
-2. Put **return ⟨sin of ⟨time × 180⟩ × ⟨amount⟩⟩** in it — the sum, with the
-   number replaced by the parameter.
+1. In the rule's own view, with no trait open, press **New block**. In
+   **Edit design**, make it read **bob by ⟨amount⟩** — a word, then a number
+   value called **amount** — and set **Reports** to a number.
+2. Below the design, put **return ⟨sin of ⟨time × 180⟩ × ⟨amount⟩⟩** under the
+   block — the sum, with the number replaced by the parameter.
 3. In both steps, use **bob by ⟨1⟩** and **bob by ⟨4⟩**. The sum is written
    once and said twice.
 4. Now change the 180 to a 60. One edit, and both of them slow down — which is

@@ -51,6 +51,8 @@
 // is reachable from Origin, and that a region's tiles touch each other.
 
 import {viewOf} from '../actors/actorData';
+import {asRuleData, isRuleData, type RuleData} from '../rules/ruleData';
+import {resolveRuleContents} from '../rules/ruleReference';
 import {stockRule} from '../rules/stock';
 
 import {sectorCell, type Axial} from './hex';
@@ -3410,16 +3412,15 @@ export const TILES: readonly Tile[] = [
       inspect: files => {
         // What the rule says, read at check time: the answer is whatever is in
         // the file, so editing the file cannot make a right answer wrong.
-        const rule = files['rules/gravity.rule'] ?? '';
-        const declared = rule.match(
-          /"NAME":\s*"amount of gravity",\s*"DEFAULT":\s*"([^"]*)"/,
-        )?.[1];
+        const declared = ruleIn(files, 'rules/gravity.rule')?.properties?.find(
+          one => one.name === 'amount of gravity',
+        )?.value;
         const said = (
           JSON.parse(files['screens/main.screen'] ?? '{}') as {
             properties?: Array<{name: string; value: string}>;
           }
         ).properties?.find(one => one.name === 'how hard it pulls')?.value;
-        return Boolean(declared) && said === declared;
+        return declared !== undefined && said === String(declared);
       },
       passes: () => true,
     },
@@ -3433,7 +3434,7 @@ export const TILES: readonly Tile[] = [
       'Your project has its own COPY of every rule it uses, and changing it changes nothing anywhere else.',
     task: 'A guard on a long slow beat, and the number that says how long — which is not in your world.',
     requires: ['arcade/waves'],
-    unlocks: [{kind: 'block', type: 'world_rule_step_tick'}],
+    unlocks: [{kind: 'affordance', id: 'rule-steps'}],
     check: {
       kind: 'outcome',
       says: "The Guard turns far more often than the stock rule turns him, and the rule file is not the library's any more.",
@@ -3478,10 +3479,12 @@ export const TILES: readonly Tile[] = [
     teaches: 'What you declare in a rule becomes vocabulary in the toolbox.',
     task: 'A wind that blows everything at the same speed, because the speed is a number typed into the rule.',
     requires: ['puzzle/undo'],
-    // NOT `define property`: `memory/world-state` grants that, and this lesson
-    // is handed it. What it adds is the OTHER declaration a rule makes.
-    unlocks: [{kind: 'block', type: 'world_rule_event'}],
-    offers: [{kind: 'block', type: 'world_rule_property'}],
+    // …and `define event`, the other declaration, which the World drawer
+    // still offers.
+    unlocks: [
+      {kind: 'affordance', id: 'rule-properties'},
+      {kind: 'block', type: 'world_rule_event'},
+    ],
     check: {
       kind: 'outcome',
       says: 'The two Leaves end up in different places, which one number in the rule cannot do.',
@@ -3523,7 +3526,7 @@ export const TILES: readonly Tile[] = [
     task: 'The same sum in two steps with one number different. Give it a name.',
     requires: ['story/scene'],
     unlocks: [
-      {kind: 'block', type: 'world_rule_block'},
+      {kind: 'affordance', id: 'rule-blocks'},
       {kind: 'block', type: 'world_return'},
     ],
     check: {
@@ -3539,14 +3542,15 @@ export const TILES: readonly Tile[] = [
         trace: Array.from({length: 8}, () => ({seconds: 0.15})),
       },
       inspect: files => {
-        const rule = files['rules/bobbing.rule'] ?? '';
-        const defined = blockIn({rule}, 'world_rule_block');
-        const parts = (
-          defined as {extraState?: {parts?: {kind: string}[]}} | undefined
-        )?.extraState?.parts;
-        const takesOne = (parts ?? []).some(part => part.kind === 'param');
+        const rule = ruleIn(files, 'rules/bobbing.rule');
+        const takesOne = (rule?.members ?? []).some(
+          member =>
+            member.kind === 'block' &&
+            member.parts.some(part => part.kind === 'param'),
+        );
         // Called from both steps: the generated query, twice in the file.
-        const calls = rule.split('world_query_Bobbing_').length - 1;
+        const calls =
+          JSON.stringify(rule ?? {}).split('world_query_Bobbing_').length - 1;
         return takesOne && calls >= 2;
       },
       passes: ({samples}) => {
@@ -3571,12 +3575,7 @@ export const TILES: readonly Tile[] = [
       'A rule of your own: work several kinds of actor share, written once and elected by each.',
     task: 'A Fish and a Bird, both bobbing, and the bob written out twice.',
     requires: ['adventure/errand'],
-    // The root itself. `New rule` seeds one — with its trait and its step
-    // beside it, since those are the three sentences a rule is — so the block
-    // is not something this lesson has to be dragged from a drawer for; what
-    // the grant does is put it IN the drawer from here on, for the rule that
-    // wants a second one or was started from a blank file.
-    unlocks: [{kind: 'block', type: 'world_rule'}],
+    unlocks: [{kind: 'affordance', id: 'rule-new'}],
     check: {
       kind: 'outcome',
       says: 'Both still bob, and neither of them carries a copy of the bobbing any more.',
@@ -3592,12 +3591,13 @@ export const TILES: readonly Tile[] = [
       inspect: files => {
         // A rule that offers a trait with a step in it — the shape `New rule`
         // seeds, and the shape a bob that moved out of both actors lands in.
-        const shared = Object.entries(files).some(
-          ([path, contents]) =>
+        const shared = Object.keys(files).some(
+          path =>
             path.startsWith('rules/') &&
             path.endsWith('.rule') &&
-            contents.includes('world_rule_trait') &&
-            contents.includes('world_trait_step'),
+            (ruleIn(files, path)?.traits ?? []).some(
+              trait => (trait.steps ?? []).length > 0,
+            ),
         );
         // Each `define actor` is a file of its own, so a copy left in either
         // of them is a `world_trait_step` still sitting in an actor file.
@@ -3627,12 +3627,7 @@ export const TILES: readonly Tile[] = [
       'Election: a rule that offers something, and the actors that choose to be it.',
     task: 'One weather and two kinds of thing, drifting the same way because the rule offers one ability.',
     requires: ['simulation/dials'],
-    unlocks: [
-      // `use trait` is how an actor ELECTS one and came with the first lesson.
-      // What this teaches is declaring one, which is a rule's own business.
-      {kind: 'block', type: 'world_rule_trait'},
-      {kind: 'block', type: 'world_rule_enum'},
-    ],
+    unlocks: [{kind: 'affordance', id: 'rule-traits'}],
     check: {
       kind: 'outcome',
       says: 'The Leaf goes sideways and the Stone goes down, from one rule.',
@@ -3838,47 +3833,19 @@ function mainMapLayers(files: Record<string, string>): MapLayerShape[] {
   }));
 }
 
-function blockIn(
+/** A rule file as data, whatever shape it is stored in. */
+function ruleIn(
   files: Record<string, string>,
-  type: string,
-): {fields?: Record<string, unknown>} | undefined {
-  const find = (
-    node: unknown,
-  ): {fields?: Record<string, unknown>} | undefined => {
-    if (Array.isArray(node)) {
-      for (const item of node) {
-        const found = find(item);
-        if (found) {
-          return found;
-        }
-      }
-      return undefined;
-    }
-    if (typeof node !== 'object' || node === null) {
-      return undefined;
-    }
-    if ((node as {type?: unknown}).type === type) {
-      return node as {fields?: Record<string, unknown>};
-    }
-    for (const value of Object.values(node)) {
-      const found = find(value);
-      if (found) {
-        return found;
-      }
-    }
+  path: string,
+): RuleData | undefined {
+  try {
+    const parsed = JSON.parse(
+      asRuleData(resolveRuleContents(files[path] ?? '')),
+    ) as unknown;
+    return isRuleData(parsed) ? parsed : undefined;
+  } catch {
     return undefined;
-  };
-  for (const contents of Object.values(files)) {
-    try {
-      const found = find(JSON.parse(contents));
-      if (found) {
-        return found;
-      }
-    } catch {
-      // A file mid-edit is not a failed lesson (see `nestedIn`).
-    }
   }
-  return undefined;
 }
 
 const lastNumber = (samples: unknown[] | undefined): number => {

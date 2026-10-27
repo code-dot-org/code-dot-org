@@ -20,6 +20,9 @@
 import {namedRootOf} from '../blockly/topBlocks';
 import {createEffectDocument} from '../effect/model/document';
 import {DEFAULT_MAP_SIZE, DEFAULT_TILE} from '../mapEditor/mapModel';
+import {RULE_DOCUMENT} from '../rules/ruleData';
+import {addTrait} from '../rules/ruleEdits';
+import {addStep} from '../rules/ruleSteps';
 import {modernStyle} from '../styles/stock/modern';
 
 /** What a new file is made of: text, or bytes that live on a URL. */
@@ -40,57 +43,19 @@ const BLANK_SPRITE =
  * A rule, with the ceremony written for you.
  *
  * A rule is three sentences before it does anything: what it is called, what
- * carrying it is called, and when it runs. Left to a learner those are three
- * blocks to find, two names to invent and a phase to pick — which was enough
- * ceremony that the lab once grew a second file type, the `.behavior`, whose
- * whole purpose was to skip them (specs/BEHAVIORS.md). Nobody reached for it:
- * the lab's own authors wrote a `.rule` forty-seven times out of forty-seven,
- * and the one behavior that existed was the one written to demonstrate the
- * construct.
+ * carrying it is called, and when it runs. Left to a learner those were
+ * enough ceremony that the lab once grew a second file type, the `.behavior`,
+ * whose whole purpose was to skip them (specs/BEHAVIORS.md). Nobody reached
+ * for it.
  *
- * So the sentences are pre-written instead. A new rule opens on `define rule
- * ⟨Bob⟩`, a `define trait ⟨Bob⟩ for actor` beside it, and `each frame during
- * decide` under the trait, and what a learner does is drop their blocks into
- * the mouth and give an actor `use trait ⟨Bob⟩`. One name, the same as a
- * behavior cost — and the two sentences it hid are on the screen to be read.
- *
- * The ability is seeded as the name, which is exactly what `parseRuleMeta`
- * falls back to when the field is empty. Left to the block's own default a new
- * rule called Bob read "which adds ability Has My Rule".
- *
- * The trait's step names no NAME and so takes the block's own placeholder:
- * seeding one would be inventing a second placeholder for the same thing.
+ * So a new rule opens in the Rule Editor with a trait of its own name and a
+ * step under it, made by the editor's own edits, and what a learner does is
+ * write the step and give an actor the trait. The ability is the name.
  */
-const newRule = (name: string): Seed => ({
-  contents: `${JSON.stringify(
-    {
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            x: 20,
-            y: 20,
-            fields: {NAME: name, ABILITY: name},
-          },
-          {
-            type: 'world_rule_trait',
-            x: 20,
-            y: 120,
-            fields: {NAME: name, SUBJECT: 'actor'},
-            next: {
-              block: {
-                type: 'world_trait_step',
-                fields: {PHASE: 'decide'},
-              },
-            },
-          },
-        ],
-      },
-    },
-    null,
-    2,
-  )}\n`,
-});
+const newRule = (name: string): Seed => {
+  const rule = addTrait({type: RULE_DOCUMENT, name, ability: name}, name);
+  return {contents: `${JSON.stringify(addStep(rule, name).data, null, 2)}\n`};
+};
 
 /**
  * What each kind of new file starts as, by extension.

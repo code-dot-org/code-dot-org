@@ -371,6 +371,11 @@ const AFFORDANCE_NAMES: Record<Affordance, string> = {
   'map-enhance': 'Abilities, from the map',
   'map-open-kind': 'An actor’s blocks, from the map',
   'map-new-actor': 'New actors, from the map',
+  'rule-new': 'Rules of your own',
+  'rule-properties': 'Properties in a rule',
+  'rule-traits': 'Traits in a rule',
+  'rule-blocks': 'Blocks in a rule',
+  'rule-steps': 'Steps in a rule',
 };
 
 /**

@@ -1,6 +1,6 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: IN PROGRESS, October 2026. Steps 0 to 4 and 5a are built.
+STATUS: IN PROGRESS, October 2026. Steps 0 to 4, 5a and 5b are built.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -158,14 +158,25 @@ trait`'s context looked for. The `camera ⟨⟩`, `move camera` and `look
 through camera` dropdowns listed the workspace's `define camera`s; they
 offer the main camera alone.
 
-#### 5b. Out of the palette
+#### 5b. Out of the palette — BUILT
 
-`define rule`, `define trait`, `use rule`, `define step`, `when tick`,
-`define block` and `use trait` leave the toolbox, the catalogue's unlocks
-and the "allowed in" tables, and a new `.rule` is seeded as data. The
-definitions stay, as the rows the compiler reads. The five Making lessons
-that teach these blocks (`making/rule`, `making/trait`, `making/block`,
-`making/change`, `making/property`) are rewritten around the Rule Editor.
+No drawer offered them by the time this was done: the Rule category holds
+only `return` and the frame time, and `define event` and `each frame`,
+which stay, are the only ones any palette lists. What named them was the
+catalogue. A new `.rule` is seeded as data, from the Rule Editor's own
+edits (`addTrait`, `addStep`). The three Making lessons that wrote rules
+in blocks store them as data, and the five Making lessons' text names the
+Rule Editor's controls; their checks read the rule as data, whatever shape
+it is stored in (`ruleIn`).
+
+What a Making lesson grants is now an affordance of the Rule Editor —
+`rule-new`, `rule-properties`, `rule-traits`, `rule-blocks`, `rule-steps`
+— and nothing withholds them yet. Which of them a gated lab holds back is
+the progression's to decide. `define choices` is granted by nothing: it
+is not data yet, and the Rule Editor cannot make one.
+
+The "allowed in" tables (`fileKind`) stay. They say where a row may sit in
+the workspaces the compiler reads, which 5c removes.
 
 #### 5c. Out of the compiler
 

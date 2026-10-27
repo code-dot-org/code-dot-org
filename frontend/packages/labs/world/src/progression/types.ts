@@ -107,13 +107,23 @@ export type UnlockTarget =
  *   — the Enhance checklist on the selected placement's kind, that kind's
  *   own file, and the Actor Creator from the palette
  *   (specs/KINDS_FROM_THE_MAP_PLAN.md).
+ * - `rule-new`, `rule-properties`, `rule-traits`, `rule-blocks`,
+ *   `rule-steps`: writing a rule in the Rule Editor — a new one, and adding a
+ *   property, a trait, a block or a step to one. Granted by the Making
+ *   lessons and withheld by nothing yet (specs/COMPILE_FROM_DATA_PLAN.md,
+ *   step 5b).
  */
 export type Affordance =
   | 'map-scripts'
   | 'map-layers'
   | 'map-enhance'
   | 'map-open-kind'
-  | 'map-new-actor';
+  | 'map-new-actor'
+  | 'rule-new'
+  | 'rule-properties'
+  | 'rule-traits'
+  | 'rule-blocks'
+  | 'rule-steps';
 
 export type Unlock = UnlockTarget & {
   /**
