@@ -6,6 +6,7 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {ruleViewOf} from '../../rules/ruleData';
 import {STOCK_RULES} from '../../rules/stock';
 import {
   BODY_OWNER_ID,
@@ -263,7 +264,7 @@ describe('every stock rule survives the round trip', () => {
   // seven rules, split and put back, compared against what went in.
   it.each(STOCK_RULES.map(rule => rule.id))('%s', id => {
     const before = JSON.parse(
-      STOCK_RULES.find(rule => rule.id === id)!.contents,
+      ruleViewOf(STOCK_RULES.find(rule => rule.id === id)!.contents),
     );
     const {shown, bodies} = split(before);
     const after = merge(shown, bodies);
@@ -289,7 +290,7 @@ describe('every stock rule survives the round trip', () => {
   it('actually hides something in the rules that matter', () => {
     // A round trip that split nothing would pass every test above.
     const solid = JSON.parse(
-      STOCK_RULES.find(rule => rule.id === 'solid')!.contents,
+      ruleViewOf(STOCK_RULES.find(rule => rule.id === 'solid')!.contents),
     );
     const {shown, bodies} = split(solid);
     const count = (document: {blocks?: {blocks?: unknown[]}}): number => {
@@ -341,7 +342,7 @@ describe('the editor seam', () => {
 
   it('keeps every body through a real rule', () => {
     const solid = JSON.parse(
-      STOCK_RULES.find(rule => rule.id === 'solid')!.contents,
+      ruleViewOf(STOCK_RULES.find(rule => rule.id === 'solid')!.contents),
     );
     const seam = createBodySeam();
 
@@ -399,7 +400,7 @@ describe('opening one member’s body', () => {
     // What the pencil does: the id comes off a block in the workspace, which
     // is a block the split put there, so the two have to agree.
     const solid = JSON.parse(
-      STOCK_RULES.find(rule => rule.id === 'solid')!.contents,
+      ruleViewOf(STOCK_RULES.find(rule => rule.id === 'solid')!.contents),
     );
     const seam = createBodySeam();
     const shown = seam.show(solid);
@@ -552,7 +553,9 @@ describe('editing one body and writing the file', () => {
   };
 
   const solidDocument = () =>
-    JSON.parse(STOCK_RULES.find(rule => rule.id === 'solid')!.contents);
+    JSON.parse(
+      ruleViewOf(STOCK_RULES.find(rule => rule.id === 'solid')!.contents),
+    );
 
   /** Every block the split took a body from. */
   const owners = (shown: unknown): string[] => {

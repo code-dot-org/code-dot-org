@@ -1,7 +1,7 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: IN PROGRESS, October 2026. Steps 0 to 4, 5a, 5b and 5c's first two
-are built.
+STATUS: IN PROGRESS, October 2026. Steps 0 to 4, 5a, 5b and 5c's first
+three are built.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -194,7 +194,11 @@ fixtures are written as rows and folded. In order, each its own commit:
    it and no rule uses it. The fold reads a missing ability as the name and
    a missing access as writable, as the walk did.
 2. BUILT. The lessons' and fixtures' rules are written as data.
-3. The stock rules are generated as data.
+3. BUILT. The stock rules are generated as data: the DSL writes the
+   workspace and stores its fold, under tsx so it can import the lab's
+   (`yarn build:rules`). All 46 are the data they folded to before, and
+   the shelf went from 4.6MB to 2.9MB. A reference's version, a hash of the
+   contents, changed for every rule; nothing acts on it.
 4. `resolveRuleContents` and `projectFiles` hand out data; what rewrites a
    rule's rows works through a view of its own, as an actor's does.
 5. Actors compile from data: the compiler and `parseActorOwnMeta` read

@@ -1,10 +1,10 @@
 // A way to write a stock `.rule` that is not 20KB of escaped JSON.
 //
-// A `.rule` file IS a Blockly workspace, and the six rules a human authored in
-// the editor stay that way — this is not a decompiler and nothing works
-// backward. What it is for is the rules we maintain in code: the source is a
-// module here, the workspace is generated, and the generated file is committed
-// so nothing changes at run time.
+// What it is for is the rules we maintain in code: the source is a module
+// here, the rule is generated, and the generated file is committed so nothing
+// changes at run time. A rule is written here as the `define rule` workspace
+// it stands for and stored as the data the Rule Editor makes of it
+// (`rules/ruleData.foldRule`), so this runs under tsx, which can import it.
 //
 // The point is not that the source is shorter. It is that the BLOCK TYPES ARE
 // DERIVED. A property's blocks are named from its rule and its export
@@ -13,6 +13,8 @@
 // was a string I guessed and checked by hand while writing the camera rules.
 // Guessing a block type fails loudly; guessing a SOCKET name leaves an empty
 // hole and no error at all. Here, one declaration produces both sides.
+
+import {foldRule} from '../../src/rules/ruleData.ts';
 
 const PASCAL = id =>
   id
@@ -1367,7 +1369,7 @@ function layout(roots) {
 
 // ── Output ───────────────────────────────────────────────────────────────────
 
-/** JSON.stringify, then escape non-ASCII — how these files store a workspace. */
+/** JSON.stringify, then escape non-ASCII — how these files store a rule. */
 const store = obj =>
   `${JSON.stringify(obj, null, 2).replace(
     /[-￿]/g,
@@ -1377,12 +1379,16 @@ const store = obj =>
 const asLiteral = json =>
   `'${json.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n')}'`;
 
-/** The `.ts` file that holds one stock rule. */
+/** The `.ts` file that holds one stock rule, as data. */
 export function moduleFor(rule, constName) {
+  const data = foldRule(rule.workspace());
+  if (!data) {
+    throw new Error(`${constName}: a rule the data cannot say whole`);
+  }
   return `${rule.header}
 
-/** The \`rules/${constName}.rule\` workspace. GENERATED — edit scripts/rules/${constName}.mjs. */
+/** The \`rules/${constName}.rule\` rule. GENERATED — edit scripts/rules/${constName}.mjs. */
 export const ${constName}Rule =
-  ${asLiteral(store(rule.workspace()))};
+  ${asLiteral(store(data))};
 `;
 }

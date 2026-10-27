@@ -19,6 +19,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {DEFAULT_PROJECT} from '../constants';
+import {ruleViewOf} from '../rules/ruleData';
 import {
   isRuleReference,
   parseRuleReference,
@@ -129,14 +130,15 @@ describe('what the references stand for', () => {
   });
 
   it('resolves each one to exactly the shelf’s copy', () => {
-    // Byte-identical, and it has to be: a lesson check asks whether a rule
-    // file still equals the library's to find out if the learner has edited it
-    // (`progression/catalogue`, the Patrol lesson). A resolution that
-    // re-serialized would answer "edited" for a rule nobody had touched.
+    // As its view, which is what `projectFiles` hands out.
     const resolved = projectFiles(DEFAULT_PROJECT.source);
 
-    expect(resolved['rules/solid.rule']).toBe(stockRule('solid')?.contents);
-    expect(resolved['rules/patrol.rule']).toBe(stockRule('patrol')?.contents);
+    expect(resolved['rules/solid.rule']).toBe(
+      ruleViewOf(stockRule('solid')!.contents),
+    );
+    expect(resolved['rules/patrol.rule']).toBe(
+      ruleViewOf(stockRule('patrol')!.contents),
+    );
   });
 
   it('has a library that no longer sets a ceiling on a project', () => {
@@ -149,6 +151,6 @@ describe('what the references stand for', () => {
     const shelf = STOCK_RULES.map(rule => bytes(rule.contents));
 
     expect(shelf).toHaveLength(46);
-    expect(shelf.reduce((sum, one) => sum + one, 0)).toBeLessThan(4_600_000);
+    expect(shelf.reduce((sum, one) => sum + one, 0)).toBeLessThan(3_000_000);
   });
 });

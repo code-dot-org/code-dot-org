@@ -23,13 +23,24 @@ import {
   ruleMetaToModule,
 } from '../../blockly/ruleMeta';
 import {PHASES} from '../../engine/core/phases';
-import {cameraRule} from '../stock/camera';
-import {cameraConfinedRule} from '../stock/cameraConfined';
-import {cameraDeadzoneRule} from '../stock/cameraDeadzone';
-import {cameraEaseRule} from '../stock/cameraEase';
-import {cameraFollowRule} from '../stock/cameraFollow';
-import {gravityRule} from '../stock/gravity';
-import {inputRule} from '../stock/input';
+import {ruleViewOf} from '../ruleData';
+import {cameraRule as cameraData} from '../stock/camera';
+import {cameraConfinedRule as cameraConfinedData} from '../stock/cameraConfined';
+import {cameraDeadzoneRule as cameraDeadzoneData} from '../stock/cameraDeadzone';
+import {cameraEaseRule as cameraEaseData} from '../stock/cameraEase';
+import {cameraFollowRule as cameraFollowData} from '../stock/cameraFollow';
+import {gravityRule as gravityData} from '../stock/gravity';
+import {inputRule as inputData} from '../stock/input';
+
+// Read as the `define rule` rows they stand for: what these check is the
+// blocks a rule is made of.
+const cameraRule = ruleViewOf(cameraData);
+const cameraConfinedRule = ruleViewOf(cameraConfinedData);
+const cameraDeadzoneRule = ruleViewOf(cameraDeadzoneData);
+const cameraEaseRule = ruleViewOf(cameraEaseData);
+const cameraFollowRule = ruleViewOf(cameraFollowData);
+const gravityRule = ruleViewOf(gravityData);
+const inputRule = ruleViewOf(inputData);
 
 /** A saved block, as much of one as this needs to walk it. */
 interface SavedBlock {

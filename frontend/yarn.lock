@@ -2789,6 +2789,7 @@ __metadata:
     react: "catalog:"
     react-dom: "catalog:"
     sass: "npm:^1.85.0"
+    tsx: "catalog:"
     typescript: "catalog:"
     vite: "catalog:"
     vite-plugin-dts: "catalog:"

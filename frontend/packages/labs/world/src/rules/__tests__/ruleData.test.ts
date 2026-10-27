@@ -1,76 +1,45 @@
 // A rule as data (specs/RULE_EDITOR_PLAN.md, step 1).
 //
-// The safety net for the Rule Editor: every stock rule folds into data, and
-// the data's view is the rule again, down to its bodies.
+// The safety net for the Rule Editor: every stock rule is data, and folds
+// back from its view, down to its bodies.
 
 import {describe, expect, it} from 'vitest';
 
 import {parseRuleMeta} from '../../blockly/ruleMeta';
-import {foldRule, ruleView, ruleViewOf, type RuleData} from '../ruleData';
+import {
+  foldRule,
+  isRuleData,
+  ruleView,
+  ruleViewOf,
+  type RuleData,
+} from '../ruleData';
 import {resolveRuleContents} from '../ruleReference';
 import {STOCK_RULES} from '../stock';
 
 type Node = Record<string, unknown>;
 
-/**
- * A workspace as the comparison reads it: without where its roots stand,
- * which the editor decides, and without what the view writes that a block
- * would assume anyway — a member's id and its eye open.
- */
-function normalized(document: unknown): unknown {
-  const walk = (node: unknown, root: boolean): unknown => {
-    if (Array.isArray(node)) {
-      return node.map(one => walk(one, root));
-    }
-    if (!node || typeof node !== 'object') {
-      return node;
-    }
-    const copy: Node = {};
-    for (const [key, value] of Object.entries(node as Node)) {
-      if (root && (key === 'x' || key === 'y')) {
-        continue;
-      }
-      copy[key] = walk(value, false);
-    }
-    const type = copy.type;
-    if (type === 'world_rule_block' || type === 'world_rule_event') {
-      delete copy.id;
-      const fields = copy.fields as Node | undefined;
-      if (fields?.ACCESS === 'shared') {
-        delete fields.ACCESS;
-      }
-    }
-    return copy;
-  };
-  const parsed = document as {blocks: {blocks: unknown[]}};
-  return {
-    ...parsed,
-    blocks: {...parsed.blocks, blocks: walk(parsed.blocks.blocks, true)},
-  };
-}
-
 describe('every stock rule', () => {
   it.each(STOCK_RULES.map(rule => [rule.id, rule.contents]))(
-    '%s folds into data, and its view is the rule again',
+    '%s is data, and folds back from its view',
     (_id, contents) => {
-      const document = JSON.parse(contents);
-      const data = foldRule(document);
+      const data = JSON.parse(contents) as RuleData;
 
-      expect(data).toBeDefined();
-      expect(normalized(ruleView(data!))).toEqual(normalized(document));
-      expect(foldRule(ruleView(data!))).toEqual(data);
+      expect(isRuleData(data)).toBe(true);
+      expect(foldRule(ruleView(data))).toEqual(data);
     },
   );
 
   it.each(STOCK_RULES.map(rule => [rule.id, rule.contents]))(
-    '%s reads the same to the rest of the lab as data',
+    '%s reads the same to the rest of the lab as its view',
     (id, contents) => {
-      const data = JSON.stringify(foldRule(JSON.parse(contents)));
       const meta = parseRuleMeta(`rules/${id}`, contents);
       expect(meta).toBeDefined();
-      expect(parseRuleMeta(`rules/${id}`, resolveRuleContents(data))).toEqual(
-        meta,
-      );
+      expect(
+        parseRuleMeta(
+          `rules/${id}`,
+          JSON.stringify(ruleView(JSON.parse(contents) as RuleData)),
+        ),
+      ).toEqual(meta);
     },
   );
 });

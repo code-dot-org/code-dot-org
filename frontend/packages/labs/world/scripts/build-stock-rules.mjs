@@ -1,9 +1,9 @@
-// Generate the stock `.rule` workspaces we maintain in code.
+// Generate the stock `.rule` files we maintain in code, as data.
 //
 // Source is `scripts/rules/<name>.mjs`; output is `src/rules/stock/<name>.ts`,
 // committed, so nothing changes at run time and a reader still sees what ships.
-// Nothing works backward: the six rules a human authored in the editor are not
-// here, and editing a generated one means editing its source.
+// Nothing works backward: editing a generated one means editing its source.
+// Run under tsx (`yarn build:rules`), since the DSL imports the lab's fold.
 //
 //   yarn build:rules          write them
 //   yarn build:rules --check  fail if any is out of date (CI, pre-commit)
@@ -89,7 +89,7 @@ for (const name of RULES) {
 if (stale.length) {
   console.error(
     `Out of date: ${stale.join(', ')}\n` +
-      `Their source changed without the workspace being regenerated. ` +
+      `Their source changed without the rule being regenerated. ` +
       `Run \`yarn build:rules\`.`,
   );
   process.exit(1);

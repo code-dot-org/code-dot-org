@@ -10,6 +10,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {parseRuleMeta} from '../../blockly/ruleMeta';
+import type {RuleData} from '../ruleData';
 import {stockRule, timeRule} from '../stock';
 
 const meta = parseRuleMeta('rules/time', timeRule)!;
@@ -60,7 +61,8 @@ describe('rules/time.rule', () => {
   });
 
   it('ticks as a step of the timer, which walks the timers for it', () => {
-    expect(timeRule).toContain('world_trait_step');
+    const {traits} = JSON.parse(timeRule) as RuleData;
+    expect(traits?.some(trait => (trait.steps ?? []).length > 0)).toBe(true);
     expect(timeRule).not.toContain('world_actors_with_trait');
   });
 

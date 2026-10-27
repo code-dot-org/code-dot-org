@@ -1,4 +1,4 @@
-// The committed workspaces must match what their sources generate.
+// The committed stock rules must match what their sources generate.
 //
 // Five of the stock rules are maintained as modules under `scripts/rules/` and
 // generated into `src/rules/stock/*.ts`; the generated file is committed, so a
@@ -17,8 +17,9 @@ import {describe, expect, it} from 'vitest';
 describe('the generated stock rules', () => {
   it('match their sources', () => {
     // `--check` writes nothing and exits non-zero on the first stale one.
+    // Through yarn, which runs it under tsx (`build:rules`).
     const run = () =>
-      execFileSync('node', ['scripts/build-stock-rules.mjs', '--check'], {
+      execFileSync('yarn', ['build:rules', '--check'], {
         cwd: process.cwd(),
         encoding: 'utf8',
         stdio: ['ignore', 'pipe', 'pipe'],

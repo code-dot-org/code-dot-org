@@ -2,8 +2,8 @@
 // step 1).
 //
 // The compiler folds what it is handed back to data (`generateRule`), so a
-// stock rule's view and the view of its data have to be the same program,
-// body for body.
+// stock rule as data and as its view have to be the same program, body for
+// body.
 
 import {render} from '@testing-library/react';
 import {createRef} from 'react';
@@ -14,8 +14,7 @@ import BlocklyGenerator, {
 } from '../../blockly/BlocklyGenerator';
 import {parseRuleMeta} from '../../blockly/ruleMeta';
 import {registerProjectRules} from '../../blockly/ruleRegistry';
-import {foldRule} from '../ruleData';
-import {resolveRuleContents} from '../ruleReference';
+import {ruleViewOf} from '../ruleData';
 
 import {ALL_STOCK_SOURCES} from './support/compileStockRules';
 
@@ -32,13 +31,9 @@ beforeAll(async () => {
   render(<BlocklyGenerator ref={generator} projectRules={metas} />);
   await new Promise(resolve => setTimeout(resolve, 50));
   for (const [path, contents] of Object.entries(ALL_STOCK_SOURCES)) {
-    const data = JSON.stringify(foldRule(JSON.parse(contents)));
     generated.set(path, {
-      blocks: generator.current!.generate(contents, `${path}.rule`),
-      data: generator.current!.generate(
-        resolveRuleContents(data),
-        `${path}.rule`,
-      ),
+      blocks: generator.current!.generate(ruleViewOf(contents), `${path}.rule`),
+      data: generator.current!.generate(contents, `${path}.rule`),
     });
   }
 });
