@@ -20,10 +20,14 @@ const DEFINE_WORLD = 'world_world';
 
 const DEFINE_RULE = 'world_rule';
 
+/** Set on a workspace that holds part of a rule without its `define rule`. */
+type RuleWorkspace = {holdsRule?: boolean};
+
 /**
- * Whether this workspace is a RULE — i.e. whether a `define rule` is in it.
+ * Whether this workspace is a RULE — i.e. whether a `define rule` is in it,
+ * or it holds a rule's bodies (`markRule`).
  *
- * Read off the blocks rather than off the file's name for the reason
+ * Read off the workspace rather than off the file's name for the reason
  * `ownTraitOptions` reads its traits that way: a registry refreshes on a parse,
  * and a caller that has a workspace in front of it should not have to wait for
  * one. `fileKind` is the answer where a path is what you have.
@@ -31,7 +35,18 @@ const DEFINE_RULE = 'world_rule';
 export const definesRule = (
   workspace: Blockly.Workspace | undefined,
 ): boolean =>
-  Boolean(workspace?.getTopBlocks(false).some(b => b.type === DEFINE_RULE));
+  Boolean(
+    (workspace as RuleWorkspace | undefined)?.holdsRule ||
+      workspace?.getTopBlocks(false).some(b => b.type === DEFINE_RULE),
+  );
+
+/** Marks a workspace as holding a rule's bodies, as a page or the compiler does. */
+export const markRule = (
+  workspace: Blockly.Workspace,
+  holds: boolean,
+): void => {
+  (workspace as RuleWorkspace).holdsRule = holds;
+};
 
 /**
  * The workspace a block belongs to — a flyout's block asks about its target.
