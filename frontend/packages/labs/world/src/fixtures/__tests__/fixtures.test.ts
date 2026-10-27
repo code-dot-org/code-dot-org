@@ -154,7 +154,11 @@ describe('the scenario catalogue', () => {
     // the engine, become an event, and find what it landed on.
     const files = Object.values(WORLD_SCENARIOS.tapper.source.files);
     const named = (name: string) => files.some(file => file.name === name);
-    const main = files.find(file => file.name === 'main.world')!.contents;
+    // The game's own code and state: the Main Screen, and the level it shows.
+    const main = files
+      .filter(file => file.name === 'main.screen' || file.name === 'main.map')
+      .map(file => file.contents)
+      .join('');
 
     // `mouse.rule` above all: holding it is what puts it in play, so a scenario
     // about the mouse that forgot the file would be a scenario about nothing.
@@ -181,9 +185,9 @@ describe('the scenario catalogue', () => {
     // …and the count, which is the world's own state (specs/WORLD_STATE.md).
     // The scenario logged `Got one!` for as long as there was nowhere to put a
     // number that outlives the coin raising the event.
-    expect(main).toContain('world_rule_property');
-    expect(main).toContain('world_set_WorldsMain_ScoreProperty');
-    expect(main).toContain('world_get_WorldsMain_ScoreProperty');
+    expect(main).toContain('"properties"');
+    expect(main).toContain('world_set_ScreensMain_ScoreProperty');
+    expect(main).toContain('world_get_ScreensMain_ScoreProperty');
     // Shown, not logged: a Label is an ordinary actor that draws its text.
     expect(named('label.actor')).toBe(true);
     // Words and a number, chained: `⟨SCORE ⟩ + ⟨“ the score ”⟩`.

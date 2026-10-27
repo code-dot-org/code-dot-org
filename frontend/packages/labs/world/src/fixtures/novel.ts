@@ -25,6 +25,7 @@ import {
   starterSprites,
   type ProjectSpec,
 } from '../constants';
+import {asScreenProject} from '../progression/lessons/asScreen';
 import {referenceToStock} from '../rules/ruleReference';
 
 import {me, number} from './meteors';
@@ -303,13 +304,13 @@ const MAIN_WORLD = JSON.stringify({
 });
 
 const SPEC: ProjectSpec = {
-  folders: ['worlds', 'actors', 'rules', 'sprites'],
+  folders: ['screens', 'maps', 'actors', 'rules', 'sprites'],
   files: {
     main: {
       name: 'main.world',
       language: 'world',
       contents: MAIN_WORLD,
-      folderId: 'worlds',
+      folderId: 'screens',
       active: true,
       open: true,
     },
@@ -364,5 +365,11 @@ const SPEC: ProjectSpec = {
   open: ['main'],
 };
 
-export const NOVEL = buildProject(SPEC);
+const built = buildProject(SPEC);
+
+/**
+ * Written as a world, and a game as a Main Screen showing its map
+ * (`asScreen`, specs/LESSONS_AS_SCREENS_PLAN.md).
+ */
+export const NOVEL = {...built, source: asScreenProject(built.source)};
 export const NOVEL_LINES = LINES;

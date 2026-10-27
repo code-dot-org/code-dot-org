@@ -51,7 +51,13 @@ const scene = async () => {
   const box = actors.find(
     actor => (actor as unknown as {type?: string}).type === 'actors/speechBox',
   )!;
-  const portrait = actors.find(actor => actor !== box)!;
+  // …and the Portrait is the other one in the scene, not the Main Screen's
+  // Viewport it is shown through.
+  const portrait = actors.find(
+    actor =>
+      actor !== box &&
+      (actor as unknown as {type?: string}).type !== 'actors/viewport',
+  )!;
   return {
     world,
     box,

@@ -44,6 +44,7 @@ import {
   useTrait,
   type ProjectSpec,
 } from '../constants';
+import {asScreenProject} from '../progression/lessons/asScreen';
 import {referenceToStock} from '../rules/ruleReference';
 
 import {me, number} from './meteors';
@@ -611,13 +612,13 @@ const MAIN_WORLD = JSON.stringify({
 });
 
 export const TAPPER_SPEC: ProjectSpec = {
-  folders: ['actors', 'rules', 'worlds', 'sprites'],
+  folders: ['actors', 'rules', 'screens', 'maps', 'sprites'],
   files: {
     main: {
       name: 'main.world',
       language: 'world',
       contents: MAIN_WORLD,
-      folderId: 'worlds',
+      folderId: 'screens',
       active: true,
       open: true,
     },
@@ -664,4 +665,10 @@ export const TAPPER_SPEC: ProjectSpec = {
   open: ['main'],
 };
 
-export const TAPPER_PROJECT = buildProject(TAPPER_SPEC);
+const built = buildProject(TAPPER_SPEC);
+
+/**
+ * Written as a world, and a game as a Main Screen showing its map
+ * (`asScreen`, specs/LESSONS_AS_SCREENS_PLAN.md).
+ */
+export const TAPPER_PROJECT = {...built, source: asScreenProject(built.source)};
