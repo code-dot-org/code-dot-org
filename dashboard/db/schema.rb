@@ -1963,6 +1963,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_26_120000) do
     t.json "solution"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_practice_problems_on_key", unique: true
   end
 
   create_table "programming_classes", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

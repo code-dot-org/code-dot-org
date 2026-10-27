@@ -1,11 +1,11 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React, {act, useState} from 'react';
 
 import QuizQuestionCard from '@cdo/apps/quiz/builder/QuizQuestionCard';
 import {MatchDraft, QuizBuilderQuestion} from '@cdo/apps/quiz/builder/types';
 
-const QUESTION: QuizBuilderQuestion = {
+const MULTIPLE_CHOICE_QUESTION: QuizBuilderQuestion = {
   id: 7,
   type: 'MultipleChoiceQuestion',
   questionName: 'Existing question',
@@ -23,19 +23,38 @@ const QUESTION: QuizBuilderQuestion = {
   page: 1,
 };
 
+const MULTIPLE_SELECT_QUESTION: QuizBuilderQuestion = {
+  id: 8,
+  type: 'MultipleSelectQuestion',
+  questionName: 'Even numbers',
+  questionTitle: 'Which are even?',
+  choices: [
+    {id: 'a', text: '2'},
+    {id: 'b', text: '3'},
+    {id: 'c', text: '4'},
+  ],
+  correctChoiceIds: ['a'],
+  description: null,
+  explanation: null,
+  standards: [],
+  attachedToOtherQuizzes: false,
+  usedInPublishedUnit: false,
+  page: 1,
+};
+
 // QuizQuestionCard doesn't own its expanded state (QuizBuilderWorkspace does,
 // so only one card in the outline can be expanded at a time) - this wrapper
 // stands in for that parent.
 function renderCard(
   props: Partial<React.ComponentProps<typeof QuizQuestionCard>> = {}
 ) {
-  const onSave = jest.fn().mockResolvedValue(QUESTION.id);
+  const onSave = jest.fn().mockResolvedValue(MULTIPLE_CHOICE_QUESTION.id);
   const onRemove = jest.fn().mockResolvedValue(true);
   const Wrapper = () => {
     const [isExpanded, setIsExpanded] = useState(props.isExpanded ?? false);
     return (
       <QuizQuestionCard
-        question={QUESTION}
+        question={MULTIPLE_CHOICE_QUESTION}
         onSave={onSave}
         onRemove={onRemove}
         {...props}
@@ -63,7 +82,7 @@ describe('QuizQuestionCard', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
 
     expect(screen.getByRole('tab', {name: 'Question'})).toBeInTheDocument();
-    expect(screen.getByLabelText('Internal name')).toHaveValue(
+    expect(screen.getByLabelText('Internal name*')).toHaveValue(
       'Existing question'
     );
   });
@@ -74,10 +93,38 @@ describe('QuizQuestionCard', () => {
     expect(screen.getByRole('tab', {name: 'Question'})).toBeInTheDocument();
   });
 
+  it('marks Internal name and Question title as required', () => {
+    renderCard({isExpanded: true});
+
+    expect(screen.getByLabelText('Internal name*')).toBeRequired();
+    expect(screen.getByLabelText('Question title*')).toBeRequired();
+    expect(
+      screen.getByRole('textbox', {name: 'Description (optional)'})
+    ).not.toBeRequired();
+  });
+
+  it('describes each Question tab field with its helper text', () => {
+    renderCard({isExpanded: true});
+
+    expect(screen.getByLabelText('Internal name*')).toHaveAccessibleDescription(
+      'Not shown to students. A short label to help you find and group this question.'
+    );
+    expect(
+      screen.getByLabelText('Question title*')
+    ).toHaveAccessibleDescription(
+      'The main question text students see. For a simple question, this can be the whole question.'
+    );
+    expect(
+      screen.getByRole('textbox', {name: 'Description (optional)'})
+    ).toHaveAccessibleDescription(
+      'Additional context, instructions or content (e.g. a code snippet) shown below the title. Supports Markdown.'
+    );
+  });
+
   it('saves the edited draft and collapses on success', async () => {
     const {onSave} = renderCard({isExpanded: true});
 
-    fireEvent.change(screen.getByLabelText('Internal name'), {
+    fireEvent.change(screen.getByLabelText('Internal name*'), {
       target: {value: 'Renamed question'},
     });
     await act(async () => {
@@ -115,7 +162,7 @@ describe('QuizQuestionCard', () => {
       screen.getByRole('button', {name: 'Discard changes'})
     ).toBeDisabled();
 
-    fireEvent.change(screen.getByLabelText('Internal name'), {
+    fireEvent.change(screen.getByLabelText('Internal name*'), {
       target: {value: 'Something else'},
     });
 
@@ -133,12 +180,12 @@ describe('QuizQuestionCard', () => {
     );
     renderCard({isExpanded: true, onSave});
 
-    fireEvent.change(screen.getByLabelText('Internal name'), {
+    fireEvent.change(screen.getByLabelText('Internal name*'), {
       target: {value: 'Something else'},
     });
     fireEvent.click(screen.getByRole('button', {name: 'Save'}));
 
-    expect(screen.getByLabelText('Internal name')).toBeDisabled();
+    expect(screen.getByLabelText('Internal name*')).toBeDisabled();
 
     await act(async () => {
       resolveSave(7);
@@ -148,7 +195,7 @@ describe('QuizQuestionCard', () => {
   it('discards edits back to the saved question', () => {
     renderCard({isExpanded: true});
 
-    const nameField = screen.getByLabelText('Internal name');
+    const nameField = screen.getByLabelText('Internal name*');
     fireEvent.change(nameField, {target: {value: 'Something else'}});
     fireEvent.click(screen.getByRole('button', {name: 'Discard changes'}));
 
@@ -164,7 +211,7 @@ describe('QuizQuestionCard', () => {
   it('shows an unsaved-changes badge after an edit, even once collapsed', () => {
     renderCard({isExpanded: true});
 
-    fireEvent.change(screen.getByLabelText('Internal name'), {
+    fireEvent.change(screen.getByLabelText('Internal name*'), {
       target: {value: 'Something else'},
     });
     expect(screen.getByLabelText('Unsaved changes')).toBeInTheDocument();
@@ -183,7 +230,10 @@ describe('QuizQuestionCard', () => {
   });
 
   describe('a pending (not yet saved) question', () => {
-    const PENDING_QUESTION: QuizBuilderQuestion = {...QUESTION, id: -1};
+    const PENDING_QUESTION: QuizBuilderQuestion = {
+      ...MULTIPLE_CHOICE_QUESTION,
+      id: -1,
+    };
 
     it('enables Save immediately, with nothing edited', () => {
       renderCard({question: PENDING_QUESTION, isExpanded: true});
@@ -200,19 +250,178 @@ describe('QuizQuestionCard', () => {
     it('focuses the Internal name field, since the create dropdown that made it loses focus', () => {
       renderCard({question: PENDING_QUESTION, isExpanded: true});
 
-      expect(screen.getByLabelText('Internal name')).toHaveFocus();
+      expect(screen.getByLabelText('Internal name*')).toHaveFocus();
     });
   });
 
   it('does not take focus when an existing question opens expanded', () => {
     renderCard({isExpanded: true});
 
-    expect(screen.getByLabelText('Internal name')).not.toHaveFocus();
+    expect(screen.getByLabelText('Internal name*')).not.toHaveFocus();
+  });
+
+  describe('answers', () => {
+    const openAnswers = () =>
+      fireEvent.click(screen.getByRole('tab', {name: 'Answers'}));
+
+    it('marks the one correct choice of a multiple choice question with a radio button', async () => {
+      const {onSave} = renderCard({isExpanded: true});
+      openAnswers();
+
+      expect(
+        screen.getByRole('radio', {name: 'Correct answer: 4'})
+      ).toBeChecked();
+      fireEvent.click(screen.getByRole('radio', {name: 'Correct answer: 3'}));
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+
+      expect(onSave).toHaveBeenCalledWith(
+        7,
+        expect.objectContaining({correctChoiceId: 'a'})
+      );
+    });
+
+    it('names each option by its position until it has text', () => {
+      renderCard({isExpanded: true});
+      openAnswers();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Add option'}));
+
+      expect(
+        screen.getByRole('radio', {name: 'Correct answer: option 3'})
+      ).toBeInTheDocument();
+      expect(screen.getByLabelText('Option 3 text')).toHaveValue('');
+      expect(screen.getByLabelText('Option 1 text')).toHaveValue('3');
+    });
+
+    it('marks any number of correct choices of a multiple select question with checkboxes', async () => {
+      const {onSave} = renderCard({
+        question: MULTIPLE_SELECT_QUESTION,
+        isExpanded: true,
+      });
+      openAnswers();
+
+      expect(
+        screen.getByRole('checkbox', {name: 'Correct answer: 2'})
+      ).toBeChecked();
+      fireEvent.click(
+        screen.getByRole('checkbox', {name: 'Correct answer: 4'})
+      );
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+
+      expect(onSave).toHaveBeenCalledWith(
+        8,
+        expect.objectContaining({
+          type: 'MultipleSelectQuestion',
+          correctChoiceIds: ['a', 'c'],
+        })
+      );
+    });
+
+    it('drops a deleted choice from the correct choices', async () => {
+      const {onSave} = renderCard({
+        question: MULTIPLE_SELECT_QUESTION,
+        isExpanded: true,
+      });
+      openAnswers();
+
+      fireEvent.click(
+        screen.getAllByRole('button', {name: 'Delete choice'})[0]
+      );
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+
+      expect(onSave).toHaveBeenCalledWith(
+        8,
+        expect.objectContaining({correctChoiceIds: []})
+      );
+    });
+
+    it('switches an unsaved question between multiple choice and multiple select, keeping its correct choice', async () => {
+      const {onSave} = renderCard({
+        question: {...MULTIPLE_CHOICE_QUESTION, id: -1},
+        isExpanded: true,
+      });
+      openAnswers();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Multiple select'}));
+
+      expect(
+        screen.getByRole('checkbox', {name: 'Correct answer: 4'})
+      ).toBeChecked();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+      expect(onSave).toHaveBeenCalledWith(
+        -1,
+        expect.objectContaining({
+          type: 'MultipleSelectQuestion',
+          correctChoiceIds: ['b'],
+        })
+      );
+    });
+
+    it('keeps only the first correct choice when switching to multiple choice', () => {
+      renderCard({
+        question: {
+          ...MULTIPLE_SELECT_QUESTION,
+          id: -1,
+          correctChoiceIds: ['c', 'a'],
+        },
+        isExpanded: true,
+      });
+      openAnswers();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Multiple choice'}));
+
+      expect(
+        screen.getByRole('radio', {name: 'Correct answer: 4'})
+      ).toBeChecked();
+      expect(
+        screen.getByRole('radio', {name: 'Correct answer: 2'})
+      ).not.toBeChecked();
+    });
+
+    it('names the type buttons by their own labels and groups them under "Selection type:"', () => {
+      renderCard({isExpanded: true});
+      openAnswers();
+
+      const group = screen.getByRole('group', {name: 'Selection type:'});
+      expect(
+        within(group).getByRole('button', {name: 'Multiple choice'})
+      ).toBeInTheDocument();
+      expect(
+        within(group).getByRole('button', {name: 'Multiple select'})
+      ).toBeInTheDocument();
+      expect(screen.getByRole('group', {name: 'Options'})).toBeInTheDocument();
+    });
+
+    it('saves a type change on a saved question with the new type', async () => {
+      const {onSave} = renderCard({isExpanded: true});
+      openAnswers();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Multiple select'}));
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: 'Save'}));
+      });
+
+      expect(onSave).toHaveBeenCalledWith(
+        7,
+        expect.objectContaining({
+          type: 'MultipleSelectQuestion',
+          correctChoiceIds: ['b'],
+        })
+      );
+    });
   });
 
   it('opens a free response question saved without choices', () => {
     // FreeResponseQuestion#builder_content_json sends no choices.
-    const {choices, correctChoiceId, ...shared} = QUESTION;
+    const {choices, correctChoiceId, ...shared} = MULTIPLE_CHOICE_QUESTION;
     void choices;
     void correctChoiceId;
     renderCard({
@@ -229,7 +438,7 @@ describe('QuizQuestionCard', () => {
   });
 
   describe('a match question', () => {
-    const {choices, correctChoiceId, ...shared} = QUESTION;
+    const {choices, correctChoiceId, ...shared} = MULTIPLE_CHOICE_QUESTION;
     void choices;
     void correctChoiceId;
     const MATCH_QUESTION: QuizBuilderQuestion = {
