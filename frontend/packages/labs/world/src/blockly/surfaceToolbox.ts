@@ -20,40 +20,21 @@
 import type {Toolbox, ToolboxCategory} from '@code-dot-org/blockly';
 
 import {HIDE_BODIES} from './bodySurfaces';
-import {
-  DRAWING_CATEGORY,
-  SIGNATURE_CATEGORY,
-  SIGNATURE_DRAWER,
-} from './domainBlocks';
-import {SIGNATURE_ROW} from './extensions/blockDesigner';
+import {DRAWING_CATEGORY} from './domainBlocks';
 
 /**
  * Which surface a toolbox is being built for.
  *
- * `interface` is the rule itself. `body` is a member's implementation. `event`
- * is the odd one: `define event` has a surface but no implementation — an
- * event is a declaration, and the blocks that run for it live under the hat it
- * makes, in whatever file cares — so there is nowhere on it to put a
- * statement, and offering any would be offering blocks with no socket. What it
- * does have is a signature, designed with the same blocks a `define block`'s
- * is, so it gets the same one drawer and nothing else.
+ * `interface` is a whole file. `body` is one thing's implementation: an
+ * actor's every-frame work, or a rule's member or step on its page.
  *
  * `drawing` is a body with ONE MORE DRAWER. The pen and the shapes are the
  * only blocks in the lab that can be used in exactly one place — `pen` is
  * bound by the closure a drawing generates and nowhere else — so this is the
  * only surface that offers them, and every file's toolbox is one drawer
  * shorter for it.
- *
- * `block` is a body with one drawer MOVED. A `define block`'s own surface is
- * the only place its signature can be edited, and the blocks that edit one sat
- * last of twelve; here they lead, and they lead with the `let` blocks
- * (`domainBlocks.SIGNATURE_CATEGORY`). Everything else about it is a body:
- * same declarations refused, same implementation blocks offered.
  */
-export type Surface = 'interface' | 'body' | 'event' | 'drawing' | 'block';
-
-/** What a surface writes its arguments in. */
-const ARGUMENT_BLOCK = 'world_signature_argument';
+export type Surface = 'interface' | 'body' | 'drawing';
 
 /**
  * Blocks that say what a rule OFFERS.
@@ -88,12 +69,6 @@ const DECLARATIONS: ReadonlySet<string> = new Set([
 const IMPLEMENTATION: ReadonlySet<string> = new Set([
   'world_return',
   'world_step_delta',
-  // The signature's own blocks. They go in the `arguments` row on a
-  // definition's own surface — the interface has no such row, so offering them
-  // there would be offering blocks with nowhere to put them.
-  ARGUMENT_BLOCK,
-  'world_signature_text',
-  SIGNATURE_ROW,
 ]);
 
 /** The type a toolbox entry offers, however it is written. */
@@ -111,12 +86,7 @@ const wanted = (surface: Surface, entry: unknown): boolean => {
     // A separator, a label, a button — not a block, and not ours to judge.
     return true;
   }
-  if (surface === 'event' || surface === 'body' || surface === 'block') {
-    // ONE ANSWER FOR ALL THREE. An event's argument used to be a filter over
-    // a set of choices, written with an item of its own; it is a VALUE THE
-    // EVENT CARRIES now, named and typed like a block's argument
-    // (specs/EVENT_VALUES_PLAN.md), so the same blocks design both signatures
-    // and there is nothing left for this to tell apart.
+  if (surface === 'body') {
     return !DECLARATIONS.has(type);
   }
   return !IMPLEMENTATION.has(type);
@@ -134,37 +104,13 @@ export function toolboxForSurface(toolbox: Toolbox, surface: Surface): Toolbox {
     return toolbox;
   }
   const categories = toolbox as ToolboxCategory[];
-  // An event surface offers ONE drawer. There is no socket on it for anything
-  // else, so a full toolbox there is a wall of blocks that cannot be used.
-  //
-  // A DRAWING'S SURFACE GETS ONE MORE, and it is the only place that does. The
-  // pen and the shapes are added here rather than filtered in, because no
-  // file's toolbox carries them any more (`structuralCategories`) — there is
-  // nowhere else they could be used, so nowhere else offers them. First, since
-  // it is what this surface is FOR.
+  // A DRAWING'S SURFACE GETS ONE MORE drawer, and it is the only place that
+  // does. The pen and the shapes are added here rather than filtered in,
+  // because no file's toolbox carries them any more (`structuralCategories`)
+  // — there is nowhere else they could be used, so nowhere else offers them.
+  // First, since it is what this surface is FOR.
   const chosen =
-    surface === 'event'
-      ? // ONE DRAWER, and it is the `define block`'s version of it — the `let`
-        // blocks first, then wording, then `argument`. An event's signature is
-        // designed with the blocks a block's signature is designed with
-        // (specs/EVENT_VALUES_PLAN.md), so there is no second arrangement of
-        // them to keep.
-        [SIGNATURE_CATEGORY]
-      : surface === 'drawing'
-        ? [DRAWING_CATEGORY, ...categories]
-        : surface === 'block'
-          ? // MOVED, not added: the signature drawer is already in the list, so
-            // putting a second one at the front would offer the same blocks
-            // twice under one name. The one at the front is the `define
-            // block`'s version of it — the `let` blocks first — and the one
-            // taken out is the general one.
-            [
-              SIGNATURE_CATEGORY,
-              ...categories.filter(
-                category => category.name !== SIGNATURE_DRAWER,
-              ),
-            ]
-          : categories;
+    surface === 'drawing' ? [DRAWING_CATEGORY, ...categories] : categories;
   return chosen
     .map(category => {
       if (!category.blocks) {

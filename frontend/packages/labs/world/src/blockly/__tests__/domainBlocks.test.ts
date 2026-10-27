@@ -3095,28 +3095,13 @@ describe('rule authoring blocks (`.rule` files)', () => {
     }
   });
 
-  it('offers a Rule toolbox category (with the dependency blocks)', () => {
+  it('offers a Rule toolbox category of what only a body says', () => {
+    // What a rule declares is its data, made in the Rule Editor
+    // (specs/RULE_EDITOR_PLAN.md); its drawer holds what a body needs.
     const cats = DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>;
-    // The declarative authoring blocks, `use rule` / `use trait` for deps, and
-    // the imperative `define block` (+ its `return`).
     expect(cats.find(c => c.name === 'Rule')?.blocks).toEqual([
-      'world_rule',
-      'world_use_rule',
-      'world_rule_trait',
-      'world_use_trait',
-      'world_rule_property',
-      'world_rule_event',
-      // A named set of choices, and one of its choices (specs/ENUMS.md).
-      'world_rule_enum',
-      'world_rule_enum_option',
-      'world_rule_block',
       'world_return',
-      'world_rule_step_tick',
-      'world_rule_step_in',
-      'world_trait_step',
       'world_step_delta',
-      // Reading and writing a variable is its own category (below): a rule's
-      // parameters are variables like any other.
     ]);
   });
 

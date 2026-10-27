@@ -13,14 +13,10 @@ import {resolveRuleContents} from '../../rules/ruleReference';
 import {projectFiles} from '../../runtime/projectFiles';
 import {projectRuleMetas} from '../projectModules';
 import {
-  duplicateMemberKeys,
-  memberKeys,
   renameMemberInSource,
   renameMemberReferences,
-  renamedMember,
   renameRuleInSource,
   renameRuleReferences,
-  type MemberKey,
 } from '../renameRule';
 import {parseRuleMeta} from '../ruleMeta';
 
@@ -276,69 +272,5 @@ describe('renameMemberReferences', () => {
     const player = next.files[starterFile('player').id];
     expect(player.contents).toContain('world_on_Gravity_BeginsFallingEvent');
     expect(player.contents).not.toContain('StartsFallingEvent');
-  });
-});
-
-describe('what changed between two states of a rule', () => {
-  const key = (k: string, kind: MemberKey['kind']) => ({key: k, kind});
-
-  it('reads one key gone and one arrived as a rename', () => {
-    expect(
-      renamedMember(
-        [key('StrengthProperty', 'property'), key('AffectedTrait', 'trait')],
-        [key('PowerProperty', 'property'), key('AffectedTrait', 'trait')],
-      ),
-    ).toEqual({from: 'StrengthProperty', to: 'PowerProperty'});
-  });
-
-  it('is not a rename when a member was added or deleted', () => {
-    const before = [key('StrengthProperty', 'property')];
-    expect(
-      renamedMember(before, [...before, key('DragProperty', 'property')]),
-    ).toBeUndefined();
-    expect(renamedMember(before, [])).toBeUndefined();
-    expect(renamedMember(before, before)).toBeUndefined();
-  });
-
-  it('is not a rename when two members changed at once', () => {
-    // Guessing which became which would rewrite references to the wrong member.
-    expect(
-      renamedMember(
-        [key('AProperty', 'property'), key('BProperty', 'property')],
-        [key('CProperty', 'property'), key('DProperty', 'property')],
-      ),
-    ).toBeUndefined();
-  });
-
-  it('is not a rename when a block changed what it reports', () => {
-    // `define block` switched from doing something to reporting something: the
-    // key leaves as an action's and arrives as a query's, and no rewrite of the
-    // call sites is possible — a reporter cannot go where a statement went.
-    expect(
-      renamedMember([key('PushAction', 'action')], [key('PushQuery', 'query')]),
-    ).toBeUndefined();
-  });
-
-  it('reads a rule’s members as the keys they are referred to by', () => {
-    const meta = parseRuleMeta(
-      'rules/gravity',
-      resolveRuleContents(starterFile('gravityRule').contents),
-    )!;
-    const keys = memberKeys(meta);
-    expect(keys).toContainEqual(key('AffectedByGravityTrait', 'trait'));
-    expect(keys).toContainEqual(key('AmountOfGravityProperty', 'property'));
-    expect(keys).toContainEqual(key('StartsFallingEvent', 'event'));
-    expect(keys).toContainEqual(key('RestHeightOfQuery', 'query'));
-    expect(keys.filter(k => k.kind === 'step').length).toBeGreaterThan(0);
-    expect(duplicateMemberKeys(keys)).toEqual([]);
-  });
-
-  it('reports two members that would answer to one key', () => {
-    expect(
-      duplicateMemberKeys([
-        key('StrengthProperty', 'property'),
-        key('StrengthProperty', 'property'),
-      ]),
-    ).toEqual(['StrengthProperty']);
   });
 });

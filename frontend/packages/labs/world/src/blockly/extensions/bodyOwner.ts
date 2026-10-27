@@ -17,37 +17,12 @@ import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import {BODY_OWNER_ID, HIDE_BODIES} from '../bodySurfaces';
 
-import {ARGUMENTS_INPUT, DESCRIPTION_ROW, RETURNS_ROW} from './blockDesigner';
 import {removeBodyButton} from './bodyButton';
 
 export const BODY_SURFACE_EXTENSION = 'world_body_surface';
 
-/** The input a `define block` and an `each frame` keep their body in. */
+/** The input an `each frame` and a `define drawing` keep their body in. */
 const SOCKET = 'DO';
-
-/**
- * Rows that belong to a member's own surface, not to the interface.
- *
- * `returns` says whether a `define block` does something or reports something,
- * `arguments` is the signature it takes, and `description` is what the block
- * is for. All three are facts about the implementation — the one that has a
- * `return` in it, the one whose parameters the body reads, the one whose
- * purpose its author is explaining — so they are asked where it is written.
- * The interface shows the block they produce instead.
- *
- * HIDDEN, NOT REMOVED, and by ROW rather than by field. A field taken off a
- * block is a field Blockly does not save, and the interface is what the file
- * is written from: removing `RETURNS` there would drop it from every rule on
- * the next save. Hiding the whole row takes its label with it, which hiding
- * the field alone did not — a bare `returns` with nothing after it.
- */
-const BODY_SURFACE_ROWS: Readonly<Record<string, readonly string[]>> = {
-  world_rule_block: [DESCRIPTION_ROW, RETURNS_ROW, ARGUMENTS_INPUT],
-  // An event has no implementation, so its surface is its phrasing and
-  // nothing else — but the row is hidden on the interface for the same reason
-  // the others are: what the block IS belongs where it is written.
-  world_rule_event: [ARGUMENTS_INPUT],
-};
 
 /**
  * Whether this workspace exists to compile rather than to be read.
@@ -102,9 +77,6 @@ export const bodySurfaceExtension: Extension = defineExtension(
       // Quiet: `world_trait_step` in an actor file has been through here
       // already on a previous render, and a missing input is not an error.
       block.removeInput(SOCKET, true);
-      for (const name of BODY_SURFACE_ROWS[block.type] ?? []) {
-        block.getInput(name)?.setVisible(false);
-      }
     },
   },
 );
@@ -132,15 +104,5 @@ export function anchorBodyOwner(block: Block): void {
   if (block.previousConnection) {
     block.setPreviousStatement(false);
   }
-  // The rows the interface stopped drawing are drawn HERE, and this is the
-  // only place they can be changed. `bodySurfaces` carries what they say back
-  // into the file.
-  for (const name of BODY_SURFACE_ROWS[block.type] ?? []) {
-    block.getInput(name)?.setVisible(true);
-  }
-  // …and the signature is written into the `arguments` row as blocks. It
-  // lives in `extraState.parts`, which is still what the file holds; these are
-  // the editor for it, and there is no gear any more to open one elsewhere.
-  (block as unknown as {buildArguments_?: () => void}).buildArguments_?.();
   (block as BlockSvg).render?.();
 }

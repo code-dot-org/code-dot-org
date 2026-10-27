@@ -1,53 +1,20 @@
-// `define block` — designing the block a rule adds to the palette.
+// `define block` and `define event` as blocks: what a rule's view holds for
+// each event and block it adds (specs/RULE_EDITOR_PLAN.md, step 7).
 //
-// `define action` and `define query` name a member in a text field and grow
-// parameter rows beneath it, so the block a learner will actually USE is never
-// shown until they go and find it in the toolbox. Two things follow from that,
-// and both are the reason this exists: the definition does not look like the
-// thing it defines, and a rule's implementation is hard to scan, because
-// "where is `nudge` defined?" means reading NAME fields down a column.
+// A member's design is data, made on its page (`actors/editor/MemberPage`),
+// and the view writes it back as one of these for the compiler to read: the
+// parts in `extraState`, the body in `DO`. Nothing draws one any more — a
+// rule is never a workspace to edit as a whole — so all a define block does
+// here is carry its parts through a load and a save.
 //
-// So the definition renders its own block, in place, above the body:
-//
-//     define block  ⟨reports a number ▾⟩
-//     push  [amount]  toward  [target]
-//     do …
-//
-// That row is what the call site will look like, built from the same parts, so
-// designing the block IS seeing it. A learner scanning a rule sees the blocks it
-// makes, not a list of names.
-//
-// THE PARTS. A signature is an ordered list of labels and parameters — the same
-// shape Blockly's own `message0` has, which is not a coincidence: `push %1
-// toward %2` is exactly "label, param, label, param". Naming a member is just
-// the case where the list is one label.
-//
-// THE EDITOR is the familiar mutator bubble — the ⚙ opens a mini-workspace
-// holding a `block` container, and the flyout offers a `text` item and one item
-// per parameter type. The stack inside the container IS the signature, read
-// top-to-bottom as the block reads left-to-right: drag a type in to add an
-// input, drag a `text` in to add wording, reorder by reordering statements,
-// remove by dragging out.
-//
-// That is worth the indirection because it is all Blockly's own machinery —
-// connecting, dragging, reordering and deleting statements already work, and
-// none of it had to be invented. The preview stays on the block, so the result
-// is visible while the bubble is open.
-//
-// USING a parameter is a drag off the preview: each one is a
-// `FieldParamVariable`, which pulls a getter for itself out from under the
-// pointer, so the way to read `amount` in the body starts on the word `amount`.
+// THE PARTS. A signature is an ordered list of labels and values, the same
+// shape Blockly's own `message0` has: `push %1 toward %2` is "label, param,
+// label, param", and naming a member is the case where the list is one label.
 
-import * as Blockly from 'blockly/core';
+import type * as Blockly from 'blockly/core';
 
-import {
-  defineExtension,
-  defineMutator,
-  type Extension,
-} from '@code-dot-org/blockly';
+import {defineMutator} from '@code-dot-org/blockly';
 
-import {enumOptions, enumRefOfParamType} from '../enums';
-import {FieldBlockPreview} from '../fields/FieldBlockPreview';
 import {paramFlavour} from '../typedVariables';
 import type {ShadowSpec} from '../valueShadow';
 
@@ -58,7 +25,7 @@ export const BLOCK_DESIGNER_MUTATOR = 'block_designer_mutator';
  *
  * A parameter's `var` is the authority — it is what the body's variable blocks
  * point at, and what survives a rename. `name` is a cache of that variable's
- * name, kept so the bubble has something to show before the variable is bound.
+ * name, kept so a design has something to show before the variable is bound.
  */
 export type BlockPart =
   | {kind: 'label'; text: string}
@@ -76,26 +43,15 @@ export type BlockPart =
        * is why it is stored as the plain value that shadow holds. Absent for
        * the types that have no sensible one — there is no default actor.
        *
-       * What `argument` can say. A `let` says {@link shadow} instead.
        */
       default?: unknown;
       /**
        * …or the whole BLOCK a call site starts with.
        *
-       * The general form of the line above, and what an argument declared by a
-       * `let` carries: whatever was in its socket (`letShadow`). `this actor`
-       * for an actor, `any ⟨Coin⟩` for a kind, an arithmetic tree if that is
-       * what the author built — a default is now anything they could make
-       * rather than anything a field could hold.
-       *
-       * THE SOCKET'S STATE, not a shadow tree, and the distinction is the
-       * whole of why: Blockly's `{block: …}` is a block a learner may drag out
-       * again, and `{shadow: …}` is a placeholder they may only type over. An
-       * author who plugs a real block into a `let` and comes back to the
-       * surface must find the block they plugged in, still theirs to move —
-       * so what was real is written back real. It is shadowed only where it
-       * becomes a DEFAULT, on the call site (`shadowed`), because there it is
-       * exactly a placeholder.
+       * The general form of the line above: `this actor` for an actor, `any
+       * ⟨Coin⟩` for a kind, an arithmetic tree. THE SOCKET'S STATE, not a
+       * shadow tree: it is shadowed only where it becomes a default, on the
+       * call site (`shadowed`), because there it is exactly a placeholder.
        */
       shadow?: SocketState;
     };
@@ -105,146 +61,17 @@ export interface BlockDesignState {
   parts: BlockPart[];
 }
 
-const PREVIEW_INPUT = 'PREVIEW';
-const TEXT_FIELD = 'TEXT';
-
-/**
- * The one block a `define block` argument is written as.
- *
- * `argument ⟨number⟩ ⟨amount⟩`: the TYPE is a field, not the block's identity,
- * so retyping an argument is a dropdown rather than deleting one block and
- * finding another. The dropdown carries the enums too, which is what let the
- * separate `choice` item go — an enum-typed argument is an argument whose type
- * happens to be a named set of words.
- *
- * `define event` keeps the older per-type items: its bubble offers CHOICES
- * only (an event's argument is a filter), so a type dropdown there would be a
- * dropdown of one.
- */
-export const SIGNATURE_ARGUMENT = 'world_signature_argument';
-
-/** `new line`: a line break in the block being designed (`designParts`). */
-export const SIGNATURE_ROW = 'world_signature_row';
-/** The field on it naming the type — a param type or an enum ref. */
-export const TYPE_FIELD = 'TYPE';
-
-/** The value a call site falls back to, and the word in front of it. */
-export const DEFAULT_FIELD = 'DEFAULT';
-const DEFAULT_LABEL = 'DEFAULT_LABEL';
-
-/** The statement input on `define block` holding its signature. */
-export const ARGUMENTS_INPUT = 'ARGUMENTS';
-
 /** The row `RETURNS` sits on, so the row can be hidden with the field. */
 export const RETURNS_ROW = 'RETURNS_ROW';
 
 /** …and the row `DESCRIPTION` sits on, for the same reason. */
 export const DESCRIPTION_ROW = 'DESCRIPTION_ROW';
 
-/**
- * The `let` blocks that declare an argument, and what each one declares.
- *
- * A `let` in the arguments row IS a parameter: `let number ⟨amount⟩ be ⟨5⟩`
- * says there is an input called `amount`, that it is a number, and that a call
- * site left alone passes five. Which is the same sentence the block already
- * said one scope in — a name, a type, a starting value — so the block a
- * learner uses to make a working value in the body is the block they use to
- * ask for one from the caller, and the body reads both with the same getter.
- *
- * WHY THE NAME IS BETTER HERE THAN ON `argument`. A `let`'s name field holds a
- * real Blockly variable id (`fields/variableName`), so the argument is bound
- * before the designer ever looks at it — where `argument` carries a name in a
- * text field and a variable id smuggled alongside it (`varId_`), which only
- * `buildArguments_` and `readArguments_` know how to keep together.
- *
- * `position` DECLARES ITS OWN TYPE, and that is worth saying because the
- * first draft did not. It looked like a spelling of `vector` — the same value
- * said as two numbers — which would have made it a spelling a signature had
- * nowhere to record, so a `let position` would have come back as `let vector`
- * the next time the surface opened. It is not a spelling. A `position`
- * argument's call site is a vector socket wearing `vector x ⟨⟩ y ⟨⟩` as its
- * shadow (`domainBlocks.typedValueInputs`): an x and a y to type into, and a
- * socket that still takes any vector dropped on it. That is a different block
- * from the one `vector` produces, so it is a different type, and the round
- * trip is exact.
- */
-const LET_ARGUMENTS: ReadonlyArray<{block: string; type: string}> = [
-  {block: 'world_let_number', type: 'number'},
-  {block: 'world_let_angle', type: 'angle'},
-  {block: 'world_let_word', type: 'string'},
-  {block: 'world_let_boolean', type: 'boolean'},
-  {block: 'world_let_vector', type: 'vector'},
-  {block: 'world_let_position', type: 'position'},
-  {block: 'world_let_actor', type: 'actor'},
-];
-
-/** The field a `let` holds its variable in. */
-const LET_VAR_FIELD = 'VAR';
-
-/** The type a `let` block declares, or undefined if it is not one. */
-const letType = (type: string): string | undefined =>
-  LET_ARGUMENTS.find(entry => entry.block === type)?.type;
-
-/** …and the block that declares that type, for the types one can say. */
-const letBlockFor = (type: string): string | undefined =>
-  LET_ARGUMENTS.find(entry => entry.type === type)?.block;
-
 /** A value socket's contents, as Blockly serializes them. */
 export interface SocketState {
   block?: ShadowSpec;
   shadow?: ShadowSpec;
 }
-
-/**
- * What a `let` in the arguments row says a call site should start with.
- *
- * Whatever is in its socket, saved as the socket holds it — a real block as a
- * block, the `let`'s own placeholder as a shadow. Keeping the two apart is what
- * lets the row be rebuilt into the row the author left (`seedLetShadow`); the
- * flattening into an all-shadow default happens where the default is made,
- * which is the call site.
- *
- * The identity, the position and the stack are dropped. A default is one value
- * — a block with a `next` would be a second statement nobody asked for — and an
- * id carried into every call site would be the same id on every one of them.
- *
- * `position` IS TWO SOCKETS and is built rather than copied: what it declares
- * is a vector said as an x and a y, so what it starts with is the block that
- * says that (`typedValueInputs`, case 'position'), with each socket inside it.
- */
-const letShadow = (
-  item: Blockly.Block,
-  type: string,
-): SocketState | undefined => {
-  const socketOf = (input: string): SocketState | undefined => {
-    const target = item.getInputTargetBlock(input);
-    if (!target) {
-      return undefined;
-    }
-    const saved = Blockly.serialization.blocks.save(target, {
-      addCoordinates: false,
-      addInputBlocks: true,
-      addNextBlocks: false,
-      doFullSerialization: false,
-    }) as (ShadowSpec & {id?: string}) | null;
-    if (!saved) {
-      return undefined;
-    }
-    // The id goes: carried into every call site it would be the same id on
-    // every one of them.
-    const rest = {...saved};
-    delete rest.id;
-    return target.isShadow() ? {shadow: rest} : {block: rest};
-  };
-  if (type === 'position') {
-    const x = socketOf('X');
-    const y = socketOf('Y');
-    return x && y
-      ? {shadow: {type: 'world_vector_of', inputs: {X: x, Y: y}}}
-      : undefined;
-  }
-  return socketOf('VALUE');
-};
 
 /**
  * A socket's contents as a DEFAULT: a shadow, and everything under it too.
@@ -283,113 +110,10 @@ export const shadowed = (state: SocketState): ShadowSpec | undefined => {
   return held ? flatten(held) : undefined;
 };
 
-/**
- * Put a part's starting block back onto the `let` that declares it.
- *
- * The other half of `letShadow`, and the reason the row a learner comes back
- * to is the row they left: a block they plugged in comes back as a BLOCK,
- * theirs to drag out again, and a placeholder comes back as a placeholder.
- * Restoring the first as a shadow would trap it — a shadow cannot be dragged.
- *
- * `position` is unpacked again: its two sockets are the x and the y inside the
- * vector block its state is.
- */
-const seedLetShadow = (
-  item: Blockly.Block,
-  type: string,
-  start: SocketState | undefined,
-): void => {
-  if (!start) {
-    return;
-  }
-  const put = (input: string, socket: SocketState | undefined): void => {
-    const connection = socket && item.getInput(input)?.connection;
-    if (!connection) {
-      return;
-    }
-    if (socket.shadow) {
-      connection.setShadowState(socket.shadow as never);
-      return;
-    }
-    // A real block: appended and connected, so it is a block on the workspace
-    // and can be taken off again.
-    const made = Blockly.serialization.blocks.append(
-      socket.block as never,
-      item.workspace,
-    );
-    const output = made.outputConnection;
-    if (output) {
-      connection.connect(output);
-    }
-  };
-  if (type === 'position') {
-    const inside = (start.shadow ?? start.block) as
-      | (ShadowSpec & {inputs?: Record<string, SocketState>})
-      | undefined;
-    put('X', inside?.inputs?.X);
-    put('Y', inside?.inputs?.Y);
-    return;
-  }
-  put('VALUE', start);
-};
-
-/**
- * The parameter type an item block stands for, or undefined if it is a label.
- *
- * Two items declare one: `argument`, which names the type in a dropdown, and a
- * `let`, which IS one per type and so needs no dropdown. Takes the block
- * rather than its type because the first of those keeps its answer in a field.
- */
-export const paramTypeOf = (item: {
-  type: string;
-  getFieldValue: (name: string) => string | null;
-}): string | undefined => {
-  if (item.type === SIGNATURE_ARGUMENT) {
-    // The dropdown stores the PARAMETER TYPE, whichever kind it is — a plain
-    // `number`, or the `enum:Owner#Name` an enum stands for — so there is
-    // nothing to infer here. Inferring was the bug: `enumParamType` prefixes
-    // whatever it is given, so asking it about `number` answered
-    // `enum:number`, which rebound the variable and renamed it on every read.
-    return item.getFieldValue(TYPE_FIELD) || undefined;
-  }
-  // A `let` in the arguments row declares one (`LET_ARGUMENTS`). Its type is
-  // the block's own — a `let` is one block per flavour, which is exactly why
-  // it needs no dropdown.
-  return letType(item.type);
-};
-
-/** The one field on the preview row: the drawing of the block being defined. */
-const PREVIEW_FIELD = 'DRAWING';
-
 /** The default signature: one label, which is the block's name. */
 export const defaultParts = (): BlockPart[] => [
   {kind: 'label', text: 'do something'},
 ];
-
-/**
- * Whether this definition sits under a `define trait` — which decides whether
- * the block it makes takes a SUBJECT.
- *
- * A member under a trait is asked OF an actor: the generated block gains an
- * `Actor` socket the caller fills (defaulting to `this actor`), and the body's
- * closure receives it as its first argument. A member at rule level has no such
- * socket — every actor it works on is a parameter its author put in the
- * signature. Placement decides it, so the preview has to read placement too.
- */
-export const isActorScoped = (block: {
-  type?: string;
-  getRootBlock?: () => {type?: string} | null;
-}): boolean => block.getRootBlock?.()?.type === 'world_rule_trait';
-
-/** The wording a signature reads as, for a name (labels joined). */
-export const partsName = (parts: readonly BlockPart[]): string =>
-  parts
-    .filter(
-      (part): part is {kind: 'label'; text: string} => part.kind === 'label',
-    )
-    .map(part => part.text.trim())
-    .filter(Boolean)
-    .join(' ');
 
 /**
  * Bind every parameter to a variable, creating and renaming to match the
@@ -449,324 +173,28 @@ export function bindParams(
   }
 }
 
-/**
- * The designer itself: the signature, the preview, and the variable each
- * parameter binds to.
- *
- * Shared, because two things are designed this way and only one of them still
- * uses a bubble. `define event` opens a mutator over it; `define block` edits
- * the same signature as a stack of blocks on its own face (`ARGUMENTS_INPUT`),
- * so it takes this and adds no `compose`/`decompose` — which is precisely what
- * decides whether Blockly hangs a gear on the block.
- */
+/** A define block's parts, carried through a load and a save. */
 interface Designer {
   parts_: BlockPart[];
   saveExtraState(): BlockDesignState;
   loadExtraState(state: BlockDesignState): void;
-  designWorkspace_(): Blockly.Workspace;
-  rebuildDesign_(): void;
-  bindParts_(): void;
-  buildDesignShape_(): void;
-  buildArguments_(): void;
-  readArguments_(): void;
 }
 
-const designer: Designer & ThisType<Blockly.BlockSvg & Designer> = {
+const designer: Designer & ThisType<Blockly.Block & Designer> = {
   // Per-instance; NOT a mixin property, which would share one array across
-  // every block. The init extension and loadExtraState seed it.
+  // every block. loadExtraState seeds it.
   parts_: [] as BlockPart[],
 
   saveExtraState: function (): BlockDesignState {
-    return {
-      parts: (this.parts_ ?? []).map(part => ({...part})),
-    };
+    return {parts: (this.parts_ ?? []).map(part => ({...part}))};
   },
 
   loadExtraState: function (state: BlockDesignState): void {
-    this.parts_ = (state.parts ?? []).map(part => ({...part}));
-    this.rebuildDesign_();
-  },
-
-  designWorkspace_: function (): Blockly.Workspace {
-    return this.workspace as unknown as Blockly.Workspace;
-  },
-
-  rebuildDesign_: function (): void {
-    this.parts_ ??= [];
-    if (this.parts_.length === 0) {
-      this.parts_ = defaultParts();
-    }
-    // The headless generator loads `.rule` files into an offscreen workspace
-    // whose renderer cannot draw a field. It needs the part DATA and the `DO`
-    // body, never this chrome — and rendering there corrupts codegen.
-    if ((this.workspace as {isRuleGenerator?: boolean}).isRuleGenerator) {
-      return;
-    }
-    // An insertion marker is a throwaway copy of this block, made and unmade
-    // on every drag frame — it is drawn as an outline, so the drawing would
-    // never be seen, and building one means standing up and tearing down a
-    // whole workspace per frame.
-    if (this.isInsertionMarker?.()) {
-      return;
-    }
-    // Variables first, and NOT silently: a rename has to reach the body's
-    // variable fields, which happens through the events it fires.
-    this.bindParts_();
-    // The shape, silently: mutating inputs fires change events the editor
-    // persists, which would re-init the block and loop. The one event a real
-    // edit fires is the mutation Blockly's own mutator machinery wraps
-    // `compose` in.
-    const enabled = Blockly.Events.isEnabled();
-    if (enabled) {
-      Blockly.Events.disable();
-    }
-    try {
-      this.buildDesignShape_();
-    } finally {
-      if (enabled) {
-        Blockly.Events.enable();
-      }
-    }
-  },
-
-  bindParts_: function (): void {
-    bindParams(this.designWorkspace_().getVariableMap(), this.parts_ ?? []);
-  },
-
-  buildDesignShape_: function (): void {
-    // The preview: the call-site block itself, drawn. Not fields spelling out
-    // its wording — the block, with its outline, its color and a getter in
-    // each socket, so what is designed is what will turn up in the toolbox.
-    //
-    // The field is made once and re-signed after that. It owns a workspace,
-    // and rebuilding it on every edit would mean disposing and re-creating one
-    // for each keystroke in the bubble.
-    let drawing = this.getField(PREVIEW_FIELD) as FieldBlockPreview | null;
-    if (!drawing) {
-      drawing = new FieldBlockPreview();
-      this.appendDummyInput(PREVIEW_INPUT).appendField(drawing, PREVIEW_FIELD);
-      // Above the body, when there is one. `define event` has none: an
-      // event is a declaration, and the blocks that RUN for it live under the
-      // hat it makes, in whatever file cares about that event.
-      if (this.getInput('DO')) {
-        this.moveInputBefore(PREVIEW_INPUT, 'DO');
-      }
-    }
-    drawing.setSignature(
-      this.parts_.map(part =>
-        part.kind === 'label'
-          ? {kind: 'label' as const, text: part.text}
-          : part.kind === 'row'
-            ? {kind: 'row' as const}
-            : {
-                kind: 'param' as const,
-                name: part.name,
-                type: part.type,
-                var: part.var,
-              },
-      ),
-      this.getFieldValue('RETURNS') ?? 'none',
-      isActorScoped(this),
-      // `define event` designs a HAT, and a hat is a different block: it
-      // opens with its subject and picks its choices rather than taking
-      // them through sockets.
-      this.type === 'world_rule_event' ? 'event' : 'block',
-    );
-  },
-
-  /**
-   * Write the signature out as blocks, into the block's own `arguments` row.
-   *
-   * Called when a body surface opens, where that row is drawn. On a rule's
-   * interface there is no such input and this does nothing, which is what
-   * keeps the interface a signature and not an editor.
-   *
-   * The variable id rides on the item (`varId_`), exactly as the bubble
-   * carried it: a part written out and read back has to keep the variable the
-   * body already reads rather than becoming a new one.
-   */
-  buildArguments_: function (): void {
-    const connection = this.getInput(ARGUMENTS_INPUT)?.connection;
-    if (!connection) {
-      return;
-    }
-    // The whole chain: `dispose(false)` takes a block's children with it, and
-    // the stack is one block's worth of children.
-    connection.targetBlock()?.dispose(false);
-    let at: Blockly.Connection | null = connection;
-    for (const part of this.parts_ ?? []) {
-      const item = this.workspace.newBlock(
-        // THE SAME ITEMS FOR BOTH DESIGNERS. An event's parameter used to be
-        // written as the choice item, because an event's parameter was a
-        // filter and a filter over "any number" is a comparison rather than a
-        // hat. It is a VALUE THE EVENT CARRIES now, named and typed, and the
-        // filter is what the hat does with the ones it can filter on
-        // (specs/EVENT_VALUES_PLAN.md) — so an event's signature is designed
-        // with the blocks a block's signature is designed with.
-        part.kind === 'label'
-          ? 'world_signature_text'
-          : part.kind === 'row'
-            ? SIGNATURE_ROW
-            : // A `let` for the types one can say, and `argument` for the rest
-              // — an enum-typed parameter and a `kind` have no `let`, and are
-              // what that block is still here for (`LET_ARGUMENTS`).
-              (letBlockFor(part.type) ?? SIGNATURE_ARGUMENT),
-      );
-      (item as Blockly.BlockSvg).initSvg?.();
-      if (part.kind === 'label') {
-        item.setFieldValue(part.text, TEXT_FIELD);
-      } else if (part.kind === 'row') {
-        // Nothing to set: a break is where it is and nothing else.
-      } else if (letType(item.type) !== undefined) {
-        // The variable this argument already is. `bindParts_` has run, so it
-        // exists; pointing the field at its id is the whole of the binding,
-        // and the field draws the name off the variable itself.
-        if (part.var) {
-          item.setFieldValue(part.var, LET_VAR_FIELD);
-        }
-        seedLetShadow(
-          item,
-          part.type,
-          // AN ACTOR STARTS AT `this actor` WHEN NOTHING ELSE WAS SAID, which
-          // is not the `let` block's own default and should not be: a world's
-          // body has no `actor` to refer to. Here it is right, because it is
-          // what the call site would be seeded with anyway
-          // (`typedValueInputs`, case 'actor') — so the row shows the default
-          // the caller will actually get rather than an empty socket.
-          part.shadow ??
-            (part.type === 'actor'
-              ? {shadow: {type: 'world_this_actor'}}
-              : undefined),
-        );
-      } else {
-        // The type as stored, plain or `enum:`-prefixed: the dropdown's
-        // values are parameter types, so this is the value.
-        item.setFieldValue(part.type, TYPE_FIELD);
-        // …and the default's widget follows it by hand, because this runs with
-        // events off and the extension listens for a change event.
-        (
-          item as unknown as {syncDefaultField_?: () => void}
-        ).syncDefaultField_?.();
-        item.setFieldValue(part.name ?? part.type, TEXT_FIELD);
-        // After the type, which is what decides whether there is a default
-        // field at all and what kind it is.
-        if (part.default !== undefined && item.getField(DEFAULT_FIELD)) {
-          item.setFieldValue(String(part.default), DEFAULT_FIELD);
-        }
-        (item as {varId_?: string}).varId_ = part.var;
-      }
-      at?.connect(item.previousConnection!);
-      at = item.nextConnection;
-    }
-    (this as Blockly.BlockSvg).render?.();
-  },
-
-  /** Read that stack back as the signature, and redraw what it describes. */
-  readArguments_: function (): void {
-    const connection = this.getInput(ARGUMENTS_INPUT)?.connection;
-    if (!connection) {
-      return;
-    }
-    const parts: BlockPart[] = [];
-    let item = connection.targetBlock();
-    while (item) {
-      if (item.type === SIGNATURE_ROW) {
-        parts.push({kind: 'row'});
-        item = item.getNextBlock();
-        continue;
-      }
-      const param = paramTypeOf(item);
-      const declared = letType(item.type);
-      if (param && declared !== undefined) {
-        // A `let`: the variable IS the argument. Its id comes off the name
-        // field rather than off a property beside it, and its name off the
-        // variable, so a rename made anywhere — the field, a getter's menu —
-        // is the same rename.
-        const id = item.getFieldValue(LET_VAR_FIELD) ?? '';
-        const variable = id
-          ? item.workspace.getVariableMap().getVariableById(id)
-          : null;
-        const start = letShadow(item, param);
-        parts.push({
-          kind: 'param',
-          type: param,
-          var: id,
-          name: variable?.getName() ?? '',
-          ...(start === undefined ? {} : {shadow: start}),
-        });
-      } else if (param) {
-        const fallback = item.getField(DEFAULT_FIELD)
-          ? (item.getFieldValue(DEFAULT_FIELD) ?? undefined)
-          : undefined;
-        parts.push({
-          kind: 'param',
-          type: param,
-          // Kept from `buildArguments_`; empty for one just dragged in, which
-          // the rebuild binds to a variable of its own.
-          var: (item as {varId_?: string}).varId_ ?? '',
-          name: item.getFieldValue(TEXT_FIELD) ?? '',
-          ...(fallback === undefined ? {} : {default: fallback}),
-        });
-      } else {
-        parts.push({kind: 'label', text: item.getFieldValue(TEXT_FIELD) ?? ''});
-      }
-      item = item.getNextBlock();
-    }
-    // Never nothing: a block with no parts has no name and no shape.
-    const next = parts.length > 0 ? parts : defaultParts();
-    // NOTHING CHANGED, NOTHING REBUILT. This is called on every edit made on a
-    // body surface, and rebuilding binds variables — which fires rename
-    // events, which arrive back here as edits. Comparing first is what stops
-    // that being a loop, and it is cheap: a signature is a handful of parts.
-    //
-    // The variable id is left out of the comparison deliberately: a part
-    // dragged in has none until the rebuild gives it one, so counting it would
-    // make the first read of a new argument look like no change at all.
-    const same = (list: readonly BlockPart[]): string =>
-      JSON.stringify(
-        list.map(part =>
-          part.kind === 'label'
-            ? ['label', part.text]
-            : part.kind === 'row'
-              ? ['row']
-              : [
-                  'param',
-                  part.type,
-                  part.name ?? '',
-                  part.default ?? '',
-                  // The whole starting block, because it is a whole block now: a
-                  // learner who edits the number inside a default has changed
-                  // the signature, and a comparison that stopped at the type
-                  // would read the row and rebuild nothing.
-                  JSON.stringify(part.shadow ?? ''),
-                ],
-        ),
-      );
-    if (same(next) === same(this.parts_ ?? [])) {
-      return;
-    }
-    this.parts_ = next;
-    this.rebuildDesign_();
+    const parts = (state.parts ?? []).map(part => ({...part}));
+    this.parts_ = parts.length ? parts : defaultParts();
   },
 };
 
-/**
- * The designers, neither of which has a bubble any more.
- *
- * A signature is a stack of blocks in `ARGUMENTS_INPUT` on the block's own
- * face, opened with the pencil — so there is nothing for a gear to open, and
- * leaving `compose` and `decompose` off is exactly what stops Blockly drawing
- * one. What the bubble used to do, `buildArguments_` and `readArguments_` do
- * in the workspace itself.
- *
- * The stack is NOT the file. `extraState.parts` is still what a rule is saved
- * with, so nothing downstream changed: those two only keep the blocks and the
- * parts saying the same thing.
- *
- * The two differ in one place and it is not here: `define event` writes its
- * arguments as CHOICE items, because an event's parameter is a filter and a
- * filter over "any number" is a comparison rather than a hat.
- */
 export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
   ...designer,
 });
@@ -777,179 +205,3 @@ export const EVENT_DESIGNER_MUTATOR = 'event_designer_mutator';
 export const eventDesignerMutator = defineMutator(EVENT_DESIGNER_MUTATOR, {
   ...designer,
 });
-
-/**
- * The widget a default value is typed into, for an argument of this type.
- *
- * The same kind of control the call site will show, because it is the same
- * question: a number field for a number, `true`/`false` for a boolean, the
- * enum's own words for an enum. `null` for the types that have no sensible
- * default — there is no default actor, a `kind` is chosen from the project's
- * kinds at the call site, and a vector is two numbers rather than one value.
- * Offering an empty box for those would be offering to answer a question that
- * is not being asked.
- */
-const defaultFieldFor = (type: string): Blockly.Field | null => {
-  const choice = enumRefOfParamType(type);
-  if (choice) {
-    const options = (): Array<[string, string]> => {
-      const live = enumOptions(choice);
-      return live.length > 0 ? live : [['(no choices yet)', '']];
-    };
-    return new Blockly.FieldDropdown(options);
-  }
-  switch (type) {
-    case 'number':
-      return new Blockly.FieldNumber(0);
-    case 'string':
-      return new Blockly.FieldTextInput('');
-    case 'boolean':
-      return new Blockly.FieldDropdown([
-        ['true', 'TRUE'],
-        ['false', 'FALSE'],
-      ]);
-    default:
-      return null;
-  }
-};
-
-export const ARGUMENT_DEFAULT_EXTENSION = 'world_signature_argument_default';
-
-/**
- * Keep an `argument` block's default field in step with its type.
- *
- * The type is a dropdown, so it changes under a field that was built for the
- * old one — a number box left behind on an argument that is now a choice. The
- * field is rebuilt when it changes, and the value carried over when the new
- * widget will take it.
- */
-export const argumentDefaultExtension: Extension = defineExtension(
-  ARGUMENT_DEFAULT_EXTENSION,
-  {
-    extension() {
-      const block = this as unknown as Blockly.BlockSvg;
-      const sync = (): void => {
-        const row = block.inputList[0];
-        if (!row) {
-          return;
-        }
-        const had = block.getField(DEFAULT_FIELD)?.getValue();
-        // Silently: this rebuilds fields, and a field change is an edit the
-        // editor would write to the file — of a block that is not in it.
-        const enabled = Blockly.Events.isEnabled();
-        if (enabled) {
-          Blockly.Events.disable();
-        }
-        try {
-          row.removeField(DEFAULT_LABEL, true);
-          row.removeField(DEFAULT_FIELD, true);
-          const field = defaultFieldFor(block.getFieldValue(TYPE_FIELD) ?? '');
-          if (field) {
-            row.appendField('default', DEFAULT_LABEL);
-            row.appendField(field, DEFAULT_FIELD);
-            if (had !== undefined && had !== null) {
-              // A number box will not take `TRUE`, and a dropdown will not
-              // take a word it does not offer. Keeping what fits is worth a
-              // try; what does not fit leaves the new field's own default.
-              try {
-                block.setFieldValue(had, DEFAULT_FIELD);
-              } catch {
-                // The old value meant nothing to the new widget.
-              }
-            }
-          }
-        } finally {
-          if (enabled) {
-            Blockly.Events.enable();
-          }
-        }
-        block.render?.();
-      };
-      // Reachable from outside, because the type is not always changed by a
-      // person: `buildArguments_` writes it while events are off, so no change
-      // event is raised and this would otherwise keep the field it was born
-      // with — a number box on an argument that is now an actor.
-      (block as unknown as {syncDefaultField_?: () => void}).syncDefaultField_ =
-        sync;
-      sync();
-      block.setOnChange(event => {
-        if (
-          event.type === Blockly.Events.BLOCK_CHANGE &&
-          (event as Blockly.Events.BlockChange).blockId === block.id &&
-          (event as Blockly.Events.BlockChange).name === TYPE_FIELD
-        ) {
-          sync();
-        }
-      });
-    },
-  },
-);
-
-/**
- * Redraw every `define block`'s preview in a workspace.
- *
- * For loads made with events OFF, which is most of them here: the surface swap
- * and the reloads after a rename all silence Blockly so the file is not
- * written back. `FINISHED_LOADING` is silenced with everything else, and that
- * event is what the init extension rebuilds on — because the serializer
- * applies `extraState` BEFORE fields, so the shape built while loading was
- * drawn against the dropdown's default. Without this a query comes back drawn
- * as an action, on the interface after going Back and on every body surface.
- */
-export function refreshBlockDesigns(workspace: Blockly.Workspace): void {
-  for (const block of workspace.getAllBlocks(false)) {
-    (block as unknown as {rebuildDesign_?: () => void}).rebuildDesign_?.();
-  }
-}
-
-export const BLOCK_DESIGNER_INIT_EXTENSION = 'block_designer_init';
-
-/**
- * Seed a fresh block's signature, and redraw it when `RETURNS` decides.
- *
- * A block dragged from the toolbox has no `extraState`, so `loadExtraState`
- * never runs; without this it would render with no parts at all.
- *
- * Two redraws, for two different reasons, and both are about `RETURNS` — which
- * decides whether the drawing stacks or plugs in, the most visible thing about
- * the block being designed:
- *
- *   • A CHANGE to it. It is a plain dropdown; nothing else would notice.
- *   • FINISHED_LOADING. Blockly's serializer applies `extraState` BEFORE fields,
- *     so the shape built during `loadExtraState` was drawn against the dropdown's
- *     default — every query in a saved file drew as an action until this.
- */
-export const blockDesignerInitExtension: Extension = defineExtension(
-  BLOCK_DESIGNER_INIT_EXTENSION,
-  {
-    extension() {
-      const block = this as unknown as Blockly.Block & {
-        parts_?: BlockPart[];
-        rebuildDesign_: () => void;
-      };
-      block.parts_ ??= defaultParts();
-      block.rebuildDesign_();
-      let wasActorScoped = isActorScoped(block);
-      block.setOnChange(event => {
-        const changedReturns =
-          event.type === Blockly.Events.BLOCK_CHANGE &&
-          (event as Blockly.Events.BlockChange).blockId === block.id &&
-          (event as Blockly.Events.BlockChange).name === 'RETURNS';
-        // Dragging the definition under a trait (or out of one) changes what
-        // the block it makes looks like — it gains or loses the subject socket
-        // — so the drawing has to follow. Compared rather than rebuilt on every
-        // move: a definition is dragged around plenty without changing owner.
-        const nowActorScoped = isActorScoped(block);
-        const changedOwner = nowActorScoped !== wasActorScoped;
-        wasActorScoped = nowActorScoped;
-        if (
-          changedReturns ||
-          changedOwner ||
-          event.type === Blockly.Events.FINISHED_LOADING
-        ) {
-          block.rebuildDesign_();
-        }
-      });
-    },
-  },
-);

@@ -73,11 +73,12 @@ describe('which definition roots a file may hold', () => {
     expect(categoryNames('world')).not.toContain('Rule');
   });
 
-  it('offers `use trait` to a rule alone: an actor’s traits are its panel’s', () => {
-    // A rule's trait may require another; an actor's traits are added from
-    // Enhance Actor (specs/ACTORS_AS_DATA_PLAN.md, step 7). An actor file
-    // that holds one still may.
-    expect(offeredTypes('rule')).toContain('world_use_trait');
+  it('offers `use trait` to no file: what needs a trait says so as data', () => {
+    // An actor's traits are added from Enhance Actor
+    // (specs/ACTORS_AS_DATA_PLAN.md, step 7), and a trait's needs on its view
+    // in the Rule Editor (specs/RULE_EDITOR_PLAN.md). An actor file that
+    // holds one still may.
+    expect(offeredTypes('rule')).not.toContain('world_use_trait');
     expect(offeredTypes('actor')).not.toContain('world_use_trait');
     expect(heldNotOffered('actor')).toContain('world_use_trait');
   });
@@ -145,13 +146,14 @@ describe('which definition roots a file may hold', () => {
     // rule, where it declares a dependency and means something, and still
     // REGISTERED everywhere so a project saved with one keeps loading.
     expect(offeredTypes('world')).not.toContain('world_use_rule');
-    expect(offeredTypes('rule')).toContain('world_use_rule');
+    // …and a rule's are its data, chosen on its view.
+    expect(offeredTypes('rule')).not.toContain('world_use_rule');
   });
 
   it('offers everything when the file kind is unknown', () => {
     const anything = offeredTypes();
 
-    expect(anything).toContain('world_rule');
+    expect(anything).toContain('world_return');
     expect(heldNotOffered(undefined)).toContain('world_actor');
     expect(categoryNames()).toContain('Rule');
   });

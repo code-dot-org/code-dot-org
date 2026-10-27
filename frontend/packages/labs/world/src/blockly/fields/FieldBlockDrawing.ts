@@ -1,11 +1,11 @@
 // A field that draws a block: the machinery, without an opinion about which.
 //
-// Two fields want the same trick. `define block` draws the call site its
-// signature will make (`FieldBlockPreview`), and `define property` draws the
-// getter and the setter it will make (`FieldPropertyPreview`). Both need a
-// private workspace inside a field, one block built on it, and a size handed
-// back to the block the field sits on — and both need the same three pieces of
-// care about WHEN that happens, which is what this file is for.
+// `define property` draws the getter and the setter it will make
+// (`FieldPropertyPreview`), which needs a private workspace inside a field,
+// one block built on it, and a size handed back to the block the field sits
+// on — and three pieces of care about WHEN that happens, which is what this
+// file is for. `define block` drew its call site the same way, before a
+// block was designed on its own page.
 //
 // A field is an SVG group Blockly asks for a size, so anything that renders
 // into that group works — including blocks. Core does the same thing for

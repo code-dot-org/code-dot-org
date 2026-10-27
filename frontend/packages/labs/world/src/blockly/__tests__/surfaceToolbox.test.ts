@@ -68,34 +68,13 @@ describe('a body surface', () => {
   });
 });
 
-describe('the Block drawer', () => {
-  // What a `define block`'s signature is made of. It goes in the `arguments`
-  // row on a body surface's head, and there is no such row anywhere else — so
-  // offering it on the interface would be offering blocks with nowhere to go.
-  it('is offered inside a body', () => {
-    expect(names(toolboxForSurface(palette(), 'body'))).toContain('Block');
-    expect(offered(toolboxForSurface(palette(), 'body'))).toContain(
-      'world_signature_argument',
-    );
-  });
-
-  it('is not offered on the interface, drawer and all', () => {
-    expect(names(toolboxForSurface(palette(), 'interface'))).not.toContain(
-      'Block',
-    );
-    expect(offered(toolboxForSurface(palette(), 'interface'))).not.toContain(
-      'world_signature_argument',
-    );
-  });
-});
-
 describe('the interface', () => {
-  it('offers the declarations', () => {
+  it('offers no declaration: a rule declares in the Rule Editor', () => {
     const shown = offered(toolboxForSurface(palette(), 'interface'));
 
-    expect(shown).toContain('world_rule_property');
-    expect(shown).toContain('world_rule_block');
-    expect(shown).toContain('world_rule_step_in');
+    expect(shown).not.toContain('world_rule_property');
+    expect(shown).not.toContain('world_rule_block');
+    expect(shown).not.toContain('world_rule_step_in');
   });
 
   it('does not offer what only a body can use', () => {
@@ -150,118 +129,5 @@ describe('what filtering must not break', () => {
     expect(names(toolboxForSurface([dynamic] as Toolbox, 'body'))).toEqual([
       'Variables',
     ]);
-  });
-});
-
-describe('an event surface', () => {
-  // `define event` has a surface but no implementation. There is nowhere on it
-  // to put a statement, so a full toolbox would be a wall of blocks that
-  // cannot be used anywhere.
-  it('offers one drawer and no more', () => {
-    expect(names(toolboxForSurface(palette(), 'event'))).toEqual(['Block']);
-  });
-
-  it('drops even a drawer that fills itself when it is opened', () => {
-    // Written after the first version of this passed with the fault in place.
-    // Emptying the other drawers is not enough: a dynamic category keeps its
-    // place when its static list runs out — deliberately, because what
-    // `onLoad` will offer is not knowable — so Variables would stand open on a
-    // surface with nowhere to put a variable.
-    const dynamic = {
-      name: 'Variables',
-      key: 'VARIABLE',
-      onLoad: () => [],
-      blocks: [],
-    } as unknown as ToolboxCategory;
-    const signature = {
-      name: 'Block',
-      blocks: ['world_signature_argument'],
-    } as ToolboxCategory;
-
-    expect(
-      names(toolboxForSurface([dynamic, signature] as Toolbox, 'event')),
-    ).toEqual(['Block']);
-    // …and it keeps its place everywhere else.
-    expect(
-      names(toolboxForSurface([dynamic, signature] as Toolbox, 'body')),
-    ).toContain('Variables');
-  });
-
-  it('offers what a `define block` offers', () => {
-    // An event's parameter was a filter and is a VALUE THE EVENT CARRIES now,
-    // named and typed like a block's argument (specs/EVENT_VALUES_PLAN.md),
-    // so the same blocks design both signatures.
-    const shown = offered(toolboxForSurface(palette(), 'event'));
-
-    expect(shown).toContain('world_signature_argument');
-    expect(shown).toContain('world_signature_text');
-  });
-
-  it('offers the same inside a body', () => {
-    const shown = offered(toolboxForSurface(palette(), 'body'));
-
-    expect(shown).toContain('world_signature_argument');
-  });
-});
-
-describe('a `define block`’s own surface', () => {
-  const strip = () => toolboxForSurface(palette(), 'block');
-
-  it('opens with the drawer the signature is written from', () => {
-    // The complaint this answers: the blocks that build a signature are the
-    // only blocks that surface exists for, and they were last of twelve.
-    expect(names(strip())[0]).toBe('Block');
-  });
-
-  it('leads that drawer with the `let` blocks', () => {
-    // An argument IS a variable the caller binds, so the block that declares
-    // one is the block a body already declares a local with — no type dropdown
-    // to work through before anything can be named.
-    const drawer = (strip() as ToolboxCategory[])[0];
-
-    expect(drawer.blocks?.slice(0, 5)).toEqual([
-      'world_let_number',
-      // A number said as a direction, beside the number it is one of.
-      'world_let_angle',
-      'world_let_word',
-      'world_let_boolean',
-      'world_let_vector',
-    ]);
-  });
-
-  it('keeps `argument` for the types a `let` cannot say', () => {
-    // Nine of the parameters in the rules this lab ships are enums and two are
-    // kinds. There is no `let` for either, so the block that can say them is
-    // one to stop LEADING with rather than one to withdraw.
-    const drawer = (strip() as ToolboxCategory[])[0];
-
-    expect(drawer.blocks).toContain('world_signature_argument');
-    expect(drawer.blocks).toContain('world_signature_text');
-  });
-
-  it('moves that drawer rather than adding a second one', () => {
-    // It is already in the list. Prepending would offer the same blocks twice
-    // under one name, and a learner would find whichever Blockly drew first.
-    expect(names(strip()).filter(name => name === 'Block')).toHaveLength(1);
-  });
-
-  it('is a body in every other respect', () => {
-    // Same declarations refused, same implementation blocks offered — the only
-    // difference is which drawer comes first.
-    const offer = offered(strip());
-
-    expect(offer).not.toContain('world_rule_property');
-    expect(offer).not.toContain('world_rule_block');
-    expect(offer).toContain('world_return');
-    expect(offer).toContain('controls_if');
-  });
-
-  it('offers `position`, which is its own kind of argument', () => {
-    // Not a spelling of `vector`: its call site is a vector socket wearing
-    // `vector x ⟨⟩ y ⟨⟩` as a shadow, so it is typed as an x and a y and still
-    // takes any vector dropped on it (`typedValueInputs`, case 'position').
-    const drawer = (strip() as ToolboxCategory[])[0];
-
-    expect(drawer.blocks).toContain('world_let_position');
   });
 });

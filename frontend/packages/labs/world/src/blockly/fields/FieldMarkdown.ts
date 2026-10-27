@@ -13,8 +13,7 @@
 // the field renders, MEASURES what the browser made of it, and only then tells
 // Blockly how big it is (`forceRerender`).
 //
-// Built in two halves, exactly as `FieldBlockPreview` is and for the same
-// reason: `initView` runs inside Blockly's focus handling, and mounting a React
+// Built in two halves, as `FieldBlockDrawing` is and for the same reason: `initView` runs inside Blockly's focus handling, and mounting a React
 // root there takes the toolbox down with it when a tab regains focus. The
 // drawing comes on the next turn of the loop.
 

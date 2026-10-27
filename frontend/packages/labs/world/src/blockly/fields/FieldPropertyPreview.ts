@@ -3,8 +3,7 @@
 // `define property` says a name, a type and a default, and what comes of that
 // is two blocks in the toolbox: `set health of ⟨this actor⟩ to ⟨100⟩` and
 // `get health of ⟨this actor⟩`. The definition used to describe them in words
-// and leave the learner to imagine the rest, which is the same gap `define
-// block` closed by drawing its call site (`FieldBlockPreview`).
+// and leave the learner to imagine the rest.
 //
 // So each of the two gets a field, and each field draws its block. What is
 // drawn is not worked out here: the block's JSON and the shadows to seed into

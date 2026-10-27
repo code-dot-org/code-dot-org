@@ -7,16 +7,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {
-  buildDomainPalette,
-  DOMAIN_BLOCKS,
-  SIGNATURE_CATEGORY,
-} from '../domainBlocks';
-import {
-  isActorScoped,
-  paramTypeOf,
-  SIGNATURE_ARGUMENT,
-} from '../extensions/blockDesigner';
+import {buildDomainPalette, DOMAIN_BLOCKS} from '../domainBlocks';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {shadowsFor} from '../valueShadow';
@@ -406,112 +397,10 @@ describe('a designed block', () => {
     expect(call?.tooltip).toBe('push toward');
   });
 
-  it('knows whether it is defining a member with a subject', () => {
-    // Placement decides it: under a `define trait` the block it makes is asked
-    // OF an actor and grows a socket nobody wrote into the signature — which is
-    // what the drawn preview has to show, or the preview is a different block
-    // from the one being defined.
-    expect(
-      isActorScoped({getRootBlock: () => ({type: 'world_rule_trait'})}),
-    ).toBe(true);
-    expect(isActorScoped({getRootBlock: () => ({type: 'world_rule'})})).toBe(
-      false,
-    );
-    // A definition floating on its own workspace is its own root.
-    expect(
-      isActorScoped({getRootBlock: () => ({type: 'world_rule_block'})}),
-    ).toBe(false);
-  });
-
-  it('answers for an event too, which decides its hat’s shape', () => {
-    // It used to return false for `define event` unconditionally, on the
-    // grounds that a hat's subject is the hat's rather than part of the
-    // phrasing. The preview then drew `when ⟨this actor⟩ …` for every event —
-    // including one declared on the RULE, whose hat takes no actor at all
-    // because the event is about the world (`EventMeta.scope`).
-    expect(
-      isActorScoped({
-        type: 'world_rule_event',
-        getRootBlock: () => ({type: 'world_rule_trait'}),
-      }),
-    ).toBe(true);
-    expect(
-      isActorScoped({
-        type: 'world_rule_event',
-        getRootBlock: () => ({type: 'world_rule'}),
-      }),
-    ).toBe(false);
-  });
-
-  it('offers only item blocks that are actually registered', () => {
-    // Blockly builds a flyout by TYPE NAME and throws on one it cannot find —
-    // at the moment the drawer is opened, not at startup. This is the check
-    // that a renamed or dropped item block is caught here instead.
-    const registered = new Set(DOMAIN_BLOCKS.map(block => block.type));
-    for (const type of SIGNATURE_CATEGORY.blocks ?? []) {
-      expect(registered.has(type as string), String(type)).toBe(true);
-    }
-  });
-
-  it('reads the argument item back as the type its dropdown names', () => {
-    // The arguments row is the only writer of a signature, so this mapping is
-    // what makes a design survive being opened and closed. The type is a
-    // FIELD, so the block is read rather than just its type.
-    for (const type of ['number', 'boolean', 'string', 'vector', 'actor']) {
-      expect(
-        paramTypeOf({
-          type: 'world_signature_argument',
-          getFieldValue: () => type,
-        }),
-      ).toBe(type);
-    }
-  });
-
-  it('reads an enum-typed argument as that enum, whichever enum', () => {
-    // No item of its own: an enum-typed parameter is an argument whose type
-    // happens to be a named set of words, and the dropdown holds them all.
-    expect(
-      paramTypeOf({
-        type: 'world_signature_argument',
-        getFieldValue: () => 'enum:Engine#Key',
-      }),
-    ).toBe('enum:Engine#Key');
-    // …and a label is a parameter of no type at all.
-    expect(
-      paramTypeOf({type: 'world_signature_text', getFieldValue: () => null}),
-    ).toBeUndefined();
-  });
-
   it('ignores a signature with no wording at all', () => {
     // Parameters alone give nothing to call the member, and nothing to read.
     expect(
       designed([{kind: 'param', type: 'number', var: 'a'}]).actions,
     ).toEqual([]);
-  });
-});
-
-describe('the argument block’s type', () => {
-  // `define block` writes its signature as `argument ⟨type⟩ ⟨name⟩` blocks, and
-  // the dropdown stores the PARAMETER TYPE itself — plain or `enum:`-prefixed.
-  // Nothing infers which kind it is, because inferring was the bug:
-  // `enumParamType` prefixes whatever it is handed, so asking it about
-  // `number` answered `enum:number`. A parameter whose type is wrong rebinds
-  // to a new variable, and the body's getters stop pointing at it.
-  const item = (type: string) => ({
-    type: SIGNATURE_ARGUMENT,
-    getFieldValue: (name: string) => (name === 'TYPE' ? type : null),
-  });
-
-  it('reads a plain type as itself', () => {
-    expect(paramTypeOf(item('number'))).toBe('number');
-    expect(paramTypeOf(item('actor'))).toBe('actor');
-  });
-
-  it('reads an enum type as itself, already prefixed', () => {
-    expect(paramTypeOf(item('enum:Engine#Key'))).toBe('enum:Engine#Key');
-  });
-
-  it('is not a parameter at all when nothing is chosen', () => {
-    expect(paramTypeOf(item(''))).toBeUndefined();
   });
 });

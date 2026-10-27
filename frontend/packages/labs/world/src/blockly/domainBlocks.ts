@@ -87,7 +87,6 @@ import {
   THIS_INPUT,
 } from './eventSubject';
 import {actorAnimationsMutator} from './extensions/actorAnimations';
-import {actorBlockReportsExtension} from './extensions/actorBlockReports';
 import {
   actorContextExtension,
   builderWorldExtension,
@@ -105,15 +104,10 @@ import {
   spriteImportFieldExtension,
 } from './extensions/appearanceImportField';
 import {
-  ARGUMENTS_INPUT,
-  argumentDefaultExtension,
   DESCRIPTION_ROW,
-  blockDesignerInitExtension,
   RETURNS_ROW,
   blockDesignerMutator,
   eventDesignerMutator,
-  SIGNATURE_ARGUMENT,
-  SIGNATURE_ROW,
   shadowed,
   type SocketState,
 } from './extensions/blockDesigner';
@@ -4090,23 +4084,13 @@ const worldLetBoolean = localDeclaration(
  * shape of literal is easier to write where it stands.
  */
 /**
- * The declarations, in the order a learner meets them.
- *
- * ONE LIST, because two drawers offer these now: `Variables`, where a body
- * makes a working value, and the signature drawer a `define block`'s own
- * surface opens with (`SIGNATURE_CATEGORY`), where the same block declares an
- * ARGUMENT. Nothing about the block differs between the two — a parameter is a
- * name the caller fills in and a local is a name the body fills in, and both
- * are read by the same getter — so offering it twice is offering one block in
- * the two places it is reached for, as `use trait` is offered under Actor and
- * under Rule.
+ * The declarations, in the order a learner meets them, as `Variables`
+ * offers them.
  *
  * `position` sits beside `vector` rather than replacing it: they declare the
  * same type and differ only in which shape of literal is easier to write
  * (`worldLetPosition`).
  */
-/** The name of the drawer a definition's own block is built out of. */
-export const SIGNATURE_DRAWER = 'Block';
 
 const LET_BLOCKS: string[] = [
   'world_let_number',
@@ -8815,32 +8799,13 @@ const worldRuleEvent = defineBlock({
   // "⟨space⟩ is pressed" — is one a handler can filter on, which is the whole
   // of specs/ENUMS.md.
   message0: 'define event',
-  // The phrasing, as blocks — drawn only on the event's own surface, which the
-  // pencil opens. An event has no implementation to put under it, so that
-  // surface holds this and nothing else; `bodySurfaces.hasSurface` is where
-  // "there is something to open" parts company with "there is a body".
-  message1: 'arguments %1',
-  args1: [{type: 'input_statement', name: ARGUMENTS_INPUT}],
   previousStatement: true,
   nextStatement: true,
-  // Kept for `saveExtraState`/`loadExtraState`, which is what carries the
-  // parts. With no `compose`/`decompose` on it there is no gear: Blockly draws
-  // one only when a mutator can open a bubble.
+  // What carries the parts. A rule's view holds one of these for each event,
+  // for the compiler; nothing draws it (`extensions/blockDesigner`).
   mutator: eventDesignerMutator,
-  extensions: [
-    blockDesignerInitExtension,
-    bodyButtonExtension,
-    bodySurfaceExtension,
-  ],
-  // A DEFINITION, colored like the other definitions — `define rule`,
-  // `define trait`, `define block`. The event color belongs to the hat this
-  // makes, which the preview row below draws.
   style: 'setup_blocks',
-  tooltip:
-    'Define an event a rule can raise, or — in an actor file — something that ' +
-    'happens to that kind of actor. The row below is the "when …" block it ' +
-    'makes; the pencil opens what it is made of. A choice in it is what a ' +
-    'handler filters on.',
+  tooltip: 'An event this rule raises: made in the Rule Editor.',
   generator: {
     javascript(block, generator) {
       // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `define block`
@@ -8953,16 +8918,9 @@ const worldRuleEnumOption = defineBlock({
 // dropdown already holds every enum.
 
 /**
- * `argument ⟨number⟩ ⟨amount⟩` — one input a `define block` takes.
- *
- * The TYPE is a field rather than the block's identity, so changing an
- * argument's type is a dropdown instead of deleting one block and hunting for
- * another. The list carries the enums as well, which is what let `define
- * block` stop needing a separate `choice` item: an enum-typed argument is one
- * whose type happens to be a named set of words.
- *
- * Its name is the name of the VARIABLE the body reads, so typing here renames
- * it everywhere the implementation already uses it.
+ * The types a designed block's value may have, as `[label, type]`: the
+ * lab's own, then each enum, whose type is a named set of words. What a
+ * member's design offers (`actors/editor/MemberPage`).
  */
 export const argumentTypeOptions = (): Array<[string, string]> => [
   // A MIXED LIST, and the halves are translated differently. `number`, `text`,
@@ -8985,61 +8943,8 @@ export const argumentTypeOptions = (): Array<[string, string]> => [
   ),
 ];
 
-const signatureArgument = defineBlock({
-  type: SIGNATURE_ARGUMENT,
-  message0: 'argument %1 %2',
-  args0: [
-    {type: 'field_dropdown', name: 'TYPE', options: argumentTypeOptions()},
-    {type: 'field_input', name: 'TEXT', text: 'value'},
-  ],
-  inputsInline: true,
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [
-    // Live, for the same reason the choice item's is: a `define choices`
-    // written a minute ago should be offered without a reload.
-    liveDropdown('world_signature_argument_types', 'TYPE', argumentTypeOptions),
-    // …and the default's widget follows the type it is a default for.
-    argumentDefaultExtension,
-  ],
-  style: 'variable_blocks',
-  tooltip:
-    'An input the block takes. Its name is the variable the implementation ' +
-    'reads; drag that name out of the block below to use it.',
-  generator: noGenerator,
-});
 
-/**
- * `text ⟨word⟩` — wording at this position in the block being designed.
- *
- * Its field is named TEXT, as `argument`'s name field is, so the designer
- * reads the two the same way: on a label it is the wording, on an input it is
- * the parameter's name.
- */
-const signatureText = defineBlock({
-  type: 'world_signature_text',
-  message0: 'text %1',
-  args0: [{type: 'field_input', name: 'TEXT', text: 'word'}],
-  previousStatement: true,
-  nextStatement: true,
-  style: 'text_blocks',
-  tooltip: 'Wording that appears on the block at this position.',
-  generator: noGenerator,
-});
 
-/** `new line` — the block being designed carries on below (`designParts`). */
-const signatureRow = defineBlock({
-  type: SIGNATURE_ROW,
-  message0: 'new line',
-  args0: [],
-  previousStatement: true,
-  nextStatement: true,
-  style: 'text_blocks',
-  tooltip:
-    'What comes after this starts a new line on the block. One at the start ' +
-    'or the end, or after another, does nothing.',
-  generator: noGenerator,
-});
 
 // Blockly clips a text field's DISPLAY at 50 characters (`maxDisplayLength`) —
 // enough for a name, not for a sentence. The value was always whole; only the
@@ -9077,66 +8982,30 @@ const BLOCK_RETURNS_OPTIONS: Array<[string, string]> = [
 
 const worldRuleBlock = defineBlock({
   type: 'world_rule_block',
-  // The name of the thing, and nothing else: the pencil that opens the
-  // implementation goes on this row (`bodyButton`), and everything that
-  // describes the block is asked below it or on its own surface.
+  // What a rule's view holds for each block it adds, for the compiler: the
+  // parts, what the block is for, what it reports and whether others see it,
+  // and what it does. Nothing draws one (`extensions/blockDesigner`).
   message0: 'define block',
   args0: [],
-  // The tooltip of the block being DEFINED — the sentence someone reads when
-  // they hover it in the toolbox months later, having forgotten what "rest
-  // height of" meant. On its own row because it is a sentence: sharing a line
-  // with the returns dropdown made both hard to read.
-  //
-  // Drawn only on a body surface, like `returns` and `arguments`: what a block
-  // is FOR is written where it is written, and the interface shows the block
-  // itself. Hidden there rather than removed — a field taken off a block is a
-  // field Blockly does not save, and the interface is what writes the file.
   message1: 'description %1 %2',
   args1: [
     {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
     {type: 'input_dummy', name: DESCRIPTION_ROW},
   ],
-  // Whether it does something or reports something, on a row of its own so
-  // that row can be hidden whole. Only a body surface draws it: the answer is
-  // a fact about the implementation, which either has a `return` in it or does
-  // not. HIDDEN there, never removed — a field taken off a block is a field
-  // Blockly does not save.
   message2: 'returns %1 %2',
   args2: [
     {type: 'field_dropdown', name: 'RETURNS', options: BLOCK_RETURNS_OPTIONS},
     {type: 'input_dummy', name: RETURNS_ROW},
   ],
-  // The signature, as blocks. Drawn only on a body surface, where the stack
-  // in it IS what the block will look like — `blockDesignerMutator` writes it
-  // out of `extraState.parts` and reads it back. The FILE is still the parts;
-  // these blocks are never saved into it.
-  message3: 'arguments %1',
-  args3: [{type: 'input_statement', name: ARGUMENTS_INPUT}],
-  // The body's socket. It is NOT drawn in the editor — `bodySurfaceExtension`
-  // takes the row off, because with the split on it is always empty and the
-  // pencil above is the way in. It stays in the definition because the file
-  // still holds the body here, and the generator loads the file whole.
-  message4: 'do %1',
-  args4: [{type: 'input_statement', name: 'DO'}],
+  message3: 'do %1',
+  args3: [{type: 'input_statement', name: 'DO'}],
   previousStatement: true,
   nextStatement: true,
   mutator: blockDesignerMutator,
-  extensions: [
-    blockDesignerInitExtension,
-    wideTextExtension('DESCRIPTION'),
-    // …and the one that says an actor's own block cannot report a value yet.
-    // In a `.rule` it never fires (`actorBlockReports`).
-    actorBlockReportsExtension,
-    bodyButtonExtension,
-    bodySurfaceExtension,
-    // …and the eye, which says whether anybody else is offered this block.
-    blockVisibilityExtension,
-  ],
+  // The eye is the `ACCESS` field, which a view writes and a load must find.
+  extensions: [blockVisibilityExtension],
   style: 'setup_blocks',
-  tooltip:
-    'Define a block this rule adds, or — in an actor file — a thing that kind ' +
-    'of actor does. The bottom row is the block itself, drawn as you will see ' +
-    'it when you use it; the pencil opens what it does.',
+  tooltip: 'A block this rule adds: made in the Rule Editor.',
   generator: {
     javascript(block, generator) {
       // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `each frame`
@@ -9272,19 +9141,13 @@ const stepBlock = (
     type,
     message0,
     args0,
-    // The body's socket, drawn on the step's own surface and nowhere else
-    // (`bodySurfaceExtension`). A MOUTH rather than the chain below, which is
-    // what it used to be: a step was a definition ROOT because its body was
-    // hundreds of blocks long and chaining it under `define rule` would have
-    // made one enormous column. The body lives on its own surface now, so a
-    // step is one row like every other member — and a member chains through
-    // `next`, which leaves the body needing somewhere else to be. `define
-    // block` and `each frame` have the same shape for the same reason.
+    // The body's socket: a member chains through `next`, so the body needs
+    // somewhere else to be. A step's page writes it (`rules/ruleSteps`).
     message1: 'do %1',
     args1: [{type: 'input_statement', name: 'DO'}],
     previousStatement: true,
     nextStatement: true,
-    extensions: [...extensions, bodySurfaceExtension],
+    extensions,
     style: 'event_blocks',
     tooltip,
     generator: noGenerator,
@@ -9305,7 +9168,7 @@ const worldRuleStepIn = stepBlock(
   [{type: 'field_dropdown', name: 'PHASE', options: phaseOptions}, nameArg],
   'Run this every tick, in a named part of the frame — “this is a force”, ' +
     'rather than “this runs before that other rule’s step”.',
-  [phaseOptionsExtension, bodyButtonExtension],
+  [phaseOptionsExtension],
 );
 
 // A step that belongs to a TRAIT, chained under `define trait` beside the
@@ -10175,7 +10038,6 @@ const worldRuleStepTick = stepBlock(
   'when tick do %1',
   [nameArg],
   'Run this every tick, in no particular order relative to other rules.',
-  [bodyButtonExtension],
 );
 
 const worldStepDelta = defineBlock({
@@ -11514,9 +11376,6 @@ export const DOMAIN_BLOCKS = [
   worldRuleBlock,
   worldRuleEnum,
   worldRuleEnumOption,
-  signatureText,
-  signatureArgument,
-  signatureRow,
   memberHead,
   stepHead,
   worldDoc,
@@ -11926,75 +11785,19 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     ],
   },
   {
+    // What only a rule's bodies say. What a rule DECLARES is its data, made
+    // in the Rule Editor (specs/RULE_EDITOR_PLAN.md), and no drawer offers it.
     name: 'Rule',
     blocks: [
-      'world_rule',
-      'world_use_rule', // a rule's dependencies (requires)
-      'world_rule_trait', // a second definition root, beside the rule
-      'world_use_trait', // a trait's dependencies (requires), under a trait
-      'world_rule_property',
-      'world_rule_event',
-      'world_rule_enum', // a named set of choices, its options chained below
-      'world_rule_enum_option',
-      'world_rule_block', // the generalized member: design the block it adds
       'world_return', // ends a query's body
-      // Per-tick behavior, one block per kind of ordering.
-      'world_rule_step_tick',
-      'world_rule_step_in',
-      'world_trait_step',
       'world_step_delta', // the frame time, inside a step
       // Reading and writing a variable lives in Variables (below), not here: a
       // rule's parameters are variables like any other, and a body wanting a
       // local is not a fact about rules.
     ],
   },
-  {
-    // What a definition's own block is made of, offered only where one is
-    // being written: these go in the `arguments` row on a surface's head, and
-    // there is no such row anywhere else. Which of them a given surface
-    // offers is `surfaceToolbox`'s business — a `define block` takes
-    // `argument`, a `define event` takes `choice`.
-    name: SIGNATURE_DRAWER,
-    blocks: [SIGNATURE_ARGUMENT, 'world_signature_text', SIGNATURE_ROW],
-  },
 ];
 
-/**
- * That drawer as a `define block`'s OWN surface offers it, at the top.
- *
- * Two things are wrong with the drawer above when the thing in front of you is
- * a block definition. It is last of twelve, so the blocks that build the
- * signature — the only blocks that surface exists for — are the hardest ones
- * there to find. And it leads with `argument`, which asks a learner to pick a
- * type out of a dropdown before they can name anything.
- *
- * So this one leads with the `let` blocks. A `let` in the arguments row
- * declares an argument: `let number ⟨amount⟩ be ⟨5⟩` is an argument called
- * `amount`, a number, five unless the caller says otherwise. That is the same
- * block, the same field and the same name a body would use to make a working
- * value, saying the same thing one scope out — which is the point, because an
- * argument IS a variable the caller binds, and the body reads it with exactly
- * the getter it would read a local with.
- *
- * `argument` stays, below them, and is not redundant: a `let` is one block per
- * flavour and there is no flavour for a parameter typed by an ENUM or by a
- * `kind`. Nine of the parameters in the rules this lab ships are enums and two
- * are kinds, so the block that can say those is not one to withdraw — it is
- * one to stop leading with.
- *
- * `choice` is left out. It belongs to `define event`, whose argument is a
- * filter rather than an input, and whose surface offers this drawer and
- * nothing else (`toolboxForSurface`).
- */
-export const SIGNATURE_CATEGORY: ToolboxCategory = {
-  name: SIGNATURE_DRAWER,
-  blocks: [
-    ...LET_BLOCKS,
-    'world_signature_text',
-    SIGNATURE_ARGUMENT,
-    SIGNATURE_ROW,
-  ],
-};
 const BUILTIN_RULE_CATEGORIES: ToolboxCategory[] = AUTHORING_RULES.map(
   ruleCategory,
 ).filter(category => category.blocks.length > 0);

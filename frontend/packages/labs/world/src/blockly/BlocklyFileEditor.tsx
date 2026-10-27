@@ -71,7 +71,7 @@ import {buildDomainPalette, heldNotOffered} from './domainBlocks';
 import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
 import {movedItself} from './editorEvents';
 import {type EventChoice} from './eventChoices';
-import {refreshBlockDesigns, type BlockPart} from './extensions/blockDesigner';
+import type {BlockPart} from './extensions/blockDesigner';
 import {setBodyOpener} from './extensions/bodyButton';
 import {anchorBodyOwner} from './extensions/bodyOwner';
 import {refreshMissingRuleWarnings} from './extensions/missingRule';
@@ -81,7 +81,7 @@ import {NoteEditorDialog} from './fields/NoteEditorDialog';
 import {fileKindOf} from './fileKind';
 import {eventsNarrowerFor, eventsUnheardBy} from './kindEvents';
 import {registerLessonButtons} from './lessonFlyoutButton';
-import {localizeBlocks, localizeText, localizeToolbox} from './localizeBlocks';
+import {localizeBlocks, localizeToolbox} from './localizeBlocks';
 import {
   MisplacedBlocksPlugin,
   setFileContext,
@@ -102,19 +102,7 @@ import {
   projectRuleMetas,
   projectWorldOptions,
 } from './projectModules';
-import {
-  duplicateMemberKeys,
-  memberKeys,
-  renameMemberInSource,
-  renameMemberReferences,
-  renamedMember,
-  renameRuleInSource,
-  renameRuleReferences,
-  type MemberKey,
-} from './renameRule';
 import {revealInToolbox, type ToolboxHost} from './revealInToolbox';
-import {designedName, parseRuleMeta} from './ruleMeta';
-import {ruleByName} from './ruleRegistry';
 import {blockOwners, rulesOutOfScope} from './rulesInScope';
 import {parseSpriteRef} from './spriteCells';
 import {setSpritePickHandler} from './spritePick';
@@ -158,94 +146,6 @@ const plugins = [
 // The toolbox is the World Lab domain blocks (Actor / Traits / Events); passing
 // `DOMAIN_BLOCKS` registers them (and their world-lab generators) on this
 // workspace, the same definitions the generator uses.
-
-/**
- * The rule rename this event is, if it is one.
- *
- * A committed edit of a `define rule` block's NAME — `BLOCK_CHANGE`, which
- * Blockly fires when the field editor closes. Typing into the field fires
- * `block_field_intermediate_change` instead, and must not be acted on: a rename
- * rewrites the project and reloads this workspace, which is not a thing to do
- * between two keystrokes.
- */
-function ruleRename(
-  event: Blockly.Events.Abstract,
-  workspace: Blockly.WorkspaceSvg,
-): {from: string; to: string; block: Blockly.Block} | undefined {
-  if (event.type !== Blockly.Events.BLOCK_CHANGE) {
-    return undefined;
-  }
-  const change = event as Blockly.Events.BlockChange;
-  if (change.element !== 'field' || change.name !== 'NAME') {
-    return undefined;
-  }
-  const block = change.blockId
-    ? workspace.getBlockById(change.blockId)
-    : undefined;
-  if (!block || block.type !== 'world_rule') {
-    return undefined;
-  }
-  const from = String(change.oldValue ?? '');
-  const to = String(change.newValue ?? '');
-  return from && to && from !== to ? {from, to, block} : undefined;
-}
-
-/**
- * Whether this event is a name being TYPED, rather than named.
- *
- * Blockly writes a text field on every keystroke, as an intermediate change, so
- * that blocks resize while you type. For most fields persisting that is
- * harmless. For the ones a `.rule` declares things with it is not: the file
- * would declare "M", "Mo", "Moo"… in turn, each of them a name nothing refers
- * to and one of which may collide with something real — and the name a rename
- * starts FROM would be gone before the rename happened. So the keystrokes are
- * shown and not saved; the commit is what the project hears about.
- */
-function isTypingDeclaration(
-  event: Blockly.Events.Abstract,
-  workspace: Blockly.WorkspaceSvg,
-): boolean {
-  if (event.type !== Blockly.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE) {
-    return false;
-  }
-  const change = event as Blockly.Events.BlockFieldIntermediateChange;
-  const block = change.blockId
-    ? workspace.getBlockById(change.blockId)
-    : undefined;
-  return !!block?.type.startsWith('world_rule');
-}
-
-/**
- * Whether this event opens or closes a signature bubble, and which.
- *
- * A `define block`'s wording lives in its mutator, and Blockly recomposes the
- * block on every keystroke there — so the member's name changes letter by
- * letter, as a mutation rather than a field edit. Reconciling on each of those
- * would rewrite the project and reload the workspace out from under the bubble
- * being typed into. Closing it is the commit.
- */
-function bubbleToggle(event: Blockly.Events.Abstract): boolean | undefined {
-  if (event.type !== Blockly.Events.BUBBLE_OPEN) {
-    return undefined;
-  }
-  const bubble = event as Blockly.Events.BubbleOpen;
-  return bubble.bubbleType === 'mutator' ? bubble.isOpen : undefined;
-}
-
-/**
- * What a rule's members are called as the editor opens it.
- *
- * The state the first edit is compared against — without it, a member renamed
- * before anything else in the session would look like one member leaving and
- * another arriving out of nowhere, which is not a rename anybody can follow.
- */
-function initialMemberKeys(
-  modulePath: string | undefined,
-  contents: string,
-): MemberKey[] {
-  const meta = modulePath ? parseRuleMeta(modulePath, contents) : undefined;
-  return meta ? memberKeys(meta) : [];
-}
 
 /** Parse a file's contents into workspace state; empty/invalid → a blank workspace. */
 function parseWorkspace(contents: string): BlocklySerialization {
@@ -794,35 +694,13 @@ export const BlocklyFileEditor = ({
     // With the collapsed bodies put back: going Back strips them out again,
     // and a save made from the body surface writes the interface whole.
     interfaceRef.current = saveSections(workspace);
-    // `define block` has no NAME field — what it is called is the signature
-    // the learner designed, which is where every other reader of the file gets
-    // it from too (`ruleMeta.addDesignedBlock`).
     const block = workspace.getBlockById(blockId);
-    const designed = designedName(
-      (
-        block as unknown as {
-          saveExtraState?: () => {
-            parts?: Array<{kind?: string; text?: string}>;
-          };
-        }
-      )?.saveExtraState?.()?.parts,
-    );
     setEditing({
       id: blockId,
-      label: block?.getFieldValue('NAME') || designed || 'this',
-      // `define event` has a surface but no implementation, so what it offers
-      // is its phrasing and nothing else; a drawing's is a body plus the one
-      // drawer that can only be used there; a `define block`'s is a body with
-      // the signature drawer moved to the front, because this is the only
-      // place a signature can be edited (`surfaceToolbox`).
-      kind:
-        block?.type === 'world_rule_event'
-          ? 'event'
-          : block?.type === 'world_define_drawing'
-            ? 'drawing'
-            : block?.type === 'world_rule_block'
-              ? 'block'
-              : 'body',
+      label: block?.getFieldValue('NAME') || 'this',
+      // A drawing's is a body plus the one drawer that can only be used
+      // there (`surfaceToolbox`).
+      kind: block?.type === 'world_define_drawing' ? 'drawing' : 'body',
     });
   }, []);
 
@@ -962,8 +840,6 @@ export const BlocklyFileEditor = ({
     [isReadOnly],
   );
 
-  // A workspace to reload once the palette has caught up (see `carry`).
-  const pendingReload = useRef<BlocklySerialization | null>(null);
   // The workspace whose load has finished. Blockly reports what it creates while
   // loading — the variables a rule declares, the blocks themselves — as ordinary
   // change events, and saving those writes the file back the moment it is
@@ -978,159 +854,6 @@ export const BlocklyFileEditor = ({
   // enqueued save wrote the starter project over the learner's work half a
   // minute later.
   const loadedWorkspace = useRef<Blockly.WorkspaceSvg | null>(null);
-  // Whether a `define block`'s signature is being typed into (see `bubbleToggle`).
-  const signatureBubbleOpen = useRef(false);
-  // The keys this rule's members are referred to by, as of the last state the
-  // project agreed on. What the next commit is compared against.
-  const memberState = useRef<MemberKey[]>(
-    initialMemberKeys(ownRuleModule, initialContents),
-  );
-
-  /**
-   * Write a rename through the project, and reload this workspace.
-   *
-   * `renamed` is the project with the references rewritten; `self` is this
-   * file's own workspace rewritten from the LIVE one, because what is on disk
-   * for it is an edit behind — the rename is in the workspace being handled.
-   *
-   * Writing everything in one `updateSources` rather than letting the ordinary
-   * per-file save follow: `saveFile` closes over the sources of the render that
-   * made it, and would put the other files back.
-   */
-  const carry = useCallback(
-    (renamed: MultiFileSource, self: string): void => {
-      const sources = sourcesRef.current;
-      const file = renamed.files[fileId];
-      updateSources({
-        ...sources,
-        source: {
-          ...renamed,
-          files: {...renamed.files, [fileId]: {...file, contents: self}},
-        },
-      });
-      // The blocks in THIS workspace carry the old name in their types, and a
-      // block's type cannot be changed in place. The palette rebuilds from the
-      // sources we just wrote; the workspace is reloaded from the rewritten
-      // state once it has (see the effect below).
-      pendingReload.current = JSON.parse(self) as BlocklySerialization;
-    },
-    [fileId, updateSources],
-  );
-
-  /**
-   * Carry a renamed MEMBER through the project.
-   *
-   * A member is referred to by the export name its own name derives, so
-   * renaming a trait, a property, an event, a step, or the wording of a designed
-   * block is the same kind of edit as renaming the rule: every reference to it
-   * has to follow. What was renamed is worked out by comparing the rule's
-   * members with the last state the project agreed on — not by reading the edit
-   * — because the edits that rename a member are various (a NAME field, a label
-   * in a mutator) and what they have in common is only the result.
-   */
-  const reconcileMembers = useCallback(
-    (contents: string): void => {
-      if (!ownRuleModule) {
-        return;
-      }
-      const meta = parseRuleMeta(ownRuleModule, contents);
-      if (!meta) {
-        return;
-      }
-      const keys = memberKeys(meta);
-      const before = memberState.current;
-      memberState.current = keys;
-      const rename = renamedMember(before, keys);
-      if (!rename) {
-        return;
-      }
-      // Two members with one key is a reference with two meanings — and unlike a
-      // rule's name, there is no one field to put back (a designed block's name
-      // is its whole signature). So it is left as written, said out loud on the
-      // rule, and not carried: rewriting references to a key that names two
-      // things would only spread the ambiguity.
-      const duplicated = duplicateMemberKeys(keys);
-      const [rule] = workspaceRef.current?.getBlocksByType('world_rule') ?? [];
-      rule?.setWarningText(
-        duplicated.length
-          ? localizeText(
-              'Two of this rule\u2019s members are both called \u201c%1\u201d.',
-              [duplicated[0]],
-            )
-          : null,
-      );
-      if (duplicated.length) {
-        return;
-      }
-      const self = renameMemberReferences(
-        contents,
-        meta.name,
-        rename.from,
-        rename.to,
-      );
-      carry(
-        renameMemberInSource(
-          sourcesRef.current.source,
-          meta.name,
-          rename.from,
-          rename.to,
-        ),
-        self ?? contents,
-      );
-    },
-    [carry, ownRuleModule],
-  );
-
-  /**
-   * Carry a rule's new name through the project.
-   *
-   * Every reference to a rule is its name, so renaming one is an edit to every
-   * file that mentions it — and to this one, whose own members' block types are
-   * built from the name too. Returns true when it has written the project
-   * itself, so the ordinary per-file save is skipped: `saveFile` closes over the
-   * sources of the render that made it, and would put the other files back.
-   */
-  const handleRename = useCallback(
-    (
-      rename: {from: string; to: string; block: Blockly.Block},
-      contents: string,
-    ): boolean => {
-      // A name two rules answer to is a reference with two meanings, so a taken
-      // one is refused rather than carried: the field goes back to what it was
-      // and the block says why.
-      //
-      // Refusing has to mean the edit did not happen at all. Letting the name
-      // stand while the references keep the old one would strand the rule —
-      // nothing would name it, and the NEXT rename would carry the name nothing
-      // refers to, leaving no rename that could ever put it right.
-      const taken = ruleByName(rename.to);
-      if (taken && taken.modulePath !== ownRuleModule) {
-        // Silently: the revert is not an edit, and an event for it would come
-        // back through here as a rename in the other direction.
-        Blockly.Events.disable();
-        try {
-          rename.block.setFieldValue(rename.from, 'NAME');
-        } finally {
-          Blockly.Events.enable();
-        }
-        rename.block.setWarningText(
-          `Another rule is already called \u201c${rename.to}\u201d. ` +
-            'Rules are referred to by name, so this one needs its own.',
-        );
-        return true;
-      }
-      rename.block.setWarningText(null);
-
-      const self = renameRuleReferences(contents, rename.from, rename.to);
-      carry(
-        renameRuleInSource(sourcesRef.current.source, rename.from, rename.to),
-        self ?? contents,
-      );
-      return true;
-    },
-    [carry, ownRuleModule],
-  );
-
   /**
    * The toolbox's blocks, at the height the workspace draws them.
    *
@@ -1278,21 +1001,10 @@ export const BlocklyFileEditor = ({
         //
         // So the keystrokes are shown and not saved; the commit — the
         // BLOCK_CHANGE Blockly fires when the editor closes, from the value
-        // it opened with — is what the project hears about. Same discipline
-        // as `isTypingDeclaration` on the file surface, which this branch
-        // returns before reaching.
+        // it opened with — is what the project hears about.
         if (event.type === Blockly.Events.BLOCK_FIELD_INTERMEDIATE_CHANGE) {
           return;
         }
-        // The signature is blocks on the head, and the FILE is the parts they
-        // stand for — so the stack is read back before anything is saved.
-        // Idempotent, and it has to be: this runs on every edit, and a rebuild
-        // binds variables, which fires events that arrive back here.
-        (
-          workspace.getBlockById(BODY_OWNER_ID) as unknown as {
-            readArguments_?: () => void;
-          } | null
-        )?.readArguments_?.();
         seam.setBody(
           editing.id,
           Blockly.serialization.workspaces.save(
@@ -1301,86 +1013,21 @@ export const BlocklyFileEditor = ({
         );
         const held = interfaceRef.current;
         if (held && !isReadOnly) {
-          const contents = JSON.stringify(seam.read(held), null, 2);
-          // EVERY change on this surface, not only ones to the head.
-          //
-          // A member's name is its signature, and the signature is edited as
-          // blocks in the `arguments` row — so retyping a word changes what
-          // the rule OFFERS, and the change event carries the id of the little
-          // `text` block that was typed into, not the head's. Gated on the
-          // head, this never ran for the one edit that most needs it: the
-          // member was renamed, its callers were left pointing at the old
-          // name, and `standInBlocks` minted a definition for the dangling
-          // type so that everything still drew and quietly did nothing.
-          //
-          // `reconcileMembers` is its own guard — it compares the member keys
-          // against the snapshot and returns unless one was renamed — so
-          // calling it on every edit costs a parse and changes nothing else.
-          reconcileMembers(contents);
-          // …and when it carried one, the project has already been written —
-          // by `carry`, from the sources of this moment. `saveFile` closes
-          // over the sources of the render that made it, so saving again here
-          // would put the other files back, references and all. The file
-          // surface skips the save for the same reason.
-          if (pendingReload.current) {
-            return;
-          }
-          onChangeRef.current(contents);
+          onChangeRef.current(JSON.stringify(seam.read(held), null, 2));
         }
         return;
       }
-      // Ignore pure UI events (selection, viewport) — only persist real edits,
-      // except a mutator bubble closing, which commits a signature.
-      const bubble = bubbleToggle(event);
-      if (bubble !== undefined) {
-        signatureBubbleOpen.current = bubble;
-        if (bubble) {
-          return;
-        }
-        // Closing it commits the session: a designed block's name is its whole
-        // signature, so what was typed into the bubble is only finished now.
-        const edited = JSON.stringify(readFile(workspace), null, 2);
-        reconcileMembers(edited);
-        if (!pendingReload.current) {
-          onChangeRef.current(edited);
-        }
+      // Ignore pure UI events (selection, viewport) — only persist real edits.
+      if (event.isUiEvent || movedItself(event)) {
         return;
       }
-      // An open bubble recomposes its block on every keystroke, so saving those
-      // would put a half-renamed member in front of the compiler — which reports
-      // it, having been handed a rule whose own body no longer names what it
-      // declares. The session is written when it closes, above.
-      if (
-        event.isUiEvent ||
-        movedItself(event) ||
-        signatureBubbleOpen.current ||
-        isTypingDeclaration(event, workspace)
-      ) {
-        return;
-      }
-      const state = readFile(workspace);
-      const contents = JSON.stringify(state, null, 2);
-      const rename = ruleRename(event, workspace);
-      if (rename && handleRename(rename, contents)) {
-        return;
-      }
-      // A member's name may have changed with this edit — but not while its
-      // signature is being typed into, which recomposes the block per keystroke.
-      if (!signatureBubbleOpen.current) {
-        reconcileMembers(contents);
-        if (pendingReload.current) {
-          return;
-        }
-      }
-      onChangeRef.current(contents);
+      onChangeRef.current(JSON.stringify(readFile(workspace), null, 2));
     },
     // `editing` among them, and it is not optional: without it this closure
     // keeps the value it had when the editor mounted — null — and a body's
     // edits fall through to the path that writes the whole file, which for a
     // workspace holding one implementation is not the file at all.
     [
-      handleRename,
-      reconcileMembers,
       editing,
       seam,
       isReadOnly,
@@ -1502,38 +1149,6 @@ export const BlocklyFileEditor = ({
     holdable,
   ]);
 
-  // Reload after a rename, once `blocks` carries the renamed member types —
-  // BlocklyProvider registers them in its own effect, which runs before this one
-  // because it is deeper in the tree. Loading with events off: the sources
-  // already hold this state, and re-saving it would be a second write of the
-  // file for the same edit.
-  useEffect(() => {
-    const workspace = workspaceRef.current;
-    const state = pendingReload.current;
-    if (!workspace || !state) {
-      return;
-    }
-    pendingReload.current = null;
-    const {scrollX, scrollY} = workspace;
-    Blockly.Events.disable();
-    try {
-      // THE HELD INTERFACE IS PART OF THE RELOAD, and forgetting that is how
-      // a rename made from a body surface undid itself. The body is rebuilt
-      // from this snapshot (`seam.bodyOf`), which was taken when the pencil
-      // was clicked — so a snapshot left alone still says the old signature,
-      // and `seam.show` above has just dropped the head state that was the
-      // only other record of the new one. The surface came back saying what
-      // the learner had typed OVER, one keystroke's work silently undone.
-      interfaceRef.current = showFile(state, workspace);
-    } finally {
-      Blockly.Events.enable();
-    }
-    refreshActorPictures(workspace);
-    refreshBlockDesigns(workspace);
-    layOut(workspace);
-    workspace.scroll(scrollX, scrollY);
-  }, [blocks, showFile, layOut]);
-
   // Swap the surface, and keep it swapped.
   //
   // NOT one-shot on `editing` changing. `BlocklyWorkspace` re-seeds itself
@@ -1590,11 +1205,6 @@ export const BlocklyFileEditor = ({
       workspace.scroll(0, 0);
     }
     refreshActorPictures(workspace);
-    // …and every `define block` redraws the block it defines. The load above
-    // is SILENT, so `FINISHED_LOADING` — which is what the designer rebuilds
-    // on, because the serializer applies `extraState` before fields — never
-    // arrives. Without this a query is drawn as an action, every time.
-    refreshBlockDesigns(workspace);
     layOut(workspace);
   }, [editing, blocks, seam, startBlocks, layOut, stripCollapsed, rootCode]);
 
@@ -1623,7 +1233,6 @@ export const BlocklyFileEditor = ({
       Blockly.Events.enable();
     }
     refreshActorPictures(workspace);
-    refreshBlockDesigns(workspace);
     workspace.scroll(scrollX, scrollY);
   }, [sourcesEpoch, initialContents, showFile]);
 
@@ -1667,7 +1276,6 @@ export const BlocklyFileEditor = ({
     }
     workspace.scroll(scrollX, scrollY);
     refreshActorPictures(workspace);
-    refreshBlockDesigns(workspace);
     // The reload made every block anew, and the show/hide control is not part
     // of the file, so it is put back with the layout (`syncToggles`).
     layOut(workspace);
@@ -1737,7 +1345,6 @@ export const BlocklyFileEditor = ({
       }
       workspace.scroll(scrollX, scrollY);
       refreshActorPictures(workspace);
-      refreshBlockDesigns(workspace);
       // …and the show/hide controls, which the reload took away: they are not
       // part of the file, so a reload builds blocks without them. On a fresh
       // page the fonts land after the file has opened, which is why a large

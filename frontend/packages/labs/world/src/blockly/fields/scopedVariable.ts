@@ -195,8 +195,8 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
 /**
  * Say that a workspace is a PICTURE of blocks rather than a program.
  *
- * The preview on a `define block` owns a workspace of its own
- * (`FieldBlockPreview`), holding one block: the one the definition will add to
+ * A field that draws a block owns a workspace of its own
+ * (`FieldBlockDrawing`), holding one block: the one a definition will add to
  * the palette, with a getter in each socket so the drawing shows what the
  * arguments are called. Those getters are a sample in exactly the sense a
  * flyout's are — nobody runs them, and there is no program around them to be

@@ -19,7 +19,6 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {mapWorkspaces, rewriteWorkspace} from './rewriteWorkspaces';
-import type {RuleMeta} from './ruleMeta';
 import {ruleSlug} from './ruleRegistry';
 
 /**
@@ -137,75 +136,4 @@ export function renameMemberInSource(
   return mapWorkspaces(source, contents =>
     renameMemberReferences(contents, rule, from, to),
   );
-}
-
-// ── What a rule's members are called, and what changed ───────────────────────
-
-/** A member's reference key, and the kind of member it belongs to. */
-export interface MemberKey {
-  readonly key: string;
-  readonly kind: 'trait' | 'property' | 'event' | 'action' | 'query' | 'step';
-}
-
-/**
- * Every key a rule's members are referred to by.
- *
- * Derived from the parsed rule rather than from its blocks, so it is the same
- * derivation the references themselves come from: a member renamed is a member
- * whose key changed, whatever was edited to change it — a NAME field, or the
- * wording of a designed block's signature.
- */
-export function memberKeys(meta: RuleMeta): MemberKey[] {
-  const keys: MemberKey[] = [];
-  const add = (key: string, kind: MemberKey['kind']): void => {
-    if (key) {
-      keys.push({key, kind});
-    }
-  };
-  meta.traits.forEach(trait => add(trait.ref.exportName, 'trait'));
-  meta.properties.forEach(property => add(property.ref.exportName, 'property'));
-  meta.events.forEach(event => add(event.ref.exportName, 'event'));
-  meta.actions.forEach(action => add(action.ref.exportName, 'action'));
-  meta.queries.forEach(query => add(query.ref.exportName, 'query'));
-  meta.steps.forEach(step => add(step.id, 'step'));
-  return keys;
-}
-
-/** Keys claimed by more than one member — each an ambiguous reference. */
-export function duplicateMemberKeys(keys: readonly MemberKey[]): string[] {
-  const seen = new Set<string>();
-  const duplicated = new Set<string>();
-  for (const {key} of keys) {
-    if (seen.has(key)) {
-      duplicated.add(key);
-    }
-    seen.add(key);
-  }
-  return [...duplicated];
-}
-
-/**
- * The rename between two states of a rule, if that is what happened.
- *
- * One key gone and one arrived, of the same kind: that is a member that was
- * renamed, and its references can follow. Anything else — a member added, one
- * deleted, two edits at once, or a `define block` that went from doing something
- * to reporting something (an action's key leaving as a query's arrives) — is not
- * a rename, and guessing that it was would rewrite references to point at the
- * wrong member, or at a block shape that cannot go where the old one did.
- */
-export function renamedMember(
-  before: readonly MemberKey[],
-  after: readonly MemberKey[],
-): {from: string; to: string} | undefined {
-  const had = new Set(before.map(member => member.key));
-  const has = new Set(after.map(member => member.key));
-  const gone = before.filter(member => !has.has(member.key));
-  const arrived = after.filter(member => !had.has(member.key));
-  if (gone.length !== 1 || arrived.length !== 1) {
-    return undefined;
-  }
-  const [from] = gone;
-  const [to] = arrived;
-  return from.kind === to.kind ? {from: from.key, to: to.key} : undefined;
 }
