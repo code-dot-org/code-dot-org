@@ -14,11 +14,10 @@ import {getData, getIdColumn} from '../selectors';
 import {useGradedView} from '../useGradedView';
 import {useResultsTableView} from '../useResultsTableView';
 
-import ColumnsButton from './ColumnsButton';
 import PredictionSentence from './PredictionSentence';
 import ResultsTable from './ResultsTable';
 import ResultsToggle from './ResultsToggle';
-import TableFilter from './TableFilter';
+import TableActionRow from './TableActionRow';
 
 import styles from './resultsDetails.module.scss';
 
@@ -63,12 +62,20 @@ const ResultsDetails = () => {
           singleLine
           className={styles.sentence}
         />
-        <div className={styles.summary}>
-          <span className={styles.accuracy}>
-            {formatAccuracy(currentResult.accuracy)} Accuracy
-          </span>
-          <span className={styles.divider} />
-          <div className={styles.actionGroup}>
+        <span className={styles.accuracy}>
+          {formatAccuracy(currentResult.accuracy)} Accuracy
+        </span>
+      </div>
+      <ResultsTable
+        results={results}
+        columns={columns}
+        view={view}
+        actionRow={
+          <TableActionRow
+            view={view}
+            showAllColumns={showAllColumns}
+            onToggleColumns={() => setShowAllColumns(shown => !shown)}
+          >
             {hasPredictions && (
               <ResultsToggle
                 grade={resultsTab}
@@ -76,15 +83,9 @@ const ResultsDetails = () => {
                 counts={counts}
               />
             )}
-            <TableFilter view={view} />
-            <ColumnsButton
-              showAllColumns={showAllColumns}
-              onToggle={() => setShowAllColumns(shown => !shown)}
-            />
-          </div>
-        </div>
-      </div>
-      <ResultsTable results={results} columns={columns} view={view} />
+          </TableActionRow>
+        }
+      />
     </div>
   );
 };
