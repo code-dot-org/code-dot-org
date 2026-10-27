@@ -86,6 +86,25 @@ module LangfuseHelper
     Rails.logger.warn("LangfuseHelper.trace_adaptive_generation failed: #{exception.message}")
   end
 
+  # Traces a decision the Adaptive Learning shell makes in the browser without a
+  # model, such as a routing change.
+  def self.trace_adaptive_decision(trace_id:, trace_name:, user_id:, input:, output:, metadata:, start_time:, end_time:, session_id: nil)
+    adaptive_client.create_trace_span(
+      trace_id: trace_id,
+      trace_name: trace_name,
+      user_id: user_id.to_s,
+      session_id: session_id,
+      input: input,
+      output: output,
+      metadata: metadata,
+      tags: [trace_name, "adaptive"],
+      start_time: start_time,
+      end_time: end_time,
+    )
+  rescue => exception
+    Rails.logger.warn("LangfuseHelper.trace_adaptive_decision failed: #{exception.message}")
+  end
+
   def self.tutor_client
     LangfuseClientHelper::Client.new(CDO.tutor_langfuse_secret_key, CDO.tutor_langfuse_public_key)
   end

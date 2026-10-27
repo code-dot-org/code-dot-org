@@ -123,6 +123,48 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
     assert opts[:input].length < AdaptiveTracesController::MAX_TEXT_LENGTH + 20
   end
 
+  test 'relays a routing decision as a span with no model, outcome or prompt' do
+    sign_in(@student)
+    allow_adaptive_ai(true)
+    LangfuseHelper.expects(:trace_adaptive_generation).never
+    captured = nil
+    LangfuseHelper.expects(:trace_adaptive_decision).with do |opts|
+      captured = opts
+      true
+    end
+
+    post :create, params: {
+      traceId: 'cd' * 16,
+      traceName: 'adaptive-routing',
+      levelId: 7,
+      input: {previousStatus: {intro: 'inProgress'}},
+      output: {status: {intro: 'complete'}},
+      startedAt: 1_767_225_600_000,
+      endedAt: 1_767_225_600_000,
+      metadata: {pathwayId: 'p', scriptId: 3},
+    }, as: :json
+
+    assert_response :success
+    assert_equal 'cd' * 16, captured[:trace_id]
+    assert_equal 'adaptive-routing', captured[:trace_name]
+    assert_equal @student.id, captured[:user_id]
+    assert_equal({'previousStatus' => {'intro' => 'inProgress'}}, captured[:input])
+    assert_equal({'status' => {'intro' => 'complete'}}, captured[:output])
+    assert_equal({pathway_id: 'p', script_id: 3, level_id: 7}, captured[:metadata])
+    assert_equal "adaptive-3-7-#{@student.id}", captured[:session_id]
+  end
+
+  test 'still requires a model and outcome of a generation' do
+    sign_in(@student)
+    allow_adaptive_ai(true)
+    LangfuseHelper.expects(:trace_adaptive_generation).never
+
+    {model: nil, outcome: nil}.each do |key, value|
+      post :create, params: @params.merge(key => value), as: :json
+      assert_response :bad_request, "expected #{key}=#{value} to be rejected"
+    end
+  end
+
   test 'rejects a malformed trace id, name, outcome or timestamp' do
     sign_in(@student)
     allow_adaptive_ai(true)

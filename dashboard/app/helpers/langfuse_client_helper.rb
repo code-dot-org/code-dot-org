@@ -113,6 +113,22 @@ module LangfuseClientHelper
       export_spans([root_span, generation_span])
     end
 
+    # A trace of one span, for a step that calls no model.
+    def create_trace_span(trace_name:, user_id: nil, session_id: nil, input: nil, output: nil, metadata: nil, tags: nil, start_time: nil, end_time: nil, trace_id: nil)
+      span = otlp_span(
+        trace_id: trace_id || SecureRandom.hex(16),
+        span_id: SecureRandom.hex(8),
+        name: trace_name,
+        start_nanos: unix_nanos(start_time),
+        end_nanos: unix_nanos(end_time),
+        attributes:
+          trace_attributes(trace_name: trace_name, user_id: user_id, session_id: session_id, tags: tags, metadata: metadata) +
+          observation_io_attributes(input, output) +
+          [otlp_attribute("langfuse.observation.type", "span")],
+      )
+      export_spans([span])
+    end
+
     private def otlp_span(trace_id:, span_id:, name:, start_nanos:, end_nanos:, attributes:, parent_span_id: nil)
       {
         traceId: trace_id,

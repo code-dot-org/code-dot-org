@@ -1,4 +1,8 @@
-import {TraceStart, startTrace} from '@cdo/apps/adaptive/ai/langfuse/trace';
+import {
+  TraceStart,
+  startTrace,
+  traceDecision,
+} from '@cdo/apps/adaptive/ai/langfuse/trace';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -92,5 +96,35 @@ describe('startTrace', () => {
       expect.any(Error),
       {error: 'Error: 503'}
     );
+  });
+});
+
+describe('traceDecision', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockPost.mockResolvedValue({});
+  });
+
+  it('posts the decision at once under a fresh trace id, with no model', () => {
+    traceDecision({
+      name: 'adaptive-routing',
+      levelId: 7,
+      input: {previousStatus: {a: 'locked'}},
+      output: {status: {a: 'available'}},
+      metadata: {pathwayId: 'p'},
+    });
+
+    const body = postedBody();
+    expect(body).toMatchObject({
+      traceName: 'adaptive-routing',
+      levelId: 7,
+      input: {previousStatus: {a: 'locked'}},
+      output: {status: {a: 'available'}},
+      metadata: {pathwayId: 'p'},
+    });
+    expect(body.traceId).toMatch(/^[0-9a-f]{32}$/);
+    expect(body.endedAt).toBe(body.startedAt);
+    expect(body).not.toHaveProperty('model');
+    expect(body).not.toHaveProperty('name');
   });
 });

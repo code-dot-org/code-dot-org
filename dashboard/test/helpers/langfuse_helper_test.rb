@@ -66,6 +66,42 @@ class LangfuseHelperTest < ActiveSupport::TestCase
     assert_equal 'error', opts[:metadata][:outcome]
   end
 
+  test 'adaptive decision is one span under the trace id, tagged by name' do
+    captured = nil
+    LangfuseClientHelper::Client.any_instance.expects(:create_trace_span).with do |opts|
+      captured = opts
+      true
+    end
+
+    LangfuseHelper.trace_adaptive_decision(
+      trace_id: 'cd' * 16,
+      trace_name: 'adaptive-routing',
+      user_id: 42,
+      session_id: 'adaptive-1-2-42',
+      input: {'previousStatus' => {}},
+      output: {'status' => {}},
+      metadata: {pathway_id: 'p'},
+      start_time: Time.utc(2026, 1, 1),
+      end_time: Time.utc(2026, 1, 1),
+    )
+
+    assert_equal 'cd' * 16, captured[:trace_id]
+    assert_equal '42', captured[:user_id]
+    assert_equal 'adaptive-1-2-42', captured[:session_id]
+    assert_equal %w[adaptive-routing adaptive], captured[:tags]
+    assert_equal({pathway_id: 'p'}, captured[:metadata])
+  end
+
+  test 'adaptive decision swallows client failures' do
+    LangfuseClientHelper::Client.any_instance.stubs(:create_trace_span).raises(StandardError, 'down')
+    Rails.logger.expects(:warn).with(regexp_matches(/trace_adaptive_decision failed: down/))
+
+    assert_nil LangfuseHelper.trace_adaptive_decision(
+      trace_id: 'cd' * 16, trace_name: 'adaptive-routing', user_id: 42, input: nil, output: nil,
+      metadata: {}, start_time: Time.utc(2026, 1, 1), end_time: Time.utc(2026, 1, 1)
+    )
+  end
+
   test 'adaptive trace swallows client failures' do
     LangfuseClientHelper::Client.any_instance.stubs(:create_trace_and_generation).raises(StandardError, 'down')
     Rails.logger.expects(:warn).with(regexp_matches(/trace_adaptive_generation failed: down/))

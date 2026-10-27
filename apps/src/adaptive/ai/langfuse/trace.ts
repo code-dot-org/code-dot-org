@@ -1,7 +1,8 @@
-// One adaptive generation's Langfuse trace, relayed through Rails. The
-// browser is the only party that sees the whole gateway call, so it reports
-// the outcome; Rails supplies the user and bounds the payload. The id is
-// minted here so the caller has it before the relay answers, and posting
+// The adaptive shell's Langfuse traces, relayed through Rails: one per
+// generation, and one per decision made without a model, such as a routing
+// change. The browser is the only party that sees the whole gateway call, so
+// it reports the outcome; Rails supplies the user and bounds the payload. The
+// id is minted here so the caller has it before the relay answers, and posting
 // never blocks or fails the caller.
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -12,6 +13,9 @@ const MAX_ERROR_MESSAGE_LENGTH = 1_000;
 
 /** Trace names Rails accepts; each is one kind of shell generation. */
 export type TraceName = 'adaptive-instructions';
+
+/** Trace names Rails accepts for a decision, which it records as one span. */
+export type DecisionTraceName = 'adaptive-routing';
 
 export type TraceOutcome = 'success' | 'schema_mismatch' | 'error';
 
@@ -52,6 +56,23 @@ export interface Trace {
   end(details: TraceEnd): void;
 }
 
+export interface Decision {
+  name: DecisionTraceName;
+  /** The adaptive level, which Rails checks access against. */
+  levelId: number | null;
+  input: unknown;
+  output: unknown;
+  metadata: TraceMetadata;
+}
+
+interface DecisionPayload extends Omit<Decision, 'name'> {
+  traceId: string;
+  traceName: DecisionTraceName;
+  /** Epoch milliseconds. */
+  startedAt: number;
+  endedAt: number;
+}
+
 interface TracePayload extends Omit<TraceEnd, 'responseId'> {
   traceId: string;
   traceName: TraceName;
@@ -89,6 +110,18 @@ export function startTrace(start: TraceStart): Trace {
   };
 }
 
+/** Records a decision as it is made. Fire-and-forget. */
+export function traceDecision({name, ...decision}: Decision): void {
+  const now = Date.now();
+  void postTrace({
+    ...decision,
+    traceId: newTraceId(),
+    traceName: name,
+    startedAt: now,
+    endedAt: now,
+  });
+}
+
 // Not crypto.randomUUID: jsdom lacks it, so the unit tests would have to mock it.
 function newTraceId(): string {
   const bytes = crypto.getRandomValues(new Uint8Array(16));
@@ -96,7 +129,9 @@ function newTraceId(): string {
 }
 
 // A failed post is reported, never thrown.
-async function postTrace(payload: TracePayload): Promise<void> {
+async function postTrace(
+  payload: TracePayload | DecisionPayload
+): Promise<void> {
   try {
     await HttpClient.post(TRACE_URL, JSON.stringify(payload), true, {
       'Content-Type': 'application/json',

@@ -191,6 +191,39 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
     refute attributes_of(generation).key?('langfuse.observation.status_message')
   end
 
+  test 'span export emits one span-typed observation with the trace attributes' do
+    captured = nil
+    HTTParty.stubs(:post).with do |_url, options|
+      captured = JSON.parse(options[:body])
+      true
+    end.returns(stub(code: 207))
+
+    @client.create_trace_span(
+      trace_id: 'cd' * 16,
+      trace_name: 'adaptive-routing',
+      user_id: '42',
+      session_id: 'adaptive-1-2-42',
+      input: {status: 'before'},
+      output: {status: 'after'},
+      tags: ['adaptive-routing'],
+      start_time: Time.utc(2026, 1, 1, 0, 0, 0),
+      end_time: Time.utc(2026, 1, 1, 0, 0, 0),
+    )
+    spans = spans_from(captured)
+
+    assert_equal 1, spans.length
+    span = spans.first
+    attributes = attributes_of(span)
+    assert_equal 'cd' * 16, span['traceId']
+    assert_nil span['parentSpanId']
+    assert_equal 'adaptive-routing', span['name']
+    assert_equal 'span', attributes['langfuse.observation.type']
+    assert_equal 'adaptive-1-2-42', attributes['langfuse.session.id']
+    assert_equal '{"status":"before"}', attributes['langfuse.observation.input']
+    assert_equal '{"status":"after"}', attributes['langfuse.observation.output']
+    refute attributes.key?('langfuse.observation.model.name')
+  end
+
   test 'export swallows transport failures' do
     HTTParty.stubs(:post).raises(Net::ReadTimeout)
     Rails.logger.expects(:warn).with(regexp_matches(/Langfuse OTLP export error/))

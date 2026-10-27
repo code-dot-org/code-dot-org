@@ -2,18 +2,20 @@
 // applies each change at once and sends it on, and the labels the map shows
 // for each status.
 
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 import {computeEvidence} from '../routing/evidence';
 import {routeStatusMap} from '../routing/route';
+import {traceRouting} from '../routing/traceRouting';
 import {Pathway, Step} from '../types';
 
 import {
   Answer,
   CheckpointStatus,
+  CheckpointStatusMap,
   EMPTY_PROGRESS,
   GeneratedContent,
   PROJECT_STEP_ID,
@@ -92,6 +94,27 @@ export function useProgress(
     () => routeStatusMap(pathway, progress ?? EMPTY_PROGRESS, evidence),
     [pathway, progress, evidence]
   );
+  // Unset until progress loads, so loading is never traced as a routing change.
+  const routedStatusMap = useRef<CheckpointStatusMap>();
+  useEffect(() => {
+    if (!progress) {
+      routedStatusMap.current = undefined;
+      return;
+    }
+    const previous = routedStatusMap.current;
+    routedStatusMap.current = statusMap;
+    if (previous) {
+      traceRouting({
+        pathway,
+        progress,
+        evidence,
+        previous,
+        current: statusMap,
+        levelId,
+        scriptId,
+      });
+    }
+  }, [pathway, progress, evidence, statusMap, levelId, scriptId]);
 
   const updateStep = useCallback(
     (stepId: string, change: (entry?: StepProgress) => StepProgress) =>

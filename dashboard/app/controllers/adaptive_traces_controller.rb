@@ -1,10 +1,13 @@
-# Relays one adaptive shell generation from the browser into Langfuse. The
-# browser calls the AI gateway directly, so Rails never sees the call; this
-# is where the user is established and the payload is bounded before export.
+# Relays one adaptive shell generation, or one decision the shell makes
+# without a model, from the browser into Langfuse. The browser calls the AI
+# gateway directly, so Rails never sees the call; this is where the user is
+# established and the payload is bounded before export.
 class AdaptiveTracesController < ApplicationController
   before_action :authenticate_user!
 
   TRACE_NAMES = %w[adaptive-instructions].freeze
+  # Recorded as one span with no generation, so they stay out of model cost and latency.
+  DECISION_TRACE_NAMES = %w[adaptive-routing].freeze
   OUTCOMES = %w[success schema_mismatch error].freeze
   # Unknown metadata keys are dropped rather than refused, so a client ahead of
   # or behind this list still gets its trace recorded.
@@ -27,31 +30,44 @@ class AdaptiveTracesController < ApplicationController
     return render status: :bad_request, json: {error: error} if error
 
     metadata = metadata_from(body['metadata'])
-    LangfuseHelper.trace_adaptive_generation(
+    trace = {
       trace_id: body['traceId'],
       trace_name: body['traceName'],
       user_id: current_user.id,
-      model: body['model'],
-      input: truncate(body['prompt'].to_s, MAX_TEXT_LENGTH),
-      output: bounded_output(body['output']),
-      outcome: body['outcome'],
-      error_message: body['errorMessage'].presence && truncate(body['errorMessage'].to_s, MAX_MESSAGE_LENGTH),
-      usage: usage_from(body['usage']),
+      output: bounded(body['output']),
       metadata: metadata.merge(level_id: body['levelId']),
       session_id: session_id(metadata[:script_id], body['levelId']),
       start_time: Time.at(body['startedAt'] / 1000.0),
       end_time: Time.at(body['endedAt'] / 1000.0),
-    )
+    }
+    if decision?(body)
+      LangfuseHelper.trace_adaptive_decision(**trace, input: bounded(body['input']))
+    else
+      LangfuseHelper.trace_adaptive_generation(
+        **trace,
+        model: body['model'],
+        input: truncate(body['prompt'].to_s, MAX_TEXT_LENGTH),
+        outcome: body['outcome'],
+        error_message: body['errorMessage'].presence && truncate(body['errorMessage'].to_s, MAX_MESSAGE_LENGTH),
+        usage: usage_from(body['usage']),
+      )
+    end
     render json: {traceId: body['traceId']}
   end
 
   private def validation_error(body)
     return 'traceId must be 32 hex characters' unless body['traceId'].to_s.match?(TRACE_ID_FORMAT)
-    return 'unknown traceName' unless TRACE_NAMES.include?(body['traceName'])
-    return 'unknown outcome' unless OUTCOMES.include?(body['outcome'])
-    return 'model is required' if body['model'].blank?
+    return 'unknown traceName' unless TRACE_NAMES.include?(body['traceName']) || decision?(body)
+    unless decision?(body)
+      return 'unknown outcome' unless OUTCOMES.include?(body['outcome'])
+      return 'model is required' if body['model'].blank?
+    end
     return 'startedAt and endedAt must be epoch milliseconds' unless body['startedAt'].is_a?(Numeric) && body['endedAt'].is_a?(Numeric)
     nil
+  end
+
+  private def decision?(body)
+    DECISION_TRACE_NAMES.include?(body['traceName'])
   end
 
   private def metadata_from(metadata)
@@ -74,13 +90,13 @@ class AdaptiveTracesController < ApplicationController
     counts.presence&.transform_keys(&:to_sym)
   end
 
-  # Structured output arrives as JSON of the generation's own shape; it is
-  # passed through whole unless it is oversized, in which case its text is cut.
-  private def bounded_output(output)
-    return nil if output.nil?
-    return truncate(output, MAX_TEXT_LENGTH) if output.is_a?(String)
-    serialized = output.to_json
-    serialized.length > MAX_TEXT_LENGTH ? truncate(serialized, MAX_TEXT_LENGTH) : output
+  # Structured input or output arrives as JSON of its own shape; it is passed
+  # through whole unless it is oversized, in which case its text is cut.
+  private def bounded(value)
+    return nil if value.nil?
+    return truncate(value, MAX_TEXT_LENGTH) if value.is_a?(String)
+    serialized = value.to_json
+    serialized.length > MAX_TEXT_LENGTH ? truncate(serialized, MAX_TEXT_LENGTH) : value
   end
 
   private def scalar?(value)
