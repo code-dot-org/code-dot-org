@@ -10,6 +10,9 @@ $(document).ready(function () {
   const widget2Ids = getScriptData('widget2ids') || [];
   createReactRoot(
     <EditWidget2 initialValue={initialValue} widget2Ids={widget2Ids} />,
-    document.getElementById('widget2_editor')
+    document.getElementById('widget2_editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

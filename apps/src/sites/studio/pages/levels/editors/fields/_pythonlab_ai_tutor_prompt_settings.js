@@ -50,6 +50,9 @@ $(document).ready(function () {
       defaultAnswerTypes={DEFAULT_ANSWER_TYPES}
       instructions={INSTRUCTIONS}
     />,
-    document.getElementById('pythonlab-ai-tutor-prompt-settings-editor')
+    document.getElementById('pythonlab-ai-tutor-prompt-settings-editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

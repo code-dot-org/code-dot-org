@@ -17,6 +17,9 @@ $(document).ready(function () {
       initialUseLinks={initialUseLinks}
       levelName={levelName}
     />,
-    document.getElementById('panels-editor')
+    document.getElementById('panels-editor'),
+    {
+      legacyReactDomRender: true,
+    }
   );
 });

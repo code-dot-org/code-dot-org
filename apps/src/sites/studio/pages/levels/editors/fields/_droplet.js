@@ -37,6 +37,9 @@ if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
     />,
     $('<div></div>')
       .insertAfter(`label[for="${fieldConfig.codeFunctions.codemirror}"]`)
-      .get(0)
+      .get(0),
+    {
+      legacyReactDomRender: true,
+    }
   );
 }
