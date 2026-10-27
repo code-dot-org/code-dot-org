@@ -184,6 +184,8 @@ namespace :seed do
   #   parent/child level relationships across partitions.
   # - quiz_questions must run before custom levels, because Quiz levels are
   #   custom levels and depend on quiz_questions.
+  # - code_docs, blocks, standards, shared_blockly_functions and libraries have
+  #   no ordering constraint against the content tasks in either direction.
   # - jit_pl_concepts must run after course_offerings, because loading the JIT
   #   PL course also writes that course's offering file in levelbuilder mode.
   #   If the two run in the other order, the seed can overwrite
