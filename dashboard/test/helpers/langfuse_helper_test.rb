@@ -51,6 +51,12 @@ class LangfuseHelperTest < ActiveSupport::TestCase
     assert_nil opts[:status_message]
   end
 
+  test 'adaptive trace passes the session id through' do
+    opts = capture_trace(session_id: 'adaptive-1-2-42')
+
+    assert_equal 'adaptive-1-2-42', opts[:session_id]
+  end
+
   test 'adaptive trace marks a failed generation as an error observation' do
     opts = capture_trace(outcome: 'error', output: nil, usage: nil, error_message: 'timed out')
 
@@ -65,5 +71,21 @@ class LangfuseHelperTest < ActiveSupport::TestCase
     Rails.logger.expects(:warn).with(regexp_matches(/trace_adaptive_generation failed: down/))
 
     assert_nil LangfuseHelper.trace_adaptive_generation(**default_args)
+  end
+
+  test 'adaptive validation scores the trace with the stored pass and evidence level' do
+    client = mock
+    client.expects(:create_score).with(id: "#{'ab' * 16}-validation_pass", trace_id: 'ab' * 16, name: 'validation_pass', value: 0, data_type: 'BOOLEAN')
+    client.expects(:create_score).with(id: "#{'ab' * 16}-validation_evidence_level", trace_id: 'ab' * 16, name: 'validation_evidence_level', value: 2, data_type: 'NUMERIC')
+    LangfuseClientHelper::Client.stubs(:new).returns(client)
+
+    LangfuseHelper.score_adaptive_validation(trace_id: 'ab' * 16, pass: false, evidence_level: 2)
+  end
+
+  test 'adaptive validation score swallows client failures' do
+    LangfuseClientHelper::Client.any_instance.stubs(:create_score).raises(StandardError, 'down')
+    Rails.logger.expects(:warn).with(regexp_matches(/score_adaptive_validation failed: down/))
+
+    assert_nil LangfuseHelper.score_adaptive_validation(trace_id: 'ab' * 16, pass: true, evidence_level: 1)
   end
 end

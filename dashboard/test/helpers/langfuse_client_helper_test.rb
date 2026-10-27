@@ -103,6 +103,14 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
     end
   end
 
+  test 'export puts the session id on every span' do
+    _url, _options, body = capture_export(session_id: 'adaptive-1-2-3')
+
+    spans_from(body).each do |span|
+      assert_equal 'adaptive-1-2-3', attributes_of(span)['langfuse.session.id']
+    end
+  end
+
   test 'export stamps every span with the rack environment' do
     CDO.stubs(:rack_env).returns(:staging)
     _url, _options, body = capture_export
@@ -151,6 +159,7 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
 
     attributes = attributes_of(generation)
     refute attributes.key?('langfuse.user.id')
+    refute attributes.key?('langfuse.session.id')
     refute attributes.key?('langfuse.trace.tags')
     refute attributes.key?('langfuse.observation.prompt.name')
     refute attributes.key?('langfuse.observation.prompt.version')
@@ -180,6 +189,32 @@ class LangfuseClientHelperTest < ActiveSupport::TestCase
 
     refute attributes_of(generation).key?('langfuse.observation.level')
     refute attributes_of(generation).key?('langfuse.observation.status_message')
+  end
+
+  test 'score posts one score to the scores endpoint under the environment' do
+    CDO.stubs(:rack_env).returns(:staging)
+    captured = nil
+    HTTParty.stubs(:post).with do |url, options|
+      captured = [url, options, JSON.parse(options[:body])]
+      true
+    end.returns(stub(code: 200))
+
+    @client.create_score(id: 'ab-pass', trace_id: 'ab' * 16, name: 'pass', value: 1, data_type: 'BOOLEAN')
+    url, options, body = captured
+
+    assert_equal 'https://us.cloud.langfuse.com/api/public/scores', url
+    assert_equal({username: 'pk-lf-test', password: 'sk-lf-test'}, options[:basic_auth])
+    assert_equal(
+      {'id' => 'ab-pass', 'traceId' => 'ab' * 16, 'name' => 'pass', 'value' => 1, 'dataType' => 'BOOLEAN', 'environment' => 'staging'},
+      body
+    )
+  end
+
+  test 'score swallows transport failures' do
+    HTTParty.stubs(:post).raises(Net::ReadTimeout)
+    Rails.logger.expects(:warn).with(regexp_matches(/Langfuse score error/))
+
+    assert_nil @client.create_score(trace_id: 'ab' * 16, name: 'pass', value: 1, data_type: 'BOOLEAN')
   end
 
   test 'export swallows transport failures' do

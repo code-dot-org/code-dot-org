@@ -79,6 +79,9 @@ class AdaptiveProgressController < ApplicationController
 
     row = step_row(step)
     row.record_validation!(attempt)
+    if attempt['traceId']&.match?(AdaptiveTracesController::TRACE_ID_FORMAT)
+      LangfuseHelper.score_adaptive_validation(trace_id: attempt['traceId'], pass: attempt['pass'], evidence_level: attempt['evidenceLevel'])
+    end
 
     render json: row_json(row)
   end

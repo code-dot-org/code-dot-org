@@ -211,6 +211,23 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_nil UserAdaptiveStep.find_by(step_id: 'try').progress
   end
 
+  test "a validation attempt scores its judge's trace in Langfuse" do
+    LangfuseHelper.expects(:score_adaptive_validation).with(trace_id: 'ab' * 16, pass: true, evidence_level: 2)
+
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 2, 'reason' => 'Heading added.', 'traceId' => 'ab' * 16}
+
+    assert_response :success
+  end
+
+  test "a validation attempt without a judge's trace id scores nothing" do
+    LangfuseHelper.expects(:score_adaptive_validation).never
+
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 2, 'reason' => 'Heading added.'}
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 2, 'reason' => 'Heading added.', 'traceId' => 'trace-2'}
+
+    assert_response :success
+  end
+
   test "only the last validation attempts are kept" do
     25.times do |i|
       put_validation 'try', {'pass' => false, 'evidenceLevel' => 0, 'reason' => "Try #{i}"}

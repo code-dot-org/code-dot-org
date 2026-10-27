@@ -64,13 +64,14 @@ module LangfuseHelper
   # Traces a generation in the Adaptive Learning shell. The actual request is made
   # by the browser over AI Gateway. This is a stopgap until Langfuse traces are handled
   # by the gateway directly.
-  def self.trace_adaptive_generation(trace_id:, trace_name:, user_id:, model:, input:, output:, outcome:, error_message:, usage:, metadata:, start_time:, end_time:)
+  def self.trace_adaptive_generation(trace_id:, trace_name:, user_id:, model:, input:, output:, outcome:, error_message:, usage:, metadata:, start_time:, end_time:, session_id: nil)
     adaptive_client.create_trace_and_generation(
       trace_id: trace_id,
       trace_name: trace_name,
       generation_name: "llm-call",
       model: model,
       user_id: user_id.to_s,
+      session_id: session_id,
       input: input,
       output: output,
       usage: usage,
@@ -83,6 +84,16 @@ module LangfuseHelper
     )
   rescue => exception
     Rails.logger.warn("LangfuseHelper.trace_adaptive_generation failed: #{exception.message}")
+  end
+
+  # The verdict as stored, not the model's raw output: the evidence level is
+  # clamped to one the skill describes.
+  def self.score_adaptive_validation(trace_id:, pass:, evidence_level:)
+    client = adaptive_client
+    client.create_score(id: "#{trace_id}-validation_pass", trace_id: trace_id, name: "validation_pass", value: pass ? 1 : 0, data_type: "BOOLEAN")
+    client.create_score(id: "#{trace_id}-validation_evidence_level", trace_id: trace_id, name: "validation_evidence_level", value: evidence_level, data_type: "NUMERIC")
+  rescue => exception
+    Rails.logger.warn("LangfuseHelper.score_adaptive_validation failed: #{exception.message}")
   end
 
   def self.tutor_client

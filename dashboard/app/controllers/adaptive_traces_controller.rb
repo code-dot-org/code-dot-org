@@ -8,7 +8,7 @@ class AdaptiveTracesController < ApplicationController
   OUTCOMES = %w[success schema_mismatch error].freeze
   # Unknown metadata keys are dropped rather than refused, so a client ahead of
   # or behind this list still gets its trace recorded.
-  METADATA_KEYS = %w[pathwayId checkpointId stepId scriptId inputsHash promptVersion responseId].freeze
+  METADATA_KEYS = %w[pathwayId checkpointId stepId scriptId inputsHash promptVersion responseId workAt instructionsTraceId].freeze
   USAGE_KEYS = %w[input output total].freeze
   TRACE_ID_FORMAT = /\A\h{32}\z/
   # The prompt carries the student's project source; longer text is cut, not refused.
@@ -26,6 +26,7 @@ class AdaptiveTracesController < ApplicationController
     error = validation_error(body)
     return render status: :bad_request, json: {error: error} if error
 
+    metadata = metadata_from(body['metadata'])
     LangfuseHelper.trace_adaptive_generation(
       trace_id: body['traceId'],
       trace_name: body['traceName'],
@@ -36,7 +37,8 @@ class AdaptiveTracesController < ApplicationController
       outcome: body['outcome'],
       error_message: body['errorMessage'].presence && truncate(body['errorMessage'].to_s, MAX_MESSAGE_LENGTH),
       usage: usage_from(body['usage']),
-      metadata: metadata_from(body['metadata']).merge(level_id: body['levelId']),
+      metadata: metadata.merge(level_id: body['levelId']),
+      session_id: session_id(metadata[:script_id], body['levelId']),
       start_time: Time.at(body['startedAt'] / 1000.0),
       end_time: Time.at(body['endedAt'] / 1000.0),
     )
@@ -58,6 +60,12 @@ class AdaptiveTracesController < ApplicationController
     metadata.slice(*METADATA_KEYS).to_h.
       select {|_, value| scalar?(value)}.
       transform_keys {|key| key.underscore.to_sym}
+  end
+
+  # One student's run through one pathway in one unit, the grain progress is kept at.
+  private def session_id(script_id, level_id)
+    return nil unless script_id.is_a?(Integer) && level_id.is_a?(Integer)
+    "adaptive-#{script_id}-#{level_id}-#{current_user.id}"
   end
 
   private def usage_from(usage)
