@@ -24,6 +24,11 @@
 - Context: specs, MCP servers, skills, or other inputs you gave the AI
 -->
 
+## Follow-up work
+<!--  Delete this section if no new work was discovered while making this PR.
+      Otherwise: List any clean-up or other tasks that will be addressed in future work. -->
+- Jira:
+
 ## Deployment notes
 <!-- Delete this section if it's a standard merge-and-deploy.
      Otherwise: migrations, feature flags, coordination, caching impacts, etc. -->
