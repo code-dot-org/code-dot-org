@@ -176,12 +176,9 @@ namespace :seed do
   end
 
   # The tasks to run before seeding the units of the given partition
-  # (:production or :ui_test). The order follows from these dependencies:
+  # (:production or :ui_test); see dashboard/config/PARTITIONS.md. The order
+  # follows from these dependencies:
   #
-  # - Course offerings, courses, units and most custom/dsl levels are separated
-  #   into production and UI test partitions so they can be seeded independently
-  #   from each other. The deprecated blockly levels and standalone project
-  #   levels are needed by both partitions. See dashboard/config/PARTITIONS.md.
   # - standalone_project_levels must run after games, but does not have an
   #   ordering dependency on production or ui test levels because there are no
   #   parent/child level relationships across partitions.
