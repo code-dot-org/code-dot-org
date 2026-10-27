@@ -24,10 +24,6 @@
   margin: 0;
 }
 
-.codeButton {
-  margin-left: auto;
-}
-
 .body {
   display: flex;
   flex: 1;

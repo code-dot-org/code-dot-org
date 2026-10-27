@@ -5,10 +5,8 @@
 // says what the rule declares — what it is for, the rules it uses, its
 // events, blocks and steps — or, with a trait open, what the trait declares.
 // Each event, block and step opens on a page of its own, where what it does
-// is written. Code opens the whole rule in blocks, folded back into data as
-// it is saved.
-//
-// A rule the data cannot say whole opens in blocks, as every rule used to.
+// is written: a rule is never a workspace of blocks to edit as a whole. A
+// file the data cannot say whole says so, as an actor's does.
 
 import {Button, Typography} from '@mui/material';
 import {
@@ -34,20 +32,13 @@ import {
   removeMember,
 } from '../../actors/editor/memberEdits';
 import {MemberPage} from '../../actors/editor/MemberPage';
-import {BlocklyFileEditor} from '../../blockly/BlocklyFileEditor';
 import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {parseRuleMeta, type RuleMeta} from '../../blockly/ruleMeta';
 import {requestFileAct} from '../../files/fileActs';
 import {fileLabel} from '../../files/fileLabel';
 import {useScriptStep} from '../../layout/TrailContext';
 import {filePath, projectFiles} from '../../runtime/projectFiles';
-import {
-  asRuleData,
-  ruleView,
-  type RuleData,
-  type RuleStep,
-  type RuleTrait,
-} from '../ruleData';
+import {type RuleData, type RuleStep, type RuleTrait} from '../ruleData';
 import {
   addProperty,
   addTrait,
@@ -672,35 +663,11 @@ export const RuleEditor = (props: CustomEditorProps) => {
   }, [openId, returnToMember]);
 
   if (!data) {
-    // A rule the data cannot say whole is written in blocks, as it was.
-    return <BlocklyFileEditor {...props} />;
-  }
-
-  if (script?.kind === 'code') {
     return (
-      <div className={styles.code}>
-        {!onTrail && (
-          <div className={styles.codeHeader}>
-            <Button
-              variant="text"
-              size="extraSmall"
-              startIcon={
-                <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
-              }
-              onClick={() => setScript(null)}
-            >
-              Rule
-            </Button>
-          </div>
-        )}
-        <div className={styles.codeBlocks}>
-          <BlocklyFileEditor
-            {...props}
-            initialContents={JSON.stringify(ruleView(data), null, 2)}
-            // Kept as data when the blocks still say what data can.
-            onChange={next => write(asRuleData(next))}
-          />
-        </div>
+      <div className={styles.editor}>
+        <Typography variant="body3" className={styles.note}>
+          This rule’s file cannot be read.
+        </Typography>
       </div>
     );
   }
@@ -961,18 +928,6 @@ export const RuleEditor = (props: CustomEditorProps) => {
             Rename
           </Button>
         )}
-        <Button
-          variant="outlined"
-          color="secondary"
-          size="small"
-          className={styles.codeButton}
-          startIcon={
-            <FontAwesomeV6Icon iconName="puzzle-piece" iconStyle="solid" />
-          }
-          onClick={() => setScript({kind: 'code'})}
-        >
-          Code
-        </Button>
       </div>
       <div className={styles.body}>
         <div

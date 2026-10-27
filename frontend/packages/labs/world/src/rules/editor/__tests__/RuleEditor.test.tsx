@@ -167,27 +167,15 @@ describe('the Rule Editor', () => {
     expect(written().uses).not.toContain('Solid Bodies');
   });
 
-  it('opens its code in blocks, and keeps it as data when saved', () => {
-    open();
-    fireEvent.click(screen.getByRole('button', {name: 'Code'}));
-
-    const view = JSON.parse(blocks.contents!);
-    expect(view.blocks.blocks[0].type).toBe('world_rule');
-    const edited = structuredClone(view);
-    edited.blocks.blocks[0].fields.ABILITY = 'Falls Down';
-    blocks.onChange!(JSON.stringify(edited));
-
-    expect(written()).toMatchObject({type: 'rule', ability: 'Falls Down'});
-  });
-
-  it('opens a rule the data cannot say in blocks', () => {
+  it('says so of a rule the data cannot say, and never opens it in blocks', () => {
     const view = ruleView(
       foldRule(JSON.parse(resolveRuleContents(GRAVITY.contents)))!,
     ) as {blocks: {blocks: unknown[]}};
     view.blocks.blocks.push({type: 'world_print'});
     open(JSON.stringify(view));
-    expect(screen.getByTestId('blocks')).toBeInTheDocument();
-    expect(screen.queryByTestId('rule-editor')).toBeNull();
+    expect(screen.getByText(/cannot be read/)).toBeInTheDocument();
+    expect(screen.queryByTestId('blocks')).toBeNull();
+    expect(screen.queryByRole('button', {name: 'Code'})).toBeNull();
   });
 });
 
