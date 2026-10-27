@@ -80,7 +80,7 @@ describe('QuizQuestionCard', () => {
     expect(screen.getByLabelText('Internal name*')).toBeRequired();
     expect(screen.getByLabelText('Question title*')).toBeRequired();
     expect(
-      screen.getByRole('textbox', {name: 'Description'})
+      screen.getByRole('textbox', {name: 'Description (optional)'})
     ).not.toBeRequired();
   });
 
@@ -96,7 +96,7 @@ describe('QuizQuestionCard', () => {
       'The main question text students see. For a simple question, this can be the whole question.'
     );
     expect(
-      screen.getByRole('textbox', {name: 'Description'})
+      screen.getByRole('textbox', {name: 'Description (optional)'})
     ).toHaveAccessibleDescription(
       'Additional context, instructions or content (e.g. a code snippet) shown below the title. Supports Markdown.'
     );
