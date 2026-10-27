@@ -24,7 +24,7 @@ import {BlocklyMarkdown, BlocklyProvider} from '@code-dot-org/blockly';
 
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {parseRuleMeta, type RuleMeta} from '../blockly/ruleMeta';
-import {memberValue, ruleSlug} from '../blockly/ruleRegistry';
+import {ruleSlug} from '../blockly/ruleRegistry';
 import {STOCK_RULES} from '../rules/stock';
 
 import styles from './progressionDialog.module.css';
@@ -46,7 +46,6 @@ export interface PreviewBlock {
 let cached: {
   blocks: ReturnType<typeof buildDomainPalette>['blocks'];
   byRule: Map<string, string[]>;
-  traitOf: Map<string, string>;
 } | null = null;
 
 const library = () => {
@@ -67,10 +66,6 @@ const library = () => {
   // the palette rather than re-derived, because a second copy of that naming
   // would be a second chance to get it wrong.
   const byRule = new Map<string, string[]>();
-  // …and the first trait each rule declares, as the value a `use trait` field
-  // stores. For the sixteen rules that have no verb at all, that row IS what
-  // the lesson gives you.
-  const traitOf = new Map<string, string>();
   for (const {id, meta} of parsed) {
     const slug = ruleSlug(meta.name);
     byRule.set(
@@ -79,12 +74,8 @@ const library = () => {
         .map(block => block.type)
         .filter(type => type.includes(`_${slug}_`)),
     );
-    const first = meta.traits[0];
-    if (first) {
-      traitOf.set(id, memberValue(first.ref));
-    }
   }
-  cached = {blocks, byRule, traitOf};
+  cached = {blocks, byRule};
   return cached;
 };
 
@@ -96,23 +87,19 @@ const library = () => {
  * IS, to somebody deciding whether to do the lesson, is the thing it lets you
  * do, so an action wins and a question is the next best.
  *
- * AND FAILING BOTH, THE TRAIT. Sixteen of the stock rules have no verb at all
- * — Arrow Keys, Gravity, Collisions — because what they give you is a way for
- * an actor to BE something. The block a learner writes for one of those is
- * `use trait ⟨Moves Across⟩`, and that is a truer picture of the lesson than
- * any getter it also happens to mint.
+ * AND FAILING BOTH, WHAT IT LETS YOU HEAR, OR READ. Sixteen of the stock
+ * rules have no verb at all — Arrow Keys, Gravity, Collisions — because what
+ * they give you is a way for an actor to BE something, chosen in the Actor
+ * Editor rather than written in code. What a learner writes for one of those
+ * is a handler for its event, or a read of its property.
  */
 export const blockForRule = (id: string): PreviewBlock | undefined => {
-  const {byRule, traitOf} = library();
+  const {byRule} = library();
   const types = byRule.get(id) ?? [];
-  const verb =
-    types.find(type => type.startsWith('world_do_')) ??
-    types.find(type => type.startsWith('world_query_'));
-  if (verb) {
-    return {type: verb};
-  }
-  const trait = traitOf.get(id);
-  return trait ? {type: 'world_use_trait', fields: {TRAIT: trait}} : undefined;
+  const shown = ['world_do_', 'world_query_', 'world_on_', 'world_get_']
+    .map(prefix => types.find(type => type.startsWith(prefix)))
+    .find(Boolean);
+  return shown ? {type: shown} : undefined;
 };
 
 /**

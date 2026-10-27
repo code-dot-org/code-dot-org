@@ -23,14 +23,12 @@ describe('the block a rule is drawn as', () => {
     });
   });
 
-  it('falls back to the TRAIT for a rule that has no verb', () => {
+  it('falls back to what a rule with no verb lets you hear, or read', () => {
     // Sixteen of the stock rules have none — what they give you is a way for
-    // an actor to BE something, and the block a learner writes for one of
-    // those is `use trait`, preset to the trait it gives.
-    expect(blockForRule('arrows')).toEqual({
-      type: 'world_use_trait',
-      fields: {TRAIT: 'Arrow Keys#MovesAcrossTrait'},
-    });
+    // an actor to BE something, chosen in the Actor Editor rather than
+    // written. What a learner writes for one of those is a handler for its
+    // event, or a read of its property.
+    expect(blockForRule('arrows')?.type).toMatch(/^world_(on|get)_ArrowKeys_/);
   });
 
   it('says nothing rather than guessing for a rule it cannot find', () => {
@@ -47,6 +45,8 @@ describe('the block a rule is drawn as', () => {
     );
 
     expect(granted.length).toBeGreaterThan(10);
-    expect(granted.filter(id => !blockForRule(id))).toEqual([]);
+    // …but for a rule that mints no block at all: Camera Confined is a trait
+    // ticked in the camera inspector, and nothing a learner writes.
+    expect(granted.filter(id => !blockForRule(id))).toEqual(['cameraConfined']);
   });
 });

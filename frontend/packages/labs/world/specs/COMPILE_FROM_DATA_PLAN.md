@@ -205,13 +205,23 @@ fixtures are written as rows and folded. In order, each its own commit:
    a rule, and `mapWorkspaces` writes a rule it rewrote back as data. The
    readers that walked the view unasked — `rulesInScope`, `standInBlocks`
    — view it themselves.
-5. Actors compile from data: the compiler and `parseActorOwnMeta` read
-   `traits` and `members`.
-6. Actors are written as data: the stock actors, the starter project, the
-   lessons, the fixtures and the enhancers.
-7. The two places that load these blocks into a live workspace — a tile's
-   trait preview, and an actor's code holding a member the data cannot —
-   and the stand-ins, which would mint the deleted types again.
+5. LATER. Actors compile from data: the compiler and `parseActorOwnMeta`
+   read `traits` and `members`.
+6. LATER. Actors are written as data: the stock actors, the starter
+   project, the lessons, the fixtures and the enhancers.
+
+   Neither is needed for the blocks to go. The compiler (`actorSheet`) and
+   `parseActorOwnMeta` walk an actor's rows as JSON and never load them
+   into a workspace, and the rows are what step 8 keeps as the view. Both
+   are a cleanup of the round trip, worth doing on their own account.
+
+7. BUILT. The two places that loaded these blocks into a live workspace. A
+   tile pictures a rule with no verb by a hat or a getter of its own, not
+   `use trait`; Camera Confined, which mints no block, is pictured by none.
+   An actor's data holds a block that reports, which it compiles to nothing,
+   as a member, and drops a `define block` or `define event` it cannot read,
+   so an actor's code never holds one. The stand-ins go with step 8: until
+   the types are deleted they are defined, and no stand-in is made for them.
 8. The definitions go, with the tables and branches that name them. The
    folds stay, for a file written in blocks and for the tutor, which
    proposes rules in blocks.

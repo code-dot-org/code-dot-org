@@ -162,14 +162,10 @@ export interface ActorMember {
 
 /**
  * Rows that are code: what the actor does, rather than what it is. In the
- * data shape each is a root of the workspace. `define block` and `define
- * event` are members (`readMember`), and code only when the data cannot hold
- * one whole.
+ * data shape each is a root of the workspace.
  */
 export const CODE_ROWS: ReadonlySet<string> = new Set([
   'world_define_drawing',
-  'world_rule_block',
-  'world_rule_event',
   'world_trait_step',
 ]);
 
@@ -195,6 +191,9 @@ const DECLARATION_ROWS: ReadonlySet<string> = new Set([
   'world_show_as',
   'world_rule_property',
   'world_actor_animations',
+  // A block or an event the data cannot read — `readMember` takes any it can.
+  'world_rule_block',
+  'world_rule_event',
 ]);
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
@@ -763,7 +762,10 @@ export function foldActor(
     const property = readProperty(row);
     const value = readValue(row);
     const effect = readEffect(row);
-    const member = readMember(row, members.length);
+    // Reporting or not: one that reports compiles to nothing in an actor
+    // (`actorSheet`), and is held so the data says everything it was written
+    // to say.
+    const member = readMember(row, members.length, {reports: true});
     if (trait !== undefined) {
       traits.push(trait);
     } else if (parent !== undefined && data.actsLike === undefined) {

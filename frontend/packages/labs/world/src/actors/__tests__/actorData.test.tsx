@@ -299,9 +299,9 @@ describe('an actor’s own blocks and events, folded', () => {
     ).toBe('New block');
   });
 
-  it('keeps a block that reports a value as code', () => {
-    // An actor's block cannot report yet (`actorBlockReports`), so the data
-    // has no way to say one; it stays as the row it was.
+  it('holds a block that reports a value as a member', () => {
+    // It compiles to nothing in an actor yet (`actorSheet`), but the data
+    // says it, so nothing an actor's code holds is a `define block`.
     const data = fold(
       actorFile('Asker', [
         {
@@ -312,8 +312,8 @@ describe('an actor’s own blocks and events, folded', () => {
       ]),
     );
 
-    expect(data.members).toBeUndefined();
-    expect(codeTypes(data)).toContain('world_rule_block');
+    expect(data.members?.[0]).toMatchObject({kind: 'block', returns: 'number'});
+    expect(codeTypes(data)).not.toContain('world_rule_block');
   });
 });
 
