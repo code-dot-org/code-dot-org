@@ -1,18 +1,14 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import classNames from 'classnames';
 import React from 'react';
 
 import {QuizQuestionSummary} from '../types';
 import {selectedAnswerLabel} from '../utils';
 
-import ChoiceLabel from './ChoiceLabel';
+import ChoiceAnswer from './ChoiceAnswer';
 import {
   ChoiceResultStatus,
   MultipleChoiceQuestionResponse,
   QuizQuestionResult,
 } from './types';
-
-import styles from './multiple-choice-answer.module.scss';
 
 type MultipleChoiceResult = QuizQuestionResult & MultipleChoiceQuestionResponse;
 
@@ -35,72 +31,38 @@ function getMultipleChoiceStatus(
   return isCorrectAnswer ? 'correct' : 'neutral';
 }
 
-// Not a RadioButton - these choices are no longer interactive.
+function getSrText(
+  status: ChoiceResultStatus,
+  answerLabel: string
+): string | undefined {
+  switch (status) {
+    case 'correct':
+      return 'Correct answer';
+    case 'incorrect':
+      return `${answerLabel}, incorrect`;
+    case 'selected_ungraded':
+      return answerLabel;
+  }
+}
+
 const MultipleChoiceAnswer: React.FunctionComponent<{
   question: QuizQuestionSummary;
   result: MultipleChoiceResult;
   isViewingStudent?: boolean;
-}> = ({question, result, isViewingStudent}) => (
-  <ul className={styles.choices}>
-    {(question.choices ?? []).map((choice, index) => {
-      const status = getMultipleChoiceStatus(choice.id, result);
-      const isSelectedChoice =
-        choice.id === result.responseData.selectedChoiceId;
+}> = ({question, result, isViewingStudent}) => {
+  const answerLabel = selectedAnswerLabel(isViewingStudent);
 
-      return (
-        <li
-          key={choice.id}
-          className={classNames(styles.option, {
-            [styles.optionCorrect]: status === 'correct',
-            [styles.optionIncorrect]: status === 'incorrect',
-            [styles.optionSelectedUngraded]: status === 'selected_ungraded',
-            [styles.optionNeutral]: status === 'neutral',
-          })}
-        >
-          <div className={styles.optionContent}>
-            <div
-              className={classNames(styles.radioVisual, {
-                [styles.radioVisualFilled]: isSelectedChoice,
-              })}
-              aria-hidden="true"
-            />
-            <ChoiceLabel
-              index={index}
-              text={choice.text}
-              className={styles.optionText}
-            />
-          </div>
-          {status === 'correct' && (
-            <>
-              <FontAwesomeV6Icon
-                iconName="check"
-                iconStyle="solid"
-                className={styles.correctIcon}
-              />
-              <span className={styles.srOnly}>Correct answer</span>
-            </>
-          )}
-          {status === 'incorrect' && (
-            <>
-              <FontAwesomeV6Icon
-                iconName="xmark"
-                iconStyle="solid"
-                className={styles.incorrectIcon}
-              />
-              <span className={styles.srOnly}>
-                {selectedAnswerLabel(isViewingStudent)}, incorrect
-              </span>
-            </>
-          )}
-          {status === 'selected_ungraded' && (
-            <span className={styles.srOnly}>
-              {selectedAnswerLabel(isViewingStudent)}
-            </span>
-          )}
-        </li>
-      );
-    })}
-  </ul>
-);
+  const choices = (question.choices ?? []).map(choice => {
+    const status = getMultipleChoiceStatus(choice.id, result);
+    return {
+      ...choice,
+      status,
+      isSelected: choice.id === result.responseData.selectedChoiceId,
+      srText: getSrText(status, answerLabel),
+    };
+  });
+
+  return <ChoiceAnswer indicator="radio" choices={choices} />;
+};
 
 export default MultipleChoiceAnswer;

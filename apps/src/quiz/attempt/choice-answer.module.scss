@@ -29,8 +29,23 @@
   min-width: 0;
 }
 
+.radio,
+.checkbox {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  background: var(--background-neutral-primary);
+  border: 2px solid var(--border-disabled-neutral);
+}
+
+.radio {
+  position: relative;
+  border-radius: 50%;
+}
+
 // Only the student's own pick is ever shown filled.
-.radioVisualFilled::after {
+.radioFilled::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -41,16 +56,31 @@
   border-radius: 50%;
 }
 
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--text-neutral-white-fixed);
+  border-radius: var(--shape-sm);
+}
+
 .optionCorrect {
   background: var(--background-success-light);
   border-color: var(--border-success-mid);
 
-  .radioVisual {
+  .radio,
+  .checkbox {
     border-color: var(--border-success-strong);
   }
 
-  .radioVisualFilled::after {
+  .radioFilled::after {
     background: var(--background-success-primary);
+  }
+
+  .checkboxChecked {
+    background: var(--background-success-primary);
+    border-color: var(--background-success-primary);
   }
 }
 
@@ -58,12 +88,17 @@
   background: var(--background-error-light);
   border-color: var(--border-error-mid);
 
-  .radioVisual {
+  .radio {
     border-color: var(--border-error-primary);
   }
 
-  .radioVisualFilled::after {
+  .radioFilled::after {
     background: var(--background-error-primary);
+  }
+
+  .checkboxChecked {
+    background: var(--background-error-primary);
+    border-color: var(--background-error-primary);
   }
 }
 
@@ -71,12 +106,18 @@
   background: var(--background-brand-light);
   border-color: var(--border-brand-light);
 
-  .radioVisual {
+  .radio {
     border-color: var(--border-selected-primary);
   }
 
-  .radioVisualFilled::after {
+  .radioFilled::after {
     background: var(--background-selected-primary);
+  }
+
+  .checkboxChecked {
+    color: var(--text-selected-primary);
+    background: var(--background-selected-primary);
+    border-color: var(--border-selected-primary);
   }
 }
 
@@ -84,17 +125,6 @@
   .optionText {
     color: var(--text-neutral-tertiary);
   }
-}
-
-.radioVisual {
-  position: relative;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  width: 20px;
-  height: 20px;
-  background: var(--background-neutral-primary);
-  border: 2px solid var(--border-disabled-neutral);
-  border-radius: 50%;
 }
 
 .optionText {

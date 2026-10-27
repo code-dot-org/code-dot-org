@@ -6,7 +6,7 @@ import React from 'react';
 import {QuizQuestionSummary} from '../types';
 import {selectedAnswerLabel} from '../utils';
 
-import ChoiceLabel from './ChoiceLabel';
+import ChoiceAnswer from './ChoiceAnswer';
 import {
   ChoiceResultStatus,
   MultipleSelectQuestionResponse,
@@ -33,7 +33,23 @@ function getMultipleSelectStatus(
   return isCorrectAnswer ? 'correct' : 'neutral';
 }
 
-// Not a Checkbox - these choices are no longer interactive.
+function getSrText(
+  status: ChoiceResultStatus,
+  isSelected: boolean,
+  answerLabel: string
+): string | undefined {
+  switch (status) {
+    case 'correct':
+      return isSelected
+        ? `${answerLabel}, correct`
+        : 'Correct answer, not selected';
+    case 'incorrect':
+      return `${answerLabel}, incorrect`;
+    case 'selected_ungraded':
+      return answerLabel;
+  }
+}
+
 const MultipleSelectAnswer: React.FunctionComponent<{
   question: QuizQuestionSummary;
   result: MultipleSelectResult;
@@ -43,78 +59,24 @@ const MultipleSelectAnswer: React.FunctionComponent<{
   const correctChoiceIds =
     result.correct === null ? null : result.correctChoiceIds ?? null;
   const answerLabel = selectedAnswerLabel(isViewingStudent);
+  const choices = (question.choices ?? []).map(choice => {
+    const isSelected = selectedChoiceIds.includes(choice.id);
+    const status = getMultipleSelectStatus(
+      isSelected,
+      correctChoiceIds,
+      choice.id
+    );
+    return {
+      ...choice,
+      status,
+      isSelected,
+      srText: getSrText(status, isSelected, answerLabel),
+    };
+  });
 
   return (
     <>
-      <ul className={styles.choices}>
-        {(question.choices ?? []).map((choice, index) => {
-          const isSelected = selectedChoiceIds.includes(choice.id);
-          const status = getMultipleSelectStatus(
-            isSelected,
-            correctChoiceIds,
-            choice.id
-          );
-
-          return (
-            <li
-              key={choice.id}
-              className={classNames(styles.option, {
-                [styles.optionCorrect]: status === 'correct',
-                [styles.optionIncorrect]: status === 'incorrect',
-                [styles.optionSelectedUngraded]: status === 'selected_ungraded',
-                [styles.optionNeutral]: status === 'neutral',
-              })}
-            >
-              <div className={styles.optionContent}>
-                <div
-                  className={classNames(styles.checkboxVisual, {
-                    [styles.checkboxVisualChecked]: isSelected,
-                  })}
-                  aria-hidden="true"
-                >
-                  {isSelected && (
-                    <FontAwesomeV6Icon iconName="check" iconStyle="solid" />
-                  )}
-                </div>
-                <ChoiceLabel
-                  index={index}
-                  text={choice.text}
-                  className={styles.optionText}
-                />
-              </div>
-              {status === 'correct' && (
-                <>
-                  <FontAwesomeV6Icon
-                    iconName="check"
-                    iconStyle="solid"
-                    className={styles.correctIcon}
-                  />
-                  <span className={styles.srOnly}>
-                    {isSelected
-                      ? `${answerLabel}, correct`
-                      : 'Correct answer, not selected'}
-                  </span>
-                </>
-              )}
-              {status === 'incorrect' && (
-                <>
-                  <FontAwesomeV6Icon
-                    iconName="xmark"
-                    iconStyle="solid"
-                    className={styles.incorrectIcon}
-                  />
-                  <span className={styles.srOnly}>
-                    {answerLabel}, incorrect
-                  </span>
-                </>
-              )}
-              {status === 'selected_ungraded' && (
-                <span className={styles.srOnly}>{answerLabel}</span>
-              )}
-            </li>
-          );
-        })}
-      </ul>
+      <ChoiceAnswer indicator="checkbox" choices={choices} />
       {result.correct !== null && !correctChoiceIds && (
         <Typography
           variant="body3"
