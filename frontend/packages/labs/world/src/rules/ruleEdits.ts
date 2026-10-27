@@ -25,6 +25,12 @@ import {
   type RuleProperty,
   type RuleTrait,
 } from './ruleData';
+import {
+  forgetPlacedProperty,
+  placedTraitUses,
+  renamePlacedProperty,
+  renamePlacedTrait,
+} from './rulePlacements';
 import {resolveRuleContents} from './ruleReference';
 
 /** Whose a property is: the rule's own, or the named trait's. */
@@ -351,12 +357,48 @@ export function renameProperty(
       [fileId]: {...file, contents: JSON.stringify(renamed, null, 2)},
     },
   };
-  return renameMemberInSource(
+  const followed = renameMemberInSource(
     declared,
     data.name,
     propertyKey(from),
     propertyKey(name),
   );
+  // A trait's property is overridden where its holders are placed.
+  return owner === null
+    ? followed
+    : renamePlacedProperty(followed, owner, from, name);
+}
+
+/**
+ * The project with a property of the rule in `fileId` gone: from the data,
+ * and from every placement that overrode it. Its blocks elsewhere are left,
+ * and say so in their own editors.
+ */
+export function deletePropertyInProject(
+  source: MultiFileSource,
+  fileId: string,
+  owner: Owner,
+  name: string,
+): MultiFileSource {
+  const file = source.files[fileId];
+  const data = ruleDataOf(file?.contents ?? '');
+  if (!data) {
+    return source;
+  }
+  const next = deleteProperty(data, owner, name);
+  if (next === data) {
+    return source;
+  }
+  const declared: MultiFileSource = {
+    ...source,
+    files: {
+      ...source.files,
+      [fileId]: {...file, contents: JSON.stringify(next, null, 2)},
+    },
+  };
+  return owner === null
+    ? declared
+    : forgetPlacedProperty(declared, owner, name);
 }
 
 /** What using the rule gives a world, as `use rule` names it in a menu. */
@@ -392,6 +434,100 @@ export function traitProblem(
     ? `This rule already has a trait called ${trimmed}.`
     : undefined;
 }
+
+/** How the rest of the project names one of this rule's traits. */
+export const traitReference = (rule: string, name: string): string =>
+  `${rule}#${traitKey(name)}`;
+
+/**
+ * The files that name a trait of the rule in `fileId`, by file id: an actor
+ * taking it, a rule or trait needing it, a placement overriding it.
+ */
+export function traitUses(
+  source: MultiFileSource,
+  fileId: string,
+  rule: string,
+  name: string,
+): string[] {
+  const reference = JSON.stringify(traitReference(rule, name));
+  const placed = new Set(
+    placedTraitUses(source, traitReference(rule, name), name),
+  );
+  return Object.entries(source.files)
+    .filter(([id]) => id !== fileId)
+    .filter(
+      ([id, file]) =>
+        placed.has(id) ||
+        resolveRuleContents(file.contents ?? '').includes(reference),
+    )
+    .map(([id]) => id);
+}
+
+/**
+ * The project with a trait of the rule in `fileId` called `to`: its
+ * declaration, every reference to it, and every placement's overrides of
+ * it. The same project when the name will not do.
+ */
+export function renameTrait(
+  source: MultiFileSource,
+  fileId: string,
+  from: string,
+  to: string,
+): MultiFileSource {
+  const file = source.files[fileId];
+  const data = ruleDataOf(file?.contents ?? '');
+  const name = to.trim();
+  if (
+    !data ||
+    name === from ||
+    traitProblem(data, name, from) ||
+    !(data.traits ?? []).some(trait => trait.name === from)
+  ) {
+    return source;
+  }
+  const renamed: RuleData = {
+    ...data,
+    traits: data.traits!.map(trait =>
+      trait.name === from ? {...trait, name} : trait,
+    ),
+  };
+  const declared: MultiFileSource = {
+    ...source,
+    files: {
+      ...source.files,
+      [fileId]: {...file, contents: JSON.stringify(renamed, null, 2)},
+    },
+  };
+  const followed = renameMemberInSource(
+    declared,
+    data.name,
+    traitKey(from),
+    traitKey(name),
+  );
+  return renamePlacedTrait(
+    followed,
+    {
+      from: traitReference(data.name, from),
+      to: traitReference(data.name, name),
+    },
+    {from, to: name},
+  );
+}
+
+/** The data without a trait, and so without all it declared. */
+export const deleteTrait = (data: RuleData, name: string): RuleData => {
+  const traits = (data.traits ?? []).filter(trait => trait.name !== name);
+  if (traits.length === (data.traits ?? []).length) {
+    return data;
+  }
+  const next = {...data};
+  if (traits.length) {
+    next.traits = traits;
+  } else {
+    delete next.traits;
+  }
+  return next;
+};
 
 export function addTrait(data: RuleData, name: string): RuleData {
   const trimmed = name.trim();
