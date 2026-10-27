@@ -4,6 +4,7 @@ import React from 'react';
 import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getIdColumn} from '../selectors';
 import type {TableView} from '../types';
 
 import CellText from './CellText';
@@ -12,6 +13,7 @@ import ColumnHeader from './ColumnHeader';
 import tableStyles from './dataTable.module.scss';
 
 export const PREDICTION_COLUMN = Symbol('AI prediction');
+export const PREDICTION_COLUMN_NAME = 'AI predicts';
 
 interface RowsTableHeaderProps {
   columns: string[];
@@ -26,6 +28,7 @@ const RowsTableHeader = ({
 }: RowsTableHeaderProps) => {
   const {project} = useProject();
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const idColumn = useAppSelector(getIdColumn);
 
   return (
     <tr>
@@ -33,7 +36,8 @@ const RowsTableHeader = ({
         className={classNames(
           tableStyles.indexCell,
           tableStyles.indexHeader,
-          tableStyles.indexColumn
+          tableStyles.indexColumn,
+          {[tableStyles.frozenIndex]: idColumn}
         )}
         aria-label="Row"
       />
@@ -49,6 +53,7 @@ const RowsTableHeader = ({
             className={classNames(tableStyles.header, {
               [tableStyles.headerLabel]: role === 'label',
               [tableStyles.headerFeature]: role === 'feature',
+              [tableStyles.idHeader]: column === idColumn,
             })}
           >
             <CellText>{columnName}</CellText>
@@ -58,11 +63,11 @@ const RowsTableHeader = ({
       {showPrediction && (
         <ColumnHeader
           column={PREDICTION_COLUMN}
-          name="AI predicts"
+          name={PREDICTION_COLUMN_NAME}
           view={view}
           className={classNames(tableStyles.header, tableStyles.headerLabel)}
         >
-          <CellText>AI predicts</CellText>
+          <CellText>{PREDICTION_COLUMN_NAME}</CellText>
         </ColumnHeader>
       )}
     </tr>

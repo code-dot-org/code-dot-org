@@ -18,6 +18,7 @@ import type {EdgeMarkerType} from '@xyflow/system';
 import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, CSSProperties, LazyExoticComponent} from 'react';
 
+import type {AilabProject} from '@cdo/apps/ailab/engine/types';
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
@@ -104,7 +105,8 @@ export type Source =
   | BlocklySource
   | MultiFileSource
   | ExcalidrawSourceWithExternalFiles
-  | SketchlabReactFlowSource;
+  | SketchlabReactFlowSource
+  | AilabProject;
 
 // -- REACT FLOW SKETCH LAB -- //
 

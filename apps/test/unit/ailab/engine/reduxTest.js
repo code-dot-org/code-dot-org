@@ -18,7 +18,7 @@ import reducer, {
   saveModel,
   setTrainingModalStep,
 } from '@cdo/apps/ailab/engine/redux';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 describe('ailab reducer', () => {
   describe('instructionsEnabled gates the panel overlay', () => {
@@ -183,7 +183,7 @@ describe('ailab reducer', () => {
       state = reducer(state, setReserveLocation('random'));
       state = reducer(state, setCurrentColumn('a'));
       state = reducer(state, setCurrentPanel('results'));
-      const next = reducer(state, resetState(/*keepsPendingProject*/ false));
+      const next = reducer(state, resetState());
       expect(next.mode).toEqual({datasets: ['d1']});
       expect(next.reserveLocation).toBe('random');
       expect(next.currentColumn).toBeUndefined();
@@ -192,7 +192,7 @@ describe('ailab reducer', () => {
 
     test('preserves instructionsEnabled through reset', () => {
       const enabled = reducer(initialState, setInstructionsEnabled(true));
-      const next = reducer(enabled, resetState(/*keepsPendingProject*/ false));
+      const next = reducer(enabled, resetState());
       expect(next.instructionsEnabled).toBe(true);
     });
   });
@@ -246,7 +246,7 @@ describe('ailab reducer', () => {
       };
       saveModel(
         save,
-        {...initialProject, labelColumn: 'a'},
+        {...defaultProject, labelColumn: 'a'},
         trainedModel
       )(
         action => actions.push(action),

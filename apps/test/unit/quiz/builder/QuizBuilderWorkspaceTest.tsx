@@ -13,7 +13,9 @@ jest.mock('@cdo/apps/quiz/builder/useQuizBuilderQuestions');
 const mockUseQuizBuilderQuestions = jest.mocked(useQuizBuilderQuestions);
 
 const question = (
-  overrides: Partial<QuizBuilderQuestion> = {}
+  overrides: Partial<
+    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}>
+  > = {}
 ): QuizBuilderQuestion => ({
   id: 1,
   type: 'MultipleChoiceQuestion',

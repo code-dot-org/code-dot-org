@@ -1,0 +1,30 @@
+name 'csp-unit2-lesson12-cfu1_27_28'
+title 'Check Your Understanding'
+description ''
+question 'What does the program print?'
+wrong '`12`'
+wrong '`10`'
+right '`7`'
+wrong '`9`'
+allow_multiple_attempts false
+
+teacher_markdown <<MARKDOWN
+Teacher solution and distractor rationale:
+
+- `12`: Treats both conditions as false, or ignores both blocks.
+- `10`: Applies only the member rule to 12. Misses that the first block already changed `price` to 9.
+- `7`: (correct): Both `if` statements run independently, in order. `price` becomes 9, then 9 - 2 = 7.
+- `9`: Treats the two `if` statements as one decision where only one block can run. Sequential `if` statements each run when their condition is true (2.3.B.7).
+MARKDOWN
+markdown <<MARKDOWN
+A program has `age = 15` and `is_member = True`, then runs this code:
+
+```python
+price = 12
+if age < 18:
+    price = 9
+if is_member:
+    price = price - 2
+print(price)
+```
+MARKDOWN

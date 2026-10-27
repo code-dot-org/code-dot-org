@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-21 15:59:30 UTC",
+    "serialized_at": "2026-10-26 17:26:10 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -182,6 +182,21 @@
         "lesson_group.key": "",
         "script.name": "csp-unit2-dev-27-28"
       }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Lesson 12: Conditionals - Day 4 (Make)",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
     }
   ],
   "lesson_activities": [
@@ -225,6 +240,8 @@
       "key": "939651e7-8197-42be-af3a-3b4f9891aad2",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "939651e7-8197-42be-af3a-3b4f9891aad2",
@@ -237,10 +254,62 @@
       "key": "f9c83858-4209-49cd-98e0-cb5b0556d6b0",
       "position": 2,
       "properties": {
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "f9c83858-4209-49cd-98e0-cb5b0556d6b0",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
+    },
+    {
+      "key": "2d02d548-0853-4731-aa9a-e422a578fa28",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2d02d548-0853-4731-aa9a-e422a578fa28",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
+    },
+    {
+      "key": "e5659d20-9513-4a10-8afa-08369be9691e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e5659d20-9513-4a10-8afa-08369be9691e",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
+    },
+    {
+      "key": "6485f470-96b5-45db-b5dc-d263de38beea",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6485f470-96b5-45db-b5dc-d263de38beea",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28"
+      }
+    },
+    {
+      "key": "d6f13e99-be5a-42eb-9353-85e7c679d0dd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6f13e99-be5a-42eb-9353-85e7c679d0dd",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "csp-unit2-dev-27-28"
       }
@@ -281,6 +350,13 @@
       "key": "cc762483-540d-4700-99d7-6148bf6d3f5b",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students connect the Boolean reasoning from Lesson 6’s unplugged activity to real Python syntax, seeing that and, or, and not behave the same way the words did with the sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a moment to think and predict the output for each line. Before revealing the answer, have students vote — stand, give a thumbs up, or raise their hand — first for who thinks the output is True, then for who thinks it’s False. If time allows, ask a student to share their reasoning each time. Reveal the output, then repeat for lines two and three.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Let students know this is not a test and they can refer to their unit guide if needed. If the class is split on a prediction, let the disagreement sit for a moment before revealing the answer — that tension is what makes the reveal useful, and rushing past it removes the incentive to reason it through."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cc762483-540d-4700-99d7-6148bf6d3f5b",
@@ -301,6 +377,8 @@
       "key": "8ce4c60d-ff08-4232-a485-3704fad78e4f",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build confidence reading Boolean expressions in code before writing any of their own, confirming predictions from the warm-up and extending that reasoning to new lines and to a working Neighborhood program.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 and 2.\n- **Level 1:** Students confirm their warm-up predictions, then predict four new lines that complete the and/or truth table.\n- **Level 2:** Students work in the Neighborhood to predict the Painter’s movement and console output.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** In Level 1, watch for students treating lines four through seven as guesses rather than reasoning through them, even though they correctly confirmed lines one through three. In Level 2, watch for students who can predict the Painter’s physical movement but not the Boolean output, or the reverse — that mismatch is worth naming for the Notice & Wonder discussion that follows.",
+        "duration": "10",
         "progression_name": "Predict & Run"
       },
       "seeding_key": {
@@ -312,6 +390,13 @@
       "key": "667e7271-618f-48a9-89ff-52a563d23da4",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *What did you notice about the code in these programs?*\n- *What do you wonder about the code in these programs?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that True and True isn’t “more true” than a single True, that False or False is the one case where or doesn’t rescue the result, and that not simply flips one value. From the Neighborhood level, surface that can_move() and has_paint() can each change value between the first check and the ready calculation — push students to identify which one flipped and why. Students may also wonder why on_something came out True from is_on_paint() alone, with is_on_bucket() sitting right there as False.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These open-ended prompts work because almost any observation is a valid answer — there’s no wrong “notice.” If the room is quiet, start with something low-stakes like “What’s something that got printed to the console in either program?” — any answer a student gives is already a Boolean value or tied to one, which makes it easy to follow up with “was that the result you expected?”"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "667e7271-618f-48a9-89ff-52a563d23da4",
@@ -322,6 +407,8 @@
       "key": "e4d41ef0-df5d-458c-a48a-4fc50d53f50c",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students tinker with the compound expressions from Level 2, swapping operators and adding not, to build their own hypotheses about how and, or, and not each change a result — setting up Direct Instruction to confirm and formalize what they’ve noticed.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 3 to tinker with the code and investigate what happens when they add a second **take_paint()**, change an **and** to an **or** (or the reverse) or add a **not** to a statement.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students changing more than one thing at once — the point is isolating a single swap per run. Watch for students confused that adding a second **take_paint()** doesn’t change **has_paint()**’s value; that’s a good moment to point out that it’s a yes/no check, not a count. Also watch for students who predict correctly but can’t yet say why the operator mattered — push them to name which side of the expression was true or false before and after.",
+        "duration": "10",
         "progression_name": "Investigate"
       },
       "seeding_key": {
@@ -333,6 +420,13 @@
       "key": "063f99d8-9118-403a-ba09-459d3ad89fee",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point out that **and**, **or**, and **not** are the same logical operators from Lesson 6, now written as lowercase Python keywords. Ask students to find each one in the code and say out loud what it means in plain English.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If a student asks what happens with the wrong capitalization, you can demonstrate live: typing **And** instead of **and** produces **NameError: name 'And' is not defined** — Python treats it as an undefined variable name rather than a keyword, since case matters."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "063f99d8-9118-403a-ba09-459d3ad89fee",
@@ -343,11 +437,94 @@
       "key": "fc019ce0-3e50-4d6a-9eae-57abda5c975c",
       "position": 6,
       "properties": {
-        "progression_name": "Modify"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students extend the Painter program by writing two compound Boolean expressions of their own, combining **and**, **or**, and **not** to check whether it’s safe to paint and whether the Painter needs more supplies.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 4 to complete Levels 4 through 6.\n- **Level 4:** Students extend the Neighborhood program, creating **ready_to_paint** and **needs_supplies** variables by combining Painter commands with **and**, **or**, and **not**.\n- **Level 5:** Students complete a multiple-choice check on evaluating a compound Boolean expression.\n- **Level 6:** Students complete a free-response check on how changing a logical operator changes a program’s behavior.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students unsure which command not should apply to in ready_to_paint or needs_supplies — point them back to the instructions’ “True if X, or True if Y” phrasing rather than telling them the placement directly. Watch for students who skip turning around and testing a second time at the end — both checks should flip values between the first and second run; if a student’s second check doesn’t flip, they likely copied the first line without recomputing it against the new position.",
+        "duration": "15",
+        "progression_name": "Modify",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Levels 5 and 6 are Check for Understanding levels that formatively assess this lesson’s objectives. Level 5 (multiple choice) checks whether students can determine the result of a compound Boolean expression. Level 6 (free response) checks whether students can explain how changing a logical operator changes a program’s behavior."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fc019ce0-3e50-4d6a-9eae-57abda5c975c",
         "lesson_activity.key": "f9c83858-4209-49cd-98e0-cb5b0556d6b0"
+      }
+    },
+    {
+      "key": "3c204f88-97e5-4212-98bf-d6a843a2ec29",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives."
+      },
+      "seeding_key": {
+        "activity_section.key": "3c204f88-97e5-4212-98bf-d6a843a2ec29",
+        "lesson_activity.key": "2d02d548-0853-4731-aa9a-e422a578fa28"
+      }
+    },
+    {
+      "key": "3c434ba0-2473-4135-8751-f786d77cb791",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3c434ba0-2473-4135-8751-f786d77cb791",
+        "lesson_activity.key": "e5659d20-9513-4a10-8afa-08369be9691e"
+      }
+    },
+    {
+      "key": "3a4f9b0f-affa-4326-b7a5-662fa248cdb9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3a4f9b0f-affa-4326-b7a5-662fa248cdb9",
+        "lesson_activity.key": "6485f470-96b5-45db-b5dc-d263de38beea"
+      }
+    },
+    {
+      "key": "7dc7dc66-43a0-4cd8-b647-15642bd88612",
+      "position": 2,
+      "properties": {
+        "progression_name": "Make"
+      },
+      "seeding_key": {
+        "activity_section.key": "7dc7dc66-43a0-4cd8-b647-15642bd88612",
+        "lesson_activity.key": "6485f470-96b5-45db-b5dc-d263de38beea"
+      }
+    },
+    {
+      "key": "64b31207-ebec-458c-bf7a-a5c0f8cc39ef",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "64b31207-ebec-458c-bf7a-a5c0f8cc39ef",
+        "lesson_activity.key": "6485f470-96b5-45db-b5dc-d263de38beea"
+      }
+    },
+    {
+      "key": "d6b4d77f-7ac2-47dc-aef1-0e483ffe1c5e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Make"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6b4d77f-7ac2-47dc-aef1-0e483ffe1c5e",
+        "lesson_activity.key": "d6f13e99-be5a-42eb-9353-85e7c679d0dd"
+      }
+    },
+    {
+      "key": "7af6c02f-9ae8-4ea7-bfa5-54b34191a80e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "7af6c02f-9ae8-4ea7-bfa5-54b34191a80e",
+        "lesson_activity.key": "d6f13e99-be5a-42eb-9353-85e7c679d0dd"
       }
     }
   ],
@@ -483,6 +660,160 @@
       "level_keys": [
         "csp-unit2-lesson7-cfu2_27_28"
       ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson8-make-console_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "7dc7dc66-43a0-4cd8-b647-15642bd88612"
+      },
+      "level_keys": [
+        "csp-unit2-lesson8-make-console_27_28"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson8-make-psswd_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "7dc7dc66-43a0-4cd8-b647-15642bd88612"
+      },
+      "level_keys": [
+        "csp-unit2-lesson8-make-psswd_27_28"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson8-cfu1_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "64b31207-ebec-458c-bf7a-a5c0f8cc39ef"
+      },
+      "level_keys": [
+        "csp-unit2-lesson8-cfu1_27_28"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson8-cfu2_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "64b31207-ebec-458c-bf7a-a5c0f8cc39ef"
+      },
+      "level_keys": [
+        "csp-unit2-lesson8-cfu2_27_28"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson12-make-museum_27_28"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "d6b4d77f-7ac2-47dc-aef1-0e483ffe1c5e"
+      },
+      "level_keys": [
+        "csp-unit2-lesson12-make-museum_27_28"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson12-cfu1_27_28"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "7af6c02f-9ae8-4ea7-bfa5-54b34191a80e"
+      },
+      "level_keys": [
+        "csp-unit2-lesson12-cfu1_27_28"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit2-lesson12-cfu2_27_28"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "7af6c02f-9ae8-4ea7-bfa5-54b34191a80e"
+      },
+      "level_keys": [
+        "csp-unit2-lesson12-cfu2_27_28"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -556,6 +887,90 @@
         "lesson_group.key": "",
         "script.name": "csp-unit2-dev-27-28",
         "activity_section.key": "fc019ce0-3e50-4d6a-9eae-57abda5c975c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson8-make-console_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson8-make-console_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "7dc7dc66-43a0-4cd8-b647-15642bd88612"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson8-make-psswd_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson8-make-psswd_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "7dc7dc66-43a0-4cd8-b647-15642bd88612"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson8-cfu1_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson8-cfu1_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "64b31207-ebec-458c-bf7a-a5c0f8cc39ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson8-cfu2_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson8-cfu2_27_28"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "64b31207-ebec-458c-bf7a-a5c0f8cc39ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson12-make-museum_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson12-make-museum_27_28"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "d6b4d77f-7ac2-47dc-aef1-0e483ffe1c5e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson12-cfu1_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson12-cfu1_27_28"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "7af6c02f-9ae8-4ea7-bfa5-54b34191a80e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit2-lesson12-cfu2_27_28",
+        "script_level.level_keys": [
+          "csp-unit2-lesson12-cfu2_27_28"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "csp-unit2-dev-27-28",
+        "activity_section.key": "7af6c02f-9ae8-4ea7-bfa5-54b34191a80e"
       }
     }
   ],

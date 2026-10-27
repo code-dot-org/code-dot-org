@@ -8,6 +8,7 @@ import {
   sendTaEvent,
   takeTaPanelEntryPoint,
 } from '@cdo/apps/aiTeacherDrawer/analytics';
+import {takeDrawerReopenNav} from '@cdo/apps/aiTeacherDrawer/drawerReopen';
 import {
   setChatIsOpen,
   fetchThreadMessages,
@@ -139,6 +140,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       );
     }
   }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
+
+  // Deliberately not gated on canStartOpen: level pages pass that as false to
+  // stop the drawer opening on its own, but this is the tail end of a click
+  // the teacher already made (see drawerReopen). Declared after the auto-open
+  // effect above so it is not immediately undone by it on mount.
+  React.useEffect(() => {
+    const reopenNav = takeDrawerReopenNav();
+    if (reopenNav) {
+      noteTaPanelEntryPoint('student_navigation');
+      dispatch(openDrawerToNav(reopenNav));
+    }
+  }, [dispatch]);
 
   const updateUnreadNotificationCount = React.useCallback(() => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
