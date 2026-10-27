@@ -1,6 +1,6 @@
 # Plan: lessons as screens
 
-STATUS: IN PROGRESS, October 2026. Steps 0 to 3 are built.
+STATUS: BUILT, October 2026.
 
 A game is a Main Screen whose Viewport is docked over the whole surface and
 shows `main.map` (specs/SCREEN_MAP_PLAN.md). Every stock game is written
@@ -166,13 +166,35 @@ match with their positions and velocities left out.
 
 The comparison of step 1 holds: all 79 lessons build the same game.
 
-### 4. The rest of `.world`
+### 4. The rest of `.world` — BUILT
 
-The empty world project, tapper and novel move the same way. Then nothing
-writes a `.world`, and the World Editor, `worldFileDocument`, the world's
-main map (`generateMainMap`, `withWorldCameras`) and the `.world` file kind
-are deleted. `define world` stays: the Main Screen compiles to it
-(`screenSetupRows`).
+- **The last worlds.** Tapper and novel are still written as worlds and go
+  through the converter. A test that writes its game as a world, as about
+  fifty do, is compiled as the screen it stands for
+  (`__tests__/support/worldAsScreen`): its level on the Main Screen itself,
+  one space as the world was, unless a camera or a level theme needs a
+  Viewport. The converter carries a world's events and theme into the
+  screen's data, which no lesson had. The actor-demo recorder compiles
+  through the same helper.
+- **The game's enhancements.** A camera that follows is a camera on the
+  Game Viewport, which it looks through; the scoreboard is a placement on
+  the Main Screen, docked in a bar above the game. Both had looked for a
+  `.world`, and neither could be asked for on a screen; the Main Screen's
+  properties offer them.
+- **What read the world.** The map editor's window is the Main Screen's
+  size; the stills' theme, the style preview's and a stock map's events are
+  the Main Screen's; the tutor is sent screens and maps and writes back
+  with `buildScreen` and `buildMap`.
+- **Deleted.** The World Editor, `worldFileDocument` and the world
+  inspector's readers; the compiler's world route and main map; a map's
+  `mainCamera`, `cameras` and `startingCamera`, the world camera list and
+  the stored cameras; `.world` as a file kind, icon, folder, seed and
+  extension; and the world fallbacks in the entry file, the reveals, the
+  scanners and the stock map import.
+
+`define world` stays as a block, and `world` as the file kind of the
+game's own code (`fileKind`). Whether `define world` goes is
+COMPILE_FROM_DATA_PLAN.md's step 5.
 
 ## Open
 
@@ -181,9 +203,6 @@ actors⟩` reaches the screen's Viewport as well as the level's actors, and
   a loop that sets every picture sets the Viewport's. The probes read the
   level; whether the block should, from code that runs in it, is a language
   question.
-- **The tutor** sends `.world` and `.actor` files whole, and no `.screen` or
-  `.map` (`aiTutor/context`), which was already so for every stock game. It
-  writes back with `buildWorld`.
 - **The memory lessons' story.** memory/actor-state says a Lamp's text
   cannot live on its placement because an actor cannot read the world. On a
   screen, the row moves under `when this screen loads` and reads the world

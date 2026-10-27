@@ -1,6 +1,7 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: IN PROGRESS, October 2026. Steps 0 to 2 are built.
+STATUS: IN PROGRESS, October 2026. Steps 0 to 3 are built, and step 4 but
+for its last sentence.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -113,18 +114,19 @@ the lessons and the stock shelf, 286 of them actors, each block given a
 fixed id first: the same code, but for the order of the names on the first
 `var` line in the list actor.
 
-### 3. Lessons as screens
+### 3. Lessons as screens — BUILT
 
 Its own plan: specs/LESSONS_AS_SCREENS_PLAN.md. A lesson's `main.world` holds
 a whole program, not only a main map, so moving it is a rewrite of what 79
 lessons open on.
 
-### 4. Cameras only on Viewports
+### 4. Cameras only on Viewports — BUILT, but for the last sentence
 
-`mainCamera`, `cameras` and `startingCamera` leave the map, with the World
-Editor's Map tab, the world camera list, `worldCameras`, `worldCameraCode`
-and `withWorldCameras`. `withCameraDeclarations` writes `defineCamera`
-calls, not blocks.
+`mainCamera`, `cameras` and `startingCamera` have left the map, with the
+World Editor's Map tab, the world camera list, `worldCameras`,
+`worldCameraCode`'s reader and `withWorldCameras`
+(LESSONS_AS_SCREENS_PLAN.md, step 4). Still to do: `withCameraDeclarations`
+writes `defineCamera` calls, not blocks.
 
 ### 5. The blocks go
 
