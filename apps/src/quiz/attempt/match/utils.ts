@@ -2,7 +2,10 @@ import {formatChoiceLetter} from '@cdo/apps/quiz/utils';
 
 import {MatchItem, MatchPairs, MatchSets, MatchSide} from './types';
 
-export function itemsOn(matchSets: MatchSets, side: MatchSide): MatchItem[] {
+export function itemsInColumn(
+  matchSets: MatchSets,
+  side: MatchSide
+): MatchItem[] {
   return matchSets[side === 'start' ? 0 : 1];
 }
 
@@ -46,15 +49,19 @@ export function partnerOf(pairs: MatchPairs, id: string): string | undefined {
 
 // Each start item has a letter by position.
 export function letterOf(matchSets: MatchSets, id: string): string | undefined {
-  const index = itemsOn(matchSets, 'start').findIndex(item => item.id === id);
+  const index = itemsInColumn(matchSets, 'start').findIndex(
+    item => item.id === id
+  );
   return index === -1 ? undefined : formatChoiceLetter(index);
 }
 
 // For accessible names: a start item's label leads with its letter.
 export function labelOf(matchSets: MatchSets, id: string): string | undefined {
-  const startItem = itemsOn(matchSets, 'start').find(item => item.id === id);
+  const startItem = itemsInColumn(matchSets, 'start').find(
+    item => item.id === id
+  );
   if (startItem) {
     return `${letterOf(matchSets, id)}. ${startItem.text}`;
   }
-  return itemsOn(matchSets, 'end').find(item => item.id === id)?.text;
+  return itemsInColumn(matchSets, 'end').find(item => item.id === id)?.text;
 }
