@@ -50,8 +50,10 @@ import {standInBlocks} from '../blockly/standInBlocks';
 import {withoutBlocks, withoutEmptyHeadings} from '../blockly/toolboxFilter';
 import {DesignSystemToolboxPlugin, withAddRules} from '../blockly/toolboxStyle';
 import {useSectionWorkspace} from '../blockly/useSectionWorkspace';
+import {markCode} from '../blockly/workspaceRoots';
 import {useWorldBlocklyTheme} from '../blockly/worldBlocklyTheme';
 import {refreshFor} from '../library/refreshRegistries';
+import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {projectFiles} from '../runtime/projectFiles';
 
 import styles from './mapEditor.module.css';
@@ -255,7 +257,16 @@ export const PlacementScriptEditor = ({
           <BlocklyWorkspace
             key={isReadOnly ? 'read-only' : 'editable'}
             className={styles.scriptWorkspace}
-            onInject={sections.onInject}
+            onInject={workspace => {
+              // The Main Screen's code is a world's (`markCode`).
+              markCode(
+                workspace,
+                kind === 'screen' && mapModule === MAIN_SCREEN_PATH
+                  ? 'world'
+                  : undefined,
+              );
+              sections.onInject(workspace);
+            }}
             startBlocks={startBlocks}
             toolbox={localizedToolbox}
             options={options}

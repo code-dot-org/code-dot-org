@@ -20,12 +20,19 @@ const DEFINE_WORLD = 'world_world';
 
 const DEFINE_RULE = 'world_rule';
 
-/** Set on a workspace that holds part of a rule without its `define rule`. */
-type RuleWorkspace = {holdsRule?: boolean};
+/**
+ * What file a workspace is the code of, when its roots do not say: a rule's
+ * page or bodies hold no `define rule`, and the Main Screen's code no `define
+ * world`, though it is a world's (`markCode`).
+ */
+type MarkedWorkspace = {holdsCodeOf?: 'rule' | 'world'};
+
+const markOf = (workspace: Blockly.Workspace | undefined) =>
+  (workspace as MarkedWorkspace | undefined)?.holdsCodeOf;
 
 /**
  * Whether this workspace is a RULE — i.e. whether a `define rule` is in it,
- * or it holds a rule's bodies (`markRule`).
+ * or it is marked as a rule's (`markCode`).
  *
  * Read off the workspace rather than off the file's name for the reason
  * `ownTraitOptions` reads its traits that way: a registry refreshes on a parse,
@@ -35,17 +42,15 @@ type RuleWorkspace = {holdsRule?: boolean};
 export const definesRule = (
   workspace: Blockly.Workspace | undefined,
 ): boolean =>
-  Boolean(
-    (workspace as RuleWorkspace | undefined)?.holdsRule ||
-      workspace?.getTopBlocks(false).some(b => b.type === DEFINE_RULE),
-  );
+  markOf(workspace) === 'rule' ||
+  Boolean(workspace?.getTopBlocks(false).some(b => b.type === DEFINE_RULE));
 
-/** Marks a workspace as holding a rule's bodies, as a page or the compiler does. */
-export const markRule = (
+/** Marks a workspace as the code of a rule or a world, or of neither. */
+export const markCode = (
   workspace: Blockly.Workspace,
-  holds: boolean,
+  of: 'rule' | 'world' | undefined,
 ): void => {
-  (workspace as RuleWorkspace).holdsRule = holds;
+  (workspace as MarkedWorkspace).holdsCodeOf = of;
 };
 
 /**
@@ -69,10 +74,14 @@ export const workspaceOfBlock = (
   );
 };
 
-/** Whether this workspace is a world — i.e. whether a `define world` is in it. */
+/**
+ * Whether this workspace is a world — i.e. whether a `define world` is in it,
+ * or it is marked as a world's, as the Main Screen's code is (`markCode`).
+ */
 export const definesWorld = (
   workspace: Blockly.Workspace | undefined,
 ): boolean =>
+  markOf(workspace) === 'world' ||
   Boolean(workspace?.getTopBlocks(false).some(b => b.type === DEFINE_WORLD));
 
 /**

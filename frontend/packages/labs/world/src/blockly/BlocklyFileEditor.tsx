@@ -115,7 +115,7 @@ import {
 } from './toolboxFilter';
 import {DesignSystemToolboxPlugin, withAddRules} from './toolboxStyle';
 import {useSectionWorkspace} from './useSectionWorkspace';
-import {markRule} from './workspaceRoots';
+import {markCode} from './workspaceRoots';
 import {useWorldBlocklyTheme} from './worldBlocklyTheme';
 
 // Distinct connector nubs for the lab's own value types, so they read apart from
@@ -913,7 +913,7 @@ export const BlocklyFileEditor = ({
   const onInject = useCallback(
     (workspace: Blockly.WorkspaceSvg) => {
       // A rule's page holds a body and no `define rule` (`definesRule`).
-      markRule(workspace, fileKind === 'rule');
+      markCode(workspace, fileKind === 'rule' ? 'rule' : undefined);
       injectSections(workspace);
       registerLessonButtons(workspace);
     },
@@ -921,7 +921,7 @@ export const BlocklyFileEditor = ({
   );
   useEffect(() => {
     if (workspaceRef.current) {
-      markRule(workspaceRef.current, fileKind === 'rule');
+      markCode(workspaceRef.current, fileKind === 'rule' ? 'rule' : undefined);
     }
   }, [fileKind]);
 

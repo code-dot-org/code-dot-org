@@ -73,7 +73,7 @@ import {
 } from './screenData';
 import {standInBlocks} from './standInBlocks';
 import {traitSubjectOfValue} from './traitOptions';
-import {markRule} from './workspaceRoots';
+import {markCode} from './workspaceRoots';
 
 // Headless Blockly → world-lab code generation for `.rule`/`.actor` files
 // (INTERFACE.md). Blockly's generator lives on a workspace, so an offscreen
@@ -504,6 +504,9 @@ function generateMainScreen(
   const load = generateLoad(generator, workspace, map, modulePath, rootTypes);
 
   workspace.clear();
+  // The screen's own code is a world's, though no `define world` is among
+  // its roots; its placements' code, generated above, is each placement's.
+  markCode(workspace, 'world');
   Blockly.serialization.workspaces.load(blocks ?? {}, workspace);
   const topBlocks = workspace
     .getTopBlocks(true)
@@ -523,6 +526,7 @@ function generateMainScreen(
     id: block.id,
     code: asString(generator.blockToCode(block, rootTypes.has(block.type))),
   }));
+  markCode(workspace, undefined);
   const setup = screenSetupRows(data);
   const rows = setup
     ? asString(
@@ -716,7 +720,9 @@ export const BlocklyGenerator = forwardRef<
         // with, and only the serialized state / generated body is read. Set on
         // every call, before any block loads.
         (workspace as {isRuleGenerator?: boolean}).isRuleGenerator = true;
-        markRule(workspace, fileKindOf(path) === 'rule');
+        // A rule's bodies are a rule's, with no `define rule` among them
+        // (`markCode`); the Main Screen marks its own (`generateMainScreen`).
+        markCode(workspace, fileKindOf(path) === 'rule' ? 'rule' : undefined);
         generator.addReservedWords(
           'actor,camera,world,eventValue,delta,map,placed,mapData',
         );
