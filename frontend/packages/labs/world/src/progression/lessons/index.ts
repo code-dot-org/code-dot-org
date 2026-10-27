@@ -6286,12 +6286,12 @@ const actorState: WorldScenario = {
   // `actors`, because it acts like the Label and declares nothing of its own
   // until the learner adds the property — which is the lesson.
   //
-  // NOT ON THE MAP, and the reason is a constraint rather than a choice: the
-  // Lamps' text reads the WORLD's number, which an actor's own file cannot
-  // do — a `.actor` has no `world` to read, and importing the world that
-  // imports it would be a cycle. So the row that writes the text has to sit
-  // in the world's `add actor` body, and a placement has no room for one
-  // (specs/PLACE_MEMORY_PLAN.md).
+  // AS CODE, not as placements: the Lamps' text reads the game's number,
+  // which an actor's own file cannot — a `.actor` has no `world` to read, and
+  // importing the game that imports it would be a cycle — and step 2 puts a
+  // row in each `add actor` body. A row whose value is worked out rather than
+  // typed stays code, under `when this screen loads` in the Main Screen's
+  // (`lessons/asScreen`, specs/LESSONS_AS_SCREENS_PLAN.md).
   name: 'State an actor carries',
   description: 'Two Lamps that cannot tell each other apart.',
   source: lessonSource({

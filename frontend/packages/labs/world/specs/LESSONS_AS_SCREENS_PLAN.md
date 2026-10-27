@@ -206,7 +206,7 @@ COMPILE_FROM_DATA_PLAN.md's step 5.
   screen. Telling a game's actors from an interface's by their `for`
   waits on a case where the two lines part: an interface actor placed in a
   level, walked by a loop.
-- **The memory lessons' story.** memory/actor-state says a Lamp's text
-  cannot live on its placement because an actor cannot read the world. On a
-  screen, the row moves under `when this screen loads` and reads the world
-  from there; the lesson's explanation changes with it.
+- **The memory lessons' story. ANSWERED.** memory/actor-state's rows are
+  code under `when this screen loads`, and its text sends the learner there:
+  the Lamps read the game's number from the Main Screen's code, which an
+  actor's own file cannot.
