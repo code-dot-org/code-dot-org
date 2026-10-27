@@ -86,7 +86,7 @@ const QuestionTab: React.FunctionComponent<QuestionTabProps> = ({
         />
       </div>
       <div className={styles.field}>
-        <FormFieldWrapper label="Description">
+        <FormFieldWrapper label="Description (optional)">
           <textarea
             className={builderCommonStyles.textarea}
             name="description"
