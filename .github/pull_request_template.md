@@ -13,9 +13,9 @@
 ## Validation
 <!-- What steps were taken by human engineers or AI to validate the code changes prior to merge? What automated test coverage exists for these changes? Be clear about whether validation steps were performed by AI or human. -->
 
-<!-- Confirm that the code and description in this pull request were fully vetted by a human engineer -->
-* [ ] Vetted PR content for length, code quality, comment clarity and readability.
-* [ ] Vetted PR description for length, accuracy, clarity, and readability.
+<!-- Confirm that the code and description in this pull request were reviewed by a human engineer -->
+* [ ] Reviewed PR content for length, code quality, comment clarity and readability.
+* [ ] Reviewed PR description for length, accuracy, clarity, and readability.
 
 ## Authorship
 <!--
