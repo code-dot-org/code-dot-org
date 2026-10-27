@@ -28,4 +28,57 @@ class DatabaseConfigurationTest < ActiveSupport::TestCase
         "#{name} must not connect as the writer's SQL user"
     end
   end
+
+  RDS_PROXY_WRITER = 'rds-proxy-writer.example.com'.freeze
+  DATABASE_WRITER = 'database-writer.example.com'.freeze
+  PROXYSQL_HOST = '127.0.0.1'.freeze
+
+  # Re-renders config/database.yml against a stubbed deployment and execution context. `database_configuration` is not
+  # memoized, so each call reads and renders the file again. Local development and continuous integration builds point
+  # every endpoint at the same host, so distinct hostnames are what make the assertions below meaningful.
+  def rendered_pool(name, db_proxy:, execution_context:)
+    CDO.stubs(:db_proxy).returns(db_proxy)
+    CDO.stubs(:execution_context).returns(execution_context)
+    CDO.stubs(:db_endpoint_proxy_writer).returns(RDS_PROXY_WRITER)
+    CDO.stubs(:db_endpoint_writer).returns(DATABASE_WRITER)
+    Rails.application.config.database_configuration.fetch(Rails.env).fetch(name)
+  end
+
+  test 'connects writes through RDS Proxy from processes that serve concurrent requests' do
+    [:web_application, :active_job_worker].each do |context|
+      assert_equal RDS_PROXY_WRITER,
+        rendered_pool('primary', db_proxy: 'rdsproxy', execution_context: context)['host'],
+        "#{context} must connect writes through RDS Proxy"
+    end
+  end
+
+  test 'connects writes directly to the database writer endpoint from every other process' do
+    # The build, migrations, cron jobs and dashboard-console run one long task rather than many concurrent short ones,
+    # so they gain nothing from multiplexing and should not inherit the proxy's timeout and pinning behavior.
+    assert_equal DATABASE_WRITER,
+      rendered_pool('primary', db_proxy: 'rdsproxy', execution_context: nil)['host']
+  end
+
+  test 'connects writes through ProxySQL from every process' do
+    # ProxySQL's endpoint is substituted into CDO.dashboard_db_writer by the Chef recipe at build time, so there is no
+    # unproxied alternative to fall back to and the execution context makes no difference.
+    CDO.stubs(:db_proxy_admin).returns("mysql://admin:not-a-secret@#{PROXYSQL_HOST}:6032/")
+    CDO.stubs(:dashboard_db_writer).
+      returns("mysql://dashboard:not-a-secret@#{PROXYSQL_HOST}:6033/#{CDO.dashboard_db_name}")
+    [nil, :web_application, :active_job_worker].each do |context|
+      assert_equal PROXYSQL_HOST,
+        rendered_pool('primary', db_proxy: 'proxysql', execution_context: context)['host'],
+        "#{context.inspect} must connect writes through ProxySQL"
+    end
+  end
+
+  test 'connects reads through the proxy from every process' do
+    # Unlike the writer pool, the reader pools have no direct endpoint to fall back to: configuration publishes only
+    # proxy endpoints for reads, so bypassing would move reads onto the writer instance.
+    [nil, :web_application, :active_job_worker].each do |context|
+      refute_equal DATABASE_WRITER,
+        rendered_pool('primary_replica', db_proxy: 'rdsproxy', execution_context: context)['host'],
+        "#{context.inspect} must not move reads onto the writer instance"
+    end
+  end
 end
