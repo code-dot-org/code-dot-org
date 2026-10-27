@@ -572,6 +572,25 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     # could confirm more things here
   end
 
+  test 'auth - given another signed-in user, sign out previous user' do
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    user = create_preexisting_user(payload)
+    previous_stable_id = SecureRandom.uuid
+
+    sign_in create(:student)
+    # As set by apps/src/metrics/statsigHelpers.js.
+    cookies.merge("#{SharedConstants::STATSIG_STABLE_ID_KEY}=#{previous_stable_id}; domain=.code.org; path=/")
+
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+    assert_response :redirect
+
+    assert_equal user.id, signed_in_user_id
+    assert_equal response.location, session[:user_return_to]
+    assert_empty cookies[SharedConstants::STATSIG_STABLE_ID_KEY]
+    refute_equal previous_stable_id, SignIn.where(user: user).last.anon_user_id
+  end
+
   test 'auth - given target_link_uri with existing query params, redirect preserves and merges params' do
     payload = get_valid_payload
     payload[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri'] = "#{CDO.studio_url('/courses')}?foo=bar"
