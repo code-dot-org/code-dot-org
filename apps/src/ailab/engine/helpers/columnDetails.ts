@@ -45,16 +45,26 @@ export function getColumnRole(
   return undefined;
 }
 
+export function withIdColumnFirst(
+  columns: string[],
+  idColumn: string | undefined
+): string[] {
+  return idColumn
+    ? [idColumn, ...columns.filter(column => column !== idColumn)]
+    : columns;
+}
+
 export function dataColumnsFor(
   data: DataRow[],
   project: AilabProject,
-  showAllColumns: boolean
+  showAllColumns: boolean,
+  idColumn?: string
 ): string[] {
   const labelColumn = project.labelColumn || 'unknown';
   const columns = showAllColumns
     ? Object.keys(data[0] ?? {}).filter(column => column !== labelColumn)
     : project.selectedFeatures;
-  return [...columns, labelColumn];
+  return withIdColumnFirst([...columns, labelColumn], idColumn);
 }
 
 export function filterColumnsByType(

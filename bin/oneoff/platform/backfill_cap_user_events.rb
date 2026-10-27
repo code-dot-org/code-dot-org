@@ -41,7 +41,7 @@ NAMES = [
 records = []
 
 # Open the normal database read-only
-DASHBOARD_DB_READER = Cdo::Sequel.database_connection_pool CDO.dashboard_db_reader, CDO.dashboard_db_reader
+DASHBOARD_DB_READER = Cdo::Sequel.database_connection_pool CDO.dashboard_db_reader
 
 # Get the starting date
 # This will be finding anything that happened before the earliest recorded event

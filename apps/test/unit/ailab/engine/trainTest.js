@@ -11,7 +11,7 @@ import rootReducer, {
   setTestData,
 } from '@cdo/apps/ailab/engine/redux';
 import train from '@cdo/apps/ailab/engine/train';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 import {levelProject, levelStore} from './levelStore';
 
@@ -31,7 +31,7 @@ describe('train functions', () => {
     store.dispatch(setColumnsByDataType('rain', ColumnTypes.NUMERICAL));
     store.dispatch(setColumnsByDataType('temperature', ColumnTypes.NUMERICAL));
     const project = {
-      ...initialProject,
+      ...defaultProject,
       labelColumn: 'cost',
       selectedFeatures: ['temperature', 'rain'],
     };
@@ -68,7 +68,7 @@ describe('train functions', () => {
     store.dispatch(setColumnsByDataType('flavor', ColumnTypes.CATEGORICAL));
     store.dispatch(setColumnsByDataType('texture', ColumnTypes.CATEGORICAL));
     const project = {
-      ...initialProject,
+      ...defaultProject,
       labelColumn: 'color',
       selectedFeatures: ['flavor', 'texture'],
     };
@@ -130,7 +130,7 @@ describe('train.cancel', () => {
     store.dispatch(setColumnsByDataType('tail', ColumnTypes.CATEGORICAL));
 
     const onLegs = {
-      ...initialProject,
+      ...defaultProject,
       labelColumn: 'animal',
       selectedFeatures: ['legs'],
     };
@@ -168,7 +168,7 @@ describe('the accuracy-check split', () => {
     store.dispatch(setColumnsByDataType('animal', ColumnTypes.CATEGORICAL));
     store.dispatch(setColumnsByDataType('legs', ColumnTypes.NUMERICAL));
     train.init(store, {
-      ...initialProject,
+      ...defaultProject,
       labelColumn: 'animal',
       selectedFeatures: ['legs'],
     });
@@ -225,7 +225,7 @@ const COLUMNS = {
 };
 
 const PROJECT = {
-  ...initialProject,
+  ...defaultProject,
   labelColumn: 'animal',
   selectedFeatures: ['legs', 'tail'],
 };

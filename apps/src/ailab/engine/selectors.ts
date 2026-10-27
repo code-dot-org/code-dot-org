@@ -91,13 +91,39 @@ export const getSelectedNumericalFeatures = createSelector(
   }
 );
 
-export const getSelectableColumns = createSelector(
+// A dataset can drop or rename the column a level names.
+export const getIdColumn = createSelector(
+  [
+    getData,
+    (state: RootState) => state.mode?.idColumn,
+    (state: RootState) => state.metadata.defaultIdColumn,
+  ],
+  (
+    data: DataRow[],
+    levelIdColumn: string | null | undefined,
+    defaultIdColumn: string | undefined
+  ): string | undefined => {
+    const idColumn =
+      levelIdColumn === null ? undefined : levelIdColumn ?? defaultIdColumn;
+    return idColumn !== undefined && Object.hasOwn(data[0] ?? {}, idColumn)
+      ? idColumn
+      : undefined;
+  }
+);
+
+export const getTrainableColumns = createSelector(
   [getData, getColumnsByDataType],
   selectableColumns
 );
 
+export const getSelectableColumns = createSelector(
+  [getTrainableColumns, getIdColumn],
+  (columns: string[], idColumn: string | undefined): string[] =>
+    columns.filter(column => column !== idColumn)
+);
+
 export const getFilterableColumns = createSelector(
-  [getSelectableColumns, getCategoricalColumns],
+  [getTrainableColumns, getCategoricalColumns],
   arrayIntersection
 );
 

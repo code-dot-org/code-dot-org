@@ -5,6 +5,11 @@ export interface MultipleChoiceQuestionResponse {
   responseData: {selectedChoiceId?: string};
 }
 
+export interface MultipleSelectQuestionResponse {
+  questionType: 'MultipleSelectQuestion';
+  responseData: {selectedChoiceIds?: string[]};
+}
+
 export interface FreeResponseQuestionResponse {
   questionType: 'FreeResponseQuestion';
   responseData: {answerText?: string};
@@ -19,6 +24,7 @@ export interface MatchQuestionResponse {
 // Narrow with the type guards below to read responseData.
 export type QuizQuestionResponse =
   | MultipleChoiceQuestionResponse
+  | MultipleSelectQuestionResponse
   | FreeResponseQuestionResponse
   | MatchQuestionResponse;
 
@@ -28,6 +34,12 @@ export function isMultipleChoiceResponse(
   response: QuizQuestionResponse
 ): response is MultipleChoiceQuestionResponse {
   return response.questionType === 'MultipleChoiceQuestion';
+}
+
+export function isMultipleSelectResponse(
+  response: QuizQuestionResponse
+): response is MultipleSelectQuestionResponse {
+  return response.questionType === 'MultipleSelectQuestion';
 }
 
 export function isFreeResponseResponse(

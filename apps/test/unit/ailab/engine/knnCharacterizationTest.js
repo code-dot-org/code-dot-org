@@ -34,7 +34,7 @@ import {
 import {getTrainedModelDataToSave} from '@cdo/apps/ailab/engine/selectors/saveSelectors';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 import {projectFromRun} from './renderWithProviders';
 
@@ -82,7 +82,7 @@ function load(id, features) {
   store.dispatch(setReserveLocation(TestDataLocations.END));
 
   const project = {
-    ...initialProject,
+    ...defaultProject,
     labelColumn: metadata.defaultLabelColumn,
     selectedFeatures:
       features ||

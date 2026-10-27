@@ -10,18 +10,21 @@ import {Provider} from 'react-redux';
 import {
   AilabEngine,
   type AilabEngineProps,
+  type AilabProject,
   instructionsDismissed,
   type InstructionsKey,
   loadLevel,
   type Mode,
   ProjectProvider,
   type SaveResponse,
-  startOver,
   store,
   TrainingDataProvider,
 } from '@cdo/apps/ailab/engine';
+import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
+import type {ProjectSources} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -30,15 +33,31 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import AccuracyValidator from '../AccuracyValidator';
 import {getDefaultInstructions} from '../defaultInstructions';
+import {sourceToProject} from '../sources';
 import {AilabLevelProperties} from '../types';
 
 import styles from './ailab-view.module.scss';
 
 interface AilabWorkspaceProps {
   levelProperties: AilabLevelProperties;
+  hasEdited: boolean;
+  savedSource: ProjectSources['source'];
+  save: (project: AilabProject) => void;
+  startOver: () => void;
+  projectManager: ProjectManager | null;
 }
 
-const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
+const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
+  levelProperties,
+  hasEdited,
+  savedSource,
+  save,
+  startOver,
+  projectManager,
+}) => {
+  // Read once: the sources change with every save, but the project the lab
+  // opens with is the one this level was loaded with.
+  const [initialProject] = useState(() => sourceToProject(savedSource));
   const dispatch = useAppDispatch();
   const {showDialog} = useDialogControl();
   const progressManager = useContext(ProgressManagerContext);
@@ -64,7 +83,8 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
     loadLevel(mode);
   }, [levelProperties.id, mode]);
 
-  const onContinue = () => {
+  const onContinue = async () => {
+    await projectManager?.flushSave();
     dispatch(continueOrFinishLesson());
   };
 
@@ -106,6 +126,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
   };
 
   const onTrained = (accuracy: number) => {
+    dispatch(sendStartedReportIfNotStarted(levelProperties.appName));
     validator.latestAccuracy = accuracy;
     progressManager?.resetValidation();
     progressManager?.updateProgress();
@@ -133,7 +154,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
         levelProperties={levelProperties}
         isRunning={false}
         hasRun={false}
-        hasEdited={false}
+        hasEdited={hasEdited}
         validationTooltip={
           mode?.requireAccuracy
             ? `Train a model with at least ${mode.requireAccuracy}% accuracy`
@@ -145,7 +166,10 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({levelProperties}) => {
       <div className={styles.workspace}>
         <div className={styles.root}>
           <Provider store={store}>
-            <ProjectProvider>
+            <ProjectProvider
+              initialProject={initialProject}
+              onProjectChange={save}
+            >
               <TrainingDataProvider>
                 <AilabEngine
                   assetPath="/blockly/media/skins/ailab/"
