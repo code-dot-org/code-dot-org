@@ -128,6 +128,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   // Instructions: the step's own or the level's, or for a project step with
   // a prompt, generated around the student's project. The lab waits until
   // they are resolved, so it never mounts with text that is about to change.
+  const generatedInstructions = progress.steps[step.id]?.generatedInstructions;
   const {instructions, isResolved} = useStepInstructions({
     pathway,
     checkpoint,
@@ -135,7 +136,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectInfo: {name: projectName, description: projectDescription},
     sources: currentSources,
     authoredInstructions: step.instructions ?? levelProperties.longInstructions,
-    generatedInstructions: progress.steps[step.id]?.generatedInstructions,
+    generatedInstructions,
     saveGeneratedInstructions,
     aichatContext: aiContext,
   });
@@ -156,6 +157,11 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     step,
     projectInfo: {name: projectName, description: projectDescription},
     instructions,
+    // A failed regeneration shows authored text but leaves older generated text saved.
+    instructionsTraceId:
+      generatedInstructions?.instructions === instructions
+        ? generatedInstructions?.traceId
+        : undefined,
     aichatContext: aiContext,
     chat,
     recordValidation: recordStepValidation,
