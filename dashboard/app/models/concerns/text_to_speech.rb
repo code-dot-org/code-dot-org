@@ -57,12 +57,12 @@ module TextToSpeech
     )
   end
 
-  def self.renderer
-    @renderer ||= Redcarpet::Markdown.new(TTSSafe)
+  def self.tts_safe_renderer
+    @@tts_safe_renderer ||= Redcarpet::Markdown.new(TTSSafe)
   end
 
-  def self.scrubber
-    @scrubber ||= Rails::Html::TargetScrubber.new.tap do |scrubber|
+  def self.tts_safe_scrubber
+    @@tts_safe_scrubber ||= Rails::Html::TargetScrubber.new.tap do |scrubber|
       scrubber.tags = ['xml']
     end
   end
@@ -140,8 +140,8 @@ module TextToSpeech
     #
     # To avoid this, we use a targeted Loofah scrubber to prune any XML blocks
     # and only XML blocks before passing the result through Redcarpet
-    text = Loofah.fragment(text).scrub!(scrubber).scrub!(:prune).to_s
-    renderer.render(text)
+    text = Loofah.fragment(text).scrub!(tts_safe_scrubber).scrub!(:prune).to_s
+    tts_safe_renderer.render(text)
   end
 
   def tts_upload_to_s3(text, key, metric_context = nil, locale: I18n.locale)
