@@ -14,9 +14,14 @@
   background: var(--background-neutral-primary);
 }
 
-.answerField {
+.promptBar .answerField {
   flex: 1;
   min-width: 0;
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 
 .submitButton {
