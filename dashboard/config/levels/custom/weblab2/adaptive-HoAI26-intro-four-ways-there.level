@@ -13,7 +13,7 @@
     "hide_share_and_remix": "false",
     "widget_view": "true",
     "require_edit_to_continue": "true",
-    "initial_view_mode": "split",
+    "initial_view_mode": "preview",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -72,8 +72,8 @@
         "3"
       ]
     },
-    "long_instructions": "Example 1"
+    "long_instructions": "#Check out this example website \r\nA student used AI Tutor and Weblab to build an interactive quiz.\r\n\r\nIt helps students figure out the most efficient and environmentally responsible way to get to school.  \r\n\r\n- Reflect on what you like about it?  \r\n- Where could you use a quiz in your own website?"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-20 18:32:27 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 18:33:15 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 00:04:12 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 19:31:57 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-20 18:32:27 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-20 18:33:15 +0000\",\"changed\":[],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 00:04:12 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 19:31:57 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":897,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 06:05:00 +0000\",\"changed\":[\"initial_view_mode\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Weblab2>

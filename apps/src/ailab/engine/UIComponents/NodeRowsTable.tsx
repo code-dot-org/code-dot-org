@@ -1,6 +1,6 @@
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {type ReactNode} from 'react';
 
 import {DATA_TABLE_ROW_LIMIT} from '../constants';
 import {getColumnRole} from '../helpers/columnDetails';
@@ -27,6 +27,7 @@ interface NodeRowsTableProps {
   emphasizedColumn?: string;
   emptyText: string;
   prediction?: string | number;
+  actionRow: ReactNode;
 }
 
 const NodeRowsTable = ({
@@ -35,6 +36,7 @@ const NodeRowsTable = ({
   emphasizedColumn,
   emptyText,
   prediction,
+  actionRow,
 }: NodeRowsTableProps) => {
   const {columns} = view;
   const {project} = useProject();
@@ -46,7 +48,7 @@ const NodeRowsTable = ({
 
   return (
     <>
-      <DataTableFrame labelId={labelId}>
+      <DataTableFrame labelId={labelId} actionRow={actionRow}>
         <table className={tableStyles.table}>
           <thead>
             <RowsTableHeader
