@@ -1,15 +1,12 @@
 # One kind of camera, in every space
 
-STATUS: BUILDING. Steps 1 to 8 are in — a camera can now be declared FOR a
-Viewport in blocks, in that Viewport's own `on create`. Steps 1 to 7 are — step 6 is where the lab got smaller (a
-map says nothing about a camera any more) and step 7 turned out to be a
-correction to this document rather than a change to the engine. Steps 1 to 4 are — a space holds cameras, one collection
-finds them all, each knows its space, one may be declared against a space that
-does not exist yet, and a Viewport says which of its own it shows through. Step
-5 proved a camera trait reaches a space's camera, and step 6 deleted the engine
-branch that used to overwrite it. What remains is the editor: nothing lists a
-Viewport's cameras yet (step 9), and `actor to follow` cannot name a kind (step
-10), so aiming one still means writing the follow in blocks.
+STATUS: BUILT. Every step is in. Since, two of them have been taken back by
+later plans, and the record below says what each was when it was built. A
+camera is data on a Viewport's placement and nowhere else: the world's own
+cameras went with the world (LESSONS_AS_SCREENS_PLAN.md, step 4), and `define
+camera`, with the strip's "in code" rows, went with the rule blocks
+(COMPILE_FROM_DATA_PLAN.md, step 5a). The compiler writes a stored camera as
+a `defineCamera` call (`BlocklyGenerator.cameraCode`).
 
 ONE REFINEMENT THE BUILD FORCED, in step 6. `settleSpace` did three jobs, not
 one: it followed what the map named, it positioned the camera from the
