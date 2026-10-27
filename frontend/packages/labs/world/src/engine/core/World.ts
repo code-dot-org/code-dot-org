@@ -2625,6 +2625,7 @@ export class World {
       id: string;
       parallax: {x: number; y: number};
       fit: boolean;
+      inMirrors: boolean;
       background: BackdropState;
     }>;
   }> {
@@ -2660,6 +2661,7 @@ export class World {
             id: layer.id,
             parallax: {x: layer.parallax.x, y: layer.parallax.y},
             fit: layer.fit,
+            inMirrors: layer.inMirrors,
             background: layer.background,
           })),
         },
@@ -4743,12 +4745,15 @@ export class World {
     parallax: {x: number; y: number};
     /** Whether it ignores the camera entirely — an interface layer. */
     fit: boolean;
+    /** Whether a mirror of this scene shows it. */
+    inMirrors: boolean;
   }> {
     return this.layerList.map(layer => ({
       id: layer.id,
       effects: layer.effects,
       parallax: {x: layer.parallax.x, y: layer.parallax.y},
       fit: layer.fit,
+      inMirrors: layer.inMirrors,
     }));
   }
 

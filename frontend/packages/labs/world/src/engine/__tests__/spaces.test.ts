@@ -506,6 +506,7 @@ describe('a map’s layers', () => {
         id: 'sky',
         parallax: {x: 0.2, y: 0},
         fit: false,
+        inMirrors: true,
         background: expect.objectContaining({
           sprite: 'sky.png',
           repeat: true,

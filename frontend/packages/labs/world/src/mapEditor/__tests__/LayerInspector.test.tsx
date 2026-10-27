@@ -134,3 +134,31 @@ describe('a layer’s background', () => {
     setFileActHandler(null);
   });
 });
+
+describe('whether mirrors show a layer', () => {
+  it('is said by unticking, and taken back by ticking', () => {
+    // A minimap of the level leaves the level's own HUD out
+    // (specs/MIRRORING_PLAN.md, step 8).
+    const onChange = vi.fn();
+    const at = (layer: object) => (
+      <LayerInspector
+        layer={{id: 'hud', ...layer}}
+        backgrounds={[]}
+        onChange={onChange}
+        onBackground={vi.fn()}
+        onClose={vi.fn()}
+        isReadOnly={false}
+      />
+    );
+    const {rerender} = render(at({}));
+    const box = screen.getByLabelText('Shown in mirrors');
+    expect(box).toBeChecked();
+    fireEvent.click(box);
+    expect(onChange).toHaveBeenLastCalledWith({inMirrors: false});
+
+    rerender(at({inMirrors: false}));
+    expect(screen.getByLabelText('Shown in mirrors')).not.toBeChecked();
+    fireEvent.click(screen.getByLabelText('Shown in mirrors'));
+    expect(onChange).toHaveBeenLastCalledWith({inMirrors: undefined});
+  });
+});

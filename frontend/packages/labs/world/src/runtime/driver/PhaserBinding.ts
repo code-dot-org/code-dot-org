@@ -330,6 +330,11 @@ export class PhaserBinding {
          */
         layers: Array<Phaser.GameObjects.Container | undefined>;
         backdrops: Array<SlotObject | undefined>;
+        /**
+         * For a mirror, the layers of the scene it shows that its camera
+         * ignores, since they say mirrors leave them out.
+         */
+        hidden: Set<Phaser.GameObjects.Container>;
       }
     >();
     // The backdrop layers' images, by layer index — created on demand, because
@@ -1157,6 +1162,7 @@ export class PhaserBinding {
             mirrors: space.mirrors,
             layers: [],
             backdrops: [],
+            hidden: new Set(),
           };
           spaceHosts.set(space.id, host);
         }
@@ -1340,6 +1346,49 @@ export class PhaserBinding {
         // too; the image inside is then left solid, or the group's would
         // be counted twice.
         object.setAlpha(group ? 1 : state.opacity);
+      }
+
+      // What a mirror leaves out: the layers of the scene it shows that say
+      // so (specs/MIRRORING_PLAN.md, step 8). Hidden as they appear, since a
+      // layer's container may be made after the mirror's host is; one shown
+      // again takes the host down to be made again next frame, as Phaser
+      // keeps an ignore and offers no way to take it back.
+      const rootLayers = world.layerSnapshot();
+      for (const space of spaces) {
+        const host = spaceHosts.get(space.id);
+        if (!host || !space.mirrors) {
+          continue;
+        }
+        const target = space.mirrorsRoot
+          ? undefined
+          : spaces.find(other => other.id === space.mirrors);
+        const targetHost = target && spaceHosts.get(target.id);
+        const shown: Array<
+          [{inMirrors: boolean}, Phaser.GameObjects.Container | undefined]
+        > = space.mirrorsRoot
+          ? rootLayers.map((layer, index) => [layer, containers[index]])
+          : (target?.layers ?? []).map((layer, index) => [
+              layer,
+              targetHost?.layers[index],
+            ]);
+        const leftOut = new Set(
+          shown.flatMap(([layer, container]) =>
+            container && !layer.inMirrors ? [container] : [],
+          ),
+        );
+        if ([...host.hidden].some(container => !leftOut.has(container))) {
+          scene.cameras.remove(host.camera);
+          scene.cameras.remove(host.over);
+          host.inner.destroy();
+          spaceHosts.delete(space.id);
+          continue;
+        }
+        for (const container of leftOut) {
+          if (!host.hidden.has(container)) {
+            host.camera.ignore(container);
+            host.hidden.add(container);
+          }
+        }
       }
 
       // The space cameras LAST, once every group is where this frame put

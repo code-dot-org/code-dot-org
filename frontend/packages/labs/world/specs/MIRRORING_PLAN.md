@@ -1,12 +1,11 @@
 # A Viewport onto the world's own scene
 
-STATUS: BUILDING. Steps 1 to 5 and 7 are in — a Viewport declares what it
-mirrors with `mirrors the world` or `mirrors`, is bound to that scene with no
-copy of its own, routes the pointer through its camera, the driver draws the
-scene it mirrors into its box, the editor draws it there too (step 5), and a
-Viewport's camera zooms (step 7). What is left is the browser check of both
-(steps 6 and 9) and layer masking (step 8) — a mirror that hides the HUD,
-which is what makes a minimap a minimap. specs/VIEWPORT_PLAN.md lists
+STATUS: BUILDING. Steps 1 to 5, 7 and 8 are in — a Viewport declares what
+it mirrors with `mirrors the world` or `mirrors`, is bound to that scene with
+no copy of its own, routes the pointer through its camera, the driver draws
+the scene it mirrors into its box, the editor draws it there too (step 5), a
+Viewport's camera zooms (step 7), and a layer may say mirrors leave it out
+(step 8). What is left is the browser check (steps 6 and 9). specs/VIEWPORT_PLAN.md lists
 "mirroring" as not built; this is what it would take, written after a Viewport
 was given cameras of its own (specs/SPACE_CAMERAS_PLAN.md) and after the first
 person to build one asked for it: a minimap, a second shot of the same level,
@@ -117,7 +116,7 @@ camera draws is the root scene and nothing else.
   has asked.
 - **Not a change to a map.** A map still says nothing about cameras.
 
-## Zoom and masking — ZOOM BUILT, MASKING PROPOSED
+## Zoom and masking — BUILT
 
 The two pieces that make a minimap a minimap: seeing more of the level than
 the game does, and not seeing what the game draws over it.
@@ -192,8 +191,15 @@ one that does not.
      layer rather than by moving Phaser's camera, so zooming it is a scale of
      every layer about the view's middle and a wider tiling of its
      backdrops. Nothing can give it a zoom, so nothing draws one.
-8. **`shown in mirrors`**: the layer's flag, the snapshot, the driver's
-   ignore, the inspector's checkbox.
+8. **`shown in mirrors`. BUILT.** A layer's `inMirrors`, true unless the
+   map says `false`, made whole by `layersOfMap` for a Viewport's map and
+   declared for the Main Screen's own (`mainMapLayers`), and carried in
+   both snapshots. The driver hides a layer that says no from the camera
+   of every mirror of its scene — the root's layers for a mirror of the
+   world, the target box's for a mirror of a box — as the layer's container
+   appears, since one may be made after the mirror's host; a layer shown
+   again takes the host down, to be made next frame, as Phaser cannot take
+   an ignore back. The layer's inspector has a "Shown in mirrors" box.
 9. **The browser check** of step 6, after these: a minimap on the Jetpack
    level, zoomed out, following the Pilot, without the level's fixed layer.
 

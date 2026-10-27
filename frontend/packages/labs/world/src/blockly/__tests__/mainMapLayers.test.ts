@@ -30,6 +30,21 @@ describe('layerDeclarations', () => {
     );
   });
 
+  it('says when mirrors leave a layer out, and only then', () => {
+    // specs/MIRRORING_PLAN.md, step 8: shown is what a layer says by saying
+    // nothing.
+    expect(
+      layerDeclarations(
+        [{id: 'hud', fit: true, inMirrors: false}, {id: 'main'}],
+        [],
+        'main',
+      ),
+    ).toBe(
+      'world.defineLayer({id: "hud", fit: true, inMirrors: false});\n' +
+        'world.defineLayer({id: "main"});\n',
+    );
+  });
+
   it('puts the blocks’ layers after, less the ones the map names', () => {
     const code = layerDeclarations(
       [{id: 'main'}],

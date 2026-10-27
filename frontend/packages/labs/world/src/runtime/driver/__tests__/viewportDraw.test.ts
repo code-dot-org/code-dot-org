@@ -366,6 +366,8 @@ const world = (held: {
   /** The box's camera's zoom, and a fit layer over its map. */
   zoom?: number;
   hud?: boolean;
+  /** Whether the world's layer says mirrors leave it out. */
+  rootLeftOut?: () => boolean;
 }) =>
   ({
     useTextMetrics: () => {},
@@ -382,7 +384,13 @@ const world = (held: {
     mapBounds: () => ({x: 320, y: 320}),
     viewSize: () => ({x: 320, y: 320}),
     layerSnapshot: () => [
-      {id: 'main', effects: [], parallax: {x: 1, y: 1}, fit: false},
+      {
+        id: 'main',
+        effects: [],
+        parallax: {x: 1, y: 1},
+        fit: false,
+        inMirrors: !held.rootLeftOut?.(),
+      },
     ],
     cameraSnapshot: () => [
       {id: 'main', position: {x: 160, y: 160}, active: true},
@@ -710,6 +718,29 @@ describe('drawing a mirror', () => {
     // Placed like any box: at (60,60), 100 by 80, looking through its camera.
     expect(mirrorCamera().viewport).toEqual([10 * 3, 20 * 3, 100 * 3, 80 * 3]);
     expect(mirrorCamera().center).toEqual([50, 40]);
+  });
+
+  it('leaves out a layer that says so, and shows it again when it stops', () => {
+    // A level's own hearts and score, which a minimap of it does not show
+    // (specs/MIRRORING_PLAN.md, step 8).
+    let leftOut = true;
+    new PhaserBinding(
+      world({spaces: true, mirror: () => 'main', rootLeftOut: () => leftOut}),
+      pane(),
+    );
+    runFrame();
+    expect(mirrorCamera().ignored).toContain(worldLayer());
+    expect(boxCamera().ignored).toContain(worldLayer());
+
+    // Phaser cannot take an ignore back, so the mirror's camera is made
+    // again, and the new one draws the layer.
+    leftOut = false;
+    runFrame();
+    expect(mirrorCamera().removed).toBe(true);
+    runFrame();
+    const live = cameras.filter(camera => !camera.removed);
+    const mirror = live.find(camera => camera.center.join() === '50,40')!;
+    expect(mirror.ignored).not.toContain(worldLayer());
   });
 
   it('of a box draws that box’s container, and nothing else', () => {
