@@ -20,9 +20,8 @@ import type {
 } from './types';
 
 /*
-  Stand-ins for a dataset that has not loaded, returned by identity. A fresh
-  `[]` each call would defeat the reference equality the memoized selectors
-  below are built on, and they would recompute on every unrelated change.
+  Stand-ins for a dataset that has not loaded, returned by identity to
+  preserve reference equality for memoization.
 */
 const NO_ROWS: DataRow[] = Object.freeze([]) as unknown as DataRow[];
 const NO_COLUMN_TYPES: Record<string, string> = Object.freeze({});
@@ -51,17 +50,6 @@ export const getDatasetId = (state: RootState): string | undefined =>
 export const getRemovedRowsCount = (state: RootState): number =>
   state.dataset?.removedRowsCount ?? 0;
 
-export type DatasetStatus = 'none' | 'loading' | 'failed' | 'loaded';
-
-export const getDatasetStatus = (state: RootState): DatasetStatus => {
-  if (state.dataset) {
-    return 'loaded';
-  }
-  if (state.invalidData) {
-    return 'failed';
-  }
-  return state.csvfile ? 'loading' : 'none';
-};
 export const getTrainedModelDetails = (
   state: RootState
 ): TrainedModelDetailsSave => state.trainedModelDetails;
