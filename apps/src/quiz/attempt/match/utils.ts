@@ -6,16 +6,16 @@ export function itemsOn(matchSets: MatchSets, side: MatchSide): MatchItem[] {
   return matchSets[side === 'start' ? 0 : 1];
 }
 
-export function hasPair(
+export function arePaired(
   pairs: MatchPairs,
   [startId, endId]: [string, string]
 ): boolean {
   return pairs.some(([start, end]) => start === startId && end === endId);
 }
 
-// Removes any pair either item was already in, so each item has at most
-// one partner.
-export function setPair(
+// Pairs the two items, first breaking any pair either was already in, so
+// each item has at most one partner.
+export function pairTogether(
   pairs: MatchPairs,
   [startId, endId]: [string, string]
 ): MatchPairs {

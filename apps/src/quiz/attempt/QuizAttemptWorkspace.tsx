@@ -473,7 +473,6 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             </Typography>
           </AttemptCard>
         );
-      // TODO: replace with a MatchQuestionContainer.
       case 'MatchQuestion':
         return (
           <MatchQuestionContainer

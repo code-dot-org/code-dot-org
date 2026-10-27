@@ -1,26 +1,26 @@
 import {
-  hasPair,
+  arePaired,
+  pairTogether,
   partnerOf,
   removePair,
-  setPair,
 } from '@cdo/apps/quiz/attempt/match/utils';
 
-describe('hasPair', () => {
+describe('arePaired', () => {
   it('is true only for an existing pair, in [start, end] order', () => {
-    expect(hasPair([['a', 'x']], ['a', 'x'])).toBe(true);
-    expect(hasPair([['a', 'x']], ['a', 'y'])).toBe(false);
-    expect(hasPair([['a', 'x']], ['x', 'a'])).toBe(false);
+    expect(arePaired([['a', 'x']], ['a', 'x'])).toBe(true);
+    expect(arePaired([['a', 'x']], ['a', 'y'])).toBe(false);
+    expect(arePaired([['a', 'x']], ['x', 'a'])).toBe(false);
   });
 });
 
-describe('setPair', () => {
+describe('pairTogether', () => {
   it('adds a new pair', () => {
-    expect(setPair([], ['a', 'x'])).toEqual([['a', 'x']]);
+    expect(pairTogether([], ['a', 'x'])).toEqual([['a', 'x']]);
   });
 
   it("replaces either item's previous pair", () => {
     expect(
-      setPair(
+      pairTogether(
         [
           ['a', 'x'],
           ['b', 'y'],

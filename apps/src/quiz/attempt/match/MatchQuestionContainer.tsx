@@ -7,7 +7,7 @@ import QuestionDescription from '../QuestionDescription';
 
 import MatchColumn from './MatchColumn';
 import {MatchPairs, MatchSets, MatchSide} from './types';
-import {hasPair, labelOf, removePair, setPair} from './utils';
+import {arePaired, labelOf, pairTogether, removePair} from './utils';
 
 import styles from './match-question-container.module.scss';
 
@@ -104,15 +104,17 @@ const MatchQuestionContainer: React.FunctionComponent<
     const pair: [string, string] =
       side === 'end' ? [selected.id, id] : [id, selected.id];
     // Choosing a pair that already exists unmatches it.
-    const isUnmatch = hasPair(pairs, pair);
+    const isAlreadyPaired = arePaired(pairs, pair);
     const startLabel = labelOf(matchSets, pair[0]);
     const endLabel = labelOf(matchSets, pair[1]);
     setAnnouncement(
-      isUnmatch
+      isAlreadyPaired
         ? `Unmatched ${startLabel} from ${endLabel}.`
         : `Matched ${startLabel} with ${endLabel}.`
     );
-    onChangePairs(isUnmatch ? removePair(pairs, pair) : setPair(pairs, pair));
+    onChangePairs(
+      isAlreadyPaired ? removePair(pairs, pair) : pairTogether(pairs, pair)
+    );
     setSelected(null);
   };
 
