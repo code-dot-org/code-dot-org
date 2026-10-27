@@ -93,8 +93,9 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
   Clock: ['world_time'],
   // The two map hats. A map that does something when it loads is a real
   // thing (the pause menu is one) and no lesson reaches it. The screen's
-  // hat and the way into a Viewport's map wait for the lessons to be
-  // screens (specs/LESSONS_AS_SCREENS_PLAN.md, step 3).
+  // hat and the way into a Viewport's map are in every lesson's Main Screen
+  // from the start, where its once-only code goes, so none offers them
+  // (specs/LESSONS_AS_SCREENS_PLAN.md).
   Map: [
     'world_in_shown_map',
     'world_on_map_loads',

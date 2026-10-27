@@ -8,9 +8,11 @@
 // the map's; a handler is the screen's. A row that says anything else is
 // code a game runs once, so it stays code: under `when this screen loads`,
 // inside `in the map ⟨Game⟩ shows`, where it acts on the level as it did on
-// the world. A handler that adds to or loads into the world is wrapped the
+// the world. That pair is always there, empty or not, since it is where a
+// lesson's once-only code is written. A handler that adds to or loads into the world is wrapped the
 // same way, since the screen is now the root it runs in.
 
+import {activateFile} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../../actors/importStockActor';
@@ -210,13 +212,16 @@ function placementOf(
 }
 
 /** `in the map ⟨Game⟩ shows do ⟨rows⟩`. */
-const inTheLevel = (rows: readonly Block[]): Block => ({
-  type: IN_SHOWN_MAP,
-  inputs: {
-    ACTOR: {block: {type: 'world_actor_kind', fields: {ACTOR: VIEWPORT}}},
-    DO: {block: chain(rows)},
-  },
-});
+const inTheLevel = (rows: readonly Block[]): Block => {
+  const first = chain(rows);
+  return {
+    type: IN_SHOWN_MAP,
+    inputs: {
+      ACTOR: {block: {type: 'world_actor_kind', fields: {ACTOR: VIEWPORT}}},
+      ...(first ? {DO: {block: first}} : {}),
+    },
+  };
+};
 
 /** A handler with its body in the level, when the body acts on a place. */
 function handlerOf(root: Block): Block {
@@ -248,6 +253,8 @@ export function screenOfWorld(
     blocks?: {blocks?: Block[]};
     variables?: unknown[];
     map?: Record<string, unknown> & {actors?: Placement[]};
+    /** Every `add actor` stays code: the lesson is about the rows. */
+    rowsAsCode?: boolean;
   };
   const roots = doc.blocks?.blocks ?? [];
   const world = roots.find(root => root.type === 'world_world');
@@ -283,7 +290,7 @@ export function screenOfWorld(
     isObject(world.next) ? world.next.block : undefined,
   )) {
     const fields = fieldsOf(row);
-    if (row.type === 'world_add_actor') {
+    if (row.type === 'world_add_actor' && !doc.rowsAsCode) {
       const kind = String(fields.ACTOR ?? '');
       const placement = placementOf(row, slots.actor, kind ? nextId(kind) : '');
       if (placement) {
@@ -329,9 +336,12 @@ export function screenOfWorld(
   const handlers = roots
     .filter(root => root !== world)
     .map(root => handlerOf(root));
-  const loads: Block[] = code.length
-    ? [{type: SCREEN_LOADS, next: {block: inTheLevel(code)}}]
-    : [];
+  // There whether or not the world had code of its own: it is where a
+  // lesson's once-only code is written, as `define world`'s body was, and
+  // no early lesson's toolbox offers either block.
+  const loads: Block[] = [
+    {type: SCREEN_LOADS, next: {block: inTheLevel(code)}},
+  ];
   const data = {
     ...(properties.length ? {properties} : {}),
     ...(rules.length ? {rules} : {}),
@@ -472,8 +482,28 @@ export function asScreenProject(source: MultiFileSource): MultiFileSource {
           }
         : {}),
     },
+    // The level a tab beside the screen, since a lesson on the map is done
+    // there: the screen draws it, but only as a picture (`MapStage`).
+    openFiles: map ? [...(next.openFiles ?? []), mapId] : next.openFiles,
   };
   // What the world declared for itself is the screen's now, and its blocks
   // are named by the file that declares them.
   return renameReferences(next, {from: 'worlds/main', to: 'screens/main'});
+}
+
+/**
+ * The project with its level in front: a lesson whose task is on the map
+ * opens there, and one whose work is in blocks on the Main Screen's code
+ * (`levelData.worldView`). The world it was written as goes with it.
+ */
+export function opensOnTheLevel(source: MultiFileSource): MultiFileSource {
+  const level = Object.values(source.files).find(
+    file => file.name === 'main.map',
+  );
+  if (!level) {
+    return source;
+  }
+  const world = worldMadeInto(source);
+  const next = activateFile(source, level.id);
+  return world === undefined ? next : rememberWorld(next, world);
 }

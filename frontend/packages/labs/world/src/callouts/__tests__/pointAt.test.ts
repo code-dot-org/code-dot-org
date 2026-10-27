@@ -26,28 +26,30 @@ describe('pointAt', () => {
   afterEach(() => {
     clearRing();
     setRevealer('file', null);
-    setRevealer('view', null);
+    setRevealer('code', null);
     setRevealer('placement', null);
     setRevealer('toolbox', null);
   });
 
   it('rings the target, focuses it, and says where it is', async () => {
-    const world = button('view.world');
+    const world = button('screen.code');
     const heard = vi.fn();
     const stop = onAnnounce(heard);
 
-    expect(await pointAt('view.world')).toBe(true);
+    expect(await pointAt('screen.code')).toBe(true);
 
     expect(world).toHaveAttribute(RING_ATTRIBUTE, 'true');
     expect(document.activeElement).toBe(world);
-    expect(heard).toHaveBeenCalledWith(expect.stringContaining('World is'));
+    expect(heard).toHaveBeenCalledWith(
+      expect.stringContaining('Screen code is'),
+    );
     stop();
   });
 
   it('asks for what the place needs, in order, before it looks', async () => {
     const asked: string[] = [];
-    setRevealer('view', step => {
-      asked.push(`view:${step.view}`);
+    setRevealer('file', step => {
+      asked.push(step.level ? 'file:level' : 'file');
     });
     setRevealer('placement', step => {
       asked.push(`placement:${step.named}`);
@@ -56,25 +58,25 @@ describe('pointAt', () => {
     });
 
     expect(await pointAt('map.enhance:Hero')).toBe(true);
-    expect(asked).toEqual(['view:map', 'placement:Hero']);
+    expect(asked).toEqual(['file:level', 'placement:Hero']);
   });
 
   it('keeps one ring: a second place takes the first’s off', async () => {
-    const map = button('view.map');
-    const world = button('view.world');
-    await pointAt('view.map');
-    await pointAt('view.world');
+    const map = button('world.properties');
+    const world = button('screen.code');
+    await pointAt('world.properties');
+    await pointAt('screen.code');
     expect(map).not.toHaveAttribute(RING_ATTRIBUTE);
     expect(world).toHaveAttribute(RING_ATTRIBUTE, 'true');
   });
 
   it('takes the ring off when the target is used, and on Escape', async () => {
-    const world = button('view.world');
-    await pointAt('view.world');
+    const world = button('screen.code');
+    await pointAt('screen.code');
     world.click();
     expect(world).not.toHaveAttribute(RING_ATTRIBUTE);
 
-    await pointAt('view.world');
+    await pointAt('screen.code');
     document.dispatchEvent(new KeyboardEvent('keydown', {key: 'Escape'}));
     expect(world).not.toHaveAttribute(RING_ATTRIBUTE);
   });
@@ -88,7 +90,7 @@ describe('pointAt', () => {
     // The map's script view: a reveal never leaves a script a learner has
     // open, even when the target happens to be in the document.
     const enhance = button('map.enhance');
-    setRevealer('view', () => false);
+    setRevealer('placement', () => false);
     expect(await pointAt('map.enhance:Hero')).toBe(false);
     expect(enhance).not.toHaveAttribute(RING_ATTRIBUTE);
     expect(lastAnnounced()).toContain(
@@ -103,11 +105,11 @@ describe('pointAt', () => {
   });
 
   it('says it again when asked again', async () => {
-    button('view.world');
+    button('screen.code');
     const heard = vi.fn();
     const stop = onAnnounce(heard);
-    await pointAt('view.world');
-    await pointAt('view.world');
+    await pointAt('screen.code');
+    await pointAt('screen.code');
     // A status region is silent when its text does not change.
     expect(heard.mock.calls[0][0]).not.toBe(heard.mock.calls[1][0]);
     expect(heard.mock.calls[1][0].trim()).toBe(heard.mock.calls[0][0].trim());
@@ -121,15 +123,15 @@ describe('pointAt', () => {
     setRevealer('file', async () => {
       await new Promise(resolve => setTimeout(resolve, 20));
       order.push('file');
-      button('view.world');
+      button('screen.code');
       return true;
     });
-    setRevealer('view', () => {
-      order.push('view');
+    setRevealer('code', () => {
+      order.push('code');
     });
 
-    await pointAt('world.blocks');
-    expect(order).toEqual(['file', 'view']);
+    await pointAt('screen.blocks');
+    expect(order).toEqual(['file', 'code']);
   });
 
   it('stops at a file it cannot find, and says the words', async () => {

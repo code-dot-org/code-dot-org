@@ -60,6 +60,8 @@ describe('Show me, in the lessons', () => {
       'input/two-hands',
       'look/background',
       'look/sprite',
+      'making/read',
+      'memory/actor-state',
       'memory/score',
       'memory/world-state',
       'motion/drag',
@@ -67,6 +69,7 @@ describe('Show me, in the lessons', () => {
       'motion/speed',
       'origin/first-world',
       'place/position',
+      'place/script',
     ]);
   });
 

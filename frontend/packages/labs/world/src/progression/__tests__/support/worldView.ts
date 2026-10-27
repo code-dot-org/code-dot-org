@@ -160,6 +160,11 @@ export function worldOfScreen(screen: string, map: string | undefined): string {
         ],
       },
       ...(held.blocks?.variables ? {variables: held.blocks.variables} : {}),
+      // An `add actor` the screen runs was code in the world, and stays so
+      // (`asScreen`, `rowsAsCode`).
+      ...(rows.some(row => row.type === 'world_add_actor')
+        ? {rowsAsCode: true}
+        : {}),
       map: {
         ...level,
         ...(map && cameras?.[0]

@@ -324,6 +324,8 @@ export interface MapStageProps {
   eventsFor?: (kind: string) => readonly EventChoice[];
   /** What the toolbar's way into the map's own workspace says. */
   mapScriptLabel?: string;
+  /** Whether the code button opens the Main Screen's code, which is never locked. */
+  screenCode?: boolean;
   /**
    * What a gated lab WITHHOLDS here (specs/CURRICULUM_PLAN.md,
    * specs/KINDS_FROM_THE_MAP_PLAN.md). A withheld control is drawn, disabled,
@@ -489,6 +491,8 @@ const ToolbarIcon = ({
   onClick?: () => void;
   'aria-disabled'?: true;
   'aria-describedby'?: string;
+  /** Where "Show me" finds it (`callouts/places`). */
+  'data-callout'?: string;
 }) => (
   <Tooltip title={label}>
     <IconButton
@@ -541,6 +545,7 @@ export const MapStage = ({
   onEnhanceKind,
   onOpenKind,
   mapScriptLabel = 'Map code',
+  screenCode = false,
   world,
   mapChoices,
   heldMaps,
@@ -3644,19 +3649,29 @@ export const MapStage = ({
             onClick={() => togglePanel('layers')}
           />
         )}
-        {onEditScript && (
-          <>
+        {onEditScript &&
+          // The Main Screen's code is the game's, and is never locked, as a
+          // world's World view was not; a map's own code is earned.
+          (screenCode ? (
             <ToolbarIcon
               label={mapScriptLabel}
               icon="puzzle-piece"
-              className={withheldClass('map-scripts')}
-              {...orWithheld('map-scripts', 'toolbar', () =>
-                onEditScript(undefined),
-              )}
+              data-callout="screen.code"
+              onClick={() => onEditScript(undefined)}
             />
-            {note('map-scripts', 'toolbar')}
-          </>
-        )}
+          ) : (
+            <>
+              <ToolbarIcon
+                label={mapScriptLabel}
+                icon="puzzle-piece"
+                className={withheldClass('map-scripts')}
+                {...orWithheld('map-scripts', 'toolbar', () =>
+                  onEditScript(undefined),
+                )}
+              />
+              {note('map-scripts', 'toolbar')}
+            </>
+          ))}
       </div>
       {/* ONE COLUMN down the left: the panels at the top and whichever
           inspector is open at the foot, taking only the height the panels

@@ -41,18 +41,18 @@ describe('a Show me link', () => {
   it('can be pressed from the keyboard', () => {
     const onActivate = vi.fn();
     rendered(LESSONS['origin/first-world'].instructions, onActivate);
-    const world = screen.getByText('World');
-    world.focus();
-    expect(document.activeElement).toBe(world);
-    fireEvent.keyDown(world, {key: 'Enter'});
-    expect(onActivate).toHaveBeenCalledWith('view.world');
+    const code = screen.getByText('Screen code');
+    code.focus();
+    expect(document.activeElement).toBe(code);
+    fireEvent.keyDown(code, {key: 'Enter'});
+    expect(onActivate).toHaveBeenCalledWith('screen.code');
   });
 
   it('is plain bold text where nothing listens, as in the progression dialog', () => {
     rendered(LESSONS['origin/first-world'].instructions);
-    const world = screen.getByText('World');
-    expect(world.tagName).toBe('B');
-    expect(world).not.toHaveAttribute('tabindex');
+    const code = screen.getByText('Screen code');
+    expect(code.tagName).toBe('B');
+    expect(code).not.toHaveAttribute('tabindex');
   });
 
   it('renders every name the lesson’s markdown holds', () => {

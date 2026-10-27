@@ -12,8 +12,8 @@ import {
 
 describe('a place’s name', () => {
   it('splits at its first colon, and only there', () => {
-    expect(parsePlaceName('view.world')).toEqual({
-      place: 'view.world',
+    expect(parsePlaceName('screen.code')).toEqual({
+      place: 'screen.code',
       argument: undefined,
     });
     expect(parsePlaceName('map.enhance:Hero')).toEqual({
@@ -42,11 +42,11 @@ describe('every place', () => {
     expect(place.says).not.toMatch(/\b(here|this|that one)\b/i);
   });
 
-  it('asks for the map before anything that is on it', () => {
+  it('asks for the level before anything that is on it', () => {
     for (const name of PLACE_NAMES.filter(each => each.startsWith('map.'))) {
       expect(placeNamed(name)!.reveals[0], name).toEqual({
-        kind: 'view',
-        view: 'map',
+        kind: 'file',
+        level: true,
       });
     }
   });
@@ -75,9 +75,9 @@ describe('a place in another file', () => {
     expect(placeNamed('actor.blocks:Hero')!.reveals).toEqual([
       {kind: 'file', actor: 'Hero'},
     ]);
-    expect(placeNamed('world.blocks')!.reveals).toEqual([
-      {kind: 'file', world: true},
-      {kind: 'view', view: 'world'},
+    expect(placeNamed('screen.blocks')!.reveals).toEqual([
+      {kind: 'file', screen: true},
+      {kind: 'code'},
     ]);
   });
 
@@ -86,10 +86,10 @@ describe('a place in another file', () => {
       {kind: 'file', actor: 'Hero'},
       {kind: 'toolbox', block: 'world_print'},
     ]);
-    // The world's blocks are a VIEW of the world's file, so both.
-    expect(placeNamed('toolbox.drawer:Loops@world')!.reveals).toEqual([
-      {kind: 'file', world: true},
-      {kind: 'view', view: 'world'},
+    // The Main Screen's blocks are its code view, so both.
+    expect(placeNamed('toolbox.drawer:Loops@screen')!.reveals).toEqual([
+      {kind: 'file', screen: true},
+      {kind: 'code'},
       {kind: 'toolbox', drawer: 'Loops'},
     ]);
   });
@@ -105,10 +105,10 @@ describe('the names in a lesson’s instructions', () => {
   it('are read out of its markdown, in order', () => {
     const markdown =
       'Press [Enhance Hero…](#clickable=map.enhance:Hero), then ' +
-      '[World](#clickable=view.world). A [link](https://example.org) is not one.';
+      '[Screen code](#clickable=screen.code). A [link](https://example.org) is not one.';
     expect(clickableNames(markdown)).toEqual([
       'map.enhance:Hero',
-      'view.world',
+      'screen.code',
     ]);
   });
 });

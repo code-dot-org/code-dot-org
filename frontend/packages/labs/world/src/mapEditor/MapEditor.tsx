@@ -775,10 +775,18 @@ export const MapEditor = ({
   // A level whose work is in blocks opens the Main Screen on its code, as it
   // opened a world on its World view (`levelData.worldOpensOn`).
   const level = useMaybeLevelProperties<WorldLevelProperties>();
-  const opensOnCode =
+  const isMainScreen =
     document.scriptKind === 'screen' &&
-    filePath(currentSources.source, fileId) === `${MAIN_SCREEN_PATH}.screen` &&
-    worldOpensOn(level) === 'world';
+    filePath(currentSources.source, fileId) === `${MAIN_SCREEN_PATH}.screen`;
+  const opensOnCode = isMainScreen && worldOpensOn(level) === 'world';
+  // "Show me" the Main Screen's code (`callouts/places`, `screen.code`).
+  useEffect(() => {
+    if (!isMainScreen) {
+      return;
+    }
+    setRevealer('code', () => setScript({kind: 'map'}));
+    return () => setRevealer('code', null);
+  }, [isMainScreen, setScript]);
   const openedOnCode = useRef(false);
   useEffect(() => {
     if (opensOnCode && !openedOnCode.current) {
@@ -1017,6 +1025,7 @@ export const MapEditor = ({
                 ? 'Map code'
                 : 'World code'
           }
+          screenCode={isMainScreen}
           world={worldInspector}
           worldCameras={worldCameraList}
           worldCameraEditor={worldCameraEditor}

@@ -51,8 +51,61 @@ describe('fileToReveal', () => {
     expect(fileToReveal(SOURCE, {actor: 'ground'})).toBe('b');
   });
 
-  it('finds the world', () => {
-    expect(fileToReveal(SOURCE, {world: true})).toBe('c');
+  it('finds the world, in a project that is still one', () => {
+    expect(fileToReveal(SOURCE, {level: true})).toBe('c');
+    expect(fileToReveal(SOURCE, {screen: true})).toBe('c');
+  });
+
+  it('finds the level and the Main Screen of a game', () => {
+    const game: MultiFileSource = {
+      ...SOURCE,
+      folders: {
+        ...SOURCE.folders,
+        '3': {id: '3', name: 'screens', parentId: '0'},
+        '4': {id: '4', name: 'maps', parentId: '0'},
+      },
+      files: {
+        ...SOURCE.files,
+        d: {
+          id: 'd',
+          name: 'main.screen',
+          language: 'screen',
+          contents: '{}',
+          folderId: '3',
+        },
+        e: {
+          id: 'e',
+          name: 'main.map',
+          language: 'map',
+          contents: '{}',
+          folderId: '4',
+        },
+      },
+    };
+    expect(fileToReveal(game, {level: true})).toBe('e');
+    expect(fileToReveal(game, {screen: true})).toBe('d');
+  });
+
+  it('takes the Main Screen for the level when it is the level', () => {
+    // adventure/rooms: a window onto a room, with no map of its own.
+    const rooms: MultiFileSource = {
+      ...SOURCE,
+      folders: {
+        ...SOURCE.folders,
+        '3': {id: '3', name: 'screens', parentId: '0'},
+      },
+      files: {
+        ...SOURCE.files,
+        d: {
+          id: 'd',
+          name: 'main.screen',
+          language: 'screen',
+          contents: '{}',
+          folderId: '3',
+        },
+      },
+    };
+    expect(fileToReveal(rooms, {level: true})).toBe('d');
   });
 
   it('answers nothing for a name the project has not got', () => {

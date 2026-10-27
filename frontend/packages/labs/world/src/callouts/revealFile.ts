@@ -1,6 +1,6 @@
 // Which file a `file` reveal means (`places`, `layout/WorldLayout`).
 //
-// A lesson names things the way a learner does — "the Hero", "the world" —
+// A lesson names things the way a learner does — "the Hero", "the level" —
 // and this answers with the file that declares one. Pure, and here rather
 // than in the layout that acts on it, so what can be tested is
 // (specs/SHOW_ME_PLAN.md; the layout itself is React, redux and codebridge,
@@ -13,25 +13,35 @@ import {
   projectActorOptions,
   projectWorldOptions,
 } from '../blockly/projectModules';
+import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {fileIdAt, projectFiles} from '../runtime/projectFiles';
 
 /**
  * The id of the file a reveal asks for, or nothing when the project holds no
  * such thing — an actor by the NAME its file declares, whatever its file is
- * called, or the world's own file.
+ * called; the level, which is `main.map` or the Main Screen where that is
+ * the level; or the Main Screen. A world's own file answers both in a
+ * project that is still a world.
  */
 export function fileToReveal(
   source: MultiFileSource,
-  {actor, world}: {actor?: string; world?: boolean},
+  {actor, level, screen}: {actor?: string; level?: boolean; screen?: boolean},
 ): string | undefined {
   const files = projectFiles(source);
   const wanted = actor?.toLowerCase();
-  if (world) {
+  // By PATH: the game's files are where the lab keeps them, and a world, a
+  // screen and a level are not modules anything is asked to import.
+  const first = (...paths: string[]) =>
+    paths.map(path => fileIdAt(source, path)).find(Boolean);
+  const world = () => {
     const modulePath = projectWorldOptions(files)[0]?.[1];
-    // By PATH, not by `fileIdForModule`, which follows the compiler's own
-    // resolution and has no reason to try `.world`: a world is not a module
-    // anything imports (`blockly/openModule`).
-    return modulePath ? fileIdAt(source, `${modulePath}.world`) : undefined;
+    return modulePath ? [`${modulePath}.world`] : [];
+  };
+  if (screen) {
+    return first(`${MAIN_SCREEN_PATH}.screen`, ...world());
+  }
+  if (level) {
+    return first('maps/main.map', `${MAIN_SCREEN_PATH}.screen`, ...world());
   }
   const modulePath = wanted
     ? projectActorOptions(files).find(

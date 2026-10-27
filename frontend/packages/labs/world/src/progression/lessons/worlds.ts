@@ -224,6 +224,11 @@ export interface WorldSpec {
    * it there rather than in blocks.
    */
   mainCamera?: MainCameraSettings;
+  /**
+   * Keep every `add actor` as code rather than placing it on the map: the
+   * lesson reads its rows, or has a learner change them (`asScreen`).
+   */
+  rowsAsCode?: true;
 }
 
 /** A `.world` file. */
@@ -298,6 +303,7 @@ export const worldFile = ({
   actors,
   handlers,
   mainCamera,
+  rowsAsCode,
 }: WorldSpec): LessonWorld => {
   const inside = [
     ...(tiles
@@ -338,6 +344,7 @@ export const worldFile = ({
         ...(mainMapOf(rows, tiles, mainCamera)
           ? {map: mainMapOf(rows, tiles, mainCamera)}
           : {}),
+        ...(rowsAsCode ? {rowsAsCode} : {}),
       },
       null,
       2,

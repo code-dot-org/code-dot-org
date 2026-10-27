@@ -20,12 +20,14 @@ export type Reveal =
    * A FILE in front, which is what every other reveal is asked of: only the
    * active tab's editor is mounted, so a place in another file has nobody to
    * answer for it until this (`layout/WorldLayout`). Named as a lesson names
-   * things — the actor by the name its file declares, the world by being the
-   * world — rather than by a path.
+   * things — the actor by the name its file declares, the level and the Main
+   * Screen by being them — rather than by a path.
    */
-  | {kind: 'file'; actor?: string; world?: boolean}
+  | {kind: 'file'; actor?: string; level?: boolean; screen?: boolean}
   /** One of a world's two views (`mapEditor/WorldEditor`). */
   | {kind: 'view'; view: 'map' | 'world'}
+  /** The Main Screen's code open, in place of the screen (`MapEditor`). */
+  | {kind: 'code'}
   /** A placement selected on the map, of a kind by name or any (`MapStage`). */
   | {kind: 'placement'; named?: string}
   /** The map's panel that starts hidden behind a button (`MapStage`). */
@@ -48,13 +50,15 @@ export interface Place {
 
 type PlaceOf = (argument: string | undefined) => Place;
 
-const onTheMap: Reveal = {kind: 'view', view: 'map'};
-const theWorldFile: Reveal = {kind: 'file', world: true};
+/** The level in front: `main.map`, or the screen where it is the level. */
+const onTheMap: Reveal = {kind: 'file', level: true};
+const theScreen: Reveal = {kind: 'file', screen: true};
+const theScreenCode: readonly Reveal[] = [theScreen, {kind: 'code'}];
 
 /**
  * A block or a drawer may say WHICH FILE'S toolbox, after an `@`:
- * `world_print@Hero` is in the Hero's file, `world_add_actor@world` in the
- * world's own workspace. Without one, whichever file is in front, which is
+ * `world_print@Hero` is in the Hero's file, `world_add_actor@screen` in the
+ * Main Screen's code. Without one, whichever file is in front, which is
  * right for a lesson that has just said to open it.
  */
 const inFile = (
@@ -68,9 +72,7 @@ const inFile = (
   return {
     wanted: argument.slice(0, at) || undefined,
     reveals:
-      file === 'world'
-        ? [theWorldFile, {kind: 'view', view: 'world'}]
-        : [{kind: 'file', actor: file}],
+      file === 'screen' ? [...theScreenCode] : [{kind: 'file', actor: file}],
   };
 };
 
@@ -84,15 +86,16 @@ const inProperties =
   });
 
 const PLACES: Readonly<Record<string, PlaceOf>> = {
-  'view.map': () => ({
-    mark: 'view.map',
-    reveals: [],
-    says: 'Map is the first of the two tabs above the editor.',
+  level: () => ({
+    reveals: [onTheMap],
+    says: 'The level is main.map, the tab beside the Main Screen.',
   }),
-  'view.world': () => ({
-    mark: 'view.world',
-    reveals: [],
-    says: 'World is the second of the two tabs above the editor, beside Map.',
+  'screen.code': () => ({
+    mark: 'screen.code',
+    reveals: [theScreen],
+    says:
+      'Screen code is the puzzle piece above the Main Screen, and it opens ' +
+      'the screen’s blocks.',
   }),
   'map.palette': named => ({
     mark: named ? `map.palette:${named}` : 'map.palette',
@@ -123,9 +126,9 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
   ),
   'world.properties': () => ({
     mark: 'world.properties',
-    reveals: [onTheMap],
+    reveals: [theScreen],
     says:
-      'The world’s own properties are beside the map, with nothing ' +
+      'The game’s own properties are beside the Main Screen, with nothing ' +
       'selected on it.',
   }),
   'map.layers': () => ({
@@ -139,9 +142,9 @@ const PLACES: Readonly<Record<string, PlaceOf>> = {
     reveals: [{kind: 'file', actor}],
     says: `${actor ?? 'The actor'}'s blocks are the tab of its own name.`,
   }),
-  'world.blocks': () => ({
-    reveals: [theWorldFile, {kind: 'view', view: 'world'}],
-    says: 'The world’s blocks are under the World tab of the world’s file.',
+  'screen.blocks': () => ({
+    reveals: [...theScreenCode],
+    says: 'The Main Screen’s blocks are behind Screen code, above the screen.',
   }),
   'toolbox.drawer': argument => {
     const {wanted, reveals} = inFile(argument);

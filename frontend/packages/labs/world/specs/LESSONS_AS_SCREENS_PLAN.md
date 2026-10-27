@@ -1,6 +1,6 @@
 # Plan: lessons as screens
 
-STATUS: IN PROGRESS, October 2026. Steps 0 to 2 are built.
+STATUS: IN PROGRESS, October 2026. Steps 0 to 3 are built.
 
 A game is a Main Screen whose Viewport is docked over the whole surface and
 shows `main.map` (specs/SCREEN_MAP_PLAN.md). Every stock game is written
@@ -137,12 +137,34 @@ match with their positions and velocities left out.
 - **The first lesson's toolbox** has six more blocks, Camera Follow's and
   Camera Confined's, which the Viewport requires (`toolboxShelf.test`).
 
-### 3. The text
+### 3. What a lesson opens on, and its text — BUILT
 
-Each lesson's instructions are read against what it now opens on, and the
-steps that name `main.world`, its Map tab or its rows are rewritten: about
-a dozen places, plus the three memory lessons of step 0 and the camera
-lessons, which say where a camera is made.
+- **Where once-only code goes.** Every lesson's Main Screen starts with
+  `when this screen loads` holding `in the map ⟨Game⟩ shows`, empty or not,
+  as a world started with `define world`; the instructions say "inside **in
+  the map ⟨Game⟩ shows**". No early toolbox offers either block, and none
+  needs to.
+- **Rows a lesson reads stay rows.** A lesson about its `add actor` rows —
+  memory/variable's positions, memory/many's seventh Coin, story/form's tab
+  order — says `rowsAsCode` in its world spec, and every `add actor` stays
+  code. A placement's position cannot be `⟨gap⟩ + 60`.
+- **Which file is in front.** A lesson on the map opens on `main.map`, where
+  its actors can be selected (the Main Screen draws the level inside its
+  Viewport only as a picture); one in the workspace opens on the Main
+  Screen's code. Both are tabs.
+- **The Main Screen's code is never locked.** Its button was the map code
+  button, which `map-scripts` withholds until the placement-script lesson;
+  a world's World view never was.
+- **Show me.** A place on the map reveals the level's file (`main.map`, or
+  the screen where it is the level); `world.properties` the Main Screen;
+  `view.map` and `view.world` are `level` and `screen.code`; `world.blocks`
+  and `@world` are `screen.blocks` and `@screen`. The map editor answers a
+  `code` reveal by opening the screen's code.
+- **The text.** Fifteen passages that named `main.world`, its Map or World
+  view, `define world` or "the top of the world" are rewritten against what
+  each lesson opens on.
+
+The comparison of step 1 holds: all 79 lessons build the same game.
 
 ### 4. The rest of `.world`
 

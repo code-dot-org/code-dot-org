@@ -40,6 +40,7 @@ import type {MainCameraSettings} from '../../blockly/placementCameras';
 import type {WorldScenario} from '../../fixtures/scenarios';
 import type {LessonProperties, TileId} from '../types';
 
+import {opensOnTheLevel} from './asScreen';
 import {lessonSource} from './support';
 import {
   addActor,
@@ -106,8 +107,8 @@ const firstWorld: WorldScenario = {
 
 Press **Run**. There is a world, and there is one thing in it.
 
-What you are looking at is the world's **map**: what is on it is what the
-world starts with, where you see it. The strip along the top is every kind
+What you are looking at is the game's **map**, \`main.map\`: what is on it is
+what the game starts with, where you see it. The strip along the top is every kind
 of thing this project has. It has one, the **Hero**.
 
 ### What you do
@@ -119,12 +120,13 @@ of thing this project has. It has one, the **Hero**.
 3. Click a Hero on the map and press
    [Open Hero](#clickable=map.openKind:Hero). This is the answer: a Hero, which
    looks like one picture and does nothing else.
-4. Change the picture with **set sprite**, go back to the \`main.world\` tab
+4. Change the picture with **set sprite**, go back to the \`main.map\` tab
    and run it again. Both change, because both are Heroes.
 
-The [World](#clickable=view.world) tab beside [Map](#clickable=view.map) is
-the same world as blocks. There is not much in it yet. Look whenever you
-like.
+The \`main.screen\` tab beside [main.map](#clickable=level) is the game
+itself: a window onto the map. Its [Screen code](#clickable=screen.code) is
+where the game's own blocks go. There is not much in it yet. Look whenever
+you like.
 
 Anything underlined with dots, like those two, is a **Show me**: press it and the lab
 points at the thing it names.
@@ -258,7 +260,7 @@ it cannot be pushed, and nothing else can affect it.
 
 1. Give the Hero **Can Move** from **Enhance Actor** — that is the Physics
    rule.
-2. Go back to the [Map](#clickable=view.map) and click the Hero. It has a
+2. Go back to [main.map](#clickable=level) and click the Hero. It has a
    **Can Move** group in its properties now, with a **Velocity** in it. Open
    the Velocity and put **2** in the first box.
 3. **Delete the whole \`each frame\`** in the Hero's code. It should still
@@ -379,7 +381,7 @@ like everything else.
 3. Press the **open** button at the end of your **set sprite** block to open
    the picture, and **paint on it**. It is yours now — the copy in the library
    is untouched.
-4. Go back to the [Map](#clickable=view.map) and press
+4. Go back to [main.map](#clickable=level) and press
    [Add New Actor](#clickable=map.newActor). Its picture step offers the picture
    you imported: it was never the Hero's, it is the project's.
 `.trim(),
@@ -657,9 +659,10 @@ down.
 2. Click each one and read its **Pos X** and **Pos Y**. Dragging and typing
    are the same thing said two ways; type an exact number into one and watch
    it move.
-3. Put a fourth somewhere **random**. That one is a block, in the
-   [World](#clickable=view.world) tab: a random place is worked out as the
-   world is built, and there is nothing to type.
+3. Put a fourth somewhere **random**. That one is a block, in the Main
+   Screen's [Screen code](#clickable=screen.code), inside **in the map
+   ⟨Game⟩ shows**: a random place is worked out as the game starts, and
+   there is nothing to type.
 `.trim(),
 };
 
@@ -1038,7 +1041,8 @@ until something plays it.
 
 ### What you do
 
-1. Under \`define world\`, add **play a tween on ⟨any Door⟩ over 1 second**.
+1. In the Main Screen's code, inside **in the map ⟨Game⟩ shows**, add **play a
+   tween on ⟨any Door⟩ over 1 second**.
 2. Inside its **move** slot, put **set position of ⟨this actor⟩** and give it
    the Post's place. Run it: the Door travels there.
 3. Change the curve from **steadily** to **slow at both ends** and watch the
@@ -1591,7 +1595,7 @@ far has moved together. A map's layers are listed beside it, front at the top.
 
 ### What you do
 
-1. On the world's **Map**, add a layer in the **Layers** list and call it
+1. On the map, add a layer in the **Layers** list and call it
    Interface. Tick **Fixed to the screen**.
 2. Click the Score on the map and set its **Layer** to Interface. Run it: the
    score stays where it is drawn, whatever the camera does.
@@ -1666,7 +1670,8 @@ on a map can carry **code** of its own, which is blocks about THIS one.
 
 ### What you do
 
-1. Open **World** and delete the handler about any Button. Open **Map** again.
+1. Open the Main Screen's [Screen code](#clickable=screen.code) and delete the
+   handler about any Button. Go back to \`main.map\`.
 2. Click the RED button on the map, and press **Code** in its properties.
 3. Add **when this actor is clicked**, and in it **set text of ⟨the ⟨Sign⟩⟩
    to ⟨RED⟩**. **the ⟨…⟩** is in the Map drawer: it names a thing on this map
@@ -3280,7 +3285,8 @@ out of it: 0 keeps none, 1 keeps all of it.
 
 ### What you do
 
-1. Add **set bounciness of ⟨any Wall⟩ to ⟨0.5⟩** at the top of the world. Run
+1. Add **set bounciness of ⟨any Wall⟩ to ⟨0.5⟩** in the Main Screen's code,
+   inside **in the map ⟨Game⟩ shows**. Run
    it: the Ball comes off the wall at half the speed, and each bounce is
    smaller than the last.
 2. Turn it up until the Ball never slows down. There is exactly one value that
@@ -3919,6 +3925,8 @@ const form: WorldScenario = {
     'Three fields that tab through themselves in the order somebody happened to add them.',
   source: lessonSource({
     world: worldFile({
+      // The lesson reads its `add actor` rows, so they stay rows.
+      rowsAsCode: true,
       name: 'My World',
       // The prompts first — they are Labels, they hold no keyboard, and the
       // tab order does not know they exist.
@@ -3957,7 +3965,8 @@ fields were ADDED in, and somebody added them as they thought of them.
 
 ### What you do
 
-1. Open the world and read the three **add actor** rows. That is the tab order.
+1. Open the Main Screen's code and read the three **add actor** rows. That is
+   the tab order.
 2. In each one, add **set ⟨tab order⟩ of ⟨this actor⟩** and give them **1**, **2**
    and **3** — reading down the screen, not down the file.
 3. Run it again. Type in the top field, press Tab, and the middle one takes
@@ -4060,7 +4069,8 @@ the same event as the words.
    line two.
 2. Add **set background to ⟨…⟩** with the \`(import…)\` row, and change it at
    line three so the story moves indoors.
-3. Add **set music** at the top of the world, and **play sound** on the line
+3. Add **set music** in the Main Screen's code, under **when this screen
+   loads**, and **play sound** on the line
    where somebody knocks.
 4. Read what you have written. Every one of those is the same shape — a line
    moved, so something changed — and none of them is about dialogue.
@@ -4101,6 +4111,8 @@ const crowd: WorldScenario = {
   description: 'One wanderer per click, and no idea what a hundred would cost.',
   source: lessonSource({
     world: worldFile({
+      // The lesson reads its `add actor` rows, so they stay rows.
+      rowsAsCode: true,
       name: 'My World',
       // One to look at before anybody clicks. The rest arrive by the handful.
       rows: [addActor(actorPath('wanderer'), [placeAt(160, 160), wander()])],
@@ -4354,11 +4366,13 @@ is different in kind from what you write in a world.
 1. Inside \`define trait ⟨Blown⟩\`, add
    **define number strength with default 1**. Declared in a trait, it belongs
    to each ACTOR that elects it.
-2. Look in the Wind category in \`main.world\`. Two blocks are there that were
+2. Look in the Wind category in the Main Screen's code. Two blocks are there
+   that were
    not before: **get strength of ⟨…⟩** and **set strength of ⟨…⟩**. What you
    declared became vocabulary.
 3. In the step, multiply the 2 by **strength of ⟨this actor⟩**.
-4. In the world, **set strength** of one Leaf to 3 and leave the other. One
+4. On the map, click one Leaf and give it a **strength** of 3 in its
+   properties, and leave the other. One
    wind, two speeds, and the rule did not have to know there would be two.
 `.trim(),
 };
@@ -5030,8 +5044,9 @@ them.
    opens.
 2. Read the top of it. There are two numbers there that belong to the WORLD
    rather than to any actor, and one of them says how hard gravity pulls.
-3. Put that number in **how hard it pulls** at the top of \`main.world\`, so
-   the world says what you found.
+3. Put that number in **how hard it pulls**, one of
+   [the game's own properties](#clickable=world.properties), so the game
+   says what you found.
 4. Now change it in the rule and run again. You are editing gravity, which
    half an hour ago was a thing that happened to you.
 `.trim(),
@@ -5461,7 +5476,7 @@ Two rooms, in two files. **maps/room1.map** is the one you are in — a Player
 and a Door — and **maps/room2.map** is the other one, which nothing has ever
 loaded. Walk into the Door and nothing happens.
 
-Open the world's **Map** and click the big box on it. That is a **Viewport**
+Click the big box on the Main Screen. That is a **Viewport**
 called Game: a window, and what you see through it is whichever map it holds.
 Right now it holds room one. A room is a map, and going somewhere else is
 **the window holding a different one**.
@@ -6192,6 +6207,8 @@ const variable: WorldScenario = {
     'Three posts in a row, and the same two numbers written six times.',
   source: lessonSource({
     world: worldFile({
+      // The lesson reads its `add actor` rows, so they stay rows.
+      rowsAsCode: true,
       name: 'My World',
       rows: [
         addActor(actorPath('post'), [placeAt(60, 160)]),
@@ -6205,7 +6222,7 @@ const variable: WorldScenario = {
   instructions: `
 ## A box for a number
 
-Three Posts in a row. Look at what the world says: **60**, **160**, **260** —
+Three Posts in a row. Look at what the Main Screen's code says: **60**, **160**, **260** —
 and **160** again, three times, for the height.
 
 Change your mind about where the row sits and you have six numbers to find and
@@ -6214,7 +6231,8 @@ starts and how far apart they are — written out six times over.
 
 ### What you do
 
-1. At the top of \`main.world\`, **set ⟨gap⟩ to 100**.
+1. In the Main Screen's code, at the top of **in the map ⟨Game⟩ shows**,
+   **set ⟨gap⟩ to 100**.
 2. Put the second Post at **⟨gap⟩ + 60** and the third at **⟨gap⟩ + ⟨gap⟩ + 60**.
    Run it: nothing has changed, and that is the point.
 3. Now change **gap** to 40 and run it again. One number, one edit.
@@ -6229,6 +6247,8 @@ const many: WorldScenario = {
   description: 'Six coins and six blocks that do the same thing to them.',
   source: lessonSource({
     world: worldFile({
+      // The lesson reads its `add actor` rows, so they stay rows.
+      rowsAsCode: true,
       name: 'My World',
       rows: [
         addActor(actorPath('coin'), [placeAt(60, 80)]),
@@ -6254,7 +6274,8 @@ A **loop** is one instruction that reaches all of them. It walks a LIST, and
 
 ### What you do
 
-1. Add **for each actor ⟨coin⟩ in ⟨all actors⟩** to the end of \`main.world\`.
+1. Add **for each actor ⟨coin⟩ in ⟨all actors⟩** to the end of **in the map
+   ⟨Game⟩ shows**, in the Main Screen's code.
 2. Inside it, **set sprite of ⟨coin⟩** to the coin picture.
 3. Run it. All six change, from one block.
 4. Add a seventh Coin to the world, above the loop, and run it again. You did
@@ -6270,6 +6291,8 @@ const worldState: WorldScenario = {
   description: 'Two Labels that disagree about how many lives are left.',
   source: lessonSource({
     world: worldFile({
+      // The lesson reads its `add actor` rows, so they stay rows.
+      rowsAsCode: true,
       name: 'My World',
       rows: [
         addActor('actors/label', [
@@ -6386,11 +6409,14 @@ carries one of its own.
 
 1. Open the Lamp. Under **Self**, type **id** as a **New property**, leave
    its kind **number**, press **Add property**, and set it to 1.
-2. In \`main.world\`, in each \`add actor\` body, **set id of ⟨this actor⟩** —
+2. In the Main Screen's code, in each \`add actor\` body, **set id of ⟨this
+   actor⟩** —
    1 for the first, 2 for the second — before the text is set.
 3. Change both Labels to read **join ⟨"lamp "⟩ ⟨id of this actor⟩**, the Lamp's
    own \`id\` rather than the world's.
-4. Delete the world's \`define number id\`. Nothing breaks: nothing needed it.
+4. Delete the game's own **id**, among
+   [the game's own properties](#clickable=world.properties). Nothing breaks:
+   nothing needed it.
 `.trim(),
 };
 
@@ -6434,6 +6460,8 @@ const listsLesson: WorldScenario = {
   description: 'Three things to remember, remembered three separate times.',
   source: lessonSource({
     world: worldFile({
+      // The lesson reads its `add actor` rows, so they stay rows.
+      rowsAsCode: true,
       name: 'My World',
       rows: ERRAND.map(word => noteSaying(words(word))),
     }),
@@ -6633,13 +6661,22 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
 /** Every lesson written so far, by the tile it belongs to. */
 export const LESSONS: Readonly<Record<TileId, WorldScenario>> =
   Object.fromEntries(
-    Object.entries(written).map(([id, lesson]) => [
-      id,
-      {
-        ...lesson,
-        levelData: {...IN_THE_WORKSPACE, ...lesson.levelData},
-      },
-    ]),
+    Object.entries(written).map(([id, lesson]) => {
+      const levelData = {...IN_THE_WORKSPACE, ...lesson.levelData};
+      return [
+        id,
+        {
+          ...lesson,
+          // On the map, a lesson opens on its level; in the workspace, on
+          // the Main Screen's code (`MapEditor`).
+          source:
+            levelData.worldView === 'map'
+              ? opensOnTheLevel(lesson.source)
+              : lesson.source,
+          levelData,
+        },
+      ];
+    }),
   ) as Readonly<Record<TileId, WorldScenario>>;
 
 /** The lesson for a tile, if anybody has written it. */

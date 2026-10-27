@@ -88,8 +88,8 @@ export const TILES: readonly Tile[] = [
       // The way from a thing on the map to what it IS: `Open ⟨Hero⟩`, which is
       // how this lesson shows a learner their first blocks
       // (specs/PILOT_PLAN.md). The lesson is told on the map; the blocks
-      // below are still what it grants, and what the World view's toolbox
-      // holds for anybody who looks.
+      // below are still what it grants, and what the Main Screen's code
+      // offers anybody who looks.
       {kind: 'affordance', id: 'map-open-kind'},
       // The blocks this lesson is done with, and not the drawers they live
       // in: a first lesson that opened the whole Actor drawer would offer
@@ -1150,8 +1150,8 @@ export const TILES: readonly Tile[] = [
     unlocks: [
       {kind: 'editor', id: 'map'},
       // …and the same arrangement in a FILE, which is what a level shared
-      // between worlds is. The lesson keeps its own in the world's main map,
-      // which is what a world opens on (specs/RETIREMENTS_PLAN.md).
+      // between games is. The lesson's own is `main.map`, which is what it
+      // opens on (specs/LESSONS_AS_SCREENS_PLAN.md).
       {kind: 'block', type: 'world_load_map'},
       // …and the two that make maps a STACK rather than a pile: one named
       // while the world runs, and the newest taken back again. A pause menu
