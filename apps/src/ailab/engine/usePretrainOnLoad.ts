@@ -10,7 +10,7 @@ import {getData} from './selectors';
 import {useTrainingData} from './TrainingDataContext';
 import {useTrainingRun} from './useTrainingRun';
 
-// Trains a pretrained level on load, and returns whether that model is still to come.
+// Returns whether a pretrained level's model is still to come.
 export function usePretrainOnLoad(restoringModel: boolean): boolean {
   const dispatch = useAppDispatch();
   const {project} = useProject();
@@ -28,7 +28,7 @@ export function usePretrainOnLoad(restoringModel: boolean): boolean {
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
   const data = useAppSelector(getData);
-  // Unset until the metadata is in. ProjectContext applies it an effect later.
+  // Unset until the metadata is in, and applied to the project an effect later.
   const willTrain =
     !presetColumns ||
     readyToTrain(

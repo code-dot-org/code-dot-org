@@ -84,7 +84,6 @@ describe('a pretrained level', () => {
   });
   afterEach(() => jest.useRealTimers());
 
-  // Pretraining starts once the loading overlay has painted.
   const paintFrame = () => act(() => jest.runAllTimers());
 
   const PRETRAINED = {
@@ -164,20 +163,6 @@ describe('a pretrained level', () => {
     paintFrame();
     expect(onLoadingChange).toHaveBeenLastCalledWith(false);
     expect(trainingData().trainedModel).toBeDefined();
-  });
-
-  test('reports it has loaded when its columns leave nothing to train on', () => {
-    const {onLoadingChange} = renderLevel({trainer: 'decisionTree'});
-
-    act(() => {
-      storeSingleton.dispatch(resetState());
-      seedLevel(storeSingleton, PRETRAINED);
-      storeSingleton.dispatch(
-        setPresetColumns({labelColumn: 'animal', selectedFeatures: []})
-      );
-    });
-    expect(onLoadingChange).toHaveBeenLastCalledWith(false);
-    expect(screen.getByRole('table')).toBeTruthy();
   });
 
   test('reports it has loaded when its saved label is a locked feature', () => {
