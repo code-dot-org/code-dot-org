@@ -62,6 +62,8 @@ export const ProjectProvider = ({
   const [project, setProject] = useState<AilabProject>(defaultProject);
   const [isProjectLoaded, setIsProjectLoaded] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
+  // The project as opened, before the student has changed anything.
+  const openedProject = useRef<AilabProject | undefined>(undefined);
   const onProjectChangeRef = useRef(onProjectChange);
   onProjectChangeRef.current = onProjectChange;
   // A project waiting for the dataset to load.
@@ -165,17 +167,17 @@ export const ProjectProvider = ({
         selectableColumns,
         data
       );
-      setProject(
-        presetColumns
-          ? applyPresetColumns(
-              reconciledProject,
-              presetColumns,
-              lockedLabel,
-              lockedFeatures,
-              data
-            )
-          : reconciledProject
-      );
+      const opened = presetColumns
+        ? applyPresetColumns(
+            reconciledProject,
+            presetColumns,
+            lockedLabel,
+            lockedFeatures,
+            data
+          )
+        : reconciledProject;
+      openedProject.current = opened;
+      setProject(opened);
       setIsProjectLoaded(true);
     },
     [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
@@ -203,11 +205,13 @@ export const ProjectProvider = ({
     }
   }, [pendingProject, datasetDescribed, applyProject]);
 
-  // TODO: skip notifying on project change if the change is due to on-load
-  // reconciliation of the project with the saved state, as that is not a user
-  // change and shouldn't count as an 'edit'.
+  // Opening reconciles the saved project with the dataset; that is not an edit.
   useEffect(() => {
-    if (isProjectLoaded && !isDefaultProject) {
+    if (
+      isProjectLoaded &&
+      !isDefaultProject &&
+      project !== openedProject.current
+    ) {
       onProjectChangeRef.current?.(project);
     }
   }, [isProjectLoaded, isDefaultProject, project]);

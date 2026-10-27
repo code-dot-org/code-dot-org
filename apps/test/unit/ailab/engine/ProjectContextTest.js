@@ -697,32 +697,51 @@ describe('ProjectContext keeping a saved project in sync', () => {
     expect(save).not.toHaveBeenCalled();
   });
 
-  test('opens the saved project into the lab', () => {
+  test('opens the saved project into the lab without reporting it', () => {
     const {save, context} = renderSync();
 
     loadDataset();
 
     expect(context().project).toEqual(SAVED_COLUMNS);
-    expect(save).toHaveBeenCalledWith(SAVED_COLUMNS);
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('does not report the columns opening drops', () => {
+    const {save, context} = renderSync({
+      ...SAVED_COLUMNS,
+      selectedFeatures: ['b', 'retired'],
+    });
+
+    loadDataset();
+
+    expect(context().project.selectedFeatures).toEqual(['b']);
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('does not report the empty project a new student opens', () => {
+    const {save, context} = renderSync(defaultProject);
+
+    loadDataset();
+
+    expect(context().project).toEqual(defaultProject);
+    expect(save).not.toHaveBeenCalled();
   });
 
   test('waits for every column of the dataset to be described', () => {
-    const {save, context} = renderSync();
+    const {context} = renderSync();
 
     loadDatasetColumnByColumn();
 
     expect(context().project).toEqual(SAVED_COLUMNS);
-    expect(save).toHaveBeenCalledTimes(1);
   });
 
   test('does not open against the dataset the last level left behind', () => {
     loadDataset();
 
-    const {save, context} = renderSync();
+    const {context} = renderSync();
     loadDataset();
 
     expect(context().project).toEqual(SAVED_COLUMNS);
-    expect(save).toHaveBeenCalledWith(SAVED_COLUMNS);
   });
 
   test('reports a column the student chooses', () => {
