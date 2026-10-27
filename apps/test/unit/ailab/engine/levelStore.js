@@ -7,7 +7,7 @@ import rootReducer, {
   setImportedData,
   setMode,
 } from '@cdo/apps/ailab/engine/redux';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 // `legs` fixes `animal`, so a trained model reaches 100%.
 export const ANIMALS = [
@@ -51,7 +51,7 @@ export function levelStore(...level) {
 // The columns a level opens with: every one except the label is a feature.
 export function levelProject(columns = ANIMAL_COLUMNS, label = 'animal') {
   return {
-    ...initialProject,
+    ...defaultProject,
     labelColumn: label,
     selectedFeatures: Object.keys(columns).filter(column => column !== label),
   };
