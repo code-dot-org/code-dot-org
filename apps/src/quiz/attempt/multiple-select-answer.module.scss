@@ -69,12 +69,13 @@
 }
 
 .optionSelectedUngraded {
-  background: var(--background-brand-purple-light);
-  border-color: var(--borders-brand-purple-light);
+  background: var(--background-brand-light);
+  border-color: var(--border-brand-light);
 
   .checkboxVisualChecked {
+    color: var(--text-selected-primary);
     background: var(--background-selected-primary);
-    border-color: var(--background-selected-primary);
+    border-color: var(--border-selected-primary);
   }
 }
 

@@ -68,15 +68,15 @@
 }
 
 .optionSelectedUngraded {
-  background: var(--background-brand-purple-light);
-  border-color: var(--borders-brand-purple-light);
+  background: var(--background-brand-light);
+  border-color: var(--border-brand-light);
 
   .radioVisual {
-    border-color: var(--borders-brand-purple-primary);
+    border-color: var(--border-selected-primary);
   }
 
   .radioVisualFilled::after {
-    background: var(--background-brand-purple-primary);
+    background: var(--background-selected-primary);
   }
 }
 
