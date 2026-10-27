@@ -16,6 +16,8 @@ import {
 } from '@code-dot-org/blockly';
 
 import {viewOf} from '../actors/actorData';
+import {ruleBodySheet} from '../rules/ruleBodies';
+import {asRuleData, isRuleData} from '../rules/ruleData';
 import {TILE_SIZE} from '../runtime/viewport';
 
 import {
@@ -49,9 +51,9 @@ import {
   type PlacementCamera,
 } from './placementCameras';
 import {
-  extractRuleBodies,
   parseRuleMeta,
   ruleMetaToModule,
+  type RuleBody,
   type RuleMeta,
 } from './ruleMeta';
 import {
@@ -62,6 +64,7 @@ import {
   type ScreenData,
 } from './screenData';
 import {standInBlocks} from './standInBlocks';
+import {markRule} from './workspaceRoots';
 
 // Headless Blockly → world-lab code generation for `.rule`/`.actor` files
 // (INTERFACE.md). Blockly's generator lives on a workspace, so an offscreen
@@ -333,6 +336,59 @@ const SCREEN_KEYS: ReadonlySet<string> = new Set([
  * hats, which go either side of the world as a world file's do
  * (`assembleWorldModule`).
  */
+/**
+ * A `.rule`: its declarations from its data, and each body generated alone
+ * under its page's head (`rules/ruleBodies`). A rule the data cannot say is
+ * not compiled, as the Rule Editor cannot open one.
+ */
+function generateRule(
+  generator: JavascriptGenerator,
+  workspace: Blockly.Workspace,
+  contents: string,
+  path: string,
+): string {
+  const modulePath = path.replace(/\.rule$/, '');
+  let data: unknown;
+  try {
+    data = JSON.parse(asRuleData(contents));
+  } catch {
+    data = undefined;
+  }
+  const meta = isRuleData(data) ? parseRuleMeta(modulePath, contents) : null;
+  if (!meta || !isRuleData(data)) {
+    return generator.finish('export {};\n');
+  }
+  const sheet = ruleBodySheet(data);
+  workspace.clear();
+  Blockly.serialization.workspaces.load(sheet.workspace, workspace);
+  generator.init(workspace);
+  // A body naming the rule's own member uses the local `export const`, not
+  // an import of the module into itself.
+  (generator as {__ruleModule?: string}).__ruleModule = modulePath;
+  const bodies = new Map<string, RuleBody>();
+  for (const at of sheet.bodies) {
+    const first = workspace.getBlockById(at.head)?.getNextBlock();
+    const code = first ? generator.blockToCode(first) : '';
+    bodies.set(at.key, {
+      params: at.params.map(id => generator.getVariableName(id)),
+      body: generator.prefixLines(
+        Array.isArray(code) ? code[0] : code,
+        generator.INDENT,
+      ),
+    });
+  }
+  (generator as {__ruleModule?: string}).__ruleModule = undefined;
+  // What the bodies imported, so the declarations do not import it again:
+  // `finish` prepends these, and two imports of one name do not build.
+  const imported = new Set(
+    Object.keys(
+      (generator as unknown as {definitions_?: Record<string, string>})
+        .definitions_ ?? {},
+    ),
+  );
+  return generator.finish(ruleMetaToModule(meta, bodies, imported));
+}
+
 function generateMainScreen(
   generator: JavascriptGenerator,
   workspace: Blockly.Workspace,
@@ -566,6 +622,7 @@ export const BlocklyGenerator = forwardRef<
         // with, and only the serialized state / generated body is read. Set on
         // every call, before any block loads.
         (workspace as {isRuleGenerator?: boolean}).isRuleGenerator = true;
+        markRule(workspace, fileKindOf(path) === 'rule');
         generator.addReservedWords(
           'actor,camera,world,eventValue,delta,map,placed,mapData',
         );
@@ -591,6 +648,9 @@ export const BlocklyGenerator = forwardRef<
             path!,
             rootTypesRef.current,
           );
+        }
+        if (fileKindOf(path) === 'rule') {
+          return generateRule(generator, workspace, contents, path!);
         }
         // A world's main map, generated FIRST: its placements' workspaces go
         // through the same headless workspace this file is about to be
@@ -648,57 +708,6 @@ export const BlocklyGenerator = forwardRef<
           path,
           topBlocks.map(block => block.type),
         );
-        if (shape === 'rule') {
-          const modulePath = (path ?? '').replace(/\.rule$/, '');
-          const meta = parseRuleMeta(modulePath, contents);
-          if (!meta) {
-            return generator.finish('export {};\n');
-          }
-          (generator as {__ruleModule?: string}).__ruleModule = modulePath;
-          const bodies = extractRuleBodies(topBlocks, {
-            body: block =>
-              generator.statementToCode(block as Blockly.Block, 'DO'),
-            // A step's body is what follows the hat. `blockToCode` on the next
-            // block generates it and everything chained after it.
-            chainBody: block => {
-              const first = (block as Blockly.Block).getNextBlock();
-              if (!first) {
-                return '';
-              }
-              const code = generator.blockToCode(first);
-              return Array.isArray(code) ? code[0] : code;
-            },
-            // The params mutator stores each param's variable id in extraState;
-            // map them to the safe JS identifiers the body's getters resolve to,
-            // so the closure signature and the getters agree.
-            signature: block => {
-              const state = (
-                block as {
-                  saveExtraState?: () => {
-                    parts?: Array<{kind?: string; var?: string}>;
-                  };
-                }
-              ).saveExtraState?.();
-              // `define block` keeps the whole designed signature; the closure's
-              // parameters are its `param` parts, in order.
-              const vars = (state?.parts ?? [])
-                .filter(part => part.kind === 'param')
-                .map(part => part.var ?? '');
-              return vars.map(id => generator.getVariableName(id));
-            },
-          });
-          (generator as {__ruleModule?: string}).__ruleModule = undefined;
-          // What the bodies imported, so the declarations do not import it
-          // again — `finish` prepends these, and two imports of one name is a
-          // build failure rather than a redundancy (ruleMetaToModule).
-          const imported = new Set(
-            Object.keys(
-              (generator as unknown as {definitions_?: Record<string, string>})
-                .definitions_ ?? {},
-            ),
-          );
-          return generator.finish(ruleMetaToModule(meta, bodies, imported));
-        }
 
         // A root block (an event handler, or an actor/world definition)
         // owns the blocks chained below it as its body and generates that chain

@@ -1,6 +1,6 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: PLANNED, October 2026. Nothing here is built.
+STATUS: IN PROGRESS, October 2026. Steps 0 and 1 are built.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a map. The compiler still
@@ -75,17 +75,23 @@ camera` block with `use trait` rows (`withCameraDeclarations` in
 
 ## What is being built
 
-### 0. A body alone
+### 0. A body alone — BUILT
 
-`generateBody(head, body, variables)` in the generator: one load, the
-chain below the head generated. `ruleDataCompiles` already pins every
-stock rule's code byte for byte; it is what each step below keeps passing.
+`ruleBodySheet` (`rules/ruleBodies`) lays out every body of a rule under
+its page's head, with the rule's variables and the key each is filed
+under, in one workspace: one load, one `init`. A workspace that holds a
+rule's bodies and no `define rule` is marked as a rule's (`markRule`), so a
+list socket there defaults to `all actors`, as on the Rule Editor's pages.
 
-### 1. Rules from data
+### 1. Rules from data — BUILT
 
-The rule path folds the view back to data (`foldRule`), generates each
-member's and step's body alone, and keys them from the data. The whole
-view is no longer loaded.
+`generateRule` folds what it is handed to data (`asRuleData`), generates
+each body below its head, and assembles the module from the data's
+metadata as before. A rule the data cannot say compiles to nothing.
+Checked against the old path on all 397 rules in the stock shelf, the
+scenarios and the lessons: the same code, but for the order of the names on
+the first `var` line in 105, which follows the order the blocks load in.
+`extractRuleBodies` is gone.
 
 ### 2. Actors from data
 

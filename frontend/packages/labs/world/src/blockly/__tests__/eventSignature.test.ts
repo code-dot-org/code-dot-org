@@ -281,8 +281,8 @@ describe('where a world event\u2019s hat may be placed', () => {
   });
 
   it('is not a rule file, which binds neither world nor actor', () => {
-    // A rule module is `const rule = new RuleBuilder(…)`, and
-    // `extractRuleBodies` matches a hat against none of its three roots — so a
+    // A rule module is `const rule = new RuleBuilder(…)`, and only a
+    // member's or a step's body is compiled (`rules/ruleBodies`) — so a
     // hat there, and everything a learner chained under it, is dropped without
     // a word. A rule says when it acts with `during <phase>`.
     const meta = ruleWithEvent(PRESSED, KEY_VAR);

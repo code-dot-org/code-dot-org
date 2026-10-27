@@ -1091,9 +1091,8 @@ export function parseRuleMeta(
 // The metadata above is static (no execution), but an action's `do` and a
 // query's `do` (ending in a `return`) are IMPERATIVE — real code, generated from
 // the body blocks the same way an event handler's body is. That needs a live
-// Blockly generator, which `parseRuleMeta` deliberately avoids, so body codegen
-// lives here as a separate pass ({@link extractRuleBodies}) run by the headless
-// generator. Each body is keyed by the member it belongs to ({@link ruleBodyKey})
+// Blockly generator, which `parseRuleMeta` deliberately avoids, so the headless
+// generator compiles the bodies alone (`rules/ruleBodies`). Each body is keyed by the member it belongs to ({@link ruleBodyKey})
 // so `ruleMetaToModule` can splice it into that member's `addAction`/`addQuery`.
 
 /** A member's body key: the scope, owning trait (if any), kind, and id. */
@@ -1104,119 +1103,11 @@ export const ruleBodyKey = (
   id: string,
 ): string => `${kind}:${scope}:${ownerTraitId ?? ''}:${id}`;
 
-/** The minimal live-block surface {@link extractRuleBodies} walks. */
-interface LiveBlock {
-  type: string;
-  getFieldValue(name: string): string | null;
-  getNextBlock(): LiveBlock | null;
-  getInputTargetBlock(name: string): LiveBlock | null;
-  /** A mutator's serialized state, when the block has one. */
-  saveExtraState?: () => {
-    parts?: ReadonlyArray<{kind?: string; text?: string}>;
-  };
-}
-
 /** The generated closure of one action/query: its parameter identifiers (in
  * order, after the `world`/`actor` subject) and its statement body. */
 export interface RuleBody {
   readonly params: readonly string[];
   readonly body: string;
-}
-
-/**
- * How {@link extractRuleBodies} turns a member's live blocks into code. `body`
- * generates the `DO` statement input; `signature` returns the member's parameter
- * identifiers, in order (its mutator's variables mapped through `getVariableName`),
- * so the closure signature and the body's getters agree.
- */
-export interface RuleBodyGen {
-  /** The member's `DO` statement input — an action's or a query's body. */
-  body: (block: LiveBlock) => string;
-  /** The chain BELOW a root — a step's body, which is an event hat's. */
-  chainBody: (block: LiveBlock) => string;
-  signature: (block: LiveBlock) => readonly string[];
-}
-
-/**
- * Generate the body and parameter signature of every `define block` and
- * `define step` in a loaded `.rule` workspace, keyed by {@link ruleBodyKey}.
- *
- * Takes the workspace's TOP BLOCKS rather than the rule root, because a trait
- * is a root of its own: its members chain below it, beside the rule rather than
- * inside it. Mirrors `parseRuleMeta`'s walk, over live blocks, so `gen` can run
- * `statementToCode` on each member's `DO` input and read its params.
- */
-export function extractRuleBodies(
-  roots: readonly LiveBlock[],
-  gen: RuleBodyGen,
-): Map<string, RuleBody> {
-  const bodies = new Map<string, RuleBody>();
-  const record = (
-    kind: 'action' | 'query' | 'step',
-    scope: MemberScope,
-    ownerTraitId: string | undefined,
-    member: LiveBlock,
-    /** For a member with no NAME field, the id derived some other way. */
-    explicitId?: string,
-  ): void => {
-    const id = explicitId ?? slug(member.getFieldValue('NAME') ?? '');
-    if (id) {
-      bodies.set(ruleBodyKey(kind, scope, ownerTraitId, id), {
-        // A step takes no user params (its closure is `(world, delta)`).
-        params: kind === 'step' ? [] : [...gen.signature(member)],
-        body: gen.body(member),
-      });
-    }
-  };
-  const visit = (
-    first: LiveBlock | null,
-    scope: MemberScope,
-    ownerTraitId: string | undefined,
-  ): void => {
-    for (let block = first; block; block = block.getNextBlock()) {
-      if (block.type === 'world_rule_block') {
-        // Whichever it is, the body is generated the same way; the RETURNS
-        // field decides which key it is filed under. Its id comes from the
-        // designed wording, not a NAME field — it has none.
-        const returns = block.getFieldValue('RETURNS');
-        record(
-          returns && returns !== 'none' ? 'query' : 'action',
-          scope,
-          ownerTraitId,
-          block,
-          slug(designedName(block.saveExtraState?.()?.parts)),
-        );
-      } else if (block.type?.startsWith('world_rule_step')) {
-        // A rule-level step: no trait owns it, so it is the world's work, and
-        // it takes no parameters — its closure is `(world, delta)`.
-        record('step', 'world', undefined, block);
-      } else if (block.type === 'world_trait_step') {
-        // A step declared under a trait, so it carries the trait's scope and
-        // owner — that is what the generator keys the body by, and what tells
-        // it whether the loop it wraps the body in walks actors or cameras.
-        //
-        // Its body is a `DO` mouth, not the chain below it — as every
-        // member's is now: a member chains through `next`, so the body needs
-        // somewhere else to be.
-        record('step', scope, ownerTraitId, block);
-      }
-    }
-  };
-  for (const root of roots) {
-    if (root.type === 'world_rule') {
-      visit(root.getNextBlock(), 'world', undefined);
-    } else if (root.type === 'world_rule_trait') {
-      // A trait's members belong to whatever elects it — an actor, or a camera
-      // (`TraitMeta.subject`). That decides what their bodies call the subject,
-      // so it has to be known here as well as at parse time.
-      visit(
-        root.getNextBlock(),
-        root.getFieldValue('SUBJECT') === 'camera' ? 'camera' : 'actor',
-        slug(root.getFieldValue('NAME') ?? ''),
-      );
-    }
-  }
-  return bodies;
 }
 
 // ── `.rule` → RuleBuilder module ─────────────────────────────────────────────

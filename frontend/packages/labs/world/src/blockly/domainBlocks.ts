@@ -8926,9 +8926,6 @@ export const argumentTypeOptions = (): Array<[string, string]> => [
   ),
 ];
 
-
-
-
 // Blockly clips a text field's DISPLAY at 50 characters (`maxDisplayLength`) —
 // enough for a name, not for a sentence. The value was always whole; only the
 // reading was cut off, mid-word, with an ellipsis. Any field holding PROSE (a
@@ -8995,9 +8992,9 @@ const worldRuleBlock = defineBlock({
       // makes in its three homes (`worldTraitStep`).
       //
       // In a `.rule` this is a DECLARATION and nothing more:
-      // the module is assembled from the file's metadata and the body is
-      // pulled out by a pass of its own (`extractRuleBodies`), so generating
-      // anything here would write it twice.
+      // the module is assembled from the file's data and the body is
+      // compiled alone (`rules/ruleBodies`), so generating anything here
+      // would write it twice.
       //
       // In an `.actor` file there is no metadata pass to write it, so this is
       // the whole declaration. `defineAction` is the third of the same bargain
@@ -12270,8 +12267,8 @@ function generateRulePalette(
    *   offered it. A hat declared under a TRAIT is fine: it takes an actor
    *   socket and registers on that, which is exactly what an `.actor` can do.
    * - `none`: a `.rule`. It binds neither — a rule module is
-   *   `const rule = new RuleBuilder(…)` — and `extractRuleBodies` matches a hat
-   *   against none of its three roots, so the hat and everything under it is
+   *   `const rule = new RuleBuilder(…)` — and only a member's or a step's body
+   *   is compiled (`rules/ruleBodies`), so the hat and everything under it is
    *   dropped without a word. A rule says when it acts with `during <phase>`.
    *
    * Only about the TOOLBOX, like `offerEmits`. The blocks stay defined, so a

@@ -1,9 +1,9 @@
 // A rule as data compiles to what its blocks did (specs/RULE_EDITOR_PLAN.md,
 // step 1).
 //
-// The compiler reads a data-shaped rule through its view (`resolveRuleContents`),
-// so the view of every stock rule's data has to be the same program, body for
-// body, as the rule it was folded from.
+// The compiler folds what it is handed back to data (`generateRule`), so a
+// stock rule's view and the view of its data have to be the same program,
+// body for body.
 
 import {render} from '@testing-library/react';
 import {createRef} from 'react';

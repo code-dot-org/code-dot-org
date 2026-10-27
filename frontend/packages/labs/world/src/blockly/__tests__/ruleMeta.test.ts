@@ -14,7 +14,6 @@ import {MotionRule} from '../../engine/__tests__/fixtures/motionRule';
 import {BUILTIN_RULE_META} from '../builtinMeta';
 import {
   builtinRuleMeta,
-  extractRuleBodies,
   parseRuleMeta,
   ruleBodyKey,
   ruleMetaToModule,
@@ -249,7 +248,7 @@ const subjectTrait = (
 // `define block`: the imperative-body member, an action or a query by its
 // RETURNS field alone. Its name is the wording of its labels, and its `do` body
 // is not read by `parseRuleMeta` (metadata is static), so these fixtures leave
-// it empty — the body is exercised through `extractRuleBodies` below.
+// it empty — the bodies are `rules/ruleBodies`'.
 const designed = (
   name: string,
   returns = 'none',
@@ -722,7 +721,7 @@ describe('actions and queries (imperative members)', () => {
         trait('Windblown', query('boolean', 'Is Gusting')),
       ),
     )!;
-    // The bodies are what `extractRuleBodies` would produce, keyed the same way.
+    // The bodies as the generator files them (`rules/ruleBodies`).
     const bodies = new Map([
       [
         ruleBodyKey('action', 'world', undefined, 'Invert'),
@@ -776,97 +775,6 @@ describe('actions and queries (imperative members)', () => {
   });
 });
 
-describe('extractRuleBodies', () => {
-  // A minimal live-block stand-in: the surface the extractor walks (the `DO` and
-  // `PARAMS` statement inputs, the next chain, and the fields).
-  const live = (
-    type: string,
-    fields: Record<string, string>,
-    opts: {do?: unknown; params?: unknown; next?: unknown; name?: string} = {},
-  ) => ({
-    type,
-    getFieldValue: (name: string) => fields[name] ?? null,
-    getInputTargetBlock: (name: string) =>
-      name === 'DO' ? opts.do : name === 'PARAMS' ? opts.params : null,
-    getNextBlock: () => opts.next ?? null,
-    // A designed member has no NAME field: its name is its signature, which the
-    // extractor reads through the mutator's saved state.
-    saveExtraState: () =>
-      opts.name ? {parts: [{kind: 'label', text: opts.name}]} : undefined,
-  });
-  it('generates a trait step’s body, keyed by that trait’s subject', () => {
-    // The gap this test exists for: `visit` only knew `world_rule_block`, so a
-    // step declared under a trait was walked past. Everything else about the
-    // rule was right — it parsed, the module generated, the step was there —
-    // and its closure was empty. A camera that never moved.
-    //
-    // The body is the `DO` mouth, not the chain below: a trait's members chain
-    // through `next`, which is why a trait step is not shaped like a hat.
-    const traitRoot = live(
-      'world_rule_trait',
-      {NAME: 'Follows', SUBJECT: 'camera'},
-      {
-        next: live(
-          'world_trait_step',
-          {NAME: 'aim at the actor', PHASE: 'aim'},
-          {do: live('world_set_position', {})},
-        ),
-      },
-    );
-
-    const bodies = extractRuleBodies([traitRoot] as never, {
-      body: () => 'AIMED\n',
-      chainBody: () => 'CHAIN\n',
-      signature: () => [],
-    });
-
-    expect(
-      bodies.get(ruleBodyKey('step', 'camera', 'Follows', 'aim_at_the_actor')),
-    ).toEqual({
-      // A step takes no user params — its closure is the subject and `delta`.
-      params: [],
-      body: 'AIMED\n',
-    });
-  });
-
-  it('generates each action/query body + signature, keyed by scope/owner/id', () => {
-    // Two TOP blocks: the rule (chaining action Nudge) and the trait Windblown
-    // (chaining query Is Gusting) beside it.
-    const root = live(
-      'world_rule',
-      {NAME: 'Has Wind'},
-      {next: live('world_rule_block', {RETURNS: 'none'}, {name: 'Nudge'})},
-    );
-    const traitRoot = live(
-      'world_rule_trait',
-      {NAME: 'Windblown'},
-      {
-        next: live(
-          'world_rule_block',
-          {RETURNS: 'boolean'},
-          {name: 'Is Gusting'},
-        ),
-      },
-    );
-    // The stand-in generator tags each body by its designed name; the signature
-    // is the member's parameters (here, Nudge takes one, the query none).
-    const nameOf = (block: {
-      saveExtraState?: () => {parts?: readonly {text?: string}[]} | undefined;
-    }): string => block.saveExtraState?.()?.parts?.[0]?.text ?? '';
-    const bodies = extractRuleBodies([root, traitRoot] as never, {
-      body: block => `BODY(${nameOf(block)})\n`,
-      chainBody: block => `CHAIN(${nameOf(block)})\n`,
-      signature: block => (nameOf(block) === 'Nudge' ? ['amount'] : []),
-    });
-    expect(
-      bodies.get(ruleBodyKey('action', 'world', undefined, 'Nudge')),
-    ).toEqual({params: ['amount'], body: 'BODY(Nudge)\n'});
-    expect(
-      bodies.get(ruleBodyKey('query', 'actor', 'Windblown', 'Is_Gusting')),
-    ).toEqual({params: [], body: 'BODY(Is Gusting)\n'});
-  });
-});
-
 describe('designed block parameters', () => {
   // The designer stores the signature in the block's `extraState`
   // (`{parts: [...]}`); a parameter part's `var` is a variable id whose name the
@@ -904,7 +812,7 @@ describe('designed block parameters', () => {
 
   it('emits the params after the subject in the closure signature', () => {
     const meta = parseRuleMeta('rules/wind', ruleWithParams)!;
-    // extractRuleBodies would resolve the VARs to these identifiers.
+    // The generator resolves the VARs to these identifiers.
     const bodies = new Map([
       [
         ruleBodyKey('action', 'world', undefined, 'Nudge'),
