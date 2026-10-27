@@ -39,19 +39,19 @@ const TrainPanel = () => {
   const canTrain = readyToTrain(project);
   const hasTrainingResult = hasCurrentTrainingResult(project);
   const {beginRun} = useTrainingRun();
-  const [isTraining, setIsTraining] = useState(false);
+  const [isStartingTraining, setIsStartingTraining] = useState(false);
 
   // Training blocks the page, so let the button's spinner paint first.
   useEffect(() => {
-    if (!isTraining) {
+    if (!isStartingTraining) {
       return;
     }
     return afterNextPaint(() => {
       beginRun();
       dispatch(setTrainingModalStep('training'));
-      setIsTraining(false);
+      setIsStartingTraining(false);
     });
-  }, [isTraining, beginRun, dispatch]);
+  }, [isStartingTraining, beginRun, dispatch]);
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
@@ -164,14 +164,14 @@ const TrainPanel = () => {
                 size="small"
                 fullWidth
                 disabled={!canTrain}
-                loading={isTraining}
+                loading={isStartingTraining}
                 loadingPosition="start"
                 loadingIndicator={
                   <CircularProgress color="inherit" size={16} disableShrink />
                 }
-                onClick={() => setIsTraining(true)}
+                onClick={() => setIsStartingTraining(true)}
               >
-                {isTraining ? 'Training…' : 'Train model'}
+                {isStartingTraining ? 'Training…' : 'Train model'}
               </Button>
             </div>
           )}

@@ -151,13 +151,14 @@ describe('a pretrained level', () => {
       seedLevel(storeSingleton, PRETRAINED);
     });
     expect(onLoadingChange).toHaveBeenLastCalledWith(true);
+    onLoadingChange.mockClear();
 
     act(() => {
       storeSingleton.dispatch(
         setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']})
       );
     });
-    expect(onLoadingChange).toHaveBeenLastCalledWith(true);
+    expect(onLoadingChange).not.toHaveBeenCalledWith(false);
     expect(trainingData().trainedModel).toBeUndefined();
 
     paintFrame();
@@ -177,6 +178,41 @@ describe('a pretrained level', () => {
     });
     expect(onLoadingChange).toHaveBeenLastCalledWith(false);
     expect(screen.getByRole('table')).toBeTruthy();
+  });
+
+  test('reports it has loaded when its saved label is a locked feature', () => {
+    const {onLoadingChange, trainingData} = renderLevel({
+      trainer: 'decisionTree',
+    });
+
+    act(() => {
+      storeSingleton.dispatch(
+        setMode({trainer: 'decisionTree', pretrained: true, lockFeatures: true})
+      );
+      storeSingleton.dispatch(
+        setPresetColumns({labelColumn: 'legs', selectedFeatures: ['animal']})
+      );
+    });
+    paintFrame();
+    expect(onLoadingChange).toHaveBeenLastCalledWith(false);
+    expect(trainingData().trainedModel).toBeUndefined();
+  });
+
+  test('trains on its saved features when the mode presets only a label', () => {
+    const {onTrained} = renderLevel({trainer: 'decisionTree'});
+
+    act(() => {
+      storeSingleton.dispatch(
+        setMode({
+          trainer: 'decisionTree',
+          pretrained: true,
+          hideSelectLabel: true,
+        })
+      );
+      storeSingleton.dispatch(setPresetColumns({labelColumn: 'animal'}));
+    });
+    paintFrame();
+    expect(onTrained.mock.calls).toEqual([[100]]);
   });
 
   test('stays on the dataset view once trained', () => {

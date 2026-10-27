@@ -1,6 +1,7 @@
 import {useEffect} from 'react';
 
 import {isPanelEnabled} from './helpers/navigationValidation';
+import {applyPresetColumns} from './helpers/projectColumns';
 import {afterNextPaint} from './helpers/utils';
 import {useAppDispatch, useAppSelector} from './hooks';
 import {useProject} from './ProjectContext';
@@ -9,10 +10,7 @@ import {getData} from './selectors';
 import {useTrainingData} from './TrainingDataContext';
 import {useTrainingRun} from './useTrainingRun';
 
-/*
-  Trains a pretrained level once its data and columns are in, and
-  returns whether we are still waiting for that model.
-*/
+// Trains a pretrained level on load, and returns whether that model is still to come.
 export function usePretrainOnLoad(restoringModel: boolean): boolean {
   const dispatch = useAppDispatch();
   const {project} = useProject();
@@ -26,15 +24,24 @@ export function usePretrainOnLoad(restoringModel: boolean): boolean {
   const canTest = useAppSelector(state =>
     isPanelEnabled(state, project, 'results')
   );
-  // Unset until the metadata is in. A column the dataset lacks is dropped from it.
   const presetColumns = useAppSelector(state => state.presetColumns);
+  const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
+  const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
+  const data = useAppSelector(getData);
+  // Unset until the metadata is in. ProjectContext applies it an effect later.
   const willTrain =
-    pretrained &&
-    (!presetColumns ||
-      (!!presetColumns.labelColumn &&
-        !!presetColumns.selectedFeatures?.length));
+    !presetColumns ||
+    readyToTrain(
+      applyPresetColumns(
+        project,
+        presetColumns,
+        lockedLabel,
+        lockedFeatures,
+        data
+      )
+    );
   const pretraining =
-    willTrain && dataLoaded && !trainedModel && !restoringModel;
+    pretrained && willTrain && dataLoaded && !trainedModel && !restoringModel;
 
   // Training blocks the page, so let the loading overlay paint first.
   useEffect(() => {

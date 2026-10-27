@@ -55,10 +55,7 @@ export function prefersReducedMotion(): boolean {
   return !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 }
 
-/*
-  Calls `callback` once the next frame has painted: an animation frame runs
-  just before the paint, and a timeout set from it runs after. Returns a canceller.
-*/
+// A timeout set from an animation frame runs after that frame paints.
 export function afterNextPaint(callback: () => void): () => void {
   let timeout: number | undefined;
   const frame = requestAnimationFrame(() => {

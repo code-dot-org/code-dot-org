@@ -58,7 +58,6 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     [updateSources]
   );
 
-  // One overlay, kept mounted, covers the project fetch and then the workspace's own loading.
   return (
     <>
       {currentSources && (
