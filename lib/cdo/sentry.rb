@@ -16,9 +16,12 @@ module Cdo
         return
       end
 
-      dsn = ::Sentry::DSN.new(CDO.dashboard_sentry_dsn)
-      sentry_releases_endpoint = "https://sentry.io/api/0/organizations/#{dsn.org_id}/releases/"
-      post(sentry_releases_endpoint, version: revision, projects: [dsn.project_id], refs: [{repository: GitHub::REPO, commit: revision}])
+      # apps and studio ship with every dashboard deploy, so the release covers their projects too.
+      project_dsns = [CDO.dashboard_sentry_dsn, CDO.frontend_apps_sentry_dsn, CDO.frontend_studio_sentry_dsn]
+      projects = project_dsns.reject {|dsn| dsn.to_s.empty?}.map {|dsn| ::Sentry::DSN.new(dsn).project_id}
+      organization_id = ::Sentry::DSN.new(CDO.dashboard_sentry_dsn).org_id
+      sentry_releases_endpoint = "https://sentry.io/api/0/organizations/#{organization_id}/releases/"
+      post(sentry_releases_endpoint, version: revision, projects: projects, refs: [{repository: GitHub::REPO, commit: revision}])
       # https://docs.sentry.io/api/releases/create-a-deploy/
       post("#{sentry_releases_endpoint}#{revision}/deploys/", environment: environment.to_s)
     rescue StandardError => exception
