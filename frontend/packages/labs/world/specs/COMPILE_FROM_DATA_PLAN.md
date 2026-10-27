@@ -115,12 +115,9 @@ fixed id first: the same code, but for the order of the names on the first
 
 ### 3. Lessons as screens
 
-`lessonSource` writes a `main.screen` whose Viewport is docked over the
-whole surface and shows `main.map`, the placements the main map held. The
-empty world project, tapper and novel move the same way. The three camera
-lessons keep their camera on the Viewport's placement, and the
-camera-follow enhancement aims the Viewport's camera. A lesson's text and
-checks that name the world or its Map tab are rewritten with it.
+Its own plan: specs/LESSONS_AS_SCREENS_PLAN.md. A lesson's `main.world` holds
+a whole program, not only a main map, so moving it is a rewrite of what 79
+lessons open on.
 
 ### 4. Cameras only on Viewports
 
