@@ -167,7 +167,12 @@ const TrainPanel = () => {
                 loading={isStartingTraining}
                 loadingPosition="start"
                 loadingIndicator={
-                  <CircularProgress color="inherit" size={16} disableShrink />
+                  <CircularProgress
+                    color="inherit"
+                    size={16}
+                    disableShrink
+                    aria-label="Training"
+                  />
                 }
                 onClick={() => setIsStartingTraining(true)}
               >

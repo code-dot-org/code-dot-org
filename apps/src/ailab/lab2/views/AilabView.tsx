@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {type AilabProject} from '@cdo/apps/ailab/engine';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
@@ -58,21 +58,32 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     [updateSources]
   );
 
+  const isLoading = !currentSources || isWorkspaceLoading;
+  // The overlay leaves the workspace in the tab order; React 18's JSX has no inert.
+  const workspaceRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (workspaceRef.current) {
+      workspaceRef.current.inert = isLoading;
+    }
+  }, [isLoading]);
+
   return (
     <>
       {currentSources && (
-        <AilabWorkspace
-          key={reinitializedCount}
-          levelProperties={levelProperties}
-          hasEdited={hasEdited}
-          savedSource={currentSources.source}
-          save={save}
-          startOver={startOver}
-          projectManager={projectManager}
-          onLoadingChange={setIsWorkspaceLoading}
-        />
+        <div ref={workspaceRef} style={{display: 'contents'}}>
+          <AilabWorkspace
+            key={reinitializedCount}
+            levelProperties={levelProperties}
+            hasEdited={hasEdited}
+            savedSource={currentSources.source}
+            save={save}
+            startOver={startOver}
+            projectManager={projectManager}
+            onLoadingChange={setIsWorkspaceLoading}
+          />
+        </div>
       )}
-      <Loading isLoading={!currentSources || isWorkspaceLoading} />
+      <Loading isLoading={isLoading} />
     </>
   );
 };

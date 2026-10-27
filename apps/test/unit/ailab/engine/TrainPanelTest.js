@@ -91,6 +91,7 @@ describe('TrainPanel training a model', () => {
     fireEvent.click(trainButton());
 
     expect(screen.getByRole('button', {name: 'Training…'}).disabled).toBe(true);
+    expect(screen.getByRole('progressbar', {name: 'Training'})).toBeTruthy();
     expect(trainingData().trainedModel).toBeUndefined();
     expect(storeSingleton.getState().trainingModalStep).toBeUndefined();
   });

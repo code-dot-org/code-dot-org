@@ -1,4 +1,4 @@
-import {act, render} from '@testing-library/react';
+import {act, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -17,7 +17,7 @@ import {
 
 jest.mock('@cdo/apps/lab2/hooks/useSources');
 jest.mock('@cdo/apps/ailab/lab2/views/AilabWorkspace', () =>
-  jest.fn(() => null)
+  jest.fn(() => <button type="button">Settings</button>)
 );
 
 const mockedUseSources = jest.mocked(useSources);
@@ -41,6 +41,8 @@ function sourcesLoaded(loaded: boolean) {
 }
 
 const overlay = () => document.querySelector('.uitest-is-loading-overlay');
+const workspaceInert = () =>
+  screen.getByRole('button', {name: 'Settings'}).parentElement?.inert;
 
 const reportWorkspaceLoading = (isLoading: boolean) =>
   act(() => mockedWorkspace.mock.lastCall?.[0].onLoadingChange(isLoading));
@@ -78,8 +80,10 @@ describe('AilabView', () => {
 
     reportWorkspaceLoading(true);
     expect(overlay()).not.toBeNull();
+    expect(workspaceInert()).toBe(true);
 
     reportWorkspaceLoading(false);
     expect(overlay()).toBeNull();
+    expect(workspaceInert()).toBe(false);
   });
 });
