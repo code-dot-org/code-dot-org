@@ -4,8 +4,9 @@
 // each trait's, under the trait's name, which opens the trait. The main area
 // says what the rule declares — what it is for, the rules it uses, its
 // events, blocks and steps — or, with a trait open, what the trait declares.
-// Code opens the whole rule in blocks, folded back into data as it is saved,
-// which is how a body is written until it has a page of its own.
+// Each event, block and step opens on a page of its own, where what it does
+// is written. Code opens the whole rule in blocks, folded back into data as
+// it is saved.
 //
 // A rule the data cannot say whole opens in blocks, as every rule used to.
 
@@ -64,9 +65,20 @@ import {
   rulePalette,
 } from '../ruleMembers';
 import {resolveRuleContents} from '../ruleReference';
+import {
+  addStep,
+  removeStep,
+  renameStep,
+  stepAtOf,
+  stepId,
+  stepOf,
+  stepsOf,
+  type StepAt,
+} from '../ruleSteps';
 
 import styles from './ruleEditor.module.css';
 import {RulePropertyRow} from './RulePropertyRow';
+import {StepPage} from './StepPage';
 
 /** A member as it reads: its words, its values in angle brackets. */
 const reading = (member: ActorMember): string =>
@@ -91,38 +103,6 @@ function projectRules(source: MultiFileSource): RuleMeta[] {
     });
   return [...BUILTIN_RULE_META, ...project];
 }
-
-/** A section of headed list items, or a line saying there are none. */
-const Listed = ({
-  title,
-  empty,
-  items,
-}: {
-  title: string;
-  empty: string;
-  items: string[];
-}) => (
-  <section aria-label={title}>
-    <Typography variant="h5" component="h3">
-      {title}
-    </Typography>
-    {items.length ? (
-      <ul className={styles.list}>
-        {items.map((item, at) => (
-          <li key={`${item}-${at}`} className={styles.item}>
-            <Typography variant="body3" component="span">
-              {item}
-            </Typography>
-          </li>
-        ))}
-      </ul>
-    ) : (
-      <Typography variant="body3" component="p" className={styles.note}>
-        {empty}
-      </Typography>
-    )}
-  </section>
-);
 
 /** Where focus goes in a members list: an Edit by member id, or a New. */
 type MemberFocus = Map<string, HTMLButtonElement>;
@@ -222,18 +202,97 @@ const memberSays = (member: ActorMember): string =>
     ? `when ${reading(member)}`
     : `${reading(member)}${member.returns ? `, reports a ${member.returns}` : ''}`;
 
-/** A definition's steps, as they read: what each body does is in Code. */
-const Steps = ({steps}: {steps: readonly RuleStep[]}) => (
-  <Listed
-    title="Steps"
-    empty="No steps."
-    items={steps.map(step =>
-      step.phase
-        ? `${step.name} — during ${step.phase}`
-        : `${step.name} — every tick`,
-    )}
-  />
-);
+/** A step as its row says it: its name and when it runs. */
+const stepSays = (step: RuleStep): string =>
+  step.phase
+    ? `${step.name}, during ${step.phase}`
+    : `${step.name}, every tick`;
+
+/** A definition's steps, each with Edit and Delete, and a way to make one. */
+const StepList = ({
+  owner,
+  steps,
+  isReadOnly,
+  buttons,
+  onEdit,
+  onDelete,
+  onNew,
+}: {
+  owner: Owner;
+  steps: readonly RuleStep[];
+  isReadOnly: boolean;
+  buttons: MemberFocus;
+  onEdit: (at: number) => void;
+  onDelete: (at: number) => void;
+  onNew: () => void;
+}) => {
+  const keep = (key: string) => (element: HTMLButtonElement | null) => {
+    if (element) {
+      buttons.set(key, element);
+    } else {
+      buttons.delete(key);
+    }
+  };
+  return (
+    <section aria-label="Steps">
+      <Typography variant="h5" component="h3">
+        Steps
+      </Typography>
+      {steps.length ? (
+        <ul className={styles.list}>
+          {steps.map((step, at) => {
+            const said = stepSays(step);
+            return (
+              <li key={`${step.name}-${at}`} className={styles.item}>
+                <Typography variant="body3" component="span">
+                  {said}
+                </Typography>
+                <div className={styles.acts}>
+                  <Button
+                    ref={keep(stepId({owner, at}))}
+                    variant="text"
+                    size="extraSmall"
+                    aria-label={`Edit ${said}`}
+                    onClick={() => onEdit(at)}
+                  >
+                    Edit
+                  </Button>
+                  {!isReadOnly && (
+                    <Button
+                      variant="text"
+                      size="extraSmall"
+                      aria-label={`Delete ${said}`}
+                      onClick={() => onDelete(at)}
+                    >
+                      Delete
+                    </Button>
+                  )}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <Typography variant="body3" component="p" className={styles.note}>
+          No steps.
+        </Typography>
+      )}
+      {!isReadOnly && (
+        <div className={styles.acts}>
+          <Button
+            ref={keep(`new-step:${owner ?? ''}`)}
+            variant="outlined"
+            color="secondary"
+            size="small"
+            onClick={onNew}
+          >
+            New step
+          </Button>
+        </div>
+      )}
+    </section>
+  );
+};
 
 /**
  * What a definition uses: the rules a rule needs, or the traits a trait
@@ -495,7 +554,8 @@ export const RuleEditor = (props: CustomEditorProps) => {
   // Focus comes back to the member's Edit, or to a New where it has gone.
   const memberButtons = useRef<MemberFocus>(new Map());
   const [returnToMember, setReturnToMember] = useState<string | null>(null);
-  const openId = script?.kind === 'member' ? script.id : null;
+  const openId =
+    script?.kind === 'member' || script?.kind === 'step' ? script.id : null;
   const modulePath = (filePath(currentSources.source, fileId) ?? '').replace(
     /\.rule$/,
     '',
@@ -594,7 +654,85 @@ export const RuleEditor = (props: CustomEditorProps) => {
     setReturnToMember(next?.id ?? `new-${member.kind}:${owner ?? ''}`);
   };
 
-  const opened = openId ? memberOf(data, openId) : undefined;
+  const openStep = (place: StepAt) => {
+    setReturnToMember(stepId(place));
+    setScript({
+      kind: 'step',
+      id: stepId(place),
+      ...(place.owner ? {trait: place.owner} : {}),
+    });
+  };
+  const makeStep = (owner: Owner) => {
+    const made = addStep(data, owner);
+    edit(made.data);
+    openStep(made.place);
+  };
+  const deleteStep = async (place: StepAt) => {
+    const step = stepOf(data, place);
+    if (
+      !step ||
+      !(await confirm({
+        title: 'Delete step',
+        message: `Delete “${stepSays(step)}”? What it does goes with it.`,
+      }))
+    ) {
+      return;
+    }
+    const left = stepsOf(data, place.owner).length - 1;
+    edit(removeStep(data, place));
+    setReturnToMember(
+      left > 0
+        ? stepId({owner: place.owner, at: Math.min(place.at, left - 1)})
+        : `new-step:${place.owner ?? ''}`,
+    );
+  };
+
+  const openedStep =
+    script?.kind === 'step' ? stepAtOf(data, script.id) : undefined;
+  if (openedStep) {
+    return (
+      <div className={styles.code}>
+        {!onTrail && (
+          <div className={styles.codeHeader}>
+            <Button
+              variant="text"
+              size="extraSmall"
+              startIcon={
+                <FontAwesomeV6Icon iconName="arrow-left" iconStyle="solid" />
+              }
+              onClick={() =>
+                setScript(
+                  openedStep.owner
+                    ? {kind: 'trait', id: openedStep.owner}
+                    : null,
+                )
+              }
+            >
+              {openedStep.owner ?? data.name}
+            </Button>
+          </div>
+        )}
+        <StepPage
+          key={stepId(openedStep)}
+          data={data}
+          place={openedStep}
+          fileId={fileId}
+          isReadOnly={isReadOnly}
+          onUpdate={update}
+          onLeave={(from, to) => {
+            const now = sources.current;
+            const source = renameStep(now.source, data.name, from, to);
+            if (source !== now.source) {
+              replaceSources({...now, source});
+            }
+          }}
+        />
+      </div>
+    );
+  }
+
+  const opened =
+    script?.kind === 'member' && openId ? memberOf(data, openId) : undefined;
   if (opened) {
     const {member, owner} = opened;
     return (
@@ -892,7 +1030,15 @@ export const RuleEditor = (props: CustomEditorProps) => {
                 onDelete={member => void deleteMember(member, trait.name)}
                 onNew={() => makeMember('block', trait.name)}
               />
-              <Steps steps={trait.steps ?? []} />
+              <StepList
+                owner={trait.name}
+                steps={trait.steps ?? []}
+                isReadOnly={isReadOnly}
+                buttons={memberButtons.current}
+                onEdit={at => openStep({owner: trait.name, at})}
+                onDelete={at => void deleteStep({owner: trait.name, at})}
+                onNew={() => makeStep(trait.name)}
+              />
             </div>
           ) : (
             <div className={styles.view}>
@@ -955,10 +1101,15 @@ export const RuleEditor = (props: CustomEditorProps) => {
                 onDelete={member => void deleteMember(member, null)}
                 onNew={() => makeMember('block', null)}
               />
-              <Steps steps={data.steps ?? []} />
-              <Typography variant="body3" component="p" className={styles.note}>
-                What each block and step does is written in Code.
-              </Typography>
+              <StepList
+                owner={null}
+                steps={data.steps ?? []}
+                isReadOnly={isReadOnly}
+                buttons={memberButtons.current}
+                onEdit={at => openStep({owner: null, at})}
+                onDelete={at => void deleteStep({owner: null, at})}
+                onNew={() => makeStep(null)}
+              />
             </div>
           )}
         </div>

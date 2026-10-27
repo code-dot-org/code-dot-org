@@ -12,6 +12,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {memberName} from '../actors/actorData';
 import {ruleDataOf} from '../rules/ruleEdits';
 import {ruleMemberName} from '../rules/ruleMembers';
+import {stepAtOf, stepOf} from '../rules/ruleSteps';
 
 import styles from './breadcrumb.module.css';
 import type {TrailStep} from './trail';
@@ -32,6 +33,11 @@ export const Breadcrumb = () => {
    */
   const nameOf = (step: TrailStep): string => {
     const file = currentSources.source.files[step.fileId];
+    if (step.script?.kind === 'step') {
+      const data = ruleDataOf(file?.contents ?? '');
+      const place = data && stepAtOf(data, step.script.id);
+      return (place && stepOf(data, place)?.name) || 'Step';
+    }
     if (step.script?.kind === 'member') {
       return file?.name.endsWith('.rule')
         ? ruleMemberName(ruleDataOf(file.contents ?? ''), step.script.id)

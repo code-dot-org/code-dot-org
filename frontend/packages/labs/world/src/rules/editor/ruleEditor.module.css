@@ -172,3 +172,27 @@
   flex: 1;
   min-height: 0;
 }
+
+/* A step's page: its name and moment, then the workspace of what it does
+   (specs/RULE_EDITOR_PLAN.md, step 5). */
+.stepPage {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+}
+
+.stepBar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  align-items: flex-end;
+  gap: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: var(--lab-border-default);
+}
+
+.stepBar > p {
+  flex-basis: 100%;
+}

@@ -212,6 +212,10 @@ below, and are listed last.
   on the row that took its place, else New. The member's page is the
   actor's, with its own ledger below, and adds Reports, a labelled
   dropdown.
+- **A step's page** opens with focus on its heading ("Step: applyVelocity");
+  its name and when it runs are a labelled field and dropdown, with the
+  moment's own summary below them in words. A step's Edit and Delete are
+  named for it ("Edit applyVelocity, during push").
 - **Untested**: no screen reader; the keys only by tests and a headless
   browser.
 

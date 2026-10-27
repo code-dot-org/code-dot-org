@@ -151,7 +151,7 @@ describe('the Rule Editor', () => {
     expect(within(needs).getByText('Can Move')).toBeInTheDocument();
     const steps = screen.getByRole('region', {name: 'Steps'});
     expect(
-      within(steps).getByText('applyVelocity — during push'),
+      within(steps).getByText('applyVelocity, during push'),
     ).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', {name: 'Gravity'}));
@@ -191,8 +191,13 @@ describe('the Rule Editor', () => {
   });
 });
 
-const traitOf = (data: {traits: Array<{name: string; members?: unknown[]}>}) =>
-  data.traits.find(one => one.name === 'Affected by Gravity')!;
+const traitOf = (data: {
+  traits: Array<{
+    name: string;
+    members?: unknown[];
+    steps: Array<{name: string; phase?: string}>;
+  }>;
+}) => data.traits.find(one => one.name === 'Affected by Gravity')!;
 
 describe('a rule’s member', () => {
   it('opens on its page from its trait, and says what it reports', () => {
@@ -252,6 +257,79 @@ describe('a rule’s member', () => {
           one.parts.map(part => part.text).join(' '),
         ),
       ).not.toContain('Invert Gravity'),
+    );
+  });
+});
+
+describe('a rule’s step', () => {
+  const openTrait = () =>
+    fireEvent.click(
+      screen.getByRole('button', {name: /^Affected by Gravity$/}),
+    );
+
+  it('opens on its page, its head saying when it runs', () => {
+    open();
+    openTrait();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Edit applyVelocity, during push'}),
+    );
+
+    const heading = screen.getByRole('heading', {name: 'Step: applyVelocity'});
+    expect(document.activeElement).toBe(heading);
+    const head = JSON.parse(blocks.contents!).blocks.blocks[0];
+    expect(head).toMatchObject({
+      type: 'world_step_head',
+      fields: {
+        MOMENT:
+          'each frame, during push, for each actor with Affected by Gravity',
+      },
+    });
+    expect(head.next.block).toBeDefined();
+  });
+
+  it('is renamed and given another moment', () => {
+    open();
+    openTrait();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Edit applyVelocity, during push'}),
+    );
+    const name = screen.getByLabelText('Name');
+    fireEvent.change(name, {target: {value: 'fall'}});
+    fireEvent.blur(name);
+    expect(traitOf(written()).steps[0].name).toBe('fall');
+
+    fireEvent.change(screen.getByLabelText('Runs'), {
+      target: {value: 'move'},
+    });
+    expect(traitOf(written()).steps[0].phase).toBe('move');
+  });
+
+  it('is made under its trait', () => {
+    open();
+    openTrait();
+    const steps = screen.getByRole('region', {name: 'Steps'});
+    fireEvent.click(within(steps).getByRole('button', {name: 'New step'}));
+    expect(traitOf(written()).steps.at(-1)).toEqual({
+      name: 'do something',
+      phase: 'decide',
+    });
+    expect(
+      screen.getByRole('heading', {name: 'Step: do something'}),
+    ).toBeInTheDocument();
+  });
+
+  it('is deleted, what it does with it', async () => {
+    open();
+    openTrait();
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: 'Delete handleCollisions, during react',
+      }),
+    );
+    await vi.waitFor(() =>
+      expect(
+        traitOf(written()).steps.map((one: {name: string}) => one.name),
+      ).toEqual(['applyVelocity']),
     );
   });
 });

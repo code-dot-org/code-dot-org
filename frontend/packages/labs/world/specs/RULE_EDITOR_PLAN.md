@@ -216,8 +216,26 @@ the rule, its two values' getters in its head.
 
 ### 5. Steps
 
-A step's page: the step at the head, what it does below, its name and
-phase in the design. The rule's view and a trait's list theirs.
+DONE. A rule's steps, and each trait's, are listed with Edit and Delete,
+and New step; Edit opens the step's page (`StepPage`) on the trail, after
+its trait when it is a trait's. A step has no id of its own, so the trail
+names it by its owner and place (`ruleSteps.stepId`).
+
+The page's bar holds the step's name and when it runs: a trait's steps
+take its subject's moments and the world's `sense`; the rule's own take any,
+or every tick. Below is the workspace of what it does, hung below a head
+(`stepHead`) that says that moment — "each frame, during push, for each
+actor with Affected by Gravity". The head is made only on the page, as a
+member's is, and the workspace goes back into the step as its body.
+
+A step is named twice in its rule's code: by its id, and by an export made
+from its name (`TickStep`). So a name is refused when either would clash
+with another step of the rule, its traits' included — "Tick" and "tick"
+are two ids and one export. A new name is followed when the page is left:
+whatever orders itself against the step (`<Rule>#<id>`) is rewritten.
+
+In the browser: Gravity's `applyVelocity` from Affected by Gravity, its
+body under its head, with focus on the step's heading.
 
 ### 6. Rename and delete
 
