@@ -239,8 +239,25 @@ body under its head, with focus on the step's heading.
 
 ### 6. Rename and delete
 
-A trait, a property, a member and a step renamed or deleted, its uses
-found and followed or named, as the Actor Editor does.
+DONE. A trait is renamed and deleted from its view. A rename rewrites its
+declaration; every reference to it (`<Rule>#<Export>Trait`), in an actor's
+traits, a trait's needs, a rule's code and any list in a map; and every
+placement's overrides of it, which are keyed by its id (`rulePlacements`).
+A delete says which files name it, and takes the trait with its
+properties, events, blocks and steps; what named it is left to say so in
+its own editor, and focus goes back to the rule's name.
+
+A trait's property renamed or deleted now reaches placements too: a
+placement's override of it follows the new name, or goes with it, and a
+trait left with nothing overridden goes from the placement.
+
+Members and steps were renamed and deleted in steps 4 and 5.
+
+Still not followed: an actor's own property renamed, whose placements'
+overrides are the actor's (`selfProperties`), as before this plan.
+
+In the browser: the starter's Acts as Ground renamed Holds Things Up; the
+game rebuilt, and the Player still lands on the Ground.
 
 ### 7. The define blocks go
 

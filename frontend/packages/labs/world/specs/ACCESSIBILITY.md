@@ -216,6 +216,10 @@ below, and are listed last.
   its name and when it runs are a labelled field and dropdown, with the
   moment's own summary below them in words. A step's Edit and Delete are
   named for it ("Edit applyVelocity, during push").
+- **A trait's Rename and Delete** are named for it ("Rename Acts as
+  Ground"); the rename is a labelled field in place, Enter saving and
+  Escape not, and the trait stays open under its new name. A delete asks
+  first, names what uses it, and puts focus on the rule's name.
 - **Untested**: no screen reader; the keys only by tests and a headless
   browser.
 

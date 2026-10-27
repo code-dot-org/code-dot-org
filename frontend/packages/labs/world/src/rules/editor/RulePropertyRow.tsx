@@ -19,7 +19,7 @@ import {fileLabel} from '../../files/fileLabel';
 import type {RuleData, RuleProperty} from '../ruleData';
 import {
   defaultText,
-  deleteProperty,
+  deletePropertyInProject,
   memberUses,
   PROPERTY_TYPES,
   propertyKey,
@@ -184,7 +184,10 @@ export const RulePropertyRow = ({
             size="small"
             onClick={() => {
               setMode('show');
-              onEdit(deleteProperty(data, owner, property.name));
+              // Through the project: a placement may override it.
+              onProject(
+                deletePropertyInProject(source, fileId, owner, property.name),
+              );
             }}
           >
             Delete

@@ -333,3 +333,41 @@ describe('a rule’s step', () => {
     );
   });
 });
+
+describe('a rule’s trait', () => {
+  const openTrait = () =>
+    fireEvent.click(screen.getByRole('button', {name: /^Acts as Ground$/}));
+
+  it('is renamed across the project, and stays open under its new name', () => {
+    open();
+    openTrait();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Rename Acts as Ground'}),
+    );
+    const form = screen.getByRole('group', {name: 'Rename Acts as Ground'});
+    fireEvent.change(within(form).getByLabelText('Name'), {
+      target: {value: 'Holds Things Up'},
+    });
+    fireEvent.click(within(form).getByRole('button', {name: 'Save name'}));
+
+    const source = replaceSources.mock.calls.at(-1)![0]
+      .source as MultiFileSource;
+    expect(source.files[GRAVITY.id].contents).toContain('Holds Things Up');
+  });
+
+  it('is deleted once asked, focus going back to the rule', async () => {
+    open();
+    openTrait();
+    fireEvent.click(
+      screen.getByRole('button', {name: 'Delete Acts as Ground'}),
+    );
+    await vi.waitFor(() =>
+      expect(written().traits.map((one: {name: string}) => one.name)).toEqual([
+        'Affected by Gravity',
+      ]),
+    );
+    expect(document.activeElement).toBe(
+      screen.getByRole('button', {name: 'Gravity'}),
+    );
+  });
+});

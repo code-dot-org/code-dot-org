@@ -11,7 +11,14 @@
 // A rule the data cannot say whole opens in blocks, as every rule used to.
 
 import {Button, Typography} from '@mui/material';
-import {useEffect, useMemo, useRef, useState, type ChangeEvent} from 'react';
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ChangeEvent,
+  type KeyboardEvent,
+} from 'react';
 
 import {usePrompts, type CustomEditorProps} from '@code-dot-org/codebridge';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
@@ -45,14 +52,17 @@ import {
   addProperty,
   addTrait,
   addUse,
+  deleteTrait,
   PROPERTY_TYPES,
   removeUse,
+  renameTrait,
   ruleDataOf,
   setAbility,
   setDescription,
   setTraitDescription,
   setTraitSubject,
   traitProblem,
+  traitUses,
   type Owner,
 } from '../ruleEdits';
 import {
@@ -407,6 +417,91 @@ const Prose = ({
   </div>
 );
 
+/** A trait's rename, said in place, and its delete. */
+const TraitActions = ({
+  name,
+  problemOf,
+  onRename,
+  onDelete,
+}: {
+  name: string;
+  problemOf: (name: string) => string | undefined;
+  onRename: (name: string) => void;
+  onDelete: () => void;
+}) => {
+  const [renaming, setRenaming] = useState(false);
+  const [draft, setDraft] = useState(name);
+  const problem = draft.trim() === name ? undefined : problemOf(draft);
+  if (!renaming) {
+    return (
+      <div className={styles.acts}>
+        <Button
+          variant="text"
+          size="small"
+          aria-label={`Rename ${name}`}
+          onClick={() => {
+            setDraft(name);
+            setRenaming(true);
+          }}
+        >
+          Rename
+        </Button>
+        <Button
+          variant="text"
+          size="small"
+          aria-label={`Delete ${name}`}
+          onClick={onDelete}
+        >
+          Delete
+        </Button>
+      </div>
+    );
+  }
+  const save = () => {
+    if (!problem) {
+      setRenaming(false);
+      if (draft.trim() !== name) {
+        onRename(draft);
+      }
+    }
+  };
+  return (
+    <div className={styles.add} role="group" aria-label={`Rename ${name}`}>
+      <TextField
+        name={`trait-${name}-rename`}
+        label="Name"
+        size="s"
+        value={draft}
+        errorMessage={problem}
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          setDraft(event.target.value)
+        }
+        onKeyDown={(event: KeyboardEvent<HTMLInputElement>) => {
+          if (event.key === 'Enter') {
+            save();
+          } else if (event.key === 'Escape') {
+            setRenaming(false);
+          }
+        }}
+      />
+      <div className={styles.acts}>
+        <Button
+          variant="outlined"
+          color="secondary"
+          size="small"
+          disabled={Boolean(problem)}
+          onClick={save}
+        >
+          Save name
+        </Button>
+        <Button variant="text" size="small" onClick={() => setRenaming(false)}>
+          Cancel
+        </Button>
+      </div>
+    </div>
+  );
+};
+
 /** A way to add a property to a definition: a button, then a short form. */
 const AddProperty = ({
   owner,
@@ -531,7 +626,8 @@ export const RuleEditor = (props: CustomEditorProps) => {
     if (openTrait) {
       returnTo.current = openTrait;
       heading.current?.focus();
-    } else if (returnTo.current) {
+    } else if (returnTo.current !== null) {
+      // '' is the rule's own name, where a deleted trait's focus goes.
       traitButtons.current.get(returnTo.current)?.focus();
       returnTo.current = null;
     }
@@ -731,6 +827,28 @@ export const RuleEditor = (props: CustomEditorProps) => {
     );
   }
 
+  const deleteTraitHere = async (name: string) => {
+    const uses = traitUses(currentSources.source, fileId, data.name, name).map(
+      id => fileLabel(currentSources.source.files[id]),
+    );
+    if (
+      !(await confirm({
+        title: 'Delete trait',
+        message:
+          `Delete ${name}, with its properties, events, blocks and steps? ` +
+          (uses.length
+            ? `${uses.join(', ')} name it, and will stop working where they do.`
+            : 'Nothing else names it.'),
+      }))
+    ) {
+      return;
+    }
+    edit(deleteTrait(data, name));
+    // Back to the rule, with focus on its name.
+    returnTo.current = '';
+    setScript(null);
+  };
+
   const opened =
     script?.kind === 'member' && openId ? memberOf(data, openId) : undefined;
   if (opened) {
@@ -868,6 +986,13 @@ export const RuleEditor = (props: CustomEditorProps) => {
           >
             <h3 className={styles.groupHead} id={`${fileId}-own`}>
               <Button
+                ref={element => {
+                  if (element) {
+                    traitButtons.current.set('', element);
+                  } else {
+                    traitButtons.current.delete('');
+                  }
+                }}
                 variant="text"
                 size="small"
                 aria-current={trait ? undefined : 'true'}
@@ -965,6 +1090,26 @@ export const RuleEditor = (props: CustomEditorProps) => {
               >
                 Trait: {trait.name}
               </Typography>
+              {!isReadOnly && (
+                <TraitActions
+                  key={trait.name}
+                  name={trait.name}
+                  problemOf={name => traitProblem(data, name, trait.name)}
+                  onRename={name => {
+                    const source = renameTrait(
+                      currentSources.source,
+                      fileId,
+                      trait.name,
+                      name,
+                    );
+                    if (source !== currentSources.source) {
+                      replaceSources({...currentSources, source});
+                      setScript({kind: 'trait', id: name.trim()});
+                    }
+                  }}
+                  onDelete={() => void deleteTraitHere(trait.name)}
+                />
+              )}
               <TextField
                 name={`${fileId}-trait-description`}
                 label="What it is for"
