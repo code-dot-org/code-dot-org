@@ -3,7 +3,10 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {withCameraDeclarations} from '../../blockly/placementCameras';
+import {
+  settingsBlockId,
+  withCameraSettings,
+} from '../../blockly/placementCameras';
 import {
   addPlacementCamera,
   removePlacementCamera,
@@ -77,32 +80,33 @@ describe('a Viewport’s cameras in the map', () => {
   });
 });
 
-describe('the declarations the compiler makes of them', () => {
-  it('is one stack of definitions, FIRST and under no hat', () => {
+describe('the rows the compiler makes of them', () => {
+  it('is one stack of `set` rows on `this camera`, beside the placement’s own', () => {
     const mine = {
       blocks: {
         blocks: [{type: 'world_on_Space_CreatedEvent', x: 20, y: 20}],
       },
     };
-    const made = withCameraDeclarations(mine, [
-      {
-        id: 'wide',
-        name: 'Wide',
-        traits: ['Camera Follow#FollowsTrait'],
-        values: [{setter: FOLLOW, type: 'actor', value: 'actors/pilot'}],
-      },
-    ]) as {blocks: {blocks: Array<{type: string; y?: number; next?: unknown}>}};
-    const [hidden, theirs] = made.blocks.blocks;
-    // Run as the map loads, not by a handler a tick later.
-    expect(hidden.type).toBe('world_define_camera');
-    expect(hidden.y!).toBeLessThan(theirs.y!);
-    expect(JSON.stringify(hidden)).toContain('"NAME":"Wide"');
-    expect(JSON.stringify(hidden)).toContain('world_this_actor');
+    const wide = {
+      id: 'wide',
+      name: 'Wide',
+      traits: ['Camera Follow#FollowsTrait'],
+      values: [{setter: FOLLOW, type: 'actor', value: 'actors/pilot'}],
+    };
+    const made = withCameraSettings(mine, [wide]) as {
+      blocks: {blocks: Array<{type: string; id?: string}>};
+    };
+    const [settings, theirs] = made.blocks.blocks;
+    expect(settings).toMatchObject({type: FOLLOW, id: settingsBlockId(wide)});
+    expect(JSON.stringify(settings)).toContain('world_this_camera');
+    expect(theirs.type).toBe('world_on_Space_CreatedEvent');
   });
 
-  it('leaves a placement with no cameras as it was', () => {
+  it('leaves a placement whose cameras set nothing as it was', () => {
     const state = {blocks: {blocks: []}};
-    expect(withCameraDeclarations(state, undefined)).toBe(state);
-    expect(withCameraDeclarations(undefined, [])).toBeUndefined();
+    const bare = {id: 'wide', name: 'Wide', traits: [], values: []};
+    expect(withCameraSettings(state, undefined)).toBe(state);
+    expect(withCameraSettings(state, [bare])).toBe(state);
+    expect(withCameraSettings(undefined, [])).toBeUndefined();
   });
 });

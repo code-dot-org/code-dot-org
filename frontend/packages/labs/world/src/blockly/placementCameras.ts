@@ -7,12 +7,11 @@
 // a camera, the visual one, and nothing in the code editor to keep in step.
 //
 // WHAT THE ENGINE NEEDS is still a camera declared for that Viewport. So the
-// compiler makes one: it turns each stored camera into the `define camera …
-// for ⟨this actor⟩` a learner would have written, and generates THAT at the
-// head of the placement's own code (`BlocklyGenerator`), which runs as the
-// map loads — after the Viewport's own map is in it, and before the first
-// tick (`World.loadMap`). The blocks exist only while the map is compiled; no
-// editor ever loads them.
+// compiler writes a `defineCamera` for each stored camera at the head of the
+// placement's own code (`BlocklyGenerator`), which runs as the map loads —
+// after the Viewport's own map is in it, and before the first tick
+// (`World.loadMap`). The values a camera starts with are `set` rows on `this
+// camera`, made here and generated inside that call; no editor loads them.
 //
 // Plain JSON in, plain JSON out, so the editor's writes and the compiler's
 // reading are tested without a workspace.
@@ -100,84 +99,55 @@ const chain = (blocks: Block[]): Block | undefined =>
     undefined,
   );
 
-/** A `set` row for each value, about `subject`: `this camera`, or the main one. */
-const settingRows = (values: readonly CameraValue[], subject: Block): Block[] =>
-  values.flatMap(({setter, type, value}) => {
-    const inputs = cameraValueInputs(type, value);
-    return inputs
-      ? [{type: setter, inputs: {ACTOR: {block: subject}, ...inputs}}]
-      : [];
-  });
+/** The id of the stack that holds `camera`'s `set` rows while it compiles. */
+export const settingsBlockId = (camera: PlacementCamera): string =>
+  `camera_settings_${camera.id}`;
+
+/** A `set` row for each value, about `this camera`, or nothing for none. */
+const settingsOf = (camera: PlacementCamera): Block | undefined =>
+  chain(
+    camera.values.flatMap(({setter, type, value}) => {
+      const inputs = cameraValueInputs(type, value);
+      return inputs
+        ? [
+            {
+              type: setter,
+              inputs: {ACTOR: {block: {type: 'world_this_camera'}}, ...inputs},
+            },
+          ]
+        : [];
+    }),
+  );
 
 /**
- * The `define camera` a stored camera stands for: `for ⟨this actor⟩` for a
- * Viewport's, and for nobody — the world — for the world's own.
+ * A placement's workspace with each stored camera's `set` rows beside it, for
+ * the compiler only: one stack per camera that sets anything, under no hat,
+ * which the compiler generates inside the `defineCamera` it writes for that
+ * camera (`BlocklyGenerator`) rather than as code of the placement's own.
+ * Identity when no camera sets anything.
  */
-const definitionOf = (
-  camera: PlacementCamera,
-  owner: 'this actor' | 'world' = 'this actor',
-): Block => {
-  const mouth = chain([
-    ...camera.traits.map(trait => ({
-      type: 'world_use_trait',
-      fields: {TRAIT: trait},
-    })),
-    ...settingRows(camera.values, {type: 'world_this_camera'}),
-  ]);
-  return {
-    type: 'world_define_camera',
-    id: camera.id,
-    fields: {NAME: camera.name},
-    inputs: {
-      ...(owner === 'this actor'
-        ? {OWNER: {block: {type: 'world_this_actor'}}}
-        : {}),
-      ...(mouth ? {DO: {block: mouth}} : {}),
-    },
-  };
-};
-
-/**
- * Where the declarations sit: above anywhere a learner could put a block.
- *
- * FIRST, so they are generated first (`getTopBlocks(true)` goes top to
- * bottom). They run as the map loads, before any handler of the learner's
- * could — a `when this actor is created` that looks through one of these
- * cameras finds it there.
- */
-const FIRST = {x: 0, y: -1_000_000};
-
-/**
- * A placement's workspace with its stored cameras declared, for the compiler
- * only: one stack of `define camera` rows, before whatever the placement's own
- * code holds, run where the placement's code runs. Identity when it stores
- * none.
- *
- * NOT UNDER A HAT. Under `when this actor is created` the cameras did not
- * exist until the first tick's handlers ran, so a Viewport looked through its
- * main camera for that tick and its chosen one followed nothing until the
- * next (specs/SCREEN_MAP_PLAN.md, step three).
- */
-export function withCameraDeclarations(
+export function withCameraSettings(
   state: object | undefined,
   cameras: readonly PlacementCamera[] | undefined,
 ): object | undefined {
-  if (!cameras?.length) {
+  const stacks = (cameras ?? []).flatMap(camera => {
+    const settings = settingsOf(camera);
+    return settings
+      ? [{...settings, id: settingsBlockId(camera), x: 0, y: 0}]
+      : [];
+  });
+  if (!stacks.length) {
     return state;
   }
   const document = (state ?? {}) as {
     blocks?: {languageVersion?: number; blocks?: Block[]};
-  };
-  const declarations: Block & typeof FIRST = {
-    ...chain(cameras.map(camera => definitionOf(camera)))!,
-    ...FIRST,
   };
   return {
     ...document,
     blocks: {
       languageVersion: 0,
       ...document.blocks,
-      blocks: [declarations, ...(document.blocks?.blocks ?? [])],
+      blocks: [...stacks, ...(document.blocks?.blocks ?? [])],
     },
   };
 }

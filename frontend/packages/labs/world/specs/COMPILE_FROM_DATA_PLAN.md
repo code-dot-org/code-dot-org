@@ -1,7 +1,6 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: IN PROGRESS, October 2026. Steps 0 to 3 are built, and step 4 but
-for its last sentence.
+STATUS: IN PROGRESS, October 2026. Steps 0 to 4 are built.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -37,9 +36,10 @@ world`, the loop over a trait's holders. Scope, owner and id never reach a
   `definesActorFile`, so it writes nothing outside a `define actor`.
 - **Cameras.** A camera belongs to a Viewport: a placement's `cameras`,
   made in its inspector on the screen it is placed on (the Screen Editor is
-  the map editor over a screen). The compiler writes each as a `define
-camera` block with `use trait` rows (`withCameraDeclarations` in
-  `placementCameras`) and generates those. No scenario, lesson or stock
+  the map editor over a screen). The compiler writes each as a
+  `defineCamera` call, and its starting values as `set` rows on `this
+camera` generated inside it (`BlocklyGenerator.cameraCode`,
+  `placementCameras`). No scenario, lesson or stock
   actor declares a camera in blocks, and tests say so (`fixtures.test`,
   `lessonChecks.test`). The Viewport takes its camera traits as an actor's
   traits (`useCameraTraits`).
@@ -120,13 +120,15 @@ Its own plan: specs/LESSONS_AS_SCREENS_PLAN.md. A lesson's `main.world` holds
 a whole program, not only a main map, so moving it is a rewrite of what 79
 lessons open on.
 
-### 4. Cameras only on Viewports — BUILT, but for the last sentence
+### 4. Cameras only on Viewports — BUILT
 
 `mainCamera`, `cameras` and `startingCamera` have left the map, with the
 World Editor's Map tab, the world camera list, `worldCameras`,
 `worldCameraCode`'s reader and `withWorldCameras`
-(LESSONS_AS_SCREENS_PLAN.md, step 4). Still to do: `withCameraDeclarations`
-writes `defineCamera` calls, not blocks.
+(LESSONS_AS_SCREENS_PLAN.md, step 4). A placement's stored camera is
+written as a `defineCamera` call, not a `define camera` block; only its
+`set` rows are still blocks, which stay. Checked against the old path on
+the ten screen and map modules that store a camera: the same bytes.
 
 ### 5. The blocks go
 

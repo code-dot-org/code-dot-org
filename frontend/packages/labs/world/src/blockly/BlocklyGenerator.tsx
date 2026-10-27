@@ -30,6 +30,7 @@ import {
 } from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {MEMBER_HEAD} from './bodySurfaces';
+import {cameraId} from './cameras';
 import {
   buildDomainPalette,
   importVar,
@@ -48,7 +49,11 @@ import {
   parseActorOwnMeta,
   type OwnMeta,
 } from './ownProperties';
-import {withCameraDeclarations, type PlacementCamera} from './placementCameras';
+import {
+  settingsBlockId,
+  withCameraSettings,
+  type PlacementCamera,
+} from './placementCameras';
 import {
   designedName,
   parseRuleMeta,
@@ -149,18 +154,30 @@ function generateWorkspaces(
   const definitions: Record<string, string> = {};
   const asString = (code: string | [string, number]): string =>
     Array.isArray(code) ? code[0] : code;
-  const generateOne = (state: object | undefined, key: string) => {
-    if (!state) {
+  const generateOne = (
+    state: object | undefined,
+    key: string,
+    cameras: readonly PlacementCamera[] = [],
+  ) => {
+    if (!state && !cameras.length) {
       return [];
     }
     workspace.clear();
-    Blockly.serialization.workspaces.load(state, workspace);
+    if (state) {
+      Blockly.serialization.workspaces.load(state, workspace);
+    }
     generator.init(workspace);
     (generator as {__ruleModule?: string}).__ruleModule = modulePath;
     (generator as {__mapModule?: string}).__mapModule = modulePath;
+    const settingsIds = new Set(cameras.map(settingsBlockId));
+    const declared = cameras.map(camera => ({
+      type: 'camera',
+      id: camera.id,
+      code: cameraCode(generator, workspace, camera),
+    }));
     const generated = workspace
       .getTopBlocks(true)
-      .filter(block => block.isEnabled())
+      .filter(block => block.isEnabled() && !settingsIds.has(block.id))
       .map(block => ({
         type: block.type,
         id: block.id,
@@ -172,21 +189,49 @@ function generateWorkspaces(
     for (const [name, code] of Object.entries(made)) {
       definitions[name === 'variables' ? `variables:${key}` : name] = code;
     }
-    return generated;
+    return [...declared, ...generated];
   };
   const mapLevel = generateOne(source.blocks, 'map');
-  // A placement's code, and its stored cameras declared beside it: the
-  // map editor keeps a Viewport's cameras as data, and they become blocks
-  // only here, where no editor sees them (`placementCameras`).
+  // A placement's code, with its stored cameras declared ahead of it.
   const placements = (source.actors ?? []).flatMap(entry => {
-    const state = withCameraDeclarations(entry.blocks, entry.cameras);
-    return entry.id && state
-      ? [{id: entry.id, blocks: generateOne(state, entry.id)}]
+    const state = withCameraSettings(entry.blocks, entry.cameras);
+    return entry.id && (state || entry.cameras?.length)
+      ? [{id: entry.id, blocks: generateOne(state, entry.id, entry.cameras)}]
       : [];
   });
   (generator as {__mapModule?: string}).__mapModule = undefined;
   (generator as {__ruleModule?: string}).__ruleModule = undefined;
   return {placements, mapLevel, definitions};
+}
+
+/**
+ * A Viewport's stored camera as the engine takes one: made in one call, then,
+ * with it bound as `camera`, its starting values set (`placementCameras`).
+ */
+function cameraCode(
+  generator: JavascriptGenerator,
+  workspace: Blockly.Workspace,
+  camera: PlacementCamera,
+): string {
+  const id = str(cameraId(camera.id));
+  const traits = camera.traits
+    .map(refFromValue)
+    .filter(refResolves)
+    .map(ref => refCode(ref, generator));
+  const define =
+    `world.defineCamera({id: ${id}, name: ${str(camera.name)}, ` +
+    `viewport: WorldLab.one(actor)` +
+    (traits.length ? `, traits: [${traits.join(', ')}]` : '') +
+    '});\n';
+  const settings = workspace.getBlockById(settingsBlockId(camera));
+  const code = settings ? generator.blockToCode(settings) : '';
+  const setup = generator.prefixLines(
+    Array.isArray(code) ? code[0] : code,
+    generator.INDENT,
+  );
+  return setup.trim()
+    ? `${define}{\nconst camera = world.camera(${id});\n${setup}}\n`
+    : define;
 }
 
 /** Put the imports several workspaces needed back before `finish` reads them. */

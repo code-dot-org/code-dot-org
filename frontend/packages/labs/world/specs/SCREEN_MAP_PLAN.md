@@ -91,7 +91,7 @@ map loads. A test reads the first snapshot.
 
 BUILT. A Viewport a map places has its own map loaded before the placing
 map's script runs, so the stored cameras, now plain rows at the head of the
-placement's code (`withCameraDeclarations`), are declared and aimed at what
+placement's code (`placementCameras`), are declared and aimed at what
 the level holds as the world is built. `shows through` is applied, and the
 space settled, as soon as the script is done and whenever `loadMapInto`
 lands a map.

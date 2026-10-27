@@ -45,7 +45,7 @@ Interface Actor are later phases.
   scale), about twenty enhancement patches (`actors/enhance`), and a dozen
   helpers on a live workspace.
 - **There is a precedent for data that becomes rows only the compiler
-  sees**: a placement's stored cameras (`withCameraDeclarations`) and the
+  sees**: a placement's stored cameras (`withCameraSettings`) and the
   Main Screen's values and rule settings (`screenData`).
 - **The "+" events workspace** is built (`useSectionWorkspace`), and both
   the file editor and a placement's workspace use it.
