@@ -20,15 +20,21 @@ import {
   getFileExtension,
   getNextFileId,
 } from '@cdo/apps/lab2/utils/multiFileSourceUtils';
-import {AI_TUTOR_ANSWER_TYPES} from '@cdo/apps/weblab2/types';
+import {
+  AI_TUTOR_ANSWER_TYPES,
+  AiTutorAnswerType,
+} from '@cdo/apps/weblab2/types';
 
-const getAnswerJsonSchema = (): JsonObjectSchema => {
-  return {
+const getAnswerJsonSchema = (
+  answerTypes: readonly AiTutorAnswerType[],
+  allowCode: boolean
+): JsonObjectSchema => {
+  const schema: JsonObjectSchema = {
     type: 'object',
     properties: {
       answerType: {
         type: 'string',
-        enum: [...AI_TUTOR_ANSWER_TYPES],
+        enum: [...answerTypes],
       },
       goal: GOAL_PROPERTY,
       assumptions: {
@@ -62,6 +68,17 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
     propertyOrdering: ANSWER_JSON_SCHEMA_PROPERTY_ORDERING,
     additionalProperties: false,
   };
+  if (allowCode) {
+    return schema;
+  }
+  return {
+    ...schema,
+    properties: Object.fromEntries(
+      Object.entries(schema.properties).filter(([name]) => name !== 'code')
+    ),
+    required: schema.required.filter(name => name !== 'code'),
+    propertyOrdering: schema.propertyOrdering?.filter(name => name !== 'code'),
+  };
 };
 
 // This list is used to determine if the AI Tutor response should trigger the accept-reject flow
@@ -94,14 +111,21 @@ export const isAcceptRejectCodeFileTypes = (
   return isValid;
 };
 
-export const aiTutorResponseJsonSchema: JsonObjectSchema = {
+// Structured output enforces what a prompt only asks for: the model cannot
+// return an answer type outside the enum, or code when the field is absent.
+export const getAiTutorResponseJsonSchema = (
+  answerTypes: readonly AiTutorAnswerType[] = AI_TUTOR_ANSWER_TYPES,
+  {allowCode = true}: {allowCode?: boolean} = {}
+): JsonObjectSchema => ({
   type: 'object',
   properties: {
-    answer: getAnswerJsonSchema(),
+    answer: getAnswerJsonSchema(answerTypes, allowCode),
   },
   required: ['answer'],
   additionalProperties: false,
-};
+});
+
+export const aiTutorResponseJsonSchema = getAiTutorResponseJsonSchema();
 
 type AiTutorCodeFile = {
   name: string;
@@ -117,7 +141,7 @@ type AcceptRejectFormattedResponse = {
 export type AiTutorAcceptRejectResponse = {
   explanation?: string;
   videoUrl?: string;
-  code: AiTutorModelCodeFile[];
+  code?: AiTutorModelCodeFile[];
   answerType: string;
 };
 
@@ -135,7 +159,7 @@ export const formatAcceptRejectResponse = (
     (response.videoUrl ? `\n[Watch this video](${response.videoUrl})\n` : '');
   return {
     explanation,
-    code: response.code.map(codeFile => ({
+    code: (response.code ?? []).map(codeFile => ({
       name: codeFile.filename,
       contents: codeFile.sourceCode,
     })),
