@@ -17,8 +17,9 @@ export interface StepValidationOptions
 /**
  * Judges each piece of work the student does on the open step, as the
  * step's lab reports it, records the verdict, and has the lab tell the
- * student. Does nothing on a step with no validation block, or in a lab
- * that takes no part in checking.
+ * student, first that a check is running and then its verdict. Does
+ * nothing on a step with no validation block, or in a lab that takes no
+ * part in checking.
  */
 export function useStepValidation(options: StepValidationOptions): void {
   // Read at judge time, so a change to the options does not resubscribe.
@@ -31,12 +32,20 @@ export function useStepValidation(options: StepValidationOptions): void {
 
   useEffect(() => {
     if (!adapter) return;
-    return adapter.observe({chat}, work => {
+    return adapter.observeWork({chat}, work => {
       const current = latest.current;
-      validateStep({...current, work}).then(attempt => {
+      let dismissChecking: (() => void) | undefined;
+      validateStep({
+        ...current,
+        work,
+        onJudging: () => {
+          dismissChecking = adapter.notifyChecking?.({chat: current.chat});
+        },
+      }).then(attempt => {
+        dismissChecking?.();
         if (!attempt) return;
         current.recordValidation(attempt);
-        adapter.report?.({chat: current.chat}, attempt);
+        adapter.reportAttempt?.({chat: current.chat}, attempt);
       });
     });
   }, [adapter, chat]);

@@ -17,18 +17,24 @@ import {labEnvironment} from '../labEnvironments';
 import {StepWork} from './types';
 
 /** Bumped when the prompt text changes, so traces say which wording ran. */
-export const VALIDATION_PROMPT_VERSION = '2026-10-22';
+export const VALIDATION_PROMPT_VERSION = '2026-10-27';
 
 export const verdictSchema = z.object({
   /** Whether the work meets the step's condition. */
   pass: z.boolean(),
   /** One of the evidence levels the skill describes. */
   evidenceLevel: z.number().int(),
-  /** Addressed to the student; at most two sentences. */
+  /** The message the student reads, opening with one of `OPENERS`. */
   reason: z.string(),
 });
 
 export type Verdict = z.infer<typeof verdictSchema>;
+
+/** How a reason may open, by whether the work passed. The first is the default. */
+export const OPENERS = {
+  pass: ['Success!'],
+  fail: ['Not quite!', 'Almost!'],
+} as const;
 
 export interface ValidationPromptInput {
   pathway: Pathway;
@@ -86,7 +92,11 @@ export function buildValidationPrompt({
       '- Judge from the change and how it came about. A condition nothing in the change shows is not met, even if the student may have meant to do it.',
       '- pass is whether the change meets the condition. Be lenient about wording, naming and style, and strict about whether the thing is actually there.',
       '- evidenceLevel is the listed level whose description best matches what the change and how it came about show about the skill; 0 when they show nothing of it.',
-      '- reason is addressed to the student in the second person, in plain language at an 8th grade reading level, at most two sentences. When the condition is not met, say what is missing and one concrete thing to do about it. Do not write code for them.',
+      '- reason is the message the student reads, in the second person, in plain language at an 8th grade reading level. It opens with exactly one of these words, chosen honestly:',
+      '  - "Success!" when the condition is met. Follow it with one short sentence saying what their change did, in the terms of their own project, such as "Success! Your header now shows the bakery\'s name."',
+      '  - "Almost!" when the condition is not met but one small change would meet it. Follow it with one or two sentences saying what is missing and the one thing to do, such as "Almost! The header is there, but it still says Welcome. Ask the AI to put your site\'s name in it."',
+      '  - "Not quite!" when the condition is not met and the work is still some way off. Follow it with one or two sentences saying what is missing and one concrete thing to do first. Do not write code for them.',
+      '  Read the whole message back as the student would: the opener and what follows must agree, with no scolding and no empty praise.',
       '- Return exactly pass, evidenceLevel and reason, and nothing else.',
     ].join('\n'),
   ]

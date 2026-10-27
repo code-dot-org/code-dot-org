@@ -21,16 +21,21 @@ export interface AcceptedBuild {
 /** A notification as a host may post it; the chat sets its id and time. */
 export type HostNotification = Pick<
   Notification,
-  'text' | 'includeInChatHistory'
+  'text' | 'includeInChatHistory' | 'hideTimestamp'
 > & {
-  notificationType: 'hostMessage' | 'success' | 'error';
+  notificationType: 'hostMessage' | 'info' | 'success' | 'warning' | 'error';
 };
 
 /** Actions the chat host may take once the chat is ready. */
 export interface ChatHandle {
-  post(notification: HostNotification): void;
-  /** Calls `listener` for each build the student accepts from now on. Returns the unsubscribe. */
+  /** Shows a notification. Returns a callback to dismiss it. */
+  post(notification: HostNotification): () => void;
+  /** Calls `listener` for each build the student accepts from now on. Returns a callback to unsubscribe. */
   onBuildAccepted(listener: (build: AcceptedBuild) => void): () => void;
+  /** Disables the student from sending messages. */
+  disableSend(): void;
+  /** Enables the student to send messages. */
+  enableSend(): void;
 }
 
 /** What a chat's host supplies. */

@@ -42,14 +42,23 @@ const work = {
 /** A chat that remembers its listeners and what was posted. */
 const fakeChat = () => {
   const listeners: ((build: AcceptedBuild) => void)[] = [];
+  const dismiss = jest.fn();
   const chat: ChatHandle = {
-    post: jest.fn(),
+    post: jest.fn(() => dismiss),
     onBuildAccepted: jest.fn(listener => {
       listeners.push(listener);
       return () => listeners.splice(listeners.indexOf(listener), 1);
     }),
+    disableSend: jest.fn(),
+    enableSend: jest.fn(),
   };
-  return {chat, listeners};
+  return {chat, listeners, dismiss};
+};
+
+/** A judge that says it is running, then answers. */
+const judge = (attempt: unknown) => (options: {onJudging?: () => void}) => {
+  options.onJudging?.();
+  return Promise.resolve(attempt);
 };
 
 const baseOptions = (chat: ChatHandle | undefined) => ({
@@ -82,10 +91,14 @@ const render = (
 describe('useStepValidation', () => {
   beforeEach(() => mockValidateStep.mockReset());
 
-  it("judges each piece of the lab's work, records the verdict and has the lab tell the student", async () => {
-    const attempt = {pass: true, evidenceLevel: 2, reason: 'Nice heading.'};
-    mockValidateStep.mockResolvedValue(attempt);
-    const {chat, listeners} = fakeChat();
+  it("judges each piece of the lab's work, records the verdict and has the lab say a check is running, then the verdict", async () => {
+    const attempt = {
+      pass: true,
+      evidenceLevel: 2,
+      reason: 'Success! Nice heading.',
+    };
+    mockValidateStep.mockImplementation(judge(attempt));
+    const {chat, listeners, dismiss} = fakeChat();
     const {recordValidation, waitFor} = render(chat);
 
     listeners[0](build);
@@ -94,33 +107,60 @@ describe('useStepValidation', () => {
     expect(mockValidateStep).toHaveBeenCalledWith(
       expect.objectContaining({work})
     );
-    expect(chat.post).toHaveBeenCalledWith({
-      notificationType: 'hostMessage',
+    expect(chat.post).toHaveBeenNthCalledWith(1, {
+      notificationType: 'info',
+      includeInChatHistory: false,
+      hideTimestamp: true,
+      text: 'Checking your work...',
+    });
+    expect(chat.disableSend).toHaveBeenCalledTimes(1);
+    expect(dismiss).toHaveBeenCalledTimes(1);
+    expect(chat.enableSend).toHaveBeenCalledTimes(1);
+    expect(chat.post).toHaveBeenNthCalledWith(2, {
+      notificationType: 'success',
       includeInChatHistory: true,
-      text: "This meets the step's goal. Nice heading.",
+      hideTimestamp: true,
+      text: 'Success! Nice heading.',
     });
   });
 
-  it('says not there yet when the work does not pass, and nothing without a verdict', async () => {
-    mockValidateStep.mockResolvedValueOnce({
-      pass: false,
-      evidenceLevel: 1,
-      reason: 'Add a heading.',
-    });
-    mockValidateStep.mockResolvedValueOnce(undefined);
-    const {chat, listeners} = fakeChat();
+  it('warns when the work does not pass, and takes back the running notice without a verdict', async () => {
+    mockValidateStep.mockImplementationOnce(
+      judge({
+        pass: false,
+        evidenceLevel: 1,
+        reason: 'Not quite! Add a heading.',
+      })
+    );
+    mockValidateStep.mockImplementationOnce(judge(undefined));
+    const {chat, listeners, dismiss} = fakeChat();
     const {recordValidation, waitFor} = render(chat);
 
     listeners[0](build);
-    await waitFor(() => expect(chat.post).toHaveBeenCalledTimes(1));
-    expect(chat.post).toHaveBeenCalledWith(
-      expect.objectContaining({text: 'Not there yet. Add a heading.'})
-    );
+    await waitFor(() => expect(chat.post).toHaveBeenCalledTimes(2));
+    expect(chat.post).toHaveBeenLastCalledWith({
+      notificationType: 'warning',
+      includeInChatHistory: true,
+      hideTimestamp: true,
+      text: 'Not quite! Add a heading.',
+    });
 
     listeners[0]({...build, at: 6});
-    await waitFor(() => expect(mockValidateStep).toHaveBeenCalledTimes(2));
+    await waitFor(() => expect(dismiss).toHaveBeenCalledTimes(2));
     expect(recordValidation).toHaveBeenCalledTimes(1);
-    expect(chat.post).toHaveBeenCalledTimes(1);
+    expect(chat.post).toHaveBeenCalledTimes(3);
+  });
+
+  it('says nothing when the judge never runs', async () => {
+    mockValidateStep.mockResolvedValue(undefined);
+    const {chat, listeners, dismiss} = fakeChat();
+    const {waitFor} = render(chat);
+
+    listeners[0](build);
+    await waitFor(() => expect(mockValidateStep).toHaveBeenCalledTimes(1));
+    expect(chat.post).not.toHaveBeenCalled();
+    expect(chat.disableSend).not.toHaveBeenCalled();
+    expect(dismiss).not.toHaveBeenCalled();
   });
 
   it('listens only with a chat, a validation block and a lab that reports work, and stops when unmounted', () => {

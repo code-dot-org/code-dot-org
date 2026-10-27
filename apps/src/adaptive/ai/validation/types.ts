@@ -31,9 +31,14 @@ export type WorkObserver = (
 /** How a lab takes part in checking its work. */
 export interface WorkAdapter {
   /** How the lab reports work. */
-  observe: WorkObserver;
+  observeWork: WorkObserver;
+  /**
+   * How the lab tells the student a validation check has begun and waits for it, if it does.
+   * Returns a callback to be invoked when the check is complete.
+   */
+  notifyChecking?: (handles: LabHandles) => () => void;
   /** How the lab tells the student a verdict, if it does. */
-  report?: (
+  reportAttempt?: (
     handles: LabHandles,
     attempt: Omit<ValidationAttempt, 'at'>
   ) => void;

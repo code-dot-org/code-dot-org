@@ -85,6 +85,13 @@ describe('buildValidationPrompt', () => {
     expect([...order].sort((a, b) => a - b)).toEqual(order);
   });
 
+  it('has the reason open with Success, Almost or Not quite', () => {
+    const text = prompt();
+    expect(text).toContain('"Success!" when the condition is met');
+    expect(text).toContain('"Almost!" when the condition is not met but');
+    expect(text).toContain('"Not quite!" when the condition is not met and');
+  });
+
   it('says so when nothing was recorded and nothing changed', () => {
     const text = prompt({work: {at: 1700, change: ''}});
     expect(text).toContain('Nothing was recorded.');

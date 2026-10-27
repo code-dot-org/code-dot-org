@@ -1,4 +1,7 @@
-import {weblab2Adapter, workOf} from '@cdo/apps/adaptive/ai/validation/weblab2';
+import {
+  weblab2Adapter,
+  workFromBuild,
+} from '@cdo/apps/adaptive/ai/validation/weblab2';
 import {AcceptedBuild, ChatHandle} from '@cdo/apps/aichat/host/ChatHostContext';
 
 jest.mock('@cdo/apps/redux', () => ({
@@ -16,14 +19,14 @@ const file = (name: string, contents: string) => ({
   folderId: '0',
 });
 
-describe('workOf', () => {
+describe('workFromBuild', () => {
   it('describes the built files as the change, the way the project is, and the exchange as the process', () => {
     const build: AcceptedBuild = {
       at: 7,
       files: [file('index.html', '<h1>Hi</h1>'), file('style.css', 'h1 {}')],
       transcript: 'Student: Add a heading',
     };
-    const work = workOf(build);
+    const work = workFromBuild(build);
     expect(work.at).toBe(7);
     expect(work.process).toBe('Student: Add a heading');
     expect(work.change).toContain('filename: index.html');
@@ -43,10 +46,12 @@ describe('weblab2Adapter', () => {
         listener = l;
         return unsubscribe;
       }),
+      disableSend: jest.fn(),
+      enableSend: jest.fn(),
     };
     const work = jest.fn();
 
-    const off = weblab2Adapter.observe({chat}, work);
+    const off = weblab2Adapter.observeWork({chat}, work);
     listener!({
       at: 3,
       files: [file('a.html', '<p/>')],
@@ -65,32 +70,65 @@ describe('weblab2Adapter', () => {
 
   it('does nothing without a chat', () => {
     const work = jest.fn();
-    expect(weblab2Adapter.observe({}, work)).toEqual(expect.any(Function));
+    expect(weblab2Adapter.observeWork({}, work)).toEqual(expect.any(Function));
     expect(work).not.toHaveBeenCalled();
-    weblab2Adapter.report?.(
+    weblab2Adapter.reportAttempt?.(
       {},
       {pass: true, evidenceLevel: 1, reason: 'Fine.'}
     );
   });
 
-  it('reports a verdict into the chat as the tutor, kept in the history', () => {
-    const chat: ChatHandle = {post: jest.fn(), onBuildAccepted: jest.fn()};
-    weblab2Adapter.report?.(
+  it('says a check is running and stops sending, until the caller takes that back', () => {
+    const dismiss = jest.fn();
+    const chat: ChatHandle = {
+      post: jest.fn(() => dismiss),
+      onBuildAccepted: jest.fn(),
+      disableSend: jest.fn(),
+      enableSend: jest.fn(),
+    };
+    const done = weblab2Adapter.notifyChecking!({chat});
+    expect(chat.post).toHaveBeenCalledWith({
+      notificationType: 'info',
+      includeInChatHistory: false,
+      hideTimestamp: true,
+      text: 'Checking your work...',
+    });
+    expect(chat.disableSend).toHaveBeenCalledTimes(1);
+    expect(dismiss).not.toHaveBeenCalled();
+    expect(chat.enableSend).not.toHaveBeenCalled();
+
+    done();
+    expect(dismiss).toHaveBeenCalledTimes(1);
+    expect(chat.enableSend).toHaveBeenCalledTimes(1);
+    expect(weblab2Adapter.notifyChecking?.({})).toEqual(expect.any(Function));
+  });
+
+  it('reports a verdict as a success or warning alert, kept in the history', () => {
+    const chat: ChatHandle = {
+      post: jest.fn(),
+      onBuildAccepted: jest.fn(),
+      disableSend: jest.fn(),
+      enableSend: jest.fn(),
+    };
+    weblab2Adapter.reportAttempt?.(
       {chat},
-      {pass: true, evidenceLevel: 2, reason: 'Nice heading.'}
+      {pass: true, evidenceLevel: 2, reason: 'Success! Nice heading.'}
     );
-    weblab2Adapter.report?.(
+    weblab2Adapter.reportAttempt?.(
       {chat},
-      {pass: false, evidenceLevel: 1, reason: 'Add a heading.'}
+      {pass: false, evidenceLevel: 1, reason: 'Not quite! Add a heading.'}
     );
     expect(chat.post).toHaveBeenNthCalledWith(1, {
-      notificationType: 'hostMessage',
+      notificationType: 'success',
       includeInChatHistory: true,
-      text: "This meets the step's goal. Nice heading.",
+      hideTimestamp: true,
+      text: 'Success! Nice heading.',
     });
-    expect(chat.post).toHaveBeenNthCalledWith(
-      2,
-      expect.objectContaining({text: 'Not there yet. Add a heading.'})
-    );
+    expect(chat.post).toHaveBeenNthCalledWith(2, {
+      notificationType: 'warning',
+      includeInChatHistory: true,
+      hideTimestamp: true,
+      text: 'Not quite! Add a heading.',
+    });
   });
 });
