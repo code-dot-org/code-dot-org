@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+#
+# Rolling-restart the delayed_job worker pool once it is older than the
+# configured period, bounding per-worker memory growth between deploys.
+#
+# Cron runs this hourly and the age check decides whether to act, which keeps
+# the period in DCDO rather than the crontab, so changing it needs no chef run.
+
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+require 'cdo/active_job_backend'
+
+DEFAULT_RESTART_PERIOD_S = 12 * 3600
+
+def main
+  return unless Gatekeeper.allows('enableActiveJobWorkerRollingRestart')
+
+  period_s = DCDO.get('active_job_worker_restart_period', DEFAULT_RESTART_PERIOD_S).to_i
+  return unless period_s > 0
+
+  age_s = Cdo::ActiveJobBackend.oldest_worker_age_s
+  return if age_s.nil? || age_s < period_s
+
+  Cdo::ActiveJobBackend.chat_client_log(
+    "delayed_job: recycling workers, oldest is #{age_s}s old (period #{period_s}s)"
+  )
+  Cdo::ActiveJobBackend.restart_workers
+end
+
+main
