@@ -175,12 +175,12 @@ describe('a data-shaped rule', () => {
     properties: [{name: 'count', type: 'number', access: 'writable', value: 0}],
   };
 
-  it('is read as its view', () => {
+  it('is read as its view, and resolved as itself', () => {
     expect(JSON.parse(ruleViewOf(JSON.stringify(data)))).toEqual(
       ruleView(data),
     );
-    expect(JSON.parse(resolveRuleContents(JSON.stringify(data)))).toEqual(
-      ruleView(data),
+    expect(resolveRuleContents(JSON.stringify(data))).toBe(
+      JSON.stringify(data),
     );
   });
 

@@ -62,7 +62,7 @@ describe('importStockRule', () => {
     expect(contents.length).toBeLessThan(60);
   });
 
-  it('writes a reference that resolves to a workspace that parses back', () => {
+  it('writes a reference that resolves to the rule, as data', () => {
     // What everything downstream sees. It goes to disk as a reference and is
     // read back — by the editor, the metadata parser and the generator —
     // through `projectFiles`, which resolves it.
@@ -72,7 +72,7 @@ describe('importStockRule', () => {
       fileNamed(source, 'gravity.rule').contents,
     );
 
-    expect(JSON.parse(contents).blocks.blocks[0].type).toBe('world_rule');
+    expect(JSON.parse(contents)).toMatchObject({type: 'rule', name: 'Gravity'});
   });
 
   it('creates the rules/ folder when the project has none', () => {
@@ -175,9 +175,10 @@ describe('importing what a rule needs', () => {
     const collision = Object.values(source.files).find(
       f => f.name === 'solid.rule',
     )!;
-    expect(resolveRuleContents(collision.contents)).toContain(
-      '"RULE": "Physics"',
-    );
+    expect(
+      (JSON.parse(resolveRuleContents(collision.contents)) as {uses?: string[]})
+        .uses,
+    ).toContain('Physics');
   });
 
   it('gives a dependency its own name, never a renamed one', () => {

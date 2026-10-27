@@ -11,6 +11,7 @@ import {describe, expect, it} from 'vitest';
 
 import {DEFAULT_PROJECT} from '../../constants';
 import {WORLD_SCENARIOS} from '../../fixtures/scenarios';
+import type {RuleData} from '../../rules/ruleData';
 import {projectFiles} from '../../runtime/projectFiles';
 import {readScreenHeader, writeScreenRuleValue} from '../screenProperties';
 import {cameraTraitChoices, worldRuleProperties} from '../worldRuleProperties';
@@ -132,9 +133,13 @@ describe('the traits a camera may elect', () => {
     const ruleFile = Object.keys(flappy).find(path =>
       path.endsWith('cameraFollow.rule'),
     )!;
+    const rule = JSON.parse(flappy[ruleFile]) as RuleData;
     const old = {
       ...flappy,
-      [ruleFile]: flappy[ruleFile].replace(/,\s*"DESCRIPTION": "[^"]*"/, ''),
+      [ruleFile]: JSON.stringify({
+        ...rule,
+        traits: rule.traits?.map(trait => ({...trait, description: undefined})),
+      }),
     };
     expect(
       cameraTraitChoices(old).find(each => each.name === 'Follows')

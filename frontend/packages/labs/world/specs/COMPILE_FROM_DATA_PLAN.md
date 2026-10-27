@@ -1,7 +1,7 @@
 # Plan: compile rules, actors and cameras from their data
 
 STATUS: IN PROGRESS, October 2026. Steps 0 to 4, 5a, 5b and 5c's first
-three are built.
+four are built.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -199,8 +199,12 @@ fixtures are written as rows and folded. In order, each its own commit:
    (`yarn build:rules`). All 46 are the data they folded to before, and
    the shelf went from 4.6MB to 2.9MB. A reference's version, a hash of the
    contents, changed for every rule; nothing acts on it.
-4. `resolveRuleContents` and `projectFiles` hand out data; what rewrites a
-   rule's rows works through a view of its own, as an actor's does.
+4. BUILT. `resolveRuleContents` and `projectFiles` hand out data, byte for
+   byte the shelf's for a reference. What walks a rule's rows reads it
+   through `workspaceViewOf` (`rewriteWorkspaces`), the view of an actor or
+   a rule, and `mapWorkspaces` writes a rule it rewrote back as data. The
+   readers that walked the view unasked — `rulesInScope`, `standInBlocks`
+   — view it themselves.
 5. Actors compile from data: the compiler and `parseActorOwnMeta` read
    `traits` and `members`.
 6. Actors are written as data: the stock actors, the starter project, the

@@ -25,12 +25,11 @@
 // there is invisible to all of it. Nothing else has to learn a second shape
 // for what a rule is.
 //
-// AND ONE PLACE TO MATERIALIZE. The editor saves a workspace by serializing
-// the whole of it, so a reference becomes a copy by the ordinary act of being
-// edited: the save writes blocks where the reference was. There is no
+// AND ONE PLACE TO MATERIALIZE. The Rule Editor saves the whole of a rule's
+// data, so a reference becomes a copy by the ordinary act of being edited:
+// the save writes the rule where the reference was. There is no
 // promotion step to get wrong, and no state in which a file is half of each.
 
-import {ruleViewOf} from './ruleData';
 import {stockRule, type StockRule} from './stock';
 
 /** What a `.rule` file holds when it is still the library's. */
@@ -145,12 +144,10 @@ export function parseRuleReference(
 }
 
 /**
- * A rule file's contents with a reference resolved to the rule it names, and
- * a data-shaped rule as the workspace it stands for (`ruleData`).
+ * A rule file's contents with a reference resolved to the rule it names.
  *
- * Identity for a file the learner has edited in blocks, which is every file
- * that is neither — so this is safe to run over a whole project and costs a
- * `startsWith` and a search per file.
+ * Identity for every other file, so this is safe to run over a whole project
+ * and costs a `startsWith` per file.
  *
  * A reference to a rule THAT IS NO LONGER ON THE SHELF resolves to nothing,
  * and nothing is what an empty rule file already means everywhere else: the
@@ -163,9 +160,9 @@ export function parseRuleReference(
 export function resolveRuleContents(contents: string): string {
   const reference = parseRuleReference(contents);
   if (!reference) {
-    return ruleViewOf(contents);
+    return contents;
   }
-  return ruleViewOf(stockRule(reference.stock)?.contents ?? '');
+  return stockRule(reference.stock)?.contents ?? '';
 }
 
 /**

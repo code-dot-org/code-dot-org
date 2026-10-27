@@ -11,8 +11,8 @@
 import {describe, expect, it} from 'vitest';
 
 import {starterFile} from '../../constants';
-import {resolveRuleContents} from '../../rules/ruleReference';
 import {buildDomainPalette} from '../domainBlocks';
+import {workspaceViewOf} from '../rewriteWorkspaces';
 import {parseRuleMeta, ruleMetaToModule} from '../ruleMeta';
 
 import {registerDefaultProjectRules} from './defaultProjectRules';
@@ -25,7 +25,7 @@ registerDefaultProjectRules();
 // REFERENCE to the library's rule, not a copy of it (rules/ruleReference,
 // specs/NEXT.md §2), and `projectFiles` is what resolves one everywhere
 // else. What is asserted below is the rule, either way.
-const source = resolveRuleContents(starterFile('gravityRule').contents);
+const source = workspaceViewOf(starterFile('gravityRule').contents);
 const meta = parseRuleMeta('rules/gravity', source)!;
 const module_ = ruleMetaToModule(meta);
 

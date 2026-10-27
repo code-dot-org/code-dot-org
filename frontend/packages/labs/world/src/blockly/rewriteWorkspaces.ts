@@ -10,7 +10,7 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {asActorData, isDataShaped, viewOf} from '../actors/actorData';
-import {asRuleData} from '../rules/ruleData';
+import {asRuleData, ruleViewOf} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 
 /**
@@ -75,6 +75,13 @@ export function rewriteWorkspace(
 }
 
 /**
+ * A workspace file's contents as the blocks they stand for: a reference as the
+ * rule it names, and an actor's or a rule's data as its view.
+ */
+export const workspaceViewOf = (contents: string): string =>
+  viewOf(ruleViewOf(resolveRuleContents(contents)));
+
+/**
  * Apply a per-file rewrite to every saved workspace in the project.
  *
  * Returns the same source object when nothing changed, so a caller can skip the
@@ -110,8 +117,9 @@ export function mapWorkspaces(
     const data = isDataShaped(held);
     // A rule held as data, or as a reference, is read as its view and written
     // back as data (`rules/ruleData`); one written in blocks stays in blocks.
-    const ruleData = file.name.endsWith('.rule') && held !== file.contents;
-    const renamed = rewrite(data ? viewOf(held) : held);
+    const ruleView = file.name.endsWith('.rule') ? ruleViewOf(held) : held;
+    const ruleData = ruleView !== held;
+    const renamed = rewrite(data ? viewOf(held) : ruleView);
     if (renamed !== undefined) {
       files[id] = {
         ...file,

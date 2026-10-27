@@ -6,7 +6,7 @@ import {beforeEach, describe, expect, it, vi} from 'vitest';
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
-import {foldRule, ruleView} from '../../ruleData';
+import {ruleView, type RuleData} from '../../ruleData';
 import {resolveRuleContents} from '../../ruleReference';
 
 // The starter's project, whose Gravity is the library's, held by reference.
@@ -169,7 +169,7 @@ describe('the Rule Editor', () => {
 
   it('says so of a rule the data cannot say, and never opens it in blocks', () => {
     const view = ruleView(
-      foldRule(JSON.parse(resolveRuleContents(GRAVITY.contents)))!,
+      JSON.parse(resolveRuleContents(GRAVITY.contents)) as RuleData,
     ) as {blocks: {blocks: unknown[]}};
     view.blocks.blocks.push({type: 'world_print'});
     open(JSON.stringify(view));

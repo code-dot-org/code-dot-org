@@ -14,7 +14,7 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {renameMemberInSource} from '../blockly/renameRule';
-import {rewriteWorkspace} from '../blockly/rewriteWorkspaces';
+import {rewriteWorkspace, workspaceViewOf} from '../blockly/rewriteWorkspaces';
 import {pascal} from '../blockly/ruleMeta';
 import {ruleSlug} from '../blockly/ruleRegistry';
 
@@ -307,7 +307,7 @@ export function memberUses(
     .filter(([id]) => id !== fileId)
     .filter(([, file]) => {
       let used = false;
-      rewriteWorkspace(resolveRuleContents(file.contents ?? ''), {
+      rewriteWorkspace(workspaceViewOf(file.contents ?? ''), {
         type(type) {
           const parts = MEMBER_TYPE.exec(type);
           used ||= Boolean(parts && parts[2] === slug && parts[3] === key);

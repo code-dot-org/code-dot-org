@@ -37,7 +37,12 @@ import {importStockEffect} from '../../effect/importStockEffect';
 import {stockEffect} from '../../effect/stock';
 import {seedFor} from '../../files/newThing';
 import {importStockRule} from '../../rules/importStockRule';
-import {isRuleData, type RuleData} from '../../rules/ruleData';
+import {
+  asRuleData,
+  isRuleData,
+  ruleViewOf,
+  type RuleData,
+} from '../../rules/ruleData';
 import {ruleDataOf, setPropertyDefault} from '../../rules/ruleEdits';
 import {resolveRuleContents} from '../../rules/ruleReference';
 import {stockRule} from '../../rules/stock';
@@ -120,14 +125,19 @@ const editing = (
   // Resolved first, the way the editor resolves one to put it on screen: a
   // rule the learner has not touched is stored as a reference to the library's
   // (rules/ruleReference, specs/NEXT.md §2), and there is nothing in a
-  // reference to edit. What is written back is the whole workspace, which is
-  // what a save does — so this stands in for a learner exactly as it did
-  // before, including the part where editing a rule makes it theirs.
+  // reference to edit. Edited as the `define rule` rows it stands for and
+  // written back as data, which is what the Rule Editor saves — including the
+  // part where editing a rule makes it theirs.
   return {
     ...source,
     files: {
       ...source.files,
-      [id]: {...file, contents: change(resolveRuleContents(file.contents))},
+      [id]: {
+        ...file,
+        contents: asRuleData(
+          change(ruleViewOf(resolveRuleContents(file.contents))),
+        ),
+      },
     },
   };
 };

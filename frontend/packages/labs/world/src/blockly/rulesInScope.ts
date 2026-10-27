@@ -48,6 +48,8 @@
 // the category back, which is the loop this is meant to have: say what you
 // depend on, and its blocks appear.
 
+import {ruleViewOf} from '../rules/ruleData';
+
 import type {RuleMeta} from './ruleMeta';
 
 /**
@@ -221,7 +223,7 @@ export function rulesInScope(
   const named =
     file.contents === undefined
       ? undefined
-      : rulesNamedIn(file.contents, owners);
+      : rulesNamedIn(ruleViewOf(file.contents), owners);
   if (!named) {
     return undefined;
   }

@@ -72,16 +72,17 @@ describe('telling one from a rule', () => {
 });
 
 describe('what a reference resolves to', () => {
-  it('is the shelf’s copy, as its view', () => {
+  it('is the shelf’s copy, byte for byte', () => {
     expect(resolveRuleContents(ruleReferenceFor(gravity))).toBe(
-      ruleViewOf(gravity.contents),
+      gravity.contents,
     );
   });
 
-  it('leaves a workspace alone', () => {
+  it('leaves anything else alone, data or blocks', () => {
     // Which is every file that is not a reference, so this runs over the whole
     // project on every read.
     for (const rule of STOCK_RULES.slice(0, 5)) {
+      expect(resolveRuleContents(rule.contents)).toBe(rule.contents);
       const view = ruleViewOf(rule.contents);
       expect(resolveRuleContents(view)).toBe(view);
     }

@@ -6,9 +6,10 @@
 // theirs — as keys. Code appears only as the implementation of one of
 // those: a block's body, a step's.
 //
-// The rest of the lab reads rules as `define rule` workspaces, and goes on
-// doing so: `ruleView` turns the data back into the workspace it stands for,
-// and `foldRule` turns a workspace into data. The view lists each definition's
+// What walks a rule's rows — a rename, a search for what uses a block —
+// reads it through `ruleView`, the workspace it stands for, and `foldRule`
+// turns a workspace back into data: one written in blocks, by hand or by the
+// tutor, and a view after its rows are rewritten. The view lists each definition's
 // members in one order — uses, properties, events and blocks as given, then
 // steps — and puts the rule's description first. A workspace the data cannot
 // say whole, such as one with a note among the members or a block the fold

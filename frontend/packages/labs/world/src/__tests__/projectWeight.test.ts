@@ -19,7 +19,6 @@
 import {describe, expect, it} from 'vitest';
 
 import {DEFAULT_PROJECT} from '../constants';
-import {ruleViewOf} from '../rules/ruleData';
 import {
   isRuleReference,
   parseRuleReference,
@@ -115,30 +114,26 @@ describe('what a new project weighs', () => {
 });
 
 describe('what the references stand for', () => {
-  it('resolves to the megabyte that used to be stored', () => {
+  it('resolves to the rules it no longer stores', () => {
     // The weight has not gone anywhere — it has stopped being COPIED. What a
-    // compile, a palette or a tutor context sees is byte for byte what it saw
-    // before, which is the whole claim `projectFiles` makes.
+    // compile, a palette or a tutor context sees is byte for byte the shelf's
+    // rule, which is the whole claim `projectFiles` makes. As data it is about
+    // 700KB, where as blocks it was over 900KB.
     const resolved = Object.entries(projectFiles(DEFAULT_PROJECT.source))
       .filter(([path]) => path.endsWith('.rule'))
       .map(([, contents]) => bytes(contents));
 
     expect(resolved).toHaveLength(14);
     expect(resolved.reduce((sum, one) => sum + one, 0)).toBeGreaterThan(
-      900_000,
+      700_000,
     );
   });
 
   it('resolves each one to exactly the shelf’s copy', () => {
-    // As its view, which is what `projectFiles` hands out.
     const resolved = projectFiles(DEFAULT_PROJECT.source);
 
-    expect(resolved['rules/solid.rule']).toBe(
-      ruleViewOf(stockRule('solid')!.contents),
-    );
-    expect(resolved['rules/patrol.rule']).toBe(
-      ruleViewOf(stockRule('patrol')!.contents),
-    );
+    expect(resolved['rules/solid.rule']).toBe(stockRule('solid')?.contents);
+    expect(resolved['rules/patrol.rule']).toBe(stockRule('patrol')?.contents);
   });
 
   it('has a library that no longer sets a ceiling on a project', () => {

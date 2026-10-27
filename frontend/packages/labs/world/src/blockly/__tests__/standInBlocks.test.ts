@@ -41,6 +41,24 @@ describe('standInBlocks', () => {
     ]);
   });
 
+  it('finds a gone type in a rule held as data, inside a step', () => {
+    const rule = JSON.stringify({
+      type: 'rule',
+      name: 'Falls',
+      ability: 'Falls',
+      steps: [
+        {
+          name: 'fall',
+          phase: 'move',
+          body: {type: 'world_do_Gravity_FallAction', id: 'gone'},
+        },
+      ],
+    });
+    const made = standInBlocks([rule], KNOWN).map(block => block.type);
+
+    expect(made).toContain('world_do_Gravity_FallAction');
+  });
+
   it('leaves Blockly’s own blocks alone', () => {
     // The bug this caught in the browser: `defined` is what the PALETTE mints,
     // and `controls_if` is not in it — Blockly registers its own. A stand-in

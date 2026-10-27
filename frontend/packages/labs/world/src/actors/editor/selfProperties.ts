@@ -14,12 +14,12 @@ import {
   mapWorkspaces,
   rewriteWorkspace,
   WORKSPACE_FILE,
+  workspaceViewOf,
 } from '../../blockly/rewriteWorkspaces';
 import {pascal} from '../../blockly/ruleMeta';
 import {pathSlug} from '../../blockly/ruleRegistry';
 import {MEMBER_TYPE} from '../../files/renameThing';
-import {resolveRuleContents} from '../../rules/ruleReference';
-import {isActorData, viewOf, type ActorData} from '../actorData';
+import {isActorData, type ActorData} from '../actorData';
 
 /** What a property's blocks are named by: `lives` → `LivesProperty`. */
 export const propertyKey = (name: string): string => `${pascal(name)}Property`;
@@ -43,7 +43,7 @@ export function propertyUses(
     .filter(([, file]) => WORKSPACE_FILE.test(file.name))
     .filter(([, file]) => {
       let uses = false;
-      rewriteWorkspace(viewOf(resolveRuleContents(file.contents ?? '')), {
+      rewriteWorkspace(workspaceViewOf(file.contents ?? ''), {
         type(type) {
           // Its own `set` rows are the values it starts at, not uses.
           if (

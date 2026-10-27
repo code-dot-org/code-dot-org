@@ -30,7 +30,6 @@ const rule = (name: string, requires: string[] = []): RuleMeta =>
     queries: [],
     events: [],
     steps: [],
-    enums: [],
   }) as unknown as RuleMeta;
 
 // Climbing needs Gravity, Gravity needs Physics, and Scoring needs nobody —
@@ -130,6 +129,27 @@ describe('a rule', () => {
       named(
         rulesInScope(
           {kind: 'rule', module: 'rules/climbing', contents: calling},
+          RULES,
+          OWNERS,
+        ),
+      ),
+    ).toEqual(['Climbing', 'Gravity', 'Physics', 'Scoring']);
+  });
+
+  it('reads a rule held as data, whose traits name what they need', () => {
+    // A trait's `uses` is a list of names in the data, and a `use trait` row
+    // only in its view.
+    const data = JSON.stringify({
+      type: 'rule',
+      name: 'Climbing',
+      ability: 'Climbing',
+      traits: [{name: 'Climbs', uses: ['Scoring#ScoresTrait']}],
+    });
+
+    expect(
+      named(
+        rulesInScope(
+          {kind: 'rule', module: 'rules/climbing', contents: data},
           RULES,
           OWNERS,
         ),

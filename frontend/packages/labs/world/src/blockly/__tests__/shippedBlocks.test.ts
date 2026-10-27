@@ -21,18 +21,17 @@ import * as Blockly from 'blockly';
 import {describe, expect, it} from 'vitest';
 
 import {typesIn} from '../../__tests__/support/blockTypes';
-import {viewOf} from '../../actors/actorData';
 import {DEFAULT_PROJECT, starterFile} from '../../constants';
-import {resolveRuleContents} from '../../rules/ruleReference';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
+import {workspaceViewOf} from '../rewriteWorkspaces';
 
-// Each actor as the blocks it stands for: a data-shaped one names its rows'
-// types through its view (`actors/actorData`).
+// Each actor and rule as the blocks it stands for: data names its rows'
+// types through its view (`workspaceViewOf`).
 const files = Object.fromEntries(
   Object.entries(projectFiles(DEFAULT_PROJECT.source)).map(
-    ([path, contents]) => [path, viewOf(contents)],
+    ([path, contents]) => [path, workspaceViewOf(contents)],
   ),
 );
 
@@ -81,7 +80,7 @@ describe('the shipped project', () => {
     }
     // The deep ones: gravity's steps and the world's own body.
     expect(
-      typesIn(resolveRuleContents(starterFile('gravityRule').contents)).length,
+      typesIn(workspaceViewOf(starterFile('gravityRule').contents)).length,
     ).toBeGreaterThan(40);
   });
 });
