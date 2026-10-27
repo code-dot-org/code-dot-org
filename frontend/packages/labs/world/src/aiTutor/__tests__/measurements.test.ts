@@ -11,83 +11,46 @@ import {describe, expect, it} from 'vitest';
 import {TILE_SIZE} from '../../runtime/viewport';
 import {worldMeasurements} from '../measurements';
 
-/** A world workspace that sets its own size. */
-const sized = (columns: number, rows: number) =>
+/** A Main Screen or a map, at a size it states, or at none. */
+const sized = (columns?: number, rows?: number) =>
   JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_world',
-          fields: {NAME: 'My World'},
-          next: {
-            block: {
-              type: 'world_set_map_size',
-              inputs: {
-                X: {block: {type: 'math_number', fields: {NUM: columns}}},
-                Y: {block: {type: 'math_number', fields: {NUM: rows}}},
-              },
-            },
-          },
-        },
-      ],
-    },
+    type: 'map',
+    actors: [],
+    ...(columns && rows ? {size: {width: columns, height: rows}} : {}),
   });
 
-const bare = JSON.stringify({
-  blocks: {blocks: [{type: 'world_world', fields: {NAME: 'My World'}}]},
-});
-
-const seeing = (columns: number, rows: number) =>
-  JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_world',
-          fields: {NAME: 'My World'},
-          next: {
-            block: {
-              type: 'world_set_view_size',
-              inputs: {
-                X: {block: {type: 'math_number', fields: {NUM: columns}}},
-                Y: {block: {type: 'math_number', fields: {NUM: rows}}},
-              },
-            },
-          },
-        },
-      ],
-    },
-  });
+const bare = sized();
 
 describe('worldMeasurements', () => {
   it('states the tile size, which is the question that was being asked', () => {
-    const said = worldMeasurements({'main.world': bare})!;
+    const said = worldMeasurements({'screens/main.screen': bare})!;
 
     expect(said).toContain(`One tile is ${TILE_SIZE} pixels square`);
     expect(said).toContain('Do not assume any other tile size');
   });
 
-  it('says a world takes the default, rather than leaving it unsaid', () => {
-    // The difference that matters: "it is 10 x 10" invites the model to write
-    // `set size of map` when nothing asked it to.
-    const said = worldMeasurements({'main.world': bare})!;
+  it('says a map takes the default, rather than leaving it unsaid', () => {
+    // The difference that matters: "it is 10 x 10" invites the model to
+    // resize the map when nothing asked it to.
+    const said = worldMeasurements({'maps/main.map': bare})!;
 
-    expect(said).toContain('does not set a size');
+    expect(said).toContain('says no size');
     expect(said).toContain('10 x 10 tiles');
   });
 
-  it('reports each world separately, because they need not agree', () => {
+  it('reports each map separately, because they need not agree', () => {
     const said = worldMeasurements({
-      'main.world': bare,
-      'big.world': sized(30, 20),
+      'maps/main.map': bare,
+      'maps/big.map': sized(30, 20),
     })!;
 
-    expect(said).toContain('`main.world` does not set a size');
-    expect(said).toContain('`big.world` is 30 x 20 tiles');
+    expect(said).toContain('`maps/main.map` says no size');
+    expect(said).toContain('`maps/big.map` is 30 x 20 tiles');
     expect(said).toContain('960 x 640 pixels');
   });
 
   it('explains that a position is a center, in pixels', () => {
-    const said = worldMeasurements({'main.world': bare})!;
+    const said = worldMeasurements({'screens/main.screen': bare})!;
 
     // The conversion the model has to do to place anything on the grid.
     expect(said).toContain('CENTRE');
@@ -95,25 +58,22 @@ describe('worldMeasurements', () => {
     expect(said).toContain('Y grows DOWNWARD');
   });
 
-  it('is nothing at all when the project holds no world', () => {
+  it('is nothing at all when the project holds no screen and no map', () => {
     expect(worldMeasurements({})).toBeUndefined();
   });
 
-  it('states a view a world sets, in tiles and pixels', () => {
+  it('states the window the Main Screen gives the game, in tiles and pixels', () => {
     // A room-sized level — 26 by 16, all of it visible — is the case the
     // standard window cannot express, and a tutor told "the screen is 10 x 10"
     // about one would place every block it suggests off the right-hand edge.
-    const said = worldMeasurements({'worlds/room.world': seeing(26, 16)});
+    const said = worldMeasurements({'screens/main.screen': sized(26, 16)});
 
     expect(said).toContain('26 x 16 tiles (832 x 512 pixels)');
-    expect(said).toContain('set size of view to');
   });
 
-  it('says nothing per world about a view nobody set', () => {
-    // The paragraph above already gives the default. Repeating it under every
-    // world is boilerplate the tutor pays for by the token.
-    const said = worldMeasurements({'worlds/main.world': sized(20, 12)});
+  it('gives the standard window for a screen that states none', () => {
+    const said = worldMeasurements({'screens/main.screen': bare});
 
-    expect(said).not.toContain('at once, which it sets');
+    expect(said).toContain('since it says no other');
   });
 });

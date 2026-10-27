@@ -56,8 +56,8 @@ const MAX_CONSOLE_LINES = 50;
 /**
  * The kinds of answer this lab asks the model for.
  *
- * The three `build` kinds are the ones that mean "I have written you a
- * workspace"; the rest are answers to read.
+ * The four `build` kinds are the ones that mean "I have written you a file";
+ * the rest are answers to read.
  */
 const ANSWER_TYPES = [
   'ask',
@@ -66,20 +66,21 @@ const ANSWER_TYPES = [
   'example',
   'explainCode',
   'buildActor',
-  'buildWorld',
+  'buildScreen',
+  'buildMap',
   'buildRule',
   'refusal',
 ] as const;
 
-const REWRITE_TYPES = ['buildActor', 'buildWorld', 'buildRule'];
+const REWRITE_TYPES = ['buildActor', 'buildScreen', 'buildMap', 'buildRule'];
 
 /** What the model is told to put in `code`, which here is not code. */
 const CODE_DESCRIPTION =
-  'Whole Blockly workspace files, as JSON. `filename` is the file to write ' +
-  '(`actors/player.actor`, `rules/lava.rule`) and `sourceCode` is the entire ' +
-  'workspace in the same shape you were shown — never a fragment, never a ' +
-  'diff. Use only block types from the catalogue. The list may be empty when ' +
-  'you are only explaining something.';
+  'Whole files, as JSON. `filename` is the file to write ' +
+  '(`actors/player.actor`, `maps/main.map`, `rules/lava.rule`) and ' +
+  '`sourceCode` is the entire file in the same shape you were shown — never ' +
+  'a fragment, never a diff. Use only block types from the catalogue. The ' +
+  'list may be empty when you are only explaining something.';
 
 export const useWorldTutor = (): TutorConfig | undefined => {
   const levelProperties = useMaybeLevelProperties();

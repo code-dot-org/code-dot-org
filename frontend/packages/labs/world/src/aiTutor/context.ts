@@ -1,7 +1,7 @@
 // What World Lab tells the tutor about the project.
 //
 // A world project is not text. Web Lab's files are HTML and CSS, which a model
-// reads as-is; a `.world`, `.actor` or `.rule` is a serialized Blockly
+// reads as-is; a `.screen`, `.actor` or `.rule` is a serialized Blockly
 // workspace. So the question is which serialization to send, and the answer is
 // different per file kind — because their sizes differ by three orders of
 // magnitude. Measured on the starter project:
@@ -10,10 +10,10 @@
 //     gravity.rule     145,790      healthBar.actor   9,773
 //     collisions.rule  122,117      coin.actor          588
 //     health.rule       72,968      ball.actor          358
-//     ────────────────────────      main.world          790
-//     all rules        ~950,000     all actors+world  ~24,000
+//     ────────────────────────      main.screen         790
+//     all rules        ~950,000     all actors+game   ~24,000
 //
-// ACTORS AND WORLDS GO AS THEY ARE. Twenty-four thousand characters for the
+// SCREENS, MAPS AND ACTORS GO AS THEY ARE. Twenty-four thousand characters for the
 // whole project, and it is the form the agent has to write back, so sending
 // anything else would mean asking it to author a shape it has never seen.
 //
@@ -39,8 +39,8 @@ import {worldMeasurements} from './measurements';
 import {importableRules} from './ruleShelf';
 import {summarizeRules} from './ruleSummary';
 
-/** Kinds whose workspace is small enough to send whole. */
-const SENT_WHOLE = ['world', 'actor'];
+/** Kinds small enough to send whole: the game's screens, its maps, its actors. */
+const SENT_WHOLE = ['screen', 'map', 'actor'];
 
 /** Editable files that are already text a model can read. */
 const READABLE_TYPES = ['js', 'ts', 'json', 'md', 'txt'];
@@ -80,7 +80,7 @@ export interface WorldContextFacts {
  * The project, told in three registers.
  *
  * Order matters: the rules first, because they are the vocabulary everything
- * else is written in; then the actors and world, which are what the student
+ * else is written in; then the screens, maps and actors, which are what the student
  * actually built; then the catalogue, which is reference material and the
  * least likely thing to need re-reading.
  */
@@ -120,16 +120,12 @@ export const worldSourceCode = ({
   const workspaces: string[] = [];
   const tooBig: string[] = [];
   const readable: string[] = [];
-  const worlds: Record<string, string> = {};
 
   for (const path of Object.keys(files).sort()) {
     const extension = extensionOf(path);
     const contents = files[path];
     if (!contents?.trim()) {
       continue;
-    }
-    if (extension === 'world') {
-      worlds[path] = contents;
     }
     if (SENT_WHOLE.includes(extension)) {
       if (contents.length > MAX_FILE_CHARS) {
@@ -144,16 +140,16 @@ export const worldSourceCode = ({
 
   // Before the workspaces, because it is how to read them: a position in one
   // of those files is a number that means nothing without this.
-  const measurements = worldMeasurements(worlds);
+  const measurements = worldMeasurements(files);
   if (measurements) {
     add(measurements);
   }
 
   if (workspaces.length) {
     add(
-      '# The actors and worlds the student built\n\n' +
-        'These are Blockly workspaces, exactly as stored. This is the form to ' +
-        'write back when proposing a change.\n\n' +
+      '# The screens, maps and actors the student built\n\n' +
+        'These are the files exactly as stored. This is the form to write ' +
+        'back when proposing a change.\n\n' +
         workspaces.join('\n\n'),
     );
   }
@@ -201,20 +197,24 @@ export const WORLD_SYSTEM_PROMPT = [
   'You are helping a student build a game out of BLOCKS, in a visual editor.',
   'They never type code. Everything you are shown is the blocks, serialized.',
   '',
-  'A `.world` file defines the world and what is in it. An `.actor` defines a',
-  'kind of thing in the world. A `.rule` defines a mechanic that actors opt',
-  'into by electing one of its traits — you are shown what each rule offers,',
-  'not how it is built, and that is all you need.',
+  'A game is its Main Screen, `screens/main.screen`: what is on the screen,',
+  "the game's own values and events, and its `blocks`, the handlers the game",
+  'runs. A Viewport on it shows the level, `maps/main.map`, whose `actors` are',
+  'where each thing starts and what it starts with. An `.actor` defines a kind',
+  'of thing. A `.rule` defines a mechanic that actors opt into by electing one',
+  'of its traits — you are shown what each rule offers, not how it is built,',
+  'and that is all you need.',
   '',
   'Talk in blocks, never in code. "Add a `when Player touches Coin` handler to',
   'your Player actor" is useful; "change line 12" is not, because there are no',
   'lines.',
   '',
-  'HOW TO CHANGE SOMETHING. Answer with type `buildActor`, `buildWorld` or',
-  '`buildRule`, and put the WHOLE file in `code` — `filename` is its path and',
-  '`sourceCode` is the entire workspace, in the same shape as the ones you were',
-  'shown. Never a fragment and never a diff. Use only block types from the',
-  'catalogue.',
+  'HOW TO CHANGE SOMETHING. Answer with type `buildActor`, `buildScreen`,',
+  '`buildMap` or `buildRule`, and put the WHOLE file in `code` — `filename` is',
+  'its path and `sourceCode` is the entire file, in the same shape as the ones',
+  'you were shown. Never a fragment and never a diff. Use only block types',
+  'from the catalogue. Something placed in the level goes in the map, not in',
+  'blocks.',
   '',
   'A workspace written anywhere else cannot be applied. Pasted into your',
   'explanation it is just text on the screen: the student gets no button, and',

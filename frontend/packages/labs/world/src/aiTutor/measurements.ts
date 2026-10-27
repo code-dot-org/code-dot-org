@@ -12,69 +12,70 @@
 // from the world it describes.
 
 import {
-  type DeclaredSize,
-  mapSizeOf,
-  viewSizeOf,
-} from '../runtime/declaredSizes';
-import {
   TILE_SIZE,
   VIEWPORT_HEIGHT,
   VIEWPORT_TILES,
   VIEWPORT_WIDTH,
 } from '../runtime/viewport';
 
-const tiles = (size: DeclaredSize): string =>
-  `${size.columns} x ${size.rows} tiles ` +
-  `(${size.columns * TILE_SIZE} x ${size.rows * TILE_SIZE} pixels)`;
-
-/**
- * One world's line: how big it is, and how much of it is seen at once.
- *
- * The window is only mentioned when the world set it. Saying "and the screen
- * shows 10 x 10" of every world would be three lines of boilerplate per
- * project restating what the paragraph above already said.
- */
-const describe = (
-  path: string,
-  size: DeclaredSize,
-  view: DeclaredSize,
-): string => {
-  const level = size.declared
-    ? `- \`${path}\` is ${tiles(size)}, which it sets with ` +
-      '`set size of map to`.'
-    : `- \`${path}\` does not set a size, so it is one screen: ` +
-      `${tiles(size)}.`;
-  return view.declared
-    ? `${level} It shows ${tiles(view)} at once, which it sets with ` +
-        '`set size of view to`.'
-    : level;
-};
-
-/**
- * The measurements section, or nothing if the project holds no world.
- *
- * `worlds` is every `.world` file by path. Each is measured separately: a
- * project may hold several, and they need not agree.
- */
-export const worldMeasurements = (
-  worlds: Record<string, string>,
-): string | undefined => {
-  const paths = Object.keys(worlds).sort();
-  if (!paths.length) {
+/** How big a file says it is, in tiles, or nothing when it does not say. */
+const sizeOf = (
+  contents: string | undefined,
+): {columns: number; rows: number} | undefined => {
+  try {
+    const size = (
+      JSON.parse(contents ?? '') as {size?: {width?: unknown; height?: unknown}}
+    ).size;
+    const columns = Number(size?.width);
+    const rows = Number(size?.height);
+    return columns > 0 && rows > 0 ? {columns, rows} : undefined;
+  } catch {
     return undefined;
   }
+};
+
+const tiles = ({columns, rows}: {columns: number; rows: number}): string =>
+  `${columns} x ${rows} tiles ` +
+  `(${columns * TILE_SIZE} x ${rows * TILE_SIZE} pixels)`;
+
+const ONE_SCREEN = {columns: VIEWPORT_TILES, rows: VIEWPORT_TILES};
+
+/**
+ * The measurements section, or nothing if the project holds no Main Screen
+ * and no map.
+ *
+ * `files` is the project by path. The window is the Main Screen's size, and
+ * each map is measured separately: a project may hold several, and they need
+ * not agree.
+ */
+export const worldMeasurements = (
+  files: Record<string, string>,
+): string | undefined => {
+  const screen = files['screens/main.screen'];
+  const maps = Object.keys(files)
+    .filter(path => path.endsWith('.map'))
+    .sort();
+  if (screen === undefined && !maps.length) {
+    return undefined;
+  }
+  const view = sizeOf(screen);
 
   return [
     '# How big things are',
     '',
-    `One tile is ${TILE_SIZE} pixels square. A world shows ${VIEWPORT_TILES} x ` +
-      `${VIEWPORT_TILES} tiles at once — ${VIEWPORT_WIDTH} x ${VIEWPORT_HEIGHT} ` +
-      'pixels — unless it says otherwise with `set size of view to`, which is ' +
-      'noted below for each world that does. Do not assume any other tile size.',
+    `One tile is ${TILE_SIZE} pixels square. Do not assume any other tile ` +
+      "size. The game is seen at its Main Screen's size: " +
+      (view
+        ? `${tiles(view)}, its \`size\`.`
+        : `${tiles(ONE_SCREEN)} — ${VIEWPORT_WIDTH} x ${VIEWPORT_HEIGHT} ` +
+          'pixels — since it says no other.'),
     '',
-    ...paths.map(path =>
-      describe(path, mapSizeOf(worlds[path]), viewSizeOf(worlds[path])),
-    ),
+    ...maps.map(path => {
+      const size = sizeOf(files[path]);
+      return size
+        ? `- \`${path}\` is ${tiles(size)}, its \`size\`.`
+        : `- \`${path}\` says no size, so it is one screen: ${tiles(ONE_SCREEN)}.`;
+    }),
     '',
     'Positions are in PIXELS, not tiles, and an actor’s position is its ' +
       `CENTRE. The middle of tile *n* is \`n * ${TILE_SIZE} + ${TILE_SIZE / 2}\`, ` +

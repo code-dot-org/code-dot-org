@@ -31,7 +31,7 @@ import {
 import {impliedRules} from './impliedRules';
 
 /** Kinds the agent may write. Everything else is data or an image. */
-export const PROPOSABLE_TYPES = ['actor', 'world', 'rule'] as const;
+export const PROPOSABLE_TYPES = ['actor', 'screen', 'map', 'rule'] as const;
 
 const extensionOf = (path: string): string =>
   path.split('.').pop()?.toLowerCase() ?? '';
