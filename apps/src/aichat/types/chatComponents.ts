@@ -33,3 +33,20 @@ export interface ChatButtonAndKey {
   ChatButton: ChatButtonComponent;
   key: string;
 }
+
+// Prompt Mode Types
+// A submit button in the message editor. Its message is sent with the mode's
+// system prompt, and schema if set, in place of the workspace's own; Enter
+// sends with the default mode.
+export interface ChatPromptMode {
+  value: string;
+  label: string;
+  icon: Pick<FontAwesomeV6IconProps, 'iconName' | 'iconStyle'>;
+  systemPrompt: string;
+  responseJsonSchema?: object;
+}
+
+export interface ChatPromptModes {
+  modes: ChatPromptMode[];
+  defaultValue: string;
+}

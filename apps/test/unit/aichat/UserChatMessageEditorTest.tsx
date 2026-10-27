@@ -204,4 +204,94 @@ describe('UserChatMessageEditor', () => {
 
     expect(textarea).toHaveValue('');
   });
+
+  describe('prompt modes', () => {
+    const promptModes = {
+      modes: [
+        {
+          value: 'build',
+          label: 'Build',
+          icon: {iconName: 'hammer'},
+          systemPrompt: 'build prompt',
+        },
+        {
+          value: 'ask',
+          label: 'Ask',
+          icon: {iconName: 'message'},
+          systemPrompt: 'ask prompt',
+        },
+      ],
+      defaultValue: 'ask',
+    };
+
+    beforeEach(() => {
+      mockState.aichat.promptModes = promptModes;
+    });
+
+    const send = async (
+      user: ReturnType<typeof userEvent.setup>,
+      submitButton?: string
+    ) => {
+      const textarea = screen.getByPlaceholderText(
+        commonI18n.aiUserMessagePlaceholder()
+      );
+      await user.type(textarea, 'Make a page');
+      await act(async () => {
+        if (submitButton) {
+          await user.click(screen.getByRole('button', {name: submitButton}));
+        } else {
+          await user.keyboard('{Enter}');
+        }
+      });
+    };
+
+    it('renders a submit button per mode in place of the arrow', () => {
+      render(<UserChatMessageEditor {...baseProps} />);
+
+      expect(screen.getByRole('button', {name: 'Build'})).toBeInTheDocument();
+      expect(screen.getByRole('button', {name: 'Ask'})).toBeInTheDocument();
+      expect(screen.queryByLabelText(commonI18n.submit())).toBeNull();
+    });
+
+    it('sends with the default mode on Enter', async () => {
+      const user = userEvent.setup();
+      render(<UserChatMessageEditor {...baseProps} />);
+
+      await send(user);
+
+      expect(mockSubmitChatContents.mock.calls[0][0]).toMatchObject({
+        modelParameters: {systemPrompt: 'ask prompt'},
+        analyticsProperties: {promptMode: 'ask'},
+      });
+    });
+
+    it('sends with the system prompt of the button clicked', async () => {
+      const user = userEvent.setup();
+      render(<UserChatMessageEditor {...baseProps} />);
+
+      await send(user, 'Build');
+
+      expect(mockSubmitChatContents.mock.calls[0][0]).toMatchObject({
+        text: 'Make a page',
+        modelParameters: {
+          systemPrompt: 'build prompt',
+          selectedModelId: baseProps.modelParameters.selectedModelId,
+        },
+        analyticsProperties: {promptMode: 'build'},
+      });
+    });
+
+    it('keeps the workspace system prompt without prompt modes', async () => {
+      const user = userEvent.setup();
+      mockState.aichat.promptModes = undefined;
+      render(<UserChatMessageEditor {...baseProps} />);
+
+      expect(screen.queryByRole('button', {name: 'Build'})).toBeNull();
+      await send(user);
+
+      expect(mockSubmitChatContents.mock.calls[0][0].modelParameters).toBe(
+        baseProps.modelParameters
+      );
+    });
+  });
 });
