@@ -1970,6 +1970,8 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   // A map's own hats (specs/MAP_FIRST.md): the body chains below them.
   'world_on_map_loads',
   'world_on_map_unloads',
+  // …and a screen's.
+  'world_on_screen_loads',
   // …and a map's definition root (specs/MAP_EVENTS_PLAN.md). It generates
   // nothing and has no body today, so this changes no output; it is here
   // because it is a definition root, and one whose body the default `scrub_`
@@ -4947,6 +4949,27 @@ const worldOnMapLoads = defineBlock({
   },
 });
 
+/**
+ * `when this screen loads`: a screen's `when this map loads`, run once its
+ * placements exist. The Main Screen's is the game starting; another's runs
+ * each time the game goes to it. A screen's own hat because a screen is a
+ * game's and a map is a level's, though both run their body in place.
+ */
+export const SCREEN_LOADS = 'world_on_screen_loads';
+
+const worldOnScreenLoads = defineBlock({
+  type: SCREEN_LOADS,
+  message0: 'when this screen loads',
+  nextStatement: true,
+  style: 'event_blocks',
+  tooltip: 'Run the blocks below as soon as this screen has been placed.',
+  generator: {
+    javascript(block, generator) {
+      return `(() => {\n${nextChainCode(block, generator)}})();\n`;
+    },
+  },
+});
+
 const worldOnMapUnloads = defineBlock({
   type: 'world_on_map_unloads',
   message0: 'when this map unloads',
@@ -7486,6 +7509,47 @@ const worldUnloadViewport = defineBlock({
     javascript(block, generator) {
       const target = actorTarget(block, generator, Order.MEMBER);
       return forEachActor(target, actor => `world.unloadViewport(${actor})`);
+    },
+  },
+});
+
+/**
+ * `in the map ⟨Game⟩ shows do ⟨…⟩` — code of the screen's that acts in a
+ * level.
+ *
+ * What acts on the world acts where its code runs (specs/SIMPLE_INTERFACE.md,
+ * "World blocks act where they run"), and the screen's code runs on the
+ * screen. A Viewport is the one thing on a screen that is also a way into a
+ * map, so this holds the map it shows for the length of the body: `add
+ * actor` adds to the level, `set background` sets the level's. Over several
+ * Viewports, the first; for one showing nothing, the body does not run.
+ *
+ * Held and let go around the body rather than wrapped in a closure, as a
+ * loop over actors is (`World.enter`), so a `return` in it still leaves the
+ * handler.
+ */
+const worldInShownMap = defineBlock({
+  type: 'world_in_shown_map',
+  message0: 'in the map %1 shows',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  message1: 'do %1',
+  args1: [{type: 'input_statement', name: 'DO'}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [actorInputExtension, worldContextExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Run the blocks inside in the map a Viewport shows: what they add to ' +
+    'the world, or set about it, is in that map.',
+  generator: {
+    javascript(block, generator) {
+      const viewport = oneActor(actorTarget(block, generator, Order.NONE));
+      const body = generator.statementToCode(block, 'DO');
+      return (
+        `if (world.enterShown(${viewport})) {\n` +
+        `  try {\n${generator.prefixLines(body, generator.INDENT)}` +
+        `  } finally {\n    world.leave();\n  }\n}\n`
+      );
     },
   },
 });
@@ -11304,6 +11368,7 @@ export const DOMAIN_BLOCKS = [
   worldLoadMapNamed,
   worldOnMapLoads,
   worldOnMapUnloads,
+  worldOnScreenLoads,
   ActorVariable.getterBlock,
   worldAllActors,
   worldCameraValue,
@@ -11350,6 +11415,7 @@ export const DOMAIN_BLOCKS = [
   worldMapRef,
   worldLoadMapInto,
   worldUnloadViewport,
+  worldInShownMap,
   worldWorld,
   worldUseRule,
   worldRule,
@@ -11684,6 +11750,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // (specs/VIEWPORT_PLAN.md).
       'world_load_map_into',
       'world_unload_viewport',
+      // …and code of the screen's run in the map one shows.
+      'world_in_shown_map',
       'world_map_ref',
 
       // The root a map opens with.
@@ -11692,6 +11760,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       'world_unload_this_map',
       'world_on_map_loads',
       'world_on_map_unloads',
+      'world_on_screen_loads',
     ],
   },
   {

@@ -145,6 +145,7 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_unload_this_map', new Set<FileKind>(['map', 'placement'])],
   ['world_on_map_loads', new Set<FileKind>(['map'])],
   ['world_on_map_unloads', new Set<FileKind>(['map'])],
+  ['world_on_screen_loads', new Set<FileKind>(['screen'])],
 ]);
 
 /**

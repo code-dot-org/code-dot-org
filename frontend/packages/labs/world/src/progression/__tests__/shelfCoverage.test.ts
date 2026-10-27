@@ -92,8 +92,15 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
   // `world_time` stands out: every delay and cooldown is measured against it.
   Clock: ['world_time'],
   // The two map hats. A map that does something when it loads is a real
-  // thing (the pause menu is one) and no lesson reaches it.
-  Map: ['world_on_map_loads', 'world_on_map_unloads'],
+  // thing (the pause menu is one) and no lesson reaches it. The screen's
+  // hat and the way into a Viewport's map wait for the lessons to be
+  // screens (specs/LESSONS_AS_SCREENS_PLAN.md, step 3).
+  Map: [
+    'world_in_shown_map',
+    'world_on_map_loads',
+    'world_on_map_unloads',
+    'world_on_screen_loads',
+  ],
   // Parenting, and the engine's own transform vocabulary. `is created` is on
   // this list, which is worth noticing: it is where an app restores what it
   // saved (specs/SAVING_PLAN.md).

@@ -691,3 +691,10 @@ layer, so it sets the map's background.
 The other blocks that act on "the world" follow the same rule. Effects act
 on the Screen, Map or layer the code runs in; map size and layer visibility
 act on the Map it runs in. Code that means some other place has to name it.
+
+A Viewport is the one thing on a Screen that is also a way into a Map, and
+its handlers are code on the Screen like any other actor's, whichever event
+they hear. Screen code that means the level names it: `in the map ⟨Game⟩
+shows do ⟨…⟩` runs its body in the map that Viewport shows, so `add actor`
+there adds to the level and `set background` sets the level's
+(`World.enterShown`).

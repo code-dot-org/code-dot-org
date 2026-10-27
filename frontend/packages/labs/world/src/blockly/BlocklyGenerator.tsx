@@ -36,6 +36,7 @@ import {
   str,
   worldModulePrologue,
   refCode,
+  SCREEN_LOADS,
 } from './domainBlocks';
 import {fileKindOf, moduleShape} from './fileKind';
 import {mainMapLayersOf, screenLayersOf} from './mainMapLayers';
@@ -546,7 +547,8 @@ function generateMainScreen(
   return generator.finish(
     assembleWorldModule(
       [...generated, {type: 'world_world', id: path, code: prologue + rows}],
-      worldEventTypes,
+      // After the world block, which places the screen's actors.
+      new Set([...worldEventTypes, SCREEN_LOADS]),
     ),
   );
 }

@@ -470,6 +470,10 @@ export class WorldBuilder {
     this.getWorld().leave();
   }
 
+  enterShown(viewport: Actor | undefined): boolean {
+    return this.getWorld().enterShown(viewport);
+  }
+
   withActor<T>(subject: Actor | Camera, fn: () => T): T {
     return this.getWorld().withActor(subject, fn);
   }

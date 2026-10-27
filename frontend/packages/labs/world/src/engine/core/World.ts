@@ -2230,6 +2230,20 @@ export class World {
     this.inHand.pop();
   }
 
+  /**
+   * Hold the space `viewport` shows, as `enter` holds an actor, and say
+   * whether it shows one — `in the map ⟨Game⟩ shows`. What acts on the
+   * world then acts in that map, from code that is the screen's. Nothing is
+   * held for a Viewport showing nothing, and the caller runs nothing.
+   */
+  enterShown(viewport: Actor | undefined): boolean {
+    const space = viewport ? this.viewportSpaceOf(viewport) : undefined;
+    if (space) {
+      this.inHand.push(space);
+    }
+    return space !== undefined;
+  }
+
   /** The actor in hand, if any — for what asks after it by name. */
   actorInHand(): Actor | Camera | undefined {
     const subject = this.inHand.at(-1);

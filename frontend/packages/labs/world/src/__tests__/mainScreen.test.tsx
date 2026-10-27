@@ -108,6 +108,100 @@ describe('a Main Screen', () => {
     ]);
   });
 
+  it('runs what it does when it loads once its actors are placed', async () => {
+    // The game starting is the Main Screen loading: the hat runs after the
+    // world block, which places the screen's actors and declares its values.
+    const {world, modules} = await compileProject(
+      simpleOnAScreen({
+        properties: [{name: 'score', type: 'number', value: '3'}],
+        blocks: {
+          blocks: {
+            languageVersion: 0,
+            blocks: [
+              {
+                type: 'world_on_screen_loads',
+                next: {
+                  block: {
+                    type: 'world_set_ScreensMain_ScoreProperty',
+                    // A read, which only the built World can answer: the
+                    // screen's one Viewport is already placed.
+                    inputs: {
+                      VALUE: {
+                        block: {
+                          type: 'world_count_of_kind',
+                          fields: {TYPE: 'actors/viewport'},
+                          inputs: {
+                            LIST: {block: {type: 'world_all_actors'}},
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            ],
+          },
+        },
+      }),
+    );
+
+    const screen = modules['screens/main'];
+    expect(world.get(screen.ScoreProperty as never)).toBe(1);
+  });
+
+  it('adds to the level from inside the map its Viewport shows', async () => {
+    // From the screen's own code an actor is the screen's; inside `in the
+    // map ⟨Game⟩ shows` it is the level's.
+    const addBall = (id: string) => ({
+      type: 'world_add_actor',
+      id,
+      fields: {ACTOR: 'actors/ball'},
+    });
+    const {world} = await compileProject(
+      simpleOnAScreen({
+        blocks: {
+          blocks: {
+            languageVersion: 0,
+            blocks: [
+              {
+                type: 'world_on_screen_loads',
+                next: {
+                  block: {
+                    ...addBall('onScreen'),
+                    next: {
+                      block: {
+                        type: 'world_in_shown_map',
+                        inputs: {
+                          ACTOR: {
+                            block: {
+                              type: 'world_actor_kind',
+                              fields: {ACTOR: 'actors/viewport'},
+                            },
+                          },
+                          DO: {block: addBall('inLevel')},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            ],
+          },
+        },
+      }),
+    );
+
+    const [viewport] = world.actors.ofType('actors/viewport');
+    const balls = world.actors.ofType('actors/ball');
+    const spaceOf = (id: string) => {
+      const ball = balls.find(one => one.id.startsWith(id));
+      expect(ball).toBeDefined();
+      return world.spaceOf(ball!);
+    };
+    expect(spaceOf('onScreen')).toBe(world.spaceOf(viewport));
+    expect(spaceOf('inLevel')).toBe(world.viewportSpaceOf(viewport));
+  });
+
   it('refuses a define world in its workspace', async () => {
     await expect(
       compileProject(

@@ -12,6 +12,7 @@ import {describe, expect, it} from 'vitest';
 import {ActorBuilder} from '../builders/ActorBuilder';
 import {RuleBuilder} from '../builders/RuleBuilder';
 import {WorldBuilder} from '../builders/WorldBuilder';
+import type {Actor} from '../core/Actor';
 import {each, filtered, inThisSpace, one} from '../core/actorValue';
 import {Vector} from '../core/Vector';
 import type {World, WorldMap} from '../core/World';
@@ -1031,6 +1032,30 @@ describe('when a Viewport shows a map', () => {
     expect(heard).toEqual([]);
     world.tick(0);
     expect(heard).toEqual([{value: '', coins: 3}]);
+  });
+
+  it('runs on the screen, as every handler of a Viewport does', () => {
+    // The level is reached by naming it (`World.enterShown`), not by which
+    // event the handler is for.
+    const world = makeWorld();
+    const win = placeWindow(world);
+    let added: Actor | undefined;
+    let inLevel: Actor | undefined;
+    win.on(ViewportShowsMapEvent, (w, actor) => {
+      added = w.addActor(Coin.instantiate('here', 'actors/coin'));
+      if (w.enterShown(actor)) {
+        try {
+          inLevel = w.addActor(Coin.instantiate('there', 'actors/coin'));
+        } finally {
+          w.leave();
+        }
+      }
+    });
+
+    world.loadMapInto(win, LEVEL);
+    world.tick(0);
+    expect(added!.space).toBe(world.spaceOf(win));
+    expect(inLevel!.space).toBe(world.viewportSpaceOf(win));
   });
 
   it('is raised for a load by path, carrying the path', () => {

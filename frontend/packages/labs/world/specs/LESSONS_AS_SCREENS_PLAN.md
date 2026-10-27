@@ -1,6 +1,6 @@
 # Plan: lessons as screens
 
-STATUS: PLANNED, October 2026. Nothing here is built.
+STATUS: IN PROGRESS, October 2026. Step 0 is built.
 
 A game is a Main Screen whose Viewport is docked over the whole surface and
 shows `main.map` (specs/SCREEN_MAP_PLAN.md). Every stock game is written
@@ -68,27 +68,32 @@ delete the world's cameras, and then retires the `.world` file.
 
 ## What is being built
 
-### 0. Code that runs when a screen loads
+### 0. Code that runs when a screen loads — BUILT
 
 Three memory lessons teach statements a game runs once: `set ⟨gap⟩ to 100`
 at the top of the world (memory/variable), a `for each` at its end
 (memory/many), and rows in an `add actor` body that read the world's own
 number (memory/actor-state). A screen's workspace holds only handlers, so
-these go under a hat. Two moments already exist or follow from one that
-does:
+these go under a hat, and what they add has to reach the level.
 
-- **`when ⟨Game⟩ shows a map`** (`ViewportShowsMapEvent`): raised once the
-  map's actors are in the Viewport's space, queued, with the map's path as
-  its value. Code about the level goes here, since the level's actors are
-  there to find.
-- **`when this screen loads`**: a screen's own event, raised once its
-  placements exist, the Main Screen's as the game starts and any other's
-  when the game goes to it. Code about the screen goes here. Not built yet;
-  it is the screen's counterpart of the Viewport's event, and the game
-  starting is the Main Screen loading.
+- **`when this screen loads`** (`world_on_screen_loads`): a screen's
+  `when this map loads`, run once its placements exist. The Main Screen's
+  is the game starting, sorted after the world block that places its
+  actors; another screen's runs as that map's script, each time the game
+  goes to it.
+- **`in the map ⟨Game⟩ shows do ⟨…⟩`** (`world_in_shown_map`): runs its
+  body holding the space a Viewport shows (`World.enterShown`), so `add
+actor` there adds to the level. Without it, screen code acts on the
+  screen.
+- **`when ⟨Game⟩ shows a map`** (`ViewportShowsMapEvent`) already exists,
+  for code that waits for the level's actors. Its handler acts on the
+  screen, as every Viewport handler does; it names the level with the block
+  above. An event that moved its own handler into the level was built and
+  taken out: one rule for every handler is less surprising than one event
+  that differs.
 
-The converter puts a lesson's statements under the Viewport's event, and
-the screen's event is built for code that is about the screen.
+A lesson's once-only statements go under `when this screen loads`, inside
+`in the map ⟨Game⟩ shows` where they place or move the level's actors.
 
 ### 1. The converter
 
@@ -121,13 +126,7 @@ are deleted. `define world` stays: the Main Screen compiles to it
 
 ## Open
 
-- **Where a coded `add actor` lands.** In the root space (`World.place`),
-  which on a screen is the screen, not the level the Viewport shows. So a
-  memory lesson's actors are placed on the map, and its statements set them
-  from `when ⟨Game⟩ shows a map`: memory/variable's Posts are placed, and
-  `gap` moves them. Whether such a lesson still reads as "a box for a
-  number" is a question for step 3.
 - **The memory lessons' story.** memory/actor-state says a Lamp's text
-  cannot live on its placement because an actor cannot read the world. On
-  a screen, the row moves under `when ⟨Game⟩ shows a map` and reads the
-  world from there; the lesson's explanation changes with it.
+  cannot live on its placement because an actor cannot read the world. On a
+  screen, the row moves under `when this screen loads` and reads the world
+  from there; the lesson's explanation changes with it.
