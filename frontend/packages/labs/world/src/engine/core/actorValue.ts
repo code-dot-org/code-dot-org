@@ -349,6 +349,22 @@ export function firstOf(value: ActorSource): readonly Actor[] {
  * hand while its test runs, so a test that asked `spaceOf(inHand)` inside would
  * see the candidate's own space and accept everything.
  */
+/**
+ * Every actor in the space of whatever is in hand, as it is now — what `all
+ * actors` means. A copy, so a loop that adds actors while it walks them ends.
+ *
+ * Here and not the whole world: inside `in the shown map` the code acts in
+ * the map, as `add actor` does there, and a loop over everything must not
+ * reach the screen's own Viewport (specs/LESSONS_AS_SCREENS_PLAN.md).
+ */
+export function actorsHere(world: World | {getWorld(): World}): Actor[] {
+  // A screen's own code holds the builder, which describes the world it hands
+  // back (`WorldBuilder.getWorld`).
+  const live = 'getWorld' in world ? world.getWorld() : world;
+  const space = live.here().space;
+  return [...live.actors].filter(actor => live.spaceOf(actor) === space);
+}
+
 export function inThisSpace(world: World, value: ActorSource): LazyActors {
   const space = world.here().space;
   return filtered(value, actor => actor.space === space);

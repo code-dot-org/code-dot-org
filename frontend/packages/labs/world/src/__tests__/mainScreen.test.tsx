@@ -202,6 +202,65 @@ describe('a Main Screen', () => {
     expect(spaceOf('inLevel')).toBe(world.viewportSpaceOf(viewport));
   });
 
+  it('counts every actor where the code runs, the map inside its Viewport', async () => {
+    // `all actors` is the actors here, as `add actor` adds here: inside `in
+    // the map ⟨Game⟩ shows` that is the level, and not the screen's own
+    // Viewport (specs/LESSONS_AS_SCREENS_PLAN.md).
+    const count = (kind: string) => ({
+      type: 'world_count_of_kind',
+      fields: {TYPE: kind},
+      inputs: {LIST: {block: {type: 'world_all_actors'}}},
+    });
+    const setScore = (kind: string, next?: object) => ({
+      type: 'world_set_ScreensMain_ScoreProperty',
+      inputs: {VALUE: {block: count(kind)}},
+      ...(next ? {next: {block: next}} : {}),
+    });
+    const {world, modules} = await compileProject(
+      simpleOnAScreen({
+        properties: [
+          {name: 'score', type: 'number', value: '-1'},
+          {name: 'boxes', type: 'number', value: '-1'},
+        ],
+        blocks: {
+          blocks: {
+            languageVersion: 0,
+            blocks: [
+              {
+                type: 'world_on_screen_loads',
+                next: {
+                  block: {
+                    type: 'world_set_ScreensMain_BoxesProperty',
+                    inputs: {VALUE: {block: count('actors/viewport')}},
+                    next: {
+                      block: {
+                        type: 'world_in_shown_map',
+                        inputs: {
+                          ACTOR: {
+                            block: {
+                              type: 'world_actor_kind',
+                              fields: {ACTOR: 'actors/viewport'},
+                            },
+                          },
+                          DO: {block: setScore('actors/viewport')},
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            ],
+          },
+        },
+      }),
+    );
+
+    const screen = modules['screens/main'];
+    // On the screen, its one Viewport; in the map, none.
+    expect(world.get(screen.BoxesProperty as never)).toBe(1);
+    expect(world.get(screen.ScoreProperty as never)).toBe(0);
+  });
+
   it('refuses a define world in its workspace', async () => {
     await expect(
       compileProject(

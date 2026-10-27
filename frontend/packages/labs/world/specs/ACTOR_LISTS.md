@@ -32,7 +32,7 @@ below.
 
 ```
 for each actor ⟨each⟩ in ⟨any Coin ▾⟩ where ⟨…⟩     the loop, given a source
-all actors                                          every actor in the world
+all actors                                          every actor here
 push ⟨this actor⟩ to ⟨these coins⟩                  appending
 clear ⟨these coins⟩                                 emptying (a per-tick set)
 count of ⟨these coins⟩                              how many

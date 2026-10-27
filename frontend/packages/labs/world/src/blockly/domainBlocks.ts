@@ -4893,11 +4893,13 @@ const worldOnMapUnloads = defineBlock({
 });
 
 /**
- * Every actor in the world — the value a loop walked before it could be given
- * one, and an actor value like any other (specs/ACTOR_LISTS.md).
+ * Every actor where the code runs — the value a loop walked before it could
+ * be given one, and an actor value like any other (specs/ACTOR_LISTS.md).
  *
- * A copy, because a source is read once at the top of a loop: a rule that adds
- * actors while iterating them terminates.
+ * In the space of whatever is in hand (`actorsHere`): inside `in the shown
+ * map` that is the map, as it is for `add actor`, and in a screen's own
+ * handler it is the screen. A copy, because a source is read once at the top
+ * of a loop: a rule that adds actors while iterating them terminates.
  */
 const worldAllActors = defineBlock({
   type: 'world_all_actors',
@@ -4905,10 +4907,13 @@ const worldAllActors = defineBlock({
   output: 'Actor',
   extensions: [worldContextExtension],
   style: 'sprite_blocks',
-  tooltip: 'Every actor in the world, as it is now.',
+  tooltip: 'Every actor here, as it is now: in the map this code runs in.',
   generator: {
     javascript() {
-      return ['[...world.actors]', Order.ATOMIC] as [string, number];
+      return ['WorldLab.actorsHere(world)', Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
     },
   },
 });

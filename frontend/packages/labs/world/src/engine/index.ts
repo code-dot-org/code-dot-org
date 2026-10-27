@@ -45,6 +45,7 @@ export {
   filtered,
   firstOf,
   inThisSpace,
+  actorsHere,
   firstWhere,
   isSameActor,
   LazyActors,

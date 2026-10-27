@@ -198,11 +198,14 @@ COMPILE_FROM_DATA_PLAN.md's step 5.
 
 ## Open
 
-- **`all actors` now holds the Viewport.** A learner's `for each actor in ⟨all
-actors⟩` reaches the screen's Viewport as well as the level's actors, and
-  a loop that sets every picture sets the Viewport's. The probes read the
-  level; whether the block should, from code that runs in it, is a language
-  question.
+- **`all actors` held the Viewport. ANSWERED.** It reached the screen's
+  Viewport as well as the level's actors, so a loop that set every picture
+  set the Viewport's. It is the actors HERE now, in the space of whatever is
+  in hand (`actorValue.actorsHere`): inside `in the map ⟨Game⟩ shows` the
+  level, as `add actor` adds there, and in the screen's own code the
+  screen. Telling a game's actors from an interface's by their `for`
+  waits on a case where the two lines part: an interface actor placed in a
+  level, walked by a loop.
 - **The memory lessons' story.** memory/actor-state says a Lamp's text
   cannot live on its placement because an actor cannot read the world. On a
   screen, the row moves under `when this screen loads` and reads the world

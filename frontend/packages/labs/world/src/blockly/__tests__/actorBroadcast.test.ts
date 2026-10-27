@@ -265,7 +265,7 @@ describe('the loop takes a source', () => {
 });
 
 describe('all actors', () => {
-  it('is a copy, so adding while iterating terminates', () => {
+  it('is the actors here, taken once, so adding while iterating terminates', () => {
     const block = DOMAIN_BLOCKS.find(b => b.type === 'world_all_actors')!;
     const [code] = block.generator.javascript(
       {} as never,
@@ -273,7 +273,7 @@ describe('all actors', () => {
       {} as never,
     ) as [string, number];
 
-    expect(code).toBe('[...world.actors]');
+    expect(code).toBe('WorldLab.actorsHere(world)');
   });
 
   it('is an actor value like any other, so a statement broadcasts over it', () => {

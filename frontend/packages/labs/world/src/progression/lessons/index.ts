@@ -4179,7 +4179,8 @@ this actor. **You find out by running it.**
    Wanderers.
 2. Run it and watch. Click again for two hundred, again for three.
 3. Print **how many actors in ⟨all actors⟩** on each click, so you know what
-   you are looking at.
+   you are looking at — inside **in the map ⟨Game⟩ shows**, after the
+   repeat, since that is where the Wanderers are.
 4. Find where it stops being smooth on YOUR machine, and write the number
    down. That number is a fact about the machine and the drawing, not about
    the lab.

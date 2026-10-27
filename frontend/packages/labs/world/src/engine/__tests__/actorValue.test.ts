@@ -18,6 +18,7 @@ import {
   firstOf,
   firstWhere,
   inThisSpace,
+  actorsHere,
   one,
   ordered,
   pushed,
@@ -411,6 +412,24 @@ describe('`⟨…⟩ in this space`', () => {
     expect(
       world.withActor(camera, () => [...inThisSpace(world, coins(world))]),
     ).toEqual([held]);
+  });
+
+  it('is what `all actors` means: every actor here, taken once', () => {
+    const {world, rootCoin, win, held} = build();
+    // At the root, the root's own — the Viewport among them, and not what it
+    // holds.
+    expect(actorsHere(world)).toEqual([rootCoin, win]);
+    // In the Viewport's space, only what it holds.
+    world.enterShown(win);
+    try {
+      expect(actorsHere(world)).toEqual([held]);
+    } finally {
+      world.leave();
+    }
+    // A copy: what a loop adds is not walked.
+    const here = actorsHere(world);
+    world.addActor(Coin.instantiate('late', 'actors/coin'));
+    expect(here).toHaveLength(2);
   });
 
   it('reads the space BEFORE the walk, not per candidate', () => {
