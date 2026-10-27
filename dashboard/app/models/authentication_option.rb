@@ -23,6 +23,7 @@
 #
 
 class AuthenticationOption < ApplicationRecord
+  include Lti
   export_to_analytics
 
   data_classification(

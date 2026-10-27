@@ -163,10 +163,10 @@ class SessionsController < Devise::SessionsController
       first
   end
 
-  # An LTI authentication_id is 'issuer|client_id|subject'; the issuer names
-  # the LMS when it is one we have configured.
+  # Find the human-readable name for the LMS based on the issuer
+  # from the authentication_id.
   private def lms_display_name(lti_option)
-    issuer = lti_option.authentication_id.to_s.split('|', 2).first
+    issuer = lti_option.lti_issuer
     Policies::Lti.find_platform_by_issuer(issuer)&.dig(:name) ||
       I18n.t('auth.lti_login_nudge_default_platform')
   end
