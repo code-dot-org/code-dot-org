@@ -81,6 +81,11 @@ export function worldOfScreen(screen: string, map: string | undefined): string {
     properties?: Array<{name: string; type: string; value: string}>;
     rules?: Array<{setter: string; type: string; value: string}>;
     backgroundColor?: string;
+    events?: Array<{
+      name: string;
+      carries?: {id: string; name: string; type: string};
+    }>;
+    theme?: string;
     actors?: Array<Record<string, unknown>>;
     blocks?: {blocks?: {blocks?: Block[]}; variables?: unknown[]};
   };
@@ -101,6 +106,27 @@ export function worldOfScreen(screen: string, map: string | undefined): string {
         },
       };
     }),
+    ...(held.events ?? []).map(event => ({
+      type: 'world_rule_event',
+      extraState: {
+        parts: [
+          {kind: 'label', text: event.name},
+          ...(event.carries
+            ? [
+                {
+                  kind: 'param',
+                  name: event.carries.name,
+                  type: event.carries.type,
+                  var: event.carries.id,
+                },
+              ]
+            : []),
+        ],
+      },
+    })),
+    ...(held.theme
+      ? [{type: 'world_use_theme', fields: {THEME: held.theme}}]
+      : []),
     ...(held.rules ?? []).map(rule => ({
       type: rule.setter,
       inputs: {VALUE: shadow(literal(rule.type, rule.value))},

@@ -9,23 +9,23 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../../__tests__/support/compileProject';
-import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
+import {WORLD_SCENARIOS} from '../../../fixtures/scenarios';
 import {fileIdAt, projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
 import {stockActorById} from '../../stock';
 import {collectsEnhancement} from '../collects';
-import {boardLayer, boardPath, scoreboardEnhancement} from '../scoreboard';
+import {boardPath, scoreboardEnhancement} from '../scoreboard';
 
-const WORLD = {kind: 'world' as const, path: 'worlds/main', name: 'My World'};
+const GAME = {kind: 'world' as const, path: 'screens/main', name: 'My Game'};
 const PLAYER = {
   kind: 'actor' as const,
   path: 'actors/player',
   name: 'Platformer Player',
 };
 
-/** The empty scenario with a Player, a Ground and a Coin in it. */
+/** The empty game with a Player, a Ground and a Coin in its project. */
 const withActors = () => {
-  let source = EMPTY_WORLD_PROJECT;
+  let source = WORLD_SCENARIOS.empty.source;
   for (const id of ['player', 'ground', 'coin']) {
     source = importStockActor(source, stockActorById(id)!).source;
   }
@@ -39,7 +39,7 @@ const at = (source: ReturnType<typeof withActors>, path: string) => {
 
 describe('the scoreboard enhancement, as edits', () => {
   it('makes an actor of its own, which is a Label by another name', () => {
-    const after = scoreboardEnhancement.apply(withActors(), WORLD);
+    const after = scoreboardEnhancement.apply(withActors(), GAME);
     const board = at(after, `${boardPath}.actor`)!;
 
     // A KIND of its own: a hat names a kind, and one on `any ⟨Label⟩` would
@@ -61,24 +61,32 @@ describe('the scoreboard enhancement, as edits', () => {
     expect(board).not.toContain('"TEXT": "Label"');
   });
 
-  it('puts it on a layer that does not scroll away', () => {
-    const world = at(
-      scoreboardEnhancement.apply(withActors(), WORLD),
-      'worlds/main.world',
-    )!;
+  it('puts it on the screen, docked above the game', () => {
+    const screen = JSON.parse(
+      at(
+        scoreboardEnhancement.apply(withActors(), GAME),
+        'screens/main.screen',
+      )!,
+    ) as {actors: Array<{type: string; id: string}>; layout: unknown};
 
-    expect(world).toContain(boardLayer);
-    // The piece a learner finds last and by accident: a world-space score
-    // slides off the moment anything moves the camera.
-    expect(world).toContain('world_layer_fixed');
-    expect(world).toContain(boardPath);
+    // On the screen rather than in the level, so moving the camera moves the
+    // room and not the score.
+    expect(screen.actors.map(actor => actor.type)).toContain(boardPath);
+    // …and in a bar of its own above what was there, the Viewport called Game.
+    expect(screen.layout).toEqual({
+      split: 'down',
+      fixed: 'first',
+      size: 32,
+      first: {dock: 'Scoreboard'},
+      second: {dock: 'Game'},
+    });
   });
 
   it('does nothing the second time', () => {
-    const once = scoreboardEnhancement.apply(withActors(), WORLD);
-    expect(scoreboardEnhancement.applied(once, WORLD)).toBe(true);
+    const once = scoreboardEnhancement.apply(withActors(), GAME);
+    expect(scoreboardEnhancement.applied(once, GAME)).toBe(true);
 
-    const twice = scoreboardEnhancement.apply(once, WORLD);
+    const twice = scoreboardEnhancement.apply(once, GAME);
     expect(at(twice, 'worlds/main.world')).toBe(at(once, 'worlds/main.world'));
     expect(at(twice, `${boardPath}.actor`)).toBe(
       at(once, `${boardPath}.actor`),
@@ -87,55 +95,29 @@ describe('the scoreboard enhancement, as edits', () => {
 });
 
 describe('the pair, played', () => {
-  const place = (path: string, x: number, y: number) => ({
-    type: 'world_add_actor',
-    fields: {ACTOR: path},
-    inputs: {
-      DO: {
-        block: {
-          type: 'world_set_position',
-          inputs: {
-            ACTOR: {block: {type: 'world_this_actor'}},
-            X: {block: {type: 'math_number', fields: {NUM: x}}},
-            Y: {block: {type: 'math_number', fields: {NUM: y}}},
-          },
-        },
-      },
-    },
+  const place = (type: string, id: string, x: number, y: number) => ({
+    type,
+    id,
+    properties: {positional: {position: {x, y}}},
   });
 
-  /** A player standing on a coin, with a scoreboard watching. */
+  /** A player standing on a coin, on the map, with a scoreboard watching. */
   const game = () => {
     let source = collectsEnhancement.apply(withActors(), PLAYER);
-    source = scoreboardEnhancement.apply(source, WORLD);
-    const worldId = fileIdAt(source, 'worlds/main.world')!;
-    const parsed = JSON.parse(source.files[worldId].contents);
-    const root = parsed.blocks.blocks.find(
-      (block: {type: string}) => block.type === 'world_world',
-    );
-    // Chained IN FRONT of whatever the enhancements appended, rather than over
-    // it: the scoreboard's layer is a row in this same chain.
-    root.next = {
-      block: {
-        ...place('actors/ground', 100, 200),
-        next: {
-          block: {
-            ...place('actors/coin', 100, 100),
-            next: {
-              block: {...place('actors/player', 100, 100), next: root.next},
-            },
-          },
-        },
-      },
-    };
+    source = scoreboardEnhancement.apply(source, GAME);
+    const mapId = fileIdAt(source, 'maps/main.map')!;
+    const map = JSON.parse(source.files[mapId].contents);
+    map.actors = [
+      ...map.actors,
+      place('actors/ground', 'Ground', 100, 200),
+      place('actors/coin', 'Coin', 100, 100),
+      place('actors/player', 'Player', 100, 100),
+    ];
     return {
       ...source,
       files: {
         ...source.files,
-        [worldId]: {
-          ...source.files[worldId],
-          contents: JSON.stringify(parsed),
-        },
+        [mapId]: {...source.files[mapId], contents: JSON.stringify(map)},
       },
     };
   };

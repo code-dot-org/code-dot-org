@@ -307,7 +307,7 @@ const fieldOf = (exportName: string) => ({
   },
 });
 
-/** The world's own list of notes — `notes` in `main.world`. */
+/** The game's own list of notes — `notes` on the Main Screen. */
 const notes = () => ({block: {type: 'world_get_ScreensMain_NotesProperty'}});
 
 /** `set ⟨items⟩ of ⟨any ⟨List⟩⟩ to ⟨notes⟩` — the list shows what is kept. */

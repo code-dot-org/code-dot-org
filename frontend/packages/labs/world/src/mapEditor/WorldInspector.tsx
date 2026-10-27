@@ -76,6 +76,11 @@ export interface WorldInspectorProps {
   ruleCount?: number;
   /** The world's cameras, as a section at the foot (`CameraList`). */
   cameras?: ReactNode;
+  /**
+   * Open the game's enhancements — a camera that follows, a scoreboard —
+   * which a world's `define world` block offered from its wand.
+   */
+  onEnhance?: () => void;
   isReadOnly: boolean;
 }
 
@@ -110,6 +115,7 @@ export const WorldInspector = ({
   onBackgroundColor,
   ruleCount,
   cameras,
+  onEnhance,
   isReadOnly,
 }: WorldInspectorProps) => {
   // What is being typed, committed on blur or Enter as a placement's fields
@@ -343,6 +349,20 @@ export const WorldInspector = ({
             onClick={() => void requestRulesConfig({editable: !isReadOnly})}
           >
             {`${countText(ruleCount)}…`}
+          </Button>
+        </FormFieldWrapper>
+      )}
+      {onEnhance && !isReadOnly && (
+        <FormFieldWrapper label="Enhance" size="s">
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="small"
+            data-callout="world.enhance"
+            aria-label={`Enhance ${title}`}
+            onClick={onEnhance}
+          >
+            {`Enhance ${title}…`}
           </Button>
         </FormFieldWrapper>
       )}

@@ -695,11 +695,27 @@ export const MapEditor = ({
             ),
         }
       : undefined;
+  // The game's own file, whose code is never locked and whose properties
+  // offer the game's enhancements.
+  const isMainScreen =
+    document.scriptKind === 'screen' &&
+    filePath(currentSources.source, fileId) === `${MAIN_SCREEN_PATH}.screen`;
   const worldInspector =
     document.world && worldHeader
       ? {
           header: worldHeader,
           title: document.world.title,
+          // The game's enhancements, on the Main Screen that is the game.
+          ...(isMainScreen
+            ? {
+                onEnhance: () =>
+                  void requestActorEnhance({
+                    kind: 'world',
+                    path: MAIN_SCREEN_PATH,
+                    name: worldHeader.name,
+                  }),
+              }
+            : {}),
           onRename: (name: string) =>
             writeFile(document.world!.writeName(contentsRef.current, name)),
           // A rule's property is a `set` row; the world's own is a DEFAULT
@@ -775,9 +791,6 @@ export const MapEditor = ({
   // A level whose work is in blocks opens the Main Screen on its code, as it
   // opened a world on its World view (`levelData.worldOpensOn`).
   const level = useMaybeLevelProperties<WorldLevelProperties>();
-  const isMainScreen =
-    document.scriptKind === 'screen' &&
-    filePath(currentSources.source, fileId) === `${MAIN_SCREEN_PATH}.screen`;
   const opensOnCode = isMainScreen && worldOpensOn(level) === 'world';
   // "Show me" the Main Screen's code (`callouts/places`, `screen.code`).
   useEffect(() => {

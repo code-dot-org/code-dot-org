@@ -776,6 +776,30 @@ describe('the world, with nothing selected', () => {
     ],
   };
 
+  it('offers the game’s enhancements where it is given a way to', () => {
+    // The Main Screen's: a camera that follows, a scoreboard. A world's
+    // `define world` offered them from its wand, and a screen has no such row.
+    const onEnhance = vi.fn();
+    const view = mount(doc(), {
+      world: {
+        header,
+        title: 'Main Screen',
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+        onEnhance,
+      },
+    });
+    fireEvent.click(view.getByRole('button', {name: 'Enhance Main Screen'}));
+    expect(onEnhance).toHaveBeenCalled();
+  });
+
+  it('offers none without one', () => {
+    const view = mount(doc(), {
+      world: {header, onRename: vi.fn(), onSetDefault: vi.fn()},
+    });
+    expect(view.queryByRole('button', {name: /Enhance/})).toBeNull();
+  });
+
   it('is shown until a placement is, and edits go back by name', () => {
     const map = doc();
     const onRename = vi.fn();
@@ -1570,7 +1594,7 @@ describe('from a placement to its kind', () => {
       onOpenKind: vi.fn(),
     });
     select(canvas, map);
-    expect(view.queryByRole('button', {name: /^Enhance/})).toBeNull();
+    expect(view.queryByRole('button', {name: /Enhance/})).toBeNull();
     expect(view.queryByRole('button', {name: /^Open/})).toBeNull();
   });
 

@@ -111,8 +111,9 @@ const EMPTY_WORLD = JSON.stringify({
 });
 
 /**
- * …as a world: what a test about an actor or an enhancement writes a world
- * into. It goes when the `.world` shape does (specs/SCREEN_MAP_PLAN.md).
+ * …as a world: what a test about an actor or an enhancement writes a few
+ * rows into, as a lesson is written. Never a learner's project: it is
+ * compiled as the Main Screen it stands for (`__tests__/support/worldAsScreen`).
  */
 const EMPTY_WORLD_SPEC: ProjectSpec = {
   folders: [
@@ -377,7 +378,7 @@ export const SCENARIOS_AS_WRITTEN: Record<WorldScenarioTag, WorldScenario> = {
       '## A conversation\n\nRead it, and answer her.\n\n' +
       '- Space moves on. At the question, the LEFT and RIGHT arrows answer ' +
       'it — that is `send to line`, and it is the whole of branching\n' +
-      '- Open `main.world` and look at `moves to a line`: one branch per ' +
+      "- Open the Main Screen's code and look at `moves to a line`: one branch per " +
       'line, and each line is BLOCKS, so line one brings the portrait on and ' +
       'the last one takes her away\n' +
       '- The box types itself out on a timer of its own — open ' +

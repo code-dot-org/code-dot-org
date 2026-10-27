@@ -1,6 +1,6 @@
-// Cameras made in the map editor: data on a Viewport's placement, or on the
-// world's main map, never blocks in anybody's code — declared by the compiler
-// alone (`blockly/placementCameras`, specs/SPACE_CAMERAS_PLAN.md).
+// Cameras made in the map editor: data on a Viewport's placement, never blocks
+// in anybody's code — declared by the compiler alone
+// (`blockly/placementCameras`, specs/SPACE_CAMERAS_PLAN.md).
 
 import {describe, expect, it} from 'vitest';
 
@@ -65,7 +65,7 @@ const withWideCamera = () =>
 describe('a Viewport’s cameras made in the map editor', () => {
   it('are declared before the learner’s own `when created` runs', async () => {
     const {code} = await compileProject(withWideCamera());
-    const world = code['worlds/main'];
+    const world = code['screens/main'];
     expect(world).toContain('defineCamera');
     expect(world.indexOf('defineCamera')).toBeLessThan(world.indexOf('"mine"'));
   }, 60000);
@@ -89,50 +89,5 @@ describe('a Viewport’s cameras made in the map editor', () => {
     const wide = space.cameraNamed('Wide');
     expect(wide).toBeDefined();
     expect(space.camera?.name).toBe('Wide');
-  }, 60000);
-});
-
-/** Flappy as a world, with `main` as its main map (`asAWorld`). */
-const flappyAsAWorld = (main: object) =>
-  asAWorld(projectFiles(WORLD_SCENARIOS.flappy.source), main);
-
-/** Flappy with a camera its map editor made, which the world starts with. */
-const withOverview = () =>
-  flappyAsAWorld({
-    cameras: [{id: 'overview', name: 'Overview', traits: [], values: []}],
-    startingCamera: 'camera:overview',
-  });
-
-describe('a world’s cameras made in the map editor', () => {
-  it('are declared, and the world starts through the one its map says', async () => {
-    // What the map editor was last told is what the world does.
-    const {world, code} = await compileProject(withOverview());
-    expect(code['worlds/main']).toContain('"Overview"');
-    expect(world.activeCamera().name).toBe('Overview');
-  }, 60000);
-});
-
-/** Flappy with its MAIN camera told to follow the Bird, and started through. */
-const withMainFollowing = () =>
-  flappyAsAWorld({
-    mainCamera: {
-      traits: ['Camera Follow#FollowsTrait'],
-      values: [
-        {
-          setter: 'world_set_CameraFollow_ActorToFollowProperty',
-          type: 'actor',
-          value: 'actors/bird',
-        },
-      ],
-    },
-    startingCamera: 'main',
-  });
-
-describe('the world’s main camera, given traits in the map editor', () => {
-  it('is given them, and the world looks through it', async () => {
-    const {world, code} = await compileProject(withMainFollowing());
-    expect(code['worlds/main']).toMatch(/world\.camera\("main"\)/);
-    expect(code['worlds/main']).toContain('addTrait');
-    expect(world.activeCamera().id).toBe('main');
   }, 60000);
 });

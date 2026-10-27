@@ -19,10 +19,8 @@
 // only drew text would sit there saying whatever it was seeded with, which is
 // exactly what this looked like before the row was added.
 //
-//   worlds/<world>.world           define layer ⟨Interface⟩ do:
-//                                    this layer ⟨fixed⟩
-//                                    add actor ⟨Scoreboard⟩ do:
-//                                      set position ⟨48, 16⟩
+//   screens/main.screen          Scoreboard placed, docked in a bar a
+//                                  tile high above the rest of the screen
 //
 // A KIND OF ITS OWN, rather than the stock Label placed and pointed at. The
 // handler has to name what it is about, and a hat names a KIND: on `any
@@ -31,15 +29,11 @@
 // name is Scoreboard — a kind that ACTS LIKE a Label, which is what the
 // starter's own `scoreboard.actor` is.
 //
-// AND IT GOES ON A FIXED LAYER, which is the piece a learner discovers last
-// and by accident. A world-space score sits where it was placed and slides off
-// the screen the moment anything moves the camera; `this layer fixed` is what
-// makes something part of the SCREEN rather than part of the room. Written
-// here even in a project with no camera, because the day one arrives — the
-// camera enhancement is one click away — nothing about the scoreboard should
-// need revisiting.
-//
-// LAST IN THE WORLD's chain, so it is defined after the map and drawn over it.
+// AND IT GOES ON THE SCREEN, beside the Viewport rather than in the level it
+// shows, which is the piece a learner discovers last and by accident. A score
+// in the level slides off the moment anything moves the camera; one on the
+// screen is part of the game rather than of the room. Docked, so it takes its
+// share of any window (specs/DOCKING_PLAN.md), as the starter's HUD does.
 
 import {getNextFileId} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';
@@ -51,7 +45,7 @@ import {stockActorById} from '../stock';
 
 import {edit, importRules, me} from './actorPatch';
 import type {Enhancement, EnhanceTarget} from './enhancements';
-import {addRoot, append, rowsUnder, type BlockJson} from './patch';
+import {addRoot, type BlockJson} from './patch';
 
 /** What makes an actor hear that the score changed. */
 const WATCHES = 'Scoring#WatchesTheScoreTrait';
@@ -59,16 +53,9 @@ const WATCHES = 'Scoring#WatchesTheScoreTrait';
 /** Where the board lands, and what it calls itself. */
 const BOARD_PATH = 'actors/scoreboard';
 const BOARD_NAME = 'Scoreboard';
-/** The layer it sits on, and the block that declares it. */
-const LAYER_ID = 'enhanceInterfaceLayer';
-const LAYER_NAME = 'Interface';
-/**
- * Where on the screen, in pixels from the top left of the view.
- *
- * The top-left corner, a Label's half-height down so the words are not cut in
- * two by the edge — the same measurement `fixtures/tapper` explains for the
- * same reason.
- */
+/** How tall the bar it is docked in is: one tile, as the starter's. */
+const BAR = 32;
+/** Where the editor first draws it; docked, the layout places it. */
 const AT = {x: 48, y: 16};
 
 /** What it says before anything has been scored, as the starter's does. */
@@ -110,44 +97,48 @@ const watcher = (): BlockJson => ({
   },
 });
 
-/** The layer, and the board on it. */
-const hud = (): BlockJson => ({
-  type: 'world_define_layer',
-  id: LAYER_ID,
-  fields: {NAME: LAYER_NAME},
-  inputs: {
-    DO: {
-      block: {
-        type: 'world_layer_fixed',
-        fields: {FIXED: 'fixed'},
-        next: {
-          block: {
-            type: 'world_add_actor',
-            fields: {ACTOR: BOARD_PATH},
-            inputs: {
-              DO: {
-                block: {
-                  type: 'world_set_position',
-                  inputs: {
-                    ACTOR: me(),
-                    X: {block: {type: 'math_number', fields: {NUM: AT.x}}},
-                    Y: {block: {type: 'math_number', fields: {NUM: AT.y}}},
-                  },
-                },
-              },
-            },
-          },
+/** A Main Screen, as much of it as this reads. */
+interface ScreenFile {
+  actors?: Array<{type?: string; id?: string}>;
+  layout?: unknown;
+  [key: string]: unknown;
+}
+
+/** Whether this screen already has the board on it. */
+const placed = (contents: string): boolean =>
+  ((JSON.parse(contents) as ScreenFile).actors ?? []).some(
+    actor => actor.type === BOARD_PATH,
+  );
+
+/**
+ * The screen with the board placed, and docked in a bar above whatever the
+ * screen laid out before (`docking`).
+ */
+const withBoard = (contents: string): string => {
+  const screen = JSON.parse(contents) as ScreenFile;
+  return JSON.stringify(
+    {
+      ...screen,
+      actors: [
+        ...(screen.actors ?? []),
+        {
+          type: BOARD_PATH,
+          id: BOARD_NAME,
+          properties: {positional: {position: AT}},
         },
+      ],
+      layout: {
+        split: 'down',
+        fixed: 'first',
+        size: BAR,
+        first: {dock: BOARD_NAME},
+        second: screen.layout ?? {dock: 'Game'},
       },
     },
-  },
-});
-
-/** Whether this world already has the board on its own interface layer. */
-const placed = (contents: string): boolean =>
-  rowsUnder(contents, {type: 'world_world'}).some(
-    row => row.type === 'world_define_layer' && row.id === LAYER_ID,
+    null,
+    2,
   );
+};
 
 /** Write the scoreboard's file, if the project has not got one. */
 const writeBoard = (source: MultiFileSource): MultiFileSource => {
@@ -220,16 +211,16 @@ const writeBoard = (source: MultiFileSource): MultiFileSource => {
 
 export const scoreboardEnhancement: Enhancement = {
   id: 'scoreboard',
-  // The WORLD's: what is on the screen while this world is played, and where
-  // it sits, are the world's business — and the score it shows is the world's
+  // The GAME's: what is on the screen while it is played, and where it sits,
+  // are the Main Screen's business — and the score it shows is the game's
   // number.
   subject: 'world',
   name: 'A scoreboard',
   description:
-    'Puts the score on the screen and keeps it there: a Scoreboard actor in the corner, on a layer that stays put when the view moves, saying what the score is whenever it changes.',
+    'Puts the score on the screen and keeps it there: a Scoreboard actor in a bar above the game, which stays put when the view moves, saying what the score is whenever it changes.',
   brings: ['Keeps Score', 'a Scoreboard actor'],
   applied(source: MultiFileSource, target: EnhanceTarget) {
-    const id = fileIdAt(source, `${target.path}.world`);
+    const id = fileIdAt(source, `${target.path}.screen`);
     return Boolean(id && placed(source.files[id].contents));
   },
   apply(source: MultiFileSource, target: EnhanceTarget) {
@@ -243,16 +234,13 @@ export const scoreboardEnhancement: Enhancement = {
     }
     current = writeBoard(current);
 
-    const id = fileIdAt(current, `${target.path}.world`);
+    const id = fileIdAt(current, `${target.path}.screen`);
     if (!id || placed(current.files[id].contents)) {
       return current;
     }
-    return edit(current, id, contents =>
-      append(contents, {type: 'world_world'}, [hud()]),
-    );
+    return edit(current, id, withBoard);
   },
 };
 
 /** Exported for the test that reads where the board was put. */
 export const boardPath = BOARD_PATH;
-export const boardLayer = LAYER_ID;

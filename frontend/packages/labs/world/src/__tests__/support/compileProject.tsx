@@ -38,6 +38,8 @@ import {
   type RuleModule,
 } from '../../rules/__tests__/support/compileStockRules';
 
+import {isWorldShaped, worldAsScreen} from './worldAsScreen';
+
 /** `actors/player.actor` → `actors/player`, which is how imports name it. */
 const modulePath = (path: string) => path.replace(/\.[^./]+$/, '');
 
@@ -85,8 +87,12 @@ export interface CompiledProject {
  * map the runtime generates from.
  */
 export async function compileProject(
-  files: Record<string, string>,
+  written: Record<string, string>,
 ): Promise<CompiledProject> {
+  // A test that writes its game as a world is compiled as the screen and map
+  // it stands for (`worldAsScreen`).
+  const fromWorld = isWorldShaped(written);
+  const files = worldAsScreen(written);
   // The registries the generator reads besides each file. Without them a
   // `load map` block emits no `world.define` lines at all, and the world
   // builds with nothing in it — silently, since an empty map is legal.
@@ -150,6 +156,11 @@ export async function compileProject(
   }
   for (const path of inDependencyOrder(code)) {
     evaluate(code[path], modules, modules[path]);
+  }
+
+  // …and its module answers to the world's name, which the test knows it by.
+  if (fromWorld) {
+    modules['worlds/main'] = modules['screens/main'];
   }
 
   // The Main Screen's module if the project holds one, else the world's

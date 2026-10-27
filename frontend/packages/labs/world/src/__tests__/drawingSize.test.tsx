@@ -130,15 +130,13 @@ describe('a drawing sized from the actor', () => {
     // before there was one pair of numbers on the kind and no way to differ.
     const {world} = await compileProject(project);
 
-    // AFTER A FRAME, and the reason is worth knowing. `add actor ⟨Plate⟩ do
-    // set width …` places the actor and THEN runs the body, so at the instant
-    // of placement its width is still the declared default and that is what
-    // `World.place` reads. The size is asked again wherever the drawing runs,
-    // so it is right from the first frame — a map placement's overrides are
-    // applied before the actor is placed at all and never lag even that far.
+    // FROM THE START. Written as `add actor ⟨Plate⟩ do set width …`, each is
+    // a placement on the map now (`worldAsScreen`), and a placement's
+    // overrides are applied before the actor is placed, so its size never
+    // lags. The size is asked again wherever the drawing runs, as well.
     expect(sizes(world)).toEqual([
-      [40, 12],
-      [40, 12],
+      [100, 12],
+      [20, 12],
     ]);
     world.renderSnapshot();
 

@@ -17,10 +17,12 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
+import type {BlockParam} from '../../actors/stock/workspace';
 import {BUILTIN_RULE_META} from '../../blockly/builtinMeta';
 import {projectOwnMetas, projectRuleMetas} from '../../blockly/projectModules';
 import {slug} from '../../blockly/ruleMeta';
 import {memberLocalName} from '../../blockly/ruleRegistry';
+import type {ScreenEvent} from '../../blockly/screenData';
 import {gameScreen} from '../../constants';
 import {renameReferences} from '../../files/renameThing';
 import {projectFiles} from '../../runtime/projectFiles';
@@ -130,11 +132,10 @@ const onThisActor = (row: Block): boolean =>
 /** Where each property a setter names is kept on a placement. */
 type Slots = Map<string, {owner: string; id: string; type: string}>;
 
-function slotsOf(source: MultiFileSource): {
+function slotsOf(files: Record<string, string>): {
   actor: Slots;
   world: Map<string, string>;
 } {
-  const files = projectFiles(source);
   const actor: Slots = new Map();
   const world = new Map<string, string>();
   for (const meta of [...BUILTIN_RULE_META, ...projectRuleMetas(files)]) {
@@ -211,6 +212,45 @@ function placementOf(
   };
 }
 
+/** The variable type a value of this type is carried in (`BlockParam`). */
+const BINDS: Record<string, BlockParam['binds']> = {
+  number: 'Number',
+  string: 'String',
+  boolean: 'Boolean',
+  actor: 'Actor',
+  vector: 'Vector',
+};
+
+/**
+ * A world's `define event` as the screen's data: a name and at most one value
+ * it carries, which is all a screen's event says (`screenData`).
+ */
+function eventOf(row: Block): ScreenEvent {
+  const parts = isObject(row.extraState)
+    ? ((row.extraState.parts ?? []) as Array<Record<string, unknown>>)
+    : [];
+  const labels = parts.filter(part => part.kind === 'label');
+  const params = parts.filter(part => part.kind === 'param');
+  if (labels.length !== 1 || params.length > 1) {
+    throw new Error('a world event a screen cannot say: one name, one value');
+  }
+  const [param] = params;
+  const type = String(param?.type ?? '');
+  return {
+    name: String(labels[0].text),
+    ...(param
+      ? {
+          carries: {
+            id: String(param.var),
+            name: String(param.name ?? type),
+            type,
+            binds: BINDS[type] ?? 'String',
+          },
+        }
+      : {}),
+  };
+}
+
 /** `in the map ⟨Game⟩ shows do ⟨rows⟩`. */
 const inTheLevel = (rows: readonly Block[]): Block => {
   const first = chain(rows);
@@ -247,7 +287,18 @@ export interface LessonScreen {
  */
 export function screenOfWorld(
   contents: string,
-  source: MultiFileSource,
+  /** The project, or its files by path, for where a setter's value is kept. */
+  source: MultiFileSource | Record<string, string>,
+  {
+    screenIsLevel = false,
+  }: {
+    /**
+     * Put the level on the Main Screen itself, with no map and no Viewport:
+     * one space, as the world was, which is what a test written as a world
+     * expects of it (`worldAsScreen`). Not for a world with a camera.
+     */
+    screenIsLevel?: boolean;
+  } = {},
 ): LessonScreen {
   const doc = JSON.parse(contents) as {
     blocks?: {blocks?: Block[]};
@@ -261,7 +312,11 @@ export function screenOfWorld(
   if (!world) {
     throw new Error('a lesson world with no define world');
   }
-  const slots = slotsOf(source);
+  const slots = slotsOf(
+    'files' in source && 'folders' in source
+      ? projectFiles(source as MultiFileSource)
+      : (source as Record<string, string>),
+  );
   // A world's own cameras: its main one becomes the Game Viewport's, and the
   // rest no lesson has.
   const {mainCamera, ...rest} = doc.map ?? {};
@@ -282,6 +337,8 @@ export function screenOfWorld(
     return id;
   };
   const properties: Array<{name: string; type: string; value: string}> = [];
+  const events: ScreenEvent[] = [];
+  let theme: string | undefined;
   const rules: Array<{setter: string; type: string; value: string}> = [];
   let backgroundColor: string | undefined;
   let size: {width: number; height: number} | undefined;
@@ -297,6 +354,12 @@ export function screenOfWorld(
         placements.push(placement);
         continue;
       }
+    } else if (row.type === 'world_use_theme' && fields.THEME) {
+      theme = String(fields.THEME);
+      continue;
+    } else if (row.type === 'world_rule_event') {
+      events.push(eventOf(row));
+      continue;
     } else if (row.type === 'world_rule_property') {
       properties.push({
         name: String(fields.NAME),
@@ -333,17 +396,24 @@ export function screenOfWorld(
     }
     code.push(row);
   }
+  // A level with a theme of its own beside the game's needs a map to hold it.
+  const asLevel =
+    screenIsLevel && !mainCamera && !(theme && typeof level.theme === 'string');
   const handlers = roots
     .filter(root => root !== world)
-    .map(root => handlerOf(root));
+    .map(root => (asLevel ? root : handlerOf(root)));
   // There whether or not the world had code of its own: it is where a
   // lesson's once-only code is written, as `define world`'s body was, and
   // no early lesson's toolbox offers either block.
-  const loads: Block[] = [
-    {type: SCREEN_LOADS, next: {block: inTheLevel(code)}},
-  ];
+  const loads: Block[] = asLevel
+    ? code.length
+      ? [{type: SCREEN_LOADS, next: {block: chain(code)}}]
+      : []
+    : [{type: SCREEN_LOADS, next: {block: inTheLevel(code)}}];
   const data = {
     ...(properties.length ? {properties} : {}),
+    ...(events.length ? {events} : {}),
+    ...(theme ? {theme} : {}),
     ...(rules.length ? {rules} : {}),
     ...(backgroundColor ? {backgroundColor} : {}),
   };
@@ -364,7 +434,7 @@ export function screenOfWorld(
   const sized = size ? {size, tile: {width: TILE_SIZE, height: TILE_SIZE}} : {};
   // A map that places a Viewport is a screen already: a window onto a room
   // (adventure/rooms). It is the screen, and there is no level of its own.
-  if (placements.some(one => one.type === VIEWPORT)) {
+  if (asLevel || placements.some(one => one.type === VIEWPORT)) {
     if (mainCamera) {
       throw new Error('a world whose own map has a Viewport and a camera');
     }

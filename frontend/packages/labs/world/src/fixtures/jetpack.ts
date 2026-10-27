@@ -1961,7 +1961,8 @@ const DOOR_ACTOR = JSON.stringify({
  *
  * `Watches the Score` is what makes that possible — an `.actor` file has no
  * binding for a WORLD event, so without the trait the only place this could be
- * written is `main.world`, reaching back out for whichever actor is the board.
+ * written is the Main Screen's code, reaching back out for whichever actor is
+ * the board.
  */
 const SCOREBOARD_ACTOR = JSON.stringify({
   blocks: {
