@@ -13,6 +13,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import SpriteLab from '../SpriteLab';
 
 import {SPRITELAB2_HELPER_CODE} from './blockly/blockDefinitions';
+import {burstBoxes} from './bursts';
 import {
   backgroundFrame,
   cameraFocus,
@@ -36,6 +37,7 @@ import {
   loadedAnimations,
   trimAnimationListImages,
 } from './imageTrim';
+import {ParticleLayer} from './particles';
 import {
   CONTACT_EPSILON,
   hasSupportAhead,
@@ -43,10 +45,20 @@ import {
   isSupported,
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
+  bodyBox,
   resolvePlatformPhysics,
   usesPlatformPhysics,
+  wallBox,
 } from './platformPhysics';
+import {createPlayerActionTracker, isPlayerAction} from './playerActions';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
+
+// A burst from the player starts at its take-off spot this many frames
+// after the jump event fires: the handler runs on the interpreter's next
+// tick, not inside the dispatch. The spot must come from an impulse this
+// recent, or a jump the tracker saw without one would serve a stale spot.
+const JUMP_EVENT_FRAMES = 4;
+const JUMP_IMPULSE_FRAMES = 8;
 
 const NOOP = () => {};
 
@@ -75,9 +87,8 @@ const CANVAS_DENSITY_FACTOR = 2;
 // How long a restart quiets further restarts: long enough to see the scene
 // run again before another collision can end it.
 const RESTART_QUIET_MS = 1000;
-// A block-triggered scene jump waits this long before it starts, so a say
-// block on the same event is seen before the scene changes.
-const SCENE_JUMP_DELAY_MS = 750;
+// The inputEvents type a when-player hat registers.
+const PLAYER_ACTION_EVENT = 'playerAction';
 // How much a platform scene dims its background, so the blocks and the
 // player read against it: the alpha of a black fill over it.
 const PLATFORM_BACKGROUND_DIM = 0.25;
@@ -163,14 +174,14 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onGoToExternalScene = null;
     this.onRestartScene = null;
     this.onPlayMusic = null;
+    // ({touching: image names, height: 0 floor to 1 top}) each frame a
+    // player exists.
+    this.onPlayerProgress = null;
     // Which on-screen controls fit the running scene: fires on every run
     // and on each set-gravity block, with {platformer, gravity}.
     this.onControlsChange = null;
     // When the last restart fired, for the quiet window above.
     this.lastRestartAt_ = 0;
-    // A block-triggered jump waiting out SCENE_JUMP_DELAY_MS; a fresh run
-    // cancels it.
-    this.jumpDelayTimer_ = null;
     // null while no audio is listening.
     this.playerObserver_ = null;
     // Jump lifecycle for the view's cover/fade: start fires with the block,
@@ -179,8 +190,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.onSceneJumpLand = null;
     this.onSceneJumpCancel = null;
     // When set, re-runs preload from this list instead of the project's own
-    // (external scenes carry their own images).
+    // (external scenes carry their own images). One list per project: its
+    // identity tells the caches below apart.
     this.preloadAnimationsOverride = null;
+    // Decoded images for this project and for the external project visited
+    // last; whichever is running is the p5 wrapper's cache.
+    this.ownPreloads_ = {};
+    this.externalPreloads_ = null;
     // Guards against overlapping execute() calls (see runProgram/onP5Setup).
     this.executeInFlight_ = false;
     this.executeStartedAt_ = 0;
@@ -206,6 +222,77 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.lateImagesUnsubscribe_ = null;
     // True while nobody can see the playspace (see setDrawPaused).
     this.drawPaused_ = false;
+    // The weather and the bursts in flight, drawn inside the paint.
+    this.particles_ = new ParticleLayer();
+    // Where each player stood as its last jump impulse was applied, the
+    // frame of that impulse, and the frame the jump event last fired (see
+    // burstParticles).
+    this.jumpStarts_ = null;
+    this.jumpImpulseFrame_ = -Infinity;
+    this.jumpEventFrame_ = -Infinity;
+  }
+
+  /** The burst block: particles from each sprite the argument names. Just
+      after the jump event fires, a player bursts from where it took off:
+      the event fires after the impulse has moved it. */
+  burstParticles(count, look, spriteArg) {
+    const view = this.particleView_();
+    if (view) {
+      const p5 = this.p5Wrapper.p5;
+      const justJumped =
+        p5.frameCount - this.jumpEventFrame_ <= JUMP_EVENT_FRAMES &&
+        p5.frameCount - this.jumpImpulseFrame_ <= JUMP_IMPULSE_FRAMES;
+      this.particles_.burst(
+        p5,
+        look,
+        count,
+        burstBoxes(
+          this.library.getSpriteArray(spriteArg),
+          justJumped ? this.jumpStarts_ : null
+        ),
+        view
+      );
+    }
+  }
+
+  // The world the particles fly through: its size and gravity; null before
+  // the canvas is up.
+  particleView_() {
+    const p5 = this.p5Wrapper.p5;
+    if (!p5 || !this.library) {
+      return null;
+    }
+    return {
+      width: p5.width,
+      height: p5.height,
+      gravity: this.usesPlatformPhysics_
+        ? this.platformGravity_
+        : PLATFORM_GRAVITY,
+    };
+  }
+
+  // What the weather lands on this frame, on top of the view: the tiles,
+  // and every other sprite as a body.
+  weatherScene_(view) {
+    const bodies = Object.values(this.library.nativeSpriteMap)
+      .filter(sprite => sprite.group !== 'walls' && !sprite.removed)
+      .map(bodyBox);
+    return {
+      ...view,
+      walls: this.wallsThisFrame_(this.library).map(wallBox),
+      bodies,
+    };
+  }
+
+  // Runs inside the paint, after the sprites, so in a platform scene the
+  // particles are in world space under the camera.
+  stepAndDrawParticles_() {
+    const view = this.particleView_();
+    if (view) {
+      this.particles_.stepAndDraw(this.p5Wrapper.p5, view, v =>
+        this.weatherScene_(v)
+      );
+    }
   }
 
   /**
@@ -252,9 +339,6 @@ export default class SpriteLab2Engine extends SpriteLab {
    */
   createLibrary(args) {
     const library = super.createLibrary(args);
-    // A fresh library is a fresh run: a jump the old one was waiting to make
-    // must not land in it.
-    this.clearSceneJumpDelay_();
     // Fixed for the run: the scene type is set before the run begins.
     const dimBackground = this.isPlatformScene();
     // Lab2's generated backgrounds (1024px) outresolve the canvas, unlike
@@ -350,6 +434,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     // fall up and land on block undersides and the view's top edge.
     this.platformGravity_ = PLATFORM_GRAVITY;
     this.notifyControlsChange_();
+    this.particles_.reset();
+    this.jumpStarts_ = null;
+    this.jumpImpulseFrame_ = -Infinity;
+    this.jumpEventFrame_ = -Infinity;
+    library.commands.setWeather = kind => this.particles_.setWeather(kind);
+    library.commands.burstParticles = (count, look, spriteArg) =>
+      this.burstParticles(count, look, spriteArg);
     // A new run starts the player's history over, so the spawn is not heard
     // as a move.
     this.forgetPlayer_();
@@ -438,7 +529,15 @@ export default class SpriteLab2Engine extends SpriteLab {
         return;
       }
       const up = this.platformGravity_ < 0 ? 1 : -1;
+      this.jumpStarts_ = new Map();
+      this.jumpImpulseFrame_ = this.p5Wrapper.p5
+        ? this.p5Wrapper.p5.frameCount
+        : -Infinity;
       library.getSpriteArray({group: 'players'}).forEach(sprite => {
+        this.jumpStarts_.set(sprite, {
+          x: sprite.position.x,
+          y: sprite.position.y,
+        });
         sprite.velocity.y = up * Math.abs(Number(speed) || 0);
       });
     };
@@ -451,6 +550,13 @@ export default class SpriteLab2Engine extends SpriteLab {
         sprite.__slab2Body = true;
       });
     };
+    // A behavior marks its sprite for one frame, and the wall collision
+    // leaves it alone.
+    library.commands.passThroughWalls = spriteArg => {
+      library.getSpriteArray(spriteArg).forEach(sprite => {
+        sprite.__slab2PassWalls = true;
+      });
+    };
     library.commands.platformGravity = () => this.platformGravity_;
     library.commands.platformGrounded = spriteArg =>
       footing(spriteArg, isSupported);
@@ -458,6 +564,28 @@ export default class SpriteLab2Engine extends SpriteLab {
       footing(spriteArg, (sprite, walls, view, gravity) =>
         hasSupportAhead(sprite, direction < 0 ? -1 : 1, walls, view, gravity)
       );
+    // The physics pass records the player's actions; the events that fire
+    // on them run one frame later.
+    this.playerActionTracker_ = createPlayerActionTracker();
+    this.playerActions_ = new Set();
+    library.commands.whenPlayer = (action, callback) => {
+      if (isPlayerAction(action)) {
+        library.addEvent(PLAYER_ACTION_EVENT, {action}, callback);
+      }
+    };
+    const callbackArgs = library.getCallbackArgListForEvent.bind(library);
+    library.getCallbackArgListForEvent = inputEvent => {
+      if (inputEvent.type !== PLAYER_ACTION_EVENT) {
+        return callbackArgs(inputEvent);
+      }
+      const fires = this.playerActions_.has(inputEvent.args.action);
+      // A burst in a jump handler starts where the player took off; the
+      // handler runs on the interpreter's next tick, so the frame is kept.
+      if (fires && inputEvent.args.action === 'jump' && this.p5Wrapper.p5) {
+        this.jumpEventFrame_ = this.p5Wrapper.p5.frameCount;
+      }
+      return fires ? [{}] : [];
+    };
     library.commands.playMusic = channelId => {
       if (channelId && this.onPlayMusic) {
         this.onPlayMusic(String(channelId));
@@ -497,18 +625,16 @@ export default class SpriteLab2Engine extends SpriteLab {
       return setAnimation.call(this, spriteArg, animation);
     };
     library.commands.goToScene = sceneId => {
-      this.delaySceneJump_(() => this.onGoToScene, String(sceneId));
+      this.triggerSceneJump_(this.onGoToScene, String(sceneId));
     };
-    // The quiet window is what keeps a condition that still holds on the
-    // next frame from restarting at frame rate. It runs from the jump
-    // itself, so the wait before it does not use it up.
+    // The quiet window keeps a condition that still holds on the next frame
+    // from restarting at frame rate.
     library.commands.restartScene = () => {
       if (Date.now() - this.lastRestartAt_ < RESTART_QUIET_MS) {
         return;
       }
-      this.delaySceneJump_(
-        () =>
-          this.onRestartScene &&
+      this.triggerSceneJump_(
+        this.onRestartScene &&
           (() => {
             this.lastRestartAt_ = Date.now();
             this.onRestartScene();
@@ -516,36 +642,22 @@ export default class SpriteLab2Engine extends SpriteLab {
       );
     };
     library.commands.goToExternalScene = sceneKey => {
-      this.delaySceneJump_(() => this.onGoToExternalScene, String(sceneKey));
+      this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
     return library;
   }
 
-  /**
-   * Start a block-triggered jump after SCENE_JUMP_DELAY_MS: the scene keeps
-   * running meanwhile, then freezes through the jump gate and the handler
-   * runs. The handler is read when the wait ends; nothing starts without
-   * one. One jump at a time: a trigger during the wait, or while a jump is
-   * in flight, is ignored.
-   */
-  delaySceneJump_(getHandler, ...args) {
-    if (!getHandler() || this.jumpDelayTimer_ || this.sceneJumpInFlight_) {
+  // Off the interpreter's step: the handler tears down the interpreter this
+  // command runs in. No handler (an engine with no view wired) starts nothing.
+  triggerSceneJump_(handler, ...args) {
+    if (!handler) {
       return;
     }
-    this.jumpDelayTimer_ = setTimeout(() => {
-      this.jumpDelayTimer_ = null;
-      const handler = getHandler();
-      if (handler && this.beginSceneJump_()) {
+    setTimeout(() => {
+      if (!this.destroyed_ && this.beginSceneJump_()) {
         handler(...args);
       }
-    }, SCENE_JUMP_DELAY_MS);
-  }
-
-  clearSceneJumpDelay_() {
-    if (this.jumpDelayTimer_) {
-      clearTimeout(this.jumpDelayTimer_);
-      this.jumpDelayTimer_ = null;
-    }
+    }, 0);
   }
 
   /**
@@ -686,9 +798,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.destroyed_) {
       return;
     }
-    // Now, not when the new library is built: that is after an async
-    // preload, and a jump waiting out its delay could start in between.
-    this.clearSceneJumpDelay_();
     this.sceneType_ = sceneType;
     if (code !== undefined) {
       this.setCode(code, referencedImages);
@@ -825,7 +934,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     this.destroyed_ = true;
     this.reset();
     this.stopTickTimer();
-    this.clearSceneJumpDelay_();
     this.imageWaitCancel_?.();
     this.clearLateImagesWatch_();
     this.frameCaptureArmed_ = false;
@@ -927,12 +1035,25 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (this.areAnimationsReady_()) {
       this.clearLateImagesWatch_();
     }
+    // Decoded images are reused by name across re-runs, and another
+    // project's names collide with this one's, so each project runs from
+    // its own cache.
+    const external = this.isExternalList_(animationList);
+    if (external && this.externalPreloads_?.list !== animationList) {
+      this.externalPreloads_ = {list: animationList, cache: {}};
+    }
+    this.p5Wrapper.preloadedSprites = external
+      ? this.externalPreloads_.cache
+      : this.ownPreloads_;
     const scoped = this.referencedImages
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;
     const preloaded = await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(scoped, animationNames(animationList))
+        await trimAnimationListImages(scoped, {
+          keepNames: animationNames(animationList),
+          thumbnails: !external,
+        })
       ),
       {multiFrame: true}
     );
@@ -956,6 +1077,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
+  isExternalList_(animationList) {
+    return animationList === this.preloadAnimationsOverride;
+  }
+
   // Decode one animation by name, mid-run: the escape hatch for a costume
   // name built dynamically, which the scene-scoped preload cannot see.
   async decodeAnimationOnDemand_(name) {
@@ -973,7 +1098,10 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     await this.p5Wrapper.preloadSpriteImages(
       loadedAnimations(
-        await trimAnimationListImages(single, animationNames(list))
+        await trimAnimationListImages(single, {
+          keepNames: animationNames(list),
+          thumbnails: !this.isExternalList_(list),
+        })
       ),
       {multiFrame: true}
     );
@@ -1121,14 +1249,16 @@ export default class SpriteLab2Engine extends SpriteLab {
     const bodyUpright = this.bodyGravity_() < 0 ? -1 : 1;
     bodies.forEach(({sprite}) => sprite.mirrorY(bodyUpright));
     // Other sprites keep the stock resolver; running it pre-paint means
-    // props draw already resolved.
-    this.library.commands.collide.call(
-      this.library,
-      'collide',
-      {group: ''},
-      {group: 'walls'}
-    );
+    // props draw already resolved. A sprite marked as passing through walls
+    // this frame is left where its behavior put it.
     const walls = this.library.getSpriteArray({group: 'walls'});
+    this.library.getSpriteArray({group: ''}).forEach(sprite => {
+      const passing = sprite.__slab2PassWalls;
+      sprite.__slab2PassWalls = false;
+      if (!passing) {
+        walls.forEach(wall => sprite.collide(wall));
+      }
+    });
     const view = {width: p5.width, height: p5.height};
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
     if (bodies.length) {
@@ -1137,6 +1267,63 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Both the requested and the resolved positions are known here, so this
     // is where the observer is fed.
     this.observePlayer_(players, walls, view);
+    this.trackPlayerActions_(players, walls, view);
+    this.reportPlayerProgress_(players, view);
+  }
+
+  trackPlayerActions_(players, walls, view) {
+    if (!players.length) {
+      this.playerActionTracker_.forget();
+      this.playerActions_ = new Set();
+      return;
+    }
+    const {sprite, x: requestedX, y: requestedY} = players[0];
+    const animation = sprite.animation;
+    this.playerActions_ = this.playerActionTracker_.observe(
+      {
+        sprite,
+        requestedX,
+        requestedY,
+        gravity: this.platformGravity_,
+        walls,
+        view,
+        animationFrame: animation ? animation.getFrame() : undefined,
+        animationFrames: animation ? animation.getLastFrame() + 1 : undefined,
+      },
+      Date.now()
+    );
+  }
+
+  reportPlayerProgress_(players, view) {
+    if (!this.onPlayerProgress || !players.length) {
+      return;
+    }
+    const player = players[0].sprite;
+    const half = sprite => ({
+      w: (sprite.width * sprite.scale) / 2,
+      h: (sprite.height * sprite.scale) / 2,
+    });
+    const p = half(player);
+    const touching = [];
+    Object.values(this.library.nativeSpriteMap).forEach(sprite => {
+      if (sprite === player || sprite.removed || sprite.group === 'walls') {
+        return;
+      }
+      const s = half(sprite);
+      if (
+        Math.abs(sprite.position.x - player.position.x) < p.w + s.w &&
+        Math.abs(sprite.position.y - player.position.y) < p.h + s.h
+      ) {
+        touching.push(sprite.getAnimationLabel());
+      }
+    });
+    const feet = player.position.y + p.h;
+    this.onPlayerProgress({
+      touching,
+      height: Math.max(0, Math.min(1, (view.height - feet) / view.height)),
+      x: player.position.x,
+      speed: player.speed,
+    });
   }
 
   /** The audio's observer of the player, or null. */
@@ -1213,7 +1400,9 @@ export default class SpriteLab2Engine extends SpriteLab {
       }
       this.physicsResolvedThisFrame_ = false;
       this.updateCharacterAnimations_();
-      return paint(...args);
+      const painted = paint(...args);
+      this.stepAndDrawParticles_();
+      return painted;
     };
   }
 

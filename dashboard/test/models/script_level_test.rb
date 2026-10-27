@@ -309,6 +309,21 @@ class ScriptLevelTest < ActiveSupport::TestCase
     end
   end
 
+  test 'summarize carries the header label, localized when a translation exists' do
+    sl = create(:script_level)
+    assert_nil sl.summarize[:header_label]
+
+    sl.level.update!(header_label: 'Story')
+    assert_equal 'Story', sl.summarize[:header_label]
+
+    with_locale('es-MX') do
+      I18n.backend.store_translations 'es-MX', {
+        'data' => {'header_label' => {sl.level.name => 'Historia'}}
+      }
+      assert_equal 'Historia', sl.summarize[:header_label]
+    end
+  end
+
   test 'teacher panel summarize' do
     sl = create_script_level_with_ancestors({assessment: false})
 
@@ -863,6 +878,20 @@ class ScriptLevelTest < ActiveSupport::TestCase
                  script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
+  # The experiment alone does not send a student without deep dive access to the tutor.
+  test 'next_level_or_redirect_path_for_user skips lesson tutor without lesson deep dive access' do
+    student = create(:student)
+    stub_lesson_tutor_experiment(student)
+    student.stubs(:can_use_lesson_deep_dive?).returns(false)
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson = script_level.lesson
+    lesson.stubs(:lesson_tutor_available?).returns true
+    lesson.stubs(:lesson_tutor_path).returns('/s/foo/lessons/1/tutor')
+    refute_equal '/s/foo/lessons/1/tutor',
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
+  end
+
   # Tutor takes precedence over lesson extras for tutor-available lessons.
   test 'next_level_or_redirect_path_for_user prefers lesson tutor over lesson extras at end of lesson' do
     student = create(:student)
@@ -1327,33 +1356,70 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal [level], script_level.reload.levels.to_a
   end
 
-  test 'level_keys with UI Test levels are only valid in ui-test-* scripts' do
-    level = create(:level, name: 'UI Test ScriptLevelTest level')
+  test 'add_variant refuses a prod variant in a UI Test script and leaves no join row' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    ui_test_script = create(:script, name: 'ui-test-script-level-test')
-    script_level = create(:script_level, script: ui_test_script, levels: [level])
-    script_level.level_keys = [level.key]
-    assert script_level.valid?
+    script = create(:script, :in_single_unit_course, is_migrated: true, name: 'ui-test-script-level-variant')
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest kept variant')
+    script_level = create(:script_level, script: script, lesson: lesson, levels: [ui_test_level])
 
-    prod_script = create(:script, name: 'script-level-test-prod')
-    script_level = create(:script_level, script: prod_script)
-    script_level.level_keys = [level.key]
-    refute script_level.valid?
-    assert_includes script_level.errors.full_messages.first, level.name
+    assert_raises ActiveRecord::RecordInvalid do
+      script_level.add_variant create(:level, name: 'ScriptLevelTest prod variant')
+    end
+    assert_equal [ui_test_level], script_level.reload.levels.to_a
   end
 
-  test 'update_levels rejects UI Test levels in non-ui-test scripts' do
-    level = create(:level, name: 'UI Test ScriptLevelTest attach')
+  test 'level_keys and their script must be on the same side of the UI Test partition' do
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest level')
+    prod_level = create(:level, name: 'ScriptLevelTest prod level')
+
+    script_level = create(:script_level, script: create(:script, name: 'ui-test-script-level-test'))
+    script_level.level_keys = [ui_test_level.key]
+    assert script_level.valid?, script_level.errors.full_messages.to_s
+    script_level.level_keys = [prod_level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, prod_level.name
+
+    script_level = create(:script_level, script: create(:script, name: 'script-level-test-prod'))
+    script_level.level_keys = [prod_level.key]
+    assert script_level.valid?, script_level.errors.full_messages.to_s
+    script_level.level_keys = [ui_test_level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, ui_test_level.name
+  end
+
+  test 'deprecated blockly levels are exempt from the UI Test partition' do
+    blockly_level = create(:level, level_num: 'script_level_test_maze', game: Game.find_by_name('maze'))
+    assert_equal 'blockly:Maze:script_level_test_maze', blockly_level.key
+
+    ['ui-test-script-level-blockly', 'script-level-blockly-prod'].each do |script_name|
+      script_level = create(:script_level, script: create(:script, name: script_name))
+      script_level.level_keys = [blockly_level.key]
+      assert script_level.valid?, script_level.errors.full_messages.to_s
+    end
+  end
+
+  test 'update_levels enforces the UI Test partition in both directions' do
+    ui_test_level = create(:level, name: 'UI Test ScriptLevelTest attach')
+    prod_level = create(:level, name: 'ScriptLevelTest prod attach')
 
     prod_script_level = create(:script_level, script: create(:script, name: 'script-level-attach-prod'))
     error = assert_raises RuntimeError do
-      prod_script_level.update_levels([{'id' => level.id}])
+      prod_script_level.update_levels([{'id' => ui_test_level.id}])
     end
-    assert_includes error.message, level.name
+    assert_includes error.message, ui_test_level.name
+    prod_script_level.update_levels([{'id' => prod_level.id}])
+    assert_equal [prod_level], prod_script_level.levels.to_a
 
     ui_test_script_level = create(:script_level, script: create(:script, name: 'ui-test-script-level-attach'))
-    ui_test_script_level.update_levels([{'id' => level.id}])
-    assert_equal [level], ui_test_script_level.levels.to_a
+    error = assert_raises RuntimeError do
+      ui_test_script_level.update_levels([{'id' => prod_level.id}])
+    end
+    assert_includes error.message, prod_level.name
+    ui_test_script_level.update_levels([{'id' => ui_test_level.id}])
+    assert_equal [ui_test_level], ui_test_script_level.levels.to_a
   end
 
   private def create_fake_plc_data
@@ -1380,12 +1446,13 @@ class ScriptLevelTest < ActiveSupport::TestCase
     @unit_assignment = create(:plc_enrollment_unit_assignment, plc_user_course_enrollment: user_course_enrollment, plc_course_unit: @plc_course_unit, user: @user)
   end
 
-  # Enables the 'lesson-tutor-redirect' experiment for the given user and
-  # disables it for every other invocation, so the end-of-lesson tutor branch
-  # is gated exactly as it is in production.
+  # Enables the 'lesson-tutor' experiment and lesson deep dive access for the
+  # given user and disables the experiment for every other invocation, so the
+  # end-of-lesson tutor branch is gated exactly as it is in production.
   private def stub_lesson_tutor_experiment(user)
     Experiment.stubs(:enabled?).returns(false)
     Experiment.stubs(:enabled?).
       with(user: user, experiment_name: 'lesson-tutor').returns(true)
+    user.stubs(:can_use_lesson_deep_dive?).returns(true)
   end
 end

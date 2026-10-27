@@ -191,13 +191,26 @@
   }
 }
 
-.stickerSlots {
+.stickers {
   @extend %options;
   padding: 4px;
 }
 
-.stickerSlot {
+// Nested to outrank the theme's IconButton size variants
+.stickers .sticker {
   width: 44px;
   height: 44px;
+  padding: 6px;
   border-radius: 4px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    // Overrides legacy.scss, which dims images in buttons until hovered
+    opacity: 1;
+  }
+}
+
+.stickerTooltip {
+  user-select: none;
 }

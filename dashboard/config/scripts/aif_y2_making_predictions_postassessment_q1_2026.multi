@@ -1,0 +1,23 @@
+name 'aif-y2-making-predictions-postassessment-q1-2026'
+
+right 'Change `hours` to `[[1], [3], [5], [8], [10]]`'
+wrong 'Change `scores` to `[[27], [34], [37], [50], [58]]`'
+wrong 'Swap the arguments to `fit`: `model.fit(scores, hours)`'
+wrong 'Call `model.predict(hours)` before `model.fit`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+This linear regression program produces an error when run. What change makes it run successfully?
+
+```python
+hours = [1, 3, 5, 8, 10]
+scores = [27, 34, 37, 50, 58]
+model = LinearRegression()
+model.fit(hours, scores)
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Machine Learning in Python
+MARKDOWN

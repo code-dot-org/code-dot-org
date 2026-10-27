@@ -123,3 +123,108 @@
   white-space: nowrap;
 }
 
+// ── Bottom navigation bar (shown when a review modality is active) ────────────
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 40px;
+  border-top: 1px solid var(--borders-neutral-solid);
+  flex-shrink: 0;
+}
+
+.navDivider {
+  width: 1px;
+  height: 49px;
+  background-color: var(--borders-neutral-solid);
+  flex-shrink: 0;
+}
+
+.navModalities {
+  display: flex;
+  gap: 8px;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  width: 72px;
+  padding: 6px 4px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  overflow: hidden;
+  transition: filter 0.12s ease;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--sentiment-information-30);
+    outline-offset: 2px;
+  }
+
+  .navIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    color: #928cef;
+  }
+}
+
+.navItemActive {
+  background-color: #d8ffdc;
+  color: #1f1976;
+  font-weight: 600;
+
+  .navIcon {
+    color: #1f1976;
+  }
+}
+
+.doneButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 5px 12px;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid #6e7782;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-neutral-primary);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+  transition: filter 0.12s ease;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--sentiment-information-30);
+    outline-offset: 2px;
+  }
+
+  .doneIcon {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+

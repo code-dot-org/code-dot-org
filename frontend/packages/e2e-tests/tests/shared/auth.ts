@@ -241,6 +241,11 @@ export type CreateTeacherAssociatedStudentOptions = {
    * "an authorized teacher-associated ... student" clause.
    */
   authorized?: boolean;
+  /**
+   * Runs under the teacher's session once the section exists, before the
+   * student joins, for section settings only its teacher may change.
+   */
+  onSectionCreated?: (section: {id: number; code: string}) => Promise<void>;
 } & Omit<CreateStudentOptions, 'name' | 'signInAfterCreate' | 'extraFields'>;
 
 /**
@@ -253,6 +258,7 @@ export async function createTeacherAssociatedStudent(
   {
     studentName,
     authorized = false,
+    onSectionCreated,
     ...studentOpts
   }: CreateTeacherAssociatedStudentOptions,
 ): Promise<{sectionCode: string} & UserCredentials> {
@@ -287,7 +293,11 @@ export async function createTeacherAssociatedStudent(
   if (!section.ok) {
     throw new Error(`sections POST failed: ${section.status}`);
   }
-  const {code: sectionCode} = JSON.parse(section.body) as {code: string};
+  const {id: sectionId, code: sectionCode} = JSON.parse(section.body) as {
+    id: number;
+    code: string;
+  };
+  await onSectionCreated?.({id: sectionId, code: sectionCode});
 
   // createUser signs the student in, replacing the teacher session; reload to
   // pick up the student's CSRF token before enrolling via /join.

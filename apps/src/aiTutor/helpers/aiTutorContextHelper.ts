@@ -89,9 +89,4 @@ export abstract class AiTutorContextHelper<AiTutorParams extends object> {
   getHiddenContextCallback() {
     return this.getHiddenContextString.bind(this);
   }
-
-  protected codeBlock(str?: string): string {
-    if (!str) return '';
-    return `\`\`\`\n${str}\n\`\`\``;
-  }
 }

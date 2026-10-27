@@ -1,38 +1,24 @@
 # `componentLibrary/dialog`
 
-## Consuming This Component
-
-This package exports two styled React components: [Dialog](Dialog.tsx), [CustomDialog](CustomDialog.tsx).
-You can import them like this:
+[MuiDialog](MuiDialog.tsx) and [MuiCustomDialog](MuiCustomDialog.tsx) are the
+MUI versions of the deprecated DSCO [Dialog](Dialog.tsx) and
+[CustomDialog](CustomDialog.tsx). They take the same props, so moving a call
+site over changes only its import.
 
 ```javascript
-import Dialog, {DialogProps} from '@code-dot-org/component-library/dialog';
-
-import {Dialog, DialogProps} from '@code-dot-org/component-library/dialog';
-
 import {
-  CustomDialog,
-  CustomDialogProps,
+  MuiDialog,
+  MuiCustomDialog,
 } from '@code-dot-org/component-library/dialog';
 ```
 
-## Using Dialog vs CustomDialog
+Use `MuiDialog` in most cases: title, description, buttons, and an optional
+icon or image. Use `MuiCustomDialog`, the bare overlay and panel, only when the
+content needs its own layout.
 
-`Dialog` is a general purpose dialog component with predefined styles and content structure that should be used in most
-cases.
+Both render in place, not in a portal, and keep the legacy scroll lock, Escape
+handling and focus trap until those move to MUI; see Deferred changes in
+[DIALOG_MIGRATION_TO_MUI.md](DIALOG_MIGRATION_TO_MUI.md). To move a legacy call
+site, use the [codemod](../../codemods/README.md#dialog-to-mui-dialogts).
 
-`CustomDialog` is a base component that can be used to create custom dialogs with custom content and styles.
-`CustomDialog` only has general dialog logic like focus trap, close on escape, etc., and no predefined or content
-structure. Visually it's just a white/dark rectangle with backdrop and close button.
-You should use `CustomDialog` only when you need to create a very custom dialog with custom content, structure, styles,
-etc.
-
-In most of the cases you should use `Dialog` component, as it's a wrapper around `CustomDialog` component.
-
-## Using CustomDialog
-
-For guidelines on how to use this component and the features it
-offers, [visit Storybook](https://code-dot-org.github.io/dsco_)
-(link to be updated once code-dot-org storybook will be public.).
-Or run storybook locally and go
-to [DesignSystem / Dialog Component](http://localhost:9001/?path=/docs/designsystem-dialog--docs).
+For props and live examples, see DesignSystem / Dialog in Storybook.

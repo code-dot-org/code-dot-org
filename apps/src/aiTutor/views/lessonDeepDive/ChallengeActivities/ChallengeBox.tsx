@@ -6,6 +6,7 @@ import {
   challengeResponseValidator,
   EvaluationStatus,
   ExplanationTypes,
+  ProjectDetailsCard,
 } from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -15,8 +16,6 @@ import {useNavigate} from 'react-router-dom';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
-
-import ProjectDetailsCard from '../../gallery/ProjectDetailsCard';
 
 import VideoChallenge from './VideoChallenge';
 import WhiteboardChallenge from './WhiteboardChallenge';
@@ -39,9 +38,13 @@ interface ChallengeBoxProps {
 // message. 'queued' and 'running' are not terminal (polling continues);
 // 'success' is terminal but its text comes from student_feedback, not here.
 const EVALUATION_ERROR_MESSAGES: Record<string, string> = {
-  pii_violation: 'This challenge response contains personal information',
-  profanity_violation: 'This challenge response contains profanity',
-  failure: 'An error occured during evaluation',
+  pii_violation:
+    "Sorry, I can't write feedback about this because it contains personal information. Please make changes and submit again.",
+  profanity_violation:
+    "Sorry, I can't write feedback about this because it was flagged by our content moderation policy. Please make changes and submit again.",
+  feedback_violation:
+    'Sorry, my feedback was flagged by our content moderation policy. Please try submitting again.',
+  failure: 'An error occurred during evaluation',
 };
 
 const ChallengeBox: FC<ChallengeBoxProps> = ({
@@ -74,9 +77,10 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   // (the drawing, or the recording) lives in the active modality component.
   // The modality reports whether it can be submitted through
   // onSubmittableChange, and registers its submit/reset handlers on these
-  // refs so the top bar can drive them.
+  // refs so the top bar can drive them. Submit resolves true once the
+  // response is created.
   const [canSubmit, setCanSubmit] = useState(false);
-  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const submitRef = useRef<(() => Promise<boolean>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
 
   // Video challenges are recordings top to bottom, so the record button
@@ -206,6 +210,14 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
     setCanSubmit(false);
     setCompositionState(CompositionStates.ITERATING);
     setChallengeResponse(null);
+  };
+
+  // On failure the modality shows its own error; return to composing.
+  const handleSubmitClick = async () => {
+    setShowConfirmation(true);
+    if (!(await submitRef.current?.())) {
+      setShowConfirmation(false);
+    }
   };
 
   const navigate = useNavigate();
@@ -588,10 +600,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     size="medium"
                     className={styles.submitButton}
                     disabled={!canSubmit}
-                    onClick={() => {
-                      setShowConfirmation(true);
-                      submitRef.current?.();
-                    }}
+                    onClick={handleSubmitClick}
                   >
                     Submit
                   </MuiButton>

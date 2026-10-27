@@ -1,0 +1,21 @@
+{
+  "key": "ui-test-lesson-tutor",
+  "display_name": "UI Test Lesson Tutor",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Course",
+  "marketing_initiative": "AIF",
+  "grade_levels": "2,3,4,5,6,7,8,9,10,11,12",
+  "header": "favorites",
+  "image": null,
+  "cs_topic": "artificial_intelligence",
+  "school_subject": "",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "A unit whose lessons have a Tutor+ deep dive, for the lesson tutor e2e tests.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2015-01-01 11:00:00 UTC",
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": null
+}

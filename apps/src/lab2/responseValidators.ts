@@ -8,6 +8,7 @@ import {
   MultiFileSource,
   ProjectSources,
 } from './types';
+import {coerceStringBooleans} from './utils/coerceStringBooleans';
 
 // Validator for Blockly sources.
 const BlocklySourceResponseValidator: ResponseValidator<
@@ -110,15 +111,7 @@ export const LevelPropertiesMapValidator: ResponseValidator<
       throw missingFieldError('appName');
     }
 
-    // Convert stringified booleans to actual booleans.
-    for (const key of Object.keys(properties)) {
-      if (properties[key] === 'true') {
-        properties[key] = true;
-      }
-      if (properties[key] === 'false') {
-        properties[key] = false;
-      }
-    }
+    response[levelId] = coerceStringBooleans(properties);
   }
 
   return response as unknown as LevelPropertiesMap;

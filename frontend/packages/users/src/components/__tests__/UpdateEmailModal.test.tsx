@@ -14,7 +14,7 @@ function renderModal(onClose = vi.fn(), isTeacher = false) {
   const client = createQueryClient({queries: {retry: false}});
   render(
     <QueryClientProvider client={client}>
-      <ToastProvider>
+      <ToastProvider politeness="polite">
         <UpdateEmailModal open onClose={onClose} isTeacher={isTeacher} />
       </ToastProvider>
     </QueryClientProvider>,
@@ -60,7 +60,12 @@ describe('UpdateEmailModal', () => {
         current_password: 'hunter2',
       },
     });
-    expect(screen.getByText('Email updated.')).toBeInTheDocument();
+    // The announcer fills a frame after the snackbar; the still-open dialog hides it.
+    await waitFor(() =>
+      expect(screen.getByRole('status', {hidden: true})).toHaveTextContent(
+        'Email updated.',
+      ),
+    );
   });
 
   it('keeps the dialog open and shows the email error on a malformed-email 422', async () => {

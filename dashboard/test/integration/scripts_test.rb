@@ -23,7 +23,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
 
     get build_script_level_path(@lockable_level_group_sl, unit_group_unit: @unit.unit_group_units.first)
-    assert_includes @response.body, '/courses/csp-2020/units/1/lessons/14/'
+    assert_redirected_to '/courses/csp-2020/units/1/lessons/14/levels/1/page/1'
     follow_redirect!
     assert_response :success
     assert_select '.level-group', 1
@@ -42,7 +42,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
 
     get build_script_level_path(@lockable_level_group_sl, unit_group_unit: @unit.unit_group_units.first)
-    assert_includes @response.body, '/courses/csp-2020/units/1/lessons/9/'
+    assert_redirected_to '/courses/csp-2020/units/1/lessons/9/levels/1/page/1'
     follow_redirect!
     assert_response :success
     assert_select '.level-group', 1

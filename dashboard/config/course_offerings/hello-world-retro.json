@@ -1,7 +1,7 @@
 {
   "key": "hello-world-retro",
   "display_name": "Hello World: Retro",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",

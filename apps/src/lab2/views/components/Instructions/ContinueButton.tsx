@@ -5,20 +5,17 @@ import {
 import React from 'react';
 
 import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
 
 type ContinueButtonProps = Omit<MuiButtonProps, 'onClick'> & {
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
-  onContinue?: () => void;
+  onContinue: () => void;
 };
 
 /**
- * Displays the 'Continue' or 'Finish' button that advances to the next level or finishes the progression unless
- * hidden is true.
+ * Displays the 'Continue' or 'Finish' button unless hidden is true.
  */
 const ContinueButton: React.FC<ContinueButtonProps> = ({
   tooltipMessage,
@@ -28,8 +25,6 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   children,
   ...buttonProps
 }) => {
-  const dispatch = useAppDispatch();
-
   // Show tooltip when button is disabled AND we have a message.
   const shouldShowTooltip = !!disabled && !!tooltipMessage;
 
@@ -52,10 +47,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
           size="small"
           type="button"
           id="instructions-continue-button"
-          onClick={() => {
-            onContinue?.();
-            dispatch(continueOrFinishLesson());
-          }}
+          onClick={onContinue}
           disabled={disabled}
           {...buttonProps}
         >

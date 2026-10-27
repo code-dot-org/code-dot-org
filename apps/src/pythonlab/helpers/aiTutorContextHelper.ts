@@ -1,4 +1,5 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {codeBlock} from '@codebridge/utils/codeBlock';
 import {getFilePath} from '@codebridge/utils/getFilePath';
 
 import {tryFetchDocsForClass} from '@cdo/apps/aiTutor/docContextApi';
@@ -66,14 +67,14 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
               prefix = `${filePath} is not visible to the student: \n`;
             }
 
-            return `${prefix}filename: ${filePath}\n${this.codeBlock(
+            return `${prefix}filename: ${filePath}\n${codeBlock(
               file.contents ?? ''
             )}`;
           })
           .join('\n\n')
       : undefined;
 
-    const validationContents = this.codeBlock(validationFile?.contents);
+    const validationContents = codeBlock(validationFile?.contents);
 
     const validationResults = JSON.stringify(
       PythonValidationTracker.getInstance().getValidationResults()
@@ -88,7 +89,7 @@ export class AiTutorPythonLabContextHelper extends AiTutorContextHelper<AiTutorP
       ?.map(line => stripAnsiSequences(line));
     const consoleOutput =
       consoleLines && consoleLines.length > 0
-        ? this.codeBlock(consoleLines.join('\n'))
+        ? codeBlock(consoleLines.join('\n'))
         : undefined;
 
     return {

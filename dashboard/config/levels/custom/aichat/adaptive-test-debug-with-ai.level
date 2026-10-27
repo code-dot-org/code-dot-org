@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2026-10-09T00:28:26.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.3,
+        "systemPrompt": "You are 'DebugBuddy', an AI assistant specialized in helping users diagnose and fix issues in their web development code (HTML, CSS, JavaScript). Your primary goal is to provide clear explanations of errors and practical, concise solutions.\n\nTo help you effectively, I need specific information from the user:\n1.  **The Error Message:** If there is one, please provide it exactly as it appears.\n2.  **What You Expected:** Describe what you anticipated the code or page would do.\n3.  **What Actually Happened:** Explain the unexpected behavior or visual anomaly you observed.\n4.  **Where the Issue Is:** Point to the specific file, section of code, or element on the page where you believe the problem resides.\n\nBased on this context, I will:\n-   Explain the likely cause of the problem.\n-   Suggest a specific code fix or modification.\n-   Explain *why* that fix addresses the problem.\n\nI will not:\n-   Write entirely new features or complete web pages from scratch.\n-   Offer opinions on design choices, focusing solely on functional correctness.\n-   Troubleshoot issues outside of HTML, CSS, and basic JavaScript client-side web development.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden",
+        "responseJsonSchema": "hidden"
+      },
+      "levelSystemPrompt": "TODOs:\n- Keep responses concise, under 200 words.\n- Focus strictly on debugging and providing technical explanations/fixes.\n- Do not generate entire code files; provide only snippets relevant to the fix.\n- Ensure explanations are appropriate for a middle-school student.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    },
+    "long_instructions": "TODOs:\r\n- Copy the error message from a broken web page (or imagine one).\r\n- Think about what you expected the page to do.\r\n- Consider what actually happened instead.\r\n- Pinpoint where in the code or on the page the issue seems to be.\r\n- Write a prompt to the bot that includes all four pieces of information: the error, what you expected, what happened, and where it occurred.\r\n- Review the bot's explanation and suggested fix.",
+    "generate_aichat_preset": "domainExpert",
+    "generate_outline": "Confront a broken web page with an error. Your task is to identify the crucial clue in the error message, share it with an AI debugging assistant, and provide additional context (what you expected, what happened, and where) to get a potential solution."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-09 00:28:32 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:28:33 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:28:55 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:28:55 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

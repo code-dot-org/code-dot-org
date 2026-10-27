@@ -5,8 +5,10 @@
 #
 # Callers: lib/rake/ci.rake (Drone), lib/rake/test.rake (DTT).
 #
-# functional stops the build when it fails. eyes does not, because a person must
-# approve each new image. They run as two processes to get two exit codes.
+# This script runs the Playwright functional and eyes test suites. During a DTT,
+# both test suites run and will block the DTT on failure. For drone, functional
+# tests are blocking but the eyes tests are run in warning mode until we can
+# develop a visual diff strategy for PRs.
 #
 # Dependencies and browsers are installed by rake test:playwright_install, once,
 # because the DTT runs both suites at the same time in this directory.

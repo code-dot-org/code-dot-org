@@ -27,7 +27,8 @@
         "fadeInOverPrevious": true
       }
     ],
-    "use_links": "false"
+    "use_links": "false",
+    "header_label": "Getting started"
   }
 }]]></config>
 </Panels>

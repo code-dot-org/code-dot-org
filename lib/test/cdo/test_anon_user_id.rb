@@ -62,36 +62,19 @@ describe Cdo::AnonUserId do
       end
     end
 
+    context 'when value has surrounding whitespace' do
+      ["\n%s", "%s\n", "%s\r\n", ' %s '].each do |format|
+        it "rejects #{format.inspect}" do
+          _(Cdo::AnonUserId.valid?(format % SecureRandom.uuid)).must_equal false
+        end
+      end
+    end
+
     context 'when value is not a string' do
       let(:input) {123}
 
       it 'returns false' do
         _(valid?).must_equal false
-      end
-    end
-  end
-
-  describe '.valid_value' do
-    let(:valid_value) {Cdo::AnonUserId.valid_value(input)}
-    let(:input) {SecureRandom.uuid}
-
-    it 'returns valid anonymous user ID' do
-      _(valid_value).must_equal input
-    end
-
-    context 'when value is invalid' do
-      let(:input) {'invalid'}
-
-      it 'returns nil' do
-        _(valid_value).must_be_nil
-      end
-    end
-
-    context 'when value is nil' do
-      let(:input) {nil}
-
-      it 'returns nil' do
-        _(valid_value).must_be_nil
       end
     end
   end

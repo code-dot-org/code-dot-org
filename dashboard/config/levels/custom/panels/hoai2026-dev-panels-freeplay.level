@@ -15,7 +15,8 @@
         "key": "hoai2026-dev-panels-freeplay-aa500533-21a5-4a7f-893c-443019a2e95e"
       }
     ],
-    "use_links": "false"
+    "use_links": "false",
+    "header_label": "Free play"
   }
 }]]></config>
 </Panels>

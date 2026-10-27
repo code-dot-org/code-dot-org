@@ -1,0 +1,102 @@
+import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  __esModule: true,
+  default: {get: jest.fn(), put: jest.fn()},
+}));
+
+const mockLogError = jest.fn();
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {
+    getInstance: () => ({getMetricsReporter: () => ({logError: mockLogError})}),
+  },
+}));
+
+const key = {scriptId: 11, levelId: 98263};
+
+const deferred = () => {
+  let resolve: () => void = () => {};
+  const promise = new Promise<Response>(r => {
+    resolve = () => r({ok: true} as Response);
+  });
+  return {promise, resolve};
+};
+
+describe('ProgressStore', () => {
+  const http = {
+    get: HttpClient.get as jest.Mock,
+    put: HttpClient.put as jest.Mock,
+  };
+
+  beforeEach(() => {
+    jest.resetAllMocks();
+    http.put.mockResolvedValue({ok: true});
+  });
+
+  it('loads the steps for the unit and level', async () => {
+    const steps = {read: {status: 'complete', timeSpent: 4}};
+    http.get.mockResolvedValue({json: async () => ({steps})});
+    const store = new ProgressStore();
+
+    expect(await store.load(key)).toEqual({steps});
+    expect(http.get).toHaveBeenCalledWith(
+      '/adaptive_progress?scriptId=11&levelId=98263'
+    );
+  });
+
+  it('sends writes one at a time, in order', async () => {
+    const first = deferred();
+    http.put.mockReturnValueOnce(first.promise);
+    const store = new ProgressStore();
+
+    const saves = [
+      store.saveStep(key, 'read', {started: true}),
+      store.saveStep(key, 'read', {completed: true, timeSinceLastSave: 900}),
+    ];
+    await Promise.resolve();
+    expect(http.put).toHaveBeenCalledTimes(1);
+
+    first.resolve();
+    await Promise.all(saves);
+
+    expect(
+      http.put.mock.calls.map(call => [call[0], JSON.parse(call[1])])
+    ).toEqual([
+      ['/adaptive_progress/steps/read/progress', {...key, started: true}],
+      [
+        '/adaptive_progress/steps/read/progress',
+        {...key, completed: true, timeSinceLastSave: 900},
+      ],
+    ]);
+  });
+
+  it('sends generated instructions on the same chain', async () => {
+    const store = new ProgressStore();
+    const generatedInstructions = {instructions: 'Hi', inputsHash: 'ab'};
+
+    store.saveStep(key, 'read', {started: true});
+    await store.saveInstructions(key, 'project', generatedInstructions);
+
+    expect(http.put.mock.calls.map(call => call[0])).toEqual([
+      '/adaptive_progress/steps/read/progress',
+      '/adaptive_progress/steps/project/generated_instructions',
+    ]);
+    expect(JSON.parse(http.put.mock.calls[1][1])).toEqual({
+      ...key,
+      generatedInstructions,
+    });
+  });
+
+  it('logs a failed write and still sends the next', async () => {
+    http.put.mockRejectedValueOnce(new Error('500'));
+    const store = new ProgressStore();
+
+    store.saveStep(key, 'read', {started: true});
+    await store.saveStep(key, 'read', {completed: true});
+
+    expect(mockLogError).toHaveBeenCalledTimes(1);
+    expect(http.put).toHaveBeenCalledTimes(2);
+  });
+});

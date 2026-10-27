@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<img src="https://images.code.org/262b74e7a031a24d957bd691251b5d03-HS7.png" alt="INSERT ALT TEXT HERE — describe what this image actually shows once selected" style="width: 35%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
+<img src="https://images.code.org/262b74e7a031a24d957bd691251b5d03-HS7.png" alt="students walking down school hallway toward the camera" style="width: 35%; border-radius: 10px; margin: 0px 0px 10px 10px; float: right;">
 
 # Getting Ready for the Curriculum
 
@@ -21,46 +21,46 @@ This module highlights important concepts and teaching strategies, but it doesn'
 
 <div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: 25px auto;">
 
-  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <h3>PL Lesson 1 - Getting Started</h3>
-    <div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-size: 11pt; font-weight: bold; padding: 4px 10px; border-radius: 10px; margin-bottom: 8px;">You are here</div>
-    <div>A short orientation to what this module covers and how to move through it, plus where Unit 1 fits into the year-long course and the AI-901 certification.<br><br><em>10 minutes</em></div>
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Section 1 - Getting Started</h3>
+    <div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-size: 13px; font-weight: bold; padding: 4px 10px; border-radius: 10px; margin-bottom: 8px;">You are here</div>
+    <div style="font-size: 16px; line-height: 1.5;">A short orientation to what this module covers and how to move through it, plus where Unit 1 fits into the year-long course and the AI-901 certification.<br><br><em>10 minutes</em></div>
   </div>
 
-  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <h3>PL Lesson 2 - What Is AI, Really?</h3>
-    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lessons 1-2</div>
-    <div>Before diving into code, students need a working definition of intelligence itself. You'll preview the sorting activity that surfaces "AI is many approaches, not one," plus a condensed history walkthrough grounding AI in linguistics, math, and psychology.<br><br><em>15 minutes</em></div>
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Section 2 - What Is AI, Really?</h3>
+    <div style="font-size: 13px; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum Lessons 1-2</div>
+    <div style="font-size: 16px; line-height: 1.5;">Before diving into code, students need a working definition of intelligence itself. You'll preview the sorting activity that surfaces "AI is many approaches, not one," plus a condensed history walkthrough grounding AI in linguistics, math, and psychology.<br><br><em>15 minutes</em></div>
   </div>
 
-  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <h3>PL Lesson 3 - Python Basics</h3>
-    <div style="font-size: 11pt; color: #555555; margin-bottom: 6px;">Aligns to curriculum lessons 3-5</div>
-    <div>Pseudocode, variables, and functions: this is where students write their first lines of Python. You'll walk through the same syntax-error triage and defining-vs-calling distinctions students commonly need help with early on.<br><br><em>30 minutes</em></div>
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Section 3 - Python Basics</h3>
+    <div style="font-size: 13px; color: #555555; margin-bottom: 6px;">Aligns to curriculum Lessons 3-5</div>
+    <div style="font-size: 16px; line-height: 1.5;">Pseudocode, variables, and functions: this is where students write their first lines of Python. You'll walk through the same syntax-error triage and defining-vs-calling distinctions students commonly need help with early on.<br><br><em>30 minutes</em></div>
   </div>
 
-  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <h3>PL Lesson 4 - Optimization in Action</h3>
-    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lesson 6</div>
-    <div>Optimization sounds abstract until students see it in action. This lesson previews the hill-climbing simulation and unplugged thermostat activity that make the concept concrete, along with the local-vs-global-optimum distinction students often miss.<br><br><em>20 minutes</em></div>
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Section 4 - Optimization in Action</h3>
+    <div style="font-size: 13px; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum Lesson 6</div>
+    <div style="font-size: 16px; line-height: 1.5;">Optimization sounds abstract until students see it in action. This section previews the hill-climbing simulation and unplugged thermostat activity that make the concept concrete, along with the local-vs-global-optimum distinction students often miss.<br><br><em>20 minutes</em></div>
   </div>
 
-  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <h3>PL Lesson 5 - Loop Basics</h3>
-    <div style="font-size: 11pt; color: #555555; margin-bottom: 6px;">Aligns to curriculum lessons 7-8</div>
-    <div>For loops and while loops are really one skill taught across two lessons. You'll step through the same loop executions your students will trace, and preview the off-by-one and infinite-loop mistakes to watch for.<br><br><em>20 minutes</em></div>
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Section 5 - Loop Basics</h3>
+    <div style="font-size: 13px; color: #555555; margin-bottom: 6px;">Aligns to curriculum Lessons 7-8</div>
+    <div style="font-size: 16px; line-height: 1.5;">For loops and while loops are really one skill taught across two lessons. You'll step through the same loop executions your students will trace, and preview the off-by-one and infinite-loop mistakes to watch for.<br><br><em>20 minutes</em></div>
   </div>
 
-  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <h3>PL Lesson 6 - Reasoning and Its Limits</h3>
-    <div style="font-size: 11pt; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum lessons 9-12</div>
-    <div>This lesson traces an arc: reading logic, building logic, then questioning logic. You'll preview how students debug real error messages, translate decision trees into code, and confront where rule-based AI breaks down, setting up why machine learning exists in Unit 2.<br><br><em>25 minutes</em></div>
+  <div style="background: #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Section 6 - Reasoning and Its Limits</h3>
+    <div style="font-size: 13px; color: #1F1976; margin-bottom: 6px;">Aligns to curriculum Lessons 9-12</div>
+    <div style="font-size: 16px; line-height: 1.5;">This section traces an arc: reading logic, building logic, then questioning logic. You'll preview how students debug real error messages, translate decision trees into code, and confront where rule-based AI breaks down, setting up why machine learning exists in Unit 2.<br><br><em>25 minutes</em></div>
   </div>
 
-  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; font-size: 14pt; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
-    <h3>PL Lesson 7 - Bringing It Together</h3>
-    <div style="font-size: 11pt; color: #555555; margin-bottom: 6px;">Aligns to curriculum lesson 13</div>
-    <div>Students apply the whole unit in one project: choosing a topic, drawing a decision tree, then implementing it in Python. You'll preview the rubric and the most common failure mode, a working program whose decision tree doesn't reflect meaningful branching, so you're ready to coach a student through it.<br><br><em>15 minutes</em></div>
+  <div style="background: #FFFFFF; border: 1px solid #E4E2F8; border-left: 6px solid #4C42CF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <h3>Section 7 - Bringing It Together</h3>
+    <div style="font-size: 13px; color: #555555; margin-bottom: 6px;">Aligns to curriculum Lesson 13</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students apply the whole unit in one project: choosing a topic, drawing a decision tree, then implementing it in Python. You'll preview the rubric and the most common failure mode, a working program whose decision tree doesn't reflect meaningful branching, so you're ready to coach a student through it.<br><br><em>15 minutes</em></div>
   </div>
 
 </div>

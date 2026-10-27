@@ -8,7 +8,11 @@ export interface AttemptCardProps {
   title: string;
   description?: React.ReactNode;
   children?: React.ReactNode;
+  // A bordered row between the body and the footer.
+  beforeFooterBorderedRow?: React.ReactNode;
   footer?: React.ReactNode;
+  // For moving focus to this card's heading.
+  headingRef?: React.Ref<HTMLHeadingElement>;
 }
 
 // Shared card shell for the intro screen and every question type.
@@ -17,7 +21,9 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
   title,
   description,
   children,
+  beforeFooterBorderedRow,
   footer,
+  headingRef,
 }) => (
   <div className={styles.card}>
     <div className={styles.content}>
@@ -28,8 +34,12 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
               {label}
             </Typography>
           )}
-          {/* Lets a page-change handler focus this heading programmatically. */}
-          <Typography variant="h4" component="h2" tabIndex={-1}>
+          <Typography
+            ref={headingRef}
+            variant="h4"
+            component="h2"
+            tabIndex={-1}
+          >
             {title}
           </Typography>
         </div>
@@ -37,6 +47,11 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
       </div>
       {children && <div className={styles.body}>{children}</div>}
     </div>
+    {beforeFooterBorderedRow && (
+      <div className={styles.beforeFooterBorderedRow}>
+        {beforeFooterBorderedRow}
+      </div>
+    )}
     {footer && <div className={styles.actionRow}>{footer}</div>}
   </div>
 );

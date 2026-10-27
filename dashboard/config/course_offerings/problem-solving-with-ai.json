@@ -1,7 +1,7 @@
 {
   "key": "problem-solving-with-ai",
   "display_name": "Problem Solving with AI",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "AIF",

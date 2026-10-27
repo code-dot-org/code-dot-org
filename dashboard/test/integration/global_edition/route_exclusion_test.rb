@@ -31,6 +31,46 @@ class GlobalEditionRouteExclusionTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe 'v3 assets' do
+    let(:asset_path) {'/v3/assets/channel/cat.png'}
+    let(:asset_body) {'image contents'}
+
+    before do
+      AssetBucket.any_instance.stubs(:get).with('channel', 'cat.png', nil, nil).returns(
+        status: 'FOUND',
+        body: StringIO.new(asset_body),
+        metadata: {},
+        last_modified: Time.utc(2026, 1, 1),
+        version_id: 'asset-version'
+      )
+    end
+
+    it 'serves an image without redirecting or changing the es-MX locale' do
+      cookies[:ge_region] = 'us'
+      cookies[:language_] = 'es-MX'
+
+      get asset_path
+
+      must_respond_with 200
+      _(response.media_type).must_equal 'image/png'
+      _(response.body).must_equal asset_body
+      _(cookies[:language_]).must_equal 'es-MX'
+    end
+
+    it 'serves a region-prefixed image when CloudFront forwards no cookies or language header' do
+      cookies.delete('ge_region')
+      cookies.delete('language_')
+
+      get "/us/es#{asset_path}", headers: {'Accept-Language' => ''}
+
+      _(request.cookies).must_be_empty
+      must_respond_with 200
+      _(response.media_type).must_equal 'image/png'
+      _(response.body).must_equal asset_body
+      _(cookies[:language_]).must_be_nil
+    end
+  end
+
   describe 'oauth' do
     around do |test|
       original_omniauth_test_mode = OmniAuth.config.test_mode

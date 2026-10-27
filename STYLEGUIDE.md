@@ -68,7 +68,7 @@ Fallback: https://github.com/styleguide/ruby
 ### Writing Unit Tests
 Our unit testing library is [Minitest](https://github.com/minitest/minitest). 
 
-When writing unit tests we recommend you use the [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-). Our default MiniTest Spec has been extended to include some RSpec features such as [`subject`](https://rspec.info/features/3-13/rspec-core/subject/explicit-subject/) or [`let!`](https://rspec.info/features/3-13/rspec-core/helper-methods/let/)
+When writing unit tests we recommend you use the [Specs Syntax](https://github.com/minitest/minitest?tab=readme-ov-file#specs-). Our default Minitest Spec has been extended to include some RSpec features such as [`subject`](https://rspec.info/features/3-13/rspec-core/subject/explicit-subject/) or [`let!`](https://rspec.info/features/3-13/rspec-core/helper-methods/let/)
 
 This documentation represents a collection of references and resources for following best practices of Specs Syntax. It is intended to guide developers in writing clean, maintainable, and consistent unit tests using the Specs Syntax.
 

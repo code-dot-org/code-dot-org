@@ -103,6 +103,22 @@ describe('WorldTab palette', () => {
     );
   });
 
+  it('offers a New square above the palette only when asked to', () => {
+    const onNewPicture = jest.fn();
+    const {unmount} = renderTab({onNewPicture});
+    const newSquare = screen.getByRole('button', {name: 'New'});
+    expect(
+      screen
+        .getByRole('radiogroup', {name: 'Items to place'})
+        .contains(newSquare)
+    ).toBe(false);
+    fireEvent.click(newSquare);
+    expect(onNewPicture).toHaveBeenCalled();
+    unmount();
+    renderTab();
+    expect(screen.queryByRole('button', {name: 'New'})).toBeNull();
+  });
+
   it('drops a dragged item onto the cell under the pointer', () => {
     const {onPaintCell, onSelect} = renderTab();
     const stone = screen.getByRole('radio', {name: /Stone, block/});
@@ -236,9 +252,10 @@ describe('WorldTab palette', () => {
         onMoveCell,
       });
       expect(screen.queryByRole('radio', {name: /Erase/})).toBeNull();
+      // The stone is of a kind this palette cannot place, so it stays.
       dragHero(100 + 1 + 50 + 10, 110);
       expect(onMoveCell).not.toHaveBeenCalled();
-      expect(screen.getByText('That square is taken.')).toBeTruthy();
+      expect(screen.getByText('That one stays.')).toBeTruthy();
       dragHero(100 + 1 + 50 * 4 + 10, 100 + 1 + 50 * 2 + 10);
       expect(onMoveCell).toHaveBeenCalledWith(2, 4, hero);
       expect(onPaintCell).not.toHaveBeenCalled();
@@ -255,7 +272,7 @@ describe('WorldTab palette', () => {
       const cells = screen.getAllByRole('gridcell');
       fireEvent.keyDown(cells[0], {key: 'Enter'});
       expect(onMoveCell).not.toHaveBeenCalled();
-      expect(screen.getByText('That square is taken.')).toBeTruthy();
+      expect(screen.getByText('That one stays.')).toBeTruthy();
       fireEvent.keyUp(cells[0], {key: 'Enter'});
       fireEvent.keyDown(cells[0], {key: 'ArrowRight'});
       fireEvent.keyDown(cells[1], {key: 'Enter'});
@@ -273,6 +290,42 @@ describe('WorldTab palette', () => {
       });
       fireEvent.keyDown(screen.getAllByRole('gridcell')[0], {key: 'Delete'});
       expect(onPaintCell).toHaveBeenCalledWith(0, 0, null);
+    });
+
+    it('keeps a cell whose kind the palette cannot place', () => {
+      // A blocks-only palette: the hero stays through Erase, Delete and
+      // painting over.
+      const {onPaintCell} = renderTab({
+        only: 'Stone',
+        world: {grid: [[hero]]},
+        selected: 'erase',
+      });
+      const cell = screen.getAllByRole('gridcell')[0];
+      expect(cell.textContent).toContain('stays');
+      expect(cell.className).toContain('worldCellBlocked');
+      fireEvent.pointerDown(cell, {pointerId: 1});
+      fireEvent.keyDown(cell, {key: 'Delete'});
+      expect(onPaintCell).not.toHaveBeenCalled();
+      expect(screen.getByText('That one stays.')).toBeTruthy();
+    });
+
+    it('refuses a held cell of a kind the palette offers as taken', () => {
+      const onMoveCell = jest.fn();
+      // Both kinds on offer: the stone could be put back, so it is only
+      // taken, not kept.
+      renderTab({
+        world: {grid: [[stone, hero]]},
+        onMoveCell,
+        selected: hero,
+      });
+      const cells = screen.getAllByRole('gridcell');
+      // The cursor says so on the stone, not on the hero's own cell, which
+      // a press would remove.
+      expect(cells[0].className).toContain('worldCellBlocked');
+      expect(cells[1].className).not.toContain('worldCellBlocked');
+      fireEvent.keyDown(cells[0], {key: 'Enter'});
+      expect(onMoveCell).not.toHaveBeenCalled();
+      expect(screen.getByText('That square is taken.')).toBeTruthy();
     });
 
     it('keeps a one-cell palette shape with nothing to place', () => {

@@ -1,6 +1,8 @@
 import AichatContextManager from '../aichat/aichatContextManager';
+import {AichatContext} from '../aichat/types';
 import HttpClient from '../util/HttpClient';
 
+import {parseSigningKey, type SigningKey} from './requestMetric';
 import {
   parseTurnstileEnforcementMode,
   type TurnstileEnforcementMode,
@@ -17,31 +19,36 @@ export interface GatewayAccessToken {
    * worker's enforcement always come from the same value.
    */
   turnstileEnforcementMode: TurnstileEnforcementMode;
+  /** The key Rails signed `token` with, chosen by a DCDO flag during the initial rollout. */
+  signingKey: SigningKey | undefined;
 }
 
-export async function fetchAccessToken(): Promise<GatewayAccessToken> {
+// Use the provided AichatContext or fall back to the default context.
+export async function fetchAccessToken(
+  aichatContext: AichatContext = AichatContextManager.getContext()
+): Promise<GatewayAccessToken> {
   const response = await HttpClient.post(
     '/ai_gateway/access_token',
-    JSON.stringify({
-      aichatContext: AichatContextManager.getContext(),
-    }),
+    JSON.stringify({aichatContext}),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',
     }
   );
-  // turnstileEnforcementMode is deliberately typed as unknown rather than asserted: it is
-  // absent from servers predating the flag, and parseTurnstileEnforcementMode is what
-  // turns anything unexpected into a safe default.
   const value = (await response.json()) as {
-    token: string;
+    token?: unknown;
     turnstileEnforcementMode?: unknown;
+    signingKey?: unknown;
   };
+  if (typeof value.token !== 'string') {
+    throw new Error('AI Gateway token response has no token');
+  }
   return {
     token: value.token,
     turnstileEnforcementMode: parseTurnstileEnforcementMode(
       value.turnstileEnforcementMode
     ),
+    signingKey: parseSigningKey(value.signingKey),
   };
 }
 

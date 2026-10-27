@@ -9,18 +9,32 @@ export const TEXT_FONT_STYLE = 'bold';
 export const MIN_FONT_SIZE = 12;
 export const MIN_TEXT_WIDTH = 40;
 
-export interface CanvasTextItem {
+interface CanvasPlacement {
   id: string;
+  x: number;
+  y: number;
+  rotation: number;
+}
+
+export interface CanvasTextItem extends CanvasPlacement {
   text: string;
   color: string;
   style: TextStyle;
-  x: number;
-  y: number;
   width: number;
   fontSize: number;
 }
 
 export type NewCanvasText = Pick<CanvasTextItem, 'text' | 'color' | 'style'>;
+
+export interface CanvasStickerItem extends CanvasPlacement {
+  src: string;
+  size: number;
+}
+
+// One list so stacking follows the order items were added.
+export type CanvasItem =
+  | ({kind: 'text'} & CanvasTextItem)
+  | ({kind: 'sticker'} & CanvasStickerItem);
 
 export interface TextAttrs {
   fill: string;
@@ -86,12 +100,12 @@ export function textStyleAttrs(
   }
 }
 
-const CORNER_ANCHORS = new Set([
+export const CORNER_ANCHORS = [
   'top-left',
   'top-right',
   'bottom-left',
   'bottom-right',
-]);
+];
 
 // Corner drags scale the font with the box; side drags only rewrap
 export function resizeText(
@@ -99,7 +113,7 @@ export function resizeText(
   anchor: string | null,
   scale: number
 ): Pick<CanvasTextItem, 'width' | 'fontSize'> {
-  if (anchor && CORNER_ANCHORS.has(anchor)) {
+  if (anchor && CORNER_ANCHORS.includes(anchor)) {
     // One factor for both keeps the box's proportions
     const clamped = Math.max(
       scale,

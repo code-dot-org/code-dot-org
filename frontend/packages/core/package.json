@@ -79,6 +79,7 @@
   },
   "scripts": {
     "build": "vite build && tsc --noEmit",
+    "clean": "rimraf dist",
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -116,6 +117,7 @@
     "react": "catalog:",
     "react-dom": "catalog:",
     "react-redux": "catalog:",
+    "rimraf": "catalog:",
     "typescript": "catalog:",
     "uuid": "^14.0.0",
     "vite": "catalog:",

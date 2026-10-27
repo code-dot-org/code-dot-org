@@ -1,7 +1,7 @@
 {
   "key": "poetry",
   "display_name": "Coding with Poetry",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "CSC",

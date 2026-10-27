@@ -374,7 +374,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
     student_code_data[:student_code] = allowlist_source_files(student_code_data[:student_code])
 
     code_data = {
-      "Level Long Instructions" => "{#{ActionController::Base.helpers.strip_tags(level.long_instructions)&.gsub(/\s+/, ' ')&.strip || 'No long instructions'}}",
+      "Level Long Instructions" => "{#{ActionController::Base.helpers.strip_tags(level.try(:generated_long_instructions) || level.long_instructions)&.gsub(/\s+/, ' ')&.strip || 'No long instructions'}}",
       "Level Short Instructions" => level.short_instructions,
       "Student Response" => student_code_data.to_json
     }

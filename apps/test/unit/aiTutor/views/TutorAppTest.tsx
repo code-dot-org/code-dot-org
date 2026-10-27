@@ -6,15 +6,15 @@ import {MemoryRouter} from 'react-router-dom';
 
 import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import TutorApp from '@cdo/apps/aiTutor/views/TutorApp';
+import experiments from '@cdo/apps/util/experiments';
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer',
   () => ({__esModule: true, default: () => <div>lesson-deep-dive</div>})
 );
 
-jest.mock('@cdo/apps/aiTutor/views/gallery/ChallengeGallery', () => ({
-  __esModule: true,
-  default: () => <div>challenge-gallery</div>,
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ChallengeGallery: () => <div>challenge-gallery</div>,
 }));
 
 jest.mock(
@@ -50,6 +50,7 @@ const LESSON_DATA: LessonDeepDiveData = {
 
 const GALLERY_DATA: TutorGalleryData = {
   currentUnitId: 1,
+  is_teacher: false,
   units: [],
   sections: [],
 };
@@ -70,6 +71,14 @@ function renderAt(
 }
 
 describe('TutorApp routing', () => {
+  beforeEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
+  });
+
+  afterEach(() => {
+    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+  });
+
   describe('index redirect', () => {
     it('redirects to welcome when lessonDeepDiveData is present', () => {
       renderAt('/');
@@ -114,6 +123,12 @@ describe('TutorApp routing', () => {
 
     it('does not render the gallery route when tutorGalleryData is null', () => {
       renderAt('/gallery', LESSON_DATA, null);
+      expect(screen.queryByText('challenge-gallery')).not.toBeInTheDocument();
+    });
+
+    it('does not render the gallery route when lesson-tutor-challenge is off', () => {
+      experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+      renderAt('/gallery');
       expect(screen.queryByText('challenge-gallery')).not.toBeInTheDocument();
     });
   });

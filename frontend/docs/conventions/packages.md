@@ -45,6 +45,9 @@ has non-obvious data flow, stateful services, or significant constraints.
 - Use `vite-plugin-externalize-deps` to exclude all peer deps from the bundle
 - Set `preserveModules: true` for dual ESM+CJS output (tree-shakeable)
 - Labs use a standard app config (no `preserveModules`); libraries use library mode
+- Set `build.emptyOutDir: false` and provide `"clean": "rimraf dist"`.
+  Consumers watch `dist/`; `turbo clean` empties it once per session, never
+  mid-build.
 - `preserveModules` and CSS modules conflict: per-module output emits
   `*.module.css`, which a consumer whose CSS-modules rule matches that glob
   (Vite's default does) re-hashes, silently dropping the already-hashed class
@@ -218,12 +221,16 @@ Visual regression rides on `@code-dot-org/playwright-support`: writing a
 snapshots, and CI diffs against Applitools. Visual projects are chromium-only
 by default; widen with `visualProjects({browsers})`.
 
-The generator also creates `.github/workflows/<name>-ci.yml` (two jobs: `build`
-via `turbo release:dryrun` and `e2e` via Playwright in the pinned container, with
-`VISUAL_PROVIDER=applitools` + `APPLITOOLS_API_KEY` so `@visual` tests diff against
-Eyes) and updates `frontend-ci.yml` with a `paths-filter` output, filter entry,
-conditional job (passing `playwright-image-tag`), and `teardown.needs` entry for
-the new lab.
+### Github Actions
+
+Packages within the `frontend` directory uses Github Actions for CI as its primary CI gate. All packages are expected to implement:
+
+- `release:dryrun` - Lint, typecheck, unit tests, etc.
+
+The following are optional depending on the needs of the package.
+
+- `test:ui:ci` - UI integration tests local to the package, with `test:ui` as its local form. Expected of frontend packages.
+- `deploy` - If a package needs to be deployed (e.g. Github Pages, NPM, etc.)
 
 ## Runtime config
 

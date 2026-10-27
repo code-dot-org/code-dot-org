@@ -1,0 +1,40 @@
+name 'pl-aif-y2-u1-l4-optimization-padlet'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+
+## AI-901 Connection
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.5;">
+    <strong>&#8505; Where this shows up again:</strong> AI-901 doesn't name hill climbing specifically, but the underlying logic does resurface: when you're selecting or tuning a model in Domain 2's Foundry work, you're doing a version of the same thing students just practiced, trying an option, checking whether it performed better, and converging toward a good choice rather than guessing at the best one outright.
+  </div>
+</div>
+
+## Share Your Approach
+
+Every teacher adapts an activity a little differently once it hits their own classroom. Share one way you'd adapt the hill-climbing or thermostat activity for your students, a different real-world example, a tweak to the pacing, anything that worked for you.
+
+<div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/s024vis4dfoiydqw1hxz" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p></div>
+
+<hr>
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 24px 0 16px 0;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 20px; width: 36px; height: 36px; min-width: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">&#10003;</div>
+    <div style="font-size: 16px; color: #1F1976;">
+      <strong>Section 4 Complete</strong><br>
+      Nice work! You've finished Optimization in Action.
+    </div>
+  </div>
+</div>
+
+<div style="background-color: #4C42CF; color: #FFFFFF; border-radius: 8px; padding: 14px 20px; margin-bottom: 16px;">
+  <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Up Next</span><br>
+  <span style="font-size: 18px; font-weight: bold;">Section 5: Loop Basics</span>
+</div>
+
+
+
+MARKDOWN

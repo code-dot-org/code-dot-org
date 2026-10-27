@@ -33,7 +33,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-04 20:17:51 UTC",
+    "serialized_at": "2026-10-20 18:39:24 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1543,7 +1543,7 @@
       "key": "883b824d-86f1-4db4-88e9-8868d9b0569b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [Make Music, Learn Code](https://www.youtube.com/watch?v=GqlP5s7KTl4) video\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Think Pair Share:** After watching the video, silently brainstorm how music and technology work together how using computers to make music creates new opportunities for musicians. Then have student turn to a partner to share. Call on 2-3 groups to share their discussion. \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this prompt to surface observations from the video about how music and technology are interconnected, such as designing songs fully \"within the box\". Extend the discussion to highlight areas that students may be excited by as they learn more about music lab.\n\n**Distribute:** Problem Solving & Computational Thinking resource. Students will use this resource to follow a clear problem-solving process and apply computational thinking strategies at each step to solve complex problems effectively.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the four aspects of computational thinking:\n- **Algorithmic Thinking:** Going step-by-step to solve a problem\n- **Pattern Recognition:** Using similarities and patterns to solve a problem\n- **Abstraction:** Breaking down a problem into smaller pieces\n- **Decomposition:** Focusing on important details to solve a problem\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are many ways music and technology are connected in real-life, but another important aspect is how musicians and computer scientists think about creating songs or solving problems. Throughout this unit, we're going to explore four key computational mindsets for how to create songs with code. Be on the lookout for these as we learn more about Music Lab today!",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [Make Music, Learn Code](https://www.youtube.com/watch?v=GqlP5s7KTl4) video\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Think Pair Share:** After watching the video, silently brainstorm how music and technology work together how using computers to make music creates new opportunities for musicians. Then have student turn to a partner to share. Call on 2-3 groups to share their discussion. \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this prompt to surface observations from the video about how music and technology are interconnected, such as designing songs fully \"within the box\". Extend the discussion to highlight areas that students may be excited by as they learn more about music lab.\n\n**Distribute:** Problem Solving & Computational Thinking resource. Students will use this resource to follow a clear problem-solving process and apply computational thinking strategies at each step to solve complex problems effectively.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the four aspects of computational thinking:\n- **Algorithmic Thinking:** Going step-by-step to solve a problem\n- **Pattern Recognition:** Using similarities and patterns to solve a problem\n- **Abstraction:** Focusing on important details to solve a problem\n- **Decomposition:** Breaking down a problem into smaller pieces\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are many ways music and technology are connected in real-life, but another important aspect is how musicians and computer scientists think about creating songs or solving problems. Throughout this unit, we're going to explore four key computational mindsets for how to create songs with code. Be on the lookout for these as we learn more about Music Lab today!",
         "progression_name": "Make Music, Learn Code Video"
       },
       "seeding_key": {
@@ -3384,6 +3384,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-612-pre_2025-v2_2026"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3406,6 +3409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-intro-choice_v2_2025-v2_2026"
+        ],
         "progression": "Client Stories"
       },
       "bonus": false,
@@ -3428,6 +3434,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-intro-try_v2_2025-v2_2026"
+        ],
         "progression": "Prepare & Try"
       },
       "bonus": false,
@@ -3450,6 +3459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-investigate_v2_2025-v2_2026"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -3472,6 +3484,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-sequential-overviewpanel_20_2026"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -3494,6 +3509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-predict_v2_2025-v2_2026"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3516,6 +3534,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-1_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3538,6 +3559,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-2_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3560,6 +3584,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-together-3_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3582,6 +3609,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-explore-formative_v2_2025-v2_2026"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3604,6 +3634,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-choice-level_v2_2025-v2_2026"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3626,6 +3659,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-explore-evaluative_v2_2025-v2_2026"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3648,6 +3684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-song-choice-level_v2_2025-v2_2026"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -3670,6 +3709,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-predict_v2_2025-v2_2026"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3692,6 +3734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-panel_v2_2025-v_2026"
+        ],
         "progression": "Play Sequential"
       },
       "bonus": false,
@@ -3714,6 +3759,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-1_v2_2025-v2_2026"
+        ],
         "progression": "Play Sequential"
       },
       "bonus": false,
@@ -3736,6 +3784,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-2_v2_2025-v2_2026"
+        ],
         "progression": "Play Sequential"
       },
       "bonus": false,
@@ -3758,6 +3809,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequence-practice-formative_v2_2025-v2_2026"
+        ],
         "progression": "Check-in"
       },
       "bonus": false,
@@ -3780,6 +3834,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-rest-predict_v2_2025-v2_2026"
+        ],
         "progression": "Rests"
       },
       "bonus": false,
@@ -3802,6 +3859,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-rest-panel_v2_2025-v2_2026"
+        ],
         "progression": "Rests"
       },
       "bonus": false,
@@ -3824,6 +3884,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-rest-1_v2_2025-v2_2026"
+        ],
         "progression": "Rests"
       },
       "bonus": false,
@@ -3846,6 +3909,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-artist-choice_v2_2025-v2_2026"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3868,6 +3934,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequencing-practice-evaluative_v2_2025-v2_2026"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3890,6 +3959,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-practice-choice_v2_2025-v2_2026"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -3912,6 +3984,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-synthesize-recap-choice-panels_v2_2025-v_2026"
+        ],
         "progression": "Skill Review"
       },
       "bonus": false,
@@ -3934,6 +4009,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequencing-synthesis-formative_v2_2025-v2_2026"
+        ],
         "progression": "Check-in"
       },
       "bonus": false,
@@ -3956,6 +4034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-sequencing-synthesize-panels_v2_2025-v2_2026"
+        ],
         "progression": "Spotlight: Henny Tha Bizness, Record Producer"
       },
       "bonus": false,
@@ -3978,6 +4059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-synthesize-filters-predict_v2_2025-v2_2026"
+        ],
         "progression": "Effects"
       },
       "bonus": false,
@@ -4000,6 +4084,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-synthesize-effects-panel_v2_2025-v2_2026"
+        ],
         "progression": "Effects"
       },
       "bonus": false,
@@ -4022,6 +4109,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-synthesize-filters-1_v2_2025-v2_2026"
+        ],
         "progression": "Effects"
       },
       "bonus": false,
@@ -4044,6 +4134,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-synthesize-filters-2_v2_2025-v2_2026"
+        ],
         "progression": "Effects"
       },
       "bonus": false,
@@ -4066,6 +4159,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-synthesize-filters-choice_v2_2025-v2_2026"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4088,6 +4184,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-sequencing-synthesis-reflect-levelgroup_v2_2025-v2_2026"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4110,6 +4209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-synthesize-effects-practice-choice_v2_20_2026"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -4132,6 +4234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-walkup-examples-choice_2025-v2_2026"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -4154,6 +4259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-triggers-panel_v2_2025-v2_2026"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -4176,6 +4284,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-triggers-2_v2_2025-v2_2026"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -4198,6 +4309,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-triggers-3_v2_2025-v2_2026"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -4220,6 +4334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-sequencing-project-prepare_v2_2025-v2_2026"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -4242,6 +4359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-1_v2_2025-v2_2026"
+        ],
         "progression": "Walk-Up Songs"
       },
       "bonus": false,
@@ -4264,6 +4384,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-2_v2_2025-v2_2026"
+        ],
         "progression": "Walk-Up Songs"
       },
       "bonus": false,
@@ -4286,6 +4409,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-3_v2_2025-v2_2026"
+        ],
         "progression": "Walk-Up Songs"
       },
       "bonus": false,
@@ -4308,6 +4434,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-walk-4_v2_2025-v2_2026"
+        ],
         "progression": "Submit Your Project!"
       },
       "bonus": false,
@@ -4330,6 +4459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-explore-1_v2_2025-v2_2026"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4352,6 +4484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-explore-2_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4374,6 +4509,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-explore-3_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4396,6 +4534,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-explore-4_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4418,6 +4559,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-explore-formative_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4440,6 +4584,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-explore-summative_v2_2025-v2_2026"
+        ],
         "progression": "Check-in"
       },
       "bonus": false,
@@ -4462,6 +4609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-explore-practice-choice_v2_2025-v2_2026"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4484,6 +4634,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-explore-practice-a_v2_2025-v2_2026"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4506,6 +4659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-explore-challenge-choice_v2_2025-v2_2026"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -4528,6 +4684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-parallel-panels_v2_2025-v2_2026"
+        ],
         "progression": "Loops with Lyrics"
       },
       "bonus": false,
@@ -4550,6 +4709,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-parson_v2_2025-v2_2026"
+        ],
         "progression": "Loops with Lyrics"
       },
       "bonus": false,
@@ -4572,6 +4734,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-practice-practice-4_v2_2025-v2_2026"
+        ],
         "progression": "Loops with Lyrics"
       },
       "bonus": false,
@@ -4594,6 +4759,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-panel-nested-loops_v2_2025-v2_2026"
+        ],
         "progression": "Nested Loops"
       },
       "bonus": false,
@@ -4616,6 +4784,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-nested-loops-2_v2_2025-v2_2026"
+        ],
         "progression": "Nested Loops"
       },
       "bonus": false,
@@ -4638,6 +4809,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-nested-loops-1_v2_2025-v2_2026"
+        ],
         "progression": "Nested Loops"
       },
       "bonus": false,
@@ -4660,6 +4834,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-formative_v2_2025-v2_2026"
+        ],
         "progression": "Check-in"
       },
       "bonus": false,
@@ -4682,6 +4859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-panel-offbeat_v2_2025-v2_2026"
+        ],
         "progression": "Loops with Rests"
       },
       "bonus": false,
@@ -4704,6 +4884,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-offbeat-1_v2_2025-v2_2026"
+        ],
         "progression": "Loops with Rests"
       },
       "bonus": false,
@@ -4726,6 +4909,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-offbeat-2_v2_2025-v2_2026"
+        ],
         "progression": "Loops with Rests"
       },
       "bonus": false,
@@ -4748,6 +4934,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-choice_v2_2025-v2_2026"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4770,6 +4959,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-practice-summative_v2_2025-v2_2026"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4792,6 +4984,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-practice-challenge_v2_2025-v2_2026"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -4814,6 +5009,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-recap-choice_v2_2025-v2_2026"
+        ],
         "progression": "Skill Review"
       },
       "bonus": false,
@@ -4836,6 +5034,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-synthesis-formative_v2_2025-v2_2026"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4858,6 +5059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-project-panels_v2_2025-v2_2026"
+        ],
         "progression": "Spotlight: Roxanne Harris, Creative Coder"
       },
       "bonus": false,
@@ -4880,6 +5084,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-skill-1_v2_2025-v2_2026"
+        ],
         "progression": "Live Coding"
       },
       "bonus": false,
@@ -4902,6 +5109,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-skill-2_v2_2025-v2_2026"
+        ],
         "progression": "Live Coding"
       },
       "bonus": false,
@@ -4924,6 +5134,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-skill-3_v2_2025-v2_2026"
+        ],
         "progression": "Live Coding"
       },
       "bonus": false,
@@ -4946,6 +5159,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-skill-4a_v2_2025-v2_2026"
+        ],
         "progression": "Live Coding"
       },
       "bonus": false,
@@ -4968,6 +5184,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-skill-4b_v2_2025-v2_2026"
+        ],
         "progression": "Live Coding"
       },
       "bonus": false,
@@ -4990,6 +5209,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-sythesize-skill-4c_v2_2025-v2_2026"
+        ],
         "progression": "Live Coding"
       },
       "bonus": false,
@@ -5012,6 +5234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-synthesis-practice-choice_v2_2025-v2_2026"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5034,6 +5259,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-synthesis-reflect-levelgroup_v2_2025-v2_2026"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5056,6 +5284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-loops-synthesis-challenge-choice_v2_2025-v2_2026"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -5078,6 +5309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-cats-examples-choice_2025-v2_2026"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -5100,6 +5334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-random-panel_v2_2025-v2_2026"
+        ],
         "progression": "Play Random"
       },
       "bonus": false,
@@ -5122,6 +5359,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-random-3_v2_2025-v2_2026"
+        ],
         "progression": "Play Random"
       },
       "bonus": false,
@@ -5144,6 +5384,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-random-2_v2_2025-v2_2026"
+        ],
         "progression": "Play Random"
       },
       "bonus": false,
@@ -5166,6 +5409,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-random-4_v2_2025-v2_2026"
+        ],
         "progression": "Play Random"
       },
       "bonus": false,
@@ -5188,6 +5434,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-project-prepare_v2_2025-v2_2026"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -5210,6 +5459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-1_v2_2025-v2_2026"
+        ],
         "progression": "Musical Cat GIFs"
       },
       "bonus": false,
@@ -5232,6 +5484,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-2_v2_2025-v2_2026"
+        ],
         "progression": "Musical Cat GIFs"
       },
       "bonus": false,
@@ -5254,6 +5509,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-3_v2_2025-v2_2026"
+        ],
         "progression": "Musical Cat GIFs"
       },
       "bonus": false,
@@ -5276,6 +5534,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-5_v2_2025-v2_2026"
+        ],
         "progression": "Musical Cat GIFs"
       },
       "bonus": false,
@@ -5298,6 +5559,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-submit_2025-v2_2026"
+        ],
         "progression": "Submit your Project!"
       },
       "bonus": false,
@@ -5320,6 +5584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-predict_v2_2025-v2_2026"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5342,6 +5609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-investigate1_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5364,6 +5634,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-investigate2_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5386,6 +5659,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-investigate3_v2_2025-v2_2026"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5408,6 +5684,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-formative-multi_v2_2025-v2_2026"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5430,6 +5709,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-practice-choice_v2_2025-v2_2026"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5452,6 +5734,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-evaluative_v2_2025-v2_2026"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5474,6 +5759,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-explore-challenge-choice_v2_2025-v2_2026"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -5496,6 +5784,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-abstract-panel_v2_2025-v2_2026"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -5518,6 +5809,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-abstract0_v2_2025-v2_2026"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -5540,6 +5834,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-abstract-1_v2_2025-v2_2026"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -5562,6 +5859,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-abstract-2_v2_2025-v2_2026"
+        ],
         "progression": "Abstraction"
       },
       "bonus": false,
@@ -5584,6 +5884,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-reuse-panel_v2_2025-v2_2026"
+        ],
         "progression": "Reusing Functions"
       },
       "bonus": false,
@@ -5606,6 +5909,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-reusable-1_v2_2025-v2_2026"
+        ],
         "progression": "Reusing Functions"
       },
       "bonus": false,
@@ -5628,6 +5934,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-reusable-2_v2_2025-v2_2026"
+        ],
         "progression": "Reusing Functions"
       },
       "bonus": false,
@@ -5650,6 +5959,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-reusable-3_v2_2025-v2_2026"
+        ],
         "progression": "Reusing Functions"
       },
       "bonus": false,
@@ -5672,6 +5984,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-formative2_v2_2025-v2_2026"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5694,6 +6009,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-compose-panel_v2_2025-v2_2026"
+        ],
         "progression": "Composing Functions"
       },
       "bonus": false,
@@ -5716,6 +6034,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-compose1_v2_2025-v2_2026"
+        ],
         "progression": "Composing Functions"
       },
       "bonus": false,
@@ -5738,6 +6059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-practice-choice_v2_2025-v2_2026"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5760,6 +6084,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-evaluative2_v2_2025-v2_2026"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5782,6 +6109,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-practice-challenge-choice_v2_2025-v2_2026"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -5804,6 +6134,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesize-recap-choice-panels_v2_2025-v2_2026"
+        ],
         "progression": "Skill Review"
       },
       "bonus": false,
@@ -5826,6 +6159,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesis-checkin_v2_2025-v2_2026"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5848,6 +6184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesis-altrice-panel_v2_2025-v2_2026"
+        ],
         "progression": "Spotlight: Altrice, Remix Artist"
       },
       "bonus": false,
@@ -5870,6 +6209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesis-remixes_2025-v2_2026"
+        ],
         "progression": "\"Only What You Gave Me\" Examples"
       },
       "bonus": false,
@@ -5892,6 +6234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesis-rearrange1_v2_2025-v2_2026"
+        ],
         "progression": "Remix Strategies"
       },
       "bonus": false,
@@ -5914,6 +6259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesis-rearrange2_v2_2025-v2_2026"
+        ],
         "progression": "Remix Strategies"
       },
       "bonus": false,
@@ -5936,6 +6284,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesis-rearrange3_v2_2025-v2_2026"
+        ],
         "progression": "Remix Strategies"
       },
       "bonus": false,
@@ -5958,6 +6309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesis-practice-choice_v2_2025-v2_2026"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5980,6 +6334,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesis-reflect-levelgroup_v2_2025-v2_2026"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -6002,6 +6359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-synthesis-challenge-choice_v2_2025-v2_2026"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -6024,6 +6384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-genre-examples-choice_2025-v2_2026"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -6046,6 +6409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-project-prepare_v2_2025-v2_2026"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -6068,6 +6434,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-genre-project_v2_2025-v2_2026"
+        ],
         "progression": "Genre Mashup"
       },
       "bonus": false,
@@ -6090,6 +6459,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "music-lab-612-post_2025-v2_2026"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -6112,6 +6484,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-problemsolving_musiclab_2025-v2_2026"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,

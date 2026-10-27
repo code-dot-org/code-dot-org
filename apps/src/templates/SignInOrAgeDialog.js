@@ -1,4 +1,7 @@
-import {CustomDialog, Dialog} from '@code-dot-org/component-library/dialog';
+import {
+  MuiCustomDialog as CustomDialog,
+  MuiDialog as Dialog,
+} from '@code-dot-org/component-library/dialog';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import Link from '@code-dot-org/component-library/link';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';

@@ -43,6 +43,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
           onClearAll={handleClearAll}
           selectAllText="Select all"
           clearAllText="Clear all"
+          doneText="Done"
           labelText="Dropdown label"
           {...props}
         />
@@ -110,49 +111,78 @@ describe('Design System - Checkbox Dropdown Component', () => {
     expect(option2.checked).toBe(false);
   });
 
-  it('handles Select All and Clear All actions', async () => {
+  it('toggles between Select all and Clear all and counts selections on Done', async () => {
     const user = userEvent.setup();
     render(<TestCheckboxDropdown />);
+
+    await user.click(
+      screen.getByRole('button', {name: /test-dropdown filter dropdown/i}),
+    );
 
     const option1 = screen.getByLabelText('option1') as HTMLInputElement;
     const option2 = screen.getByLabelText('option2') as HTMLInputElement;
     const option3 = screen.getByLabelText('option3') as HTMLInputElement;
 
-    const selectAll = screen.getByText('Select all');
-    const clearAll = screen.getByText('Clear all');
+    expect(
+      screen.getByRole('button', {name: 'Select all'}),
+    ).toBeInTheDocument();
+    expect(screen.queryByRole('button', {name: 'Clear all'})).toBeNull();
+    expect(screen.getByRole('button', {name: 'Done'})).toBeInTheDocument();
 
-    expect(option1.checked).toBe(false);
-    expect(option2.checked).toBe(false);
-    expect(option3.checked).toBe(false);
-
-    await user.click(selectAll);
+    await user.click(screen.getByRole('button', {name: 'Select all'}));
 
     expect(option1.checked).toBe(true);
     expect(option2.checked).toBe(true);
     expect(option3.checked).toBe(true);
+    expect(screen.getByRole('button', {name: 'Clear all'})).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Done (3)'})).toBeInTheDocument();
 
-    await user.click(clearAll);
+    await user.click(option1);
+
+    expect(option1.checked).toBe(false);
+    expect(screen.getByRole('button', {name: 'Done (2)'})).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', {name: 'Clear all'}));
 
     expect(option1.checked).toBe(false);
     expect(option2.checked).toBe(false);
     expect(option3.checked).toBe(false);
+    expect(
+      screen.getByRole('button', {name: 'Select all'}),
+    ).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Done'})).toBeInTheDocument();
   });
 
-  it('Checkbox Dropdown - renders with no Select all and Clear all controls', async () => {
+  it('closes the menu from Done and returns focus to the trigger', async () => {
+    const user = userEvent.setup();
+    render(<TestCheckboxDropdown />);
+
+    const trigger = screen.getByRole('button', {
+      name: /test-dropdown filter dropdown/i,
+    });
+    await user.click(trigger);
+    expect(trigger.parentElement).toHaveClass('open');
+
+    await user.click(screen.getByLabelText('option1'));
+    await user.click(screen.getByRole('button', {name: 'Done (1)'}));
+
+    expect(trigger.parentElement).not.toHaveClass('open');
+    expect(trigger).toHaveFocus();
+  });
+
+  it('renders with no action row when controls are hidden', () => {
     render(<TestCheckboxDropdown hideControls />);
 
-    const label = screen.getByText('Dropdown label');
-    const option1 = screen.getByDisplayValue('option-1');
-    const option2 = screen.getByDisplayValue('option-2');
-    const option3 = screen.getByDisplayValue('option-3');
-    const selectAll = screen.queryByText('Select all');
-    const clearAll = screen.queryByText('Clear all');
-
-    expect(label).toBeDefined();
-    expect(option1).toBeDefined();
-    expect(option2).toBeDefined();
-    expect(option3).toBeDefined();
-    expect(selectAll).toBeNull();
-    expect(clearAll).toBeNull();
+    expect(screen.getByText('Dropdown label')).toBeDefined();
+    expect(screen.getByDisplayValue('option-1')).toBeDefined();
+    expect(
+      screen.queryByRole('button', {name: 'Select all', hidden: true}),
+    ).toBeNull();
+    expect(
+      screen.queryByRole('button', {name: 'Clear all', hidden: true}),
+    ).toBeNull();
+    expect(
+      screen.queryByRole('button', {name: 'Done', hidden: true}),
+    ).toBeNull();
   });
 });

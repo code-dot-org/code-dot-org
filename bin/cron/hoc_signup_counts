@@ -13,7 +13,6 @@ require 'dynamic_config/dcdo'
 
 DEFAULT_YEAR = 2017
 PEGASUS_REPORTING_DB_READONLY = Cdo::Sequel.database_connection_pool(
-  CDO.pegasus_reporting_db_reader,
   CDO.pegasus_reporting_db_reader
 )
 

@@ -4,10 +4,12 @@ import React from 'react';
 
 import styles from './Guide.module.scss';
 
-/** The guide's distances from its container's right and bottom edges
-    (.guide in Guide.module.scss), for siblings that lay out around it. */
+/** The guide's distances from its container's right and bottom edges, and
+    its padding, for siblings that lay out around it. The same values as the
+    --guide-* variables in Guide.module.scss. */
 export const GUIDE_RIGHT_OFFSET_PX = 32;
 export const GUIDE_BOTTOM_OFFSET_PX = 20;
+export const GUIDE_PADDING_PX = 24;
 
 interface GuideProps {
   id?: string;

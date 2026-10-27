@@ -1,0 +1,33 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-16T16:34:10.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "> Think about the library chatbot’s holiday-hours mistake. If a patron had actually relied on that wrong answer, who would be affected, and how?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18867,
+    "name_suffix": "_2025",
+    "encrypted_solution": "4OVykGUopbwyRDGFG6ZvtT9VGLXVEJQNEasZxkkExwyE9mLxTLEguVSfW+Y3\nTTUKWSGDq5T/3L0WEcfZJmFpftRP7HhTotfsmS02gBatfNSuClodS+VeRcJf\ngdqcf3YodPmdK+UxDKbDHStiIfJt02TCQ216Rdq4ALFksOfhQq5j5jydFJpx\nahyqb0mGyy1DSD0ryRx5OwtAbeBbc10abKaVtV1yr+jtoTDpnIvxDl1hgMcY\nSJCnDSefm6Hhyvl+9dG0KUWrdLhZcSpOSatMAGJyVufrif2l2hmnJPJKvllV\n+nEXawTBBx4yGZ/pPFmg8BjCFlAQghPKAGMuD4oLEjKk7WWNT9O8kQOz5+Tx\nU8cmPX5/cGIZAJR7ApozgJ6X3YSE645MDD/lD5ytHdw8S++2I1YKBKzsYs/X\n6T2EYjlCxpqjK2qLGZTlUHY1xNO8a4oHco5bTPJqC9+fLV0KGmjnqmH6FKmj\n7T5D5L8SN8Jfgiz5krfqKXZdvgZdZ5y3HDeuuPCsvwRh9xU9ku8Js+TtycbR\n+EgMaxX3AuqcJdKtCcPCGXgC2xo10mio0LCTFjUSqGtekMPvY0uK67ZjmNfk\nafCrOdLGheUHeNs57eMQFHZLcMoiDpg9PEgMd9Z/gDBN24CW0vdAfYwcVRh+\nycZGbljJV08YjF/rxn4Nljgx62X1jQaGQMsdKiRVLLwGQEKiRkO2WZX2C1GQ\nqmHZf3V7m8ZgVAf8bFfLsmArTJl5K7e8+3mjTTXn0AjuycA5VrZ5cCOhaXZr\n3NZw4uGXQfYcv+CTFZNsYnSC33iV+KNQANH8e+qfZGw7jLddEV/w8UYlxbmV\nlfZF+S8GuY8vFjH1RGuJnr6QnBT/n/yi9ru4mT1P0CgUj/aDaHFSC1sWxDnw\n6GnigiezDjdOJY208Q==\n",
+    "encrypted": "false",
+    "optional": "false",
+    "title": "Who’s Affected",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false",
+    "teacher_markdown": "A strong answer names a specific, plausible person and a concrete consequence tied to the actual scenario — for example, a patron who shows up expecting the library to be open on Memorial Day and wastes a trip, or someone who needed to return a book that day and didn’t realize the library was closed. \r\n\r\nA weaker answer stays vague (“people could be confused” or “it could cause problems”) without naming who, specifically, or what actually happens to them as a result. The key distinction isn’t length — it’s whether the student connects the chatbot’s specific error to a specific real-world outcome, rather than describing the error generically."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-16T16:34:10.141+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson16-cfu1_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson16-cfu1_27_28\"},{\"changed_at\":\"2026-10-16 16:35:13 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-16 16:36:14 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-16 21:19:23 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\",\"title\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

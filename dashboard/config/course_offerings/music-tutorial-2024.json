@@ -1,7 +1,7 @@
 {
   "key": "music-tutorial-2024",
   "display_name": "Music Lab Tutorial",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "CSF",

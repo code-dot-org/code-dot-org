@@ -23,6 +23,7 @@ import type {
   UpdatePasswordParams,
   UpdateProfileParams,
   UpdateSchoolInfoParams,
+  UnlinkLtiAccountParams,
   UpdateUserTypeParams,
   UserSettings,
 } from './users.types';
@@ -394,8 +395,21 @@ export function createUsersApi(transport: Transport) {
             ...(params.educatorRole !== undefined && {
               educator_role: params.educatorRole,
             }),
+            ...(params.ltiRosterSyncEnabled !== undefined && {
+              lti_roster_sync_enabled: params.ltiRosterSyncEnabled,
+            }),
           },
         },
+      });
+    },
+
+    /** POST /lti/v1/account_linking/unlink */
+    async unlinkLtiAccount(params: UnlinkLtiAccountParams): Promise<void> {
+      await transport.request<unknown>({
+        method: 'POST',
+        url: '/lti/v1/account_linking/unlink',
+        headers: JSON_ACCEPT,
+        body: {authentication_option_id: params.authenticationOptionId},
       });
     },
 

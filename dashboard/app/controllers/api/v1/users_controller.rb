@@ -68,6 +68,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         has_seen_ai_assessments_announcement: current_user.has_seen_ai_assessments_announcement?,
         ai_differentiation_enabled: !current_user.ai_differentiation_toggled_off?,
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
+        teacher_panel_v2_seen: current_user.teacher_panel_v2_seen?,
         educator_role: current_user.educator_role,
         grades_teaching: current_user.grades_teaching || [],
         sharing_disabled: current_user.sharing_disabled,
@@ -315,6 +316,15 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     return head :unauthorized unless current_user
 
     current_user.update!(has_completed_ai_differentiation_welcome: true)
+
+    head :no_content
+  end
+
+  # POST /api/v1/users/teacher_panel_v2_seen
+  def post_teacher_panel_v2_seen
+    return head :unauthorized unless current_user
+
+    current_user.update!(teacher_panel_v2_seen: true)
 
     head :no_content
   end

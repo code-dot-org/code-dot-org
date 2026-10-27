@@ -1,4 +1,4 @@
-import {CustomDialog} from '@code-dot-org/component-library/dialog';
+import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 

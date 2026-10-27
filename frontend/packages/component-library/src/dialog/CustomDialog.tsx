@@ -8,6 +8,10 @@ import useFocusTrap from '@/common/hooks/useFocusTrap';
 
 import moduleStyles from './customDialog.module.scss';
 
+/**
+ * @deprecated Use `MuiCustomDialogProps` from `@code-dot-org/component-library/dialog`.
+ * Codemod: `yarn codemod:dialog` in `frontend/packages/component-library`.
+ */
 export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
   /** CustomDialog color mode */
   mode?: 'light' | 'dark';
@@ -35,6 +39,10 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
  *
  * Design System: CustomDialog Component.
  * Renders CustomDialog with content passed through props.
+ *
+ * @deprecated Use `MuiCustomDialog` from `@code-dot-org/component-library/dialog`; it takes the same props.
+ * Codemod: `yarn codemod:dialog` in `frontend/packages/component-library`.
+ * See `src/dialog/DIALOG_MIGRATION_TO_MUI.md`.
  */
 
 const CustomDialog: React.FunctionComponent<CustomDialogProps> = ({

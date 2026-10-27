@@ -1,0 +1,1427 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-09-29T14:36:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Smart Classroom",
+    "long_instructions": "#Smart Classroom\r\n\r\nFollow the directions in the canvas in order to brainstorm and design an innovative device for a connected classroom of the future.",
+    "bubble_choice_description": "You and your partner will brainstorm innovative devices for a connected classroom in a futuristic smart school using IoT solutions",
+    "thumbnail_url": "https://images.code.org/f2930ff07406fb124aa3c29b92cd5778-ai-chat-lab-icon (1).png",
+    "hide_share_and_remix": "false",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "69687dd7-554f-48c4-b648-de0852daa874",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/7ebc8ac6-01fc-4e7a-bc95-add1284e3a63.png",
+              "altText": "furniture-5"
+            },
+            "position": {
+              "x": -179.30842331247112,
+              "y": 293.48241768162865
+            },
+            "width": 80,
+            "height": 81.34922755398489,
+            "measured": {
+              "width": 80,
+              "height": 81
+            },
+            "dragging": false
+          },
+          {
+            "id": "0ee199b2-a334-48cb-bb28-1bc9683a936d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/aff7a736-0971-4457-a536-31498bf331e2.png",
+              "altText": "furniture-4"
+            },
+            "position": {
+              "x": -47.74634314878905,
+              "y": 415.298245019384
+            },
+            "width": 102.735748497656,
+            "height": 88.92781038653686,
+            "measured": {
+              "width": 103,
+              "height": 89
+            },
+            "dragging": false
+          },
+          {
+            "id": "bf144f6d-c3fc-4d1a-be08-87284d25fa51",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/d780f10f-e614-43c3-9ce9-79367754fbaa.png",
+              "altText": "furniture-3"
+            },
+            "position": {
+              "x": -151.72438304136324,
+              "y": 397.2711239251469
+            },
+            "width": 80,
+            "height": 120,
+            "measured": {
+              "width": 80,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "d1ad909c-7937-4f1a-8b83-d411e2c4b3a5",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/281dd812-6d0c-46bf-945a-6e7833592fe8.png",
+              "altText": "furniture-2"
+            },
+            "position": {
+              "x": 23.999044396915266,
+              "y": 261.80019112061694
+            },
+            "width": 80,
+            "height": 120,
+            "measured": {
+              "width": 80,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "1a22f87f-8b42-45a0-bb2b-1c716f14a704",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/9867eb8b-3241-4b59-8ae9-e7db1550d41f.png",
+              "altText": "furniture-1"
+            },
+            "position": {
+              "x": -84.8181129259343,
+              "y": 260.9652360509519
+            },
+            "width": 80,
+            "height": 120,
+            "measured": {
+              "width": 80,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "e1f510be-1c78-446f-891c-5f0abd6ad660",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/37d79a7f-9a60-4465-90ef-6d4eb5b0f930.png",
+              "altText": "sticky-1"
+            },
+            "position": {
+              "x": 253.96064112972718,
+              "y": 654.8070106200369
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cf656d6d-39bf-4552-a5c6-9e1ec9dc3f87",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/642a6839-ab2c-45c0-8b6c-b1c5a18100cf.png",
+              "altText": "sticky-2"
+            },
+            "position": {
+              "x": 240.1379064753968,
+              "y": 902.8915624313008
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "cfc4b4c7-0818-4a4f-b23e-8a721cc4c678",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/b847cd5b-5a8f-4e4a-87f2-541bb4ba14a5.png",
+              "altText": "sticky-3"
+            },
+            "position": {
+              "x": 477.0840699744797,
+              "y": 651.2685449750685
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "58beda0b-6993-4541-bfc5-129a91403484",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/c0a1fe88-338a-402b-b373-b6573b7b5120.png",
+              "altText": "sticky-4"
+            },
+            "position": {
+              "x": 473.48243125429076,
+              "y": 900.8178243365505
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "8ab49e65-acc3-45e9-aff6-95aa096b968e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/98e49af8-d327-43fe-bb20-e40a07f2920d.png",
+              "altText": "canvas-1",
+              "locked": true
+            },
+            "position": {
+              "x": 728.8881690739847,
+              "y": 838.4452194479954
+            },
+            "width": 1319.5733503104377,
+            "height": 746.7964055732094,
+            "measured": {
+              "width": 1320,
+              "height": 747
+            },
+            "dragging": false
+          },
+          {
+            "id": "70954e5b-a0f9-41a7-af9a-5e7205ec3554",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/c2700595-1c59-455a-bc89-169424e69809.png",
+              "altText": "canvas-2",
+              "locked": true
+            },
+            "position": {
+              "x": 730.0698701879039,
+              "y": 74.85890827461787
+            },
+            "width": 1321.6053715087314,
+            "height": 735.9903936405113,
+            "measured": {
+              "width": 1322,
+              "height": 736
+            },
+            "dragging": false
+          },
+          {
+            "id": "86c9a0aa-bdc8-400b-989a-e4ec0b998326",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/154ee362-c00d-4eb1-bc88-afacdfeb6a5f.png",
+              "altText": "model",
+              "locked": true
+            },
+            "position": {
+              "x": 821.19509306902,
+              "y": 897.0182299049716
+            },
+            "width": 1154.1513054084382,
+            "height": 622.4656367386463,
+            "measured": {
+              "width": 1154,
+              "height": 622
+            },
+            "dragging": false
+          },
+          {
+            "id": "a0c65e0f-c627-4c9d-86b6-bc5661f61e09",
+            "type": "text",
+            "data": {
+              "text": "Problem Solved",
+              "strokeColor": "#d1d1d1",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 268.8601352339042,
+              "y": 614.1694399035774
+            },
+            "width": 129.7434917749852,
+            "height": 40,
+            "measured": {
+              "width": 130,
+              "height": 40
+            },
+            "dragging": false,
+            "zIndex": 1
+          },
+          {
+            "id": "9a4ff9e1-88ae-44b8-90bc-928b0ad95617",
+            "type": "text",
+            "data": {
+              "text": "Privacy / Security",
+              "strokeColor": "#d1d1d1",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 254.7772647346443,
+              "y": 862.2369271288808
+            },
+            "width": 129.7434917749852,
+            "height": 40,
+            "measured": {
+              "width": 130,
+              "height": 40
+            },
+            "dragging": false,
+            "zIndex": 2
+          },
+          {
+            "id": "d35df3c8-584b-4caa-9bd8-7218d7116496",
+            "type": "text",
+            "data": {
+              "text": "Data Collected",
+              "strokeColor": "#d1d1d1",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 492.7204051930062,
+              "y": 611.5304240820317
+            },
+            "width": 129.7434917749852,
+            "height": 40,
+            "measured": {
+              "width": 130,
+              "height": 40
+            },
+            "dragging": false,
+            "zIndex": 3
+          },
+          {
+            "id": "3ff2e566-f47a-40c5-87af-81268945ef6d",
+            "type": "text",
+            "data": {
+              "text": "Data Transmission",
+              "strokeColor": "#d1d1d1",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 487.8740900691565,
+              "y": 860.917419218108
+            },
+            "width": 129.7434917749852,
+            "height": 40,
+            "measured": {
+              "width": 130,
+              "height": 40
+            },
+            "dragging": false,
+            "zIndex": 4
+          },
+          {
+            "id": "e3e9480a-6e12-4c18-8e06-f9513b165f1f",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/37d79a7f-9a60-4465-90ef-6d4eb5b0f930.png",
+              "altText": "sticky-1"
+            },
+            "position": {
+              "x": 244.72865695766086,
+              "y": 674.5692544851385
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "02eedd9a-c275-4a6c-92f5-bc98423547cc",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/37d79a7f-9a60-4465-90ef-6d4eb5b0f930.png",
+              "altText": "sticky-1"
+            },
+            "position": {
+              "x": 231.53357784993187,
+              "y": 695.6813810575048
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "419bd6e9-d2c3-4244-b5fd-5d57fba36f6a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/37d79a7f-9a60-4465-90ef-6d4eb5b0f930.png",
+              "altText": "sticky-1"
+            },
+            "position": {
+              "x": 217.01899083143007,
+              "y": 712.8349838975524
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "a86f9402-65b4-4075-a31c-5f0738f9a8ef",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/642a6839-ab2c-45c0-8b6c-b1c5a18100cf.png",
+              "altText": "sticky-2"
+            },
+            "position": {
+              "x": 230.214069939159,
+              "y": 923.956249621215
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "e3b29c99-8e1a-4d59-bc38-7037384ae358",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/642a6839-ab2c-45c0-8b6c-b1c5a18100cf.png",
+              "altText": "sticky-2"
+            },
+            "position": {
+              "x": 219.65800665297593,
+              "y": 943.7488682828084
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "87ebfc80-9c96-4708-bd69-9015485f04fe",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/642a6839-ab2c-45c0-8b6c-b1c5a18100cf.png",
+              "altText": "sticky-2"
+            },
+            "position": {
+              "x": 206.462927545247,
+              "y": 964.8609948551748
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "38134f09-a14b-4b0b-aaf5-00097a467845",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/b847cd5b-5a8f-4e4a-87f2-541bb4ba14a5.png",
+              "altText": "sticky-3"
+            },
+            "position": {
+              "x": 466.6915660695029,
+              "y": 667.7159672548122
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "8aa3839b-3e81-4a4d-b41c-23ae8521bd22",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/b847cd5b-5a8f-4e4a-87f2-541bb4ba14a5.png",
+              "altText": "sticky-3"
+            },
+            "position": {
+              "x": 453.6926956175114,
+              "y": 688.2394678599661
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "1cd186ae-97c8-4a53-8c5c-ee61f41f2323",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/b847cd5b-5a8f-4e4a-87f2-541bb4ba14a5.png",
+              "altText": "sticky-3"
+            },
+            "position": {
+              "x": 438.9818999432722,
+              "y": 708.5667598093825
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "b02b4860-8979-47a9-9541-5f5fb3cd352d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/c0a1fe88-338a-402b-b373-b6573b7b5120.png",
+              "altText": "sticky-4"
+            },
+            "position": {
+              "x": 461.267915509526,
+              "y": 917.7820597475741
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "2adfdb9f-17f2-42f5-ae46-32fae8312c12",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/c0a1fe88-338a-402b-b373-b6573b7b5120.png",
+              "altText": "sticky-4"
+            },
+            "position": {
+              "x": 449.9000412606981,
+              "y": 936.7285168289541
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "e1a32cbe-7c41-40b3-8e0e-7e0edebe928e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/c0a1fe88-338a-402b-b373-b6573b7b5120.png",
+              "altText": "sticky-4"
+            },
+            "position": {
+              "x": 436.25859216210443,
+              "y": 957.9485487600996
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "e63a2395-2667-4ed5-b649-8a4a4d02eb1c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/b408c886-45c4-4c4c-884b-06de7f0217f3.png",
+              "altText": "comm-1"
+            },
+            "position": {
+              "x": 378.688599426384,
+              "y": 261.1363038624966
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "1f3513c2-41ba-4e5e-93a1-36308457d230",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/8a2c30d7-2fbb-4c65-8fdd-24bfa607c8b8.png",
+              "altText": "comm-2"
+            },
+            "position": {
+              "x": 487.40849548948427,
+              "y": 262.78882016757683
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "cece4f46-9114-41ca-a5c3-2f4e9dd573c9",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/e97451d6-07d8-48f2-afba-7da21aafa677.png",
+              "altText": "comm-3"
+            },
+            "position": {
+              "x": 309.70934161565646,
+              "y": 410.2737640649727
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "d2a3057b-002b-4fb7-8647-0f30ed9af2b3",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/1441073c-432b-4c7d-81ef-4ca446563594.png",
+              "altText": "comm-4"
+            },
+            "position": {
+              "x": 272.3320675335431,
+              "y": 263.77894322941637
+            },
+            "width": 80,
+            "height": 60,
+            "measured": {
+              "width": 80,
+              "height": 60
+            },
+            "dragging": false
+          },
+          {
+            "id": "a28ff4cf-2f84-4d9c-952f-724293ea2415",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/9dc43f86-862e-4928-bcc3-91d2159491d9.png",
+              "altText": "comm-5"
+            },
+            "position": {
+              "x": 448.34184374606394,
+              "y": 407.2640058674701
+            },
+            "width": 80,
+            "height": 64.21380279503398,
+            "measured": {
+              "width": 80,
+              "height": 64
+            },
+            "dragging": false
+          },
+          {
+            "id": "581b563a-51bb-4532-a5b5-bd383e613b83",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ababab",
+              "fontColor": "#e4e2f8",
+              "backgroundColor": "#e4e2f8",
+              "locked": true
+            },
+            "position": {
+              "x": -216.91408343446955,
+              "y": 220.30402401412738
+            },
+            "width": 356.4572833891775,
+            "height": 326.8191819401018,
+            "measured": {
+              "width": 356,
+              "height": 327
+            },
+            "dragging": false,
+            "zIndex": -1
+          },
+          {
+            "id": "5952e32e-7a60-422f-8ccb-47f8c1692e0e",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ababab",
+              "fontColor": "#e4e2f8",
+              "backgroundColor": "#d5efff",
+              "locked": true
+            },
+            "position": {
+              "x": 244.00926755024255,
+              "y": 220.30402401412732
+            },
+            "width": 356.4572833891775,
+            "height": 326.8191819401018,
+            "measured": {
+              "width": 356,
+              "height": 327
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "cdb8e00b-c1d9-4687-b7c0-406a185bf891",
+            "type": "text",
+            "data": {
+              "text": "NFC",
+              "strokeColor": "#d1d1d1",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 272.2223804569379,
+              "y": 331.0146691218627
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "f2311f61-e536-4d64-af21-a3b283b1336a",
+            "type": "text",
+            "data": {
+              "text": "Bluetooth",
+              "strokeColor": "#d1d1d1",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 378.42954917906474,
+              "y": 330.1441185585667
+            },
+            "width": 82.73376135699456,
+            "height": 40,
+            "measured": {
+              "width": 83,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "52246ea1-e2b1-4f77-ae1d-992c49774cd1",
+            "type": "text",
+            "data": {
+              "text": "Wi-FI",
+              "strokeColor": "#d1d1d1",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 485.4965587506416,
+              "y": 329.44890146346484
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "9c95f912-c1ba-4374-817b-cb62ca11d168",
+            "type": "text",
+            "data": {
+              "text": "Cellular (5G)",
+              "strokeColor": "#d1d1d1",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 297.8976550041914,
+              "y": 478.42534739833667
+            },
+            "width": 99.87733454506238,
+            "height": 40,
+            "measured": {
+              "width": 100,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "5d71cb38-09c7-4729-b54f-1b91f7fb85e0",
+            "type": "text",
+            "data": {
+              "text": "Satellite",
+              "strokeColor": "#d1d1d1",
+              "fontSize": "small"
+            },
+            "position": {
+              "x": 450.8550721597636,
+              "y": 476.9223088285973
+            },
+            "width": 88.390350995092,
+            "height": 40,
+            "measured": {
+              "width": 88,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "fbabfd21-e037-486e-b8bf-97a4dc498a92",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ababab",
+              "fontColor": "#e4e2f8",
+              "backgroundColor": "#ffffff",
+              "locked": true
+            },
+            "position": {
+              "x": -217.32597674544635,
+              "y": 697.8784771746288
+            },
+            "width": 356.4572833891775,
+            "height": 326.8191819401018,
+            "measured": {
+              "width": 356,
+              "height": 327
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "d4f62f37-e79f-430e-ba2a-6e088f97059d",
+            "type": "text",
+            "data": {
+              "text": "Furniture",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": -128.84658553502823,
+              "y": 175.19954634915462
+            },
+            "width": 160,
+            "height": 40,
+            "measured": {
+              "width": 160,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "35eaf1e4-c485-40ed-9bf8-466995198976",
+            "type": "text",
+            "data": {
+              "text": "Communication",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 319.60644256149936,
+              "y": 175.19954634915456
+            },
+            "width": 192.16355393991688,
+            "height": 40,
+            "measured": {
+              "width": 192,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "5dba4243-4327-40d8-8c52-fbc1ee2ade28",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/db9c9fda-2cac-4f2a-8ca9-7e42187d229b.png",
+              "altText": "thing-1"
+            },
+            "position": {
+              "x": -14.06575000800568,
+              "y": 933.1360534422847
+            },
+            "width": 85.7298882409907,
+            "height": 69.98135330515697,
+            "measured": {
+              "width": 86,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "8b9b4474-b6c6-4c77-98fe-6867a5c5691e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/e95aa18d-c865-4580-8b3d-f157f36225b4.png",
+              "altText": "thing-2"
+            },
+            "position": {
+              "x": 38.98432981985813,
+              "y": 833.0987600525987
+            },
+            "width": 82.69845510796989,
+            "height": 69.98135330515709,
+            "measured": {
+              "width": 83,
+              "height": 70
+            },
+            "dragging": false
+          },
+          {
+            "id": "7fc4d195-bc57-4c76-b6f9-0438549bfb87",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/d3a25629-5f79-4084-b399-a092bb102de1.png",
+              "altText": "thing-3"
+            },
+            "position": {
+              "x": -145.93309129440996,
+              "y": 931.6203368757742
+            },
+            "width": 80,
+            "height": 74.52850300468822,
+            "measured": {
+              "width": 80,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "10c6f1a1-9492-4060-9591-cf3892be6b80",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/301ea0c1-f720-44f4-8243-93256dde2087.png",
+              "altText": "thing-4"
+            },
+            "position": {
+              "x": -73.17869610191106,
+              "y": 833.0987600525985
+            },
+            "width": 80,
+            "height": 66.94992017213622,
+            "measured": {
+              "width": 80,
+              "height": 67
+            },
+            "dragging": false
+          },
+          {
+            "id": "c0d88a4c-eb21-4347-b3f7-2b27c43b1c76",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/d176aa62-4805-452d-9562-a1fc990058ca.png",
+              "altText": "thing-5"
+            },
+            "position": {
+              "x": -182.31028889065948,
+              "y": 833.0987600525987
+            },
+            "width": 80,
+            "height": 74.52850300468822,
+            "measured": {
+              "width": 80,
+              "height": 75
+            },
+            "dragging": false
+          },
+          {
+            "id": "c7bda65a-6c69-4aa6-8c20-9715cee8d25e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/b12ef691-56f1-492f-bd4e-80eb6b0d1a06.png",
+              "altText": "thing-6"
+            },
+            "position": {
+              "x": 29.89003042079574,
+              "y": 722.4514506973396
+            },
+            "width": 80,
+            "height": 62.402770472605084,
+            "measured": {
+              "width": 80,
+              "height": 62
+            },
+            "dragging": false
+          },
+          {
+            "id": "8b909c31-b7db-4c60-b2d2-4080b91dcfb2",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/a0b358bf-a4d8-4e56-b29d-28171d166603.png",
+              "altText": "thing-7"
+            },
+            "position": {
+              "x": -86.82014520050463,
+              "y": 723.9671672638502
+            },
+            "width": 80,
+            "height": 68.46563673864648,
+            "measured": {
+              "width": 80,
+              "height": 68
+            },
+            "dragging": false
+          },
+          {
+            "id": "f7b6f58a-7dec-4916-99b4-46b36d03f0fc",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson10-smart-classroom/uuid/9f5032c1-9d25-41c0-a8a0-e4a04cd2adf4.png",
+              "altText": "thing-8"
+            },
+            "position": {
+              "x": -192.92030485623218,
+              "y": 722.4514506973399
+            },
+            "width": 80,
+            "height": 66.94992017213622,
+            "measured": {
+              "width": 80,
+              "height": 67
+            },
+            "dragging": false
+          },
+          {
+            "id": "524d0ad9-2374-42ea-975b-48a7b430b140",
+            "type": "text",
+            "data": {
+              "text": "Classroom Items",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": -150.10240634710792,
+              "y": 650.520153908837
+            },
+            "width": 229.64404506368976,
+            "height": 40,
+            "measured": {
+              "width": 230,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "577ca851-ca30-4904-933f-d733f9877d37",
+            "type": "shape",
+            "data": {
+              "shapeType": "diamond",
+              "label": "",
+              "strokeColor": "#ffffff",
+              "backgroundColor": "#ffe3ce",
+              "locked": true
+            },
+            "position": {
+              "x": 1138.950724155363,
+              "y": -458.6305627992528
+            },
+            "width": 426.540597976124,
+            "height": 178.0583480740072,
+            "measured": {
+              "width": 427,
+              "height": 178
+            },
+            "dragging": false
+          },
+          {
+            "id": "52fd149e-d5ae-4acc-a262-4f6d9a098956",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ababab",
+              "fontColor": "#e4e2f8",
+              "backgroundColor": "#ccf1d0",
+              "locked": true
+            },
+            "position": {
+              "x": 947.427658980378,
+              "y": -242.10520251005892
+            },
+            "width": 356.4572833891775,
+            "height": 206.68320420523705,
+            "measured": {
+              "width": 356,
+              "height": 207
+            },
+            "dragging": false,
+            "zIndex": -1
+          },
+          {
+            "id": "aa9ac899-2e21-4fdd-aa13-41f70854839d",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "strokeColor": "#ababab",
+              "fontColor": "#e4e2f8",
+              "backgroundColor": "#fbdae8",
+              "locked": true
+            },
+            "position": {
+              "x": 1415.1298548244877,
+              "y": -252.51463431251716
+            },
+            "width": 356.4572833891775,
+            "height": 279.18352908808055,
+            "measured": {
+              "width": 356,
+              "height": 279
+            },
+            "dragging": false,
+            "zIndex": -2
+          },
+          {
+            "id": "754534b2-b6de-46d8-954d-9c29d3274c13",
+            "type": "text",
+            "data": {
+              "text": "* What problem does your innovation solve?\n\n* What sensor/hardware does it use and what data is collected?\n\n* How does it send/receive data?\n\n* What privacy or security concerns might arise?",
+              "strokeColor": "transparent",
+              "fontSize": "small",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 954.2146272147945,
+              "y": -179.2212356797972
+            },
+            "width": 319.15023948359135,
+            "height": 106.69152892645732,
+            "measured": {
+              "width": 319,
+              "height": 107
+            },
+            "dragging": false
+          },
+          {
+            "id": "08b8fd65-1e39-4ee9-8082-c84bd5e790ba",
+            "type": "text",
+            "data": {
+              "text": "What is a problem or issue you’d like to address in your school?\n\nWhat kind of technology do you think we'll have by 2050?\n\nStill stuck getting started? Here are some ideas:\n\n- Design a device that makes students feel safer.\n\n- Design something that reduces distractions.\n\n\n",
+              "strokeColor": "transparent",
+              "fontSize": "small",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1431.2271863827666,
+              "y": -134.90078805057985
+            },
+            "width": 326.98519455325646,
+            "height": 106.69152892645732,
+            "measured": {
+              "width": 327,
+              "height": 107
+            },
+            "dragging": false
+          },
+          {
+            "id": "12a8df50-1ddc-4b59-a99b-79377e3307db",
+            "type": "text",
+            "data": {
+              "text": "Design Template Checklist",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 955.201374477915,
+              "y": -237.98239893966408
+            },
+            "width": 342.64303844452803,
+            "height": 40,
+            "measured": {
+              "width": 343,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "082e4e90-a663-45b7-b8ec-1ef0f409c5ee",
+            "type": "text",
+            "data": {
+              "text": "Need Help Getting Started?",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1423.0376780321994,
+              "y": -244.9415104546849
+            },
+            "width": 342.64303844452803,
+            "height": 40,
+            "measured": {
+              "width": 343,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "38b7fac5-3966-4499-8928-d5636f798598",
+            "type": "text",
+            "data": {
+              "text": "Have an idea for your device?",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1234.6659416781604,
+              "y": -396.20255931929836
+            },
+            "width": 249.07963982877243,
+            "height": 48.10791282160872,
+            "measured": {
+              "width": 249,
+              "height": 48
+            },
+            "dragging": false
+          },
+          {
+            "id": "6906f1f2-408c-4939-ba63-b88ac60e3f3a",
+            "type": "text",
+            "data": {
+              "text": "Yes",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1087.844412922443,
+              "y": -341.9823989396641
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "373f35a2-71c6-473b-bf9a-cb30626e462b",
+            "type": "text",
+            "data": {
+              "text": "No",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "fontFamily": "draw",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1578.844412922443,
+              "y": -338.9823989396641
+            },
+            "width": 80,
+            "height": 40,
+            "measured": {
+              "width": 80,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "579ba5c1-ec48-4c67-90ac-54d3e5043230",
+            "type": "text",
+            "data": {
+              "text": "My Smart Classroom Canvas",
+              "strokeColor": "transparent",
+              "fontSize": "large",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": 766.4103796751631,
+              "y": 114.57088368873859
+            },
+            "width": 349.73320589651524,
+            "height": 46.96440450636899,
+            "measured": {
+              "width": 350,
+              "height": 47
+            },
+            "dragging": false
+          },
+          {
+            "id": "90482d43-8745-477a-a008-15abb489340a",
+            "type": "text",
+            "data": {
+              "text": "Design a Smart Classroom ",
+              "strokeColor": "transparent",
+              "fontSize": 80,
+              "fontFamily": "draw",
+              "locked": false
+            },
+            "position": {
+              "x": -158.84658553502805,
+              "y": -146.8004536508451
+            },
+            "width": 685.9999999999995,
+            "height": 145.9999999999999,
+            "measured": {
+              "width": 686,
+              "height": 146
+            },
+            "dragging": false
+          },
+          {
+            "id": "872db4e5-b42c-4567-8160-5f8c294a115b",
+            "type": "text",
+            "data": {
+              "text": "Design an innovative device for a connected classroom in a futuristic smart school using IoT solutions.\n\n- Drag the furniture, classroom items, and communication devices into the Canvas to the right to design. \n- Use the digital sticky notes to label what problem you are solving, what data you are collecting, how data is transmitted, and any security & safety concerns that might arise.",
+              "strokeColor": "transparent",
+              "fontSize": "small",
+              "fontFamily": "sans",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -130.54127935854012,
+              "y": 58.51986544679484
+            },
+            "width": 753.1502394835909,
+            "height": 105.54283057146029,
+            "measured": {
+              "width": 753,
+              "height": 106
+            },
+            "dragging": false
+          },
+          {
+            "id": "2173f8e5-b5f0-41d3-ac58-a16e407fd84f",
+            "type": "text",
+            "data": {
+              "text": "Directions",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "fontFamily": "draw",
+              "locked": true
+            },
+            "position": {
+              "x": -134.2511925612915,
+              "y": 34.17035509518277
+            },
+            "width": 99.93201113256754,
+            "height": 40.87055056329612,
+            "measured": {
+              "width": 100,
+              "height": 41
+            },
+            "dragging": false
+          }
+        ],
+        "edges": [
+          {
+            "id": "cc180c00-6bad-42ab-8431-6891ce967359",
+            "source": "38b7fac5-3966-4499-8928-d5636f798598",
+            "target": "52fd149e-d5ae-4acc-a262-4f6d9a098956",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "top-target",
+            "sourceHandle": "left-source",
+            "zIndex": 5,
+            "data": {
+              "locked": true
+            }
+          },
+          {
+            "id": "41128cde-c9bc-4fc1-8d91-10076c7aee60",
+            "source": "38b7fac5-3966-4499-8928-d5636f798598",
+            "target": "aa9ac899-2e21-4fdd-aa13-41f70854839d",
+            "type": "default",
+            "style": {
+              "stroke": "var(--sketchlab-stroke-default)",
+              "strokeWidth": 3
+            },
+            "markerEnd": {
+              "type": "arrowclosed",
+              "color": "var(--sketchlab-stroke-default)",
+              "width": 14,
+              "height": 14,
+              "strokeWidth": 3
+            },
+            "targetHandle": "top-target",
+            "sourceHandle": "right-source",
+            "zIndex": 5,
+            "data": {
+              "locked": true
+            }
+          }
+        ],
+        "viewport": {
+          "x": -798.2141010296316,
+          "y": 549.50456873983,
+          "zoom": 1.0000000000000027
+        }
+      }
+    },
+    "project_template_level_name": "ai-and-the-systems-that-power-it-lesson10-smart-classroom-template"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-09-29 14:36:26 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 14:46:07 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 16:50:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 17:28:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 17:35:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 17:44:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 17:45:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 17:46:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 17:50:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-29 20:33:16 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-01 18:54:18 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

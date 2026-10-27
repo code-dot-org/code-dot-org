@@ -410,7 +410,7 @@ module Services
         # TODO: this can be simplified / avoided if we add a new unique identifier field to ScriptLevel.
         script_level_to_import = script_levels_by_seeding_key[sl_data['seeding_key']] || ScriptLevel.new
         script_level_attrs = sl_data.except('seeding_key')
-        script_level_attrs['script_id'] = seed_context.script.id
+        script_level_attrs['script'] = seed_context.script
         script_level_attrs['activity_section_id'] = section_id if section_id
         script_level_attrs['stage_id'] = lesson.id
         script_level_to_import.assign_attributes(script_level_attrs)

@@ -23,13 +23,24 @@ class QuizTest < ActiveSupport::TestCase
   end
 
   test "reveal_answer_explanation cannot be true unless show_correctness is true" do
-    quiz = create(:quiz)
+    quiz = create(:quiz, show_questions_after_submit: true)
     quiz.show_correctness = false
     quiz.reveal_answer_explanation = true
     refute quiz.valid?
     assert_includes quiz.errors[:reveal_answer_explanation].join, 'show_correctness'
 
     quiz.show_correctness = true
+    assert quiz.valid?
+  end
+
+  test "reveal_answer_explanation cannot be true unless show_questions_after_submit is true" do
+    quiz = create(:quiz, show_correctness: true)
+    quiz.show_questions_after_submit = false
+    quiz.reveal_answer_explanation = true
+    refute quiz.valid?
+    assert_includes quiz.errors[:reveal_answer_explanation].join, 'show_questions_after_submit'
+
+    quiz.show_questions_after_submit = true
     assert quiz.valid?
   end
 
@@ -48,6 +59,17 @@ class QuizTest < ActiveSupport::TestCase
   test "show_intro_screen may be false with custom_intro_text set and no time limit" do
     quiz = create(:quiz, time_limit_minutes: nil, custom_intro_text: 'Welcome!', show_intro_screen: false)
     assert quiz.valid?
+  end
+
+  test "summarize_for_lab2_properties gives a multiple select question's choices but not its answer key" do
+    quiz = create(:quiz)
+    question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+
+    quiz_question = quiz.summarize_for_lab2_properties(nil, nil, nil)[:quizQuestions].sole
+    assert_equal 'MultipleSelectQuestion', quiz_question[:type]
+    assert_equal %w(a b c), (quiz_question[:choices].map {|c| c['id']})
+    refute quiz_question.key?(:correctChoiceIds)
   end
 
   test "questions come from placements" do
@@ -106,6 +128,21 @@ class QuizTest < ActiveSupport::TestCase
     assert QuizQuestionResponse.exists?(response.id)
   end
 
+  test "clone_with_name copies placements and shares questions" do
+    quiz = create(:quiz)
+    first_question = create(:quiz_question)
+    second_question = create(:quiz_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: first_question, page: 1, position: 1)
+    create(:quiz_question_placement, level: quiz, quiz_question: second_question, page: 2, position: 1)
+
+    copy = quiz.clone_with_name('Cloned quiz')
+
+    assert_equal 'Cloned quiz', copy.name
+    assert_equal [first_question, second_question], copy.questions
+    assert_equal [[1, 1], [2, 1]], (copy.placements.map {|p| [p.page, p.position]})
+    assert_equal 2, quiz.placements.count
+  end
+
   test "clone_with_suffix copies placements and shares questions" do
     quiz = create(:quiz)
     first_question = create(:quiz_question)
@@ -159,5 +196,98 @@ class QuizTest < ActiveSupport::TestCase
     assert_equal 70, first.name.length
     assert_equal first, second
     assert_equal 1, first.placements.count
+  end
+
+  test "serializable_hash reflects current placements live, ordered by page then position" do
+    quiz = create(:quiz)
+    second = create(:quiz_question_placement, level: quiz, page: 1, position: 2)
+    first = create(:quiz_question_placement, level: quiz, page: 1, position: 1)
+
+    assert_equal(
+      [
+        {'question_key' => first.quiz_question.key, 'page' => 1, 'position' => 1},
+        {'question_key' => second.quiz_question.key, 'page' => 1, 'position' => 2},
+      ],
+      quiz.serializable_hash['placements']
+    )
+  end
+
+  test "load_level_xml translates the file's placements key to serialized_placements" do
+    quiz = create(:quiz)
+    xml = Nokogiri::XML(<<~XML, &:noblanks)
+      <Quiz>
+        <config><![CDATA[{"placements": [{"question_key": "abc", "page": 1, "position": 1}]}]]></config>
+      </Quiz>
+    XML
+
+    hash = quiz.load_level_xml(xml)
+
+    assert_equal [{'question_key' => 'abc', 'page' => 1, 'position' => 1}], hash['serialized_placements']
+    refute hash.key?('placements')
+  end
+
+  test "import_serialized_placements! creates placements from serialized_placements" do
+    quiz = create(:quiz)
+    question = create(:quiz_question)
+    quiz.serialized_placements = [{'question_key' => question.key, 'page' => 1, 'position' => 1}]
+
+    quiz.import_serialized_placements!
+
+    assert_equal [question], quiz.reload.questions
+  end
+
+  test "import_serialized_placements! does nothing when placements already match" do
+    quiz = create(:quiz)
+    placement = create(:quiz_question_placement, level: quiz, page: 1, position: 1)
+    quiz.serialized_placements = [{'question_key' => placement.quiz_question.key, 'page' => 1, 'position' => 1}]
+
+    quiz.import_serialized_placements!
+
+    assert_equal placement.id, quiz.reload.placements.first.id
+  end
+
+  test "import_serialized_placements! updates page/position on an existing placement" do
+    quiz = create(:quiz)
+    placement = create(:quiz_question_placement, level: quiz, page: 1, position: 1)
+    quiz.serialized_placements = [{'question_key' => placement.quiz_question.key, 'page' => 2, 'position' => 1}]
+
+    quiz.import_serialized_placements!
+
+    assert_equal 1, quiz.placements.count
+    assert_equal 2, quiz.placements.first.page
+  end
+
+  test "import_serialized_placements! removes placements no longer listed" do
+    quiz = create(:quiz)
+    create(:quiz_question_placement, level: quiz)
+    quiz.serialized_placements = []
+
+    quiz.import_serialized_placements!
+
+    assert_empty quiz.placements
+  end
+
+  test "import_serialized_placements! raises when the .level file has no placements list" do
+    quiz = create(:quiz)
+
+    assert_raises(RuntimeError) {quiz.import_serialized_placements!}
+  end
+
+  test "import_serialized_placements! raises on an unresolvable question_key" do
+    quiz = create(:quiz)
+    quiz.serialized_placements = [{'question_key' => 'not-a-real-key', 'page' => 1, 'position' => 1}]
+
+    assert_raises(RuntimeError) {quiz.import_serialized_placements!}
+  end
+
+  test "import_serialized_placements! raises rather than silently dropping a duplicate question_key" do
+    quiz = create(:quiz)
+    question = create(:quiz_question)
+    quiz.serialized_placements = [
+      {'question_key' => question.key, 'page' => 1, 'position' => 1},
+      {'question_key' => question.key, 'page' => 1, 'position' => 2},
+    ]
+
+    assert_raises(ActiveRecord::RecordNotUnique) {quiz.import_serialized_placements!}
   end
 end

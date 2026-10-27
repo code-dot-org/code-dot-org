@@ -498,6 +498,14 @@
               </shadow>
             </value>
           </block>
+          <block type="gamelab_everyInterval" id="@wvE[[8/(m/nuDD0$8b6">
+            <field name="UNIT">"seconds"</field>
+            <value name="N">
+              <shadow type="math_number" id="cSgn8qh0?.kL:T#MOIm4">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
           <block type="gamelab_whenPromptAnswered" id="v-?HmiO2pnH14,V|Qum-">
             <value name="VAR">
               <block type="variables_get" id=";bf0egpL44a`6jlzGIxq" movable="false">

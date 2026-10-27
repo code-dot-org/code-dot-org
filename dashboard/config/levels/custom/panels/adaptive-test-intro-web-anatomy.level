@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-10-09T00:27:22.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-test-intro-web-anatomy-85f585ed-aa19-46d3-a328-10f2505902b6",
+        "text": "Just like a house has different rooms, a website has different sections or 'components'!",
+        "imageUrl": "https://images.code.org/3f091c6bb59e3b526f99b64a4ecc76a2-adaptive-test-intro-web-anatomy-panel-1-fe049a84-a422-499b-bdb0-b4b6b671d430.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "adaptive-test-intro-web-anatomy-33af5ef5-b654-49a9-a050-76e3046f6dd4",
+        "text": "The *hero section* is usually at the top. It grabs your attention with a big message and an eye-catching image.",
+        "imageUrl": "https://images.code.org/436a2f114d133c0896d7589159cffc72-adaptive-test-intro-web-anatomy-panel-2-962d83e3-2a71-4192-843e-b39215862cb8.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "adaptive-test-intro-web-anatomy-07b14328-6dfc-4b01-af4f-74d75bb81e42",
+        "text": "Further down, you might see *feature cards*. These are small boxes that show off different products, services, or ideas.",
+        "imageUrl": "https://images.code.org/eaae7db02eae9f25c54c4a90683c199c-adaptive-test-intro-web-anatomy-panel-3-6f149c4c-381a-4c54-953b-0916cb3f77ae.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "adaptive-test-intro-web-anatomy-f741de7e-ce18-4e6a-bf69-8484f4c3c5b8",
+        "text": "Look for the *call-to-action*! It's a button or link that tells you what to do next, like 'Sign Up' or 'Learn More'.",
+        "imageUrl": "https://images.code.org/2fa30818c30204e3ff31c6cf160650de-adaptive-test-intro-web-anatomy-panel-4-8a986581-1ca1-4d75-9aea-11ff98f6bae5.png",
+        "layout": "text-bottom-center"
+      },
+      {
+        "key": "adaptive-test-intro-web-anatomy-feb4dd8f-69fd-4c78-9579-e626d7d1c1e7",
+        "text": "Now you know some basic web page components! Keep an eye out for them as you browse.",
+        "imageUrl": "https://images.code.org/26ee013a993e7303810c87e9aa398bcd-adaptive-test-intro-web-anatomy-panel-5-30234834-0162-4dfb-9f5c-f673e7283354.png",
+        "layout": "text-bottom-center"
+      }
+    ],
+    "generate_outline": "This introductory lesson will teach you the common components of a web page, such as the hero section, feature cards, and call-to-action buttons. You'll learn to recognize and understand their purpose in web design."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-09 00:28:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:28:13 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

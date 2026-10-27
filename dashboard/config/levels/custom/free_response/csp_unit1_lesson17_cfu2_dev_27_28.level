@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-10T04:50:36.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Why Programming Languages Exist\r\n\r\nA classmate says, \"Computers should just follow instructions written in everyday English.\" Using what happened in today's activity, explain why programming languages exist. ",
+    "encrypted_solution": "X1wXCWgYnVOTd4by6sBPVqs+wtLw61HvOGvnCTI+Vazow31f5LRMh16FpN/4\nl5cXF6BpV5fsm7mOwqiUQbct7PsQrryzvrRk9iN3HdoZwEyE8QXbsIV6HCkR\nmD3YYVbm2+asRsaS6/hy6Mu5X1Yhza233/Dern1+QYQxAbWN8Hyc1B6WIYyl\nJ7PPFg1yPM283LXgNjTuS/XfMDzrPTUOjPTW5dKPj/8q662dy3YmTAtMeg5E\nQnHkk2/OYRDVhuG+mm5VvRx9ggXw1yGEatfHA363iEvKZF12pc2H07rTU9qA\nsZ1C9VA335g9BSoTjbEAOQGdI2NOwntQT0d0+K1SAJ27tW7znqcFC5F1HSOq\n6J4NLcNGC1Rs5FMalInvOxEz/x2dr3KMcb8d4EIcbYgDybv07ffKL+6gxldW\n/p7gBbmXeEkxO58DaK+XwH0xitY6Mn6AVoRWKOjvvoTfrWCfnBokB1hUfFCV\nj5AnP66y1eFuNA8GJ2i1SLt/OplJ5Ut3abyJefzHJRfQb2d3Bk88bIdlbG9U\ncLlMxojOfqdcBBig7AgPnzZUWTCXeb8qIw6l0fSU+XTd0f2Pd23f+HBLdbDq\n5qBfPJCABIwZttnym/4EOvrborOSMMK34820xZNptD67gogkBXmKi6A5sXtE\nROAycdQnaq9D0FDwRDWFiRXGjvmKJ5Oj/re72ZpuhAkJpg7GMOJ5CvC07DMd\nuIMW/NWmy4p1DlezMgdrrwkZANGeaoOc5EqtT8sj8rgwdRy/6bKXOY1eXEYa\nR8gWz7nJjLuUetTutru6Yfw2FqDGntDvOon87OpcIQ+4jNNNk1Q5\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19163,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-10T04:50:36.848+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson17_cfu1_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson17_cfu1_dev_27_28\"},{\"changed_at\":\"2026-10-10 04:57:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

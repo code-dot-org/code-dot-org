@@ -1,23 +1,38 @@
 #!/bin/bash
 
-# Starts an SSM Session Manager session to the EC2 instance, specified by Name (tag) or ID.
+# Starts an SSM Session Manager session to the EC2 instance, specified by Name
+# (tag) or instance ID. When a Name matches more than one running instance the
+# session is refused rather than connecting to an arbitrary one; re-run with the
+# instance ID you want.
 
 INSTANCE_NAME="${1?
 Usage: $0 INSTANCE_NAME [OPTION]...}"
 
-if [[ "$INSTANCE_NAME" =~ ^i-.* ]]; then
+if [[ "$INSTANCE_NAME" =~ ^i- ]]; then
   INSTANCE_ID="$INSTANCE_NAME"
 else
-  INSTANCE_ID=$(aws ec2 describe-instances \
-    --filters "Name=tag:Name,Values=$INSTANCE_NAME" \
-    --query Reservations[].Instances[].[InstanceId] \
-    --output text \
-    | head -n1
-  )
-fi
-if [ -z "$INSTANCE_ID" ]; then
-  echo "Instance '$INSTANCE_NAME' not found."
-  exit 1
+  # Unquoted substitution splits the ids into an array on whitespace; instance ids hold no glob characters, so
+  # word-splitting is safe here.
+  INSTANCE_IDS=($(aws ec2 describe-instances \
+    --filters "Name=tag:Name,Values=$INSTANCE_NAME" "Name=instance-state-name,Values=running" \
+    --query 'Reservations[].Instances[].InstanceId' \
+    --output text))
+
+  case "${#INSTANCE_IDS[@]}" in
+    0)
+      echo "Instance '$INSTANCE_NAME' not found." >&2
+      exit 1
+      ;;
+    1)
+      INSTANCE_ID="${INSTANCE_IDS[0]}"
+      ;;
+    *)
+      echo "Instance name '$INSTANCE_NAME' is ambiguous; ${#INSTANCE_IDS[@]} running instances match:" >&2
+      printf '  %s\n' "${INSTANCE_IDS[@]}" >&2
+      echo "Re-run with the instance id you want." >&2
+      exit 1
+      ;;
+  esac
 fi
 
 aws ssm start-session --target "$INSTANCE_ID" "${@:2}"

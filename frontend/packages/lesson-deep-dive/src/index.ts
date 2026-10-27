@@ -1,7 +1,10 @@
 // Public API for @code-dot-org/lesson-deep-dive
 // Export all public symbols from this file.
+export {default as AudioRecorder} from './ChallengeActivities/AudioRecorder';
+export {default as FizzyButton} from './FizzyButton';
 export {default as LessonSummaryCard} from './LessonSummaryCard';
 export {default as LevelsAttemptedBox} from './StudentLessonStats/LevelsAttemptedBox';
+export {default as NextStepPicker} from './NextStepPicker';
 export {default as PersonalizedWelcomeBox} from './PersonalizedWelcomeBox';
 export {default as PreSkillsCheck} from './PreSkillsCheck';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
@@ -40,3 +43,13 @@ export type {
   TutorGalleryData,
   ViewerRole,
 } from './gallery/types';
+export {
+  addReaction,
+  getChallengeResponse,
+  getUnitCounts,
+  listChallengeResponses,
+  removeReaction,
+  setApproved,
+} from './gallery/api';
+export {default as ChallengeGallery} from './gallery/ChallengeGallery';
+export {default as ProjectDetailsCard} from './gallery/ProjectDetailsCard';

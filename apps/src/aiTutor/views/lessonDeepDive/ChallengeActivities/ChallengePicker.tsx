@@ -66,7 +66,9 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
   }, [lessonId]);
 
   const filtered = modality
-    ? challenges.filter(c => c.default_modality === modality)
+    ? challenges.filter(
+        c => c.default_modality === modality || c.default_modality === 'both'
+      )
     : [];
   const currentChallenge = filtered[challengeIndex] ?? null;
   const hasMultiple = filtered.length > 1;

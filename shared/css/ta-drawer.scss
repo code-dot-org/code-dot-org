@@ -1,0 +1,28 @@
+// The AI teaching-assistant drawer (apps/src/aiTeacherDrawer) occupies a strip
+// along the right edge of the viewport, starting below the 50px header. It
+// publishes the width of that strip as --ta-drawer-width on the root element --
+// 0px while the drawer is closed -- and the timing of its slide as
+// --ta-drawer-transition, so that a page can leave room for a drawer that is
+// drawn over it.
+//
+// This is for pages the drawer covers. A Lab2 lab instead renders the drawer
+// inside its own component tree (see Lab2Wrapper), where it is an ordinary
+// flex sibling taking real layout space, so those pages read nothing from
+// here and the drawer publishes no width for them.
+//
+// Content laid out in normal flow needs nothing from here either: legacy.scss
+// insets #main_content once, for every page, and animates it alongside the
+// drawer. Because #main_content is the header's sibling rather than its child,
+// the header keeps the full page width. What is left is the legacy labs, which
+// position their shells against the viewport and so never feel that margin.
+// Such a shell must inset only itself: insetting a box the header sits inside,
+// such as the pinned body, drags the header in with it.
+//
+// A legacy lab also computes widths in JavaScript, from availableContentWidth()
+// in apps/src/util/taDrawerInset.ts. That answers with the width the lab ends
+// up with rather than the width it has mid-slide, so these shells resize in one
+// step instead of animating, keeping a lab and its contents the same size
+// throughout.
+
+$ta-drawer-width: var(--ta-drawer-width, 0px);
+$ta-drawer-transition: var(--ta-drawer-transition, 0s);

@@ -23,3 +23,36 @@
 .optionLetter {
   font-weight: 600;
 }
+
+// After .optionSelected so a graded pick overrides its purple.
+.optionCorrect {
+  background: var(--background-success-light);
+  border-color: var(--border-success-mid);
+
+  .statusIcon {
+    color: var(--text-success-primary);
+  }
+}
+
+.optionIncorrect {
+  background: var(--background-error-light);
+  border-color: var(--border-error-mid);
+
+  .statusIcon {
+    color: var(--text-error-primary);
+  }
+}
+
+.statusIcon {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

@@ -7,6 +7,7 @@
 #  asset_type            :string(255)      not null
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
+#  ai_alt_text           :text(65535)
 #
 # Indexes
 #

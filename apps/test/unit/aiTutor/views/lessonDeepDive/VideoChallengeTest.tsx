@@ -62,7 +62,7 @@ const recordVideo = async () => {
 const VideoHarness: FC<{
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({submitCallback}) => {
-  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const submitRef = useRef<(() => Promise<boolean>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
   const [canSubmit, setCanSubmit] = useState(false);
   const [isRecording, setIsRecording] = useState(false);

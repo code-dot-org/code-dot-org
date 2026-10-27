@@ -4,6 +4,7 @@ import {generateText, type GenerateTextResult} from 'ai';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
+import {AichatContext} from '../aichat/types';
 
 import {
   CURRENT_SCHEMA_VERSION,
@@ -11,6 +12,11 @@ import {
   type CurrentGatewayGenerateTextResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
+import {
+  recordGatewayRequestError,
+  recordGatewayRequestOk,
+  recordTokenNotIssued,
+} from './requestMetric';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 import {
   fetchTurnstileToken,
@@ -101,10 +107,14 @@ const generateTextThroughGateway = async <
 ): Promise<GatewayGenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
   const phase = extraOptions?.phase as GatewayPhase | undefined;
+  // A caller outside a chat passes its own context for the access token.
+  const aichatContext =
+    (extraOptions?.aichatContext as AichatContext | undefined) ??
+    AichatContextManager.getContext();
   const modelString = getModelString(model);
   const promptLength =
     typeof options.prompt === 'string' ? options.prompt.length : 0;
-  const clientType = AichatContextManager.getContext().clientType;
+  const clientType = aichatContext.clientType;
 
   let schemaErrorReported = false;
   const execute = async (): Promise<
@@ -123,7 +133,13 @@ const generateTextThroughGateway = async <
       // Turnstile mode that decides whether a challenge is needed at all. The
       // manager pre-fetches a token after every delivery, so only the first
       // call of a session waits on a challenge here.
-      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const access = await fetchAccessToken(aichatContext).catch(
+        (error: unknown) => {
+          recordTokenNotIssued();
+          throw error;
+        }
+      );
+      const {token, turnstileEnforcementMode} = access;
       const turnstileToken = await fetchTurnstileToken(
         turnstileEnforcementMode
       );
@@ -140,7 +156,11 @@ const generateTextThroughGateway = async <
         JSON.stringify({...payload, token}),
         false,
         headers
-      );
+      ).catch(async (error: unknown) => {
+        await recordGatewayRequestError(access.signingKey, error);
+        throw error;
+      });
+      recordGatewayRequestOk(access.signingKey);
 
       const rawResponse = await response.json();
       const parseResult =

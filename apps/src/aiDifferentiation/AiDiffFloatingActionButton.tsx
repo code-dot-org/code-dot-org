@@ -1,7 +1,14 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {
+  noteTaPanelEntryPoint,
+  sendTaEvent,
+  takeTaPanelEntryPoint,
+} from '@cdo/apps/aiTeacherDrawer/analytics';
+import {takeDrawerReopenNav} from '@cdo/apps/aiTeacherDrawer/drawerReopen';
 import {
   setChatIsOpen,
   fetchThreadMessages,
@@ -61,6 +68,12 @@ interface AiDiffFloatingActionButtonProps {
    * be the only visible entry point to the drawer.
    */
   hideButton?: boolean;
+  /**
+   * Lays the drawer out in the surrounding flow rather than over the page.
+   * Set by Lab2Wrapper, which hosts this component inside the lab's own
+   * component tree so the lab's layout accounts for the drawer directly.
+   */
+  inline?: boolean;
 }
 
 const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
@@ -82,6 +95,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   canDefaultOpen = true,
   openToNav,
   hideButton = false,
+  inline = false,
 }) => {
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
@@ -126,6 +140,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       );
     }
   }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
+
+  // Deliberately not gated on canStartOpen: level pages pass that as false to
+  // stop the drawer opening on its own, but this is the tail end of a click
+  // the teacher already made (see drawerReopen). Declared after the auto-open
+  // effect above so it is not immediately undone by it on mount.
+  React.useEffect(() => {
+    const reopenNav = takeDrawerReopenNav();
+    if (reopenNav) {
+      noteTaPanelEntryPoint('student_navigation');
+      dispatch(openDrawerToNav(reopenNav));
+    }
+  }, [dispatch]);
 
   const updateUnreadNotificationCount = React.useCallback(() => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
@@ -193,6 +219,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       });
   }, [context, dispatch]);
 
+  // Only the pre-rebrand PNG reports a load; see showPulse below.
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
   const [fabPosition, setFabPosition] = useState<{top: number} | null>(null);
@@ -280,10 +307,38 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     onDragEnd();
   };
 
-  const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
+  // The TA rebrand -- new mark, pink disc, count-only badge -- ships with the
+  // rest of the new teacher panel. Without the experiment this is the old FAB,
+  // down to the pulse waiting on the PNG to load.
+  const showRebrandedIcon = experiments.isEnabled('ta-teacher-panel');
+  const showPulse =
+    canShowPulse && !hasOpened && (showRebrandedIcon || isFabImageLoaded);
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButtonRight;
+
+  // Every path that opens the drawer ends in chatIsOpen going true, including
+  // the automatic open above and the teacher panel handle, which never touch
+  // handleClick. Report the open from the transition and let whoever caused it
+  // leave their name behind (see noteTaPanelEntryPoint).
+  const wasChatOpenRef = useRef<boolean | null>(null);
+  useEffect(() => {
+    const wasOpen = wasChatOpenRef.current;
+    wasChatOpenRef.current = chatIsOpen;
+    if (wasOpen === null || wasOpen === chatIsOpen || !chatIsOpen) {
+      return;
+    }
+    const entryPoint = takeTaPanelEntryPoint();
+    sendTaEvent(
+      EVENTS.AI_TA_PANEL_OPENED,
+      {
+        entry_point: entryPoint,
+        context_type: context.type,
+        script_name: scriptName,
+      },
+      entryPoint
+    );
+  }, [chatIsOpen, context.type, scriptName]);
 
   const handleClick = () => {
     if (wasDraggingRef.current) {
@@ -303,6 +358,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
+    if (!chatIsOpen) {
+      noteTaPanelEntryPoint(openToNav ? 'nav_shortcut' : 'fab');
+    }
     if (openToNav) {
       dispatch(openDrawerToNav(openToNav));
     } else {
@@ -319,10 +377,30 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     updateUnreadNotificationCount();
   };
 
-  const brand = document.documentElement.dataset.brand;
+  // Unlike handleClick, always closes rather than toggling/re-opening to
+  // openToNav — used by the drawer's own close (X) button, which must be
+  // able to close the drawer even when this FAB is configured with
+  // openToNav (where handleClick would otherwise just re-open it).
+  const closeDrawer = () => {
+    analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_CLOSED, {
+      aiDiffChatContext: context,
+      scriptName,
+    });
+    trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
+    dispatch(setChatIsOpen(false));
+    trySetSessionStorage(SESSION_STORAGE_KEY, false.toString());
+    updateUnreadNotificationCount();
+  };
 
   return (
-    <div id="fab-contained">
+    <div
+      id="fab-contained"
+      // Hosted inside a dark Lab2 lab, the button would otherwise pick up that
+      // lab's theme; the drawer resets this for itself too. Light is the
+      // default theme, so this changes nothing on pages without one.
+      data-theme={inline ? 'Light' : undefined}
+      className={inline ? style.fabContainedInline : undefined}
+    >
       {!hideButton && !chatIsOpen && (
         <button
           ref={buttonRef}
@@ -349,14 +427,17 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           }}
         >
           <Badge
+            // Rebranded, the badge is the unread count and nothing else: MUI
+            // hides it at zero, which covers both "no notifications" and
+            // "still loading". Before the rebrand it doubled as a 'TA' label.
             badgeContent={
               unreadNotificationCount === 'loading'
                 ? 0
-                : unreadNotificationCount > 0
+                : unreadNotificationCount > 0 || showRebrandedIcon
                 ? unreadNotificationCount
                 : 'TA'
             }
-            color="error"
+            color={showRebrandedIcon ? undefined : 'error'}
             overlap="circular"
             aria-label={
               unreadNotificationCount &&
@@ -367,43 +448,55 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
             sx={{
               height: '48px',
               width: '48px',
-              '& .MuiBadge-badge': {
-                backgroundColor:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0
-                    ? 'var(--background-error-primary)'
-                    : 'var(--background-brand-aqua-primary)',
-                color:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0 ||
-                  brand === 'codeai-next'
-                    ? 'var(--text-neutral-white-fixed)'
-                    : 'var(--text-neutral-black-fixed)',
-                top: '5%',
-                right: '5%',
-              },
+              '& .MuiBadge-badge': showRebrandedIcon
+                ? {
+                    backgroundColor:
+                      'var(--background-neutral-primary-inverse)',
+                    color: 'var(--text-neutral-primary-inverse)',
+                    border: '2px solid var(--background-neutral-primary)',
+                    top: '5%',
+                    right: '18%',
+                  }
+                : {
+                    backgroundColor:
+                      unreadNotificationCount === 'loading' ||
+                      unreadNotificationCount > 0
+                        ? 'var(--background-error-primary)'
+                        : 'var(--background-brand-aqua-primary)',
+                    color: 'var(--text-neutral-white-fixed)',
+                    top: '5%',
+                    right: '5%',
+                  },
             }}
-            className={style.badge}
           >
-            <img
-              alt="AI bot - unread notifications"
-              src={aiFabWithoutText}
-              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-              className={style.fabImageWithBadge}
-              draggable={false}
-            />
+            {showRebrandedIcon ? (
+              <FontAwesomeV6Icon
+                iconFamily="kit"
+                iconName="ta"
+                title={i18n.openOrCloseTeachingAssistant()}
+                className={style.fabIcon}
+              />
+            ) : (
+              <img
+                alt="AI bot - unread notifications"
+                src={aiFabWithoutText}
+                onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+                draggable={false}
+              />
+            )}
           </Badge>
         </button>
       )}
       <React.Suspense fallback={<div />}>
         <LazyAiDiffDrawer
           context={context}
-          closeTutor={handleClick}
+          closeTutor={closeDrawer}
           curriculumCourses={curriculumCourses || ([] as string[])}
           scriptName={scriptName}
           unreadNotificationCount={
             unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
           }
+          inline={inline}
         />
       </React.Suspense>
     </div>

@@ -165,6 +165,7 @@ class User < ApplicationRecord
   include CredentialStrippable
   include Facilitator
   include TermsOfService
+  include LogTokenable
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
@@ -255,6 +256,7 @@ class User < ApplicationRecord
     ai_differentiation_toggled_off
     has_seen_ai_assessments_announcement
     has_completed_ai_differentiation_welcome
+    teacher_panel_v2_seen
     sort_by_family_name
     has_seen_homepage_welcome
     lti_roster_sync_enabled

@@ -1,0 +1,9 @@
+name 'csp_unit1_lesson10_cfu1_dev_27_28'
+title 'Multiple Choice: Bits to Pixels'
+description ''
+question 'A pixel in a color image uses 6 bits. Which statement describes how those bits make the color of the pixel?'
+wrong 'Each bit picks one color from a list of six colors.'
+right 'The bits are split into three groups, and each group sets the level of red, green, or blue light.'
+wrong 'The bits are added together to get one brightness number.'
+wrong 'The bits store the position of the pixel in the image.'
+allow_multiple_attempts true

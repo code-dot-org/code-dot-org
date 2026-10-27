@@ -14,7 +14,7 @@ function renderModal(onClose = vi.fn()) {
   const client = createQueryClient({queries: {retry: false}});
   render(
     <QueryClientProvider client={client}>
-      <ToastProvider>
+      <ToastProvider politeness="polite">
         <CreatePasswordModal open onClose={onClose} />
       </ToastProvider>
     </QueryClientProvider>,
@@ -62,7 +62,12 @@ describe('CreatePasswordModal', () => {
     expect(
       (body.user as Record<string, unknown>).current_password,
     ).toBeUndefined();
-    expect(screen.getByText('Password created.')).toBeInTheDocument();
+    // The announcer fills a frame after the snackbar; the still-open dialog hides it.
+    await waitFor(() =>
+      expect(screen.getByRole('status', {hidden: true})).toHaveTextContent(
+        'Password created.',
+      ),
+    );
   });
 
   it('keeps the dialog open and shows a too-short-password 422 on the password field', async () => {

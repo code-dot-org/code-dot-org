@@ -1,13 +1,18 @@
 // No redux Provider, unlike main.tsx: the gallery reads no redux state.
 
-import './nodeShims';
-
 import {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
 import {z} from 'zod';
 
-import ChallengeGallery from '@cdo/apps/aiTutor/views/gallery/ChallengeGallery';
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  ApiClientProvider,
+  createApiClient,
+  createKyTransport,
+  refreshCsrfToken,
+  resolveCsrfToken,
+} from '@code-dot-org/core/api';
 
+import ChallengeGallery from '../gallery/ChallengeGallery';
 import {type TutorGalleryData} from '../gallery/types';
 
 import {DevPageChrome} from './devPageChrome';
@@ -15,6 +20,7 @@ import {registerGalleryMocks} from './galleryMocks';
 
 const TutorGalleryDataSchema = z.object({
   currentUnitId: z.number(),
+  is_teacher: z.boolean(),
   units: z.array(
     z.object({
       id: z.number(),
@@ -44,10 +50,25 @@ async function fetchTutorGalleryData(): Promise<TutorGalleryData> {
 async function boot(): Promise<void> {
   // Without the worker, the Vite proxy forwards requests to a local Rails.
   if (import.meta.env.VITE_API_MODE === 'msw') {
-    const {startMockWorker} = await import('@code-dot-org/core/api/mocks');
+    const {maybeResetFromUrl, setActiveScenario, startMockWorker} =
+      await import('@code-dot-org/core/api/mocks');
+    // The scenario keys the sessionStorage that keeps mock writes across reloads.
+    setActiveScenario({labKey: 'lesson-deep-dive-gallery', tag: 'default'});
+    maybeResetFromUrl();
     registerGalleryMocks();
     await startMockWorker();
   }
+
+  const apiClient = createApiClient(
+    createKyTransport({
+      baseUrl: window.location.origin,
+      credentials: 'same-origin',
+      getCsrfToken: resolveCsrfToken,
+      kyOptions: {timeout: false},
+    }),
+  );
+  // gallery.html has no csrf-token meta tag; prime it the way HttpClient did.
+  await refreshCsrfToken(apiClient.transport);
 
   const container = document.getElementById('tutor-gallery-container')!;
   let tutorGalleryData: TutorGalleryData;
@@ -60,13 +81,14 @@ async function boot(): Promise<void> {
     return;
   }
 
-  createReactRoot(
+  createRoot(container).render(
     <StrictMode>
-      <DevPageChrome>
-        <ChallengeGallery tutorGalleryData={tutorGalleryData} />
-      </DevPageChrome>
+      <ApiClientProvider client={apiClient}>
+        <DevPageChrome>
+          <ChallengeGallery tutorGalleryData={tutorGalleryData} />
+        </DevPageChrome>
+      </ApiClientProvider>
     </StrictMode>,
-    container,
   );
 }
 

@@ -3,6 +3,7 @@ import {Button, IconButton, Tooltip, Typography} from '@mui/material';
 import React, {FC, ReactNode, Ref, useId, useRef, useState} from 'react';
 
 import {NewCanvasText, TEXT_STYLES, TextStyle} from './canvasTextUtils';
+import {Sticker, STICKER_SECTIONS} from './stickers';
 
 import styles from './edit-toolbar.module.scss';
 
@@ -22,12 +23,6 @@ const TEXT_COLORS = [
   {name: 'Brown', value: '#8b5e3c'},
   {name: 'Black', value: '#000000'},
   {name: 'White', value: '#ffffff', light: true},
-];
-
-const STICKER_SECTIONS = [
-  {title: 'Retro', slots: 8},
-  {title: 'Neon', slots: 11},
-  {title: 'Sketch', slots: 12},
 ];
 
 interface ToolButtonProps {
@@ -205,16 +200,37 @@ const TextPanel: FC<TextPanelProps> = ({onClose, onAddText}) => {
   );
 };
 
-const StickersPanel: FC<{onClose: () => void}> = ({onClose}) => (
+interface StickersPanelProps {
+  onClose: () => void;
+  onAddSticker: (sticker: Sticker) => void;
+}
+
+const StickersPanel: FC<StickersPanelProps> = ({onClose, onAddSticker}) => (
   <Panel title="Stickers" onClose={onClose}>
-    {STICKER_SECTIONS.map(({title, slots}) => (
+    {STICKER_SECTIONS.map(({title, stickers}) => (
       <div key={title} className={styles.section}>
         <Typography variant="body4" className={styles.sectionLabel}>
           {title}
         </Typography>
-        <div className={styles.stickerSlots} aria-hidden="true">
-          {Array.from({length: slots}, (_, i) => (
-            <div key={i} className={styles.stickerSlot} />
+        <div className={styles.stickers}>
+          {stickers.map(sticker => (
+            <Tooltip
+              key={sticker.name}
+              title={sticker.name}
+              // Closes on leaving the sticker, so it never covers the next one
+              disableInteractive
+              slotProps={{tooltip: {className: styles.stickerTooltip}}}
+            >
+              <IconButton
+                variant="text"
+                color="tertiary"
+                aria-label={sticker.name}
+                onClick={() => onAddSticker(sticker)}
+                className={styles.sticker}
+              >
+                <img src={sticker.src} alt="" />
+              </IconButton>
+            </Tooltip>
           ))}
         </div>
       </div>
@@ -224,12 +240,14 @@ const StickersPanel: FC<{onClose: () => void}> = ({onClose}) => (
 
 interface EditToolbarProps {
   onAddText: (text: NewCanvasText) => void;
+  onAddSticker: (sticker: Sticker) => void;
   canDelete: boolean;
   onDelete: () => void;
 }
 
 const EditToolbar: FC<EditToolbarProps> = ({
   onAddText,
+  onAddSticker,
   canDelete,
   onDelete,
 }) => {
@@ -260,7 +278,7 @@ const EditToolbar: FC<EditToolbarProps> = ({
           />
           <ToolButton
             label="Stickers"
-            iconName="badge"
+            iconName="face-smile"
             pressed={openPanel === 'stickers'}
             onClick={() => toggle('stickers')}
             buttonRef={stickersButtonRef}
@@ -280,7 +298,9 @@ const EditToolbar: FC<EditToolbarProps> = ({
       {openPanel === 'text' && (
         <TextPanel onClose={close} onAddText={onAddText} />
       )}
-      {openPanel === 'stickers' && <StickersPanel onClose={close} />}
+      {openPanel === 'stickers' && (
+        <StickersPanel onClose={close} onAddSticker={onAddSticker} />
+      )}
     </div>
   );
 };

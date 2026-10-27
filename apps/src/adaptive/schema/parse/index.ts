@@ -5,7 +5,7 @@ import {z} from 'zod';
 
 import {pathwaySchema, pathwaySourceSchema} from '../pathway';
 
-import {referenceProblems} from './references';
+import {findReferenceProblems} from './references';
 
 type Pathway = z.infer<typeof pathwaySchema>;
 type PathwaySource = z.infer<typeof pathwaySourceSchema>;
@@ -29,7 +29,7 @@ export function parsePathway(raw: unknown): Pathway {
   if (!result.success) {
     throw new AdaptiveContentError(formatIssues(result.error));
   }
-  const problems = referenceProblems(result.data);
+  const problems = findReferenceProblems(result.data);
   if (problems.length > 0) {
     throw new AdaptiveContentError(problems);
   }
@@ -45,4 +45,4 @@ export function parsePathwaySource(raw: unknown): PathwaySource {
   return result.data;
 }
 
-export {referenceProblems} from './references';
+export {findReferenceProblems} from './references';

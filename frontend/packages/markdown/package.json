@@ -28,6 +28,7 @@
   },
   "scripts": {
     "build": "vite build && tsc --noEmit",
+    "clean": "rimraf dist",
     "dev": "vite --config vite.demo.config.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -75,6 +76,7 @@
     "remark-gfm": "^4.0.1",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
+    "rimraf": "catalog:",
     "stylelint": "catalog:",
     "typescript": "catalog:",
     "unified": "^11.0.5",

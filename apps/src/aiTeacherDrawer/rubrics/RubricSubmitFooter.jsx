@@ -179,7 +179,7 @@ function RubricSubmitFooter({
             </Typography>
           </div>
         )}
-        {!errorSubmitting && (
+        {!errorSubmitting && !!lastSubmittedTimestamp && (
           <div id="ui-feedback-submitted-timestamp">
             <Typography variant="body4" gutterBottom>
               {!!lastSubmittedTimestamp &&

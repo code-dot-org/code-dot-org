@@ -3,60 +3,46 @@ import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {
-  AiChatDisabledState,
-  ChatButtonData,
-  ResponseSchemaSettings,
-} from '@cdo/apps/aichat/types';
-import {ChatAsset} from '@cdo/apps/aichat/types/assets';
-import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
-import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import AiTutorChat, {
+  AiTutorChatProps,
+} from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
 import {useInstructionsDrawer} from './useInstructionsDrawer';
 
 import styles from './ai-tutor-chat-with-instructions-drawer.module.scss';
 
-interface AiTutorChatWithInstructionDrawerProps {
-  hiddenContextCallback: () => Promise<string>;
-  aiTutorMultimodalEnabled?: boolean;
-  levelName?: string;
-  channelId?: string;
-  aiTutorChatButtonData?: ChatButtonData[];
-  aiTutorSystemPrompt?: string;
-  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+type AiTutorChatWithInstructionDrawerProps = Omit<
+  AiTutorChatProps,
+  'hasInstructionsDrawer'
+> & {
   instructionsContent?: React.ReactNode;
-  tutorVideos?: JsonVideoFileMetadata[];
+  // The instructions as authored, in markdown. Pinned, they are shown as a
+  // message from the tutor in place of instructionsContent.
+  instructionsText?: string;
   isPredictLevel?: boolean;
-  disabledState?: AiChatDisabledState;
-  onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
-  onAssetRemoved?: (asset: ChatAsset) => void;
   // True when the AI Tutor tab is selected. This component is shared with the
   // Instructions tab (where it renders instructions only); the chat and the
   // Hide/Show Instructions toggle fade in only when the AI Tutor tab is active.
   aiTutorActive: boolean;
-  initialWelcomeMessage?: string;
-}
+  // The instructions stay open above the chat, with no Show/Hide toggle and
+  // no resize bar; with instructionsText, as a message from the tutor.
+  instructionsPinned?: boolean;
+};
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   AiTutorChatWithInstructionDrawerProps
 > = ({
-  hiddenContextCallback,
-  aiTutorMultimodalEnabled,
-  levelName,
-  channelId,
-  aiTutorChatButtonData,
-  aiTutorSystemPrompt,
-  aiTutorResponseSchemaSettings,
   instructionsContent,
-  tutorVideos,
+  instructionsText,
   isPredictLevel,
-  disabledState,
-  onAssetUploaded,
-  onAssetRemoved,
   aiTutorActive,
-  initialWelcomeMessage,
+  instructionsPinned = false,
+  ...aiTutorChatProps
 }) => {
+  const instructionsAsMessage = instructionsPinned && !!instructionsText;
   const {
     containerRef,
     instructionsScrollAreaRef,
@@ -69,7 +55,11 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     separatorProps,
     isDragging,
     toggleInstructions,
-  } = useInstructionsDrawer({isPredictLevel, aiTutorActive});
+  } = useInstructionsDrawer({
+    isPredictLevel,
+    aiTutorActive,
+    pinned: instructionsPinned,
+  });
 
   // Keep the chat mounted across tab switches (so its state persists) but inert
   // when the Instructions tab is showing, so its hidden controls aren't tabbable.
@@ -154,42 +144,51 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           ref={instructionsScrollAreaRef}
           className={styles.instructionsScrollArea}
         >
-          <div ref={instructionsContentRef}>{instructionsContent}</div>
+          <div ref={instructionsContentRef}>
+            {instructionsAsMessage ? (
+              <ChatMessage role={Role.ASSISTANT} text={instructionsText!} />
+            ) : (
+              instructionsContent
+            )}
+          </div>
         </div>
-        {showInstructions && showScrollFade && (
+        {showInstructions && showScrollFade && !instructionsAsMessage && (
           <div className={styles.scrollFade} aria-hidden />
         )}
       </div>
-      <div
-        className={classNames(
-          styles.toggleButtonContainer,
-          !aiTutorActive && styles.fadeHidden
-        )}
-        style={{top: drawerHeight}}
-        aria-hidden={!aiTutorActive}
-      >
-        <MuiButton
-          variant="text"
-          color="secondary"
-          size="extraSmall"
-          className={styles.toggleButton}
-          onClick={toggleInstructions}
-          type="button"
-          tabIndex={aiTutorActive ? undefined : -1}
-          startIcon={
-            <FontAwesomeV6Icon iconName="info-circle" iconStyle="solid" />
-          }
-          endIcon={
-            <FontAwesomeV6Icon
-              iconName={isCollapsed ? 'chevron-down' : 'chevron-up'}
-              iconStyle="solid"
-            />
-          }
+      {!instructionsPinned && (
+        <div
+          className={classNames(
+            styles.toggleButtonContainer,
+            !aiTutorActive && styles.fadeHidden
+          )}
+          style={{top: drawerHeight}}
+          aria-hidden={!aiTutorActive}
         >
-          {isCollapsed ? 'Show Instructions' : 'Hide Instructions'}
-        </MuiButton>
-      </div>
-      {aiTutorActive && !isCollapsed && (
+          <MuiButton
+            variant="text"
+            color="secondary"
+            size="extraSmall"
+            className={styles.toggleButton}
+            onClick={toggleInstructions}
+            type="button"
+            tabIndex={aiTutorActive ? undefined : -1}
+            startIcon={
+              <FontAwesomeV6Icon iconName="info-circle" iconStyle="solid" />
+            }
+            endIcon={
+              <FontAwesomeV6Icon
+                iconName={isCollapsed ? 'chevron-down' : 'chevron-up'}
+                iconStyle="solid"
+              />
+            }
+          >
+            {isCollapsed ? 'Show Instructions' : 'Hide Instructions'}
+          </MuiButton>
+        </div>
+      )}
+      {instructionsPinned && <div className={styles.divider} aria-hidden />}
+      {aiTutorActive && !isCollapsed && !instructionsPinned && (
         <ResizeBar
           className={classNames(
             styles.resizeBar,
@@ -209,19 +208,8 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
       >
         <div className={styles.chatContent} style={{height: chatContentHeight}}>
           <AiTutorChat
-            hiddenContextCallback={hiddenContextCallback}
-            aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
-            levelName={levelName}
-            channelId={channelId}
-            aiTutorChatButtonData={aiTutorChatButtonData}
-            aiTutorSystemPrompt={aiTutorSystemPrompt}
-            aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
-            hasInstructionsDrawer={true}
-            tutorVideos={tutorVideos}
-            disabledState={disabledState}
-            onAssetUploaded={onAssetUploaded}
-            onAssetRemoved={onAssetRemoved}
-            initialWelcomeMessage={initialWelcomeMessage}
+            {...aiTutorChatProps}
+            hasInstructionsDrawer={!instructionsPinned}
           />
         </div>
       </div>

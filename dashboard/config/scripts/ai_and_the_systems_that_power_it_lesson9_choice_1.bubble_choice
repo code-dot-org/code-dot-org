@@ -1,0 +1,17 @@
+name 'ai-and-the-systems-that-power-it-lesson9-choice-1'
+display_name 'Exploring AI Models in Careers'
+description 'Select the career you are interested in to explore different AI models'
+
+sublevels
+level 'ai-and-the-systems-that-power-it-lesson9-explore-amara'
+level 'ai-and-the-systems-that-power-it-lesson9-explore-joaquin'
+level 'ai-and-the-systems-that-power-it-lesson9-explore-denise'
+level 'ai-and-the-systems-that-power-it-lesson9-explore-marcus'
+level 'ai-and-the-systems-that-power-it-lesson9-explore-layla'
+
+uses_lab2
+navigation_type 'next_level'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

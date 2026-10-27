@@ -13,6 +13,8 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
     exports: 'auto',
+    // apps bundles this CJS output; a bare require of ESM-only ky yields the namespace, not the function.
+    interop: 'auto',
     entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
@@ -41,6 +43,9 @@ export default defineConfig({
     },
   },
   build: {
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    emptyOutDir: false,
     sourcemap: true,
     cssCodeSplit: true,
     lib: {

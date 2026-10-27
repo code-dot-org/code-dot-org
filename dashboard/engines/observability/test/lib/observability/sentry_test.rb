@@ -59,6 +59,14 @@ describe Observability::Sentry do
         Observability::Sentry.setup
       end
 
+      it 'sets the release to the checked-out git revision' do
+        GitUtils.stubs(:git_revision).returns('45f292e6d70b29ada94da635ca905ca00310b4f7')
+        mock_config = stub_everything('sentry_config')
+        mock_config.expects(:release=).with('45f292e6d70b29ada94da635ca905ca00310b4f7')
+        Sentry.expects(:init).yields(mock_config)
+        Observability::Sentry.setup
+      end
+
       describe 'when CDO.enable_opentelemetry is false' do
         it 'does not configure the OTLP integration' do
           mock_config = stub_everything('sentry_config')
@@ -82,6 +90,23 @@ describe Observability::Sentry do
           Observability::Sentry.setup
         end
       end
+    end
+  end
+
+  describe '.set_user_token' do
+    it 'identifies the user by the token it was given' do
+      Sentry.expects(:set_user).with(id: '3f2a9c14-7b8e-4d21-9a33-c5e1f0b47d92')
+      Observability::Sentry.set_user_token('3f2a9c14-7b8e-4d21-9a33-c5e1f0b47d92')
+    end
+
+    it 'leaves the user context untouched when the token is nil' do
+      Sentry.expects(:set_user).never
+      Observability::Sentry.set_user_token(nil)
+    end
+
+    it 'leaves the user context untouched when the token is empty' do
+      Sentry.expects(:set_user).never
+      Observability::Sentry.set_user_token('')
     end
   end
 end

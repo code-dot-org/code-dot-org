@@ -780,6 +780,8 @@ end
 def cucumber_arguments_for_browser(browser, options)
   arguments = ' -S' # strict mode, so that we fail on undefined steps
   arguments += skip_tag('@skip')
+  # Skip tests that are covered by Playwright. The Port Cucumber to Playwright Claude dynamic workflow adds this tag once the feature has been migrated.
+  arguments += skip_tag('@playwright')
 
   # If --eyes is specified, only run scenarios with the corresponding eyes tag.
   # Otherwise, do not call tag(), allowing any scenarios to run which are not
@@ -814,7 +816,7 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
   arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?
-  arguments += skip_tag('@contentful_key') if CDO.contentful_cs_for_all_access_token.blank?
+  arguments += skip_tag('@contentful_key') if CDO.contentful_hour_of_ai_access_token.blank?
   arguments
 end
 

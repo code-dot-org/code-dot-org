@@ -1,6 +1,5 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2026-09-02T21:22:42.000Z",
   "level_num": "custom",
@@ -702,21 +701,21 @@
             "id": "bc29cd24-d29d-4008-9166-a5443850f8a4",
             "type": "text",
             "data": {
-              "text": "Restate the problem and make your best guesses about possible solutions",
+              "text": "In your Activity Guide, restate the problem and make your best guesses about possible solutions",
               "strokeColor": "transparent",
               "fontFamily": "sans",
               "fontSize": "large",
               "textAlign": "left",
-              "locked": true
+              "locked": false
             },
             "position": {
-              "x": 1919.6407160285253,
-              "y": -101.99828374479044
+              "x": 2203.839760846164,
+              "y": -82.7956455814364
             },
-            "width": 1045.0483482824857,
+            "width": 576.5039770966473,
             "height": 40,
             "measured": {
-              "width": 1045,
+              "width": 577,
               "height": 40
             },
             "dragging": false
@@ -915,6 +914,107 @@
               "height": 94
             },
             "dragging": false
+          },
+          {
+            "id": "89ff8d51-aa60-4ab7-98bc-d96f936e55f1",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-blue)",
+              "locked": true
+            },
+            "position": {
+              "x": 2208.098504528497,
+              "y": -242.3185299146047
+            },
+            "width": 586.2985672264595,
+            "height": 144.32334167358178,
+            "measured": {
+              "width": 586,
+              "height": 144
+            },
+            "dragging": false
+          },
+          {
+            "id": "9337dbe7-d487-4495-894f-338ebedacf1c",
+            "type": "text",
+            "data": {
+              "text": "DO THIS - Drag the magnifying glass icons to highlight places in the diagram that might be a cause of the issues.",
+              "strokeColor": "transparent",
+              "fontFamily": "sans",
+              "fontSize": "large",
+              "textAlign": "left",
+              "locked": false
+            },
+            "position": {
+              "x": 2209.385296552419,
+              "y": -305.226204306954
+            },
+            "width": 609.7885499131276,
+            "height": 40,
+            "measured": {
+              "width": 610,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "846c1478-39cb-4f83-8d75-8d6085cc0bb6",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-2/uuid/10b99a9d-966a-4c74-a637-321634f81f82.png",
+              "altText": "magnifyingGlass"
+            },
+            "position": {
+              "x": 2247.7839567327624,
+              "y": -230.47690304720305
+            },
+            "width": 124.15507542840578,
+            "height": 120,
+            "measured": {
+              "width": 124,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "6c1c7905-9651-4641-864b-e4eb1e01e135",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-2/uuid/10b99a9d-966a-4c74-a637-321634f81f82.png",
+              "altText": "magnifyingGlass"
+            },
+            "position": {
+              "x": 2430.8381148760955,
+              "y": -230.64516929237905
+            },
+            "width": 124.15507542840578,
+            "height": 120,
+            "measured": {
+              "width": 124,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "4f41e3f5-3a33-413e-bee8-99848f9c9263",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/ai-and-the-systems-that-power-it-lesson3-device-2/uuid/10b99a9d-966a-4c74-a637-321634f81f82.png",
+              "altText": "magnifyingGlass"
+            },
+            "position": {
+              "x": 2616.4636171218517,
+              "y": -231.92534516993595
+            },
+            "width": 124.15507542840578,
+            "height": 120,
+            "measured": {
+              "width": 124,
+              "height": 120
+            },
+            "dragging": false
           }
         ],
         "edges": [
@@ -1010,9 +1110,9 @@
           }
         ],
         "viewport": {
-          "x": -1082.052920372833,
-          "y": 255.0780665623143,
-          "zoom": 0.6800241892992602
+          "x": -1096.2097739158407,
+          "y": 241.96721540238326,
+          "zoom": 0.6800241892992601
         }
       }
     },
@@ -1020,6 +1120,7 @@
     "bubble_choice_description": "Joaquín, the coach, is having issues with player tracking hardware.",
     "thumbnail_url": "https://images.code.org/bc5dd713e9443613ea540a6e24dcd72c-Joaquin.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-02T21:22:42.782+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-1\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-1\"},{\"changed_at\":\"2026-09-02 21:23:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:24:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:25:34 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 16:56:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:02:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:51:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:53:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:02:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:26:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 14:21:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 14:23:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 15:17:15 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 15:17:33 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-02T21:22:42.782+00:00\",\"changed\":[\"cloned from \\\"ai-and-the-systems-that-power-it-lesson3-device-1\\\"\"],\"cloned_from\":\"ai-and-the-systems-that-power-it-lesson3-device-1\"},{\"changed_at\":\"2026-09-02 21:23:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:24:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-02 21:25:34 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 16:56:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:02:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:51:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 17:53:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:02:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:05:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-03 18:26:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 14:21:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-04 14:23:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 15:17:15 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-09-09 15:17:33 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-02 17:12:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-02 17:14:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import React from 'react';
 
 import taImage from '@cdo/apps/templates/rubrics/images/ai-teaching-assistant-assign.png';
+import experiments from '@cdo/apps/util/experiments';
 
 import moduleStyles from './sections-refresh.module.scss';
 
@@ -83,13 +84,14 @@ function renderOfferings(
             </span>
           )}
         </div>
-        {course.ai_teaching_assistant_available && (
-          <img
-            src={taImage}
-            className={moduleStyles.taImage}
-            alt="AI Teaching Assistant available"
-          />
-        )}
+        {course.ai_teaching_assistant_available &&
+          !experiments.isEnabled('ta-teacher-panel') && (
+            <img
+              src={taImage}
+              className={moduleStyles.taImage}
+              alt="AI Teaching Assistant available"
+            />
+          )}
       </div>
     );
   });

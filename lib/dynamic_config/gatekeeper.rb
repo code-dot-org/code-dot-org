@@ -1,5 +1,7 @@
-# A module that allows us to dynamically turn on and off
-# features without requiring a code push.
+require 'dynamic_config/dynamic_config_base'
+
+# A complex implementation of dynamic configuration, which allows us to
+# conditionally apply the configuration on a per-request basis.
 #
 # Basic usage:
 # if Gatekeeper.allows("new-tutorial", default: false)
@@ -15,20 +17,17 @@
 # if Gatekeeper.allows("feature-sharing", where: { script_id: @script.id }, default: false)
 #
 # This allows you to turn on feature-sharing for specific scripts
+class Gatekeeper < DynamicConfigBase
+  # @override
+  def self.cache_identifier
+    CDO.gatekeeper_table_name
+  end
 
-require 'dynamic_config/datastore_cache'
-require 'dynamic_config/dynamic_config_base'
-require 'dynamic_config/environment_aware_dynamic_config_helper'
-require 'dynamic_config/adapters/dynamodb_adapter'
-require 'dynamic_config/adapters/json_file_adapter'
-require 'dynamic_config/adapters/memory_adapter'
-
-class GatekeeperBase < DynamicConfigBase
   # @param feature [String] the name of the feature
   # @param where [Hash] a hash of conditions
   # @param default [Bool] the default value to return
   # @returns [Bool]
-  def allows(feature, where: {}, default: false)
+  def self.allows(feature, where: {}, default: false)
     rule_map = get_rule_map(feature)
     conditions = []
     conditions << where_key(where)
@@ -41,15 +40,16 @@ class GatekeeperBase < DynamicConfigBase
     default
   end
 
-  def disallows(*params)
+  def self.disallows(*params)
     !allows(*params)
   end
 
   # Sets the value for a given feature/where combo
+  # @override
   # @param feature [String]
   # @param where [Hash]
   # @param value [Bool]
-  def set(feature, where: {}, value: nil)
+  def self.set(feature, where: {}, value: nil)
     raise ArgumentError, "Value must be a boolean" unless !!value == value
 
     rule_map = get_rule_map(feature)
@@ -61,23 +61,14 @@ class GatekeeperBase < DynamicConfigBase
   # @param feature [String]
   # @param where [Hash]
   # @returns [Bool] whether or not something was deleted
-  def delete(feature, where: {})
+  def self.delete(feature, where: {})
     raise ArgumentError, "feature must be a string" unless feature.is_a? String
 
     rule_map = get_rule_map(feature)
     key = where_key(where)
     if rule_map.key? key
       rule_map.delete key
-      # This is a little odd, but in Ruby 2 if the last argument of a method
-      # call is a Hash, Ruby will attempt to interpret it as a hash of keyword
-      # arguments and so we can get some unexpected behavior when `rule_map`
-      # ends up as an empty hash.
-      #
-      # To prevent that, explicitly pass a (no-op) hash of keyword arguments to
-      # this method call so it never attempts to use rule_map for that purpose.
-      #
-      # TODO after updating to Ruby 3.0: remove the now-unnecessary `**{}`
-      @datastore_cache.set(feature, rule_map, **{})
+      datastore_cache.set(feature, rule_map)
       return true
     end
     false
@@ -86,8 +77,8 @@ class GatekeeperBase < DynamicConfigBase
   # Returns the mapping of conditions to bool for the given feature
   # @param feature [String]
   # @returns [Hash]
-  def get_rule_map(feature)
-    json_map = @datastore_cache.get(feature)
+  def self.get_rule_map(feature)
+    json_map = datastore_cache.get(feature)
     return json_map unless json_map.nil?
     return {}
   end
@@ -95,22 +86,15 @@ class GatekeeperBase < DynamicConfigBase
   # Generates the key for the where clause
   # @param where [Hash]
   # returns [String]
-  def where_key(where)
+  def self.where_key(where)
     Oj.dump(stringify_keys(where).sort, mode: :strict)
   end
 
-  # Factory method for creating GatekeeperBase objects
-  # @returns [GatekeeperBase]
-  def self.create
-    datastore_cache = EnvironmentAwareDynamicConfigHelper.create_datastore_cache(CDO.gatekeeper_table_name)
-    GatekeeperBase.new datastore_cache
-  end
-
   # Returns the hash version of gatekeeper
-  def to_hash
+  def self.to_hash
     gatekeeper = {}
 
-    @datastore_cache.all.each do |feature, rules|
+    datastore_cache.all.each do |feature, rules|
       gatekeeper[feature] = feature_details = []
       rules.each do |conditions, value|
         rule = {"rule" => nil}
@@ -131,24 +115,24 @@ class GatekeeperBase < DynamicConfigBase
   end
 
   # Returns a set of all of the distinct feature names, for features that contain at least one rule.
-  def feature_names
+  def self.feature_names
     Set.new.tap do |result|
-      @datastore_cache.all.each do |feature, rules|
+      datastore_cache.all.each do |feature, rules|
         result << feature unless rules.blank?
       end
     end
   end
 
   # Returns a set of all of the script names used in rule conditions.
-  def script_names
+  def self.script_names
     property_values('script_name')
   end
 
   # Returns a set of all of the distinct values used in where conditions for
   # the property named `condition_property`.
-  def property_values(condition_property)
+  def self.property_values(condition_property)
     Set.new.tap do |result|
-      @datastore_cache.all.each do |_feature, rules|
+      datastore_cache.all.each do |_feature, rules|
         rules.each do |conditions, _value|
           JSON.parse(conditions).each do |property, value|
             result << value if property == condition_property
@@ -161,20 +145,14 @@ class GatekeeperBase < DynamicConfigBase
   # Converts the current config state to a yaml string
   # @returns [String]
   # @override
-  def to_yaml
+  def self.to_yaml
     YAML.dump(to_hash)
   end
 
-  def refresh
-    @datastore_cache.update_local_cache
-  end
-
-  private def stringify_keys(hsh)
+  private_class_method def self.stringify_keys(hsh)
     hsh.inject({}) do |hash, pair|
       hash[pair[0].to_s] = pair[1]
       hash
     end
   end
 end
-
-Gatekeeper = GatekeeperBase.create

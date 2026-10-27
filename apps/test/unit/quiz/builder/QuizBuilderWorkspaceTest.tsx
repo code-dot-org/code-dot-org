@@ -1,4 +1,4 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -13,14 +13,17 @@ jest.mock('@cdo/apps/quiz/builder/useQuizBuilderQuestions');
 const mockUseQuizBuilderQuestions = jest.mocked(useQuizBuilderQuestions);
 
 const question = (
-  overrides: Partial<QuizBuilderQuestion> = {}
+  overrides: Partial<
+    Extract<QuizBuilderQuestion, {type: 'MultipleChoiceQuestion'}>
+  > = {}
 ): QuizBuilderQuestion => ({
   id: 1,
   type: 'MultipleChoiceQuestion',
   questionName: 'JavaScript variable fundamentals',
-  stem: 'What is a variable in JavaScript?',
+  questionTitle: 'What is a variable in JavaScript?',
   choices: [],
   correctChoiceId: null,
+  description: null,
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
@@ -40,8 +43,19 @@ const BASE_STATE: QuizBuilderQuestionsState = {
   load: jest.fn(),
 };
 
+// Opens the nth "Create question" dropdown and picks a question type.
+function createFromDropdown(index: number, typeLabel: string) {
+  const trigger = screen.getAllByRole('button', {name: 'Create question'})[
+    index
+  ];
+  fireEvent.click(trigger);
+  const dropdown = trigger.closest('[id$="-dropdown"]') as HTMLElement;
+  fireEvent.click(within(dropdown).getByRole('button', {name: typeLabel}));
+}
+
 function renderWorkspace(
-  stateOverrides: Partial<QuizBuilderQuestionsState> = {}
+  stateOverrides: Partial<QuizBuilderQuestionsState> = {},
+  propOverrides: Partial<React.ComponentProps<typeof QuizBuilderWorkspace>> = {}
 ) {
   mockUseQuizBuilderQuestions.mockReturnValue({
     ...BASE_STATE,
@@ -51,6 +65,11 @@ function renderWorkspace(
     <QuizBuilderWorkspace
       levelId={42}
       quizTitle="AI Foundations Certification Exam"
+      showIntroScreen={false}
+      customIntroText=""
+      hasTimeLimit={false}
+      onSaveQuizConfig={jest.fn()}
+      {...propOverrides}
     />
   );
 }
@@ -58,6 +77,20 @@ function renderWorkspace(
 describe('QuizBuilderWorkspace', () => {
   beforeEach(() => {
     jest.resetAllMocks();
+  });
+
+  it('shows the intro screen card, with its content, when the intro screen is on', () => {
+    renderWorkspace(
+      {},
+      {showIntroScreen: true, customIntroText: 'You have 45 minutes.'}
+    );
+    expect(screen.getByText('Intro Screen')).toBeInTheDocument();
+    expect(screen.getByText('You have 45 minutes.')).toBeInTheDocument();
+  });
+
+  it('hides the intro screen card when the intro screen is off', () => {
+    renderWorkspace({}, {showIntroScreen: false});
+    expect(screen.queryByText('Intro Screen')).not.toBeInTheDocument();
   });
 
   it('fetches questions for the given level', () => {
@@ -78,19 +111,21 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.getByText('0 questions')).toBeInTheDocument();
   });
 
-  it('lists each placed question with its name and stem', () => {
+  it('lists each placed question with its name and question title', () => {
     renderWorkspace({
       questions: [
         question(),
         question({
           id: 2,
           questionName: 'MVC frameworks',
-          stem: 'Which MVC framework is most popular?',
+          questionTitle: 'Which MVC framework is most popular?',
         }),
       ],
     });
 
-    expect(screen.getByText('2 questions')).toBeInTheDocument();
+    // Once for the workspace-wide total, once for the page 1 header - both
+    // questions default to page 1.
+    expect(screen.getAllByText('2 questions')).toHaveLength(2);
     expect(
       screen.getByText('JavaScript variable fundamentals')
     ).toBeInTheDocument();
@@ -115,31 +150,72 @@ describe('QuizBuilderWorkspace', () => {
     });
     renderWorkspace({questions: [question()], addPendingQuestion});
 
-    fireEvent.click(screen.getByRole('button', {name: '+ Create question'}));
+    createFromDropdown(0, 'Multiple choice');
     expect(screen.getByRole('tab', {name: 'Question'})).toBeInTheDocument();
   });
 
-  it('calls addPendingQuestion when the create button is clicked', () => {
+  it('calls addPendingQuestion with page 1 and the chosen type from the empty state', () => {
     const addPendingQuestion = jest.fn();
     renderWorkspace({addPendingQuestion});
 
-    fireEvent.click(screen.getByRole('button', {name: '+ Create question'}));
+    createFromDropdown(0, 'Free response');
 
-    expect(addPendingQuestion).toHaveBeenCalledTimes(1);
+    expect(addPendingQuestion).toHaveBeenCalledWith(1, 'FreeResponseQuestion');
+  });
+
+  it("creates a question on the page whose row's button was clicked", () => {
+    const addPendingQuestion = jest.fn();
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 2, questionName: 'MVC frameworks'}),
+      ],
+      addPendingQuestion,
+    });
+
+    expect(
+      screen.getAllByRole('button', {name: 'Create question'})
+    ).toHaveLength(2);
+
+    createFromDropdown(1, 'Multiple choice');
+    expect(addPendingQuestion).toHaveBeenCalledWith(
+      2,
+      'MultipleChoiceQuestion'
+    );
+  });
+
+  it('adds an empty page one past the last existing page without creating a question', () => {
+    const addPendingQuestion = jest.fn();
+    renderWorkspace({
+      questions: [
+        question({id: 1, page: 1}),
+        question({id: 2, page: 3, questionName: 'MVC frameworks'}),
+      ],
+      addPendingQuestion,
+    });
+
+    fireEvent.click(screen.getByRole('button', {name: 'Add page'}));
+    expect(addPendingQuestion).not.toHaveBeenCalled();
+    expect(screen.getByText('Page 4')).toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
+
+    createFromDropdown(2, 'Free response');
+    expect(addPendingQuestion).toHaveBeenCalledWith(4, 'FreeResponseQuestion');
   });
 
   it('disables the create button while questions are still loading', () => {
     renderWorkspace({isLoading: true});
     expect(
-      screen.getByRole('button', {name: '+ Create question'})
+      screen.getByRole('button', {name: 'Create question'})
     ).toBeDisabled();
   });
 
-  it('disables the create button while a pending question already exists', () => {
+  it('disables the per-page create and add-page buttons while a pending question already exists', () => {
     renderWorkspace({questions: [question({id: -1})]});
     expect(
-      screen.getByRole('button', {name: '+ Create question'})
+      screen.getByRole('button', {name: 'Create question'})
     ).toBeDisabled();
+    expect(screen.getByRole('button', {name: 'Add page'})).toBeDisabled();
   });
 
   it('explains why the create button is disabled by a pending question', () => {
@@ -182,7 +258,7 @@ describe('QuizBuilderWorkspace', () => {
   it("shows a question-specific error on that question's card, not the banner", () => {
     renderWorkspace({
       questions: [question()],
-      error: 'stem cannot be blank',
+      error: 'question title cannot be blank',
       errorQuestionId: 1,
     });
 
@@ -191,7 +267,9 @@ describe('QuizBuilderWorkspace', () => {
     expect(screen.queryByRole('alert')).toBeNull();
 
     fireEvent.click(screen.getByRole('button', {name: 'Edit question'}));
-    expect(screen.getByRole('alert')).toHaveTextContent('stem cannot be blank');
+    expect(screen.getByRole('alert')).toHaveTextContent(
+      'question title cannot be blank'
+    );
   });
 
   it('does not show a question-specific error on a different card', () => {
@@ -200,12 +278,27 @@ describe('QuizBuilderWorkspace', () => {
         question(),
         question({id: 2, questionName: 'MVC frameworks'}),
       ],
-      error: 'stem cannot be blank',
+      error: 'question title cannot be blank',
       errorQuestionId: 1,
     });
 
     fireEvent.click(screen.getAllByRole('button', {name: 'Edit question'})[1]);
     expect(screen.queryByRole('alert')).toBeNull();
+  });
+
+  it('groups questions under their page, in ascending page order', () => {
+    renderWorkspace({
+      questions: [
+        question({id: 1, questionName: 'Page two question', page: 2}),
+        question({id: 2, questionName: 'Page one question', page: 1}),
+      ],
+    });
+
+    const pageLabels = screen.getAllByText(/^Page \d$/);
+    expect(pageLabels.map(label => label.textContent)).toEqual([
+      'Page 1',
+      'Page 2',
+    ]);
   });
 
   it('collapses the previously expanded question when another is opened', () => {

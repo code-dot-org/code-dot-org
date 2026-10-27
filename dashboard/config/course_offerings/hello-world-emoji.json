@@ -1,7 +1,7 @@
 {
   "key": "hello-world-emoji",
   "display_name": "Hello World: Emoji",
-  "is_featured": true,
+  "is_featured": false,
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",

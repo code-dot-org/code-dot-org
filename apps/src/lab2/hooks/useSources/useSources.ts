@@ -21,7 +21,9 @@ import type {
   ProjectSources,
   ProjectVersion,
 } from '@cdo/apps/lab2/types';
-import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
+import getInitialSources, {
+  getStartOverSources,
+} from '@cdo/apps/lab2/utils/getInitialSources';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import configureHeader from './configureHeader';
@@ -302,14 +304,13 @@ export default function useSources<T extends ProjectSources>({
   );
 
   const startOver = useCallback(() => {
-    const {templateSources, startSources} = levelProperties;
-    const startOverSources = isToolboxMode
-      ? getToolboxEditSourcesRef.current?.(levelProperties) ?? defaultSources
-      : isStartMode
-      ? defaultSources
-      : templateSources || startSources || defaultSources;
-    projectManagerRef.current?.save(startOverSources as T, true);
-    reinitializeSources(startOverSources as T | undefined);
+    const startOverSources = getStartOverSources(
+      levelProperties,
+      defaultSources,
+      getToolboxEditSourcesRef.current?.(levelProperties)
+    );
+    projectManagerRef.current?.save(startOverSources, true);
+    reinitializeSources(startOverSources);
     setHasEdited(false);
   }, [defaultSources, levelProperties, reinitializeSources]);
 

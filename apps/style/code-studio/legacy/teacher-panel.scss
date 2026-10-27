@@ -1,6 +1,9 @@
 @import "color";
 @import "font";
 
+// Deliberately not inset by the TA drawer (shared/css/ta-drawer.scss): the
+// drawer supersedes this panel, so it stays put and the drawer slides over it.
+// TeacherPanelHandle hides the covered handle from assistive technology.
 .teacher-panel {
   position: fixed;
   top: 85px;

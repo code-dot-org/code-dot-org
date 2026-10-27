@@ -8,7 +8,6 @@
 #  requester_id        :integer
 #  level_id            :integer
 #  unit_id             :integer
-#  skill_id            :integer
 #  section_id          :integer
 #  school_year         :string(255)
 #  evaluator           :string(255)

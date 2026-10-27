@@ -37,6 +37,7 @@ module TextToSpeech
 
   TTS_BUCKET = 'cdo-tts'.freeze
   UPDATED_TTS_PATH_DCDO_KEY = 'updated_tts_path'.freeze
+  ACAPELA_GENERATION_DCDO_KEY = 'acapela_tts_generation'.freeze
 
   # Pull the VOICES out of the SharedConstants (updating the locale keys to
   # match the expectation of the I18n gem since these locale keys are using
@@ -88,7 +89,13 @@ module TextToSpeech
     end
   end
 
+  # Each Acapela request is billed, so generation stays off unless DCDO enables it.
+  def self.acapela_enabled?
+    DCDO.get(ACAPELA_GENERATION_DCDO_KEY, false)
+  end
+
   def self.tts_upload_to_s3(text, key, name, filename, context = nil, locale: I18n.locale)
+    return unless TextToSpeech.acapela_enabled?
     return if text.blank?
     return if CDO.acapela_login.blank? || CDO.acapela_storage_app.blank? || CDO.acapela_storage_password.blank?
     return if AWS::S3.cached_exists_in_bucket?(TTS_BUCKET, filename)

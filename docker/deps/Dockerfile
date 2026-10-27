@@ -38,9 +38,9 @@ COPY --chown=1000:1000 dashboard/engines/observability/lib/observability/version
 # The Gemfile's `ruby '>= 3.0', '< 3.5'` is a range, so bundler would not object,
 # and .ruby-version is an input to the published bundle- key: without this, the
 # bump publishes a new key over a bundle the old interpreter compiled.
-RUN --mount=type=cache,id=cdo-deps-bundle-cache,sharing=locked,uid=1000,gid=1000,target=/usr/local/bundle/ruby/3.2.0/cache \
+RUN --mount=type=cache,id=cdo-deps-bundle-cache,sharing=locked,uid=1000,gid=1000,target=/usr/local/bundle/ruby/3.3.0/cache \
   set -eux \
-  && test "$(ruby -e 'print RbConfig::CONFIG["ruby_version"]')" = 3.2.0 \
+  && test "$(ruby -e 'print RbConfig::CONFIG["ruby_version"]')" = 3.3.0 \
   && test "$(cat .ruby-version)" = "$(ruby -e 'print RUBY_VERSION')" \
   && bundle install --jobs "${BUNDLE_JOBS:-$(nproc)}" \
   && bundle check \

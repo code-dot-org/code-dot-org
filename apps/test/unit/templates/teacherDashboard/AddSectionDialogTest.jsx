@@ -18,6 +18,7 @@ jest.mock('@code-dot-org/component-library/dialog', () => {
 
   return {
     Dialog: MockDialog,
+    MuiDialog: MockDialog,
   };
 });
 

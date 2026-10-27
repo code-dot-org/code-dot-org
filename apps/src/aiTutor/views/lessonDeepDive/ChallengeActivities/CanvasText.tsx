@@ -56,7 +56,13 @@ const CanvasText: FC<CanvasTextProps> = ({
     label.findOne<TagNode>('Tag')?.setAttrs(styled.tag);
     transformer.forceUpdate();
 
-    onChange({x: label.x(), y: label.y(), width, fontSize});
+    onChange({
+      x: label.x(),
+      y: label.y(),
+      width,
+      fontSize,
+      rotation: label.rotation(),
+    });
   };
 
   return (
@@ -65,6 +71,7 @@ const CanvasText: FC<CanvasTextProps> = ({
       id={item.id}
       x={item.x}
       y={item.y}
+      rotation={item.rotation}
       draggable={editable}
       onMouseDown={onSelect}
       onTouchStart={onSelect}

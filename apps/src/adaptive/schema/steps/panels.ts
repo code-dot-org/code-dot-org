@@ -25,7 +25,8 @@ export const panelSchema = subsetOf<Panel>()(
   z.strictObject({
     key: z.string().min(1),
     imageUrl: z.string().min(1),
-    text: z.string().min(1),
+    // Empty for an image-only panel; the viewer then hides the text box.
+    text: z.string(),
     layout: panelLayoutSchema.optional(),
     typing: z.boolean().optional(),
     fadeInOverPrevious: z.boolean().optional(),

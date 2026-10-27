@@ -19,7 +19,9 @@ function createJavascriptConfig(format: 'cjs' | 'esm'): Options {
       './src/react/FontLoader/index.tsx',
     ],
     outDir: `dist/${format}`,
-    clean: true,
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    clean: false,
     dts: true,
     // The following is located within this package, however they are supposed to be
     // dynamically imported at runtime and therefore, should be excluded from the compiled
@@ -37,7 +39,7 @@ function createLocaleCSSConfig(entryPoints: string[], outDir: string): Options {
   return {
     entry: entryPoints,
     outDir: outDir,
-    clean: true,
+    clean: false,
     format: 'esm',
     target: 'es2019',
     sourcemap: true,

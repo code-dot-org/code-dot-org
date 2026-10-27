@@ -2,6 +2,7 @@ import {
   LevelPropertiesMapValidator,
   sourceResponseValidatorFor,
 } from '@cdo/apps/lab2/responseValidators';
+import {coerceStringBooleans} from '@cdo/apps/lab2/utils';
 
 describe('sourceResponseValidatorFor', () => {
   const multiFile = {source: {folders: {}, files: {}}};
@@ -105,5 +106,23 @@ describe('LevelPropertiesMapValidator', () => {
         levelData: {library: 'launch2024'},
       },
     });
+  });
+});
+
+describe('coerceStringBooleans', () => {
+  it('turns "true" and "false" into booleans and copies the rest', () => {
+    const input = {a: 'true', b: 'false', c: 'other', d: {e: 'true'}};
+    const output = coerceStringBooleans(input);
+    expect(output).toEqual({a: true, b: false, c: 'other', d: {e: 'true'}});
+    expect(input.a).toBe('true');
+  });
+});
+
+describe('LevelPropertiesMapValidator', () => {
+  it('coerces string booleans on each level', () => {
+    const map = LevelPropertiesMapValidator({
+      1: {appName: 'weblab2', hideShareAndRemix: 'false'},
+    });
+    expect(map[1].hideShareAndRemix).toBe(false);
   });
 });

@@ -1,0 +1,51 @@
+.statsRow {
+  display: flex;
+  width: 100%;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-p-xs);
+  flex: 1 0 0;
+  min-width: 0;
+  padding: 20px;
+
+  &:not(:last-child) {
+    border-right: 1px solid var(--border-neutral-primary);
+  }
+
+  .statValue {
+    color: var(--text-brand-primary);
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+}
+
+.statCaption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.statTitle {
+  color: var(--text-neutral-primary);
+  font-weight: 600;
+}
+
+.statSubtitle {
+  color: var(--text-neutral-tertiary);
+}
+
+.submittedStamp {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-success-primary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

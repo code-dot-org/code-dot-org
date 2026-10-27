@@ -78,6 +78,10 @@ yarn dev
 Changing any monorepo managed dependencies (such as labs) will automatically trigger a rebuild and be made
 available to the persistent dev server using Turborepo's watch feature.
 
+`yarn dev` first runs `turbo clean --filter '@code-dot-org/studio...'`. The trailing `...` is Turborepo's
+"and its dependencies" selector, so only the `dist/` directories studio is about to rebuild are emptied;
+packages used solely by `apps` are left alone. Rebuilds during the session overwrite `dist/` in place.
+
 ### Formatting, Linting. (Prettier, ESLint, Stylelint)
 
 To format all files in all packages and apps, run the following command:
@@ -120,10 +124,21 @@ copy it from `frontend/.env.example`)
 To run the visual tests:
 
 ```bash
-yarn workspace @code-dot-org/design-system-storybook eyes-storybook
+yarn workspace @code-dot-org/design-system-storybook test:ui:ci
 ```
 
 If differences are detected, follow the [baseline update](https://applitools.com/docs/topics/overview/overview-reviewing-test-results.html) guide to resolve.
+
+### Github Actions
+
+Packages within the `frontend` directory uses Github Actions for CI as its primary CI gate. All packages are expected to implement:
+
+- `release:dryrun` - Lint, typecheck, unit tests, etc.
+
+The following are optional depending on the needs of the package.
+
+- `test:ui:ci` - UI integration tests local to the package, with `test:ui` as its local form. Expected of frontend packages.
+- `deploy` - If a package needs to be deployed (e.g. Github Pages, NPM, etc.)
 
 ## Cleaning
 

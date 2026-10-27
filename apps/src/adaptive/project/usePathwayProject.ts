@@ -20,8 +20,11 @@ export interface PathwayProjectState {
   /** False for anyone but the owner, and until the channel has loaded. */
   isEditable: boolean;
   loadError?: Error;
-  /** Renames the project and/or replaces the student's description of it. */
-  editProject: (edits: {name?: string; description?: string}) => void;
+  /**
+   * Renames the project and/or replaces the student's description of it.
+   * Resolves once the channel has saved.
+   */
+  editProject: (edits: {name?: string; description?: string}) => Promise<void>;
 }
 
 export function usePathwayProject(pathway: Pathway): PathwayProjectState {
@@ -42,14 +45,14 @@ export function usePathwayProject(pathway: Pathway): PathwayProjectState {
     useSources({levelProperties: templateLevel, defaultSources: NO_SOURCES});
 
   const editProject = useCallback<PathwayProjectState['editProject']>(
-    ({name, description}) => {
+    async ({name, description}) => {
       const current = projectManager?.getLastChannel();
       if (!projectManager || !current) return;
       if (name !== undefined) {
-        projectManager.rename(name);
+        await projectManager.rename(name);
       }
       if (description !== undefined) {
-        projectManager.updateChannel(
+        await projectManager.updateChannel(
           {
             labConfig: {
               ...current.labConfig,

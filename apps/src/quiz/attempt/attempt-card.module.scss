@@ -36,6 +36,10 @@
   color: var(--text-neutral-tertiary);
 }
 
+.beforeFooterBorderedRow {
+  border-top: 1px solid var(--border-neutral-primary);
+}
+
 .actionRow {
   display: flex;
   align-items: center;
