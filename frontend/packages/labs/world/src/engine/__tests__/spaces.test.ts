@@ -363,6 +363,66 @@ describe('the mouse, through a Viewport', () => {
   });
 });
 
+describe('a camera’s zoom', () => {
+  // How much of its window a camera takes in (specs/MIRRORING_PLAN.md, step
+  // 7). What it sees is its window over its zoom, so a rule measuring the
+  // view is right at any zoom, and the pointer is mapped through it.
+
+  it('takes in its window over its zoom', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.defineCamera({id: 'wide', viewport: win, zoom: 0.5});
+    world.defineCamera({id: 'close', viewport: win, zoom: 2});
+    const space = world.viewportSpaceOf(win)!;
+
+    // The Window kind is 100 by 80.
+    expect(world.viewSize(space.cameraNamed('wide')!)).toEqual(
+      new Vector(200, 160),
+    );
+    expect(world.viewSize(space.cameraNamed('close')!)).toEqual(
+      new Vector(50, 40),
+    );
+    // …and its main camera, which says none, takes in its window.
+    expect(world.viewSize(space.camera!)).toEqual(new Vector(100, 80));
+  });
+
+  it('maps the pointer through it', () => {
+    const world = makeWorld();
+    const window = placeWindow(world);
+    window.set(PositionProperty, new Vector(200, 160)); // corner at (150, 120)
+    const [a] = world.loadMapInto(window, LEVEL);
+    window.set(ViewportScrollProperty, new Vector(270, 120));
+    world.tick(0);
+    world.viewportSpaceOf(window)!.camera!.zoom = 2;
+    world.setPointer({x: 160, y: 130}, []); // 10 in from the corner
+
+    // At 2 the camera at (320, 160) shows 50 by 40: (295..345, 140..180),
+    // and 10 pixels in is 5 into that.
+    expect(world.mousePosition(a)).toEqual(new Vector(300, 145));
+  });
+
+  it('is told to the driver', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    world.viewportSpaceOf(win)!.camera!.zoom = 3;
+    expect(world.spaceSnapshot()[0].camera.zoom).toBe(3);
+    expect(world.cameraSnapshot()[0].zoom).toBe(1);
+  });
+
+  it('is never zero, negative or not a number', () => {
+    const world = makeWorld();
+    const win = placeWindow(world);
+    for (const [id, zoom] of [
+      ['none', 0],
+      ['less', -2],
+      ['nan', Number.NaN],
+    ] as const) {
+      world.defineCamera({id, viewport: win, zoom});
+      expect(world.viewportSpaceOf(win)!.cameraNamed(id)!.zoom).toBe(1);
+    }
+  });
+});
+
 describe('what the driver is told', () => {
   it('names each actor’s space, and describes each Viewport’s', () => {
     const world = makeWorld();
@@ -391,7 +451,7 @@ describe('what the driver is told', () => {
         mirrorsRoot: false,
         // The middle of the window: a load leaves the camera there, and a map
         // no longer says to follow anything (specs/SPACE_CAMERAS_PLAN.md).
-        camera: {x: 50, y: 40},
+        camera: {x: 50, y: 40, zoom: 1},
         view: {x: 100, y: 80},
         bounds: {x: 640, y: 320},
         // A map that names no layers has the one every world has.

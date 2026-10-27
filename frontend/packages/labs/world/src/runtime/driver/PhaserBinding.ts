@@ -604,8 +604,12 @@ export class PhaserBinding {
       parallaxOf: (index: number) => {x: number; y: number},
       /** How big the level is, which is what a stretched slot covers. */
       mapSize: {x: number; y: number},
-      /** How much of it is on screen — `World.viewSize`, in pixels. */
-      viewSize: {x: number; y: number},
+      /**
+       * How much of it is on screen, in the layer's own pixels — `World.viewSize`
+       * for the world's; for a space's, what its camera takes in, or its
+       * window for a fit layer, which keeps its size however the camera zooms.
+       */
+      viewOf: (index: number) => {x: number; y: number},
       /**
        * Where a new slot image goes: the world's layer by default, or a
        * space's own layer container (specs/LAYERS_PLAN.md).
@@ -614,6 +618,7 @@ export class PhaserBinding {
         intoLayer(scene, index, image),
     ) => {
       slots.forEach((slot, index) => {
+        const viewSize = viewOf(index);
         let image = images[index];
         const sprite = slot.sprite;
         if (sprite === undefined || !scene.textures.exists(sprite)) {
@@ -735,7 +740,7 @@ export class PhaserBinding {
         shiftOfLayer,
         parallaxOfLayer,
         mapSize,
-        viewSize,
+        () => viewSize,
       );
 
       layers.forEach((layer, index) => {
@@ -1163,10 +1168,15 @@ export class PhaserBinding {
         // `−offset × f` the world's gets. A slot inside it is then placed
         // by the same arithmetic (`backdropPlacement`).
         const held = host;
+        // What the camera takes in: its window over its zoom, measured from
+        // the corner it shows (specs/MIRRORING_PLAN.md, step 7).
+        const zoom = space.camera.zoom;
+        const seen = {x: space.view.x / zoom, y: space.view.y / zoom};
         const offset = {
-          x: space.camera.x - space.view.x / 2,
-          y: space.camera.y - space.view.y / 2,
+          x: space.camera.x - seen.x / 2,
+          y: space.camera.y - seen.y / 2,
         };
+        const fitAt = (index: number) => Boolean(space.layers[index]?.fit);
         const shiftOf = (index: number) =>
           layerShift(space.layers[index], offset);
         space.layers.forEach((_layer, index) => {
@@ -1180,6 +1190,9 @@ export class PhaserBinding {
           }
           const shift = shiftOf(index);
           container.setPosition(offset.x - shift.x, offset.y - shift.y);
+          // A fit layer is the window's and not the scene's, so the camera's
+          // zoom is taken back off it.
+          container.setScale(fitAt(index) ? 1 / zoom : 1);
           if (unsorted.has(container)) {
             container.sort('depth');
             unsorted.delete(container);
@@ -1209,7 +1222,7 @@ export class PhaserBinding {
           shiftOf,
           parallaxOf,
           space.bounds,
-          space.view,
+          index => (fitAt(index) ? space.view : seen),
           intoSpaceLayer,
         );
         if (unsorted.has(host.inner)) {
@@ -1353,7 +1366,9 @@ export class PhaserBinding {
           width * RENDER_SCALE,
           height * RENDER_SCALE,
         );
-        host.camera.setZoom(RENDER_SCALE * Math.abs(matrix.scaleX));
+        host.camera.setZoom(
+          RENDER_SCALE * Math.abs(matrix.scaleX) * space.camera.zoom,
+        );
         host.camera.centerOn(space.camera.x, space.camera.y);
         // The space's own sky, painted inside its rectangle; none leaves the
         // box see-through, as it always was (`World.setBackgroundColor`).

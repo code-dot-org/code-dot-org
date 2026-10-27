@@ -1,11 +1,12 @@
 # A Viewport onto the world's own scene
 
-STATUS: BUILDING. Steps 1 to 5 are in — a Viewport declares what it mirrors
-with `mirrors the world` or `mirrors`, is bound to that scene with no copy of
-its own, routes the pointer through its camera, the driver draws the scene it
-mirrors into its box, and the editor draws it there too (step 5). What is left
-is the browser check (step 6), zoom, and layer masking — a mirror that hides
-the HUD, which is what makes a minimap a minimap and is its own step. specs/VIEWPORT_PLAN.md lists
+STATUS: BUILDING. Steps 1 to 5 and 7 are in — a Viewport declares what it
+mirrors with `mirrors the world` or `mirrors`, is bound to that scene with no
+copy of its own, routes the pointer through its camera, the driver draws the
+scene it mirrors into its box, the editor draws it there too (step 5), and a
+Viewport's camera zooms (step 7). What is left is the browser check of both
+(steps 6 and 9) and layer masking (step 8) — a mirror that hides the HUD,
+which is what makes a minimap a minimap. specs/VIEWPORT_PLAN.md lists
 "mirroring" as not built; this is what it would take, written after a Viewport
 was given cameras of its own (specs/SPACE_CAMERAS_PLAN.md) and after the first
 person to build one asked for it: a minimap, a second shot of the same level,
@@ -116,7 +117,7 @@ camera draws is the root scene and nothing else.
   has asked.
 - **Not a change to a map.** A map still says nothing about cameras.
 
-## Zoom and masking — PROPOSED
+## Zoom and masking — ZOOM BUILT, MASKING PROPOSED
 
 The two pieces that make a minimap a minimap: seeing more of the level than
 the game does, and not seeing what the game draws over it.
@@ -170,8 +171,27 @@ one that does not.
 
 ### Order
 
-7. **Zoom**: engine, layers, driver, then the editor, each tested where it
-   can be and the driver seen in the browser.
+7. **Zoom. BUILT, for a Viewport's added cameras.** `Camera.zoom`, from
+   `defineCamera({zoom})`, and kept above zero. `view size` with a camera in
+   hand is its window over its zoom, and the pointer is mapped through it.
+   The driver zooms a Viewport's camera by it, measures that space's layers
+   from the corner the zoomed camera shows, takes the zoom back off its fit
+   layers, and tiles its backdrops over what is seen. A camera's inspector
+   has a Zoom field, stored with the camera and written into its
+   `defineCamera`; the stage draws what a Viewport holds or mirrors at the
+   zoom of the camera it looks through, about the box's middle. Three
+   departures, each until something asks:
+   - **No `zoom` block.** A camera's position is the actor's own
+     `PositionProperty`, which it answers; nothing every camera has could
+     carry a zoom, and a built-in camera trait for one field is the bespoke
+     machinery this lab avoids.
+   - **Not a main camera's.** A Viewport's main camera takes its kind's
+     traits and has no stored camera to hold a zoom; a minimap adds a camera
+     and looks through it.
+   - **Not the root's.** The world's own camera is drawn by shifting each
+     layer rather than by moving Phaser's camera, so zooming it is a scale of
+     every layer about the view's middle and a wider tiling of its
+     backdrops. Nothing can give it a zoom, so nothing draws one.
 8. **`shown in mirrors`**: the layer's flag, the snapshot, the driver's
    ignore, the inspector's checkbox.
 9. **The browser check** of step 6, after these: a minimap on the Jetpack

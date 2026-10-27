@@ -933,6 +933,21 @@ export function renamePlacementCamera(
     : renamed;
 }
 
+/** The map with a Viewport's camera at a zoom; 1 is said by saying none. */
+export const withPlacementCameraZoom = (
+  doc: MapDoc,
+  actorId: string,
+  cameraId: string,
+  zoom: number,
+): MapDoc =>
+  withCamera(doc, actorId, cameraId, camera => {
+    const next: PlacementCamera = {...camera, zoom};
+    if (zoom === 1) {
+      delete next.zoom;
+    }
+    return next;
+  });
+
 /** The map with a Viewport's camera electing a trait, or no longer. */
 export const withPlacementCameraTrait = (
   doc: MapDoc,

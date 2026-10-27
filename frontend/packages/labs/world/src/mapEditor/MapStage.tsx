@@ -92,6 +92,7 @@ import {
   showsThroughOf,
   withPlacementCameraTrait,
   withPlacementCameraValue,
+  withPlacementCameraZoom,
   withShowsThrough,
   asVec,
   extentOf,
@@ -511,6 +512,9 @@ interface CameraEditor {
   setStarting: (id: string) => void;
   setTrait: (id: string, trait: string, elected: boolean) => void;
   setValue: (id: string, property: CameraProperty, value: string) => void;
+  /** A camera's zoom, 1 when it says none. */
+  zoomOf: (id: string) => number;
+  setZoom: (id: string, zoom: number) => void;
 }
 
 export const MapStage = ({
@@ -3103,6 +3107,14 @@ export const MapStage = ({
       ctx.beginPath();
       ctx.rect(-hw, -hh, hw * 2, hh * 2);
       ctx.clip();
+      // At the zoom of the camera it looks through, about the middle of the
+      // box, where a camera at rest is (specs/MIRRORING_PLAN.md, step 7): so a
+      // minimap reads as one before the game runs.
+      const through = owner.cameras?.find(
+        camera => camera.name === showsThroughOf(owner),
+      );
+      const zoom = through?.zoom ?? 1;
+      ctx.scale(zoom, zoom);
       ctx.translate(-hw, -hh);
       for (const inside of held.actors) {
         if (!positionOf(inside)) {
@@ -3450,6 +3462,11 @@ export const MapStage = ({
                   value,
                 }),
               ),
+            zoomOf: id => named(id)?.zoom ?? 1,
+            setZoom: (id, zoom) =>
+              commit(
+                withPlacementCameraZoom(mapRef.current, actor.id, id, zoom),
+              ),
           };
         })()
       : undefined;
@@ -3687,6 +3704,8 @@ export const MapStage = ({
             onValue={(property, value) =>
               cameraEditor.setValue(inspectedCamera.id, property, value)
             }
+            zoom={cameraEditor.zoomOf(inspectedCamera.id)}
+            onZoom={zoom => cameraEditor.setZoom(inspectedCamera.id, zoom)}
             onClose={() => setInspectingCamera(null)}
             onRemove={() => {
               cameraEditor.remove(inspectedCamera.id);

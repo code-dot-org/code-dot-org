@@ -2128,6 +2128,17 @@ export class World {
    */
   viewSize(actor?: Actor | Camera): Vector {
     const subject = actor ?? this.inHand.at(-1);
+    const window = this.windowSize(subject);
+    // What a camera takes in is its window over its zoom, so a rule that
+    // keeps a view inside the map, or ignores small moves, measures what is
+    // seen (specs/MIRRORING_PLAN.md, step 7).
+    return subject instanceof Camera
+      ? new Vector(window.x / subject.zoom, window.y / subject.zoom)
+      : window;
+  }
+
+  /** The rectangle a subject's view is drawn into, in screen pixels. */
+  private windowSize(subject: Actor | Camera | Space | undefined): Vector {
     // A camera a Viewport owns is seen through that Viewport's window, and for
     // a mirror that is not the window of the space it looks at
     // (`Camera.window`, specs/MIRRORING_PLAN.md).
@@ -2604,7 +2615,7 @@ export class World {
     mirrors: string | undefined;
     /** Whether `mirrors` is the root, which is no space host of the driver's. */
     mirrorsRoot: boolean;
-    camera: {x: number; y: number};
+    camera: {x: number; y: number; zoom: number};
     view: {x: number; y: number};
     bounds: {x: number; y: number};
     /** The color behind its map, or none for a see-through box. */
@@ -2631,7 +2642,11 @@ export class World {
           // that space's display list (specs/MIRRORING_PLAN.md).
           mirrors: space.mirrorOf?.id,
           mirrorsRoot: space.mirrorOf === this.rootSpace,
-          camera: {x: space.camera.position.x, y: space.camera.position.y},
+          camera: {
+            x: space.camera.position.x,
+            y: space.camera.position.y,
+            zoom: space.camera.zoom,
+          },
           view: {x: view.x, y: view.y},
           bounds: {x: space.bounds.x, y: space.bounds.y},
           clearColor: space.clearColor
@@ -4149,18 +4164,18 @@ export class World {
       outer.y - (at.y - view.y / 2),
     );
     return new Vector(
-      camera.position.x - view.x / 2 + inside.x,
-      camera.position.y - view.y / 2 + inside.y,
+      camera.position.x + (inside.x - view.x / 2) / camera.zoom,
+      camera.position.y + (inside.y - view.y / 2) / camera.zoom,
     );
   }
 
   /** Where the pointer is in the root, through the world's own camera. */
   private rootPointer(): Vector {
     const camera = this.activeCamera();
-    const view = this.viewSize(camera);
+    const view = this.windowSize(camera);
     return new Vector(
-      camera.position.x - view.x / 2 + this.pointer.x,
-      camera.position.y - view.y / 2 + this.pointer.y,
+      camera.position.x + (this.pointer.x - view.x / 2) / camera.zoom,
+      camera.position.y + (this.pointer.y - view.y / 2) / camera.zoom,
     );
   }
 
@@ -4746,12 +4761,14 @@ export class World {
   cameraSnapshot(): ReadonlyArray<{
     id: string;
     position: {x: number; y: number};
+    zoom: number;
     /** Whether the view is taken through this one. Exactly one is. */
     active: boolean;
   }> {
     return this.cameraList.map(camera => ({
       id: camera.id,
       position: {x: camera.position.x, y: camera.position.y},
+      zoom: camera.zoom,
       active: camera.id === this.activeCameraId,
     }));
   }

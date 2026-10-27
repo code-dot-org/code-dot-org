@@ -1186,6 +1186,16 @@ describe('a level, with nothing selected', () => {
     expect(written().actors[0].properties?.showsMap?.showsThrough).toBe(
       'Camera 2',
     );
+    // How much it takes in, kept with the camera (specs/MIRRORING_PLAN.md,
+    // step 7); a zoom that is no zoom at all is not taken.
+    const zoom = view.getByLabelText('Zoom');
+    fireEvent.change(zoom, {target: {value: '0.5'}});
+    fireEvent.blur(zoom);
+    expect(written().actors[0].cameras?.[0].zoom).toBe(0.5);
+    fireEvent.change(zoom, {target: {value: '0'}});
+    fireEvent.blur(zoom);
+    expect(written().actors[0].cameras?.[0].zoom).toBe(0.5);
+    expect(zoom).toHaveValue(0.5);
     // Closed, the Viewport's inspector again, the new camera in its list.
     fireEvent.click(view.getByRole('button', {name: 'Close'}));
     expect(view.queryByTestId('camera-inspector')).toBeNull();

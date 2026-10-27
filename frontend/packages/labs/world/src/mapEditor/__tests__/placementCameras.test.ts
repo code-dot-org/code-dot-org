@@ -9,6 +9,7 @@ import {
 } from '../../blockly/placementCameras';
 import {
   addPlacementCamera,
+  withPlacementCameraZoom,
   removePlacementCamera,
   renamePlacementCamera,
   showsThroughOf,
@@ -77,6 +78,16 @@ describe('a Viewport’s cameras in the map', () => {
       value: '',
     });
     expect(mini(nobody).cameras![0].values).toEqual([]);
+  });
+});
+
+describe('a camera’s zoom', () => {
+  it('is kept with the camera, and 1 is kept as nothing', () => {
+    const {doc, id} = addPlacementCamera(MAP, 'Mini');
+    const wide = withPlacementCameraZoom(doc, 'Mini', id, 0.5);
+    expect(mini(wide).cameras![0].zoom).toBe(0.5);
+    const back = withPlacementCameraZoom(wide, 'Mini', id, 1);
+    expect(mini(back).cameras![0]).not.toHaveProperty('zoom');
   });
 });
 

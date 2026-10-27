@@ -23,10 +23,9 @@
 // not in `world.actors`, so no rule has to learn to skip it and nothing that
 // removes actors takes it away.
 //
-// NO ZOOM YET. The spec's `fit` and a parallax factor of `(0, 0)` differ only
-// once a camera can scale — a layer at zero still zooms, a `fit` layer does not
-// — so the distinction is carried in the model and is invisible until zoom
-// arrives. Adding it here later changes no authoring.
+// ZOOM IS PART OF THE POSE. The spec's `fit` and a parallax factor of `(0, 0)`
+// differ only once a camera scales: a layer at zero still zooms, a `fit` layer
+// does not.
 
 import type {Actor} from './Actor';
 import type {Space} from './Space';
@@ -86,6 +85,8 @@ export interface CameraInit {
    * the middle of the world's own rectangle.
    */
   position?: Vector;
+  /** How much it magnifies: 1 shows its window's worth, 2 half that. */
+  zoom?: number;
   /** Traits it elects — how it behaves, authored in a rule. */
   traits?: Trait[];
   /** Initial values for the properties those traits declare. */
@@ -166,6 +167,12 @@ export class Camera {
   readonly name: string;
   /** Mutable: moving the camera is the whole point of having one. */
   position: Vector;
+  /**
+   * How much it magnifies, and part of the pose as `position` is: at 2 the
+   * view takes in half its window's width and height, at 0.5 twice
+   * (specs/MIRRORING_PLAN.md, step 7). Always above zero.
+   */
+  zoom: number;
   private readonly traited: Traited;
 
   constructor(init: CameraInit) {
@@ -174,6 +181,7 @@ export class Camera {
     this.position = init.position
       ? new Vector(init.position.x, init.position.y)
       : RESTING_POSITION();
+    this.zoom = validZoom(init.zoom);
     this.traited = new Traited(
       `Camera '${init.id}'`,
       init.traits ?? [],
@@ -233,6 +241,10 @@ export class Camera {
     return isPosition(property) || this.traited.hasProperty(property);
   }
 }
+
+/** A zoom a camera can hold: a finite number above zero, else 1. */
+export const validZoom = (zoom: number | undefined): number =>
+  typeof zoom === 'number' && Number.isFinite(zoom) && zoom > 0 ? zoom : 1;
 
 /** A camera with its defaults filled in. */
 export function makeCamera(init: CameraInit): Camera {

@@ -222,6 +222,9 @@ function cameraCode(
     `world.defineCamera({id: ${id}, name: ${str(camera.name)}, ` +
     `viewport: WorldLab.one(actor)` +
     (traits.length ? `, traits: [${traits.join(', ')}]` : '') +
+    (camera.zoom !== undefined && camera.zoom !== 1
+      ? `, zoom: ${camera.zoom}`
+      : '') +
     '});\n';
   const settings = workspace.getBlockById(settingsBlockId(camera));
   const code = settings ? generator.blockToCode(settings) : '';

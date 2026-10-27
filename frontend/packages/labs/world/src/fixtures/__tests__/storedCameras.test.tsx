@@ -46,7 +46,7 @@ const WIDE = [
 ];
 
 /** Jetpack as a world, with a Viewport whose map editor made it a camera called Wide. */
-const withWideCamera = () =>
+const withWideCamera = (cameras: readonly object[] = WIDE) =>
   asAWorld(projectFiles(WORLD_SCENARIOS.jetpack.source), {
     actors: [
       {
@@ -57,12 +57,23 @@ const withWideCamera = () =>
           showsMap: {mirrorsTheWorld: true, showsThrough: 'Wide'},
         },
         blocks: MINE,
-        cameras: WIDE,
+        cameras,
       },
     ],
   });
 
 describe('a Viewport’s cameras made in the map editor', () => {
+  it('take the zoom the inspector gave them', async () => {
+    // A minimap that takes in more of the level than the game does
+    // (specs/MIRRORING_PLAN.md, step 7).
+    const {code, world} = await compileProject(
+      withWideCamera([{...WIDE[0], zoom: 0.5}]),
+    );
+    expect(code['screens/main']).toContain('zoom: 0.5');
+    const mini = [...world.actors].find(actor => actor.id === 'Mini')!;
+    expect(world.viewportSpaceOf(mini)!.cameraNamed('Wide')!.zoom).toBe(0.5);
+  }, 60000);
+
   it('are declared before the learner’s own `when created` runs', async () => {
     const {code} = await compileProject(withWideCamera());
     const world = code['screens/main'];

@@ -35,6 +35,8 @@ export interface PlacementCamera {
   /** The trait values it elects (`Camera Follow#FollowsTrait`). */
   traits: string[];
   values: CameraValue[];
+  /** How much it magnifies; absent is 1 (`Camera.zoom`). */
+  zoom?: number;
 }
 
 /** A serialized block, as much of one as this writes. */

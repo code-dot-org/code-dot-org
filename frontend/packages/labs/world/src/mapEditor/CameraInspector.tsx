@@ -50,6 +50,9 @@ export interface CameraInspectorProps {
   onStarting: () => void;
   onTrait: (trait: string, elected: boolean) => void;
   onValue: (property: CameraProperty, value: string) => void;
+  /** How much it magnifies (`Camera.zoom`); the main camera's is not set here. */
+  zoom?: number;
+  onZoom?: (zoom: number) => void;
   onClose: () => void;
   /** Take the camera away; absent for the main camera, which cannot go. */
   onRemove?: () => void;
@@ -80,6 +83,8 @@ export const CameraInspector = ({
   onStarting,
   onTrait,
   onValue,
+  zoom = 1,
+  onZoom,
   onClose,
   onRemove,
   mainNote = 'Every world has this camera. It shows the map from its top ' +
@@ -91,7 +96,10 @@ export const CameraInspector = ({
   const main = id === MAIN_CAMERA;
   // What is being typed, committed on blur or Enter; the parent re-keys this
   // when the camera changes from outside.
-  const [draft, setDraft] = useState<Record<string, string>>({name});
+  const [draft, setDraft] = useState<Record<string, string>>({
+    name,
+    zoom: String(zoom),
+  });
   const blurOnEnter = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       (event.target as HTMLInputElement).blur();
@@ -235,6 +243,31 @@ export const CameraInspector = ({
               onRename(next);
             } else {
               setDraft(was => ({...was, name}));
+            }
+          }}
+          onKeyDown={blurOnEnter}
+        />
+      )}
+      {!main && onZoom && (
+        // Above 1 the view takes in less and shows it larger; below 1, more.
+        <TextField
+          name="camera-zoom"
+          label="Zoom"
+          inputType="number"
+          size="s"
+          value={draft.zoom}
+          disabled={isReadOnly}
+          onChange={(event: ChangeEvent<HTMLInputElement>) =>
+            setDraft(was => ({...was, zoom: event.target.value}))
+          }
+          onBlur={() => {
+            const typed = Number(draft.zoom);
+            if (Number.isFinite(typed) && typed > 0) {
+              if (typed !== zoom) {
+                onZoom(typed);
+              }
+            } else {
+              setDraft(was => ({...was, zoom: String(zoom)}));
             }
           }}
           onKeyDown={blurOnEnter}

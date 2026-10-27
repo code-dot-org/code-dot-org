@@ -35,6 +35,8 @@ interface FakeNode {
   visible: boolean;
   /** The cameras that pass it over, as Phaser keeps them: a bit each. */
   filter: number;
+  /** What it was last scaled by, both ways. */
+  scale?: number;
   /** For a graphics: the rectangles filled since the last clear. */
   rects: number[][];
   /** For a slot image: its texture and the size it was stretched to. */
@@ -85,7 +87,8 @@ vi.mock('phaser', () => {
       this.record.y = y;
       return this;
     }
-    setScale() {
+    setScale(scale: number) {
+      this.record.scale = scale;
       return this;
     }
     setRotation() {
@@ -360,6 +363,9 @@ const world = (held: {
    * between frames and watch the host be made again.
    */
   mirror?: () => 'main' | 'main/win' | undefined;
+  /** The box's camera's zoom, and a fit layer over its map. */
+  zoom?: number;
+  hud?: boolean;
 }) =>
   ({
     useTextMetrics: () => {},
@@ -407,7 +413,7 @@ const world = (held: {
             {
               id: 'main/win',
               owner: 'win',
-              camera: {x: 320, y: 160},
+              camera: {x: 320, y: 160, zoom: held.zoom ?? 1},
               view: {x: 100, y: 80},
               bounds: {x: 640, y: 320},
               layers: [
@@ -423,6 +429,16 @@ const world = (held: {
                   fit: false,
                   background: slot(),
                 },
+                ...(held.hud
+                  ? [
+                      {
+                        id: 'hud',
+                        parallax: {x: 0, y: 0},
+                        fit: true,
+                        background: slot(),
+                      },
+                    ]
+                  : []),
               ],
             },
             ...(held.mirror
@@ -432,7 +448,7 @@ const world = (held: {
                     owner: 'mini',
                     mirrors: held.mirror(),
                     mirrorsRoot: held.mirror() === 'main',
-                    camera: {x: 50, y: 40},
+                    camera: {x: 50, y: 40, zoom: 1},
                     view: {x: 100, y: 80},
                     bounds: {x: 320, y: 320},
                     layers: [],
@@ -475,6 +491,23 @@ describe('drawing a Viewport’s space', () => {
     expect(camera.viewport).toEqual([110 * 3, 120 * 3, 100 * 3, 80 * 3]);
     expect(camera.zoom).toBe(3);
     expect(camera.center).toEqual([320, 160]);
+  });
+
+  it('zooms the box’s camera, and measures its layers from what it shows', () => {
+    // At 2 the camera at (320,160) takes in 50 by 40, from (295,140)
+    // (specs/MIRRORING_PLAN.md, step 7).
+    new PhaserBinding(world({spaces: true, zoom: 2, hud: true}), pane());
+    runFrame();
+
+    expect(cameras[0].zoom).toBe(3 * 2);
+    const [sky, main, hud] = inner()!.children;
+    expect([main.x, main.y]).toEqual([0, 0]);
+    // Half the travel across, none up, from the corner the zoom shows.
+    expect([sky.x, sky.y]).toEqual([147.5, 140]);
+    // A fit layer is the window's: at the corner, with the zoom taken off.
+    expect([hud.x, hud.y]).toEqual([295, 140]);
+    expect(hud.scale).toBe(0.5);
+    expect(sky.scale).toBe(1);
   });
 
   it('holds the space’s actors in a container the main camera ignores', () => {
