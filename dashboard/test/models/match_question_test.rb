@@ -46,14 +46,13 @@ class MatchQuestionTest < ActiveSupport::TestCase
     refute question.answered?({})
   end
 
-  test "attempt_content_json splits the pairs into two sets and omits the answer key" do
+  test "attempt_content_json splits the pairs into two groups and omits the answer key" do
     question = create(:match_question)
     json = question.attempt_content_json
     refute json.key?(:pairs)
     refute json.key?(:correctPairs)
-    first, second = json[:matchSets]
-    assert_equal ['a', 'b', 'c'], first.map {|i| i['id']}.sort
-    assert_equal ['x', 'y', 'z'], second.map {|i| i['id']}.sort
+    assert_equal ['a', 'b', 'c'], json[:firstItems].map {|i| i['id']}.sort
+    assert_equal ['x', 'y', 'z'], json[:secondItems].map {|i| i['id']}.sort
   end
 
   test "answer_key_json lists each pair's item ids" do

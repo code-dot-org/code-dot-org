@@ -15,7 +15,7 @@ export interface FreeResponseQuestionResponse {
   responseData: {answerText?: string};
 }
 
-// Each pair is two item ids, one from each set, in either order.
+// Each pair is two item ids, one from each group, in either order.
 export interface MatchQuestionResponse {
   questionType: 'MatchQuestion';
   responseData: {pairs?: [string, string][]};
@@ -46,6 +46,12 @@ export function isFreeResponseResponse(
   response: QuizQuestionResponse
 ): response is FreeResponseQuestionResponse {
   return response.questionType === 'FreeResponseQuestion';
+}
+
+export function isMatchResponse(
+  response: QuizQuestionResponse
+): response is MatchQuestionResponse {
+  return response.questionType === 'MatchQuestion';
 }
 
 export type QuizQuestionResult = QuizQuestionResponse & {

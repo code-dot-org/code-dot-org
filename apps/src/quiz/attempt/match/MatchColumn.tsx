@@ -2,13 +2,13 @@ import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
-import {MatchPairs, MatchSets, MatchSide} from './types';
+import {MatchItems, MatchPairs, MatchSide} from './types';
 import {findPartner, itemsInColumn, letterOf, getItemText} from './utils';
 
 import styles from './match-question-container.module.scss';
 
 interface MatchColumnProps {
-  matchSets: MatchSets;
+  items: MatchItems;
   side: MatchSide;
   pairs: MatchPairs;
   selectedId: string | undefined;
@@ -19,7 +19,7 @@ interface MatchColumnProps {
 }
 
 const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
-  matchSets,
+  items,
   side,
   pairs,
   selectedId,
@@ -28,14 +28,14 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
   disabled,
 }) => (
   <div className={styles.column}>
-    {itemsInColumn(matchSets, side).map(item => {
+    {itemsInColumn(items, side).map(item => {
       const partnerId = findPartner(pairs, item.id);
       const isSelected = selectedId === item.id;
       // An end item shows its partner's letter once paired.
       const letter =
         side === 'start'
-          ? letterOf(matchSets, item.id)
-          : partnerId && letterOf(matchSets, partnerId);
+          ? letterOf(items, item.id)
+          : partnerId && letterOf(items, partnerId);
       return (
         <button
           key={item.id}
@@ -46,11 +46,11 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
           aria-pressed={isSelected}
           aria-label={
             partnerId
-              ? `${getItemText(matchSets, item.id)}, matched with ${getItemText(
-                  matchSets,
+              ? `${getItemText(items, item.id)}, matched with ${getItemText(
+                  items,
                   partnerId
                 )}`
-              : getItemText(matchSets, item.id)
+              : getItemText(items, item.id)
           }
           onClick={() => onClickItem(item.id)}
           disabled={disabled}

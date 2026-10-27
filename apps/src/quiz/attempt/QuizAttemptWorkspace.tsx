@@ -18,7 +18,7 @@ import AttemptCard from './AttemptCard';
 import FreeResponseQuestionContainer from './FreeResponseQuestionContainer';
 import IntroCard from './IntroCard';
 import MatchQuestionContainer from './match/MatchQuestionContainer';
-import {MatchPairs, MatchSets} from './match/types';
+import {MatchPairs} from './match/types';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
 import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
@@ -26,6 +26,7 @@ import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
 import {
   isFreeResponseResponse,
+  isMatchResponse,
   isMultipleChoiceResponse,
   QuizAttemptData,
   QuizQuestionResponse,
@@ -35,22 +36,6 @@ import {
 import useQuizAttempt from './useQuizAttempt';
 
 import styles from './quiz-attempt-workspace.module.scss';
-
-// TODO: replace with the question's own matchSets from attempt_content_json.
-const STUB_MATCH_SETS: MatchSets = [
-  [
-    {id: 'a', text: 'Image classifier'},
-    {id: 'b', text: 'Large language model'},
-    {id: 'c', text: 'Recommender system'},
-    {id: 'd', text: 'Speech recognizer'},
-  ],
-  [
-    {id: 'x', text: 'Drafting and summarizing text'},
-    {id: 'y', text: 'Turning spoken words into text'},
-    {id: 'z', text: 'Sorting photos into categories'},
-    {id: 'w', text: 'Ranking videos for one viewer'},
-  ],
-];
 
 // How long typing must pause before a free response answer autosaves.
 export const ANSWER_AUTOSAVE_DELAY_MS = 1000;
@@ -138,10 +123,6 @@ const QuizAttemptWorkspace: React.FunctionComponent<
   // Answers are locked from the Submit click until it settles, so what was
   // on screen at the click is what gets sent.
   const [isSubmitting, setIsSubmitting] = useState(false);
-  // TODO: replace with responsesByQuestionId once match responses are saved.
-  const [stubMatchPairs, setStubMatchPairs] = useState<
-    Record<number, MatchPairs>
-  >({});
   // State lags a render behind, so a fast second click checks this instead.
   const isSubmittingRef = useRef(false);
   // One chained promise per question, so a rapid second pick waits for the
@@ -372,6 +353,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     );
   };
 
+  // Like answer text, a failed save keeps the pairs; submit resends them.
+  const handleChangePairs = (questionId: number, pairs: MatchPairs) => {
+    const responseData = {pairs};
+    setResponsesByQuestionId(prev => ({
+      ...prev,
+      [questionId]: {questionType: 'MatchQuestion', responseData},
+    }));
+    queueResponseWrite(questionId, responseData).catch(() => {
+      // Already recorded as a user-facing error in useQuizAttempt.
+    });
+  };
+
   const handleBlurAnswerText = (questionId: number) => {
     const unsavedText = unsavedAnswerTextsRef.current[questionId];
     if (unsavedText !== undefined) {
@@ -480,11 +473,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             headingRef={headingRef}
             question={question}
             questionLabel={questionLabel}
-            matchSets={STUB_MATCH_SETS}
-            pairs={stubMatchPairs[question.id] ?? []}
-            onChangePairs={pairs =>
-              setStubMatchPairs(prev => ({...prev, [question.id]: pairs}))
+            pairs={
+              (response &&
+                isMatchResponse(response) &&
+                response.responseData.pairs) ||
+              []
             }
+            onChangePairs={pairs => handleChangePairs(question.id, pairs)}
             disabled={isSubmitting}
           />
         );
