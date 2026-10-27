@@ -116,3 +116,23 @@
     color: var(--text-neutral-placeholder);
   }
 }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fieldHelp {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 0;
+  color: var(--text-neutral-tertiary);
+}
+
+.fieldHelpIcon {
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
+}
