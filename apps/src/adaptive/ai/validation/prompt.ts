@@ -11,6 +11,7 @@ import {
   PathwayProjectInfo,
   Skill,
 } from '../../types';
+import {describeEvidenceLevels} from '../evidenceLevels';
 import {labEnvironment} from '../labEnvironments';
 
 import {StepWork} from './types';
@@ -55,9 +56,6 @@ export function buildValidationPrompt({
 }: ValidationPromptInput): string {
   const name = project.name ? `"${project.name}"` : 'untitled so far';
   const environment = labEnvironment(pathway);
-  const levels = Object.entries(skill.evidenceLevels ?? {}).map(
-    ([level, description]) => `- ${level}: ${description}`
-  );
   return [
     "You check one piece of work in a student's project in a project-based learning pathway. Judge that work: the change below, in light of how the student went about it. The rest of the project is there for context only.",
     environment ? `How the student works in this lab:\n${environment}` : '',
@@ -81,10 +79,7 @@ export function buildValidationPrompt({
       work.change || 'Nothing changed.',
     ].join('\n'),
     `CONDITION\n${condition}`,
-    [
-      `EVIDENCE LEVELS for the skill "${skill.title}": ${skill.description}`,
-      ...levels,
-    ].join('\n'),
+    describeEvidenceLevels(skill),
     [
       'RULES',
       '',
