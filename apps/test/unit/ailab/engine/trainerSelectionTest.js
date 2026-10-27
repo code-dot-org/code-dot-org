@@ -7,7 +7,7 @@ import {getTrainedModelDataToSave} from '@cdo/apps/ailab/engine/selectors/saveSe
 import {buildTrainer} from '@cdo/apps/ailab/engine/trainers';
 import DecisionTreeTrainer from '@cdo/apps/ailab/engine/trainers/DecisionTreeTrainer';
 import KNNTrainer from '@cdo/apps/ailab/engine/trainers/KNNTrainer';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 import {levelStore} from './levelStore';
 
@@ -27,7 +27,7 @@ const JEANS_COLUMNS = {
 // The trainer id comes off the label column's type, so an untrained project
 // carrying the right label is enough.
 function savedTrainerId(store, label = 'animal') {
-  const project = {...initialProject, labelColumn: label};
+  const project = {...defaultProject, labelColumn: label};
   return getTrainedModelDataToSave(store.getState(), project).selectedTrainer;
 }
 

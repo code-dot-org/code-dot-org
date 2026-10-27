@@ -56,7 +56,7 @@ const evidenceOf = (levels: {[skillId: string]: number}): PathwayEvidence =>
   Object.fromEntries(
     Object.entries(levels).map(([skillId, evidenceLevel]) => [
       skillId,
-      {skillId, evidenceLevel, source: 'questions' as const, from: []},
+      {skillId, evidenceLevel, from: []},
     ])
   );
 

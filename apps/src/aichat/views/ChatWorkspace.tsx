@@ -5,6 +5,7 @@ import markdownToTxt from 'markdown-to-txt';
 import React, {
   useCallback,
   useEffect,
+  useRef,
   useState,
   useMemo,
   forwardRef,
@@ -21,6 +22,8 @@ import {
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
 } from '../constants';
 import {applySchemaDisplayTransform} from '../helpers/applySchemaDisplayTransform';
+import {acceptedBuilds} from '../host/acceptedBuilds';
+import {AcceptedBuild, useChatHost} from '../host/ChatHostContext';
 import {
   addChatEvent,
   clearChatMessages,
@@ -322,6 +325,38 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
         );
       });
     }, [dispatch, previousParameters, modelParameters]);
+
+    // Sets up the chat host's handle, if there is one. Posts get added as
+    // notifications and each build the student accepts gets emitted through
+    // the listener.
+    const host = useChatHost();
+    const buildListeners = useRef(new Set<(build: AcceptedBuild) => void>());
+    const lastBuildAt = useRef(Date.now());
+    useEffect(() => {
+      host?.onChatReady({
+        post: notification =>
+          dispatch(
+            addChatEvent({
+              ...notification,
+              timestamp: Date.now(),
+              removeId: getNewRemoveId(),
+            })
+          ),
+        onBuildAccepted: listener => {
+          buildListeners.current.add(listener);
+          return () => {
+            buildListeners.current.delete(listener);
+          };
+        },
+      });
+    }, [host, dispatch]);
+    useEffect(() => {
+      for (const build of acceptedBuilds(unfilteredVisibleItems)) {
+        if (build.at <= lastBuildAt.current) continue;
+        lastBuildAt.current = build.at;
+        buildListeners.current.forEach(listener => listener(build));
+      }
+    }, [unfilteredVisibleItems]);
 
     const [liveAnnouncement, setLiveAnnouncement] = useState('');
     const storedChatEvents = selectedStudent

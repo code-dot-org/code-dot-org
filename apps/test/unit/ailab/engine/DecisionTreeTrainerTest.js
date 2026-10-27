@@ -18,18 +18,18 @@ import rootReducer, {
 } from '@cdo/apps/ailab/engine/redux';
 import train from '@cdo/apps/ailab/engine/train';
 import {buildTrainer} from '@cdo/apps/ailab/engine/trainers';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
-function setUp(data, columns, label) {
+function setUp(data, columns, label, mode = {}) {
   const store = createStore(rootReducer);
 
-  store.dispatch(setMode({trainer: 'decisionTree'}));
+  store.dispatch(setMode({trainer: 'decisionTree', ...mode}));
   store.dispatch(setImportedData(data, false));
   Object.entries(columns).forEach(([column, type]) =>
     store.dispatch(setColumnsByDataType(column, type))
   );
   const project = {
-    ...initialProject,
+    ...defaultProject,
     labelColumn: label,
     selectedFeatures: Object.keys(columns).filter(column => column !== label),
   };
@@ -107,6 +107,8 @@ describe('DecisionTreeTrainer: the full train and predict flow', () => {
 });
 
 describe('DecisionTreeTrainer: the maxDepth sweep', () => {
+  afterEach(() => jest.restoreAllMocks());
+
   /*
     One feature separates the label completely, so a depth of 1 is already
     perfect. Every candidate with a greater depth ties with it. The sweep must keep the
@@ -140,13 +142,8 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     expect(run.hyperparameters).toEqual({maxDepth: 1});
   });
 
-  /*
-    The complement of the tie case, and the reason it is not enough on its own:
-    a sweep that always returned the first candidate would pass that test. Here
-    `x` separates A from {B, C} but cannot tell B from C, so one split scores
-    50% and two score 100%.
-  */
-  test('a deeper tree wins when one split cannot separate the label', () => {
+  // A depth-1 tree splits on x, so it gets one of the last two rows wrong.
+  function setUpTwoSplitLabel(mode) {
     const combinations = [
       {label: 'A', x: '0', y: '0'},
       {label: 'A', x: '0', y: '1'},
@@ -157,18 +154,22 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     for (let i = 0; i < 5; i++) {
       rows.push(...combinations);
     }
-    // The reserved rows are the last two, one B and one C, so a tree that
-    // cannot separate them scores 50%.
     const data = [
       ...rows.slice(0, 18),
       {label: 'B', x: '1', y: '0'},
       {label: 'C', x: '1', y: '1'},
     ];
-    const {store, trainer} = setUp(
+    return setUp(
       data,
       {label: CATEGORICAL, x: NUMERICAL, y: NUMERICAL},
-      'label'
+      'label',
+      mode
     );
+  }
+
+  // Catches what the tie case can't: a sweep that keeps its first candidate.
+  test('a deeper tree wins when one split cannot separate the label', () => {
+    const {store, trainer} = setUpTwoSplitLabel();
 
     const run = trainer.startTraining();
 
@@ -177,6 +178,73 @@ describe('DecisionTreeTrainer: the maxDepth sweep', () => {
     expect(state.accuracyCheckPredictedLabels).toEqual(
       state.accuracyCheckLabels
     );
+  });
+
+  test("a level's maxDepth replaces the sweep", () => {
+    const {store, trainer} = setUpTwoSplitLabel({
+      hyperparameters: {maxDepth: 1},
+    });
+
+    const run = trainer.startTraining();
+
+    const state = store.getState();
+    expect(run.hyperparameters).toEqual({maxDepth: 1});
+    expect(state.accuracyCheckPredictedLabels).not.toEqual(
+      state.accuracyCheckLabels
+    );
+  });
+
+  /*
+    A level can name a depth the sweep would never try, and a saved run of it
+    still has to come back when the student reopens their project.
+  */
+  test("rebuilds a level's maxDepth from outside the sweep", () => {
+    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
+    expect(trainer.startTraining().hyperparameters).toEqual({maxDepth: 4});
+
+    expect(trainer.rebuild({maxDepth: 4})).toBeDefined();
+  });
+
+  // Pinning a depth does not strand the runs students saved before it.
+  test('rebuilds a swept depth after the level pinned another', () => {
+    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
+    trainer.startTraining();
+
+    expect(trainer.rebuild({maxDepth: 2})).toBeDefined();
+  });
+
+  test('rebuilds any whole depth, the sweep being only what it tries first', () => {
+    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
+    trainer.startTraining();
+
+    expect(trainer.rebuild({maxDepth: 7})).toBeDefined();
+  });
+
+  test.each([
+    ['below one', 0],
+    ['negative', -1],
+    ['fractional', 1.5],
+  ])('declines a depth that is %s', (_name, maxDepth) => {
+    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
+    trainer.startTraining();
+
+    expect(trainer.rebuild({maxDepth})).toBeUndefined();
+  });
+
+  /*
+    The range check cannot know every value an algorithm will refuse, so a
+    throw from one has to reach the student as a retrain, not a blank lab.
+  */
+  test('declines rather than throwing when the build fails', () => {
+    const {trainer} = setUpTwoSplitLabel({hyperparameters: {maxDepth: 4}});
+    trainer.startTraining();
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+    // Own property, so the shared prototype survives this test.
+    trainer.buildModel = () => {
+      throw new TypeError('the algorithm refused this one');
+    };
+
+    expect(trainer.rebuild({maxDepth: 4})).toBeUndefined();
   });
 });
 
