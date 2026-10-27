@@ -111,6 +111,15 @@ export const MEMBER_HEAD_ID = 'member-head';
 export const memberValueSocket = (at: number): string => `VALUE${at}`;
 
 /**
+ * A step on its page: the moment of the frame it runs in, with what it does
+ * below it (`stepHead`).
+ */
+export const STEP_HEAD = 'world_step_head';
+
+/** The one step head on the page. */
+export const STEP_HEAD_ID = 'step-head';
+
+/**
  * What a body surface's head owns, by the id of the block it stands in for.
  *
  * The head draws `returns` and the `arguments` stack — the interface draws

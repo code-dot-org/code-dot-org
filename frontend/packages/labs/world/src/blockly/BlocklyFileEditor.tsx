@@ -272,12 +272,12 @@ export interface BlocklyFileEditorProps extends CustomEditorProps {
    */
   boxed?: boolean;
   /**
-   * An actor's member page (specs/ACTOR_BLOCKS_PLAN.md, step 6): the
-   * contents are the block being made, with what it does below it
-   * (`memberHead`), and its design is the page's, handed to the head as
-   * `parts`.
+   * A page of one thing's implementation (specs/ACTOR_BLOCKS_PLAN.md, step
+   * 6): the contents are its head with what it does below it. A member's
+   * head is the block being made (`memberHead`), and its design is the
+   * page's, handed to the head as `parts`; a step's (`stepHead`) has none.
    */
-  memberHead?: {parts: readonly BlockPart[]};
+  memberHead?: {parts?: readonly BlockPart[]};
 }
 
 export const BlocklyFileEditor = ({

@@ -52,7 +52,7 @@ import {SHOW_AS} from './actorIconMeta';
 import {ACTOR_ICON_OPTIONS} from './actorIcons';
 import {actorInputExtension, cameraInputExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
-import {MEMBER_HEAD} from './bodySurfaces';
+import {MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
 import {BUILTIN_RULE_META} from './builtinMeta';
 import {
   cameraId,
@@ -249,6 +249,7 @@ import {
   ruleLocation,
 } from './ruleRegistry';
 import {measuredImages, parseSpriteRef, spriteCell} from './spriteCells';
+import {stepHead} from './stepHead';
 import {TOOLBOX_HEADING, toolboxHeading} from './toolboxStyle';
 import {
   projectRuleIdentities,
@@ -11517,6 +11518,7 @@ export const DOMAIN_BLOCKS = [
   signatureArgument,
   signatureRow,
   memberHead,
+  stepHead,
   worldDoc,
   worldReturn,
   worldRuleStepIn,
@@ -12659,6 +12661,7 @@ export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_rule_block',
   'world_rule_event',
   MEMBER_HEAD,
+  STEP_HEAD,
 ]);
 
 /**
