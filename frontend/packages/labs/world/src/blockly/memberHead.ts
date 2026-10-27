@@ -63,8 +63,12 @@ const head: Head & ThisType<HeadBlock> = {
 
   rebuild_() {
     // Variables with events on: a value renamed renames its variable, and
-    // the body's getters follow by the events that fires.
-    bindParams(this.workspace.getVariableMap(), this.parts_);
+    // the body's getters follow by the events that fires. Not in the
+    // compiler's workspace, which holds every block's body at once, and two
+    // blocks may each have a value called `row`.
+    if (!(this.workspace as {isRuleGenerator?: boolean}).isRuleGenerator) {
+      bindParams(this.workspace.getVariableMap(), this.parts_);
+    }
     Blockly.Events.disable();
     try {
       for (const input of [...this.inputList]) {

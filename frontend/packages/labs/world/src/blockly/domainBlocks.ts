@@ -336,7 +336,10 @@ const AUTHORING_RULES: readonly RuleMeta[] = BUILTIN_RULE_META;
 // import the module into itself. The generator carries the module being written
 // as `__ruleModule` (set by BlocklyGenerator); a member whose module matches is
 // local, so we skip the import.
-const refCode = (ref: MemberRef, generator?: JavascriptGenerator): string => {
+export const refCode = (
+  ref: MemberRef,
+  generator?: JavascriptGenerator,
+): string => {
   const modulePath = refModule(ref);
   if (modulePath) {
     const selfModule = (generator as {__ruleModule?: string} | undefined)

@@ -1,14 +1,14 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: IN PROGRESS, October 2026. Steps 0 and 1 are built.
+STATUS: IN PROGRESS, October 2026. Steps 0 to 2 are built.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
-ACTORS_AS_DATA_PLAN.md), and a camera is data on a map. The compiler still
+ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
 reads each the old way: it turns the data back into a workspace of
 `define` blocks, loads the whole workspace, and generates from it. That is
 the only reason `define rule`, `define trait`, `use rule`, a rule's steps,
-`define block`, `define event`, `use trait` and `define camera` are still
-registered blocks. This plan compiles each from its data, loading only the
+`define block`, `use trait` and `define camera` are still registered
+blocks. This plan compiles each from its data, loading only the
 bodies, and then deletes those blocks.
 
 ## What exists
@@ -93,16 +93,25 @@ scenarios and the lessons: the same code, but for the order of the names on
 the first `var` line in 105, which follows the order the blocks load in.
 `extractRuleBodies` is gone.
 
-### 2. Actors from data
+### 2. Actors from data — BUILT
 
-`actorModule(data, bodies)` writes what the rows' generators wrote: the
-builder, traits (camera traits apart), acts like, record, animations,
-values, effects, members and their bodies. The actor's own workspace
-(handlers, `each frame`, `define drawing`) is loaded as written, and the
-code rows generate by a flag the generator sets for an actor file rather
-than by asking for a `define actor` above them. A new test pins every
-stock and scenario actor's code byte for byte, as `ruleDataCompiles` does
-rules'.
+Not a module writer of its own: most of an actor's rows (acts like, is a
+record, its look, animations, values, effects, `each frame`, `define
+drawing`) are ordinary rows whose generators stay. Three kinds are the
+blocks this plan deletes, and those are said directly, where their rows
+stand (`BlocklyGenerator.actorCode`): a trait it uses, an event it
+declares, and a block it adds, whose body is laid out under `memberHead`
+as on its page. `actorSheet` takes those three out of the chain before the
+load. `define actor` stays as the root the rows are generated under.
+
+The head binds its values on a page, renaming one that shares a name with
+another variable; in the compiler's workspace, which holds every block's
+body, two blocks may each have a value called `row`, so it does not.
+
+Checked against the old path on all 786 Blockly files in the scenarios,
+the lessons and the stock shelf, 286 of them actors, each block given a
+fixed id first: the same code, but for the order of the names on the first
+`var` line in the list actor.
 
 ### 3. Lessons as screens
 
@@ -123,10 +132,12 @@ calls, not blocks.
 ### 5. The blocks go
 
 Once nothing loads a view: `define rule`, `define trait`, `use rule`, a
-rule's `define step` and `when tick`, `define block`, `define event`, `use
+rule's `define step` and `when tick`, `define block`, `use
 trait` and `define camera` leave the palette, with what only they used.
-`define property` stays: a world's own properties are rows under `define
-world`. `each frame` and `define drawing` stay: an actor's code holds them.
+`define property` and `define event` stay: a world's own properties and
+events are rows under `define world` (`screenData`). `each frame` and
+`define drawing` stay: an actor's code holds them. `define actor` stays as
+the compiler's root for an actor's rows.
 
 ## Open
 

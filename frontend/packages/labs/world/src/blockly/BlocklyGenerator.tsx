@@ -20,6 +20,7 @@ import {ruleBodySheet} from '../rules/ruleBodies';
 import {asRuleData, isRuleData} from '../rules/ruleData';
 import {TILE_SIZE} from '../runtime/viewport';
 
+import {actorSheet, type ActorPiece} from './actorSheet';
 import {
   assembleActorModule,
   assembleMainMap,
@@ -28,11 +29,13 @@ import {
   type GeneratedBlock,
 } from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
+import {MEMBER_HEAD} from './bodySurfaces';
 import {
   buildDomainPalette,
   importVar,
   str,
   worldModulePrologue,
+  refCode,
 } from './domainBlocks';
 import {fileKindOf, moduleShape} from './fileKind';
 import {mainMapLayersOf, screenLayersOf} from './mainMapLayers';
@@ -51,11 +54,15 @@ import {
   type PlacementCamera,
 } from './placementCameras';
 import {
+  designedName,
   parseRuleMeta,
+  pascal,
   ruleMetaToModule,
+  slug,
   type RuleBody,
   type RuleMeta,
 } from './ruleMeta';
+import {refFromValue, refResolves} from './ruleRegistry';
 import {
   DEFAULT_SCREEN_NAME,
   MAIN_SCREEN_PATH,
@@ -64,6 +71,7 @@ import {
   type ScreenData,
 } from './screenData';
 import {standInBlocks} from './standInBlocks';
+import {traitSubjectOfValue} from './traitOptions';
 import {markRule} from './workspaceRoots';
 
 // Headless Blockly → world-lab code generation for `.rule`/`.actor` files
@@ -336,6 +344,90 @@ const SCREEN_KEYS: ReadonlySet<string> = new Set([
  * hats, which go either side of the world as a world file's do
  * (`assembleWorldModule`).
  */
+/**
+ * A `define actor` and its rows: each row generated where it stands, and a
+ * trait it uses or a block or event it adds said here (`actorSheet`).
+ */
+function actorCode(
+  generator: JavascriptGenerator,
+  workspace: Blockly.Workspace,
+  root: Blockly.Block,
+  pieces: readonly ActorPiece[],
+): string {
+  const asString = (code: string | [string, number]): string =>
+    Array.isArray(code) ? code[0] : code;
+  const name = String(root.getFieldValue('NAME') ?? '');
+  // Registered rather than written, so it is deduped against every other
+  // block that needs `WorldLab`.
+  (generator as unknown as {definitions_: Record<string, string>}).definitions_[
+    'world_lab'
+  ] = `import * as WorldLab from 'world-lab';`;
+  let code =
+    `const actor = new WorldLab.ActorBuilder({id: ${JSON.stringify(
+      slug(name),
+    )}, name: ${JSON.stringify(name)}})` + ';\n';
+  // The rows left in the chain are the `row` pieces, in order.
+  let row = root.getNextBlock();
+  for (const piece of pieces) {
+    if (piece.kind === 'row') {
+      code += row ? asString(generator.blockToCode(row, true)) : '';
+      row = row?.getNextBlock() ?? null;
+    } else if (piece.kind === 'trait') {
+      code += traitCode(generator, piece.trait);
+    } else if (piece.kind === 'event') {
+      const named = designedName(piece.parts);
+      // NO PARAMETERS IN THE CALL: what an event carries is the emit's and
+      // the hat's to say (`ActorBuilder.defineEvent`).
+      code += named
+        ? `export const ${pascal(named)}Event = actor.defineEvent(` +
+          `${JSON.stringify(slug(named))}, {name: ${JSON.stringify(named)}});\n`
+        : '';
+    } else {
+      const named = designedName(piece.parts);
+      const first = piece.head
+        ? workspace.getBlockById(piece.head)?.getNextBlock()
+        : undefined;
+      if (!named || !piece.head) {
+        continue;
+      }
+      const params = piece.parts
+        .filter(part => part.kind === 'param')
+        .map(part => generator.getVariableName(part.var ?? ''));
+      const body = first
+        ? generator.prefixLines(
+            asString(generator.blockToCode(first)),
+            generator.INDENT,
+          )
+        : '';
+      // The closure's `actor` shadows the module's builder, as a step's does:
+      // `this actor` compiles to `actor` wherever it is written.
+      code +=
+        `export const ${pascal(named)}Action = actor.defineAction(` +
+        `${JSON.stringify(slug(named))}, (${['actor', ...params].join(', ')}) => {\n` +
+        `  const world = actor.world;\n${body}}, {name: ${JSON.stringify(named)}});\n`;
+    }
+  }
+  return code;
+}
+
+/** `actor.useTraits`, or nothing for a trait no rule in play declares. */
+function traitCode(generator: JavascriptGenerator, trait: string): string {
+  if (!trait) {
+    return '';
+  }
+  const ref = refFromValue(trait);
+  // A trait whose rule is gone writes nothing, rather than an import of a
+  // module that is not there (`missingRule`).
+  if (!refResolves(ref)) {
+    return '';
+  }
+  // A camera trait goes to the Viewport's own main camera
+  // (specs/SPACE_CAMERAS_PLAN.md).
+  return traitSubjectOfValue(trait) === 'camera'
+    ? `actor.useCameraTraits([${refCode(ref, generator)}]);\n`
+    : `actor.useTraits([${refCode(ref, generator)}]);\n`;
+}
+
 /**
  * A `.rule`: its declarations from its data, and each body generated alone
  * under its page's head (`rules/ruleBodies`). A rule the data cannot say is
@@ -670,8 +762,14 @@ export const BlocklyGenerator = forwardRef<
         // …with the world's own cameras declared, which the map editor
         // keeps on its main map and no editor shows as blocks
         // (`placementCameras`).
+        // …and an actor with its traits and members out of its rows, which
+        // are said directly (`actorSheet`).
+        const sheet =
+          fileKindOf(path) === 'actor' ? actorSheet(parsed) : undefined;
         const state =
-          fileKindOf(path) === 'world' ? withWorldCameras(parsed) : parsed;
+          fileKindOf(path) === 'world'
+            ? withWorldCameras(parsed)
+            : (sheet?.workspace ?? parsed);
         Blockly.serialization.workspaces.load(state, workspace);
 
         // Events are their own top-level blocks, so we can't rely on
@@ -700,7 +798,7 @@ export const BlocklyGenerator = forwardRef<
         // `define actor` in a world must not stop the world compiling either.
         const topBlocks = workspace
           .getTopBlocks(true)
-          .filter(block => block.isEnabled());
+          .filter(block => block.isEnabled() && block.type !== MEMBER_HEAD);
         // What this file compiles to, decided by its NAME — a file's kind is a
         // property of the file, and no block may change it. Throws if one that
         // would is present (`fileKind`).
@@ -753,9 +851,15 @@ export const BlocklyGenerator = forwardRef<
         const generated = topBlocks.map(block => ({
           type: block.type,
           id: block.id,
-          code: asString(
-            generator.blockToCode(block, rootTypesRef.current.has(block.type)),
-          ),
+          code:
+            sheet && block.type === 'world_actor'
+              ? actorCode(generator, workspace, block, sheet.pieces)
+              : asString(
+                  generator.blockToCode(
+                    block,
+                    rootTypesRef.current.has(block.type),
+                  ),
+                ),
         }));
         if (mainMap) {
           mergeDefinitions(generator, mainMap.definitions);
