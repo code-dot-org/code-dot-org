@@ -280,6 +280,15 @@ So no `define` block is ever drawn, and what drew one went with it:
   the reload a rename forced (`BlocklyFileEditor`), with the member-key
   comparison they used (`renameRule.memberKeys`).
 - **The pencil** on a rule's blocks, events and steps.
+- **The rest of the chrome**, afterwards: `define property`'s drawn getter
+  and setter (`FieldPropertyPreview`, `FieldBlockDrawing`, and the preview
+  workspace's mark in `scopedVariable`), `use rule`'s import row, open
+  button and lesson button (`ruleImportField`), and the widening of a
+  trait's description. `define property` keeps the eye and the default's
+  field, and `use rule` its live options, because a view writes those fields
+  and the compiler must find them to load it. `define rule` had nothing
+  extra. `use trait` keeps all of its own: a camera is still declared in
+  blocks, with `use trait` under `define camera`, so it is still drawn.
 
 The define blocks themselves stay: a rule's view is written in them, and the
 compiler reads the view, which loads them without drawing them.
@@ -290,10 +299,6 @@ What stays for now:
   bodies on a surface of their own from a pencil, as before; they go when an
   actor's drawing has a page of its own (ACTOR_BLOCKS_PLAN.md, "Not in this
   phase").
-- **The rest of the define blocks' chrome.** `define property`'s drawn
-  getter and setter (`FieldPropertyPreview`, `FieldBlockDrawing`), `define
-trait`'s and `define rule`'s fields and buttons are never drawn either, and
-  can go the same way.
 - **The lessons.** Five lessons in Making unlock define blocks no drawer
   holds, and their tasks say to write rules in blocks. Their checks read a
   rule's view, so they still pass; their words need writing again for the

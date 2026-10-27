@@ -1,7 +1,7 @@
 // Turns the `(import…)` row of an ACTOR dropdown into an actual import.
 //
-// `ruleImportField` with one word changed, and the same reasoning: the row is
-// not a value, so the validator REJECTS the sentinel — which leaves the field
+// The same reasoning as `appearanceImportField`: the row is not a value, so
+// the validator REJECTS the sentinel — which leaves the field
 // holding whatever it held — and writes the imported path back when the dialog
 // resolves.
 //

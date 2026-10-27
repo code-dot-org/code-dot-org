@@ -1,7 +1,6 @@
 // Turns the `(import…)` row of a sprite or animation dropdown into an import.
 //
-// The same shape as `ruleImportField`, and the same reasoning: the row is not a
-// value. Choosing it means "go and fetch me one", so the validator REJECTS the
+// The row is not a value. Choosing it means "go and fetch me one", so the validator REJECTS the
 // sentinel — returning null leaves the field as it was — and kicks off the
 // import, writing the result back when the picker resolves.
 //

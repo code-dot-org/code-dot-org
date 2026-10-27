@@ -8,7 +8,7 @@ import {afterEach, describe, expect, it} from 'vitest';
 
 import {DOMAIN_BLOCKS} from '../domainBlocks';
 import {setProjectRuleModules} from '../moduleOptions';
-import {IMPORT_RULE_VALUE, setRuleImportHandler} from '../ruleImport';
+import {setRuleImportHandler} from '../ruleImport';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {setProjectRuleMeta} from '../traitOptions';
@@ -45,12 +45,6 @@ describe('the use-rule dropdown', () => {
         options?: () => Array<[string, string]>;
       }
     ).options!();
-
-  it('offers import last, after the rules already available', () => {
-    const rows = options();
-    expect(rows.at(-1)?.[1]).toBe(IMPORT_RULE_VALUE);
-    expect(rows.length).toBeGreaterThan(1);
-  });
 
   it('does not offer the rules every world already has', () => {
     // Space and Appearance are seeded into every world (WorldBuilder.rulesInPlay

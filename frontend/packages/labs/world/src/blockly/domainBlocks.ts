@@ -8,14 +8,13 @@
 // `import * as WorldLab from 'world-lab'`, so no per-block import analysis is
 // needed; the compiler rewrites `world-lab` to the self-hosted engine.
 
-import type {Block, BlockSvg, Field, FieldDropdown} from 'blockly';
+import type {Block, Field, FieldDropdown} from 'blockly';
 // From `blockly/core`, NOT `blockly`: the bundle entry point re-installs the
 // default English messages, which puts `colour` back on every color block after
 // `installColorMessages` has spelled them the lab's way
 // (`blockly/colorMessages`). A type-only import of the same names is free; a
 // value import is not.
 import {
-  Events,
   FieldDropdown as FieldDropdownClass,
   FieldLabel,
   FieldNumber,
@@ -134,7 +133,6 @@ import {mapImportFieldExtension} from './extensions/mapImportField';
 import {missingRuleExtension} from './extensions/missingRule';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
-import {ruleImportFieldExtension} from './extensions/ruleImportField';
 import {rulesButtonExtension} from './extensions/rulesButton';
 import {sliderRangeMutator} from './extensions/sliderRange';
 import {soundImportFieldExtension} from './extensions/soundImportField';
@@ -148,10 +146,6 @@ import {
   installColorPickerField,
 } from './fields/FieldColorPicker';
 import {FieldMarkdown} from './fields/FieldMarkdown';
-import {
-  FieldPropertyPreview,
-  type BlockDrawing,
-} from './fields/FieldPropertyPreview';
 import {fieldSliderArg} from './fields/FieldSlider';
 import fieldVectorPlugin, {
   fieldVectorArg,
@@ -214,14 +208,12 @@ import {
 } from './moduleOptions';
 import {type OwnMeta} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
-import {IMPORT_RULE_VALUE} from './ruleImport';
 import {
   designedName,
   inHand,
   propertyDefault,
   STARTS_EMPTY,
   pascal,
-  PROPERTY_TYPES,
   slug,
 } from './ruleMeta';
 import type {
@@ -7543,7 +7535,6 @@ const useRuleOptions = (field?: FieldDropdown): Array<[string, string]> => {
             : [fileLabel, modulePath];
         }),
     ),
-    ['(import…)', IMPORT_RULE_VALUE],
   ];
 };
 const useRuleOptionsExtension = liveDropdown(
@@ -7558,20 +7549,11 @@ const worldUseRule = defineBlock({
   args0: [{type: 'field_dropdown', name: 'RULE', options: useRuleOptions}],
   previousStatement: true,
   nextStatement: true,
-  // The import extension AFTER the options one, so it wraps that validator
-  // rather than being wrapped by it (see ruleImportField).
-  extensions: [
-    useRuleOptionsExtension,
-    ruleImportFieldExtension,
-    openSourceButtonExtension,
-    // …and the way back to the lesson it was met in
-    // (extensions/lessonButton).
-    lessonButtonExtension,
-  ],
+  // Live options, so a load keeps a rule's name the menu had not heard of.
+  // Nothing draws one: what a rule uses is its data, chosen on its view.
+  extensions: [useRuleOptionsExtension],
   style: 'behavior_blocks',
-  tooltip:
-    'Say that this rule needs another one. A world does not need this: it ' +
-    'runs every rule the project holds.',
+  tooltip: 'A rule this rule uses: chosen in the Rule Editor.',
   generator: {
     javascript(block, generator) {
       const rule = block.getFieldValue('RULE');
@@ -8266,7 +8248,7 @@ const worldRule = defineBlock({
   // A definition root: no previous connection; its declarations chain below.
   nextStatement: true,
   style: 'setup_blocks',
-  tooltip: 'Define a rule: its world properties, traits, and events.',
+  tooltip: 'A rule: made in the Rule Editor.',
   generator: noGenerator,
 });
 
@@ -8348,15 +8330,10 @@ const worldRuleTrait = defineBlock({
   args1: [
     {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
   ],
-  extensions: [wideTextExtension('DESCRIPTION')],
   // A definition root: no previous connection; its declarations chain below.
   nextStatement: true,
   style: 'setup_blocks',
-  tooltip:
-    'Define a trait for the rule in this file, and say what takes it. An ' +
-    'actor trait is the usual kind; a camera trait is how a camera is told to ' +
-    'behave — “follows the player” is one. Its properties, events, actions ' +
-    'and queries chain below it.',
+  tooltip: 'A trait of a rule: made in the Rule Editor.',
   generator: noGenerator,
 });
 
@@ -8380,49 +8357,8 @@ const WITH_DEFAULT_LABEL = 'WITH_DEFAULT';
 /** The labels that make a point's two number fields read as an x and a y. */
 const DEFAULT_X_LABEL = 'DEFAULT_X_LABEL';
 const DEFAULT_Y_LABEL = 'DEFAULT_Y_LABEL';
-/** The rows the previews hang off, and the fields that draw them. */
-const GET_PREVIEW_ROW = 'GET_PREVIEW_ROW';
-const SET_PREVIEW_ROW = 'SET_PREVIEW_ROW';
-const GET_PREVIEW_FIELD = 'GET_PREVIEW';
-const SET_PREVIEW_FIELD = 'SET_PREVIEW';
-
-/**
- * What the block is a property OF, read from where it sits.
- *
- * Placement decides it, exactly as it decides what `parseRuleMeta` and
- * `ownProperties` make of the same block: chained under a `define trait` it
- * belongs to whatever that trait elects, and at the top of a rule, an actor or
- * a world file it belongs to the file.
- */
-const propertyScopeOf = (block: Block): MemberScope => {
-  const root = block.getRootBlock();
-  if (root?.type === 'world_rule_trait') {
-    return root.getFieldValue('SUBJECT') === 'camera' ? 'camera' : 'actor';
-  }
-  // An `.actor` file's own property is that kind of actor's; a `.world` file's
-  // own and a rule's own are the world's.
-  return root?.type === 'world_actor' ? 'actor' : 'world';
-};
-
-/** The property a `define property` block currently describes. */
-const propertyOn = (block: Block): PropertyShapeInput => {
-  const declared = String(block.getFieldValue('TYPE') ?? 'number');
-  const type = (
-    PROPERTY_TYPES.has(declared) ? declared : 'number'
-  ) as PropertyType;
-  return {
-    name: String(block.getFieldValue('NAME') ?? '').trim(),
-    type,
-    // Read exactly as `parseRuleMeta` reads it, so what is drawn starts with
-    // the same value the real block will be seeded with.
-    default: propertyDefault(
-      type,
-      block.getFieldValue('DEFAULT'),
-      block.getFieldValue(DEFAULT_Y_FIELD),
-    ),
-    scope: propertyScopeOf(block),
-  };
-};
+/** The row the eye sits on. */
+const ACCESS_ROW = 'ACCESS_ROW';
 
 /**
  * How the `with default` slot is edited, which is a fact about the TYPE.
@@ -8633,162 +8569,54 @@ function shapeDefaultField(block: Block, type: string): void {
   }
 }
 
-/** One of the two drawings, from the shared shape. */
-const propertyDrawing = (
-  shape: PropertyBlockShape,
-  muted = false,
-): BlockDrawing => ({
-  definition: {
-    message0: shape.message0,
-    args0: shape.args0,
-    inputsInline: true,
-    ...(shape.output === undefined
-      ? {previousStatement: null, nextStatement: null}
-      : {output: shape.output}),
-    style: shape.style,
-  },
-  shadows: shape.shadows,
-  subject: shape.subject,
-  muted,
-});
-
 const PROPERTY_DESIGNER_EXTENSION = 'world_property_designer';
 
 /**
- * Draw the two blocks a `define property` makes, and let the eye decide whether
- * the second one leaves the file.
+ * The fields a `define property` holds besides its type and name: the eye,
+ * which says whether the setter leaves the file, and the default, whose
+ * editor depends on the type.
  *
- * The same bargain `define block` and `define event` struck (`blockDesigner`):
- * a definition should look like the thing defined. A property makes a getter
- * and a setter, so both are drawn, from the one description the real blocks are
- * built from (`propertyShape`) — a preview that described them in its own words
- * would be right until the first time one of them changed.
+ * Nothing draws one any more — a rule is data (specs/RULE_EDITOR_PLAN.md) —
+ * but the compiler loads a rule's view, and the fields a view writes must be
+ * there for it to load them into.
  *
- * READ-ONLY IS A FACT ABOUT THE SETTER, which is why the eye sits beside it. A
- * property a step owns — gravity's "falling", which its landing step sets and
- * nothing else may — must not grow a `set` block anyone else can reach:
- * offering one invites a learner to write a value the next tick overwrites,
- * which looks like the block is broken. The setter still EXISTS, and the rule
- * that declared it still uses it, so it is still drawn — faded, which is what
- * "not offered outside here" looks like.
+ * ON THE VALIDATOR, which is what makes a saved block come back right. A
+ * validator runs INSIDE `setValue`, so the slot is reshaped while Blockly is
+ * still applying the file's fields — before it reaches `DEFAULT`, which the
+ * saver always writes after `TYPE`.
  */
 const propertyDesignerExtension = defineExtension(PROPERTY_DESIGNER_EXTENSION, {
   extension() {
-    const block = this as unknown as Block & {
-      // `rebuildDesign_`, and not a name of its own: `refreshBlockDesigns`
-      // sweeps a workspace for exactly this method after a load made with
-      // events OFF, which is most of them here — the surface swap and every
-      // reload after a rename silence Blockly so the file is not written back.
-      // Unswept, a saved property came back drawn as the `strength` its fields
-      // default to, because Blockly's serializer applies fields AFTER an
-      // extension has run.
-      rebuildDesign_: () => void;
-    };
-    const svg = block as unknown as BlockSvg;
-
-    // The eye, made once. Shared with `define block`, which asks the same
-    // question about the same kind of declaration (`fields/visibilityEye`).
-    const eye = visibilityEye(WRITABLE, READONLY);
-
-    block.rebuildDesign_ = () => {
-      // The editor first, so what is read below is read from the right field.
-      shapeDefaultField(block, String(block.getFieldValue('TYPE') ?? ''));
-      const property = propertyOn(block);
-      const readonly = block.getFieldValue(PROPERTY_ACCESS_FIELD) === READONLY;
-      eye.sync();
-      const get = block.getField(
-        GET_PREVIEW_FIELD,
-      ) as FieldPropertyPreview | null;
-      const set = block.getField(
-        SET_PREVIEW_FIELD,
-      ) as FieldPropertyPreview | null;
-      // Nothing to draw for a property with no name: the blocks it would make
-      // would read `set  of ⟨this actor⟩`, which is not a picture of anything.
-      const shape = property.name ? propertyShape(property) : undefined;
-      get?.setDrawing(shape ? propertyDrawing(shape.get) : null);
-      set?.setDrawing(shape ? propertyDrawing(shape.set, readonly) : null);
-    };
-
-    const getPreview = new FieldPropertyPreview();
-    const setPreview = new FieldPropertyPreview();
+    const block = this as unknown as Block;
     block
-      .appendDummyInput(GET_PREVIEW_ROW)
-      .appendField(getPreview, GET_PREVIEW_FIELD);
-    block
-      .appendDummyInput(SET_PREVIEW_ROW)
-      .appendField(eye.field, PROPERTY_ACCESS_FIELD)
-      .appendField(setPreview, SET_PREVIEW_FIELD);
-    eye.field.setTooltip(
-      'Whether the "set" block below is offered anywhere else. Turn it off ' +
-        'for a value the file declaring it works out for itself — a learner ' +
-        'given a setter for one of those writes a value the next tick ' +
-        'overwrites, and the block looks broken.',
-    );
-
-    // ON THE VALIDATOR, which is what makes a saved block come back right.
-    // A validator runs INSIDE `setValue`, so the slot is reshaped while
-    // Blockly is still applying the file's fields — before it reaches
-    // `DEFAULT`, which the saver always writes after `TYPE`. The change event
-    // that `rebuildDesign_` listens for is fired asynchronously and would
-    // arrive far too late for that (`Events.fire`).
+      .appendDummyInput(ACCESS_ROW)
+      .appendField(
+        visibilityEye(WRITABLE, READONLY).field,
+        PROPERTY_ACCESS_FIELD,
+      );
     (block.getField('TYPE') as FieldDropdown | null)?.setValidator(value => {
       shapeDefaultField(block, String(value));
       return undefined;
     });
-
-    block.rebuildDesign_();
-
-    let wasScope = propertyScopeOf(block);
-    block.setOnChange(event => {
-      const mine =
-        event.type === Events.BLOCK_CHANGE &&
-        (event as Events.BlockChange).blockId === block.id;
-      // Where it sits decides whose property it is, and so whether the drawn
-      // blocks take a subject at all. Compared rather than redrawn on every
-      // move: a declaration is dragged around plenty without changing owner.
-      const scope = propertyScopeOf(block);
-      const movedOwner = scope !== wasScope;
-      wasScope = scope;
-      if (
-        mine ||
-        movedOwner ||
-        // Blockly's serializer applies fields AFTER extensions run, so the
-        // drawing built above was drawn against the block's defaults. Every
-        // saved property came back drawn as `strength` until this.
-        event.type === Events.FINISHED_LOADING
-      ) {
-        block.rebuildDesign_();
-        svg.queueRender?.();
-      }
-    });
+    shapeDefaultField(block, String(block.getFieldValue('TYPE') ?? ''));
   },
 });
 
 const worldRuleProperty = defineBlock({
   type: 'world_rule_property',
-  // A DEFINITION, styled and colored like the other definitions — `define
-  // rule`, `define trait`, `define block`, `define event` — with the blocks it
-  // makes drawn on its own face by the extension below.
-  // The default is NOT here: what it is edited by, and whether it is asked for
-  // at all, are facts about the TYPE, so the extension below puts the words and
-  // the editor on the end of this row (`shapeDefaultField`).
+  // What a rule's view holds for each property, for the compiler. The
+  // default is NOT here: what it is edited by is a fact about the TYPE, so
+  // the extension below puts it on the end of this row (`shapeDefaultField`).
   message0: 'define %1 %2',
   args0: [
     {type: 'field_dropdown', name: 'TYPE', options: PROPERTY_TYPE_OPTIONS},
     {type: 'field_input', name: 'NAME', text: 'strength'},
   ],
-  // NOT inline: the two drawings are rows under the declaration, the way
-  // `define block` puts the block it makes under its own signature. Inline put
-  // the declaration, the getter, the eye and the setter on one line, which ran
-  // off the side of the workspace and read as four unrelated things.
   previousStatement: true,
   nextStatement: true,
   extensions: [propertyDesignerExtension],
   style: 'setup_blocks',
-  tooltip:
-    'Define a property — a world property at the rule level, an actor property ' +
-    'inside a "define trait". The two blocks below it are what it makes; the ' +
-    'eye says whether the "set" one is offered outside this file.',
+  tooltip: 'A property of a rule or a trait: made in the Rule Editor.',
   generator: noGenerator,
 });
 
@@ -8942,9 +8770,6 @@ export const argumentTypeOptions = (): Array<[string, string]> => [
       ],
   ),
 ];
-
-
-
 
 // Blockly clips a text field's DISPLAY at 50 characters (`maxDisplayLength`) —
 // enough for a name, not for a sentence. The value was always whole; only the
