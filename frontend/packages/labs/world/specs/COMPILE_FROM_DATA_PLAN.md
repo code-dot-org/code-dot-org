@@ -34,13 +34,22 @@ world`, the loop over a trait's holders. Scope, owner and id never reach a
   and `define event` (whole declarations, in an actor file), `each frame`,
   `define drawing`, and the handlers. Each row's generator asks
   `definesActorFile`, so it writes nothing outside a `define actor`.
-- **Cameras.** A map's `mainCamera`, `cameras` and `startingCamera`, and a
-  placement's `cameras`, are data (`mapModel`). The compiler writes them as
-  `define camera` blocks with `use trait` rows (`withWorldCameras` and
-  `withCameraDeclarations` in `placementCameras`) and generates those. No
-  scenario, lesson or stock actor declares a camera in blocks, and tests
-  say so (`fixtures.test`, `lessonChecks.test`). The Viewport takes its
-  camera traits as an actor's traits (`useCameraTraits`).
+- **Cameras.** A camera belongs to a Viewport: a placement's `cameras`,
+  made in its inspector on the screen it is placed on (the Screen Editor is
+  the map editor over a screen). The compiler writes each as a `define
+camera` block with `use trait` rows (`withCameraDeclarations` in
+  `placementCameras`) and generates those. No scenario, lesson or stock
+  actor declares a camera in blocks, and tests say so (`fixtures.test`,
+  `lessonChecks.test`). The Viewport takes its camera traits as an actor's
+  traits (`useCameraTraits`).
+- **What is left of the world's main map.** The stock games are a
+  `main.screen` whose docked Viewport shows `main.map`. The lessons are not:
+  `lessonSource` writes each as a `main.world` holding a main map, as do the
+  empty world project (`EMPTY_WORLD_SPEC`), tapper and novel. Three camera
+  lessons set the map's `mainCamera`. What serves that map's cameras is the
+  World Editor's Map tab (`worldFileDocument`, `hasWorldCameras`), the
+  world camera list (`worldCameras`, `worldCameraCode`), `withWorldCameras`,
+  and the camera-follow enhancement, which writes `mainCamera`.
 - **Who loads a view into Blockly.** The generator; and, in tests, the
   stock compile helpers (`compileProject`, `compileStockRules`). Every other
   reader of a view reads its JSON (`parseRuleMeta`, `ownProperties`, the
@@ -58,8 +67,10 @@ world`, the loop over a trait's holders. Scope, owner and id never reach a
 - **An actor's module is written from its data in TypeScript**, the rows'
   generators' output said directly, and its handlers and code roots loaded
   from its own workspace as they are written.
-- **A camera is written from the map's data** as the `defineCamera` call
-  the block made.
+- **A camera is a Viewport's**, written from its placement's data as the
+  `defineCamera` call the block made. A world has none of its own.
+- **A lesson is a screen**, as a game is: a Viewport docked over the whole
+  surface, showing the lesson's map.
 - **The views stay, as JSON.** Readers walk them; only nothing loads them.
 
 ## What is being built
@@ -87,13 +98,23 @@ than by asking for a `define actor` above them. A new test pins every
 stock and scenario actor's code byte for byte, as `ruleDataCompiles` does
 rules'.
 
-### 3. Cameras from data
+### 3. Lessons as screens
 
-`withWorldCameras` and `withCameraDeclarations` write `defineCamera`
-calls, not blocks. The map editor's camera list reads the map's data, not
-block-declared cameras (`worldCameras`).
+`lessonSource` writes a `main.screen` whose Viewport is docked over the
+whole surface and shows `main.map`, the placements the main map held. The
+empty world project, tapper and novel move the same way. The three camera
+lessons keep their camera on the Viewport's placement, and the
+camera-follow enhancement aims the Viewport's camera. A lesson's text and
+checks that name the world or its Map tab are rewritten with it.
 
-### 4. The blocks go
+### 4. Cameras only on Viewports
+
+`mainCamera`, `cameras` and `startingCamera` leave the map, with the World
+Editor's Map tab, the world camera list, `worldCameras`, `worldCameraCode`
+and `withWorldCameras`. `withCameraDeclarations` writes `defineCamera`
+calls, not blocks.
+
+### 5. The blocks go
 
 Once nothing loads a view: `define rule`, `define trait`, `use rule`, a
 rule's `define step` and `when tick`, `define block`, `define event`, `use
@@ -107,11 +128,5 @@ world`. `each frame` and `define drawing` stay: an actor's code holds them.
   loads (`ESTABLISHED_ELSEWHERE`), and a world written by hand could hold a
   `define camera`. Nothing in the repo does. Deleting the block makes such a
   file unreadable, which is the cost no migration means (never shipped).
-- **The world's cameras.** A Viewport's cameras are already made in its
-  inspector, on the screen it is placed on (the Screen Editor is the map
-  editor over a screen). The world's own cameras are the exception: they
-  are kept on its main map (`mainCamera`, `cameras`, `startingCamera`).
-  Whether they move to the main screen's Viewport is a question for step 3;
-  the compile change does not depend on it.
 - **A world's properties** are the last declarations written as blocks
   (`define world`, `define property`). A world as data is its own phase.
