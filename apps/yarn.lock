@@ -3924,6 +3924,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/core@portal:../frontend/packages/core/::locator=blockly-mooc%40workspace%3A."
   dependencies:
+    "@code-dot-org/shared-constants": "workspace:*"
     camelcase-keys: "npm:^10.0.2"
     events: "npm:^3.3.0"
     flat: "npm:^6.0.1"
@@ -3932,6 +3933,8 @@ __metadata:
   peerDependencies:
     "@reduxjs/toolkit": ^2.8.2
     "@sentry/browser": ^10.51.0
+    "@statsig/js-client": ^3.25.5
+    "@statsig/web-analytics": ^3.25.5
     "@tanstack/react-query": "*"
     js-cookie: ^3.0.5
     ky: ^1.14.3
@@ -4160,6 +4163,12 @@ __metadata:
   checksum: 10/9d80760ede352c83f50e2a7f74bbbff855dc2d29cc4e4dfd822d661721095983636308314042fcf1f9c0aebae1b536ff8bf0e81c0aa2fa91ebd6fd12a66e8e09
   languageName: node
   linkType: hard
+
+"@code-dot-org/shared-constants@portal:../frontend/packages/shared-constants/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/shared-constants@portal:../frontend/packages/shared-constants/::locator=blockly-mooc%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "@codemirror/autocomplete@npm:^6.0.0, @codemirror/autocomplete@npm:^6.18.6, @codemirror/autocomplete@npm:^6.3.2, @codemirror/autocomplete@npm:^6.7.1":
   version: 6.18.7

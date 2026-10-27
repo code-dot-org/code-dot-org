@@ -2,7 +2,7 @@
 
 Runtime utilities shared by all Code.org frontend applications: environment detection, site configuration, brand detection, and dashboard API client.
 
-Optional code.org-specific integrations (localization, observability) are available as sub-path exports and registered via the plugin model — open-source forks can omit them entirely.
+Optional code.org-specific integrations (localization, observability, consent, analytics) are available as sub-path exports and registered via the plugin model — open-source forks can omit them entirely.
 
 ## Boot
 
@@ -127,6 +127,34 @@ known.
 See [`src/plugins/consent/README.md`](src/plugins/consent/README.md) for full
 usage details.
 
+## Analytics
+
+`analyticsPlugin`, `sendEvent`, and `setUser` are available via the
+`./plugins/analytics` sub-path export:
+
+```ts
+import {initializeCore} from '@code-dot-org/core';
+import {analyticsPlugin, sendEvent} from '@code-dot-org/core/plugins/analytics';
+import {consentPlugin} from '@code-dot-org/core/plugins/consent';
+
+initializeCore({plugins: [consentPlugin, analyticsPlugin]});
+
+sendEvent('Account Settings Page Visited', {'user type': 'teacher'});
+```
+
+The plugin reads `config.analytics` from the Rails-injected
+`<meta name="app-config">` tag and dynamically imports the Statsig adapter, so
+the SDK stays out of bundles that do not opt in.
+
+Register `consentPlugin` **before** it. Consent gates only whether the Statsig
+stable ID may be persisted to the device, decided once per page load when the
+consent source first settles — and analytics waits for that settlement before
+building a client, so a page with `analyticsPlugin` and no `consentPlugin`
+never sends anything.
+
+See [`src/plugins/analytics/README.md`](src/plugins/analytics/README.md) for
+the consent behavior and usage details.
+
 ## Experiments
 
 `getEnabledExperiments` is available via the `./plugins/experiments` sub-path
@@ -156,10 +184,10 @@ When adding a new code.org-specific integration, use this table to decide where 
 
 **Default rule:** Start as a plugin in core. Graduate to a new package only if the npm dependency weight or architectural independence makes the package boundary genuinely necessary.
 
-Current count: five plugins (localization, observability, consent,
-experiments, with analytics pending). This is the top of the "≤ ~3–4" guidance above;
-extraction trigger for consent specifically is a consumer that wants it
-without the rest of core.
+Current count: five plugins (localization, observability, consent, analytics,
+experiments). This is the top of the "≤ ~3–4" guidance above; extraction
+trigger for consent specifically is a consumer that wants it without the
+rest of core.
 
 ## Writing a plugin
 

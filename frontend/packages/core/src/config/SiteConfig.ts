@@ -25,6 +25,16 @@ declare global {
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface SiteConfigExtensions {}
 
+/** Analytics section of the <meta name="app-config"> tag. */
+export interface AnalyticsRuntimeConfig {
+  analytics?: {
+    provider?: 'statsig' | 'none';
+    enabled?: boolean;
+    statsig?: {clientKey: string; autoCapture?: boolean};
+    user?: {userId: string; userType?: string};
+  };
+}
+
 /**
  * Shape of the frontend observability runtime config parsed from the
  * <meta name="app-config"> tag.
@@ -47,13 +57,15 @@ export interface ObservabilityRuntimeConfig {
  * Parse the <meta name="app-config"> tag and return the runtime config.
  * Returns an empty object if the tag is absent or the JSON is malformed.
  */
-function parseRuntimeConfig(): ObservabilityRuntimeConfig {
+function parseRuntimeConfig(): AnalyticsRuntimeConfig &
+  ObservabilityRuntimeConfig {
   try {
     const meta = document.querySelector<HTMLMetaElement>(
       'meta[name="app-config"]',
     );
     if (!meta?.content) return {};
-    return JSON.parse(meta.content) as ObservabilityRuntimeConfig;
+    return JSON.parse(meta.content) as AnalyticsRuntimeConfig &
+      ObservabilityRuntimeConfig;
   } catch {
     return {};
   }
@@ -66,6 +78,9 @@ export class SiteConfig {
   public readonly dashboardApiUrl: string;
   /** Brand- and environment-aware marketing-site origin (scheme + host). */
   public readonly marketingOrigin: string;
+
+  /** Parsed by core itself, before any plugin runs. */
+  public readonly analytics: NonNullable<AnalyticsRuntimeConfig['analytics']>;
 
   /**
    * Observability runtime config parsed from the meta tag.
@@ -83,10 +98,15 @@ export class SiteConfig {
     this.dashboardApiUrl = getDashboardApiUrl(this.environment);
     this.marketingOrigin = getMarketingOrigin(this.brand, this.environment);
 
+    // Spread first, so an explicit null provider in the meta cannot beat the default.
     const runtime = parseRuntimeConfig();
+    this.analytics = {
+      ...runtime.analytics,
+      provider: runtime.analytics?.provider ?? 'none',
+    };
     this.observability = {
-      provider: runtime.observability?.provider ?? 'none',
       ...runtime.observability,
+      provider: runtime.observability?.provider ?? 'none',
     };
   }
 
