@@ -18,7 +18,12 @@ const TOOLBOX_CATEGORY_KEYS = [
   'Variables',
 ];
 
-test.describe('Maze, Frozen, and Minecraft:Agent tutorials in various languages', () => {
+// Temporarily skipping these tests while we resolve some issues specific to
+// the test server, wherein English strings can get incorrectly cached as
+// translations, causing these tests to persistently fail until the cache is
+// cleared in the next build.
+// See Slack thread for more context: https://codeai.slack.com/archives/C0T0PNTM3/p1792083326856779
+test.skip('Maze, Frozen, and Minecraft:Agent tutorials in various languages', () => {
   /**
    * Migration status: COMPLETED
    * Source: dashboard/test/ui/features/foundations/i18n.feature "Maze tutorial in Spanish"
