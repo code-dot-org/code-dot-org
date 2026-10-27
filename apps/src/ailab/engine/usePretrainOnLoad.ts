@@ -1,6 +1,7 @@
 import {useEffect} from 'react';
 
 import {isPanelEnabled} from './helpers/navigationValidation';
+import {afterNextPaint} from './helpers/utils';
 import {useAppDispatch, useAppSelector} from './hooks';
 import {useProject} from './ProjectContext';
 import {getHideDatasetView, readyToTrain, setCurrentPanel} from './redux';
@@ -8,7 +9,11 @@ import {getData} from './selectors';
 import {useTrainingData} from './TrainingDataContext';
 import {useTrainingRun} from './useTrainingRun';
 
-export function usePretrainOnLoad(restoringModel: boolean) {
+/*
+  Trains a pretrained level once its data and columns are in, and
+  returns whether we are still waiting for that model.
+*/
+export function usePretrainOnLoad(restoringModel: boolean): boolean {
   const dispatch = useAppDispatch();
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
@@ -21,31 +26,30 @@ export function usePretrainOnLoad(restoringModel: boolean) {
   const canTest = useAppSelector(state =>
     isPanelEnabled(state, project, 'results')
   );
+  // Unset until the metadata is in. A column the dataset lacks is dropped from it.
+  const presetColumns = useAppSelector(state => state.presetColumns);
+  const willTrain =
+    pretrained &&
+    (!presetColumns ||
+      (!!presetColumns.labelColumn &&
+        !!presetColumns.selectedFeatures?.length));
+  const pretraining =
+    willTrain && dataLoaded && !trainedModel && !restoringModel;
 
+  // Training blocks the page, so let the loading overlay paint first.
   useEffect(() => {
-    if (
-      pretrained &&
-      dataLoaded &&
-      canTrain &&
-      !trainedModel &&
-      !restoringModel
-    ) {
-      beginRun();
+    if (!pretraining || !canTrain) {
+      return;
     }
-  }, [
-    pretrained,
-    dataLoaded,
-    canTrain,
-    trainedModel,
-    restoringModel,
-    beginRun,
-  ]);
+    return afterNextPaint(beginRun);
+  }, [pretraining, canTrain, beginRun]);
 
   // The new run reaches `project` on the next render, so wait for canTest.
-  // TODO: Add loading state for before training finishes.
   useEffect(() => {
     if (hideDatasetView && canTest) {
       dispatch(setCurrentPanel('results'));
     }
   }, [hideDatasetView, canTest, dispatch]);
+
+  return pretraining;
 }

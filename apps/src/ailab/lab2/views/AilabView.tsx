@@ -18,6 +18,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
 }) => {
   const dispatch = useAppDispatch();
   const [reinitializedCount, setReinitializedCount] = useState(0);
+  const [isWorkspaceLoading, setIsWorkspaceLoading] = useState(false);
   const handleReinitialize = useCallback(
     () => setReinitializedCount(count => count + 1),
     []
@@ -57,20 +58,23 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
     [updateSources]
   );
 
-  if (!currentSources) {
-    return <Loading isLoading={true} />;
-  }
-
+  // One overlay, kept mounted, covers the project fetch and then the workspace's own loading.
   return (
-    <AilabWorkspace
-      key={reinitializedCount}
-      levelProperties={levelProperties}
-      hasEdited={hasEdited}
-      savedSource={currentSources.source}
-      save={save}
-      startOver={startOver}
-      projectManager={projectManager}
-    />
+    <>
+      {currentSources && (
+        <AilabWorkspace
+          key={reinitializedCount}
+          levelProperties={levelProperties}
+          hasEdited={hasEdited}
+          savedSource={currentSources.source}
+          save={save}
+          startOver={startOver}
+          projectManager={projectManager}
+          onLoadingChange={setIsWorkspaceLoading}
+        />
+      )}
+      <Loading isLoading={!currentSources || isWorkspaceLoading} />
+    </>
   );
 };
 

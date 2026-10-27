@@ -2,12 +2,13 @@
 import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
 import CheckboxDropdown from '@code-dot-org/component-library/dropdown/checkboxDropdown';
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import {Button, Typography} from '@mui/material';
+import {Button, CircularProgress, Typography} from '@mui/material';
 import classNames from 'classnames';
-import React, {type ChangeEvent} from 'react';
+import React, {type ChangeEvent, useEffect, useState} from 'react';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {hasCurrentTrainingResult} from '../helpers/navigationValidation';
+import {afterNextPaint} from '../helpers/utils';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {readyToTrain, setTrainingModalStep} from '../redux';
@@ -38,6 +39,19 @@ const TrainPanel = () => {
   const canTrain = readyToTrain(project);
   const hasTrainingResult = hasCurrentTrainingResult(project);
   const {beginRun} = useTrainingRun();
+  const [isTraining, setIsTraining] = useState(false);
+
+  // Training blocks the page, so let the button's spinner paint first.
+  useEffect(() => {
+    if (!isTraining) {
+      return;
+    }
+    return afterNextPaint(() => {
+      beginRun();
+      dispatch(setTrainingModalStep('training'));
+      setIsTraining(false);
+    });
+  }, [isTraining, beginRun, dispatch]);
 
   const columnName = (column: string) =>
     getLocalizedColumnName(datasetId, column);
@@ -76,11 +90,6 @@ const TrainPanel = () => {
 
   const onRemoveAllFeatures = () => {
     setSelectedFeatures([]);
-  };
-
-  const onTrain = () => {
-    beginRun();
-    dispatch(setTrainingModalStep('training'));
   };
 
   const featuresSummary =
@@ -155,9 +164,14 @@ const TrainPanel = () => {
                 size="small"
                 fullWidth
                 disabled={!canTrain}
-                onClick={onTrain}
+                loading={isTraining}
+                loadingPosition="start"
+                loadingIndicator={
+                  <CircularProgress color="inherit" size={16} disableShrink />
+                }
+                onClick={() => setIsTraining(true)}
               >
-                Train model
+                {isTraining ? 'Training…' : 'Train model'}
               </Button>
             </div>
           )}

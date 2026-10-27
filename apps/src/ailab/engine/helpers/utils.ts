@@ -56,6 +56,21 @@ export function prefersReducedMotion(): boolean {
 }
 
 /*
+  Calls `callback` once the next frame has painted: an animation frame runs
+  just before the paint, and a timeout set from it runs after. Returns a canceller.
+*/
+export function afterNextPaint(callback: () => void): () => void {
+  let timeout: number | undefined;
+  const frame = requestAnimationFrame(() => {
+    timeout = window.setTimeout(callback);
+  });
+  return () => {
+    cancelAnimationFrame(frame);
+    window.clearTimeout(timeout);
+  };
+}
+
+/*
   Both hyperparameters count something — neighbours, or splits — so both are
   whole numbers of at least one.
 */
