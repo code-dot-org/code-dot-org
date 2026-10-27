@@ -82,28 +82,6 @@ function* walkRows(block: Block | undefined): Generator<Block> {
 }
 
 /**
- * The cameras a WORLD declares for itself: every `define camera` in its
- * workspace whose owner socket is empty.
- *
- * One with something plugged in is somebody else's — a Viewport's, declared
- * from the world's blocks by naming it — and is not the world's to list.
- */
-export function worldCameras(contents: string): DeclaredCamera[] {
-  let state: BlocklySerialization | undefined;
-  try {
-    state = JSON.parse(contents) as BlocklySerialization;
-  } catch {
-    return [];
-  }
-  return [...everyBlock(state)]
-    .filter(
-      block =>
-        block.type === 'world_define_camera' && ownerOf(block) === 'world',
-    )
-    .map(declared);
-}
-
-/**
  * The cameras a PLACEMENT's script declares for itself: every `define camera
  * for ⟨this actor⟩` in it.
  *

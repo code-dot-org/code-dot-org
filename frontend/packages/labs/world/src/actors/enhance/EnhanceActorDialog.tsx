@@ -71,10 +71,11 @@ export const EnhanceActorDialog = ({
       role="dialog"
       title={`Enhance ${target.name}`}
       // What it will touch, said in the terms of the thing it is about: an
-      // actor enhancement writes into that actor, a world one into the world.
-      description={`Tick what it should be able to do. This writes blocks into ${
-        target.kind === 'world' ? 'the world' : "the actor's own file"
-      }, and you can open them afterwards and change anything you like.`}
+      // actor enhancement writes into that actor, a game's into its Main
+      // Screen.
+      description={`Tick what it should be able to do. This writes into ${
+        target.kind === 'world' ? 'the Main Screen' : "the actor's own file"
+      }, and you can open it afterwards and change anything you like.`}
       onClose={onCancel}
       closeLabel="Close"
       primaryButtonProps={{

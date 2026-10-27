@@ -1,12 +1,11 @@
-/* THE DESIGN SYSTEM'S FONT, set at each root this editor has: the map, a
-   world around it, and one actor's code. Nothing above them in the lab sets
+/* THE DESIGN SYSTEM'S FONT, set at each root this editor has: the map, and
+   one placement's code. Nothing above them in the lab sets
    one, so text here fell to the browser's default — Times for a bare label,
    Arial for a button, which does not inherit a font unless told to. Every
    control styled below says `font: inherit` for that reason, and a size or
    weight set here is one of the design system's type-scale variables
    (`fontVariables.css`), not a number of our own. */
 .editor,
-.worldEditor,
 .script {
   font-family: var(--font-family-main, sans-serif);
 }
@@ -393,27 +392,6 @@
 
 .scriptWorkspace {
   flex: 1;
-  min-height: 0;
-}
-
-/* A world: the view bar, then whichever view is up, filling the rest. */
-.worldEditor {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.viewBar {
-  padding: 0 0.5rem;
-  border-bottom: 1px solid var(--borders-neutral-light);
-  background: var(--background-neutral-primary);
-}
-
-/* The view under the tabs, filling the rest. */
-.viewPanel {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
   min-height: 0;
 }
 

@@ -98,7 +98,7 @@ describe('the scenario catalogue', () => {
       // …and a game to compile: a Main Screen, or a world until every
       // scenario has one (`entryFileOf`).
       const paths = projectFiles(WORLD_SCENARIOS[tag].source);
-      expect(paths[entryFileOf(paths)]).toBeDefined();
+      expect(paths[entryFileOf()]).toBeDefined();
     }
   });
 

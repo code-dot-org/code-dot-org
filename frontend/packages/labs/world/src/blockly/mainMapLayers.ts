@@ -21,17 +21,6 @@ export interface MainMapLayer {
   background?: Slot;
 }
 
-/** The layers a world file's `map` states, or none. */
-export function mainMapLayersOf(contents: string): MainMapLayer[] {
-  try {
-    return layersIn(
-      (JSON.parse(contents) as {map?: {layers?: unknown}}).map?.layers,
-    );
-  } catch {
-    return [];
-  }
-}
-
 /**
  * The layers a screen states, or none. A screen is the map it shows, so its
  * layers are its own top-level key rather than a `map`'s.

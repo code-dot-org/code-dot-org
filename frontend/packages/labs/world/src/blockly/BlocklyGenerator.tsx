@@ -39,21 +39,16 @@ import {
   SCREEN_LOADS,
 } from './domainBlocks';
 import {fileKindOf, moduleShape} from './fileKind';
-import {mainMapLayersOf, screenLayersOf} from './mainMapLayers';
+import {screenLayersOf} from './mainMapLayers';
 import {setCurrentPlacements} from './moduleOptions';
 import {
   ownPropertyDeclarations,
   parseScreenOwnMeta,
-  parseWorldOwnMeta,
   worldOwnPropertyDeclarations,
   parseActorOwnMeta,
   type OwnMeta,
 } from './ownProperties';
-import {
-  withCameraDeclarations,
-  withWorldCameras,
-  type PlacementCamera,
-} from './placementCameras';
+import {withCameraDeclarations, type PlacementCamera} from './placementCameras';
 import {
   designedName,
   parseRuleMeta,
@@ -247,40 +242,9 @@ function generateMap(
 }
 
 /**
- * A world's MAIN MAP, compiled for the world's module
- * (specs/MAIN_MAP_PLAN.md): the code `assembleWorldModule` emits after the
- * world block, and the imports it needs, which the caller merges once the
- * world's own workspace has been generated. Nothing for a world that holds
- * no map, or an empty one.
- */
-function generateMainMap(
-  generator: JavascriptGenerator,
-  workspace: Blockly.Workspace,
-  contents: string,
-  path: string,
-  rootTypes: ReadonlySet<string>,
-): {code: string; definitions: Record<string, string>} | undefined {
-  let source: MapSource | undefined;
-  try {
-    source = (JSON.parse(contents) as {map?: MapSource}).map;
-  } catch {
-    return undefined;
-  }
-  return source
-    ? generateLoad(
-        generator,
-        workspace,
-        source,
-        path.replace(/\.world$/, ''),
-        rootTypes,
-      )
-    : undefined;
-}
-
-/**
- * The load of the map a game is — a world's main map, or the Main Screen
- * itself — with a `define` for each kind it places, and the imports its
- * placements' code needed. Nothing for a map that places nothing.
+ * The load of the map a game is — the Main Screen itself — with a `define`
+ * for each kind it places, and the imports its placements' code needed.
+ * Nothing for a map that places nothing.
  */
 function generateLoad(
   generator: JavascriptGenerator,
@@ -752,33 +716,16 @@ export const BlocklyGenerator = forwardRef<
         if (fileKindOf(path) === 'rule') {
           return generateRule(generator, workspace, contents, path!);
         }
-        // A world's main map, generated FIRST: its placements' workspaces go
-        // through the same headless workspace this file is about to be
-        // loaded into (specs/MAIN_MAP_PLAN.md).
-        const mainMap =
-          fileKindOf(path) === 'world'
-            ? generateMainMap(
-                generator,
-                workspace,
-                contents,
-                path!,
-                rootTypesRef.current,
-              )
-            : undefined;
         workspace.clear();
         const parsed = contents.trim() ? JSON.parse(contents) : {};
-        // …with the world's own cameras declared, which the map editor
-        // keeps on its main map and no editor shows as blocks
-        // (`placementCameras`).
-        // …and an actor with its traits and members out of its rows, which
-        // are said directly (`actorSheet`).
+        // An actor with its traits and members out of its rows, which are
+        // said directly (`actorSheet`).
         const sheet =
           fileKindOf(path) === 'actor' ? actorSheet(parsed) : undefined;
-        const state =
-          fileKindOf(path) === 'world'
-            ? withWorldCameras(parsed)
-            : (sheet?.workspace ?? parsed);
-        Blockly.serialization.workspaces.load(state, workspace);
+        Blockly.serialization.workspaces.load(
+          sheet?.workspace ?? parsed,
+          workspace,
+        );
 
         // Events are their own top-level blocks, so we can't rely on
         // `workspaceToCode`'s position ordering (see assembleActorModule).
@@ -828,33 +775,10 @@ export const BlocklyGenerator = forwardRef<
           shape === 'actor' && path
             ? parseActorOwnMeta(path.replace(/\.actor$/, ''), contents)
             : undefined;
-        // …and a WORLD's own, which are the same declaration one scope up
-        // (specs/WORLD_STATE.md). `__ruleModule` for the same reason: a get
-        // block in this file names the local const rather than importing the
-        // module into itself.
-        const ownWorld =
-          shape === 'world' && path
-            ? parseWorldOwnMeta(path.replace(/\.world$/, ''), contents)
-            : undefined;
-        const owning = ownActor ?? ownWorld;
-        if (owning) {
+        if (ownActor) {
           (generator as {__ruleModule?: string}).__ruleModule =
-            owning.modulePath;
+            ownActor.modulePath;
         }
-        // …and the main map's LAYERS, which the world block declares with
-        // its own (`mainMapLayers`). Cleared for every other kind of file.
-        (generator as {__mainMapLayers?: unknown}).__mainMapLayers =
-          shape === 'world' ? mainMapLayersOf(contents) : [];
-        // …and the main map ITSELF, which the world block loads between its
-        // prologue and its rows, so a row can name a placement
-        // (specs/MAP_BEFORE_ROWS_PLAN.md).
-        (generator as {__mainMap?: string}).__mainMap =
-          shape === 'world' ? (mainMap?.code ?? '') : '';
-        // The world block emits these itself, right after `const world` and
-        // before its body — the body is what reads them (`world_world`).
-        (generator as {__worldOwn?: string}).__worldOwn = ownWorld
-          ? worldOwnPropertyDeclarations(ownWorld)
-          : '';
 
         const generated = topBlocks.map(block => ({
           type: block.type,
@@ -869,16 +793,11 @@ export const BlocklyGenerator = forwardRef<
                   ),
                 ),
         }));
-        if (mainMap) {
-          mergeDefinitions(generator, mainMap.definitions);
-        }
         return generator.finish(
-          shape === 'world'
-            ? assembleWorldModule(generated, worldEventsRef.current)
-            : assembleActorModule(
-                generated,
-                ownActor ? ownPropertyDeclarations(ownActor) : '',
-              ),
+          assembleActorModule(
+            generated,
+            ownActor ? ownPropertyDeclarations(ownActor) : '',
+          ),
         );
       },
     }),

@@ -31,21 +31,12 @@ const defineMap = (name: string) => ({
 });
 
 /** The project's one world, declaring the event the menu raises. */
-const WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        fields: {NAME: 'Main'},
-        next: {
-          block: {
-            type: 'world_rule_event',
-            extraState: {parts: [{kind: 'label', text: 'quit'}]},
-          },
-        },
-      },
-    ],
-  },
+/** The Main Screen, which declares the game's `quit`. */
+const SCREEN = JSON.stringify({
+  type: 'map',
+  name: 'Main',
+  actors: [],
+  events: [{name: 'quit'}],
 });
 
 /**
@@ -79,7 +70,7 @@ const MENU = JSON.stringify({
       type: 'actors/button',
       id: 'Quit',
       blocks: workspace(
-        whenClicked({type: 'world_emit_WorldsMain_QuitEvent'}),
+        whenClicked({type: 'world_emit_ScreensMain_QuitEvent'}),
         // …and a neighbour named as a value, plugged into `remove actor`.
         whenClicked({
           type: 'world_remove_actor',
@@ -103,7 +94,7 @@ const generate = async (
   path = 'maps/menu.map',
 ): Promise<string> => {
   const ref = createRef<BlocklyGeneratorHandle>();
-  const files = {[path]: contents, 'worlds/main.world': WORLD};
+  const files = {[path]: contents, 'screens/main.screen': SCREEN};
   render(
     <BlocklyGenerator
       ref={ref}
@@ -156,12 +147,12 @@ describe('the module a map compiles to', () => {
     expect(script).toContain('map.unload();');
   });
 
-  it('raises the world’s event BY NAME, and names a neighbour', async () => {
+  it('raises the game’s event BY NAME, and names a neighbour', async () => {
     const js = await generate(MENU);
-    // By name and not by import: the world LOADS the map, so a map importing
-    // the world's module would be a cycle (specs/MAP_EVENTS_PLAN.md).
+    // By name and not by import: the game LOADS the map, so a map importing
+    // the Main Screen's module would be a cycle (specs/MAP_EVENTS_PLAN.md).
     expect(js).toContain('world.emitNamed("quit");');
-    expect(js).not.toContain("from 'worlds/main'");
+    expect(js).not.toContain("from 'screens/main'");
     expect(js).not.toContain('export const QuitEvent');
     expect(js).toContain('world.removeActor(placed["Pause"]);');
   });

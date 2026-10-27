@@ -374,17 +374,6 @@ export interface MapStageProps {
     onTheme?: (path: string | undefined) => void;
   };
   /**
-   * The cameras the world's own workspace declares, for the camera list in
-   * the world's inspector on a main map with nothing selected. Read by the editor, which has the file's
-   * text; the stage knows nothing of files (`worldCameras`).
-   */
-  worldCameras?: readonly DeclaredCamera[];
-  /**
-   * The edits the world's cameras take, made in the world's code by the
-   * editor, which has the file (`worldCameraCode`); absent for a `.map`.
-   */
-  worldCameraEditor?: WorldCameraEditor;
-  /**
    * The traits the project's rules offer a camera, for a selected
    * Viewport's cameras; absent, a Viewport's are listed and not edited.
    */
@@ -508,9 +497,9 @@ const ToolbarIcon = ({
   </Tooltip>
 );
 
-/** What the world's cameras can be told, from the strip and the inspector. */
-export interface WorldCameraEditor {
-  /** The camera the world starts looking through (`MAIN_CAMERA` default). */
+/** What a Viewport's cameras can be told, from the strip and the inspector. */
+interface CameraEditor {
+  /** The camera it looks through (`MAIN_CAMERA` default). */
   starting: string;
   /** The traits the project's rules offer a camera. */
   choices: readonly CameraTraitChoice[];
@@ -536,8 +525,6 @@ export const MapStage = ({
   incoming = null,
   onPicture,
   eventsFor,
-  worldCameras = [],
-  worldCameraEditor,
   cameraChoices,
   withheld,
   appBuilder = false,
@@ -3418,15 +3405,14 @@ export const MapStage = ({
   // …except the world's own, which are EDITED in the list and need no
   // script to be offered (`worldCameraCode`).
   const scripts = !appBuilder && onEditScript && !locked('map-scripts');
-  // A SELECTED VIEWPORT'S cameras are edited as the world's are, through the
-  // same list and inspector — but they are data on the placement, made here
-  // and nowhere else, which the compiler turns into their declarations
-  // (`blockly/placementCameras`). Its `shows through` says which it looks
-  // through, by name.
+  // A SELECTED VIEWPORT'S cameras, edited through the list and inspector:
+  // data on the placement, made here and nowhere else, which the compiler
+  // turns into their declarations (`blockly/placementCameras`). Its `shows
+  // through` says which it looks through, by name.
   const isViewport = selectedSchema.some(
     group => group.trait === VIEWPORT.trait,
   );
-  const viewportCameraEditor: WorldCameraEditor | undefined =
+  const viewportCameraEditor: CameraEditor | undefined =
     selectedActor && isViewport && cameraChoices
       ? (() => {
           const actor = selectedActor;
@@ -3479,12 +3465,11 @@ export const MapStage = ({
           };
         })()
       : undefined;
-  /** Whose cameras the strip and inspector edit: a Viewport's, or the world's. */
-  const cameraEditor = selectedActor ? viewportCameraEditor : worldCameraEditor;
-  // Made here and kept as data: a Viewport's on its placement, the world's on
-  // its main map. Cameras declared in code beside them are listed, not edited.
+  const cameraEditor = viewportCameraEditor;
+  // Made here and kept as data on the placement. Cameras declared in its
+  // code beside them are listed, not edited.
   const editableCameras: readonly DeclaredCamera[] = (
-    (selectedActor ? selectedActor.cameras : map.cameras) ?? []
+    selectedActor?.cameras ?? []
   ).map(({id, name, traits}) => ({id, name, traits}));
   const cameras = appBuilder
     ? undefined
@@ -3507,16 +3492,7 @@ export const MapStage = ({
               open: () => onEditScript?.(selectedActor.id),
             }
           : undefined
-      : world && (worldCameraEditor || scripts)
-        ? {
-            // Edited here, the stored ones with the code's beside them;
-            // otherwise only what the code declares, to open.
-            list: worldCameraEditor ? editableCameras : (worldCameras ?? []),
-            inCode: worldCameraEditor ? (worldCameras ?? []) : [],
-            owner: 'the world',
-            open: scripts ? () => onEditScript?.(undefined) : undefined,
-          }
-        : undefined;
+      : undefined;
   /** The camera open in the inspector, while it still exists. */
   const inspectedCamera =
     cameraEditor && inspectingCamera
@@ -3524,10 +3500,8 @@ export const MapStage = ({
         ? {id: MAIN_CAMERA, name: 'Main camera'}
         : editableCameras.find(each => each.id === inspectingCamera)
       : undefined;
-  // The cameras of whatever is inspected, as a section of its inspector: a
-  // selected Viewport's, or the world's on a main map with nothing selected
-  // — and nothing on a level `.map`, since a map has none
-  // (specs/SPACE_CAMERAS_PLAN.md). A row opens the camera's inspector in
+  // A selected Viewport's cameras, as a section of its inspector; a map and
+  // a screen have none of their own (specs/SPACE_CAMERAS_PLAN.md). A row opens the camera's inspector in
   // place of this one, and its Close comes back.
   const cameraSection = cameras ? (
     <CameraList

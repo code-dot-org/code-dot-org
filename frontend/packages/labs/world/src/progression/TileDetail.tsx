@@ -343,7 +343,8 @@ const unlockIcon = (unlock: Unlock): string => {
     case 'actor':
       return iconFor('actors');
     case 'template':
-      return iconFor('worlds');
+      // A whole project: the lab's planet.
+      return 'planet-ringed';
     case 'asset':
       // A picture or a strip of them — which it is, is a fact about the
       // library rather than about the unlock, so this asks the library.

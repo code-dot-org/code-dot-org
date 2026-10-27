@@ -388,7 +388,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
     // A clearer message than the compiler's raw "no such project file" when the
     // project simply has no entry (e.g. a stale saved project after the entry
     // moved). Reset the demo's saved state with `?cdoMockReset=1`.
-    const entry = entryFileOf(compileFiles);
+    const entry = entryFileOf();
     if (!compileFiles[entry]) {
       pushConsole({
         level: 'error',
@@ -571,7 +571,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       };
     }
     const [moduleUrl, assets] = await Promise.all([
-      pair.compile.compile(files, entryFileOf(files)),
+      pair.compile.compile(files, entryFileOf()),
       projectAssets(sourcesRef.current.source),
     ]);
     return pair.preview.check(moduleUrl, run, assets);

@@ -1,13 +1,17 @@
 // What kind of file a Blockly file is, and what it may therefore contain.
 //
-// A project's Blockly files come in three kinds, and the kind is in the name:
-// `.actor`, `.world`, `.rule`. Two very different things need to agree about it
+// A project's Blockly files come in kinds, and the kind is in the name:
+// `.actor`, `.rule`, `.map`, `.screen`. Two very different things need to agree about it
 // — the palette, which decides what blocks a learner may put in the file, and
 // the generator, which decides what module the file compiles to. When they
 // disagree, a file is offered a block that then changes what the file IS. So
 // both ask here.
 
-/** Which kind of file this is. */
+/**
+ * Which kind of file this is. `world` is no file's any more: it is the code a
+ * game's own blocks are, the home of `define world`, which the Main Screen
+ * compiles through, and of the hats a palette offers that code.
+ */
 export type FileKind =
   | 'actor'
   | 'world'
@@ -24,7 +28,7 @@ export type FileKind =
  * callers with no path (tests), and treats it as "work it out from the blocks".
  */
 export const fileKindOf = (path?: string): FileKind | undefined => {
-  const match = /\.(rule|actor|world|map|screen)$/.exec(path ?? '');
+  const match = /\.(rule|actor|map|screen)$/.exec(path ?? '');
   return match ? (match[1] as FileKind) : undefined;
 };
 

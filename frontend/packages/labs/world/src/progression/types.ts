@@ -83,9 +83,9 @@ export type UnlockTarget =
   /** A sprite, animation or backdrop from the appearance library. */
   | {kind: 'asset'; id: string}
   /**
-   * One of the editors a file type opens in. Read by nothing yet: a view is
-   * never locked (`mapEditor/WorldEditor`), and what a gate withholds is
-   * inside one — see `affordance`.
+   * One of the editors a file type opens in. Read by nothing yet: an editor
+   * is never locked, and what a gate withholds is inside one — see
+   * `affordance`.
    */
   | {kind: 'editor'; id: 'map' | 'effect' | 'image'}
   /**

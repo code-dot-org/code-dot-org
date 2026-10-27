@@ -250,7 +250,7 @@ export class WorldBuilder {
    * Handle a world event. See {@link World.on}.
    *
    * Deferred like everything else, so a `when ⟨space⟩ is pressed` hat at module
-   * scope in a `.world` file registers on the world this describes — `world` is
+   * scope in the Main Screen's code registers on the world this describes — `world` is
    * this builder there, and the same call has to be right in a handler too.
    */
   on(event: GameEvent, handler: WorldEventHandler): this {
@@ -262,13 +262,13 @@ export class WorldBuilder {
    *
    * THE METHOD THAT WAS NOT HERE, and the reason `add ⟨1⟩ to the score` under
    * `define world` died at run time with `world.act is not a function`: a world
-   * action generates `world.act(…)`, `world` is this builder in a `.world`
-   * file's setup, and `worldContextExtension` saw a bound `world` and said
+   * action generates `world.act(…)`, `world` is this builder in the Main
+   * Screen's setup, and `worldContextExtension` saw a bound `world` and said
    * nothing. The palette offered a block that could not run where it offered it
    * (specs/PROGRESSION.md, "World actions in a world's setup").
    *
    * LOGGED ONLY WHEN THE WORLD IS NOT IN A FRAME, which is the same line `set`
-   * draws by another route. A `.world` file's handler closes over this builder
+   * draws by another route. The Main Screen's handler closes over this builder
    * too, so a score bumped on every click would otherwise append an entry per
    * click for the life of the game, and replay every one of them into the next
    * world made from this description. An action taken during a frame is a thing
@@ -291,7 +291,7 @@ export class WorldBuilder {
    * calls. Everything else here is an act whose order is its meaning — `add
    * effect` then `remove effect` leaves none — but a property has one value and
    * the last write wins, so replaying a hundred of them and replaying the last
-   * are the same world. That matters now that a `.world` file's handler is the
+   * are the same world. That matters now that the Main Screen's handler is the
    * ordinary place to keep a score: `world` is this builder there, so a counter
    * incremented on every click would otherwise grow the log by one entry per
    * click, for the life of the game (specs/WORLD_STATE.md).
@@ -318,8 +318,8 @@ export class WorldBuilder {
    *
    * Builds the world, because it hands back a value out of it rather than
    * telling it something — the same family as `camera`, `actors` and
-   * `mapBounds`. And it has to exist here at all because `world` in a `.world`
-   * file IS this builder, including inside the event handlers written there:
+   * `mapBounds`. And it has to exist here at all because `world` in the Main
+   * Screen's code IS this builder, including inside the event handlers written there:
    * `get score` in a click handler landed on the builder and threw
    * "world.get is not a function" (specs/WORLD_STATE.md).
    */
@@ -332,7 +332,7 @@ export class WorldBuilder {
    *
    * Forwarded rather than deferred, like `get` and for the same reason: it
    * hands back a value out of the world instead of telling it something. And it
-   * has to be here at all because a `.world` file may ask — `load map`, then
+   * has to be here at all because the Main Screen's code may ask — `load map`, then
    * "is anything solid where this door opens" — which is a question about the
    * actors the map just placed.
    */
@@ -665,7 +665,7 @@ export class WorldBuilder {
    *
    * Zero while a world is being described, and honestly so: nothing has ticked
    * yet. Present rather than builder-forbidden because the block is a plain
-   * reporter a learner may reasonably drop into a `.world` file, and answering
+   * reporter a learner may reasonably drop into the Main Screen's code, and answering
    * "no time has passed" is better than a method that is not there.
    */
   time(): number {

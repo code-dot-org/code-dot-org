@@ -12,60 +12,57 @@ import {compileProject} from '../../__tests__/support/compileProject';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import type {Actor} from '../../engine';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockMap} from '../importStockMap';
 import {stockMapById} from '../stock';
 
-const me = () => ({block: {type: 'world_this_actor'}});
-const number = (value: number) => ({
-  block: {type: 'math_number', fields: {NUM: value}},
-});
-
-/** One field, well above the keyboard, and the keyboard itself. */
-const WORLD = JSON.stringify({
+/** One field, well above the keyboard, and the keyboard loaded over it. */
+const SCREEN = {
+  actors: [
+    {
+      type: 'actors/textInput',
+      id: 'Field',
+      properties: {positional: {position: {x: 80, y: 60}}},
+    },
+  ],
   blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
-        next: {
-          block: {
-            type: 'world_add_actor',
-            fields: {ACTOR: 'actors/textInput'},
-            inputs: {
-              DO: {
-                block: {
-                  type: 'world_set_position',
-                  inputs: {ACTOR: me(), X: number(80), Y: number(60)},
-                },
-              },
-            },
-            next: {
-              block: {type: 'world_load_map', fields: {MAP: 'maps/keyboard'}},
-            },
+    blocks: {
+      languageVersion: 0,
+      blocks: [
+        {
+          type: 'world_on_screen_loads',
+          next: {
+            block: {type: 'world_load_map', fields: {MAP: 'maps/keyboard'}},
           },
         },
-      },
-    ],
+      ],
+    },
   },
-});
+};
 
 const play = async () => {
   const withField = importStockActor(
-    EMPTY_WORLD_PROJECT,
+    EMPTY_APP_PROJECT,
     stockActorById('textInput')!,
   ).source;
-  const source = importStockMap(withField, stockMapById('keyboard')!).source;
-  const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+  const main = Object.values(withField.files).find(
+    file => file.name === 'main.screen',
   )!;
-  const {world, modules} = await compileProject(
-    projectFiles({
-      ...source,
-      files: {...source.files, [main.id]: {...main, contents: WORLD}},
-    }),
-  );
+  const source = importStockMap(
+    {
+      ...withField,
+      files: {
+        ...withField.files,
+        [main.id]: {
+          ...main,
+          contents: JSON.stringify({...JSON.parse(main.contents), ...SCREEN}),
+        },
+      },
+    },
+    stockMapById('keyboard')!,
+  ).source;
+  const {world, modules} = await compileProject(projectFiles(source));
   world.tick(1 / 60);
 
   const text = modules['actors/label'].TextProperty;

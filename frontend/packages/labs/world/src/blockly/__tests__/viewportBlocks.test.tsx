@@ -100,45 +100,45 @@ const WINDOW = JSON.stringify({
     ],
   },
 });
-const WORLD = JSON.stringify({
-  blocks: {blocks: [{type: 'world_world', fields: {NAME: 'Main'}}]},
-  map: {
-    size: {width: 10, height: 10},
-    tile: {width: 32, height: 32},
-    actors: [
-      {
-        type: 'actors/window',
-        id: 'Game',
-        properties: {
-          positional: {
-            position: {x: 160, y: 160},
-            intrinsicSize: {x: 100, y: 80},
-          },
-          showsMap: {map: 'maps/level1'},
+/** A Main Screen with a Viewport on it, showing the level. */
+const SCREEN = JSON.stringify({
+  type: 'map',
+  name: 'Main',
+  size: {width: 10, height: 10},
+  tile: {width: 32, height: 32},
+  actors: [
+    {
+      type: 'actors/window',
+      id: 'Game',
+      properties: {
+        positional: {
+          position: {x: 160, y: 160},
+          intrinsicSize: {x: 100, y: 80},
         },
+        showsMap: {map: 'maps/level1'},
       },
-    ],
-  },
+    },
+  ],
 });
 const FILES = {
-  'worlds/main.world': WORLD,
+  'screens/main.screen': SCREEN,
   'actors/coin.actor': COIN,
   'actors/window.actor': WINDOW,
   'maps/level1.map': LEVEL,
 };
 
-describe('the world module', () => {
+describe('the Main Screen’s module', () => {
   it('registers every map the project holds, with the kinds it places', async () => {
     refreshProjectDropdowns(FILES, [], {}, []);
     const ref = createRef<BlocklyGeneratorHandle>();
     render(<BlocklyGenerator ref={ref} />);
     await new Promise(resolve => setTimeout(resolve, 50));
-    const js = ref.current!.generate(WORLD, 'worlds/main.world');
+    const js = ref.current!.generate(SCREEN, 'screens/main.screen');
 
     expect(js).toContain('import MapsLevel1 from "maps/level1";');
     expect(js).toContain('world.define("actors/coin", ActorsCoin);');
     expect(js).toContain('world.defineMap("maps/level1", MapsLevel1);');
-    // Before the main map is loaded, so a Viewport in it finds its map.
+    // Before the screen is loaded, so a Viewport on it finds its map.
     expect(js.indexOf('world.defineMap(')).toBeLessThan(
       js.indexOf('world.loadMap(mainMap)'),
     );

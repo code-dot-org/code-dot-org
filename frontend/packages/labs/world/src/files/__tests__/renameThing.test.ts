@@ -256,21 +256,6 @@ describe('renaming a screen', () => {
   });
 });
 
-describe('renaming the world the lab runs', () => {
-  it('renames the world and leaves its file where the runtime looks', () => {
-    // `worlds/main.world` is the entry BY PATH: without it the runtime says
-    // "No entry file" and the project does not run at all.
-    const source = project();
-
-    const {source: next} = renameThing(source, source.files.w, 'The Hall');
-
-    expect(next.files.w.name).toBe('main.world');
-    expect(JSON.parse(read(next, 'w')).blocks.blocks[0].fields.NAME).toBe(
-      'The Hall',
-    );
-  });
-});
-
 describe('renaming a rule', () => {
   /** A rule, an actor that takes its trait, and a world that uses it. */
   const rules = (): MultiFileSource => ({

@@ -1043,26 +1043,6 @@ describe('the camera list', () => {
     },
   };
 
-  it('lists the world’s cameras in its inspector, with nothing selected', () => {
-    const view = mount(doc(), {
-      onEditScript: vi.fn(),
-      world: {
-        header: {name: 'W', properties: []},
-        onRename: vi.fn(),
-        onSetDefault: vi.fn(),
-      },
-      worldCameras: [
-        {id: 'c1', name: 'Wide', traits: ['Camera Follow#Follows']},
-      ],
-    });
-    // A section of the world's inspector, and no button on the stage.
-    expect(view.queryByRole('button', {name: 'Cameras'})).toBeNull();
-    const list = view.getByTestId('camera-list');
-    expect(view.getByTestId('world-inspector')).toContainElement(list);
-    expect(view.getByText('Wide')).toBeInTheDocument();
-    expect(view.getByText(/Follows/)).toBeInTheDocument();
-  });
-
   it('lists a placement’s own, read from its script, when it is selected', () => {
     const map = doc();
     map.actors[0] = {...map.actors[0], blocks: chase as never};
@@ -1086,7 +1066,6 @@ describe('the camera list', () => {
         onRename: vi.fn(),
         onSetDefault: vi.fn(),
       },
-      worldCameras: [{id: 'c1', name: 'Wide', traits: []}],
     });
     expect(view.queryByTestId('camera-list')).toBeNull();
     expect(view.queryByRole('button', {name: 'Layers'})).toBeNull();
@@ -1196,75 +1175,6 @@ describe('a level, with nothing selected', () => {
     fireEvent.click(main.getByRole('button', {name: /Rules: 11 rules/}));
     expect(asked).toHaveBeenCalledWith({editable: true});
     setRulesConfigHandler(null);
-  });
-
-  it('lists the world’s cameras, opens one, and adds another', () => {
-    const editor = {
-      starting: 'chase',
-      choices: [
-        {
-          value: 'Camera Follow#FollowsTrait',
-          name: 'Follows',
-          rule: 'Camera Follow',
-          description: 'Keeps an actor in view as it moves about.',
-          properties: [
-            {
-              setter: 'world_set_CameraFollow_ActorToFollowProperty',
-              name: 'actor to follow',
-              type: 'actor',
-            },
-          ],
-        },
-      ],
-      traitsOf: () => ['Camera Follow#FollowsTrait'],
-      valueOf: () => 'actors/bird',
-      add: vi.fn(() => 'wide'),
-      remove: vi.fn(),
-      rename: vi.fn(),
-      setStarting: vi.fn(),
-      setTrait: vi.fn(),
-      setValue: vi.fn(),
-    };
-    const main = mount(
-      {
-        ...doc(),
-        cameras: [{id: 'chase', name: 'Chase', traits: [], values: []}],
-      },
-      {
-        world: {
-          header: {name: 'W', properties: []},
-          onRename: vi.fn(),
-          onSetDefault: vi.fn(),
-        },
-        worldCameraEditor: editor,
-        kinds: {'actors/bird': {name: 'Bird'}},
-      },
-    );
-    fireEvent.click(main.getByRole('button', {name: /^Chase/}));
-    expect(main.getByTestId('camera-inspector')).toBeInTheDocument();
-    expect(main.getByLabelText('Follows')).toBeChecked();
-    // Picked from one closed list; what a ticked one does is said below it.
-    expect(
-      main.container.querySelector('#camera-traits-dropdown'),
-    ).not.toBeNull();
-    expect(
-      main.getByText('Keeps an actor in view as it moves about.'),
-    ).toBeInTheDocument();
-    const follow = main.container.querySelector(
-      'select[name="camera-world_set_CameraFollow_ActorToFollowProperty"]',
-    ) as HTMLSelectElement;
-    expect(follow.value).toBe('actors/bird');
-    fireEvent.click(main.getByLabelText('Follows'));
-    expect(editor.setTrait).toHaveBeenCalledWith(
-      'chase',
-      'Camera Follow#FollowsTrait',
-      false,
-    );
-    fireEvent.click(main.getByRole('button', {name: 'Remove this camera'}));
-    expect(editor.remove).toHaveBeenCalledWith('chase');
-    // Gone, the world's inspector is back with its list.
-    fireEvent.click(main.getByRole('button', {name: 'Add a camera'}));
-    expect(editor.add).toHaveBeenCalled();
   });
 
   it('edits a selected Viewport’s cameras as map data, not code', () => {

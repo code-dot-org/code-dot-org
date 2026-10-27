@@ -32,7 +32,6 @@ import {
   importStockSprite,
 } from '../../appearance/importStock';
 import {stockAnimation, stockSprite} from '../../appearance/stock';
-import type {MainCameraSettings} from '../../blockly/placementCameras';
 import {importStockEffect} from '../../effect/importStockEffect';
 import {stockEffect} from '../../effect/stock';
 import {importStockRule} from '../../rules/importStockRule';
@@ -43,6 +42,7 @@ import {projectFiles} from '../../runtime/projectFiles';
 import {tile} from '../index';
 import {LESSONS} from '../lessons';
 import {rememberWorld, worldMadeInto} from '../lessons/asScreen';
+import type {MainCameraSettings} from '../lessons/worlds';
 import {actorPath} from '../lessons/worlds';
 import type {TileId} from '../types';
 

@@ -36,12 +36,12 @@ export const WorldLevelDataSchema = z.object({
   // lesson about color is not a lesson about picking one exactly, and a level
   // says so here (`levelData.simpleColors`).
   simpleColors: z.boolean().optional(),
-  // Where a game opens: on its map, or on its blocks — a world's World view,
-  // or the Main Screen's code (mapEditor/WorldEditor, MapEditor). Default
-  // `map` — a game is its map first (specs/MAP_FIRST.md) — and a lesson whose
-  // task is in the workspace says `world`, so a learner lands where the
-  // instructions are (specs/CURRICULUM_PLAN.md). A lesson on the map opens
-  // on `main.map` (specs/LESSONS_AS_SCREENS_PLAN.md).
+  // Where a game opens: on its map, or on its Main Screen's code
+  // (mapEditor/MapEditor). Default `map` — a game is its map first
+  // (specs/MAP_FIRST.md) — and a lesson whose task is in the workspace says
+  // `world`, so a learner lands where the instructions are
+  // (specs/CURRICULUM_PLAN.md). A lesson on the map opens on `main.map`
+  // (specs/LESSONS_AS_SCREENS_PLAN.md).
   worldView: z.enum(['map', 'world']).optional(),
   // Which TREE of lessons this level belongs to, by catalogue id. Default is
   // the original one, which is every level written before there was more than

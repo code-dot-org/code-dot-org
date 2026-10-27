@@ -16,7 +16,6 @@ import {label} from './label';
 import {
   parseActorOwnMeta,
   parseScreenOwnMeta,
-  parseWorldOwnMeta,
   type OwnMeta,
 } from './ownProperties';
 import {parseRuleMeta, type RuleMeta} from './ruleMeta';
@@ -89,13 +88,6 @@ export function projectActorOptions(
   files: Record<string, string>,
 ): Array<[string, string]> {
   return modulesUnder(files, 'actors/');
-}
-
-/** `[name, path]` options for the project's worlds. */
-export function projectWorldOptions(
-  files: Record<string, string>,
-): Array<[string, string]> {
-  return modulesUnder(files, 'worlds/');
 }
 
 /**
@@ -330,19 +322,11 @@ export function projectOwnMetas(files: Record<string, string>): OwnMeta[] {
         metas.push(meta);
       }
     }
-    // …and every WORLD's own state (specs/WORLD_STATE.md). Missing here, a
-    // world's `set score to …` was a block the generator's palette did not
-    // define, so `standInBlocks` minted a placeholder that generated NOTHING —
-    // the handler ran, took the coin, and quietly failed to count it.
-    if (path.startsWith('worlds/') && path.endsWith('.world')) {
-      const world = path.replace(/\.world$/, '');
-      const meta = parseWorldOwnMeta(world, contents);
-      if (meta) {
-        metas.push(meta);
-      }
-    }
-    // …and a SCREEN's, which are the same declarations held as data
-    // (specs/SCREEN_MAP_PLAN.md, step 4).
+    // …and the game's own state, which its Main Screen holds as data
+    // (specs/WORLD_STATE.md, specs/SCREEN_MAP_PLAN.md, step 4). Missing here,
+    // a `set score to …` is a block the generator's palette does not define,
+    // so `standInBlocks` mints a placeholder that generates NOTHING — the
+    // handler runs, takes the coin, and quietly fails to count it.
     if (path.startsWith('screens/') && path.endsWith('.screen')) {
       const meta = parseScreenOwnMeta(path.replace(/\.screen$/, ''), contents);
       if (meta) {

@@ -7,7 +7,6 @@ import {
   projectEffectParameters,
   projectMapActorTypes,
   projectRuleOptions,
-  projectWorldOptions,
   projectWorldRules,
 } from '../projectModules';
 
@@ -36,13 +35,6 @@ describe('projectModules', () => {
       ['Blob', 'actors/blob'], // fallback: Title-cased basename
       ['Ground', 'actors/ground'], // from the JS builder `name`
       ['Player', 'actors/player'], // from the Blockly NAME field
-    ]);
-  });
-
-  it('labels a world by its authored name, not the file stem', () => {
-    // File is `platform` but the world calls itself "Platform World".
-    expect(projectWorldOptions(FILES)).toEqual([
-      ['Platform World', 'worlds/platform'],
     ]);
   });
 

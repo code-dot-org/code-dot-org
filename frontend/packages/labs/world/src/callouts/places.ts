@@ -24,8 +24,6 @@ export type Reveal =
    * Screen by being them — rather than by a path.
    */
   | {kind: 'file'; actor?: string; level?: boolean; screen?: boolean}
-  /** One of a world's two views (`mapEditor/WorldEditor`). */
-  | {kind: 'view'; view: 'map' | 'world'}
   /** The Main Screen's code open, in place of the screen (`MapEditor`). */
   | {kind: 'code'}
   /** A placement selected on the map, of a kind by name or any (`MapStage`). */

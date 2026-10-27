@@ -9,10 +9,7 @@
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {fileIdForModule} from '../blockly/openModule';
-import {
-  projectActorOptions,
-  projectWorldOptions,
-} from '../blockly/projectModules';
+import {projectActorOptions} from '../blockly/projectModules';
 import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {fileIdAt, projectFiles} from '../runtime/projectFiles';
 
@@ -20,8 +17,7 @@ import {fileIdAt, projectFiles} from '../runtime/projectFiles';
  * The id of the file a reveal asks for, or nothing when the project holds no
  * such thing — an actor by the NAME its file declares, whatever its file is
  * called; the level, which is `main.map` or the Main Screen where that is
- * the level; or the Main Screen. A world's own file answers both in a
- * project that is still a world.
+ * the level; or the Main Screen.
  */
 export function fileToReveal(
   source: MultiFileSource,
@@ -29,19 +25,15 @@ export function fileToReveal(
 ): string | undefined {
   const files = projectFiles(source);
   const wanted = actor?.toLowerCase();
-  // By PATH: the game's files are where the lab keeps them, and a world, a
-  // screen and a level are not modules anything is asked to import.
+  // By PATH: the game's files are where the lab keeps them, and a screen and
+  // a level are not modules anything is asked to import.
   const first = (...paths: string[]) =>
     paths.map(path => fileIdAt(source, path)).find(Boolean);
-  const world = () => {
-    const modulePath = projectWorldOptions(files)[0]?.[1];
-    return modulePath ? [`${modulePath}.world`] : [];
-  };
   if (screen) {
-    return first(`${MAIN_SCREEN_PATH}.screen`, ...world());
+    return first(`${MAIN_SCREEN_PATH}.screen`);
   }
   if (level) {
-    return first('maps/main.map', `${MAIN_SCREEN_PATH}.screen`, ...world());
+    return first('maps/main.map', `${MAIN_SCREEN_PATH}.screen`);
   }
   const modulePath = wanted
     ? projectActorOptions(files).find(

@@ -33,7 +33,7 @@ describe('what a new file starts as', () => {
       return parsed.blocks?.blocks?.[0]?.fields?.NAME ?? parsed.name;
     };
 
-    for (const extension of ['world', 'actor', 'rule']) {
+    for (const extension of ['actor', 'rule']) {
       expect(named(extension), extension).toBe('Chaser');
     }
     // …and the document that names itself at the top level.

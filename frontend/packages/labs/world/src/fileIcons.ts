@@ -33,7 +33,6 @@ const icon = (iconName: string): FileIcon => ({
 });
 
 export const FILE_ICONS = {
-  world: icon('planet-ringed'),
   actor: icon('masks-theater'),
   effect: icon('wand-sparkles'),
   rule: icon('scroll'),

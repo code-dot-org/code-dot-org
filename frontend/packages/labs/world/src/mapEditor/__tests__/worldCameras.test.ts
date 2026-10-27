@@ -4,7 +4,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {placementCameras, worldCameras} from '../worldCameras';
+import {placementCameras} from '../worldCameras';
 
 /** `define camera ⟨name⟩ for ⟨owner⟩`, with the traits its mouth elects. */
 const camera = (
@@ -33,43 +33,6 @@ const camera = (
 });
 const workspace = (roots: object[]) => ({
   blocks: {languageVersion: 0, blocks: roots},
-});
-
-describe('the cameras a world declares', () => {
-  it('lists those with an empty owner, under `define world` or floating', () => {
-    const file = JSON.stringify(
-      workspace([
-        {
-          type: 'world_world',
-          next: {
-            block: camera('c1', 'Wide', undefined, ['Camera Follow#Follows']),
-          },
-        },
-        camera('c2', 'Overview', undefined),
-      ]),
-    );
-    expect(worldCameras(file)).toEqual([
-      {id: 'c1', name: 'Wide', traits: ['Camera Follow#Follows']},
-      {id: 'c2', name: 'Overview', traits: []},
-    ]);
-  });
-
-  it('leaves out one declared FOR something, which is that thing’s', () => {
-    const file = JSON.stringify(
-      workspace([
-        camera('c1', 'Chase', {
-          type: 'world_actor_kind',
-          fields: {ACTOR: 'actors/viewport'},
-        }),
-      ]),
-    );
-    expect(worldCameras(file)).toEqual([]);
-  });
-
-  it('answers nothing for text that is not a workspace', () => {
-    expect(worldCameras('{"map":')).toEqual([]);
-    expect(worldCameras('{}')).toEqual([]);
-  });
 });
 
 describe('the cameras a placement’s script declares', () => {

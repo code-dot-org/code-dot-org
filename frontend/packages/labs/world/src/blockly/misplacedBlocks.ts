@@ -133,10 +133,12 @@ export const misplacementOf = (block: Blockly.Block): string | undefined => {
   // by a paste, and the dropdown on the block is how it is put right.
   if (block.type.startsWith('world_on_') && block.getField(SUBJECT_FIELD)) {
     const kind = block.getFieldValue(SUBJECT_FIELD);
-    if (context.kind === 'world' && !kind) {
+    // A screen's code is the game's, as a world's was.
+    const game = context.kind === 'world' || context.kind === 'screen';
+    if (game && !kind) {
       return 'A world’s handler is about a kind of actor: pick one after “any”.';
     }
-    if (context.kind !== 'world' && kind) {
+    if (!game && kind) {
       return 'This handler is about this actor: choose “this actor” instead of a kind.';
     }
   }

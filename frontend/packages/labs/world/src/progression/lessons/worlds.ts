@@ -8,7 +8,7 @@
 // block).
 
 import {chain, me, num} from '../../actors/stock/workspace';
-import type {MainCameraSettings} from '../../blockly/placementCameras';
+import type {CameraValue} from '../../blockly/placementCameras';
 
 /** `set position of ⟨this actor⟩ x ⟨…⟩ y ⟨…⟩`, inside an `add actor`. */
 export const placeAt = (x: number, y: number) => ({
@@ -173,6 +173,16 @@ export const declareProperty = (
   type: 'world_rule_property',
   fields: {TYPE: type, ACCESS: 'writable', NAME: name, DEFAULT: value},
 });
+
+/**
+ * A camera a lesson's world starts with: the traits it elects and their
+ * values. Written on the world as its main camera, and made the Game
+ * Viewport's when the lesson becomes a screen (`asScreen`).
+ */
+export interface MainCameraSettings {
+  traits: string[];
+  values: CameraValue[];
+}
 
 export interface WorldSpec {
   name: string;

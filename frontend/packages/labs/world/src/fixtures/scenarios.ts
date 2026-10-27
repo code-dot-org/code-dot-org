@@ -169,6 +169,10 @@ const EMPTY_APP_SPEC: ProjectSpec = {
   open: ['main'],
 };
 
+/** The empty app as a project: what a test writes a screen of its own into. */
+export const EMPTY_APP_PROJECT: MultiFileSource =
+  buildProject(EMPTY_APP_SPEC).source;
+
 /**
  * An empty game: a Main Screen whose Viewport shows an empty level
  * (specs/SCREEN_MAP_PLAN.md). What a learner starting from scratch sees.

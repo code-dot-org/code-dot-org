@@ -3,7 +3,7 @@
 
 import {describe, expect, it} from 'vitest';
 
-import {layerDeclarations, mainMapLayersOf} from '../mainMapLayers';
+import {layerDeclarations} from '../mainMapLayers';
 
 const LAYERS = [
   {
@@ -16,19 +16,6 @@ const LAYERS = [
   // Fog over the game: a layer in front of it, with a background of its own.
   {id: 'layer2', name: 'Fog', fit: true, background: {sprite: 'fog.png'}},
 ];
-
-describe('mainMapLayersOf', () => {
-  it('reads the layers a world’s map states, or none', () => {
-    expect(mainMapLayersOf(JSON.stringify({map: {layers: LAYERS}}))).toEqual(
-      LAYERS,
-    );
-    expect(mainMapLayersOf('{"blocks":{}}')).toEqual([]);
-    expect(mainMapLayersOf('{broken')).toEqual([]);
-    expect(mainMapLayersOf('{"map":{"layers":[{"name":"no id"}]}}')).toEqual(
-      [],
-    );
-  });
-});
 
 describe('layerDeclarations', () => {
   it('declares the map’s layers in order, then sets their slots', () => {

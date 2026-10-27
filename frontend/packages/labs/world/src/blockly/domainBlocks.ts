@@ -7195,10 +7195,9 @@ const worldWorld = defineBlock({
   // …and after the name, how many rules are in play and the way to see them.
   // The world runs every rule the project holds, so the block would otherwise
   // say nothing at all about the thing it is most made of.
-  // The count of rules in play, and a wand: what this world could be given
-  // (extensions/enhanceButton). A camera that follows an actor is the world's
-  // rather than the actor's — nothing it writes lands in an actor's file.
-  extensions: [rulesButtonExtension, enhanceButtonExtension],
+  // The count of rules in play. What a game could be given is offered by
+  // its Main Screen's properties (`WorldInspector`).
+  extensions: [rulesButtonExtension],
   style: 'setup_blocks',
   tooltip:
     'Define a world: the actors that live in it, and what it looks like.',

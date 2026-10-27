@@ -100,7 +100,6 @@ import {
   projectActorOptions,
   projectOwnMetas,
   projectRuleMetas,
-  projectWorldOptions,
 } from './projectModules';
 import {revealInToolbox, type ToolboxHost} from './revealInToolbox';
 import {blockOwners, rulesOutOfScope} from './rulesInScope';
@@ -348,14 +347,8 @@ export const BlocklyFileEditor = ({
     [finishPick],
   );
 
-  // The world whose module the popup introspects: the file being edited when it
-  // is a world (its own actors are in it), else the project's first.
-  const worldPath = useMemo(() => {
-    const path = filePath(currentSources.source, fileId);
-    return path?.endsWith('.world')
-      ? path.replace(/\.world$/, '')
-      : (gameModuleOf(files) ?? projectWorldOptions(files)[0]?.[1] ?? '');
-  }, [currentSources.source, fileId, files]);
+  // The game whose module the popup introspects.
+  const worldPath = useMemo(() => gameModuleOf(files) ?? '', [files]);
 
   /**
    * Keep the actor thumbnails the map field draws with.
@@ -432,15 +425,6 @@ export const BlocklyFileEditor = ({
     return path?.endsWith('.actor') ? path.replace(/\.actor$/, '') : undefined;
   }, [currentSources.source, fileId]);
 
-  // …and which `.world`, for the one thing that asks: a world declaring state
-  // of its own gets a drawer for it exactly as an actor does, and while that
-  // world is open, that drawer is the one being worked in and belongs at the
-  // top of the strip (`domainBlocks`, `CURRENT_HEADING`).
-  const ownWorldModule = useMemo(() => {
-    const path = filePath(currentSources.source, fileId);
-    return path?.endsWith('.world') ? path.replace(/\.world$/, '') : undefined;
-  }, [currentSources.source, fileId]);
-
   // The properties this actor declares for itself, if it is one. Parsed from
   // the file as saved rather than from the live workspace: the palette is
   // rebuilt when the sources change, which is exactly when a declaration was
@@ -501,7 +485,6 @@ export const BlocklyFileEditor = ({
       // whose `emit` blocks are listed: an actor's events are heard anywhere
       // and raised only at home (`domainBlocks`).
       ownActorModule,
-      ownWorldModule,
     });
     // …and a definition for every block type the project's files hold that
     // this palette does not mint. That is what a deleted rule leaves behind,
@@ -562,7 +545,6 @@ export const BlocklyFileEditor = ({
     ownContents,
     ownRuleModule,
     ownActorModule,
-    ownWorldModule,
     fileKind,
     hiddenCategories,
     app,

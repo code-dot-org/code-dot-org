@@ -14,7 +14,6 @@ import {ImageFileEditor} from './imageEditor/ImageFileEditor';
 import {MapEditor} from './mapEditor/MapEditor';
 import {followPlaces, PICTURE_EXTENSION} from './mapEditor/placePicture';
 import {ScreenEditor} from './mapEditor/ScreenEditor';
-import {WorldEditor} from './mapEditor/WorldEditor';
 import {whyKeepFile} from './rules/deleteGuard';
 import {RuleFileEditor} from './rules/editor/RuleEditor';
 import {StyleFileEditor} from './styles/StyleFileEditor';
@@ -41,7 +40,6 @@ export const WORLD_EDITABLE_FILE_TYPES = [
   'txt',
   'rule',
   'actor',
-  'world',
   // A `.screen` is a map document that is shown on the display: the Main
   // Screen is the game (specs/SCREEN_MAP_PLAN.md).
   'screen',
@@ -105,7 +103,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     md: 'markdown',
     rule: 'rule',
     actor: 'actor',
-    world: 'world',
     screen: 'screen',
     map: 'map',
     effect: 'effect',
@@ -134,9 +131,6 @@ export const worldConfig: Partial<CodebridgeConfig> = {
     // An actor in the data shape opens in the Actor Editor, one still in
     // blocks in the file editor (specs/ACTOR_EDITOR_PLAN.md).
     actor: orShowCode(ActorFileEditor),
-    // A world opens on its main map, with its workspace one switch away
-    // (specs/MAP_FIRST.md, "The editor's modes").
-    world: orShowCode(WorldEditor),
     map: orShowCode(MapEditor),
     screen: orShowCode(ScreenEditor),
     effect: EffectFileEditor,
@@ -146,9 +140,9 @@ export const worldConfig: Partial<CodebridgeConfig> = {
   /**
    * What a TAB calls a file: the name the file declares.
    *
-   * `main.world` holds a world called "Platform World", and that is the word on
-   * its blocks, in every dropdown that offers it, and in the menu the learner
-   * opened it from (`files/FileMenus`) — so a tab reading `main.world` was the
+   * `main.screen` holds a game called "Platform World", and that is the word
+   * in every dropdown that offers it, and in the menu the learner opened it
+   * from (`files/FileMenus`) — so a tab reading `main.screen` would be the
    * one place in the lab saying something else. One rule, one answer:
    * `authoredName`, falling back to the file's own stem titled, which is what
    * every dropdown does for a file that declares nothing.

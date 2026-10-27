@@ -36,12 +36,12 @@ import {
   useTrait,
   words,
 } from '../../actors/stock/workspace';
-import type {MainCameraSettings} from '../../blockly/placementCameras';
 import type {WorldScenario} from '../../fixtures/scenarios';
 import type {LessonProperties, TileId} from '../types';
 
 import {opensOnTheLevel} from './asScreen';
 import {lessonSource} from './support';
+import type {MainCameraSettings} from './worlds';
 import {
   addActor,
   anyKind,

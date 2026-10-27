@@ -194,9 +194,7 @@ vi.mock('../../runtime/WorldRuntimeContext', () => ({
 }));
 
 const {MapEditor} = await import('../MapEditor');
-const {screenFileDocument, worldFileDocument} = await import(
-  '../worldDocument'
-);
+const {screenFileDocument} = await import('../worldDocument');
 
 /** A map with two actors in it, at the size every map used to be. */
 const CONTENTS = JSON.stringify({
@@ -375,87 +373,6 @@ describe('a placement’s workspace, in the map’s place', () => {
     expect(written(onChange).blocks).toEqual({
       blocks: {blocks: [{type: 'world_resume_game'}]},
     });
-  });
-});
-
-describe('over a world’s file', () => {
-  const WORLD = JSON.stringify({
-    blocks: {blocks: [{type: 'world_world', fields: {NAME: 'W'}}]},
-    map: {
-      size: {width: 6, height: 5},
-      tile: {width: 32, height: 32},
-      actors: [{type: 'actors/coin', id: 'a', properties: {}}],
-    },
-  });
-
-  const openWorld = () => {
-    const onChange = vi.fn();
-    const onOpenMapScript = vi.fn();
-    render(
-      <MapEditor
-        fileId="3"
-        initialContents={WORLD}
-        language="world"
-        isReadOnly={false}
-        onChange={onChange}
-        document={worldFileDocument}
-        onOpenMapScript={onOpenMapScript}
-      />,
-    );
-    return {onChange, onOpenMapScript};
-  };
-
-  it('shows the map beside the blocks', () => {
-    openWorld();
-    expect(screen.getByLabelText('Width')).toHaveValue(6);
-    expect(screen.getByTestId('stage')).toHaveAttribute('data-actors', '1');
-  });
-
-  it('writes the map back with the blocks untouched', () => {
-    const {onChange} = openWorld();
-    fireEvent.change(screen.getByLabelText('Width'), {target: {value: '9'}});
-
-    const file = JSON.parse(onChange.mock.calls.at(-1)![0] as string);
-    expect(file.blocks.blocks[0].fields.NAME).toBe('W');
-    expect(file.map.size).toEqual({width: 9, height: 5});
-  });
-
-  it('sends the map’s own script to the world instead', () => {
-    const {onOpenMapScript} = openWorld();
-    fireEvent.click(screen.getByRole('button', {name: 'Map script'}));
-    expect(onOpenMapScript).toHaveBeenCalled();
-    expect(screen.queryByTestId('script')).toBeNull();
-  });
-
-  it('shows the world with nothing selected, and writes its edits', () => {
-    const {onChange} = openWorld();
-    expect(screen.getByTestId('world-name')).toHaveTextContent('W');
-
-    fireEvent.click(screen.getByRole('button', {name: 'Rename world'}));
-    let file = JSON.parse(onChange.mock.calls.at(-1)![0] as string);
-    expect(file.blocks.blocks[0].fields.NAME).toBe('Z');
-    expect(file.map.actors).toHaveLength(1);
-    expect(screen.getByTestId('world-name')).toHaveTextContent('Z');
-
-    // A map edit after it keeps the rename.
-    fireEvent.change(screen.getByLabelText('Width'), {target: {value: '7'}});
-    file = JSON.parse(onChange.mock.calls.at(-1)![0] as string);
-    expect(file.blocks.blocks[0].fields.NAME).toBe('Z');
-    expect(file.map.size.width).toBe(7);
-  });
-
-  it('is not shown for a map that is no world', () => {
-    open();
-    expect(screen.queryByTestId('world-name')).toBeNull();
-  });
-
-  it('owns a placement’s script in the world’s module', () => {
-    openWorld();
-    fireEvent.click(screen.getByRole('button', {name: 'Script'}));
-    expect(screen.getByTestId('script')).toHaveAttribute(
-      'data-module',
-      'worlds/main',
-    );
   });
 });
 

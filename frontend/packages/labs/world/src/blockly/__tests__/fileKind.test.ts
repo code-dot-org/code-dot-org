@@ -33,7 +33,9 @@ const categoryNames = (fileKind?: FileKind): string[] =>
 describe('fileKindOf', () => {
   it('reads the four extensions, and nothing else', () => {
     expect(fileKindOf('player.actor')).toBe('actor');
-    expect(fileKindOf('levels/one.world')).toBe('world');
+    expect(fileKindOf('screens/main.screen')).toBe('screen');
+    // A world is no file's kind any more: a game is its Main Screen.
+    expect(fileKindOf('levels/one.world')).toBeUndefined();
     expect(fileKindOf('rules/gravity.rule')).toBe('rule');
     // A map is generated too, now that it carries workspaces
     // (specs/MAP_FIRST.md); `placement` is a kind no file has.
@@ -177,14 +179,10 @@ describe('what a file compiles to', () => {
     // does — and a root that disagrees with the name is refused (below),
     // never allowed to redirect it.
     expect(moduleShape('player.actor', ['world_actor'])).toBe('actor');
-    expect(moduleShape('one.world', ['world_world'])).toBe('world');
     expect(moduleShape('rules/g.rule', ['world_rule'])).toBe('rule');
   });
 
-  it('is a world even before the world block exists', () => {
-    // A half-built `.world` has no root yet. Compiling it as an ACTOR — which
-    // is what looking for `world_world` did — reports the wrong problem.
-    expect(moduleShape('one.world', [])).toBe('world');
+  it('is an actor even before the actor block exists', () => {
     expect(moduleShape('player.actor', [])).toBe('actor');
   });
 
@@ -203,16 +201,12 @@ describe('what a file compiles to', () => {
     expect(() => moduleShape('player.actor', ['world_rule'])).toThrow(
       /can only be in a \.rule file, and this is a \.actor/,
     );
-    expect(() => moduleShape('one.world', ['world_rule'])).toThrow();
   });
 
   it('refuses a `define actor` outside an actor file', () => {
-    // As invalid in a world as a `define rule` is, and refused the same way:
-    // a world once held its own actors, and does not now.
-    expect(() => moduleShape('one.world', ['world_actor'])).toThrow(
-      /can only be in a \.actor file, and this is a \.world/,
+    expect(() => moduleShape('rules/g.rule', ['world_actor'])).toThrow(
+      /can only be in a \.actor file, and this is a \.rule/,
     );
-    expect(() => moduleShape('rules/g.rule', ['world_actor'])).toThrow();
     expect(() => moduleShape('player.actor', ['world_actor'])).not.toThrow();
   });
 

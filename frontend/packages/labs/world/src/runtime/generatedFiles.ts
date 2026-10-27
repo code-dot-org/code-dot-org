@@ -1,6 +1,6 @@
 // Generated JavaScript, kept between compiles.
 //
-// A `.rule` / `.actor` / `.world` file is Blockly JSON that has to become a
+// A `.rule` / `.actor` / `.screen` file is Blockly JSON that has to become a
 // module before esbuild sees it, and generating one means loading it into a
 // headless workspace and walking it. That is the expensive part of a compile —
 // the default project's two large rules are a quarter of a second between them

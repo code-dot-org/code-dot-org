@@ -38,7 +38,7 @@ export function purposeHere(source: MultiFileSource): PaletteTab | undefined {
   if (file.name.endsWith('.screen')) {
     return 'interface';
   }
-  if (file.name.endsWith('.map') || file.name.endsWith('.world')) {
+  if (file.name.endsWith('.map')) {
     return 'game';
   }
   return undefined;

@@ -12,62 +12,60 @@ import {compileProject} from '../../__tests__/support/compileProject';
 import {importStockActor} from '../../actors/importStockActor';
 import {stockActorById} from '../../actors/stock';
 import type {Actor, World} from '../../engine';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockMap} from '../importStockMap';
 import {stockMapById} from '../stock';
 
-const me = () => ({block: {type: 'world_this_actor'}});
-const number = (value: number) => ({
-  block: {type: 'math_number', fields: {NUM: value}},
-});
-
-/** A button of the project's own, under whatever map is loaded over it. */
-const WORLD = (map: string) =>
-  JSON.stringify({
+/**
+ * A button of the project's own on the Main Screen, and the map loaded over
+ * it as the screen loads.
+ */
+const SCREEN = (map: string) => ({
+  actors: [
+    {
+      type: 'actors/button',
+      id: 'Button',
+      properties: {positional: {position: {x: 160, y: 160}}},
+    },
+  ],
+  blocks: {
     blocks: {
+      languageVersion: 0,
       blocks: [
         {
-          type: 'world_world',
-          fields: {NAME: 'My World'},
-          next: {
-            block: {
-              type: 'world_add_actor',
-              fields: {ACTOR: 'actors/button'},
-              inputs: {
-                DO: {
-                  block: {
-                    type: 'world_set_position',
-                    inputs: {ACTOR: me(), X: number(160), Y: number(160)},
-                  },
-                },
-              },
-              next: {block: {type: 'world_load_map', fields: {MAP: map}}},
-            },
-          },
+          type: 'world_on_screen_loads',
+          next: {block: {type: 'world_load_map', fields: {MAP: map}}},
         },
       ],
     },
-  });
+  },
+});
 
 const play = async (id: string) => {
-  let source = EMPTY_WORLD_PROJECT;
+  let source = EMPTY_APP_PROJECT;
   for (const actor of ['label', 'panel', 'button']) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }
-  // THE WORLD IS WRITTEN FIRST, and the map imported over it. A map raises the
-  // world's events and declares none, so it is the import that writes `define
-  // event ⟨yes⟩` into the world file (`maps/declareEvents`) — and a test that
-  // replaced the world afterwards would throw those rows away and leave the
+  // THE SCREEN IS WRITTEN FIRST, and the map imported over it. A map raises
+  // the game's events and declares none, so it is the import that declares
+  // ⟨yes⟩ in the Main Screen's data (`maps/declareEvents`) — and a test that
+  // replaced the screen afterwards would throw that away and leave the
   // dialog's `emit` naming a block nothing defines.
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
   source = {
     ...source,
     files: {
       ...source.files,
-      [main.id]: {...main, contents: WORLD(`maps/${id}`)},
+      [main.id]: {
+        ...main,
+        contents: JSON.stringify({
+          ...JSON.parse(main.contents),
+          ...SCREEN(`maps/${id}`),
+        }),
+      },
     },
   };
   source = importStockMap(source, stockMapById(id)!).source;
@@ -91,16 +89,16 @@ const play = async (id: string) => {
       world.tick(1 / 60);
     },
     /**
-     * Count what one of the WORLD's events says, by listening for it there.
+     * Count what one of the game's events says, by listening for it there.
      *
-     * On the world's module and not the map's: the map raises it by name and
-     * the declaration the export comes from is the world's
+     * On the Main Screen's module and not the map's: the map raises it by name
+     * and the declaration the export comes from is the screen's
      * (specs/MAP_EVENTS_PLAN.md).
      */
     counting: (event: string) => {
       const said: unknown[] = [];
       world.on(
-        modules['worlds/main'][event] as never,
+        modules['screens/main'][event] as never,
         ((_w: World, value: unknown) => said.push(value)) as never,
       );
       return said;

@@ -17,7 +17,7 @@ import {useSources} from '@code-dot-org/lab/contexts';
 import {requestFileAct} from '../files/fileActs';
 import {fileLabel} from '../files/fileLabel';
 import {entryFileOf} from '../mainWorld';
-import {filePath, projectFiles} from '../runtime/projectFiles';
+import {filePath} from '../runtime/projectFiles';
 
 import styles from './placeHeading.module.css';
 import {placePicture} from './placePicture';
@@ -54,7 +54,7 @@ export const PlaceHeading = ({fileId, isReadOnly}: PlaceHeadingProps) => {
   const kind = file?.name.endsWith('.map') ? 'Map' : 'Screen';
   // The entry is the one place a project cannot be without (`entryFileOf`).
   const isEntry = useMemo(
-    () => filePath(source, fileId) === entryFileOf(projectFiles(source)),
+    () => filePath(source, fileId) === entryFileOf(),
     [source, fileId],
   );
   // A world is what a Main Screen was, and is listed with the screens.

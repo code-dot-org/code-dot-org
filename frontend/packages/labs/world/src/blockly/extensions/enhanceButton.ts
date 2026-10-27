@@ -72,8 +72,6 @@ export interface EnhanceContext {
   actorModule?: string;
   /** The file it is editing, whatever kind. */
   fileModule?: string;
-  /** Which definition this block IS — the button rides on both. */
-  defines: 'actor' | 'world';
   /** What the block calls the actor, which is what the dialog's title says. */
   name: string;
   /** Whether the block is a preview in a flyout rather than in the file. */
@@ -96,13 +94,6 @@ export function enhanceTarget(
   if (context.flyout || context.readOnly) {
     return undefined;
   }
-  if (context.defines === 'world') {
-    // The world itself, named by its file: what a world enhancement writes
-    // into is the world, and there is one per file.
-    return context.fileModule
-      ? {kind: 'world', path: context.fileModule, name: context.name}
-      : undefined;
-  }
   if (context.actorModule) {
     return {kind: 'actor', path: context.actorModule, name: context.name};
   }
@@ -115,7 +106,6 @@ function contextOf(block: Block): EnhanceContext {
   return {
     actorModule: editingActorModule(block),
     fileModule: editingFileModule(block),
-    defines: block.type === 'world_world' ? 'world' : 'actor',
     // Read at click time as well as here: the field is editable, and the name
     // on screen is the one the learner means.
     name: String(block.getFieldValue('NAME') ?? '').trim(),

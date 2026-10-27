@@ -92,15 +92,6 @@ const newRule = (name: string): Seed => ({
   )}\n`,
 });
 
-/** A Blockly file holding one root, named — what the editor opens onto. */
-const rootNamed = (type: string, name: string): Seed => ({
-  contents: `${JSON.stringify(
-    {blocks: {blocks: [{type, x: 20, y: 20, fields: {NAME: name}}]}},
-    null,
-    2,
-  )}\n`,
-});
-
 /**
  * What each kind of new file starts as, by extension.
  *
@@ -109,8 +100,6 @@ const rootNamed = (type: string, name: string): Seed => ({
  */
 export const seedFor = (extension: string, name: string): Seed | undefined => {
   switch (extension) {
-    case 'world':
-      return rootNamed('world_world', name);
     case 'actor':
       // In the data shape: what it is as keys, and nothing it does yet
       // (specs/ACTOR_EDITOR_PLAN.md).

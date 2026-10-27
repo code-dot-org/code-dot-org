@@ -165,7 +165,7 @@ export async function compileProject(
 
   // The Main Screen's module if the project holds one, else the world's
   // (`entryFileOf`).
-  const built = modules[modulePath(entryFileOf(files))];
+  const built = modules[modulePath(entryFileOf())];
   if (!built) {
     throw new Error('project has no world module');
   }

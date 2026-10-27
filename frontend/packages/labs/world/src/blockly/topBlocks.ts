@@ -1,6 +1,6 @@
 // The top blocks of a Blockly-authored file, whichever shape the file is.
 //
-// A `.rule`, an `.actor` and a `.world` ARE a workspace serialization, so
+// A `.rule` and an `.actor` ARE a workspace serialization, so
 // their top blocks are `blocks.blocks`. A `.map` is a DOCUMENT — its size, its
 // tile, its placements — that holds a workspace under `blocks`, so its top
 // blocks are `blocks.blocks.blocks`, one level further down.
@@ -9,9 +9,7 @@
 // file calls itself (`projectModules/authoredName`), what it called itself
 // before a rename, and where to write the new name (`newThing/renamed`). Each
 // walked the first shape only, which is why a `.map` declared no name until
-// `define map` gave it one to declare (specs/MAP_EVENTS_PLAN.md). One more asks
-// it about a `.world` in particular: where to write a `define event` an
-// imported map needs (`maps/declareEvents`).
+// `define map` gave it one to declare (specs/MAP_EVENTS_PLAN.md).
 
 /** As much of a block as naming and walking need. */
 export interface TopBlock {

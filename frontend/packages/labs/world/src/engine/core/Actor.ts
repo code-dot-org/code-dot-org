@@ -83,7 +83,7 @@ export class Actor {
    *
    * Set by the same call as {@link world} and {@link layer}, for the same
    * reason. Zero rather than undefined before placement, so an actor described
-   * in a `.world` file (placed before the first tick) is as old as the game
+   * in the Main Screen or its map (placed before the first tick) is as old as the game
    * is — which is the answer a learner expects for something that has been
    * there the whole time.
    */

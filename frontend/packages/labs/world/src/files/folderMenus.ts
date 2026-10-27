@@ -32,8 +32,6 @@ import {BACKGROUNDS_FOLDER} from '../appearance/backgroundsFolder';
  * (`FileMenus`).
  */
 export const ACTORS_FOLDER = 'actors';
-/** …and the world's, which holds exactly one file (specs/MAP_EVENTS_PLAN.md). */
-export const WORLDS_FOLDER = 'worlds';
 /**
  * …and the screens', whose Main Screen is the game in the shape that
  * replaces a world (specs/SCREEN_MAP_PLAN.md, step 4).
@@ -93,22 +91,12 @@ export const SCREENS_MENU: FolderMenu = {
 };
 
 /**
- * The kinds, in the order a project is built up in: a world, then the
- * pictures, because they come before the things made out of them; then the
+ * The kinds, in the order a project is built up in: the pictures, because they come before the things made out of them; then the
  * actors, the rules that give them behavior, and the sounds; then the maps,
  * and the effects and themes a picture is drawn through. (No animations: an
  * animation is an actor's own, specs/ANIMATION_PLAN.md.)
  */
 export const FOLDER_MENUS: readonly FolderMenu[] = [
-  {
-    // ONE WORLD PER PROJECT. A world is a whole PROGRAM — nothing composes
-    // them, and the compiler has one entry — so levels, screens and dialogs
-    // are maps, and `make` makes no second world (specs/MAP_EVENTS_PLAN.md).
-    folder: WORLDS_FOLDER,
-    label: 'World',
-    icon: 'planet-ringed',
-    makes: [],
-  },
   {
     folder: SPRITES_FOLDER,
     label: 'Sprites',

@@ -51,11 +51,6 @@ describe('fileToReveal', () => {
     expect(fileToReveal(SOURCE, {actor: 'ground'})).toBe('b');
   });
 
-  it('finds the world, in a project that is still one', () => {
-    expect(fileToReveal(SOURCE, {level: true})).toBe('c');
-    expect(fileToReveal(SOURCE, {screen: true})).toBe('c');
-  });
-
   it('finds the level and the Main Screen of a game', () => {
     const game: MultiFileSource = {
       ...SOURCE,

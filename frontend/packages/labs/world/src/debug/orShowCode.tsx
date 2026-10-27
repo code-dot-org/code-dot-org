@@ -9,7 +9,7 @@ import {useShowCode} from './showCode';
  * An editor that shows the file's JavaScript instead, when that is asked for.
  *
  * Applied in `config.editorComponents` to the file kinds that are authored in
- * blocks (`.rule`, `.actor`, `.world`, `.map`), which are exactly the kinds
+ * blocks (`.rule`, `.actor`, `.map`, `.screen`), which are exactly the kinds
  * that compile to a module worth reading.
  *
  * AROUND EACH EDITOR RATHER THAN AROUND THE WORKSPACE. Swapping Codebridge's

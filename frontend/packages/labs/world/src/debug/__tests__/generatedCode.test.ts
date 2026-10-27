@@ -61,7 +61,6 @@ describe('what the JavaScript panel shows', () => {
     for (const path of [
       'actors/label.actor',
       'rules/falls.rule',
-      'worlds/main.world',
       'screens/main.screen',
       'maps/level1.map',
     ]) {

@@ -34,7 +34,6 @@ import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import {useProjectImages} from '../appearance/useProjectImages';
 import {projectActorIcons} from '../blockly/actorIconMeta';
 import {actorIconImage} from '../blockly/actorIcons';
-import {cameraBlockId, cameraValue} from '../blockly/cameras';
 import {buildDomainPalette} from '../blockly/domainBlocks';
 import {eventChoicesIn, type EventChoice} from '../blockly/eventChoices';
 import {eventsNarrowerFor, type NarrowEvents} from '../blockly/kindEvents';
@@ -77,25 +76,17 @@ import {
 } from './localPictures';
 import styles from './mapEditor.module.css';
 import {
-  addMapCamera,
   clampTiles,
-  removeMapCamera,
-  renameMapCamera,
-  withMapCameraTrait,
-  withMapCameraValue,
-  withStartingCamera,
   MAX_MAP_TILES,
   MIN_MAP_TILES,
   parseMap,
   type MapDoc,
   type WorkspaceState,
 } from './mapModel';
-import {MapStage, type WorldCameraEditor} from './MapStage';
+import {MapStage} from './MapStage';
 import {PlaceHeading} from './PlaceHeading';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {withPlacePicture} from './placePicture';
-import {MAIN_CAMERA, startingCamera} from './worldCameraCode';
-import {worldCameras} from './worldCameras';
 import {mapFileDocument, type MapDocumentAdapter} from './worldDocument';
 import type {WorldProperty} from './worldProperties';
 import {cameraTraitChoices, worldRuleProperties} from './worldRuleProperties';
@@ -633,64 +624,9 @@ export const MapEditor = ({
     () => document.world?.read(fileText, ruleProperties),
     [document, fileText, ruleProperties],
   );
-  // The world's own cameras, for the strip — from the file, which the stage
-  // never sees (`worldCameras`). Absent for a `.map`, which has none.
-  const worldCameraList = useMemo(
-    () => (document.hasWorldCameras ? worldCameras(fileText) : []),
-    [document.hasWorldCameras, fileText],
-  );
-  // …and what they can be told. The world's cameras are made HERE and kept
-  // on its main map, never as blocks in its code (`placementCameras`); the
-  // traits a camera may elect are the project's rules' camera traits. Which
-  // one it starts through is the map's to say once it says it, and the
-  // code's — a `look through camera` row — until then.
+  // The traits a Viewport's camera may elect: the project's rules' camera
+  // traits.
   const cameraChoices = useMemo(() => cameraTraitChoices(files), [files]);
-  // …the main camera's too, whose traits and values are stored apart.
-  const storedCamera = (id: string) =>
-    id === MAIN_CAMERA
-      ? map.mainCamera
-      : map.cameras?.find(camera => camera.id === id);
-  const worldCameraEditor: WorldCameraEditor | undefined =
-    document.hasWorldCameras
-      ? {
-          starting: map.startingCamera
-            ? (cameraBlockId(map.startingCamera) ?? MAIN_CAMERA)
-            : startingCamera(fileText),
-          choices: cameraChoices,
-          traitsOf: id => storedCamera(id)?.traits ?? [],
-          valueOf: (id, property) =>
-            storedCamera(id)?.values.find(
-              each => each.setter === property.setter,
-            )?.value,
-          add: () => {
-            const made = addMapCamera(
-              map,
-              worldCameraList.map(camera => camera.name),
-            );
-            commit(made.doc);
-            return made.id;
-          },
-          remove: id => commit(removeMapCamera(map, id)),
-          rename: (id, name) => commit(renameMapCamera(map, id, name)),
-          setStarting: id =>
-            commit(
-              withStartingCamera(
-                map,
-                id === MAIN_CAMERA ? MAIN_CAMERA : cameraValue(id),
-              ),
-            ),
-          setTrait: (id, trait, elected) =>
-            commit(withMapCameraTrait(map, id, trait, elected)),
-          setValue: (id, property, value) =>
-            commit(
-              withMapCameraValue(map, id, {
-                setter: property.setter,
-                type: property.type,
-                value,
-              }),
-            ),
-        }
-      : undefined;
   // The game's own file, whose code is never locked and whose properties
   // offer the game's enhancements.
   const isMainScreen =
@@ -1036,8 +972,6 @@ export const MapEditor = ({
           }
           screenCode={isMainScreen}
           world={worldInspector}
-          worldCameras={worldCameraList}
-          worldCameraEditor={worldCameraEditor}
           cameraChoices={cameraChoices}
           mapChoices={mapChoices}
           heldMaps={heldMaps}

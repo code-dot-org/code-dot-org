@@ -6,10 +6,10 @@
 // each walking its own rules and pictures, and the map is written last — and
 // never over an existing one, which is the promise every import makes.
 //
-// …AND THE WORLD'S EVENTS, which is the one place an import writes into a file
-// the learner already had. A map raises the world's events and declares none
-// itself, so the Pause Menu's Quit button raises nothing until the world says
-// `define event ⟨quit⟩`; the import says it (`declareEvents`), and says it
+// …AND THE GAME'S EVENTS, which is the one place an import writes into a file
+// the learner already had. A map raises the game's events and declares none
+// itself, so the Pause Menu's Quit button raises nothing until the Main Screen
+// declares `quit`; the import declares it (`declareScreenEvents`), and does
 // even for a map the project already holds, because the reason to run the
 // import again is that something is missing (specs/MAP_EVENTS_PLAN.md).
 
@@ -18,10 +18,10 @@ import type {MultiFileSource} from '@code-dot-org/core/api';
 
 import {importStockActor} from '../actors/importStockActor';
 import {stockActorById} from '../actors/stock';
-import {MAIN_SCREEN_PATH, MAIN_WORLD_PATH} from '../mainWorld';
+import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {fileIdAt} from '../runtime/projectFiles';
 
-import {declareEvents, declareScreenEvents} from './declareEvents';
+import {declareScreenEvents} from './declareEvents';
 import type {StockMap} from './stock';
 
 const MAPS_FOLDER = 'maps';
@@ -58,13 +58,8 @@ const mainScreenId = (source: MultiFileSource): string | undefined =>
   fileIdAt(source, `${MAIN_SCREEN_PATH}.screen`);
 
 /**
- * The project with the map's events declared in its world, or in its Main
- * Screen's data when it has one (`entryFileOf`).
- *
- * The world is found by PATH rather than by extension: a project has one, at
- * `worlds/main.world`, and that is the same fact a stock map's `emit` block is
- * minted against (`mainWorld`). A project whose world has been moved or
- * renamed gets its files and no declarations, which the load-time check
+ * The project with the map's events declared on its Main Screen. A project
+ * with none gets its files and no declarations, which the load-time check
  * reports rather than the import guessing.
  */
 function withDeclaredEvents(
@@ -74,22 +69,18 @@ function withDeclaredEvents(
   if (!map.raises?.length) {
     return source;
   }
-  const screen = mainScreenId(source);
-  const id = screen ?? fileIdAt(source, `${MAIN_WORLD_PATH}.world`);
-  const world = id === undefined ? undefined : source.files[id];
-  if (!world) {
+  const id = mainScreenId(source);
+  const screen = id === undefined ? undefined : source.files[id];
+  if (!screen) {
     return source;
   }
-  const contents = (screen ? declareScreenEvents : declareEvents)(
-    world.contents ?? '',
-    map.raises,
-  );
-  if (contents === world.contents) {
+  const contents = declareScreenEvents(screen.contents ?? '', map.raises);
+  if (contents === screen.contents) {
     return source;
   }
   return {
     ...source,
-    files: {...source.files, [world.id]: {...world, contents}},
+    files: {...source.files, [screen.id]: {...screen, contents}},
   };
 }
 

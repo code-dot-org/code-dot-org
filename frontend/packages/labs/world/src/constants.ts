@@ -30,15 +30,12 @@ import {
 } from './appearance/stock';
 import {serializeEffectDocument} from './effect/model';
 import {rippleEffect} from './effect/stock';
-import {MAIN_WORLD_PATH} from './mainWorld';
+import {MAIN_SCREEN_PATH} from './mainWorld';
 import {referenceToStock} from './rules/ruleReference';
 import {TILE_SIZE, VIEWPORT_TILES} from './runtime/viewport';
 
-/**
- * The world the game starts in — the driver's compile + run entry point
- * (PLAN §6). Fixed for the slice; later a level/appOptions field selects it.
- */
-export const ENTRY_FILE = `${MAIN_WORLD_PATH}.world`;
+/** The game's file: the driver's compile + run entry point (PLAN §6). */
+export const ENTRY_FILE = `${MAIN_SCREEN_PATH}.screen`;
 
 /**
  * The default project for a new World Lab: a small gravity game across the
@@ -48,7 +45,7 @@ export const ENTRY_FILE = `${MAIN_WORLD_PATH}.world`;
  * sandbox's fixed shell (PLAN §6).
  */
 // The actors are TEMPLATES — a set of traits and appearance, but no position:
-// the world (main.world, authored in Blockly) places each instance and sets its
+// the game (its map, `main.map`) places each instance and sets its
 // per-instance position. All four are `.actor` files, which is to say Blockly
 // workspaces: a learner who wants to know what a ground tile IS opens it and
 // reads three rows, rather than reading JavaScript they have not been taught.
@@ -63,7 +60,7 @@ export const ENTRY_FILE = `${MAIN_WORLD_PATH}.world`;
 // actor has those (`ActorBuilder`'s foundation), so what a template lists is
 // what makes it that kind of actor and nothing else.
 
-// Blockly workspace helpers. A `.actor` / `.world` file is a Blockly
+// Blockly workspace helpers. A `.actor` file is a Blockly
 // workspace stored as serialized JSON (INTERFACE.md); the lab generates
 // world-lab code from it before compiling. `nextBlock` chains statement blocks;
 // `onEvent` builds a floating event-handler block (its own workspace root, so it
@@ -579,7 +576,7 @@ const COIN_ACTOR = coinActor;
 // The handlers are the ACTOR's events rather than the world's, which is what
 // "Watches the Score" exists for. An `.actor` file has no binding for a world
 // event, so `when the score changes` — the rule's other, world-scoped copy of
-// this — could only be written in `main.world`, and would then have to reach
+// this — could only be written in the Main Screen's code, and would then have to reach
 // back out for whichever actor is the scoreboard.
 /** The scoreboard's canvas, shared with the single-world telling of it. */
 export const SCOREBOARD_WIDTH = 96;

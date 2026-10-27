@@ -43,7 +43,7 @@ import {LibraryImports} from '../library/LibraryImports';
 import {entryFileOf} from '../mainWorld';
 import {WorldPreview} from '../preview/WorldPreview';
 import {ProgressionButton} from '../progression/ProgressionButton';
-import {fileIdAt, projectFiles} from '../runtime/projectFiles';
+import {fileIdAt} from '../runtime/projectFiles';
 
 import {Breadcrumb} from './Breadcrumb';
 import {follow, withScript, type ScriptStep, type Trail} from './trail';
@@ -120,11 +120,7 @@ const WorldLayout = () => {
     return () => setRevealer('file', null);
   }, []);
   const entryFileId = useMemo(
-    () =>
-      fileIdAt(
-        currentSources.source,
-        entryFileOf(projectFiles(currentSources.source)),
-      ),
+    () => fileIdAt(currentSources.source, entryFileOf()),
     [currentSources],
   );
 

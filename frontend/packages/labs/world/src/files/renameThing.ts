@@ -31,7 +31,6 @@ import {renameRuleInSource} from '../blockly/renameRule';
 import {mapWorkspaces, rewriteWorkspace} from '../blockly/rewriteWorkspaces';
 import {namedRootOf} from '../blockly/topBlocks';
 import {ENTRY_FILE} from '../constants';
-import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {writeScreenName} from '../mapEditor/screenProperties';
 import {asRuleData} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
@@ -164,7 +163,7 @@ export type Refusal = string | undefined;
 /**
  * Rename the thing this file declares, and move the file to match.
  *
- * THE FILE STAYS PUT for the world the lab runs. `worlds/main.world` is the
+ * THE FILE STAYS PUT for the game the lab runs. `screens/main.screen` is the
  * entry by PATH — the runtime says "No entry file" without it — so that one is
  * renamed inside and left where it is. Everything else moves, and every
  * reference moves with it.
@@ -179,9 +178,9 @@ export function renameThing(
   if (!stem) {
     return {source, refusal: 'A name needs a letter or a number in it.'};
   }
-  // The game's own file keeps its name, in either shape (`entryFileOf`).
+  // The game's own file keeps its name (`entryFileOf`).
   const at = `${source.folders[file.folderId]?.name}/${file.name}`;
-  const entry = at === ENTRY_FILE || at === `${MAIN_SCREEN_PATH}.screen`;
+  const entry = at === ENTRY_FILE;
   const toFileName = entry ? file.name : `${stem}.${extension}`;
 
   const clash = Object.values(source.files).find(

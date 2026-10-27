@@ -572,7 +572,7 @@ export class PhaserBinding {
      *
      * Reconciled every frame like the actors, because a backdrop can change
      * mid-game — an event handler saying `set background to …`, or the
-     * hot-reload patch after the learner edits their `.world` file.
+     * hot-reload patch after the learner edits their Main Screen.
      *
      * Each layer's image is STRETCHED to the viewport: the stock backdrops are
      * square and larger than it, so fitting would letterbox a square into a

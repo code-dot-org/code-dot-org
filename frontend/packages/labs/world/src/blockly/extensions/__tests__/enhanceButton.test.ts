@@ -14,27 +14,18 @@ import {enhanceTarget, type EnhanceContext} from '../enhanceButton';
 const inFile: EnhanceContext = {
   actorModule: 'actors/player',
   fileModule: 'actors/player',
-  defines: 'actor',
   name: 'Platformer Player',
   flyout: false,
   readOnly: false,
 };
 
-/** …and a `define actor` pasted into a world, which is about nobody. */
+/** …and a `define actor` anywhere else, which is about nobody. */
 const inWorld: EnhanceContext = {
   actorModule: undefined,
-  fileModule: 'worlds/main',
-  defines: 'actor',
+  fileModule: 'screens/main',
   name: 'Ball',
   flyout: false,
   readOnly: false,
-};
-
-/** …and the `define world` block itself, which is a thing to enhance too. */
-const theWorld: EnhanceContext = {
-  ...inWorld,
-  defines: 'world',
-  name: 'Platform World',
 };
 
 describe('the wand on define actor', () => {
@@ -43,16 +34,6 @@ describe('the wand on define actor', () => {
       kind: 'actor',
       path: 'actors/player',
       name: 'Platformer Player',
-    });
-  });
-
-  it('points at the world, on the world block', () => {
-    // Not every enhancement is an actor's: a camera that follows an actor is
-    // defined in a world and looked through by a world.
-    expect(enhanceTarget(theWorld)).toEqual({
-      kind: 'world',
-      path: 'worlds/main',
-      name: 'Platform World',
     });
   });
 
