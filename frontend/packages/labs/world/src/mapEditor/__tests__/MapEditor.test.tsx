@@ -131,6 +131,13 @@ const SOURCE: MultiFileSource = {
       folderId: '9',
       contents: '',
     },
+    '4': {
+      id: '4',
+      name: 'main.screen',
+      language: 'screen',
+      folderId: '6',
+      contents: '',
+    },
     '3': {
       id: '3',
       name: 'main.world',
@@ -152,19 +159,21 @@ const SOURCE: MultiFileSource = {
     '9': {id: '9', name: 'maps', parentId: '0'},
     '8': {id: '8', name: 'actors', parentId: '0'},
     '7': {id: '7', name: 'worlds', parentId: '0'},
+    '6': {id: '6', name: 'screens', parentId: '0'},
   },
   openFiles: [],
 };
 
 const updateSources = vi.fn();
+/** What the level says; no level is a game, the default (`appBuilder`). */
+let levelData: {worldView?: 'map' | 'world'} | undefined;
 vi.mock('@code-dot-org/lab/contexts', () => ({
   useSources: () => ({
     currentSources: {source: SOURCE},
     updateSources,
     sourcesEpoch: 0,
   }),
-  // No level: a game, the default (`appBuilder`).
-  useMaybeLevelProperties: () => undefined,
+  useMaybeLevelProperties: () => (levelData ? {levelData} : undefined),
 }));
 
 /** The Actor Creator's seam, answered with whatever a test says was made. */
@@ -185,7 +194,9 @@ vi.mock('../../runtime/WorldRuntimeContext', () => ({
 }));
 
 const {MapEditor} = await import('../MapEditor');
-const {worldFileDocument} = await import('../worldDocument');
+const {screenFileDocument, worldFileDocument} = await import(
+  '../worldDocument'
+);
 
 /** A map with two actors in it, at the size every map used to be. */
 const CONTENTS = JSON.stringify({
@@ -573,5 +584,34 @@ describe('Show me, while a script is open', () => {
       'data-callout',
       'map.newActor',
     );
+  });
+});
+
+describe('the Main Screen of a level whose work is in blocks', () => {
+  const openScreen = () =>
+    render(
+      <MapEditor
+        fileId="4"
+        initialContents={CONTENTS}
+        language="screen"
+        isReadOnly={false}
+        onChange={vi.fn()}
+        document={screenFileDocument}
+      />,
+    );
+
+  beforeEach(() => {
+    levelData = undefined;
+  });
+
+  it('opens on the screen’s code, as a world opened on its World view', () => {
+    levelData = {worldView: 'world'};
+    openScreen();
+    expect(screen.getByTestId('script')).toHaveAttribute('data-kind', 'screen');
+  });
+
+  it('opens on the screen itself otherwise', () => {
+    openScreen();
+    expect(screen.queryByTestId('script')).toBeNull();
   });
 });

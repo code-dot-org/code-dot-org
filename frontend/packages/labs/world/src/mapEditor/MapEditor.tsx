@@ -23,7 +23,7 @@ import {activateFile, type CustomEditorProps} from '@code-dot-org/codebridge';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import type {MultiFileSource} from '@code-dot-org/core/api';
-import {useSources} from '@code-dot-org/lab/contexts';
+import {useMaybeLevelProperties, useSources} from '@code-dot-org/lab/contexts';
 
 import {requestActorDelete} from '../actors/actorDelete';
 import {purposeOf, type PaletteTab} from '../actors/actorPurpose';
@@ -53,7 +53,8 @@ import {
 import {setRevealer} from '../callouts/reveal';
 import fields from '../formFields.module.css';
 import {useScriptStep} from '../layout/TrailContext';
-import {gameModuleOf} from '../mainWorld';
+import {worldOpensOn, type WorldLevelProperties} from '../levelData';
+import {gameModuleOf, MAIN_SCREEN_PATH} from '../mainWorld';
 import {useMaybeProgression} from '../progression/progressionContext';
 import type {Affordance} from '../progression/types';
 import {agreedViewSize} from '../runtime/declaredSizes';
@@ -771,6 +772,20 @@ export const MapEditor = ({
   const [step, setScript, onTrail] = useScriptStep(fileId);
   // A map's are a placement's code and its own; an actor's is not one here.
   const script = step?.kind === 'code' ? null : step;
+  // A level whose work is in blocks opens the Main Screen on its code, as it
+  // opened a world on its World view (`levelData.worldOpensOn`).
+  const level = useMaybeLevelProperties<WorldLevelProperties>();
+  const opensOnCode =
+    document.scriptKind === 'screen' &&
+    filePath(currentSources.source, fileId) === `${MAIN_SCREEN_PATH}.screen` &&
+    worldOpensOn(level) === 'world';
+  const openedOnCode = useRef(false);
+  useEffect(() => {
+    if (opensOnCode && !openedOnCode.current) {
+      openedOnCode.current = true;
+      setScript({kind: 'map'});
+    }
+  }, [opensOnCode, setScript]);
   // A REVEAL NEVER LEAVES A SCRIPT A LEARNER HAS OPEN
   // (specs/SHOW_ME_PLAN.md). While one is, the stage is not mounted to
   // answer for a selection, and this answers no: Show me then says where the
