@@ -5,7 +5,7 @@ import {formatChoiceLetter} from '../utils';
 
 import styles from './choice-label.module.scss';
 
-// A choice's letter and text, e.g. "A. Four".
+// A choice's letter and text, e.g. "B. A variable".
 const ChoiceLabel: React.FunctionComponent<{
   index: number;
   text: string;

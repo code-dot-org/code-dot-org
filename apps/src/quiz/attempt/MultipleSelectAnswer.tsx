@@ -7,16 +7,13 @@ import {QuizQuestionSummary} from '../types';
 import {selectedAnswerLabel} from '../utils';
 
 import ChoiceLabel from './ChoiceLabel';
-import {MultipleSelectQuestionResponse, QuizQuestionResult} from './types';
+import {
+  ChoiceResultStatus,
+  MultipleSelectQuestionResponse,
+  QuizQuestionResult,
+} from './types';
 
 import styles from './multiple-select-answer.module.scss';
-
-type MultipleSelectStatus =
-  | 'correct'
-  | 'missed'
-  | 'incorrect'
-  | 'selected_ungraded'
-  | 'neutral';
 
 type MultipleSelectResult = QuizQuestionResult & MultipleSelectQuestionResponse;
 
@@ -24,7 +21,7 @@ function getMultipleSelectStatus(
   isSelected: boolean,
   correctChoiceIds: string[] | null,
   choiceId: string
-): MultipleSelectStatus {
+): ChoiceResultStatus {
   // No answer key: correctness hidden, or shown only for the whole question.
   if (!correctChoiceIds) {
     return isSelected ? 'selected_ungraded' : 'neutral';
@@ -33,7 +30,7 @@ function getMultipleSelectStatus(
   if (isSelected) {
     return isCorrectAnswer ? 'correct' : 'incorrect';
   }
-  return isCorrectAnswer ? 'missed' : 'neutral';
+  return isCorrectAnswer ? 'correct' : 'neutral';
 }
 
 // Not a Checkbox - these choices are no longer interactive.
@@ -62,8 +59,7 @@ const MultipleSelectAnswer: React.FunctionComponent<{
             <li
               key={choice.id}
               className={classNames(styles.option, {
-                [styles.optionCorrect]:
-                  status === 'correct' || status === 'missed',
+                [styles.optionCorrect]: status === 'correct',
                 [styles.optionIncorrect]: status === 'incorrect',
                 [styles.optionSelectedUngraded]: status === 'selected_ungraded',
               })}
@@ -85,7 +81,7 @@ const MultipleSelectAnswer: React.FunctionComponent<{
                   className={styles.optionText}
                 />
               </div>
-              {(status === 'correct' || status === 'missed') && (
+              {status === 'correct' && (
                 <>
                   <FontAwesomeV6Icon
                     iconName="check"
@@ -93,7 +89,7 @@ const MultipleSelectAnswer: React.FunctionComponent<{
                     className={styles.correctIcon}
                   />
                   <span className={styles.srOnly}>
-                    {status === 'correct'
+                    {isSelected
                       ? `${answerLabel}, correct`
                       : 'Correct answer, not selected'}
                   </span>

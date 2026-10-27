@@ -6,22 +6,20 @@ import {QuizQuestionSummary} from '../types';
 import {selectedAnswerLabel} from '../utils';
 
 import ChoiceLabel from './ChoiceLabel';
-import {MultipleChoiceQuestionResponse, QuizQuestionResult} from './types';
+import {
+  ChoiceResultStatus,
+  MultipleChoiceQuestionResponse,
+  QuizQuestionResult,
+} from './types';
 
 import styles from './multiple-choice-answer.module.scss';
-
-type MultipleChoiceStatus =
-  | 'correct'
-  | 'incorrect'
-  | 'selected_ungraded'
-  | 'neutral';
 
 type MultipleChoiceResult = QuizQuestionResult & MultipleChoiceQuestionResponse;
 
 function getMultipleChoiceStatus(
   choiceId: string,
   result: MultipleChoiceResult
-): MultipleChoiceStatus {
+): ChoiceResultStatus {
   const isSelected = choiceId === result.responseData.selectedChoiceId;
   const isCorrectAnswer = choiceId === result.correctChoiceId;
 
