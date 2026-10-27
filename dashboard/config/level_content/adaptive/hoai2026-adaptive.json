@@ -297,6 +297,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-use-the-lingo-6",
           "project": true,
+          "validation": {
+            "condition": "A prompt asked for a change by naming one part of the page and saying what that part is for.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Ask the AI for a change that names one block of their page and says what it is for.\nOutline: Prompt: \"Pick one part of your page and ask for a change. Name it and say its job.\"\nEvidence: a prompt that names a block and its job."
         }
       ]
@@ -523,6 +527,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-a-list-and-a-random-pick-18",
           "project": true,
+          "validation": {
+            "condition": "The student told the AI what the options are and that the page picks one of them from the list by chance.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Tell the AI what the options are and how the page should pick one.\nOutline: Prompt: \"What are your options, and how should the page choose one?\"\nEvidence: explains that the page picks one item from a list by chance."
         }
       ]
@@ -658,6 +666,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-remember-and-show-25",
           "project": true,
+          "validation": {
+            "condition": "The student told the AI what the page should remember and what should change on screen when it does.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Tell the AI what the page should remember and what should show right away.\nOutline: Prompt: \"What should your page remember, and what should show when it does?\"\nEvidence: names what is remembered and what changes on screen."
         }
       ]
@@ -727,6 +739,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-layout-and-spacing-28",
           "project": true,
+          "validation": {
+            "condition": "A prompt named the blocks that need more room or a different order and said how they should be arranged.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Ask the AI for a layout change that names the blocks and how they should be arranged.\nOutline: Prompt: \"Which blocks need more room or a different order? Say how they should be arranged.\"\nEvidence: a prompt that names blocks and says how they should be arranged."
         }
       ]
@@ -851,6 +867,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-readable-and-clear-34",
           "project": true,
+          "validation": {
+            "condition": "A prompt named a block that is hard to read and asked for a size, contrast or wording change to it.",
+            "measures": { "skillId": "build" }
+          },
           "instructionsPrompt": "Task: Pick a block that is hard to read and ask for a size, contrast or wording change.\nOutline: Prompt: \"Which block is hardest to read? Ask for a change.\"\nEvidence: a prompt that names a block and a readability change."
         }
       ]
@@ -984,6 +1004,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-lead-with-the-point-40",
           "project": true,
+          "validation": {
+            "condition": "The headline now says what the site is for, whether a prompt asked for it or the student edited it by hand.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Ask the AI to change the headline and first line, or edit them by hand.\nOutline: Prompt: \"What is your site for? Make the headline say it.\"\nEvidence: a prompt or edit that states the site's purpose in the headline."
         }
       ]
@@ -1042,6 +1066,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-make-the-ask-clear-43",
           "project": true,
+          "validation": {
+            "condition": "The call-to-action now has a clear verb and a next step, whether a prompt asked for it or the student edited it by hand.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Ask for a call-to-action with a clear verb and next step, or edit it by hand.\nOutline: Prompt: \"What should a visitor do next? Make the button say it.\"\nEvidence: a call-to-action with a clear verb and next step."
         }
       ]
@@ -1168,6 +1196,10 @@
           "kind": "level",
           "level": "adaptive-HoAI26-find-it-in-the-code-49",
           "project": true,
+          "validation": {
+            "condition": "The student pointed to the line or rule in the code for a block they named.",
+            "measures": { "skillId": "language" }
+          },
           "instructionsPrompt": "Task: Find the line for one named block in their code.\nOutline: Prompt: \"Pick a block and find its line in your code.\"\nEvidence: points to the line or rule for a named block."
         }
       ]
