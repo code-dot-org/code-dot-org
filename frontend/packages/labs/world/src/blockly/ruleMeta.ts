@@ -7,6 +7,7 @@
 // trait dropdown can be driven by BOTH sources without importing the engine's
 // rule objects directly — the seam that lets rules live in the project.
 
+import type {ActorMember} from '../actors/actorData';
 import type {
   ActorAction,
   GameEvent,
@@ -19,15 +20,20 @@ import type {
   WorldAction,
   WorldQuery,
 } from '../engine';
-import {ruleViewOf} from '../rules/ruleData';
+import {
+  foldRule,
+  isRuleData,
+  type RuleData,
+  type RuleProperty,
+  type RuleStep,
+} from '../rules/ruleData';
 
-import type {ParamType, EnumMeta} from './enums';
+import type {ParamType} from './enums';
 import type {SocketState} from './extensions/blockDesigner';
 import {
   memberLocalName,
   refFromValue,
   refModule,
-  ruleByName,
   ruleLocation,
 } from './ruleRegistry';
 
@@ -309,14 +315,6 @@ export interface RuleMeta {
   readonly queries: readonly QueryMeta[];
   readonly events: readonly EventMeta[];
   readonly steps: readonly StepMeta[];
-  /**
-   * Named sets of choices this rule declares (`define choices`).
-   *
-   * Not members: nothing generated names one, and the engine never hears about
-   * them (specs/ENUMS.md). They are here because a `.rule` is where one is
-   * written, and the editor reads a project's rules to learn what it has.
-   */
-  readonly enums: readonly EnumMeta[];
 }
 
 /**
@@ -450,18 +448,14 @@ export function builtinRuleMeta(
       queries,
       events,
       steps,
-      // The engine's own enums are not a rule's (`Engine#Key` belongs to the
-      // World, which owns the keyboard); they are declared in `blockly/enums`.
-      enums: [],
     };
   });
 }
 
 // ── Declarative `.rule` files ────────────────────────────────────────────────
-// A `.rule` file is a Blockly workspace (JSON): a `world_rule` root naming the
-// rule, chaining member-declaration blocks. We read it STATICALLY — the same way
-// `.actor`/`.world` files are read for their names — never executing it, to
-// learn the traits/properties/events it declares (its metadata). A project
+// A `.rule` file is the rule as data (`rules/ruleData`). It is read
+// STATICALLY, never executed, to learn the traits, properties, events, blocks
+// and steps it declares (its metadata). A project
 // rule's members are named in generated code by a fixed convention (PascalCase
 // id + kind) that the rule's own module codegen mirrors, so `import`s line up.
 
@@ -614,86 +608,52 @@ export const propertyDefault = (
   }
 };
 
-// One block in a `.rule` workspace: a `world_rule` chain, or a `define trait`'s
-// `do` body (its `inputs.DO`). An action/query block also carries the params
-// mutator's `extraState` (its parameter list).
-interface RuleBlock {
-  type?: string;
-  fields?: Record<string, unknown>;
-  inputs?: Record<string, {block?: RuleBlock}>;
-  extraState?: {
-    params?: ReadonlyArray<{type?: string; var?: string}>;
-    /** `world_rule_block`'s designed signature (blockDesigner). */
-    parts?: ReadonlyArray<{
-      kind?: string;
-      text?: string;
-      type?: string;
-      var?: string;
-      /** What a call site starts with, when the author gave one. */
-      default?: unknown;
-      /** …or the whole block it starts with, when the author built one. */
-      shadow?: SocketState;
-    }>;
-  };
-  next?: {block?: RuleBlock};
-}
-
 /**
- * Parse a `.rule` workspace JSON into {@link RuleMeta} (or `undefined` if it is
- * not a `world_rule` workspace / not valid JSON yet). `modulePath` is the
- * extension-less path the generated code imports the rule and its members from
- * (`rules/wind`). The declared members become `project` refs into that module.
+ * A `.rule` file as {@link RuleMeta}, or `undefined` for one that is not a
+ * rule or not valid JSON yet. `modulePath` is the extension-less path the
+ * generated code imports the rule and its members from (`rules/wind`); the
+ * declared members become `project` refs into that module.
+ *
+ * Read from the rule's data. A file written as a `define rule` workspace is
+ * folded first, and one the data cannot say whole is not a rule.
  */
 export function parseRuleMeta(
   modulePath: string,
   contents: string,
 ): RuleMeta | undefined {
-  let root: RuleBlock | undefined;
-  let traitRoots: RuleBlock[] = [];
-  let enumRoots: RuleBlock[] = [];
-  // A `.rule`'s parameter names live in the workspace variable map (a param
-  // block's VAR field is a variable id); resolve id → name to label params.
-  const variableNames = new Map<string, string>();
+  let parsed: unknown;
   try {
-    // A data-shaped rule is read as the workspace it stands for.
-    const parsed = JSON.parse(ruleViewOf(contents)) as {
-      blocks?: {blocks?: RuleBlock[]};
-      variables?: ReadonlyArray<{id?: string; name?: string}>;
-    };
-    for (const variable of parsed.variables ?? []) {
-      if (variable.id) {
-        variableNames.set(variable.id, variable.name ?? variable.id);
-      }
-    }
-    const tops = parsed.blocks?.blocks ?? [];
-    root = tops.find(b => b?.type === 'world_rule');
-    // Traits are top blocks beside the rule, not chained inside it — one `.rule`
-    // declares one rule, so every trait in the file belongs to it.
-    traitRoots = tops.filter(b => b?.type === 'world_rule_trait');
-    enumRoots = tops.filter(b => b?.type === 'world_rule_enum');
+    parsed = JSON.parse(contents);
   } catch {
-    return undefined; // mid-edit / not JSON
-  }
-  if (!root) {
     return undefined;
   }
+  const data = isRuleData(parsed) ? parsed : foldRule(parsed);
+  return data && ruleMetaOf(modulePath, data);
+}
 
-  const field = (block: RuleBlock, name: string): string =>
-    typeof block.fields?.[name] === 'string'
-      ? (block.fields[name] as string)
-      : '';
+/** {@link parseRuleMeta}, of the data itself. */
+export function ruleMetaOf(modulePath: string, data: RuleData): RuleMeta {
+  // A parameter's name lives in the variable map: a part's `var` is a
+  // variable's id.
+  const variableNames = new Map<string, string>();
+  for (const variable of (data.variables ?? []) as ReadonlyArray<{
+    id?: string;
+    name?: string;
+  }>) {
+    if (variable?.id) {
+      variableNames.set(variable.id, variable.name ?? variable.id);
+    }
+  }
 
-  const ruleName = field(root, 'NAME') || 'Rule';
-  // What using it gives a world. Absent on a rule authored before the field
-  // existed, and on one whose two readings are the same word.
-  const ability = field(root, 'ABILITY') || ruleName;
+  const ruleName = data.name || 'Rule';
+  const ability = data.ability || ruleName;
   const ref = (exportName: string): MemberRef => ({
     source: 'project',
     exportName,
     ruleName,
     modulePath,
   });
-  // This rule's own ref — the owner of steps it declares (an anchor target).
+  // This rule's own ref — the owner of steps it declares.
   const selfRef: MemberRef = ref(`${pascal(ruleName)}Rule`);
 
   const traits: TraitMeta[] = [];
@@ -702,76 +662,48 @@ export function parseRuleMeta(
   const queries: QueryMeta[] = [];
   const events: EventMeta[] = [];
   const steps: StepMeta[] = [];
-  // Dependencies: `use rule` blocks in the rule body name the rules this one
-  // requires — a built-in export name or a project module path, exactly as a
-  // world's `use rule` names them (resolved by the same seam).
-  const requires: string[] = [];
 
-  // A `define property` block → a PropertyMeta. World-scoped at the rule level;
-  // actor-scoped (owned by `ownerTraitId`) inside a `define trait`'s `do`.
+  /** World-scoped on the rule; owned by `ownerTraitId` on a trait. */
   const addProperty = (
-    block: RuleBlock,
+    property: RuleProperty,
     ownerTraitId?: string,
     ownerSubject: 'actor' | 'camera' = 'actor',
   ): void => {
-    const name = field(block, 'NAME');
+    const name = property.name;
     if (!name) {
       return;
     }
-    const declared = field(block, 'TYPE');
     const type = (
-      PROPERTY_TYPES.has(declared) ? declared : 'number'
+      PROPERTY_TYPES.has(property.type) ? property.type : 'number'
     ) as PropertyType;
     properties.push({
       id: slug(name),
       name,
       type,
-      default: propertyDefault(
-        type,
-        // Raw, not `field()`: a vector's default is an object, not a string.
-        block.fields?.DEFAULT,
-        block.fields?.DEFAULT_Y,
-      ),
-      // Absent on a workspace saved before the field existed, which reads as
-      // writable — the behavior those files already had.
-      readonly: field(block, 'ACCESS') === 'readonly',
+      default: propertyDefault(type, property.value, property.valueY),
+      readonly: property.access === 'readonly',
       scope: ownerTraitId ? ownerSubject : 'world',
       ownerTraitId,
       ref: ref(`${pascal(name)}Property`),
     });
   };
 
-  // A `define event` block → an EventMeta. Declared at rule level or under a
-  // trait; both produce a rule-level event.
   /**
-   * A `define event` → the event, and the phrasing of the hat it makes.
-   *
-   * Designed like a block (`extraState.parts`), and named by its labels joined,
-   * so "%1 is pressed" is the event `is pressed` with one choice to filter on.
+   * A member's parts as its block is built from them. A parameter whose
+   * variable is missing is called `value`.
    */
-  const addEvent = (
-    block: RuleBlock,
-    ownerTraitId?: string,
-    ownerSubject: 'actor' | 'camera' = 'actor',
-  ): void => {
-    const raw = block.extraState?.parts ?? [];
-    const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
+  const partsOf = (member: ActorMember, paramType: string): MemberPart[] =>
+    member.parts.flatMap((part): MemberPart[] => {
       if (part.kind === 'param') {
         return [
           {
             kind: 'param',
-            // `value` rather than `choice` when the variable is missing: an
-            // event's parameter was a filter over a set of choices and is a
-            // VALUE THE EVENT CARRIES now, of whatever type its author gave
-            // it (specs/EVENT_VALUES_PLAN.md).
             name: (part.var && variableNames.get(part.var)) || 'value',
-            type: (part.type ?? 'string') as ParamType,
-            // What the `emit` socket starts with, carried through for the
-            // same reason a `define block`'s argument carries one: an event
-            // designed with a `let` says what a raiser gets by default, and
-            // dropping it here made that row do nothing.
+            type: (part.type ?? paramType) as ParamType,
             ...(part.default === undefined ? {} : {default: part.default}),
-            ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
+            ...(part.shadow === undefined
+              ? {}
+              : {shadow: part.shadow as SocketState}),
           },
         ];
       }
@@ -780,7 +712,15 @@ export function parseRuleMeta(
       }
       return part.text ? [{kind: 'label', text: part.text}] : [];
     });
-    const name = designedName(raw);
+
+  /** An event, named by its labels joined: "%1 is pressed" is `is pressed`. */
+  const addEvent = (
+    member: ActorMember,
+    ownerTraitId?: string,
+    ownerSubject: 'actor' | 'camera' = 'actor',
+  ): void => {
+    const parts = partsOf(member, 'string');
+    const name = designedName(member.parts);
     if (!name) {
       return;
     }
@@ -795,67 +735,39 @@ export function parseRuleMeta(
   };
 
   /**
-   * A `define block` → an action or a query, decided by its RETURNS field.
-   *
-   * Its name is the wording of its labels joined; its params are the parameter
-   * parts, in order. The parts are kept as well, so the call-site block can be
-   * built in the arrangement that was designed rather than name-then-arguments.
+   * A block: a query when it reports something, an action when it does not.
+   * The parts are kept, so its call site is built in the arrangement that was
+   * designed rather than name-then-arguments.
    */
   const addDesignedBlock = (
-    block: RuleBlock,
+    member: ActorMember,
     ownerTraitId?: string,
     ownerSubject: 'actor' | 'camera' = 'actor',
   ): void => {
-    const raw = block.extraState?.parts ?? [];
-    const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
-      if (part.kind === 'param') {
-        return [
-          {
-            kind: 'param',
-            name: (part.var && variableNames.get(part.var)) || 'value',
-            type: (part.type ?? 'number') as ParamType,
-            ...(part.default === undefined ? {} : {default: part.default}),
-            ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
-          },
-        ];
-      }
-      if (part.kind === 'row') {
-        return [{kind: 'row'}];
-      }
-      return part.text ? [{kind: 'label', text: part.text}] : [];
-    });
-    const name = designedName(raw);
+    const parts = partsOf(member, 'number');
+    const name = designedName(member.parts);
     if (!name) {
       return;
     }
-    const params = parts
-      .filter(
-        (
-          part,
-        ): part is {
-          kind: 'param';
-          name: string;
-          type: ParamType;
-          default?: unknown;
-          shadow?: SocketState;
-        } => part.kind === 'param',
-      )
-      // …and what each starts with. `EditorParam.default` is what
-      // `typedValueInputs` seeds the socket's shadow from, so a default
-      // written on a `define block` arrives at every call site of it.
-      .map(part => ({
-        name: part.name,
-        type: part.type,
-        ...(part.default === undefined ? {} : {default: part.default}),
-        ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
-      }));
-    const returns = field(block, 'RETURNS');
+    const params = parts.flatMap(part =>
+      part.kind === 'param'
+        ? [
+            {
+              name: part.name,
+              type: part.type,
+              ...(part.default === undefined ? {} : {default: part.default}),
+              ...(part.shadow === undefined ? {} : {shadow: part.shadow}),
+            },
+          ]
+        : [],
+    );
+    const returns = member.returns;
     const common = {
       id: slug(name),
       name,
       params,
       parts,
-      description: field(block, 'DESCRIPTION') || undefined,
+      description: member.description || undefined,
       scope: (ownerTraitId ? ownerSubject : 'world') as MemberScope,
       ownerTraitId,
     };
@@ -870,198 +782,71 @@ export function parseRuleMeta(
     }
   };
 
-  // A `define step` block → a StepMeta. Its ordering: the `ORDER` dropdown
-  // (unordered/before/after) and, when anchored, the `STEP` dropdown's value —
-  // an anchor `<owner>#<stepId>` where `owner` is a built-in rule export name or
-  // a project rule module path (matching the trait dropdown's encoding).
-  const stepAnchor = (value: string): StepAnchor | undefined => {
-    const hash = value.lastIndexOf('#');
-    if (hash < 0) {
-      return undefined;
-    }
-    const owner = value.slice(0, hash);
-    const stepId = value.slice(hash + 1);
-    if (!owner || !stepId) {
-      return undefined;
-    }
-    // `owner` is a rule NAME. Which rule that is — engine or project, and if a
-    // project one, in which file — is the registry's business at generate time.
-    const owned = ruleByName(owner);
-    const ownerRef: MemberRef = {
-      source: owned?.source ?? 'project',
-      exportName: owned?.ref.exportName ?? '',
-      ruleName: owner,
-      modulePath: owned?.modulePath,
-    };
-    return {ownerRef, stepId};
-  };
-  /**
-   * A step root → a StepMeta. Its ordering is the BLOCK TYPE, not a field:
-   * `when tick` is unordered, `before`/`after` carry the anchor dropdown.
-   */
-  const STEP_KIND: Record<string, StepOrderMeta['kind']> = {
-    world_rule_step_tick: 'free',
-    world_rule_step_before: 'before',
-    world_rule_step_after: 'after',
-    world_rule_step_in: 'phase',
-  };
-  const addStep = (block: RuleBlock): void => {
-    const name = field(block, 'NAME');
-    const kind = STEP_KIND[block.type ?? ''];
-    if (!name || !kind) {
-      return;
-    }
-    if (kind === 'phase') {
-      const phase = field(block, 'PHASE');
-      steps.push({
-        id: slug(name),
-        name,
-        ownerRef: selfRef,
-        scope: 'world',
-        order: phase ? {kind, phase} : {kind: 'free'},
-      });
-      return;
-    }
-    const anchor =
-      kind === 'free' ? undefined : stepAnchor(field(block, 'STEP'));
-    const order: StepOrderMeta = anchor ? {kind, anchor} : {kind: 'free'};
-    steps.push({
-      id: slug(name),
-      name,
-      ownerRef: selfRef,
-      scope: 'world',
-      order,
-    });
-  };
+  const addMember = (
+    member: ActorMember,
+    ownerTraitId?: string,
+    ownerSubject: 'actor' | 'camera' = 'actor',
+  ): void =>
+    member.kind === 'event'
+      ? addEvent(member, ownerTraitId, ownerSubject)
+      : addDesignedBlock(member, ownerTraitId, ownerSubject);
 
   /**
-   * A step declared under a trait: it runs for each subject that has it.
-   *
-   * Always phased. A trait's step is saying what KIND of work it does — a
-   * camera trait that clamps the view runs in `confine` — and the phases it is
-   * offered are the ones its subject takes part in, so there is no neighbor
-   * for it to name and no dropdown of every step in the project to pick from.
+   * A step: the rule's runs once for the world, a trait's once for each
+   * subject that has it. With no phase it is unordered.
    */
-  const addTraitStep = (
-    block: RuleBlock,
-    ownerTraitId: string,
-    ownerSubject: 'actor' | 'camera',
+  const addStep = (
+    step: RuleStep,
+    ownerTraitId?: string,
+    ownerSubject: 'actor' | 'camera' = 'actor',
   ): void => {
-    const name = field(block, 'NAME');
-    if (!name) {
+    if (!step.name) {
       return;
     }
-    const phase = field(block, 'PHASE');
     steps.push({
-      id: slug(name),
-      name,
+      id: slug(step.name),
+      name: step.name,
       ownerRef: selfRef,
-      scope: ownerSubject,
-      ownerTraitId,
-      order: phase ? {kind: 'phase', phase} : {kind: 'free'},
+      scope: ownerTraitId ? ownerSubject : 'world',
+      ...(ownerTraitId ? {ownerTraitId} : {}),
+      order: step.phase ? {kind: 'phase', phase: step.phase} : {kind: 'free'},
     });
   };
 
-  // The rule's own chain: `use rule` dependencies and its world-scoped members.
-  // Traits are separate roots, handled below.
-  for (
-    let block: RuleBlock | undefined = root.next?.block;
-    block;
-    block = block.next?.block
-  ) {
-    if (block.type === 'world_use_rule') {
-      const dep = field(block, 'RULE');
-      if (dep) {
-        requires.push(dep);
-      }
-    } else if (block.type === 'world_rule_property') {
-      addProperty(block);
-    } else if (block.type === 'world_rule_block') {
-      addDesignedBlock(block);
-    } else if (block.type?.startsWith('world_rule_step')) {
-      // A member like the rest of them now. It used to be a root — an event
-      // hat with its body chained below — which is what a step had to be while
-      // that body was hundreds of blocks long. The body is on its own surface
-      // now, so the step is one row in the rule's own list.
-      addStep(block);
-    } else if (block.type === 'world_rule_event') {
-      // Declared on the rule, so it is the WORLD's: the keyboard rule's key
-      // events are about the world, not about a kind of actor. Every event is
-      // registered the same way (`rule.addEvent`) — where it is chained decides
-      // what it is about, and so what a handler is handed.
-      addEvent(block);
-    }
+  for (const property of data.properties ?? []) {
+    addProperty(property);
+  }
+  // Declared on the rule, so an event here is the WORLD's: the keyboard
+  // rule's key events are about the world, not about a kind of actor.
+  for (const member of data.members ?? []) {
+    addMember(member);
+  }
+  for (const step of data.steps ?? []) {
+    addStep(step);
   }
 
-  // A set of choices: the root names it, the blocks below it are the choices.
-  // A word is both what a learner reads and what the block emits, so no
-  // translation table and no way for the two to disagree. An empty set is kept
-  // — a learner types the name before the options, and a set that vanished
-  // between keystrokes would take the dropdowns using it with it.
-  const enums: EnumMeta[] = [];
-  for (const enumBlock of enumRoots) {
-    const name = field(enumBlock, 'NAME');
-    if (!name) {
+  for (const trait of data.traits ?? []) {
+    if (!trait.name) {
       continue;
     }
-    const options: Array<readonly [string, string]> = [];
-    for (
-      let block: RuleBlock | undefined = enumBlock.next?.block;
-      block;
-      block = block.next?.block
-    ) {
-      if (block.type !== 'world_rule_enum_option') {
-        continue;
-      }
-      const word = field(block, 'NAME');
-      if (word && !options.some(([, value]) => value === word)) {
-        options.push([word, word]);
-      }
+    const traitId = slug(trait.name);
+    const subject = trait.subject === 'camera' ? 'camera' : 'actor';
+    for (const property of trait.properties ?? []) {
+      addProperty(property, traitId, subject);
     }
-    enums.push({owner: ruleName, name, options});
-  }
-
-  // Each trait root, and the chain of members below it.
-  for (const traitBlock of traitRoots) {
-    const name = field(traitBlock, 'NAME');
-    if (!name) {
-      continue;
+    for (const member of trait.members ?? []) {
+      addMember(member, traitId, subject);
     }
-    const traitId = slug(name);
-    // What elects it. Absent on a trait saved before the field existed, which
-    // reads as `actor` — the behavior those files already had.
-    const subject: 'actor' | 'camera' =
-      field(traitBlock, 'SUBJECT') === 'camera' ? 'camera' : 'actor';
-    const traitRequires: string[] = [];
-    for (
-      let member: RuleBlock | undefined = traitBlock.next?.block;
-      member;
-      member = member.next?.block
-    ) {
-      if (member.type === 'world_use_trait') {
-        const dep = field(member, 'TRAIT');
-        if (dep) {
-          traitRequires.push(dep);
-        }
-      } else if (member.type === 'world_rule_property') {
-        addProperty(member, traitId, subject);
-      } else if (member.type === 'world_rule_block') {
-        addDesignedBlock(member, traitId, subject);
-      } else if (member.type === 'world_trait_step') {
-        addTraitStep(member, traitId, subject);
-      } else if (member.type === 'world_rule_event') {
-        addEvent(member, traitId, subject);
-      }
+    for (const step of trait.steps ?? []) {
+      addStep(step, traitId, subject);
     }
     traits.push({
       id: traitId,
-      name,
-      ref: ref(`${pascal(name)}Trait`),
-      requires: traitRequires,
+      name: trait.name,
+      ref: ref(`${pascal(trait.name)}Trait`),
+      requires: (trait.uses ?? []).filter(Boolean),
       subject,
-      ...(field(traitBlock, 'DESCRIPTION')
-        ? {description: field(traitBlock, 'DESCRIPTION')}
-        : {}),
+      ...(trait.description ? {description: trait.description} : {}),
     });
   }
 
@@ -1074,16 +859,14 @@ export function parseRuleMeta(
     ref: selfRef,
     // Never itself. A `use rule` naming this rule generates a module that
     // imports its own default export — a cycle the compiler resolves to
-    // `undefined`, and the project dies reading `.id` of it. The dropdown does
-    // not offer it (editingRule), so this is for a file that already holds one.
-    requires: requires.filter(dep => dep !== ruleName),
+    // `undefined`, and the project dies reading `.id` of it.
+    requires: (data.uses ?? []).filter(dep => dep && dep !== ruleName),
     traits,
     properties,
     actions,
     queries,
     events,
     steps,
-    enums,
   };
 }
 

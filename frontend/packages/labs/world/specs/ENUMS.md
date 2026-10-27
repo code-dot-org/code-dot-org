@@ -1,5 +1,9 @@
 # Choices, and events that filter on them
 
+A rule's own `define choices` is not read since rules became data
+(COMPILE_FROM_DATA_PLAN.md, step 5c): the data has no place for one. The
+engine's choices — keys, buttons, directions — are as described here.
+
 ## The problem
 
 `rules/input.rule` raises one event for every key that goes down, carrying the

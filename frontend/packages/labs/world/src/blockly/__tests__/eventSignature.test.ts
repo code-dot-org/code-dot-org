@@ -351,7 +351,7 @@ describe('an event that carries an ACTOR', () => {
   const TOUCHED = {
     parts: [
       {kind: 'label', text: 'is touched by'},
-      {kind: 'param', name: 'other', type: 'actor'},
+      {kind: 'param', name: 'other', type: 'actor', var: 'other'},
     ],
   };
   /** A workspace holding a world; the kinds come from the project's files. */
@@ -546,7 +546,7 @@ describe('an event that carries several values', () => {
       ruleWithEvent({
         parts: [
           {kind: 'label', text: 'is touched by'},
-          {kind: 'param', name: 'other', type: 'actor'},
+          {kind: 'param', name: 'other', type: 'actor', var: 'other'},
         ],
       }),
     ) as unknown as {type: string; extensions: Array<{name: string}>};

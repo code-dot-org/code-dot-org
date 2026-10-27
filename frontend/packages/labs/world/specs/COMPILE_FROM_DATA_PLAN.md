@@ -180,9 +180,31 @@ the workspaces the compiler reads, which 5c removes.
 
 #### 5c. Out of the compiler
 
-The compiler and `parseRuleMeta` read rule and actor data directly, the
-stock rules are generated as data, and the lessons and fixtures are written
-as data. Then the definitions go.
+Rules compile from data, but by way of the view: `projectFiles` hands every
+`.rule` out as `define rule` rows (`resolveRuleContents`), `generateRule`
+folds them back, and `parseRuleMeta` walks the rows for everything the
+palette and the lab know about a rule. Actors are stored as data and read
+as `define actor` rows (`viewOf`) by the compiler, `parseActorOwnMeta` and
+the enhancers; the stock actors, the starter project, the lessons and the
+fixtures are written as rows and folded. In order, each its own commit:
+
+1. `parseRuleMeta` reads the data, folding a file written in blocks first.
+   A rule's `define choices` is dropped: the data has no place for it and
+   no rule uses it.
+2. The lessons' and fixtures' rules are written as data.
+3. The stock rules are generated as data.
+4. `resolveRuleContents` and `projectFiles` hand out data; what rewrites a
+   rule's rows works through a view of its own, as an actor's does.
+5. Actors compile from data: the compiler and `parseActorOwnMeta` read
+   `traits` and `members`.
+6. Actors are written as data: the stock actors, the starter project, the
+   lessons, the fixtures and the enhancers.
+7. The two places that load these blocks into a live workspace — a tile's
+   trait preview, and an actor's code holding a member the data cannot —
+   and the stand-ins, which would mint the deleted types again.
+8. The definitions go, with the tables and branches that name them. The
+   folds stay, for a file written in blocks and for the tutor, which
+   proposes rules in blocks.
 
 ## Open
 

@@ -153,14 +153,17 @@ function readProperty(row: Block): RuleProperty | undefined {
     ) ||
     typeof fields.TYPE !== 'string' ||
     typeof fields.NAME !== 'string' ||
-    (fields.ACCESS !== 'writable' && fields.ACCESS !== 'readonly')
+    (fields.ACCESS !== undefined &&
+      fields.ACCESS !== 'writable' &&
+      fields.ACCESS !== 'readonly')
   ) {
     return undefined;
   }
   return {
     name: fields.NAME,
     type: fields.TYPE,
-    access: fields.ACCESS,
+    // Absent reads as writable, as it always has.
+    access: fields.ACCESS ?? 'writable',
     ...('DEFAULT' in fields ? {value: fields.DEFAULT} : {}),
     ...('DEFAULT_Y' in fields ? {valueY: fields.DEFAULT_Y} : {}),
   };
@@ -341,7 +344,6 @@ export function foldRule(document: unknown): RuleData | undefined {
     !only(root, ['type', 'fields', 'next', 'x', 'y']) ||
     !stringFields(root, ['NAME', 'ABILITY']) ||
     typeof fields.NAME !== 'string' ||
-    typeof fields.ABILITY !== 'string' ||
     !others.every(other => isObject(other) && other.type === TRAIT)
   ) {
     return undefined;
@@ -371,7 +373,8 @@ export function foldRule(document: unknown): RuleData | undefined {
   return {
     type: RULE_DOCUMENT,
     name: fields.NAME,
-    ability: fields.ABILITY,
+    // Absent reads as the name, as `parseRuleMeta` always read it.
+    ability: (fields.ABILITY as string | undefined) || fields.NAME,
     ...(description === undefined ? {} : {description}),
     ...listed(declared),
     ...(traits.length ? {traits} : {}),

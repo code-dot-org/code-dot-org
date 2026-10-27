@@ -95,17 +95,6 @@ export const summarizeRule = (rule: RuleMeta): string => {
   if (rule.events.length) {
     lines.push(`events: ${list(rule.events.map(says))}`);
   }
-  if (rule.enums.length) {
-    lines.push(
-      // The LABEL of each option, which is what the student reads on the
-      // dropdown; the value behind it is the engine's business.
-      `choices: ${list(
-        rule.enums.map(
-          e => `${e.name} (${e.options.map(([label]) => label).join('/')})`,
-        ),
-      )}`,
-    );
-  }
   return lines.join('\n');
 };
 

@@ -123,6 +123,29 @@ describe('a rule', () => {
     expect(foldRule(loose)).toBeUndefined();
   });
 
+  it('reads what a hand-written rule leaves out as it always read', () => {
+    // A rule written as blocks — by the tutor, say — may say no ability and
+    // no access, and `parseRuleMeta` read both before it read the data.
+    const folded = foldRule({
+      blocks: {
+        blocks: [
+          {
+            type: 'world_rule',
+            fields: {NAME: 'Wind'},
+            next: {
+              block: {
+                type: 'world_rule_property',
+                fields: {TYPE: 'number', NAME: 'strength', DEFAULT: 2},
+              },
+            },
+          },
+        ],
+      },
+    });
+    expect(folded?.ability).toBe('Wind');
+    expect(folded?.properties?.[0].access).toBe('writable');
+  });
+
   it('keeps what a block reports', () => {
     const data = foldRule(
       rule([

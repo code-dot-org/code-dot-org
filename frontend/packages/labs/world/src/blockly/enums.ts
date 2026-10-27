@@ -11,9 +11,9 @@
 // is a thing the editor knows and the emitted JavaScript has already forgotten
 // — the string is the whole of what survives.
 //
-// Two sources, as with rules. The engine's `Key` is the list `world_key` has
-// always carried, given a name so a rule can point at it instead of rebuilding
-// it; a rule's own arrive from `define choices` (ENUMS.md step 3).
+// The engine's are the only ones: `Key` is the list `world_key` has always
+// carried, given a name so a rule can point at it instead of rebuilding it. A
+// rule's own `define choices` waits on a place in the rule's data.
 
 import type {ArgType} from '../engine';
 import {KEY_CHOICES} from '../engine/core/keys';
@@ -36,8 +36,7 @@ export interface EnumMeta {
    *
    * They differ, and have to. The keyboard's space bar reads `space` and is
    * the string `" "`; its arrows read `up arrow` and are `"ArrowUp"`. A
-   * learner-authored enum will normally have the two the same, which is what
-   * `define choices` will produce.
+   * learner-authored enum would normally have the two the same.
    */
   readonly options: ReadonlyArray<readonly [label: string, value: string]>;
 }
@@ -100,46 +99,8 @@ export const ENGINE_ENUMS: readonly EnumMeta[] = [
   DIRECTION_ENUM,
 ];
 
-let projectEnums: readonly EnumMeta[] = [];
-
-/**
- * Replace the project's own enums, as the editor replaces its rules.
- *
- * Called with everything `define choices` declared across the project's
- * `.rule` files, whenever those files change (ENUMS.md step 3).
- */
-export function registerProjectEnums(metas: readonly EnumMeta[]): void {
-  projectEnums = metas;
-}
-
-/** Every enum in play, the engine's first. */
-export function allEnums(): EnumMeta[] {
-  return [...ENGINE_ENUMS, ...projectEnums];
-}
-
-/**
- * Sets of choices claimed by more than one declaration — an ambiguous reference
- * each, the same problem two rules with one name are.
- *
- * A reference carries the owner (`Wind#Colors`), so two RULES may each declare
- * their own `Colors` without either being in doubt. What is in doubt is two
- * `define choices` blocks naming the same set inside one rule: they produce one
- * reference, `enumByRef` answers with the first, and the second's words appear
- * nowhere. Reported rather than silently picked, exactly as `duplicateRuleNames`
- * is — a learner whose choices do nothing should be told why.
- */
-export function duplicateEnumNames(): string[] {
-  const seen = new Set<string>();
-  const duplicated = new Set<string>();
-  for (const meta of allEnums()) {
-    const ref = enumRef(meta);
-    if (seen.has(ref)) {
-      duplicated.add(ref);
-    }
-    seen.add(ref);
-  }
-  return [...duplicated];
-}
+/** Every enum in play: the engine's. */
+export const allEnums = (): EnumMeta[] => [...ENGINE_ENUMS];
 
 /** The enum a stored reference means, or undefined if nothing declares it. */
 export function enumByRef(ref: string): EnumMeta | undefined {

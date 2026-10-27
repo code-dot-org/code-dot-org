@@ -21,7 +21,6 @@ import {projectSheets} from '../appearance/sheetFile';
 import type {ImageSize} from '../runtime/imageSize';
 
 import {setKindAnimations} from './animationOptions';
-import {duplicateEnumNames, registerProjectEnums} from './enums';
 import {
   setActorParents,
   setProjectActors,
@@ -158,11 +157,6 @@ export function refreshProjectDropdowns(
   // project. Refreshed here rather than at parse time so the editor and the
   // generator resolve against the same set — the files as they are right now.
   registerProjectRules(ruleMetas);
-  // …and the choices those rules declare (`define choices`), which the block
-  // designer offers as parameter types and the enum chips read their options
-  // from. Same moment as the rules, for the same reason: one view of the files
-  // as they are right now.
-  registerProjectEnums(ruleMetas.flatMap(rule => rule.enums));
   warnAboutDuplicateNames();
   const worldRules = projectWorldRules(files);
   setProjectRules(worldRules);
@@ -221,10 +215,7 @@ let warnedAbout = '';
  */
 function warnAboutDuplicateNames(): void {
   const rules = duplicateRuleNames();
-  // Sets of choices go the same way and are reported the same way: one name,
-  // one reference, and everything that reads it gets the first (blockly/enums).
-  const choices = duplicateEnumNames();
-  const key = [...rules, '\u0000', ...choices].join('\u0000');
+  const key = rules.join('\u0000');
   if (key === warnedAbout) {
     return;
   }
@@ -234,13 +225,6 @@ function warnAboutDuplicateNames(): void {
       `world lab: more than one rule is named ${rules
         .map(name => `"${name}"`)
         .join(', ')}; references to it resolve to the first one.`,
-    );
-  }
-  if (choices.length) {
-    console.warn(
-      `world lab: more than one set of choices is named ${choices
-        .map(ref => `"${ref.replace('#', ' \u25b8 ')}"`)
-        .join(', ')}; the words offered are the first one's.`,
     );
   }
 }

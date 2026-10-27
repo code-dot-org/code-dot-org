@@ -12225,12 +12225,6 @@ function generateRulePalette(
   // from the rest: a world handler registers on the `world` binding and so must
   // be emitted after it, where an actor's must come before (see that file).
   const worldEventTypes: string[] = [];
-  // Chips already built, by reference. Two `define choices` naming one set
-  // produce one reference and would produce one block type twice — and
-  // registering a type twice does not fail, it silently replaces
-  // (`Driver.registerBlocks`). The duplicate is reported elsewhere
-  // (duplicateEnumNames); here it simply does not get a second block.
-  const chipped = new Set<string>();
   for (const rule of rules) {
     const propTypes: string[] = [];
     const queryTypes: string[] = [];
@@ -12312,27 +12306,11 @@ function generateRulePalette(
         ruleEventTypes.push(emit.type);
       }
     }
-    // A chip per set of choices this rule declares — the block an enum-typed
-    // socket wears, and the only way to name one of the choices anywhere else
-    // (a comparison, a variable). The engine's `Key` has `world_key` for that
-    // and so is not listed; a rule's own has nothing but this.
-    const choiceTypes: string[] = [];
-    for (const meta of rule.enums) {
-      const ref = enumRef(meta);
-      if (chipped.has(ref)) {
-        continue;
-      }
-      chipped.add(ref);
-      const block = defineEnumValueBlock(meta);
-      blocks.push(block);
-      choiceTypes.push(block.type);
-    }
     const categoryBlocks = [
       ...propTypes,
       ...queryTypes,
       ...actionTypes,
       ...ruleEventTypes,
-      ...choiceTypes,
       ...(ALSO_LISTED[rule.name] ?? []),
     ];
     if (categoryBlocks.length > 0) {
