@@ -40,7 +40,7 @@
   font-size: 12px;
   color: var(--text-neutral-white-fixed);
   background: var(--background-neutral-primary);
-  border: 2px solid var(--border-neutral-solid);
+  border: 2px solid var(--border-disabled-neutral);
   border-radius: var(--shape-sm);
 }
 
@@ -79,8 +79,6 @@
 }
 
 .optionNeutral {
-  border-color: var(--border-disabled-neutral);
-
   .optionText {
     color: var(--text-neutral-tertiary);
   }

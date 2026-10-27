@@ -81,8 +81,6 @@
 }
 
 .optionNeutral {
-  border-color: var(--border-disabled-neutral);
-
   .optionText {
     color: var(--text-neutral-tertiary);
   }
@@ -94,6 +92,7 @@
   box-sizing: border-box;
   width: 20px;
   height: 20px;
+  background: var(--background-neutral-primary);
   border: 2px solid var(--border-disabled-neutral);
   border-radius: 50%;
 }

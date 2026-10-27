@@ -20,6 +20,19 @@
   border-color: var(--borders-brand-purple-light);
 }
 
+// Graded rows have no interaction states.
+.option:not(.optionCorrect, .optionIncorrect) {
+  &:hover,
+  &:active {
+    border-color: var(--border-neutral-secondary);
+  }
+
+  &.optionSelected:hover,
+  &.optionSelected:active {
+    border-color: var(--border-brand-mid);
+  }
+}
+
 // After .optionSelected so a graded pick overrides its purple.
 .optionCorrect {
   background: var(--background-success-light);
