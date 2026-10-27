@@ -93,8 +93,9 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
     if (!block || typeof id !== 'string' || !id) {
       return UNNAMED;
     }
-    // In the flyout there is no scope to be in and the block is a sample
-    // rather than part of a program — so it draws what it holds.
+    // In the flyout, and in a `define block`'s preview, there is no scope to be
+    // in and the block is a sample rather than part of a program — so it draws
+    // what it holds (`markPreviewWorkspace`).
     return this.namesSomething() ? super.getText() || UNNAMED : UNNAMED;
   }
 
@@ -191,8 +192,30 @@ export class ScopedFieldVariable extends Blockly.FieldVariable {
   }
 }
 
-/** Whether this block is a sample in a flyout rather than part of a program. */
-const isSample = (block: Blockly.Block): boolean => block.isInFlyout;
+/**
+ * Say that a workspace is a PICTURE of blocks rather than a program.
+ *
+ * A field that draws a block owns a workspace of its own
+ * (`FieldBlockDrawing`), holding one block: the one a definition will add to
+ * the palette, with a getter in each socket so the drawing shows what the
+ * arguments are called. Those getters are a sample in exactly the sense a
+ * flyout's are — nobody runs them, and there is no program around them to be
+ * in the scope of — but they are not in a flyout, so the scope walk found
+ * nothing and every parameter in every preview drew `???` while the field
+ * underneath held the right variable all along.
+ *
+ * Marked rather than sniffed, as `isRuleGenerator` is on the headless
+ * generator's workspace: the thing that builds a workspace for a purpose is
+ * what knows the purpose.
+ */
+export function markPreviewWorkspace(workspace: Blockly.Workspace): void {
+  (workspace as {isBlockPreview?: boolean}).isBlockPreview = true;
+}
+
+/** Whether this block is a drawing rather than part of a program. */
+const isSample = (block: Blockly.Block): boolean =>
+  block.isInFlyout ||
+  Boolean((block.workspace as {isBlockPreview?: boolean}).isBlockPreview);
 
 /** The name a block's JSON asks for this field by. */
 export const SCOPED_VARIABLE_FIELD = 'field_scoped_variable';

@@ -280,15 +280,16 @@ So no `define` block is ever drawn, and what drew one went with it:
   the reload a rename forced (`BlocklyFileEditor`), with the member-key
   comparison they used (`renameRule.memberKeys`).
 - **The pencil** on a rule's blocks, events and steps.
-- **The rest of the chrome**, afterwards: `define property`'s drawn getter
-  and setter (`FieldPropertyPreview`, `FieldBlockDrawing`, and the preview
-  workspace's mark in `scopedVariable`), `use rule`'s import row, open
-  button and lesson button (`ruleImportField`), and the widening of a
-  trait's description. `define property` keeps the eye and the default's
-  field, and `use rule` its live options, because a view writes those fields
-  and the compiler must find them to load it. `define rule` had nothing
-  extra. `use trait` keeps all of its own: a camera is still declared in
-  blocks, with `use trait` under `define camera`, so it is still drawn.
+- **The rest of a rule's chrome**, afterwards: `use rule`'s import row,
+  open button and lesson button (`ruleImportField`), and the widening of a
+  trait's description. `use rule` keeps its live options, because a view
+  writes that field and the compiler must find it to load it. `define
+rule` had nothing extra. `define property` keeps its drawn getter and
+  setter: a world's own properties are `define property` rows under
+  `define world`, which the lessons teach, so it is still drawn. They were
+  deleted with the rest and put back. `use trait` keeps all of its own: a
+  camera is still declared in blocks, with `use trait` under `define
+camera`.
 
 The define blocks themselves stay: a rule's view is written in them, and the
 compiler reads the view, which loads them without drawing them.
