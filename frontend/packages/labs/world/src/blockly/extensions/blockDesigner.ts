@@ -1,11 +1,9 @@
-// `define block` and `define event` as blocks: what a rule's view holds for
-// each event and block it adds (specs/RULE_EDITOR_PLAN.md, step 7).
+// A designed member's signature (specs/RULE_EDITOR_PLAN.md, step 7).
 //
-// A member's design is data, made on its page (`actors/editor/MemberPage`),
-// and the view writes it back as one of these for the compiler to read: the
-// parts in `extraState`, the body in `DO`. Nothing draws one any more — a
-// rule is never a workspace to edit as a whole — so all a define block does
-// here is carry its parts through a load and a save.
+// A member's design is data, made on its page (`actors/editor/MemberPage`).
+// `define event` still loads where a world declares its events, and all it
+// does with its parts here is carry them through a load and a save. A
+// `define block` is a row of a view and no longer a block (`viewRows`).
 //
 // THE PARTS. A signature is an ordered list of labels and values, the same
 // shape Blockly's own `message0` has: `push %1 toward %2` is "label, param,
@@ -17,8 +15,6 @@ import {defineMutator} from '@code-dot-org/blockly';
 
 import {paramFlavour} from '../typedVariables';
 import type {ShadowSpec} from '../valueShadow';
-
-export const BLOCK_DESIGNER_MUTATOR = 'block_designer_mutator';
 
 /**
  * One piece of a block's signature: fixed wording, or a value it takes.
@@ -60,12 +56,6 @@ export type BlockPart =
 export interface BlockDesignState {
   parts: BlockPart[];
 }
-
-/** The row `RETURNS` sits on, so the row can be hidden with the field. */
-export const RETURNS_ROW = 'RETURNS_ROW';
-
-/** …and the row `DESCRIPTION` sits on, for the same reason. */
-export const DESCRIPTION_ROW = 'DESCRIPTION_ROW';
 
 /** A value socket's contents, as Blockly serializes them. */
 export interface SocketState {
@@ -173,7 +163,7 @@ export function bindParams(
   }
 }
 
-/** A define block's parts, carried through a load and a save. */
+/** A designed member's parts, carried through a load and a save. */
 interface Designer {
   parts_: BlockPart[];
   saveExtraState(): BlockDesignState;
@@ -194,10 +184,6 @@ const designer: Designer & ThisType<Blockly.Block & Designer> = {
     this.parts_ = parts.length ? parts : defaultParts();
   },
 };
-
-export const blockDesignerMutator = defineMutator(BLOCK_DESIGNER_MUTATOR, {
-  ...designer,
-});
 
 /** The name the event designer registers under. */
 export const EVENT_DESIGNER_MUTATOR = 'event_designer_mutator';

@@ -26,6 +26,7 @@ import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette} from '../domainBlocks';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
 import {workspaceViewOf} from '../rewriteWorkspaces';
+import {VIEW_ROWS} from '../viewRows';
 
 // Each actor and rule as the blocks it stands for: data names its rows'
 // types through its view (`workspaceViewOf`).
@@ -59,7 +60,11 @@ describe('the shipped project', () => {
       for (const type of typesIn(contents)) {
         // Ours, or Blockly's own (`controls_if`, `math_number`, …), which are
         // registered by importing blockly at all.
-        if (!palette.has(type) && !Blockly.Blocks[type]) {
+        if (
+          !palette.has(type) &&
+          !Blockly.Blocks[type] &&
+          !VIEW_ROWS.has(type)
+        ) {
           missing.push(`${path}: ${type}`);
         }
       }

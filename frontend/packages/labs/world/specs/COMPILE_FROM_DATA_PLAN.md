@@ -1,7 +1,7 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: IN PROGRESS, October 2026. Steps 0 to 4, 5a, 5b and 5c's first
-four are built.
+STATUS: BUILT, October 2026, but for 5c's steps 5 and 6, which are put off
+as a cleanup (below).
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -222,9 +222,16 @@ fixtures are written as rows and folded. In order, each its own commit:
    as a member, and drops a `define block` or `define event` it cannot read,
    so an actor's code never holds one. The stand-ins go with step 8: until
    the types are deleted they are defined, and no stand-in is made for them.
-8. The definitions go, with the tables and branches that name them. The
-   folds stay, for a file written in blocks and for the tutor, which
-   proposes rules in blocks.
+8. BUILT. The definitions go: `define rule`, `define trait`, `use rule`,
+   `use trait`, `during … do`, `when tick`, `define block` and `define
+choices`, with the `use rule` dropdown, the `use trait` dropdown and the
+   rule workspace's own traits it offered, the trait a block sat under, and
+   the roots, homes and surfaces that listed them. Their names stay as the
+   rows a view is written in (`viewRows`), which the folds read — for a
+   file written in blocks and for the tutor, which proposes rules in blocks
+   — and the walks over a project's blocks read. Nothing defines them, and
+   the stand-ins leave them alone. `define property`, `define event`, `each
+frame` and `define actor` stay.
 
 ## Open
 

@@ -103,7 +103,7 @@ describe('the block catalogue', () => {
     const out = source({});
 
     expect(out).toContain('Every block available in this project');
-    expect(out).toContain('world_use_trait');
+    expect(out).toContain('world_this_actor');
   });
 
   it('explains how to read a block sentence', () => {

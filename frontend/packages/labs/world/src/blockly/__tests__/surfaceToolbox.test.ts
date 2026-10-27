@@ -109,7 +109,10 @@ describe('what filtering must not break', () => {
 
   it('drops a drawer with nothing left in it', () => {
     const toolbox = [
-      category('Only Declarations', ['world_rule', 'world_rule_property']),
+      category('Only Declarations', [
+        'world_rule_event',
+        'world_rule_property',
+      ]),
       category('Something', ['world_add_trait']),
     ] as Toolbox;
 

@@ -25,13 +25,11 @@ describe('the file’s own definition', () => {
     },
   };
 
-  it('is the four definitions, and nothing else', () => {
+  it('is the three definitions, and nothing else', () => {
     expect(
-      ['world_actor', 'world_world', 'world_rule', 'world_map'].every(
-        isPinnedRoot,
-      ),
+      ['world_actor', 'world_world', 'world_map'].every(isPinnedRoot),
     ).toBe(true);
-    expect(isPinnedRoot('world_rule_trait')).toBe(false);
+    expect(isPinnedRoot('world_trait_step')).toBe(false);
   });
 
   it('cannot be moved or deleted, and a handler still can', () => {

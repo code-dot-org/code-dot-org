@@ -12,8 +12,8 @@
 // still generates code. What changes is what is offered where.
 //
 // BY BLOCK TYPE, NOT BY CATEGORY, because the declarations are scattered:
-// `define property` is offered under Actor, World AND Rule, and `define block`
-// under Actor and Rule. Filtering the Rule category alone would leave the
+// `define property` and `define event` are each offered under Actor, World
+// AND Rule. Filtering the Rule category alone would leave the
 // others behind, which is the mistake the first draft of the interface split
 // made in the serializer (`bodySurfaces`).
 
@@ -39,23 +39,14 @@ export type Surface = 'interface' | 'body' | 'drawing';
 /**
  * Blocks that say what a rule OFFERS.
  *
- * Every one of them is a declaration: it adds a property, a trait, an event, a
- * block or a step to the rule itself. None can appear inside an
+ * Every one of them is a declaration: it adds a property, an event or a step
+ * to whatever it is written in. None can appear inside an
  * implementation — a body is statements, and these are the things statements
  * get attached to.
  */
 const DECLARATIONS: ReadonlySet<string> = new Set([
-  'world_rule',
-  'world_use_rule',
-  'world_rule_trait',
-  'world_use_trait',
   'world_rule_property',
   'world_rule_event',
-  'world_rule_enum',
-  'world_rule_enum_option',
-  'world_rule_block',
-  'world_rule_step_tick',
-  'world_rule_step_in',
   'world_trait_step',
 ]);
 

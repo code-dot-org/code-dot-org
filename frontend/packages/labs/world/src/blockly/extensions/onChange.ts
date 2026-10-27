@@ -2,10 +2,11 @@
 //
 // `Block.setOnChange` sets ONE handler: the second caller silently replaces the
 // first. That is fine for a block with one extension and wrong for a block with
-// two, and we have both — `world_use_trait` carries `traitContextExtension`
-// (which warns when the block sits outside a rule) and `openSourceButtonExtension`
-// (which adds and removes the open button), and extensions apply in array order, so the
-// open button was quietly winning and the warning never updated after the first render.
+// two, and we have them: a block carrying `traitContextExtension` (which warns
+// when the block sits outside `define actor`) and `openSourceButtonExtension`
+// (which adds and removes the open button) — extensions apply in array order,
+// so the open button was quietly winning and the warning never updated after
+// the first render.
 //
 // Nothing failed loudly. A warning that does not appear looks exactly like a
 // block that is fine, which is why this went unnoticed: the bug is the absence

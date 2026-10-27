@@ -67,8 +67,6 @@ export const isMapKind = (kind: FileKind | undefined): boolean =>
 export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_actor', new Set<FileKind>(['actor'])],
   ['world_world', new Set<FileKind>(['world'])],
-  ['world_rule', new Set<FileKind>(['rule'])],
-  ['world_rule_trait', new Set<FileKind>(['rule'])],
   // …and an ACTOR file, where the same block declares a thing that HAPPENS to
   // that kind of actor rather than a member of a rule
   // (`ActorBuilder.defineEvent`).
@@ -79,7 +77,7 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // and a hundred drawers to hold them (specs/MAP_EVENTS_PLAN.md).
   //
   // This entry USED TO EXCLUDE a `.world`, "for the reason `define block`
-  // beside it is not: a world's own `define actor` generates into a block
+  // was not: a world's own `define actor` generates into a block
   // scope, and the declaration this emits is an `export const`." A world has
   // not been able to hold a `define actor` since every actor became a file —
   // see `DEFINING_ROOTS` below, which refuses one outright — so the block
@@ -93,16 +91,6 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // by name — so that a hundred maps raising one event is one declaration and
   // one handler (specs/MAP_EVENTS_PLAN.md).
   ['world_rule_event', new Set<FileKind>(['rule', 'actor', 'world'])],
-  // …and an ACTOR file, where the same block declares a thing that kind of
-  // actor does rather than a member of a rule (`ActorBuilder.defineAction`).
-  //
-  // STILL NOT A `.world`, and now for a reason that is true: nobody has asked
-  // for one. The old reason was the dead block scope above; a `define block`
-  // at a world file's top level would generate as happily as an actor's does,
-  // and what it would BE is a helper local to one program. That is a real
-  // thing and a separate question, and the day it is asked this line is one
-  // word (specs/MAP_EVENTS_PLAN.md).
-  ['world_rule_block', new Set<FileKind>(['rule', 'actor'])],
   // `acts like` names another ACTOR's module, so it belongs in the file that
   // defines one and nowhere else.
   //
@@ -112,10 +100,6 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   // has no actor definition for it to sit in, so the block was offered in a
   // file that could do nothing with it.
   ['world_acts_like', new Set<FileKind>(['actor'])],
-  ['world_rule_enum', new Set<FileKind>(['rule'])],
-  ['world_rule_enum_option', new Set<FileKind>(['rule'])],
-  ['world_rule_step_tick', new Set<FileKind>(['rule'])],
-  ['world_rule_step_in', new Set<FileKind>(['rule'])],
   // `each frame` reads two ways, and both are the same sentence about
   // whoever owns it: chained under a `define trait` it is one of that trait's
   // members; chained under an `.actor` file's `define actor` it is work that
@@ -166,7 +150,6 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
 const DEFINING_ROOTS: ReadonlyMap<string, string> = new Map([
   ['world_world', 'define world'],
   ['world_actor', 'define actor'],
-  ['world_rule', 'define rule'],
   ['world_map', 'define map'],
 ]);
 
@@ -200,9 +183,6 @@ export function moduleShape(
 ): ModuleShape {
   const kind = fileKindOf(path);
   if (!kind) {
-    if (topBlockTypes.includes('world_rule')) {
-      return 'rule';
-    }
     return topBlockTypes.includes('world_world') ? 'world' : 'actor';
   }
   for (const type of topBlockTypes) {

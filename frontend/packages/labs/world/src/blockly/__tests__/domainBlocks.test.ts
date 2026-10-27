@@ -25,8 +25,8 @@ import {setProjectMaps, setProjectRuleModules} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {forgetImageSizes, setProjectGrids} from '../spriteCells';
-import {setProjectRuleMeta, setProjectRules} from '../traitOptions';
 import {shadowFor, shadowsFor, VALUE_SHADOW_EXTENSION} from '../valueShadow';
+import {markCode} from '../workspaceRoots';
 
 // The domain blocks each carry a `world-lab` JavaScript generator. These test
 // them in isolation with fake `block`/`generator` objects — no rendered Blockly
@@ -238,15 +238,6 @@ describe('domain block generators', () => {
     expect(code).not.toContain('export default');
   });
 
-  it('world_use_trait references a built-in trait via WorldLab', () => {
-    expect(emit('world_use_trait', {TRAIT: 'CollidableTrait'})).toBe(
-      'actor.useTraits([WorldLab.CollidableTrait]);\n',
-    );
-    expect(emit('world_use_trait', {TRAIT: 'ControlledByArrowsTrait'})).toBe(
-      'actor.useTraits([WorldLab.ControlledByArrowsTrait]);\n',
-    );
-  });
-
   it('an actor’s own `each frame` declares a step on the kind', () => {
     // The behavior half of an actor's own properties: work a KIND does every
     // frame, with no rule to do it in (ActorBuilder.defineStep).
@@ -286,85 +277,6 @@ describe('domain block generators', () => {
     );
 
     expect(code).toBe('');
-  });
-
-  it('world_use_trait at "(none)" emits nothing', () => {
-    // Reachable in the ordinary way now: an actor in a project whose rules
-    // offer nothing electable, since the two traits every actor already has
-    // are no longer in the dropdown (blockly/foundation).
-    expect(emit('world_use_trait', {TRAIT: ''})).toBe('');
-  });
-
-  it('world_use_trait gives a CAMERA trait to a kind’s own camera', () => {
-    // A camera trait elected under `define actor` — which the palette offers
-    // only to a kind that shows a map — goes to the Viewport's main camera,
-    // so a Viewport can follow something without declaring a second camera
-    // (specs/SPACE_CAMERAS_PLAN.md, "simplifying"). A different builder call,
-    // decided by the trait's own subject in the rules in play.
-    const CHASE_RULE = parseRuleMeta(
-      'rules/chase',
-      JSON.stringify({
-        blocks: {
-          blocks: [
-            {type: 'world_rule', fields: {NAME: 'Chasing'}},
-            {
-              type: 'world_rule_trait',
-              fields: {NAME: 'Chases', SUBJECT: 'camera'},
-            },
-          ],
-        },
-      }),
-    )!;
-    registerProjectRules([PROJECT_RULE, CHASE_RULE]);
-    setProjectRuleMeta([CHASE_RULE]);
-    setProjectRules(['rules/chase']);
-    try {
-      const defs: Record<string, string> = {};
-      const code = generatorFor('world_use_trait')(
-        {getFieldValue: () => 'Chasing#ChasesTrait'} as never,
-        {definitions_: defs} as never,
-        {} as never,
-      );
-      expect(code).toBe('actor.useCameraTraits([Chasing_ChasesTrait]);\n');
-      expect(defs['named:rules/chase:ChasesTrait']).toBe(
-        'import {ChasesTrait as Chasing_ChasesTrait} from "rules/chase";',
-      );
-    } finally {
-      registerProjectRules([PROJECT_RULE]);
-      setProjectRuleMeta([]);
-      setProjectRules([]);
-    }
-  });
-
-  it('world_use_trait imports a project trait from the rule it names', () => {
-    const defs: Record<string, string> = {};
-    const code = generatorFor('world_use_trait')(
-      {getFieldValue: () => 'Has Wind#WindblownTrait'} as never,
-      {definitions_: defs} as never,
-      {} as never,
-    );
-    expect(code).toBe('actor.useTraits([HasWind_WindblownTrait]);\n');
-    expect(defs['named:rules/wind:WindblownTrait']).toBe(
-      'import {WindblownTrait as HasWind_WindblownTrait} from "rules/wind";',
-    );
-  });
-
-  it('world_use_trait emits nothing for a rule the project has not got', () => {
-    // A dead reference, which is a thing a project can hold now that removing
-    // a rule deletes its file. Emitting it would import a module that is not
-    // there — `cannot resolve 'rules/gravity' from 'actors/player.actor'` —
-    // and stop the WHOLE project compiling over one row in one actor. So the
-    // row does nothing, the rest of the game runs, and the block says why
-    // (extensions/missingRule).
-    const defs: Record<string, string> = {};
-    const code = generatorFor('world_use_trait')(
-      {getFieldValue: () => 'Ghost#HauntedTrait'} as never,
-      {definitions_: defs} as never,
-      {} as never,
-    );
-
-    expect(code).toBe('');
-    expect(defs).toEqual({});
   });
 
   it('world_set_position reads a Vector from the x/y value sockets', () => {
@@ -964,8 +876,6 @@ describe('domain block generators', () => {
     // whatever the project holds, and trimming a shared prefix it does not have
     // costs nothing.
     const live = [
-      ['world_use_trait', 'TRAIT'],
-      ['world_use_rule', 'RULE'],
       ['world_add_actor', 'ACTOR'],
       ['world_load_map', 'MAP'],
     ] as const;
@@ -2172,44 +2082,6 @@ describe('world block generators', () => {
     expect(defs['world_lab']).toBe(`import * as WorldLab from 'world-lab';`);
   });
 
-  it('world_use_rule adds a built-in rule by name, as its world-lab export', () => {
-    // The dropdown no longer OFFERS the engine's two rules — every world has
-    // them already (blockly/foundation) — but a saved block naming one keeps
-    // its value, and still means exactly this.
-    expect(run('world_use_rule', {RULE: 'Space'}, {}, '')).toBe(
-      'world.useRules([WorldLab.SpatialRule]);\n',
-    );
-  });
-
-  it('world_use_rule at "(none)" emits nothing', () => {
-    // A project holding no rules at all: the dropdown's only real row is
-    // "(none)", and the alternative here is `WorldLab.` with no name after it,
-    // which is a syntax error rather than a missing rule.
-    expect(run('world_use_rule', {RULE: ''}, {}, '')).toBe('');
-  });
-
-  it('world_use_rule imports a project rule from wherever its name lives', () => {
-    // The field says "Has Wind"; which file that is comes from the registry,
-    // and is the only place in the generated module a path appears at all.
-    const defs: Record<string, string> = {};
-    expect(run('world_use_rule', {RULE: 'Has Wind'}, defs, '')).toBe(
-      'world.useRules([RulesWind]);\n',
-    );
-    expect(defs['mod:rules/wind']).toBe('import RulesWind from "rules/wind";');
-  });
-
-  it('world_use_rule treats an unknown value as a module — a `.js` rule', () => {
-    // A hand-written rule declares no name to be found by, so it is referred to
-    // by its file and imported from exactly there.
-    const defs: Record<string, string> = {};
-    expect(run('world_use_rule', {RULE: 'rules/animation'}, defs, '')).toBe(
-      'world.useRules([RulesAnimation]);\n',
-    );
-    expect(defs['mod:rules/animation']).toBe(
-      'import RulesAnimation from "rules/animation";',
-    );
-  });
-
   it('world_add_effect imports the .effect as data and applies it', () => {
     // The path is passed alongside the document because it is the effect's
     // identity: the driver registers one shader render node per path, so the
@@ -2721,34 +2593,6 @@ describe('world block generators', () => {
 describe('world_load_map generator', () => {
   afterEach(() => setProjectMaps({}));
 
-  it('names an actor and a rule apart when they share a file name', () => {
-    // THE BUG THIS PINS. An import name was the last path segment, so a
-    // project holding `actors/healthBar` and `rules/healthBar` — which is
-    // exactly what importing the stock Health Bar gives you — emitted two
-    // imports called `HealthBar` and would not compile: "The symbol HealthBar
-    // has already been declared". Any actor and rule sharing a name did it.
-    setProjectMaps({'maps/level1': ['actors/healthBar']});
-    const defs: Record<string, string> = {};
-    const placed = generatorFor('world_load_map')(
-      {getFieldValue: () => 'maps/level1'} as never,
-      {definitions_: defs, statementToCode: () => ''} as never,
-      {} as never,
-    ) as string;
-    const used = generatorFor('world_use_rule')(
-      {getFieldValue: () => 'rules/healthBar'} as never,
-      {definitions_: defs} as never,
-      {} as never,
-    ) as string;
-
-    expect(placed).toContain('ActorsHealthBar');
-    expect(used).toContain('RulesHealthBar');
-    // …and both imports survive, because they are two names rather than one.
-    const bindings = Object.values(defs)
-      .map(line => /^import (\w+) /.exec(line)?.[1])
-      .filter(Boolean);
-    expect(new Set(bindings).size).toBe(bindings.length);
-  });
-
   it('imports+defines each actor the map places, then loads it', () => {
     setProjectMaps({'maps/level1': ['actors/player', 'actors/coin']});
     const defs: Record<string, string> = {};
@@ -2949,12 +2793,7 @@ describe('buildDomainPalette (project rule blocks)', () => {
 });
 
 describe('rule authoring blocks (`.rule` files)', () => {
-  const AUTHORING = [
-    'world_rule',
-    'world_rule_trait',
-    'world_rule_property',
-    'world_rule_event',
-  ];
+  const AUTHORING = ['world_rule_property', 'world_rule_event'];
 
   it('registers the declaration blocks with no-op generators', () => {
     for (const type of AUTHORING) {
@@ -2976,10 +2815,6 @@ describe('rule authoring blocks (`.rule` files)', () => {
       'world_return',
       'world_step_delta',
     ]);
-  });
-
-  it('is a root block type (owns its declaration chain)', () => {
-    expect(ROOT_BLOCK_TYPES.has('world_rule')).toBe(true);
   });
 });
 
@@ -3045,10 +2880,6 @@ describe('builder-context warnings', () => {
       DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>
     ).find(c => c.name === 'Actor')?.blocks;
     expect(actor).toContain('variables_get_Actor');
-  });
-
-  it('guards `use trait`, whose `useTraits` is builder-only', () => {
-    expect(extensionsOf('world_use_trait')).toContain(TRAIT_CONTEXT_EXTENSION);
   });
 
   it('guards `remove effect`, which needs a live actor', () => {
@@ -3197,8 +3028,12 @@ describe('what an actor list’s source socket wears', () => {
     // Not a preference: a rule is generic over the actors that elect its
     // traits, and the dropdown there would offer a rule author precisely the
     // thing they must not name (specs/ACTOR_LISTS.md).
+    // A rule's body is in a workspace marked as a rule's (`markCode`).
+    const rule = {getTopBlocks: () => []};
+    markCode(rule as never, 'rule');
     for (const type of LIST_BLOCKS) {
-      expect(sourceShadow(type, 'world_rule')).toEqual({
+      const entry = shadowsFor(type)?.find(s => s.name === 'SOURCE');
+      expect(shadowFor(entry!.shadow, {workspace: rule} as never)).toEqual({
         type: 'world_all_actors',
       });
     }

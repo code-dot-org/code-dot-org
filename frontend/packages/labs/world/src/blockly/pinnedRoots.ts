@@ -19,7 +19,6 @@ import type {Blockly} from '@code-dot-org/blockly';
 export const PINNED_ROOTS: ReadonlySet<string> = new Set([
   'world_actor',
   'world_world',
-  'world_rule',
   'world_map',
 ]);
 

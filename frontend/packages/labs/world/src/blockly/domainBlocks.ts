@@ -58,7 +58,7 @@ import {cameraIdFromValue, cameraOptions} from './cameras';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
 import {END_ROW, ROW_PART, settledParts} from './designParts';
-import {editingActorModule, editingRuleFor} from './editingRule';
+import {editingActorModule} from './editingRule';
 import {
   allEnums,
   BUTTON_ENUM,
@@ -99,14 +99,10 @@ import {
   spriteImportFieldExtension,
 } from './extensions/appearanceImportField';
 import {
-  DESCRIPTION_ROW,
-  RETURNS_ROW,
-  blockDesignerMutator,
   eventDesignerMutator,
   shadowed,
   type SocketState,
 } from './extensions/blockDesigner';
-import {blockVisibilityExtension} from './extensions/blockVisibility';
 import {bodyButtonExtension} from './extensions/bodyButton';
 import {bodySurfaceExtension} from './extensions/bodyOwner';
 import {drawingContextExtension} from './extensions/drawingContext';
@@ -197,7 +193,6 @@ import {
   projectStylePaths,
   projectMapPaths,
   NONE_VALUE,
-  orNone,
   placementOptions,
   placementOptionsExtension,
   ruleModuleOptions,
@@ -233,22 +228,17 @@ import {
   memberLocalName,
   pathSlug,
   refResolves,
-  ruleLocation,
 } from './ruleRegistry';
 import {measuredImages, parseSpriteRef, spriteCell} from './spriteCells';
 import {stepHead} from './stepHead';
 import {TOOLBOX_HEADING, toolboxHeading} from './toolboxStyle';
 import {
-  projectRuleIdentities,
   actorTraitOptions,
   actorTraitOptionsExtension,
   anyTraitOptions,
   anyTraitOptionsExtension,
   cameraTraitOptions,
   cameraTraitOptionsExtension,
-  traitOptions,
-  traitOptionsExtension,
-  traitSubjectOfValue,
 } from './traitOptions';
 import {
   DEFINE_TWEEN,
@@ -587,69 +577,6 @@ const worldActor = defineBlock({
       // by the generator's assembly step (BlocklyGenerator), not here — events
       // are their own top-level blocks, so this block only builds the actor.
       return `const actor = ${built};\n` + nextChainCode(block, generator);
-    },
-  },
-});
-
-const worldUseTrait = defineBlock({
-  type: 'world_use_trait',
-  message0: 'use trait %1',
-  // The options are the traits in play — those a rule the project's worlds attach
-  // provides (populated live by the extension); the value is the trait's export.
-  args0: [{type: 'field_dropdown', name: 'TRAIT', options: traitOptions}],
-  previousStatement: true,
-  nextStatement: true,
-  // `useTraits` is a builder method, so this belongs under `define actor` — or
-  // inside `define trait`, where it declares that trait's own dependencies and
-  // is read statically rather than generated. In an event handler `actor` is
-  // the live instance and the call would throw; the extension warns in the
-  // editor instead.
-  extensions: [
-    traitOptionsExtension,
-    traitContextExtension,
-    openSourceButtonExtension,
-    // …and the way back to the lesson it was met in
-    // (extensions/lessonButton).
-    lessonButtonExtension,
-    // …and, when the rule that declares this trait has been deleted, a warning
-    // saying so — since the generator's answer to that is to write nothing.
-    missingRuleExtension,
-    // …and what the chosen trait is for, after what the block does.
-    traitTooltipExtension,
-  ],
-  style: 'behavior_blocks',
-  tooltip: 'Give the actor a trait (its properties and behavior).',
-  generator: {
-    javascript(block, generator) {
-      const trait = block.getFieldValue('TRAIT');
-      // "(none)" — the rules in play offer nothing electable, which is the
-      // ordinary state of a project with no rules now that the two traits every
-      // actor already has are not offered. Same bargain `use rule` makes: an
-      // unfinished block emits nothing rather than `WorldLab.` with no name
-      // after it, which does not parse.
-      if (!trait) {
-        return '';
-      }
-      const ref = refFromValue(trait);
-      // A trait whose RULE the project no longer has — deleted from the rules
-      // panel, or a file removed by hand. Emitting it would import a module
-      // that is not there and stop the whole project compiling, over one row
-      // in one actor; so nothing is written, the actor goes without that trait,
-      // and the block wears a warning saying which rule is missing
-      // (extensions/missingRule, ruleRegistry.refResolves).
-      if (!refResolves(ref)) {
-        return '';
-      }
-      // A CAMERA TRAIT ON A KIND THAT SHOWS A MAP goes to the Viewport's own
-      // main camera, so a Viewport can follow something without declaring a
-      // second camera and looking through it (specs/SPACE_CAMERAS_PLAN.md,
-      // "simplifying"). The palette offers such a trait only there; a saved
-      // file may still hold one elsewhere, and the engine gives a kind with no
-      // space nothing to forward it to.
-      if (traitSubjectOfValue(trait) === 'camera') {
-        return `actor.useCameraTraits([${refCode(ref, generator)}]);\n`;
-      }
-      return `actor.useTraits([${refCode(ref, generator)}]);\n`;
     },
   },
 });
@@ -1947,14 +1874,6 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   // than does, and a chained one would be an orphan at the top level.
   'world_define_tween',
   'world_world',
-  'world_rule',
-  // A trait is a definition root too — its members chain below it, beside the
-  // rule rather than inside it. So is each step: its body chains below it.
-  'world_rule_trait',
-  'world_rule_step_tick',
-  'world_rule_step_in',
-  // …and a set of choices, whose options chain below it.
-  'world_rule_enum',
   // A map's own hats (specs/MAP_FIRST.md): the body chains below them.
   'world_on_map_loads',
   'world_on_map_unloads',
@@ -7147,25 +7066,10 @@ const worldLoadMap = defineBlock({
 
 // ── World composition ────────────────────────────────────────────────────────
 // A `.world` file is authored with `world_world` (the root, like `world_actor`)
-// and `world_use_rule` / `world_use_animations` / `world_load_map` children —
-// the rules in play, the animation files to register, and the actors placed.
+// and `world_use_animations` / `world_load_map` children — the animation files
+// to register, and the actors placed.
 // Each body block targets the `const world` the root binds, mirroring the actor
 // pattern.
-
-/**
- * A row's code, or nothing: lifted into the world block's prologue when the
- * row is being generated under `define world`, which is when it has to
- * precede the main map's placements (see `world_world`). Anywhere else the
- * code is returned as it is.
- */
-const hoistedInWorld = (generator: unknown, code: string): string => {
-  const hoist = (generator as {__worldHoist?: string[]}).__worldHoist;
-  if (!hoist) {
-    return code;
-  }
-  hoist.push(code);
-  return '';
-};
 
 const worldWorld = defineBlock({
   type: 'world_world',
@@ -7195,10 +7099,8 @@ const worldWorld = defineBlock({
       // as it is generated, into this list, and emitted with the prologue
       // below. The main map is loaded between the prologue and the body
       // (specs/MAP_BEFORE_ROWS_PLAN.md), so the first placement is no longer
-      // wherever the first `add actor` row sits: it is before every row. A
-      // `use rule` row is the one such row there is — `WorldBuilder` refuses
-      // a rule once an actor exists — and a world does not need one, but a
-      // world may have one. Layers are lifted the same way, by `layerPlan`.
+      // wherever the first `add actor` row sits: it is before every row.
+      // Layers are lifted the same way, by `layerPlan`.
       const hoisted: string[] = [];
       (generator as {__worldHoist?: string[]}).__worldHoist = hoisted;
       const body = nextChainCode(block, generator);
@@ -7256,8 +7158,7 @@ export function worldModulePrologue(
   // EVERY `.rule` THE PROJECT HOLDS, in play. Exactly the argument the
   // animations below have always made — a file is not a thing a world opts
   // into, it is a thing the project HAS — and it took a while to see that
-  // rules are the same. This was the foundational ones only; the rest had
-  // to be named in a `use rule`.
+  // rules are the same.
   //
   // What makes it safe is that a rule with no elected trait does nothing.
   // Every one of them either steps per actor holding its trait or filters
@@ -7272,9 +7173,7 @@ export function worldModulePrologue(
   // WORLD had not also been told — was the shape of the language's worst
   // half-hour. Holding the file is now the whole of it.
   //
-  // Delete the file and nothing is emitted. Name it in a `use rule` as
-  // well and it is the same module, so the world has it once — which is
-  // what keeps the rows in projects saved before this harmless.
+  // Delete the file and nothing is emitted.
   const rules = ruleModuleOptions()
     .map(([, modulePath]) => modulePath)
     .filter(modulePath => modulePath)
@@ -7535,121 +7434,6 @@ const worldInShownMap = defineBlock({
         `if (world.enterShown(${viewport})) {\n` +
         `  try {\n${generator.prefixLines(body, generator.INDENT)}` +
         `  } finally {\n    world.leave();\n  }\n}\n`
-      );
-    },
-  },
-});
-
-// The `use rule` dropdown offers the project's own rule modules (under
-// `rules/`), valued by module path — the generator branches on the `/` a path
-// carries, importing the module rather than reading `WorldLab`.
-//
-// WHAT THIS BLOCK IS FOR, now that a world runs every rule the project holds:
-// a RULE's dependency. "Drives with Arrow Keys" requires Physics, and that is a
-// statement about the rule, true wherever it is used and false to leave out. It
-// is offered under Rule and nowhere else; a world with one still loads and the
-// row still resolves to the same module, so the world has it once.
-//
-// THE ENGINE'S OWN TWO ARE NOT OFFERED. `WorldBuilder` seeds Space and
-// Appearance into every world it builds (`rulesInPlay`), so requiring either is
-// a tautology. A project rule DECLARING one is offered, and the eject case is
-// why: naming it is what makes `rulesInPlay` prefer the learner's version over
-// the built-in it shadows, so taking the row away would mean the shadow could
-// never come into play.
-//
-// Labelled by the rule's ABILITY, not its name: "requires Has Gravity" is the
-// sentence. The category in the toolbox says the other half — "Gravity", the
-// thing you open and edit.
-/**
- * The rules this one may require, plus a way to get more.
- *
- * `(import…)` is listed last and copies a stock rule into the project — the
- * same affordance the effect dropdown has, and the only way to reach gravity
- * now that it is not built in. Offered even when the project already has rules:
- * wanting a second one is the normal case.
- *
- * And never as the ONLY row, which is what `orNone` is doing here: with the
- * built-ins gone this list can be empty, a fresh block takes the first option
- * as its value, and a block that silently became "open the import dialog" is
- * not a block.
- */
-const useRuleOptions = (field?: FieldDropdown): Array<[string, string]> => {
-  const identities = projectRuleIdentities();
-  // Not the rule this workspace IS: a rule that uses itself generates a module
-  // that imports its own default export, and the project stops before it starts.
-  const own = editingRuleFor(field);
-  return [
-    ...orNone(
-      ruleModuleOptions()
-        .filter(([, modulePath]) => modulePath !== own)
-        .map(([fileLabel, modulePath]): [string, string] => {
-          // A parsed `.rule` says what it is and what it gives, and is referred
-          // to by that name from then on, wherever its file ends up. A `.js`
-          // rule declares neither, so it is named by its module — as is a
-          // `.rule` the editor could not parse, which still has to be pickable
-          // mid-edit.
-          const identity = identities.get(modulePath);
-          return identity
-            ? [identity.ability, identity.name]
-            : [fileLabel, modulePath];
-        }),
-    ),
-  ];
-};
-const useRuleOptionsExtension = liveDropdown(
-  'world_use_rule_options',
-  'RULE',
-  useRuleOptions,
-);
-
-const worldUseRule = defineBlock({
-  type: 'world_use_rule',
-  message0: 'use rule %1',
-  args0: [{type: 'field_dropdown', name: 'RULE', options: useRuleOptions}],
-  previousStatement: true,
-  nextStatement: true,
-  // Live options, so a load keeps a rule's name the menu had not heard of.
-  // Nothing draws one: what a rule uses is its data, chosen on its view.
-  extensions: [useRuleOptionsExtension],
-  style: 'behavior_blocks',
-  tooltip: 'A rule this rule uses: chosen in the Rule Editor.',
-  generator: {
-    javascript(block, generator) {
-      const rule = block.getFieldValue('RULE');
-      // "(none)" — a project with no rules yet. An unfinished block emits
-      // nothing, rather than the `WorldLab.` below with no name after it, which
-      // does not parse and would take the whole module down with it.
-      if (!rule) {
-        return '';
-      }
-      // The field holds a rule's NAME. Where that rule lives is looked up here
-      // and nowhere else: a built-in reads `WorldLab`, a project `.rule` is
-      // imported from whatever module currently declares that name. A value the
-      // registry doesn't know is a module path — a `.js` rule names nothing, so
-      // it can only be referred to by its file.
-      const located = ruleLocation(rule);
-      const modulePath =
-        located?.source === 'project'
-          ? located.modulePath
-          : located
-            ? undefined
-            : rule;
-      if (modulePath) {
-        addImport(
-          generator,
-          `mod:${modulePath}`,
-          `import ${importVar(modulePath)} from ${str(modulePath)};`,
-        );
-        return hoistedInWorld(
-          generator,
-          `world.useRules([${importVar(modulePath)}]);\n`,
-        );
-      }
-      const exportName =
-        located?.source === 'builtin' ? located.exportName : rule;
-      return hoistedInWorld(
-        generator,
-        `world.useRules([WorldLab.${exportName}]);\n`,
       );
     },
   },
@@ -8164,33 +7948,6 @@ const PROPERTY_TYPE_OPTIONS: Array<[string, string]> = [
   ['vectors', 'vectors'],
 ];
 
-// A query reports one value; `point` (two scalars) isn't a single report, so it
-// is omitted — a whole `vector` covers 2D.
-const QUERY_RETURN_TYPE_OPTIONS: Array<[string, string]> = [
-  ['number', 'number'],
-  ['boolean', 'boolean'],
-  ['string', 'string'],
-  ['vector', 'vector'],
-];
-
-const worldRule = defineBlock({
-  type: 'world_rule',
-  // Two names, because a rule reads two ways round. NAME is what it IS
-  // ("Gravity") — its toolbox category, and how everything refers to it. ABILITY
-  // is what using it GIVES a world ("Has Gravity"), which is what `use rule`
-  // shows, because that block is a sentence about the world.
-  message0: 'define rule %1 which adds ability %2',
-  args0: [
-    {type: 'field_input', name: 'NAME', text: 'My Rule'},
-    {type: 'field_input', name: 'ABILITY', text: 'Has My Rule'},
-  ],
-  // A definition root: no previous connection; its declarations chain below.
-  nextStatement: true,
-  style: 'setup_blocks',
-  tooltip: 'A rule: made in the Rule Editor.',
-  generator: noGenerator,
-});
-
 /**
  * `define map ⟨Write⟩` — the root a map's workspace never had.
  *
@@ -8227,55 +7984,6 @@ const worldMap = defineBlock({
   generator: noGenerator,
 });
 
-// A trait is a DEFINITION, like the rule itself, so it is a top block: it sits
-// beside `define rule` in the workspace rather than chained inside it, and its
-// members chain below it the same way the rule's do.
-//
-// It reads better and it scales. A rule with three traits used to be one tower
-// with three `do` mouths nested in it, and every member of every trait was
-// indented inside that. Now each trait is its own stack a learner can move,
-// collapse and read on its own — which is what they are: separate things an
-// actor may take, belonging to one rule.
-//
-// The rule it belongs to is the one defined in the SAME FILE. A `.rule` declares
-// exactly one rule, so there is nothing to disambiguate and nothing to wire up.
-const worldRuleTrait = defineBlock({
-  type: 'world_rule_trait',
-  message0: 'define trait %1 for %2',
-  args0: [
-    {type: 'field_input', name: 'NAME', text: 'My Trait'},
-    // What elects it. A FIELD rather than a second declaration block: the
-    // subject is which kind of thing a trait's members belong to, and this
-    // project already models that as a member's SCOPE, derived from where it
-    // was declared. `world_rule_block` took the same road — one block with a
-    // field, rather than one block per kind.
-    //
-    // Defaults to `actor`, so every trait that exists reads and behaves
-    // unchanged, and so does every trait saved before the field existed.
-    {
-      type: 'field_dropdown',
-      name: 'SUBJECT',
-      options: [
-        ['an actor', 'actor'],
-        ['a camera', 'camera'],
-      ],
-    },
-  ],
-  // What it is FOR, in one line: the tooltip wherever the trait is chosen —
-  // a camera's checkbox, an actor's `use trait` — as `define block`'s
-  // description is the tooltip of the block it defines. A row of its own,
-  // because it is a sentence.
-  message1: 'description %1',
-  args1: [
-    {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
-  ],
-  // A definition root: no previous connection; its declarations chain below.
-  nextStatement: true,
-  style: 'setup_blocks',
-  tooltip: 'A trait of a rule: made in the Rule Editor.',
-  generator: noGenerator,
-});
-
 // The names the pieces of a `define property` go by. `ACCESS` used to be a
 // dropdown reading "property" / "read-only property"; it is the eye now, and
 // keeps the name and both of its values so that every `.rule` and `.actor`
@@ -8305,20 +8013,12 @@ const SET_PREVIEW_FIELD = 'SET_PREVIEW';
 /**
  * What the block is a property OF, read from where it sits.
  *
- * Placement decides it, exactly as it decides what `parseRuleMeta` and
- * `ownProperties` make of the same block: chained under a `define trait` it
- * belongs to whatever that trait elects, and at the top of a rule, an actor or
- * a world file it belongs to the file.
+ * Placement decides it, exactly as it decides what `ownProperties` makes of
+ * the same block: an `.actor` file's own property is that kind of actor's,
+ * and a world's own is the world's.
  */
-const propertyScopeOf = (block: Block): MemberScope => {
-  const root = block.getRootBlock();
-  if (root?.type === 'world_rule_trait') {
-    return root.getFieldValue('SUBJECT') === 'camera' ? 'camera' : 'actor';
-  }
-  // An `.actor` file's own property is that kind of actor's; a `.world` file's
-  // own and a rule's own are the world's.
-  return root?.type === 'world_actor' ? 'actor' : 'world';
-};
+const propertyScopeOf = (block: Block): MemberScope =>
+  block.getRootBlock()?.type === 'world_actor' ? 'actor' : 'world';
 
 /** The property a `define property` block currently describes. */
 const propertyOn = (block: Block): PropertyShapeInput => {
@@ -8778,47 +8478,6 @@ const worldRuleEvent = defineBlock({
   },
 });
 
-/**
- * `define choices` — a named set of string choices this rule declares
- * (specs/ENUMS.md).
- *
- * A definition ROOT, beside `define trait` and the step hats rather than
- * chained under the rule: its options stack below it, and a rule with three
- * sets of choices reads as three lists rather than one long column.
- *
- * What it buys is at the edit surface. A parameter typed by these choices is a
- * dropdown of them, and an event argument typed by them is a filter. Nothing
- * of it survives into generated code: the value is the string.
- */
-const worldRuleEnum = defineBlock({
-  type: 'world_rule_enum',
-  message0: 'define choices %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'Colors'}],
-  nextStatement: true,
-  style: 'setup_blocks',
-  tooltip:
-    'Define a named set of choices. A block input typed by them is a dropdown ' +
-    'of these words; an event argument typed by them filters on one.',
-  generator: noGenerator,
-});
-
-/**
- * One choice. The word IS the value — what a learner reads and what the block
- * emits are the same string, which is what makes a set of choices something
- * they can reason about without a table of translations. (The engine's `Key`
- * differs there, and can: it is naming keys the browser already named.)
- */
-const worldRuleEnumOption = defineBlock({
-  type: 'world_rule_enum_option',
-  message0: 'option %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'red'}],
-  previousStatement: true,
-  nextStatement: true,
-  style: 'text_blocks',
-  tooltip: 'One of the choices. The word is the value.',
-  generator: noGenerator,
-});
-
 // ── The blocks a signature is written in ─────────────────────────────────────
 // A stack of these IS the signature, read left-to-right as top-to-bottom: a
 // `text` adds wording, a `let` or an `argument` adds an input, reordering the
@@ -8878,106 +8537,6 @@ function wideTextExtension(fieldName: string): Extension {
   });
 }
 
-// The generalized member: one block that defines any block a rule adds.
-//
-// `RETURNS` says whether it is an action ("does something") or a query, and
-// what a query reports — a distinction that was once two separate blocks, made
-// by a dropdown instead, because everything else about them is identical.
-//
-// Its signature lives in the designer mutator (blockDesigner), which renders it
-// above the body exactly as the call site will read.
-const BLOCK_RETURNS_OPTIONS: Array<[string, string]> = [
-  ['does something', 'none'],
-  ...QUERY_RETURN_TYPE_OPTIONS.map(
-    ([label, value]) => [`reports a ${label}`, value] as [string, string],
-  ),
-];
-
-const worldRuleBlock = defineBlock({
-  type: 'world_rule_block',
-  // What a rule's view holds for each block it adds, for the compiler: the
-  // parts, what the block is for, what it reports and whether others see it,
-  // and what it does. Nothing draws one (`extensions/blockDesigner`).
-  message0: 'define block',
-  args0: [],
-  message1: 'description %1 %2',
-  args1: [
-    {type: 'field_input', name: 'DESCRIPTION', text: '', spellcheck: true},
-    {type: 'input_dummy', name: DESCRIPTION_ROW},
-  ],
-  message2: 'returns %1 %2',
-  args2: [
-    {type: 'field_dropdown', name: 'RETURNS', options: BLOCK_RETURNS_OPTIONS},
-    {type: 'input_dummy', name: RETURNS_ROW},
-  ],
-  message3: 'do %1',
-  args3: [{type: 'input_statement', name: 'DO'}],
-  previousStatement: true,
-  nextStatement: true,
-  mutator: blockDesignerMutator,
-  // The eye is the `ACCESS` field, which a view writes and a load must find.
-  extensions: [blockVisibilityExtension],
-  style: 'setup_blocks',
-  tooltip: 'A block this rule adds: made in the Rule Editor.',
-  generator: {
-    javascript(block, generator) {
-      // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `each frame`
-      // makes in its three homes (`worldTraitStep`).
-      //
-      // In a `.rule` this is a DECLARATION and nothing more:
-      // the module is assembled from the file's data and the body is
-      // compiled alone (`rules/ruleBodies`), so generating anything here
-      // would write it twice.
-      //
-      // In an `.actor` file there is no metadata pass to write it, so this is
-      // the whole declaration. `defineAction` is the third of the same bargain
-      // `defineProperty` and `defineStep` make: state a kind carries, work it
-      // does every frame, and a named thing it does (ActorBuilder).
-      if (!definesActorFile(block)) {
-        return '';
-      }
-      // The statement form only. A block that says it REPORTS something wants
-      // `defineQuery` and a `return`, which is the next piece of work; the
-      // block says so on its own face rather than quietly doing nothing
-      // (`actorBlockStatementOnly`).
-      const returns = block.getFieldValue('RETURNS');
-      if (returns && returns !== 'none') {
-        return '';
-      }
-      const parts = (
-        block as unknown as {
-          saveExtraState?: () => {
-            parts?: Array<{kind?: string; text?: string; var?: string}>;
-          };
-        }
-      ).saveExtraState?.()?.parts;
-      const name = designedName(parts);
-      if (!name) {
-        return ''; // a block with no words on it names nothing
-      }
-      // The mutator stores each parameter's VARIABLE ID; the body's getters
-      // resolve those to safe identifiers, so the closure's signature has to
-      // resolve them the same way or the two disagree.
-      const params = (parts ?? [])
-        .filter(part => part.kind === 'param')
-        .map(part => generator.getVariableName(part.var ?? ''));
-      const body = generator.statementToCode(block, 'DO');
-      // The closure's `actor` SHADOWS the module's builder, as a step's does:
-      // a body written in an actor file says `this actor` and means this one,
-      // and `this actor` compiles to `actor` wherever it is written.
-      //
-      // `world` is bound from the actor because a body may well ask the world
-      // something, and the engine hands an action `(actor, …args)` — the same
-      // preamble a rule's actor-scoped action gets (`ruleMetaToModule`).
-      return (
-        `export const ${pascal(name)}Action = actor.defineAction(` +
-        `${str(slug(name))}, (${['actor', ...params].join(', ')}) => {\n` +
-        `  const world = actor.world;\n${body}}, {name: ${str(name)}});\n`
-      );
-    },
-  },
-});
-
 /**
  * Whether this block is chained under a `define actor`.
  *
@@ -9029,60 +8588,6 @@ const worldReturn = defineBlock({
 // point for physics: gravity's step runs BEFORE Motion integrates. Read
 // statically for its ordering + as an anchor target; its body is generated like
 // an action's (so it carries no generator here).
-
-// A step is a per-tick EVENT the rule handles, so it is an event hat: a top
-// block with its body chained below, like `when this actor …` in an actor file.
-//
-// Three blocks rather than one with an order dropdown. The ordering is not a
-// setting on a step, it is what KIND of step it is — "run before Motion moves
-// things" and "run every tick, whenever" are different statements about when
-// behavior happens, and a dropdown that changes whether a second dropdown is
-// even meaningful (which is what the old block needed `stepOrder` for, to hide
-// the anchor when unordered) is a shape hiding two blocks in one.
-//
-// `before Motion ▸ reposition do applyVelocity` reads as the sentence it is.
-
-/** The shared shape: a name, a body chained below, no previous connection. */
-const stepBlock = (
-  type: string,
-  message0: string,
-  args0: BlockArgDefinition[],
-  tooltip: string,
-  extensions: Extension[] = [],
-) =>
-  defineBlock({
-    type,
-    message0,
-    args0,
-    // The body's socket: a member chains through `next`, so the body needs
-    // somewhere else to be. A step's page writes it (`rules/ruleSteps`).
-    message1: 'do %1',
-    args1: [{type: 'input_statement', name: 'DO'}],
-    previousStatement: true,
-    nextStatement: true,
-    extensions,
-    style: 'event_blocks',
-    tooltip,
-    generator: noGenerator,
-  });
-
-const nameArg: BlockArgDefinition = {
-  type: 'field_input',
-  name: 'NAME',
-  text: 'each tick',
-};
-// Naming the MOMENT rather than a neighbor. What the other three cannot say:
-// gravity is a force, and saying so should not require knowing that Physics
-// exists (engine/core/phases). Rule-level, so it is offered every moment —
-// the work that fits no single actor lives here.
-const worldRuleStepIn = stepBlock(
-  'world_rule_step_in',
-  'during %1 do %2',
-  [{type: 'field_dropdown', name: 'PHASE', options: phaseOptions}, nameArg],
-  'Run this every tick, in a named part of the frame — “this is a force”, ' +
-    'rather than “this runs before that other rule’s step”.',
-  [phaseOptionsExtension],
-);
 
 // A step that belongs to a TRAIT, chained under `define trait` beside the
 // properties, because that is where every other member of a trait is declared.
@@ -9945,13 +9450,6 @@ registerValueShadows('world_draw_image', [
   {name: 'X', shadow: {type: 'math_number', fields: {NUM: 0}}},
   {name: 'Y', shadow: {type: 'math_number', fields: {NUM: 0}}},
 ]);
-
-const worldRuleStepTick = stepBlock(
-  'world_rule_step_tick',
-  'when tick do %1',
-  [nameArg],
-  'Run this every tick, in no particular order relative to other rules.',
-);
 
 const worldStepDelta = defineBlock({
   type: 'world_step_delta',
@@ -11149,7 +10647,6 @@ const worldRemoveCameraTrait = traitMutation({
 
 export const DOMAIN_BLOCKS = [
   worldActor,
-  worldUseTrait,
   worldActsLike,
   worldForEachTyped,
   worldText,
@@ -11282,19 +10779,12 @@ export const DOMAIN_BLOCKS = [
   worldUnloadViewport,
   worldInShownMap,
   worldWorld,
-  worldUseRule,
-  worldRule,
-  worldRuleTrait,
   worldRuleProperty,
   worldRuleEvent,
-  worldRuleBlock,
-  worldRuleEnum,
-  worldRuleEnumOption,
   memberHead,
   stepHead,
   worldDoc,
   worldReturn,
-  worldRuleStepIn,
   worldTraitStep,
   worldShowAs,
   worldCountWith,
@@ -11337,7 +10827,6 @@ export const DOMAIN_BLOCKS = [
   worldTextAnchor,
   worldDrawImage,
   worldDrawPicture,
-  worldRuleStepTick,
   worldKey,
   worldForEachKey,
   worldComment,
@@ -11357,8 +10846,7 @@ export const DOMAIN_BLOCKS = [
 ];
 
 // Keyed by rule id: the hand-authored (non-generated) blocks that act on a
-// rule's traits/queries. `use trait`/`use rule` span every rule, so they live
-// with the Actor/World they build, not in any one rule category.
+// rule's traits/queries.
 const RULE_HAND_BLOCKS = new Map<string, string[]>([
   [
     'spatial',
@@ -11556,11 +11044,8 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // world declares them once and any map may raise them
       // (specs/MAP_EVENTS_PLAN.md).
       'world_rule_event',
-      // NO `use rule`. A world runs the rules the project holds, so the block
-      // says nothing here (blockly/projectModules) — it stays registered so
-      // that projects saved with one keep loading and keep meaning what they
-      // meant, and stays offered under Rule, where it is a rule's `requires`
-      // and still a real statement. It goes entirely once nothing holds one.
+      // No `use rule`: a world runs the rules the project holds
+      // (blockly/projectModules).
       // How big the level is, and how much of it is on screen at once, for
       // anything that keeps a view inside it. Read here; said by the map
       // editor and the Screen.
@@ -12020,9 +11505,7 @@ const withEngine = (categories: ToolboxCategory[]): ToolboxCategory[] => {
  * The structural categories as one kind of file sees them.
  *
  * The whole `Rule` category goes when the file is not a `.rule`: every block in
- * it declares part of a rule, and the two it shares with elsewhere
- * (`use rule`, `use trait`) are listed in World and Actor as well, so dropping
- * it costs nothing. That the Engine category was already gated this way and
+ * it means something only in a rule's body, so dropping it costs nothing. That the Engine category was already gated this way and
  * Rule was not is the inconsistency being closed.
  *
  * No file kind — the headless generator, which has no one file — sees all of
@@ -12341,7 +11824,6 @@ function generateRulePalette(
  */
 export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_actor',
-  'world_use_trait',
   'world_rule_property',
   'world_acts_like',
   'world_actor_is_data',
@@ -12352,10 +11834,8 @@ export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_define_layer',
   'world_layer_parallax',
   'world_layer_fixed',
-  // An actor's own blocks and events are designed in the Actor Editor
-  // (specs/ACTOR_BLOCKS_PLAN.md), whose member page writes a block under
-  // the head it makes for it.
-  'world_rule_block',
+  // An actor's own events are designed in the Actor Editor
+  // (specs/ACTOR_BLOCKS_PLAN.md).
   'world_rule_event',
   MEMBER_HEAD,
   STEP_HEAD,

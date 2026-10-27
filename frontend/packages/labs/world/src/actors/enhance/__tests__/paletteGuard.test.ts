@@ -33,6 +33,7 @@ import {
   projectRuleMetas,
 } from '../../../blockly/projectModules';
 import {workspaceViewOf} from '../../../blockly/rewriteWorkspaces';
+import {VIEW_ROWS} from '../../../blockly/viewRows';
 import {EMPTY_WORLD_PROJECT} from '../../../fixtures/scenarios';
 import {projectFiles} from '../../../runtime/projectFiles';
 import {importStockActor} from '../../importStockActor';
@@ -180,7 +181,11 @@ const checkShelf = (
       for (const type of new Set(types)) {
         // Ours, or Blockly's own (`controls_if`, `math_number`, …), which are
         // registered by importing blockly at all.
-        if (!palette.has(type) && !Blockly.Blocks[type]) {
+        if (
+          !palette.has(type) &&
+          !Blockly.Blocks[type] &&
+          !VIEW_ROWS.has(type)
+        ) {
           missing.push(`${row.id} → ${path}: ${type}`);
         }
       }

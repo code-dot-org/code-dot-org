@@ -33,18 +33,12 @@ export function inWorldContext(block: Block): boolean {
   for (let parent = block.getParent(); parent; parent = parent.getParent()) {
     if (
       parent.type === 'world_world' ||
-      // Every rule-member body binds `world`: a step's closure is
-      // `(world, delta)`, a designed block's is `(world, …params)`, and an
-      // actor-scoped one binds it from `actor.world`. The step prefix covers
-      // all three hats (`when tick`, `before …`, `after …`).
-      parent.type.startsWith('world_rule_step') ||
-      // `each frame` binds it the same way, in both of its homes: under a
+      // `each frame` binds it in both of its homes: under a
       // trait its closure is `(world, delta)`, and standing alone in an
       // `.actor` file it is `(actor, world, delta)`. Missing here, so every
       // `world`-reading block inside one wore a warning saying it did not know
       // what world it was on — in a trait step as much as in an actor's.
       parent.type === 'world_trait_step' ||
-      parent.type === 'world_rule_block' ||
       // …and the head an actor's own block is written under on its page.
       parent.type === MEMBER_HEAD ||
       parent.type === STEP_HEAD ||

@@ -86,9 +86,8 @@ export function hasEnclosingActor(block: Blockly.Block): boolean {
     parent;
     child = parent, parent = parent.getParent()
   ) {
-    // `define actor` binds `actor` for its whole chain, and a trait's members
-    // are the subject's — both give a body an actor of its own.
-    if (parent.type === 'world_actor' || parent.type === 'world_rule_trait') {
+    // `define actor` binds `actor` for its whole chain.
+    if (parent.type === 'world_actor') {
       return true;
     }
     // An unnamed spawn binds `actor` for what it CONTAINS, so a spawn inside a
@@ -108,7 +107,7 @@ export function hasEnclosingActor(block: Blockly.Block): boolean {
       return parent.getField(SUBJECT_FIELD) !== null;
     }
     // Roots that bind something that is not an actor.
-    if (parent.type === 'world_world' || parent.type === 'world_rule') {
+    if (parent.type === 'world_world') {
       return false;
     }
   }

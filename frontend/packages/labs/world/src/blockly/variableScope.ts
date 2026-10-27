@@ -22,11 +22,7 @@
 
 import type {Block, Workspace} from 'blockly';
 
-import {
-  BODY_OWNER_ID,
-  MEMBER_HEAD,
-  memberValueSocket,
-} from './bodySurfaces';
+import {MEMBER_HEAD, memberValueSocket} from './bodySurfaces';
 import {indexedBlocks, type IndexedBlock} from './workspaceIndex';
 
 /**
@@ -89,9 +85,6 @@ export const BINDERS: Readonly<Record<string, Binder>> = {
   world_extreme_actor: {fields: ['VAR'], over: ['KEY']},
 };
 
-/** A `define block`'s parameters, which are variables its mutator manages. */
-const PARAMS_BLOCK = 'world_rule_block';
-
 /**
  * One name an event hands its handler, and the flavour it arrives as.
  *
@@ -145,27 +138,7 @@ export function eventLocalIds(
   return locals.map(local => map.getVariable(local.name, local.type)?.getId());
 }
 
-/**
- * Where a `define block`'s parameters reach, which is two places and was one.
- *
- * IN THE FILE the implementation sits in the head's `DO` mouth, so that is the
- * input the names cover. ON A BODY SURFACE it does not: the surface hangs the
- * implementation off the head's `next` (`bodySurfaces.bodyOf`), because a
- * member's block is the heading of the page rather than a box drawn round it.
- * The names have to follow it there, and until they did, every getter in every
- * `define block` implementation offered `???` — the parameters were in scope
- * of a mouth that surface leaves empty.
- *
- * ONLY THAT ONE HEAD gets the `next` chain, and the identity is what says so:
- * `bodyOf` gives it {@link BODY_OWNER_ID}, and nothing else on any surface
- * carries that id. On the INTERFACE the same `next` is the member list — what
- * the rule declares after this one — so binding over it there would put one
- * member's parameters in scope of the next member's body, which is a different
- * bug and a quieter one.
- */
-const PARAMS_OVER = 'DO';
-
-/** The variable ids a `define block` names as its parameters. */
+/** The variable ids a member's head names as its parameters. */
 function paramIds(block: Block | IndexedBlock): string[] {
   const state = (
     block as unknown as {
@@ -188,16 +161,10 @@ function bindingsOf(block: Block | IndexedBlock): {
     const ids = paramIds(block);
     return {ids, over: [REST, ...ids.map((_, at) => memberValueSocket(at))]};
   }
-  if (block.type === PARAMS_BLOCK) {
-    return {
-      ids: paramIds(block),
-      over: block.id === BODY_OWNER_ID ? [PARAMS_OVER, REST] : [PARAMS_OVER],
-    };
-  }
   // An event's hat binds what the event hands over, across the rows below it
   // — a handler's body is the hat's `next` chain, which is what {@link REST}
-  // means. The same shape `define block` has above, over a different input,
-  // and keyed by name rather than by id for the reason `EventLocal` gives.
+  // means. Keyed by name rather than by id, for the reason `EventLocal`
+  // gives.
   const carried = eventLocalIds(block).filter(
     (id): id is string => id !== undefined,
   );

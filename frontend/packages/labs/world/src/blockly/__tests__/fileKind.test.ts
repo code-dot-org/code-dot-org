@@ -75,16 +75,6 @@ describe('which definition roots a file may hold', () => {
     expect(categoryNames('world')).not.toContain('Rule');
   });
 
-  it('offers `use trait` to no file: what needs a trait says so as data', () => {
-    // An actor's traits are added from Enhance Actor
-    // (specs/ACTORS_AS_DATA_PLAN.md, step 7), and a trait's needs on its view
-    // in the Rule Editor (specs/RULE_EDITOR_PLAN.md). An actor file that
-    // holds one still may.
-    expect(offeredTypes('rule')).not.toContain('world_use_trait');
-    expect(offeredTypes('actor')).not.toContain('world_use_trait');
-    expect(heldNotOffered('actor')).toContain('world_use_trait');
-  });
-
   it('offers `each frame` wherever there is an owner to name', () => {
     // Two readings, both the same sentence about whoever owns it: a trait's
     // member in a `.rule`, and a kind's own work in an `.actor`. A world
@@ -197,12 +187,6 @@ describe('what a file compiles to', () => {
     expect(() => moduleShape('rules/g.rule', ['world_world'])).toThrow();
   });
 
-  it('refuses a `define rule` outside a rule', () => {
-    expect(() => moduleShape('player.actor', ['world_rule'])).toThrow(
-      /can only be in a \.rule file, and this is a \.actor/,
-    );
-  });
-
   it('refuses a `define actor` outside an actor file', () => {
     expect(() => moduleShape('rules/g.rule', ['world_actor'])).toThrow(
       /can only be in a \.actor file, and this is a \.rule/,
@@ -232,16 +216,9 @@ describe('what a file compiles to', () => {
   it('falls back to the blocks when there is no path', () => {
     // Callers without a path have nothing better to go on, and nothing is
     // refused — there is no kind for a root to contradict.
-    expect(moduleShape(undefined, ['world_rule'])).toBe('rule');
     expect(moduleShape(undefined, ['world_world'])).toBe('world');
     expect(moduleShape(undefined, ['world_actor'])).toBe('actor');
     expect(moduleShape(undefined, [])).toBe('actor');
-  });
-
-  it('reads a rule as a rule even beside a world block, with no path', () => {
-    // Order of the checks, pinned: the rule branch generates a whole different
-    // kind of module, so it wins.
-    expect(moduleShape(undefined, ['world_world', 'world_rule'])).toBe('rule');
   });
 });
 

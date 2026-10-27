@@ -18,8 +18,6 @@ const DEFINE_ACTOR = 'world_actor';
 /** The `world_world` block type; its presence is what makes a file a world. */
 const DEFINE_WORLD = 'world_world';
 
-const DEFINE_RULE = 'world_rule';
-
 /**
  * What file a workspace is the code of, when its roots do not say: a rule's
  * page or bodies hold no `define rule`, and the Main Screen's code no `define
@@ -31,19 +29,13 @@ const markOf = (workspace: Blockly.Workspace | undefined) =>
   (workspace as MarkedWorkspace | undefined)?.holdsCodeOf;
 
 /**
- * Whether this workspace is a RULE — i.e. whether a `define rule` is in it,
- * or it is marked as a rule's (`markCode`).
- *
- * Read off the workspace rather than off the file's name for the reason
- * `ownTraitOptions` reads its traits that way: a registry refreshes on a parse,
- * and a caller that has a workspace in front of it should not have to wait for
- * one. `fileKind` is the answer where a path is what you have.
+ * Whether this workspace is a RULE's code: marked so (`markCode`). A rule's
+ * pages and bodies hold no root that would say. `fileKind` is the answer
+ * where a path is what you have.
  */
 export const definesRule = (
   workspace: Blockly.Workspace | undefined,
-): boolean =>
-  markOf(workspace) === 'rule' ||
-  Boolean(workspace?.getTopBlocks(false).some(b => b.type === DEFINE_RULE));
+): boolean => markOf(workspace) === 'rule';
 
 /** Marks a workspace as the code of a rule or a world, or of neither. */
 export const markCode = (

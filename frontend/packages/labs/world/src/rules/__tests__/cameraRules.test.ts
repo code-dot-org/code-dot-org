@@ -22,6 +22,7 @@ import {
   ruleBodyKey,
   ruleMetaToModule,
 } from '../../blockly/ruleMeta';
+import {VIEW_ROWS} from '../../blockly/viewRows';
 import {PHASES} from '../../engine/core/phases';
 import {ruleViewOf} from '../ruleData';
 import {cameraRule as cameraData} from '../stock/camera';
@@ -190,7 +191,11 @@ describe('every block these rules name', () => {
     ] as const) {
       for (const type of typesIn(source)) {
         // Ours, or Blockly's own, which importing blockly registers.
-        if (!palette.has(type) && !Blockly.Blocks[type]) {
+        if (
+          !palette.has(type) &&
+          !Blockly.Blocks[type] &&
+          !VIEW_ROWS.has(type)
+        ) {
           missing.push(`${name}: ${type}`);
         }
       }

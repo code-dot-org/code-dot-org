@@ -68,7 +68,7 @@ import {
 import {actorCodeChoices, rootCodeRows} from './codeRoots';
 import {documentExtras, withDocumentExtras} from './documentExtras';
 import {buildDomainPalette, heldNotOffered} from './domainBlocks';
-import {setEditingActor, setEditingFile, setEditingRule} from './editingRule';
+import {setEditingActor, setEditingFile} from './editingRule';
 import {movedItself} from './editorEvents';
 import {type EventChoice} from './eventChoices';
 import type {BlockPart} from './extensions/blockDesigner';
@@ -1101,14 +1101,11 @@ export const BlocklyFileEditor = ({
     return () => setRevealer('toolbox', null);
   }, []);
 
-  // Which rule this workspace is, so `use rule` can leave it out of its own list.
+  // Which actor this workspace is, for `this actor` to draw it.
   // After mount rather than during: the workspace is created by a child, whose
-  // effects run first. A block deserialized before this lands keeps whatever it
-  // was saved with, which is the right way round — a dropdown that cannot offer
-  // a value drops it.
+  // effects run first.
   useEffect(() => {
     if (workspaceRef.current) {
-      setEditingRule(workspaceRef.current, ownRuleModule);
       setEditingActor(workspaceRef.current, ownActorModule);
       // …and which FILE it is at all, which is what an act on the file needs:
       // a world's own `define actor` can be enhanced, and the patch lands in

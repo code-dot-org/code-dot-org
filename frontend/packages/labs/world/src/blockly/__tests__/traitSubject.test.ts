@@ -1,98 +1,20 @@
-// Which traits `use trait` offers, and where.
+// Which traits each trait dropdown offers.
 //
-// A trait belongs to whatever takes it (`TraitMeta.subject`), so the dropdown
-// has to know where it is being asked from. Offering every trait everywhere
-// would put "Affected by Gravity" on a camera — the meaningless-trait problem
-// this project has already avoided twice, once by keeping cameras out of
-// `world.actors` and once by giving traits a subject at all. This is the third
-// place it would have come back.
+// A trait belongs to whatever takes it (`TraitMeta.subject`). Offering every
+// trait to an actor would put "Follows" on one, which reads correctly and does
+// nothing — so `add trait` narrows to the subject it is about, and `has trait`,
+// which asks about a value, offers all of them.
 
 import {beforeEach, describe, expect, it} from 'vitest';
 
-import type {Blockly} from '@code-dot-org/blockly';
-
 import {
+  actorTraitOptions,
   anyTraitOptions,
+  cameraTraitOptions,
   setProjectRuleMeta,
   setProjectRules,
-  traitOptions,
-  traitSubjectFor,
   traitSubjectOfValue,
 } from '../traitOptions';
-
-/**
- * A `use trait` field whose block sits under the given chain, innermost first.
- *
- * Ordinary parents rather than surround parents, because `use trait` chains
- * BELOW `define actor` and `define trait` alike — their bodies are stacks, so
- * being next-connected is being inside.
- */
-const fieldUnder = (
-  ...blocks: Array<string | {type: string; subject?: string}>
-): {getSourceBlock(): unknown} => {
-  let parent: unknown = null;
-  for (const entry of [...blocks].reverse()) {
-    const spec = typeof entry === 'string' ? {type: entry} : entry;
-    const above = parent;
-    parent = {
-      type: spec.type,
-      getParent: () => above,
-      getFieldValue: (name: string) =>
-        name === 'SUBJECT' ? (spec.subject ?? null) : null,
-    };
-  }
-  return {getSourceBlock: () => parent};
-};
-
-describe('what a `use trait` is electing for', () => {
-  it('is an actor under `define actor`', () => {
-    expect(
-      traitSubjectFor(
-        fieldUnder('world_use_trait', 'world_actor') as Blockly.FieldDropdown,
-      ),
-    ).toBe('actor');
-  });
-
-  it('is the trait’s own subject inside `define trait`', () => {
-    // A camera trait's dependencies are camera traits: `requires` means "and
-    // this too", so it must mean something the same subject can take.
-    expect(
-      traitSubjectFor(
-        fieldUnder('world_use_trait', {
-          type: 'world_rule_trait',
-          subject: 'camera',
-        }) as Blockly.FieldDropdown,
-      ),
-    ).toBe('camera');
-    expect(
-      traitSubjectFor(
-        fieldUnder('world_use_trait', {
-          type: 'world_rule_trait',
-          subject: 'actor',
-        }) as Blockly.FieldDropdown,
-      ),
-    ).toBe('actor');
-  });
-
-  it('is an actor for a trait declared before the field existed', () => {
-    expect(
-      traitSubjectFor(
-        fieldUnder('world_use_trait', {
-          type: 'world_rule_trait',
-        }) as Blockly.FieldDropdown,
-      ),
-    ).toBe('actor');
-  });
-
-  it('is an actor for a block that is nowhere', () => {
-    // A floating block, and the flyout's preview of one. Actor is the answer
-    // that shows the traits a learner is most likely to be reaching for.
-    expect(
-      traitSubjectFor(fieldUnder('world_use_trait') as Blockly.FieldDropdown),
-    ).toBe('actor');
-    expect(traitSubjectFor(undefined)).toBe('actor');
-  });
-});
 
 describe('which traits each dropdown offers', () => {
   // A `.rule` giving an actor trait and a camera trait, in play.
@@ -140,7 +62,6 @@ describe('which traits each dropdown offers', () => {
     queries: [],
     events: [],
     steps: [],
-    enums: [],
   };
 
   beforeEach(() => {
@@ -150,149 +71,23 @@ describe('which traits each dropdown offers', () => {
 
   const names = (rows: Array<[string, string]>) => rows.map(([label]) => label);
 
-  it('offers `use trait` only what the thing electing can take', () => {
-    expect(
-      names(
-        traitOptions(
-          fieldUnder('world_use_trait', {
-            type: 'world_rule_trait',
-            subject: 'camera',
-          }) as Blockly.FieldDropdown,
-        ),
-      ),
-    ).toEqual(['Follows']);
-    expect(
-      names(
-        traitOptions(
-          fieldUnder('world_use_trait', 'world_actor') as Blockly.FieldDropdown,
-        ),
-      ),
-    ).toEqual(['Watched']);
+  it('offers each subject only what it can take', () => {
+    expect(names(actorTraitOptions())).toEqual(['Watched']);
+    expect(names(cameraTraitOptions())).toEqual(['Follows']);
   });
 
-  it('offers a kind that SHOWS A MAP the camera traits too', () => {
-    // A Viewport has a camera of its own, and a camera trait elected on the
-    // kind goes to it — so a Viewport can follow something without declaring
-    // a second camera (specs/SPACE_CAMERAS_PLAN.md, "simplifying"). Read off
-    // the `define actor`'s own rows, since that is where `Shows a Map` is said.
-    const row = (trait: string, next: unknown = null) => ({
-      type: 'world_use_trait',
-      getFieldValue: (name: string) => (name === 'TRAIT' ? trait : null),
-      getNextBlock: () => next,
-    });
-    const viewportKind = {
-      type: 'world_actor',
-      getParent: () => null,
-      getFieldValue: () => null,
-      getNextBlock: () =>
-        row('Viewport#ViewportTrait', row('Boxed#BoxedTrait')),
-    };
-    const under = (kind: unknown) =>
-      ({
-        getSourceBlock: () => ({
-          type: 'world_use_trait',
-          getParent: () => kind,
-        }),
-      }) as unknown as Blockly.FieldDropdown;
-    expect(names(traitOptions(under(viewportKind)))).toEqual([
-      'Follows',
-      'Watched',
-    ]);
-
-    // …and a kind that shows no map is offered no camera trait, as before: a
-    // Label given `Follows` would give it to no camera at all.
-    const plainKind = {
-      ...viewportKind,
-      getNextBlock: () => row('Boxed#BoxedTrait'),
-    };
-    expect(names(traitOptions(under(plainKind)))).toEqual(['Watched']);
-  });
-
-  it('says which kind of thing a `use trait` value names', () => {
-    // What the generator asks under `define actor`: a camera trait elected
-    // there compiles to `useCameraTraits`, an actor's to `useTraits`.
+  it('says which kind of thing a trait reference names', () => {
+    // What the generator asks of an actor's traits: a camera trait elected on
+    // a kind compiles to `useCameraTraits`, an actor's to `useTraits`.
     expect(traitSubjectOfValue('Camera Follow#FollowsTrait')).toBe('camera');
     expect(traitSubjectOfValue('Camera Follow#WatchedTrait')).toBe('actor');
     expect(traitSubjectOfValue('Nobody#NothingTrait')).toBeUndefined();
   });
 
   it('offers `has trait` every trait, wherever it sits', () => {
-    // The bug this pair exists for: inside `for each actor` — walking `all
-    // cameras` — there is no camera trait above, so a filtered dropdown
-    // answered "actor" and hid every camera trait from the one loop that
-    // needed them.
+    // Inside `for each actor` walking `all cameras`, the subject is a value
+    // the editor cannot read, and a filtered list hid every camera trait from
+    // the one loop that needed them.
     expect(names(anyTraitOptions())).toEqual(['Follows', 'Watched']);
-  });
-});
-
-describe('a rule seeing the traits it declares', () => {
-  // Until now `traitOptions` answered "what may a WORLD use", which is right in
-  // an `.actor` or a `.world` and wrong in the rule being written: a learner
-  // who defines a trait cannot then name it in the same file's step, which is
-  // the very next thing they try.
-
-  /** A field on a block in a `.rule` workspace declaring the given traits. */
-  const inRuleWorkspace = (
-    ruleName: string,
-    ...traits: Array<{name: string; subject?: string}>
-  ) => {
-    const tops = [
-      {type: 'world_rule', getFieldValue: () => ruleName},
-      ...traits.map(trait => ({
-        type: 'world_rule_trait',
-        getFieldValue: (name: string) =>
-          name === 'NAME' ? trait.name : (trait.subject ?? null),
-      })),
-    ];
-    return {
-      getSourceBlock: () => ({
-        getParent: () => null,
-        workspace: {getTopBlocks: () => tops},
-      }),
-    } as unknown as Blockly.FieldDropdown;
-  };
-
-  beforeEach(() => {
-    // Nothing in play: no world attaches this rule yet, which is the case.
-    setProjectRuleMeta([]);
-    setProjectRules([]);
-  });
-
-  it('offers its own traits though no world attaches it', () => {
-    expect(
-      anyTraitOptions(inRuleWorkspace('Camera Follow', {name: 'Follows'})),
-    ).toEqual([['Follows', 'Camera Follow#FollowsTrait']]);
-  });
-
-  it('stores the same reference a registered trait would', () => {
-    // `<Rule Name>#<ExportName>`, which `refFromValue` decodes even while the
-    // rule defining it is still being written.
-    expect(
-      anyTraitOptions(
-        inRuleWorkspace('Camera Follow', {name: 'actor to follow'}),
-      )[0][1],
-    ).toBe('Camera Follow#ActorToFollowTrait');
-  });
-
-  it('still narrows `use trait` by subject among its own', () => {
-    const field = inRuleWorkspace(
-      'Camera Follow',
-      {name: 'Follows', subject: 'camera'},
-      {name: 'Watched', subject: 'actor'},
-    );
-    // The workspace has no camera trait above the field, so electing here
-    // is an actor's — and only the actor trait is offered.
-    expect(traitOptions(field).map(([label]) => label)).toEqual(['Watched']);
-  });
-
-  it('offers nothing of its own in a workspace that is not a rule', () => {
-    const notARule = {
-      getSourceBlock: () => ({
-        getParent: () => null,
-        workspace: {getTopBlocks: () => [{type: 'world_world'}]},
-      }),
-    } as unknown as Blockly.FieldDropdown;
-
-    expect(anyTraitOptions(notARule)).toEqual([['(none)', '']]);
   });
 });

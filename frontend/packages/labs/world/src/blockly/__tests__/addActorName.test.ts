@@ -106,15 +106,6 @@ describe('where naming the placed actor is offered', () => {
     expect(enclosed({type: 'world_on_Input_KeyPressedEvent'})).toBe(false);
   });
 
-  it('is, under a trait — its members belong to the subject', () => {
-    expect(enclosed('world_rule_trait')).toBe(true);
-  });
-
-  it('is not, under a rule’s own body', () => {
-    // A rule's members are the world's; there is no actor bound.
-    expect(enclosed('world_rule')).toBe(false);
-  });
-
   it('is, inside an unnamed spawn — a spawn within a spawn', () => {
     // An unnamed `add actor` binds `actor` for its BODY, so a nested one has
     // something to shadow in turn.

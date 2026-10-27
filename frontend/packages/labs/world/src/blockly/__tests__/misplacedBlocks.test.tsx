@@ -97,7 +97,7 @@ describe('a definition with a home elsewhere', () => {
   it('takes its rows down with it, and back up', () => {
     const world = fileOf('world');
     const actor = world.newBlock('world_actor');
-    const row = world.newBlock('world_use_trait');
+    const row = world.newBlock('world_acts_like');
     actor.nextConnection!.connect(row.previousConnection!);
 
     review(actor);
@@ -147,7 +147,7 @@ describe('a root no drawer here offers', () => {
 
   it('is left to the orphan plugin when it is a row, not a root', () => {
     const file = fileOf('world');
-    const row = file.newBlock('world_use_trait');
+    const row = file.newBlock('world_acts_like');
 
     expect(misplacementOf(row)).toBeUndefined();
   });

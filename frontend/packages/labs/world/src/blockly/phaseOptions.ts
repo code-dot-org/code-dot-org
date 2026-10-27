@@ -1,38 +1,27 @@
 // Which named moments of the frame a step may run in (engine/core/phases).
 //
-// The list a step is offered depends on where it is written. Declared under a
-// trait, the step knows its subject — so a camera trait is offered the camera's
-// moments and never sees `push`, which is not a thing a camera does. Declared
-// beside the rule it has no subject, and is offered all of them: reading the
-// keyboard and walking every pair of bodies are real work that fits no single
-// actor.
-//
-// The filtering is a consequence of the declaration site rather than a rule
-// anyone maintains, which is the same arrangement `use trait` already uses
-// (`traitSubjectFor`). It is why the step block belongs UNDER `define trait`
-// and not beside it wearing a subject dropdown: position already says it.
+// A block offers what its subject takes part in. `each frame` is an actor's
+// own work, so it is offered an actor's moments and never sees a camera's. A
+// rule's steps are chosen on their page in the Rule Editor (`ruleSteps`).
 
 import type {Blockly, Extension} from '@code-dot-org/blockly';
 
 import {PHASES, phasesFor, type PhaseSubject} from '../engine/core/phases';
 
 import {liveDropdown} from './moduleOptions';
-import {traitSubjectFor} from './traitOptions';
 
 /** The block that carries a subject-scoped step; see `phaseSubjectFor`. */
 export const TRAIT_STEP_BLOCK = 'world_trait_step';
 
 /**
- * What a step's phase list should be about.
- *
- * Only a trait-scoped step has a subject. A rule-level one gets `world`, which
- * is not a filter — it offers every moment.
+ * What a step's phase list should be about: an actor's, for `each frame`, and
+ * every moment for anything else, which is not a filter.
  */
 export function phaseSubjectFor(field?: {
   getSourceBlock(): unknown;
 }): PhaseSubject {
   const block = field?.getSourceBlock() as {type?: string} | null | undefined;
-  return block?.type === TRAIT_STEP_BLOCK ? traitSubjectFor(field) : 'world';
+  return block?.type === TRAIT_STEP_BLOCK ? 'actor' : 'world';
 }
 
 /** The `PHASE` dropdown's rows: the label a learner reads, and the phase id. */
