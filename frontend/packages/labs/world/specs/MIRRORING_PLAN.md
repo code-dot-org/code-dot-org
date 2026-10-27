@@ -107,15 +107,75 @@ camera draws is the root scene and nothing else.
 
 ## What this is NOT
 
-- **Not zoom.** A minimap wants to show more of the level than the game does,
-  and today a camera has no zoom, so a mirror shows the same scale in a
-  smaller box. Zoom is the piece that makes a minimap a minimap; it waits on
-  "the engine's cameras having any" (specs/VIEWPORT_PLAN.md) and is a
-  property on a camera, not on this.
+- **Not zoom, in steps 1 to 6.** A minimap wants to show more of the level
+  than the game does, and a camera has no zoom, so a mirror shows the same
+  scale in a smaller box. Zoom is a property on a camera, not on this; it is
+  proposed below, as step 7.
 - **Not a Viewport showing another Viewport.** A mirror of a mirror is a
   Phaser camera over a container that another camera also draws, and nothing
   has asked.
 - **Not a change to a map.** A map still says nothing about cameras.
+
+## Zoom and masking — PROPOSED
+
+The two pieces that make a minimap a minimap: seeing more of the level than
+the game does, and not seeing what the game draws over it.
+
+### Zoom is a camera's
+
+A camera is a pose (`core/Camera`), and how much of the scene it takes in is
+part of the pose: `zoom`, a number, 1 by default, larger showing less. It is
+the camera's and not the Viewport's, for the reason the plan gave: a Viewport
+cuts between cameras, and a wide shot and a close one are two cameras, not
+one camera and a setting on its window.
+
+What it touches, which is why it is a step and not a field:
+
+- **The engine.** `Camera.zoom`, held as `position` is, and a `ZoomProperty`
+  that `get` and `set` route to it, so `set zoom of ⟨this camera⟩` is the
+  ordinary setter and a camera rule may ease it. What a camera takes in is
+  its window divided by its zoom: `view size` with a camera in hand answers
+  that, so `Confined to the Map` and `Ignores Small Moves`, which measure by
+  it, are right at any zoom with no change of their own. The pointer is
+  mapped through it (`mousePosition`).
+- **Layers.** A layer at parallax `(0, 0)` zooms; a `fit` layer does not
+  (`core/Camera`, "NO ZOOM YET"). The model already says so and the driver
+  has to: a fit layer's container is scaled back by the zoom.
+- **The driver.** `setZoom(RENDER_SCALE × scale × zoom)` for each host's
+  camera and the root's, where it is `RENDER_SCALE × scale` today.
+- **The editor.** A camera's inspector gains a Zoom field, the main camera's
+  too, stored with the camera as its traits' values are. The stage draws a
+  held or mirrored scene at the zoom of the camera its Viewport shows
+  through, so a minimap reads as one before the game runs.
+
+### Masking is a layer's
+
+Since the game moved onto its Main Screen, a game's HUD is usually the
+screen's — the Scoreboard docked above the Game Viewport — and a minimap
+mirrors the Game Viewport, which never shows it. What masking is still for
+is a layer inside the scene a mirror shows: a level's own fixed layer of
+hearts, or the whole screen for a mirror of the world.
+
+Recommended: **a layer says whether mirrors show it** — `shown in mirrors`,
+on by default, a checkbox in the layer's inspector, carried in the layer
+snapshot. A mirror's host camera ignores the layers that say no, as it
+already ignores other spaces' containers, and a layer whose answer changes
+is taken down and made again, as a box whose `mirrors` changes is.
+
+Rather than a list on each mirror of the layers it hides, which is more
+general and costs a placement property naming another map's layers — a
+reference across files the inspector has no picker for. Every minimap
+asked for so far wants the same layers hidden; a per-mirror list waits for
+one that does not.
+
+### Order
+
+7. **Zoom**: engine, layers, driver, then the editor, each tested where it
+   can be and the driver seen in the browser.
+8. **`shown in mirrors`**: the layer's flag, the snapshot, the driver's
+   ignore, the inspector's checkbox.
+9. **The browser check** of step 6, after these: a minimap on the Jetpack
+   level, zoomed out, following the Pilot, without the level's fixed layer.
 
 ## Order of work
 
