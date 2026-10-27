@@ -18,7 +18,7 @@ import reducer, {
   saveModel,
   setTrainingModalStep,
 } from '@cdo/apps/ailab/engine/redux';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 describe('ailab reducer', () => {
   describe('instructionsEnabled gates the panel overlay', () => {
@@ -246,7 +246,7 @@ describe('ailab reducer', () => {
       };
       saveModel(
         save,
-        {...initialProject, labelColumn: 'a'},
+        {...defaultProject, labelColumn: 'a'},
         trainedModel
       )(
         action => actions.push(action),

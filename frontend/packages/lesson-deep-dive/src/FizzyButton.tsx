@@ -1,11 +1,11 @@
-import React, {FC, useCallback, useEffect, useRef} from 'react';
+import {type FC, type ReactNode, useCallback, useEffect, useRef} from 'react';
 
-import styles from './lesson-deep-dive-container.module.scss';
+import styles from './fizzy-button.module.scss';
 
 interface FizzyButtonProps {
   onClick: () => void;
   ariaLabel: string;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
@@ -55,7 +55,7 @@ const FizzyButton: FC<FizzyButtonProps> = ({
     () => () => {
       if (intervalRef.current !== null) clearInterval(intervalRef.current);
     },
-    []
+    [],
   );
 
   return (

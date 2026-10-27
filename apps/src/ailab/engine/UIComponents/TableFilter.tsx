@@ -16,9 +16,10 @@ import styles from './tableFilter.module.scss';
 
 interface TableFilterProps {
   view: TableView;
+  menuAlign?: 'left' | 'right';
 }
 
-const TableFilter = ({view}: TableFilterProps) => {
+const TableFilter = ({view, menuAlign = 'right'}: TableFilterProps) => {
   const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
   const anchorRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -134,8 +135,8 @@ const TableFilter = ({view}: TableFilterProps) => {
         anchorEl={() => anchorRef.current!}
         onClose={closeMenu}
         disableRestoreFocus
-        anchorOrigin={{vertical: 'bottom', horizontal: 'right'}}
-        transformOrigin={{vertical: 'top', horizontal: 'right'}}
+        anchorOrigin={{vertical: 'bottom', horizontal: menuAlign}}
+        transformOrigin={{vertical: 'top', horizontal: menuAlign}}
         slotProps={{
           paper: {
             role: 'dialog',
