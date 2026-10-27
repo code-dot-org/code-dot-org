@@ -16,7 +16,7 @@
   width: 100%;
   min-height: 46px;
   padding: 10px 14px 10px 12px;
-  background: var(--background-neutral-secondary);
+  background: var(--background-neutral-primary);
   border: 1px solid var(--border-neutral-primary);
   border-radius: var(--shape-sm);
 }
@@ -75,6 +75,14 @@
   .checkboxVisualChecked {
     background: var(--background-selected-primary);
     border-color: var(--background-selected-primary);
+  }
+}
+
+.optionNeutral {
+  border-color: var(--border-disabled-neutral);
+
+  .optionText {
+    color: var(--text-neutral-tertiary);
   }
 }
 

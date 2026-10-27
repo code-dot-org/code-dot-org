@@ -22,7 +22,7 @@ function getMultipleSelectStatus(
   correctChoiceIds: string[] | null,
   choiceId: string
 ): ChoiceResultStatus {
-  // No answer key: correctness hidden, or shown only for the whole question.
+  // showCorrectness off - still show what was selected, ungraded.
   if (!correctChoiceIds) {
     return isSelected ? 'selected_ungraded' : 'neutral';
   }
@@ -62,6 +62,7 @@ const MultipleSelectAnswer: React.FunctionComponent<{
                 [styles.optionCorrect]: status === 'correct',
                 [styles.optionIncorrect]: status === 'incorrect',
                 [styles.optionSelectedUngraded]: status === 'selected_ungraded',
+                [styles.optionNeutral]: status === 'neutral',
               })}
             >
               <div className={styles.optionContent}>
