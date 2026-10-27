@@ -56,7 +56,6 @@ export function withIdColumnFirst(
     : columns;
 }
 
-// A dataset can drop or rename the column a level names; null turns it off.
 export function idColumnOf(
   data: DataRow[],
   levelIdColumn: string | null | undefined,
