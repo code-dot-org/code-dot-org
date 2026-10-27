@@ -4,6 +4,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {
+  DefaultLocale,
+  LocaleFallbacks,
+} from '@cdo/generated-scripts/sharedConstants';
+
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
 import * as shapes from '../shapes';
@@ -13,6 +18,13 @@ import * as shapes from '../shapes';
  */
 const PISKEL_PATH =
   '/blockly/js/piskel/index.html' + (PISKEL_DEVELOPMENT_MODE ? '?debug' : '');
+
+const toPiskelLocale = locale => locale.toLowerCase().replace('-', '_');
+
+// LocaleFallbacks keyed and valued in Piskel's format, e.g. {en_in: 'en_us'}.
+const PISKEL_LOCALE_FALLBACKS = Object.fromEntries(
+  Object.entries(LocaleFallbacks).map(locales => locales.map(toPiskelLocale))
+);
 
 /**
  * The PiskelEditor component is a wrapper for the iframe that contains the
@@ -61,12 +73,34 @@ class PiskelEditor extends React.Component {
     this.piskel.onStateSaved(this.onAnimationSaved);
     this.piskel.onAddFrame(this.onAddFrame);
 
-    this.iframe.contentWindow.piskel_locale = this.props.localeCode;
+    this.setPiskelLocale_();
   }
 
   componentWillUnmount() {
     this.piskel.detachFromPiskel();
     this.piskel = undefined;
+  }
+
+  /**
+   * Sets window.piskel_locale for Piskel to the first of localeCode,
+   * its fallback, and the default locale that Piskel has strings for;
+   * Piskel crashes on startup otherwise.
+   * Resolved on read, since piskel_locales is defined by Piskel's own bundle.
+   * @private
+   */
+  setPiskelLocale_() {
+    const win = this.iframe.contentWindow;
+
+    const locales = [
+      this.props.localeCode,
+      PISKEL_LOCALE_FALLBACKS[this.props.localeCode],
+      toPiskelLocale(DefaultLocale),
+    ];
+
+    Object.defineProperty(win, 'piskel_locale', {
+      configurable: true,
+      get: () => locales.find(locale => win.piskel_locales?.[locale]),
+    });
   }
 
   UNSAFE_componentWillReceiveProps(newProps) {
@@ -219,6 +253,9 @@ class PiskelEditor extends React.Component {
     );
   }
 }
+
+export const UnconnectedPiskelEditor = PiskelEditor;
+
 export default connect(
   state => ({
     currentAnimation: state.animationTab.currentAnimations[state.interfaceMode],
