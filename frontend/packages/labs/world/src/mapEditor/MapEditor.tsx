@@ -84,6 +84,7 @@ import {
   type WorkspaceState,
 } from './mapModel';
 import {MapStage} from './MapStage';
+import {withMirrors} from './mirrorPreview';
 import {PlaceHeading} from './PlaceHeading';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {withPlacePicture} from './placePicture';
@@ -594,6 +595,11 @@ export const MapEditor = ({
     [currentSources],
   );
 
+  // The game's own file, whose code is never locked and whose properties
+  // offer the game's enhancements.
+  const isMainScreen =
+    document.scriptKind === 'screen' &&
+    filePath(currentSources.source, fileId) === `${MAIN_SCREEN_PATH}.screen`;
   const heldMaps = useMemo(() => {
     const held: Record<string, MapDoc> = {};
     for (const actor of map.actors) {
@@ -604,8 +610,12 @@ export const MapEditor = ({
         held[actor.id] = parseMap(contents);
       }
     }
-    return held;
-  }, [map, files]);
+    // …and what a mirror shows instead, the world's own scene being the Main
+    // Screen (`mirrorPreview`).
+    const screen = files[`${MAIN_SCREEN_PATH}.screen`];
+    const root = isMainScreen ? map : screen ? parseMap(screen) : undefined;
+    return withMirrors(map, held, root);
+  }, [map, files, isMainScreen]);
 
   const commit = (next: MapDoc, group?: string) => {
     // A change to the layout, or to the size it divides, moves what is
@@ -627,11 +637,6 @@ export const MapEditor = ({
   // The traits a Viewport's camera may elect: the project's rules' camera
   // traits.
   const cameraChoices = useMemo(() => cameraTraitChoices(files), [files]);
-  // The game's own file, whose code is never locked and whose properties
-  // offer the game's enhancements.
-  const isMainScreen =
-    document.scriptKind === 'screen' &&
-    filePath(currentSources.source, fileId) === `${MAIN_SCREEN_PATH}.screen`;
   const worldInspector =
     document.world && worldHeader
       ? {

@@ -1,11 +1,11 @@
 # A Viewport onto the world's own scene
 
-STATUS: BUILDING. Steps 1 to 4 are in — a Viewport declares what it mirrors
+STATUS: BUILDING. Steps 1 to 5 are in — a Viewport declares what it mirrors
 with `mirrors the world` or `mirrors`, is bound to that scene with no copy of
-its own, routes the pointer through its camera, and the driver draws the scene
-it mirrors into its box. What is left is the editor's dimmed preview (step 5),
-zoom, and layer masking — a mirror that hides the HUD, which is what makes a
-minimap a minimap and is its own step. specs/VIEWPORT_PLAN.md lists
+its own, routes the pointer through its camera, the driver draws the scene it
+mirrors into its box, and the editor draws it there too (step 5). What is left
+is the browser check (step 6), zoom, and layer masking — a mirror that hides
+the HUD, which is what makes a minimap a minimap and is its own step. specs/VIEWPORT_PLAN.md lists
 "mirroring" as not built; this is what it would take, written after a Viewport
 was given cameras of its own (specs/SPACE_CAMERAS_PLAN.md) and after the first
 person to build one asked for it: a minimap, a second shot of the same level,
@@ -155,9 +155,12 @@ camera draws is the root scene and nothing else.
    reports no layers of its own, or the driver would build a second set of
    backdrops inside the box over the scene it shows.
 
-5. **Editor.** Nothing for the properties — `mirrors the world` is a checkbox
-   and `mirrors` a placement reference, both of which the inspector already
-   draws — but the held-map preview should draw the mirrored scene dimmed
-   inside the box, as it draws a held level.
+5. **Editor. BUILT.** Nothing for the properties — `mirrors the world` is a
+   checkbox and `mirrors` a placement reference, both of which the inspector
+   already draws. The stage draws a mirror's scene dimmed inside its box, as
+   it draws a held level: the held map at the end of its chain, found as the
+   engine finds it, or the Main Screen for one that mirrors the world
+   (`mapEditor/mirrorPreview`). On a game, a minimap mirrors the Game
+   Viewport, since the world's own scene is the screen the game is shown on.
 6. **Specs**, and the browser: a minimap on the Jetpack level, following the
    Pilot at the same scale, until zoom lands.
