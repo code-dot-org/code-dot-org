@@ -45,6 +45,7 @@ import {
   type ProjectSpec,
 } from '../constants';
 import {asScreenProject} from '../progression/lessons/asScreen';
+import type {RuleData} from '../rules/ruleData';
 import {referenceToStock} from '../rules/ruleReference';
 
 import {me, number} from './meteors';
@@ -349,8 +350,8 @@ const CROSSHAIR_ACTOR = JSON.stringify({
  * it the way it takes anything else, with `use trait ⟨Spin⟩`. This was once
  * the lab's one `.behavior` — a file type whose whole purpose was to say this
  * in one block rather than three, and which nothing else ever reached for
- * (specs/BEHAVIORS.md, "Where this ended"). The three blocks here are the
- * three `New rule` now writes.
+ * (specs/BEHAVIORS.md, "Where this ended"). A trait of the rule's name with a
+ * step under it is what `New rule` now writes.
  *
  * ITS STATE IS ITS OWN, AND EACH ACTOR'S IS ITS OWN. `spin speed` is declared
  * under the trait, so it arrives and leaves with it and no actor carries a
@@ -358,70 +359,55 @@ const CROSSHAIR_ACTOR = JSON.stringify({
  * copy, which the coins prove by spinning at speeds written into their
  * arrangement.
  */
-const SPIN_RULE = JSON.stringify({
-  blocks: {
-    blocks: [
+const SPIN_RULE = JSON.stringify(
+  {
+    type: 'rule',
+    name: 'Spin',
+    ability: 'Spins',
+    traits: [
       {
-        type: 'world_rule',
-        x: 20,
-        y: 20,
-        fields: {NAME: 'Spin', ABILITY: 'Spins'},
-      },
-      {
-        type: 'world_rule_trait',
-        x: 20,
-        y: 120,
-        fields: {NAME: 'Spin', SUBJECT: 'actor'},
-        next: {
-          block: stack([
-            // A declaration and a default, not code — so it sits at the top,
-            // where it reads best, and the step below reads it.
-            {
-              type: 'world_rule_property',
-              fields: {
-                TYPE: 'number',
-                ACCESS: 'writable',
-                NAME: 'spin speed',
-                DEFAULT: '120',
-              },
-            },
-            {
-              type: 'world_trait_step',
-              fields: {PHASE: 'decide', NAME: 'spin'},
+        name: 'Spin',
+        properties: [
+          {
+            name: 'spin speed',
+            type: 'number',
+            access: 'writable',
+            value: '120',
+          },
+        ],
+        steps: [
+          {
+            name: 'spin',
+            phase: 'decide',
+            body: {
+              type: 'world_set_Space_RotationProperty',
               inputs: {
-                DO: {
+                ACTOR: me(),
+                // Degrees per SECOND, so the spin is the same however
+                // long a frame took — `delta` is what makes it so.
+                VALUE: {
                   block: {
-                    type: 'world_set_Space_RotationProperty',
+                    type: 'math_arithmetic',
+                    fields: {OP: 'ADD'},
                     inputs: {
-                      ACTOR: me(),
-                      // Degrees per SECOND, so the spin is the same however
-                      // long a frame took — `delta` is what makes it so.
-                      VALUE: {
+                      A: {
+                        block: {
+                          type: 'world_get_Space_RotationProperty',
+                          inputs: {ACTOR: me()},
+                        },
+                      },
+                      B: {
                         block: {
                           type: 'math_arithmetic',
-                          fields: {OP: 'ADD'},
+                          fields: {OP: 'MULTIPLY'},
                           inputs: {
                             A: {
                               block: {
-                                type: 'world_get_Space_RotationProperty',
+                                type: 'world_get_Spin_SpinSpeedProperty',
                                 inputs: {ACTOR: me()},
                               },
                             },
-                            B: {
-                              block: {
-                                type: 'math_arithmetic',
-                                fields: {OP: 'MULTIPLY'},
-                                inputs: {
-                                  A: {
-                                    block: {
-                                      type: 'world_get_Spin_SpinSpeedProperty',
-                                      inputs: {ACTOR: me()},
-                                    },
-                                  },
-                                  B: {block: {type: 'world_step_delta'}},
-                                },
-                              },
-                            },
+                            B: {block: {type: 'world_step_delta'}},
                           },
                         },
                       },
@@ -430,12 +416,14 @@ const SPIN_RULE = JSON.stringify({
                 },
               },
             },
-          ]),
-        },
+          },
+        ],
       },
     ],
-  },
-});
+  } satisfies RuleData,
+  null,
+  2,
+);
 
 const MAIN_WORLD = JSON.stringify({
   blocks: {

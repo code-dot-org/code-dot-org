@@ -7,7 +7,9 @@
 
 import {describe, expect, it} from 'vitest';
 
+import {compileProject} from '../../__tests__/support/compileProject';
 import {viewOf} from '../../actors/actorData';
+import {RotationProperty} from '../../engine';
 import {keyName, KEY_CHOICES} from '../../engine/core/keys';
 import {entryFileOf} from '../../mainWorld';
 import {lessonChannel} from '../../progression/lessonRoute';
@@ -147,6 +149,18 @@ describe('the scenario catalogue', () => {
       expect(named(sprite)).toBe(true);
     }
   });
+
+  it('spins tapper’s coins, from a rule written as data', async () => {
+    const {world, modules} = await compileProject(
+      projectFiles(WORLD_SCENARIOS.tapper.source),
+    );
+    const {SpinTrait} = modules['rules/spin'] as unknown as {SpinTrait: never};
+    const coin = [...world.actors].find(actor => actor.has(SpinTrait))!;
+    const before = coin.get(RotationProperty);
+    world.tick(1 / 60);
+    world.tick(1 / 60);
+    expect(coin.get(RotationProperty)).not.toBe(before);
+  }, 60000);
 
   it('gives tapper the mouse, and the rules a click is made of', () => {
     // The one scenario played with the pointer, and the only demonstration

@@ -37,7 +37,7 @@ import {
   words,
 } from '../../actors/stock/workspace';
 import type {WorldScenario} from '../../fixtures/scenarios';
-import {asRuleData} from '../../rules/ruleData';
+import type {RuleData, RuleTrait} from '../../rules/ruleData';
 import type {LessonProperties, TileId} from '../types';
 
 import {opensOnTheLevel} from './asScreen';
@@ -4265,65 +4265,49 @@ const heldPosition = (component: 'x' | 'y') => ({
 });
 
 /**
- * A rule a learner can read in a sitting: one trait, one step, one number.
- * Written as the rows it stands for and stored as data, as the Rule Editor
- * writes it.
+ * A rule a learner can read in a sitting: one trait, **Blown**, whose one step
+ * drifts whatever elected it two pixels right a frame. The wind lesson and
+ * the weather lesson each start from one, under its own name.
  */
-const WIND_RULE = asRuleData(
+const driftRule = (name: string, ability: string): string =>
   JSON.stringify(
     {
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            x: 20,
-            y: 20,
-            fields: {NAME: 'Wind', ABILITY: 'Has Wind'},
-            next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
-          },
-          {
-            type: 'world_rule_trait',
-            x: 20,
-            y: 160,
-            fields: {NAME: 'Blown'},
-            next: {
-              block: {
-                type: 'world_use_trait',
-                fields: {TRAIT: 'Space#PositionalTrait'},
-                next: {
-                  block: {
-                    type: 'world_trait_step',
-                    fields: {PHASE: 'move', NAME: 'drift'},
-                    inputs: {
-                      DO: {
-                        block: {
-                          type: 'world_set_position',
-                          inputs: {
-                            ACTOR: me(),
-                            X: {
-                              block: {
-                                type: 'math_arithmetic',
-                                fields: {OP: 'ADD'},
-                                inputs: {A: heldPosition('x'), B: num(2)},
-                              },
-                            },
-                            Y: heldPosition('y'),
-                          },
-                        },
-                      },
+      type: 'rule',
+      name,
+      ability,
+      uses: ['Space'],
+      traits: [
+        {
+          name: 'Blown',
+          uses: ['Space#PositionalTrait'],
+          steps: [
+            {
+              name: 'drift',
+              phase: 'move',
+              body: {
+                type: 'world_set_position',
+                inputs: {
+                  ACTOR: me(),
+                  X: {
+                    block: {
+                      type: 'math_arithmetic',
+                      fields: {OP: 'ADD'},
+                      inputs: {A: heldPosition('x'), B: num(2)},
                     },
                   },
+                  Y: heldPosition('y'),
                 },
               },
             },
-          },
-        ],
-      },
-    },
+          ],
+        },
+      ],
+    } satisfies RuleData,
     null,
     2,
-  ),
-);
+  );
+
+const WIND_RULE = driftRule('Wind', 'Has Wind');
 
 const ruleProperty: WorldScenario = {
   // A lesson about a RULE FILE, reached from Rules in Play.
@@ -4709,61 +4693,7 @@ nothing anywhere else changes when you change it.
 // ── making/trait ─────────────────────────────────────────────────────────────
 
 /** A rule with ONE trait in it, which is the shape this lesson doubles. */
-const WEATHER_RULE = asRuleData(
-  JSON.stringify(
-    {
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            x: 20,
-            y: 20,
-            fields: {NAME: 'Weather', ABILITY: 'Has Weather'},
-            next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
-          },
-          {
-            type: 'world_rule_trait',
-            x: 20,
-            y: 160,
-            fields: {NAME: 'Blown'},
-            next: {
-              block: {
-                type: 'world_use_trait',
-                fields: {TRAIT: 'Space#PositionalTrait'},
-                next: {
-                  block: {
-                    type: 'world_trait_step',
-                    fields: {PHASE: 'move', NAME: 'drift'},
-                    inputs: {
-                      DO: {
-                        block: {
-                          type: 'world_set_position',
-                          inputs: {
-                            ACTOR: me(),
-                            X: {
-                              block: {
-                                type: 'math_arithmetic',
-                                fields: {OP: 'ADD'},
-                                inputs: {A: heldPosition('x'), B: num(2)},
-                              },
-                            },
-                            Y: heldPosition('y'),
-                          },
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        ],
-      },
-    },
-    null,
-    2,
-  ),
-);
+const WEATHER_RULE = driftRule('Weather', 'Has Weather');
 
 const ownTrait: WorldScenario = {
   name: 'A trait of your own',
@@ -5102,66 +5032,47 @@ const bobBy = (amount: number) => ({
 });
 
 /** One trait of the Bobbing rule: a step that moves y by the sum above. */
-const bobTrait = (name: string, step: string, amount: number, y: number) => ({
-  type: 'world_rule_trait',
-  x: 20,
-  y,
-  fields: {NAME: name},
-  next: {
-    block: {
-      type: 'world_use_trait',
-      fields: {TRAIT: 'Space#PositionalTrait'},
-      next: {
-        block: {
-          type: 'world_trait_step',
-          // The step's name has to be its own: a rule's steps become named
-          // constants in one module, so two called `bob` are one identifier
-          // declared twice and a rule that will not load.
-          fields: {PHASE: 'move', NAME: step},
-          inputs: {
-            DO: {
-              block: {
-                type: 'world_set_position',
-                inputs: {
-                  ACTOR: me(),
-                  X: heldPosition('x'),
-                  Y: {
-                    block: {
-                      type: 'math_arithmetic',
-                      fields: {OP: 'ADD'},
-                      inputs: {A: heldPosition('y'), B: {block: bobBy(amount)}},
-                    },
-                  },
-                },
-              },
+const bobTrait = (name: string, step: string, amount: number): RuleTrait => ({
+  name,
+  uses: ['Space#PositionalTrait'],
+  steps: [
+    {
+      // The step's name has to be its own: a rule's steps become named
+      // constants in one module, so two called `bob` are one identifier
+      // declared twice and a rule that will not load.
+      name: step,
+      phase: 'move',
+      body: {
+        type: 'world_set_position',
+        inputs: {
+          ACTOR: me(),
+          X: heldPosition('x'),
+          Y: {
+            block: {
+              type: 'math_arithmetic',
+              fields: {OP: 'ADD'},
+              inputs: {A: heldPosition('y'), B: {block: bobBy(amount)}},
             },
           },
         },
       },
     },
-  },
+  ],
 });
 
-const BOBBING_RULE = asRuleData(
-  JSON.stringify(
-    {
-      blocks: {
-        blocks: [
-          {
-            type: 'world_rule',
-            x: 20,
-            y: 20,
-            fields: {NAME: 'Bobbing', ABILITY: 'Bobs'},
-            next: {block: {type: 'world_use_rule', fields: {RULE: 'Space'}}},
-          },
-          bobTrait('Bobs Gently', 'bob gently', 1, 160),
-          bobTrait('Bobs Wildly', 'bob wildly', 4, 420),
-        ],
-      },
-    },
-    null,
-    2,
-  ),
+const BOBBING_RULE = JSON.stringify(
+  {
+    type: 'rule',
+    name: 'Bobbing',
+    ability: 'Bobs',
+    uses: ['Space'],
+    traits: [
+      bobTrait('Bobs Gently', 'bob gently', 1),
+      bobTrait('Bobs Wildly', 'bob wildly', 4),
+    ],
+  } satisfies RuleData,
+  null,
+  2,
 );
 
 const ownBlock: WorldScenario = {

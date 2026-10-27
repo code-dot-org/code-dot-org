@@ -1,6 +1,7 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: IN PROGRESS, October 2026. Steps 0 to 4, 5a and 5b are built.
+STATUS: IN PROGRESS, October 2026. Steps 0 to 4, 5a, 5b and 5c's first two
+are built.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -188,10 +189,11 @@ as `define actor` rows (`viewOf`) by the compiler, `parseActorOwnMeta` and
 the enhancers; the stock actors, the starter project, the lessons and the
 fixtures are written as rows and folded. In order, each its own commit:
 
-1. `parseRuleMeta` reads the data, folding a file written in blocks first.
-   A rule's `define choices` is dropped: the data has no place for it and
-   no rule uses it.
-2. The lessons' and fixtures' rules are written as data.
+1. BUILT. `parseRuleMeta` reads the data, folding a file written in blocks
+   first. A rule's `define choices` is dropped: the data has no place for
+   it and no rule uses it. The fold reads a missing ability as the name and
+   a missing access as writable, as the walk did.
+2. BUILT. The lessons' and fixtures' rules are written as data.
 3. The stock rules are generated as data.
 4. `resolveRuleContents` and `projectFiles` hand out data; what rewrites a
    rule's rows works through a view of its own, as an actor's does.
