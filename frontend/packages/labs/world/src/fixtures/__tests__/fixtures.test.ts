@@ -329,10 +329,8 @@ describe('the scenario catalogue', () => {
     expect(map.size.height).toBe(VIEWPORT_TILES);
 
     // The view is the Viewport's camera, kept on its placement as the map
-    // editor keeps it — not a `define camera` in blocks, which the Cameras
-    // list would show as "in code" — and the one the Viewport looks through.
+    // editor keeps it, and the one the Viewport looks through.
     const main = contents('main.screen');
-    expect(main).not.toContain('world_define_camera');
     const [viewport] = JSON.parse(main).actors as Array<{
       properties: {showsMap: {map: string; showsThrough: string}};
       cameras: object[];

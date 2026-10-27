@@ -52,50 +52,17 @@ const seedShadow = (
 };
 
 /**
- * Whether this block sits inside a `define camera` body.
- *
- * `getSurroundParent`, because `define camera` HAS a `do` mouth — the reason
- * `layerOf` gives for the same choice. A block merely chained below the camera
- * is beside it, not in it.
- *
- * A handler ends the walk: it rebinds the subject, so a block inside one is not
- * the camera's however far up the camera is.
- */
-export const inCameraBody = (block: Block): boolean => {
-  for (
-    let parent = block.getSurroundParent?.() ?? null;
-    parent;
-    parent = parent.getSurroundParent?.() ?? null
-  ) {
-    if (parent.type === 'world_define_camera') {
-      return true;
-    }
-    if (parent.type.startsWith('world_on_')) {
-      return false;
-    }
-  }
-  return false;
-};
-
-/**
- * The subject a block in this position is about.
- *
- * Inside `define camera` that is the camera — `this camera` outputs `Actor`, so
- * it fits the same socket, and a camera has the foundation's traits (a position,
- * a rotation) that these blocks read. Everywhere else it is the actor.
+ * The subject a block in this position is about: the actor, unless the block
+ * names a camera trait.
  */
 export const subjectShadow = (block: Block): string => {
-  if (inCameraBody(block)) {
-    return 'world_this_camera';
-  }
   // A block that NAMES a trait is a special case, and `add trait ⟨…⟩ to ⟨…⟩`
   // is the one that matters: the trait decides whose it is. A camera trait
   // given to `this actor` is a sentence that reads fine and does nothing, and
   // the fix was to drag `camera ⟨the main camera⟩` in every single time.
   //
-  // The main camera rather than `this camera`, because outside a `define
-  // camera` body there is no such thing — `this camera` generates the bare
-  // identifier `camera`, which a world body does not bind.
+  // The main camera rather than `this camera`, because `this camera`
+  // generates the bare identifier `camera`, which a world body does not bind.
   const named = block.getFieldValue?.('TRAIT');
   if (named && subjectOfTraitValue(String(named)) === 'camera') {
     return cameraOutside(block);
@@ -104,11 +71,10 @@ export const subjectShadow = (block: Block): string => {
 };
 
 /**
- * Whose a camera member is, outside a `define camera` body.
+ * Whose a camera member is.
  *
- * IN A WORLD FILE, the main camera: `define camera` is for the second camera a
- * world wants, so the common case is a world adjusting the one every world
- * already has, and `this camera` there generates an identifier nothing binds.
+ * IN A WORLD FILE, the main camera: `this camera` there generates an
+ * identifier nothing binds.
  *
  * ANYWHERE ELSE — an actor file, a placement's script — the actor. The only
  * kind offered a camera member there is one that shows a map, whose camera
@@ -134,22 +100,17 @@ const fileWorkspaceOf = (block: Block): WorkspaceSvg | undefined => {
 };
 
 /**
- * The subject for a member a CAMERA elects — `set look offset of ⟨…⟩`.
- *
- * Inside `define camera`, the camera being defined. Outside it, whatever
- * `cameraOutside` says: the world's main camera in a world file, the actor
- * itself in an actor's or a placement's.
+ * The subject for a member a CAMERA elects — `set look offset of ⟨…⟩`: the
+ * world's main camera in a world file, the actor itself in an actor's or a
+ * placement's.
  */
-export const cameraShadow = (block: Block): string =>
-  inCameraBody(block) ? 'world_this_camera' : cameraOutside(block);
+export const cameraShadow = (block: Block): string => cameraOutside(block);
 
 /**
  * Replace the shadow when the block's surroundings change its subject.
  *
- * Seeding at creation was not enough, and the gap was visible: a block dragged
- * INTO a `define camera` kept the `this actor` it was made with, so it read as
- * being about an actor that is not there, and a learner had to know to swap in
- * `this camera` by hand. Dragging back out has the same problem in reverse.
+ * Seeding at creation was not enough: `add trait ⟨…⟩ to ⟨…⟩` is made before its
+ * trait is chosen, and choosing a camera trait changes whose it is.
  *
  * ONLY A SHADOW IS OURS TO CHANGE. A block the learner dropped into the socket
  * is an answer they gave; replacing it because they moved the whole thing would
@@ -197,24 +158,17 @@ export const actorInputExtension: Extension = defineExtension(
  *
  * `set look offset of ⟨…⟩` belongs to a camera, so the answer to "whose?" is
  * `this camera` and never `this actor`. Seeded with the wrong one it read as a
- * sentence about an actor and generated `actor`, which a `define camera` body
- * does not bind — so it had to be thrown away and replaced by hand every time.
+ * sentence about an actor in a world file, where there is none.
  *
  * Chosen from the member's SCOPE, which is a fact about where it was declared
- * (`MemberScope`) and so is known when the block is defined. Being inside a
- * `define camera` is not: an extension runs as the block is created, and a
- * block in a flyout has not landed anywhere yet. That is why the ordinary
- * engine blocks — `set position of ⟨this actor⟩` and the rest — still seed an
- * actor wherever they are dragged.
+ * (`MemberScope`) and so is known when the block is defined.
  */
 export const cameraInputExtension: Extension = defineExtension(
   CAMERA_INPUT_EXTENSION,
   {
     extension() {
       seedShadow(this, () => cameraShadow(this));
-      // Re-seeded for the reason the actor one is: a block dragged into a
-      // `define camera` should read as that camera's, and dragged out again
-      // should stop pretending there is one.
+      // A block made in the flyout is seeded for the flyout's file.
       addOnChange(this, function (this: Block, event) {
         if (isStructuralChange(this, event)) {
           reseedShadow(this, cameraShadow);

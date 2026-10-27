@@ -6,9 +6,8 @@
 // follow`, `look offset` — which is what a placement's inspector does for an
 // actor's traits. An added camera is removed here.
 //
-// What it shows and writes is data kept on the owner — a Viewport's on its
-// placement, the world's on its main map — which the compiler turns into the
-// camera's `define camera` (`blockly/placementCameras`).
+// What it shows and writes is data kept on the Viewport's placement, which
+// the compiler turns into a `defineCamera` call (`blockly/placementCameras`).
 //
 // The main camera has no traits of its own here: every world has it, and it
 // shows the map from its top left. Following something is what an added

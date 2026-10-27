@@ -95,7 +95,7 @@ function rulesInPlay(refs: string[]): Set<RuleMeta> {
  * What the thing electing a trait here IS — an actor, or a camera.
  *
  * A trait belongs to whatever takes it (`TraitMeta.subject`), so the dropdown
- * has to know where it is being asked from: inside `define camera` only camera
+ * has to know where it is being asked from: inside a camera trait only camera
  * traits make sense, and inside `define actor` only an actor's. Offering both
  * everywhere would put "Affected by Gravity" on a camera, which is the
  * meaningless-trait problem this project has already avoided twice.
@@ -114,7 +114,7 @@ export function traitSubjectFor(field?: {
  *
  * `subject` is what would take the trait, and decides which traits make sense
  * at all. `electing` is whether this row GIVES a thing a trait — `define actor`
- * and `define camera` do, and generate `useTraits` — as against declaring one
+ * does, and generates `useTraits` — as against declaring one
  * trait's dependency on another under `define trait`, which generates
  * `requires` and is a statement about the trait rather than about anything
  * holding it. The foundation traits are left out of the first and kept in the
@@ -150,9 +150,6 @@ function traitSiteFor(field?: {getSourceBlock(): unknown}): {
     parent;
     parent = parent.getParent?.() as typeof parent
   ) {
-    if (parent.type === 'world_define_camera') {
-      return {subject: 'camera', electing: true};
-    }
     if (parent.type === 'world_actor') {
       return {subject: 'actor', electing: true, viewport: showsAMap(parent)};
     }

@@ -62,7 +62,7 @@ import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
 import {AngleInput} from './AngleInput';
 import {CameraInspector} from './CameraInspector';
-import {CameraList} from './CameraList';
+import {CameraList, type ListedCamera} from './CameraList';
 import {
   dividerAt,
   dockChoices,
@@ -166,7 +166,6 @@ import {useAfterImport} from './useAfterImport';
 import {VectorInput} from './VectorInput';
 import {WithheldNote} from './WithheldNote';
 import {MAIN_CAMERA, type CameraProperty} from './worldCameraCode';
-import {placementCameras, type DeclaredCamera} from './worldCameras';
 import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
 import type {CameraTraitChoice} from './worldRuleProperties';
 
@@ -1691,10 +1690,7 @@ export const MapStage = ({
       prop.ownerId === VIEWPORT.trait &&
       prop.propId === VIEWPORT.showsThrough
     ) {
-      const names = [
-        ...(selectedActor.cameras ?? []),
-        ...placementCameras(selectedActor.blocks),
-      ].map(camera => camera.name);
+      const names = (selectedActor.cameras ?? []).map(camera => camera.name);
       const chosen = draft[fieldKey(prop)] ?? '';
       return (
         <SimpleDropdown
@@ -3397,14 +3393,6 @@ export const MapStage = ({
     return scriptButtonAt(corners, SCRIPT_BUTTON, size, SCRIPT_BUTTON_GAP);
   })();
 
-  // Only when a script can be opened, because opening it is the one thing
-  // the camera list offers — and not at all while scripts are withheld from
-  // this lesson: a list whose one button opens a script nobody may open is a
-  // list that says less than nothing.
-  //
-  // …except the world's own, which are EDITED in the list and need no
-  // script to be offered (`worldCameraCode`).
-  const scripts = !appBuilder && onEditScript && !locked('map-scripts');
   // A SELECTED VIEWPORT'S cameras, edited through the list and inspector:
   // data on the placement, made here and nowhere else, which the compiler
   // turns into their declarations (`blockly/placementCameras`). Its `shows
@@ -3466,33 +3454,7 @@ export const MapStage = ({
         })()
       : undefined;
   const cameraEditor = viewportCameraEditor;
-  // Made here and kept as data on the placement. Cameras declared in its
-  // code beside them are listed, not edited.
-  const editableCameras: readonly DeclaredCamera[] = (
-    selectedActor?.cameras ?? []
-  ).map(({id, name, traits}) => ({id, name, traits}));
-  const cameras = appBuilder
-    ? undefined
-    : selectedActor
-      ? viewportCameraEditor
-        ? {
-            list: editableCameras,
-            inCode: placementCameras(selectedActor.blocks),
-            owner: selectedActor.id,
-            open: scripts ? () => onEditScript?.(selectedActor.id) : undefined,
-          }
-        : // Not a Viewport, or no camera rules to edit one with: only what
-          // its code declares, when it declares any — a section saying
-          // "only the main camera" on every placement says nothing.
-          scripts && placementCameras(selectedActor.blocks).length > 0
-          ? {
-              list: placementCameras(selectedActor.blocks),
-              inCode: [],
-              owner: selectedActor.id,
-              open: () => onEditScript?.(selectedActor.id),
-            }
-          : undefined
-      : undefined;
+  const editableCameras: readonly ListedCamera[] = selectedActor?.cameras ?? [];
   /** The camera open in the inspector, while it still exists. */
   const inspectedCamera =
     cameraEditor && inspectingCamera
@@ -3503,33 +3465,28 @@ export const MapStage = ({
   // A selected Viewport's cameras, as a section of its inspector; a map and
   // a screen have none of their own (specs/SPACE_CAMERAS_PLAN.md). A row opens the camera's inspector in
   // place of this one, and its Close comes back.
-  const cameraSection = cameras ? (
-    <CameraList
-      cameras={cameras.list}
-      owner={cameras.owner}
-      onOpen={cameras.open}
-      inCode={cameras.inCode}
-      edits={
-        cameraEditor
-          ? {
-              starting: cameraEditor.starting,
-              onSelect: id => {
-                setInspectingCamera(id);
-                setInspectingLayer(false);
-              },
-              onAdd: () => {
-                const id = cameraEditor.add();
-                if (id) {
-                  setInspectingCamera(id);
-                  setInspectingLayer(false);
-                }
-              },
-              isReadOnly,
+  const cameraSection =
+    !appBuilder && selectedActor && viewportCameraEditor ? (
+      <CameraList
+        cameras={editableCameras}
+        owner={selectedActor.id}
+        edits={{
+          starting: viewportCameraEditor.starting,
+          onSelect: id => {
+            setInspectingCamera(id);
+            setInspectingLayer(false);
+          },
+          onAdd: () => {
+            const id = viewportCameraEditor.add();
+            if (id) {
+              setInspectingCamera(id);
+              setInspectingLayer(false);
             }
-          : undefined
-      }
-    />
-  ) : null;
+          },
+          isReadOnly,
+        }}
+      />
+    ) : null;
 
   return (
     <div className={styles.stage} ref={stageRef}>

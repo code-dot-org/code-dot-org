@@ -1019,43 +1019,6 @@ describe('the world, with nothing selected', () => {
 });
 
 describe('the camera list', () => {
-  // What cameras the thing being edited has declared, read from its blocks
-  // (specs/SPACE_CAMERAS_PLAN.md, step 9a). Only offered when a script can be
-  // opened, since opening it is the one thing the strip does.
-  const chase = {
-    blocks: {
-      languageVersion: 0,
-      blocks: [
-        {
-          type: 'world_on_Space_CreatedEvent',
-          inputs: {
-            DO: {
-              block: {
-                type: 'world_define_camera',
-                id: 'cam1',
-                fields: {NAME: 'Chase'},
-                inputs: {OWNER: {block: {type: 'world_this_actor'}}},
-              },
-            },
-          },
-        },
-      ],
-    },
-  };
-
-  it('lists a placement’s own, read from its script, when it is selected', () => {
-    const map = doc();
-    map.actors[0] = {...map.actors[0], blocks: chase as never};
-    const onEditScript = vi.fn();
-    const {canvas, ...view} = mount(map, {onEditScript});
-    pointer(canvas, 'pointerdown', screenPoint(map, {x: 48, y: 48}));
-    pointer(canvas, 'pointerup', screenPoint(map, {x: 48, y: 48}));
-    expect(view.getByText('Chase')).toBeInTheDocument();
-
-    fireEvent.click(view.getByRole('button', {name: 'Open code'}));
-    expect(onEditScript).toHaveBeenCalledWith('a');
-  });
-
   it('offers no cameras in App Builder, and no layers either', () => {
     // Left out rather than withheld: no lesson grants either to an app.
     const view = mount(doc(), {

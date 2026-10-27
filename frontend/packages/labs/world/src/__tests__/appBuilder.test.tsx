@@ -155,14 +155,14 @@ describe('the actor library in an app', () => {
 
 describe('withoutBlocks', () => {
   const toolbox = [
-    {name: 'World', blocks: ['world_world', 'world_define_camera']},
-    {name: 'Cameras only', blocks: ['world_define_camera']},
+    {name: 'World', blocks: ['world_world', 'world_use_camera']},
+    {name: 'Cameras only', blocks: ['world_use_camera']},
     {name: 'Loops', blocks: ['controls_forEach']},
   ];
 
   it('drops the blocks, and a drawer left holding none', () => {
     expect(
-      withoutBlocks(toolbox as never, new Set(['world_define_camera'])),
+      withoutBlocks(toolbox as never, new Set(['world_use_camera'])),
     ).toEqual([
       {name: 'World', blocks: ['world_world']},
       {name: 'Loops', blocks: ['controls_forEach']},

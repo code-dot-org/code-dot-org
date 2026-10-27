@@ -54,12 +54,7 @@ import {actorInputExtension, cameraInputExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
 import {BUILTIN_RULE_META} from './builtinMeta';
-import {
-  cameraId,
-  cameraIdFromValue,
-  cameraOptions,
-  cameraOptionsExtension,
-} from './cameras';
+import {cameraIdFromValue, cameraOptions} from './cameras';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
 import {END_ROW, ROW_PART, settledParts} from './designParts';
@@ -253,7 +248,6 @@ import {
   cameraTraitOptionsExtension,
   traitOptions,
   traitOptionsExtension,
-  traitSubjectFor,
   traitSubjectOfValue,
 } from './traitOptions';
 import {
@@ -627,12 +621,6 @@ const worldUseTrait = defineBlock({
   tooltip: 'Give the actor a trait (its properties and behavior).',
   generator: {
     javascript(block, generator) {
-      // Inside `define camera` the declaration collects these and passes them
-      // to `defineCamera` in one call, so there is nothing to emit here: a
-      // camera is made complete, and has no builder to add a trait to.
-      if (traitSubjectFor({getSourceBlock: () => block}) === 'camera') {
-        return '';
-      }
       const trait = block.getFieldValue('TRAIT');
       // "(none)" — the rules in play offer nothing electable, which is the
       // ordinary state of a project with no rules now that the two traits every
@@ -1452,8 +1440,8 @@ const onHandler = (
  *
  * The scope is where the member was declared: a trait a camera elects gives
  * `camera`, and the only sensible subject then is `this camera` — an actor one
- * is not merely odd, it generates `actor`, which a `define camera` body does
- * not bind. Said once here because four block factories ask it.
+ * is not merely odd, it generates `actor`, which a camera's step does not
+ * bind. Said once here because four block factories ask it.
  */
 const subjectInputExtension = (scope: MemberScope) =>
   scope === 'camera' ? cameraInputExtension : actorInputExtension;
@@ -2793,8 +2781,8 @@ export interface PropertyBlockShape {
 /**
  * The subject a property block is asked OF, as the block that starts in its
  * socket. An actor's is `this actor`; a camera's is the main camera, because
- * `this camera` outside a `define camera` body names an identifier nothing
- * binds (`actorInput.cameraShadow`).
+ * `this camera` outside a camera's step names an identifier nothing binds
+ * (`actorInput.cameraShadow`).
  */
 const SUBJECT_SHADOW: Record<'actor' | 'camera', string> = {
   actor: 'world_this_actor',
@@ -5037,7 +5025,7 @@ const worldCameraValue = defineBlock({
   message0: 'camera %1',
   args0: [{type: 'field_dropdown', name: 'CAMERA', options: cameraOptions}],
   output: 'Actor',
-  extensions: [cameraOptionsExtension, worldContextExtension],
+  extensions: [worldContextExtension],
   style: 'sprite_blocks',
   tooltip:
     'One camera, to read or set something on. Its traits’ properties are set ' +
@@ -5045,7 +5033,6 @@ const worldCameraValue = defineBlock({
   generator: {
     javascript(block) {
       const camera = cameraIdFromValue(
-        block,
         String(block.getFieldValue('CAMERA') ?? ''),
       );
       return [`world.camera(${str(camera)})`, Order.MEMBER] as [string, number];
@@ -8043,11 +8030,7 @@ const worldMoveCamera = defineBlock({
   inputsInline: true,
   previousStatement: true,
   nextStatement: true,
-  extensions: [
-    cameraOptionsExtension,
-    worldContextExtension,
-    valueShadowExtension,
-  ],
+  extensions: [worldContextExtension, valueShadowExtension],
   style: 'setup_blocks',
   tooltip:
     'Point a camera at a place in the world. Everything moves with it except ' +
@@ -8058,124 +8041,9 @@ const worldMoveCamera = defineBlock({
         generator.valueToCode(block, 'POSITION', Order.NONE) ||
         'new WorldLab.Vector(0, 0)';
       const camera = cameraIdFromValue(
-        block,
         String(block.getFieldValue('CAMERA') ?? ''),
       );
       return `world.setCameraPosition(${position}, ${str(camera)});\n`;
-    },
-  },
-});
-
-/**
- * Declare a camera — a second place to look from.
- *
- * Not hoisted, unlike `define layer`: a camera is an entry in a list rather
- * than a place in a scene graph, so one can be added to a world that already
- * exists and there is nothing to order. Declaring it before you name it is
- * therefore just reading order, which is how the block chain runs anyway.
- *
- * A world has one without asking. This is for the second: an overview to cut to
- * when the player dies, a fixed shot for a boss room.
- */
-const worldDefineCamera = defineBlock({
-  type: 'world_define_camera',
-  // …AND WHOSE IT IS. A camera belongs to a space: the world's own, or a
-  // Viewport's, which shows a different scene and so cannot share one
-  // (specs/SPACE_CAMERAS_PLAN.md). An EMPTY socket is the world's, which is what
-  // every camera written before a Viewport could own one says — so this costs
-  // nothing to add, because the generator emits exactly what it emitted before
-  // for an empty one.
-  //
-  // A SOCKET AND NOT A DROPDOWN, which is a reversal: a dropdown of placement
-  // names came first, on the grounds that a world's prologue declares its
-  // cameras before the main map has placed any Viewport, so a live actor would
-  // be empty at the one moment it is read. That is true of the PROLOGUE and the
-  // wrong place to declare one. In a Viewport placement's `on create` the
-  // Viewport certainly exists, `world` is bound (`extensions/worldContext`
-  // admits any `world_on_…` hat), and `this actor` IS the Viewport.
-  //
-  // The socket is also the more correct of the two. A dropdown holds an authored
-  // placement id, and a map loaded twice suffixes those — so a name matches the
-  // first copy and silently misses the second. `this actor` names the instance
-  // that is actually there.
-  message0: 'define camera %1 for %2',
-  args0: [
-    {type: 'field_input', name: 'NAME', text: 'Camera'},
-    {
-      type: 'input_value',
-      name: 'OWNER',
-      check: 'Actor',
-    },
-  ],
-  message1: 'do %1',
-  args1: [{type: 'input_statement', name: 'DO'}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [worldContextExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'A place to look from, and how it behaves. Every world has one already; ' +
-    'define another to cut between views. Give it traits to make it follow ' +
-    'something.',
-  generator: {
-    javascript(block, generator) {
-      // The traits are COLLECTED here rather than emitted by the `use trait`
-      // blocks themselves. An actor's `use trait` calls a builder method, but a
-      // camera is made in one call — `defineCamera({…, traits})` — and there is
-      // no half-built camera to add to. So the declaration gathers its body,
-      // and `use trait` inside a camera generates nothing (see its generator).
-      const traits: string[] = [];
-      for (
-        let member = block.getInputTargetBlock?.('DO') ?? null;
-        member;
-        member = member.getNextBlock?.() ?? null
-      ) {
-        if (member.type !== 'world_use_trait') {
-          continue;
-        }
-        const ref = refFromValue(String(member.getFieldValue('TRAIT') ?? ''));
-        if (ref) {
-          traits.push(refCode(ref, generator));
-        }
-      }
-      const settings = [
-        `id: ${str(cameraId(block.id))}`,
-        `name: ${str(String(block.getFieldValue('NAME') ?? 'Camera'))}`,
-      ];
-      // Whose it is, and nothing at all when the socket is empty — so a camera
-      // of the world generates the bytes it always did (`World.defineCamera`
-      // routes on `space` being absent).
-      //
-      // Through `one`, because an actor-typed socket holds a VALUE and a value
-      // may be a list: `any ⟨Minimap⟩` is every Minimap there is, and a camera
-      // belongs to one space. The same reading `actor to follow` takes of its
-      // own actor-typed property.
-      const owner = generator.valueToCode(block, 'OWNER', Order.NONE);
-      if (owner) {
-        settings.push(`viewport: WorldLab.one(${owner})`);
-      }
-      if (traits.length) {
-        settings.push(`traits: [${traits.join(', ')}]`);
-      }
-      const define = `world.defineCamera({${settings.join(', ')}});\n`;
-      // Everything in the mouth that is NOT a `use trait` — `set actor to
-      // follow …`, a `log`, anything. The walk above reads the declarations and
-      // used to drop the rest on the floor: the blocks sat there looking right
-      // and generated nothing at all, which is the worst way for a mouth to
-      // fail. (`use trait` emits nothing here itself, so this is only the rest.)
-      //
-      // Made AFTER the camera, and with it bound, so `this camera` means the one
-      // being defined — writing `set … of ⟨camera ⟨Chase⟩⟩` inside the
-      // definition of Chase is a name a learner should not have to repeat.
-      const setup = generator.statementToCode(block, 'DO');
-      if (!setup.trim()) {
-        return define;
-      }
-      return (
-        `${define}{\n` +
-        `const camera = world.camera(${str(cameraId(block.id))});\n` +
-        `${setup}}\n`
-      );
     },
   },
 });
@@ -8197,13 +8065,12 @@ const worldUseCamera = defineBlock({
   args0: [{type: 'field_dropdown', name: 'CAMERA', options: cameraOptions}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [cameraOptionsExtension, worldContextExtension],
+  extensions: [worldContextExtension],
   style: 'setup_blocks',
   tooltip: 'Draw the world through this camera from now on.',
   generator: {
     javascript(block) {
       const camera = cameraIdFromValue(
-        block,
         String(block.getFieldValue('CAMERA') ?? ''),
       );
       return `world.setActiveCamera(${str(camera)});\n`;
@@ -11395,7 +11262,6 @@ export const DOMAIN_BLOCKS = [
   worldLayerParallax,
   worldLayerFixed,
   worldWithinLayer,
-  worldDefineCamera,
   worldUseCamera,
   worldMoveCamera,
   worldAddActor,
@@ -12505,7 +12371,6 @@ export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_use_theme',
   'world_set_map_size',
   'world_set_view_size',
-  'world_define_camera',
   'world_define_layer',
   'world_layer_parallax',
   'world_layer_fixed',

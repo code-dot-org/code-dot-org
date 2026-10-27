@@ -69,13 +69,12 @@ export interface CameraInit {
    * declared before spaces had cameras of their own
    * (specs/SPACE_CAMERAS_PLAN.md).
    *
-   * THE ACTOR IS WHAT THE BLOCK PASSES, because `define camera ⟨…⟩ for ⟨…⟩`
-   * belongs in the Viewport's own `on create`, where the Viewport exists and
-   * `this actor` is it. An id is accepted beside it for a caller that has one —
-   * the engine's own tests, and any code holding a name rather than a thing —
-   * and both are resolved when the call is made: nothing waits for a Viewport
-   * that is not there, because the place to declare a camera is the handler that
-   * fires when its space is made.
+   * THE ACTOR IS WHAT THE COMPILER PASSES, because a Viewport's stored camera
+   * is declared in its placement's own code, where the Viewport exists and
+   * `actor` is it (`BlocklyGenerator.cameraCode`). An id is accepted beside it
+   * for a caller that has one — the engine's own tests, and any code holding a
+   * name rather than a thing — and both are resolved when the call is made:
+   * nothing waits for a Viewport that is not there.
    *
    * NOT CALLED `space`, though it decides one, because {@link Camera.space} is
    * the Space itself. One name for the thing asked for and another for the thing

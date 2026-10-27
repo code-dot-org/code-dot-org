@@ -1,6 +1,6 @@
 # Plan: compile rules, actors and cameras from their data
 
-STATUS: IN PROGRESS, October 2026. Steps 0 to 4 are built.
+STATUS: IN PROGRESS, October 2026. Steps 0 to 4 and 5a are built.
 
 A rule and an actor are data, edited in their editors (RULE_EDITOR_PLAN.md,
 ACTORS_AS_DATA_PLAN.md), and a camera is data on a Viewport. The compiler still
@@ -132,19 +132,55 @@ the ten screen and map modules that store a camera: the same bytes.
 
 ### 5. The blocks go
 
-Once nothing loads a view: `define rule`, `define trait`, `use rule`, a
-rule's `define step` and `when tick`, `define block`, `use
-trait` and `define camera` leave the palette, with what only they used.
+The blocks this plan is about are two things at once: what a learner drags,
+and the rows every rule and actor is read through. A rule's data is turned
+back into `define rule` rows before anything reads it (`ruleView`, read by
+`parseRuleMeta` for every rule); the stock rules (`rules/stock`), a new
+`.rule` (`newThing`) and the three Making lessons' rules are written as
+blocks; an actor is read as `use trait` and `define block` rows
+(`actorView`), and the stock actors, the fixtures and the lessons are
+written as rows and folded. Taking the blocks from the learner and taking
+them from the compiler are two different jobs, done in that order.
+
+The rule's step blocks are `world_rule_step_in` and `world_rule_step_tick`.
+`world_trait_step` is `each frame`, which stays: an actor's code holds it.
 `define property` and `define event` stay: a world's own properties and
-events are rows under `define world` (`screenData`). `each frame` and
-`define drawing` stay: an actor's code holds them. `define actor` stays as
-the compiler's root for an actor's rows.
+events are rows under `define world` (`screenData`). `define drawing`
+stays. `define actor` stays as the compiler's root for an actor's rows.
+
+#### 5a. `define camera` goes — BUILT
+
+Nothing makes one: a Viewport's cameras are data (step 4). The block goes,
+with what only it used: the walk that listed a placement's cameras written
+in code (`worldCameras.placementCameras`) and the camera list's "in code"
+rows, and the camera body that `this camera`, a trait's subject and `use
+trait`'s context looked for. The `camera ⟨⟩`, `move camera` and `look
+through camera` dropdowns listed the workspace's `define camera`s; they
+offer the main camera alone.
+
+#### 5b. Out of the palette
+
+`define rule`, `define trait`, `use rule`, `define step`, `when tick`,
+`define block` and `use trait` leave the toolbox, the catalogue's unlocks
+and the "allowed in" tables, and a new `.rule` is seeded as data. The
+definitions stay, as the rows the compiler reads. The five Making lessons
+that teach these blocks (`making/rule`, `making/trait`, `making/block`,
+`making/change`, `making/property`) are rewritten around the Rule Editor.
+
+#### 5c. Out of the compiler
+
+The compiler and `parseRuleMeta` read rule and actor data directly, the
+stock rules are generated as data, and the lessons and fixtures are written
+as data. Then the definitions go.
 
 ## Open
 
-- **A world's `define camera`.** `define world` is not offered but still
-  loads (`ESTABLISHED_ELSEWHERE`), and a world written by hand could hold a
-  `define camera`. Nothing in the repo does. Deleting the block makes such a
-  file unreadable, which is the cost no migration means (never shipped).
 - **A world's properties** are the last declarations written as blocks
   (`define world`, `define property`). A world as data is its own phase.
+  Until then `define world` stays as the compiler's root for the screen's
+  data and as how the lessons and fixtures write their worlds.
+- **Naming a Viewport's camera in code.** `camera ⟨⟩`, `move camera` and
+  `look through camera` name a camera by the `define camera` block that
+  made it, so after 5a they name the main camera only. A Viewport's stored
+  cameras have names (`showsThrough` reads them); a dropdown of those is
+  not built.

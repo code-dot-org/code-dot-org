@@ -2140,10 +2140,8 @@ describe('the camera-feel lesson’s check', () => {
     }));
 
   it('starts where the camera lesson left off, kept on the Viewport', () => {
-    // No `define camera` for the map editor to list as "in code": the camera
-    // is the Game Viewport's, made in its inspector.
+    // The camera is the Game Viewport's, made in its inspector.
     const screen = projectFiles(lesson.source)['screens/main.screen'];
-    expect(screen).not.toContain('world_define_camera');
     const game = (
       JSON.parse(screen) as {
         actors: Array<{id: string; cameras?: Array<{traits: string[]}>}>;

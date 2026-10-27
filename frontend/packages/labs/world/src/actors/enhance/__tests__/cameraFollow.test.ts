@@ -67,7 +67,6 @@ describe('the camera-follow enhancement, as edits', () => {
     expect(followedIn(contents)).toBe('actors/player');
     // Data, not blocks: the camera inspector shows it as the Viewport's, and
     // the code shows nothing (`placementCameras`).
-    expect(contents).not.toContain('world_define_camera');
     expect(contents).not.toContain('world_use_camera');
 
     // …and the rule that aims it, which brings the one that moves the view.

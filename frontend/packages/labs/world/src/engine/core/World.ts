@@ -1547,7 +1547,7 @@ export class World {
       // A camera with no position of its own rests in the middle of THIS
       // world's view. `Camera` defaults to the middle of the standard one,
       // which is the wrong middle for a world that has said how wide it is —
-      // and `set size of view` is written above `define camera`, so a camera
+      // and `set size of view` runs before a camera is declared, so a camera
       // declared afterwards would never be caught by the sweep in
       // `setViewSize` either.
       const camera = makeCamera({
@@ -1663,8 +1663,8 @@ export class World {
     // failure this lab keeps meeting (specs/SPACE_CAMERAS_PLAN.md). So the
     // engine, which owns the convention, resolves it.
     //
-    // This is what binds `camera` inside `define camera ⟨…⟩ of ⟨…⟩`, so that
-    // `set actor to follow` in its mouth means the camera being defined.
+    // This is what binds `camera` for a stored camera's starting values, so
+    // that `set actor to follow` means the camera being declared.
     for (const space of this.viewportSpaces) {
       const found = space.cameras.find(
         camera => camera.id === id || camera.id.endsWith(`:${id}`),

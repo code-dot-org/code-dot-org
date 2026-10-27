@@ -24,7 +24,7 @@ import {
  * A `use trait` field whose block sits under the given chain, innermost first.
  *
  * Ordinary parents rather than surround parents, because `use trait` chains
- * BELOW `define actor` and `define camera` alike — their bodies are stacks, so
+ * BELOW `define actor` and `define trait` alike — their bodies are stacks, so
  * being next-connected is being inside.
  */
 const fieldUnder = (
@@ -51,17 +51,6 @@ describe('what a `use trait` is electing for', () => {
         fieldUnder('world_use_trait', 'world_actor') as Blockly.FieldDropdown,
       ),
     ).toBe('actor');
-  });
-
-  it('is a camera under `define camera`', () => {
-    expect(
-      traitSubjectFor(
-        fieldUnder(
-          'world_use_trait',
-          'world_define_camera',
-        ) as Blockly.FieldDropdown,
-      ),
-    ).toBe('camera');
   });
 
   it('is the trait’s own subject inside `define trait`', () => {
@@ -102,20 +91,6 @@ describe('what a `use trait` is electing for', () => {
       traitSubjectFor(fieldUnder('world_use_trait') as Blockly.FieldDropdown),
     ).toBe('actor');
     expect(traitSubjectFor(undefined)).toBe('actor');
-  });
-
-  it('takes the innermost of two that could answer', () => {
-    // A `define camera` inside a world whose body also holds actors: the
-    // nearest declaration is the one electing.
-    expect(
-      traitSubjectFor(
-        fieldUnder(
-          'world_use_trait',
-          'world_define_camera',
-          'world_world',
-        ) as Blockly.FieldDropdown,
-      ),
-    ).toBe('camera');
   });
 });
 
@@ -179,10 +154,10 @@ describe('which traits each dropdown offers', () => {
     expect(
       names(
         traitOptions(
-          fieldUnder(
-            'world_use_trait',
-            'world_define_camera',
-          ) as Blockly.FieldDropdown,
+          fieldUnder('world_use_trait', {
+            type: 'world_rule_trait',
+            subject: 'camera',
+          }) as Blockly.FieldDropdown,
         ),
       ),
     ).toEqual(['Follows']);
@@ -243,7 +218,7 @@ describe('which traits each dropdown offers', () => {
 
   it('offers `has trait` every trait, wherever it sits', () => {
     // The bug this pair exists for: inside `for each actor` — walking `all
-    // cameras` — there is no `define camera` above, so a filtered dropdown
+    // cameras` — there is no camera trait above, so a filtered dropdown
     // answered "actor" and hid every camera trait from the one loop that
     // needed them.
     expect(names(anyTraitOptions())).toEqual(['Follows', 'Watched']);
@@ -305,7 +280,7 @@ describe('a rule seeing the traits it declares', () => {
       {name: 'Follows', subject: 'camera'},
       {name: 'Watched', subject: 'actor'},
     );
-    // The workspace has no `define camera` above the field, so electing here
+    // The workspace has no camera trait above the field, so electing here
     // is an actor's — and only the actor trait is offered.
     expect(traitOptions(field).map(([label]) => label)).toEqual(['Watched']);
   });

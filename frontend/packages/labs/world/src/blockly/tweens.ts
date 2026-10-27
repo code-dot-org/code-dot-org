@@ -93,12 +93,10 @@ export const tweenOptionsExtension = liveDropdown(
  * Whether this block sits inside a tween's mouth — either kind.
  *
  * `getSurroundParent`, because the mouth is a statement input: a block merely
- * chained BELOW the definition is beside it, not in it. Same walk and the same
- * reasoning as `inCameraBody`.
+ * chained BELOW the definition is beside it, not in it.
  *
- * A handler ends it, for the reason a camera body's walk stops at one: inside a
- * handler the subject is rebound and the block is about a moment rather than
- * about a destination.
+ * A handler ends it: inside a handler the subject is rebound and the block is
+ * about a moment rather than about a destination.
  */
 export const inTweenBody = (block: Blockly.Block): boolean => {
   for (
