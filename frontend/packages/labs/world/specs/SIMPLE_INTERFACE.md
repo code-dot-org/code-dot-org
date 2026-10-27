@@ -41,7 +41,10 @@ before it is first drawn, what it is for deciding how it is drawn, every
 actor opened in the Actor Editor, and the blocks an editor establishes out
 of the toolbox, with the lessons rewritten (ACTORS_AS_DATA_PLAN.md), then
 an actor's own events and blocks as data, designed from chips on a page of
-their own beside its Look (ACTOR_BLOCKS_PLAN.md). The
+their own beside its Look (ACTOR_BLOCKS_PLAN.md), then a rule as data,
+opened only in the Rule Editor: its properties and traits beside what it
+and each trait declares, and each event, block and step on a page of its
+own (RULE_EDITOR_PLAN.md). The
 accessibility gaps each phase opened or closed
 are kept in ACCESSIBILITY.md.
 

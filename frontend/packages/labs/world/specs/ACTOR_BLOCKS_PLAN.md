@@ -381,7 +381,6 @@ before the page can be reached headless.
 - The world file as data, retiring `define world`.
 - A Screen's events, which are data already (`ScreenEvent`) and would take
   the same page.
-- A rule's `define block` and `define event` on this page. When rules keep
-  their members as data too, `define block`, its designer and its drawing
-  can be deleted outright.
+- A rule's `define block` and `define event` on this page: done, and the
+  designer and its drawing deleted (RULE_EDITOR_PLAN.md, step 7).
 - Blocks that report a value.

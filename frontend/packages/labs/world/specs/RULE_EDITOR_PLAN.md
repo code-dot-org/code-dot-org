@@ -1,6 +1,6 @@
 # Plan: a rule as data, and its editor
 
-STATUS: PLANNED, October 2026. Nothing here is built.
+STATUS: BUILT, October 2026. The working record, as the other plans are.
 
 An actor is data, made in the Actor Editor, and its code is only what its
 events and blocks do (ACTORS_AS_DATA_PLAN.md, ACTOR_BLOCKS_PLAN.md). A
@@ -261,10 +261,48 @@ game rebuilt, and the Player still lands on the Ground.
 
 ### 7. The define blocks go
 
-Out of every drawer first. Then, once nothing writes them, `define
-block`'s designer (`blockDesigner`), its drawing (`FieldBlockPreview`) and
-the body surfaces (`bodySurfaces`, the editor's `editing` mode) are
-deleted.
+DONE, as far as rules go. A rule opens in the Rule Editor and nowhere else:
+its Code view, which opened the whole rule in blocks, is gone, and a rule
+file the data cannot say opens to say it cannot be read, as an actor's does.
+So no `define` block is ever drawn, and what drew one went with it:
+
+- **The drawers.** The Rule drawer holds `return` and `delta`, what a body
+  says; the Block drawer of signature blocks is gone, with the `block` and
+  `event` surfaces that offered it (`surfaceToolbox`).
+- **The designer** (`extensions/blockDesigner`): the preview, the arguments
+  row and its signature blocks (`text`, `argument`, `new line`), the event
+  designer's bubble, and the extension that warned an actor's block could
+  not report (`actorBlockReports`). What stays is the parts: a mutator that
+  saves and loads them, and `bindParams`, which a member page's head uses.
+- **The preview field** (`FieldBlockPreview`).
+- **The block editor's rule paths**: renaming a rule from its `define rule`,
+  following a member renamed in blocks, the signature bubble's commit, and
+  the reload a rename forced (`BlocklyFileEditor`), with the member-key
+  comparison they used (`renameRule.memberKeys`).
+- **The pencil** on a rule's blocks, events and steps.
+
+The define blocks themselves stay: a rule's view is written in them, and the
+compiler reads the view, which loads them without drawing them.
+
+What stays for now:
+
+- **Body surfaces.** An actor's `define drawing` and `each frame` open their
+  bodies on a surface of their own from a pencil, as before; they go when an
+  actor's drawing has a page of its own (ACTOR_BLOCKS_PLAN.md, "Not in this
+  phase").
+- **The rest of the define blocks' chrome.** `define property`'s drawn
+  getter and setter (`FieldPropertyPreview`, `FieldBlockDrawing`), `define
+trait`'s and `define rule`'s fields and buttons are never drawn either, and
+  can go the same way.
+- **The lessons.** Five lessons in Making unlock define blocks no drawer
+  holds, and their tasks say to write rules in blocks. Their checks read a
+  rule's view, so they still pass; their words need writing again for the
+  Rule Editor.
+- **Choices.** `define choices` is not part of a rule's data, and no stock
+  rule has one; a rule holding one cannot be read.
+
+In the browser: Gravity's member and step pages; the game plays; the Health
+Bar's `each frame` opens on its surface from its pencil.
 
 ## Accessibility
 

@@ -35,7 +35,9 @@ written as a `define actor` block; that is only how the compiler reads one.
 
 ## Rule
 
-A **Rule** is a law of the world.
+A **Rule** is a law of the world. It is data, made in the Rule Editor: its properties, its
+**traits** with theirs, and the events, blocks and steps each adds, each written on a page of
+its own (RULE_EDITOR_PLAN.md).
 
 ## Property
 
