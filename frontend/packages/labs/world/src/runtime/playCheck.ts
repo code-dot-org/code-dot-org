@@ -59,7 +59,8 @@ export function readProbe(world: World, probe: Probe): unknown {
   switch (probe.kind) {
     case 'actorCount':
       return [...world.actors].filter(
-        actor => !probe.of || isKind(actor, probe.of),
+        actor =>
+          inLevel(world, actor) && (!probe.of || isKind(actor, probe.of)),
       ).length;
     case 'positions':
       return world
@@ -69,10 +70,15 @@ export function readProbe(world: World, probe: Probe): unknown {
     case 'drawnCount':
       return world
         .renderSnapshot()
-        .filter(state => Boolean(state.frame ?? state.drawing)).length;
+        .filter(
+          state =>
+            inLevel(world, state.actor) &&
+            Boolean(state.frame ?? state.drawing),
+        ).length;
     case 'sprites':
       return world
         .renderSnapshot()
+        .filter(state => inLevel(world, state.actor))
         .map(state => state.frame?.sprite)
         .filter((name): name is string => typeof name === 'string');
     case 'property':
@@ -92,7 +98,7 @@ export function readProbe(world: World, probe: Probe): unknown {
           height: state.drawing!.height,
         }));
     case 'backdrop':
-      return world.backdropSnapshot().map(backdrop => ({
+      return backdropsOf(world).map(backdrop => ({
         sprite: backdrop.sprite,
         repeat: backdrop.repeat,
         offset: {x: backdrop.offset.x, y: backdrop.offset.y},
@@ -112,24 +118,53 @@ export function readProbe(world: World, probe: Probe): unknown {
             .map(state => named(state.effects))
         : [
             named(world.effects()),
-            ...world
-              .backdropSnapshot()
-              .map(backdrop => named(backdrop.effects)),
+            ...backdropsOf(world).map(backdrop => named(backdrop.effects)),
           ];
     }
-    case 'cameras':
-      return world.cameraSnapshot().map(camera => ({
-        id: camera.id,
-        x: camera.position.x,
-        y: camera.position.y,
-        active: camera.active,
-      }));
+    case 'cameras': {
+      const level = levelOf(world);
+      return level
+        ? level.cameras.map(camera => ({
+            id: camera.id,
+            x: camera.position.x,
+            y: camera.position.y,
+            active: camera === level.camera,
+          }))
+        : world.cameraSnapshot().map(camera => ({
+            id: camera.id,
+            x: camera.position.x,
+            y: camera.position.y,
+            active: camera.active,
+          }));
+    }
     case 'worldProperty':
       // The same map a hot-reload compares against (`WorldSnapshot.world`),
       // keyed the same way: `${ruleId}.${propId}`.
       return world.snapshot().world[probe.path];
   }
 }
+
+/**
+ * The level the game shows: the space of its first Viewport, which a game's
+ * Main Screen docks over the whole of itself (specs/LESSONS_AS_SCREENS_PLAN.md).
+ * A probe of the view, its backdrop and its cameras is a probe of that. None
+ * for a world with no Viewport, whose view is its own.
+ */
+const levelOf = (world: World) => world.spaces[0];
+
+/** Whether an actor is in what the game shows, rather than around it. */
+const inLevel = (world: World, actor: Actor): boolean => {
+  const level = levelOf(world);
+  return !level || world.spaceOf(actor) === level;
+};
+
+/** The backdrops of what the game shows, back to front. */
+const backdropsOf = (world: World) => {
+  const level = levelOf(world);
+  return level
+    ? level.layers.map(layer => layer.background)
+    : world.backdropSnapshot();
+};
 
 /**
  * Play the script and sample the probes: once before it starts, and again after

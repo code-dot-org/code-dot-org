@@ -42,8 +42,11 @@ import {playCheck} from '../../runtime/playCheck';
 import {projectFiles} from '../../runtime/projectFiles';
 import {tile} from '../index';
 import {LESSONS} from '../lessons';
+import {rememberWorld, worldMadeInto} from '../lessons/asScreen';
 import {actorPath} from '../lessons/worlds';
 import type {TileId} from '../types';
+
+import {withWorld, worldOf} from './support/worldView';
 
 /**
  * Play a tile's check against a project and say whether it passes.
@@ -132,19 +135,15 @@ const editingWorld = (
   source: MultiFileSource,
   change: (contents: string) => string,
 ): MultiFileSource => {
-  const byName = (name: string) =>
-    Object.entries(source.files).find(([, file]) => file.name === name);
-  const world = byName('main.world');
-  if (!world) {
-    throw new Error('no file called main.world');
-  }
   const actors = Object.entries(source.files).filter(([, file]) =>
     file.name.endsWith('.actor'),
   );
 
   type Parsed = {blocks: {blocks: Row[]}; [key: string]: unknown};
   const parse = (contents: string) => JSON.parse(contents) as Parsed;
-  const merged = parse(world[1].contents);
+  // The screen and its map, seen as the world they were made from
+  // (`support/worldView`).
+  const merged = parse(worldMadeInto(source) ?? worldOf(source));
   // Each actor file as it was, so what is not roots — the variables a
   // designed block's parameters are — goes back with its roots.
   const parsedActors = new Map<string, Parsed>();
@@ -189,10 +188,6 @@ const editingWorld = (
       worldRoots.push(root);
     }
   }
-  files[world[0]] = {
-    ...world[1],
-    contents: JSON.stringify({...changed, blocks: {blocks: worldRoots}}),
-  };
   for (const [id, file] of actors) {
     files[id] = {
       ...file,
@@ -206,7 +201,8 @@ const editingWorld = (
       ),
     };
   }
-  return {...source, files};
+  const world = JSON.stringify({...changed, blocks: {blocks: worldRoots}});
+  return rememberWorld(withWorld({...source, files}, world), world);
 };
 
 /**
@@ -2143,13 +2139,17 @@ describe('the camera-feel lesson’s check', () => {
       ],
     }));
 
-  it('starts where the camera lesson left off, kept in the map', () => {
-    // No `define camera` for the map editor to list as "in code".
-    const world = projectFiles(lesson.source)['worlds/main.world'];
-    expect(world).not.toContain('world_define_camera');
-    expect(JSON.parse(world).map.mainCamera.traits).toContain(
-      'Camera Follow#FollowsTrait',
-    );
+  it('starts where the camera lesson left off, kept on the Viewport', () => {
+    // No `define camera` for the map editor to list as "in code": the camera
+    // is the Game Viewport's, made in its inspector.
+    const screen = projectFiles(lesson.source)['screens/main.screen'];
+    expect(screen).not.toContain('world_define_camera');
+    const game = (
+      JSON.parse(screen) as {
+        actors: Array<{id: string; cameras?: Array<{traits: string[]}>}>;
+      }
+    ).actors.find(actor => actor.id === 'Game')!;
+    expect(game.cameras?.[0].traits).toContain('Camera Follow#FollowsTrait');
   });
 
   it('refuses a view welded to the Hero', async () => {
@@ -2311,13 +2311,16 @@ describe('the layers lesson’s check', () => {
   it('is a world whose Score is on a fixed layer and whose Hills lag', async () => {
     // The check reads the file. This reads the WORLD the file builds, so
     // what the check accepts is what a learner sees: the map's layers are
-    // the world's, in the map's order, and each thing is on the one it names.
+    // the level's, in the map's order, and each thing is on the one it names.
     const {world} = await compileProject(
       projectFiles(onTheMap({fixed: true, parallax: true})),
     );
-    const layers = world.layerSnapshot();
+    const layers = world.spaces[0].layers;
     expect(layers.map(layer => layer.id)).toEqual(['layer2', 'main', 'layer1']);
-    expect(layers[0].parallax).toEqual({x: 0.4, y: 1});
+    expect({x: layers[0].parallax.x, y: layers[0].parallax.y}).toEqual({
+      x: 0.4,
+      y: 1,
+    });
     expect(layers[2].fit).toBe(true);
     const on = (type: string) => [
       ...new Set(

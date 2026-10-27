@@ -1,6 +1,6 @@
 # Plan: lessons as screens
 
-STATUS: IN PROGRESS, October 2026. Step 0 is built.
+STATUS: IN PROGRESS, October 2026. Steps 0 to 2 are built.
 
 A game is a Main Screen whose Viewport is docked over the whole surface and
 shows `main.map` (specs/SCREEN_MAP_PLAN.md). Every stock game is written
@@ -95,19 +95,47 @@ actor` there adds to the level. Without it, screen code acts on the
 A lesson's once-only statements go under `when this screen loads`, inside
 `in the map ⟨Game⟩ shows` where they place or move the level's actors.
 
-### 1. The converter
+### 1. The converter — BUILT
 
-`worldFile` writes `main.screen` and `main.map` as the decisions say, and
-`lessonSource` makes `main.screen` the active file. A test runs every
-lesson's spec through it and checks that nothing was dropped: each
-placement, property, handler and setting lands somewhere, and a row the
-converter cannot place fails the test with the lesson's id.
+`asScreenProject` (`progression/lessons/asScreen`) runs last in
+`lessonSource`: it brings the stock Viewport, turns `main.world` into
+`main.screen` and `main.map` (`screenOfWorld`), and renames what the world
+declared for itself from `worlds/main` to `screens/main`. Where a setter's
+property is kept on a placement is read from the project's own rules and
+actors. Two cases the decisions did not foresee:
 
-### 2. The checks and the tutor
+- **An `add actor` that adds a trait stays code.** A placement's `when
+created` runs after its overrides are applied, so a value set on the
+  trait it adds was lost. The story lessons do this, and their rows were
+  code in the world.
+- **A main map that places a Viewport is the screen.** adventure/rooms is a
+  window onto a room already; wrapped in another screen, its Viewport sat
+  inside the level.
 
-The six checks in `catalogue.ts` and the tutor's context read the screen
-and the map. `lessonChecks.test` and the stock pipeline tests run every
-lesson's checks against its own solution, as now.
+Checked against the old path on all 79 lessons, compiled and run for a
+second: the same actors, in the same spaces, with the same values, and the
+same background. memory/lists and simulation/many place at random, and
+match with their positions and velocities left out.
+
+### 2. The checks, the probes and the tests — BUILT
+
+- **The checks** that read `worlds/main.world` read the Main Screen and the
+  level (`gameText`, `levelOf` in `catalogue.ts`).
+- **The probes** of the view read the level the game shows, the first
+  Viewport's space: its backdrops, its cameras (the one it looks through is
+  `active`), and the actors and pictures counted (`playCheck`).
+- **The Main Screen's code is a world's.** A hat with no subject loads as a
+  kind there, as in a world (`eventSubject`); the screen's own workspace is
+  marked so (`markCode`), in the compiler and in the editor, and its
+  placements' code is not.
+- **A lesson whose work is in blocks** (`worldView: 'world'`) opens its
+  Main Screen on the screen's code.
+- **The check tests** still write a solved lesson as an edit to the world it
+  was written as: `asScreen` remembers each lesson's world by its screen's
+  file (`worldMadeInto`), the edit is converted the way the lesson was, and
+  `support/worldView` reconstructs one where nothing is remembered.
+- **The first lesson's toolbox** has six more blocks, Camera Follow's and
+  Camera Confined's, which the Viewport requires (`toolboxShelf.test`).
 
 ### 3. The text
 
@@ -126,6 +154,14 @@ are deleted. `define world` stays: the Main Screen compiles to it
 
 ## Open
 
+- **`all actors` now holds the Viewport.** A learner's `for each actor in ⟨all
+actors⟩` reaches the screen's Viewport as well as the level's actors, and
+  a loop that sets every picture sets the Viewport's. The probes read the
+  level; whether the block should, from code that runs in it, is a language
+  question.
+- **The tutor** sends `.world` and `.actor` files whole, and no `.screen` or
+  `.map` (`aiTutor/context`), which was already so for every stock game. It
+  writes back with `buildWorld`.
 - **The memory lessons' story.** memory/actor-state says a Lamp's text
   cannot live on its placement because an actor cannot read the world. On a
   screen, the row moves under `when this screen loads` and reads the world

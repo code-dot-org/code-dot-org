@@ -66,6 +66,14 @@ const at = (sector: RegionId, a: number, b: number): Axial => {
   return sectorCell(index >= 0 ? index : GENRES.indexOf(sector), a, b);
 };
 
+/**
+ * The game's own files as text: the Main Screen and the level it shows,
+ * where a lesson's world-wide code and declarations are kept
+ * (specs/LESSONS_AS_SCREENS_PLAN.md).
+ */
+const gameText = (files: Record<string, string>): string =>
+  (files['screens/main.screen'] ?? '') + (files['maps/main.map'] ?? '');
+
 export const TILES: readonly Tile[] = [
   // ── Origin ────────────────────────────────────────────────────────────────
   {
@@ -675,13 +683,13 @@ export const TILES: readonly Tile[] = [
       },
       // The shape half is the lesson; the played half is what stops somebody
       // naming a value and then quietly breaking the row with it.
-      inspect: files =>
-        Object.entries(files).some(
-          ([path, contents]) =>
-            path.startsWith('worlds/') &&
-            (contents.match(/variables_get_/g) ?? []).length >= 2 &&
-            contents.includes('variables_set_'),
-        ),
+      inspect: files => {
+        const game = gameText(files);
+        return (
+          (game.match(/variables_get_/g) ?? []).length >= 2 &&
+          game.includes('variables_set_')
+        );
+      },
       passes: ({samples}) => {
         const posts = lastList<Point>(samples.posts);
         if (posts.length !== 3) {
@@ -755,16 +763,18 @@ export const TILES: readonly Tile[] = [
       kind: 'outcome',
       says: 'Both Labels say the same thing, and each reads it from the world.',
       falsePass:
-        'Typing the same words into both, which also makes them agree. So the shape half asks for the declaration AND for a read of it — the getter block is keyed by the file (`world_get_WorldsMain_…`), not by the name, so it holds whatever the property ends up called.',
+        'Typing the same words into both, which also makes them agree. So the shape half asks for the declaration AND for a read of it — the getter block is keyed by the file (`world_get_ScreensMain_…`), not by the name, so it holds whatever the property ends up called.',
       run: {
         probes: {said: {kind: 'property', of: 'Label', name: 'text'}},
         trace: [{seconds: 0.1}],
       },
       inspect: files => {
-        const world = files['worlds/main.world'] ?? '';
+        const screen = JSON.parse(files['screens/main.screen'] ?? '{}') as {
+          properties?: unknown[];
+        };
         return (
-          world.includes('world_rule_property') &&
-          world.includes('world_get_WorldsMain_')
+          Boolean(screen.properties?.length) &&
+          gameText(files).includes('world_get_ScreensMain_')
         );
       },
       passes: ({samples}) => {
@@ -812,8 +822,7 @@ export const TILES: readonly Tile[] = [
         // (specs/ACTORS_AS_DATA_PLAN.md, step 5).
         viewOf(files['actors/lamp.actor'] ?? '').includes(
           'world_rule_property',
-        ) &&
-        (files['worlds/main.world'] ?? '').includes('world_get_ActorsLamp_'),
+        ) && gameText(files).includes('world_get_ActorsLamp_'),
       passes: ({samples}) => {
         const said = lastList<string>(samples.said);
         return said.length === 2 && said[0] !== said[1];
@@ -848,10 +857,10 @@ export const TILES: readonly Tile[] = [
         trace: [{seconds: 0.1}],
       },
       inspect: files => {
-        const world = files['worlds/main.world'] ?? '';
+        const game = gameText(files);
         return (
-          world.includes('lists_create_with') &&
-          world.includes('world_for_each_word')
+          game.includes('lists_create_with') &&
+          game.includes('world_for_each_word')
         );
       },
       passes: ({samples}) => {
@@ -893,10 +902,10 @@ export const TILES: readonly Tile[] = [
         ]).flat(),
       },
       inspect: files => {
-        const world = files['worlds/main.world'] ?? '';
+        const game = gameText(files);
         return (
-          world.includes('world_on_Scoring_TheTargetIsReachedEvent') &&
-          world.includes('world_get_Scoring_ScoreProperty')
+          game.includes('world_on_Scoring_TheTargetIsReachedEvent') &&
+          game.includes('world_get_Scoring_ScoreProperty')
         );
       },
       passes: ({console: said}) => said.length === 1 && said[0] === '5',
@@ -2399,10 +2408,10 @@ export const TILES: readonly Tile[] = [
         ].flatMap(key => [{hold: [key], seconds: 0.1}, {seconds: 0.2}]),
       },
       inspect: files => {
-        const world = files['worlds/main.world'] ?? '';
+        const game = gameText(files);
         return (
-          world.includes('world_on_Collisions_StartsTouchingEvent') &&
-          world.includes('world_on_Collisions_StopsTouchingEvent')
+          game.includes('world_on_Collisions_StartsTouchingEvent') &&
+          game.includes('world_on_Collisions_StopsTouchingEvent')
         );
       },
       passes: ({samples}) => {
@@ -3405,9 +3414,11 @@ export const TILES: readonly Tile[] = [
         const declared = rule.match(
           /"NAME":\s*"amount of gravity",\s*"DEFAULT":\s*"([^"]*)"/,
         )?.[1];
-        const said = (files['worlds/main.world'] ?? '').match(
-          /"NAME":\s*"how hard it pulls",\s*"DEFAULT":\s*"([^"]*)"/,
-        )?.[1];
+        const said = (
+          JSON.parse(files['screens/main.screen'] ?? '{}') as {
+            properties?: Array<{name: string; value: string}>;
+          }
+        ).properties?.find(one => one.name === 'how hard it pulls')?.value;
         return Boolean(declared) && said === declared;
       },
       passes: () => true,
@@ -3762,52 +3773,44 @@ function blocksIn(files: Record<string, string>, type: string): unknown[] {
 }
 
 /**
- * How many placements the project's worlds hold in their main maps — what an
- * arrangement IS, as opposed to what a stack of `add actor` rows reaches.
+ * The level a lesson arranges: `maps/main.map`, or the Main Screen where
+ * there is no such map and the screen is what is arranged
+ * (specs/LESSONS_AS_SCREENS_PLAN.md).
  */
-function mainMapPlacements(files: Record<string, string>): number {
-  let count = 0;
-  for (const [path, contents] of Object.entries(files)) {
-    if (!path.endsWith('.world')) {
-      continue;
-    }
-    try {
-      const actors = (JSON.parse(contents) as {map?: {actors?: unknown}}).map
-        ?.actors;
-      count += Array.isArray(actors) ? actors.length : 0;
-    } catch {
-      // A file mid-edit is not a failed lesson (see `nestedIn`).
-    }
+function levelOf(files: Record<string, string>): unknown {
+  try {
+    return JSON.parse(
+      files['maps/main.map'] ?? files['screens/main.screen'] ?? '{}',
+    );
+  } catch {
+    // A file mid-edit is not a failed lesson (see `nestedIn`).
+    return {};
   }
-  return count;
 }
 
 /**
- * How many placements on the project's worlds' main maps carry a script: a
+ * How many placements the project's level holds — what an arrangement IS,
+ * as opposed to what a stack of `add actor` rows reaches.
+ */
+function mainMapPlacements(files: Record<string, string>): number {
+  const actors = (levelOf(files) as {actors?: unknown}).actors;
+  return Array.isArray(actors) ? actors.length : 0;
+}
+
+/**
+ * How many placements on the project's level carry a script: a
  * workspace of their own with at least one block in it
  * (specs/MAP_SCRIPTS_PLAN.md).
  */
 function scriptedPlacements(files: Record<string, string>): number {
-  let count = 0;
-  for (const [path, contents] of Object.entries(files)) {
-    if (!path.endsWith('.world')) {
-      continue;
-    }
-    try {
-      const actors =
-        (
-          JSON.parse(contents) as {
-            map?: {actors?: Array<{blocks?: {blocks?: {blocks?: unknown[]}}}>};
-          }
-        ).map?.actors ?? [];
-      count += actors.filter(
-        actor => (actor.blocks?.blocks?.blocks?.length ?? 0) > 0,
-      ).length;
-    } catch {
-      // A file mid-edit is not a failed lesson (see `nestedIn`).
-    }
-  }
-  return count;
+  const actors =
+    (
+      levelOf(files) as {
+        actors?: Array<{blocks?: {blocks?: {blocks?: unknown[]}}}>;
+      }
+    ).actors ?? [];
+  return actors.filter(actor => (actor.blocks?.blocks?.blocks?.length ?? 0) > 0)
+    .length;
 }
 
 /** A main map's layer, as a check reads it: how it moves, and the kinds on it. */
@@ -3818,38 +3821,21 @@ interface MapLayerShape {
 }
 
 /**
- * The layers the project's worlds declare in their main maps, each with the
- * kinds placed on it. A placement that names no layer is on `main`, which a
+ * The layers the project's level declares, each with the kinds placed on
+ * it. A placement that names no layer is on `main`, which a
  * map has whether or not it lists it.
  */
 function mainMapLayers(files: Record<string, string>): MapLayerShape[] {
-  const found: MapLayerShape[] = [];
-  for (const [path, contents] of Object.entries(files)) {
-    if (!path.endsWith('.world')) {
-      continue;
-    }
-    try {
-      const map = (
-        JSON.parse(contents) as {
-          map?: {
-            layers?: Array<{id: string} & Omit<MapLayerShape, 'holds'>>;
-            actors?: Array<{type?: string; layer?: string}>;
-          };
-        }
-      ).map;
-      for (const layer of map?.layers ?? []) {
-        found.push({
-          ...layer,
-          holds: (map?.actors ?? [])
-            .filter(actor => (actor.layer ?? 'main') === layer.id)
-            .flatMap(actor => (actor.type ? [actor.type] : [])),
-        });
-      }
-    } catch {
-      // A file mid-edit is not a failed lesson (see `nestedIn`).
-    }
-  }
-  return found;
+  const map = levelOf(files) as {
+    layers?: Array<{id: string} & Omit<MapLayerShape, 'holds'>>;
+    actors?: Array<{type?: string; layer?: string}>;
+  };
+  return (map.layers ?? []).map(layer => ({
+    ...layer,
+    holds: (map.actors ?? [])
+      .filter(actor => (actor.layer ?? 'main') === layer.id)
+      .flatMap(actor => (actor.type ? [actor.type] : [])),
+  }));
 }
 
 function blockIn(

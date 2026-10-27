@@ -27,12 +27,13 @@ import {buildProject, type ProjectSpec} from '../../constants';
 import {importStockRule} from '../../rules/importStockRule';
 import {stockRule} from '../../rules/stock';
 
+import {asScreenProject, rememberWorld} from './asScreen';
 import type {LessonWorld} from './worlds';
 
 /** The eight folders every World project has. */
 export const LESSON_FOLDERS = [
   'rules',
-  'worlds',
+  'screens',
   'actors',
   'sprites',
   'backgrounds',
@@ -42,8 +43,9 @@ export const LESSON_FOLDERS = [
 
 export interface LessonSpec {
   /**
-   * The `.world` file, as a Blockly workspace — or that and the actor files
-   * beside it, which is what `worldFile` hands over.
+   * The world, as a `define world` workspace — or that and the actor files
+   * beside it, which is what `worldFile` hands over. A lesson is written as a
+   * world and opens as a Main Screen showing `main.map` (`asScreen`).
    */
   world: string | LessonWorld;
   /**
@@ -83,7 +85,7 @@ export interface LessonSpec {
 /**
  * A lesson's project.
  *
- * `main.world` is the active tab, because a lesson is about the world unless
+ * `main.screen` is the active tab, because a lesson is about the game unless
  * it says otherwise, and the tab a learner lands on is the first thing the
  * lesson says to them. The actors the world spec listed are open beside it,
  * so a learner asked to change the Hero reaches the Hero without a list of
@@ -97,7 +99,9 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
       name: 'main.world',
       language: 'world',
       contents: world,
-      folderId: 'worlds',
+      // A screen once it is converted (`asScreenProject`), and so filed
+      // where the screen will be.
+      folderId: 'screens',
       active: true,
       open: true,
     },
@@ -169,11 +173,14 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
       need(stockAnimation(id), 'animation', id),
     ).source;
   }
-  // Every actor as data, as the scenarios' are: an actor's file is data and
-  // events, made in the Actor Editor, and no actor is opened as a `define
+  // The world a Main Screen showing a map, as a game is
+  // (specs/LESSONS_AS_SCREENS_PLAN.md), which brings the Viewport.
+  //
+  // …and every actor as data, as the scenarios' are: an actor's file is data
+  // and events, made in the Actor Editor, and no actor is opened as a `define
   // actor` (specs/ACTORS_AS_DATA_PLAN.md, step 5). A lesson writes its
   // actors as workspaces because that is how they are easiest to write.
-  return inDataShape(source);
+  return rememberWorld(inDataShape(asScreenProject(source)), world);
 };
 
 /** A stock item, or a thrown error naming what was asked for. */

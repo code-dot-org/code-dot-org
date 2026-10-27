@@ -348,9 +348,13 @@ describe('a gated first lesson', () => {
   // one rule nobody has taught. The number is raised again and the note is
   // not softened: the first lesson's screen says it unlocks the Actor drawer
   // and shows eighteen blocks that are not that.
+  // …and then six more, when the lessons became screens: the Viewport a
+  // screen shows its level through requires Camera Follow and Camera
+  // Confined, so that it can be aimed from its inspector, and each rule's
+  // properties are ungated blocks (specs/LESSONS_AS_SCREENS_PLAN.md).
   it('is small enough to read', () => {
     const offered = offeredAt('origin/first-world');
-    expect(offered.size).toBeLessThan(29);
+    expect(offered.size).toBeLessThan(35);
   });
 
   it('and seventeen of what it offers are a FOUNDATION rule’s own blocks', () => {
@@ -436,6 +440,19 @@ describe('a property the learner just declared', () => {
     // An actor is data: declared through its view, and folded back
     // (specs/ACTORS_AS_DATA_PLAN.md, step 5).
     const written = files[path];
+    // A screen declares its values as data, as its inspector writes them
+    // (`screenData`).
+    if (path.endsWith('.screen')) {
+      const screen = JSON.parse(written) as {properties?: object[]};
+      files[path] = JSON.stringify({
+        ...screen,
+        properties: [
+          ...(screen.properties ?? []),
+          {name: 'lives', type: 'number', value: '3'},
+        ],
+      });
+      return offeredIn(id, files);
+    }
     const actor = path.endsWith('.actor');
     const workspace = JSON.parse(actor ? viewOf(written) : written) as {
       blocks: {blocks: {type?: string; next?: unknown}[]};
@@ -456,6 +473,11 @@ describe('a property the learner just declared', () => {
     files[path] = actor
       ? asActorData(JSON.stringify(workspace), written)
       : JSON.stringify(workspace);
+    return offeredIn(id, files);
+  };
+
+  /** What the world's palette offers, with the run-up to this lesson done. */
+  const offeredIn = (id: TileId, files: Record<string, string>) => {
     const {toolbox} = buildDomainPalette(projectRuleMetas(files), {
       fileKind: 'world',
       ownProperties: projectOwnMetas(files),
@@ -478,14 +500,14 @@ describe('a property the learner just declared', () => {
     );
   };
 
-  it('is offered by the world that declares it', () => {
+  it('is offered by the screen that declares it', () => {
     const offered = declaring(
       'memory/world-state',
-      'worlds/main.world',
+      'screens/main.screen',
       'world_world',
     );
-    expect(offered.has('world_get_WorldsMain_LivesProperty')).toBe(true);
-    expect(offered.has('world_set_WorldsMain_LivesProperty')).toBe(true);
+    expect(offered.has('world_get_ScreensMain_LivesProperty')).toBe(true);
+    expect(offered.has('world_set_ScreensMain_LivesProperty')).toBe(true);
   });
 
   it('is offered by the actor that declares it', () => {

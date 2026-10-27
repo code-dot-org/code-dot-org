@@ -226,7 +226,7 @@ describe('every picture a lesson names', () => {
 describe('what a lesson starts out doing', () => {
   it('has the speed lesson crossing the screen by hand', async () => {
     const {world} = await built('motion/speed');
-    const hero = [...world.actors][0];
+    const [hero] = world.actors.ofType('actors/hero');
     const from = hero.get(PositionProperty).x;
     for (let frame = 0; frame < 60; frame++) {
       world.tick(1 / 60);
@@ -291,8 +291,11 @@ describe('the view a lesson’s world opens on', () => {
   });
 
   it.each(onTheMap)('%s has a map to open on, and says so', id => {
-    const world = projectFiles(LESSONS[id].source)['worlds/main.world'];
-    expect((JSON.parse(world) as {map?: object}).map).toBeDefined();
+    const files = projectFiles(LESSONS[id].source);
+    const level = JSON.parse(
+      files['maps/main.map'] ?? files['screens/main.screen'],
+    ) as {actors?: unknown[]};
+    expect(level.actors?.length, id).toBeGreaterThan(0);
     expect(LESSONS[id].instructions).toMatch(/\bmap\b/i);
   });
 });
@@ -306,12 +309,16 @@ describe('a lesson that names a file', () => {
 });
 
 describe('every lesson', () => {
-  it('defines no actor inside its world', () => {
+  it('is a Main Screen, and defines no actor in it', () => {
     // An actor is a file. A `define actor` among a world's own roots was the
-    // old way of keeping a lesson to one file, and nothing reads it now.
+    // old way of keeping a lesson to one file, and nothing reads it now; and
+    // a lesson is a screen, as a game is (specs/LESSONS_AS_SCREENS_PLAN.md).
     for (const id of ids) {
-      const world = projectFiles(LESSONS[id].source)['worlds/main.world'];
-      expect(world, id).not.toContain('"type": "world_actor"');
+      const files = projectFiles(LESSONS[id].source);
+      expect(files['worlds/main.world'], id).toBeUndefined();
+      expect(files['screens/main.screen'], id).not.toContain(
+        '"type": "world_actor"',
+      );
     }
   });
 });
