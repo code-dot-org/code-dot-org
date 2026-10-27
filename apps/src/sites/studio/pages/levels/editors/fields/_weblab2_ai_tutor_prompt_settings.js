@@ -57,9 +57,6 @@ $(document).ready(function () {
       answerTypeContracts={ANSWER_TYPE_CONTRACTS}
       defaultAnswerTypes={DEFAULT_ANSWER_TYPES}
     />,
-    document.getElementById('ai-tutor-prompt-settings-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('ai-tutor-prompt-settings-editor')
   );
 });
