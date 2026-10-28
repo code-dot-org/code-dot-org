@@ -62,7 +62,6 @@ export const ProjectProvider = ({
   const [project, setProject] = useState<AilabProject>(defaultProject);
   const [isProjectLoaded, setIsProjectLoaded] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
-  // The project as opened, before the student has changed anything.
   const openedProject = useRef<AilabProject | undefined>(undefined);
   const onProjectChangeRef = useRef(onProjectChange);
   onProjectChangeRef.current = onProjectChange;
