@@ -6,6 +6,8 @@ import {
 import I18n from '@cdo/apps/ailab/engine/i18n';
 
 import {
+  allNumericalRows,
+  classificationRows,
   userUploadedDatasetState,
   premadeDatasetState,
   playDatasetDescription,
@@ -61,7 +63,7 @@ describe('getDatasetDetails', () => {
     const details = getDatasetDetails(userUploadedDatasetState);
     expect(details.name).toBe('');
     expect(details.description).toBe(playDatasetDescription);
-    expect(details.numRows).toBe(userUploadedDatasetState.data.length);
+    expect(details.numRows).toBe(classificationRows.length);
     expect(details.isUserUploaded).toBe(true);
   });
 
@@ -69,7 +71,7 @@ describe('getDatasetDetails', () => {
     const details = getDatasetDetails(premadeDatasetState);
     expect(details.name).toBe(premadeDatasetId);
     expect(details.description).toBe(batDatasetDescription);
-    expect(details.numRows).toBe(premadeDatasetState.data.length);
+    expect(details.numRows).toBe(allNumericalRows.length);
     expect(details.isUserUploaded).toBe(false);
     expect(details.potentialUses).toBe(batDatasetUses);
     expect(details.potentialMisuses).toBe(batDatasetMisuses);

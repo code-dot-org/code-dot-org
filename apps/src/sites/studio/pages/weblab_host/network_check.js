@@ -10,9 +10,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <WebLabNetworkCheck studioUrl={brambleConfig.studioUrl} />,
-    document.getElementById('weblab-network-check-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('weblab-network-check-container')
   );
 });

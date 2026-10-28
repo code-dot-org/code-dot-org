@@ -1,6 +1,13 @@
 {
   "datasets": [
     {
+      "id": "smart_room_training",
+      "name": "Smart Room Training",
+      "path": "datasets/smart_room_training.csv",
+      "metadataPath": "datasets/smart_room_training.json",
+      "rowCount": 6
+    },
+    {
       "id": "songs",
       "name": "Top Songs",
       "path": "datasets/songs.csv",

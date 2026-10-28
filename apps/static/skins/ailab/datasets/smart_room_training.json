@@ -1,0 +1,41 @@
+{
+  "name": "smart_room_training",
+  "card": {
+    "description": "A small dataset of six rooms used to train the Smart Room Inspector app. Each room is described by how messy the floor is, how many dirty dishes, cups, and cans you can see, whether the bed is made, and how many posters are on the wall. Each room is labeled Clean Enough or Total Disaster.",
+    "source": "Created for AI Discoveries, Lesson 5: Curating Your Own Dataset",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI - AI Discoveries",
+      "potentialUses": "Try to find which features do the best job of separating Clean Enough rooms from Total Disaster rooms.",
+      "potentialMisuses": "This dataset only has six rooms, and it only includes what the person who collected it could see. A room could have a mess this data doesn't capture, so be careful about trusting its labels for rooms that look different from these."
+    }
+  },
+  "defaultLabelColumn": "Label",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Floor Mess",
+      "description": "How messy is the floor? (Low, Medium, High, or Extreme)"
+    },
+    {
+      "type": "numerical",
+      "id": "Dirty Dishes-Cups-Cans",
+      "description": "How many dirty dishes, cups, and cans can you see in the room?"
+    },
+    {
+      "type": "categorical",
+      "id": "Bed Status",
+      "description": "Is the bed made? (Made, Unmade, or No Bed)"
+    },
+    {
+      "type": "numerical",
+      "id": "Posters on Wall",
+      "description": "How many posters are on the wall?"
+    },
+    {
+      "type": "categorical",
+      "id": "Label",
+      "description": "Is the room Clean Enough or a Total Disaster?"
+    }
+  ]
+}

@@ -51,9 +51,6 @@ $(document).ready(() => {
         <ExpandableImageDialog />
       </>
     </Provider>,
-    document.getElementById('show-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('show-container')
   );
 });

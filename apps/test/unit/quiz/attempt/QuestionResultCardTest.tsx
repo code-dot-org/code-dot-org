@@ -176,6 +176,95 @@ describe('QuestionResultCard', () => {
     });
   });
 
+  describe('multiple select', () => {
+    const MS_QUESTION: QuizQuestionSummary = {
+      id: 3,
+      type: 'MultipleSelectQuestion',
+      questionName: 'Fruit',
+      questionTitle: 'Which are fruits?',
+      choices: [
+        {id: 'a', text: 'Apple'},
+        {id: 'b', text: 'Banana'},
+        {id: 'c', text: 'Carrot'},
+        {id: 'd', text: 'Daikon'},
+      ],
+      page: 1,
+    };
+
+    type MultipleSelectResult = Extract<
+      QuizQuestionResult,
+      {questionType: 'MultipleSelectQuestion'}
+    >;
+
+    const renderMsCard = (
+      overrides: Partial<MultipleSelectResult> = {},
+      props: Partial<QuestionResultCardProps> = {}
+    ) =>
+      render(
+        <QuestionResultCard
+          question={MS_QUESTION}
+          result={{
+            quizQuestionId: 3,
+            questionType: 'MultipleSelectQuestion',
+            responseData: {selectedChoiceIds: ['b', 'c']},
+            correct: false,
+            explanation: null,
+            correctChoiceIds: ['a', 'b'],
+            ...overrides,
+          }}
+          {...props}
+        />
+      );
+
+    it('marks each choice against the answer key when it is revealed', () => {
+      renderMsCard();
+
+      expect(
+        within(choiceItem('Apple')).getByText('Correct answer, not selected')
+      ).toBeInTheDocument();
+      expect(
+        within(choiceItem('Banana')).getByText('Your answer, correct')
+      ).toBeInTheDocument();
+      expect(
+        within(choiceItem('Carrot')).getByText('Your answer, incorrect')
+      ).toBeInTheDocument();
+      expect(choiceItem('Daikon')).toHaveTextContent(/^D\. Daikon$/);
+    });
+
+    it('shows selected choices as plain answers and the overall result when the key is hidden', () => {
+      renderMsCard({correctChoiceIds: null});
+
+      expect(
+        within(choiceItem('Banana')).getByText('Your answer')
+      ).toBeInTheDocument();
+      expect(
+        within(choiceItem('Carrot')).getByText('Your answer')
+      ).toBeInTheDocument();
+      expect(screen.queryByText(/Correct answer/)).toBeNull();
+      expect(screen.getByText('Your answer is incorrect')).toBeInTheDocument();
+    });
+
+    it("names the student's answer for a teacher viewing a student", () => {
+      renderMsCard(
+        {correct: true, correctChoiceIds: null},
+        {isViewingStudent: true}
+      );
+
+      expect(
+        screen.getByText("Student's answer is correct")
+      ).toBeInTheDocument();
+    });
+
+    it('shows no grading when correctness is hidden', () => {
+      renderMsCard({correct: null, correctChoiceIds: null});
+
+      expect(
+        within(choiceItem('Banana')).getByText('Your answer')
+      ).toBeInTheDocument();
+      expect(screen.queryByText(/is (in)?correct/)).toBeNull();
+    });
+  });
+
   describe('free response', () => {
     const FR_QUESTION: QuizQuestionSummary = {
       id: 2,
