@@ -15,7 +15,10 @@ export const toJsLocale = (locale: string) =>
 export const JS_DEFAULT_LOCALE = toJsLocale(DefaultLocale);
 
 const JS_LOCALE_FALLBACKS: Record<string, string> = Object.fromEntries(
-  Object.entries(LocaleFallbacks).map(locales => locales.map(toJsLocale))
+  Object.entries(LocaleFallbacks).map(([locale, fallback]) => [
+    toJsLocale(locale),
+    toJsLocale(fallback),
+  ])
 );
 
 /**
