@@ -314,6 +314,7 @@ class User < ApplicationRecord
   has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
 
   has_many :user_school_infos
+  has_many :teacher_directory_verification_requests, dependent: :destroy
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
 
   has_many :pd_applications,

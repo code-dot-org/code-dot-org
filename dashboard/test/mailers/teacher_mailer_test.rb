@@ -39,4 +39,16 @@ class TeacherMailerTest < ActionMailer::TestCase
     assert_equal ['teacher@code.org'], mail.from
     assert_match /Congratulations! You are now a verified teacher on CodeAI. You now have access to CodeAI's protected teacher materials - here's what to expect:/, mail.body.encoded
   end
+
+  test 'teacher directory verification email includes a confirmation link' do
+    teacher = build(:teacher, email: 'teacher@example.edu')
+    token = SecureRandom.urlsafe_base64(32)
+
+    mail = TeacherMailer.teacher_directory_verification_email(teacher, 'Example School', token)
+
+    assert_equal [teacher.email], mail.to
+    assert_equal ['teacher@code.org'], mail.from
+    assert_includes mail.body.encoded, token
+    assert_includes mail.body.encoded, 'Example School'
+  end
 end
