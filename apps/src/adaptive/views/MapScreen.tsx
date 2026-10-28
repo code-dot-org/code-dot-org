@@ -106,9 +106,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   // is set, React renders CheckpointCard (adding #adaptive-checkpoint-card-start to
   // the DOM). We then call refresh(true) so intro.js re-runs its element resolver
   // and picks up the button for step 4.
-  const stepsRef = useRef<{
-    introJs?: {refresh: (reset?: boolean) => void};
-  } | null>(null);
+  const stepsRef = useRef<Steps | null>(null);
   useEffect(() => {
     if (tourCheckpointId) {
       stepsRef.current?.introJs?.refresh(true);

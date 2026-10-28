@@ -1,11 +1,5 @@
 import React from 'react';
 
-import i18n from '@cdo/locale';
-
-// intro.js-react allows a string or a React element for the intro prop.
-// Wrapping translator-supplied strings in a fragment sanitizes any HTML.
-const sanitize = (unsafe: string) => <>{unsafe}</>;
-
 export const SKILL_MAP_TOUR_STORAGE_KEY = 'adaptive-skill-map-tour-seen-v1';
 export const SKILL_MAP_TOUR_INITIAL_STEP = 0;
 
@@ -14,32 +8,51 @@ export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
     {
       element: '#adaptive-tour-map-canvas',
       position: 'right',
-      title: i18n.skillMapTourMapTitle(),
-      intro: sanitize(i18n.skillMapTourMapText()),
+      title: 'Your skill map',
+      intro: (
+        <>
+          Each circle is a checkpoint. Finish one and the connected ones unlock.
+        </>
+      ),
     },
     {
       element: '#adaptive-tour-first-available',
-      title: i18n.skillMapTourCheckpointTitle(),
-      intro: sanitize(i18n.skillMapTourCheckpointText()),
+      title: 'Open checkpoints',
+      intro: <>Tap any highlighted checkpoint to learn what it covers.</>,
     },
     {
       element: '#adaptive-tour-side',
-      title: i18n.skillMapTourSideTitle(),
-      intro: sanitize(i18n.skillMapTourSideText()),
+      title: 'Checkpoint details',
+      intro: (
+        <>
+          When you select a checkpoint, its details appear here — what you'll
+          learn, how long it takes, and any prereqs.
+        </>
+      ),
     },
     {
       element: '#adaptive-checkpoint-card-start',
       position: 'left',
-      title: i18n.skillMapTourStartTitle(),
-      intro: sanitize(i18n.skillMapTourStartText()),
+      title: 'Starting a checkpoint',
+      intro: (
+        <>
+          When you're ready to begin, hit the Start button inside the panel. You
+          can come back to the map any time.
+        </>
+      ),
     },
   ];
 
   if (hasSkippedCheckpoints) {
     steps.push({
       element: '#adaptive-tour-first-available',
-      title: i18n.skillMapTourSkillCheckTitle(),
-      intro: sanitize(i18n.skillMapTourSkillCheckText()),
+      title: 'Skill Checks',
+      intro: (
+        <>
+          Checkpoints with a lightbulb badge are Skill Checks. You may already
+          know this material and can skip ahead.
+        </>
+      ),
     });
   }
 

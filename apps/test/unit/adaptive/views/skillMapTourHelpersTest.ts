@@ -47,20 +47,14 @@ describe('buildSkillMapTourSteps', () => {
 
   it('wraps every intro in a React element so intro.js does not render raw HTML', () => {
     buildSkillMapTourSteps(true).forEach((step, i) => {
-      expect(typeof step.intro).toBe(
-        'object',
-        `step[${i}].intro must be a React element, not a plain string`
-      );
+      expect(typeof step.intro).toBe('object');
     });
   });
 
   it('gives every step a non-empty title string', () => {
     buildSkillMapTourSteps(true).forEach((step, i) => {
       expect(typeof step.title).toBe('string');
-      expect((step.title as string).length).toBeGreaterThan(
-        0,
-        `step[${i}].title is empty`
-      );
+      expect((step.title as string).length).toBeGreaterThan(0);
     });
   });
 });
