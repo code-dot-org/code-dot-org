@@ -5,6 +5,9 @@ import TutorDeepDiveEditor from '@cdo/apps/levelbuilder/lesson-editor/TutorDeepD
 
 const flushPromises = () => new Promise(resolve => setTimeout(resolve, 0));
 
+// The practice problems panel renders a second table below the videos table.
+const videosTable = wrapper => wrapper.find('table').first();
+
 describe('TutorDeepDiveEditor', () => {
   let defaultProps;
 
@@ -33,8 +36,7 @@ describe('TutorDeepDiveEditor', () => {
 
   it('renders a row per video', () => {
     const wrapper = mount(<TutorDeepDiveEditor {...defaultProps} />);
-    // one header row + one video row
-    expect(wrapper.find('tbody tr').length).toBe(1);
+    expect(videosTable(wrapper).find('tbody tr').length).toBe(1);
     expect(wrapper.text()).toContain('video-a');
     expect(wrapper.text()).toContain('First video');
   });
@@ -42,9 +44,11 @@ describe('TutorDeepDiveEditor', () => {
   it('lists the associated objective descriptions, not the audience', () => {
     const wrapper = mount(<TutorDeepDiveEditor {...defaultProps} />);
     // objective descriptions are resolved from ids and listed
-    expect(wrapper.find('tbody li').map(li => li.text())).toEqual([
-      'Objective one',
-    ]);
+    expect(
+      videosTable(wrapper)
+        .find('tbody li')
+        .map(li => li.text())
+    ).toEqual(['Objective one']);
     // audience column has been removed
     expect(wrapper.text()).not.toContain('Student');
   });
@@ -54,8 +58,8 @@ describe('TutorDeepDiveEditor', () => {
     const wrapper = mount(
       <TutorDeepDiveEditor {...defaultProps} initialVideos={[video]} />
     );
-    expect(wrapper.find('tbody li').length).toBe(0);
-    expect(wrapper.find('tbody').text()).toContain('None');
+    expect(videosTable(wrapper).find('tbody li').length).toBe(0);
+    expect(videosTable(wrapper).find('tbody').text()).toContain('None');
   });
 
   it('renders an empty state with no videos', () => {
@@ -69,7 +73,9 @@ describe('TutorDeepDiveEditor', () => {
     const wrapper = mount(<TutorDeepDiveEditor {...defaultProps} />);
     expect(wrapper.find('TutorVideoDialog').prop('isOpen')).toBe(false);
 
-    wrapper.find('button').last().simulate('click');
+    wrapper
+      .findWhere(n => n.name() === 'button' && n.text().includes('Add Video'))
+      .simulate('click');
     wrapper.update();
 
     expect(wrapper.find('TutorVideoDialog').prop('isOpen')).toBe(true);
@@ -88,7 +94,7 @@ describe('TutorDeepDiveEditor', () => {
     const wrapper = mount(<TutorDeepDiveEditor {...defaultProps} />);
 
     // the trash button is the second action button in the row
-    wrapper.find('tbody button').at(1).prop('onClick')();
+    videosTable(wrapper).find('tbody button').at(1).prop('onClick')();
     await flushPromises();
 
     expect(confirmSpy).toHaveBeenCalled();
@@ -105,8 +111,38 @@ describe('TutorDeepDiveEditor', () => {
     fetchSpy = jest.spyOn(window, 'fetch');
 
     const wrapper = mount(<TutorDeepDiveEditor {...defaultProps} />);
-    wrapper.find('tbody button').at(1).prop('onClick')();
+    videosTable(wrapper).find('tbody button').at(1).prop('onClick')();
 
     expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('passes the lesson and its practice problems to the practice problems panel', () => {
+    const problems = [
+      {
+        id: 10,
+        problemType: 'match',
+        problemText: 'Match the terms',
+        solution: [{option: 'a', correct: 'b'}],
+        objectiveIds: [1],
+      },
+    ];
+    const wrapper = mount(
+      <TutorDeepDiveEditor
+        {...defaultProps}
+        initialPracticeProblems={problems}
+      />
+    );
+
+    const panel = wrapper.find('PracticeProblemsPanel');
+    expect(panel.prop('lessonId')).toBe(42);
+    expect(panel.prop('objectives')).toBe(defaultProps.objectives);
+    expect(panel.prop('initialProblems')).toBe(problems);
+  });
+
+  it('gives the practice problems panel an empty list when none are passed', () => {
+    const wrapper = mount(<TutorDeepDiveEditor {...defaultProps} />);
+    expect(
+      wrapper.find('PracticeProblemsPanel').prop('initialProblems')
+    ).toEqual([]);
   });
 });
