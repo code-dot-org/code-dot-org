@@ -689,6 +689,28 @@ describe('ProjectContext keeping a saved project in sync', () => {
     expect(save).not.toHaveBeenCalled();
   });
 
+  test('reports nothing on a pretrained level', () => {
+    const {save, context} = renderSync();
+    act(() => singletonStore.dispatch(setMode({pretrained: true})));
+    loadDataset();
+
+    act(() => context().applyTrainingRun(FIRST));
+
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('opens a pretrained level without its saved run', () => {
+    const {context} = renderSync({...SAVED_COLUMNS, hyperparameters: {k: 1}});
+    act(() => singletonStore.dispatch(setMode({pretrained: true})));
+    loadDataset();
+
+    expect(context().project).toEqual({
+      ...defaultProject,
+      labelColumn: 'a',
+      selectedFeatures: ['b'],
+    });
+  });
+
   test('does not open against the dataset the last level left behind', () => {
     loadDataset();
 

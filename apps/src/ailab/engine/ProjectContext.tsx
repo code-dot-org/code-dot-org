@@ -81,6 +81,8 @@ export const ProjectProvider = ({
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
+  // A pretrained level trains itself and locks its columns: nothing to keep.
+  const pretrained = useAppSelector(state => !!state.mode?.pretrained);
   const datasetLoaded = useAppSelector(state => !!state.dataset);
 
   useResetSignal(
@@ -160,7 +162,13 @@ export const ProjectProvider = ({
     (saved: AilabProject) => {
       previousRun.current = undefined;
       const reconciledProject = keepSelectableColumns(
-        saved,
+        pretrained
+          ? {
+              ...defaultProject,
+              labelColumn: saved.labelColumn,
+              selectedFeatures: saved.selectedFeatures,
+            }
+          : saved,
         selectableColumns,
         data
       );
@@ -177,7 +185,14 @@ export const ProjectProvider = ({
       setProject(opened);
       setIsProjectLoaded(true);
     },
-    [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
+    [
+      pretrained,
+      selectableColumns,
+      data,
+      presetColumns,
+      lockedLabel,
+      lockedFeatures,
+    ]
   );
 
   const openProject = useCallback((saved: AilabProject) => {
@@ -209,11 +224,12 @@ export const ProjectProvider = ({
     if (
       isProjectLoaded &&
       !isDefaultProject &&
+      !pretrained &&
       project !== openedProject.current
     ) {
       onProjectChangeRef.current?.(project);
     }
-  }, [isProjectLoaded, isDefaultProject, project]);
+  }, [isProjectLoaded, isDefaultProject, pretrained, project]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {

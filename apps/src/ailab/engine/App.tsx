@@ -295,7 +295,8 @@ const App = ({
   }, [currentPanel]);
 
   useEffect(() => {
-    if (latestResult) {
+    // A pretrained level's run is the level's own, not the student's.
+    if (latestResult && !pretrained) {
       onTrained?.(Number(latestResult.accuracy));
     }
     // As above: report a result once, not once per render of the consumer.

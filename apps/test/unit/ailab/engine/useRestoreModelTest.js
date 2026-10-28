@@ -113,14 +113,18 @@ test('rebuilds nothing when the project describes no run', () => {
   expect(store.getState().currentPanel).toBe('datasetView');
 });
 
-test('rebuilds rather than retrains on a pretrained level', () => {
+test('retrains rather than rebuilds on a pretrained level', () => {
   const saved = savedAfterTraining();
   store.dispatch(setMode({pretrained: true}));
 
-  const rendered = openLab(saved);
+  const rendered = openLab({
+    ...saved,
+    historicResults: [...saved.historicResults, ...saved.historicResults],
+  });
 
   expect(rendered.trainingData().trainedModel).toBeDefined();
-  expect(rendered.project().historicResults).toEqual(saved.historicResults);
+  expect(rendered.project().historicResults).toHaveLength(1);
+  expect(store.getState().currentPanel).toBe('datasetView');
 });
 
 test('still pretrains a level with nothing saved', () => {
@@ -129,36 +133,6 @@ test('still pretrains a level with nothing saved', () => {
   const rendered = openLab({...defaultProject, ...COLUMNS});
 
   expect(rendered.project().historicResults).toHaveLength(1);
-});
-
-describe('a pretrained level whose saved run cannot be rebuilt', () => {
-  beforeEach(() => store.dispatch(setMode({pretrained: true})));
-
-  test('pretrains when the split no longer fits the dataset', () => {
-    const saved = savedAfterTraining();
-
-    const rendered = openLab({...saved, accuracyCheckRowIndices: [99]});
-
-    expect(rendered.trainingData().trainedModel).toBeDefined();
-    expect(rendered.project().historicResults.length).toBeGreaterThan(
-      saved.historicResults.length
-    );
-  });
-
-  test('pretrains when reconciliation has already dropped the run', () => {
-    const saved = savedAfterTraining();
-
-    const rendered = openLab({
-      ...saved,
-      hyperparameters: undefined,
-      accuracyCheckRowIndices: undefined,
-    });
-
-    expect(rendered.trainingData().trainedModel).toBeDefined();
-    expect(rendered.project().historicResults.length).toBeGreaterThan(
-      saved.historicResults.length
-    );
-  });
 });
 
 describe('a run trained on columns the project has since changed', () => {
