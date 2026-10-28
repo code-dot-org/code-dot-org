@@ -7,7 +7,7 @@ profile, login, school, role, and account actions. Consumed by the Studio app
 Three tabs are implemented: **Account Details** (profile, login, parent/guardian
 email, account actions), **Educator Profile** (school information and educator
 role, educators only), and **Integrations** (linked accounts and LMS roster
-sync). The email opt-in lives in the Update email dialog, as in legacy.
+sync).
 
 Integrations is hidden from accounts that can't manage linked accounts
 (accounts not yet migrated to multiple logins, and accounts in a
