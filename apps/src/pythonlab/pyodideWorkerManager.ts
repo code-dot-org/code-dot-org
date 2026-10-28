@@ -151,7 +151,10 @@ const setUpPyodideWorker = () => {
         break;
       }
       case 'updated_source':
-        getStore().dispatch(setAndSaveSource(message));
+        // Don't save AI Tutor changes the student hasn't accepted.
+        if (!getStore().getState().lab2Project.viewingAiTutorVersion) {
+          getStore().dispatch(setAndSaveSource(message));
+        }
         break;
       case 'error':
         getStore().dispatch(setHasError(true));

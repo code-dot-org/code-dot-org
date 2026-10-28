@@ -8,12 +8,21 @@ const mockDispatch = jest.fn();
 const mockLogWarning = jest.fn();
 const mockWriteConsoleMessage = jest.fn();
 let mockIsRunning = false;
+let mockViewingAiTutorVersion = false;
+const mockSetAndSaveSource = jest.fn();
 
 jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({
     dispatch: mockDispatch,
-    getState: () => ({lab2System: {isRunning: mockIsRunning}}),
+    getState: () => ({
+      lab2System: {isRunning: mockIsRunning},
+      lab2Project: {viewingAiTutorVersion: mockViewingAiTutorVersion},
+    }),
   }),
+}));
+
+jest.mock('@cdo/apps/lab2/redux/lab2ProjectReduxThunks', () => ({
+  setAndSaveSource: (...args: unknown[]) => mockSetAndSaveSource(...args),
 }));
 
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
@@ -70,6 +79,7 @@ describe('pyodideSandboxManager', () => {
     jest.clearAllMocks();
     jest.useFakeTimers();
     mockIsRunning = false;
+    mockViewingAiTutorVersion = false;
     document.body.innerHTML = '';
   });
 
@@ -131,5 +141,31 @@ describe('pyodideSandboxManager', () => {
     expect(mockWriteConsoleMessage).toHaveBeenCalledWith(
       expect.stringContaining('stopped')
     );
+  });
+
+  describe('updated_source', () => {
+    const sendUpdatedSource = () =>
+      window.dispatchEvent(
+        new MessageEvent('message', {
+          data: {type: 'updated_source', message: {files: {}}, id: '1'},
+          origin: SANDBOX_ORIGIN,
+        })
+      );
+    it('saves the source the program left behind', () => {
+      loadManager();
+
+      sendUpdatedSource();
+
+      expect(mockSetAndSaveSource).toHaveBeenCalled();
+    });
+
+    it('does not save while an AI Tutor version is under review', () => {
+      loadManager();
+      mockViewingAiTutorVersion = true;
+
+      sendUpdatedSource();
+
+      expect(mockSetAndSaveSource).not.toHaveBeenCalled();
+    });
   });
 });

@@ -1,6 +1,7 @@
 import {renderHook} from '@testing-library/react-hooks';
 
 import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useSharedAiTutorResponseSchemaSettings';
+import * as pythonlab from '@cdo/apps/pythonlab/helpers/aiTutorStructuredResponseHelper';
 import * as weblab2 from '@cdo/apps/weblab2/helpers/aiTutorStructuredResponseHelper';
 
 const mockDispatch = jest.fn();
@@ -130,5 +131,32 @@ describe('useSharedAiTutorResponseSchemaSettings', () => {
 
     expect(mockDispatch).not.toHaveBeenCalled();
     expect(text).toContain('index.html');
+  });
+
+  it('uses the answer and file types the lab passes in', () => {
+    const {formatForDisplay, onResponse} = renderHook(() =>
+      useSharedAiTutorResponseSchemaSettings({
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        source: source as any,
+        jsonSchema: pythonlab.aiTutorResponseJsonSchema,
+        acceptRejectAnswerTypes: pythonlab.acceptRejectAnswerTypes,
+        acceptRejectFileTypes: pythonlab.acceptRejectFileTypes,
+      })
+    ).result.current;
+
+    // An HTML build is copy-paste in Python Lab.
+    expect(formatForDisplay(acceptRejectResponse)).toContain('index.html');
+    onResponse!(acceptRejectResponse);
+    expect(mockDispatch).not.toHaveBeenCalled();
+
+    onResponse!({
+      answer: {
+        answerType: 'buildPython',
+        explanation: 'Added a greeting.',
+        code: [{filename: 'main.py', sourceCode: 'print("hi")'}],
+      },
+    });
+    const dispatched = mockDispatch.mock.calls.map(([action]) => action.type);
+    expect(dispatched).toContain('lab2Project/setViewingAiTutorVersion');
   });
 });

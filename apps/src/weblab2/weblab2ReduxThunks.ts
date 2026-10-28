@@ -64,7 +64,9 @@ export const acceptAiTutorVersion = createAsyncThunk<
         );
       return;
     }
+    // Keep labConfig and other project fields; only the source changes.
     const sourcesBeforeAiTutorVersion = {
+      ...sources,
       source: state.lab2Project.projectSourceBeforeAiTutorVersion,
     };
 
@@ -101,6 +103,7 @@ export const acceptAiTutorVersion = createAsyncThunk<
       ),
     };
     const updatedSources = {
+      ...sources,
       source: updatedSource,
     };
     // Save sources before AI Tutor version if there were any changes to the project since the last saved version.

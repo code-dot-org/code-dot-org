@@ -61,3 +61,8 @@ export const aiTutorResponseJsonSchema: JsonObjectSchema = {
   required: ['answer'],
   additionalProperties: false,
 };
+
+// Answers the student can accept or reject. Others are copy and paste.
+export const acceptRejectAnswerTypes = ['buildPython', 'buildCSV', 'buildJSON'];
+
+export const acceptRejectFileTypes = ['py', 'csv', 'json'];
