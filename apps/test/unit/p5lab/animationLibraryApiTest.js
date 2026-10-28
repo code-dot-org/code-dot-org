@@ -141,6 +141,19 @@ describe('animationLibraryApi', () => {
       );
     });
 
+    it('rejects without trying locale fallback when request fails with other than 404', async () => {
+      stubManifest('es_mx');
+      fetchSpy
+        .withArgs('/api/v1/animation-library/manifest/spritelab/es_la')
+        .resolves({ok: false, status: 500});
+      let error;
+      await getManifest('spritelab', 'es_la').catch(e => (error = e));
+      expect(error).to.be.an('error');
+      expect(fetchSpy).not.calledWith(
+        '/api/v1/animation-library/manifest/spritelab/es_mx'
+      );
+    });
+
     it('rejects when no manifest exists', async () => {
       fetchSpy
         .withArgs('/api/v1/animation-library/manifest/spritelab/en_us')

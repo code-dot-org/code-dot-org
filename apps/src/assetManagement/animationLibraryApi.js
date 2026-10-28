@@ -13,7 +13,13 @@ export async function getManifest(appType, locale = 'en_us') {
       `/api/v1/animation-library/manifest/${appType}/${manifestLocale}`
     );
 
-    if (response.ok) return response.json();
+    if (response.ok) {
+      return response.json();
+    } else if (response.status !== 404) {
+      throw new Error(
+        `Failed to load ${appType} animation manifest for locale ${manifestLocale}: ${response.status}`
+      );
+    }
   }
 
   throw new Error(`No ${appType} animation manifest for locale ${locale}`);
