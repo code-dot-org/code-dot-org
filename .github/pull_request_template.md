@@ -1,14 +1,12 @@
+## Overview
+
+Jira: 
+
 <!--
 - Background and Intent: What is the background, motivation, and context for this update? Include links to any design documents, specs, tickets, or other external sources that give context for the change.
 - Design Overview: What conceptually is changing in the code? What design decisions were made and why? Don't explain how it works when that's already clear.
 - Visible Changes: What functionality is changing from an end user perspective? Include screenshots, videos, or before/after comparisons for UI changes.
 -->
-
-## Links
-<!-- Delete this section if links are included inline above.
-     Otherwise: Jira tickets, design docs, Slack threads, related PRs, etc. -->
-
-- Jira:
 
 ## Validation
 <!-- What steps were taken by human engineers or AI to validate the code changes prior to merge? What automated test coverage exists for these changes? Be clear about whether validation steps were performed by AI or human. -->
