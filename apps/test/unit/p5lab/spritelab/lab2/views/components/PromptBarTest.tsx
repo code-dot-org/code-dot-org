@@ -23,12 +23,12 @@ describe('PromptBar', () => {
     ).toBeTruthy();
   });
 
-  it('answers on Submit and clears the field', () => {
+  it('answers on Send and clears the field', () => {
     const onAnswer = jest.fn();
     render(<PromptBar prompt={namePrompt} onAnswer={onAnswer} />);
     const field = screen.getByRole('textbox') as HTMLInputElement;
     fireEvent.change(field, {target: {value: 'Ada'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Send'}));
     expect(onAnswer).toHaveBeenCalledWith('name', 'Ada');
     expect(field.value).toBe('');
   });
@@ -46,9 +46,9 @@ describe('PromptBar', () => {
     const onAnswer = jest.fn();
     render(<PromptBar prompt={namePrompt} onAnswer={onAnswer} disabled />);
     const field = screen.getByRole('textbox', {name: 'What is your name?'});
-    const submit = screen.getByRole('button', {name: 'Submit'});
+    const send = screen.getByRole('button', {name: 'Send'});
     expect((field as HTMLInputElement).disabled).toBe(true);
-    expect((submit as HTMLButtonElement).disabled).toBe(true);
+    expect((send as HTMLButtonElement).disabled).toBe(true);
     fireEvent.submit(field);
     expect(onAnswer).not.toHaveBeenCalled();
   });
