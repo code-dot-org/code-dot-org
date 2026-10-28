@@ -39,7 +39,7 @@ const parseAnswer = (response: unknown) =>
  * Build answers load the tutor's code into the project for the student to
  * accept or reject. Other answers show their code to copy and paste.
  */
-export const useAiTutorResponseSchemaSettings = ({
+export const useSharedAiTutorResponseSchemaSettings = ({
   source,
   isWidgetView,
   jsonSchema,

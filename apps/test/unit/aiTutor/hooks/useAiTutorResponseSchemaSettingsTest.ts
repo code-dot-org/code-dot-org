@@ -1,6 +1,6 @@
 import {renderHook} from '@testing-library/react-hooks';
 
-import {useAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useAiTutorResponseSchemaSettings';
+import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useAiTutorResponseSchemaSettings';
 import * as weblab2 from '@cdo/apps/weblab2/helpers/aiTutorStructuredResponseHelper';
 
 const mockDispatch = jest.fn();
@@ -62,10 +62,10 @@ const weblab2Options = (isWidgetView?: boolean) => ({
 
 const renderSettings = (isWidgetView?: boolean) =>
   renderHook(() =>
-    useAiTutorResponseSchemaSettings(weblab2Options(isWidgetView))
+    useSharedAiTutorResponseSchemaSettings(weblab2Options(isWidgetView))
   ).result.current;
 
-describe('useAiTutorResponseSchemaSettings', () => {
+describe('useSharedAiTutorResponseSchemaSettings', () => {
   beforeEach(() => jest.clearAllMocks());
 
   // formatForDisplay runs over every message in the transcript on every render,
@@ -83,7 +83,7 @@ describe('useAiTutorResponseSchemaSettings', () => {
   it('formatForDisplay is stable across renders so the transcript memo holds', () => {
     const options = weblab2Options(false);
     const {result, rerender} = renderHook(() =>
-      useAiTutorResponseSchemaSettings(options)
+      useSharedAiTutorResponseSchemaSettings(options)
     );
     const first = result.current.formatForDisplay;
     rerender();
