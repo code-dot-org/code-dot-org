@@ -30,6 +30,7 @@ const BASE_RESULT: MultipleChoiceResult = {
   quizQuestionId: 1,
   questionType: 'MultipleChoiceQuestion',
   responseData: {},
+  answered: false,
   correct: null,
   explanation: null,
   correctChoiceId: null,
@@ -54,7 +55,11 @@ const choiceItem = (text: string) =>
 
 describe('QuestionResultCard', () => {
   it('marks the selected correct choice', () => {
-    renderCard({responseData: {selectedChoiceId: '1'}, correct: true});
+    renderCard({
+      responseData: {selectedChoiceId: '1'},
+      answered: true,
+      correct: true,
+    });
 
     expect(
       within(choiceItem('Four')).getByText('Correct answer')
@@ -68,7 +73,11 @@ describe('QuestionResultCard', () => {
   });
 
   it('marks the selected incorrect choice', () => {
-    renderCard({responseData: {selectedChoiceId: '2'}, correct: false});
+    renderCard({
+      responseData: {selectedChoiceId: '2'},
+      answered: true,
+      correct: false,
+    });
 
     expect(
       within(choiceItem('Five')).getByText('Your answer, incorrect')
@@ -78,7 +87,11 @@ describe('QuestionResultCard', () => {
   });
 
   it('shows a selected choice as ungraded when correctness is hidden', () => {
-    renderCard({responseData: {selectedChoiceId: '0'}, correct: null});
+    renderCard({
+      responseData: {selectedChoiceId: '0'},
+      answered: true,
+      correct: null,
+    });
 
     expect(
       within(choiceItem('Three')).getByText('Your answer', {exact: true})
@@ -93,6 +106,7 @@ describe('QuestionResultCard', () => {
     renderCard(
       {
         responseData: {selectedChoiceId: '2'},
+        answered: true,
         correct: false,
         correctChoiceId: '1',
       },
@@ -106,7 +120,7 @@ describe('QuestionResultCard', () => {
 
   it("labels an ungraded selection as the student's answer for a teacher viewing a student", () => {
     renderCard(
-      {responseData: {selectedChoiceId: '0'}},
+      {responseData: {selectedChoiceId: '0'}, answered: true},
       {isViewingStudent: true}
     );
     expect(
@@ -145,7 +159,11 @@ describe('QuestionResultCard', () => {
   });
 
   it('does not tag an answered question as skipped', () => {
-    renderCard({responseData: {selectedChoiceId: '1'}, correct: true});
+    renderCard({
+      responseData: {selectedChoiceId: '1'},
+      answered: true,
+      correct: true,
+    });
 
     expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
   });
@@ -219,6 +237,7 @@ describe('QuestionResultCard', () => {
             quizQuestionId: 3,
             questionType: 'MultipleSelectQuestion',
             responseData: {selectedChoiceIds: ['b', 'c']},
+            answered: true,
             correct: false,
             explanation: null,
             correctChoiceIds: ['a', 'b'],
@@ -277,7 +296,7 @@ describe('QuestionResultCard', () => {
     });
 
     it('tags an empty selection as skipped', () => {
-      renderMsCard({responseData: {selectedChoiceIds: []}});
+      renderMsCard({responseData: {selectedChoiceIds: []}, answered: false});
 
       expect(screen.getByText('Skipped')).toBeInTheDocument();
     });
@@ -317,6 +336,7 @@ describe('QuestionResultCard', () => {
             questionType: 'FreeResponseQuestion',
             quizQuestionId: 2,
             responseData: {answerText: 'x > 3'},
+            answered: true,
           }}
         />
       );
@@ -353,6 +373,7 @@ describe('QuestionResultCard', () => {
             questionType: 'FreeResponseQuestion',
             quizQuestionId: 2,
             responseData: {answerText: 'x > 3'},
+            answered: true,
             explanation: 'The condition becomes false.',
           }}
           revealAnswerExplanation
