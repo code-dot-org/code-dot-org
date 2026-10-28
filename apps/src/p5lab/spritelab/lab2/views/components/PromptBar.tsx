@@ -67,7 +67,7 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
             className={styles.submitButton}
             disabled={disabled}
           >
-            Submit
+            Send
           </MuiButton>
         </form>
       )}
