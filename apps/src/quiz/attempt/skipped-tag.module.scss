@@ -1,0 +1,25 @@
+// Ungraded colors match the design-system default Tag.
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+  height: 24px;
+  padding: 0 8px;
+  font-size: 12px;
+  color: var(--text-neutral-primary);
+  white-space: nowrap;
+  background: var(--background-brand-teal-light);
+  border: 1px solid transparent;
+  border-radius: var(--shape-sm);
+
+  span {
+    color: inherit;
+  }
+}
+
+.tagGraded {
+  color: var(--text-error-secondary);
+  background: var(--background-error-light);
+  border-color: var(--border-error-mid);
+}
