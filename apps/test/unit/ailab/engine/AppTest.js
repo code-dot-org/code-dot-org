@@ -100,22 +100,22 @@ describe('a pretrained level', () => {
     return {onTrained, trainingData};
   }
 
-  test('trains once on load, without the training modal or a report', () => {
+  test('trains once on load, without the training modal', () => {
     const {onTrained, trainingData} = renderLevel(PRETRAINED);
-    expect(onTrained).not.toHaveBeenCalled();
+    expect(onTrained.mock.calls).toEqual([[100]]);
     expect(trainingData().trainedModel).toBeDefined();
     expect(storeSingleton.getState().trainingModalStep).toBeUndefined();
     expect(document.activeElement).toBe(document.body);
   });
 
   test('waits for its own data and columns after a level change', () => {
-    const {trainingData} = renderLevel({trainer: 'decisionTree'});
+    const {onTrained} = renderLevel({trainer: 'decisionTree'});
 
     act(() => {
       storeSingleton.dispatch(resetState());
       storeSingleton.dispatch(setMode(PRETRAINED));
     });
-    expect(trainingData().trainedModel).toBeUndefined();
+    expect(onTrained).not.toHaveBeenCalled();
 
     act(() => {
       seedLevel(storeSingleton, PRETRAINED);
@@ -123,7 +123,7 @@ describe('a pretrained level', () => {
         setPresetColumns({labelColumn: 'animal', selectedFeatures: ['legs']})
       );
     });
-    expect(trainingData().trainedModel).toBeDefined();
+    expect(onTrained.mock.calls).toEqual([[100]]);
   });
 
   test('stays on the dataset view once trained', () => {
