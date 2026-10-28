@@ -30,9 +30,8 @@ module CodespanOnlyMarkdownHelper
     end
   end
 
-  CodespanOnlyRenderer = Redcarpet::Markdown.new(CodespanOnly)
-
   def render_codespan_only_markdown(markdown)
-    CodespanOnlyRenderer.render(markdown)
+    @@renderer ||= Redcarpet::Markdown.new(CodespanOnly)
+    @@renderer.render(markdown)
   end
 end

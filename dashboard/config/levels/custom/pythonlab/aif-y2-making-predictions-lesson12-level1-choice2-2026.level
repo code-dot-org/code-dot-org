@@ -1,0 +1,58 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T23:32:50.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Look at the data given to you in `knitting.csv`.\r\n- Run the program to visualize this data in `matplotlib`. The program is already written for you.\r\n- In your Project Planning Guide, respond to the questions in **Step 3: Visualizing Your Problem**.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nimport matplotlib.pyplot as plt\n\n# Data\nwith open(\"knitting.csv\") as f:\n  data = list(csv.DictReader(f))\n\ngroups = [(\"yes\", \"Has Deadline\"), (\"no\", \"Has No Deadline\")]\n\n# Styling\nplt.rcParams.update({\"font.size\": 11, \"figure.dpi\": 140})\nstyles = {\n  \"finished\": {\n    \"marker\": \"o\",\n    \"color\": \"#0072B2\",\n    \"label\": \"Finished\"\n  },\n  \"abandoned\": {\n    \"marker\": \"^\",\n    \"color\": \"#E69F00\",\n    \"label\": \"Abandoned\"\n  },\n}\n\n# Plotting\nfigure, axes_list = plt.subplots(\n  2,\n  1,\n  figsize=(6, 9),\n  sharex=True,\n  sharey=True\n)\n\nfor axes, (value, heading) in zip(axes_list, groups):\n  subset = [row for row in data if row[\"deadline\"] == value]\n\n  for outcome, style in styles.items():\n    x = [\n        float(row[\"estimated-hours\"]) for row in subset\n        if row[\"outcome\"] == outcome\n    ]\n    y = [\n        float(row[\"hours-per-week\"]) for row in subset\n        if row[\"outcome\"] == outcome\n    ]\n    axes.scatter(\n      x,\n      y,\n      marker=style[\"marker\"],\n      color=style[\"color\"],\n      s=55,\n      edgecolors=\"black\",\n      linewidths=0.5,\n      label=style[\"label\"],\n    )\n\n  axes.set_title(f\"{heading} (n={len(subset)})\")\n  axes.set_ylabel(\"Hours Available per Week\")\n  axes.grid(True, linestyle=\":\", alpha=0.6)\n\naxes_list[-1].set_xlabel(\"Estimated Hours to Complete\")\naxes_list[0].legend(title=\"Outcome\", loc=\"lower right\")\n\nfigure.suptitle(\"Knitting Projects\")\nfigure.tight_layout()\nplt.show()\n",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "knitting.csv",
+          "contents": "estimated-hours,hours-per-week,deadline,outcome\n26,5.0,no,finished\n26,5.3,yes,finished\n25,6.0,yes,finished\n10,1.2,no,finished\n120,5.7,yes,abandoned\n34,9.8,yes,finished\n34,5.8,no,finished\n64,4.8,no,abandoned\n5,2.3,yes,finished\n5,5.2,no,finished\n13,3.2,yes,finished\n16,6.3,yes,finished\n61,2.8,no,abandoned\n40,9.3,no,finished\n9,4.7,yes,finished\n22,6.6,no,finished\n7,3.6,no,finished\n76,9.5,no,abandoned\n8,3.4,no,finished\n29,9.1,no,finished\n24,1.0,no,abandoned\n53,2.9,no,abandoned\n8,6.7,yes,finished\n70,1.6,yes,abandoned\n119,2.2,yes,abandoned\n36,1.3,no,abandoned\n36,4.7,yes,finished\n22,8.2,yes,finished\n7,5.4,no,finished\n9,8.1,yes,finished\n74,3.4,no,abandoned\n15,7.1,no,finished\n8,8.9,yes,finished\n32,4.7,no,finished\n13,5.0,yes,finished\n97,7.5,no,abandoned\n39,3.3,yes,finished\n18,5.2,yes,finished\n115,3.1,yes,abandoned\n26,1.5,no,abandoned\n114,4.9,no,abandoned\n17,2.7,no,finished\n10,1.4,yes,finished\n11,4.5,yes,finished\n84,8.9,no,abandoned\n70,8.5,no,finished\n103,9.8,yes,finished\n12,7.3,no,finished\n6,1.3,yes,finished\n20,5.3,no,finished\n43,4.1,yes,finished\n45,4.3,no,abandoned\n27,7.4,yes,finished\n38,8.1,no,finished\n8,2.9,no,finished\n75,6.2,no,abandoned\n15,2.7,yes,finished\n49,9.9,yes,finished\n22,2.7,no,finished\n31,1.2,yes,abandoned\n11,6.9,yes,finished\n99,3.2,yes,abandoned\n8,8.5,no,finished\n21,4.1,no,finished\n16,8.8,yes,finished\n25,1.6,yes,finished\n102,9.4,yes,finished\n76,7.3,no,abandoned\n20,8.9,yes,finished\n26,6.4,no,finished\n31,5.1,no,finished\n7,2.1,no,finished\n120,2.1,yes,abandoned\n73,5.9,yes,finished\n17,2.6,no,finished\n58,9.0,no,finished\n34,5.6,yes,finished\n36,5.8,no,finished\n19,2.8,no,finished\n28,9.9,no,finished\n120,8.7,yes,finished\n38,5.2,yes,finished\n113,3.2,no,abandoned\n37,9.6,no,finished\n38,4.6,no,finished\n11,9.0,yes,finished\n92,5.6,no,abandoned\n19,3.0,no,finished\n5,9.5,no,finished\n32,1.1,no,abandoned\n115,1.5,yes,abandoned\n11,5.2,yes,finished\n24,7.1,yes,finished\n6,6.3,no,finished\n71,2.4,yes,abandoned\n30,2.1,yes,finished\n15,7.8,no,finished\n74,8.8,no,abandoned\n56,1.9,yes,abandoned\n7,9.0,yes,finished\n74,3.3,no,abandoned\n18,1.6,yes,finished\n12,9.2,no,finished\n71,9.0,no,finished\n31,8.5,no,finished\n32,7.5,no,finished\n10,4.3,no,finished\n18,7.4,no,finished\n26,3.4,yes,finished\n20,3.7,no,finished\n69,4.8,no,abandoned\n62,5.8,yes,finished\n9,1.7,no,finished\n9,2.8,no,finished\n42,2.7,no,abandoned\n29,4.1,no,finished\n16,8.9,no,finished\n46,9.7,yes,finished\n24,4.2,yes,finished\n11,2.1,no,finished\n11,9.8,no,finished\n10,2.5,yes,finished\n21,4.3,no,finished\n76,9.2,no,abandoned\n23,1.9,no,finished\n6,7.5,yes,finished\n9,4.0,no,finished\n17,7.3,yes,finished\n110,6.9,no,abandoned\n59,4.7,no,abandoned\n23,7.5,no,finished\n120,4.3,no,abandoned\n89,5.4,no,abandoned\n19,3.9,yes,finished\n22,1.6,no,abandoned\n66,7.1,yes,finished\n24,6.9,no,finished\n45,3.3,yes,finished\n17,2.2,yes,finished\n20,7.1,no,finished\n24,8.7,yes,finished\n7,1.7,no,finished\n64,7.7,no,finished\n7,6.2,no,finished\n8,1.4,yes,finished\n5,5.2,yes,finished\n48,8.2,no,finished\n30,1.6,yes,finished\n33,4.8,yes,finished\n5,5.0,yes,finished\n6,8.2,no,finished\n75,9.4,yes,finished\n55,5.7,yes,finished\n10,5.4,yes,finished\n15,2.3,yes,finished\n120,1.9,yes,abandoned\n39,6.3,yes,finished\n16,7.4,no,finished\n113,4.7,no,abandoned\n24,9.6,no,finished\n51,3.5,yes,finished\n7,4.8,no,finished\n56,4.1,no,abandoned\n69,1.4,no,abandoned\n16,9.9,yes,finished\n22,7.1,yes,finished\n21,9.8,no,finished\n34,8.7,yes,finished\n13,3.5,no,finished\n16,5.6,no,finished\n19,4.9,no,finished\n11,8.6,no,finished\n92,8.1,no,abandoned\n24,3.3,yes,finished\n39,9.0,yes,finished\n42,2.9,no,abandoned\n39,6.7,no,finished\n10,5.4,no,finished\n15,2.0,yes,finished\n6,8.6,no,finished\n7,5.6,yes,finished\n12,9.4,no,finished\n61,4.0,no,abandoned\n17,5.2,no,finished\n13,2.0,no,finished\n43,7.2,no,finished\n42,2.9,no,abandoned\n46,2.2,yes,finished\n16,5.4,no,finished\n39,4.8,yes,finished\n9,7.9,yes,finished\n50,1.9,yes,abandoned\n6,9.5,yes,finished\n18,5.7,yes,finished\n17,8.9,yes,finished\n29,7.7,no,finished\n60,9.1,yes,finished\n89,9.9,no,abandoned\n6,6.2,yes,finished\n15,2.5,yes,finished\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/f87437bf5e71dd1b88f0726c8517ad11-knitting.jpg",
+    "display_name": "Knitting to Completion",
+    "bubble_choice_description": "Will this project be completed?"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 23:34:58 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:36:45 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:36:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:39:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:41:12 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:44:49 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:44:56 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:45:17 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 23:45:55 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-14 03:26:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

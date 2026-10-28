@@ -8,11 +8,17 @@ import type {
 
 import {
   connectedAccounts,
+  disconnectBlockedMessage,
   isConnectLocked,
   lockedConnectMessage,
   unconnectedLmsPlatforms,
   unconnectedProviders,
 } from '../linkedAccounts';
+
+const NO_LOGIN =
+  'To make sure you can still sign in to your account, please add a password or another linked account first.';
+const ROSTERED =
+  'You cannot disconnect from this linked account because it is tied to one of your sections.';
 
 const INTEGRATIONS: IntegrationsSettings = {
   canManageLinkedAccounts: true,
@@ -61,7 +67,7 @@ describe('connectedAccounts', () => {
 });
 
 describe('unconnectedProviders', () => {
-  it('lists the linkable providers with no linked login, in legacy order', () => {
+  it('lists the linkable providers with no linked login, in display order', () => {
     expect(unconnectedProviders([email, clever])).toEqual([
       'google_oauth2',
       'microsoft_v2_auth',
@@ -90,6 +96,82 @@ describe('unconnectedLmsPlatforms', () => {
       'canvas_cloud',
       'schoology',
     ]);
+  });
+});
+
+describe('disconnectBlockedMessage', () => {
+  it('blocks Google for a student in a Google Classroom section', () => {
+    const settings = settingsWith([google, email], {hasPassword: true});
+    const integrations = {...INTEGRATIONS, isGoogleClassroomStudent: true};
+
+    expect(disconnectBlockedMessage(google, settings, integrations)).toBe(
+      ROSTERED,
+    );
+  });
+
+  it('blocks Clever for a student in a Clever section', () => {
+    const settings = settingsWith([clever, email], {hasPassword: true});
+    const integrations = {...INTEGRATIONS, isCleverStudent: true};
+
+    expect(disconnectBlockedMessage(clever, settings, integrations)).toBe(
+      ROSTERED,
+    );
+  });
+
+  it('blocks the last login when there is no password', () => {
+    const settings = settingsWith([google]);
+
+    expect(disconnectBlockedMessage(google, settings, INTEGRATIONS)).toBe(
+      NO_LOGIN,
+    );
+  });
+
+  it('allows the last login when there is a password', () => {
+    const settings = settingsWith([google], {hasPassword: true});
+
+    expect(
+      disconnectBlockedMessage(google, settings, INTEGRATIONS),
+    ).toBeUndefined();
+  });
+
+  it('blocks a login whose only remaining sibling is an email login without a password', () => {
+    const settings = settingsWith([google, email]);
+
+    expect(disconnectBlockedMessage(google, settings, INTEGRATIONS)).toBe(
+      NO_LOGIN,
+    );
+  });
+
+  it('allows a login while another linked login remains', () => {
+    const settings = settingsWith([google, microsoft]);
+
+    expect(
+      disconnectBlockedMessage(google, settings, INTEGRATIONS),
+    ).toBeUndefined();
+  });
+
+  it('blocks the LMS login when it is the only kind of login, even with a password', () => {
+    const settings = settingsWith([lti], {hasPassword: true});
+
+    expect(disconnectBlockedMessage(lti, settings, INTEGRATIONS)).toBe(
+      NO_LOGIN,
+    );
+  });
+
+  it('blocks the LMS login beside an email login without a password', () => {
+    const settings = settingsWith([lti, email]);
+
+    expect(disconnectBlockedMessage(lti, settings, INTEGRATIONS)).toBe(
+      NO_LOGIN,
+    );
+  });
+
+  it('allows the LMS login beside a password login', () => {
+    const settings = settingsWith([lti, email], {hasPassword: true});
+
+    expect(
+      disconnectBlockedMessage(lti, settings, INTEGRATIONS),
+    ).toBeUndefined();
   });
 });
 

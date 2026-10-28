@@ -25,9 +25,8 @@
 #  index_levels_on_type       (type)
 #
 class Quiz < Level
-  # custom_intro_text is the body of the pre-attempt intro screen, shown only
-  # while show_intro_screen is on; blank falls back to default text on the
-  # frontend. Unlike instructions, it isn't shown during the attempt.
+  # custom_intro_text is the intro screen's body; unlike instructions, it
+  # isn't shown during the attempt.
   serialized_attrs %w(
     time_limit_minutes
     show_correctness
@@ -39,6 +38,8 @@ class Quiz < Level
     max_attempts
     show_questions_after_submit
   )
+
+  attr_accessor :serialized_placements
 
   PURPOSES = %w(exam exam_simulation practice check_for_understanding).freeze
   validates :purpose, inclusion: {in: PURPOSES}, allow_nil: true
@@ -57,6 +58,39 @@ class Quiz < Level
   # The dependent: nil clause ensures student attempts are kept when this quiz is deleted.
   has_many :attempts, class_name: 'QuizAttempt', foreign_key: :level_id, inverse_of: :level, dependent: nil
 
+  def serializable_hash(options = nil)
+    super.merge('placements' => placements.includes(:quiz_question).map(&:serializable_hash))
+  end
+
+  # Translates the key used in the .level file ("placements") to "serialized_placements",
+  # which we use to differentiate between the file's data and placements derived from the association.
+  def load_level_xml(xml_node)
+    hash = super
+    hash['serialized_placements'] = hash.delete('placements') if hash.key?('placements')
+    hash
+  end
+
+  def import_serialized_placements!
+    raise "quiz #{name.dump}: .level file is missing a placements list" if serialized_placements.nil?
+
+    questions_by_key = QuizQuestion.where(key: serialized_placements.map {|entry| entry['question_key']}).index_by(&:key)
+
+    desired = serialized_placements.map do |entry|
+      question = questions_by_key[entry['question_key']]
+      raise "quiz #{name.dump}: unknown question_key #{entry['question_key'].dump}" unless question
+      {quiz_question_id: question.id, page: entry['page'], position: entry['position']}
+    end
+
+    existing = placements.map {|p| {quiz_question_id: p.quiz_question_id, page: p.page, position: p.position}}
+    return if existing.sort_by {|h| h[:quiz_question_id]} == desired.sort_by {|h| h[:quiz_question_id]}
+
+    # insert_all!/delete_all bypass QuizQuestionPlacement's callbacks, avoiding
+    # the after commit hook that would otherwise circularly resave the quiz.
+    placements.delete_all
+    QuizQuestionPlacement.insert_all!(desired.map {|d| d.merge(level_id: id)}) if desired.any?
+    placements.reset
+  end
+
   def self.create_from_level_builder(params, level_params)
     create!(
       level_params.merge(
@@ -72,29 +106,23 @@ class Quiz < Level
   end
 
   # Placements are quiz-owned join rows; questions stay shared bank content.
-  def clone_with_suffix(new_suffix, editor_experiment: nil, allow_existing: true)
-    suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
-    max_index = 70 - suffix.length - 1
-    new_name = "#{base_name[0..max_index]}#{suffix}"
-    existing = Level.find_by_name(new_name)
-    return existing if existing && allow_existing
-
-    level = super(suffix, editor_experiment: editor_experiment, allow_existing: allow_existing)
-    placements.each do |placement|
-      level.placements.create!(quiz_question: placement.quiz_question, page: placement.page, position: placement.position)
+  def clone_with_name(new_name, editor_experiment: nil)
+    ActiveRecord::Base.transaction do
+      level = super(new_name, editor_experiment: editor_experiment)
+      placements.each do |placement|
+        level.placements.create!(quiz_question: placement.quiz_question, page: placement.page, position: placement.position)
+      end
+      level
     end
-    level
   end
 
-  # Adds quiz_questions into levelProperties so the frontend can render and
-  # answer them. Correct-answer and explanation fields (e.g. correct_choice_id)
-  # are deliberately excluded so grading stays server-side.
+  # Adds quiz questions to levelProperties without answer keys or
+  # explanations, so grading stays server-side.
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties_camelized = super
     properties_camelized[:scriptId] = script&.id
-    # Iterates placements rather than questions directly so each question's
-    # page is available alongside it. Ordering matches
-    # QuizQuestionPlacement's own default_scope (page, then position).
+    # Placements, not questions, so each question carries its page; ordered
+    # by page, then position.
     properties_camelized[:quizQuestions] = placements.includes(:quiz_question).map do |placement|
       question = placement.quiz_question
       {
@@ -120,10 +148,7 @@ class Quiz < Level
     errors.add(:reveal_answer_explanation, 'cannot be true unless show_questions_after_submit is also true')
   end
 
-  # A time limit with no intro screen means a student could start the timer
-  # without ever being told there is one - custom_intro_text has no such
-  # requirement, since the frontend falls back to default framing text when
-  # it's blank.
+  # The intro screen is where a student learns there is a time limit.
   private def show_intro_screen_required_when_time_limit
     return unless time_limit_minutes.present? && !show_intro_screen?
     errors.add(:show_intro_screen, 'cannot be false when time_limit_minutes is set')

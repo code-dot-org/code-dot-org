@@ -31,6 +31,7 @@ export const AI_TUTOR_ANSWER_TYPES = [
   'buildHTML',
   'buildJavaScript',
   'buildJSON',
+  'buildPage',
   'debug',
   'documentation',
   'example',

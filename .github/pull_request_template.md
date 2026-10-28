@@ -27,4 +27,4 @@
      Otherwise: new PII, auth changes, API surface changes, etc. -->
 
 ---
-For further PR guidelines, see [PULL_REQUEST_GUIDELINES.md](PULL_REQUEST_GUIDELINES.md)
+For further PR guidelines, see [PULL_REQUEST_GUIDELINES.md](https://github.com/code-dot-org/code-dot-org/blob/staging/.github/PULL_REQUEST_GUIDELINES.md)

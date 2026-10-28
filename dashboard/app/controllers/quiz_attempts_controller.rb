@@ -136,17 +136,21 @@ class QuizAttemptsController < ApplicationController
       )&.map do |result|
         {
           quizQuestionId: result[:quiz_question_id],
-          selectedChoiceId: result[:selected_choice_id],
+          questionType: result[:quiz_question_type],
+          # Its shape depends on questionType.
+          responseData: result[:response_data],
           correct: result[:correct],
           explanation: result[:explanation],
-          correctChoiceId: result[:correct_choice_id]
+          # Its fields depend on questionType.
+          **result[:answer_key]
         }
       end,
       # nil once submitted - use questionResults instead.
       questionResultsInProgress: attempt.question_results_in_progress&.map do |question_result|
         {
           quizQuestionId: question_result[:quiz_question_id],
-          selectedChoiceId: question_result[:selected_choice_id]
+          questionType: question_result[:quiz_question_type],
+          responseData: question_result[:response_data]
         }
       end
     }

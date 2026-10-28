@@ -2,11 +2,12 @@ require 'set'
 
 class LevelLoader
   # Top-level entry point, called by rake seed:custom_levels and
-  # seed:custom_levels_ui_tests. With a level_name, the tree is chosen by the
-  # name's "UI Test " prefix; without one, `tree` picks which tree's levels to
-  # load (:production or :ui_test). See dashboard/test/ui/config/README.md.
-  def self.load_custom_levels(level_name, root_dir, tree: nil)
-    import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir, tree: tree), level_name: level_name)
+  # seed:custom_levels_ui_tests. With a level_name, the partition is chosen by
+  # the name's "UI Test " prefix; without one, `partition` picks which
+  # partition's levels to load (:production or :ui_test). See
+  # dashboard/test/ui/config/README.md.
+  def self.load_custom_levels(level_name, root_dir, partition: nil)
+    import_levels(Policies::LevelFiles.level_file_glob(level_name, root_dir, partition: partition), level_name: level_name)
   end
 
   #
@@ -42,7 +43,7 @@ class LevelLoader
     # dashboard/test/ui/config/README.md.
     misfiled = level_file_paths.reject do |path|
       name = Policies::LevelFiles.level_name_from_path(path)
-      Policies::LevelFiles.tree_for_name(name) == Policies::LevelFiles.tree_for_path(path)
+      Policies::LevelFiles.partition_for_name(name) == Policies::LevelFiles.partition_for_path(path)
     end
     if misfiled.any?
       raise "level files misfiled: \"UI Test \" levels belong under " \
@@ -123,6 +124,9 @@ class LevelLoader
       # which modifies the DB and which they expect to get run only on
       # levelbuilder. so, just run the callbacks we're sure we need instead.
       Level.setup_child_levels_for(changed_levels, [ParentLevelsChildLevel::CONTAINED, ParentLevelsChildLevel::PROJECT_TEMPLATE])
+
+      # Load question placements for quizzes, which are serialized as part of the level's content.
+      changed_levels.select {|level| level.is_a?(Quiz)}.each(&:import_serialized_placements!)
     end
   end
 

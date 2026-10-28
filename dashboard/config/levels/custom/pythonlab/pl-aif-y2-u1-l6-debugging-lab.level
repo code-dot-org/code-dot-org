@@ -1,0 +1,48 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-10-27T17:59:51.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "In Lesson 9, students complete this exact task in Debug a Smart Home (Levels 1-3): their first time fixing a genuine syntax error, as opposed to the \"Find the Bug\" activity earlier in the lesson, where the code ran fine but produced wrong output. That contrast is worth having clear in your own head before you teach it: some bugs crash the program, some don't.\r\n\r\nYou’re a QA engineer testing a program for a smart speaker. The program should print out all the playlists that you can listen to, but there’s a bug.\r\n\r\n**Do This**\r\n\r\n1. Try to run the code!\r\n2. Read the error message. Use the error message to identify the bug in the program.\r\n3. Fix the bug and run the program again.\r\n\r\n**💻 Coding Tip**\r\n\r\nWhen Python shows you an error message, pay attention to what code it underlines and what line number it mentions. That can be a helpful place to start looking for problems in the code!\r\n\r\n---\r\n\r\n**Reflection:** What might your students find challenging about this task, actually reading the error message's details, or recognizing a missing parenthesis as the cause?\r\n\r\n<br>\r\n\r\n\r\n::: details [**See a solution**]\r\n```\r\nprint(\"🎶 Here are your playlists:\")\r\nprint(\"⭐️ Today's Top Hits\")\r\nprint(\"🏃‍♀️ Workout\")\r\n# Add a closing parenthesis to the line\r\nprint(\"💙 Your Favorites\")\r\nprint(\"🌙 Calm Music to Unwind\")\r\n\r\n```\r\n:::\r\n\r\n\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "print(\"🎶 Here are your playlists:\")\nprint(\"⭐️ Today's Top Hits\")\nprint(\"🏃‍♀️ Workout\")\nprint(\"💙 Your Favorites\"\nprint(\"🌙 Calm Music to Unwind\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqqqvoCcwpSR5e0\nTl5W/iRAwMGLhIvOTRZcey9NecqtejgKfM0l9V0PFt8u0d0C0VyC9WtQ5wU7\necwUbcZOCsxdBg4w/wgabRtNLJERkmkFPsWpjP3glqs/w49lGeIcRXy+QaPH\nb/VZFLLtw0hyv8dYBUTN1e6d2eoB775EraN9kX0ybivSRxyhUAt3nCOs0J8h\n+88ZIzdHJZgNCYVBhiLJuaFoGK9i6eNIrOj2pw11ZSaan6YSU6vzy+0rPGNQ\n95SnzM0+byvT3lKXBsL7PJ8/vzeog8ONJPngHVLaGTd6QMGBxBbRjvdFASG7\n9oH4tW9oNiTnL/0zPl1+ofDxs4VTxzXBKqdEl0e+tcBjoy6ir343iSfccJjx\nffk6gAgN2qTO+jbo1g6QljOz3nFswujT\n",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-27T17:59:51.189+00:00\",\"changed\":[\"cloned from \\\"aif-y2-logic-based-ai-lesson9-level1-2026\\\"\"],\"cloned_from\":\"aif-y2-logic-based-ai-lesson9-level1-2026\"},{\"changed_at\":\"2026-10-27 18:07:54 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-27 18:08:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-27 18:10:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-10-27 18:12:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Pythonlab>

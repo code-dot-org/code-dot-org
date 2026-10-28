@@ -10,7 +10,6 @@ class SourcesTest < FilesApiTestBase
   def setup
     # Stub out helpers that make remote API calls
     ProfanityFilter.stubs(:find_potential_profanity).returns nil
-    Geocoder.stubs(:find_potential_street_address).returns false
     ObservabilityTestRecorder.install
 
     @channel = create_channel

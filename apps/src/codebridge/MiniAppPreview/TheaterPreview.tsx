@@ -3,8 +3,10 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {getSystemError} from '@codebridge/Console/MessageHelpers';
 import React, {useCallback, useEffect, useState} from 'react';
 
+import {TheaterDescription} from '@cdo/apps/miniApps/theater/constants';
 import Theater from '@cdo/apps/miniApps/theater/Theater';
 import TheaterVisualization from '@cdo/apps/miniApps/theater/TheaterVisualization';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import MiniAppEmptyState from './MiniAppEmptyState';
 import PhotoPrompterButton from './PhotoPrompterButton';
@@ -23,8 +25,12 @@ const TheaterPreview: React.FunctionComponent<TheaterPreviewProps> = ({
 }) => {
   const {sendTypedInputMessage, levelProperties} = useCodebridgeContext();
   const appName = levelProperties?.appName;
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const [isPrompterOpen, setIsPrompterOpen] = useState(false);
   const [promptText, setPromptText] = useState('');
+  const [description, setDescription] = useState<TheaterDescription | null>(
+    null
+  );
 
   const onMediaLoadError = useCallback(
     (type: 'video' | 'audio') => {
@@ -59,7 +65,8 @@ const TheaterPreview: React.FunctionComponent<TheaterPreviewProps> = ({
       () => setIsPrompterOpen(false),
       sendTypedInputMessage ?? (() => {}),
       setIsOutputVisible,
-      onMediaLoadError
+      onMediaLoadError,
+      setDescription
     );
     CodebridgeRegistry.getInstance().setTheater(theater);
 
@@ -82,7 +89,7 @@ const TheaterPreview: React.FunctionComponent<TheaterPreviewProps> = ({
 
   return (
     <div className={moduleStyles.miniAppContainer}>
-      <TheaterVisualization />
+      <TheaterVisualization description={description} isRunning={isRunning} />
       {!isOutputVisible && !isPrompterOpen && (
         <MiniAppEmptyState
           iconName="camera-movie"

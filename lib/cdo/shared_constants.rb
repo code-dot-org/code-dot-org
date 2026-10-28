@@ -898,6 +898,10 @@ module SharedConstants
     LESSON_DEEP_DIVE: "lesson-deep-dive",
     # The adaptive pathway shell's own generation calls (instructions, validation, routing).
     ADAPTIVE: "adaptive",
+    # Spoken descriptions of Python Lab theater output, for screen reader users.
+    THEATER_DESCRIPTION: "theater-description",
+    # Levelbuilder curriculum generator pages (lessons/:id/generate and the unit scope).
+    CURRICULUM_GENERATOR: "curriculum-generator",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
@@ -906,6 +910,8 @@ module SharedConstants
     AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
     AI_CHAT_CLIENT_TYPES[:LESSON_DEEP_DIVE] => 60,
     AI_CHAT_CLIENT_TYPES[:ADAPTIVE] => 30,
+    AI_CHAT_CLIENT_TYPES[:THEATER_DESCRIPTION] => 30,
+    AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR] => 30,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze

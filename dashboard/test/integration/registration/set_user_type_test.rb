@@ -23,6 +23,19 @@ module RegistrationsControllerTests
       assert_response :bad_request
     end
 
+    test 'logs user_type_changed with Statsig cookie stable ID' do
+      stable_id = SecureRandom.uuid
+      student = create(:student)
+      sign_in student
+      cookies[SharedConstants::STATSIG_STABLE_ID_KEY] = stable_id
+
+      Metrics::Events.expects(:log_event).with(
+        has_entries(event_name: 'user_type_changed', request: responds_with(:statsig_stable_id, stable_id))
+      )
+      patch '/users/user_type', as: :json, params: {user: {user_type: 'teacher', email: 'converted@example.com'}}
+      assert_response :success
+    end
+
     #
     # Tests for non-migrated users
     #

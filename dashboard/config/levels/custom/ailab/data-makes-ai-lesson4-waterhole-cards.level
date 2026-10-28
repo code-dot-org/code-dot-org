@@ -1,0 +1,18 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-10-28T02:18:01.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"hideTestingView\": true\r\n}",
+    "uses_lab2": "true",
+    "short_instructions": "Enter each feature of the three cases in the activity guide\r\nClick Predict",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"- Look through the record cards.\\n- Find a card that matches one of your photos.\\n- Find the Row number at the top of that card.\\n- Write it in your activity guide.\"\r\n}"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-28T02:18:01.000+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson4-waterhole-all-cameras\\\"\"],\"cloned_from\":\"data-makes-ai-lesson4-waterhole-all-cameras\"},{\"changed_at\":\"2026-10-28 02:18:57 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

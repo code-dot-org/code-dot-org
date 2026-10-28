@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T17:57:50.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Sea Turtles",
+    "long_instructions": "You are a marine conservation biologist studying hatches of sea turtles. You are trying to predict how many sea turtles will hatch based on the depth of the turtle nest, and the sand temperature.\r\n\r\nYou have built two linear regression models trained on different datasets. You’d like to test to see which one performs the best on your test data.\r\n\r\n**☑️ Do This:**\r\n\r\n1. The code currently has Model 1 make predictions for each of the test inputs. Update the code so that Model 2 also makes predictions for each of the test inputs.\r\n2. Calculate the mean squared error for each model. In other words, for each model, calculate the loss by comparing its predictions for the test data against the actual outputs for the test data.\r\n3. Print the mean squared error for each model so that you can compare them.",
+    "bubble_choice_description": "Help a conservation biologist test the performance of a model for predicting sea turtle hatchlings.",
+    "thumbnail_url": "https://images.code.org/abd96973eb73a617eb4f2327519c2faf-sea-turtle.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\n# Input features: [nest depth, sand temperature]\ninputs1 = [[35, 30], [45, 32], [55, 29], [70, 33], [30, 28]]\ninputs2 = [[40, 29], [50, 31], [35, 33], [65, 34], [55, 35]]\n\n# Output feature: sea turtle hatchlings\noutputs1 = [44, 55, 74, 88, 40]\noutputs2 = [88, 79, 62, 66, 57]\n\n# First model\nmodel1 = LinearRegression()\nmodel1.fit(inputs1, outputs1)\n\n# Second model\nmodel2 = LinearRegression()\nmodel2.fit(inputs2, outputs2)\n\n# Test data\ntest_inputs = [[30, 28], [68, 34], [40, 34], [60, 28], [35, 31]]\ntest_outputs = [41, 83, 46, 80, 43]\n\npredictions1 = model1.predict(test_inputs)\n# TODO 1: Have model 2 predict outputs for each of the test inputs\n\n# TODO 2: Calculate mean squared error for each model\n# TODO 3: Print the mean squared error for each model",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqegzQx0XMm46ov\nAxWIayZKrxratJD7llghl37RBGl12kHRaaJ8qBCZSMFIoih3iReRbK9kk18t\nU2Y139/2gj55uWs7a/+dtMLQFvaoGlJTtpK0j0ISO4U4SV+LlyWZ4l25XXpy\nTcu/meiKMcfM8V7LwWOC1dhR5MdYEmJpXrlx7U2bChemsd29Xos6vwOCmXSb\n7lylX9Nek39fiiObHB5tyT07s016aWIawn//n9MqaR5AQhsPu42NK4SMpObV\nvcP9NZJzYnx0MOfcCXoCVP2BhpzKFVd6dm5vRa6Wo+ft53Y27CSxLY2I0bGM\nSbLnhPyc6ewOt0zCNlgiEjHPO9/Lo/fAbYrv1kp28JwuS7ezO4EH84E3e/IR\nKqP3Y/HFOBRur4ZBNm2A9NguhndbKuxK/ZiJ/VNRpNft6FR0ZgGfh2uTUqLi\nRmzaLZIwQC7jNFzD2t7XOuYks0WJfW/8tavI1pi5FCA1jwgWJPTzj+Ns0FtB\nCEx/uT1Kl0Y4DnpPJeCmkMGPMxRtYlnEtD91SfYaQSZLbF7MXBxIZ42nUU1g\nXAzHPMNcqYNa/hzurvU4Fc/HDwnew2WuAmmm806XYgtff9cWuAMH0brKGROP\ni4gB+syud7xfpzyo2NvSzBrFvzOlfqvK5iIDwgIUa5LGiA6EaL+UvTcnQr2c\nnJtz1RW8we8A1X4EukHTpXZ6vF5wwQ+kar7LyfNNUE/jft1r397G408ZJDFp\nF8U3ZbWc0i1tvMa/JNiyeobTzbhCqThq9XhIowWsHC5E6vM1E8qlpDu45s/o\npk6c+BYcAvwdBKnm2cEHRCRVF+3Ch4+dVSbAOrqrk9SqZJoUQvNzvB1YvFYI\nliSs06Qs5ZhlbtFXwssghNQ0Os9xXrO1Q7fNaUO6i7MHi5GkmGwlJaOF2Yy8\nxEBm3n1pmS44YWktzK7MgR3+lK2Gf7PkULrnXnToWsPpinb9lk4s0+9fAsL4\nPmLOaDFoAs7P2hx1Cw8Qo1ACfQY9eTUT22Xo1XT1x+viC0fju+J1vkdW70lc\ns8Bi9TrPhpSWmVT+fqEofmofUO+slpfJDSsPwkXW3OdNNcmKAYIdDy9nPjuu\nLXHunCfQ0hUViglJ0Mz9nhAJU3QCWS1WMErCnJLrbioCjljJUPkqwuKPVHb2\nOXixp7Ob4t2+50qCJ9Yw9aa+YE9m3MZBO961z3+cHWoLnD/isf0DkJBc89LO\n+b2jnD+nT0N4EWw1H+kgoswBm3i590SoCjZ2I3XpGE+PGZ9G0Uev1AfSMwxo\nECGKDlXu2JxWWvPZOqg6afZ43m5vNVfDh/C0UDSvQGl5fVDV358Tca4/Mi+A\nfgCOxrqMC6zRczJXML0H5jEQccUqs+R9pbcv0wu1Faiq1CHSAZXuQNb8nkuv\n3r64R1r3IaclkpNYkLbPgBYLVObNHSM3g4vMoh5Y3cgZHPB/IsW0g0sj9FeS\nTeLYNkBEs/hNFpnmiuHfBgdUFMcjCRtnyBrIA+3/\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 17:57:56 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-13 17:58:11 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>
