@@ -1,6 +1,6 @@
 # Plan: the Main Screen compiles from its data, and `define world` goes
 
-STATUS: PROPOSED, October 2026.
+STATUS: BUILDING, October 2026. Steps 1 and 2 are built.
 
 A game is a Main Screen, and what the Main Screen declares is data
 (`blockly/screenData`): its name, its own values and events, the rule
@@ -43,9 +43,10 @@ color` and a `set` row per rule setting, loads them into the headless
 
 1. **The bytes as they are.** Record the generated Main Screen module of
    every lesson, Tapper and Novel, so steps 2 and 3 are checked against them.
-2. **Declarations from data.** `screenOwnMeta(modulePath, data)` reads the
-   screen's values and events directly; `screenDeclarationDocument` and its
-   rows go.
+2. **Declarations from data. BUILT.** `screenOwnMeta(modulePath, data)`
+   reads the screen's values and events directly; `screenDeclarationDocument`
+   and its rows are gone. The 90 generated Main Screen modules of the
+   lessons and scenarios are the same, but for the ids a conversion mints.
 3. **Setup from data.** `screenSetupCode` writes the theme, the background
    color and each rule setting as the calls their blocks generated, and
    `assembleWorldModule` is handed the world's code rather than finding a

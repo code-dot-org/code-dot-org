@@ -52,7 +52,11 @@ import {
   type MemberRef,
   type PropertyMeta,
 } from './ruleMeta';
-import {parseScreenData, screenDeclarationDocument} from './screenData';
+import {
+  DEFAULT_SCREEN_NAME,
+  parseScreenData,
+  type ScreenData,
+} from './screenData';
 
 /** A block as it appears in a serialized workspace. */
 interface ActorBlock {
@@ -202,24 +206,102 @@ export function parseWorldOwnMeta(
 
 /**
  * A SCREEN's own declarations: its game-wide values and events, which it
- * holds as data rather than as rows (specs/SCREEN_MAP_PLAN.md, step 4).
- *
- * Read through the world's walk, over the rows `define world` would have
- * held (`screenDeclarationDocument`), so a screen's declarations are a
- * world's in every respect but the module path they are named by.
+ * holds as data rather than as rows (specs/SCREEN_MAP_PLAN.md, step 4), read
+ * from the data (`screenOwnMeta`).
  */
 export function parseScreenOwnMeta(
   modulePath: string,
   contents: string,
 ): OwnMeta | undefined {
   const data = parseScreenData(contents);
-  return data
-    ? parseWorldOwnMeta(
-        modulePath,
-        JSON.stringify(screenDeclarationDocument(data)),
-      )
-    : undefined;
+  return data ? screenOwnMeta(modulePath, data) : undefined;
 }
+
+/**
+ * What a screen's data declares, as a world's declarations read: named,
+ * minted and imported as a world's are, by the module path of the screen
+ * (specs/WORLD_AS_DATA_PLAN.md, step 2).
+ */
+export function screenOwnMeta(modulePath: string, data: ScreenData): OwnMeta {
+  const name = data.name || DEFAULT_SCREEN_NAME;
+  const properties: PropertyMeta[] = [];
+  const taken = new Set<string>();
+  for (const property of data.properties ?? []) {
+    // An unnamed one declares nothing, and the first of a name wins, as for
+    // every other declaration.
+    const declared = property?.name;
+    if (typeof declared !== 'string' || !declared.trim()) {
+      continue;
+    }
+    const id = slug(declared);
+    if (taken.has(id)) {
+      continue;
+    }
+    taken.add(id);
+    const type = (
+      PROPERTY_TYPES.has(property.type) ? property.type : 'number'
+    ) as PropertyType;
+    const held = vectorText(property.value);
+    properties.push({
+      id,
+      name: declared,
+      type,
+      default:
+        type === 'vector'
+          ? propertyDefault(type, held ?? {x: 0, y: 0})
+          : type === 'point'
+            ? propertyDefault(type, held?.x ?? 0, held?.y ?? 0)
+            : propertyDefault(type, property.value),
+      readonly: false,
+      scope: 'world',
+      ref: {
+        source: 'project',
+        exportName: `${pascal(declared)}Property`,
+        ruleName: name,
+        modulePath,
+        own: true,
+      },
+    });
+  }
+  const events: EventMeta[] = [];
+  const named = new Set<string>();
+  for (const event of data.events ?? []) {
+    if (typeof event?.name !== 'string' || !event.name.trim()) {
+      continue;
+    }
+    const carries = event.carries;
+    const declared = designedEventOf(
+      [
+        {kind: 'label', text: event.name},
+        ...(carries
+          ? [{kind: 'param', name: carries.name, type: carries.type}]
+          : []),
+      ],
+      modulePath,
+      name,
+      new Map(),
+      'world',
+    );
+    if (declared && !named.has(declared.id)) {
+      named.add(declared.id);
+      events.push(declared);
+    }
+  }
+  return {modulePath, name, properties, actions: [], events};
+}
+
+/** `x,y` as two numbers, or nothing for text that is not a pair. */
+const vectorText = (text: unknown): {x: number; y: number} | undefined => {
+  if (typeof text !== 'string') {
+    return undefined;
+  }
+  const parts = text.split(',');
+  if (parts.length !== 2) {
+    return undefined;
+  }
+  const [x, y] = parts.map(part => Number(part.trim()));
+  return Number.isFinite(x) && Number.isFinite(y) ? {x, y} : undefined;
+};
 
 /** The walk both share: a root's chain, and every declaration in it. */
 function declarationsIn(
@@ -494,7 +576,23 @@ function designedEvent(
   variables: ReadonlyMap<string, string>,
   scope: 'actor' | 'world' = 'actor',
 ): EventMeta | undefined {
-  const raw = block.extraState?.parts ?? [];
+  return designedEventOf(
+    block.extraState?.parts ?? [],
+    modulePath,
+    actorName,
+    variables,
+    scope,
+  );
+}
+
+/** `designedEvent`, of the designed parts themselves. */
+function designedEventOf(
+  raw: NonNullable<NonNullable<ActorBlock['extraState']>['parts']>,
+  modulePath: string,
+  actorName: string,
+  variables: ReadonlyMap<string, string>,
+  scope: 'actor' | 'world' = 'actor',
+): EventMeta | undefined {
   const parts: MemberPart[] = raw.flatMap((part): MemberPart[] => {
     if (part.kind === 'param') {
       return [
