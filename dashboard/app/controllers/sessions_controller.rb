@@ -150,17 +150,25 @@ class SessionsController < Devise::SessionsController
   # The form submits either `hashed_email` (hashed client-side) or `login`,
   # which may be a username or a cleartext email. A username never matches
   # an auth option's hashed_email, so it falls through to nil.
+  #
+  # Providers in UNTRUSTED_EMAIL_CREDENTIAL_TYPES do not guarantee an email
+  # belongs to one person, so the same hashed_email can sit on options owned
+  # by different users. Nudging then could point at a provider someone else
+  # used, so the nudge is only given when every match belongs to one user.
   private def sso_option_for_submitted_login
     submitted = params[:user] || {}
     hashed_email = submitted[:hashed_email].presence
     hashed_email ||= AuthenticationOption.hash_email(submitted[:login].strip) if submitted[:login].present?
     return nil if hashed_email.blank?
 
-    AuthenticationOption.
+    options = AuthenticationOption.
       where(hashed_email: hashed_email).
       where.not(credential_type: AuthenticationOption::EMAIL).
       order(updated_at: :desc).
-      first
+      to_a
+    return nil unless options.map(&:user_id).uniq.one?
+
+    options.first
   end
 
   # Find the human-readable name for the LMS based on the issuer

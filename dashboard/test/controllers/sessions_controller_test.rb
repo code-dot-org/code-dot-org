@@ -218,6 +218,16 @@ class SessionsControllerTest < ActionController::TestCase
     assert_select '.alert', I18n.t('auth.sso_login_nudge', provider: 'Microsoft')
   end
 
+  test 'failed signin shows the generic error when matching SSO options belong to different users' do
+    enable_sso_nudge
+    email = 'shared@example.com'
+    create(:lti_authentication_option, user: create(:student), email: email)
+    create(:authentication_option, user: create(:student), email: email, credential_type: AuthenticationOption::CLEVER)
+
+    post :create, params: {user: {login: '', hashed_email: AuthenticationOption.hash_email(email), password: 'wrong'}}
+    assert_select '.alert', I18n.t('devise.failure.not_found_in_database')
+  end
+
   test 'failed signin for an LTI account nudges toward launching from the LMS' do
     enable_sso_nudge
     user = create(:user, :with_lti_auth)
