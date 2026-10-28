@@ -1,0 +1,16 @@
+.git
+.github
+.idea
+.vscode
+apps/node_modules
+apps/.yarn/cache
+dashboard/node_modules
+dashboard/tmp
+dashboard/log
+tmp
+log
+coverage
+dist
+build
+k8s/mimic/cdo-no-symlinks
+*.log
