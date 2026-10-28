@@ -126,16 +126,14 @@ const chained = (root: BlockJson, rows: readonly BlockJson[]): BlockJson => {
 };
 
 /**
- * The rows that set the screen up once it is placed: its theme, the color
- * behind it, and each rule setting, chained in that order — the rows the
- * inspector writes at the top of `define world`. Nothing when there are
- * none. A rule setting whose text is no literal of its type is left out.
+ * The rows that set the screen up once it is placed: the color behind it,
+ * and each rule setting, chained in that order — `set` rows, generated as
+ * any are. Nothing when there are none. A rule setting whose text is no
+ * literal of its type is left out. The theme is written as its call
+ * (`BlocklyGenerator.generateMainScreen`).
  */
 export function screenSetupRows(data: ScreenData): BlockJson | undefined {
   const rows: BlockJson[] = [];
-  if (typeof data.theme === 'string' && data.theme) {
-    rows.push({type: 'world_use_theme', fields: {THEME: data.theme}});
-  }
   if (typeof data.backgroundColor === 'string' && data.backgroundColor) {
     rows.push({
       type: 'world_set_background_color',

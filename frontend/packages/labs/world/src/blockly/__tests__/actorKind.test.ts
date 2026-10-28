@@ -76,13 +76,13 @@ describe('any <kind>, anywhere else', () => {
 describe('assembleWorldModule', () => {
   it('registers handlers before the world places anything', () => {
     // `ActorBuilder.instantiate` copies the handlers a template has WHEN it
-    // makes an instance. A hat below the world block would register onto a
+    // makes an instance. A hat below the world's code would register onto a
     // template every actor had already been made from: it would compile, run,
     // and never fire.
-    const code = assembleWorldModule([
-      {type: 'world_world', code: 'const world = mk();\nworld.loadMap(m);\n'},
-      {type: 'world_on_startsFalling', code: 'ActorsCoin.on(E, h);\n'},
-    ]);
+    const code = assembleWorldModule(
+      'const world = mk();\nworld.loadMap(m);\n',
+      [{type: 'world_on_startsFalling', code: 'ActorsCoin.on(E, h);\n'}],
+    );
 
     expect(code).toBe(
       'ActorsCoin.on(E, h);\n' +

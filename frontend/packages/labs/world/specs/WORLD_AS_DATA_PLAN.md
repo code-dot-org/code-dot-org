@@ -1,6 +1,6 @@
 # Plan: the Main Screen compiles from its data, and `define world` goes
 
-STATUS: BUILDING, October 2026. Steps 1 and 2 are built.
+STATUS: BUILDING, October 2026. Steps 1 to 3 are built.
 
 A game is a Main Screen, and what the Main Screen declares is data
 (`blockly/screenData`): its name, its own values and events, the rule
@@ -47,11 +47,13 @@ color` and a `set` row per rule setting, loads them into the headless
    reads the screen's values and events directly; `screenDeclarationDocument`
    and its rows are gone. The 90 generated Main Screen modules of the
    lessons and scenarios are the same, but for the ids a conversion mints.
-3. **Setup from data.** `screenSetupCode` writes the theme, the background
-   color and each rule setting as the calls their blocks generated, and
-   `assembleWorldModule` is handed the world's code rather than finding a
-   root. A rule setting is resolved from its setter's type to the property
-   it sets, as the converter already does (`asScreen.slotsOf`).
+3. **Setup from data. BUILT, but for its rows.** The theme is written as
+   its call, and `assembleWorldModule` is handed the world's code rather
+   than finding a `define world` among the blocks. The background color and
+   the rule settings stay `set` rows, generated as any are: both blocks
+   stay, and writing their code out again here would be a second copy of
+   their generators — the bargain a Viewport camera's starting values made
+   (COMPILE_FROM_DATA_PLAN.md, step 4). The 90 modules are the same.
 4. **Lessons stop writing `define world`.** `worldFile` returns the spec it
    was built from — name, rows, handlers, map — and the converter sorts the
    spec rather than a workspace. The lesson checks that edit the

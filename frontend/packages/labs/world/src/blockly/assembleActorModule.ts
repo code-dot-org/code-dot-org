@@ -63,13 +63,13 @@ export function assembleActorModule(
 }
 
 /**
- * Assemble a `.world` file's module. The `world_world` block is the root — it
- * builds `const world = …` and generates its `use rule` / `use animations` /
- * `load map` children inline — so it is the only top-level block; any stray
- * others are appended before the default export. Imports are hoisted by
- * `finish()`.
+ * Assemble the game's module, the Main Screen's: `world`, the code that
+ * builds `const world = …` and sets it up, then the handlers in the order
+ * their constraints below need, then anything else before the default
+ * export. Imports are hoisted by `finish()`.
  */
 export function assembleWorldModule(
+  world: string,
   blocks: GeneratedBlock[],
   /**
    * Which hat types belong to a WORLD event — see the two constraints below.
@@ -81,22 +81,21 @@ export function assembleWorldModule(
    */
   worldEventTypes: ReadonlySet<string> = new Set(),
 ): string {
-  const world = blocks.find(block => block.type === 'world_world');
   // Tween definitions, hoisted for exactly the reason local actors are: they
   // are `const`s the world's own body reads — `add actor … do play tween …` —
-  // and `rest` is emitted AFTER the world block, so left there the name is in
+  // and `rest` is emitted AFTER the world's code, so left there the name is in
   // its temporal dead zone and the module throws as it is imported.
   const tweens = blocks.filter(block => block.type === DEFINE_TWEEN);
   // Event handlers are REGISTRATIONS, and the two kinds have OPPOSITE
   // constraints — which is why they are split rather than kept together.
   //
-  // An actor's must come BEFORE the world block. A template copies its handlers
+  // An actor's must come BEFORE the world's code. A template copies its handlers
   // into each instance as it makes one (`ActorBuilder.instantiate`), so a hat
-  // below the world block would register onto a template every actor had
+  // below the world's code would register onto a template every actor had
   // already been made from: it would compile, run, and never fire.
   //
   // A world's must come AFTER it. It generates `world.on(…)`, and `world` is
-  // what the world block binds. Above it, the module threw as it was imported
+  // what that code binds. Above it, the module threw as it was imported
   // and the whole project stopped — and because esbuild rewrites the `const`,
   // it threw as "Cannot read properties of undefined (reading 'on')" rather
   // than as the use-before-declaration it actually is.
@@ -104,18 +103,13 @@ export function assembleWorldModule(
   const onActors = handlers.filter(block => !worldEventTypes.has(block.type));
   const onWorld = handlers.filter(block => worldEventTypes.has(block.type));
   const rest = blocks.filter(
-    block =>
-      block !== world && !tweens.includes(block) && !handlers.includes(block),
+    block => !tweens.includes(block) && !handlers.includes(block),
   );
   const actorsCode = tweens
     .map(block => block.code)
     .concat(onActors.map(block => block.code))
     .join('');
-  // The world's MAIN MAP is not here: the world block loads it itself,
-  // between its prologue and its rows (`world_world`), so that a row can
-  // name what the map placed (specs/MAP_BEFORE_ROWS_PLAN.md).
-  const worldCode =
-    (world ? world.code : '') + onWorld.map(block => block.code).join('');
+  const worldCode = world + onWorld.map(block => block.code).join('');
   const restCode = rest.map(block => block.code).join('');
   return `${actorsCode}${worldCode}${restCode}export default world;\n`;
 }

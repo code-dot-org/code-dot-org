@@ -539,6 +539,16 @@ function generateMainScreen(
     code: asString(generator.blockToCode(block, rootTypes.has(block.type))),
   }));
   markCode(workspace, undefined);
+  // The theme first, as its row was (`screenSetupRows`, which writes the
+  // rest): what every drawing's `use style` is looked up in.
+  const theme =
+    typeof data.theme === 'string' && data.theme ? data.theme : undefined;
+  if (theme) {
+    mergeDefinitions(generator, {
+      [`mod:${theme}`]: `import ${importVar(theme)} from ${str(theme)};`,
+    });
+  }
+  const themed = theme ? `world.useTheme(${importVar(theme)});\n` : '';
   const setup = screenSetupRows(data);
   const rows = setup
     ? asString(
@@ -562,8 +572,9 @@ function generateMainScreen(
   }
   return generator.finish(
     assembleWorldModule(
-      [...generated, {type: 'world_world', id: path, code: prologue + rows}],
-      // After the world block, which places the screen's actors.
+      prologue + themed + rows,
+      generated,
+      // After the world's code, which places the screen's actors.
       new Set([...worldEventTypes, SCREEN_LOADS]),
     ),
   );
