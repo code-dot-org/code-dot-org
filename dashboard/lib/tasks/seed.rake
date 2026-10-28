@@ -176,8 +176,8 @@ namespace :seed do
   end
 
   # The tasks to run before seeding the units of the given partition
-  # (:production or :ui_test); see dashboard/config/PARTITIONS.md. The order
-  # follows from these dependencies:
+  # (:production_curriculum or :ui_test_curriculum); see
+  # dashboard/config/PARTITIONS.md. The order follows from these dependencies:
   #
   # - standalone_project_levels must run after games, but does not have an
   #   ordering dependency on production or ui test levels because there are no
@@ -191,12 +191,12 @@ namespace :seed do
   #   If the two run in the other order, the seed can overwrite
   #   course_offerings/just-in-time-pl.json with the database's stale copy
   #   before course_offerings ever reads the file.
-  def get_scripts_dependencies(partition: :production)
+  def get_scripts_dependencies(partition: :production_curriculum)
     content_dependencies =
       case partition
-      when :production
+      when :production_curriculum
         [:child_dsls, :custom_levels, :parent_dsls, :course_offerings]
-      when :ui_test
+      when :ui_test_curriculum
         [:child_dsls_ui_tests, :custom_levels_ui_tests, :parent_dsls_ui_tests, :course_offerings_ui_tests]
       else
         raise "Unknown partition: #{partition}"
@@ -236,7 +236,7 @@ namespace :seed do
     update_scripts(incremental: true)
   end
 
-  timed_task_with_logging scripts_ui_tests: get_scripts_dependencies(partition: :ui_test) do
+  timed_task_with_logging scripts_ui_tests: get_scripts_dependencies(partition: :ui_test_curriculum) do
     update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
