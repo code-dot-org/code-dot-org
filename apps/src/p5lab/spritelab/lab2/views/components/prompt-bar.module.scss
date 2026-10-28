@@ -5,7 +5,6 @@
   @include sr-only;
 }
 
-// The question across the top; the field and Submit beneath it.
 .promptBar {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
