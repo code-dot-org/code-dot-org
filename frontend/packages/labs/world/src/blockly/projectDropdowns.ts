@@ -28,6 +28,7 @@ import {
   setProjectStyleFiles,
   setProjectStyleNames,
   setProjectEffectParameters,
+  setProjectLayers,
   setProjectMaps,
   setProjectRuleModules,
   setProjectBackgrounds,
@@ -41,6 +42,7 @@ import {
   projectStyleFileOptions,
   projectStyleNames,
   projectEffectParameters,
+  projectLayerOptions,
   projectMapActorTypes,
   projectOwnMetas,
   projectRuleMetas,
@@ -144,6 +146,7 @@ export function refreshProjectDropdowns(
   setProjectEffectParameters(effectParameters);
   const maps = projectMapActorTypes(files);
   setProjectMaps(maps);
+  setProjectLayers(projectLayerOptions(files));
   // The `use rule` dropdown offers the project's own rule modules (under
   // `rules/`) alongside the built-ins.
   const ruleModules = projectRuleOptions(files);

@@ -15,7 +15,6 @@ import {
   worldModulePrologue,
 } from '../domainBlocks';
 import {
-  BUILDER_WORLD_EXTENSION,
   RUNTIME_ACTOR_EXTENSION,
   TRAIT_CONTEXT_EXTENSION,
 } from '../extensions/actorContext';
@@ -206,7 +205,6 @@ const prologueOf = (
     {
       name,
       hoisted: [],
-      plan: [],
       own: '',
       mapLayers: [],
       mainMap: '',
@@ -429,9 +427,9 @@ describe('domain block generators', () => {
     ]);
   });
 
-  it('world_layer_parallax sets the factor for the layer it is written in', () => {
-    // Not part of `define layer`: a new layer moves with the camera like the
-    // game does, and parallax is a thing you go and ask for.
+  it('world_layer_parallax sets the factor for the layer it runs in', () => {
+    // A layer's starting factor is the map's; naming none, this changes the
+    // one the code runs in (`World.layerHere`).
     const run = (parallax: {x: number; y: number}) =>
       generatorFor('world_layer_parallax')(
         {getFieldValue: () => parallax} as never,
@@ -440,11 +438,11 @@ describe('domain block generators', () => {
       ) as string;
 
     expect(run({x: 0.2, y: 0})).toBe(
-      'world.setLayerParallax(new WorldLab.Vector(0.2, 0), "main");\n',
+      'world.setLayerParallax(new WorldLab.Vector(0.2, 0));\n',
     );
     // Vertical-only, which a fixed list of presets could not have said.
     expect(run({x: 0, y: 0.5})).toBe(
-      'world.setLayerParallax(new WorldLab.Vector(0, 0.5), "main");\n',
+      'world.setLayerParallax(new WorldLab.Vector(0, 0.5));\n',
     );
   });
 
@@ -460,8 +458,8 @@ describe('domain block generators', () => {
         {} as never,
       ) as string;
 
-    expect(run('fixed')).toBe('world.setLayerFit(true, "main");\n');
-    expect(run('follows')).toBe('world.setLayerFit(false, "main");\n');
+    expect(run('fixed')).toBe('world.setLayerFit(true);\n');
+    expect(run('follows')).toBe('world.setLayerFit(false);\n');
   });
 
   it('world_move_camera points a named camera at a place', () => {
@@ -2927,24 +2925,8 @@ describe('builder-context warnings', () => {
     // `world` is bound — where `builderWorld` used to subsume it, so neither
     // block carries two warnings that say one thing.
     for (const type of ['world_load_map']) {
-      expect(extensionsOf(type), type).not.toContain(BUILDER_WORLD_EXTENSION);
       expect(extensionsOf(type), type).toContain(WORLD_CONTEXT_EXTENSION);
     }
-  });
-
-  it('does NOT guard `add actor`, which now spawns at runtime too', () => {
-    // It used to be guarded for a good reason: it generates
-    // `world.addActor(Template, id, type)` and the live World took an
-    // already-made Actor, so in a handler it pushed an ActorBuilder into the
-    // actor list and threw nothing — the game just had a thing in it that was
-    // not an actor.
-    //
-    // The World takes the template form now and instantiates it, which is what
-    // firing a bullet or splitting an asteroid needs. The guard would only warn
-    // a learner off something that works.
-    expect(extensionsOf('world_add_actor')).not.toContain(
-      BUILDER_WORLD_EXTENSION,
-    );
   });
 
   it('guards `any ⟨kind⟩` only where `world` is unbound', () => {

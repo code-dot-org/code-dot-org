@@ -31,10 +31,8 @@ import {World, WorldBuilder} from '../index';
 /**
  * Builder-only, because the live World cannot answer them after the fact.
  *
- * Their blocks carry `builderWorldExtension`, or throw through
- * `requireNoActors`. The guard warns; it does not prevent, so a learner who
- * ignores it still reaches the missing method — which is why these are written
- * down rather than merely tolerated.
+ * They throw through `requireNoActors`, which is why these are written down
+ * rather than merely tolerated.
  */
 // `define` and `loadMap` were here — "registering a template is part of
 // describing a world", "placement instantiates templates" — and both moved to

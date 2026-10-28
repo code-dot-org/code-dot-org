@@ -2403,7 +2403,8 @@ describe('the layers lesson’s check', () => {
   });
 
   it('accepts one half on the map and the other in blocks', async () => {
-    // The Hills on a layer of the map's, the Score in a `define layer`.
+    // The Hills on a layer of the map's, the Score in a `define layer` the
+    // converter makes the map's.
     const {passes, result} = await check(
       'place/layers',
       inBlocks({fixed: true}, onTheMap({parallax: true})),

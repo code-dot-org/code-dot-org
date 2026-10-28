@@ -447,31 +447,21 @@ const MAIN_WORLD = JSON.stringify({
                 DEFAULT: '0',
               },
             },
-            // THE GAME, in a layer of its own. Declared first, so it is drawn
-            // first and everything below is in front of it.
+            // THE GAME, in the default layer, which is drawn first.
+            COIN_GRID,
             {
-              type: 'world_define_layer',
-              fields: {NAME: 'Game'},
-              inputs: {
-                DO: {
-                  block: stack([
-                    COIN_GRID,
-                    {
-                      type: 'world_add_actor',
-                      fields: {ACTOR: SCOREBOARD},
-                    },
-                    {
-                      type: 'world_add_actor',
-                      fields: {ACTOR: 'actors/crosshair'},
-                    },
-                  ]),
-                },
-              },
+              type: 'world_add_actor',
+              fields: {ACTOR: SCOREBOARD},
             },
-            // THE INTERFACE, which is a layer and nothing else — `fixed to the
-            // screen` ignores the camera altogether, so what is in here is in
-            // screen space (specs/VIEWPORT.md, specs/UI_ACTORS.md). Declared
-            // last, so it is drawn last and sits over the game.
+            {
+              type: 'world_add_actor',
+              fields: {ACTOR: 'actors/crosshair'},
+            },
+            // THE INTERFACE, which is a layer of the map and nothing else —
+            // fixed to the screen, it ignores the camera altogether, so what
+            // is on it is in screen space (specs/VIEWPORT.md,
+            // specs/UI_ACTORS.md). After the default, so it sits over the
+            // game. The converter makes it the map's (`lessons/asScreen`).
             {
               type: 'world_define_layer',
               fields: {NAME: 'Interface'},

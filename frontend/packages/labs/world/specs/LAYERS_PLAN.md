@@ -61,9 +61,10 @@ are retired; see "Foregrounds retired" at the end.)
   given `offset × (1 − f)`, which under a camera scrolled by `offset` nets
   the `−offset × f` the world's gets — so a slot inside it is placed by
   `stretchedPlacement` and `tiledPlacement` unchanged.
-- **Blocks keep the run-time half.** `define layer`, `this layer moves …`
-  and the slot blocks stay, for the world's layers and for what changes
-  while the game runs. A block naming a layer OF A MAP
+- **Blocks keep the run-time half.** `this layer moves …` and the slot
+  blocks stay, for what changes while the game runs, acting on the layer
+  the code runs in. (`define layer` and `within layer` went later: a layer
+  is the map's alone, WORLD_AS_DATA_PLAN.md, step 8.) A block naming a layer OF A MAP
   (`layer ⟨…⟩ of this map`, MAP_FIRST.md) is not in this step.
 - **Not in this step**: the look-through mode that pans the editor's
   camera to show parallax; per-layer effects in a space; layer reordering

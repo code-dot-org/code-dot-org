@@ -19,7 +19,7 @@ const LAYERS = [
 
 describe('layerDeclarations', () => {
   it('declares the map’s layers in order, then sets their slots', () => {
-    expect(layerDeclarations(LAYERS, [], 'main')).toBe(
+    expect(layerDeclarations(LAYERS)).toBe(
       'world.defineLayer({id: "layer1", name: "Sky", parallax: new WorldLab.Vector(0.2, 0)});\n' +
         'world.defineLayer({id: "main"});\n' +
         'world.defineLayer({id: "layer2", name: "Fog", fit: true});\n' +
@@ -34,37 +34,17 @@ describe('layerDeclarations', () => {
     // specs/MIRRORING_PLAN.md, step 8: shown is what a layer says by saying
     // nothing.
     expect(
-      layerDeclarations(
-        [{id: 'hud', fit: true, inMirrors: false}, {id: 'main'}],
-        [],
-        'main',
-      ),
+      layerDeclarations([
+        {id: 'hud', fit: true, inMirrors: false},
+        {id: 'main'},
+      ]),
     ).toBe(
       'world.defineLayer({id: "hud", fit: true, inMirrors: false});\n' +
         'world.defineLayer({id: "main"});\n',
     );
   });
 
-  it('puts the blocks’ layers after, less the ones the map names', () => {
-    const code = layerDeclarations(
-      [{id: 'main'}],
-      [{id: 'layer_hud'}, {id: 'main'}],
-      'main',
-    );
-    expect(code).toBe(
-      'world.defineLayer({id: "main"});\n' +
-        'world.defineLayer({id: "layer_hud"});\n',
-    );
-  });
-
-  it('says what the blocks alone said, when the map names none', () => {
-    expect(
-      layerDeclarations([], [{id: 'layer_hud'}, {id: 'main'}], 'main'),
-    ).toBe(
-      'world.defineLayer({id: "layer_hud"});\nworld.defineLayer({id: "main"});\n',
-    );
-    // …and nothing at all for a world with no layers anywhere.
-    expect(layerDeclarations([], [{id: 'main'}], 'main')).toBe('');
-    expect(layerDeclarations([], [], 'main')).toBe('');
+  it('says nothing for a map with no layers', () => {
+    expect(layerDeclarations([])).toBe('');
   });
 });

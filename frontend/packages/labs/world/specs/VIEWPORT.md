@@ -493,6 +493,11 @@ Layers complicate the scene graph. Two blocks place things — `add actor` and
 `create actor in map` is gone, its placements being the world's main map,
 where a placement names its layer itself. specs/RETIREMENTS_PLAN.md.)
 
+(Superseded: `define layer` and `within layer` are gone, and a layer is the
+map's, made in the map editor, with each placement naming its own layer;
+code places into the default layer. WORLD_AS_DATA_PLAN.md, step 8. What
+follows is the design as it was.)
+
 A LAYER OWNS ITS CONTENTS. `define layer` has a `do` mouth, and what is placed
 inside it is placed in it:
 

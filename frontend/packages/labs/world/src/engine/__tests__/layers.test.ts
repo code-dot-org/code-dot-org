@@ -143,9 +143,9 @@ describe('a world that names layers', () => {
   });
 
   it('puts an actor in the default layer when told a layer that is gone', () => {
-    // The id comes from generated code naming a `define layer` block. Deleting
-    // that block while something still names it should leave the actors
-    // somewhere visible rather than take the world down.
+    // The id comes from a map or a dropdown naming a layer. A layer deleted
+    // while something still names it should leave the actors somewhere
+    // visible rather than take the world down.
     const world = built();
     world.addActor(actor('orphan'), 'a-layer-that-was-deleted');
 
@@ -629,6 +629,6 @@ describe('declaring a layer after the world is built', () => {
     const builder = new WorldBuilder({id: 'w', name: 'W'});
     builder.addActor(new ActorBuilder({id: 'a', name: 'a'}));
 
-    expect(() => builder.defineLayer({id: 'late'})).toThrow(/define layer/);
+    expect(() => builder.defineLayer({id: 'late'})).toThrow(/defineLayer/);
   });
 });

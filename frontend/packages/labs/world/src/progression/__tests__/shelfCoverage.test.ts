@@ -60,7 +60,6 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
     'world_clear_actors',
     'world_any_actors',
     'world_is_in_actors',
-    'world_all_actors_in_layer',
     'world_is_in_layer',
     'variables_get_Actor',
     'world_kind_of',

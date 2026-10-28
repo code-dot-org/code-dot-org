@@ -11,7 +11,6 @@ import * as Blockly from 'blockly/core';
 import {beforeAll, describe, expect, it} from 'vitest';
 
 import {mapGridSize} from '../fields/mapGridSize';
-import {layerIdFromValue, layersIn, layerValue} from '../layers';
 import {boundIds, writtenIds} from '../variableScope';
 import {
   hasIndexedBlock,
@@ -73,7 +72,7 @@ const number = (value: number) => ({
   shadow: {type: 'math_number', fields: {NUM: value}},
 });
 
-/** A world whose body declares a layer, a map size and a variable. */
+/** A world whose body holds a named row, a map size and a variable. */
 const FILE = {
   variables: [{id: 'v-count', name: 'count', type: 'Number'}],
   blocks: {
@@ -130,8 +129,6 @@ const unbuild = (workspace: Blockly.Workspace) => {
 const answers = (workspace: Blockly.Workspace) => {
   const world = workspace.getBlockById('world')!;
   return {
-    layers: layersIn(workspace),
-    layerOfValue: layerIdFromValue(world, layerValue('sky')),
     grid: mapGridSize(world),
     written: [...writtenIds(workspace)],
     bound: [...boundIds(workspace)],
@@ -142,7 +139,6 @@ describe('the workspace index', () => {
   it('answers the same about a body held unbuilt as about a built one', () => {
     const built = answers(loaded());
     // The file's own answers, so the comparison is not of two empty lists.
-    expect(built.layers).toEqual([{blockId: 'sky', name: 'Sky'}]);
     expect(built.grid).toMatchObject({columns: 20, rows: 12});
     expect(built.written).toEqual(['v-count']);
 
@@ -172,6 +168,5 @@ describe('the workspace index', () => {
     setUnbuiltBody(workspace, 'world', undefined);
     expect(unbuiltBodyOf(workspace, 'world')).toBeUndefined();
     expect(hasIndexedBlock(workspace, 'sky')).toBe(false);
-    expect(layersIn(workspace)).toEqual([]);
   });
 });

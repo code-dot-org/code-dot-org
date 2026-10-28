@@ -236,6 +236,38 @@ export function projectEffectParameters(
 }
 
 /**
+ * Every layer the project's maps and screens hold, as `[name, id]`, each id
+ * once and the first name it is given: what a LAYER dropdown offers.
+ */
+export function projectLayerOptions(
+  files: Record<string, string>,
+): Array<[string, string]> {
+  const rows: Array<[string, string]> = [];
+  const taken = new Set<string>();
+  for (const path of Object.keys(files).sort()) {
+    if (!/^(maps\/.*\.map|screens\/.*\.screen)$/.test(path)) {
+      continue;
+    }
+    let layers: unknown;
+    try {
+      layers = (JSON.parse(files[path]) as {layers?: unknown}).layers;
+    } catch {
+      continue;
+    }
+    for (const layer of Array.isArray(layers) ? layers : []) {
+      const id = (layer as {id?: unknown})?.id;
+      if (typeof id !== 'string' || taken.has(id)) {
+        continue;
+      }
+      taken.add(id);
+      const name = (layer as {name?: unknown}).name;
+      rows.push([typeof name === 'string' && name.trim() ? name : id, id]);
+    }
+  }
+  return rows;
+}
+
+/**
  * Actor module paths referenced by each map file (JSON under `maps/`), keyed by
  * the map's extension-less path. The `world_load_map` block reads this to emit
  * an import + `world.define` for each actor a map places, then `world.loadMap`.

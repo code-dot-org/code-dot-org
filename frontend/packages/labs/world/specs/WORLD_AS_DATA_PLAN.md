@@ -1,7 +1,6 @@
 # Plan: the Main Screen compiles from its data, and `define world` goes
 
-STATUS: BUILDING, October 2026. Steps 1 to 3 and 7 are built; step 8,
-the layers, is next.
+STATUS: BUILT, October 2026, but for steps 4 to 6, which are later.
 
 A game is a Main Screen, and what the Main Screen declares is data
 (`blockly/screenData`): its name, its own values and events, the rule
@@ -82,11 +81,19 @@ color` and a `set` row per rule setting, loads them into the headless
    an actor's. The tests of the blocks went; the tests of what they did
    read a screen's data (`screenOwnMeta`) or the prologue
    (`worldModulePrologue`). `making/property` grants `rule-properties`.
-8. **The layers.** `define layer` and `within layer`, the
-   `builderWorldExtension` that holds them to `define world`, and
-   `layerPlan` go. A layer dropdown reads the map's layers, and Tapper's
-   `define layer`, which the converter keeps as code, becomes its screen's
-   own layer (step 5, for that one fixture).
+8. **The layers. BUILT.** `define layer` and `within layer` are deleted,
+   with `builderWorldExtension` and `layerPlan`. Code places into the
+   default layer; a layer's contents are placements, which name their
+   layer. `this layer moves …` and `this layer is fixed` act on the layer
+   the code runs in, as the slot blocks do. `all actors in layer` and `is
+   in layer` offer every layer of the project's maps and screens, by name
+   (`projectLayerOptions`), storing the map's own id. The converter makes
+   a lesson's `define layer` a layer of the level map, with its literal
+   `add actor`s placed on it and the rest kept as code. Tapper's Game
+   layer is the default now, and its Interface the map's fixed layer,
+   holding the three literal labels; the score label, which code names,
+   is in the default layer, which looks the same since Tapper's camera
+   does not move. `place/layers` grants `all actors in layer`.
 
 Steps 2 and 3 change no output.
 
@@ -107,8 +114,8 @@ Steps 2 and 3 change no output.
 
 - **Layers are the map's.** A layer is data, like a camera: made in the map
   editor and kept in the map (`mainMapLayers.screenLayersOf`), not
-  declared in code. `define layer` goes with `define world` (step 7), and
-  Tapper's layer becomes its screen's own (step 8).
+  declared in code. `define layer` goes after `define world` (step 8),
+  and Tapper's Interface layer becomes its map's own.
 - **`define event` goes.** A screen's events are data, and the editor will
   make them; a learner's `define event` in a drawer has no place left. Its
   name stays as a row in an actor's and a rule's view (`viewRows`), and
@@ -116,7 +123,10 @@ Steps 2 and 3 change no output.
 
 ## Open
 
-- **`within layer`**, which puts what its body places into a layer, is
-  checked only under `define world`, which nothing can now hold. Whether
-  it names a map's layer from the screen's code, or goes, is settled in
-  step 8.
+- **A layer for code to place into.** Code places into the default layer.
+  If a program needs to spawn into another, `add actor` taking a layer is
+  the shape, rather than `within layer`: screen code can enter a
+  Viewport's map, so a block enclosing it has no one map to name a layer
+  of.
+- **A LAYER dropdown in a map's own code** offers every map's layers, not
+  that map's alone.

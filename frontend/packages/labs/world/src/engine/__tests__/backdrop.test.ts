@@ -155,8 +155,8 @@ describe('a world backdrop', () => {
   });
 
   it('paints the default layer when told one that is gone', () => {
-    // The id comes from generated code naming a `define layer` block; deleting
-    // that block should paint somewhere visible, not take the world down.
+    // A layer deleted while something still names it should paint
+    // somewhere visible, not take the world down.
     const w = world();
     w.setBackground('cave.png', 'a-layer-that-was-deleted');
 

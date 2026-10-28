@@ -5,7 +5,8 @@
 // whose body says only literals is a placement, and its `set`s that
 // placement's overrides; the world's state, a rule's
 // setting and the background color are the screen's data; `set map size` is
-// the map's; a handler is the screen's. A row that says anything else is
+// the map's, and so is a `define layer`, with what its body places with
+// literals on it; a handler is the screen's. A row that says anything else is
 // code a game runs once, so it stays code: under `when this screen loads`,
 // inside `in the map ⟨Game⟩ shows`, where it acts on the level as it did on
 // the world. That pair is always there, empty or not, since it is where a
@@ -167,7 +168,16 @@ function slotsOf(files: Record<string, string>): {
 type Placement = {
   type: string;
   id: string;
+  layer?: string;
   properties?: Record<string, Record<string, unknown>>;
+};
+
+/** A map's layer, as `define layer` said one (`mapModel.MapLayerDoc`). */
+type Layer = {
+  id: string;
+  name: string;
+  fit?: boolean;
+  parallax?: {x: number; y: number};
 };
 
 /** An `add actor` as a placement, or nothing for one that is code. */
@@ -343,10 +353,43 @@ export function screenOfWorld(
   let backgroundColor: string | undefined;
   let size: {width: number; height: number} | undefined;
   const code: Block[] = [];
+  const layers: Layer[] = [];
   for (const row of rowsOf(
     isObject(world.next) ? world.next.block : undefined,
   )) {
     const fields = fieldsOf(row);
+    if (row.type === 'world_define_layer') {
+      // A layer is the map's. What its body places with literals is placed
+      // on it; the rest is code, which places into the default layer.
+      const name = String(fields.NAME ?? 'Layer');
+      const layer: Layer = {id: slug(name), name};
+      for (const inner of rowsOf(inputOf(row, 'DO'))) {
+        if (inner.type === 'world_layer_fixed') {
+          layer.fit = fieldsOf(inner).FIXED === 'fixed';
+          continue;
+        }
+        if (inner.type === 'world_layer_parallax') {
+          const {x, y} = (fieldsOf(inner).PARALLAX ?? {}) as {
+            x?: number;
+            y?: number;
+          };
+          layer.parallax = {x: Number(x ?? 1), y: Number(y ?? 1)};
+          continue;
+        }
+        const kind = String(fieldsOf(inner).ACTOR ?? '');
+        const placement =
+          inner.type === 'world_add_actor' && !doc.rowsAsCode
+            ? placementOf(inner, slots.actor, kind ? nextId(kind) : '')
+            : undefined;
+        if (placement) {
+          placements.push({...placement, layer: layer.id});
+        } else {
+          code.push(inner);
+        }
+      }
+      layers.push(layer);
+      continue;
+    }
     if (row.type === 'world_add_actor' && !doc.rowsAsCode) {
       const kind = String(fields.ACTOR ?? '');
       const placement = placementOf(row, slots.actor, kind ? nextId(kind) : '');
@@ -396,6 +439,10 @@ export function screenOfWorld(
     }
     code.push(row);
   }
+  // The map's own layers, then the ones `define layer` rows said.
+  const stated = (level as {layers?: unknown}).layers;
+  const allLayers = [...(Array.isArray(stated) ? stated : []), ...layers];
+  const mapLayers = allLayers.length ? {layers: allLayers} : {};
   // A level with a theme of its own beside the game's needs a map to hold it.
   const asLevel =
     screenIsLevel && !mainCamera && !(theme && typeof level.theme === 'string');
@@ -446,6 +493,7 @@ export function screenOfWorld(
           name,
           ...sized,
           ...data,
+          ...mapLayers,
           actors: placements,
           ...workspace,
         },
@@ -469,7 +517,13 @@ export function screenOfWorld(
   return {
     screen: JSON.stringify({...screen, ...workspace}, null, 2),
     map: JSON.stringify(
-      {...level, type: 'map', ...sized, actors: placements},
+      {
+        ...level,
+        type: 'map',
+        ...sized,
+        ...mapLayers,
+        actors: placements,
+      },
       null,
       2,
     ),

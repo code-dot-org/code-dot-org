@@ -84,7 +84,6 @@ import {
 import {actorAnimationsMutator} from './extensions/actorAnimations';
 import {
   actorContextExtension,
-  builderWorldExtension,
   runtimeActorExtension,
   traitContextExtension,
 } from './extensions/actorContext';
@@ -148,11 +147,8 @@ import {
   DEFAULT_PARALLAX,
   LAYER_FIXED_OPTIONS,
   layerIdFromValue,
-  layerArgumentOf,
-  layerOf,
   layerOptions,
   layerOptionsExtension,
-  type LayerPlanEntry,
 } from './layers';
 import {lessonFlyoutButton} from './lessonFlyoutButton';
 import {localizeText} from './localizeBlocks';
@@ -6596,7 +6592,7 @@ const worldAddActor = defineBlock({
       return (
         `{\nconst ${binding} = world.addActor(${template}, ${str(
           block.id,
-        )}, ${str(type)}, ${str(layerOf(block))});\n` + `${body}}\n`
+        )}, ${str(type)}, ${str(DEFAULT_LAYER_ID)});\n` + `${body}}\n`
       );
     },
   },
@@ -6644,63 +6640,11 @@ const worldRemoveActor = defineBlock({
 });
 
 /**
- * A layer, and the actors in it (specs/VIEWPORT.md).
- *
- * A group drawn together, at a depth given by where this block sits: layers
- * draw in the order they are declared, so the first is furthest back. The body
- * is what is IN it — a layer owns its contents, so a placement inside this
- * block is placed in this layer and you can see which by looking at it.
- *
- * The declaration itself is HOISTED by `define world`, not emitted here: a
- * layer must be declared before the first actor is placed, because the first
- * placement builds the World and a layer cannot be spliced into one that
- * exists. So this block generates only its contents (`layerPlan`).
- *
- * No parallax or fit fields yet, deliberately. Both are stored by the engine
- * and neither is READ until there is a camera to be a factor of — a knob that
- * does nothing is worse than no knob.
- */
-const worldDefineLayer = defineBlock({
-  type: 'world_define_layer',
-  message0: 'define layer %1',
-  args0: [{type: 'field_input', name: 'NAME', text: 'Layer'}],
-  message1: 'do %1',
-  args1: [{type: 'input_statement', name: 'DO'}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [builderWorldExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'A group of actors drawn together. Layers draw in the order you define ' +
-    'them, so the first one is furthest back. A new layer moves with the ' +
-    'camera like the game does; put “this layer …” inside it to change that.',
-  generator: {
-    javascript(block, generator) {
-      return generator.statementToCode(block, 'DO');
-    },
-  },
-});
-
-/**
- * Place into a layer declared somewhere else.
- *
- * The reopener. `define layer`'s own body covers the common case by
- * containment; this covers the one it cannot — adding to a layer that was
- * declared earlier, beside other things. Innermost wins when they nest.
- *
- * It declares nothing, so it does not appear in `layerPlan`: naming a layer is
- * not defining one.
- */
-/**
  * How much of the camera's motion this layer takes — the opt-in to parallax.
  *
- * Deliberately NOT part of `define layer`. A new layer moves with the camera
- * like the game does, which is what a learner adding their first one means, and
- * a declaration carrying settings nobody needs yet is settings to read past.
- * Parallax is a thing you go and ask for.
- *
- * It names no layer: it sets the one it is written in, like `set background`
- * and every other slot block (blockly/layers).
+ * A layer's starting parallax is the map's (its inspector); this changes it
+ * while the game runs. It names no layer: it sets the one the code runs in,
+ * like `set background` and every other slot block (blockly/layers).
  *
  * `1, 1` is the game itself. `0.2, 0` is a sky that shifts as the player walks
  * and stays put when they jump — horizontal only, because a sky that bobs on
@@ -6726,7 +6670,7 @@ const worldLayerParallax = defineBlock({
         x: 1,
         y: 1,
       }) as VectorValue;
-      return `world.setLayerParallax(new WorldLab.Vector(${Number(value.x)}, ${Number(value.y)}), ${str(layerOf(block))});\n`;
+      return `world.setLayerParallax(new WorldLab.Vector(${Number(value.x)}, ${Number(value.y)}));\n`;
     },
   },
 });
@@ -6759,27 +6703,7 @@ const worldLayerFixed = defineBlock({
   generator: {
     javascript(block) {
       const fixed = block.getFieldValue('FIXED') === 'fixed';
-      return `world.setLayerFit(${fixed}, ${str(layerOf(block))});\n`;
-    },
-  },
-});
-
-const worldWithinLayer = defineBlock({
-  type: 'world_within_layer',
-  message0: 'within layer %1',
-  args0: [{type: 'field_dropdown', name: 'LAYER', options: layerOptions}],
-  message1: 'do %1',
-  args1: [{type: 'input_statement', name: 'DO'}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [layerOptionsExtension, builderWorldExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Place the actors inside into a layer you defined earlier, rather than ' +
-    'into the one this block sits in.',
-  generator: {
-    javascript(block, generator) {
-      return generator.statementToCode(block, 'DO');
+      return `world.setLayerFit(${fixed});\n`;
     },
   },
 });
@@ -7052,7 +6976,7 @@ const worldLoadMap = defineBlock({
         `map:${map}`,
         `import ${importVar(map)} from ${str(map)};`,
       );
-      return `${defines}world.loadMap(${importVar(map)}, ${str(layerOf(block))});\n`;
+      return `${defines}world.loadMap(${importVar(map)}, ${str(DEFAULT_LAYER_ID)});\n`;
     },
   },
 });
@@ -7067,8 +6991,6 @@ export interface WorldPrologue {
   name: string;
   /** Rows lifted out of the body to precede the first placement. */
   hoisted: readonly string[];
-  /** The layers `define layer` rows declare, in order (`layerPlan`). */
-  plan: readonly LayerPlanEntry[];
   /** The world's own declarations (`worldOwnPropertyDeclarations`). */
   own: string;
   /** The layers of the map the world is, with their slots. */
@@ -7175,13 +7097,6 @@ export function worldModulePrologue(
       return `${defines}world.defineMap(${str(mapPath)}, ${importVar(mapPath)});\n`;
     })
     .join('');
-  // Layers, hoisted (blockly/layers). Every `defineLayer` has to precede
-  // the first placement — the first placement builds the World, and a
-  // layer cannot be spliced into one that exists — so the declarations
-  // cannot be emitted where their blocks sit. `layerPlan` reads the body's
-  // order and reports the stack, including where the default belongs.
-  // Emitted only when the world declares one: a world with no layers says
-  // nothing about layers, and the engine supplies the default.
   // How big each of the project's images is, stated for the same reason
   // the animations above are and by the same argument: a picture's size is
   // not something a world opts into, it is a fact about what the project
@@ -7206,11 +7121,7 @@ export function worldModulePrologue(
   // …with the MAIN MAP's ahead of them, slots and all: the world's file
   // holds the map, so the generator hands its layers over
   // (`BlocklyGenerator`, specs/LAYERS_PLAN.md).
-  const layers = layerDeclarations(
-    prologue.mapLayers,
-    prologue.plan,
-    DEFAULT_LAYER_ID,
-  );
+  const layers = layerDeclarations(prologue.mapLayers);
   // The world's OWN state, hoisted for the same reason the layers above
   // are: a declaration cannot be emitted where its block sits when the body
   // around it reads the const it makes. `add actor … set text to ⟨score⟩`
@@ -7477,7 +7388,7 @@ const defineSlotBlocks = (slot: {
         }
         // A whole image, never a cell: a backdrop is not a spritesheet, so this
         // field never carries the `name.png#3` a `set sprite` field can.
-        return `world.set${slot.method}(${str(name)}${layerArgumentOf(block)});\n`;
+        return `world.set${slot.method}(${str(name)});\n`;
       },
     },
   });
@@ -7500,7 +7411,7 @@ const defineSlotBlocks = (slot: {
         const offset =
           generator.valueToCode(block, 'OFFSET', Order.NONE) ||
           'new WorldLab.Vector(0, 0)';
-        return `world.set${slot.method}Offset(${offset}${layerArgumentOf(block)});\n`;
+        return `world.set${slot.method}Offset(${offset});\n`;
       },
     },
   });
@@ -7534,7 +7445,7 @@ const defineSlotBlocks = (slot: {
     generator: {
       javascript(block) {
         const repeat = block.getFieldValue('REPEAT') === 'true';
-        return `world.set${slot.method}Repeat(${repeat}${layerArgumentOf(block)});\n`;
+        return `world.set${slot.method}Repeat(${repeat});\n`;
       },
     },
   });
@@ -7562,8 +7473,8 @@ const defineSlotBlocks = (slot: {
       `Take the ${slot.label} image away, leaving the backdrop color. The ` +
       'offset and the tiling stay as they were, for the next image.',
     generator: {
-      javascript(block) {
-        return `world.set${slot.method}(undefined${layerArgumentOf(block)});\n`;
+      javascript() {
+        return `world.set${slot.method}(undefined);\n`;
       },
     },
   });
@@ -7602,13 +7513,6 @@ const defineEffectBlocks = (owner: {
   noun: string;
   /** The engine method's middle: `addEffect` / `addBackgroundEffect`. */
   method: string;
-  /**
-   * Whether the call names a layer.
-   *
-   * The world's effect covers the whole screen and belongs to no layer; a
-   * slot's belongs to the layer the block is written in (blockly/layers).
-   */
-  layered: boolean;
   /** The tooltip's description of what gets filtered. */
   filters: string;
 }) => {
@@ -7655,15 +7559,11 @@ const defineEffectBlocks = (owner: {
           `import ${importVar(path)} from ${str(path)};`,
         );
         const values = effectParamValuesCode(block, generator);
-        // None named is "the layer this code runs in", which the engine
-        // works out (`World.here`).
-        const layer = owner.layered ? layerArgumentOf(block) : '';
-        // `undefined` rather than nothing when a layer follows: the layer is
-        // the fourth argument, so the third cannot simply be left off.
-        const settings = values || (layer ? 'undefined' : '');
+        // No layer named: the engine's is the layer this code runs in
+        // (`World.here`).
         return `world.add${owner.method}Effect(${str(path)}, ${importVar(path)}${
-          settings ? `, ${settings}` : ''
-        }${layer});\n`;
+          values ? `, ${values}` : ''
+        });\n`;
       },
     },
   });
@@ -7692,8 +7592,7 @@ const defineEffectBlocks = (owner: {
           return '';
         }
         // No import: removing needs only the effect's identity, not its graph.
-        const layer = owner.layered ? layerArgumentOf(block) : '';
-        return `world.remove${owner.method}Effect(${str(path)}${layer});\n`;
+        return `world.remove${owner.method}Effect(${str(path)});\n`;
       },
     },
   });
@@ -7707,14 +7606,12 @@ const EFFECT_OWNER_BLOCKS = [
     infix: 'world',
     noun: 'the world',
     method: '',
-    layered: false,
     filters: 'the whole view',
   }),
   defineEffectBlocks({
     infix: 'layer',
     noun: 'this layer',
     method: 'Layer',
-    layered: true,
     filters:
       'everything this layer draws — its actors and its images together, ' +
       'leaving the other layers alone',
@@ -7723,7 +7620,6 @@ const EFFECT_OWNER_BLOCKS = [
     infix: 'background',
     noun: 'the background',
     method: 'Background',
-    layered: true,
     filters: 'the background only — the actors in front of it are not affected',
   }),
 ].flat();
@@ -10574,10 +10470,8 @@ export const DOMAIN_BLOCKS = [
   worldIsInActors,
   worldForEach,
   worldIsA,
-  worldDefineLayer,
   worldLayerParallax,
   worldLayerFixed,
-  worldWithinLayer,
   worldUseCamera,
   worldMoveCamera,
   worldAddActor,
@@ -10964,9 +10858,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // score sharp (specs/VIEWPORT.md).
       'world_add_layer_effect',
       'world_remove_layer_effect',
-      // Which layer an actor is in, while the game runs; the layers
-      // themselves are the map editor's.
-      'world_within_layer',
     ],
   },
   {
@@ -11628,9 +11519,8 @@ function generateRulePalette(
  */
 /**
  * Blocks no drawer offers, because an editor establishes what they say
- * (specs/ACTORS_AS_DATA_PLAN.md, step 6), which a file may still HOLD: a
- * layer written with `define layer` loads and runs as it did. Not offered is
- * not wrong to be there.
+ * (specs/ACTORS_AS_DATA_PLAN.md, step 6), which a file may still HOLD. Not
+ * offered is not wrong to be there.
  */
 export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_actor',
@@ -11639,7 +11529,6 @@ export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_actor_is_data',
   'world_set_map_size',
   'world_set_view_size',
-  'world_define_layer',
   'world_layer_parallax',
   'world_layer_fixed',
   MEMBER_HEAD,

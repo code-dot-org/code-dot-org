@@ -226,7 +226,7 @@ export class WorldBuilder {
    * learner can see in their blocks would stop being the ordering they get.
    */
   defineLayer(layer: LayerInit): this {
-    this.requireNoActors('define layer');
+    this.requireNoActors('defineLayer');
     this.layers.push(layer);
     return this;
   }

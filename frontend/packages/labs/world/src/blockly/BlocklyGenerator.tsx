@@ -558,7 +558,6 @@ function generateMainScreen(
   const prologue = worldModulePrologue(generator, {
     name: typeof name === 'string' && name ? name : DEFAULT_SCREEN_NAME,
     hoisted: [],
-    plan: [],
     own: own ? worldOwnPropertyDeclarations(own) : '',
     mapLayers: screenLayersOf(contents),
     mainMap: screenSize(map) + (load?.code ?? ''),

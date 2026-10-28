@@ -3,8 +3,8 @@
 // A world's layer list is fixed when the world is built, so a layer cannot be
 // added by loading a map; the main map is in the world's own file, though,
 // and the generator can read it. Its layers are declared in the world's
-// prologue, ahead of the ones `define layer` blocks declare, and each slot's
-// starting values follow as the calls a block would have made. What the map
+// prologue, and each slot's starting values follow as the calls a block
+// would have made. What the map
 // editor shows is then what the game draws, with no block written.
 
 interface Slot {
@@ -93,28 +93,13 @@ const slotCalls = (
 };
 
 /**
- * The world's layer declarations: the main map's, in their order, then the
- * blocks' that the map did not already name — and after them each slot's
- * starting values. Nothing at all when neither says anything, so a world
- * with no layers still declares none and the engine supplies the default.
+ * The world's layer declarations: the main map's, in their order, and after
+ * them each slot's starting values. Nothing at all for a map with no layers,
+ * which takes the engine's default.
  */
-export function layerDeclarations(
-  mapLayers: readonly MainMapLayer[],
-  planned: ReadonlyArray<{id: string}>,
-  defaultId: string,
-): string {
-  const named = new Set(mapLayers.map(layer => layer.id));
-  const fromBlocks = planned.filter(entry => !named.has(entry.id));
-  const anything =
-    mapLayers.length > 0 || planned.some(entry => entry.id !== defaultId);
-  if (!anything) {
-    return '';
-  }
+export function layerDeclarations(mapLayers: readonly MainMapLayer[]): string {
   return (
     mapLayers.map(declaration).join('') +
-    fromBlocks
-      .map(entry => `world.defineLayer({id: ${q(entry.id)}});\n`)
-      .join('') +
     mapLayers
       .map(layer => slotCalls(layer.id, 'Background', layer.background))
       .join('')

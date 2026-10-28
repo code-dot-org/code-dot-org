@@ -1241,34 +1241,25 @@ export const TILES: readonly Tile[] = [
       // Where a layer is made: the map editor's strip, a layer's inspector,
       // and the layer a placement is on (specs/CURRICULUM_PLAN.md)…
       {kind: 'affordance', id: 'map-layers'},
-      // …and the one block that asks about a layer while the game runs.
-      // Defining one is the map editor's, and no toolbox offers that
-      // (specs/ACTORS_AS_DATA_PLAN.md, step 6).
-      {kind: 'block', type: 'world_within_layer'},
+      // …and the block that asks about a layer while the game runs.
+      {kind: 'block', type: 'world_all_actors_in_layer'},
     ],
     check: {
       kind: 'shape',
       says: 'The Score is in a layer fixed to the screen, and the Hills are in one that moves less than the camera.',
       falsePass:
-        'Moving the Score every frame to wherever the camera is, which looks identical and is a thing to keep in step by hand for the rest of the project. The check reads the LAYER, which is the declaration that makes it true once — from the map, where the lesson makes one, or from `define layer` blocks, which say the same.',
+        'Moving the Score every frame to wherever the camera is, which looks identical and is a thing to keep in step by hand for the rest of the project. The check reads the map\u2019s LAYER, which is the declaration that makes it true once.',
       run: {probes: {view: {kind: 'cameras'}}, trace: [{seconds: 0.1}]},
       inspect: files => {
-        const declared = blocksIn(files, 'world_define_layer').map(layer =>
-          JSON.stringify(layer),
-        );
-        const inBlocks = (what: string, who: string) =>
-          declared.some(layer => layer.includes(what) && layer.includes(who));
         const layers = mainMapLayers(files);
         const onMap = (is: (layer: MapLayerShape) => boolean, who: string) =>
           layers.some(layer => is(layer) && layer.holds.includes(who));
         return (
-          (onMap(layer => layer.fit === true, 'actors/score') ||
-            inBlocks('world_layer_fixed', 'actors/score')) &&
-          (onMap(
+          onMap(layer => layer.fit === true, 'actors/score') &&
+          onMap(
             layer => !layer.fit && (layer.parallax?.x ?? 1) < 1,
             'actors/hill',
-          ) ||
-            inBlocks('world_layer_parallax', 'actors/hill'))
+          )
         );
       },
       // The world is still a world: the shape half is what this lesson can be
@@ -3726,38 +3717,6 @@ const withoutRules = (files: Record<string, string>): Record<string, string> =>
   Object.fromEntries(
     Object.entries(files).filter(([path]) => !path.endsWith('.rule')),
   );
-
-/**
- * The first block of a type in any of the project's files.
- *
- * `nestedIn`'s sibling, for a check that wants to READ a block rather than ask
- * whether one is inside another — the arrangement a `create in map` holds is a
- * field on the block, so counting what a learner painted means finding it.
- */
-function blocksIn(files: Record<string, string>, type: string): unknown[] {
-  const found: unknown[] = [];
-  const walk = (node: unknown): void => {
-    if (Array.isArray(node)) {
-      node.forEach(walk);
-      return;
-    }
-    if (typeof node !== 'object' || node === null) {
-      return;
-    }
-    if ((node as {type?: unknown}).type === type) {
-      found.push(node);
-    }
-    Object.values(node).forEach(walk);
-  };
-  for (const contents of Object.values(files)) {
-    try {
-      walk(JSON.parse(contents));
-    } catch {
-      // A file mid-edit is not a failed lesson (see `nestedIn`).
-    }
-  }
-  return found;
-}
 
 /**
  * The level a lesson arranges: `maps/main.map`, or the Main Screen where

@@ -1189,8 +1189,8 @@ export class World {
    * Place an actor, in `layer` or in the default one.
    *
    * An unknown layer id is the default rather than an error: the id comes from
-   * generated code naming a `define layer` block, and a layer deleted while a
-   * `within layer` still names it should put its actors somewhere visible
+   * a map or a dropdown naming a layer, and a layer deleted while something
+   * still names it should put its actors somewhere visible
    * rather than take the world down. The same reasoning as a `use rule` naming
    * a rule that has gone.
    */
@@ -4510,9 +4510,8 @@ export class World {
    * The background slot of a layer, or of the default layer.
    *
    * An unknown id is the default rather than an error, for the reason
-   * `addActor` gives: the id comes from generated code naming a `define layer`
-   * block, and deleting that block while a `set background` still names it
-   * should paint somewhere visible instead of taking the world down.
+   * `addActor` gives: a layer deleted while something still names it should
+   * paint somewhere visible instead of taking the world down.
    */
   private backdropAt(layer?: string): LayerSlot {
     return this.layerHere(layer).background;
