@@ -235,10 +235,9 @@ frame` and `define actor` stay.
 
 ## Open
 
-- **A world's properties** are the last declarations written as blocks
-  (`define world`, `define property`). A world as data is its own phase.
-  Until then `define world` stays as the compiler's root for the screen's
-  data and as how the lessons and fixtures write their worlds.
+- **A world's properties** were the last declarations written as blocks.
+  The Main Screen compiles from its data, and `define world` is gone
+  (WORLD_AS_DATA_PLAN.md).
 - **Naming a Viewport's camera in code.** `camera ⟨⟩`, `move camera` and
   `look through camera` name a camera by the `define camera` block that
   made it, so after 5a they name the main camera only. A Viewport's stored

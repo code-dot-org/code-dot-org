@@ -1,11 +1,12 @@
 # A Viewport onto the world's own scene
 
-STATUS: BUILDING. Steps 1 to 5, 7 and 8 are in — a Viewport declares what
-it mirrors with `mirrors the world` or `mirrors`, is bound to that scene with
-no copy of its own, routes the pointer through its camera, the driver draws
-the scene it mirrors into its box, the editor draws it there too (step 5), a
-Viewport's camera zooms (step 7), and a layer may say mirrors leave it out
-(step 8). What is left is the browser check (steps 6 and 9). specs/VIEWPORT_PLAN.md lists
+STATUS: BUILT, October 2026. A Viewport declares what it mirrors with
+`mirrors the world` or `mirrors`, is bound to that scene with no copy of its
+own, routes the pointer through its camera, the driver draws the scene it
+mirrors into its box, the editor draws it there too (step 5), a Viewport's
+camera zooms (step 7), and a layer may say mirrors leave it out (step 8).
+The browser checks (steps 6 and 9) were looked at, not exhaustively.
+specs/VIEWPORT_PLAN.md lists
 "mirroring" as not built; this is what it would take, written after a Viewport
 was given cameras of its own (specs/SPACE_CAMERAS_PLAN.md) and after the first
 person to build one asked for it: a minimap, a second shot of the same level,
