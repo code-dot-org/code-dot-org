@@ -8,6 +8,7 @@ import FreeResponseAnswer from './FreeResponseAnswer';
 import MultipleChoiceAnswer from './MultipleChoiceAnswer';
 import MultipleSelectAnswer from './MultipleSelectAnswer';
 import QuestionDescription from './QuestionDescription';
+import SkippedTag from './SkippedTag';
 import {
   isFreeResponseResponse,
   isMultipleChoiceResponse,
@@ -27,6 +28,19 @@ export interface QuestionResultCardProps {
   isViewingStudent?: boolean;
 }
 
+function isSkipped(result: QuizQuestionResult): boolean {
+  if (isFreeResponseResponse(result)) {
+    return !result.responseData.answerText;
+  }
+  if (isMultipleChoiceResponse(result)) {
+    return !result.responseData.selectedChoiceId;
+  }
+  if (isMultipleSelectResponse(result)) {
+    return !result.responseData.selectedChoiceIds?.length;
+  }
+  return false;
+}
+
 // Read-only review of one submitted question, graded or not.
 const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   question,
@@ -37,6 +51,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
 }) => (
   <AttemptCard
     label={questionLabel}
+    tag={isSkipped(result) && <SkippedTag isGraded={result.correct !== null} />}
     title={question.questionTitle}
     description={<QuestionDescription markdown={question.description} />}
   >
