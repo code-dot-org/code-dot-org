@@ -61,6 +61,25 @@
       "properties": {
         "enabled": {"type": "boolean"},
         "replicas": {"type": "integer", "minimum": 0},
+        "autoscaling": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {"type": "boolean"},
+            "minReplicas": {"type": "integer", "minimum": 1},
+            "maxReplicas": {"type": "integer", "minimum": 1},
+            "jobsPerReplica": {"type": "integer", "minimum": 1},
+            "pollingInterval": {"type": "integer", "minimum": 1},
+            "connectionStringSecret": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {"type": "string"},
+                "key": {"type": "string", "minLength": 1}
+              }
+            }
+          }
+        },
         "priorityMode": {},
         "terminationGracePeriodSeconds": {"type": "integer", "minimum": 0},
         "command": {"$ref": "#/definitions/stringList"},

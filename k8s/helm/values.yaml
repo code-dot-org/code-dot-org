@@ -65,6 +65,16 @@ dashboardJob:
 activeJobWorker:
   enabled: true
   replicas: 1
+  autoscaling:
+    enabled: false
+    minReplicas: 1
+    maxReplicas: 4
+    jobsPerReplica: 1
+    pollingInterval: 30
+    # Existing namespace-local Secret containing a Go MySQL DSN, not a Rails URL.
+    connectionStringSecret:
+      name: ""
+      key: connectionString
   # Delayed Job priorities: high < 10, low >= 10; both leaves the range unrestricted.
   priorityMode: both
   # Seconds between SIGTERM and SIGKILL when a pod is replaced or drained.

@@ -55,7 +55,13 @@ metadata:
 spec:
 
   {{- if $isDeployment }}
-  replicas: {{ .replicas | default .Values.autoscaling.replicasWhenAutoscaleDisabled | default 1 }}
+  {{- if not .autoscalingEnabled }}
+  {{- if hasKey . "replicas" }}
+  replicas: {{ .replicas }}
+  {{- else }}
+  replicas: {{ .Values.autoscaling.replicasWhenAutoscaleDisabled }}
+  {{- end }}
+  {{- end }}
   selector:
     matchLabels:
       {{ .selectorLabels | nindent 6 }}

@@ -129,6 +129,122 @@ set `active_job_worker_max_priority: 9` for them (`config/<env>.yml.erb`,
 Run `bundle exec ruby k8s/bin/verify-worker-priorities` to check Helm modes,
 generated worker commands, and invalid values without a cluster or database.
 
+## Active Job autoscaling (draft)
+
+The chart can create a KEDA `ScaledObject` and `TriggerAuthentication` for the
+worker Deployment. KEDA owns the resulting HPA. Dashboard autoscaling remains
+independent. Autoscaling is disabled by default and does not install KEDA.
+
+The initial staging override, to add to `k8s-gitops` after the prerequisites
+below are deployed, is:
+
+```yaml
+activeJobWorker:
+  priorityMode: low
+  terminationGracePeriodSeconds: 2100
+  autoscaling:
+    enabled: true
+    minReplicas: 1
+    maxReplicas: 4
+    jobsPerReplica: 1
+    pollingInterval: 30
+    connectionStringSecret:
+      name: active-job-scaler-db
+      key: connectionString
+```
+
+### Demand and scaling policy
+
+The MySQL query counts nonfailed jobs whose `run_at` is due, restricted to the
+worker's `priorityMode`. Locked rows remain in the count: claiming a job does
+not remove demand. Future jobs and retained failures do not count. Before HPA
+stabilization and rate limits, the desired count is approximately
+`ceil(outstanding jobs / jobsPerReplica)`, bounded by the configured minimum
+and maximum. One job per replica assumes the generated command's single worker
+process per pod. Custom commands are rejected when autoscaling is enabled.
+
+This count measures outstanding work, not worker occupancy. An abandoned lock
+still contributes demand until the job is recovered or marked failed. Expired
+locks remain counted because Delayed Job can reclaim them. Legacy workers
+consuming the same priorities also contribute locked rows; finish the priority
+split before treating this metric as Kubernetes-only demand. Do not override
+worker priority limits through `locals.yml` or environment variables when using
+autoscaling: the query is derived from `priorityMode` only.
+
+Metrics are cached for the polling interval. The HPA may add one replica per
+minute and remove one per minute after a five-minute stabilization window.
+After repeated query errors, KEDA falls back to the greater of the current
+replica count and the configured minimum. Alert on scaler errors; this fallback
+cannot infer new demand during an outage. Scale-to-zero is deliberately excluded.
+
+The worker keeps its configured shutdown grace period. Counting running jobs
+does not ensure Kubernetes selects an idle pod for termination. A terminating
+worker must finish its current job before the grace period expires; otherwise
+its lock can delay recovery for four hours. The 2100-second staging setting
+covers the known 30-minute job cap, not every possible Delayed Job runtime.
+Terminating pods can also consume resources beyond the HPA maximum while their
+replacements start. Allow for that overlap in node capacity planning.
+
+### Infrastructure prerequisites
+
+Install and pin a compatible KEDA release in `k8s-gitops` before enabling the
+chart option. The draft uses the KEDA 2.18 API, including
+`fallback.behavior: currentReplicasIfHigher` and cached MySQL metrics. Confirm
+compatibility with the cluster's Kubernetes version and the selected KEDA
+release. Keep the operator, metrics server, webhooks, and CRDs under the
+infrastructure application's ownership, not this workload chart.
+
+Provision the namespace-local Secret through External Secrets. Its
+`connectionString` value must be a Go MySQL driver DSN, for example:
+
+```text
+scaler:PASSWORD@tcp(DB_HOST:3306)/dashboard_staging?tls=true&timeout=5s&readTimeout=5s&writeTimeout=5s
+```
+
+Use a dedicated account with SELECT access to `delayed_jobs` on the writer
+endpoint; a read replica can lag the queue. Verify the database certificate
+chain is trusted by the KEDA image. The Rails `db_writer` URL is not this DSN
+format and must not be reused verbatim. Keep credentials out of Helm values.
+KEDA needs network access to MySQL and access to this Secret; the application
+pod's IRSA role does not provide database authentication to KEDA.
+
+Run EXPLAIN for the generated COUNT query against representative queue sizes.
+Check query latency and database load before choosing a polling interval or
+adding an index. Monitor outstanding jobs and oldest eligible waiting-job age,
+scaler errors, desired/ready/terminating replicas, and database load. The
+existing ActiveJob metrics need priority filtering for this use.
+
+### Replica ownership and rollout
+
+When worker autoscaling is enabled, the Deployment omits `spec.replicas`.
+Verify the Argo application does not restore that field during sync. If it
+reports drift on HPA-owned replicas, configure an ignore rule scoped to this
+Deployment's `/spec/replicas` with `RespectIgnoreDifferences=true`. Do not ignore
+replicas across all Deployments. There must be only one HPA for the worker.
+
+Enable staging first. Verify KEDA readiness, one idle worker, growth under a
+low-priority backlog, and no growth from high-priority, future, or failed jobs.
+Run a long job through scale-down and confirm completion without a forced kill.
+Test an unavailable metrics source and a subsequent recovery. Sync Argo while
+scaled above one replica and confirm the count is not reset. Review queue wait
+time and database load before increasing the four-worker cap.
+
+For rollback, disable autoscaling and set `activeJobWorker.replicas` explicitly.
+Prune the ScaledObject and its owned HPA before reconciling the fixed count;
+otherwise the controllers can temporarily compete. The chart does not restore
+the replica count captured when the ScaledObject was created.
+
+Local checks require Helm and the repository Ruby bundle:
+
+```sh
+bundle exec ruby k8s/bin/verify-worker-autoscaling
+bundle exec ruby k8s/bin/verify-worker-priorities
+```
+
+These checks cover manifest rendering, not KEDA admission, database access, or
+live scale-down. See the [MySQL scaler](https://keda.sh/docs/2.18/scalers/mysql/)
+and [ScaledObject API](https://keda.sh/docs/2.18/reference/scaledobject-spec/).
+
 ## Non-local clusters
 
 Argo CD and Kargo configuration lives in the
