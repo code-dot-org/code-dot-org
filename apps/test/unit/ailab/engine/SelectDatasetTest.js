@@ -110,8 +110,20 @@ describe('SelectDataset', () => {
     const {store} = renderPicker('datasets/songs.csv', {datasets});
     expect(screen.queryByRole('button', {name: /^Upload/})).toBeNull();
     act(() => store.dispatch(setInvalidData('loadFailed')));
-    expect(
-      screen.getByText('This dataset could not be loaded. Try another one.')
-    ).toBeTruthy();
+    expect(screen.getByRole('alert').textContent).toBe(
+      'This dataset could not be loaded. Try another one.'
+    );
+  });
+
+  test('keeps a valid upload when one of our datasets fails', () => {
+    const {store} = renderPicker(new File(['a,b\n1,2'], UPLOAD_NAME));
+    clickFirstTile();
+    act(() => store.dispatch(setInvalidData('loadFailed')));
+    expect(chip().getAttribute('aria-pressed')).toBe('false');
+
+    fireEvent.click(
+      screen.getByText(getAvailableDatasets()[1].name).closest('button')
+    );
+    expect(chip()).toBeTruthy();
   });
 });
