@@ -336,6 +336,13 @@ export interface LevelProperties {
    * message from the tutor, and don't show the separate Instructions tab.
    */
   showInstructionsInAiTutor?: boolean;
+  /**
+   * With showInstructionsInAiTutor, dim the page around the instructions for
+   * a few seconds when the level opens.
+   */
+  spotlightInstructions?: boolean;
+  // Suppress every product tour, automatic or replayed from student resources.
+  disableProductTours?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
