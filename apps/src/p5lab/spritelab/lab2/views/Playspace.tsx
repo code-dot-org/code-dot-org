@@ -536,10 +536,12 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     return () => window.clearTimeout(timer);
   }, [mode]);
   const visible = measured && !settledHidden;
-  // The bar and the prompt wait unseen at their destinations and fade in once
-  // the box arrives.
+
   const barRef = useRef<HTMLDivElement>(null);
   const promptRef = useRef<HTMLDivElement>(null);
+
+  // Fade in the play bar and the prompt bar so they don't render incorrectly
+  // while switching modes.
   useLayoutEffect(() => {
     if (animate) {
       [barRef, promptRef].forEach(ref =>
@@ -556,6 +558,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     // Only a mode change moves the bar; animate is derived for that render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
+
   // The card fades between its two sizes rather than sliding, which would
   // reflow its text: a copy at the old size fades out.
   const cardRef = useRef<HTMLDivElement>(null);

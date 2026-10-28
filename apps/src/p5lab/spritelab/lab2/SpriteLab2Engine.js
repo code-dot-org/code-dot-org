@@ -648,6 +648,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     getStore().dispatch(clearPrompt());
     library.commands.setPrompt = (promptText, variableName, setterCallback) => {
       library.registerPrompt(promptText, variableName, setterCallback);
+      // Last prompt always wins, so we only ever have 1 active prompt unlike legacy.
       library.numActivePrompts = 1;
       getStore().dispatch(
         showPrompt({promptText: String(promptText ?? ''), variableName})
