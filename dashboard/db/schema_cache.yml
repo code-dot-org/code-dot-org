@@ -14300,7 +14300,20 @@ indexes:
     type: 
     using: :btree
     comment: 
-  practice_problems: []
+  practice_problems:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: practice_problems
+    name: index_practice_problems_on_key
+    unique: true
+    columns:
+    - key
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   programming_classes:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_classes
@@ -16939,7 +16952,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20261009170000
+version: 20261015120000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

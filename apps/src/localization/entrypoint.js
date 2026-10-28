@@ -172,6 +172,48 @@ function loadLocalize() {
     ),
   });
 
+  // Only the server-rendered footer select; React-rendered locale selects
+  // follow `localization` themselves and break if their options are replaced.
+  const findLocaleSelect = () => document.querySelector('select#locale');
+
+  const ensureSelector = cdoLanguage => {
+    const localeSelect = findLocaleSelect();
+    if (localeSelect) {
+      const optionIndex =
+        localeSelect.querySelector("option[value='" + cdoLanguage + "']")
+          ?.index || 0;
+      localeSelect.selectedIndex = optionIndex;
+    }
+  };
+
+  const toCdoLanguage = language => (language === 'source' ? 'en' : language);
+
+  const handleChange = event => {
+    event.stopPropagation();
+    event.preventDefault();
+    Localize.cdoSetLanguage(event.target.selectedOptions[0].value);
+  };
+
+  const onDOMLoad = () => {
+    const localeSelect = findLocaleSelect();
+    if (localeSelect) {
+      // Replace the server's locale list with the languages Localize serves
+      Localize.getAvailableLanguages((err, data) => {
+        localeSelect.innerHTML = '';
+        data.forEach(info => {
+          const option = document.createElement('option');
+          option.value = info.code;
+          option.textContent = info.name;
+          localeSelect.append(option);
+        });
+        ensureSelector(toCdoLanguage(Localize.getLanguage()));
+      });
+      localeSelect.removeAttribute('onchange');
+      localeSelect.addEventListener('change', handleChange);
+    }
+    ensureSelector(toCdoLanguage(Localize.getLanguage()));
+  };
+
   // Add a custom function to Localize:
   Localize.realSetLanguage = Localize.setLanguage;
   Localize.cdoCallbacks = [];
@@ -185,58 +227,7 @@ function loadLocalize() {
       .querySelector('html')
       .setAttribute('dir', ['fa'].includes(lang) ? 'rtl' : 'ltr');
 
-    const cdoLanguage = language === 'source' ? 'en' : language;
-
-    const ensureSelector = cdoLanguage => {
-      const localeSelect =
-        document.querySelector('#locale') ||
-        document.querySelector("select[name='locale']");
-      if (localeSelect) {
-        const optionIndex =
-          localeSelect.querySelector("option[value='" + cdoLanguage + "']")
-            ?.index || 0;
-        localeSelect.selectedIndex = optionIndex;
-      }
-    };
-
-    // This function ensures that the dropdowns show the requested language
-    const handleChange = event => {
-      event.stopPropagation();
-      event.preventDefault();
-      Localize.cdoSetLanguage(event.target.selectedOptions[0].value);
-    };
-
-    // When the site loads, ensure the language selector has the correct value
-    const onDOMLoad = () => {
-      const localeSelect =
-        document.querySelector('#locale') ||
-        document.querySelector("select[name='locale']");
-      if (localeSelect) {
-        // Remove all options and replace them with the LocalizeJS options we have
-        Localize.getAvailableLanguages((err, data) => {
-          localeSelect.innerHTML = '';
-          data.forEach(info => {
-            const option = document.createElement('option');
-            option.value = info.code;
-            option.textContent = info.name;
-            localeSelect.append(option);
-          });
-        });
-        localeSelect.removeAttribute('onchange');
-        localeSelect.addEventListener('change', handleChange);
-      }
-      ensureSelector(cdoLanguage);
-    };
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', onDOMLoad);
-    } else {
-      // 'interactive' or 'complete' — DOMContentLoaded has already fired
-      onDOMLoad();
-    }
-
-    // Translate everything in the Blockly message pool
-    ensureSelector(cdoLanguage);
+    ensureSelector(toCdoLanguage(language));
   };
 
   // Just in case... any other calls to the Localize setLanguage will also hit
@@ -245,6 +236,13 @@ function loadLocalize() {
 
   // Ensure we are setting the correct direction on our <html> tag
   Localize.cdoSetLanguage(Localize.getLanguage());
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onDOMLoad);
+  } else {
+    // 'interactive' or 'complete' — DOMContentLoaded has already fired
+    onDOMLoad();
+  }
 
   // Forcibly hide the widget for good measure
   Localize.hideWidget();

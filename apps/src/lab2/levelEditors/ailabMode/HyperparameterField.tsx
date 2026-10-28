@@ -1,10 +1,11 @@
 import TextField from '@code-dot-org/component-library/textField';
 import React, {useState} from 'react';
 
+import {isValidHyperparameter} from '@cdo/apps/ailab/engine';
+
 import {
   getHyperparameter,
   getHyperparameterKey,
-  isValidHyperparameter,
   ModeObject,
   setHyperparameter,
 } from './ailabMode';

@@ -82,7 +82,7 @@ class StudentWorkSampleController < ApplicationController
 
     code_samples = []
     student_ids.each do |student_id|
-      student_code = get_student_code(student_id.to_i, level, unit_id)
+      student_code = get_student_code(student_id.to_i, level, unit_id) || {}
       if student_code[:student_code]
         code_samples << {
           level_id: level.id,

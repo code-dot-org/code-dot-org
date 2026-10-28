@@ -3,23 +3,18 @@ import React, {type ReactNode, useId, useMemo, useState} from 'react';
 
 import {dataColumnsFor} from '../helpers/columnDetails';
 import type {Grade} from '../helpers/displayTreeNodeContent';
+import {rowCountText} from '../helpers/utils';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getIdColumn} from '../selectors';
 import {useDatasetTableView} from '../useDatasetTableView';
 import {useGradedView} from '../useGradedView';
 
-import ColumnsButton from './ColumnsButton';
 import NodeRowsTable from './NodeRowsTable';
 import ResultsToggle from './ResultsToggle';
-import TableFilter from './TableFilter';
+import TableActionRow from './TableActionRow';
 
 import styles from './rowsPanel.module.scss';
-
-const rowCountText = (shown: number, total: number) => {
-  const totalText = `${total} ${total === 1 ? 'Row' : 'Rows'}`;
-  return shown === total ? totalText : `${shown} of ${totalText}`;
-};
 
 export interface RowsPanelProps {
   description: ReactNode;
@@ -59,48 +54,43 @@ const RowsPanel = ({
 
   return (
     <div className={styles.panel}>
-      <div className={styles.header}>
-        <Typography
-          id={descriptionId}
-          variant="body3"
-          component="p"
-          className={styles.text}
-        >
-          {description}
-        </Typography>
-        <div className={styles.actions}>
-          {!rowsByGrade && (
-            <>
-              <Typography variant="body3" component="span">
-                <strong>
-                  {rowCountText(tableView.rows.length, rowIndices.length)}
-                </strong>
-              </Typography>
-              <span className={styles.divider} />
-            </>
-          )}
-          <div className={styles.actionGroup}>
-            {rowsByGrade && (
-              <ResultsToggle
-                grade={grade}
-                onChange={value => setGrade(value as Grade)}
-                counts={counts}
-              />
-            )}
-            <TableFilter view={tableView} />
-            <ColumnsButton
-              showAllColumns={showAllColumns}
-              onToggle={onToggleColumns}
-            />
-          </div>
-        </div>
-      </div>
+      <Typography
+        id={descriptionId}
+        variant="body3"
+        component="p"
+        className={styles.text}
+      >
+        {description}
+      </Typography>
       <NodeRowsTable
         labelId={descriptionId}
         view={tableView}
         emphasizedColumn={emphasizedColumn}
         emptyText={emptyText}
         prediction={prediction}
+        actionRow={
+          <TableActionRow
+            view={tableView}
+            showAllColumns={showAllColumns}
+            onToggleColumns={onToggleColumns}
+          >
+            {rowsByGrade ? (
+              <ResultsToggle
+                grade={grade}
+                onChange={value => setGrade(value as Grade)}
+                counts={counts}
+              />
+            ) : (
+              <Typography
+                variant="label3"
+                component="span"
+                className={styles.rowCount}
+              >
+                {rowCountText(tableView.rows.length, rowIndices.length)}
+              </Typography>
+            )}
+          </TableActionRow>
+        }
       />
     </div>
   );
