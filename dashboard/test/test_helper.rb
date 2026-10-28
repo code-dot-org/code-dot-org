@@ -121,6 +121,9 @@ class ActiveSupport::TestCase
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
     AWS::S3.stubs(:exists_in_bucket).returns(true)
 
+    # Spares tests that stub DCDO.get key by key from stubbing this flag too; ProjectsBackends selects a backend.
+    Projects.stubs(:active_record?).returns(false)
+
     # Test class specific VCR configs
     VCR.configuration.cassette_library_dir = vcr_cassette_library_dir
   end

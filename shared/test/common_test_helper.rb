@@ -114,6 +114,9 @@ module SetupTest
     # Enable stubbing.
     Mocha::Mockery.setup
 
+    # Without ActiveRecord, this harness can test only the Sequel implementation of Projects and storage_id.rb.
+    Projects.stubs(:active_record?).returns(false) if defined?(Projects)
+
     random = Random.new(0)
     # 4 test wrappers:
     # VCR (record/replay HTTP interactions)

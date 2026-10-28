@@ -53,6 +53,8 @@ def storage_decrypt_id(encrypted)
 end
 
 def get_storage_id_and_project_id(encrypted)
+  return Project.storage_id_and_project_id(encrypted) if Projects.active_record?
+
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
 
   if uuid?(encrypted)
@@ -106,6 +108,8 @@ def storage_encrypt_id(id)
 end
 
 def get_project_channel_id(storage_id, project_id)
+  return Project.channel_id_for(storage_id, project_id) if Projects.active_record?
+
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i
@@ -202,24 +206,34 @@ end
 
 # Returns first user storage ID row matching query
 def get_user_storage_id(query)
+  return ProjectStorage.find_by(query) if Projects.active_record?
+
   user_storage_ids_table.where(query).first
 end
 
 # Takes an array of user ids and returns a mapping from user id to storage id
 def get_storage_ids_by_user_ids(user_ids)
+  return ProjectStorage.storage_ids_by_user_id(user_ids) if Projects.active_record?
+
   user_storage_ids_table.where({user_id: user_ids}).select_hash(:user_id, :id)
 end
 
 # Takes an array of user ids and returns a mapping from storage id to user id
 def get_user_ids_by_storage_ids(user_ids)
+  return ProjectStorage.user_ids_by_storage_id(user_ids) if Projects.active_record?
+
   user_storage_ids_table.where({user_id: user_ids}).select_hash(:id, :user_id)
 end
 
 def update_annoymous_user_storage_id(storage_id, user_id)
+  return ProjectStorage.claim_anonymous(storage_id, user_id) if Projects.active_record?
+
   user_storage_ids_table.where(id: storage_id, user_id: nil).update(user_id: user_id)
 end
 
 def create_storage_id_for_user(user_id = nil, anon_user_id: nil)
+  return ProjectStorage.create_for_user(user_id, anon_user_id:) if Projects.active_record?
+
   # We don't have any existing storage id we can associate with this user, so create a new one
   user_storage_ids_table.insert(user_id:, anon_user_id:)
 rescue Sequel::UniqueConstraintViolation
@@ -232,6 +246,8 @@ end
 
 # Used in tests only
 def delete_storage_id_for_user(user_id)
+  return ProjectStorage.where(user_id: user_id).delete_all if Projects.active_record?
+
   user_storage_ids_table.where(user_id: user_id).delete
 end
 

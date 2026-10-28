@@ -16,6 +16,11 @@ class Projects
   class PublishError < StandardError
   end
 
+  # Read on every call, never at load time: DCDO is not safe to read while the application initializes.
+  def self.active_record?
+    DCDO.get('projects-active-record', false)
+  end
+
   def initialize(storage_id)
     @storage_id = storage_id
 
@@ -23,6 +28,10 @@ class Projects
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
+    if Projects.active_record?
+      return Project.create_channel(@storage_id, value, ip:, type:, published_at:, remix_parent_id:, standalone:, level:)
+    end
+
     validate_thumbnail_url(nil, value['thumbnailUrl'])
 
     project_type = type || level&.project_type
@@ -51,6 +60,8 @@ class Projects
   end
 
   def delete(channel_id)
+    return Project.delete_channel(@storage_id, channel_id) if Projects.active_record?
+
     owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
@@ -63,6 +74,8 @@ class Projects
   end
 
   def restore(channel_id)
+    return Project.restore_channel(@storage_id, channel_id) if Projects.active_record?
+
     owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
@@ -73,6 +86,8 @@ class Projects
   end
 
   def get(channel_id)
+    return Project.get_channel(@storage_id, channel_id) if Projects.active_record?
+
     begin
       owner, project_id = get_storage_id_and_project_id(channel_id)
     rescue ArgumentError, OpenSSL::Cipher::CipherError => exception
@@ -100,6 +115,10 @@ class Projects
   end
 
   def update(channel_id, value, ip_address, project_type: nil, locale: 'en')
+    if Projects.active_record?
+      return Project.update_channel(@storage_id, channel_id, value, ip_address, project_type:, locale:)
+    end
+
     owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
@@ -132,6 +151,8 @@ class Projects
   end
 
   def publish(channel_id, type, user)
+    return Project.publish_channel(@storage_id, channel_id, type) if Projects.active_record?
+
     owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
@@ -146,21 +167,21 @@ class Projects
   end
 
   def get_active_projects
+    return Project.where(storage_id: @storage_id).active if Projects.active_record?
+
     Projects.table.where(storage_id: @storage_id, state: 'active')
   end
 
-  def get_projects_with_state(state: 'active', order: nil)
-    query = Projects.table.where(storage_id: @storage_id, state: state)
+  def get_projects_with_state(state: 'active')
+    return Project.where(storage_id: @storage_id, state: state).order(updated_at: :desc) if Projects.active_record?
 
-    if order.present?
-      query.order(order)
-    end
-
-    query
+    Projects.table.where(storage_id: @storage_id, state: state).order(Sequel.desc(:updated_at))
   end
 
   # Returns an array of all ids for projects with storage id = @storage_id
   def get_all_project_ids
+    return Project.where(storage_id: @storage_id).pluck(:id) if Projects.active_record?
+
     Projects.table.
       where(storage_id: @storage_id).
       map(:id)
@@ -168,6 +189,8 @@ class Projects
 
   # Soft-delete all of the projects for user with storage id @storage_id
   def soft_delete_all
+    return Project.soft_delete_all_for_storage(@storage_id) if Projects.active_record?
+
     Projects.table.
       where(storage_id: @storage_id).
       exclude(state: 'deleted').
@@ -176,6 +199,8 @@ class Projects
 
   # Restores all of this user's projects that were soft-deleted after the given time
   def restore_if_deleted_after(deleted_time)
+    return Project.restore_for_storage_if_deleted_after(@storage_id, deleted_time) if Projects.active_record?
+
     Projects.table.
       where(storage_id: @storage_id, state: 'deleted').
       where(Sequel.lit('updated_at >= ?', deleted_time.localtime)).
@@ -188,6 +213,8 @@ class Projects
   end
 
   def unpublish(channel_id)
+    return Project.unpublish_channel(@storage_id, channel_id) if Projects.active_record?
+
     owner, project_id = get_storage_id_and_project_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
@@ -227,6 +254,10 @@ class Projects
   end
 
   def users_paired_on_level?(project_id, current_user_id, owner_user_id, owner_storage_id)
+    if Projects.active_record?
+      return Project.users_paired_on_level?(project_id, current_user_id, owner_user_id, owner_storage_id)
+    end
+
     channel_tokens_table = DASHBOARD_DB[:channel_tokens]
     level_id_row = channel_tokens_table.where(storage_app_id: project_id, storage_id: owner_storage_id).first
     return false if level_id_row.nil?
@@ -244,6 +275,8 @@ class Projects
   end
 
   def increment_abuse(channel_id, amount, override_frozen = false)
+    return Project.increment_abuse(channel_id, amount, override_frozen) if Projects.active_record?
+
     _owner, project_id = get_storage_id_and_project_id(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
@@ -268,6 +301,8 @@ class Projects
   end
 
   def reset_abuse(channel_id)
+    return Project.reset_abuse(channel_id) if Projects.active_record?
+
     _owner, project_id = get_storage_id_and_project_id(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
@@ -280,6 +315,8 @@ class Projects
   end
 
   def to_a
+    return Project.channels_for_storage(@storage_id) if Projects.active_record?
+
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').filter_map do |row|
       channel_id = get_project_channel_id(row[:storage_id], row[:id])
       begin
@@ -296,6 +333,8 @@ class Projects
 
   # Find the encrypted channel token for most recent project of the given level type.
   def most_recent(key, include_hidden = false)
+    return Project.most_recent_channel(@storage_id, key, include_hidden) if Projects.active_record?
+
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
       parsed = JSON.parse(i[:value])
       (include_hidden || !parsed['hidden']) && !parsed['frozen'] && parsed['level'].split('/').last == key
@@ -304,13 +343,6 @@ class Projects
     end
 
     get_project_channel_id(row[:storage_id], row[:id]) if row
-  end
-
-  # Find the encrypted channel token for most recent project of the given project_type.
-  def most_recent_project_type(type)
-    row = @table.where(storage_id: @storage_id, project_type: type).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).first
-    return nil unless row
-    JSON.parse(row[:value])['id']
   end
 
   # Returns the row value with 'id' and 'isOwner' merged from input params, and
@@ -364,6 +396,8 @@ class Projects
   #   chronological order, up to the provided limit.
   #
   def self.remix_ancestry(channel_id, depth: 1)
+    return Project.remix_ancestry(channel_id, depth:) if Projects.active_record?
+
     [].tap do |ancestors|
       _, project_id = get_storage_id_and_project_id(channel_id)
       next_row = Projects.table.where(id: project_id).first
@@ -378,6 +412,8 @@ class Projects
   end
 
   def self.get_abuse(channel_id)
+    return Project.abuse_score_for(channel_id) if Projects.active_record?
+
     _, project_id = get_storage_id_and_project_id(channel_id)
     project_info = Projects.table.where(id: project_id).first
     project_info[:abuse_score]
@@ -385,6 +421,8 @@ class Projects
 
   # Returns projects with id in ids
   def self.get_by_ids(ids)
+    return Project.where(id: ids) if Projects.active_record?
+
     Projects.table.where(id: ids)
   end
 
