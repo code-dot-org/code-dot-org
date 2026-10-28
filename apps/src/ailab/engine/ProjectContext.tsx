@@ -15,7 +15,7 @@ import {
   sortByColumnOrder,
 } from './helpers/projectColumns';
 import {useAppSelector} from './hooks';
-import {getSelectableColumns} from './selectors';
+import {getData, getSelectableColumns} from './selectors';
 import type {TrainingRun} from './trainers/types';
 import {defaultProject, type AilabProject} from './types';
 import {useResetSignal} from './useResetSignal';
@@ -74,15 +74,12 @@ export const ProjectProvider = ({
   const isProjectLoading =
     pendingProject !== undefined && datasetSelectionPending;
   const isDefaultProject = project === defaultProject;
-  const data = useAppSelector(state => state.data);
+  const data = useAppSelector(getData);
   const presetColumns = useAppSelector(state => state.presetColumns);
   const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
-  const columnsByDataType = useAppSelector(state => state.columnsByDataType);
-  const datasetDescribed =
-    data.length > 0 &&
-    Object.keys(data[0]).every(column => columnsByDataType[column]);
+  const datasetLoaded = useAppSelector(state => !!state.dataset);
 
   useResetSignal(
     useCallback(() => {
@@ -197,11 +194,11 @@ export const ProjectProvider = ({
   }, [initialProject]);
 
   useEffect(() => {
-    if (pendingProject && datasetDescribed) {
+    if (pendingProject && datasetLoaded) {
       setPendingProject(undefined);
       applyProject(pendingProject);
     }
-  }, [pendingProject, datasetDescribed, applyProject]);
+  }, [pendingProject, datasetLoaded, applyProject]);
 
   // TODO: skip notifying on project change if the change is due to on-load
   // reconciliation of the project with the saved state, as that is not a user

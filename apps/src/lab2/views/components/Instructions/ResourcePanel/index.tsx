@@ -402,6 +402,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             isPredictLevel={isPredictLevel}
             aiTutorActive={currentTab === Tabs.AiTutor}
             instructionsPinned={instructionsInAiTutor}
+            spotlightInstructions={!!levelProperties.spotlightInstructions}
           />
         );
       } else {
