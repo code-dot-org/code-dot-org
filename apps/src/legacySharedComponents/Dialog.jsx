@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -7,8 +8,6 @@ import locale from '@cdo/locale';
 import {childrenOfType, whenNoChildOfTypes} from '../propTypes';
 import BaseDialog from '../templates/BaseDialog';
 import color from '../util/color';
-
-import LegacyButton from './LegacyButton';
 
 export const styles = {
   icon: {
@@ -65,25 +64,27 @@ Body.propTypes = {
   children: PropTypes.node,
 };
 
-export function Confirm(props) {
-  let {type, ...other} = props;
-  type = type || 'primary';
+export function Confirm({type, children, ...other}) {
   return (
-    <LegacyButton type={type} {...other}>
-      {props.children || locale.dialogOK()}
-    </LegacyButton>
+    <MuiButton
+      variant="contained"
+      color={type === 'danger' ? 'error' : 'primary'}
+      {...other}
+    >
+      {children || locale.dialogOK()}
+    </MuiButton>
   );
 }
 Confirm.propTypes = {
   children: PropTypes.node,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['primary', 'danger']),
 };
 
-export function Cancel(props) {
+export function Cancel({children, ...other}) {
   return (
-    <LegacyButton type="cancel" {...props}>
-      {props.children || locale.dialogCancel()}
-    </LegacyButton>
+    <MuiButton variant="outlined" color="secondary" {...other}>
+      {children || locale.dialogCancel()}
+    </MuiButton>
   );
 }
 Cancel.propTypes = {
