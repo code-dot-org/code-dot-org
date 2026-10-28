@@ -2,6 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
@@ -457,22 +458,24 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             {/* Students make a new image rather than replacing one in
                   place; the regenerate path stays for the advanced dialog. */}
             {advanced && (
-              <button
-                type="button"
-                className={moduleStyles.button}
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
                 onClick={() => setView('generate')}
               >
-                <FontAwesomeV6Icon iconName="sparkles" />
                 Generate with AI
-              </button>
+              </MuiButton>
             )}
-            <button
-              type="button"
-              className={moduleStyles.primaryButton}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
               onClick={onClose}
             >
               {imageChanged ? 'Accept' : 'Done'}
-            </button>
+            </MuiButton>
           </div>
         </>
       )}

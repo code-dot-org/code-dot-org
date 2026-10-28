@@ -3,6 +3,7 @@
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Popover from '@code-dot-org/component-library/popover';
+import {Button as MuiButton} from '@mui/material';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
 import {POSE_MARK, SentPrompts} from './sentPrompts';
@@ -100,10 +101,12 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             } as React.CSSProperties)
       }
     >
-      <button
-        type="button"
+      <MuiButton
+        variant="text"
+        color="tertiary"
+        size="small"
         ref={linkRef}
-        className={styles.promptLink}
+        startIcon={<FontAwesomeV6Icon iconName="circle-info" aria-hidden />}
         aria-expanded={open}
         aria-controls={open ? PANEL_ID : undefined}
         disabled={disabled}
@@ -112,9 +115,8 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           setOpen(current => !current);
         }}
       >
-        <FontAwesomeV6Icon iconName="circle-info" aria-hidden />
         {TITLE}
-      </button>
+      </MuiButton>
       {open && (
         <Popover
           id={PANEL_ID}

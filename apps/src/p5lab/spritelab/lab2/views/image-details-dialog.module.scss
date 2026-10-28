@@ -220,13 +220,6 @@
   @include chrome.footer;
 
   font-size: 14px;
-
-  button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
 }
 
 .footerLeft {
@@ -234,20 +227,6 @@
   align-items: center;
   gap: 10px;
   margin-right: auto;
-}
-
-.button {
-  @include chrome.plain-button;
-}
-
-.primaryButton {
-  @include chrome.plain-button;
-  @include chrome.primary-button;
-}
-
-.dangerButton {
-  @include chrome.plain-button;
-  @include chrome.danger-button;
 }
 
 .iconButton {
