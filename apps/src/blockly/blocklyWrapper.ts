@@ -695,6 +695,9 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
+    if (options.maxFlyoutShare) {
+      workspace.maxFlyoutShare = options.maxFlyoutShare;
+    }
 
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.

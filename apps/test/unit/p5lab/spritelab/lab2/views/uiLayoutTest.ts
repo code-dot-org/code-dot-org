@@ -11,6 +11,7 @@ describe('readUiLayout', () => {
       guideUnderPreview: false,
       switchAtStart: true,
       editors: ['Images', 'World', 'Code'],
+      previewShare: 0.22,
     });
   });
 
@@ -21,6 +22,7 @@ describe('readUiLayout', () => {
       guideUnderPreview: true,
       switchAtStart: false,
       editors: ['Code', 'World', 'Images'],
+      previewShare: 1 / 3,
     });
   });
 

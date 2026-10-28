@@ -198,6 +198,9 @@ interface PlayspaceProps {
   below?: React.ReactNode;
   /** Which edge the preview column sits at; the code keeps the rest. */
   side?: 'left' | 'right';
+  /** The column's share of the browser's width; PREVIEW_WIDTH_SHARE
+      unless given. */
+  columnShare?: number;
   // The preview column's width, which the code keeps clear of.
   onPreviewWidth?: (width: number) => void;
 }
@@ -221,6 +224,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   columnHeader,
   below,
   side = 'right',
+  columnShare = PREVIEW_WIDTH_SHARE,
   onPreviewWidth,
   getDefaultSpriteSize,
   onPreviewClick,
@@ -399,7 +403,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // editing view gave it. The browser's width, not the playspace's: the
   // panels left of the workspace count against the code, not the preview.
   const browserWidth = window.innerWidth || size.w;
-  const share = Math.round(browserWidth * PREVIEW_WIDTH_SHARE);
+  const share = Math.round(browserWidth * columnShare);
   // The room under the box: the bar, the gap and the card.
   const belowRoomFor = (card: number) =>
     (playBar ? BAR_ROOM : 0) + (below ? CARD_GAP + card : 0);

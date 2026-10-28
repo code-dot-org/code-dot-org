@@ -18,7 +18,16 @@ export interface UiLayout {
   switchAtStart: boolean;
   /** The switch's editors, in order. */
   editors: Editor[];
+  /** The preview column's share of the browser's width. */
+  previewShare: number;
 }
+
+// Beside a 280 px panel at a 1280 px window this leaves the workspace
+// about 720 px: free play's widest toolbox block and widest stack side
+// by side.
+const PREVIEW_SHARE = 0.22;
+// The earlier layout's column.
+const CLASSIC_PREVIEW_SHARE = 1 / 3;
 
 /** A query parameter's value, by name. */
 export type ParamReader = (name: string) => unknown;
@@ -31,6 +40,7 @@ export function readUiLayout(param: ParamReader = queryParams): UiLayout {
       guideUnderPreview: true,
       switchAtStart: false,
       editors: ['Code', 'World', 'Images'],
+      previewShare: CLASSIC_PREVIEW_SHARE,
     };
   }
   return {
@@ -39,5 +49,6 @@ export function readUiLayout(param: ParamReader = queryParams): UiLayout {
     guideUnderPreview: false,
     switchAtStart: true,
     editors: ['Images', 'World', 'Code'],
+    previewShare: PREVIEW_SHARE,
   };
 }

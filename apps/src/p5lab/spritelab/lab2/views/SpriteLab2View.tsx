@@ -521,10 +521,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [tabs, enabledTabs, picturesOffered]
   );
   // The lab's layout; `?ui=classic` brings back the earlier one.
-  const {previewSide, guideUnderPreview, switchAtStart, editors} = useMemo(
-    () => readUiLayout(),
-    []
-  );
+  const {previewSide, guideUnderPreview, switchAtStart, editors, previewShare} =
+    useMemo(() => readUiLayout(), []);
   // The instructions live in the guide or in the panel, never both; the
   // panel offers no other tab while it carries them.
   const panelLevelProperties = useMemo(
@@ -2111,7 +2109,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         hasEdited={hasEdited}
         settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
         className={classNames(
-          !panelIsSidebar && moduleStyles.instructionsArea,
+          !panelIsSidebar &&
+            (guideUnderPreview
+              ? moduleStyles.instructionsArea
+              : moduleStyles.instructionsColumn),
           panelIsSidebar && moduleStyles.resourceSidebar
         )}
         sidebarOnly={panelIsSidebar}
@@ -2283,6 +2284,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               columnHeader={<EditorStrip title="Preview" />}
               onPreviewWidth={setPreviewWidth}
               side={previewSide}
+              columnShare={previewShare}
               controls={
                 <PlayControls
                   // On a pinned-scene level the game IS the one scene, so no

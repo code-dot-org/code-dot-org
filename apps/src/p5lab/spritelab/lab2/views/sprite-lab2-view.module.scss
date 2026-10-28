@@ -20,6 +20,13 @@
   min-width: 25%;
 }
 
+// The panel's column in the default layout: a fixed width, so the
+// workspace keeps the room its blocks need as the window narrows.
+.instructionsColumn {
+  flex: 0 0 280px;
+  min-width: 280px;
+}
+
 .divider {
   width: 1px;
   height: 100%;

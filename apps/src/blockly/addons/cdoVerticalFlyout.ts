@@ -2,6 +2,10 @@ import * as BlocklyCore from 'blockly/core';
 
 import {ExtendedWorkspaceSvg} from '../types';
 
+// The flyout's widest share of the workspace, unless the workspace's
+// options say otherwise.
+const DEFAULT_MAX_FLYOUT_SHARE = 0.4;
+
 export default class VerticalFlyout extends BlocklyCore.VerticalFlyout {
   /**
    * @override
@@ -33,11 +37,14 @@ export default class VerticalFlyout extends BlocklyCore.VerticalFlyout {
         this.targetWorkspace as ExtendedWorkspaceSvg
       )
     ) {
-      // Constrain the flyout to not be wider than 40% of the total main workspace space.
+      // Constrain the flyout to a share of the total main workspace space.
+      const share =
+        (mainWorkspace as ExtendedWorkspaceSvg | undefined)?.maxFlyoutShare ??
+        DEFAULT_MAX_FLYOUT_SHARE;
       flyoutWidth = Math.min(
         flyoutWidth,
         // Before the modal editor workspace is opened, its svg metrics are unreliable.
-        mainWorkspace?.getMetricsManager().getSvgMetrics().width * 0.4
+        mainWorkspace?.getMetricsManager().getSvgMetrics().width * share
       );
     }
 
