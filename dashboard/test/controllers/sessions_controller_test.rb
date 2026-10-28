@@ -258,10 +258,6 @@ class SessionsControllerTest < ActionController::TestCase
     assert_select '.alert', 0
   end
 
-  private def enable_sso_nudge
-    DCDO.set('sso_nudge_enabled', true)
-  end
-
   test "users go to code.org after logging out" do
     student = create(:student)
     sign_in student
@@ -469,5 +465,9 @@ class SessionsControllerTest < ActionController::TestCase
         password: user.password
       }
     }
+  end
+
+  private def enable_sso_nudge
+    DCDO.set('sso_nudge_enabled', true)
   end
 end
