@@ -552,7 +552,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     );
     observer.observe(bar);
     return () => observer.disconnect();
-  }, [playBar]);
+    // The bar's node comes and goes with the prop, not with its contents.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [!!playBar]);
   useLayoutEffect(() => {
     if (animate) {
       barRef.current?.animate?.(

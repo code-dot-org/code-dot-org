@@ -1,3 +1,5 @@
+@use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
+
 $mark-size: 22px;
 // The instructions panel's body size, so the checklist reads as its text.
 $text-size: 14px;
@@ -103,10 +105,5 @@ $line-height: 1.4;
 }
 
 .srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+  @include chrome.sr-only;
 }

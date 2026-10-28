@@ -63,7 +63,7 @@ const ObjectivesList: React.FunctionComponent<ObjectivesListProps> = ({
             );
             return (
               <li
-                key={item.id ?? index}
+                key={index}
                 className={classNames(
                   styles.item,
                   item.done && styles.itemDone

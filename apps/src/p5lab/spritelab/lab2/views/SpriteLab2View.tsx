@@ -21,7 +21,6 @@ import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
@@ -547,7 +546,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The pane slides between the column's edge and the full width as its
   // tab comes and goes.
   const picturesSlide = usePaneSlide(
-    activeTab === 'Images',
+    guideUnderPreview && activeTab === 'Images',
     previewWidth,
     pictures.sheetRef
   );
@@ -690,19 +689,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     everPlayed: playProgress.everPlayed,
     runtime: playProgress.runtime,
   });
-  // The checklist as the instructions panel shows it.
-  const panelChecklist = useMemo<ObjectivesChecklist | undefined>(
-    () =>
-      objectives.active
-        ? {
-            title: objectives.title,
-            items: objectives.items,
-            allDone: objectives.allDone,
-            collapsedText: objectives.collapsedText,
-          }
-        : undefined,
-    [objectives]
-  );
 
   // The World palette selection lives here so it survives leaving the tab
   // (WorldTab unmounts when hidden).
@@ -1488,6 +1474,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       fadeIn(pictures.sheetRef.current);
     }
   }, [activeTab, fadeIn, guideUnderPreview, pictures.sheetRef]);
+  // The Images sheet mounts a render after its tab first comes up, when the
+  // effect above found nothing to fade.
+  useEffect(() => {
+    if (pictures.mounted && activeTab === 'Images' && tabBeforeRef.current) {
+      fadeIn(pictures.sheetRef.current);
+    }
+    // Only the mount should fade here; the tab effect covers later switches.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pictures.mounted]);
   // The world's wrapper first mounts a render after its tab comes up, when
   // the effect above found nothing to fade.
   const worldWrapperMounted = useCallback(
@@ -2175,7 +2170,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         sidebarOnly={panelIsSidebar}
         // The checklist and the Continue gate ride in the panel unless
         // the guide carries them.
-        objectives={guideUnderPreview ? undefined : panelChecklist}
+        objectives={
+          guideUnderPreview || !objectives.active ? undefined : objectives
+        }
         hideContinueIfDisabled={!guideUnderPreview}
         footerButtons={
           isEditable && (
