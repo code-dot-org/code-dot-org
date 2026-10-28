@@ -15,9 +15,7 @@ export type CsvResult =
 export const parseCsvText = (csv: string): CsvResult =>
   readRows(Papa.parse<Record<string, string>>(csv, PARSE_OPTIONS));
 
-/*
-  Fetches a csv we own. Resolves even when the fetch fails.
-*/
+// Fetches a csv we own. Resolves even when the fetch fails.
 export const fetchCsv = async (url: string): Promise<CsvResult> => {
   try {
     const response = await fetch(url);
