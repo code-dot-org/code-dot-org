@@ -8,6 +8,7 @@ class SecretsTest < Minitest::Test
       stub_responses: {
         batch_get_secret_value: lambda do |ctx|
           ids = ctx.params[:secret_id_list]
+          return 'ValidationException' if ids.any?(&:empty?)
           found, missing = ids.partition {|id| @values[id]}
           {
             secret_values: found.map {|id| {name: id, secret_string: @values[id]}},
@@ -100,6 +101,15 @@ class SecretsTest < Minitest::Test
     @values['a'] = '1'
     assert_equal '1', @secrets.get!('a')
     assert_equal %w(a), requested_ids(:get_secret_value)
+  end
+
+  def test_empty_key_is_not_batched
+    @values['a'] = '1'
+    @secrets.required('a', '')
+    assert_equal '1', @secrets.get!('a')
+    assert_equal [%w(a)], requested_ids
+    assert_raises(Cdo::Secrets::NOT_FOUND) {@secrets.get!('')}
+    assert_equal [''], requested_ids(:get_secret_value)
   end
 
   def test_required

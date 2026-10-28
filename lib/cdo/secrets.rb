@@ -148,6 +148,9 @@ module Cdo
     # @param keys[Array<String>]
     # @return [Hash<String, String>] Secret names and their values
     private def batch_get_secret_values(client, keys)
+      # An empty ID (a StackSecret on a host outside a Stack) fails the whole request; leave it to GetSecretValue.
+      keys = keys.reject(&:empty?)
+      return {} if keys.empty?
       response = client.batch_get_secret_value(secret_id_list: keys)
       # The SDK returns nil, not [], for a list absent from the response.
       Array(response.secret_values).to_h {|secret| [secret.name, secret.secret_string]}
