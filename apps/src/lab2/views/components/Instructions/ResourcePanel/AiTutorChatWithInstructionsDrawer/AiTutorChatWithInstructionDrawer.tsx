@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -9,6 +9,7 @@ import AiTutorChat, {
   AiTutorChatProps,
 } from '@cdo/apps/lab2/views/components/AiTutorChat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import Spotlight from '@cdo/apps/lab2/views/components/Spotlight';
 
 import {useInstructionsDrawer} from './useInstructionsDrawer';
 
@@ -30,6 +31,13 @@ type AiTutorChatWithInstructionDrawerProps = Omit<
   // The instructions stay open above the chat, with no Show/Hide toggle and
   // no resize bar; with instructionsText, as a message from the tutor.
   instructionsPinned?: boolean;
+  // Spotlight the pinned instructions once, when the drawer mounts.
+  spotlightInstructions?: boolean;
+};
+
+// Gray, so students do not read the instructions as the tutor speaking.
+const instructionsMessageStyles = {
+  'message-assistant': styles.instructionsMessage,
 };
 
 const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
@@ -40,9 +48,14 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   isPredictLevel,
   aiTutorActive,
   instructionsPinned = false,
+  spotlightInstructions = false,
   ...aiTutorChatProps
 }) => {
   const instructionsAsMessage = instructionsPinned && !!instructionsText;
+  const [spotlightDone, setSpotlightDone] = useState(false);
+  const endSpotlight = useCallback(() => setSpotlightDone(true), []);
+  const spotlit =
+    spotlightInstructions && instructionsAsMessage && !spotlightDone;
   const {
     containerRef,
     instructionsScrollAreaRef,
@@ -146,7 +159,11 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
         >
           <div ref={instructionsContentRef}>
             {instructionsAsMessage ? (
-              <ChatMessage role={Role.ASSISTANT} text={instructionsText!} />
+              <ChatMessage
+                role={Role.ASSISTANT}
+                text={instructionsText!}
+                customStyles={instructionsMessageStyles}
+              />
             ) : (
               instructionsContent
             )}
@@ -156,6 +173,9 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
           <div className={styles.scrollFade} aria-hidden />
         )}
       </div>
+      {spotlit && (
+        <Spotlight target={instructionsDrawerRef} onDone={endSpotlight} />
+      )}
       {!instructionsPinned && (
         <div
           className={classNames(

@@ -122,6 +122,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     recordValidation,
     aiContext,
   } = usePathwayContext();
+  // Read on mount, before StepPlayer's start of this visit gives it a status.
+  const [firstVisit] = useState(() => !progress.steps[step.id]?.status);
   // Keyed on the project's strings, not the channel, which changes on every save.
   const {name: projectName, description: projectDescription} =
     projectInfoFromChannel(step.project ? channel : undefined);
@@ -162,8 +164,9 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share
-  // and remix, and pathway-specific tutor context that gets appendd to the level
-  // system prompt.
+  // and remix, spotlight the instructions on a first visit in place of the
+  // lab's product tours, and pathway-specific tutor context that gets appendd
+  // to the level system prompt.
   const viewProperties = useMemo<LevelProperties>(() => {
     const context = buildTutorContext({
       pathway,
@@ -182,6 +185,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       ...levelProperties,
       hideShareAndRemix: true,
       hideNonInstructionTabs: true,
+      spotlightInstructions: firstVisit,
+      disableProductTours: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
     };
@@ -195,6 +200,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectDescription,
     instructions,
     latestValidationAttempt,
+    firstVisit,
   ]);
 
   // The lab's own Continue button advances the step. A step whose work is
