@@ -234,6 +234,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const [size, setSize] = useState({w: 0, h: 0});
   // The height the docked instructions need, from their content.
   const [belowNeed, setBelowNeed] = useState(0);
+  // The bar's height, measured: one row of small buttons until it wraps.
+  const [barHeight, setBarHeight] = useState(SMALL_BUTTON_PX);
   const belowObserver = useRef<ResizeObserver | null>(null);
   const belowContentRef = useCallback((el: HTMLDivElement | null) => {
     belowObserver.current?.disconnect();
@@ -404,9 +406,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   // panels left of the workspace count against the code, not the preview.
   const browserWidth = window.innerWidth || size.w;
   const share = Math.round(browserWidth * columnShare);
-  // The room under the box: the bar, the gap and the card.
+  // The room under the box: the bar, the gap and the card. The bar's
+  // buttons wrap on a narrow column, so its room follows its height.
+  const barRoom = playBar ? barHeight + BAR_GAP : 0;
   const belowRoomFor = (card: number) =>
-    (playBar ? BAR_ROOM : 0) + (below ? CARD_GAP + card : 0);
+    barRoom + (below ? CARD_GAP + card : 0);
   // A taller need shrinks the box, never widens the column, which would
   // reflow the text taller again.
   let columnWidth = share;
@@ -432,7 +436,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   if (below && boxWidth < PREVIEW_MIN_PX) {
     const maxColumn = Math.round(browserWidth * PREVIEW_WIDTH_MAX_SHARE);
     const besideWidth = Math.min(
-      size.h - topRoom - 2 * CARD_GAP - (playBar ? BAR_ROOM : 0),
+      size.h - topRoom - 2 * CARD_GAP - barRoom,
       maxColumn - BESIDE_TEXT_MIN_PX - 3 * CARD_GAP
     );
     if (besideWidth > boxWidth && besideWidth >= BESIDE_BOX_MIN_PX) {
@@ -458,8 +462,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     beside && side === 'left'
       ? previewPlacement.x + previewBoxSide + CARD_GAP
       : columnLeft + CARD_GAP;
-  const belowRoomTop =
-    previewPlacement.y + previewBoxSide + BAR_ROOM + CARD_GAP;
+  const belowRoomTop = previewPlacement.y + previewBoxSide + barRoom + CARD_GAP;
   const belowRoom = size.h - belowRoomTop - CARD_GAP;
   const belowHeight = Math.min(belowNeed + 2 * CARD_BORDER_PX, belowRoom);
   const belowCard: React.CSSProperties = beside
@@ -507,7 +510,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
 
   const placement: Placement =
     mode === 'play'
-      ? playPlacement(size, cardGuide, playBar ? BAR_ROOM : 0, 0, side)
+      ? playPlacement(size, cardGuide, barRoom, 0, side)
       : previewPlacement;
   const {x, y, scale} = placement;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
@@ -539,6 +542,17 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   const visible = measured && !settledHidden;
   // The bar waits unseen at its destination and fades in once the box arrives.
   const barRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const bar = barRef.current;
+    if (!bar || typeof ResizeObserver !== 'function') {
+      return;
+    }
+    const observer = new ResizeObserver(() =>
+      setBarHeight(Math.max(SMALL_BUTTON_PX, Math.round(bar.offsetHeight)))
+    );
+    observer.observe(bar);
+    return () => observer.disconnect();
+  }, [playBar]);
   useLayoutEffect(() => {
     if (animate) {
       barRef.current?.animate?.(

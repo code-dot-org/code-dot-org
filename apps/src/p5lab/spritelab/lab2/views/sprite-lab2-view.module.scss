@@ -905,13 +905,20 @@ $z-over-blockly: 71;
   top: 0;
   left: 0;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 16px;
   pointer-events: none;
 
+  // On a narrow column a button's text wraps; the button grows with it
+  // and the bar's measured height makes room.
   button {
     pointer-events: auto;
+    height: auto;
+    min-height: 2rem;
+    white-space: normal;
+    line-height: 1.25;
+    text-align: center;
   }
 }
 

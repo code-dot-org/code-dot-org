@@ -91,6 +91,7 @@ import {
 import {runtimeNeeds, WorkspaceSource} from '../objectives';
 import {requestPicture} from '../picturePicker';
 import {countImagesByType, imageCountsDelta} from '../projectCounts';
+import {reducedMotion} from '../reducedMotion';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -260,6 +261,9 @@ interface SpriteLab2ViewProps {
   // Used for keying effects off of sources reinitializing.
   sourcesReinitializedCount: number;
 }
+
+// An editor fading in as its tab comes up: quick, so a tab is never slow.
+const TAB_FADE_MS = 180;
 
 // ?layout=N picks a world layout by index, for seeing each one on demand.
 function layoutOverrideParam(): number | undefined {
@@ -1444,7 +1448,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // worldMounted: the world's wrapper can first render after the last change.
   const stageRef = useRef<HTMLDivElement>(null);
   const codeWrapperRef = useRef<HTMLDivElement>(null);
-  const worldWrapperRef = useRef<HTMLDivElement>(null);
+  const worldWrapperRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     if (stageRef.current) {
       stageRef.current.inert = stageCovered;
@@ -1456,6 +1460,45 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       worldWrapperRef.current.inert = activeTab !== 'World';
     }
   }, [stageCovered, activeTab, worldMounted]);
+
+  // An editor fades in as its tab comes up. The editors stay mounted and
+  // are unclipped to show, so the fade is by hand; never on arrival.
+  const fadeIn = useCallback((editor: HTMLElement | null) => {
+    if (!reducedMotion()) {
+      editor?.animate?.([{opacity: 0}, {opacity: 1}], {
+        duration: TAB_FADE_MS,
+        easing: 'ease-out',
+      });
+    }
+  }, []);
+  const shownTabRef = useRef<Tab | null>(null);
+  const tabBeforeRef = useRef<Tab | null>(null);
+  useEffect(() => {
+    const from = shownTabRef.current;
+    shownTabRef.current = activeTab;
+    if (!from || from === activeTab) {
+      return;
+    }
+    tabBeforeRef.current = from;
+    if (activeTab === 'Code') {
+      fadeIn(codeWrapperRef.current);
+    } else if (activeTab === 'World') {
+      fadeIn(worldWrapperRef.current);
+    } else if (activeTab === 'Images' && !guideUnderPreview) {
+      fadeIn(pictures.sheetRef.current);
+    }
+  }, [activeTab, fadeIn, guideUnderPreview, pictures.sheetRef]);
+  // The world's wrapper first mounts a render after its tab comes up, when
+  // the effect above found nothing to fade.
+  const worldWrapperMounted = useCallback(
+    (wrapper: HTMLDivElement | null) => {
+      worldWrapperRef.current = wrapper;
+      if (wrapper && tabBeforeRef.current) {
+        fadeIn(wrapper);
+      }
+    },
+    [fadeIn]
+  );
 
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
@@ -2240,7 +2283,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           costly part. */}
             {/* Images: kept mounted, and off to the right rather than
             clipped while another editor shows, where a pick's dialog can
-            still open inside it. */}
+            still open inside it. It covers the preview too; the classic
+            layout slides it in from the column's edge, the default fades
+            it in like the other editors. */}
             {pictures.mounted && (
               <div
                 ref={pictures.sheetRef}
@@ -2251,17 +2296,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   moduleStyles.codeTabWrapper,
                   moduleStyles.picturesEditor,
                   editorsShown && moduleStyles.underEditorStrip,
-                  picturesSlide.parked && moduleStyles.picturesEditorParked
+                  (guideUnderPreview
+                    ? picturesSlide.parked
+                    : activeTab !== 'Images') &&
+                    moduleStyles.picturesEditorParked
                 )}
-                style={picturesSlide.style}
-                onTransitionEnd={picturesSlide.onTransitionEnd}
+                style={guideUnderPreview ? picturesSlide.style : undefined}
+                onTransitionEnd={
+                  guideUnderPreview ? picturesSlide.onTransitionEnd : undefined
+                }
               >
                 <GenerateImagePane {...imagePaneProps} />
               </div>
             )}
             {worldTabEnabled && worldMounted && (
               <div
-                ref={worldWrapperRef}
+                ref={worldWrapperMounted}
                 className={classNames(
                   moduleStyles.codeTabWrapper,
                   editorsShown && moduleStyles.underEditorStrip,
