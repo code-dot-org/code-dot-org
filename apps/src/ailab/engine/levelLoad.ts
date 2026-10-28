@@ -7,7 +7,6 @@ import {
   setMode,
   setCurrentPanel,
   setSelectedCSV,
-  setSelectedJSON,
   setSelectedName,
   setReserveLocation,
   resetState,
@@ -51,7 +50,6 @@ const processMode = (mode: Mode | undefined): void => {
 
   store.dispatch(setSelectedName(item.name));
   store.dispatch(setSelectedCSV(assetPath + item.path));
-  store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
   loadDataset(assetPath + item.path, assetPath + item.metadataPath);
 
   store.dispatch(setCurrentPanel('datasetView'));

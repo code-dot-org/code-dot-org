@@ -65,4 +65,12 @@ class SequelTest < Minitest::Test
     assert_equal uri, uri.gsub('mysql:', 'mysql2:')
     assert_equal 'mysql:pw', URI::DEFAULT_PARSER.unescape(URI.parse(uri).password)
   end
+
+  # Nitro v6 instances drop the server's replies on TCP flows idle for 350s.
+  def test_database_connection_pool_expires_connections_before_nitro_idle_timeout
+    db = Cdo::Sequel.database_connection_pool('mysql2://root@localhost/dashboard')
+    assert_operator db.pool.connection_expiration_timeout, :<, 350
+  ensure
+    db&.disconnect
+  end
 end

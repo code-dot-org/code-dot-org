@@ -45,10 +45,7 @@ $(document).ready(function () {
         curriculaTaught={curriculaTaught}
       />
     </Provider>,
-    document.getElementById('curriculum-catalog-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('curriculum-catalog-container')
   );
   displayDifferentiationChat();
 });

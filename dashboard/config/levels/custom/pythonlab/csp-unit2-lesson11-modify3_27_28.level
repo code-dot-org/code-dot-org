@@ -1,0 +1,402 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-28T04:50:05.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "explainCode",
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+        "documentation": "Also cover methods from the neighborhood module (e.g. can_move(), has_paint(), is_on_bucket(), is_on_paint(), take_paint(), turn_left()) using the same placeholder rules as built-ins.",
+        "explainCode": "Only explain code the student has already written and run. Do not describe what ready_to_paint or needs_supplies should contain, or preview what either variable’s value will be before the student has written and tested it themselves.",
+        "hint": "Do not state which function not should apply to in ready_to_paint or needs_supplies — deciding that is the point of the task. Point toward re-reading the instruction’s two clauses (e.g. “True if standing on a bucket, or True if out of paint”) rather than toward a specific line of code."
+      }
+    },
+    "long_instructions": "# Modify: Check Before You Move\r\n\r\nYour Task: This painter is facing south, and a traffic cone is right in front of it. The program tells the Painter to move anyway. Make the program handle the cone.\r\n\r\nDo This:\r\n\r\n1. Run the program. What happens when the Painter moves into the cone? Read the error message.\r\n2. Add an `if` so the Painter only moves when `can_move()` is True. Run it again. What happens now? Why does the Painter just stand there?\r\n3. Add an `else` branch that makes the Painter turn when it can't move.\r\n4. Use Validate to check your work.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from neighborhood import *\n\n# Painter setup: these lines point the Painter south\nturn_left()\nturn_left()\nturn_left()\n\n# Your code goes below\nmove()",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 46
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "mini_app_variant": "functional",
+    "encrypted_exemplar_sources": "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\nxUvUxZSJ0QiqoCciXl/nNu3ExgbPERS+i2wmFvc=\n",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "contents": "import re\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\ndef read_code():\n    with open('main.py') as main_file:\n        return main_file.read()\n\n\nclass TestGuardModify(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and save the results\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        cls.painter = cls.log.painter_logs[0] if cls.log.painter_logs else None\n\n    def test_keeps_the_turns(self):\n        \"\"\"Your program keeps the turns that point the Painter at the cone\"\"\"\n        if len(re.findall(r'turn_left\\s*\\(\\s*\\)', read_code())) < 3:\n            self.fail(\"Keep the three turn_left() lines at the top of the starter code. They point the Painter at the cone.\")\n\n    def test_checks_can_move(self):\n        \"\"\"Your program checks can_move() with an if\"\"\"\n        if not re.search(r'^\\s*if\\s+.*can_move\\s*\\(', read_code(), re.MULTILINE):\n            self.fail(\"Add an if that checks can_move() before the Painter moves, like if can_move():\")\n\n    def test_uses_else(self):\n        \"\"\"Your program uses an else branch\"\"\"\n        if not re.search(r'^\\s*else\\s*:', read_code(), re.MULTILINE):\n            self.fail(\"This level asks you to add an else branch. Add else: after your if, with an indented line that tells the Painter what to do.\")\n\n    def test_painter_turned(self):\n        \"\"\"Your Painter turns when it can't move\"\"\"\n        if self.painter is None:\n            self.skipTest(\"Your code didn't run far enough to check yet. Make sure the starter code is still there and run again.\")\n        self.assertNotEqual(\n            self.painter.ending_position.direction.lower(),\n            \"south\",\n            \"Right now your Painter ends facing south, the way it was facing at the cone. The else only runs when the Painter can't move forward, so make it turn.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "teacher_markdown": "Misconceptions and what to test for:\r\n\r\n- The starter crashes on purpose. The Painter moves into the cone and the console shows \"Painter tried to move off the grid or into an obstacle.\" Ask students to say what the Painter did wrong before they change anything.\r\n- The three turn_left() lines are the L19 right turn. They point the Painter south, directly at the cone.\r\n- After the if guard, the Painter stands still, because can_move() is False and the if branch is skipped. Ask: \"Which branch ran?\" and \"Why isn't the Painter doing anything?\"\r\n- One turn_left() from facing south faces east, along the open top row. Ask: \"Which way is the Painter facing now, and can it move?\"\r\n- A student who puts move() in the else will crash again. The else runs exactly when the Painter can't move. Ask: \"Why did the else cause the same error?\"\r\n- Forgetting the colon after else, or not indenting the line under it, is the most common error.\r\n- Else never takes a condition. Writing else not can_move(): is a syntax error.\r\n- A second if not can_move(): works, but the level asks for an else. Ask: \"What are the two ways to write this?\"\r\n- can_move(\"south\") also works. Accept it.\r\n- Validate checks the structure and the Painter's final direction. It does not detect an error that happens after the else, so a student whose program still crashes will see it in the console.\r\n- If a student uses Build Python, they still own the program. Ask them to explain which branch ran.\r\n\r\nValidation checks that the program keeps the three turn_left() lines, uses an if with can_move(), uses an else, and ends facing a different direction than south."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-28T04:50:05.759+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson11-modify2_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson11-modify2_27_28\"},{\"changed_at\":\"2026-10-28 04:54:07 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 04:56:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 04:56:56 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 04:57:58 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"serialized_maze\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 04:59:09 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 04:59:45 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 05:33:53 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"serialized_maze\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 05:35:59 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 05:38:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 05:41:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

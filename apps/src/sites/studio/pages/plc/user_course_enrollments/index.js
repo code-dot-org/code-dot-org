@@ -9,8 +9,5 @@ createReactRoot(
   <ProfessionalLearningCourseProgress
     deeperLearningCourseData={userCourseEnrollmentData}
   />,
-  document.getElementById('user-course-enrollment-container'),
-  {
-    legacyReactDomRender: true,
-  }
+  document.getElementById('user-course-enrollment-container')
 );
