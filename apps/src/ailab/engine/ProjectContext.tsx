@@ -202,7 +202,9 @@ export const ProjectProvider = ({
     }
   }, [pendingProject, datasetLoaded, applyProject]);
 
-  // Opening reconciles the saved project with the dataset; that is not an edit.
+  // Only report project changes that are not the initial opened project
+  // or the default project. Those are not real edits by students, and would
+  // be recreated on a reload.
   useEffect(() => {
     if (
       isProjectLoaded &&
