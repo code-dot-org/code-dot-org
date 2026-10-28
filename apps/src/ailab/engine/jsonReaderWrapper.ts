@@ -14,6 +14,7 @@ export const fetchMetadata = (jsonfile: string): Promise<MetadataResult> =>
     rawFile.onerror = failed;
     rawFile.ontimeout = failed;
     rawFile.onreadystatechange = function () {
+      // State 4 means the request is done, any other state means the request is still in progress.
       if (rawFile.readyState !== 4) {
         return;
       }

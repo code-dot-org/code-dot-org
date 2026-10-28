@@ -19,10 +19,8 @@ import type {
   TrainedModelDetailsSave,
 } from './types';
 
-/*
-  Stand-ins for a dataset that has not loaded, returned by identity to
-  preserve reference equality for memoization.
-*/
+// Static constants used as values when the dataset is not loaded.
+// Use these rather than a fresh [] or {} to ensure reference equality.
 const NO_ROWS: DataRow[] = Object.freeze([]) as unknown as DataRow[];
 const NO_COLUMN_TYPES: Record<string, string> = Object.freeze({});
 const NO_METADATA: Metadata = Object.freeze({card: Object.freeze({})});
