@@ -138,6 +138,18 @@ describe('QuestionResultCard', () => {
     ).not.toBeInTheDocument();
   });
 
+  it('tags a skipped question as skipped', () => {
+    renderCard({correct: false, correctChoiceId: '1'});
+
+    expect(screen.getByText('Skipped')).toBeInTheDocument();
+  });
+
+  it('does not tag an answered question as skipped', () => {
+    renderCard({responseData: {selectedChoiceId: '1'}, correct: true});
+
+    expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
+  });
+
   it('renders the question description as markdown', () => {
     renderCard(
       {},
@@ -263,6 +275,12 @@ describe('QuestionResultCard', () => {
       ).toBeInTheDocument();
       expect(screen.queryByText(/is (in)?correct/)).toBeNull();
     });
+
+    it('tags an empty selection as skipped', () => {
+      renderMsCard({responseData: {selectedChoiceIds: []}});
+
+      expect(screen.getByText('Skipped')).toBeInTheDocument();
+    });
   });
 
   describe('free response', () => {
@@ -273,6 +291,22 @@ describe('QuestionResultCard', () => {
       questionTitle: 'Why does the loop stop?',
       page: 1,
     };
+
+    it('tags an empty answer as skipped', () => {
+      render(
+        <QuestionResultCard
+          question={FR_QUESTION}
+          result={{
+            ...BASE_RESULT,
+            questionType: 'FreeResponseQuestion',
+            quizQuestionId: 2,
+            responseData: {},
+          }}
+        />
+      );
+
+      expect(screen.getByText('Skipped')).toBeInTheDocument();
+    });
 
     it("shows the student's answer text, without a choice list", () => {
       render(
