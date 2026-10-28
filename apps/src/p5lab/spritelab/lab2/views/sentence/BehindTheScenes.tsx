@@ -1,12 +1,13 @@
 // Under the frame once a picture is back: a link to a panel with the words
 // the model got, and for a set a second tab with the posed frames' words.
 
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Popover from '@code-dot-org/component-library/popover';
 import Tabs from '@code-dot-org/component-library/tabs';
 import {Button as MuiButton} from '@mui/material';
 import React, {useLayoutEffect, useRef, useState} from 'react';
+
+import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 
 import {POSE_MARK, SentPrompts} from './sentPrompts';
 
@@ -36,8 +37,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
   disabled,
 }) => {
   const [open, setOpen] = useState(false);
-  // Optional: the unit tests render without a theme.
-  const {theme} = useTheme(true);
+  const mode = useThemeMode();
   const [tab, setTab] = useState<Tab>('picture');
   const linkRef = useRef<HTMLButtonElement>(null);
   const rowRef = useRef<HTMLDivElement>(null);
@@ -46,9 +46,16 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
     setOpen(false);
     linkRef.current?.focus();
   };
-  // For the key handler below, which outlives a render.
-  const tabRef = useRef(tab);
-  tabRef.current = tab;
+  // The tabs component has no arrow keys of its own.
+  const onTabKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
+      return;
+    }
+    e.preventDefault();
+    const next: Tab = tab === 'picture' ? 'poses' : 'picture';
+    setTab(next);
+    document.getElementById(`sentence-prompt-tab-${next}`)?.focus();
+  };
   useLayoutEffect(() => {
     if (!open) {
       return;
@@ -74,21 +81,10 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
       row?.querySelector<HTMLElement>('button[aria-label="Close"]')
     )?.focus();
     window.addEventListener('resize', measure);
-    // The tabs component has no arrow keys of its own.
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setOpen(false);
         linkRef.current?.focus();
-      } else if (
-        (e.key === 'ArrowLeft' || e.key === 'ArrowRight') &&
-        e.target instanceof HTMLElement &&
-        e.target.getAttribute('role') === 'tab' &&
-        rowRef.current?.contains(e.target)
-      ) {
-        e.preventDefault();
-        const next: Tab = tabRef.current === 'picture' ? 'poses' : 'picture';
-        setTab(next);
-        document.getElementById(`sentence-prompt-tab-${next}`)?.focus();
       }
     };
     document.addEventListener('keydown', onKeyDown);
@@ -138,21 +134,24 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           onClose={close}
         >
           {sent.poses && (
-            <Tabs
-              // Its ids: sentence-prompt-tab-<value> and -panel-<value>.
-              name="sentence-prompt"
-              size="s"
-              mode={theme === 'Dark' ? 'dark' : 'light'}
-              hidePanels
-              tabsContainerClassName={styles.promptTabs}
-              defaultSelectedTabValue={tab}
-              onChange={value => setTab(value as Tab)}
-              tabs={TABS.map(([id, label]) => ({
-                value: id,
-                text: label,
-                tabContent: null,
-              }))}
-            />
+            <div onKeyDown={onTabKeyDown}>
+              <Tabs
+                // Its ids: sentence-prompt-tab-<value> and -panel-<value>.
+                name="sentence-prompt"
+                size="s"
+                mode={mode}
+                tabListAriaLabel="Which words"
+                hidePanels
+                tabsContainerClassName={styles.promptTabs}
+                defaultSelectedTabValue={tab}
+                onChange={value => setTab(value as Tab)}
+                tabs={TABS.map(([id, label]) => ({
+                  value: id,
+                  text: label,
+                  tabContent: null,
+                }))}
+              />
+            </div>
           )}
           {sent.poses && tab === 'poses' ? (
             <div

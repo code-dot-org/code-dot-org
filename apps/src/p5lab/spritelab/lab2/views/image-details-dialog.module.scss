@@ -12,7 +12,7 @@
 .dialogHost {
   display: contents;
 
-  // The host carries data-theme; the chrome colors follow it.
+  // The chrome's palette, on the page's tokens.
   @include chrome.theme;
 }
 
@@ -120,7 +120,7 @@
   left: 8px;
   padding: 2px 8px;
   border-radius: 4px;
-  background: color-mix(in srgb, var(--neutral-base-black) 45%, transparent);
+  background: color-mix(in srgb, var(--neutral-base-true-black) 45%, transparent);
   color: var(--text-neutral-white-fixed);
   font-size: 13px;
   // The page gives every span user-select: text.

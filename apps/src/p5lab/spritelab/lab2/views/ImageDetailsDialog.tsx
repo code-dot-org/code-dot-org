@@ -1,10 +1,11 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
+
+import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 
 import {GeneratedImageResult} from '../ai/images/imageGeneration';
 import {
@@ -152,8 +153,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   onSelectAlternative,
 }) => {
   const isNew = animKey === null;
-  const {theme} = useTheme();
-  const mode = theme === 'Dark' ? 'dark' : 'light';
+  const mode = useThemeMode();
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );
@@ -486,9 +486,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   );
 
   return (
-    // data-theme drives both the chrome's own colors and the design
-    // system's semantic colors inside the panel (the TextField reads them).
-    <div className={moduleStyles.dialogHost} data-theme={mode}>
+    <div className={moduleStyles.dialogHost}>
       <CustomDialog
         aria-label={title}
         onClose={onClose}

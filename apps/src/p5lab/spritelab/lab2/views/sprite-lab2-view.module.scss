@@ -922,7 +922,7 @@ $z-over-blockly: 71;
 
   &:hover,
   &:focus-visible {
-    background: color-mix(in srgb, var(--neutral-base-black) 28%, transparent);
+    background: color-mix(in srgb, var(--neutral-base-true-black) 28%, transparent);
   }
 
   &:hover::after,
@@ -948,17 +948,18 @@ $z-over-blockly: 71;
 // Scene-jump transition (scenes UI variant): sceneCover blanks the canvas the
 // instant a jump triggers and holds while the target loads; sceneFade takes
 // over when it lands and fades out, revealing the new scene.
+// Theatre black, whatever the brand.
 .sceneCover {
   position: absolute;
   inset: 0;
-  background: var(--background-neutral-black-fixed);
+  background: var(--neutral-base-true-black);
   pointer-events: none;
 }
 
 .sceneFade {
   position: absolute;
   inset: 0;
-  background: var(--background-neutral-black-fixed);
+  background: var(--neutral-base-true-black);
   opacity: 0;
   animation: scene-fade-in 0.45s ease-out;
   pointer-events: none;
@@ -982,7 +983,7 @@ $z-over-blockly: 71;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--neutral-base-black) 55%, transparent);
+  background: color-mix(in srgb, var(--neutral-base-true-black) 55%, transparent);
   opacity: 0;
   animation: scene-loading-fade-in 0.4s ease-in 1.5s both;
   pointer-events: none;

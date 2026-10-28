@@ -44,6 +44,16 @@ $panel-text: var(--dialog-panel-text);
     var(--text-neutral-primary) 16%,
     transparent
   );
+
+  // On the dark theme the panel sits two steps above the page, a readable
+  // gray rather than near-black, and its controls step up with it.
+  [data-theme='Dark'] & {
+    --dialog-panel-bg: var(--background-neutral-tertiary);
+    --dialog-control-bg: var(--background-neutral-quaternary);
+    --dialog-inset-bg: var(--background-neutral-quaternary);
+    --dialog-hover-bg: var(--background-neutral-quinary);
+    --dialog-active-bg: var(--background-neutral-senary);
+  }
 }
 
 // One high-contrast keyboard focus ring for everything in the panel; UA
