@@ -120,8 +120,8 @@
   left: 8px;
   padding: 2px 8px;
   border-radius: 4px;
-  background: rgb(0 0 0 / 45%);
-  color: #fff;
+  background: color-mix(in srgb, var(--neutral-base-black) 45%, transparent);
+  color: var(--text-neutral-white-fixed);
   font-size: 13px;
   // The page gives every span user-select: text.
   user-select: none;

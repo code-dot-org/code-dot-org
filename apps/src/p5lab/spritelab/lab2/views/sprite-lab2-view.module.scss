@@ -284,7 +284,7 @@ $z-over-blockly: 71;
 
   .sceneThumb {
     color: var(--text-neutral-white-fixed);
-    background: rgb(255 255 255 / 25%);
+    background: color-mix(in srgb, var(--neutral-base-white) 25%, transparent);
   }
 }
 
@@ -696,7 +696,7 @@ $z-over-blockly: 71;
   }
 
   a {
-    color: #8ab4f8;
+    color: var(--text-info-primary);
   }
 }
 
@@ -914,7 +914,7 @@ $z-over-blockly: 71;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: var(--text-neutral-white-fixed);
     font-size: 32px;
     opacity: 0;
     transition: opacity 0.12s ease-in;
@@ -922,7 +922,7 @@ $z-over-blockly: 71;
 
   &:hover,
   &:focus-visible {
-    background: rgb(0 0 0 / 28%);
+    background: color-mix(in srgb, var(--neutral-base-black) 28%, transparent);
   }
 
   &:hover::after,
@@ -951,14 +951,14 @@ $z-over-blockly: 71;
 .sceneCover {
   position: absolute;
   inset: 0;
-  background: #000;
+  background: var(--background-neutral-black-fixed);
   pointer-events: none;
 }
 
 .sceneFade {
   position: absolute;
   inset: 0;
-  background: #000;
+  background: var(--background-neutral-black-fixed);
   opacity: 0;
   animation: scene-fade-in 0.45s ease-out;
   pointer-events: none;
@@ -982,7 +982,7 @@ $z-over-blockly: 71;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(0 0 0 / 55%);
+  background: color-mix(in srgb, var(--neutral-base-black) 55%, transparent);
   opacity: 0;
   animation: scene-loading-fade-in 0.4s ease-in 1.5s both;
   pointer-events: none;
@@ -991,8 +991,8 @@ $z-over-blockly: 71;
 .sceneLoadingSpinner {
   width: 48px;
   height: 48px;
-  border: 5px solid rgb(255 255 255 / 30%);
-  border-top-color: #fff;
+  border: 5px solid color-mix(in srgb, var(--neutral-base-white) 30%, transparent);
+  border-top-color: var(--borders-neutral-white-fixed);
   border-radius: 50%;
   animation: scene-loading-spin 0.9s linear infinite;
 }
