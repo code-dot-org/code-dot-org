@@ -19,14 +19,12 @@ const JS_LOCALE_FALLBACKS: Record<string, string> = Object.fromEntries(
 );
 
 /**
- * Returns jsLocale, its fallback, and the default locale, in that order and
- * without duplicates, for looking up resources that exist for some locales.
- * The caller tries each in turn; none is known to have the resource.
+ * Returns locales to try in order: jsLocale, its fallback, then the default.
  *
  * @param jsLocale js locale, lowercase with an underscore (en_in, not en-IN)
- * @returns js locales in order, e.g. ['es_la', 'es_mx', 'en_us'] for es_la
+ * @returns e.g. ['es_la', 'es_mx', 'en_us'] for es_la
  */
-export function getJsLocaleFallbacks(jsLocale: string): string[] {
+export function getJsLocaleCandidates(jsLocale: string): string[] {
   const locales = [jsLocale];
 
   const fallback = JS_LOCALE_FALLBACKS[jsLocale];

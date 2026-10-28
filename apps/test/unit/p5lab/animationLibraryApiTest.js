@@ -117,6 +117,11 @@ describe('animationLibraryApi', () => {
 
     beforeEach(() => {
       fetchSpy.resolves({ok: false, status: 404});
+      sinon.stub(console, 'warn');
+    });
+
+    afterEach(() => {
+      console.warn.restore();
     });
 
     it('returns manifest for locale', async () => {
@@ -131,6 +136,9 @@ describe('animationLibraryApi', () => {
       expect(await getManifest('spritelab', 'es_la')).to.deep.equal({
         locale: 'es_mx',
       });
+      expect(console.warn).calledOnceWith(
+        sinon.match('animation manifest for locale es_la')
+      );
     });
 
     it('returns default manifest when locale and its fallback have none', async () => {

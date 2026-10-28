@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {getJsLocaleFallbacks} from '@cdo/apps/util/locale';
+import {getJsLocaleCandidates} from '@cdo/apps/util/locale';
 
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
@@ -79,12 +79,25 @@ class PiskelEditor extends React.Component {
    * @private
    */
   setPiskelLocale_() {
-    const win = this.iframe.contentWindow;
-    const locales = getJsLocaleFallbacks(this.props.localeCode);
+    const {localeCode} = this.props;
 
+    const win = this.iframe.contentWindow;
+    const locales = getJsLocaleCandidates(localeCode);
+
+    let piskelLocale;
     Object.defineProperty(win, 'piskel_locale', {
       configurable: true,
-      get: () => locales.find(locale => win.piskel_locales?.[locale]),
+      get: () => {
+        if (!piskelLocale) {
+          piskelLocale = locales.find(locale => win.piskel_locales?.[locale]);
+
+          if (piskelLocale !== localeCode) {
+            console.warn(`No Piskel strings for locale ${localeCode}`);
+          }
+        }
+
+        return piskelLocale;
+      },
     });
   }
 

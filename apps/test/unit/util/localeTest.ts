@@ -1,6 +1,6 @@
 import {
   JS_DEFAULT_LOCALE,
-  getJsLocaleFallbacks,
+  getJsLocaleCandidates,
   toJsLocale,
 } from '@cdo/apps/util/locale';
 
@@ -11,9 +11,9 @@ describe('locale', () => {
     });
   });
 
-  describe('getJsLocaleFallbacks', () => {
+  describe('getJsLocaleCandidates', () => {
     it('returns locale, its fallback, and default locale', () => {
-      expect(getJsLocaleFallbacks('es_la')).toEqual([
+      expect(getJsLocaleCandidates('es_la')).toEqual([
         'es_la',
         'es_mx',
         'en_us',
@@ -21,11 +21,11 @@ describe('locale', () => {
     });
 
     it('omits missing fallback', () => {
-      expect(getJsLocaleFallbacks('or_in')).toEqual(['or_in', 'en_us']);
+      expect(getJsLocaleCandidates('or_in')).toEqual(['or_in', 'en_us']);
     });
 
     it('omits duplicates', () => {
-      expect(getJsLocaleFallbacks(JS_DEFAULT_LOCALE)).toEqual([
+      expect(getJsLocaleCandidates(JS_DEFAULT_LOCALE)).toEqual([
         JS_DEFAULT_LOCALE,
       ]);
     });

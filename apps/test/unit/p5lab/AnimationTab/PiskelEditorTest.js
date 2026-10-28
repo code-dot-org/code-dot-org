@@ -2,14 +2,41 @@ import {UnconnectedPiskelEditor as PiskelEditor} from '@cdo/apps/p5lab/Animation
 
 describe('PiskelEditor', () => {
   describe('setPiskelLocale_', () => {
-    function piskelLocale(localeCode, piskelLocales) {
+    let warn;
+
+    beforeEach(() => {
+      warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    });
+
+    afterEach(() => {
+      warn.mockRestore();
+    });
+
+    function piskelWindow(localeCode, piskelLocales) {
       const editor = new PiskelEditor({localeCode});
       const win = {};
       editor.iframe = {contentWindow: win};
       editor.setPiskelLocale_();
       win.piskel_locales = piskelLocales;
-      return win.piskel_locale;
+      return win;
     }
+
+    function piskelLocale(localeCode, piskelLocales) {
+      return piskelWindow(localeCode, piskelLocales).piskel_locale;
+    }
+
+    it('warns once when Piskel has no strings for locale', () => {
+      const win = piskelWindow('es_la', {en_us: {}, es_mx: {}});
+      expect(win.piskel_locale).toBe('es_mx');
+      expect(win.piskel_locale).toBe('es_mx');
+      expect(warn).toHaveBeenCalledTimes(1);
+      expect(warn).toHaveBeenCalledWith('No Piskel strings for locale es_la');
+    });
+
+    it('does not warn when Piskel has strings for locale', () => {
+      piskelLocale('es_mx', {en_us: {}, es_mx: {}});
+      expect(warn).not.toHaveBeenCalled();
+    });
 
     it('uses locale Piskel has strings for', () => {
       expect(piskelLocale('es_mx', {en_us: {}, es_mx: {}})).toBe('es_mx');
