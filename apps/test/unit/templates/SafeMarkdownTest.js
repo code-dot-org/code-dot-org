@@ -426,6 +426,23 @@ describe('SafeMarkdown', () => {
     expect(wrapper.equals(<div />)).toBe(true);
   });
 
+  it('keeps styles it can parse', () => {
+    const wrapper = shallow(
+      <SafeMarkdown markdown='<p style="text-indent: 10px;">Indented</p>' />
+    );
+
+    expect(wrapper.html()).toContain('style="text-indent:10px"');
+  });
+
+  it('drops styles instead of throwing when one cannot be parsed', () => {
+    const wrapper = shallow(
+      <SafeMarkdown markdown='<p style="color: red;">Red</p> like <code><p style="..."></code>' />
+    );
+
+    expect(wrapper.html()).toContain('Red');
+    expect(wrapper.html()).not.toContain('style=');
+  });
+
   it('handles whitespace', () => {
     // Test with full mount to reproduce the React runtime error "Nothing was returned from render..."
     const emptyWhitespace = mount(<SafeMarkdown markdown="" />);

@@ -20,6 +20,7 @@ import {WeakMapPlus} from '../util/dataStructures/WeakMapPlus';
 import externalLinks from './plugins/externalLinks';
 import localizeMarkdownParagraphs from './plugins/localizeMarkdownParagraphs';
 import notranslateMarkdownParagraphs from './plugins/notranslateMarkdownParagraphs';
+import stripStyles from './plugins/stripStyles';
 
 /**
  * Basic component for rendering a markdown string as HTML, with sanitization.
@@ -76,7 +77,9 @@ class SafeMarkdown extends React.Component {
       this.props.localized ?? true
     );
 
-    const rendered = Object(processor.processSync(this.props.markdown).result);
+    const rendered = Object(
+      processMarkdown(processor, this.props.markdown).result
+    );
 
     const markdownProps = {};
     if (this.props.className) {
@@ -314,6 +317,26 @@ const markdownToReactWithEmbedsAndExternalLinks = (rehypeMap, localized) => {
   }
 
   return cache.get(rehypeMap);
+};
+
+// rehype-react throws on a style attribute it cannot parse, such as an AI
+// reply quoting `<p style="...">`. Rendering without styles beats crashing.
+const processMarkdown = (processor, markdown) => {
+  try {
+    return processor.processSync(markdown);
+  } catch {
+    return withoutStyles(processor).processSync(markdown);
+  }
+};
+
+const styleFreeProcessorCache = new WeakMap();
+
+const withoutStyles = processor => {
+  if (!styleFreeProcessorCache.has(processor)) {
+    styleFreeProcessorCache.set(processor, processor().use(stripStyles));
+  }
+
+  return styleFreeProcessorCache.get(processor);
 };
 
 export default SafeMarkdown;
