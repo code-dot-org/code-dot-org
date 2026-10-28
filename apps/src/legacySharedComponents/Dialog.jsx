@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import locale from '@cdo/locale';
@@ -113,9 +112,9 @@ Footer.propTypes = {
   children: PropTypes.node,
 };
 
-export var Icon = Radium(function Icon({src}) {
-  return <span style={[styles.icon, {backgroundImage: `url(${src})`}]} />;
-});
+export function Icon({src}) {
+  return <span style={{...styles.icon, backgroundImage: `url(${src})`}} />;
+}
 Icon.propTypes = {
   src: PropTypes.string.isRequired,
 };
