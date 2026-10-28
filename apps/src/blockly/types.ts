@@ -213,9 +213,6 @@ export interface ExtendedWorkspaceSvg extends BlocklyCore.WorkspaceSvg {
   globalVariables: string[];
   sourceGlobalVariables: string[];
   noFunctionBlockFrame: boolean;
-  /** Width the workspace keeps beside the flyout, px; the flyout may
-      pass its usual share of the workspace up to that (cdoVerticalFlyout.ts). */
-  workspaceMinWidth?: number;
   events: {
     dispatchEvent: () => void;
   };
@@ -238,9 +235,6 @@ export interface ExtendedBlocklyOptions extends BlocklyCore.BlocklyOptions {
   editBlocks: string | undefined;
   topLevelProcedureAutopopulate: boolean | undefined;
   noFunctionBlockFrame: boolean;
-  /** Lets the flyout pass its usual share of the workspace as long as the
-      workspace keeps this many px beside it (cdoVerticalFlyout.ts). */
-  workspaceMinWidth?: number;
   useModalFunctionEditor: boolean;
   useBlocklyDynamicCategories: boolean;
   grayOutUndeletableBlocks: boolean | undefined;

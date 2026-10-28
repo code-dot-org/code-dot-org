@@ -695,9 +695,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
-    if (options.workspaceMinWidth) {
-      workspace.workspaceMinWidth = options.workspaceMinWidth;
-    }
 
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.

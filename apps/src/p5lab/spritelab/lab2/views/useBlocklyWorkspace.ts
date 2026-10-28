@@ -27,10 +27,6 @@ import {STACK_ROOM_EVENT_GROUP, watchStackRoom} from '../stackRoom';
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
 
 const NO_BLOCK_TYPES: ReadonlySet<string> = new Set();
-// The flyout may pass the wrapper's share of the workspace, which clipped
-// free play's widest toolbox block at a 1280 px window, as long as this
-// much workspace is left for a stack beside it.
-const WORKSPACE_MIN_WIDTH = 320;
 
 // In toolbox edit mode the roles swap: the toolbox offers every available block
 // (so any of them can be added to the level's toolbox), and the workspace holds
@@ -161,9 +157,6 @@ export default function useBlocklyWorkspace({
       trashcan: true,
       customSimpleDialog,
       editBlocks: getAppOptionsEditBlocks(),
-      // The workspace is narrow beside the panel and the preview, and the
-      // widest toolbox block must still show whole.
-      workspaceMinWidth: WORKSPACE_MIN_WIDTH,
     } as BlocklyCore.BlocklyOptions);
 
     // Drags onto a placeholder keep the placeholder showing, not a marker.
