@@ -124,6 +124,7 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_equal 1, body['score']
     assert_equal 1, body['maxScore']
     result = body['questionResults'].first
+    assert result['answered']
     assert result['correct']
     assert_equal 'because math', result['explanation']
     assert_equal 'b', result['correctChoiceId']

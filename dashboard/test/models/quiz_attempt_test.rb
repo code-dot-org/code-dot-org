@@ -125,6 +125,21 @@ class QuizAttemptTest < ActiveSupport::TestCase
     assert_equal({correctChoiceId: 'b'}, result[:answer_key])
   end
 
+  test "question_results reports whether each response was answered" do
+    quiz = create(:quiz)
+    answered_question = create(:multiple_choice_question)
+    skipped_question = create(:multiple_select_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: answered_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: skipped_question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: answered_question, response_data: {'selectedChoiceId' => 'b'})
+    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: skipped_question, response_data: {'selectedChoiceIds' => []})
+
+    results = attempt.question_results.index_by {|result| result[:quiz_question_id]}
+    assert results[answered_question.id][:answered]
+    refute results[skipped_question.id][:answered]
+  end
+
   test "question_results overrides can reveal correctness/explanation regardless of the quiz's own settings" do
     quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
     question = create(:multiple_choice_question, explanation: 'because math')
