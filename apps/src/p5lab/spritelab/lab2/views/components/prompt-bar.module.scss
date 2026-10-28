@@ -4,14 +4,14 @@
   @include sr-only;
 }
 
-// A band across the bottom of the game, as classic Sprite Lab's was.
 .promptBar {
   display: flex;
   align-items: flex-end;
   gap: 8px;
+  margin: 0;
   padding: 8px;
   border-top: 1px solid var(--borders-neutral-primary);
-  background: var(--background-neutral-primary);
+  background: var(--background-neutral-secondary);
 }
 
 .promptBar .answerField {
@@ -21,11 +21,12 @@
   input {
     box-sizing: border-box;
     width: 100%;
+    // The design system's brand caret vanishes on a dark input.
+    caret-color: var(--text-neutral-primary);
   }
 }
 
 .submitButton {
   flex-shrink: 0;
-  // Cancel the legacy global button margin.
   margin: 0;
 }
