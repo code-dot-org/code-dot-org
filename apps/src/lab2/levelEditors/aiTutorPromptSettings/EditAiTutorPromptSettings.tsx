@@ -9,7 +9,7 @@ import moduleStyles from './edit-ai-tutor-prompt-settings.module.scss';
 interface PromptSettings {
   answerTypes?: string[];
   answerTypeCustomizations?: Record<string, string>;
-  enableCommitMessages?: boolean;
+  disableCommitMessages?: boolean;
 }
 
 interface EditAiTutorPromptSettingsProps {
@@ -55,7 +55,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   >(promptSettings?.answerTypeCustomizations ?? {});
 
   const [enableCommitMessages, setEnableCommitMessages] = useState(
-    promptSettings?.enableCommitMessages ?? true
+    !promptSettings?.disableCommitMessages
   );
 
   const handleToggle = (answerType: string, checked: boolean) => {
@@ -94,7 +94,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
           answerTypes: Array.from(enabledAnswerTypes),
           answerTypeCustomizations: answerTypeCustomizations,
           // Omitted while on, so levels that never set it serialize unchanged.
-          enableCommitMessages: enableCommitMessages ? undefined : false,
+          disableCommitMessages: enableCommitMessages ? undefined : true,
         })}
         name={'level[ai_tutor_prompt_settings]'}
       />

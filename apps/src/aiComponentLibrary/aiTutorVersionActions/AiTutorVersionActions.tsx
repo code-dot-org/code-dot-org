@@ -25,8 +25,8 @@ import moduleStyles from './ai-tutor-version-actions.module.scss';
 interface AiTutorVersionActionsProps {
   files: ProjectFile[];
   onRequestScrollToBottom: () => void;
-  /** When false, Accept saves at once, with no description. */
-  enableCommitMessages?: boolean;
+  /** When true, Accept saves at once, with no description. */
+  disableCommitMessages?: boolean;
 }
 
 /**
@@ -36,7 +36,7 @@ interface AiTutorVersionActionsProps {
 const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
   files,
   onRequestScrollToBottom,
-  enableCommitMessages = true,
+  disableCommitMessages = false,
 }) => {
   const [commitDescription, setCommitDescription] = useState('');
   const [isAcceptMode, setIsAcceptMode] = useState(false);
@@ -187,9 +187,9 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             className={moduleStyles.actionButton}
             disabled={isSaving}
             onClick={
-              enableCommitMessages
-                ? () => setIsAcceptMode(true)
-                : handleSaveAiTutorVersion
+              disableCommitMessages
+                ? handleSaveAiTutorVersion
+                : () => setIsAcceptMode(true)
             }
             type="button"
             startIcon={

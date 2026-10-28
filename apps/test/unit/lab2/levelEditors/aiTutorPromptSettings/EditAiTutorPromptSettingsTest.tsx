@@ -137,10 +137,10 @@ describe('EditAiTutorPromptSettings', () => {
         />
       );
       expect(toggle()).toBeChecked();
-      expect(serialized(container)).not.toHaveProperty('enableCommitMessages');
+      expect(serialized(container)).not.toHaveProperty('disableCommitMessages');
     });
 
-    it('serializes false once turned off', () => {
+    it('serializes disableCommitMessages once turned off', () => {
       const {container} = render(
         <EditAiTutorPromptSettings
           {...WEBLAB2_PROPS}
@@ -148,14 +148,14 @@ describe('EditAiTutorPromptSettings', () => {
         />
       );
       fireEvent.click(toggle());
-      expect(serialized(container).enableCommitMessages).toBe(false);
+      expect(serialized(container).disableCommitMessages).toBe(true);
     });
 
-    it('loads a saved false as off', () => {
+    it('loads a saved disableCommitMessages as off', () => {
       render(
         <EditAiTutorPromptSettings
           {...WEBLAB2_PROPS}
-          promptSettings={{answerTypes: ['ask'], enableCommitMessages: false}}
+          promptSettings={{answerTypes: ['ask'], disableCommitMessages: true}}
           showCommitMessagesToggle
         />
       );

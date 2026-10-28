@@ -48,7 +48,7 @@ export interface AiTutorChatProps {
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;
   onAssetRemoved?: (asset: ChatAsset) => void;
   initialWelcomeMessage?: string;
-  enableCommitMessages?: boolean;
+  disableCommitMessages?: boolean;
 }
 
 // A free chat with lab-supplied context added to each question.
@@ -70,7 +70,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   onAssetUploaded,
   onAssetRemoved,
   initialWelcomeMessage,
-  enableCommitMessages,
+  disableCommitMessages,
 }) => {
   const viewingAiTutorVersionFileUpdates = useAppSelector(
     isViewingAiTutorVersionFileUpdates
@@ -131,10 +131,10 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
       <AiTutorVersionActions
         files={versionFiles!}
         onRequestScrollToBottom={onRequestScrollToBottom}
-        enableCommitMessages={enableCommitMessages}
+        disableCommitMessages={disableCommitMessages}
       />
     ),
-    [versionFiles, enableCommitMessages]
+    [versionFiles, disableCommitMessages]
   );
 
   const renderLastMessagePostText =

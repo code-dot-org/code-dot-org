@@ -3,8 +3,8 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 export interface AiTutorPromptSettings {
   answerTypes: AiTutorAnswerType[];
   answerTypeCustomizations?: Partial<Record<AiTutorAnswerType, string>>;
-  /** False when accepting AI Tutor changes saves at once, without asking for a description. */
-  enableCommitMessages?: boolean;
+  /** True when accepting AI Tutor changes saves at once, without asking for a description. */
+  disableCommitMessages?: boolean;
 }
 
 export type Widget2 = {
