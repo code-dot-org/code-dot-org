@@ -62,8 +62,8 @@ color` and a `set` row per rule setting, loads them into the headless
 7. **`define world` goes:** the block, its generator, and the tables and
    parent checks that name it (`ROOT_HOMES`, `DEFINING_ROOTS`, the pinned
    and named roots, `worldContext`, `addActorName`, `actorContext`), with
-   `parseWorldOwnMeta` and `use theme`. The unit tests of the block go with
-   it.
+   `parseWorldOwnMeta`, `use theme`, `define layer` and `define event`. The
+   unit tests of the blocks go with them.
 
 Steps 2 and 3 change no output. Steps 4 to 6 change what lessons and tests
 are written in, not what they compile to.
@@ -83,15 +83,17 @@ are written in, not what they compile to.
 - **The Main Screen's code keeps the `'world'` kind** (`markCode`): the
   name is internal, and every reader of it means "the game's own code".
 
+- **Layers are the map's.** A layer is data, like a camera: made in the map
+  editor and kept in the map (`mainMapLayers.screenLayersOf`), not
+  declared in code. `define layer` goes with `define world` (step 7), and
+  Tapper's layer becomes its screen's own (step 5).
+- **`define event` goes.** A screen's events are data, and the editor will
+  make them; a learner's `define event` in a drawer has no place left. Its
+  name stays as a row in an actor's and a rule's view (`viewRows`), and
+  `making/property` stops granting it (step 7).
+
 ## Open
 
-- **Layers.** `define layer` and `within layer` are valid only under
-  `define world` (`actorContext.builderWorldExtension`, `layerPlan`), and
-  Tapper's converted code holds a `define layer`. A screen has layers as
-  data, made in the map editor (`mainMapLayers.screenLayersOf`). Either
-  Tapper's layer becomes the screen's, and both blocks go with `define
-world` — or they find a home in the screen's code.
-- **`define event` in the World drawer.** The survey found the World
-  drawer's `define event` filtered out on the Main Screen, which would make
-  `making/property`'s grant of it a grant of nothing. Not yet checked
-  against what an `.actor` or `.rule` workspace offers.
+- **`within layer`**, which puts what its body places into a layer, is
+  checked only under `define world` today. Whether it names a map's layer
+  from the screen's code, or goes, is settled when step 7 reaches it.
