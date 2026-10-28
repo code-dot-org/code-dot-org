@@ -143,7 +143,9 @@ Resources:
                   - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationMarketingSitesTestRole"
           # Read-only access to secrets.
           - Effect: Allow
-            Action: secretsmanager:GetSecretValue
+            Action:
+              - secretsmanager:GetSecretValue
+              - secretsmanager:BatchGetSecretValue
             Resource: '*'
           # Allow ECS ExecuteCommand on test environment resources only
           - Sid: AllowECSExecuteCommandOnTestResources
@@ -639,6 +641,10 @@ roles.each do |name, config| %>
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
+          # Grants nothing alone: each secret in a batch also requires GetSecretValue.
+          - Effect: Allow
+            Action: secretsmanager:BatchGetSecretValue
+            Resource: '*'
 
   EngineerDataPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -749,6 +755,10 @@ roles.each do |name, config| %>
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/firebase_secret-ngO5yy
+          # Grants nothing alone: each secret in a batch also requires GetSecretValue.
+          - Effect: Allow
+            Action: secretsmanager:BatchGetSecretValue
+            Resource: '*'
 
   # Lets contributors publish new Font Awesome kit builds to dsco.code.org.
   # See frontend/packages/fonts/README.md#updating-fontawesome-files
