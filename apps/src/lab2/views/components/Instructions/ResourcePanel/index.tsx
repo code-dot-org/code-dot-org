@@ -389,6 +389,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         onAssetUploaded,
         onAssetRemoved,
         initialWelcomeMessage,
+        enableCommitMessages:
+          levelProperties.aiTutorPromptSettings?.enableCommitMessages,
       };
       if (usesSharedInstructionsDrawer) {
         tabMap[Tabs.AiTutor] = (

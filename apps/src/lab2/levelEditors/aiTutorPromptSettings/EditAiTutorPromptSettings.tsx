@@ -1,5 +1,5 @@
 import Toggle from '@code-dot-org/component-library/toggle';
-import {Button as MuiButton, Typography} from '@mui/material';
+import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -9,6 +9,7 @@ import moduleStyles from './edit-ai-tutor-prompt-settings.module.scss';
 interface PromptSettings {
   answerTypes?: string[];
   answerTypeCustomizations?: Record<string, string>;
+  enableCommitMessages?: boolean;
 }
 
 interface EditAiTutorPromptSettingsProps {
@@ -20,6 +21,8 @@ interface EditAiTutorPromptSettingsProps {
   legacyMode?: string;
   legacyModeToAnswerType?: Record<string, string[]>;
   instructions?: string;
+  /** Only labs whose tutor proposes file changes for the student to accept. */
+  showCommitMessagesToggle?: boolean;
 }
 
 const DEFAULT_INSTRUCTIONS =
@@ -34,6 +37,7 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   legacyMode,
   legacyModeToAnswerType,
   instructions = DEFAULT_INSTRUCTIONS,
+  showCommitMessagesToggle = false,
 }) => {
   const [enabledAnswerTypes, setEnabledAnswerTypes] = useState<Set<string>>(
     () => {
@@ -49,6 +53,10 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
   const [answerTypeCustomizations, setAnswerTypeCustomizations] = useState<
     Record<string, string>
   >(promptSettings?.answerTypeCustomizations ?? {});
+
+  const [enableCommitMessages, setEnableCommitMessages] = useState(
+    promptSettings?.enableCommitMessages ?? true
+  );
 
   const handleToggle = (answerType: string, checked: boolean) => {
     setEnabledAnswerTypes(prev => {
@@ -79,15 +87,14 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
 
   return (
     <div>
-      <Typography variant="body2" className={moduleStyles.instructions}>
-        {instructions}
-      </Typography>
       <input
         id="level_ai_tutor_prompt_settings"
         type="hidden"
         value={JSON.stringify({
           answerTypes: Array.from(enabledAnswerTypes),
           answerTypeCustomizations: answerTypeCustomizations,
+          // Omitted while on, so levels that never set it serialize unchanged.
+          enableCommitMessages: enableCommitMessages ? undefined : false,
         })}
         name={'level[ai_tutor_prompt_settings]'}
       />
@@ -135,6 +142,16 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
           </div>
         ))}
       </div>
+      {showCommitMessagesToggle && (
+        <div className={moduleStyles.commitMessagesToggle}>
+          <Toggle
+            name="enableCommitMessages"
+            label="Enable commit messages (recommended): accepting AI Tutor changes will prompt for a commit message"
+            checked={enableCommitMessages}
+            onChange={e => setEnableCommitMessages(e.target.checked)}
+          />
+        </div>
+      )}
     </div>
   );
 };
