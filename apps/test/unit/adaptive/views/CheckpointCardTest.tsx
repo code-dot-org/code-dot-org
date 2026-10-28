@@ -67,6 +67,48 @@ describe('CheckpointCard', () => {
     expect(onSelectCheckpoint).toHaveBeenCalledWith('intro');
   });
 
+  it('gives the action button the tour id for non-locked statuses', () => {
+    for (const status of [
+      'available',
+      'inProgress',
+      'complete',
+      'skipped',
+    ] as const) {
+      const {unmount} = render(
+        <CheckpointCard
+          pathway={pathway}
+          checkpoint={intro}
+          status={status}
+          statusMap={{intro: status, details: 'locked'}}
+          evidence={{}}
+          onStart={jest.fn()}
+          onSelectCheckpoint={jest.fn()}
+        />
+      );
+      expect(
+        document.getElementById('adaptive-checkpoint-card-start')
+      ).not.toBeNull();
+      unmount();
+    }
+  });
+
+  it('renders no action button (and no tour id) when status is locked', () => {
+    render(
+      <CheckpointCard
+        pathway={pathway}
+        checkpoint={intro}
+        status="locked"
+        statusMap={{intro: 'locked', details: 'locked'}}
+        evidence={{}}
+        onStart={jest.fn()}
+        onSelectCheckpoint={jest.fn()}
+      />
+    );
+    expect(
+      document.getElementById('adaptive-checkpoint-card-start')
+    ).toBeNull();
+  });
+
   it('ends the sentence after the skills when nothing has been shown', () => {
     render(
       <CheckpointCard
