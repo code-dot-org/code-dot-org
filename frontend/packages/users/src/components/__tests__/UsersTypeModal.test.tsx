@@ -6,6 +6,7 @@ import {createQueryClient, QueryClientProvider} from '@code-dot-org/core/api';
 import type {UserType} from '@code-dot-org/core/api';
 import {mockServer} from '@code-dot-org/core/api/mocks/server';
 
+import {EMAIL_OPT_IN_REQUIRED} from '../EmailOptInField';
 import UsersTypeModal from '../UsersTypeModal';
 
 function renderModal(prospectiveType: UserType, onClose = vi.fn()) {
@@ -64,6 +65,28 @@ describe('UsersTypeModal', () => {
     expect(
       screen.getByRole('button', {name: /change to educator/i}),
     ).toBeDisabled();
+  });
+
+  it('does not show the required error before the question is touched', () => {
+    renderModal('teacher');
+    expect(screen.queryByText(EMAIL_OPT_IN_REQUIRED)).not.toBeInTheDocument();
+  });
+
+  it('shows the required error when submitted unanswered', () => {
+    let requested = false;
+    mockServer.use(
+      http.patch('*/users/user_type', () => {
+        requested = true;
+        return new HttpResponse(null, {status: 204});
+      }),
+    );
+    renderModal('teacher');
+    fireEvent.change(emailField()!, {target: {value: 'new@teacher.org'}});
+    const form = emailField()!.closest('form');
+    fireEvent.submit(form!);
+
+    expect(screen.getByRole('alert')).toHaveTextContent(EMAIL_OPT_IN_REQUIRED);
+    expect(requested).toBe(false);
   });
 
   it('sends the email and hashed email when changing to educator', async () => {

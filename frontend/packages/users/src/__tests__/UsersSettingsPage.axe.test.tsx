@@ -178,6 +178,20 @@ describe('UsersSettingsPage — accessibility', () => {
     expect(await auditBody()).toHaveNoViolations();
   });
 
+  it('has no axe violations with the opt-in required error shown', async () => {
+    renderPage('student-can-switch');
+    await screen.findByRole('tablist');
+    fireEvent.change(screen.getByRole('combobox', {name: /account type/i}), {
+      target: {value: 'teacher'},
+    });
+    const dialog = await screen.findByRole('alertdialog', {
+      name: /change account type/i,
+    });
+    fireEvent.submit(within(dialog).getByRole('radiogroup').closest('form')!);
+    await within(dialog).findByText('This field is required.');
+    expect(await auditBody()).toHaveNoViolations();
+  });
+
   it('has no axe violations with the delete-account alertdialog open', async () => {
     renderPage('teacher');
     await screen.findByRole('tablist');

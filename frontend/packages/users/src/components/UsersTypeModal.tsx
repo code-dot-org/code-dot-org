@@ -1,12 +1,9 @@
-import {Box, Button, DialogContentText, Typography} from '@mui/material';
+import {Button, DialogContentText} from '@mui/material';
 import {useState} from 'react';
 
 import {FormError} from '@code-dot-org/component-library/form';
-import Link from '@code-dot-org/component-library/link';
-import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import {useToast} from '@code-dot-org/component-library/toast';
-import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 import {
   DashboardApiClient,
   useUpdateUserType,
@@ -16,6 +13,7 @@ import {
 
 import {hashEmail} from '../util/hashEmail';
 
+import EmailOptInField from './EmailOptInField';
 import FormDialog from './FormDialog';
 import {useModalForm} from './useModalForm';
 
@@ -27,7 +25,8 @@ const TYPE_LABEL: Record<UserType, string> = {
 /**
  * Confirmation alertdialog for an account-type change. Committed only on
  * confirm; dismissing leaves the account unchanged. Educator accounts require a
- * cleartext email, so becoming one prompts for it and blocks confirm until given.
+ * cleartext email and, like legacy, an answer to the email opt-in question, so
+ * becoming one prompts for both and blocks confirm until given.
  */
 export default function UsersTypeModal({
   open,
@@ -43,12 +42,15 @@ export default function UsersTypeModal({
   const {errors, resetErrors, onSubmit} = useModalForm();
   const [email, setEmail] = useState('');
   const [emailOptIn, setEmailOptIn] = useState<EmailOptIn>('');
+  const [optInTouched, setOptInTouched] = useState(false);
 
   const isChangingToEducator = prospectiveType === 'teacher';
+  const optInUnanswered = isChangingToEducator && emailOptIn === '';
 
   const close = () => {
     setEmail('');
     setEmailOptIn('');
+    setOptInTouched(false);
     resetErrors();
     onClose();
   };
@@ -56,6 +58,11 @@ export default function UsersTypeModal({
   // Stay open and show the error on failure; close only once the change commits.
   const handleSubmit = onSubmit(async () => {
     if (!prospectiveType) return;
+    // Enter in the email field submits past the disabled confirm.
+    if (optInUnanswered) {
+      setOptInTouched(true);
+      return;
+    }
     await mutation.mutateAsync(
       isChangingToEducator
         ? {
@@ -89,8 +96,8 @@ export default function UsersTypeModal({
             variant="contained"
             disabled={
               mutation.isPending ||
-              (isChangingToEducator &&
-                (email.trim().length === 0 || emailOptIn === ''))
+              (isChangingToEducator && email.trim().length === 0) ||
+              optInUnanswered
             }
           >
             {prospectiveType
@@ -121,52 +128,13 @@ export default function UsersTypeModal({
         />
       )}
       {isChangingToEducator && (
-        /* A radiogroup named by the question, not a fieldset/legend: the
-           privacy link inside a legend would be flattened into the group's name
-           and announced with every radio. The link follows the group so reading
-           and tab order reach the answer before the aside. */
-        <Box>
-          <Typography
-            id="account-type-optin-question"
-            variant="body2"
-            component="div"
-            sx={{mb: 1}}
-          >
-            Can we email you about updates to our courses, local opportunities,
-            or other computer science news?
-          </Typography>
-          <Box
-            role="radiogroup"
-            aria-labelledby="account-type-optin-question"
-            sx={{display: 'flex', gap: 3}}
-          >
-            <RadioButton
-              name="email_preference_opt_in"
-              value="yes"
-              label="Yes"
-              checked={emailOptIn === 'yes'}
-              onChange={event =>
-                setEmailOptIn(event.target.value as EmailOptIn)
-              }
-              disabled={mutation.isPending}
-            />
-            <RadioButton
-              name="email_preference_opt_in"
-              value="no"
-              label="No"
-              checked={emailOptIn === 'no'}
-              onChange={event =>
-                setEmailOptIn(event.target.value as EmailOptIn)
-              }
-              disabled={mutation.isPending}
-            />
-          </Box>
-          <Typography variant="body2" component="div" sx={{mt: 1}}>
-            <Link href={siteConfig.marketingUrl('/privacy')} openInNewTab>
-              (See our privacy policy)
-            </Link>
-          </Typography>
-        </Box>
+        <EmailOptInField
+          value={emailOptIn}
+          onChange={setEmailOptIn}
+          touched={optInTouched}
+          onTouched={() => setOptInTouched(true)}
+          disabled={mutation.isPending}
+        />
       )}
     </FormDialog>
   );
