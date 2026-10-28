@@ -9769,6 +9769,36 @@ registerValueShadows('world_can_reach', [
   {name: 'ACTOR', shadow: {type: 'world_this_actor'}},
 ]);
 
+/**
+ * `⟨actor⟩ shows at the pointer` — false where a Scroll View carrying it has
+ * it outside its window. The pointer's hit test asks this beside `can be
+ * reached`; the keyboard does not (`World.showsAtPointer`).
+ */
+const worldShowsAtPointer = defineBlock({
+  type: 'world_shows_at_pointer',
+  message0: '%1 shows at the pointer',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  inputsInline: true,
+  output: 'Boolean',
+  extensions: [worldContextExtension, valueShadowExtension],
+  style: 'logic_blocks',
+  tooltip:
+    'False where a Scroll View holding this has scrolled it out of its ' +
+    'window, so the pointer cannot touch it there.',
+  generator: {
+    javascript(block, generator) {
+      const actor = generator.valueToCode(block, 'ACTOR', Order.NONE) || 'null';
+      return [`world.showsAtPointer(${actor})`, Order.FUNCTION_CALL] as [
+        string,
+        number,
+      ];
+    },
+  },
+});
+registerValueShadows('world_shows_at_pointer', [
+  {name: 'ACTOR', shadow: {type: 'world_this_actor'}},
+]);
+
 // `key <key> is down` — the polling side of input, which the engine has always
 // had (`World.isKeyDown`) and the palette never offered: only the edge-triggered
 // event hats ("when this actor presses space") were reachable from blocks, so a
@@ -10369,6 +10399,7 @@ export const DOMAIN_BLOCKS = [
   worldNewLine,
   worldTextWidth,
   worldCanReach,
+  worldShowsAtPointer,
   worldNow,
   worldTimePart,
   worldTimeText,
@@ -10925,6 +10956,8 @@ const ENGINE_CATEGORY: ToolboxCategory = {
     // dialog, and every rule that delivers input has to ask
     // (specs/MODALITY_PLAN.md).
     'world_can_reach',
+    // …and whether a Scroll View hides it where the pointer is.
+    'world_shows_at_pointer',
     // …and what the game asks of the BROWSER, which is not the same question:
     // whether a key reaches the game at all, rather than whether it is down.
     // Tab is the one that cannot be a constant in the driver, and the arrival

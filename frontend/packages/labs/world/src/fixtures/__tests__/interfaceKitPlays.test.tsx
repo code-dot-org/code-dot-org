@@ -14,7 +14,7 @@ import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import type {Actor, World} from '../../engine';
-import {ViewportContentProperty, ViewportScrollProperty} from '../../engine';
+import {ContentProperty, ScrollProperty} from '../../engine';
 import {projectFiles} from '../../runtime/projectFiles';
 import {WORLD_SCENARIOS} from '../scenarios';
 
@@ -46,6 +46,7 @@ const play = async (measure?: typeof boldIsWider) => {
   };
   return {
     world,
+    modules,
     named: (id: string) => [...world.actors].find(actor => actor.id === id),
     says: (actor: Actor) => actor.get(text as never) as unknown as string,
     at,
@@ -148,21 +149,33 @@ describe('the Interface Kit', () => {
     expect(says(area)).toContain('\n');
   }, 60000);
 
-  it('holds a map taller than itself, and scrolls over it', async () => {
-    // A Scroll View is a Viewport with a finger: the content is a MAP, and
-    // the engine grows the space to it. Six tiles of settings in a window
-    // four tall is something to drag up to.
+  it('holds children taller than itself, and scrolls over them', async () => {
+    // Five rows of settings in a window with room for three is something to
+    // drag up to; the engine measures the content from the children.
     const {named, wheelOver} = await play();
     const view = named('Settings')!;
-    const content = view.get(ViewportContentProperty) as {y: number};
+    const content = view.get(ContentProperty) as {y: number};
     expect(content.y).toBeGreaterThan(128);
 
-    const before = (view.get(ViewportScrollProperty) as {y: number}).y;
+    const before = (view.get(ScrollProperty) as {y: number}).y;
     wheelOver(view, 40);
 
-    expect((view.get(ViewportScrollProperty) as {y: number}).y).toBeGreaterThan(
-      before,
-    );
+    expect((view.get(ScrollProperty) as {y: number}).y).toBeGreaterThan(before);
+  }, 60000);
+
+  it('clicks a row only where the window shows it', async () => {
+    // INVERT is the last row, below the fold until the page is scrolled. Its
+    // position is real either way; what changes is whether the window shows
+    // it, and a click that lands outside the window is not its.
+    const {modules, named, click, wheelOver} = await play();
+    const invert = named('INVERT')!;
+    const on = modules['actors/toggle'].OnProperty;
+    click(invert);
+    expect(invert.get(on as never)).toBe(false);
+
+    wheelOver(named('Settings')!, 400);
+    click(invert);
+    expect(invert.get(on as never)).toBe(true);
   }, 60000);
 
   it('puts real actors in the Scroll View, not rows of words', async () => {

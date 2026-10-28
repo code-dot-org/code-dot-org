@@ -184,6 +184,7 @@ describe('every stock actor', () => {
       'Viewport',
       'Boxed',
       'Styled',
+      'Scrolling',
     ]);
     for (const actor of STOCK_ACTORS) {
       const elected = [...actor.contents.matchAll(/"TRAIT": "([^#]+)#/g)]

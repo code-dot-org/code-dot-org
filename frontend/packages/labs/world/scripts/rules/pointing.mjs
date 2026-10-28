@@ -25,6 +25,7 @@ import {
   n,
   over,
   pick,
+  showsAtPointer,
   sine,
   times,
 } from './dsl.mjs';
@@ -92,10 +93,12 @@ const withinAxis = (which, subject) =>
  * dialog would be answering a question nobody asks. Putting it here is also
  * one place to be right instead of two to remember, which is exactly the bug
  * this fixes: a key on the on-screen keyboard was pressing the button on the
- * screen behind it (`World.canReach`, specs/MODALITY_PLAN.md).
+ * screen behind it (`World.canReach`, specs/MODALITY_PLAN.md). A child a
+ * Scroll View has scrolled out of its window is not hit either, though it is
+ * still where its position says (`World.showsAtPointer`).
  */
 export const under = subject =>
   both(
     both(withinAxis('x', subject), withinAxis('y', subject)),
-    canBeReached(subject),
+    both(canBeReached(subject), showsAtPointer(subject)),
   );

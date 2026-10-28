@@ -128,6 +128,8 @@ export * from './rules/boxed';
 // …and which theme it is painted out of (specs/STYLES_PLAN.md).
 export * from './rules/styled';
 export * from './rules/viewport';
+// …and a window onto its own children (specs/ONE_WORLD_PLAN.md).
+export * from './rules/scrolling';
 export {Space, ROOT_SPACE_ID} from './core/Space';
 export type {MapLayer, MapSlot} from './core/Layer';
 

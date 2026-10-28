@@ -121,6 +121,8 @@ const RUNTIME_ONLY: Record<string, string> = {
     'still being described has loaded none of them \u2014 it is also a ' +
     "rule's question rather than a project's, which is why the block is in " +
     'the Engine drawer (specs/MODALITY_PLAN.md)',
+  showsAtPointer:
+    'there is no pointer yet, and nothing has been scrolled for it to miss',
 };
 
 /**

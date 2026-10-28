@@ -94,38 +94,36 @@ const typedIn = () => ({
 /** The screen, in tiles: the standard width, and a phone's height. */
 export const PORTRAIT = {columns: 10, rows: 18};
 
+/** The Settings Scroll View's window, and where its middle is on screen. */
+const SETTINGS = {width: 300, height: 128, x: 160, y: 428};
+
 /**
- * What the Scroll View shows: a settings page taller than the window onto it.
+ * What the Scroll View holds: a settings page taller than the window onto it.
  *
- * A MAP, because that is what a Scroll View holds — it is a Viewport with a
- * finger, and a Viewport shows a map (`actors/scrollView`). So the content is
- * a file of its own, and the thing being demonstrated is that the rows in it
- * are REAL ACTORS: each one is a Label and a Toggle that can be clicked
- * through the window, which is the case a List cannot answer.
+ * ITS CHILDREN, each placed in its frame (specs/PARENTING.md). The rows are
+ * REAL ACTORS: each one is a Label and a Toggle that can be clicked through
+ * the window, which is the case a List cannot answer. Written from the top
+ * left of the page and moved into the Scroll View's frame, which is measured
+ * from its middle.
  *
- * SIX TILES TALL against the four the window is, so there is something below
- * the fold to drag up to. A map the same size as its window would scroll
- * nowhere and demonstrate nothing.
+ * FIVE ROWS, against the window's room for three, so there is something
+ * below the fold to drag up to.
  */
-const SETTINGS_MAP = JSON.stringify(
-  {
-    type: 'map',
-    size: {width: 9, height: 6},
-    tile: {width: TILE_SIZE, height: TILE_SIZE},
-    actors: [
-      ...['SOUND', 'MUSIC', 'HINTS', 'SHAKE', 'INVERT'].flatMap((what, at) => [
-        place('actors/label', `${what} label`, 76, 26 + at * 36, {
-          Label: {text: what},
-        }),
-        place('actors/toggle', what, 214, 26 + at * 36, {
-          Label: {text: ''},
-          hasABox: {width: 64},
-        }),
-      ]),
-    ],
+const SETTINGS_ROWS = ['SOUND', 'MUSIC', 'HINTS', 'SHAKE', 'INVERT'].flatMap(
+  (what, at) => {
+    const y = 26 + at * 36 - SETTINGS.height / 2;
+    return [
+      place('actors/label', `${what} label`, 76 - SETTINGS.width / 2, y, {
+        positional: {parent: 'Settings'},
+        Label: {text: what},
+      }),
+      place('actors/toggle', what, 214 - SETTINGS.width / 2, y, {
+        positional: {parent: 'Settings'},
+        Label: {text: ''},
+        hasABox: {width: 64},
+      }),
+    ];
   },
-  null,
-  2,
 );
 
 /** The screen, as the map editor sees it: five placements, top to bottom. */
@@ -190,14 +188,14 @@ const INTERFACE_MAP = {
       hasABox: {width: 300, height: 88},
     }),
     // …and a window onto something taller than itself, which is the other
-    // thing nothing had ever put on a screen. What is IN it is a map
-    // (`SETTINGS_MAP`) rather than rows of words: its toggles are actors, and
+    // thing nothing had ever put on a screen. What is IN it is its children
+    // (`SETTINGS_ROWS`) rather than rows of words: its toggles are actors, and
     // clicking one through the window is the case a List cannot answer
     // (specs/SCROLLING_PLAN.md).
-    place('actors/scrollView', 'Settings', 160, 428, {
-      hasABox: {width: 300, height: 128},
-      showsMap: {map: 'maps/settings'},
+    place('actors/scrollView', 'Settings', SETTINGS.x, SETTINGS.y, {
+      hasABox: {width: SETTINGS.width, height: SETTINGS.height},
     }),
+    ...SETTINGS_ROWS,
     // …and the box that says the answer, a letter at a time. At the foot
     // of the screen, where a phone keeps its replies, and nobody's child.
     place('actors/speechBox', 'Reply', 160, 530),
@@ -348,24 +346,8 @@ export const interfaceKit = (empty: MultiFileSource): MultiFileSource => {
   if (!main) {
     return source;
   }
-  const maps = Object.values(source.folders).find(
-    folder => folder.name === 'maps' && folder.parentId === '0',
-  );
   return {
     ...source,
-    files: {
-      ...source.files,
-      [main.id]: {...main, contents: INTERFACE_SCREEN},
-      // The Scroll View's contents. Written here rather than imported: a
-      // stock map is something several projects share, and a settings page
-      // is this kit's own idea of something to scroll.
-      kitSettingsMap: {
-        id: 'kitSettingsMap',
-        name: 'settings.map',
-        language: 'map',
-        contents: SETTINGS_MAP,
-        folderId: maps?.id ?? '0',
-      },
-    },
+    files: {...source.files, [main.id]: {...main, contents: INTERFACE_SCREEN}},
   };
 };

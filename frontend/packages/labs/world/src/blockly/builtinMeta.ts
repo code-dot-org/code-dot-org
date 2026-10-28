@@ -12,6 +12,7 @@ import * as WorldLab from '../engine';
 import {
   AnimationRule,
   BoxedRule,
+  ScrollingRule,
   SpatialRule,
   StyledRule,
   ViewportRule,
@@ -55,6 +56,9 @@ export const BUILTIN_RULES = [
   // silently — which is the bug the guard in `stockActors.test` exists for,
   // and which it caught on this rule's first day (specs/BOXES_PLAN.md).
   StyledRule,
+  // …and a window onto its children, which is what a Scroll View is
+  // (specs/ONE_WORLD_PLAN.md).
+  ScrollingRule,
 ];
 
 export const BUILTIN_RULE_META: RuleMeta[] = builtinRuleMeta(

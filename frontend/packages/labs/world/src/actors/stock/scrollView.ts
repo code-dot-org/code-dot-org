@@ -6,22 +6,23 @@
 // page, a form, a feed, a list whose rows are real actors with a picture and
 // a button in them (specs/SCROLLING_PLAN.md).
 //
-// IT IS A VIEWPORT, which is the only thing in this lab that can clip. A mask
-// does nothing in this Phaser; a clip comes from a CAMERA, and a Viewport is
-// an actor with a space and a camera of its own. So the content is a MAP
-// loaded into it, the engine grows the space to the map's size, and scrolling
-// is moving that camera — which the engine was already clamping into the
-// bounds every tick, for a level's camera, and which now answers to `scroll`.
+// WHAT IT HOLDS IS ITS CHILDREN, placed under it on the screen
+// (specs/PARENTING.md). It `Scrolls Its Children`: they are drawn inside its
+// box and nowhere else, moved up the page by `scroll`, and the engine
+// measures `content` from them and keeps `scroll` inside it
+// (`engine/rules/scrolling`, specs/ONE_WORLD_PLAN.md). It used to be a
+// Viewport holding a map of its own, which with one World would be a second
+// one.
 //
-// WHAT IT ADDS TO A VIEWPORT is a finger and a scrollbar. Dragging moves the
-// content with the finger — which is why the movement is SUBTRACTED: dragging
-// up carries the page up, so the window goes down it. The bar down the right
-// edge is drawn from `scroll` and `content`, both of which the engine keeps
-// honest, so it cannot disagree with where the window actually is.
+// WHAT IT ADDS is a finger and a scrollbar. Dragging moves the content with
+// the finger — which is why the movement is SUBTRACTED: dragging up carries
+// the page up, so the window goes down it. The bar down the right edge is
+// drawn from `scroll` and `content`, both of which the engine keeps honest,
+// so it cannot disagree with where the window actually is.
 //
 // NOT A LIST. It does not know about rows, choosing, or what is in it; it
-// shows a map and moves over it. A list whose rows are actors is this with a
-// map of rows in it, and the choosing is that map's business.
+// moves over what it holds. A list whose rows are actors is this with rows
+// for children, and the choosing is theirs.
 
 import {BORDER, LOOK, RADIUS_BAR, RADIUS_TIGHT} from './look';
 import {
@@ -53,15 +54,15 @@ const BAR_INSET = 3;
 const STEP = 24;
 
 const OWN = 'Boxed';
-const VIEW = 'Viewport';
+const VIEW = 'Scrolling';
 
 const read = (own: string, exportName: string) => ({
   block: {type: `world_get_${own}_${exportName}`, inputs: {ACTOR: me()}},
 });
 const width = () => read(OWN, 'WidthProperty');
 const height = () => read(OWN, 'HeightProperty');
-const scroll = () => read(VIEW, 'ViewportScrollProperty');
-const content = () => read(VIEW, 'ViewportContentProperty');
+const scroll = () => read(VIEW, 'ScrollProperty');
+const content = () => read(VIEW, 'ContentProperty');
 
 const sized = (name: 'Width' | 'Height', value: number) => ({
   type: `world_set_Boxed_${name}Property`,
@@ -92,7 +93,7 @@ const point = (x: object, y: object) => ({
 
 /** `set scroll of this actor to ⟨…⟩`. */
 const scrollTo = (to: object) => ({
-  type: `world_set_${VIEW}_ViewportScrollProperty`,
+  type: `world_set_${VIEW}_ScrollProperty`,
   inputs: {ACTOR: me(), VALUE: to},
 });
 
@@ -137,7 +138,7 @@ const onKey = (key: string, pixels: number, hat = 'Presses') => ({
  * Both are the same fraction twice: the window is `height ÷ content` of the
  * whole, and it begins `scroll ÷ content` of the way down. Drawn from the
  * numbers the ENGINE settled rather than from what anybody asked for, so the
- * thumb cannot be off the end of its track (`World.settleSpace`).
+ * thumb cannot be off the end of its track (`World.settleScrolling`).
  */
 const thumbTop = () =>
   maths(
@@ -152,7 +153,7 @@ export const scrollViewActor = actorFile(
   'Scroll View',
   [
     actsLike('actors/label'),
-    useTrait('Viewport#ViewportTrait'),
+    useTrait('Scrolling#ScrollsTrait'),
     useTrait('Gestures#TakesGesturesTrait'),
     // …and the click, which is a SEPARATE election from the drag: the Mouse
     // rule raises `is clicked with` only on actors that elected Can Be

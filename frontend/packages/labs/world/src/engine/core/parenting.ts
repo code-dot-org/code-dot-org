@@ -122,14 +122,39 @@ export function localTransformOf(actor: Actor): Transform {
   };
 }
 
+let childOffset: ((parent: Actor) => Vector | undefined) | undefined;
+
+/**
+ * Say how far a parent moves its children within its frame — a Scroll View's
+ * scroll (`rules/scrolling`), registered by the rule for the reason
+ * `registerParenting` is.
+ */
+export function registerChildOffset(
+  offset: (parent: Actor) => Vector | undefined,
+): void {
+  childOffset = offset;
+}
+
+/**
+ * The frame `parent` places its children in: its world transform, moved by
+ * its child offset where it has one.
+ */
+export function childFrameOf(parent: Actor): Transform {
+  const frame = worldTransformOf(parent);
+  const offset = childOffset?.(parent);
+  return offset
+    ? compose(frame, {position: offset, rotation: 0, scale: new Vector(1, 1)})
+    : frame;
+}
+
 /**
  * Where an actor is in the WORLD: its stored transform composed onto its
- * parent's world transform, all the way up. A root's is its own.
+ * parent's frame, all the way up. A root's is its own.
  */
 export function worldTransformOf(actor: Actor): Transform {
   const local = localTransformOf(actor);
   const parent = actor.parent();
-  return parent ? compose(worldTransformOf(parent), local) : local;
+  return parent ? compose(childFrameOf(parent), local) : local;
 }
 
 /** Whether `candidate` is `actor` or carried, at any depth, by `actor`. */

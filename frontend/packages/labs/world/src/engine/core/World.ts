@@ -5,6 +5,11 @@
 // then flush the events those steps raised.
 
 import {BOXED} from '../rules/boxed';
+import {
+  ContentProperty,
+  ScrollProperty,
+  ScrollsTrait,
+} from '../rules/scrolling';
 import {STYLED} from '../rules/styled';
 import {
   ViewportContentProperty,
@@ -520,6 +525,12 @@ export interface RenderState {
   y: number;
   scaleX: number;
   scaleY: number;
+  /**
+   * The box this actor draws its children inside and nowhere else, centred
+   * on it in its own frame, for a Scroll View (`rules/scrolling`). `local`
+   * on each child already carries the scroll.
+   */
+  clip?: {width: number; height: number};
   /** Degrees. */
   rotation: number;
   /** Vertical skew in degrees — a shear the driver applies about the actor's
@@ -2379,6 +2390,59 @@ export class World {
       }
       this.showsThrough(space);
       this.settleSpace(space);
+    }
+  }
+
+  /**
+   * Measure what each Scroll View holds and keep its scroll inside it
+   * (`rules/scrolling`). At the end of the tick, after whatever handler set
+   * the scroll, so what is drawn and what a project reads next are where it
+   * actually stopped.
+   *
+   * THE CONTENT IS MEASURED FROM THE WINDOW'S TOP LEFT, in the parent's
+   * frame and before the scroll: each child's stored position plus half its
+   * drawn size, and never less than the window.
+   */
+  private settleScrolling(): void {
+    const size = this.intrinsicSizeProperty();
+    const position = this.positionalProperty(SPATIAL.position);
+    const scale = this.scaleProperty();
+    if (!size || !position || !scale) {
+      return;
+    }
+    for (const actor of this.actorList) {
+      if (!actor.has(ScrollsTrait)) {
+        continue;
+      }
+      const window = actor.get(size);
+      let right = window.x;
+      let bottom = window.y;
+      for (const child of this.childrenOf(actor)) {
+        const at = child.local(position);
+        const drawn = child.get(size);
+        const scaled = child.local(scale);
+        right = Math.max(
+          right,
+          at.x + window.x / 2 + (drawn.x * Math.abs(scaled.x)) / 2,
+        );
+        bottom = Math.max(
+          bottom,
+          at.y + window.y / 2 + (drawn.y * Math.abs(scaled.y)) / 2,
+        );
+      }
+      const content = new Vector(right, bottom);
+      const known = actor.get(ContentProperty) as VectorLike;
+      if (known.x !== content.x || known.y !== content.y) {
+        actor.set(ContentProperty, content);
+      }
+      const asked = actor.get(ScrollProperty) as VectorLike;
+      const settled = new Vector(
+        Math.min(Math.max(asked.x, 0), content.x - window.x),
+        Math.min(Math.max(asked.y, 0), content.y - window.y),
+      );
+      if (asked.x !== settled.x || asked.y !== settled.y) {
+        actor.set(ScrollProperty, settled);
+      }
     }
   }
 
@@ -4353,6 +4417,37 @@ export class World {
     return load ? loads.indexOf(load) >= topModal : false;
   }
 
+  /**
+   * Whether `actor` is drawn where the pointer is: false where a Scroll View
+   * carrying it, at any depth, has it outside its window. The pointer's hit
+   * test asks this beside `canReach`; the keyboard does not, so a field
+   * scrolled out of sight still takes what is typed into it.
+   */
+  showsAtPointer(actor: Actor): boolean {
+    const position = this.positionalProperty(SPATIAL.position);
+    const size = this.intrinsicSizeProperty();
+    const scale = this.scaleProperty();
+    if (!position || !size || !scale) {
+      return true;
+    }
+    for (let at = actor.parent(); at; at = at.parent()) {
+      if (!at.has(ScrollsTrait)) {
+        continue;
+      }
+      const pointer = this.mousePosition(at);
+      const middle = at.get(position);
+      const drawn = at.get(size);
+      const scaled = at.get(scale);
+      if (
+        Math.abs(pointer.x - middle.x) > (drawn.x * Math.abs(scaled.x)) / 2 ||
+        Math.abs(pointer.y - middle.y) > (drawn.y * Math.abs(scaled.y)) / 2
+      ) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   /** Advance the simulation by `delta` seconds. */
   tick(delta: number): void {
     this.inTick = true;
@@ -4421,6 +4516,7 @@ export class World {
       this.leaving.clear();
     }
     this.settleSpaces();
+    this.settleScrolling();
     // The keys this tick become "previous" for the next, so edge detection
     // (newlyPressed/Released) compares against exactly one frame back. The
     // mouse's buttons are the same mechanism and advance in the same breath.
@@ -5092,12 +5188,23 @@ export class World {
       const position = actor.get(positionProp);
       const scale = actor.get(scaleProp);
       const parent = actor.parent();
+      // A Scroll View's children are drawn where the scroll moves them, in
+      // its frame, so the driver nests them without knowing about scrolling.
+      const scrolled =
+        parent?.has(ScrollsTrait) === true
+          ? (parent.get(ScrollProperty) as VectorLike)
+          : undefined;
       const stored = parent
         ? {
-            position: actor.local(positionProp),
+            position: scrolled
+              ? actor
+                  .local(positionProp)
+                  .subtract(new Vector(scrolled.x, scrolled.y))
+              : actor.local(positionProp),
             scale: actor.local(scaleProp),
           }
         : undefined;
+
       states.push({
         actor,
         ...(parent && stored
@@ -5131,6 +5238,17 @@ export class World {
           ? {space: actor.space.id}
           : {}),
       });
+      // The window is the box the actor is drawn at, read after its drawing
+      // so a Scroll View made larger this frame clips at its new size.
+      if (actor.has(ScrollsTrait)) {
+        const state = states[states.length - 1];
+        const size = this.intrinsicSizeProperty();
+        const known = size ? actor.get(size) : new Vector(0, 0);
+        state.clip = {
+          width: state.drawing?.width ?? known.x,
+          height: state.drawing?.height ?? known.y,
+        };
+      }
     }
     return states;
   }

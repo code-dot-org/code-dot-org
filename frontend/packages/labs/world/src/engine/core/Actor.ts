@@ -7,6 +7,7 @@
 import {all, LazyActors} from './actorValue';
 import {fnv1a} from './hash';
 import {
+  childFrameOf,
   isDescendantOf,
   isWorldTransformProperty,
   parentingKeys,
@@ -207,7 +208,7 @@ export class Actor {
     const world = keepWorld ? worldTransformOf(this) : undefined;
     this.store(keys.parent, parent ? [parent] : []);
     if (world) {
-      const local = parent ? toLocal(worldTransformOf(parent), world) : world;
+      const local = parent ? toLocal(childFrameOf(parent), world) : world;
       this.store(keys.position, local.position);
       this.store(keys.rotation, local.rotation);
       this.store(keys.scale, local.scale);
@@ -260,7 +261,7 @@ export class Actor {
       }
       // A world value written to a child is stored in the parent's frame.
       if (isWorldTransformProperty(property) && this.parent()) {
-        const parent = worldTransformOf(this.parent()!);
+        const parent = childFrameOf(this.parent()!);
         const world = worldTransformOf(this);
         const next =
           property === keys.position

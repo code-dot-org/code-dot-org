@@ -1,112 +1,67 @@
 // The Scroll View, PLAYED: a finger over something taller than the window.
 //
-// The engine half is pinned without an actor in `engine/scrolling.test`; this
-// is the half a learner meets — that dragging moves the page with the finger,
+// The engine half is pinned without an actor in `engine/scrollsChildren.test`;
+// this is the half a learner meets — that dragging moves the page with the finger,
 // that it stops at both ends, and that the arrows work once the keyboard is on
 // it (specs/SCROLLING_PLAN.md).
 
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import {
-  ViewportContentProperty,
-  ViewportScrollProperty,
-} from '../../engine/rules/viewport';
-import {EMPTY_WORLD_PROJECT} from '../../fixtures/scenarios';
+import {ContentProperty, ScrollProperty} from '../../engine/rules/scrolling';
+import {EMPTY_APP_PROJECT} from '../../fixtures/scenarios';
 import {projectFiles} from '../../runtime/projectFiles';
 import {importStockActor} from '../importStockActor';
 import {stockActorById} from '../stock';
 
-const me = () => ({block: {type: 'world_this_actor'}});
-const number = (value: number) => ({
-  block: {type: 'math_number', fields: {NUM: value}},
-});
-
-/** One Scroll View, middle of the screen, showing the long map below. */
-const WORLD = JSON.stringify({
-  blocks: {
-    blocks: [
-      {
-        type: 'world_world',
-        fields: {NAME: 'My World'},
-        next: {
-          block: {
-            type: 'world_add_actor',
-            fields: {ACTOR: 'actors/scrollView'},
-            inputs: {
-              DO: {
-                block: {
-                  type: 'world_set_position',
-                  inputs: {ACTOR: me(), X: number(160), Y: number(160)},
-                  next: {
-                    block: {
-                      type: 'world_set_Viewport_ViewportMapProperty',
-                      inputs: {
-                        ACTOR: me(),
-                        VALUE: {
-                          block: {type: 'text', fields: {TEXT: 'maps/long'}},
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    ],
-  },
-});
-
-/** Ten rows down a column three windows tall. */
-const LONG_MAP = JSON.stringify({
+/**
+ * One Scroll View, 200 tall, in the middle of the screen, holding ten rows
+ * down a column three windows tall: its children, each placed in its frame,
+ * which is measured from its middle.
+ */
+const SCREEN = JSON.stringify({
   type: 'map',
-  size: {width: 10, height: 20},
-  tile: {width: 32, height: 32},
-  actors: Array.from({length: 10}, (_, at) => ({
-    type: 'actors/label',
-    id: `Row${at}`,
-    properties: {
-      positional: {position: {x: 160, y: 30 + at * 60}},
-      Label: {text: `row ${at}`},
+  name: 'Main',
+  actors: [
+    {
+      type: 'actors/scrollView',
+      id: 'Page',
+      properties: {
+        positional: {position: {x: 160, y: 160}},
+        hasABox: {width: 280, height: 200},
+      },
     },
-  })),
+    ...Array.from({length: 10}, (_, at) => ({
+      type: 'actors/label',
+      id: `Row${at}`,
+      properties: {
+        positional: {parent: 'Page', position: {x: 0, y: -70 + at * 60}},
+        Label: {text: `row ${at}`},
+      },
+    })),
+  ],
 });
 
 const play = async () => {
   const source = importStockActor(
-    EMPTY_WORLD_PROJECT,
+    EMPTY_APP_PROJECT,
     stockActorById('scrollView')!,
   ).source;
   const main = Object.values(source.files).find(
-    file => file.name === 'main.world',
+    file => file.name === 'main.screen',
   )!;
-  const maps = Object.values(source.folders).find(
-    folder => folder.name === 'maps' && folder.parentId === '0',
-  );
   const {world} = await compileProject(
     projectFiles({
       ...source,
-      files: {
-        ...source.files,
-        [main.id]: {...main, contents: WORLD},
-        longMap: {
-          id: 'longMap',
-          name: 'long.map',
-          language: 'map',
-          contents: LONG_MAP,
-          folderId: maps?.id ?? '0',
-        },
-      },
+      files: {...source.files, [main.id]: {...main, contents: SCREEN}},
     }),
   );
   world.tick(1 / 60);
   world.tick(1 / 60);
 
-  // The Viewport rule is the ENGINE's own — a foundation rule in play in every
-  // world — so its properties come from the engine rather than from a project
-  // module (`engine/rules/viewport`).
+  // Scrolls Its Children is the ENGINE's own — a foundation rule in play in
+  // every world — so its properties come from the engine rather than from a
+  // project module (`engine/rules/scrolling`).
   const view = [...world.actors].find(
     actor => actor.type === 'actors/scrollView',
   )!;
@@ -123,9 +78,8 @@ const play = async () => {
   return {
     world,
     view,
-    at: () => (view.get(ViewportScrollProperty) as {x: number; y: number}).y,
-    content: () =>
-      (view.get(ViewportContentProperty) as {x: number; y: number}).y,
+    at: () => (view.get(ScrollProperty) as {x: number; y: number}).y,
+    content: () => (view.get(ContentProperty) as {x: number; y: number}).y,
     down,
     press: (key: string) => {
       world.setInput([key]);
@@ -145,7 +99,9 @@ const play = async () => {
 describe('the Scroll View', () => {
   it('knows how tall what it holds is, and starts at the top', async () => {
     const {at, content} = await play();
-    expect(content()).toBe(640);
+    // The last row's middle is 470 below the top of the window, and half a
+    // label's height below that is the bottom of the page.
+    expect(content()).toBeGreaterThan(470);
     expect(at()).toBe(0);
   });
 
@@ -157,12 +113,12 @@ describe('the Scroll View', () => {
   });
 
   it('stops at the bottom rather than running off it', async () => {
-    const {at, down} = await play();
+    const {at, content, down} = await play();
     for (let pull = 0; pull < 20; pull += 1) {
       down(200);
     }
-    // Twenty tiles of map, ten of window: the last place the top can be.
-    expect(at()).toBe(640 - 200);
+    // The page less the window: the last place the top can be.
+    expect(at()).toBe(content() - 200);
   });
 
   it('stops at the top, however hard it is pushed back', async () => {

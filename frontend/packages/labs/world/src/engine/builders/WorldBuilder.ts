@@ -50,6 +50,7 @@ import type {Vector} from '../core/Vector';
 import {World, type WorldMap} from '../core/World';
 import {AnimationRule} from '../rules/animation';
 import {BoxedRule} from '../rules/boxed';
+import {ScrollingRule} from '../rules/scrolling';
 import {SpatialRule} from '../rules/spatial';
 import {StyledRule} from '../rules/styled';
 import {ViewportRule} from '../rules/viewport';
@@ -74,6 +75,9 @@ const FOUNDATION_RULES: readonly Rule[] = [
   // inspector cannot ask whether a project imported the rule that lets one
   // button be the red one (specs/STYLES_PLAN.md).
   StyledRule,
+  // …and a window onto its own children, for the same reason: a Scroll
+  // View's `use trait` resolves in every project (specs/ONE_WORLD_PLAN.md).
+  ScrollingRule,
 ];
 
 // A Map — the data a level is — is the World's now, because loading one is

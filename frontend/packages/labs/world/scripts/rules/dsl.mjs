@@ -386,6 +386,15 @@ export const canBeReached = subject => ({
   inputs: {ACTOR: value(subject)},
 });
 
+/**
+ * `<subject> shows at the pointer` — false where a Scroll View carrying it
+ * has it outside its window (`World.showsAtPointer`).
+ */
+export const showsAtPointer = subject => ({
+  type: 'world_shows_at_pointer',
+  inputs: {ACTOR: value(subject)},
+});
+
 /** `<subject> has trait <Rule#Trait>`. */
 /** `add <actor> to <list>` — the list is a VARIABLE, named in a field. */
 export const pushActor = (list, actor) => ({

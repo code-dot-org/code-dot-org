@@ -949,6 +949,62 @@ export class PhaserBinding {
       }
     };
 
+    /**
+     * A Scroll View's clip: a rectangle its group is masked to
+     * (specs/ONE_WORLD_PLAN.md, "Clipping"). A mask FILTER, which clips in
+     * WebGL where `setMask` does nothing. The rectangle is drawn in the
+     * group's frame and carried by the group's world transform, redrawn only
+     * when the box changes size.
+     */
+    const clips = new WeakMap<
+      Phaser.GameObjects.Container,
+      {
+        shape: Phaser.GameObjects.Graphics;
+        mask: Phaser.Filters.Mask;
+        width: number;
+        height: number;
+      }
+    >();
+    const clipTo = (
+      scene: Phaser.Scene,
+      group: Phaser.GameObjects.Container,
+      clip: {width: number; height: number} | undefined,
+    ) => {
+      const held = clips.get(group);
+      if (!clip) {
+        if (held) {
+          group.filters?.external.remove(held.mask);
+          held.shape.destroy();
+          clips.delete(group);
+        }
+        return;
+      }
+      // The tests' stand-in Phaser has no filters; nothing to clip there.
+      if (typeof group.enableFilters !== 'function') {
+        return;
+      }
+      let shape = held?.shape;
+      let mask = held?.mask;
+      if (!shape || !mask) {
+        const made = scene.make.graphics({}, false);
+        shape = made;
+        group.enableFilters();
+        mask = group.filters!.external.addMask(made);
+        group.once('destroy', () => made.destroy());
+      }
+      if (!held || held.width !== clip.width || held.height !== clip.height) {
+        shape
+          .clear()
+          .fillStyle(0xffffff)
+          .fillRect(-clip.width / 2, -clip.height / 2, clip.width, clip.height);
+      }
+      clips.set(group, {shape, mask, width: clip.width, height: clip.height});
+      const matrix = group.getWorldTransformMatrix();
+      shape.setPosition(matrix.tx, matrix.ty);
+      shape.setRotation(matrix.rotationNormalized);
+      shape.setScale(matrix.scaleX, matrix.scaleY);
+    };
+
     const sync = (scene: Phaser.Scene) => {
       syncViewSize(scene);
       syncBackdrops(scene);
@@ -1249,9 +1305,12 @@ export class PhaserBinding {
 
       for (const state of snapshot) {
         const object = objectFor(state);
-        const group = owners.has(state.actor)
-          ? groupOf(state)
-          : groups.get(state.actor);
+        // A Scroll View draws through a group from its first frame, so its
+        // children are never drawn unclipped while the group is made.
+        const group =
+          owners.has(state.actor) || state.clip
+            ? groupOf(state)
+            : groups.get(state.actor);
         // What carries this actor's transform: its group when it has one,
         // else its own object; and which transform — its local one inside
         // its parent's group, else its world one.
@@ -1281,6 +1340,7 @@ export class PhaserBinding {
           group.setRotation(base.rotation * DEGREES_TO_RADIANS);
           group.setAlpha(state.opacity);
           into(group, object, false);
+          clipTo(scene, group, state.clip);
         }
         // The actor's own image: at the group's origin when it has one, so
         // its picture, its frame's fit and its shear are its own and the

@@ -294,8 +294,8 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     for: 'interface',
     name: 'Scroll View',
     description:
-      'A window onto something taller than itself. Set its map and drag it, or tab to it and use the arrows; a bar down the edge says where you are. What a long screen, a settings page or a list of real rows is made of.',
-    // Shows a Map is the engine's own; the finger, the click and the keyboard
+      'A window onto something taller than itself. Put actors in it, then drag it, or tab to it and use the arrows; a bar down the edge says where you are. What a long screen, a settings page or a list of real rows is made of.',
+    // Scrolls Its Children is the engine's own; the finger, the click and the keyboard
     // are not. MOUSE IS EASY TO FORGET and fails silently: a hat naming a rule
     // the project lacks is a stand-in, which generates nothing for itself and
     // leaves what was chained under it at the top of the module — where it ran

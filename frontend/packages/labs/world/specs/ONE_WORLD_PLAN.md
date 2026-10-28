@@ -1,6 +1,6 @@
 # Plan: one World, seen through Viewports
 
-STATUS: BUILDING, October 2026. Step 1 is done. Comes before
+STATUS: BUILDING, October 2026. Steps 1 and 2 are done. Comes before
 specs/SCREEN_STACK_PLAN.md, which sits on it.
 
 A game has one World. Maps fill it, and maps bring its layers. A Viewport is
@@ -186,8 +186,8 @@ There are no migrations (specs/RETIREMENTS_PLAN.md).
 5. World blocks act on the World: `here` and `in the map ⟨…⟩ shows` go, and
    with them `load map … into` and `unload ⟨Viewport⟩`.
 6. Cameras: one per Viewport, with the camera traits as now; `actor to
-follow` by kind. Removing camera lists, `shows through` and choosing a
-   mirror target. Tests.
+follow` by kind. Removing camera lists, `shows through`, choosing a mirror
+   target, and the Viewport's own `scroll` and `content`. Tests.
 7. Layers: `fit` removed, screens lose their layers. Tapper's Interface
    labels become Main Screen placements.
 8. The screen editor: a way into a Scroll View to arrange content taller
@@ -195,6 +195,26 @@ follow` by kind. Removing camera lists, `shows through` and choosing a
 9. Specs: MIRRORING_PLAN.md, SPACE_CAMERAS_PLAN.md, VIEWPORT_PLAN.md,
    VIEWPORT.md, LAYERS_PLAN.md, SCROLLING_PLAN.md and SIMPLE_INTERFACE.md
    marked superseded where this replaces them, and this record.
+
+## Learned while building
+
+- **Step 2 kept the Viewport's own `scroll` and `content`.** The Scroll View
+  no longer uses them, but `spaces.test` positions a Viewport's camera with
+  them, and those tests are rewritten in step 3. They go in step 6 with the
+  rest of a Viewport's camera.
+- **The scroll is applied between a parent and its children's frame**
+  (`parenting.childFrameOf`), so a child's position is where it is drawn,
+  and a position written to it while scrolled reads back as written. The
+  render snapshot reports each child's `local` with the scroll in it, and
+  the Scroll View's own `clip`, so the renderer nests and masks without
+  knowing about scrolling.
+- **The pointer's clip is a rule's question.** `⟨actor⟩ shows at the
+pointer` joins `can be reached` in the shared hit test of Mouse and
+  Gestures (`scripts/rules/pointing.mjs`). It is not part of `canReach`,
+  which the keyboard asks too: a field scrolled out of sight still takes
+  what is typed into it.
+- **Seen in the browser** on the Interface Kit: the rows are clipped at both
+  edges of the window, and the wheel moves them and the scrollbar.
 
 ## Not in this plan
 

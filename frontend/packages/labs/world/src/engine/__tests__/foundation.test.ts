@@ -25,6 +25,7 @@ describe('the foundation', () => {
     expect(world.snapshot().ruleIds).toEqual([
       'animation',
       'boxed',
+      'scrolling',
       'spatial',
       'styled',
       'viewport',
@@ -78,6 +79,7 @@ describe('the foundation', () => {
     expect(world.snapshot().ruleIds).toEqual([
       'animation',
       'boxed',
+      'scrolling',
       'spatial',
       'styled',
       'viewport',
@@ -96,6 +98,7 @@ describe('the foundation', () => {
     expect(world.snapshot().ruleIds).toEqual([
       'animation',
       'boxed',
+      'scrolling',
       'spatial',
       'styled',
       'viewport',

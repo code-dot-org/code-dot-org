@@ -724,6 +724,7 @@ describe('snapshot + setWorldProperty (hot-reload support)', () => {
       'collision',
       'gravity',
       'motion',
+      'scrolling',
       'spatial',
       'styled',
       'viewport',

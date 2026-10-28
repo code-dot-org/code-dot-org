@@ -4,12 +4,11 @@
 // it is always open, it is as tall as it SAYS rather than as tall as its
 // contents, and it scrolls (specs/LIST_PLAN.md).
 //
-// WHY IT DRAWS ITS OWN ROWS rather than holding children. A clip in this
-// engine comes from a camera or from an actor's own canvas, and nothing else:
-// a mask is a filter and does nothing in WebGL (`PhaserBinding`). Children are
-// separate actors with canvases of their own, so a Panel whose children slide
-// under a window would draw them over everything around it. A drawing is
-// exactly the actor's size, so a list that draws its rows is clipped for free.
+// WHY IT DRAWS ITS OWN ROWS rather than holding children. A Scroll View
+// clips real children with a mask filter (`engine/rules/scrolling`), but
+// every child is an actor, and a list of a thousand words would be a
+// thousand of them. A drawing is exactly the actor's size, so a list that
+// draws its rows is clipped for free.
 //
 // THE SCROLL IS IN PIXELS, not in rows. A drag is a distance, and rounding it
 // to whole rows makes a slow drag do nothing and a fast one jump; which row is
