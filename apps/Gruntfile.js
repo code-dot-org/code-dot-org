@@ -418,10 +418,16 @@ module.exports = function (grunt) {
     ...(SINGLE_APP ? {APP: SINGLE_APP} : {}),
     ...(PISKEL_DEVELOPMENT_MODE ? {PISKEL_DEV: '1'} : {}),
     ...('RSPACK_SWC' in process.env ? {} : {RSPACK_SWC: 'all'}),
+    // The child bypasses grunt.log, so --no-color must reach rspack itself.
+    ...(grunt.option('no-color') ? {NO_COLOR: '1'} : {}),
     NODE_OPTIONS: `${
       process.env.NODE_OPTIONS ? process.env.NODE_OPTIONS + ' ' : ''
     }--max-old-space-size=${buildMaxMemory}`,
   };
+  // By default grunt-exec reads the child's output from a pipe and
+  // reprints it, so rspack sees no terminal and drops its colors.  Hand
+  // the child grunt's own stdout and stderr instead.
+  const rspackStdio = {stdout: 'inherit', stderr: 'inherit'};
 
   config.exec = {
     // `--rspack` (or APPS_BUNDLER=rspack) swaps only the JS bundling
@@ -436,6 +442,7 @@ module.exports = function (grunt) {
     // default to production and silently minify dev builds.)
     rspackBuild: {
       command: 'node node_modules/.bin/rspack build --config rspack.config.js',
+      ...rspackStdio,
       options: {
         env: {
           ...rspackEnv,
@@ -453,6 +460,7 @@ module.exports = function (grunt) {
     // there rather than here keeps prebuild's copied assets.
     rspackServe: {
       command: 'node node_modules/.bin/rspack serve --config rspack.config.js',
+      ...rspackStdio,
       // HOT and DEV are set here rather than inherited: the `dev` task
       // sets them after this config is built, and rspack.config.js
       // gives a DEV-less run no devServer block at all — no port, no
