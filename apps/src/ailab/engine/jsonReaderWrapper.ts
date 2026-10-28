@@ -5,31 +5,22 @@ export type MetadataResult =
   | {ok: true; metadata: Metadata}
   | {ok: false; reason: 'loadFailed'};
 
-export const fetchMetadata = (jsonfile: string): Promise<MetadataResult> =>
-  new Promise(resolve => {
-    const failed = () => resolve({ok: false, reason: 'loadFailed'});
-    const rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType('application/json');
-    rawFile.open('GET', jsonfile, true);
-    rawFile.onerror = failed;
-    rawFile.ontimeout = failed;
-    rawFile.onreadystatechange = function () {
-      // State 4 means the request is done, any other state means the request is still in progress.
-      if (rawFile.readyState !== 4) {
-        return;
-      }
-      if (rawFile.status !== 200) {
-        failed();
-        return;
-      }
-      try {
-        resolve({ok: true, metadata: JSON.parse(rawFile.responseText)});
-      } catch {
-        failed();
-      }
-    };
-    rawFile.send(null);
-  });
+const LOAD_FAILED: MetadataResult = {ok: false, reason: 'loadFailed'};
+
+/* Fetches a dataset's metadata. Resolves even when the fetch fails. */
+export const fetchMetadata = async (
+  jsonfile: string
+): Promise<MetadataResult> => {
+  try {
+    const response = await fetch(jsonfile);
+    if (!response.ok) {
+      return LOAD_FAILED;
+    }
+    return {ok: true, metadata: await response.json()};
+  } catch {
+    return LOAD_FAILED;
+  }
+};
 
 /* The type each column is described as. A field with no type falls back to categorical. */
 export const columnTypesFromMetadata = (
