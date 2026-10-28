@@ -26,12 +26,14 @@ describe('MoreOptionsDropdown', () => {
     jest.restoreAllMocks();
   });
 
-  const renderComponent = () =>
+  const renderComponent = (props = {}) =>
     render(
       <MoreOptionsDropdown
         students={students}
         expandMetadataForStudents={expandMetadataForStudents}
         collapseMetadataForStudents={collapseMetadataForStudents}
+        unitName="Course A"
+        {...props}
       />
     );
 
@@ -84,6 +86,17 @@ describe('MoreOptionsDropdown', () => {
     expect(screen.queryByText(i18n.resetProgress())).toBeNull();
   });
 
+  it('hides the reset progress option until the unit has loaded', () => {
+    renderComponent({unitName: null});
+
+    fireEvent.click(
+      screen.getByRole('button', {name: i18n.additionalOptions()})
+    );
+
+    expect(screen.getByText(i18n.expandAll())).toBeTruthy();
+    expect(screen.queryByText(i18n.resetProgress())).toBeNull();
+  });
+
   it('opens the reset progress dialog when reset-progress is clicked', () => {
     renderComponent();
 
@@ -94,9 +107,11 @@ describe('MoreOptionsDropdown', () => {
     fireEvent.click(screen.getByText(i18n.resetProgress()));
 
     expect(
-      screen.getByText(i18n.resetProgressSelectStudentsDescription())
+      screen.getByText(
+        i18n.resetProgressSelectStudentsDescription({unitName: 'Course A'})
+      )
     ).toBeTruthy();
-    expect(screen.getByText('Student1')).toBeTruthy();
-    expect(screen.getByText('Student2')).toBeTruthy();
+    expect(screen.getByRole('checkbox', {name: 'Student1'})).toBeTruthy();
+    expect(screen.getByRole('checkbox', {name: 'Student2'})).toBeTruthy();
   });
 });

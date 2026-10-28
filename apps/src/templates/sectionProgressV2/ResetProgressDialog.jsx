@@ -51,15 +51,6 @@ export default function ResetProgressDialog({
   const [reason, setReason] = React.useState(
     () => (askForReason && tryGetLocalStorage(REASON_STORAGE_KEY, '')) || ''
   );
-
-  // The unit name comes from course data that may not have loaded; fall back
-  // to wording that does not name the unit rather than naming an empty one.
-  const selectStudentsDescription = unitName
-    ? i18n.resetProgressSelectStudentsDescriptionForUnit({unitName})
-    : i18n.resetProgressSelectStudentsDescription();
-  const confirmWarning = unitName
-    ? i18n.resetProgressConfirmWarningForUnit({unitName})
-    : i18n.resetProgressConfirmWarning();
   const [selectedIds, setSelectedIds] = React.useState(() => new Set());
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [hasError, setHasError] = React.useState(false);
@@ -142,7 +133,7 @@ export default function ResetProgressDialog({
     return (
       <Modal
         title={i18n.resetProgress()}
-        description={selectStudentsDescription}
+        description={i18n.resetProgressSelectStudentsDescription({unitName})}
         customContent={
           <div className={styles.studentListContainer}>
             <div className={styles.selectAllRow}>
@@ -189,7 +180,7 @@ export default function ResetProgressDialog({
   return (
     <Modal
       title={i18n.resetProgressConfirmTitle()}
-      description={confirmWarning}
+      description={i18n.resetProgressConfirmWarning({unitName})}
       customContent={
         askForReason && (
           <div className={styles.reasonField}>
@@ -234,7 +225,7 @@ export default function ResetProgressDialog({
 ResetProgressDialog.propTypes = {
   students: PropTypes.arrayOf(studentShape).isRequired,
   unitId: PropTypes.number.isRequired,
-  unitName: PropTypes.string,
+  unitName: PropTypes.string.isRequired,
   sectionId: PropTypes.number.isRequired,
   courseId: PropTypes.number,
   unitPosition: PropTypes.number,

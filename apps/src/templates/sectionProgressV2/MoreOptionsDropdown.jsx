@@ -89,7 +89,9 @@ function MoreOptionsDropdown({
             icon: {iconName: 'arrows-to-line', iconStyle: 'solid'},
             onClick: collapseAll,
           },
-          ...(offerResetProgress
+          // The dialog names the unit, which comes from course data that loads
+          // separately from the section.
+          ...(offerResetProgress && unitName
             ? [
                 {
                   value: 'reset-progress',

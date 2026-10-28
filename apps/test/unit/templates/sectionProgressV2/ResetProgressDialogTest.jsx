@@ -58,7 +58,7 @@ describe('ResetProgressDialog', () => {
 
     expect(
       screen.getByText(
-        i18n.resetProgressSelectStudentsDescriptionForUnit({
+        i18n.resetProgressSelectStudentsDescription({
           unitName: 'Course A',
         })
       )
@@ -68,30 +68,18 @@ describe('ResetProgressDialog', () => {
     fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
 
     expect(
-      screen.getByText(
-        i18n.resetProgressConfirmWarningForUnit({unitName: 'Course A'})
-      )
+      screen.getByText(i18n.resetProgressConfirmWarning({unitName: 'Course A'}))
     ).toBeTruthy();
-  });
-
-  it('falls back to unnamed wording when the unit name is unavailable', () => {
-    renderComponent({unitName: undefined});
-
-    expect(
-      screen.getByText(i18n.resetProgressSelectStudentsDescription())
-    ).toBeTruthy();
-
-    fireEvent.click(screen.getByLabelText('Student1 Familyone'));
-    fireEvent.click(screen.getByRole('button', {name: i18n.next()}));
-
-    expect(screen.getByText(i18n.resetProgressConfirmWarning())).toBeTruthy();
   });
 
   it('renders a checkbox for every student and disables Next until one is selected', () => {
     renderComponent();
 
-    expect(screen.getByText('Student1 Familyone')).toBeTruthy();
-    expect(screen.getByText('Student2 Familytwo')).toBeTruthy();
+    for (const name of ['Student1 Familyone', 'Student2 Familytwo']) {
+      expect(screen.getByRole('checkbox', {name})).not.toBeChecked();
+    }
+    // One per student plus Select All.
+    expect(screen.getAllByRole('checkbox')).toHaveLength(students.length + 1);
     expect(screen.getByRole('button', {name: i18n.next()})).toBeDisabled();
   });
 
@@ -128,9 +116,7 @@ describe('ResetProgressDialog', () => {
 
     expect(screen.getByText(i18n.resetProgressConfirmTitle())).toBeTruthy();
     expect(
-      screen.getByText(
-        i18n.resetProgressConfirmWarningForUnit({unitName: 'Course A'})
-      )
+      screen.getByText(i18n.resetProgressConfirmWarning({unitName: 'Course A'}))
     ).toBeTruthy();
     expect(global.fetch).not.toHaveBeenCalled();
   });
