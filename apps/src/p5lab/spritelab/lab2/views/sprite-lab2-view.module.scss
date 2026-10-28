@@ -39,51 +39,11 @@
 // 1px outlines).
 $tab-item-height: 34px;
 
-.tabContainer {
-  display: flex;
-  align-items: center;
-  padding: 6px 8px;
-  background: var(--background-neutral-secondary);
-  border-bottom: 1px solid var(--borders-neutral-primary);
-  justify-content: space-between;
-}
-
 // The Images editor's pane.
 .picturesEditor {
   overflow: auto;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
-}
-
-// ?bar=bottom: the same bar under the workspace, ruled off above instead.
-.tabContainerBottom {
-  border-bottom: none;
-  border-top: 1px solid var(--borders-neutral-primary);
-}
-
-// ?resources=bar: the resource panel's buttons at the scene row's end.
-.toolButtons {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-.toolSettings {
-  position: relative;
-}
-
-// The settings panel drops from its button, over the editors.
-.toolSettingsPanel {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: variables.$z-index-overlay + 1;
-  width: 320px;
-  margin-top: 6px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 35%);
 }
 
 .tabBar {
@@ -104,81 +64,6 @@ $tab-item-height: 34px;
 }
 
 // --- Scene tabs ---
-
-// The project's scenes as tabs; overflow hides under the row's end.
-.sceneTabs {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 0;
-  height: $tab-item-height;
-}
-
-.sceneTabsRow {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
-// A scene's tab: its picture and name.
-.sceneTab {
-  display: flex;
-  align-items: stretch;
-  flex: 0 1 auto;
-  box-sizing: border-box;
-  height: $tab-item-height;
-  min-width: 64px;
-  max-width: 180px;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px 4px 0 0;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  overflow: hidden;
-}
-
-.sceneTabMain {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: 0 1 auto;
-  min-width: 0;
-  height: 100%;
-  margin: 0;
-  padding: 0 10px;
-  border: none;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  font-size: 14px;
-
-  &:hover:not(:disabled) {
-    background: var(--background-neutral-tertiary);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-}
-
-.sceneTabActive {
-  // Filled, not underlined, so the open scene reads at a glance.
-  border-color: var(--borders-brand-teal-primary);
-  background: var(--borders-brand-teal-primary);
-  color: #fff;
-
-  .sceneTabMain {
-    font-weight: 600;
-    cursor: default;
-
-    &:hover:not(:disabled) {
-      background: transparent;
-    }
-  }
-}
 
 .sceneTabName {
   display: block;
@@ -310,55 +195,6 @@ $tab-item-height: 34px;
   .editorSwitchActive {
     box-shadow: inset 3px 0 0 var(--borders-brand-teal-primary);
   }
-}
-
-// New scene: a square beside the tabs.
-.sceneTabButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  box-sizing: border-box;
-  width: $tab-item-height;
-  height: $tab-item-height;
-  margin: 0;
-  padding: 0;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-
-  &:hover:not(:disabled) {
-    background: var(--background-neutral-tertiary);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-}
-
-// The song a playing game is using, sized to sit among the tab controls.
-.musicBar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: $tab-item-height;
-  box-sizing: border-box;
-  padding: 0 10px;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  color: var(--text-neutral-primary);
-  font-size: 12px;
-  line-height: 1.2;
-  max-width: 220px;
-}
-
-.musicBarTitle {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .tabContent {
@@ -1153,14 +989,6 @@ $z-over-blockly: 71;
     font-size: 12px;
     line-height: 1.4;
   }
-}
-
-// The start scene's mark, when there is more than one scene.
-.sceneTabStart {
-  display: inline-flex;
-  flex: none;
-  color: var(--text-neutral-secondary);
-  font-size: 12px;
 }
 
 // A sheet under the scene row, over the whole area below. Closed, the

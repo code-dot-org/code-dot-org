@@ -134,19 +134,14 @@ import {
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
 
-import {readBarLayout} from './barLayout';
 import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
-import CatalogBand from './CatalogBand';
 import EditorStrip from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import PlayBar from './components/PlayBar';
 import PlayControls from './components/PlayControls';
-import SceneDropdown from './components/SceneDropdown';
-import SceneMusicBar from './components/SceneMusicBar';
 import Sheet from './components/Sheet';
-import ToolButtons from './components/ToolButtons';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton from './DiscoverBlocksButton';
 import GenerateImagePane from './GenerateImagePane';
@@ -154,9 +149,9 @@ import GenerateSpriteLab from './GenerateSpriteLab';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesGallery from './ScenesGallery';
-import SceneTabs from './SceneTabs';
 import SentenceScene from './sentence/SentenceScene';
 import {showTtsFor} from './showTts';
+import {readUiLayout} from './uiLayout';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
 import {useFlyoutDots} from './useFlyoutDots';
@@ -189,7 +184,6 @@ const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 /** The switch's editors, in order. */
-const EDITORS: Editor[] = ['Code', 'World', 'Images'];
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 // On hover over World while a story scene is active.
@@ -526,19 +520,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }),
     [tabs, enabledTabs, picturesOffered]
   );
-  // The lab's optional layouts, chosen by query parameters.
-  const {
-    previewSide,
-    barAtBottom,
-    barInWorkspace,
-    scenesInStrip,
-    scenesInPreviewBar,
-    scenesInAStrip,
-    resourcesInBar,
-    previewBarShown,
-    jumboSide,
-    editorsAtStart,
-  } = useMemo(() => readBarLayout(), []);
+  // The lab's layout; `?ui=classic` brings back the earlier one.
+  const {previewSide, guideUnderPreview, switchAtStart, editors} = useMemo(
+    () => readUiLayout(),
+    []
+  );
+  // The instructions live in the guide or in the panel, never both; the
+  // panel offers no other tab while it carries them.
+  const panelLevelProperties = useMemo(
+    () =>
+      guideUnderPreview
+        ? levelProperties
+        : {...levelProperties, hideNonInstructionTabs: true},
+    [guideUnderPreview, levelProperties]
+  );
+  const panelIsSidebar = guideUnderPreview && !!levelProperties.levelMode;
   // Images is open while its tab is: the hook's open state drives the
   // pane's inertness and its mount.
   const setPicturesOpen = pictures.setOpen;
@@ -1427,10 +1423,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     currentSources.blockCatalogSeen,
   ]);
 
-  const {nowPlaying, playMusic} = useSceneMusic(
-    activeTab === 'Play',
-    musicProjects
-  );
+  const {playMusic} = useSceneMusic(activeTab === 'Play', musicProjects);
 
   // A sheet over the editors and the stage: All scenes.
   const stageCovered = activeTab === 'Scenes';
@@ -2060,17 +2053,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const catalogOffered = catalog.length > 0 && isEditable;
   const openBlockCatalog = () => setShowBlockCatalog(true);
 
-  // The resource panel's buttons, when they live in a bar.
-  const toolButtons = resourcesInBar && (
-    <ToolButtons
-      levelId={levelProperties.id}
-      appName={levelProperties.appName}
-      theme={theme}
-      settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
-      onStartOver={isEditable ? () => setShowStartOver(true) : undefined}
-    />
-  );
-
   const imagePaneProps = {
     uploadImage,
     onRenameImage: handleRenameImage,
@@ -2122,38 +2104,34 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           onClose={closeBlockCatalog}
         />
       )}
-      {!resourcesInBar && (
-        <>
-          <ResourcePanel
-            levelProperties={levelProperties}
-            isRunning={isRunning}
-            hasRun={hasRun}
-            hasEdited={hasEdited}
-            settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
-            className={classNames(
-              !levelProperties.levelMode && moduleStyles.instructionsArea,
-              !!levelProperties.levelMode && moduleStyles.resourceSidebar
-            )}
-            sidebarOnly={!!levelProperties.levelMode}
-            footerButtons={
-              isEditable && (
-                <IconButtonWithTooltip
-                  id="start-over"
-                  label="Start Over"
-                  icon={{iconName: 'refresh', iconStyle: 'solid'}}
-                  variant="text"
-                  color="tertiary"
-                  tooltipDirection="onRight"
-                  onClick={() => setShowStartOver(true)}
-                  theme={theme}
-                  size="small"
-                />
-              )
-            }
-          />
-          <div className={moduleStyles.divider} />
-        </>
-      )}
+      <ResourcePanel
+        levelProperties={panelLevelProperties}
+        isRunning={isRunning}
+        hasRun={hasRun}
+        hasEdited={hasEdited}
+        settings={[...blocklySettings, themeSetting, ...gameAudio.settings]}
+        className={classNames(
+          !panelIsSidebar && moduleStyles.instructionsArea,
+          panelIsSidebar && moduleStyles.resourceSidebar
+        )}
+        sidebarOnly={panelIsSidebar}
+        footerButtons={
+          isEditable && (
+            <IconButtonWithTooltip
+              id="start-over"
+              label="Start Over"
+              icon={{iconName: 'refresh', iconStyle: 'solid'}}
+              variant="text"
+              color="tertiary"
+              tooltipDirection="onRight"
+              onClick={() => setShowStartOver(true)}
+              theme={theme}
+              size="small"
+            />
+          )
+        }
+      />
+      <div className={moduleStyles.divider} />
       {isImageMode(levelProperties.levelMode) ? (
         // The sentence scene is the whole lab: its panel is the Guide,
         // instructions included.
@@ -2179,49 +2157,23 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           />
         </div>
       ) : (
-        <LabShell
-          barAtBottom={barAtBottom}
-          barHidden={barInWorkspace || scenesInAStrip}
-          rightExtra={
-            <>
-              {activeTab === 'Play' && nowPlaying && (
-                <SceneMusicBar
-                  title={nowPlaying.title}
-                  loading={nowPlaying.loading}
-                />
-              )}
-              {toolButtons}
-            </>
-          }
-          sceneTabs={
-            scenesOffered ? (
-              <SceneTabs
-                {...sceneControls}
-                galleryOpen={activeTab === 'Scenes'}
-                disabled={activeTab === 'Play'}
-              />
-            ) : undefined
-          }
-        >
+        <LabShell>
           {WorkspaceAlert}
           <div ref={stageRef} className={moduleStyles.stage}>
-            {barInWorkspace &&
-              scenesOffered &&
+            {scenesOffered &&
               editorsShown &&
               (activeTab === 'Code' || activeTab === 'World') && (
                 <WorkspaceSceneBar
                   {...sceneControls}
                   rightExtra={
-                    <>
-                      {activeTab === 'Code' && catalogOffered && (
-                        <DiscoverBlocksButton
-                          remaining={hiddenBlockTypes.size}
-                          className={moduleStyles.barButton}
-                          onClick={openBlockCatalog}
-                        />
-                      )}
-                      {toolButtons}
-                    </>
+                    activeTab === 'Code' &&
+                    catalogOffered && (
+                      <DiscoverBlocksButton
+                        remaining={hiddenBlockTypes.size}
+                        className={moduleStyles.barButton}
+                        onClick={openBlockCatalog}
+                      />
+                    )
                   }
                   style={clearOfPreview}
                 />
@@ -2233,25 +2185,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 <EditorStrip
                   editor={activeTab}
                   onChange={handleEditorChange}
-                  editors={EDITORS}
+                  editors={editors}
                   disabledEditors={disabledEditors}
-                  switchAtStart={editorsAtStart}
-                  start={
-                    scenesInStrip &&
-                    scenesOffered &&
-                    activeTab !== 'Images' && (
-                      <SceneDropdown {...sceneControls} />
-                    )
-                  }
+                  switchAtStart={switchAtStart}
                   history={
                     activeTab === 'Code'
                       ? {canUndo, canRedo, undo, redo}
                       : undefined
                   }
-                  historyAtEnd={scenesInStrip}
-                  // With no scene row, the resource buttons close a strip:
-                  // the Preview's when there is one.
-                  end={scenesInAStrip && !previewBarShown && toolButtons}
                   style={clearOfPreview}
                 />
               )}
@@ -2262,7 +2203,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               className={classNames(
                 moduleStyles.codeTabWrapper,
                 editorsShown && moduleStyles.underEditorStrip,
-                barInWorkspace && moduleStyles.aboveWorkspaceSceneBar
+                moduleStyles.aboveWorkspaceSceneBar
               )}
               style={{
                 clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
@@ -2273,15 +2214,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             >
               {animationsSeeded && (
                 <div id={BLOCKLY_DIV_ID} className={moduleStyles.blocklyDiv} />
-              )}
-              {/* With a workspace bar the catalog opens from the bar's end. */}
-              {!barInWorkspace && catalogOffered && (
-                <CatalogBand
-                  workspaceVersion={workspaceVersion}
-                  getWorkspace={getMainWorkspace}
-                  remaining={hiddenBlockTypes.size}
-                  onClick={openBlockCatalog}
-                />
               )}
             </div>
 
@@ -2305,7 +2237,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 style={picturesSlide.style}
                 onTransitionEnd={picturesSlide.onTransitionEnd}
               >
-                <GenerateImagePane {...imagePaneProps} jumboSide={jumboSide} />
+                <GenerateImagePane {...imagePaneProps} />
               </div>
             )}
             {worldTabEnabled && worldMounted && (
@@ -2314,7 +2246,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 className={classNames(
                   moduleStyles.codeTabWrapper,
                   editorsShown && moduleStyles.underEditorStrip,
-                  barInWorkspace && moduleStyles.aboveWorkspaceSceneBar
+                  moduleStyles.aboveWorkspaceSceneBar
                 )}
                 style={{
                   clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
@@ -2348,18 +2280,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               boxRef={playspaceRef}
               platformScene={playingPlatformer}
               mode={playspaceMode}
-              columnHeader={
-                previewBarShown ? (
-                  <EditorStrip
-                    title="Preview"
-                    start={
-                      scenesInPreviewBar &&
-                      scenesOffered && <SceneDropdown {...sceneControls} />
-                    }
-                    end={scenesInAStrip && toolButtons}
-                  />
-                ) : undefined
-              }
+              columnHeader={<EditorStrip title="Preview" />}
               onPreviewWidth={setPreviewWidth}
               side={previewSide}
               controls={
@@ -2388,7 +2309,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 />
               }
               below={
-                levelProperties.levelMode ? (
+                guideUnderPreview && levelProperties.levelMode ? (
                   <GenerateSpriteLab
                     docked
                     levelMode={levelProperties.levelMode}
