@@ -48,7 +48,7 @@ describe('MatchQuestionContainer', () => {
   it('pairs a card in one set with a card in the other', () => {
     const {onChangePairs} = renderContainer();
 
-    fireEvent.click(card('A. 1 + 1'));
+    fireEvent.click(card('1 + 1'));
     fireEvent.click(card('2'));
 
     expect(onChangePairs).toHaveBeenLastCalledWith([['a', 'y']]);
@@ -58,7 +58,7 @@ describe('MatchQuestionContainer', () => {
     const {onChangePairs} = renderContainer();
 
     fireEvent.click(card('2'));
-    fireEvent.click(card('A. 1 + 1'));
+    fireEvent.click(card('1 + 1'));
 
     expect(onChangePairs).toHaveBeenLastCalledWith([['a', 'y']]);
   });
@@ -66,49 +66,68 @@ describe('MatchQuestionContainer', () => {
   it('names each paired card with its partner', () => {
     renderContainer([['a', 'y']]);
 
-    expect(card('A. 1 + 1, matched with 2')).toBeInTheDocument();
-    expect(card('2, matched with A. 1 + 1')).toBeInTheDocument();
-    expect(card('B. 2 + 1')).toBeInTheDocument();
+    expect(card('1 + 1, matched with 2')).toBeInTheDocument();
+    expect(card('2, matched with 1 + 1')).toBeInTheDocument();
+    expect(card('2 + 1')).toBeInTheDocument();
   });
 
   it("letters every first-set card, and a second-set card only once it's paired", () => {
     renderContainer([['b', 'x']]);
 
-    expect(card('A. 1 + 1')).toHaveTextContent(/A$/);
-    expect(card('B. 2 + 1, matched with 3')).toHaveTextContent(/B$/);
-    expect(card('3, matched with B. 2 + 1')).toHaveTextContent(/B$/);
+    expect(card('1 + 1')).toHaveTextContent(/A$/);
+    expect(card('2 + 1, matched with 3')).toHaveTextContent(/B$/);
+    expect(card('3, matched with 2 + 1')).toHaveTextContent(/B$/);
     expect(card('2')).toHaveTextContent(/^2$/);
   });
 
   it('marks the selected card as pressed, and deselects it on a second click', () => {
     renderContainer();
 
-    fireEvent.click(card('A. 1 + 1'));
-    expect(card('A. 1 + 1')).toHaveAttribute('aria-pressed', 'true');
+    fireEvent.click(card('1 + 1'));
+    expect(card('1 + 1')).toHaveAttribute('aria-pressed', 'true');
 
-    fireEvent.click(card('A. 1 + 1'));
-    expect(card('A. 1 + 1')).toHaveAttribute('aria-pressed', 'false');
+    fireEvent.click(card('1 + 1'));
+    expect(card('1 + 1')).toHaveAttribute('aria-pressed', 'false');
   });
 
   it('moves the selection within a set instead of pairing', () => {
     const {onChangePairs} = renderContainer();
 
-    fireEvent.click(card('A. 1 + 1'));
-    fireEvent.click(card('B. 2 + 1'));
+    fireEvent.click(card('1 + 1'));
+    fireEvent.click(card('2 + 1'));
 
-    expect(card('A. 1 + 1')).toHaveAttribute('aria-pressed', 'false');
-    expect(card('B. 2 + 1')).toHaveAttribute('aria-pressed', 'true');
+    expect(card('1 + 1')).toHaveAttribute('aria-pressed', 'false');
+    expect(card('2 + 1')).toHaveAttribute('aria-pressed', 'true');
     expect(onChangePairs).not.toHaveBeenCalled();
   });
 
-  it('unpairs two partners when they are paired again', () => {
+  it('unmatches a matched card when it is selected, and keeps it selected', () => {
     const {onChangePairs} = renderContainer([['a', 'y']]);
 
-    fireEvent.click(card('A. 1 + 1, matched with 2'));
-    fireEvent.click(card('2, matched with A. 1 + 1'));
+    fireEvent.click(card('2, matched with 1 + 1'));
 
     expect(onChangePairs).toHaveBeenLastCalledWith([]);
-    expect(card('A. 1 + 1')).toBeInTheDocument();
+    expect(card('2')).toHaveAttribute('aria-pressed', 'true');
+    expect(card('1 + 1')).toHaveAttribute('aria-pressed', 'false');
+  });
+
+  it('rematches an unmatched card with a new partner', () => {
+    const {onChangePairs} = renderContainer([['a', 'y']]);
+
+    fireEvent.click(card('1 + 1, matched with 2'));
+    fireEvent.click(card('3'));
+
+    expect(onChangePairs).toHaveBeenLastCalledWith([['a', 'x']]);
+  });
+
+  it('does not restore the pair when the unmatched card is deselected', () => {
+    const {onChangePairs} = renderContainer([['a', 'y']]);
+
+    fireEvent.click(card('1 + 1, matched with 2'));
+    fireEvent.click(card('1 + 1'));
+
+    expect(onChangePairs).toHaveBeenCalledTimes(1);
+    expect(card('1 + 1')).toHaveAttribute('aria-pressed', 'false');
   });
 
   it('describes how to match, for screen readers', () => {
@@ -117,23 +136,33 @@ describe('MatchQuestionContainer', () => {
     expect(
       screen.getByRole('group', {name: 'Match each expression to its value.'})
     ).toHaveAccessibleDescription(
-      'Select an item in one column, then an item in the other column to match them. Select a matched pair again to unmatch it.'
+      'Select an item in one column, then an item in the other column to match them. Selecting a matched item unmatches it.'
     );
   });
 
   it('announces each match and unmatch', () => {
     renderContainer();
 
-    fireEvent.click(card('A. 1 + 1'));
+    fireEvent.click(card('1 + 1'));
     fireEvent.click(card('2'));
     expect(screen.getByRole('status')).toHaveTextContent(
-      'Matched A. 1 + 1 with 2.'
+      'Matched 1 + 1 with 2.'
     );
 
-    fireEvent.click(card('2, matched with A. 1 + 1'));
-    fireEvent.click(card('A. 1 + 1, matched with 2'));
+    fireEvent.click(card('2, matched with 1 + 1'));
     expect(screen.getByRole('status')).toHaveTextContent(
-      'Unmatched A. 1 + 1 from 2.'
+      'Unmatched 2 from 1 + 1. Select an item in the other column to match it.'
+    );
+  });
+
+  it('announces the partner dropped when the second card was already matched', () => {
+    renderContainer([['a', 'y']]);
+
+    fireEvent.click(card('2 + 1'));
+    fireEvent.click(card('2, matched with 1 + 1'));
+
+    expect(screen.getByRole('status')).toHaveTextContent(
+      'Matched 2 + 1 with 2. 1 + 1 is no longer matched.'
     );
   });
 });
