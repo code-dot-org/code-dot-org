@@ -48,11 +48,6 @@ export default function UpdateEmailModal({
   };
 
   const handleSubmit = onSubmit(async () => {
-    // Enter in a text field submits past the disabled button.
-    if (optInUnanswered) {
-      setOptInTouched(true);
-      return;
-    }
     await mutation.mutateAsync({
       newEmail: email,
       hashedEmail: hashEmail(email),

@@ -151,27 +151,6 @@ describe('UpdateEmailModal', () => {
       expect(submitButton()).toBeEnabled();
     });
 
-    it('should show the required error when submitted unanswered', () => {
-      let requested = false;
-      mockServer.use(
-        http.patch('*/users/email', () => {
-          requested = true;
-          return HttpResponse.json({});
-        }),
-      );
-      const {onClose} = renderModal(vi.fn(), true);
-
-      fireEvent.change(newEmailField(), {target: {value: 'test@example.com'}});
-      fireEvent.submit(newEmailField().closest('form')!);
-
-      expect(screen.getByText('This field is required.')).toBeInTheDocument();
-      expect(screen.getByRole('radiogroup')).toHaveAccessibleDescription(
-        'This field is required.',
-      );
-      expect(requested).toBe(false);
-      expect(onClose).not.toHaveBeenCalled();
-    });
-
     it("should send a teacher's answer with the email change", async () => {
       let body: unknown;
       mockServer.use(

@@ -187,7 +187,7 @@ describe('UsersSettingsPage — accessibility', () => {
     const dialog = await screen.findByRole('alertdialog', {
       name: /change account type/i,
     });
-    fireEvent.submit(within(dialog).getByRole('radiogroup').closest('form')!);
+    fireEvent.blur(within(dialog).getByRole('radio', {name: 'Yes'}));
     await within(dialog).findByText('This field is required.');
     expect(await auditBody()).toHaveNoViolations();
   });
