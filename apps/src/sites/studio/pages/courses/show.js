@@ -111,10 +111,7 @@ function showCourseOverview() {
         }
       />
     </Provider>,
-    document.getElementById('course_overview'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('course_overview')
   );
   tooltipifyVocabulary();
   displayDifferentiationChat(scriptData);
@@ -136,10 +133,7 @@ function displayDifferentiationChat(scriptData) {
           scriptName={scriptData.course_summary.name}
         />
       </Provider>,
-      aiDiffFabMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      aiDiffFabMountPoint
     );
   }
 }

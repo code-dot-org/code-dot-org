@@ -16,12 +16,27 @@
 }
 
 .optionSelected {
-  background: var(--background-brand-purple-light);
-  border-color: var(--borders-brand-purple-light);
+  background: var(--background-brand-light);
+  border-color: var(--border-brand-light);
 }
 
-.optionLetter {
-  font-weight: 600;
+// Graded rows have no interaction states.
+.option:not(.optionCorrect, .optionIncorrect) {
+  &:hover,
+  &:active {
+    border-color: var(--border-neutral-secondary);
+  }
+
+  &.optionSelected:hover,
+  &.optionSelected:active {
+    border-color: var(--border-brand-mid);
+  }
+
+  &:has(input:focus-visible) {
+    box-shadow:
+      0 0 0 2px var(--background-neutral-primary),
+      0 0 0 4px var(--border-focused-primary);
+  }
 }
 
 // After .optionSelected so a graded pick overrides its purple.
