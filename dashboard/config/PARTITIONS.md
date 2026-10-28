@@ -1,9 +1,9 @@
 # Curriculum partitions
 
 Curriculum content in this repo is split into three partitions, each seeded on
-its own: production, UI test, and standalone project. Which partition something
-belongs to is decided by its name, and each partition's
-definition files live in its own tree.
+its own: production curriculum, UI test curriculum, and standalone projects.
+Which partition something belongs to is decided by its name, and each
+partition's definition files live in its own tree.
 `dashboard/test/ui/config/README.md` and
 `dashboard/config/standalone_projects/README.md` cover how the two
 non-production partitions are seeded and authored.
@@ -23,9 +23,9 @@ See [partitioned curriculum data proposal](https://docs.google.com/document/d/1i
 
 | Partition | Identifier | Tree |
 |---|---|---|
-| Production | `:production` | `dashboard/config`, apart from `config/standalone_projects` |
-| UI test | `:ui_test` | `dashboard/test/ui/config` |
-| Standalone project | `:standalone_project` | `dashboard/config/standalone_projects` |
+| Production curriculum | `:production_curriculum` | `dashboard/config`, apart from `config/standalone_projects` |
+| UI test curriculum | `:ui_test_curriculum` | `dashboard/test/ui/config` |
+| Standalone projects | `:standalone_projects` | `dashboard/config/standalone_projects` |
 
 ## Naming
 

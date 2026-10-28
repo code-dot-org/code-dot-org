@@ -150,9 +150,9 @@ class DSLDefined < Level
 
   # See dashboard/config/PARTITIONS.md.
   SCRIPTS_DIRS = {
-    production: 'config/scripts',
-    ui_test: 'test/ui/config/scripts',
-    standalone_project: 'config/standalone_projects/scripts',
+    production_curriculum: 'config/scripts',
+    ui_test_curriculum: 'test/ui/config/scripts',
+    standalone_projects: 'config/standalone_projects/scripts',
   }.freeze
 
   def scripts_dir

@@ -3,9 +3,9 @@ module Policies
     # A level's name selects exactly one of these trees, so no two trees ever
     # define the same level. See dashboard/config/PARTITIONS.md.
     LEVELS_SUBDIR = {
-      production: 'config/levels',
-      ui_test: 'test/ui/config/levels',
-      standalone_project: 'config/standalone_projects/levels',
+      production_curriculum: 'config/levels',
+      ui_test_curriculum: 'test/ui/config/levels',
+      standalone_projects: 'config/standalone_projects/levels',
     }.freeze
 
     # Raises on a name that matches both the "UI Test " and the standalone
@@ -17,9 +17,9 @@ module Policies
         raise ArgumentError, "level name #{level_name.to_s.dump} matches both the \"UI Test \" " \
           "and the standalone project partition rules; a name may match only one"
       end
-      return :ui_test if ui_test
-      return :standalone_project if standalone
-      :production
+      return :ui_test_curriculum if ui_test
+      return :standalone_projects if standalone
+      :production_curriculum
     end
 
     # Unlike partition_for_name, never raises, so validations can call it. A
@@ -46,9 +46,9 @@ module Policies
     # belongs to, based on which tree its path falls under.
     def self.partition_for_path(path)
       path = path.to_s
-      return :ui_test if path.include?('test/ui/config/')
-      return :standalone_project if path.include?('config/standalone_projects/')
-      :production
+      return :ui_test_curriculum if path.include?('test/ui/config/')
+      return :standalone_projects if path.include?('config/standalone_projects/')
+      :production_curriculum
     end
 
     # We organize new level files into a `levels` directory to keep them
@@ -87,7 +87,7 @@ module Policies
     # partition is selected by the name; without one, `partition` picks which
     # partition's levels to enumerate.
     def self.level_file_glob(level_name, root_dir = '.', partition: nil)
-      partition ||= level_name ? partition_for_name(level_name) : :production
+      partition ||= level_name ? partition_for_name(level_name) : :production_curriculum
       "#{root_dir}/#{LEVELS_SUBDIR.fetch(partition)}/**/#{level_name || '*'}.level"
     end
   end

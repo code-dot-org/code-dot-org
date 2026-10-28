@@ -305,7 +305,7 @@ namespace :seed do
   end
 
   timed_task_with_logging custom_levels_ui_tests: :environment do
-    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, partition: :ui_test)
+    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, partition: :ui_test_curriculum)
   end
 
   timed_task_with_logging parent_dsls_ui_tests: :environment do
@@ -320,7 +320,7 @@ namespace :seed do
   STANDALONE_PROJECT_PARENT_DSL_FILES = dsl_files('config/standalone_projects/scripts', PARENT_DSL_TYPES).freeze
 
   timed_task_with_logging standalone_project_levels: :environment do
-    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, partition: :standalone_project)
+    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, partition: :standalone_projects)
     DSLDefined.transaction do
       parse_dsl_files(STANDALONE_PROJECT_PARENT_DSL_FILES, PARENT_DSL_TYPES)
     end

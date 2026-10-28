@@ -46,9 +46,9 @@ class LevelLoader
       "git mv #{path.dump} #{path.sub(subdirs[from], subdirs[to]).dump}" unless from == to
     end
     if misfiled.any?
-      raise "level files misfiled: \"UI Test \" levels belong under #{subdirs[:ui_test]}, " \
+      raise "level files misfiled: \"UI Test \" levels belong under #{subdirs[:ui_test_curriculum]}, " \
         "standalone project levels (\"New ... Project\", \"... Subproject\") under " \
-        "#{subdirs[:standalone_project]}, all others under #{subdirs[:production]}. " \
+        "#{subdirs[:standalone_projects]}, all others under #{subdirs[:production_curriculum]}. " \
         "To fix:\n#{misfiled.join("\n")}"
     end
 

@@ -86,24 +86,24 @@ module Policies
       assert_equal('./config/levels/**/My UI Test Level.level', Policies::LevelFiles.level_file_glob('My UI Test Level'))
       # without a name, partition: picks which partition to enumerate
       assert_equal('./config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil))
-      assert_equal('./test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, partition: :ui_test))
-      assert_equal('./config/standalone_projects/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, partition: :standalone_project))
-      assert_equal('/custom/root/test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, '/custom/root', partition: :ui_test))
+      assert_equal('./test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, partition: :ui_test_curriculum))
+      assert_equal('./config/standalone_projects/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, partition: :standalone_projects))
+      assert_equal('/custom/root/test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, '/custom/root', partition: :ui_test_curriculum))
     end
 
     test 'partition_for_name selects a partition by name and refuses a name matching two rules' do
-      assert_equal :production, Policies::LevelFiles.partition_for_name('Regular Level')
-      assert_equal :production, Policies::LevelFiles.partition_for_name('My UI Test Level')
-      assert_equal :ui_test, Policies::LevelFiles.partition_for_name('UI Test Level')
-      assert_equal :ui_test, Policies::LevelFiles.partition_for_name('ui test lowercase')
-      assert_equal :standalone_project, Policies::LevelFiles.partition_for_name('New Tree Project')
-      assert_equal :standalone_project, Policies::LevelFiles.partition_for_name('Tree Subproject')
-      assert_equal :standalone_project, Policies::LevelFiles.partition_for_name('Calc Free Play')
+      assert_equal :production_curriculum, Policies::LevelFiles.partition_for_name('Regular Level')
+      assert_equal :production_curriculum, Policies::LevelFiles.partition_for_name('My UI Test Level')
+      assert_equal :ui_test_curriculum, Policies::LevelFiles.partition_for_name('UI Test Level')
+      assert_equal :ui_test_curriculum, Policies::LevelFiles.partition_for_name('ui test lowercase')
+      assert_equal :standalone_projects, Policies::LevelFiles.partition_for_name('New Tree Project')
+      assert_equal :standalone_projects, Policies::LevelFiles.partition_for_name('Tree Subproject')
+      assert_equal :standalone_projects, Policies::LevelFiles.partition_for_name('Calc Free Play')
 
       # UI Test names only: the project rule needs "New " at the start, and
       # the allow-list is an exact match
-      assert_equal :ui_test, Policies::LevelFiles.partition_for_name('UI Test New Tree Project')
-      assert_equal :ui_test, Policies::LevelFiles.partition_for_name('UI Test Calc Free Play')
+      assert_equal :ui_test_curriculum, Policies::LevelFiles.partition_for_name('UI Test New Tree Project')
+      assert_equal :ui_test_curriculum, Policies::LevelFiles.partition_for_name('UI Test Calc Free Play')
       ['UI Test Tree Subproject', 'ui test lowercase subproject'].each do |name|
         e = assert_raises(ArgumentError) {Policies::LevelFiles.partition_for_name(name)}
         assert_includes e.message, 'only one'
@@ -121,12 +121,12 @@ module Policies
     end
 
     test 'partition_for_path selects a partition by the tree the file sits in' do
-      assert_equal :production, Policies::LevelFiles.partition_for_path('config/levels/custom/maze/Foo.level')
-      assert_equal :production, Policies::LevelFiles.partition_for_path(Rails.root.join('config/scripts/foo.multi'))
-      assert_equal :ui_test, Policies::LevelFiles.partition_for_path('test/ui/config/levels/custom/UI Test Foo.level')
-      assert_equal :ui_test, Policies::LevelFiles.partition_for_path('./test/ui/config/scripts/ui_test_foo.multi')
-      assert_equal :standalone_project, Policies::LevelFiles.partition_for_path('config/standalone_projects/levels/custom/applab/New App Lab Project.level')
-      assert_equal :standalone_project, Policies::LevelFiles.partition_for_path(Rails.root.join('config/standalone_projects/scripts/new_foo_project.bubble_choice'))
+      assert_equal :production_curriculum, Policies::LevelFiles.partition_for_path('config/levels/custom/maze/Foo.level')
+      assert_equal :production_curriculum, Policies::LevelFiles.partition_for_path(Rails.root.join('config/scripts/foo.multi'))
+      assert_equal :ui_test_curriculum, Policies::LevelFiles.partition_for_path('test/ui/config/levels/custom/UI Test Foo.level')
+      assert_equal :ui_test_curriculum, Policies::LevelFiles.partition_for_path('./test/ui/config/scripts/ui_test_foo.multi')
+      assert_equal :standalone_projects, Policies::LevelFiles.partition_for_path('config/standalone_projects/levels/custom/applab/New App Lab Project.level')
+      assert_equal :standalone_projects, Policies::LevelFiles.partition_for_path(Rails.root.join('config/standalone_projects/scripts/new_foo_project.bubble_choice'))
     end
 
     test 'default path for standalone project levels is in the standalone tree' do
