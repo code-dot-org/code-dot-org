@@ -18,7 +18,7 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
 }) => {
   const [answer, setAnswer] = useState('');
 
-  // A half-typed answer was meant for the question just replaced.
+  // If a new prompt comes in, clear the current answer, as it was meant for the previous question.
   useEffect(() => {
     setAnswer('');
   }, [prompt]);
