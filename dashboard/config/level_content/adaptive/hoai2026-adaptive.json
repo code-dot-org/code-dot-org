@@ -87,18 +87,6 @@
           "level": "adaptive-HoAI26-intro-four-ways-there"
         },
         {
-          "id": "intro-second-look",
-          "title": "Second Look",
-          "kind": "level",
-          "level": "adaptive-HoAI26-intro-second-look"
-        },
-        {
-          "id": "intro-schedule-snap",
-          "title": "Schedule Snap",
-          "kind": "level",
-          "level": "adaptive-HoAI26-intro-schedule-snap"
-        },
-        {
           "id": "intro-plan",
           "title": "Plan your website",
           "kind": "questions",
@@ -257,28 +245,28 @@
             },
             {
               "key": "adaptive-HoAI26-use-the-lingo-4-d0f02545-840a-4370-95c5-1425103a1f5d",
-              "imageUrl": "https://images.code.org/5c00eed0ca6469f72220f1d45b76daa3-panda-panel-1-smooth.gif",
+              "imageUrl": "https://images.code.org/6e27590f581e1959b18f5a8ea039ff1e-panda1.png",
               "text": "###Hero Banner\n\nThe **hero** section introduces your page.",
               "layout": "text-bottom-right",
               "fadeInOverPrevious": true
             },
             {
               "key": "adaptive-HoAI26-use-the-lingo-4-1774d6c3-2655-47d6-a5f8-adc23ff053d4",
-              "imageUrl": "https://images.code.org/4cbf36ea81de2d406284648987c85cb2-panda-panel-2-smooth.gif",
+              "imageUrl": "https://images.code.org/52e6642b23f6181e5df952febf841421-row-09-PAN-2-refined.png",
               "text": "###Feature Cards\n\nSmaller 'feature cards' show key info or options.",
               "layout": "text-bottom-right",
               "fadeInOverPrevious": true
             },
             {
               "key": "adaptive-HoAI26-use-the-lingo-4-7cf960b2-c941-4a0e-b99a-620e481caad4",
-              "imageUrl": "https://images.code.org/f86e7d22373a481729d0274ee6031e16-panda-panel-3-drag-bamboo.gif",
+              "imageUrl": "https://images.code.org/b28e0cbb266cd58f7823fe3a7231b354-row-10-PAN-3-refined.png",
               "text": "###Interactive Canvas\nAn 'interactive canvas' lets users play or create.",
               "layout": "text-bottom-right",
               "fadeInOverPrevious": true
             },
             {
               "key": "adaptive-HoAI26-use-the-lingo-4-72392717-95fb-44d8-82e3-9599f4c8b802",
-              "imageUrl": "https://images.code.org/e9f7ceb739176bd901c6e1c77c5b2693-panda-panel-4-smooth.gif",
+              "imageUrl": "https://images.code.org/951d163dd70c6a286be2faf6a9343312-row-11-PAN-4-refined.png",
               "text": "###Call-to-action\nA 'call-to-action' button guides you to the next step.",
               "layout": "text-bottom-right",
               "fadeInOverPrevious": true
