@@ -278,6 +278,26 @@ export interface ProjectFolder {
 /**
  * Labs may extend this type to add lab-specific properties.
  */
+/** One line of a level's checklist (Instructions/ObjectivesList.tsx). */
+export interface ObjectiveItem {
+  /** What the lab reports a hover or click on this line by. */
+  id?: string;
+  /** Markdown. */
+  text: string;
+  done: boolean;
+}
+
+/** A level's checklist as the lab reports it: what to do, which of it
+    holds, and whether all of it does, which lets the student continue. */
+export interface ObjectivesChecklist {
+  /** Markdown; the instructions when the level has no other. */
+  title?: string;
+  items: ObjectiveItem[];
+  allDone: boolean;
+  /** A short line a collapsed panel keeps. */
+  collapsedText?: string;
+}
+
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
   id: number;

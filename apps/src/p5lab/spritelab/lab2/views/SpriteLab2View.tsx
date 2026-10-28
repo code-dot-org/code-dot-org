@@ -21,6 +21,7 @@ import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {ObjectivesChecklist} from '@cdo/apps/lab2/types';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
@@ -685,6 +686,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     everPlayed: playProgress.everPlayed,
     runtime: playProgress.runtime,
   });
+  // The checklist as the instructions panel shows it.
+  const panelChecklist = useMemo<ObjectivesChecklist | undefined>(
+    () =>
+      objectives.active
+        ? {
+            title: objectives.title,
+            items: objectives.items,
+            allDone: objectives.allDone,
+            collapsedText: objectives.collapsedText,
+          }
+        : undefined,
+    [objectives]
+  );
 
   // The World palette selection lives here so it survives leaving the tab
   // (WorldTab unmounts when hidden).
@@ -2116,6 +2130,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           panelIsSidebar && moduleStyles.resourceSidebar
         )}
         sidebarOnly={panelIsSidebar}
+        // The checklist and the Continue gate ride in the panel unless
+        // the guide carries them.
+        objectives={guideUnderPreview ? undefined : panelChecklist}
+        hideContinueIfDisabled={!guideUnderPreview}
         footerButtons={
           isEditable && (
             <IconButtonWithTooltip
