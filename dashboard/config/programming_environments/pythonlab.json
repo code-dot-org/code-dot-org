@@ -30,6 +30,12 @@
       "name": "Control Structures",
       "color": "#94fbab",
       "position": 3
+    },
+    {
+      "key": "neighborhood_functional_",
+      "name": "neighborhood (functional)",
+      "color": "#fbdae8",
+      "position": 4
     }
   ]
 }
