@@ -11,6 +11,10 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
+# Indexes
+#
+#  index_practice_problems_on_key  (key) UNIQUE
+#
 class PracticeProblem < ApplicationRecord
   has_and_belongs_to_many :objectives, join_table: :objectives_practice_problems
   validates :problem_type, inclusion: {in: SharedConstants::PRACTICE_PROBLEM_TYPES.values}

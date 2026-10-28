@@ -11,7 +11,7 @@ const TRACE_URL = '/adaptive/traces';
 const MAX_ERROR_MESSAGE_LENGTH = 1_000;
 
 /** Trace names Rails accepts; each is one kind of shell generation. */
-export type TraceName = 'adaptive-instructions';
+export type TraceName = 'adaptive-instructions' | 'adaptive-validation';
 
 export type TraceOutcome = 'success' | 'schema_mismatch' | 'error';
 

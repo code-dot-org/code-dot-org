@@ -345,6 +345,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       return {};
     }
     const tabMap: Record<string, React.ReactNode> = {};
+    const hideNonInstructionTabs =
+      levelProperties.hideNonInstructionTabs ?? false;
 
     const instructionsContent = hasInstructions ? (
       <Instructions
@@ -357,11 +359,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Instructions] = instructionsContent;
     }
 
-    validExtraTabs.forEach(tab => {
-      tabMap[tab.id] = tab.content;
-    });
+    if (!hideNonInstructionTabs) {
+      validExtraTabs.forEach(tab => {
+        tabMap[tab.id] = tab.content;
+      });
+    }
 
-    if (validationSettings && hasValidationConditions) {
+    if (
+      !hideNonInstructionTabs &&
+      validationSettings &&
+      hasValidationConditions
+    ) {
       tabMap[Tabs.Validation] = <ValidationPanel {...validationSettings} />;
     }
 
@@ -401,68 +409,70 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       }
     }
 
-    // The version history tab is hidden in permanently read-only mode with the following exception:
-    // - if a teacher is viewing a student's project (in which case they can view old versions, but not restore them).
-    // Version history is also hidden on predict levels and widget view.
-    const versionHistoryHidden =
-      (isPermanentlyReadOnly && !viewAsUserId) ||
-      isWidgetView ||
-      isReadOnlyPredict ||
-      levelProperties.hideVersionHistory;
-    if (versionHistoryProps && !versionHistoryHidden) {
-      tabMap[Tabs.VersionHistory] = (
-        <VersionHistoryPanel
-          selectedVersion={selectedVersion}
-          setSelectedVersion={setSelectedVersion}
-          startSources={versionHistoryProps.startSources}
-          levelId={levelId}
-          disabled={isTemporarilyReadOnly && !isViewingOldVersion}
-          isOpen={currentTab === Tabs.VersionHistory}
-          alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
-          onLoadVersion={versionHistoryProps.onLoadVersion}
-        />
-      );
-    }
+    if (!hideNonInstructionTabs) {
+      // The version history tab is hidden in permanently read-only mode with the following exception:
+      // - if a teacher is viewing a student's project (in which case they can view old versions, but not restore them).
+      // Version history is also hidden on predict levels and widget view.
+      const versionHistoryHidden =
+        (isPermanentlyReadOnly && !viewAsUserId) ||
+        isWidgetView ||
+        isReadOnlyPredict ||
+        levelProperties.hideVersionHistory;
+      if (versionHistoryProps && !versionHistoryHidden) {
+        tabMap[Tabs.VersionHistory] = (
+          <VersionHistoryPanel
+            selectedVersion={selectedVersion}
+            setSelectedVersion={setSelectedVersion}
+            startSources={versionHistoryProps.startSources}
+            levelId={levelId}
+            disabled={isTemporarilyReadOnly && !isViewingOldVersion}
+            isOpen={currentTab === Tabs.VersionHistory}
+            alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
+            onLoadVersion={versionHistoryProps.onLoadVersion}
+          />
+        );
+      }
 
-    if (showRubric) {
-      tabMap[Tabs.StudentRubric] = <StudentRubricView />;
-    }
+      if (showRubric) {
+        tabMap[Tabs.StudentRubric] = <StudentRubricView />;
+      }
 
-    if (showBackpack) {
-      tabMap[Tabs.Backpack] = (
-        <UnifiedBackpackPanel
-          {...backpackProps}
-          backpackRefreshKey={backpackRefreshKey}
-        />
-      );
-    }
+      if (showBackpack) {
+        tabMap[Tabs.Backpack] = (
+          <UnifiedBackpackPanel
+            {...backpackProps}
+            backpackRefreshKey={backpackRefreshKey}
+          />
+        );
+      }
 
-    if (
-      isUserTeacher &&
-      (levelProperties.teacherMarkdown ||
-        levelProperties.predictSettings?.solution)
-    ) {
-      tabMap[Tabs.TeachersOnly] = (
-        <ForTeachersOnly
-          levelProperties={levelProperties}
-          className={classNames(styles.panelContent, styles.teachersOnlyTab)}
-        />
-      );
-    }
+      if (
+        isUserTeacher &&
+        (levelProperties.teacherMarkdown ||
+          levelProperties.predictSettings?.solution)
+      ) {
+        tabMap[Tabs.TeachersOnly] = (
+          <ForTeachersOnly
+            levelProperties={levelProperties}
+            className={classNames(styles.panelContent, styles.teachersOnlyTab)}
+          />
+        );
+      }
 
-    const shortcuts = getLabShortcuts(levelProperties.appName as AppName);
-    if (
-      levelTours.length > 0 ||
-      otherAvailableTours.length > 0 ||
-      !!shortcuts
-    ) {
-      tabMap[Tabs.StudentResources] = (
-        <StudentResourcesPanel
-          levelTours={levelTours}
-          otherAvailableTours={otherAvailableTours}
-          shortcuts={shortcuts}
-        />
-      );
+      const shortcuts = getLabShortcuts(levelProperties.appName as AppName);
+      if (
+        levelTours.length > 0 ||
+        otherAvailableTours.length > 0 ||
+        !!shortcuts
+      ) {
+        tabMap[Tabs.StudentResources] = (
+          <StudentResourcesPanel
+            levelTours={levelTours}
+            otherAvailableTours={otherAvailableTours}
+            shortcuts={shortcuts}
+          />
+        );
+      }
     }
 
     return tabMap;

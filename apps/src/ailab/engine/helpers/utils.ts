@@ -9,6 +9,11 @@ export function getKeyByValue(
   return Object.keys(object).find(key => object[key] === value);
 }
 
+export function rowCountText(shown: number, total: number): string {
+  const totalText = `${total} ${total === 1 ? 'row' : 'rows'}`;
+  return shown === total ? totalText : `${shown} of ${totalText}`;
+}
+
 export function isEmpty(object: Record<string, unknown>): boolean {
   return Object.keys(object).length === 0;
 }
@@ -48,4 +53,12 @@ export function getNiceAxisStep(max: number, intervals: number): number {
 
 export function prefersReducedMotion(): boolean {
   return !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+}
+
+/*
+  Both hyperparameters count something — neighbours, or splits — so both are
+  whole numbers of at least one.
+*/
+export function isValidHyperparameter(value: unknown): boolean {
+  return typeof value === 'number' && Number.isInteger(value) && value >= 1;
 }
