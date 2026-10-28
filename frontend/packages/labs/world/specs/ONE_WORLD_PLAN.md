@@ -72,13 +72,50 @@ actor`, `set background`, `load map`. A screen's own actors are its
   this is the rule the first one follows.
 - **`actor to follow` takes a kind in the inspector.** The picker offers the
   project's kinds, not one map's placements.
-- **The Scroll View stops being a Viewport.** Its content is its children,
-  placed on the screen in the screen editor, and it clips and scrolls them.
-  A Scroll View holding a map would be a second World. To be checked: what
-  clipping costs without a camera of its own (see below).
+- **The Scroll View stops being a Viewport.** A Scroll View holding a map
+  would be a second World. Its content is its children, placed under it in
+  the screen editor (specs/PARENTING.md). It clips them with a mask, and
+  scrolling moves them under it. `scroll` and `content` move from the
+  Viewport to it; `content` is its children's extent. See "Clipping".
 - **A screen may hold any kind of actor.** A title screen with a Player
   bouncing on it is reasonable. It is drawn flat, and never meets the
   World's actors.
+
+## Clipping
+
+A camera's rectangle used to be the only clip in the lab besides an actor's
+own canvas. The binding says a mask does nothing in WebGL (`PhaserBinding`,
+`actors/stock/list`), which is true of the `setMask` component and not of
+Phaser 4's mask FILTER. That was tried in October 2026, under the binding's
+renderer (WebGL, Phaser 4.2.1, headless Chromium on SwiftShader):
+
+- A Container given `enableFilters()` and `filters.external.addMask(g)`,
+  with `g` a Graphics rectangle in world coordinates, is clipped to the
+  rectangle exactly, text included.
+- Moving the children inside it scrolls them under the clip.
+- A mask inside a masked Container clips to both.
+- Zooming and scrolling the camera moves the clip with what it clips.
+- An internal filter on the same Container, a glow, still draws, inside the
+  clip.
+- Objects outside the Container are not clipped.
+- Forty masked Containers took a software-rendered frame rate from 60 to
+  about 51. Each mask renders a texture, so a screen with a few Scroll Views
+  is cheap and one with hundreds is not.
+
+What follows for the Scroll View:
+
+- **It needs no camera.** Its children's Container carries the mask, which is
+  its own rectangle, redrawn when it moves or is resized.
+- **The engine clips input itself.** A mask changes only what is drawn. A
+  point counts on a Scroll View's child only inside the Scroll View, and so
+  does a tap; the engine's hit test does this, not the binding.
+- **Nesting works**, one Scroll View in another, with no special case.
+- **The filter order matters.** `skew.ts` already depends on where
+  `enableFilters` puts its step, so the mask joins that order rather than
+  being added beside it.
+- **The comments that say a mask does nothing** are corrected when this is
+  built. The List keeps drawing its own rows: drawing only the rows that
+  show is why a thousand words cost what six do.
 
 ## What goes
 
@@ -109,7 +146,11 @@ follow` by kind. Removing camera lists and `shows through`. Tests.
    labels become Main Screen placements.
 5. World blocks act on the World. Removing `here`, `load map … into`,
    `unload ⟨Viewport⟩`, `in the map ⟨…⟩ shows` and mirroring.
-6. The Scroll View over its children.
+6. The Scroll View over its children: the mask in the binding, the clipped
+   hit test in the engine, and a way into a Scroll View in the screen
+   editor to place and arrange content taller than its window. The
+   Interface Kit's settings page moves from its own map to children of the
+   Scroll View.
 7. The lesson converter, the 90 lessons, the fixtures and the map editor.
    The Main Screen dump compared before and after, as for
    WORLD_AS_DATA_PLAN.md: every difference accounted for.
@@ -122,8 +163,6 @@ follow` by kind. Removing camera lists and `shows through`. Tests.
 - How the preview's renderer gives each space and camera its view
   (`PhaserBinding`), and what one World seen by several cameras needs from
   it.
-- How the Scroll View clips without a space of its own, and whether a
-  screen region with a camera of its own is the simplest way to do it.
 - Which lessons and fixtures aim a camera at a placement, name a camera
   other than `main`, or put code under `in the map ⟨…⟩ shows`, and what each
   becomes.
@@ -134,6 +173,10 @@ follow` by kind. Removing camera lists and `shows through`. Tests.
 
 - More than one map in the World at once.
 - More than one World.
+- Rows added to a Scroll View by code, such as a feed of real actors. That
+  wants `add ⟨kind⟩ into ⟨actor⟩`, placing the new actor where its parent
+  is, since `add actor` adds to the World. Nothing needs it yet; the Notes
+  app uses the List.
 - Per-level camera hints, such as a map asking for a zoom. Data on the map
   if a lesson needs one.
 - The screen stack, which is specs/SCREEN_STACK_PLAN.md.
