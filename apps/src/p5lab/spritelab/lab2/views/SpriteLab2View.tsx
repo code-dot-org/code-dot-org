@@ -90,7 +90,6 @@ import {
 import {runtimeNeeds, WorkspaceSource} from '../objectives';
 import {requestPicture} from '../picturePicker';
 import {countImagesByType, imageCountsDelta} from '../projectCounts';
-import {reducedMotion} from '../reducedMotion';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -162,6 +161,7 @@ import usePicturesSheet from './usePicturesSheet';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
+import useTabFade from './useTabFade';
 import WorldTab from './WorldTab';
 
 import moduleStyles from './sprite-lab2-view.module.scss';
@@ -260,9 +260,6 @@ interface SpriteLab2ViewProps {
   // Used for keying effects off of sources reinitializing.
   sourcesReinitializedCount: number;
 }
-
-// An editor fading in as its tab comes up: quick, so a tab is never slow.
-const TAB_FADE_MS = 180;
 
 // ?layout=N picks a world layout by index, for seeing each one on demand.
 function layoutOverrideParam(): number | undefined {
@@ -1447,53 +1444,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [stageCovered, activeTab, worldMounted]);
 
-  // An editor fades in as its tab comes up. The editors stay mounted and
-  // are unclipped to show, so the fade is by hand; never on arrival.
-  const fadeIn = useCallback((editor: HTMLElement | null) => {
-    if (!reducedMotion()) {
-      editor?.animate?.([{opacity: 0}, {opacity: 1}], {
-        duration: TAB_FADE_MS,
-        easing: 'ease-out',
-      });
-    }
-  }, []);
-  const shownTabRef = useRef<Tab | null>(null);
-  const tabBeforeRef = useRef<Tab | null>(null);
-  useEffect(() => {
-    const from = shownTabRef.current;
-    shownTabRef.current = activeTab;
-    if (!from || from === activeTab) {
-      return;
-    }
-    tabBeforeRef.current = from;
-    if (activeTab === 'Code') {
-      fadeIn(codeWrapperRef.current);
-    } else if (activeTab === 'World') {
-      fadeIn(worldWrapperRef.current);
-    } else if (activeTab === 'Images' && !guideUnderPreview) {
-      fadeIn(pictures.sheetRef.current);
-    }
-  }, [activeTab, fadeIn, guideUnderPreview, pictures.sheetRef]);
-  // The Images sheet mounts a render after its tab first comes up, when the
-  // effect above found nothing to fade.
-  useEffect(() => {
-    if (pictures.mounted && activeTab === 'Images' && tabBeforeRef.current) {
-      fadeIn(pictures.sheetRef.current);
-    }
-    // Only the mount should fade here; the tab effect covers later switches.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pictures.mounted]);
-  // The world's wrapper first mounts a render after its tab comes up, when
-  // the effect above found nothing to fade.
-  const worldWrapperMounted = useCallback(
-    (wrapper: HTMLDivElement | null) => {
-      worldWrapperRef.current = wrapper;
-      if (wrapper && tabBeforeRef.current) {
-        fadeIn(wrapper);
-      }
-    },
-    [fadeIn]
-  );
+  // The classic layout slides Images in instead of fading it.
+  const fade = useTabFade(activeTab, {
+    Code: codeWrapperRef,
+    World: worldWrapperRef,
+    ...(guideUnderPreview ? {} : {Images: pictures.sheetRef}),
+  });
 
   // The scene Play (re)starts from: null means the beginning (the first
   // scene). Clicking a preview sets it to the previewed scene; entering Play
@@ -2285,7 +2241,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             it in like the other editors. */}
             {pictures.mounted && (
               <div
-                ref={pictures.sheetRef}
+                ref={guideUnderPreview ? pictures.sheetRef : fade.ref('Images')}
                 id={PICTURES_DRAWER_ID}
                 role="region"
                 aria-label="Images"
@@ -2308,7 +2264,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             )}
             {worldTabEnabled && worldMounted && (
               <div
-                ref={worldWrapperMounted}
+                ref={fade.ref('World')}
                 className={classNames(
                   moduleStyles.codeTabWrapper,
                   editorsShown && moduleStyles.underEditorStrip,
