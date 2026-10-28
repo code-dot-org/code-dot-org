@@ -12,6 +12,8 @@ export type AichatContext = {
   scriptId: number | null;
   channelId: string | undefined;
   lessonId?: number;
-  // Requests that the AI Gateway token be issued with content-safety checks disabled.
-  disableSafetyChecks?: boolean;
+  // Ask for an AI Gateway token that skips the worker's input or output
+  // moderation. Rails grants each only to client types on its allowlist.
+  disableInputModeration?: boolean;
+  disableOutputModeration?: boolean;
 };

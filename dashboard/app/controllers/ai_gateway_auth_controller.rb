@@ -23,6 +23,17 @@ class AiGatewayAuthController < ApplicationController
   TURNSTILE_ENFORCEMENT_MODES = %w[disabled monitor enforce].freeze
   TURNSTILE_ENFORCEMENT_MODE_DEFAULT = 'disabled'.freeze
 
+  # Client types that may request a token with input or output moderation
+  # disabled. clientType is client-sent, so keep these lists narrow.
+  INPUT_MODERATION_BYPASS_CLIENT_TYPES = [
+    SharedConstants::AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR],
+  ].freeze
+  OUTPUT_MODERATION_BYPASS_CLIENT_TYPES = [
+    SharedConstants::AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR],
+  ].freeze
+  INPUT_MODERATION_BYPASS_NOT_PERMITTED_ERROR = 'input_moderation_bypass_not_permitted'.freeze
+  OUTPUT_MODERATION_BYPASS_NOT_PERMITTED_ERROR = 'output_moderation_bypass_not_permitted'.freeze
+
   rescue_from CanCan::AccessDenied do
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end
@@ -45,12 +56,16 @@ class AiGatewayAuthController < ApplicationController
       return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 
-    safety_checks_disabled = ActiveModel::Type::Boolean.new.cast(aichat_context[:disableSafetyChecks]) == true
-    if safety_checks_disabled && !current_user.can_disable_aichat_safety_checks?
-      return render status: :forbidden, json: {
-        error: 'safety_checks_bypass_not_permitted',
-        message: 'Requested an AI Gateway token with content-safety checks disabled, but the current user does not have permission to disable them.',
-      }
+    client_type = aichat_context[:clientType]
+
+    input_moderation_disabled = requested?(aichat_context[:disableInputModeration])
+    if input_moderation_disabled && INPUT_MODERATION_BYPASS_CLIENT_TYPES.exclude?(client_type)
+      return render_moderation_bypass_not_permitted(INPUT_MODERATION_BYPASS_NOT_PERMITTED_ERROR, 'input', client_type)
+    end
+
+    output_moderation_disabled = requested?(aichat_context[:disableOutputModeration])
+    if output_moderation_disabled && OUTPUT_MODERATION_BYPASS_CLIENT_TYPES.exclude?(client_type)
+      return render_moderation_bypass_not_permitted(OUTPUT_MODERATION_BYPASS_NOT_PERMITTED_ERROR, 'output', client_type)
     end
 
     # Resolve the Turnstile mode once. Both the claim and the response field
@@ -73,18 +88,32 @@ class AiGatewayAuthController < ApplicationController
         token_id: token_id,
         hostname: hostname,
         user_log_token: user_log_token,
-        aichat_client_type: aichat_context[:clientType],
+        aichat_client_type: client_type,
         level_id: aichat_context[:currentLevelId],
         script_id: aichat_context[:scriptId],
         channel_id: aichat_context[:channelId],
         lesson_id: aichat_context[:lessonId],
         turnstile_enforcement_mode: enforcement_mode,
-        safety_checks_disabled: safety_checks_disabled,
+        input_moderation_disabled: input_moderation_disabled,
+        output_moderation_disabled: output_moderation_disabled,
+        # The worker cannot look up levels; level_id is client-sent and may be nil.
+        safety_prompt_locale: AichatSafetyHelper.safety_prompt_locale(aichat_context[:currentLevelId]),
       },
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSPHRASE),
       'RS256'
     )
     render json: {token: token, turnstileEnforcementMode: enforcement_mode}
+  end
+
+  private def requested?(flag)
+    ActiveModel::Type::Boolean.new.cast(flag) == true
+  end
+
+  private def render_moderation_bypass_not_permitted(error, check, client_type)
+    render status: :forbidden, json: {
+      error: error,
+      message: "Requested an AI Gateway token with #{check} moderation disabled, but client type #{client_type.inspect} may not disable it.",
+    }
   end
 
   # DCDO stores arbitrary JSON, so the value here may be any type. A YAML-loaded

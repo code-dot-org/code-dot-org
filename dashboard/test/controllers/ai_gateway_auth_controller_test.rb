@@ -156,36 +156,54 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
-  test 'levelbuilder requesting the safety-check bypass gets it granted in the token' do
-    levelbuilder = create(:levelbuilder)
-    sign_in(levelbuilder)
+  [
+    [:input, :disableInputModeration, :input_moderation_disabled, :output_moderation_disabled, AiGatewayAuthController::INPUT_MODERATION_BYPASS_NOT_PERMITTED_ERROR],
+    [:output, :disableOutputModeration, :output_moderation_disabled, :input_moderation_disabled, AiGatewayAuthController::OUTPUT_MODERATION_BYPASS_NOT_PERMITTED_ERROR],
+  ].each do |check, flag, claim, other_claim, error|
+    test "grants the #{check} moderation bypass to an allowlisted client type" do
+      @params[:aichatContext] = curriculum_generator_context.merge(flag => true)
 
-    claims = mint_and_capture_claims(user: levelbuilder, disable_safety_checks: true)
+      claims = mint_and_capture_claims(user: create(:levelbuilder))
 
-    assert_equal true, claims[:safety_checks_disabled]
+      assert_equal true, claims[claim]
+      assert_equal false, claims[other_claim]
+    end
+
+    test "refuses the #{check} moderation bypass to a client type not on the allowlist" do
+      sign_in(@authorized_teacher)
+      User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+      @params[:aichatContext][flag] = true
+
+      post :get_access_token, params: @params, as: :json
+
+      assert_response :forbidden
+      body = JSON.parse(response.body)
+      assert_equal error, body['error']
+      assert body['message'].present?
+      assert_nil body['token']
+    end
+
+    test "signs #{claim} false when the bypass is not requested" do
+      assert_equal false, mint_and_capture_claims[claim]
+
+      @params[:aichatContext] = curriculum_generator_context
+      assert_equal false, mint_and_capture_claims(user: create(:levelbuilder))[claim]
+    end
   end
 
-  test 'non-levelbuilder requesting the safety-check bypass is forbidden and gets no token' do
-    sign_in(@authorized_teacher)
-    User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
-    params = @params.deep_dup
-    params[:aichatContext][:disableSafetyChecks] = true
+  test 'signs the spanish safety prompt locale for a level in a LATAM script' do
+    Policies::Courses.stubs(:modularity_enabled?).returns(false)
+    latam_script = create(:script, :with_levels, :in_single_unit_course, name: AichatSafetyHelper::SPANISH_SCRIPT_NAMES.first)
+    @params[:aichatContext][:currentLevelId] = latam_script.levels.first.id
 
-    post :get_access_token, params: params, as: :json
-
-    assert_response :forbidden
-    response_json = JSON.parse(response.body)
-    assert_equal 'safety_checks_bypass_not_permitted', response_json['error']
-    assert_nil response_json['token']
+    assert_equal 'spanish', mint_and_capture_claims[:safety_prompt_locale]
   end
 
-  test 'levelbuilder not requesting the bypass does not get it by default' do
-    levelbuilder = create(:levelbuilder)
-    sign_in(levelbuilder)
+  test 'signs the american safety prompt locale for any other level, or none' do
+    assert_equal 'american', mint_and_capture_claims[:safety_prompt_locale]
 
-    claims = mint_and_capture_claims(user: levelbuilder)
-
-    assert_equal false, claims[:safety_checks_disabled]
+    @params[:aichatContext] = curriculum_generator_context
+    assert_equal 'american', mint_and_capture_claims(user: create(:levelbuilder))[:safety_prompt_locale]
   end
 
   private def stub_turnstile_enforcement_mode(value)
@@ -196,7 +214,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
   # Mints a token and returns the claims handed to JWT.encode, so the signed
   # payload can be asserted without a signing key.
-  private def mint_and_capture_claims(user: @authorized_teacher, disable_safety_checks: nil)
+  private def mint_and_capture_claims(user: @authorized_teacher)
     sign_in(user)
     User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
     # The signing key is only configured outside the test environment. Generated
@@ -211,12 +229,17 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
       true
     end.returns('fake.jwt.token')
 
-    params = @params.deep_dup
-    params[:aichatContext][:disableSafetyChecks] = disable_safety_checks unless disable_safety_checks.nil?
-
-    post :get_access_token, params: params, as: :json
+    post :get_access_token, params: @params, as: :json
 
     assert_response :success
     captured
+  end
+
+  private def curriculum_generator_context
+    {
+      clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR],
+      currentLevelId: nil,
+      scriptId: @script.id,
+    }
   end
 end
