@@ -25,7 +25,7 @@
   background-color: var(--background-neutral-secondary);
 }
 
-.upload {
+.footer {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -34,15 +34,15 @@
   border-top: 1px solid var(--border-neutral-primary);
 }
 
-.upload .divider {
+.footer .divider {
   height: 12px;
   border-color: var(--border-neutral-primary);
 }
 
-.upload .fileInput {
+.footer .fileInput {
   display: none;
 }
 
-.upload .invalidData {
+.footer .invalidData {
   color: var(--text-error-primary);
 }

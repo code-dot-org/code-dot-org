@@ -23,22 +23,39 @@ const read = data => {
 };
 
 describe('fetchCsv', () => {
-  test('resolves with the rows once the download completes', async () => {
-    const loading = fetchCsv('animals.csv');
-    Papa.parse.mock.calls[0][1].complete({data: ANIMALS});
+  const realFetch = global.fetch;
+  afterEach(() => (global.fetch = realFetch));
 
-    expect(await loading).toEqual({
+  test('resolves with the rows once the download completes', async () => {
+    global.fetch = jest.fn(() =>
+      Promise.resolve({ok: true, text: () => Promise.resolve('animal,legs')})
+    );
+    Papa.parse.mockReturnValue({data: ANIMALS});
+
+    expect(await fetchCsv('animals.csv')).toEqual({
       ok: true,
       rows: ANIMALS,
       removedRowsCount: 0,
     });
+    expect(Papa.parse.mock.calls[0][0]).toBe('animal,legs');
   });
 
-  test('resolves a failure when the download errors', async () => {
-    const loading = fetchCsv('missing.csv');
-    Papa.parse.mock.calls[0][1].error();
+  test('resolves a failure when the server refuses', async () => {
+    global.fetch = jest.fn(() => Promise.resolve({ok: false}));
 
-    expect(await loading).toEqual({ok: false, reason: 'loadFailed'});
+    expect(await fetchCsv('missing.csv')).toEqual({
+      ok: false,
+      reason: 'loadFailed',
+    });
+  });
+
+  test('resolves a failure when the request is blocked', async () => {
+    global.fetch = jest.fn(() => Promise.reject(new TypeError('blocked')));
+
+    expect(await fetchCsv('blocked.csv')).toEqual({
+      ok: false,
+      reason: 'loadFailed',
+    });
   });
 });
 

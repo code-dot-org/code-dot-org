@@ -139,48 +139,52 @@ const SelectDataset = () => {
           />
         ))}
       </div>
-      {!specifiedDatasets && (
-        <div className={styles.upload}>
-          <Button
-            ref={uploadButtonRef}
-            variant="outlined"
-            color="secondary"
-            size="small"
-            startIcon={
-              <FontAwesomeV6Icon
-                iconName="arrow-up-from-bracket"
-                aria-hidden="true"
-              />
-            }
-            onClick={() => fileInputRef.current!.click()}
-          >
-            {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
-          </Button>
-          {uploadedFile && !invalidData && (
+      {(!specifiedDatasets || invalidData) && (
+        <div className={styles.footer}>
+          {!specifiedDatasets && (
             <>
-              <Divider orientation="vertical" className={styles.divider} />
-              <UploadedFileChip
-                fileName={uploadedFile.name}
-                isSelected={isUploadSelected}
-                onSelect={handleUploadChipSelect}
-                onRemove={handleUploadRemove}
+              <Button
+                ref={uploadButtonRef}
+                variant="outlined"
+                color="secondary"
+                size="small"
+                startIcon={
+                  <FontAwesomeV6Icon
+                    iconName="arrow-up-from-bracket"
+                    aria-hidden="true"
+                  />
+                }
+                onClick={() => fileInputRef.current!.click()}
+              >
+                {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
+              </Button>
+              {uploadedFile && !invalidData && (
+                <>
+                  <Divider orientation="vertical" className={styles.divider} />
+                  <UploadedFileChip
+                    fileName={uploadedFile.name}
+                    isSelected={isUploadSelected}
+                    onSelect={handleUploadChipSelect}
+                    onRemove={handleUploadRemove}
+                  />
+                </>
+              )}
+              {/* Setting value to empty here allows us to receive an
+                  onChange event for the same file as previously selected,
+                  which allows the user to upload a file, then choose an
+                  existing dataset, and then reupload the same file. */}
+              <input
+                ref={fileInputRef}
+                className={classNames('csv-input', styles.fileInput)}
+                type="file"
+                accept=".csv,text/csv,application/vnd.ms-excel"
+                name="file"
+                placeholder={undefined}
+                onChange={handleUploadSelect}
+                value=""
               />
             </>
           )}
-          {/* Setting value to empty here allows us to receive an
-              onChange event for the same file as previously selected,
-              which allows the user to upload a file, then choose an
-              existing dataset, and then reupload the same file. */}
-          <input
-            ref={fileInputRef}
-            className={classNames('csv-input', styles.fileInput)}
-            type="file"
-            accept=".csv,text/csv,application/vnd.ms-excel"
-            name="file"
-            placeholder={undefined}
-            onChange={handleUploadSelect}
-            value=""
-          />
           <Typography variant="body3" className={styles.invalidData}>
             {getInvalidDataMessage()}
           </Typography>
