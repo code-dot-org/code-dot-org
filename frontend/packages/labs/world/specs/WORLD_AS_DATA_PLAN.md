@@ -124,9 +124,10 @@ Steps 2 and 3 change no output.
 ## Open
 
 - **A layer for code to place into.** Code places into the default layer.
-  If a program needs to spawn into another, `add actor` taking a layer is
-  the shape, rather than `within layer`: screen code can enter a
-  Viewport's map, so a block enclosing it has no one map to name a layer
-  of.
+  When a program needs another, a `move ⟨actor⟩ to layer ⟨…⟩` block is the
+  likely shape: it acts on an actor already placed, so it needs no map to
+  be enclosed in, and it serves a spawn and a later move alike. Not
+  `within layer`: screen code can enter a Viewport's map, so a block
+  enclosing it has no one map to name a layer of.
 - **A LAYER dropdown in a map's own code** offers every map's layers, not
   that map's alone.
