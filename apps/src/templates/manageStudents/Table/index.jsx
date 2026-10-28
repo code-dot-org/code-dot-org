@@ -107,6 +107,18 @@ export const COLUMNS = {
   ACTIONS: 5,
 };
 
+const csvImportWarningNotice = () =>
+  typeof i18n.manageStudentsNotificationCSVImportWarning === 'function'
+    ? i18n.manageStudentsNotificationCSVImportWarning()
+    : 'Some optional CSV values were left blank.';
+
+const csvImportWarningDetails = numRows =>
+  typeof i18n.manageStudentsNotificationCSVImportWarningDetails === 'function'
+    ? i18n.manageStudentsNotificationCSVImportWarningDetails({numRows})
+    : `Unrecognized age, gender, or state values were left blank in ${
+        numRows === 1 ? '1 CSV row' : `${numRows} CSV rows`
+      }.`;
+
 class ManageStudentsTable extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string,
@@ -151,6 +163,7 @@ class ManageStudentsTable extends Component {
     this.getColumns = this.getColumns.bind(this);
     this.onPrintLoginCards = this.onPrintLoginCards.bind(this);
     this.handleSaveAllClick = this.handleSaveAllClick.bind(this);
+    this.onCsvImportWarning = this.onCsvImportWarning.bind(this);
   }
 
   state = {
@@ -161,7 +174,12 @@ class ManageStudentsTable extends Component {
       },
     },
     showPasswordLengthFailure: false,
+    csvImportWarning: null,
   };
+
+  onCsvImportWarning(csvImportWarning) {
+    this.setState({csvImportWarning});
+  }
 
   renderTransferSuccessNotification() {
     const {type, numStudents, sectionDisplay} = this.props.transferStatus;
@@ -807,6 +825,16 @@ class ManageStudentsTable extends Component {
             dismissible={false}
           />
         )}
+        {this.state.csvImportWarning && (
+          <Notification
+            type={NotificationType.warning}
+            notice={csvImportWarningNotice()}
+            details={csvImportWarningDetails(
+              this.state.csvImportWarning.rowCount
+            )}
+            dismissible={false}
+          />
+        )}
         {transferStatus.status === TransferStatus.SUCCESS &&
           this.renderTransferSuccessNotification()}
         <div className={moduleStyles.additionalControlsContainer}>
@@ -820,6 +848,7 @@ class ManageStudentsTable extends Component {
                 <AddMultipleStudents
                   sectionId={this.props.sectionId}
                   disabled={this.props.isDemoSection}
+                  onCsvImportWarning={this.onCsvImportWarning}
                 />
               </DemoSectionTooltip>
             )}
