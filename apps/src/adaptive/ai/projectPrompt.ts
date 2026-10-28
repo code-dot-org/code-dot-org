@@ -14,7 +14,7 @@ import {labEnvironment} from './labEnvironments';
 /**
  * Used by Langfuse traces; change when a meaningful update is made.
  */
-export const PROJECT_PROMPT_VERSION = '2026-10-27';
+export const PROJECT_PROMPT_VERSION = '2026-10-28';
 
 export const projectOutputSchema = z.object({
   /** The project's name, a few words. */
@@ -78,7 +78,7 @@ export function buildProjectPrompt({
       '',
       '- Return the full contents of every file you change, under its exact filename. Do not add files; a file you leave out stays as it is.',
       "- Keep the template's structure, ids and classes where they still fit, so later instructions about the template's parts still apply.",
-      "- Use the student's own topic, words and names. Add nothing they did not ask for, and label any placeholder text plainly.",
+      '- Stay close to the idea the student described: their topic, words and names. Where they left the look or content open, make a reasonable choice that fits the topic, and label any placeholder text plainly.',
       '- Keep it simple. This is a first draft the student will change, not a finished site.',
       '- Plain language at an 8th grade reading level. No personal information, profanity or unsafe content.',
       "- name: the project's name in at most five words, taken from or fitting the student's answers.",

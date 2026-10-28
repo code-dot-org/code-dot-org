@@ -1,4 +1,10 @@
-import {generate} from '@cdo/apps/adaptive/ai/generate';
+import * as Observability from '@code-dot-org/core/plugins/observability';
+
+import {
+  generate,
+  isAdaptiveAiEnabled,
+  moderateInput,
+} from '@cdo/apps/adaptive/ai/generate';
 import {generateProject} from '@cdo/apps/adaptive/ai/generateProject';
 import {PROJECT_PROMPT_VERSION} from '@cdo/apps/adaptive/ai/projectPrompt';
 import {Progress} from '@cdo/apps/adaptive/progress/model';
@@ -7,8 +13,27 @@ import {AichatContext} from '@cdo/apps/aichat/types';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-jest.mock('@cdo/apps/adaptive/ai/generate', () => ({generate: jest.fn()}));
+jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
+  generate: jest.fn(),
+  isAdaptiveAiEnabled: jest.fn(() => true),
+  moderateInput: jest.fn(async () => 'ok'),
+}));
+jest.mock('@code-dot-org/core/plugins/observability', () => ({
+  metrics: {count: jest.fn()},
+}));
+const mockLogWarning = jest.fn();
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {
+    getInstance: () => ({
+      getMetricsReporter: () => ({logWarning: mockLogWarning}),
+    }),
+  },
+}));
 const mockGenerate = generate as jest.Mock;
+const mockEnabled = isAdaptiveAiEnabled as jest.Mock;
+const mockModerate = moderateInput as jest.Mock;
+const mockCount = Observability.metrics.count as jest.Mock;
 
 const step: LevelStep = {
   id: 'generated',
@@ -83,7 +108,12 @@ const resolve = (
     ...overrides,
   });
 
-beforeEach(() => mockGenerate.mockReset());
+beforeEach(() => {
+  jest.clearAllMocks();
+  mockGenerate.mockReset();
+  mockEnabled.mockReturnValue(true);
+  mockModerate.mockResolvedValue('ok');
+});
 
 describe('generateProject', () => {
   it('lays the generated files over the template, with the generated name and description', async () => {
@@ -150,6 +180,44 @@ describe('generateProject', () => {
     mockGenerate.mockResolvedValue({traceId: 't1'});
     expect(await resolve()).toBeUndefined();
   });
+
+  it('asks nothing, not even moderation, when adaptive AI is off', async () => {
+    mockEnabled.mockReturnValue(false);
+    expect(await resolve()).toBeUndefined();
+    expect(mockModerate).not.toHaveBeenCalled();
+    expect(mockGenerate).not.toHaveBeenCalled();
+  });
+
+  it('moderates the answers before the call and counts the result', async () => {
+    mockGenerate.mockResolvedValue({output, traceId: 't1'});
+    await resolve();
+    expect(mockModerate).toHaveBeenCalledWith('Rex', context);
+    expect(mockCount).toHaveBeenCalledWith('adaptive.text_moderation', 1, {
+      phase: 'input_filter',
+      result: 'ok',
+    });
+    expect(mockLogWarning).not.toHaveBeenCalled();
+  });
+
+  it.each(['flagged', 'error'])(
+    'never asks for the project, and logs it, when moderation is %s',
+    async moderation => {
+      mockModerate.mockResolvedValue(moderation);
+      expect(await resolve()).toBeUndefined();
+      expect(mockGenerate).not.toHaveBeenCalled();
+      expect(mockCount).toHaveBeenCalledWith('adaptive.text_moderation', 1, {
+        phase: 'input_filter',
+        result: moderation,
+      });
+      expect(mockLogWarning).toHaveBeenCalledWith(
+        expect.objectContaining({
+          moderation,
+          pathwayId: 'p',
+          stepId: 'generated',
+        })
+      );
+    }
+  );
 
   it('is nothing when no generated file matched the template', async () => {
     mockGenerate.mockResolvedValue({
