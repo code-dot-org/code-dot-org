@@ -83,7 +83,14 @@ class MatchQuestion < QuizQuestion
   def attempt_content_json
     first_items = content['pairs'].map {|p| p['items'][0]}
     second_items = content['pairs'].map {|p| p['items'][1]}
-    shared_content_json.merge(matchSets: [first_items.shuffle, second_items.shuffle])
+    shared_content_json.merge(matchSets: [first_items, stable_shuffle(second_items)])
+  end
+
+  # The same order on every load for every student, but not reproducible
+  # without the server secret.
+  private def stable_shuffle(items)
+    secret = Rails.application.key_generator.generate_key('match_question_order')
+    items.sort_by {|item| OpenSSL::HMAC.hexdigest('SHA256', secret, "#{key}:#{item['id']}")}
   end
 
   private def correct_pairs
