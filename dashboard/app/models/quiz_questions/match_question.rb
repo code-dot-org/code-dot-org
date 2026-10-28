@@ -87,7 +87,9 @@ class MatchQuestion < QuizQuestion
   end
 
   # The same order on every load for every student, but not reproducible
-  # without the server secret.
+  # without the server secret. No random number generator is needed: hashing
+  # each item together with the secret and sorting by the result already
+  # scrambles the order.
   private def stable_shuffle(items)
     secret = Rails.application.key_generator.generate_key('match_question_order')
     items.sort_by {|item| OpenSSL::HMAC.hexdigest('SHA256', secret, "#{key}:#{item['id']}")}
