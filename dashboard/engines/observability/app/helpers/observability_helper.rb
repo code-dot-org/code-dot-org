@@ -11,8 +11,10 @@ module ObservabilityHelper
     use_sentry = CDO.enable_sentry && dsn.present?
     observability = use_sentry ? {provider: 'sentry', sentry: {dsn: dsn}} : {provider: 'none'}
 
-    sampling = DCDO.get('frontend-observability-sampling-config', {})
-    observability[:sampling] = sampling if sampling.present?
+    observability[:sampling] = DCDO.get(
+      'frontend-observability-sampling-config',
+      {errorSampleRate: 1, tracesSampleRate: 1, logSampleRate: 1, metricsSampleRate: 1}
+    )
 
     {observability: observability}.to_json
   end

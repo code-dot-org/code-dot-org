@@ -114,7 +114,7 @@ class MetricsReporter {
       return;
     }
 
-    if (DCDO.get('frontend-observability-enabled', false)) {
+    if (DCDO.get('frontend-observability-enabled', true)) {
       const dimensionAttributes = Object.fromEntries(
         metric.dimensions
           .filter(d => d?.name && d?.value)
@@ -140,7 +140,7 @@ class MetricsReporter {
       deviceInfo: this.getDeviceInfo(),
     };
 
-    if (DCDO.get('frontend-observability-enabled', false)) {
+    if (DCDO.get('frontend-observability-enabled', true)) {
       this.sendToObservabilityLogger(level, message);
     }
 

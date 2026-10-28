@@ -5,7 +5,7 @@ import DCDO from '@cdo/apps/dcdo';
 
 const corePlugins = [];
 
-if (DCDO.get('frontend-observability-enabled', false)) {
+if (DCDO.get('frontend-observability-enabled', true)) {
   corePlugins.push(Observability.observabilityPlugin);
 }
 

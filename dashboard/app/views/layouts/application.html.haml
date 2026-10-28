@@ -30,7 +30,7 @@
     = favicon_link_tag asset_path(Cdo::Brand.favicon(request)), rel: 'icon', sizes: '32x32'
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = render partial: 'layouts/google_analytics'
-    - if DCDO.get('frontend-observability-enabled', false)
+    - if DCDO.get('frontend-observability-enabled', true)
       -# Frontend config (read by core's SiteConfig via meta tag)
       %meta{name: 'app-config', content: observability_config(CDO.frontend_apps_sentry_dsn)}
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is
