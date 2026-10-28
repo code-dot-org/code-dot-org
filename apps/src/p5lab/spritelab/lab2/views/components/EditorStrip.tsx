@@ -20,7 +20,7 @@ interface EditorStripProps {
   editor?: Editor;
   onChange?: (editor: Editor) => void;
   editors?: Editor[];
-  disabledEditors?: Partial<Record<Editor, string>>;
+  disabledEditors?: Editor[];
   /** The name in the middle; the open editor's unless given. */
   title?: string;
   /** The switch at the bar's start instead of its end; undo and redo

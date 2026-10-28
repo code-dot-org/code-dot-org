@@ -1,8 +1,10 @@
 // Under the frame once a picture is back: a link to a panel with the words
 // the model got, and for a set a second tab with the posed frames' words.
 
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Popover from '@code-dot-org/component-library/popover';
+import Tabs from '@code-dot-org/component-library/tabs';
 import {Button as MuiButton} from '@mui/material';
 import React, {useLayoutEffect, useRef, useState} from 'react';
 
@@ -34,6 +36,8 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
   disabled,
 }) => {
   const [open, setOpen] = useState(false);
+  // Optional: the unit tests render without a theme.
+  const {theme} = useTheme(true);
   const [tab, setTab] = useState<Tab>('picture');
   const linkRef = useRef<HTMLButtonElement>(null);
   const rowRef = useRef<HTMLDivElement>(null);
@@ -42,15 +46,9 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
     setOpen(false);
     linkRef.current?.focus();
   };
-  const onTabKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
-      return;
-    }
-    e.preventDefault();
-    const next: Tab = tab === 'picture' ? 'poses' : 'picture';
-    setTab(next);
-    document.getElementById(`sentence-prompt-tab-${next}`)?.focus();
-  };
+  // For the key handler below, which outlives a render.
+  const tabRef = useRef(tab);
+  tabRef.current = tab;
   useLayoutEffect(() => {
     if (!open) {
       return;
@@ -76,10 +74,21 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
       row?.querySelector<HTMLElement>('button[aria-label="Close"]')
     )?.focus();
     window.addEventListener('resize', measure);
+    // The tabs component has no arrow keys of its own.
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setOpen(false);
         linkRef.current?.focus();
+      } else if (
+        (e.key === 'ArrowLeft' || e.key === 'ArrowRight') &&
+        e.target instanceof HTMLElement &&
+        e.target.getAttribute('role') === 'tab' &&
+        rowRef.current?.contains(e.target)
+      ) {
+        e.preventDefault();
+        const next: Tab = tabRef.current === 'picture' ? 'poses' : 'picture';
+        setTab(next);
+        document.getElementById(`sentence-prompt-tab-${next}`)?.focus();
       }
     };
     document.addEventListener('keydown', onKeyDown);
@@ -129,32 +138,25 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           onClose={close}
         >
           {sent.poses && (
-            <div
-              className={styles.promptTabs}
-              role="tablist"
-              aria-label="Which words"
-            >
-              {TABS.map(([id, label]) => (
-                <button
-                  key={id}
-                  type="button"
-                  role="tab"
-                  id={`sentence-prompt-tab-${id}`}
-                  aria-selected={tab === id}
-                  aria-controls="sentence-prompt-panel"
-                  tabIndex={tab === id ? 0 : -1}
-                  className={styles.promptTab}
-                  onClick={() => setTab(id)}
-                  onKeyDown={onTabKeyDown}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
+            <Tabs
+              // Its ids: sentence-prompt-tab-<value> and -panel-<value>.
+              name="sentence-prompt"
+              size="s"
+              mode={theme === 'Dark' ? 'dark' : 'light'}
+              hidePanels
+              tabsContainerClassName={styles.promptTabs}
+              defaultSelectedTabValue={tab}
+              onChange={value => setTab(value as Tab)}
+              tabs={TABS.map(([id, label]) => ({
+                value: id,
+                text: label,
+                tabContent: null,
+              }))}
+            />
           )}
           {sent.poses && tab === 'poses' ? (
             <div
-              id="sentence-prompt-panel"
+              id="sentence-prompt-panel-poses"
               className={styles.promptText}
               role="tabpanel"
               aria-labelledby="sentence-prompt-tab-poses"
@@ -189,7 +191,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
             </div>
           ) : (
             <p
-              id="sentence-prompt-panel"
+              id="sentence-prompt-panel-picture"
               className={styles.promptText}
               role={sent.poses ? 'tabpanel' : undefined}
               aria-labelledby={

@@ -184,11 +184,8 @@ registerReducers({
 const ENABLED_TABS: readonly Tab[] = ['Images', 'Code', 'Play'];
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
-/** The switch's editors, in order. */
 // On hover over a control a level withholds.
 const LOCKED_REASON = 'Unlocks later in the lesson.';
-// On hover over World while a story scene is active.
-const STORY_NO_WORLD_REASON = 'A story scene has no world.';
 const WORLD_TABS: readonly Tab[] = ['Images', 'World', 'Code', 'Play'];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
@@ -507,18 +504,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // What the level withholds is disabled rather than missing, so free play
   // holds no surprises later.
   const editorsShown = tabs.includes('Code') || enabledTabs.includes('World');
-  const disabledEditors = useMemo<Partial<Record<Editor, string>>>(
-    () => ({
-      ...(picturesOffered ? {} : {Images: LOCKED_REASON}),
-      ...(tabs.includes('Code') ? {} : {Code: LOCKED_REASON}),
-      ...(enabledTabs.includes('World')
-        ? {}
-        : {
-            World: tabs.includes('World')
-              ? STORY_NO_WORLD_REASON
-              : LOCKED_REASON,
-          }),
-    }),
+  const disabledEditors = useMemo<Editor[]>(
+    () => [
+      ...(picturesOffered ? [] : (['Images'] as Editor[])),
+      ...(tabs.includes('Code') ? [] : (['Code'] as Editor[])),
+      ...(enabledTabs.includes('World') ? [] : (['World'] as Editor[])),
+    ],
     [tabs, enabledTabs, picturesOffered]
   );
   // The lab's layout; `?ui=classic` brings back the earlier one.
