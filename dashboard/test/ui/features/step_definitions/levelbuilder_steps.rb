@@ -24,7 +24,7 @@ end
 
 # "ui-test-" prefixed so the unit sits on the test side of the curriculum data
 # partition, as TestController#create_migrated_script does; see
-# dashboard/test/ui/config/README.md.
+# dashboard/config/PARTITIONS.md.
 Given(/^I enter a temp unit name$/) do
   @temp_script_name = "ui-test-temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
   puts "temp unit name: #{@temp_script_name}"
