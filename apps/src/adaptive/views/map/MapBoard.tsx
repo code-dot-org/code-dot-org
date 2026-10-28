@@ -77,7 +77,7 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
       }
     : {x: 0, y: 0};
   return (
-    <div ref={fitRef} className={styles.fit}>
+    <div ref={fitRef} id="adaptive-tour-map-canvas" className={styles.fit}>
       <div
         className={styles.board}
         style={{

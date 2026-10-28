@@ -6,7 +6,7 @@ import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {useMemo, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {CheckpointStatusMap} from '../progress';
 import {usePathwayProject} from '../project/usePathwayProject';
@@ -47,8 +47,6 @@ interface MapScreenProps {
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
   onWorkOnProject: () => void;
-  /** True on the student's first visit (no step progress recorded yet). */
-  isFirstVisit: boolean;
   /** True when at least one checkpoint has been skipped by the router. */
   hasSkippedCheckpoints: boolean;
 }
@@ -61,21 +59,29 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   onFocus,
   onStart,
   onWorkOnProject,
-  isFirstVisit,
   hasSkippedCheckpoints,
 }) => {
   const {theme, setTheme} = useTheme();
   // The project manager lives only while the map shows, so it never races a
   // step's manager on the same channel.
   const projectState = usePathwayProject(pathway);
-  const focused = focusId && pathway.checkpoints.find(c => c.id === focusId);
+  // During the tour, show CheckpointCard for the first available checkpoint
+  // without zooming the map. A zoomed map shifts the highlighted node away from
+  // where IntroJS measured it, so we keep the map at its fit view.
+  const [tourCheckpointId, setTourCheckpointId] = useState<
+    string | undefined
+  >();
+  const effectiveFocusId = tourCheckpointId ?? focusId;
+  const focused = effectiveFocusId
+    ? pathway.checkpoints.find(c => c.id === effectiveFocusId)
+    : undefined;
   const mapSettings = useMemo(
     () => resolveMapSettings(pathway, window.location.search),
     [pathway]
   );
 
   const [tourEnabled, setTourEnabled] = useState(
-    () => isFirstVisit && !localStorage.getItem(SKILL_MAP_TOUR_STORAGE_KEY)
+    () => !localStorage.getItem(SKILL_MAP_TOUR_STORAGE_KEY)
   );
 
   const tourSteps = useMemo(
@@ -86,7 +92,28 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   const dismissTour = () => {
     localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
     setTourEnabled(false);
+    setTourCheckpointId(undefined);
   };
+
+  // Used by onBeforeChange to focus a checkpoint when advancing past step 1,
+  // so CheckpointCard (and its Start button) are in the DOM before step 4.
+  const firstAvailableId = useMemo(
+    () => pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id,
+    [pathway.checkpoints, statusMap]
+  );
+
+  // intro.js resolves CSS selectors eagerly at start() time. When tourCheckpointId
+  // is set, React renders CheckpointCard (adding #adaptive-checkpoint-card-start to
+  // the DOM). We then call refresh(true) so intro.js re-runs its element resolver
+  // and picks up the button for step 4.
+  const stepsRef = useRef<{
+    introJs?: {refresh: (reset?: boolean) => void};
+  } | null>(null);
+  useEffect(() => {
+    if (tourCheckpointId) {
+      stepsRef.current?.introJs?.refresh(true);
+    }
+  }, [tourCheckpointId]);
 
   // A click on the map background while zoomed returns to the full map.
   const onMapClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -98,11 +125,19 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   return (
     <div className={styles.mapScreen}>
       <Steps
+        ref={stepsRef}
         enabled={tourEnabled}
         initialStep={SKILL_MAP_TOUR_INITIAL_STEP}
         steps={tourSteps}
         onExit={dismissTour}
         onComplete={dismissTour}
+        onBeforeChange={(nextStepIndex: number) => {
+          if (nextStepIndex === 1 && firstAvailableId) {
+            setTourCheckpointId(firstAvailableId);
+          } else if (nextStepIndex === 0) {
+            setTourCheckpointId(undefined);
+          }
+        }}
         options={{
           scrollToElement: false,
           exitOnOverlayClick: false,

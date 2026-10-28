@@ -12,7 +12,8 @@ export const SKILL_MAP_TOUR_INITIAL_STEP = 0;
 export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
   const steps = [
     {
-      element: '#adaptive-tour-map',
+      element: '#adaptive-tour-map-canvas',
+      position: 'right',
       title: i18n.skillMapTourMapTitle(),
       intro: sanitize(i18n.skillMapTourMapText()),
     },
@@ -27,9 +28,8 @@ export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
       intro: sanitize(i18n.skillMapTourSideText()),
     },
     {
-      // No element: IntroJS floats this tooltip centered on the screen.
-      // The Start button lives in CheckpointCard, which only mounts when a
-      // checkpoint is focused — we explain the concept without requiring it.
+      element: '#adaptive-checkpoint-card-start',
+      position: 'left',
       title: i18n.skillMapTourStartTitle(),
       intro: sanitize(i18n.skillMapTourStartText()),
     },

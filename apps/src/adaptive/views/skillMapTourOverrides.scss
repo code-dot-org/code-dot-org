@@ -11,14 +11,6 @@
   box-shadow: var(--neutral-black-alpha-50) 0 0 0 5000px !important;
 }
 
-// The map canvas uses a high z-index for its nodes; the overlay must clear it.
-.introjs-overlay {
-  z-index: 1000;
-}
-.introjs-helperLayer,
-.introjs-tooltipReferenceLayer {
-  z-index: 1001;
-}
 
 // Larger tooltip arrows, repositioned to sit clear of the wider border.
 .introjs-arrow {
@@ -45,9 +37,8 @@
   left: -18px;
 }
 
-// Wider tooltip with a code.org surface, shadow, and z-index above the map canvas.
+// Wider tooltip with a code.org surface and shadow.
 .introjs-tooltip {
-  z-index: 1002;
   width: 400px;
   max-width: 400px;
   border: 1px solid var(--background-neutral-primary);

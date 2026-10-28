@@ -291,7 +291,6 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     );
   }
 
-  const hasProgress = Object.values(progress.steps).some(s => s.status);
   const hasSkippedCheckpoints = Object.values(statusMap).some(
     s => s === 'skipped'
   );
@@ -318,7 +317,6 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           });
         }}
         onWorkOnProject={openProject}
-        isFirstVisit={!hasProgress}
         hasSkippedCheckpoints={hasSkippedCheckpoints}
       />
     </div>
