@@ -98,11 +98,7 @@ import {
   backgroundImportFieldExtension,
   spriteImportFieldExtension,
 } from './extensions/appearanceImportField';
-import {
-  eventDesignerMutator,
-  shadowed,
-  type SocketState,
-} from './extensions/blockDesigner';
+import {shadowed, type SocketState} from './extensions/blockDesigner';
 import {bodyButtonExtension} from './extensions/bodyButton';
 import {bodySurfaceExtension} from './extensions/bodyOwner';
 import {drawingContextExtension} from './extensions/drawingContext';
@@ -125,11 +121,9 @@ import {mapImportFieldExtension} from './extensions/mapImportField';
 import {missingRuleExtension} from './extensions/missingRule';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
-import {rulesButtonExtension} from './extensions/rulesButton';
 import {sliderRangeMutator} from './extensions/sliderRange';
 import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
-import {styleImportFieldExtension} from './extensions/styleImportField';
 import {traitTooltipExtension} from './extensions/traitTooltip';
 import {worldContextExtension} from './extensions/worldContext';
 import fieldAnglePlugin, {fieldAngleArg} from './fields/FieldAngle';
@@ -158,7 +152,6 @@ import {
   layerOf,
   layerOptions,
   layerOptionsExtension,
-  layerPlan,
   type LayerPlanEntry,
 } from './layers';
 import {lessonFlyoutButton} from './lessonFlyoutButton';
@@ -179,8 +172,6 @@ import {
   effectFileOptions,
   effectFileOptionsExtension,
   liveDropdown,
-  styleFileOptions,
-  styleFileOptionsExtension,
   styleNameOptions,
   styleNameOrPlainOptions,
   styleNameOrPlainOptionsExtension,
@@ -204,11 +195,9 @@ import {
 import {type OwnMeta} from './ownProperties';
 import {phaseOptions, phaseOptionsExtension} from './phaseOptions';
 import {
-  designedName,
   inHand,
   propertyDefault,
   STARTS_EMPTY,
-  pascal,
   PROPERTY_TYPES,
   slug,
 } from './ruleMeta';
@@ -1873,7 +1862,6 @@ export const ROOT_BLOCK_TYPES: ReadonlySet<string> = new Set([
   // A tween's definition, for both of the reasons above: it declares rather
   // than does, and a chained one would be an orphan at the top level.
   'world_define_tween',
-  'world_world',
   // A map's own hats (specs/MAP_FIRST.md): the body chains below them.
   'world_on_map_loads',
   'world_on_map_unloads',
@@ -7070,64 +7058,8 @@ const worldLoadMap = defineBlock({
 });
 
 // ── World composition ────────────────────────────────────────────────────────
-// A `.world` file is authored with `world_world` (the root, like `world_actor`)
-// and `world_use_animations` / `world_load_map` children — the animation files
-// to register, and the actors placed.
-// Each body block targets the `const world` the root binds, mirroring the actor
-// pattern.
-
-const worldWorld = defineBlock({
-  type: 'world_world',
-  // The `with` is a word waiting for a field: the rules button is appended
-  // after it by the extension below, so the block reads `define world named
-  // ⟨Platform World⟩ with ⟨8 rules⟩`. A JSON `args0` entry could not do it —
-  // the button carries an `onClick`, which no block definition can express.
-  message0: 'define world named %1 with',
-  args0: [{type: 'field_input', name: 'NAME', text: 'World'}],
-  // A definition root: no previous connection, a NEXT connection — the body
-  // (`load map`, `create in map`, the cameras) chains below it rather than
-  // nesting in a `do` input.
-  nextStatement: true,
-  // …and after the name, how many rules are in play and the way to see them.
-  // The world runs every rule the project holds, so the block would otherwise
-  // say nothing at all about the thing it is most made of.
-  // The count of rules in play. What a game could be given is offered by
-  // its Main Screen's properties (`WorldInspector`).
-  extensions: [rulesButtonExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Define a world: the actors that live in it, and what it looks like.',
-  generator: {
-    javascript(block, generator) {
-      const name = block.getFieldValue('NAME');
-      // ROWS THAT MUST PRECEDE THE FIRST PLACEMENT are lifted out of the body
-      // as it is generated, into this list, and emitted with the prologue
-      // below. The main map is loaded between the prologue and the body
-      // (specs/MAP_BEFORE_ROWS_PLAN.md), so the first placement is no longer
-      // wherever the first `add actor` row sits: it is before every row.
-      // Layers are lifted the same way, by `layerPlan`.
-      const hoisted: string[] = [];
-      (generator as {__worldHoist?: string[]}).__worldHoist = hoisted;
-      const body = nextChainCode(block, generator);
-      (generator as {__worldHoist?: string[]}).__worldHoist = undefined;
-      return (
-        worldModulePrologue(generator, {
-          name,
-          hoisted,
-          plan: layerPlan(block),
-          own: (generator as {__worldOwn?: string}).__worldOwn ?? '',
-          // …with the MAIN MAP's ahead of them, slots and all: the world's
-          // file holds the map, so the generator hands its layers over
-          // (`BlocklyGenerator`, specs/LAYERS_PLAN.md).
-          mapLayers:
-            (generator as {__mainMapLayers?: MainMapLayer[]}).__mainMapLayers ??
-            [],
-          mainMap: (generator as {__mainMap?: string}).__mainMap ?? '',
-        }) + body
-      );
-    },
-  },
-});
+// The game's module opens with the prologue below, written from the Main
+// Screen's data (`BlocklyGenerator.generateMainScreen`).
 
 /** What `worldModulePrologue` is handed: the parts a file supplies. */
 export interface WorldPrologue {
@@ -7150,10 +7082,8 @@ export interface WorldPrologue {
  * declarations, every rule, animation, theme, actor and map the project
  * holds, image sizes, layers, and the load of the map the world is.
  *
- * `define world` emits this and then its rows; a Main Screen emits it from
- * its data and then the rows its data stands for
- * (specs/SCREEN_MAP_PLAN.md, step 4). One function, so the two shapes
- * cannot drift while both exist.
+ * A Main Screen emits it from its data and then the rows its data stands
+ * for (specs/SCREEN_MAP_PLAN.md, step 4).
  */
 export function worldModulePrologue(
   generator: Parameters<typeof addImport>[0],
@@ -7200,8 +7130,8 @@ export function worldModulePrologue(
   // import could have followed, so it can only look one up
   // (specs/RECORDS_PLAN.md).
   // …and every THEME, by path, for the same reason one level along: a
-  // drawing names a class and the FILE is chosen three ways — the world's
-  // `use theme` row, a map's field, a placement's property — and only the
+  // drawing names a class and the FILE is chosen three ways — the Main
+  // Screen's theme, a map's field, a placement's property — and only the
   // first of those is a path an import could have followed. The other two
   // are strings in data, and a file that says `extends` is a fourth. So
   // the world is handed the lot and looks one up (specs/STYLES_PLAN.md).
@@ -7290,7 +7220,7 @@ export function worldModulePrologue(
   // was (specs/WORLD_STATE.md).
   //
   // Passed on the generator rather than read off the block, so there is ONE
-  // parse of a world's declarations (`parseWorldOwnMeta`) instead of a
+  // parse of a world's declarations (`screenOwnMeta`) instead of a
   // second walk over live blocks that could drift from it — the same
   // bargain `__ruleModule` makes two lines below the same seam.
   const own = prologue.own;
@@ -7310,7 +7240,7 @@ export function worldModulePrologue(
     own +
     rules +
     prologue.hoisted.join('') +
-    // BEFORE the body, which is where `use theme` sits: the row names a
+    // BEFORE the body, which is where the theme is said: it names a
     // base and the world has to be able to find it, and every other
     // theme besides, before anything draws.
     themes +
@@ -7353,7 +7283,7 @@ const worldMapRef = defineBlock({
  *
  * The map is a value (`map ⟨…⟩`, or whatever else holds a path), the
  * Viewport an actor. Every map the project holds is registered on the
- * world (`world_world`), so nothing is imported here: the world finds the
+ * world (`worldModulePrologue`), so nothing is imported here: the world finds the
  * map by its path (`World.loadMapInto`). Over several Viewports it loads
  * into each, as `remove actor` removes each.
  */
@@ -8413,76 +8343,6 @@ const worldRuleProperty = defineBlock({
   generator: noGenerator,
 });
 
-const worldRuleEvent = defineBlock({
-  type: 'world_rule_event',
-  // Designed, like `define block`: the row below is the HAT this event makes,
-  // built from the same parts. An event whose phrasing takes a choice —
-  // "⟨space⟩ is pressed" — is one a handler can filter on, which is the whole
-  // of specs/ENUMS.md.
-  message0: 'define event',
-  previousStatement: true,
-  nextStatement: true,
-  // What carries the parts. A rule's view holds one of these for each event,
-  // for the compiler; nothing draws it (`extensions/blockDesigner`).
-  mutator: eventDesignerMutator,
-  style: 'setup_blocks',
-  tooltip: 'An event this rule raises: made in the Rule Editor.',
-  generator: {
-    javascript(block, generator) {
-      // WHERE IT SITS DECIDES WHO WRITES IT, the same bargain `define block`
-      // beside it makes (`worldRuleBlock`). In a `.rule` the module is
-      // assembled from the file's metadata, so writing anything here would
-      // declare the event twice; in an `.actor` file there is no metadata pass
-      // and this is the whole declaration. In a MAP's own workspace there is
-      // no actor to declare it on either: the event is a plain identity
-      // owned by the map's module (specs/MAP_FIRST.md), written as an export
-      // the world's hat imports and the map's own `emit` names locally.
-      const mapModule = (generator as {__mapModule?: string}).__mapModule;
-      if (mapModule) {
-        const named = designedName(
-          (
-            block as unknown as {
-              saveExtraState?: () => {
-                parts?: Array<{kind?: string; text?: string; var?: string}>;
-              };
-            }
-          ).saveExtraState?.()?.parts,
-        );
-        if (!named) {
-          return '';
-        }
-        return (
-          `export const ${pascal(named)}Event = {id: ${str(slug(named))}, ` +
-          `name: ${str(named)}, ownerId: ${str(mapModule)}};\n`
-        );
-      }
-      if (!definesActorFile(block)) {
-        return '';
-      }
-      const parts = (
-        block as unknown as {
-          saveExtraState?: () => {
-            parts?: Array<{kind?: string; text?: string; var?: string}>;
-          };
-        }
-      ).saveExtraState?.()?.parts;
-      const name = designedName(parts);
-      if (!name) {
-        return ''; // an event with no words on it names nothing
-      }
-      // NO PARAMETERS IN THE CALL. What an event carries is a fact about the
-      // `emit` that raises it and the hat that hears it, both of which read
-      // the designed parts from the palette (`ownProperties.designedEvent`);
-      // the engine's event is an identity and a name and nothing else
-      // (`ActorBuilder.defineEvent`).
-      return (
-        `export const ${pascal(name)}Event = actor.defineEvent(` +
-        `${str(slug(name))}, {name: ${str(name)}});\n`
-      );
-    },
-  },
-});
-
 // ── The blocks a signature is written in ─────────────────────────────────────
 // A stack of these IS the signature, read left-to-right as top-to-bottom: a
 // `text` adds wording, a `let` or an `argument` adds an input, reordering the
@@ -9042,52 +8902,6 @@ const worldPenWeight = defineBlock({
 });
 
 /**
- * `use theme ⟨styles/modern⟩` — which file a drawing's style names mean.
- *
- * ON THE WORLD, and that is the point of the split: the drawings name roles
- * and this says what a role looks like, so swapping a theme is one row rather
- * than an edit to every control (specs/STYLES_PLAN.md).
- *
- * The file is imported as DATA, the way an `.effect` is — the bundler loads
- * the JSON, the engine resolves its tokens once, and nothing about styles
- * reaches the generated code beyond this call.
- */
-const worldUseTheme = defineBlock({
-  type: 'world_use_theme',
-  message0: 'use theme %1',
-  args0: [{type: 'field_dropdown', name: 'THEME', options: styleFileOptions}],
-  previousStatement: true,
-  nextStatement: true,
-  // The import extension AFTER the options one, so it wraps that validator
-  // rather than being wrapped by it (see styleImportField).
-  extensions: [
-    styleFileOptionsExtension,
-    styleImportFieldExtension,
-    openSourceButtonExtension,
-  ],
-  style: 'behavior_blocks',
-  tooltip:
-    'Say which theme this world\u2019s interface is painted in. Every ' +
-    '\u201cuse style\u201d in every drawing is looked up in this file.',
-  generator: {
-    javascript(block, generator) {
-      const path = block.getFieldValue('THEME');
-      // A project with no themes yet emits nothing rather than an import of
-      // the empty path, which does not resolve and takes the module down.
-      if (!path) {
-        return '';
-      }
-      addImport(
-        generator,
-        `mod:${path}`,
-        `import ${importVar(path)} from ${str(path)};`,
-      );
-      return `world.useTheme(${importVar(path)});\n`;
-    },
-  },
-});
-
-/**
  * `use style ⟨button face⟩` — the pen, set from the theme, all at once.
  *
  * THE BLOCK THE OTHER PEN BLOCKS ARE FOR. A drawing that says "fill accent,
@@ -9097,7 +8911,7 @@ const worldUseTheme = defineBlock({
  * (specs/STYLES_PLAN.md).
  *
  * A NAME, NOT A FILE. Which file the name is looked up in is the WORLD's to
- * say (`use theme`), which is the whole of what makes a theme swappable: the
+ * say (the Main Screen's theme), which is the whole of what makes a theme swappable: the
  * drawings do not change when it does.
  *
  * A DROPDOWN, NEVER FREE TEXT, for the reason this lab has met four times —
@@ -10783,9 +10597,7 @@ export const DOMAIN_BLOCKS = [
   worldLoadMapInto,
   worldUnloadViewport,
   worldInShownMap,
-  worldWorld,
   worldRuleProperty,
-  worldRuleEvent,
   memberHead,
   stepHead,
   worldDoc,
@@ -10822,7 +10634,6 @@ export const DOMAIN_BLOCKS = [
   worldPenNoShadow,
   worldPenWeight,
   worldPenStyle,
-  worldUseTheme,
   worldMap,
   worldDrawRectangle,
   worldDrawCircle,
@@ -11043,12 +10854,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
   {
     name: 'World',
     blocks: [
-      // The VOCABULARY the world carries: the words its maps raise. A map used
-      // to declare its own, which meant a hundred level maps minted a hundred
-      // different `complete` events and a hundred drawers to hold them; the
-      // world declares them once and any map may raise them
-      // (specs/MAP_EVENTS_PLAN.md).
-      'world_rule_event',
       // No `use rule`: a world runs the rules the project holds
       // (blockly/projectModules).
       // How big the level is, and how much of it is on screen at once, for
@@ -11824,24 +11629,19 @@ function generateRulePalette(
 /**
  * Blocks no drawer offers, because an editor establishes what they say
  * (specs/ACTORS_AS_DATA_PLAN.md, step 6), which a file may still HOLD: a
- * world written with `define world`, its layers and its theme, loads and
- * runs as it did. Not offered is not wrong to be there.
+ * layer written with `define layer` loads and runs as it did. Not offered is
+ * not wrong to be there.
  */
 export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_actor',
   'world_rule_property',
   'world_acts_like',
   'world_actor_is_data',
-  'world_world',
-  'world_use_theme',
   'world_set_map_size',
   'world_set_view_size',
   'world_define_layer',
   'world_layer_parallax',
   'world_layer_fixed',
-  // An actor's own events are designed in the Actor Editor
-  // (specs/ACTOR_BLOCKS_PLAN.md).
-  'world_rule_event',
   MEMBER_HEAD,
   STEP_HEAD,
 ]);
@@ -11918,7 +11718,7 @@ export function buildDomainPalette(
      *
      * ONLY the hoist asks, which is why it is separate from the actor's above
      * rather than folded into it: a world declaring state of its own gets a
-     * drawer for it exactly as an actor does (`parseWorldOwnMeta`, and both
+     * drawer for it exactly as an actor does (`screenOwnMeta`, and both
      * arrive in `ownProperties`), and while that world is open, that drawer is
      * the one being worked in. Nothing else about the palette turns on it.
      */
@@ -12038,7 +11838,7 @@ export function buildDomainPalette(
       types.push(hat.type);
       ownEventTypes.push(hat.type);
       away.push(hat.type);
-      // A WORLD's event is the world's to hear (`parseWorldOwnMeta`), and a
+      // A WORLD's event is the world's to hear (`screenOwnMeta`), and a
       // hat that registers on `world` must come after the world block binds
       // it (`assembleWorldModule`).
       if (event.scope === 'world') {

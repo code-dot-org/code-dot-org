@@ -1,4 +1,4 @@
-// The seam between the `use theme` dropdown and the import dialog.
+// The seam between a theme menu and the import dialog.
 //
 // `effectImport`'s sibling on the same mechanism: picking `(import…)` has to
 // open a dialog, write a file into the project, and come back with the new
@@ -6,7 +6,7 @@
 
 import {importSeam, type ImportHandler} from '../blockly/libraryImport';
 
-/** The sentinel the `use theme` dropdown carries for its `(import…)` row. */
+/** The sentinel a theme menu carries for its `(import…)` row. */
 export const IMPORT_STYLE_VALUE = '__import_style__';
 
 /**

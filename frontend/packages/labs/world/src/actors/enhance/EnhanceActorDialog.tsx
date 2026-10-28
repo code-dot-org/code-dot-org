@@ -2,7 +2,7 @@
 //
 // WHAT IT IS ABOUT IS ALREADY ANSWERED. Enhancing is done TO a thing, so it is
 // asked from that thing — an actor's row beside Rename and Clone, or the wand
-// on its `define actor`, or the wand on a `define world` — and the thing's name
+// on its `define actor`, or the World inspector's — and the thing's name
 // is in the title rather than in a list to pick from. Which is also why the
 // shelf shows only what suits it: an actor is offered the actor ones, a world
 // the world ones (`groupsFor`).

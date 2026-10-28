@@ -368,8 +368,8 @@ export function projectRuleMetas(files: Record<string, string>): RuleMeta[] {
  *
  * Now holding the file is the whole of it, and the world generator emits what
  * this reports. It is safe
- * because a rule with no elected trait does nothing — see the note on
- * `world_world`'s generator.
+ * because a rule with no elected trait does nothing — see the note in
+ * `domainBlocks.worldModulePrologue`.
  *
  * By NAME, which is what a reference resolves by, so a rule that moves between
  * files is still the same rule. A `.js` rule declares no name and is known by

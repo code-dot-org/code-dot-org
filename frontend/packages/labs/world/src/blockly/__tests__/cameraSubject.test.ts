@@ -37,21 +37,21 @@ const within = (...types: string[]): never => {
   return wrap(blocks[0]);
 };
 
-/** The fake block, in a file whose root is `root` — a world's or an actor's. */
-const inFile = (block: never, root: string): never =>
-  ({
-    ...(block as object),
-    workspace: {getTopBlocks: () => [{type: root}]},
-  }) as never;
+/** A file's workspace: the game's own code, or one whose root is `root`. */
+const fileOf = (root: string) =>
+  root === 'world'
+    ? {holdsCodeOf: 'world', getTopBlocks: () => []}
+    : {getTopBlocks: () => [{type: root}]};
 
-/** The fake block in a FLYOUT, over a file whose root is `root`. */
+/** The fake block, in the game's code or an actor's file. */
+const inFile = (block: never, root: string): never =>
+  ({...(block as object), workspace: fileOf(root)}) as never;
+
+/** The fake block in a FLYOUT, over the same. */
 const inFlyoutOf = (block: never, root: string): never =>
   ({
     ...(block as object),
-    workspace: {
-      isFlyout: true,
-      targetWorkspace: {getTopBlocks: () => [{type: root}]},
-    },
+    workspace: {isFlyout: true, targetWorkspace: fileOf(root)},
   }) as never;
 
 describe('the subject a block is about', () => {
@@ -116,7 +116,7 @@ describe('a block that names a trait', () => {
       subjectShadow(
         inFile(
           naming('Camera Follow#FollowsTrait', 'world_add_trait'),
-          'world_world',
+          'world',
         ),
       ),
     ).toBe('world_camera');
@@ -148,10 +148,10 @@ describe('a block that names a trait', () => {
 });
 
 describe('a member a camera elects', () => {
-  it('is about the main camera in a world file', () => {
+  it('is about the main camera in the game’s own code', () => {
     expect(
       cameraShadow(
-        inFile(within('world_set_CameraFollow_TargetProperty'), 'world_world'),
+        inFile(within('world_set_CameraFollow_TargetProperty'), 'world'),
       ),
     ).toBe('world_camera');
   });
@@ -174,10 +174,7 @@ describe('a member a camera elects', () => {
     // nothing; the question is about the file behind it.
     expect(
       cameraShadow(
-        inFlyoutOf(
-          within('world_set_CameraFollow_TargetProperty'),
-          'world_world',
-        ),
+        inFlyoutOf(within('world_set_CameraFollow_TargetProperty'), 'world'),
       ),
     ).toBe('world_camera');
     expect(

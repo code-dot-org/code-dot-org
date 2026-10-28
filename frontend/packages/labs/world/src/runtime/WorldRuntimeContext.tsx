@@ -242,7 +242,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       files,
       isBlocklyPath,
       (contents, path) => generator.generate(contents, path),
-      // What the generator will read besides each file. A `define world` emits
+      // What the generator will read besides each file. The game's module emits
       // its rules and its image sizes from the installed registries, so a
       // module cached before one of them arrived is out of date in a way its
       // own bytes cannot show (blockly/projectDropdowns, runtime/generatedFiles).
@@ -494,7 +494,7 @@ export function WorldRuntimeProvider({children}: {children: ReactNode}) {
       };
     }
     // Thumbnails are decoration, and generation can now refuse a file outright
-    // (a `define world` in an `.actor`). The compile path reports that properly;
+    // (a `define map` in an `.actor`). The compile path reports that properly;
     // throwing here would only add an unhandled rejection, since both callers
     // are a bare `void getActorInfo(…).then(…)`.
     let files: Record<string, string>;

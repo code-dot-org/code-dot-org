@@ -14,7 +14,6 @@ import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
 import type {EffectParameter} from '../effect/model/types';
 import {IMPORT_MAP_VALUE} from '../maps/mapImport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
-import {IMPORT_STYLE_VALUE} from '../styles/styleImport';
 
 import {actorIconImage} from './actorIcons';
 import {actorIcon, actorThumbnail} from './actorThumbnails';
@@ -36,14 +35,13 @@ let projectBackgrounds: Array<[string, string]> = [];
 let projectSounds: Array<[string, string]> = [];
 // `[label, path]` for the project's `.effect` files — the `add effect` dropdown.
 let projectEffectFiles: Array<[string, string]> = [];
-// The same for `.style` files — the `use theme` dropdown — and, separately,
+// The same for `.style` files, which the world registers by path, and,
 // every style NAME they define between them, which is what `use style` offers
 // (specs/STYLES_PLAN.md).
 let projectStyleFileList: Array<[string, string]> = [];
 let projectStyleNameList: string[] = [];
-// `[label, path]` for the project's own rule modules under `rules/` — the
-// `world_use_rule` dropdown offers these ALONGSIDE the built-in rules, and its
-// generator imports the module (a path value) rather than reading `WorldLab`.
+// `[label, path]` for the project's own rule modules under `rules/`, each of
+// which the world imports and puts in play (`worldModulePrologue`).
 let projectRuleModules: Array<[string, string]> = [];
 // Map path -> the actor module paths it places (for the load-map generator).
 let projectMaps: Record<string, string[]> = {};
@@ -143,29 +141,13 @@ export function setProjectStyleNames(names: string[]): void {
 }
 
 /**
- * Current THEME dropdown options: the project's `.style` files, and a way to
- * fetch one.
- *
- * The import row is listed last and is never the fallback — `orNone` still
- * supplies "(no themes yet)" — so a saved block whose theme was deleted does
- * not silently become the import row.
- *
- * `projectStylePaths` above it is the same list without the labels, for the
- * world preamble: only ONE of the three ways a theme is chosen is a path an
- * import could follow, which is the world's own `use theme` row. A map's is a
- * string in its document, a placement's is a string in a property, and a
- * file's `extends` is a fourth — so the world is handed the lot and looks one
- * up (specs/STYLES_PLAN.md).
+ * The project's `.style` files, by path, for the game's preamble: a map's
+ * theme is a string in its document and a placement's a string in a
+ * property, so the game is handed every one and looks one up
+ * (specs/STYLES_PLAN.md).
  */
 export function projectStylePaths(): string[] {
   return projectStyleFileList.map(([, path]) => path);
-}
-
-export function styleFileOptions(): Array<[string, string]> {
-  return [
-    ...orNone(projectStyleFileList, '(no themes yet)'),
-    ['(import…)', IMPORT_STYLE_VALUE],
-  ];
 }
 
 /**
@@ -750,11 +732,6 @@ export const effectFileOptionsExtension = liveDropdown(
   'world_effect_file_options',
   'EFFECT',
   effectFileOptions,
-);
-export const styleFileOptionsExtension = liveDropdown(
-  'world_style_file_options',
-  'THEME',
-  styleFileOptions,
 );
 export const styleNameOptionsExtension = liveDropdown(
   'world_style_name_options',

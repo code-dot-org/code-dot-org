@@ -12,7 +12,7 @@
 // THREE QUESTIONS, asked of a root whenever it is created, moved or changed:
 //
 //   - Is it a definition with a home elsewhere? `ROOT_HOMES` says which kinds
-//     of file may hold `define actor`, `define world` and the rest.
+//     of file may hold `define actor`, `define map` and the rest.
 //   - Is it offered to this kind of file at all? The palette is built per
 //     kind, and its toolbox is the set of what may be placed here. A hat the
 //     world hears and an actor cannot is in no drawer of an actor file.

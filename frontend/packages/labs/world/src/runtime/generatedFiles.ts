@@ -23,7 +23,7 @@
 // contents — and their keys — change with it.
 //
 // The environment is that argument taken to its conclusion, and leaving it out
-// was a bug with a long tail. `define world` emits `world.useRules` from the
+// was a bug with a long tail. The game's module emits `world.useRules` from the
 // project's rule modules and `world.useImageSizes` from what the editor has
 // MEASURED — neither of which is in this file, or in any file. An image served
 // from the assets backend is measured only once it has decoded, which lands in

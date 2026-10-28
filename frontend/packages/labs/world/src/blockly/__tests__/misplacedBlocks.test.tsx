@@ -112,21 +112,19 @@ describe('a definition with a home elsewhere', () => {
 });
 
 describe('what a file may hold, against what its toolbox shows', () => {
-  // A lesson's shelf leaves out what the learner has not been given, and a
-  // learner who opens a lesson before `origin/first-world` has not been given
-  // `define world`. Checked against THAT toolbox, the world's own definition
-  // read as a block a world cannot hold, and was disabled with every row
-  // under it — a world that compiled to `export default world` and nothing
-  // else. So the check is made against the whole palette for the kind of
-  // file (`BlocklyFileEditor`, `holdable`), and the shelf is only advice.
-  it('keeps a world’s own definition, though the shelf has not got to it', () => {
-    const {toolbox} = buildDomainPalette(RULES, {fileKind: 'world'});
+  // A lesson's shelf leaves out what the learner has not been given. Checked
+  // against THAT toolbox, a file's own rows read as blocks it cannot hold, and
+  // were disabled — a world that once compiled to `export default world` and
+  // nothing else. So the check is made against the whole palette for the kind
+  // of file (`BlocklyFileEditor`, `holdable`), and the shelf is only advice.
+  it('keeps a row the shelf has not got to', () => {
+    const {toolbox} = buildDomainPalette(RULES, {fileKind: 'actor'});
     const shelved = shelvedToolbox(toolbox, {holds: () => false});
-    expect(typesOffered(shelved).has('world_world')).toBe(false);
+    expect(typesOffered(shelved).has('world_trait_step')).toBe(false);
 
-    const world = fileOf('world');
-    const root = world.newBlock('world_world');
-    const row = world.newBlock('world_add_actor');
+    const actor = fileOf('actor');
+    const root = actor.newBlock('world_actor');
+    const row = actor.newBlock('world_trait_step');
     root.nextConnection!.connect(row.previousConnection!);
 
     review(root);

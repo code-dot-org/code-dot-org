@@ -12,6 +12,7 @@ import {
   DOMAIN_BLOCKS,
   DOMAIN_TOOLBOX,
   ROOT_BLOCK_TYPES,
+  worldModulePrologue,
 } from '../domainBlocks';
 import {
   BUILDER_WORLD_EXTENSION,
@@ -194,6 +195,23 @@ const emit = (
     {} as never,
   ) as string;
 };
+
+/** The game's module up to its rows, for a game called `name`. */
+const prologueOf = (
+  name: string,
+  definitions: Record<string, string> = {},
+): string =>
+  worldModulePrologue(
+    {definitions_: definitions},
+    {
+      name,
+      hoisted: [],
+      plan: [],
+      own: '',
+      mapLayers: [],
+      mainMap: '',
+    },
+  );
 
 /** Run a value (reporter) block's generator; returns its `[code, order]` tuple. */
 const emitValue = (
@@ -774,12 +792,12 @@ describe('domain block generators', () => {
     );
     // Both halves: grids are replaced, sizes are MERGED (a measurement arrives
     // late and must not drop the others), so clearing them takes two calls.
-    // `world_world` states every measured size, and would state this one.
+    // The game's prologue states every measured size, and would state this one.
     setProjectGrids({}, {});
     forgetImageSizes();
   });
 
-  it('world_world states every image the editor measured', () => {
+  it('the game states every image the editor measured', () => {
     // No block says this, the same way no block says which animation files
     // exist: how big a picture is is a fact about the project, not a decision
     // a world makes. The engine cannot read a PNG and the editor already has.
@@ -792,14 +810,14 @@ describe('domain block generators', () => {
 
     // Sorted, so the same project compiles to the same text — the order two
     // measurements happened to arrive in is not part of the program.
-    expect(emit('world_world', {NAME: 'W'})).toContain(
+    expect(prologueOf('W')).toContain(
       'world.useImageSizes({"a.png":{"width":64,"height":16},' +
         '"b.png":{"width":8,"height":8}});\n',
     );
 
     // Nothing measured, nothing said.
     forgetImageSizes();
-    expect(emit('world_world', {NAME: 'W'})).not.toContain('useImageSizes');
+    expect(prologueOf('W')).not.toContain('useImageSizes');
   });
 
   it('world_play_animation plays the animation on the ACTOR value (restarting it)', () => {
@@ -2066,18 +2084,11 @@ describe('world block generators', () => {
     ) as string;
   };
 
-  it('world_world builds the world and hosts its body', () => {
+  it('the game’s prologue builds the world, named for the game', () => {
     const defs: Record<string, string> = {};
-    const code = run(
-      'world_world',
-      {NAME: 'Platform World'},
-      defs,
-      'world.useRules([X]);\n',
-    );
     // The id is derived from the name: spaces become underscores.
-    expect(code).toBe(
-      'const world = new WorldLab.WorldBuilder({id: "Platform_World", name: "Platform World"});\n' +
-        'world.useRules([X]);\n',
+    expect(prologueOf('Platform World', defs)).toBe(
+      'const world = new WorldLab.WorldBuilder({id: "Platform_World", name: "Platform World"});\n',
     );
     expect(defs['world_lab']).toBe(`import * as WorldLab from 'world-lab';`);
   });
@@ -2565,7 +2576,7 @@ describe('world block generators', () => {
     ]);
     const defs: Record<string, string> = {};
 
-    const code = run('world_world', {NAME: 'Platform World'}, defs, '');
+    const code = prologueOf('Platform World', defs);
 
     expect(code).toContain('world.useRules([RulesInput]);');
     expect(code).toContain('world.useRules([RulesGravity]);');
@@ -2583,7 +2594,7 @@ describe('world block generators', () => {
     // conjures a module the project has not got.
     const defs: Record<string, string> = {};
 
-    const code = run('world_world', {NAME: 'Platform World'}, defs, '');
+    const code = prologueOf('Platform World', defs);
 
     expect(code).not.toContain('useRules');
     expect(defs['mod:rules/input']).toBeUndefined();
@@ -2793,7 +2804,7 @@ describe('buildDomainPalette (project rule blocks)', () => {
 });
 
 describe('rule authoring blocks (`.rule` files)', () => {
-  const AUTHORING = ['world_rule_property', 'world_rule_event'];
+  const AUTHORING = ['world_rule_property'];
 
   it('registers the declaration blocks with no-op generators', () => {
     for (const type of AUTHORING) {
@@ -3001,10 +3012,13 @@ describe('what an actor list’s source socket wears', () => {
   ];
 
   /** A stand-in workspace holding one top block of the given type. */
-  const workspaceWith = (type: string) =>
-    ({
-      getTopBlocks: () => [{type}],
-    }) as never;
+  const workspaceWith = (type: string) => {
+    const workspace = {getTopBlocks: () => (type === 'world' ? [] : [{type}])};
+    if (type === 'world') {
+      markCode(workspace as never, 'world');
+    }
+    return workspace as never;
+  };
 
   const sourceShadow = (blockType: string, rootType: string) => {
     const entry = shadowsFor(blockType)?.find(s => s.name === 'SOURCE');
@@ -3013,9 +3027,9 @@ describe('what an actor list’s source socket wears', () => {
     } as never);
   };
 
-  it('offers a kind to pick from in a world or an actor file', () => {
+  it('offers a kind to pick from in the game’s code or an actor file', () => {
     for (const type of LIST_BLOCKS) {
-      expect(sourceShadow(type, 'world_world')).toEqual({
+      expect(sourceShadow(type, 'world')).toEqual({
         type: 'world_actor_kind',
       });
       expect(sourceShadow(type, 'world_actor')).toEqual({

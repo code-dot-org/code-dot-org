@@ -1,7 +1,7 @@
 // The definition a file is about, held at the top of its workspace
 // (specs/LAZY_WORKSPACE_PLAN.md).
 //
-// `define actor`, `define world`, `define rule` and `define map` are what
+// `define actor` and `define map` are what
 // their file IS: everything else in it is about that one thing. So the block
 // stays first — nothing can be dragged above it — and cannot be dragged away
 // or deleted. Other top blocks (a rule's traits, an actor's handlers) move
@@ -18,7 +18,6 @@ import type {Blockly} from '@code-dot-org/blockly';
 /** The top blocks that are what their file defines. */
 export const PINNED_ROOTS: ReadonlySet<string> = new Set([
   'world_actor',
-  'world_world',
   'world_map',
 ]);
 

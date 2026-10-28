@@ -106,10 +106,6 @@ export function hasEnclosingActor(block: Blockly.Block): boolean {
     if (parent.type.startsWith('world_on_')) {
       return parent.getField(SUBJECT_FIELD) !== null;
     }
-    // Roots that bind something that is not an actor.
-    if (parent.type === 'world_world') {
-      return false;
-    }
   }
   return false;
 }

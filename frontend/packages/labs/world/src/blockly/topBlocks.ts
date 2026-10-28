@@ -51,7 +51,6 @@ export const topBlocksOf = (parsed: unknown): TopBlock[] => {
  */
 const NAMED_ROOTS: readonly string[] = [
   'world_actor',
-  'world_world',
   'world_rule',
   'world_map',
 ];

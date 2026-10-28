@@ -1,8 +1,8 @@
 // Which `define actor` blocks get a wand, and what it is pointed at.
 //
 // The button itself needs a workspace with the whole palette registered to say
-// anything at all, so what is tested here is the decision — the same split
-// `rulesButton` makes for its wording. Getting it wrong is not cosmetic: a
+// anything at all, so what is tested here is the decision. Getting it wrong
+// is not cosmetic: a
 // wand pointed at the wrong address writes into the wrong file, and one on a
 // read-only workspace offers an edit at all.
 

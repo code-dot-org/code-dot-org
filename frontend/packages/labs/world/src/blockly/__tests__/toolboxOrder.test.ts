@@ -23,7 +23,7 @@ import {SOKOBAN} from '../../fixtures/sokoban';
 import {mouseRule} from '../../rules/stock';
 import {projectFiles} from '../../runtime/projectFiles';
 import {buildDomainPalette, DOMAIN_TOOLBOX} from '../domainBlocks';
-import {parseWorldOwnMeta} from '../ownProperties';
+import {screenOwnMeta} from '../ownProperties';
 import {projectOwnMetas, projectRuleMetas} from '../projectModules';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
@@ -200,30 +200,10 @@ describe('the drawer for the file being edited', () => {
     // does (specs/WORLD_STATE.md) — and both arrive in `ownProperties`, so it
     // used to land under the Actors heading, which a world is not. Open, it is
     // the drawer being worked in.
-    const world = parseWorldOwnMeta(
-      'worlds/main',
-      JSON.stringify({
-        blocks: {
-          blocks: [
-            {
-              type: 'world_world',
-              fields: {NAME: 'Tapper'},
-              next: {
-                block: {
-                  type: 'world_rule_property',
-                  fields: {
-                    TYPE: 'number',
-                    ACCESS: 'writable',
-                    NAME: 'score',
-                    DEFAULT: '0',
-                  },
-                },
-              },
-            },
-          ],
-        },
-      }),
-    )!;
+    const world = screenOwnMeta('worlds/main', {
+      name: 'Tapper',
+      properties: [{name: 'score', type: 'number', value: '0'}],
+    });
     const rows = shape(
       buildDomainPalette(rules, {
         fileKind: 'world',

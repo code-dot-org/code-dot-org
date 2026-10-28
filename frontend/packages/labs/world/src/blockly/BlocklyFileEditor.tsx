@@ -530,7 +530,7 @@ export const BlocklyFileEditor = ({
       // scope, a level's hidden drawers, an app's, a hat this actor cannot
       // hear, a lesson's shelf — and none of them makes a block that is
       // already in the file wrong to be there. Asking the shelved toolbox
-      // instead disabled `define world` itself in any lesson opened before
+      // instead disabled the world's root itself in any lesson opened before
       // `origin/first-world` was done, and a disabled world compiles to
       // `export default world` and nothing else (`misplacedBlocks`).
       // …and what no drawer offers because an editor says it, which a file

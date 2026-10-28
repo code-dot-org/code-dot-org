@@ -84,9 +84,8 @@ export const ThemeField = ({
           ...options.map(([label, path]) => ({value: path, text: label})),
           // …and a way in, because a project starts with no themes and a menu
           // whose only row is "the world's" is a dead end that says nothing
-          // about where a theme comes from. The same seam the `use theme`
-          // block's `(import…)` uses, and the one a placement's Theme field
-          // uses.
+          // about where a theme comes from. The same seam a placement's Theme
+          // field uses.
           {value: IMPORT_STYLE_VALUE, text: '(import…)'},
         ]}
         onChange={(event: ChangeEvent<HTMLSelectElement>) => {

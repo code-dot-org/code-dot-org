@@ -17,4 +17,8 @@ export const VIEW_ROWS: ReadonlySet<string> = new Set([
   'world_rule_step_in',
   'world_rule_step_tick',
   'world_rule_block',
+  'world_rule_event',
+  // …and the root a lesson, a fixture or a test writes its world under,
+  // which the converter reads (`lessons/asScreen`).
+  'world_world',
 ]);

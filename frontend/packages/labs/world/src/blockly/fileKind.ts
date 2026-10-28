@@ -8,9 +8,8 @@
 // both ask here.
 
 /**
- * Which kind of file this is. `world` is no file's any more: it is the code a
- * game's own blocks are, the home of `define world`, which the Main Screen
- * compiles through, and of the hats a palette offers that code.
+ * Which kind of file this is. `world` is no file's: it is the Main Screen's
+ * code, the game's own, and the hats a palette offers it.
  */
 export type FileKind =
   | 'actor'
@@ -52,8 +51,7 @@ export const isMapKind = (kind: FileKind | undefined): boolean =>
  * A root here is not merely useless in the wrong file — it changes what the
  * file IS, so it is both kept out of the palette and refused by the generator.
  *
- * `world_actor` belongs to an `.actor` file alone. A world once held its own,
- * as roots beside `define world`; every actor is a file now.
+ * `world_actor` belongs to an `.actor` file alone; every actor is a file.
  *
  * `world_rule` names only `rule`, and the rest of a rule's definition blocks
  * are not listed at all: the palette drops that whole category outside a
@@ -66,31 +64,6 @@ export const isMapKind = (kind: FileKind | undefined): boolean =>
  */
 export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
   ['world_actor', new Set<FileKind>(['actor'])],
-  ['world_world', new Set<FileKind>(['world'])],
-  // …and an ACTOR file, where the same block declares a thing that HAPPENS to
-  // that kind of actor rather than a member of a rule
-  // (`ActorBuilder.defineEvent`).
-  //
-  // …AND A WORLD, which is the app's own vocabulary: the events its maps
-  // raise. A map used to declare its own and the world heard them, which
-  // meant a hundred level maps minted a hundred different `complete` events
-  // and a hundred drawers to hold them (specs/MAP_EVENTS_PLAN.md).
-  //
-  // This entry USED TO EXCLUDE a `.world`, "for the reason `define block`
-  // was not: a world's own `define actor` generates into a block
-  // scope, and the declaration this emits is an `export const`." A world has
-  // not been able to hold a `define actor` since every actor became a file —
-  // see `DEFINING_ROOTS` below, which refuses one outright — so the block
-  // scope that reason turns on cannot be created any more. The restriction
-  // outlived its cause by some months, and the two entries under it are the
-  // rest of the same wreckage.
-  //
-  // NOT A `.map`, which it was until the inversion: a map used to declare the
-  // events its placements raised, and the world heard them through a drawer
-  // per map. A map declares no events of its own now — it RAISES the world's,
-  // by name — so that a hundred maps raising one event is one declaration and
-  // one handler (specs/MAP_EVENTS_PLAN.md).
-  ['world_rule_event', new Set<FileKind>(['rule', 'actor', 'world'])],
   // `acts like` names another ACTOR's module, so it belongs in the file that
   // defines one and nowhere else.
   //
@@ -140,7 +113,7 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
  * The roots that DEFINE what a file is, and how each reads in the error.
  *
  * One in the wrong kind of file is refused rather than compiled: a `define
- * rule` in a world is not a world with something extra in it, it is a file
+ * map` in an actor is not an actor with something extra in it, it is a file
  * that cannot be what its name says. `define actor` joined the list when
  * every actor became a file — until then a world could hold one, and before
  * that "actor" was the shape a file fell back to, so it never had a wrong
@@ -148,7 +121,6 @@ export const ROOT_HOMES: ReadonlyMap<string, ReadonlySet<FileKind>> = new Map([
  * place and stay that way (`ROOT_HOMES`).
  */
 const DEFINING_ROOTS: ReadonlyMap<string, string> = new Map([
-  ['world_world', 'define world'],
   ['world_actor', 'define actor'],
   ['world_map', 'define map'],
 ]);
@@ -168,12 +140,8 @@ export type ModuleShape = FileKind;
  * broken rather than one block being in the wrong file.
  *
  * So the file's extension decides, and a defining root that disagrees with it
- * is an error rather than a redirection. A `.world` still assembles as a world
- * with no root yet — a half-built one is missing it, and compiling that as an
- * actor reports the wrong problem.
- *
- * With no path there is nothing better to go on than the blocks, so the old
- * sniffing stands in and nothing is refused.
+ * is an error rather than a redirection. With no path there is nothing to go
+ * on, and the blocks are an actor's.
  *
  * @throws if a defining root is in a file whose kind is not its home.
  */
@@ -183,7 +151,7 @@ export function moduleShape(
 ): ModuleShape {
   const kind = fileKindOf(path);
   if (!kind) {
-    return topBlockTypes.includes('world_world') ? 'world' : 'actor';
+    return 'actor';
   }
   for (const type of topBlockTypes) {
     const says = DEFINING_ROOTS.get(type);

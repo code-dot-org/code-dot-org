@@ -449,7 +449,7 @@ function written(root: Node, into: Map<string, unknown>, reading: Reading) {
  *
  * THE READER IS A SECOND IMPLEMENTATION OF THE PEN — it makes the map
  * editor's stills without running a game — so it has to find the theme the
- * same way the game does, which is a `use theme` row under `define world`.
+ * same way the game does: the Main Screen's.
  * Without this every drawing naming a style would read INCOMPLETE and every
  * interface picture in the editor would fall back to the sandbox's slow path
  * (specs/STYLES_PLAN.md).

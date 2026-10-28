@@ -5,7 +5,7 @@
 // into a file somebody made, so the rules it works by are worth stating.
 //
 // IT WRITES BLOCKS THEY COULD HAVE WRITTEN. Everything here appends ordinary
-// rows to the chain under a `define actor` or a `define world` — the same
+// rows to the chain under a `define actor` — the same
 // blocks the toolbox offers, in the same order a learner would have dragged
 // them. Nothing is marked, hidden or owned by the library afterwards: what an
 // enhancement leaves behind is a project, and deleting the rows undoes it.

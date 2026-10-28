@@ -1,17 +1,15 @@
 // A designed member's signature (specs/RULE_EDITOR_PLAN.md, step 7).
 //
-// A member's design is data, made on its page (`actors/editor/MemberPage`).
-// `define event` still loads where a world declares its events, and all it
-// does with its parts here is carry them through a load and a save. A
-// `define block` is a row of a view and no longer a block (`viewRows`).
+// A member's design is data, made on its page (`actors/editor/MemberPage`);
+// `define block` and `define event` are rows of a view and no longer blocks
+// (`viewRows`). What is left here is what a member's head and its call
+// sites read of a signature.
 //
 // THE PARTS. A signature is an ordered list of labels and values, the same
 // shape Blockly's own `message0` has: `push %1 toward %2` is "label, param,
 // label, param", and naming a member is the case where the list is one label.
 
 import type * as Blockly from 'blockly/core';
-
-import {defineMutator} from '@code-dot-org/blockly';
 
 import {paramFlavour} from '../typedVariables';
 import type {ShadowSpec} from '../valueShadow';
@@ -51,11 +49,6 @@ export type BlockPart =
        */
       shadow?: SocketState;
     };
-
-/** The designer's serialized state: the signature. */
-export interface BlockDesignState {
-  parts: BlockPart[];
-}
 
 /** A value socket's contents, as Blockly serializes them. */
 export interface SocketState {
@@ -99,11 +92,6 @@ export const shadowed = (state: SocketState): ShadowSpec | undefined => {
   const held = state.block ?? state.shadow;
   return held ? flatten(held) : undefined;
 };
-
-/** The default signature: one label, which is the block's name. */
-export const defaultParts = (): BlockPart[] => [
-  {kind: 'label', text: 'do something'},
-];
 
 /**
  * Bind every parameter to a variable, creating and renaming to match the
@@ -162,32 +150,3 @@ export function bindParams(
     part.name = name;
   }
 }
-
-/** A designed member's parts, carried through a load and a save. */
-interface Designer {
-  parts_: BlockPart[];
-  saveExtraState(): BlockDesignState;
-  loadExtraState(state: BlockDesignState): void;
-}
-
-const designer: Designer & ThisType<Blockly.Block & Designer> = {
-  // Per-instance; NOT a mixin property, which would share one array across
-  // every block. loadExtraState seeds it.
-  parts_: [] as BlockPart[],
-
-  saveExtraState: function (): BlockDesignState {
-    return {parts: (this.parts_ ?? []).map(part => ({...part}))};
-  },
-
-  loadExtraState: function (state: BlockDesignState): void {
-    const parts = (state.parts ?? []).map(part => ({...part}));
-    this.parts_ = parts.length ? parts : defaultParts();
-  },
-};
-
-/** The name the event designer registers under. */
-export const EVENT_DESIGNER_MUTATOR = 'event_designer_mutator';
-
-export const eventDesignerMutator = defineMutator(EVENT_DESIGNER_MUTATOR, {
-  ...designer,
-});

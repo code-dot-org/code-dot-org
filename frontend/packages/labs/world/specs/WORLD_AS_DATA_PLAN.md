@@ -1,6 +1,7 @@
 # Plan: the Main Screen compiles from its data, and `define world` goes
 
-STATUS: BUILDING, October 2026. Steps 1 to 3 are built.
+STATUS: BUILDING, October 2026. Steps 1 to 3 and 7 are built; step 8,
+the layers, is next.
 
 A game is a Main Screen, and what the Main Screen declares is data
 (`blockly/screenData`): its name, its own values and events, the rule
@@ -54,22 +55,40 @@ color` and a `set` row per rule setting, loads them into the headless
    stay, and writing their code out again here would be a second copy of
    their generators — the bargain a Viewport camera's starting values made
    (COMPILE_FROM_DATA_PLAN.md, step 4). The 90 modules are the same.
-4. **Lessons stop writing `define world`.** `worldFile` returns the spec it
-   was built from — name, rows, handlers, map — and the converter sorts the
-   spec rather than a workspace. The lesson checks that edit the
-   remembered world move with it.
-5. **The fixtures.** Tapper and Novel the same way, or written as a screen
-   and a map directly.
-6. **The test shape.** `EMPTY_WORLD_PROJECT` becomes an empty Main Screen,
-   and the shim reads specs.
-7. **`define world` goes:** the block, its generator, and the tables and
-   parent checks that name it (`ROOT_HOMES`, `DEFINING_ROOTS`, the pinned
-   and named roots, `worldContext`, `addActorName`, `actorContext`), with
-   `parseWorldOwnMeta`, `use theme`, `define layer` and `define event`. The
-   unit tests of the blocks go with them.
+4. **LATER. Lessons stop writing `define world`.** `worldFile` returns
+   the spec it was built from — name, rows, handlers, map — and the
+   converter sorts the spec rather than a workspace. The lesson checks
+   that edit the remembered world move with it.
+5. **LATER. The fixtures.** Tapper and Novel the same way, or written as
+   a screen and a map directly.
+6. **LATER. The test shape.** `EMPTY_WORLD_PROJECT` becomes an empty Main
+   Screen, and the shim reads specs.
 
-Steps 2 and 3 change no output. Steps 4 to 6 change what lessons and tests
-are written in, not what they compile to.
+   Steps 4 to 6 are not needed for the block to go. A lesson's, a
+   fixture's and a test's `define world` is JSON the converter reads
+   (`lessons/asScreen`), and nothing loads one into a workspace: its name
+   stays as a row a view is written in (`viewRows`), as the rule blocks'
+   did (COMPILE_FROM_DATA_PLAN.md, step 8). Each is worth doing on its own
+   account. What cannot wait is Tapper's `define layer`, kept as code by
+   the converter (step 8).
+7. **`define world` goes. BUILT, but for the layers.** The block and its
+   generator, `use theme` and `define event` are deleted, with the rules
+   button and the event designer that rode on them, `parseWorldOwnMeta`,
+   and the entries that named them (`ROOT_HOMES`, `DEFINING_ROOTS`, the
+   pinned and named roots, `worldContext`, `addActorName`, the Declarations
+   drawer). `world_world` and `world_rule_event` stay as names a view is
+   written in (`viewRows`). A workspace is the game's code by its mark
+   alone (`workspaceRoots.definesWorld`); a file with no path compiles as
+   an actor's. The tests of the blocks went; the tests of what they did
+   read a screen's data (`screenOwnMeta`) or the prologue
+   (`worldModulePrologue`). `making/property` grants `rule-properties`.
+8. **The layers.** `define layer` and `within layer`, the
+   `builderWorldExtension` that holds them to `define world`, and
+   `layerPlan` go. A layer dropdown reads the map's layers, and Tapper's
+   `define layer`, which the converter keeps as code, becomes its screen's
+   own layer (step 5, for that one fixture).
+
+Steps 2 and 3 change no output.
 
 ## Decided
 
@@ -89,7 +108,7 @@ are written in, not what they compile to.
 - **Layers are the map's.** A layer is data, like a camera: made in the map
   editor and kept in the map (`mainMapLayers.screenLayersOf`), not
   declared in code. `define layer` goes with `define world` (step 7), and
-  Tapper's layer becomes its screen's own (step 5).
+  Tapper's layer becomes its screen's own (step 8).
 - **`define event` goes.** A screen's events are data, and the editor will
   make them; a learner's `define event` in a drawer has no place left. Its
   name stays as a row in an actor's and a rule's view (`viewRows`), and
@@ -98,5 +117,6 @@ are written in, not what they compile to.
 ## Open
 
 - **`within layer`**, which puts what its body places into a layer, is
-  checked only under `define world` today. Whether it names a map's layer
-  from the screen's code, or goes, is settled when step 7 reaches it.
+  checked only under `define world`, which nothing can now hold. Whether
+  it names a map's layer from the screen's code, or goes, is settled in
+  step 8.

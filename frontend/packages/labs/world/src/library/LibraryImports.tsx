@@ -25,8 +25,7 @@
 // does — by asking, and awaiting what comes back.
 //
 // THE RULES PANEL MOVED HERE TOO, later and for the same reason the shelves
-// did: it stopped having one caller. The `define world` block opens it, and
-// so does the map editor's World inspector, which is on screen while no
+// did: the map editor's World inspector opens it, and is on screen while no
 // Blockly editor is mounted at all (`blockly/rulesConfig`).
 
 import {useCallback, useEffect, useRef, useState} from 'react';
@@ -419,7 +418,7 @@ export const LibraryImports = () => {
       {shelf === 'style' && (
         <ImportStyleDialog
           onImport={(style: StockStyle) => {
-            // The THEME's path, which is what a `use theme` dropdown stores.
+            // The THEME's path, which is what a theme menu stores.
             const {source, path} = importStockStyle(
               sourcesRef.current.source,
               style,

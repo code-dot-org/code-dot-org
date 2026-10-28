@@ -25,10 +25,8 @@ describe('the file’s own definition', () => {
     },
   };
 
-  it('is the three definitions, and nothing else', () => {
-    expect(
-      ['world_actor', 'world_world', 'world_map'].every(isPinnedRoot),
-    ).toBe(true);
+  it('is the two definitions, and nothing else', () => {
+    expect(['world_actor', 'world_map'].every(isPinnedRoot)).toBe(true);
     expect(isPinnedRoot('world_trait_step')).toBe(false);
   });
 

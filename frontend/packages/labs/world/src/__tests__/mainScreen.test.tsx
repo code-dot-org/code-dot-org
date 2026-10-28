@@ -260,19 +260,4 @@ describe('a Main Screen', () => {
     expect(world.get(screen.BoxesProperty as never)).toBe(1);
     expect(world.get(screen.ScoreProperty as never)).toBe(0);
   });
-
-  it('refuses a define world in its workspace', async () => {
-    await expect(
-      compileProject(
-        simpleOnAScreen({
-          blocks: {
-            blocks: {
-              languageVersion: 0,
-              blocks: [{type: 'world_world', fields: {NAME: 'World'}}],
-            },
-          },
-        }),
-      ),
-    ).rejects.toThrow(/define world/);
-  });
 });

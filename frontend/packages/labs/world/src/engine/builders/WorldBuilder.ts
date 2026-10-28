@@ -500,8 +500,8 @@ export class WorldBuilder {
   /**
    * Say which theme this world's interface is painted in.
    *
-   * DEFERRED LIKE THE REST, because `use theme` is a row under `define world`
-   * and a world's body runs against the builder. It is also legal in a
+   * DEFERRED LIKE THE REST, because the Main Screen's theme is said as the
+   * game is built, against the builder. It is also legal in a
    * handler, where it runs against the live World — which is how a project
    * could change theme mid-game if it wanted to, though nothing offers a
    * reason to yet (specs/STYLES_PLAN.md).

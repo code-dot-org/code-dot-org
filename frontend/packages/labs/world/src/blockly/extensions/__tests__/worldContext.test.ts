@@ -2,9 +2,9 @@ import {describe, expect, it} from 'vitest';
 
 import {inWorldContext} from '../worldContext';
 
-// `inWorldContext` walks a block's ancestry (`getParent`) for the two blocks that
-// bind `world`: a `world_on_*` event handler or the `world_world` root. Fake the
-// chain — the real Block only needs `type` + `getParent` for this.
+// `inWorldContext` walks a block's ancestry (`getParent`) for what binds
+// `world`: a `world_on_*` event handler. Fake the chain — the real Block only
+// needs `type` + `getParent` for this.
 type FakeBlock = {type: string; getParent(): FakeBlock | null};
 const chain = (...types: string[]): FakeBlock => {
   let parent: FakeBlock | null = null;
@@ -20,11 +20,6 @@ describe('inWorldContext', () => {
   it('is true inside an event handler', () => {
     // e.g. set-world-strength chained under a "when starts falling" hat.
     const block = chain('world_set_StrengthProperty', 'world_on_startsFalling');
-    expect(inWorldContext(block as never)).toBe(true);
-  });
-
-  it('is true inside a world file (under the world_world root)', () => {
-    const block = chain('world_set_StrengthProperty', 'world_world');
     expect(inWorldContext(block as never)).toBe(true);
   });
 

@@ -1,9 +1,9 @@
 // What a workspace's top blocks say about the file it is.
 //
-// A `.rule` has a `define rule` among its roots, a `.world` a `define world`,
-// and an `.actor` one `define actor`. Three questions here read that off the
-// blocks rather than off the file's name, so a flyout's preview and a file
-// that has not been saved yet answer the same as one that has. The fourth
+// An `.actor` has a `define actor` among its roots; a rule's code and the
+// game's own are marked (`markCode`). The questions here read that off the
+// workspace rather than off the file's name, so a flyout's preview and a file
+// that has not been saved yet answer the same as one that has. The last
 // finds the `define actor` a block sits under, which is what `acts like` asks.
 //
 // This file held the world-defined actor, a `define actor` among a world's
@@ -15,13 +15,10 @@ import type {Blockly} from '@code-dot-org/blockly';
 /** The `world_actor` block type — a definition root in either kind of file. */
 const DEFINE_ACTOR = 'world_actor';
 
-/** The `world_world` block type; its presence is what makes a file a world. */
-const DEFINE_WORLD = 'world_world';
-
 /**
  * What file a workspace is the code of, when its roots do not say: a rule's
- * page or bodies hold no `define rule`, and the Main Screen's code no `define
- * world`, though it is a world's (`markCode`).
+ * page or bodies hold no `define rule`, and the Main Screen's code no root
+ * at all (`markCode`).
  */
 type MarkedWorkspace = {holdsCodeOf?: 'rule' | 'world'};
 
@@ -67,14 +64,12 @@ export const workspaceOfBlock = (
 };
 
 /**
- * Whether this workspace is a world — i.e. whether a `define world` is in it,
- * or it is marked as a world's, as the Main Screen's code is (`markCode`).
+ * Whether this workspace is the game's own code — the Main Screen's, which
+ * is marked so (`markCode`).
  */
 export const definesWorld = (
   workspace: Blockly.Workspace | undefined,
-): boolean =>
-  markOf(workspace) === 'world' ||
-  Boolean(workspace?.getTopBlocks(false).some(b => b.type === DEFINE_WORLD));
+): boolean => markOf(workspace) === 'world';
 
 /**
  * The `define actor` root a block sits under, if it is in one.

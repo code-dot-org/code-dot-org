@@ -370,7 +370,7 @@ export interface MapStageProps {
     | 'backgrounds'
     | 'onBackground'
   > & {
-    /** The world's theme changed: its `use theme` row (`worldProperties`). */
+    /** The world's theme changed (`worldProperties`). */
     onTheme?: (path: string | undefined) => void;
   };
   /**
@@ -1739,8 +1739,7 @@ export const MapStage = ({
               text: label,
             })),
             // …and a way in, because a project starts with no themes and a
-            // menu of one row says nothing about where one comes from. The
-            // same seam the `use theme` block's `(import…)` uses.
+            // menu of one row says nothing about where one comes from.
             {value: IMPORT_STYLE_VALUE, text: '(import…)'},
           ]}
           onChange={(event: ChangeEvent<HTMLSelectElement>) => {
@@ -3751,7 +3750,7 @@ export const MapStage = ({
               // groups and the vector popover, and a drag on the grid commits
               // on every move. The inspector follows the header itself.
               {...world}
-              // …and the theme, which is the WORLD's — its `use theme` row — and
+              // …and the theme, which is the WORLD's, and
               // so its main map's: there is no difference to keep between them.
               theme={world.header.theme}
               themeOptions={themeOptions}

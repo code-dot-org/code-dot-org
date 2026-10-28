@@ -5,8 +5,8 @@
 // not among its options, so the registry must be populated before Blockly
 // deserializes a block that selected it.
 //
-// These registries are also GENERATOR INPUT, not only dropdown options: a
-// `define world` emits `world.useRules` from the project's rule modules and
+// These registries are also GENERATOR INPUT, not only dropdown options: the
+// game's module emits `world.useRules` from the project's rule modules and
 // `world.useImageSizes` from what has been measured, and neither is written in
 // any file. So `generationEnvironment` states what is installed, as one
 // comparable string, and the generated-file cache keys on it — see
@@ -136,9 +136,8 @@ export function refreshProjectDropdowns(
   );
   const effectFiles = projectEffectFileOptions(files);
   setProjectEffectFiles(effectFiles);
-  // The themes, and the style names they define between them: one dropdown for
-  // `use theme` on a world, one for `use style` in a drawing
-  // (specs/STYLES_PLAN.md).
+  // The themes, which the world registers by path, and the style names they
+  // define between them, for `use style` in a drawing (specs/STYLES_PLAN.md).
   setProjectStyleFiles(projectStyleFileOptions(files));
   setProjectStyleNames(projectStyleNames(files));
   const effectParameters = projectEffectParameters(files);

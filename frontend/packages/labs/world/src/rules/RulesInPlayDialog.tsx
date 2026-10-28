@@ -1,17 +1,16 @@
 // The rules a world runs, and the two things you can do about them.
 //
-// Opened from the world block (blockly/extensions/rulesButton), and it exists
-// because holding a rule is what puts it in play (blockly/projectModules).
-// That is the right rule and an invisible one: there is no longer a row per
-// mechanic on the world block to read, and there is no file browser to see
-// `rules/` in.
+// It exists because holding a rule is what puts it in play
+// (blockly/projectModules). That is the right rule and an invisible one:
+// there is no row per mechanic to read, and no file browser to see `rules/`
+// in.
 //
 // So this is the browser for one folder, and the answer to one question.
 // It lists what is in play, and offers what a learner can do about it: add
 // one from the shelf, make a new one, take one away — and, since the folder
 // buttons went, open, rename and clone one (specs/SHELL_FINISH_PLAN.md, step
-// 4). It is reached from the world block, the World inspector, and the
-// toolbox beside Add Rules.
+// 4). It is reached from the World inspector and the toolbox beside Add
+// Rules.
 //
 // REMOVING DELETES THE FILE, because that is what "not in play" now means.
 // There is no third state where a project holds a rule and does not run it —

@@ -16,7 +16,7 @@ import {beforeEach, describe, expect, it} from 'vitest';
 // that skipped it would be testing a registry the app never has.
 import '../builtinMeta';
 import {buildDomainPalette} from '../domainBlocks';
-import {parseWorldOwnMeta} from '../ownProperties';
+import {screenOwnMeta} from '../ownProperties';
 import {parseRuleMeta} from '../ruleMeta';
 import {
   missingRuleOfBlockType,
@@ -76,30 +76,13 @@ describe('refResolves', () => {
 // open at the time, and on every project that keeps a score.
 
 describe('a world’s own property', () => {
-  const world = JSON.stringify({
-    blocks: {
-      blocks: [
-        {
-          type: 'world_world',
-          fields: {NAME: 'My World'},
-          next: {
-            block: {
-              type: 'world_rule_property',
-              fields: {
-                TYPE: 'number',
-                ACCESS: 'writable',
-                NAME: 'score',
-                DEFAULT: '0',
-              },
-            },
-          },
-        },
-      ],
-    },
-  });
+  const world = {
+    name: 'My World',
+    properties: [{name: 'score', type: 'number', value: '0'}],
+  };
 
   it('claims no rule, so nothing says the rule is missing', () => {
-    const meta = parseWorldOwnMeta('worlds/main', world)!;
+    const meta = screenOwnMeta('worlds/main', world);
     buildDomainPalette([], {ownProperties: [meta]});
     expect(
       missingRuleOfBlockType('world_get_WorldsMain_ScoreProperty'),

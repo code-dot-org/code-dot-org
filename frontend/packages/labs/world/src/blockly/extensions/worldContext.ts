@@ -27,12 +27,11 @@ const WARNING_ID = 'worldContext';
 
 /**
  * Whether `world` is in scope for `block`: true if any ancestor binds it — an
- * event handler, a `.world` file's root, or any of a rule's member bodies.
+ * event handler, or any of a rule's member bodies.
  */
 export function inWorldContext(block: Block): boolean {
   for (let parent = block.getParent(); parent; parent = parent.getParent()) {
     if (
-      parent.type === 'world_world' ||
       // `each frame` binds it in both of its homes: under a
       // trait its closure is `(world, delta)`, and standing alone in an
       // `.actor` file it is `(actor, world, delta)`. Missing here, so every

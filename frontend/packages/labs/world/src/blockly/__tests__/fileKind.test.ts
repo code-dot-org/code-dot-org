@@ -54,19 +54,14 @@ describe('fileKindOf', () => {
 });
 
 describe('which definition roots a file may hold', () => {
-  it('offers `define actor` and `define world` nowhere, and holds each at home', () => {
-    // What an actor is, is the Actor Editor's, and a project has one world
-    // (specs/ACTORS_AS_DATA_PLAN.md, step 6). A file written with one still
-    // holds it: an actor file its `define actor`, a world its `define world`.
+  it('offers `define actor` nowhere, and holds it at home', () => {
+    // What an actor is, is the Actor Editor's (specs/ACTORS_AS_DATA_PLAN.md,
+    // step 6). A file written with one still holds it.
     for (const kind of KINDS) {
       expect(offeredTypes(kind)).not.toContain('world_actor');
-      expect(offeredTypes(kind)).not.toContain('world_world');
     }
     expect(heldNotOffered('actor')).toContain('world_actor');
     expect(heldNotOffered('world')).not.toContain('world_actor');
-    expect(heldNotOffered('world')).toContain('world_world');
-    expect(heldNotOffered('actor')).not.toContain('world_world');
-    expect(heldNotOffered('rule')).not.toContain('world_world');
   });
 
   it('gives the Rule category to a rule alone', () => {
@@ -180,13 +175,6 @@ describe('what a file compiles to', () => {
     expect(moduleShape('rules/g.rule', [])).toBe('rule');
   });
 
-  it('refuses a `define world` outside a world', () => {
-    expect(() => moduleShape('player.actor', ['world_world'])).toThrow(
-      /can only be in a \.world file, and this is a \.actor/,
-    );
-    expect(() => moduleShape('rules/g.rule', ['world_world'])).toThrow();
-  });
-
   it('refuses a `define actor` outside an actor file', () => {
     expect(() => moduleShape('rules/g.rule', ['world_actor'])).toThrow(
       /can only be in a \.actor file, and this is a \.rule/,
@@ -195,8 +183,8 @@ describe('what a file compiles to', () => {
   });
 
   it('names the file in the error, since a project has many', () => {
-    expect(() => moduleShape('actors/player.actor', ['world_world'])).toThrow(
-      /actors\/player\.actor/,
+    expect(() => moduleShape('rules/gravity.rule', ['world_actor'])).toThrow(
+      /rules\/gravity\.rule/,
     );
   });
 
@@ -213,11 +201,11 @@ describe('what a file compiles to', () => {
     ).not.toThrow();
   });
 
-  it('falls back to the blocks when there is no path', () => {
+  it('is an actor’s when there is no path', () => {
     // Callers without a path have nothing better to go on, and nothing is
     // refused — there is no kind for a root to contradict.
-    expect(moduleShape(undefined, ['world_world'])).toBe('world');
     expect(moduleShape(undefined, ['world_actor'])).toBe('actor');
+    expect(moduleShape(undefined, ['world_map'])).toBe('actor');
     expect(moduleShape(undefined, [])).toBe('actor');
   });
 });

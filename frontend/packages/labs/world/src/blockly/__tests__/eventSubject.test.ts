@@ -15,6 +15,7 @@ import {
   THIS_INPUT,
 } from '../eventSubject';
 import {setProjectActors} from '../moduleOptions';
+import {markCode} from '../workspaceRoots';
 
 const HAT = 'world_on_test_subject';
 
@@ -32,7 +33,6 @@ beforeAll(() => {
     );
   }
   Blockly.defineBlocksWithJsonArray([
-    {type: 'world_world', message0: 'define world', nextStatement: null},
     {type: 'world_actor', message0: 'define actor', nextStatement: null},
     {
       type: HAT,
@@ -52,10 +52,14 @@ beforeAll(() => {
   ]);
 });
 
-/** A workspace holding `root`, and a handler made in it afterwards. */
+/** The game's code (`world`) or a file holding `root`, and a handler in it. */
 const handlerIn = (root: string, saved?: object) => {
   const workspace = new Blockly.Workspace();
-  workspace.newBlock(root);
+  if (root === 'world') {
+    markCode(workspace, 'world');
+  } else {
+    workspace.newBlock(root);
+  }
   return saved
     ? Blockly.serialization.blocks.append(saved as never, workspace)
     : workspace.newBlock(HAT);
@@ -73,13 +77,13 @@ describe('whose event a handler is', () => {
   });
 
   it('is a kind, made in a world', () => {
-    const hat = handlerIn('world_world');
+    const hat = handlerIn('world');
     expect(subjectKindOf(hat)).toBe('actors/coin');
     expect(shown(hat)).toEqual([ANY_INPUT]);
   });
 
   it('is what was stored, whatever it would have started as', () => {
-    const hat = handlerIn('world_world', {
+    const hat = handlerIn('world', {
       type: HAT,
       fields: {[SUBJECT_FIELD]: 'actors/player'},
     });
@@ -89,7 +93,7 @@ describe('whose event a handler is', () => {
   it('keeps an empty subject a world cannot use, and offers the way out', () => {
     // A handler pasted from an actor file: still `this actor`, so the
     // misplaced check can say so, and the dropdown is up to pick a kind.
-    const hat = handlerIn('world_world', {
+    const hat = handlerIn('world', {
       type: HAT,
       fields: {[SUBJECT_FIELD]: ''},
     });

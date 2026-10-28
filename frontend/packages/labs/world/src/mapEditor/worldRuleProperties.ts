@@ -2,8 +2,8 @@
 // inspector shows them (specs/WORLD_RULE_FIELDS_PLAN.md).
 //
 // Every rule the project holds, because that is every rule the world runs: a
-// world's module emits a `useRules` for each of them (`domainBlocks`,
-// `world_world`), so a project that holds Scoring has a target score whether
+// world's module emits a `useRules` for each of them
+// (`domainBlocks.worldModulePrologue`), so a project that holds Scoring has a target score whether
 // or not anything says so.
 //
 // Here rather than in `worldProperties`, which is surgery on a world's JSON

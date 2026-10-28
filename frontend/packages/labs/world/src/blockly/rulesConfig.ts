@@ -1,6 +1,5 @@
-// The seam between a world's rules buttons and the dialog behind them: the
-// one on the `define world` block, and the one in the map editor's World
-// inspector.
+// The seam between the World inspector's rules button and the dialog behind
+// it.
 //
 // `ruleImport`'s shape exactly, and for the same reason: a Blockly field cannot
 // open a React dialog or write a file, so the React layer registers a handler

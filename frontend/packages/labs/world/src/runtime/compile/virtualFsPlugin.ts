@@ -70,7 +70,7 @@ function loaderFor(path: string): Loader {
   if (
     path.endsWith('.json') ||
     path.endsWith('.effect') ||
-    // …and `.style`, a theme, imported by a world's `use theme` block and
+    // …and `.style`, a theme, imported by the game's module and
     // read by the engine as data — the same deal an `.effect` gets, for the
     // same reason: nothing about it is code (specs/STYLES_PLAN.md).
     path.endsWith('.style')

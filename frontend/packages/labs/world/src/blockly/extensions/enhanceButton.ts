@@ -1,4 +1,4 @@
-// The sparkles on `define actor` and on `define world`: give this thing
+// The sparkles on `define actor`: give this thing
 // something it does not have yet.
 //
 // The third of the buttons that ride on a block — the open button opens the file a
@@ -83,7 +83,7 @@ export interface EnhanceContext {
 /**
  * Which actor this `define actor` is about, or none — in which case no button.
  *
- * Exported for its test, as `rulesButton`'s wording is: the rest of this
+ * Exported for its test: the rest of this
  * module needs a workspace with the whole palette registered to say anything,
  * and what can be wrong on its own is which blocks are offered the button and
  * what they would be pointed at.

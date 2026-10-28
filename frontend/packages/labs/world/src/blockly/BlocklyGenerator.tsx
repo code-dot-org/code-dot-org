@@ -346,16 +346,14 @@ const SCREEN_KEYS: ReadonlySet<string> = new Set([
 ]);
 
 /**
- * The Main Screen's module (specs/SCREEN_MAP_PLAN.md, step 4): what `define
- * world` compiles to, from the screen's data.
+ * The Main Screen's module (specs/SCREEN_MAP_PLAN.md, step 4): the game,
+ * from the screen's data.
  *
  * The screen is the map the game is, so its placements are loaded as a
- * world's main map is; its game-wide values and events are declared as a
- * world's rows declare them (`parseScreenOwnMeta`); its theme, background
- * color and rule settings become the rows the inspector would have written
- * under `define world` (`screenSetupRows`); and its own workspace holds the
- * hats, which go either side of the world as a world file's do
- * (`assembleWorldModule`).
+ * world's main map is; its game-wide values and events are declared from
+ * its data (`screenOwnMeta`); its theme is a call, and its background color
+ * and rule settings are `set` rows (`screenSetupRows`); and its own
+ * workspace holds the hats (`assembleWorldModule`).
  */
 /**
  * A `define actor` and its rows: each row generated where it stands, and a
@@ -516,14 +514,13 @@ function generateMainScreen(
   const load = generateLoad(generator, workspace, map, modulePath, rootTypes);
 
   workspace.clear();
-  // The screen's own code is a world's, though no `define world` is among
-  // its roots; its placements' code, generated above, is each placement's.
+  // The screen's own code is a world's, though no root says so; its placements' code, generated above, is each placement's.
   markCode(workspace, 'world');
   Blockly.serialization.workspaces.load(blocks ?? {}, workspace);
   const topBlocks = workspace
     .getTopBlocks(true)
     .filter(block => block.isEnabled());
-  // Refuses a `define world` or any other defining root: a screen's
+  // Refuses a defining root: a screen's
   // workspace holds events (`fileKind`).
   moduleShape(
     path,

@@ -96,8 +96,8 @@ export const TILES: readonly Tile[] = [
       // The blocks this lesson is done with, and not the drawers they live
       // in: a first lesson that opened the whole Actor drawer would offer
       // forty-two blocks to somebody who has met three (progression/toolboxShelf).
-      // Not `define actor` or `define world`, which no toolbox offers: an
-      // actor is made in the Actor Editor and a project has one world
+      // Not `define actor`, which no toolbox offers: an actor is made in
+      // the Actor Editor, and a project's one world is its Main Screen
       // (specs/ACTORS_AS_DATA_PLAN.md, step 6).
       {kind: 'block', type: 'world_this_actor'},
       {kind: 'block', type: 'world_add_actor'},
@@ -2718,8 +2718,7 @@ export const TILES: readonly Tile[] = [
       // find two screens, a form, a keyboard and a list already talking to
       // each other (`fixtures/app`, specs/APPS.md).
       {kind: 'template', id: 'app'},
-      // NOT `use theme`, which no toolbox offers: which theme a Screen is
-      // painted in is the Screen's Theme field (specs/STYLES_PLAN.md,
+      // Which theme a Screen is painted in is the Screen's Theme field (specs/STYLES_PLAN.md,
       // specs/ACTORS_AS_DATA_PLAN.md, step 6). `use style` needs no grant;
       // it is a pen block and arrives with the Drawing drawer.
       // …and the two blocks an on-screen keyboard is built out of. A key
@@ -3477,12 +3476,7 @@ export const TILES: readonly Tile[] = [
     teaches: 'What you declare in a rule becomes vocabulary in the toolbox.',
     task: 'A wind that blows everything at the same speed, because the speed is a number typed into the rule.',
     requires: ['puzzle/undo'],
-    // …and `define event`, the other declaration, which the World drawer
-    // still offers.
-    unlocks: [
-      {kind: 'affordance', id: 'rule-properties'},
-      {kind: 'block', type: 'world_rule_event'},
-    ],
+    unlocks: [{kind: 'affordance', id: 'rule-properties'}],
     check: {
       kind: 'outcome',
       says: 'The two Leaves end up in different places, which one number in the rule cannot do.',

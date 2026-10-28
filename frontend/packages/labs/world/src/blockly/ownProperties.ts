@@ -186,25 +186,6 @@ export function parseActorOwnMeta(
 }
 
 /**
- * A WORLD file's own property declarations (specs/WORLD_STATE.md).
- *
- * The same walk over a different root, because it is the same declaration in a
- * fourth home: `world_rule_property` already takes its meaning from where it
- * sits, and a `.world` file's `define world` body is one more place to sit.
- *
- * What differs is the SCOPE, and everything downstream follows from it: a
- * world-scoped property's get/set blocks take no subject socket and compile to
- * `world.get(…)` / `world.set(…)`, which is the shape a rule's own properties
- * already have.
- */
-export function parseWorldOwnMeta(
-  modulePath: string,
-  contents: string,
-): OwnMeta | undefined {
-  return declarationsIn(modulePath, contents, 'world_world', 'world', 'World');
-}
-
-/**
  * A SCREEN's own declarations: its game-wide values and events, which it
  * holds as data rather than as rows (specs/SCREEN_MAP_PLAN.md, step 4), read
  * from the data (`screenOwnMeta`).

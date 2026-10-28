@@ -16,7 +16,6 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
 
-import {countText} from '../blockly/extensions/rulesButton';
 import {requestRulesConfig} from '../blockly/rulesConfig';
 import {DEFAULT_BACKDROP_COLOR} from '../engine';
 import fields from '../formFields.module.css';
@@ -25,6 +24,7 @@ import {AngleInput} from './AngleInput';
 import {BackgroundColorField, BackgroundField} from './BackgroundField';
 import styles from './mapEditor.module.css';
 import type {MapSlotDoc} from './mapModel';
+import {countText} from './ruleCount';
 import {ThemeField} from './ThemeField';
 import {VectorInput} from './VectorInput';
 import {
@@ -46,13 +46,12 @@ export interface WorldInspectorProps {
   onRename: (name: string) => void;
   /**
    * Set one property's starting value. What that MEANS differs by where the
-   * property comes from, and the caller knows: a `define property` row's
-   * DEFAULT for the world's own, a `set` row under `define world` for a
-   * rule's (specs/WORLD_RULE_FIELDS_PLAN.md).
+   * property comes from, and the caller knows: the screen's own value, or a
+   * rule setting for a rule's (specs/WORLD_RULE_FIELDS_PLAN.md).
    */
   onSetDefault: (property: WorldProperty, value: string) => void;
   /**
-   * The theme the world is painted in — its `use theme` row — which is its
+   * The theme the world is painted in, which is its
    * main map's too: a main map has no theme of its own (`worldProperties`).
    */
   theme: string | undefined;
@@ -70,15 +69,14 @@ export interface WorldInspectorProps {
   /** …and the world's background color, a row in its code. */
   onBackgroundColor?: (color: string) => void;
   /**
-   * How many rules the project holds — what the `define world` block's
-   * button counts — for the button here that opens the same panel.
+   * How many rules the project holds, for the button that opens the rules
+   * panel.
    */
   ruleCount?: number;
   /** The world's cameras, as a section at the foot (`CameraList`). */
   cameras?: ReactNode;
   /**
-   * Open the game's enhancements — a camera that follows, a scoreboard —
-   * which a world's `define world` block offered from its wand.
+   * Open the game's enhancements — a camera that follows, a scoreboard.
    */
   onEnhance?: () => void;
   isReadOnly: boolean;
@@ -335,8 +333,8 @@ export const WorldInspector = ({
         onKeyDown={blurOnEnter}
       />
       {ruleCount !== undefined && (
-        // THE RULES IN PLAY, as the `define world` block's button shows them
-        // and opening the same panel (`blockly/rulesConfig`): adding a rule
+        // THE RULES IN PLAY, opening the rules panel
+        // (`blockly/rulesConfig`): adding a rule
         // and taking one away are things a world is made of, and should not
         // need its code open.
         <FormFieldWrapper label="Rules" size="s">

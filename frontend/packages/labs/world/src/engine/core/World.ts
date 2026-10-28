@@ -3488,7 +3488,7 @@ export class World {
    * Register a theme by path, before anything names one.
    *
    * WHY THE WORLD IS HANDED THE LOT. Only one of the three ways a theme is
-   * chosen is a path an import could follow: the world's own `use theme` row.
+   * chosen is a path an import could follow: the Main Screen's theme.
    * A map's is a string in its document, a placement's is a string in a
    * property, and a file's `extends` is a fourth — none of which a bundler
    * can see. So the preamble imports every `.style` the project holds and
@@ -3568,7 +3568,7 @@ export class World {
    *
    * THREE LEVELS AND NO MORE. The actor's own is a property a placement sets
    * in the inspector; the map's is a field on the map document; the world's
-   * is the `use theme` row. Each is a whole FILE rather than a class, which
+   * is the Main Screen's. Each is a whole FILE rather than a class, which
    * is what keeps the drawings out of it — a drawing names a class and never
    * learns which file answered (specs/STYLES_PLAN.md).
    *

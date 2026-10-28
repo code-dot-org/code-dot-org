@@ -30,7 +30,6 @@ const BUTTONS = [
   'openSourceButton.ts',
   'enhanceButton.ts',
   'lessonButton.ts',
-  'rulesButton.ts',
   'bodyButton.ts',
 ];
 
