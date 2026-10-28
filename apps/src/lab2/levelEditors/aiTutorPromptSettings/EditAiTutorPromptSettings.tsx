@@ -54,8 +54,8 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
     Record<string, string>
   >(promptSettings?.answerTypeCustomizations ?? {});
 
-  const [enableCommitMessages, setEnableCommitMessages] = useState(
-    !promptSettings?.disableCommitMessages
+  const [disableCommitMessages, setDisableCommitMessages] = useState(
+    promptSettings?.disableCommitMessages ?? false
   );
 
   const handleToggle = (answerType: string, checked: boolean) => {
@@ -93,8 +93,8 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
         value={JSON.stringify({
           answerTypes: Array.from(enabledAnswerTypes),
           answerTypeCustomizations: answerTypeCustomizations,
-          // Omitted while on, so levels that never set it serialize unchanged.
-          disableCommitMessages: enableCommitMessages ? undefined : true,
+          // Omitted unless true, so levels that never set it serialize unchanged.
+          disableCommitMessages: disableCommitMessages || undefined,
         })}
         name={'level[ai_tutor_prompt_settings]'}
       />
@@ -147,8 +147,9 @@ const EditAiTutorPromptSettings: React.FC<EditAiTutorPromptSettingsProps> = ({
           <Toggle
             name="enableCommitMessages"
             label="Enable commit messages (recommended): accepting AI Tutor changes will prompt for a commit message"
-            checked={enableCommitMessages}
-            onChange={e => setEnableCommitMessages(e.target.checked)}
+            checked={!disableCommitMessages}
+            // The toggle reads as "enable", so its checked state is the inverse.
+            onChange={e => setDisableCommitMessages(!e.target.checked)}
           />
         </div>
       )}
