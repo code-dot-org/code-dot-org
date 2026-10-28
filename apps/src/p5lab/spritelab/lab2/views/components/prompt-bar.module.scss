@@ -1,21 +1,32 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 @use '../sentence/sr-only' as *;
 
 .srOnly {
   @include sr-only;
 }
 
+// The question across the top; the field and Submit beneath it.
 .promptBar {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  column-gap: 8px;
+  row-gap: 0.125rem;
   margin: 0;
   padding: 8px;
   border-top: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-secondary);
 }
 
+// Matches a small TextField's own label.
+.question {
+  @include mixins.label-three;
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--text-neutral-primary);
+}
+
 .promptBar .answerField {
-  flex: 1;
   min-width: 0;
 
   input {
@@ -27,6 +38,5 @@
 }
 
 .submitButton {
-  flex-shrink: 0;
   margin: 0;
 }

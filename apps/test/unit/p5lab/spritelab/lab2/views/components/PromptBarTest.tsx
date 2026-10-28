@@ -42,6 +42,17 @@ describe('PromptBar', () => {
     expect(onAnswer).toHaveBeenCalledWith('name', '7');
   });
 
+  it('shows the question but takes no answer while disabled', () => {
+    const onAnswer = jest.fn();
+    render(<PromptBar prompt={namePrompt} onAnswer={onAnswer} disabled />);
+    const field = screen.getByRole('textbox', {name: 'What is your name?'});
+    const submit = screen.getByRole('button', {name: 'Submit'});
+    expect((field as HTMLInputElement).disabled).toBe(true);
+    expect((submit as HTMLButtonElement).disabled).toBe(true);
+    fireEvent.submit(field);
+    expect(onAnswer).not.toHaveBeenCalled();
+  });
+
   it('shows the newest question and drops the half-typed answer', () => {
     const onAnswer = jest.fn();
     const {rerender} = render(

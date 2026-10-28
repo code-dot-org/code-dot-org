@@ -2387,6 +2387,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 <PromptBar
                   prompt={activePrompt}
                   onAnswer={handlePromptAnswer}
+                  disabled={
+                    playspaceMode !== 'play' || jumpCover || externalLoading
+                  }
                 />
               }
               playBar={
