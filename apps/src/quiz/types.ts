@@ -31,10 +31,9 @@ export interface QuizQuestionSummary {
   questionTitle: string;
   description?: string | null;
   choices?: QuizQuestionItem[];
-  // A match question's two groups of items. The server shuffles each group
-  // on every load.
-  firstItems?: QuizQuestionItem[];
-  secondItems?: QuizQuestionItem[];
+  // A match question's two sets of items. The server shuffles each set on
+  // every load.
+  matchSets?: [QuizQuestionItem[], QuizQuestionItem[]];
   page: number;
 }
 

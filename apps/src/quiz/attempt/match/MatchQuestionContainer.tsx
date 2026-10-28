@@ -6,7 +6,7 @@ import AttemptCard from '../AttemptCard';
 import QuestionDescription from '../QuestionDescription';
 
 import MatchColumn from './MatchColumn';
-import {MatchPairs, MatchSelection, MatchSide} from './types';
+import {MatchPairs, MatchSelection, MatchSets, MatchSide} from './types';
 import {findPartner, pairTogether, getItemText, unpairItem} from './utils';
 
 import styles from './match-question-container.module.scss';
@@ -20,6 +20,9 @@ export interface MatchQuestionContainerProps {
   headingRef?: React.Ref<HTMLHeadingElement>;
   disabled?: boolean;
 }
+
+// A constant, so the line measurement effect doesn't rerun every render.
+const NO_MATCH_SETS: MatchSets = [[], []];
 
 interface Point {
   x: number;
@@ -39,6 +42,7 @@ function curvePath(start: Point, end: Point): string {
 const MatchQuestionContainer: React.FunctionComponent<
   MatchQuestionContainerProps
 > = ({question, questionLabel, pairs, onChangePairs, headingRef, disabled}) => {
+  const matchSets = question.matchSets ?? NO_MATCH_SETS;
   // The currently selected items in each column, if any.
   // Once both are set, a pair is formed, and the selection is subsequently cleared (see handleClick).
   // For example, {start: 'abc-123', end: undefined} means the first column has item with ID 'abc-123' selected,
@@ -86,7 +90,7 @@ const MatchQuestionContainer: React.FunctionComponent<
     observer.observe(board);
     board.querySelectorAll('button').forEach(card => observer.observe(card));
     return () => observer.disconnect();
-  }, [pairs, question.firstItems, question.secondItems]);
+  }, [pairs, matchSets]);
 
   const handleClick = (side: MatchSide, id: string) => {
     const next: MatchSelection = {...selection, [side]: id};
@@ -95,13 +99,13 @@ const MatchQuestionContainer: React.FunctionComponent<
     if (start && end) {
       const previousPartnerId = findPartner(pairs, id);
       const matchedAnnouncement = `Matched ${getItemText(
-        question,
+        matchSets,
         start
-      )} with ${getItemText(question, end)}.`;
+      )} with ${getItemText(matchSets, end)}.`;
       setAnnouncement(
         previousPartnerId
           ? `${matchedAnnouncement} ${getItemText(
-              question,
+              matchSets,
               previousPartnerId
             )} is no longer matched.`
           : matchedAnnouncement
@@ -123,8 +127,8 @@ const MatchQuestionContainer: React.FunctionComponent<
     if (partnerId) {
       onChangePairs(unpairItem(pairs, id));
       setAnnouncement(
-        `Unmatched ${getItemText(question, id)} from ${getItemText(
-          question,
+        `Unmatched ${getItemText(matchSets, id)} from ${getItemText(
+          matchSets,
           partnerId
         )}. Select an item in the other column to match it.`
       );
@@ -166,7 +170,7 @@ const MatchQuestionContainer: React.FunctionComponent<
         {(['start', 'end'] as const).map(side => (
           <MatchColumn
             key={side}
-            items={question}
+            matchSets={matchSets}
             side={side}
             pairs={pairs}
             selectedId={selection[side]}

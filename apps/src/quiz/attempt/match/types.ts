@@ -1,13 +1,9 @@
 import {QuizQuestionSummary} from '@cdo/apps/quiz/types';
 
-// A match question's two groups of items.
-export type MatchItems = Pick<
-  QuizQuestionSummary,
-  'firstItems' | 'secondItems'
->;
+export type MatchSets = NonNullable<QuizQuestionSummary['matchSets']>;
 
 // A column, by reading order: start is the left column in left-to-right
-// languages. The start column shows the first group, whose items are lettered.
+// languages. The start column shows the first set, whose items are lettered.
 export type MatchSide = 'start' | 'end';
 
 // A pair is [start id, end id].

@@ -3,18 +3,18 @@ import '@testing-library/jest-dom';
 import React, {useState} from 'react';
 
 import MatchQuestionContainer from '@cdo/apps/quiz/attempt/match/MatchQuestionContainer';
-import {MatchItems, MatchPairs} from '@cdo/apps/quiz/attempt/match/types';
+import {MatchSets, MatchPairs} from '@cdo/apps/quiz/attempt/match/types';
 
-const MATCH_ITEMS: MatchItems = {
-  firstItems: [
+const MATCH_SETS: MatchSets = [
+  [
     {id: 'a', text: '1 + 1'},
     {id: 'b', text: '2 + 1'},
   ],
-  secondItems: [
+  [
     {id: 'x', text: '3'},
     {id: 'y', text: '2'},
   ],
-};
+];
 
 // Stands in for QuizAttemptWorkspace, which owns the pairs.
 function renderContainer(initialPairs: MatchPairs = []) {
@@ -28,7 +28,7 @@ function renderContainer(initialPairs: MatchPairs = []) {
           type: 'MatchQuestion',
           questionName: 'Sums',
           questionTitle: 'Match each expression to its value.',
-          ...MATCH_ITEMS,
+          matchSets: MATCH_SETS,
         }}
         pairs={pairs}
         onChangePairs={newPairs => {
@@ -45,7 +45,7 @@ function renderContainer(initialPairs: MatchPairs = []) {
 const card = (name: string) => screen.getByRole('button', {name});
 
 describe('MatchQuestionContainer', () => {
-  it('pairs a card in one group with a card in the other', () => {
+  it('pairs a card in one set with a card in the other', () => {
     const {onChangePairs} = renderContainer();
 
     fireEvent.click(card('1 + 1'));
@@ -54,7 +54,7 @@ describe('MatchQuestionContainer', () => {
     expect(onChangePairs).toHaveBeenLastCalledWith([['a', 'y']]);
   });
 
-  it('pairs in either order, always as [first group, second group]', () => {
+  it('pairs in either order, always as [first set, second set]', () => {
     const {onChangePairs} = renderContainer();
 
     fireEvent.click(card('2'));
@@ -71,7 +71,7 @@ describe('MatchQuestionContainer', () => {
     expect(card('2 + 1')).toBeInTheDocument();
   });
 
-  it("letters every first-group card, and a second-group card only once it's paired", () => {
+  it("letters every first-set card, and a second-set card only once it's paired", () => {
     renderContainer([['b', 'x']]);
 
     expect(card('1 + 1')).toHaveTextContent(/A$/);
@@ -90,7 +90,7 @@ describe('MatchQuestionContainer', () => {
     expect(card('1 + 1')).toHaveAttribute('aria-pressed', 'false');
   });
 
-  it('moves the selection within a group instead of pairing', () => {
+  it('moves the selection within a set instead of pairing', () => {
     const {onChangePairs} = renderContainer();
 
     fireEvent.click(card('1 + 1'));

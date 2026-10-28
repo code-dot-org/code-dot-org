@@ -1,13 +1,13 @@
 import {QuizQuestionItem} from '@cdo/apps/quiz/types';
 import {formatChoiceLetter} from '@cdo/apps/quiz/utils';
 
-import {MatchItems, MatchPairs, MatchSide} from './types';
+import {MatchPairs, MatchSets, MatchSide} from './types';
 
 export function itemsInColumn(
-  items: MatchItems,
+  matchSets: MatchSets,
   side: MatchSide
 ): QuizQuestionItem[] {
-  return (side === 'start' ? items.firstItems : items.secondItems) ?? [];
+  return matchSets[side === 'start' ? 0 : 1];
 }
 
 // Pairs the two items, first breaking any pair either was already in, so
@@ -40,15 +40,18 @@ export function findPartner(pairs: MatchPairs, id: string): string | undefined {
 }
 
 // Each start item has a letter by position.
-export function letterOf(items: MatchItems, id: string): string | undefined {
-  const index = itemsInColumn(items, 'start').findIndex(item => item.id === id);
+export function letterOf(matchSets: MatchSets, id: string): string | undefined {
+  const index = itemsInColumn(matchSets, 'start').findIndex(
+    item => item.id === id
+  );
   return index === -1 ? undefined : formatChoiceLetter(index);
 }
 
 // For accessible names, which leave out the letter: a name already says
 // what the item is matched with.
-export function getItemText(items: MatchItems, id: string): string | undefined {
-  return [...(items.firstItems ?? []), ...(items.secondItems ?? [])].find(
-    item => item.id === id
-  )?.text;
+export function getItemText(
+  matchSets: MatchSets,
+  id: string
+): string | undefined {
+  return matchSets.flat().find(item => item.id === id)?.text;
 }

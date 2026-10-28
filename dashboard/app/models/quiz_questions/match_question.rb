@@ -19,7 +19,7 @@
 #  index_quiz_questions_on_name        (name)
 #
 class MatchQuestion < QuizQuestion
-  # Pair each item in one group with its partner in the other. Items are
+  # Pair each item in one set with its partner in the other. Items are
   # matched one-to-one.
   #
   # `content` shape:
@@ -33,8 +33,8 @@ class MatchQuestion < QuizQuestion
   #     ]
   #   }
   #
-  # Students see each pair's first item in one group and its second item in
-  # the other, so item ids must not reveal which items are paired.
+  # Students see each pair's first item in one set and its second item in the
+  # other, so item ids must not reveal which items are paired.
   validate :validate_question_shape
 
   def auto_gradable?
@@ -83,7 +83,7 @@ class MatchQuestion < QuizQuestion
   def attempt_content_json
     first_items = content['pairs'].map {|p| p['items'][0]}
     second_items = content['pairs'].map {|p| p['items'][1]}
-    shared_content_json.merge(firstItems: first_items.shuffle, secondItems: second_items.shuffle)
+    shared_content_json.merge(matchSets: [first_items.shuffle, second_items.shuffle])
   end
 
   private def correct_pairs

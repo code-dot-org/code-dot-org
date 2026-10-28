@@ -15,7 +15,7 @@ export interface FreeResponseQuestionResponse {
   responseData: {answerText?: string};
 }
 
-// Each pair is two item ids, one from each group, in either order.
+// Each pair is two item ids, one from each set, in either order.
 export interface MatchQuestionResponse {
   questionType: 'MatchQuestion';
   responseData: {pairs?: [string, string][]};
