@@ -73,4 +73,37 @@ describe('PromptBar', () => {
     fireEvent.submit(field);
     expect(onAnswer).toHaveBeenCalledWith('age', '9');
   });
+
+  it('keeps the half-typed answer when the same question is asked again', () => {
+    const {rerender} = render(
+      <PromptBar prompt={namePrompt} onAnswer={jest.fn()} />
+    );
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Ad'}});
+    rerender(<PromptBar prompt={{...namePrompt}} onAnswer={jest.fn()} />);
+    expect((screen.getByRole('textbox') as HTMLInputElement).value).toBe('Ad');
+  });
+
+  it('keeps the half-typed answer across a rerun that asks again', () => {
+    const {rerender} = render(
+      <PromptBar prompt={namePrompt} onAnswer={jest.fn()} />
+    );
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Ad'}});
+    rerender(<PromptBar prompt={null} onAnswer={jest.fn()} />);
+    rerender(<PromptBar prompt={{...namePrompt}} onAnswer={jest.fn()} />);
+    expect((screen.getByRole('textbox') as HTMLInputElement).value).toBe('Ad');
+  });
+
+  it('drops the half-typed answer when the same text asks for another variable', () => {
+    const {rerender} = render(
+      <PromptBar prompt={namePrompt} onAnswer={jest.fn()} />
+    );
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'Ad'}});
+    rerender(
+      <PromptBar
+        prompt={{...namePrompt, variableName: 'nickname'}}
+        onAnswer={jest.fn()}
+      />
+    );
+    expect((screen.getByRole('textbox') as HTMLInputElement).value).toBe('');
+  });
 });

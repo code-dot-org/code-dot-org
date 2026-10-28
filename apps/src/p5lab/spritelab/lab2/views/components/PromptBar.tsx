@@ -1,6 +1,6 @@
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import {ActivePrompt} from '../../redux/spriteLab2Redux';
 
@@ -21,10 +21,21 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
   disabled = false,
 }) => {
   const [answer, setAnswer] = useState('');
+  const lastPrompt = useRef(prompt);
 
-  // If a new prompt comes in, clear the current answer, as it was meant for the previous question.
+  // Clear the answer if the prompt changes to a different question or variable.
   useEffect(() => {
-    setAnswer('');
+    if (!prompt) {
+      return;
+    }
+    const last = lastPrompt.current;
+    lastPrompt.current = prompt;
+    if (
+      last?.promptText !== prompt.promptText ||
+      last?.variableName !== prompt.variableName
+    ) {
+      setAnswer('');
+    }
   }, [prompt]);
 
   const handleSubmit = (event: React.FormEvent) => {
