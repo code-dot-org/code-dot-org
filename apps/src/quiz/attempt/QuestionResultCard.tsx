@@ -28,19 +28,6 @@ export interface QuestionResultCardProps {
   isViewingStudent?: boolean;
 }
 
-function isSkipped(result: QuizQuestionResult): boolean {
-  if (isFreeResponseResponse(result)) {
-    return !result.responseData.answerText;
-  }
-  if (isMultipleChoiceResponse(result)) {
-    return !result.responseData.selectedChoiceId;
-  }
-  if (isMultipleSelectResponse(result)) {
-    return !result.responseData.selectedChoiceIds?.length;
-  }
-  return false;
-}
-
 // Read-only review of one submitted question, graded or not.
 const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   question,
@@ -51,7 +38,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
 }) => (
   <AttemptCard
     label={questionLabel}
-    tag={isSkipped(result) && <SkippedTag isGraded={result.correct !== null} />}
+    tag={!result.answered && <SkippedTag isGraded={result.correct !== null} />}
     title={question.questionTitle}
     description={<QuestionDescription markdown={question.description} />}
   >
