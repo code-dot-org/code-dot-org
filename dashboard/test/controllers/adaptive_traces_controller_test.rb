@@ -73,6 +73,17 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
     assert_equal Time.utc(2026, 1, 1, 0, 0, 2), opts[:end_time]
   end
 
+  test 'relays every kind of shell generation' do
+    sign_in(@student)
+    allow_adaptive_ai(true)
+
+    AdaptiveTracesController::TRACE_NAMES.each do |trace_name|
+      opts = capture_trace(traceName: trace_name)
+      assert_response :success
+      assert_equal trace_name, opts[:trace_name]
+    end
+  end
+
   test 'keeps only allowlisted scalar metadata, snake cased, plus the level' do
     sign_in(@student)
     allow_adaptive_ai(true)

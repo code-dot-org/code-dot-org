@@ -135,6 +135,7 @@ describe('useSources', () => {
       expect(result.current.channel).toEqual(OWNED_CHANNEL);
       expect(result.current.isEditable).toBe(true);
       expect(result.current.hasEdited).toBe(false);
+      expect(result.current.hasSavedSources).toBe(true);
     });
 
     it('publishes the channel to redux on load (transition bridge)', async () => {
@@ -165,6 +166,7 @@ describe('useSources', () => {
       await flush();
 
       expect(result.current.currentSources).toEqual(DEFAULT_SOURCES);
+      expect(result.current.hasSavedSources).toBe(false);
     });
 
     it('does not load when the level does not use projects', async () => {

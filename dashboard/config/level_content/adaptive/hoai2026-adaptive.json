@@ -111,6 +111,15 @@
           ]
         },
         {
+          "id": "intro-starter",
+          "title": "Your starter site",
+          "kind": "level",
+          "level": "adaptive-HoAI26-intro-starter",
+          "project": true,
+          "instructions": "Here is a first version of your site, built from your plan. Look it over, then continue.",
+          "projectPrompt": "The first version of the student's website, built from their plan: a hero with a headline that says what the site is for, one or two sections that fit the topic, and a call-to-action. Keep the look and feel simple, but appropriate for their given topic. It should feel clean but not overly polished."
+        },
+        {
           "id": "intro-web-dev",
           "title": "Intro - Diagnostic for web dev",
           "kind": "questions",

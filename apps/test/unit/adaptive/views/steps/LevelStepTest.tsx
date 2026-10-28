@@ -44,17 +44,30 @@ jest.mock('@cdo/apps/adaptive/project/projectInfo', () => ({
   projectInfoFromChannel: () => ({name: undefined, description: undefined}),
 }));
 
+// Mutable per test; reset to a loaded, editable, never-saved project.
+const sourcesState = {
+  isLoading: false,
+  isEditable: true,
+  hasEdited: false,
+  hasSavedSources: false,
+  currentSources: {source: ''},
+  channel: undefined as unknown,
+  projectManager: null as unknown,
+  loadError: undefined,
+  updateSources: jest.fn(),
+};
+const baseSourcesState = {...sourcesState};
 jest.mock('@cdo/apps/lab2/hooks/useSources', () => ({
   __esModule: true,
-  default: () => ({
-    isLoading: false,
-    isEditable: true,
-    hasEdited: false,
-    currentSources: {source: ''},
-    channel: undefined,
-    projectManager: null,
-    loadError: undefined,
-  }),
+  default: () => sourcesState,
+}));
+
+const generateCalls: {shouldGenerate: boolean | undefined}[] = [];
+jest.mock('@cdo/apps/adaptive/views/steps/useGenerateProject', () => ({
+  useGenerateProject: (options: {shouldGenerate: boolean | undefined}) => {
+    generateCalls.push({shouldGenerate: options.shouldGenerate});
+    return {isResolved: options.shouldGenerate === false};
+  },
 }));
 
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
@@ -130,6 +143,8 @@ describe('LevelStep (LevelPlayer)', () => {
   afterEach(() => {
     restoreRedux();
     jest.clearAllMocks();
+    Object.assign(sourcesState, baseSourcesState);
+    generateCalls.length = 0;
   });
 
   function renderStep(step = makeLevelStep()) {
@@ -147,5 +162,62 @@ describe('LevelStep (LevelPlayer)', () => {
   it('sets hideNonInstructionTabs on viewProperties passed to the lab view', () => {
     renderStep();
     expect(screen.getByText('hide tabs: true')).toBeInTheDocument();
+  });
+
+  describe('generating the project', () => {
+    const projectStep = () =>
+      ({
+        ...makeLevelStep(),
+        project: true,
+        projectPrompt: 'A one-page site.',
+      } as LevelStepContent);
+    const lastDecision = () => generateCalls[generateCalls.length - 1];
+    const loaded = () => {
+      sourcesState.channel = {id: 'c', labConfig: {}};
+      sourcesState.projectManager = {};
+    };
+
+    it('never generates on a step without a project prompt', () => {
+      renderStep();
+      expect(lastDecision()).toEqual({shouldGenerate: false});
+      expect(screen.getByText('hide tabs: true')).toBeInTheDocument();
+    });
+
+    it('does not decide until the project has loaded, and waits for it', () => {
+      sourcesState.isLoading = true;
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: undefined});
+      expect(screen.getByText('Loading...')).toBeInTheDocument();
+    });
+
+    it('generates for the owner on a project with nothing saved and nothing generated', () => {
+      loaded();
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: true});
+    });
+
+    it('does not generate over saved work', () => {
+      loaded();
+      sourcesState.hasSavedSources = true;
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: false});
+    });
+
+    it('does not generate twice', () => {
+      loaded();
+      sourcesState.channel = {
+        id: 'c',
+        labConfig: {adaptive: {generationTraceId: 'ab'.repeat(16)}},
+      };
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: false});
+    });
+
+    it('does not generate for anyone but the owner', () => {
+      loaded();
+      sourcesState.isEditable = false;
+      renderStep(projectStep());
+      expect(lastDecision()).toEqual({shouldGenerate: false});
+    });
   });
 });

@@ -62,6 +62,8 @@ export interface UseSourcesOutput<T extends ProjectSources> {
   isEditable: boolean;
   /** If the user has updated sources since the level loaded. */
   hasEdited: boolean;
+  /** If the project had saved sources when it loaded. False until then, and for a project never saved. */
+  hasSavedSources: boolean;
   /** The current project sources. */
   currentSources: T | undefined;
   /** The project channel as last loaded or saved. */
@@ -136,6 +138,7 @@ export default function useSources<T extends ProjectSources>({
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   const [currentVersion, setCurrentVersion] = useState<string>();
   const [hasEdited, setHasEdited] = useState(false);
+  const [hasSavedSources, setHasSavedSources] = useState(false);
   const [loadError, setLoadError] = useState<Error>();
   const [channel, setChannel] = useState<Channel>();
 
@@ -189,6 +192,7 @@ export default function useSources<T extends ProjectSources>({
       setVersionList([]);
       setCurrentVersion(undefined);
       setHasEdited(false);
+      setHasSavedSources(false);
       setLoadError(undefined);
       setChannel(undefined);
       await projectManagerRef.current?.cleanUp();
@@ -227,6 +231,7 @@ export default function useSources<T extends ProjectSources>({
       // Some components (including non-Lab2 areas like the header) read state.lab.channel directly
       // so we need to set it here. Prefer to read channel from this hook via the consuming lab within lab components.
       dispatch(setChannelAction(projectAndSources?.channel));
+      setHasSavedSources(projectAndSources?.sources !== undefined);
       setSources(
         getInitialSources(
           levelProperties,
@@ -404,6 +409,7 @@ export default function useSources<T extends ProjectSources>({
     isLoading,
     isEditable,
     hasEdited,
+    hasSavedSources,
     currentSources,
     channel,
     projectManager: projectManagerRef.current,
