@@ -61,11 +61,14 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
  * The SDK result plus the worker's detached signature over `text`. A caller
  * that persists the response must relay it to dashboard, which verifies it
  * rather than taking the browser's word for what the model said.
+ * providerMetadata narrows the SDK's untyped JSON so that the worker's
+ * moderation verdicts under `aiGateway` read without casts.
  */
 export type GatewayGenerateTextResult<
   TOOLS extends SDKTools,
   OUTPUT extends SDKOutput
-> = GenerateTextResult<TOOLS, OUTPUT> & {
+> = Omit<GenerateTextResult<TOOLS, OUTPUT>, 'providerMetadata'> & {
+  readonly providerMetadata: CurrentGatewayGenerateTextResponse['providerMetadata'];
   responseSignature?: string;
 };
 
