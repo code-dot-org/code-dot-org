@@ -428,6 +428,15 @@ module.exports = function (grunt) {
   // reprints it, so rspack sees no terminal and drops its colors.  Hand
   // the child grunt's own stdout and stderr instead.
   const rspackStdio = {stdout: 'inherit', stderr: 'inherit'};
+  // Only ^C ends the dev server cleanly, with code 0 or by signal (null);
+  // an exit with no ^C before it is a failure, code 0 included.
+  let interrupted = false;
+  const endsOnlyByInterrupt = {
+    exitCodes: [0, null],
+    callback: err => {
+      if (!err && !interrupted) grunt.fail.warn('ended without Ctrl-C');
+    },
+  };
 
   config.exec = {
     // `--rspack` (or APPS_BUNDLER=rspack) swaps only the JS bundling
@@ -461,6 +470,7 @@ module.exports = function (grunt) {
     rspackServe: {
       command: 'node node_modules/.bin/rspack serve --config rspack.config.js',
       ...rspackStdio,
+      ...endsOnlyByInterrupt,
       // HOT and DEV are set here rather than inherited: the `dev` task
       // sets them after this config is built, and rspack.config.js
       // gives a DEV-less run no devServer block at all — no port, no
@@ -482,7 +492,12 @@ module.exports = function (grunt) {
       'bundle exec ./script/generateRegionConfigurations.rb',
     generateStudioRoutes: 'bundle exec ./script/generateStudioRoutes.rb',
     buildFrontendDependencies: './script/frontend-dependencies.sh',
-    watchFrontendDependencies: './script/frontend-dependencies.sh --watch',
+    // Stays piped: given a terminal, turbo would open its full-screen UI
+    // and take the keys, ^C included.  No callback, so nothing is buffered.
+    watchFrontendDependencies: {
+      command: './script/frontend-dependencies.sh --watch',
+      exitCodes: [0, null, 130], // 0, or SIGINT seen by sh or by yarn
+    },
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
@@ -811,6 +826,32 @@ module.exports = function (grunt) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
+  // ^C reaches every process in the terminal's foreground group at once.
+  // A grunt that exits first leaves the shell prompting while the dev
+  // server below it is still restoring the terminal.
+  function outliveChildrenOnInterrupt() {
+    process.once('SIGINT', () => {
+      interrupted = true;
+      grunt.log.muted = true; // no "Done." from each grunt; a failure un-mutes
+      grunt.option('force', true); // a failed child must not abort the wait
+      grunt.task.clearQueue();
+      process.once('SIGINT', () => process.exit(130));
+    });
+  }
+  // The dev task sets the option just before concurrent spawns its
+  // children, each a grunt of its own that inherits every option.
+  grunt.registerTask('outliveChildrenOnInterrupt', () => {
+    grunt.option('outlive-children', true);
+    outliveChildrenOnInterrupt();
+  });
+  if (grunt.option('outlive-children')) {
+    if (grunt.cli.tasks.includes('watch')) {
+      process.once('SIGINT', () => process.exit(0)); // not a failed child
+    } else {
+      outliveChildrenOnInterrupt();
+    }
+  }
+
   grunt.registerTask('dev', function () {
     // Unless explicitly overridden, set HOT=1 and DEV=1 when running `grunt dev`
     process.env.HOT ||= 1;
@@ -820,6 +861,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'prebuild',
       'newer:sass',
+      'outliveChildrenOnInterrupt',
       APPS_BUNDLER === 'rspack' ? 'concurrent:watchRspack' : 'concurrent:watch',
       'postbuild',
     ]);
