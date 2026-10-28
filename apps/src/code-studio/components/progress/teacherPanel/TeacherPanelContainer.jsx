@@ -9,7 +9,11 @@ export default class TeacherPanelContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
+    // The TA drawer does not show the floating panel's slide-out handle.
+    collapsible: PropTypes.bool,
   };
+
+  static defaultProps = {collapsible: true};
 
   state = {open: tryGetLocalStorage('teacher-panel', 'open') !== 'closed'};
 
@@ -24,18 +28,23 @@ export default class TeacherPanelContainer extends React.Component {
   };
 
   render() {
+    const {collapsible} = this.props;
     return (
       <div
         className={classNames('teacher-panel', this.props.className, {
-          hidden: !this.state.open,
+          hidden: collapsible && !this.state.open,
         })}
       >
-        <div className="hide-handle">
-          <FontAwesome icon="chevron-right" onClick={this.hide} />
-        </div>
-        <div className="show-handle">
-          <FontAwesome icon="chevron-left" onClick={this.show} />
-        </div>
+        {collapsible && (
+          <>
+            <div className="hide-handle">
+              <FontAwesome icon="chevron-right" onClick={this.hide} />
+            </div>
+            <div className="show-handle">
+              <FontAwesome icon="chevron-left" onClick={this.show} />
+            </div>
+          </>
+        )}
         {this.props.children}
       </div>
     );
