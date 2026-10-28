@@ -1,12 +1,9 @@
-import {Box, Button, Typography} from '@mui/material';
+import {Button} from '@mui/material';
 import {useState} from 'react';
 
 import {FormError} from '@code-dot-org/component-library/form';
-import Link from '@code-dot-org/component-library/link';
-import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import {useToast} from '@code-dot-org/component-library/toast';
-import {CodeStudioConfig as siteConfig} from '@code-dot-org/core';
 import {
   DashboardApiClient,
   useUpdateEmail,
@@ -15,10 +12,9 @@ import {
 
 import {hashEmail} from '../util/hashEmail';
 
+import EmailOptInField from './EmailOptInField';
 import FormDialog from './FormDialog';
 import {useModalForm} from './useModalForm';
-
-const OPT_IN_REQUIRED = 'This field is required.';
 
 /**
  * Update-email modal; a failure stays open so the typed input survives. Like
@@ -35,26 +31,26 @@ export default function UpdateEmailModal({
 }) {
   const mutation = useUpdateEmail(DashboardApiClient);
   const toast = useToast();
-  const {errors, setErrors, resetErrors, onSubmit} = useModalForm();
+  const {errors, resetErrors, onSubmit} = useModalForm();
   const [email, setEmail] = useState('');
   const [currentPassword, setCurrentPassword] = useState('');
   const [optIn, setOptIn] = useState<EmailOptIn>('');
-  const optInError = errors.fieldErrors.email_preference_opt_in?.[0];
+  const [optInTouched, setOptInTouched] = useState(false);
+  const optInUnanswered = isTeacher && optIn === '';
 
   const close = () => {
     setEmail('');
     setCurrentPassword('');
     setOptIn('');
+    setOptInTouched(false);
     resetErrors();
     onClose();
   };
 
   const handleSubmit = onSubmit(async () => {
-    if (isTeacher && !optIn) {
-      setErrors({
-        fieldErrors: {email_preference_opt_in: [OPT_IN_REQUIRED]},
-        formError: null,
-      });
+    // Enter in a text field submits past the disabled button.
+    if (optInUnanswered) {
+      setOptInTouched(true);
       return;
     }
     await mutation.mutateAsync({
@@ -80,7 +76,7 @@ export default function UpdateEmailModal({
           <Button
             type="submit"
             variant="contained"
-            disabled={mutation.isPending}
+            disabled={mutation.isPending || optInUnanswered}
           >
             Update email
           </Button>
@@ -107,57 +103,13 @@ export default function UpdateEmailModal({
         aria-invalid={errors.fieldErrors.current_password ? true : undefined}
       />
       {isTeacher && (
-        // The privacy link follows the group so it is not folded into the
-        // radiogroup's accessible name, as in ParentEmailModal.
-        <Box>
-          <Typography
-            id="email-optin-question"
-            variant="body2"
-            component="div"
-            sx={{mb: 1}}
-          >
-            Can we email you about updates to our courses, local opportunities,
-            or other computer science news?
-          </Typography>
-          <Box
-            role="radiogroup"
-            aria-labelledby="email-optin-question"
-            aria-describedby={optInError ? 'email-optin-error' : undefined}
-            aria-invalid={optInError ? true : undefined}
-          >
-            <RadioButton
-              name="email_opt_in"
-              value="yes"
-              label="Yes"
-              checked={optIn === 'yes'}
-              onChange={event => setOptIn(event.target.value as EmailOptIn)}
-              disabled={mutation.isPending}
-            />
-            <RadioButton
-              name="email_opt_in"
-              value="no"
-              label="No"
-              checked={optIn === 'no'}
-              onChange={event => setOptIn(event.target.value as EmailOptIn)}
-              disabled={mutation.isPending}
-            />
-          </Box>
-          {optInError && (
-            <Typography
-              id="email-optin-error"
-              variant="body3"
-              component="div"
-              sx={{color: 'var(--text-error-primary)', mt: 0.5}}
-            >
-              {optInError}
-            </Typography>
-          )}
-          <Typography variant="body2" component="div" sx={{mt: 1}}>
-            <Link href={siteConfig.marketingUrl('/privacy')} openInNewTab>
-              (See our privacy policy)
-            </Link>
-          </Typography>
-        </Box>
+        <EmailOptInField
+          value={optIn}
+          onChange={setOptIn}
+          touched={optInTouched}
+          onTouched={() => setOptInTouched(true)}
+          disabled={mutation.isPending}
+        />
       )}
     </FormDialog>
   );

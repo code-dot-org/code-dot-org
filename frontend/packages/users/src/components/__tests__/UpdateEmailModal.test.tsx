@@ -144,7 +144,14 @@ describe('UpdateEmailModal', () => {
       expect(screen.queryByRole('radiogroup')).not.toBeInTheDocument();
     });
 
-    it('should require an answer from a teacher before sending anything', async () => {
+    it('should keep the submit button disabled until a teacher answers', () => {
+      renderModal(vi.fn(), true);
+      expect(submitButton()).toBeDisabled();
+      fireEvent.click(screen.getByRole('radio', {name: 'Yes'}));
+      expect(submitButton()).toBeEnabled();
+    });
+
+    it('should show the required error when submitted unanswered', () => {
       let requested = false;
       mockServer.use(
         http.patch('*/users/email', () => {
@@ -154,11 +161,10 @@ describe('UpdateEmailModal', () => {
       );
       const {onClose} = renderModal(vi.fn(), true);
 
-      fillAndSubmit();
+      fireEvent.change(newEmailField(), {target: {value: 'test@example.com'}});
+      fireEvent.submit(newEmailField().closest('form')!);
 
-      expect(
-        await screen.findByText('This field is required.'),
-      ).toBeInTheDocument();
+      expect(screen.getByText('This field is required.')).toBeInTheDocument();
       expect(screen.getByRole('radiogroup')).toHaveAccessibleDescription(
         'This field is required.',
       );
