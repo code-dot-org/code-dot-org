@@ -218,7 +218,7 @@ module Levels
     # Of the given child level names, those on the opposite side of the
     # "UI Test " partition from this level. Ignores nil entries.
     def cross_partition_child_names(child_names)
-      child_names.compact.reject {|child_name| Level.ui_test_name?(child_name) == ui_test?}
+      child_names.compact.reject {|child_name| Level.ui_test_partition_name?(child_name) == ui_test?}
     end
 
     def cross_partition_children_message(offending_child_names)

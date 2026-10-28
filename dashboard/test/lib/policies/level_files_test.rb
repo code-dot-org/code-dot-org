@@ -84,10 +84,10 @@ module Policies
       # the prefix is case-insensitive, and only counts as a prefix
       assert_equal('./test/ui/config/levels/**/ui test lowercase.level', Policies::LevelFiles.level_file_glob('ui test lowercase'))
       assert_equal('./config/levels/**/My UI Test Level.level', Policies::LevelFiles.level_file_glob('My UI Test Level'))
-      # without a name, tree: picks which tree to enumerate
+      # without a name, partition: picks which partition to enumerate
       assert_equal('./config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil))
-      assert_equal('./test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, tree: :ui_test))
-      assert_equal('/custom/root/test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, '/custom/root', tree: :ui_test))
+      assert_equal('./test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, partition: :ui_test))
+      assert_equal('/custom/root/test/ui/config/levels/**/*.level', Policies::LevelFiles.level_file_glob(nil, '/custom/root', partition: :ui_test))
     end
 
     test 'a UI Test level never resolves to a file in the production tree' do

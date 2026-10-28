@@ -304,7 +304,7 @@ namespace :seed do
   end
 
   timed_task_with_logging custom_levels_ui_tests: :environment do
-    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, tree: :ui_test)
+    LevelLoader.load_custom_levels(nil, CURRICULUM_CONTENT_DIR, partition: :ui_test)
   end
 
   timed_task_with_logging parent_dsls_ui_tests: :environment do
@@ -348,7 +348,7 @@ namespace :seed do
         # A file must sit in the tree its level name selects, or seeding the
         # other tree would quietly pick it up; see
         # dashboard/test/ui/config/README.md.
-        if Policies::LevelFiles.tree_for_name(data[:name]) != Policies::LevelFiles.tree_for_path(filename)
+        if Policies::LevelFiles.partition_for_name(data[:name]) != Policies::LevelFiles.partition_for_path(filename)
           raise "level #{data[:name].dump} does not belong in #{filename}: \"UI Test \" levels " \
             "live under test/ui/config/scripts, all others under config/scripts"
         end
