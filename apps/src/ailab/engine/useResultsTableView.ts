@@ -3,7 +3,12 @@ import {useCallback, useMemo} from 'react';
 import {getLocalizedValue} from './helpers/valueDetails';
 import {useAppSelector} from './hooks';
 import {useProject} from './ProjectContext';
-import {getFilterableColumns} from './selectors';
+import {
+  getColumnsByDataType,
+  getData,
+  getDatasetId,
+  getFilterableColumns,
+} from './selectors';
 import type {ColumnId, ResultsData, TableView} from './types';
 import {PREDICTION_COLUMN} from './UIComponents/RowsTableHeader';
 import {useTableView} from './useTableView';
@@ -15,10 +20,10 @@ export function useResultsTableView(
   const {project} = useProject();
   const selectedFeatures = project.selectedFeatures;
   const labelColumn = project.labelColumn || 'unknown';
-  const data = useAppSelector(state => state.data);
-  const columnsByDataType = useAppSelector(state => state.columnsByDataType);
+  const data = useAppSelector(getData);
+  const columnsByDataType = useAppSelector(getColumnsByDataType);
   const filterableColumns = useAppSelector(getFilterableColumns);
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const rows = useMemo(() => [...results.examples.keys()], [results]);
   const viewColumns = useMemo<ColumnId[]>(
     () => [...columns, PREDICTION_COLUMN],

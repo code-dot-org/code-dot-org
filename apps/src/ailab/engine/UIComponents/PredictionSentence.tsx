@@ -6,6 +6,7 @@ import {flushSync} from 'react-dom';
 
 import {getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
+import {getDatasetId} from '../selectors';
 
 import SentenceTag from './SentenceTag';
 
@@ -54,7 +55,7 @@ const PredictionSentence = ({
   singleLine = false,
   className,
 }: PredictionSentenceProps) => {
-  const datasetId = useAppSelector(state => state.metadata?.name || '');
+  const datasetId = useAppSelector(state => getDatasetId(state) || '');
   const rowRef = useRef<HTMLDivElement>(null);
   const leadRef = useRef<HTMLSpanElement>(null);
   const rulerRef = useRef<HTMLSpanElement>(null);

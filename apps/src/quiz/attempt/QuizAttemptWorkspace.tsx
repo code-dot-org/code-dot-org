@@ -20,6 +20,7 @@ import IntroCard from './IntroCard';
 import MatchQuestionContainer from './match/MatchQuestionContainer';
 import {MatchPairs} from './match/types';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
+import MultipleSelectQuestionContainer from './MultipleSelectQuestionContainer';
 import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
@@ -28,6 +29,7 @@ import {
   isFreeResponseResponse,
   isMatchResponse,
   isMultipleChoiceResponse,
+  isMultipleSelectResponse,
   QuizAttemptData,
   QuizQuestionResponse,
   QuizQuestionResponseData,
@@ -292,12 +294,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     return thisWrite;
   };
 
-  const handleSelectChoice = (questionId: number, choiceId: string) => {
+  // Shows a choice-based answer at once and saves it; a failed save rolls
+  // back to the previous answer.
+  const saveChoiceResponse = (
+    questionId: number,
+    response: QuizQuestionResponse
+  ) => {
     const previousResponse = responsesByQuestionId[questionId];
-    const response: QuizQuestionResponse = {
-      questionType: 'MultipleChoiceQuestion',
-      responseData: {selectedChoiceId: choiceId},
-    };
     setResponsesByQuestionId(prev => ({...prev, [questionId]: response}));
 
     queueResponseWrite(questionId, response.responseData).catch(() => {
@@ -316,6 +319,29 @@ const QuizAttemptWorkspace: React.FunctionComponent<
         }
         return next;
       });
+    });
+  };
+
+  const handleSelectChoice = (questionId: number, choiceId: string) =>
+    saveChoiceResponse(questionId, {
+      questionType: 'MultipleChoiceQuestion',
+      responseData: {selectedChoiceId: choiceId},
+    });
+
+  const handleToggleChoice = (questionId: number, choiceId: string) => {
+    const previous = responsesByQuestionId[questionId];
+    const selectedChoiceIds =
+      (previous &&
+        isMultipleSelectResponse(previous) &&
+        previous.responseData.selectedChoiceIds) ||
+      [];
+    saveChoiceResponse(questionId, {
+      questionType: 'MultipleSelectQuestion',
+      responseData: {
+        selectedChoiceIds: selectedChoiceIds.includes(choiceId)
+          ? selectedChoiceIds.filter(id => id !== choiceId)
+          : [...selectedChoiceIds, choiceId],
+      },
     });
   };
 
@@ -452,19 +478,24 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             disabled={isSubmitting}
           />
         );
-      // TODO: replace with a MultipleSelectQuestionContainer.
       case 'MultipleSelectQuestion':
         return (
-          <AttemptCard
+          <MultipleSelectQuestionContainer
             key={question.id}
-            label={questionLabel}
-            title={question.questionTitle}
             headingRef={headingRef}
-          >
-            <Typography variant="body2">
-              Multiple select questions are not available yet.
-            </Typography>
-          </AttemptCard>
+            question={question}
+            questionLabel={questionLabel}
+            selectedChoiceIds={
+              (response &&
+                isMultipleSelectResponse(response) &&
+                response.responseData.selectedChoiceIds) ||
+              []
+            }
+            onToggleChoice={choiceId =>
+              handleToggleChoice(question.id, choiceId)
+            }
+            disabled={isSubmitting}
+          />
         );
       case 'MatchQuestion':
         return (

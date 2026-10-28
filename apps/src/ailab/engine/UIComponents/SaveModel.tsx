@@ -11,7 +11,7 @@ import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {useProject} from '../ProjectContext';
 import {setTrainedModelDetail} from '../redux';
-import {getSelectedColumnsDescriptions} from '../selectors';
+import {getDatasetId, getSelectedColumnsDescriptions} from '../selectors';
 
 import ScrollableContent from './ScrollableContent';
 import Statement from './Statement';
@@ -28,9 +28,7 @@ const SaveModel = () => {
   );
   const dataDescription = useAppSelector(getDatasetDescription);
   const isUserUploaded = useAppSelector(isUserUploadedDataset);
-  const datasetId = useAppSelector(
-    state => state.metadata && state.metadata.name
-  );
+  const datasetId = useAppSelector(getDatasetId);
 
   const [showColumnDescriptions, setShowColumnDescriptions] =
     useState(isUserUploaded);

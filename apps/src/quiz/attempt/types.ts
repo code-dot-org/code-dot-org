@@ -54,11 +54,20 @@ export function isMatchResponse(
   return response.questionType === 'MatchQuestion';
 }
 
+// How a choice is marked in a submitted question's results.
+export type ChoiceResultStatus =
+  | 'correct'
+  | 'incorrect'
+  | 'selected_ungraded'
+  | 'neutral';
+
 export type QuizQuestionResult = QuizQuestionResponse & {
   quizQuestionId: number;
   correct: boolean | null;
   explanation: string | null;
-  correctChoiceId: string | null;
+  // The answer key, by question type; null when hidden.
+  correctChoiceId?: string | null;
+  correctChoiceIds?: string[] | null;
 };
 
 // Unanswered questions are omitted.

@@ -4,7 +4,7 @@ import React from 'react';
 import {getColumnRole, getLocalizedColumnName} from '../helpers/columnDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {getIdColumn} from '../selectors';
+import {getDatasetId, getIdColumn} from '../selectors';
 import type {TableView} from '../types';
 
 import CellText from './CellText';
@@ -27,7 +27,7 @@ const RowsTableHeader = ({
   showPrediction,
 }: RowsTableHeaderProps) => {
   const {project} = useProject();
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const idColumn = useAppSelector(getIdColumn);
 
   return (

@@ -7,6 +7,7 @@ import {getDisplayTreePath, type DisplayTreeNode} from '../helpers/displayTree';
 import {displayNodeLabel} from '../helpers/displayTreeNodeContent';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getDatasetId} from '../selectors';
 import {getDisplayTreeRows} from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
 
@@ -28,7 +29,7 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
   const titleId = useId();
   const {project} = useProject();
   const {trainedModel} = useTrainingData();
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const rowsAt = useAppSelector(state =>
     getDisplayTreeRows(state, project, trainedModel)
   );
