@@ -1,6 +1,6 @@
 # Plan: one World, seen through Viewports
 
-STATUS: PLANNED, October 2026. Nothing below is built. Comes before
+STATUS: BUILDING, October 2026. Step 1 is done. Comes before
 specs/SCREEN_STACK_PLAN.md, which sits on it.
 
 A game has one World. Maps fill it, and maps bring its layers. A Viewport is
@@ -117,15 +117,50 @@ What follows for the Scroll View:
   built. The List keeps drawing its own rows: drawing only the rows that
   show is why a thousand words cost what six do.
 
+## How it is built
+
+**The root stays the screen, and the World is a second space beside it.**
+The other way round, the World as the root and the screen moved out of it,
+would change which space the renderer's main camera draws, and the renderer
+cuts the root into bands around each Viewport (`PhaserBinding.band`). Leaving
+the root alone leaves all of that alone.
+
+**Every Viewport mirrors the World.** A mirror is already a Viewport whose
+cameras look at a space it does not own, and the renderer already draws a
+mirror through its target's container (specs/MIRRORING_PLAN.md). So "a
+window onto the World through a camera of its own" is the mirror path with
+one target, and what goes is the choosing of targets, not the mechanism.
+The renderer needs one new thing: a host for a space that no Viewport owns,
+which holds the World's containers and layers and is drawn only by mirrors.
+
+**What was found** (October 2026):
+
+- **The renderer** gives each Viewport's space a container and a Phaser
+  camera, draws the root with the main camera cut into bands, and draws a
+  mirror by pointing its camera at the target's container.
+- **The 90 lessons**: 81 put code under `in the map ⟨Game⟩ shows`; 88 have a
+  Viewport and every one names `maps/main`; four (Flappy and its lessons)
+  declare a second camera on the Viewport, `Follow`, aimed at
+  `ofType("actors/bird")`, which is already a kind; Breakout loads a map
+  into the Viewport to restart; none mirrors or uses a fixed layer.
+- **The Scroll View** is the only Viewport with a map other than the
+  level's, and the Interface Kit is the only content that places one. It
+  has to stop being a Viewport before every Viewport shows the World, so it
+  is built first.
+- **Before the first map** the World is the size of the window, as a
+  Viewport's space is now, and a Viewport shows its clear color.
+
 ## What goes
 
 There are no migrations (specs/RETIREMENTS_PLAN.md).
 
-- A space for each Viewport, and `viewportSpaceOf`, `showHeldMap`,
-  `loadMapInto`, `unloadViewport`, `enterShown` and `here`.
-- The Viewport's `map`, `content`, `shows through`, `mirrors` and `mirrors
-the world` properties, and `when ⟨Viewport⟩ shows a map`.
-- Mirroring: `mirrorTargetOf`, `mirrorInto`, `stopMirroring`, the layer's
+- A scene for each Viewport: `showHeldMap`, `loadMapInto`, `unloadViewport`,
+  `enterShown` and `here`. A Viewport keeps a space only as the holder of
+  its camera and window.
+- The Viewport's `map`, `shows through`, `mirrors` and `mirrors the world`
+  properties, and `when ⟨Viewport⟩ shows a map`. `scroll` and `content` go
+  to the Scroll View.
+- Choosing what to mirror: `mirrorTargetOf`, chains of mirrors, the layer's
   `inMirrors`, and the map editor's mirror preview.
 - A Viewport's list of cameras, `defineCamera`, camera ids, and the Cameras
   drawer blocks that name a camera.
@@ -137,37 +172,29 @@ the world` properties, and `when ⟨Viewport⟩ shows a map`.
 ## Order of work
 
 1. This plan.
-2. Engine: one World beside the screen. A Viewport's camera looks at it.
-   `loadMap` replaces what the World holds, and the first map comes from the
-   screen's data. Tests.
-3. Cameras: one per Viewport, with the camera traits as now; `actor to
-follow` by kind. Removing camera lists and `shows through`. Tests.
-4. Layers: `fit` removed, screens lose their layers. Tapper's Interface
-   labels become Main Screen placements.
-5. World blocks act on the World. Removing `here`, `load map … into`,
-   `unload ⟨Viewport⟩`, `in the map ⟨…⟩ shows` and mirroring.
-6. The Scroll View over its children: the mask in the binding, the clipped
-   hit test in the engine, and a way into a Scroll View in the screen
-   editor to place and arrange content taller than its window. The
+2. The Scroll View over its children: a `Scrolls` trait with `scroll` and
+   `content`, children shifted by the scroll in the parent's frame, the
+   mask in the renderer, and the clipped hit test in the engine. The
    Interface Kit's settings page moves from its own map to children of the
    Scroll View.
-7. The lesson converter, the 90 lessons, the fixtures and the map editor.
-   The Main Screen dump compared before and after, as for
-   WORLD_AS_DATA_PLAN.md: every difference accounted for.
-8. Specs: MIRRORING_PLAN.md, SPACE_CAMERAS_PLAN.md, VIEWPORT_PLAN.md,
+3. Engine: the World space. Every Viewport mirrors it, `loadMap` from World
+   code replaces what it holds, and a Viewport's `map` loads into it.
+   Renderer: the World's host. Tests.
+4. The first map from the screen's data, and the converter, lessons and
+   fixtures moved to it. The Main Screen dump compared before and after:
+   every difference accounted for.
+5. World blocks act on the World: `here` and `in the map ⟨…⟩ shows` go, and
+   with them `load map … into` and `unload ⟨Viewport⟩`.
+6. Cameras: one per Viewport, with the camera traits as now; `actor to
+follow` by kind. Removing camera lists, `shows through` and choosing a
+   mirror target. Tests.
+7. Layers: `fit` removed, screens lose their layers. Tapper's Interface
+   labels become Main Screen placements.
+8. The screen editor: a way into a Scroll View to arrange content taller
+   than its window, and the map editor's mirror preview removed.
+9. Specs: MIRRORING_PLAN.md, SPACE_CAMERAS_PLAN.md, VIEWPORT_PLAN.md,
    VIEWPORT.md, LAYERS_PLAN.md, SCROLLING_PLAN.md and SIMPLE_INTERFACE.md
    marked superseded where this replaces them, and this record.
-
-## To find out before step 2
-
-- How the preview's renderer gives each space and camera its view
-  (`PhaserBinding`), and what one World seen by several cameras needs from
-  it.
-- Which lessons and fixtures aim a camera at a placement, name a camera
-  other than `main`, or put code under `in the map ⟨…⟩ shows`, and what each
-  becomes.
-- What the World's size is between Run and the first map, and what a
-  Viewport draws then.
 
 ## Not in this plan
 
