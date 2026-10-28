@@ -16,6 +16,7 @@ describe('ObjectivesEditor', () => {
     defaultProps = {
       objectives: [{key: '1', description: 'description'}],
       updateObjectives,
+      scriptLevels: [],
     };
   });
 
@@ -36,16 +37,18 @@ describe('ObjectivesEditor', () => {
 
   it('can add an objective', () => {
     const wrapper = mount(<ObjectivesEditor {...defaultProps} />);
-    const addObjectiveButton = wrapper.find('button').first();
+    const addObjectiveButton = wrapper
+      .find('button')
+      .filterWhere(button => button.text().includes('Create New Objective'));
     addObjectiveButton.simulate('mouseDown');
     expect(updateObjectives).toHaveBeenCalledWith([
       {description: 'description', key: '1'},
-      {description: '', key: 'objective-2'},
+      {description: '', key: 'objective-2', scriptLevelIds: []},
     ]);
     wrapper.setProps({
       objectives: [
         {description: 'description', key: '1'},
-        {description: '', key: 'objective-2'},
+        {description: '', key: 'objective-2', scriptLevelIds: []},
       ],
     });
 
@@ -59,22 +62,24 @@ describe('ObjectivesEditor', () => {
     objectiveInput.simulate('keyDown', {key: 'Enter'});
     expect(updateObjectives).toHaveBeenCalledWith([
       {description: 'description', key: '1'},
-      {description: 'new description', key: 'objective-2'},
+      {description: 'new description', key: 'objective-2', scriptLevelIds: []},
     ]);
   });
 
   it('does not add an objective after add and cancel', () => {
     const wrapper = mount(<ObjectivesEditor {...defaultProps} />);
-    const addObjectiveButton = wrapper.find('button').first();
+    const addObjectiveButton = wrapper
+      .find('button')
+      .filterWhere(button => button.text().includes('Create New Objective'));
     addObjectiveButton.simulate('mouseDown');
     expect(updateObjectives).toHaveBeenCalledWith([
       {description: 'description', key: '1'},
-      {description: '', key: 'objective-2'},
+      {description: '', key: 'objective-2', scriptLevelIds: []},
     ]);
     wrapper.setProps({
       objectives: [
         {description: 'description', key: '1'},
-        {description: '', key: 'objective-2'},
+        {description: '', key: 'objective-2', scriptLevelIds: []},
       ],
     });
 
@@ -87,6 +92,26 @@ describe('ObjectivesEditor', () => {
     cancelEditButton.simulate('mouseDown');
     expect(updateObjectives).toHaveBeenCalledWith([
       {description: 'description', key: '1'},
+    ]);
+  });
+
+  it('tags an objective with a level', () => {
+    const wrapper = mount(
+      <ObjectivesEditor
+        {...defaultProps}
+        objectives={[
+          {key: '1', description: 'description', scriptLevelIds: []},
+        ]}
+        scriptLevels={[{id: '5', label: '1. level one'}]}
+      />
+    );
+    wrapper
+      .find('button')
+      .filterWhere(b => b.text() === 'Tag levels')
+      .simulate('click');
+    wrapper.find('input[type="checkbox"]').simulate('change');
+    expect(updateObjectives).toHaveBeenCalledWith([
+      {key: '1', description: 'description', scriptLevelIds: ['5']},
     ]);
   });
 });
