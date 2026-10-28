@@ -1,0 +1,29 @@
+name 'csp-unit2-lesson7-cfu1_27_28'
+title 'Check your understanding'
+
+
+wrong '`False`'
+right '`True`'
+wrong '`Error`'
+wrong 'Nothing prints'
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+ A store checks whether an order qualifies for free shipping. Given `price = 45` and `member = True`, what does the code on the right print?
+ 
+```
+price = 45
+member = True
+free_shipping = price >= 50 or member
+print(free_shipping)
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Teacher solution and distractor rationale:
+
+- `True` (correct): price >= 50 is False (45 is not ≥ 50), but member is True. or only needs one side true, so the result is True.
+- `False`: The most likely misconception — a student who computed price >= 50 correctly as False may assume that one False sinks the whole expression, applying and’s rule to an or expression.
+- `Error`: Tests whether a student thinks mixing a relational expression (price >= 50) with a plain Boolean variable (member) inside one or is a type error. It isn’t — both sides evaluate to a Boolean before or runs.
+- Nothing prints: Would only be plausible if a student thought free_shipping needed to be explicitly converted to a string before printing — testing for confusion with earlier str() conversions seen in Theater levels, which don’t apply here since print() handles Booleans directly.
+MARKDOWN

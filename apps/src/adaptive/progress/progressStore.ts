@@ -1,77 +1,97 @@
-// Where a student's pathway progress lives. One implementation for now, the
-// browser's local storage, behind an interface a server-backed store can
-// replace once the progress shape settles.
+// Where a student's pathway progress lives: the server, keyed by the unit and
+// the adaptive level. A level step's progress is not written here; it is its
+// level's own, reported through milestones.
 
-import {EMPTY_PROGRESS, type Progress} from './model';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {
+  Answer,
+  EMPTY_PROGRESS,
+  GeneratedContent,
+  Progress,
+  ValidationAttempt,
+} from './model';
 
 export interface ProgressKey {
-  /** Null for a signed-out student, who shares one record per browser. */
-  userId: number | null;
-  /** The unit the level was opened from; null for standalone play. */
-  scriptId: number | null;
+  scriptId: number;
   levelId: number;
-  /** Guards the record: content swapped under the level is not resumed. */
-  pathwayId: string;
 }
 
-export interface ProgressStore {
-  load(key: ProgressKey): Promise<Progress | undefined>;
-  save(key: ProgressKey, progress: Progress): Promise<void>;
+/** One save of a non-level step; the server sets times only once. */
+export interface StepWrite {
+  started?: true;
+  completed?: true;
+  timeSinceLastSave?: number;
+  answers?: {questionId: number | string; list: Answer[]};
 }
 
-interface StoredProgress {
-  pathwayId: string;
-  progress: Progress;
-  savedAt: string;
+const query = ({scriptId, levelId}: ProgressKey) =>
+  `scriptId=${scriptId}&levelId=${levelId}`;
+
+/** Sends writes one at a time, in order; a failed one is logged and skipped. */
+export class ProgressStore {
+  private chain: Promise<void> = Promise.resolve();
+
+  async load(key: ProgressKey): Promise<Progress> {
+    const response = await HttpClient.get(`/adaptive_progress?${query(key)}`);
+    const body = (await response.json()) as Partial<Progress>;
+    return {...EMPTY_PROGRESS, ...body};
+  }
+
+  saveStep(key: ProgressKey, stepId: string, write: StepWrite): Promise<void> {
+    return this.enqueue(`save ${stepId}`, () =>
+      this.putStep(key, stepId, 'progress', write)
+    );
+  }
+
+  saveInstructions(
+    key: ProgressKey,
+    stepId: string,
+    content: GeneratedContent
+  ): Promise<void> {
+    return this.enqueue(`save instructions for ${stepId}`, () =>
+      this.putStep(key, stepId, 'generated_instructions', {
+        generatedInstructions: content,
+      })
+    );
+  }
+
+  /** Appends one check of a project step's work; the server sets its time. */
+  saveValidation(
+    key: ProgressKey,
+    stepId: string,
+    attempt: Omit<ValidationAttempt, 'at'>
+  ): Promise<void> {
+    return this.enqueue(`save validation for ${stepId}`, () =>
+      this.putStep(key, stepId, 'validation_history', {attempt})
+    );
+  }
+
+  private putStep(
+    key: ProgressKey,
+    stepId: string,
+    route: string,
+    body: object
+  ) {
+    return HttpClient.put(
+      `/adaptive_progress/steps/${encodeURIComponent(stepId)}/${route}`,
+      JSON.stringify({...key, ...body}),
+      true,
+      {'Content-Type': 'application/json'}
+    );
+  }
+
+  private enqueue(label: string, request: () => Promise<unknown>) {
+    this.chain = this.chain.then(request).then(
+      () => undefined,
+      error =>
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError(`Adaptive progress: ${label} failed`, error as Error)
+    );
+    return this.chain;
+  }
 }
 
-// The same triple UserLevel is keyed by, so a server store can take over
-// record for record.
-const storageKey = (key: ProgressKey) =>
-  `adaptive-progress:${key.userId ?? 'anonymous'}:${key.scriptId ?? 'none'}:${
-    key.levelId
-  }`;
-
-const isProgress = (value: unknown): value is Progress =>
-  typeof value === 'object' &&
-  value !== null &&
-  Array.isArray((value as Progress).completed) &&
-  Array.isArray((value as Progress).started) &&
-  ((value as Progress).stepContext === undefined ||
-    (typeof (value as Progress).stepContext === 'object' &&
-      (value as Progress).stepContext !== null));
-
-/**
- * Progress in the browser's local storage. Unavailable storage (private
- * windows, blocked site data) reads as no progress and drops writes, so the
- * pathway still plays for the session.
- */
-export const localStorageProgressStore: ProgressStore = {
-  async load(key) {
-    try {
-      const raw = window.localStorage.getItem(storageKey(key));
-      if (!raw) return undefined;
-      const stored = JSON.parse(raw) as Partial<StoredProgress>;
-      if (stored.pathwayId !== key.pathwayId || !isProgress(stored.progress)) {
-        return undefined;
-      }
-      // Records written before stepContext existed load with an empty cache.
-      return {...EMPTY_PROGRESS, ...stored.progress};
-    } catch {
-      return undefined;
-    }
-  },
-
-  async save(key, progress) {
-    const stored: StoredProgress = {
-      pathwayId: key.pathwayId,
-      progress,
-      savedAt: new Date().toISOString(),
-    };
-    try {
-      window.localStorage.setItem(storageKey(key), JSON.stringify(stored));
-    } catch {
-      // Storage unavailable: progress lives for the session only.
-    }
-  },
-};
+export const serverProgressStore = new ProgressStore();

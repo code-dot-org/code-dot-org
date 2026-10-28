@@ -29,8 +29,8 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
       projectInfo: {name, description},
       sources: opts.sources,
       authoredInstructions: opts.authoredInstructions,
-      stepContext: opts.stepContext,
-      updateStepContext: opts.updateStepContext,
+      generatedInstructions: opts.generatedInstructions,
+      saveGeneratedInstructions: opts.saveGeneratedInstructions,
       aichatContext: opts.aichatContext,
     }).then(instructions => {
       if (!cancelled) setResolved(instructions ?? NO_INSTRUCTIONS);
@@ -46,8 +46,8 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
     description,
     opts.sources,
     opts.authoredInstructions,
-    opts.stepContext,
-    opts.updateStepContext,
+    opts.generatedInstructions,
+    opts.saveGeneratedInstructions,
     opts.aichatContext,
   ]);
   return {

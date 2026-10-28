@@ -21,6 +21,7 @@ describe('Theater', () => {
   let onJavabuilderMessage: jest.Mock;
   let onOutputVisibleChange: jest.Mock;
   let onMediaLoadError: jest.Mock;
+  let onDescriptionChange: jest.Mock;
   let uploadFile: jest.Mock;
 
   beforeEach(() => {
@@ -31,6 +32,7 @@ describe('Theater', () => {
     onJavabuilderMessage = jest.fn();
     onOutputVisibleChange = jest.fn();
     onMediaLoadError = jest.fn();
+    onDescriptionChange = jest.fn();
 
     playAudioSpy = jest.fn();
     pauseAudioSpy = jest.fn();
@@ -56,7 +58,8 @@ describe('Theater', () => {
       closePhotoPrompter,
       onJavabuilderMessage,
       onOutputVisibleChange,
-      onMediaLoadError
+      onMediaLoadError,
+      onDescriptionChange
     );
     theater.getImgElement = () => imageElement as HTMLImageElement;
     theater.getAudioElement = () => audioElement as HTMLAudioElement;
@@ -603,5 +606,70 @@ describe('Theater', () => {
       InputMessageType.THEATER,
       InputMessage.UPLOAD_ERROR
     );
+  });
+
+  describe('describe', () => {
+    const descriptionSignal = {
+      value: TheaterSignalType.DESCRIPTION,
+      detail: {summary: 'Still picture.', transcript: 'Shapes: a red circle.'},
+    };
+    const packageDescription = {
+      status: 'ready',
+      summary: 'Still picture.',
+      detail: 'Shapes: a red circle.',
+    };
+
+    it('reports pending, then the AI description', async () => {
+      theater.describe(Promise.resolve('A red circle in the center.'));
+      expect(onDescriptionChange).toHaveBeenLastCalledWith({status: 'pending'});
+      await Promise.resolve();
+      expect(onDescriptionChange).toHaveBeenLastCalledWith({
+        status: 'ready',
+        summary: 'A red circle in the center.',
+      });
+    });
+
+    it('falls back to the package description when the AI one fails or was never requested', async () => {
+      theater.handleSignal(descriptionSignal);
+      theater.describe(Promise.reject(new Error('gateway down')));
+      await Promise.resolve();
+      await Promise.resolve();
+      expect(onDescriptionChange).toHaveBeenLastCalledWith(packageDescription);
+
+      onDescriptionChange.mockClear();
+      theater.describe();
+      expect(onDescriptionChange).toHaveBeenLastCalledWith(packageDescription);
+    });
+
+    it('reports unavailable when neither description exists', () => {
+      theater.describe();
+      expect(onDescriptionChange).toHaveBeenLastCalledWith({
+        status: 'unavailable',
+      });
+    });
+
+    it('clears the description on reset and drops a late answer', async () => {
+      theater.handleSignal(descriptionSignal);
+      let resolve: (text: string) => void = () => {};
+      theater.describe(new Promise<string>(r => (resolve = r)));
+      theater.reset();
+      expect(onDescriptionChange).toHaveBeenLastCalledWith(null);
+      resolve('stale');
+      await Promise.resolve();
+      expect(onDescriptionChange).toHaveBeenLastCalledWith(null);
+    });
+
+    it('drops an earlier answer once a newer one is requested', async () => {
+      let resolveFirst: (text: string) => void = () => {};
+      theater.describe(new Promise<string>(r => (resolveFirst = r)));
+      theater.describe(Promise.resolve('second'));
+      await Promise.resolve();
+      resolveFirst('first');
+      await Promise.resolve();
+      expect(onDescriptionChange).toHaveBeenLastCalledWith({
+        status: 'ready',
+        summary: 'second',
+      });
+    });
   });
 });

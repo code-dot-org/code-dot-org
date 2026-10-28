@@ -5,8 +5,18 @@
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {Suspense, useEffect, useMemo, useState} from 'react';
+import React, {
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
+import {
+  ChatHandle,
+  ChatHostContext,
+} from '@cdo/apps/aichat/host/ChatHostContext';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -20,12 +30,16 @@ import Loading from '@cdo/apps/lab2/views/Loading';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
+import {isAdaptiveAiEnabled} from '../../ai/generate';
 import {buildTutorContext} from '../../ai/tutorContext';
+import {workAdapterFor} from '../../ai/validation/adapters';
+import {latestValidation} from '../../progress/model';
 import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
 
 import {useStepInstructions} from './useStepInstructions';
+import {useStepValidation} from './useStepValidation';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
@@ -103,8 +117,9 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     pathway,
     checkpoint,
     statusMap,
-    stepContextMap,
-    updateStepContext,
+    progress,
+    saveGeneratedInstructions,
+    recordValidation,
     aiContext,
   } = usePathwayContext();
   // Keyed on the project's strings, not the channel, which changes on every save.
@@ -120,9 +135,30 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectInfo: {name: projectName, description: projectDescription},
     sources: currentSources,
     authoredInstructions: step.instructions ?? levelProperties.longInstructions,
-    stepContext: stepContextMap[step.id],
-    updateStepContext,
+    generatedInstructions: progress.steps[step.id]?.generatedInstructions,
+    saveGeneratedInstructions,
     aichatContext: aiContext,
+  });
+  // Each build the student accepts is checked against the step's condition,
+  // the verdict recorded on the step and told in the chat, through the
+  // handle the lab's chat hands back.
+  const [chat, setChat] = useState<ChatHandle>();
+  const chatHost = useMemo(() => ({onChatReady: setChat}), []);
+  const latestValidationAttempt = latestValidation(progress.steps[step.id]);
+  const recordStepValidation = useCallback(
+    (attempt: Parameters<typeof recordValidation>[1]) =>
+      recordValidation(step, attempt),
+    [recordValidation, step]
+  );
+  useStepValidation({
+    pathway,
+    checkpoint,
+    step,
+    projectInfo: {name: projectName, description: projectDescription},
+    instructions,
+    aichatContext: aiContext,
+    chat,
+    recordValidation: recordStepValidation,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share
@@ -137,6 +173,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       project: step.project
         ? {name: projectName, description: projectDescription}
         : undefined,
+      latestValidationAttempt,
     });
     const own = levelProperties.levelSystemPrompt;
     return {
@@ -144,6 +181,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       showInstructionsInAiTutor: true,
       ...levelProperties,
       hideShareAndRemix: true,
+      hideNonInstructionTabs: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
     };
@@ -156,17 +194,28 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectName,
     projectDescription,
     instructions,
+    latestValidationAttempt,
   ]);
 
-  // The lab's own Continue button advances the step.
+  // The lab's own Continue button advances the step. A step whose work is
+  // checked waits for work that passes, unless no judge can run: adaptive AI
+  // is off, or the lab takes no part in checking.
+  const checked =
+    !step.validation ||
+    !isAdaptiveAiEnabled() ||
+    !workAdapterFor(levelProperties.appName) ||
+    !!latestValidationAttempt?.pass;
   const navigation = useMemo(
     () => ({
       label: continueLabel,
-      enabled: true,
+      enabled: checked,
+      tooltip: checked
+        ? undefined
+        : 'Continue unlocks once your work on this step meets its goal.',
       endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
       onContinue: onComplete,
     }),
-    [continueLabel, onComplete]
+    [continueLabel, checked, onComplete]
   );
 
   // Stands in for ProjectContainer's level-change reset, which steps bypass.
@@ -216,13 +265,15 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     <div className={styles.levelHost}>
       {ready ? (
         <ExternalNavigationContext.Provider value={navigation}>
-          <Suspense fallback={<Loading isLoading />}>
-            <View
-              levelProperties={viewProperties}
-              initialSources={initialSources}
-              channel={channel}
-            />
-          </Suspense>
+          <ChatHostContext.Provider value={chatHost}>
+            <Suspense fallback={<Loading isLoading />}>
+              <View
+                levelProperties={viewProperties}
+                initialSources={initialSources}
+                channel={channel}
+              />
+            </Suspense>
+          </ChatHostContext.Provider>
         </ExternalNavigationContext.Provider>
       ) : (
         <Loading isLoading loadingText={loadingText} />

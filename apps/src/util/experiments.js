@@ -35,8 +35,6 @@ experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
-// Experiment for enabling the AI-TA differentiation artifacts
-experiments.AI_ARTIFACT = 'ai-artifact';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
 experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Allows the playspace to be dragged to take up a larger portion of the screen

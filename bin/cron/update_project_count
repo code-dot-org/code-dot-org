@@ -24,7 +24,6 @@ MAX_EXECUTION_TIME_SEC = MAX_EXECUTION_TIME / 1000
 # Connection to read from Dashboard reader database.
 DASHBOARD_DB_READER = Cdo::Sequel.database_connection_pool(
   CDO.dashboard_db_reader,
-  CDO.dashboard_db_reader,
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
 

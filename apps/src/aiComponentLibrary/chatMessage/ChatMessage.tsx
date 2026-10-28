@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -7,6 +8,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
@@ -65,22 +67,30 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       )}
     >
       <div className={moduleStyles.grid}>
-        {isAssistant && isTA && (
-          <div className={moduleStyles.botIconTAOverlayContainer}>
-            <div className={classNames(moduleStyles.botIconContainer)}>
-              <img
-                src={aiBotOutlineIcon}
-                alt={commonI18n.aiChatBotIconAlt()}
-                className={moduleStyles.botIcon}
-              />
-            </div>
-            {isTA && (
+        {isAssistant &&
+          isTA &&
+          (experiments.isEnabled('ta-teacher-panel') ? (
+            // The mark reads "TA" itself, so it needs no overlay pill.
+            <FontAwesomeV6Icon
+              iconFamily="kit"
+              iconName="ta"
+              title={commonI18n.aiChatBotIconAlt()}
+              className={moduleStyles.taDiscIcon}
+            />
+          ) : (
+            <div className={moduleStyles.botIconTAOverlayContainer}>
+              <div className={classNames(moduleStyles.botIconContainer)}>
+                <img
+                  src={aiBotOutlineIcon}
+                  alt={commonI18n.aiChatBotIconAlt()}
+                  className={moduleStyles.botIcon}
+                />
+              </div>
               <div className={moduleStyles.botOverlay}>
                 <span>{'TA'}</span>
               </div>
-            )}
-          </div>
-        )}
+            </div>
+          ))}
         <div className={moduleStyles[`message-and-header-${role}`]}>
           {header && <div className={moduleStyles.header}>{header}</div>}
           {(text || postText) && (

@@ -166,6 +166,8 @@ type ResourcePanelProps = InstructionsProps & {
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
   sidebarOnly?: boolean;
+  /** Lab-defined buttons in the footer column, ahead of the built-in ones. */
+  footerButtons?: React.ReactNode;
   /** Show the collapse/expand control. Defaults to standalone project levels. */
   collapsible?: boolean;
   hideCollapsedTabBorder?: boolean;
@@ -204,6 +206,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
+  footerButtons,
   collapsible,
   hideCollapsedTabBorder = false,
   backpackProps,
@@ -327,8 +330,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     !!hiddenContextCallback &&
     hasInstructions;
 
-  // The AI Tutor tab, with its instructions drawer open to begin with,
-  // stands in for the Instructions tab. Predict levels keep their own layout.
+  // The AI Tutor tab, with the instructions pinned above its chat, stands in
+  // for the Instructions tab. Predict levels keep their own layout.
   const instructionsInAiTutor =
     !!levelProperties.showInstructionsInAiTutor &&
     usesSharedInstructionsDrawer &&
@@ -342,6 +345,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       return {};
     }
     const tabMap: Record<string, React.ReactNode> = {};
+    const hideNonInstructionTabs =
+      levelProperties.hideNonInstructionTabs ?? false;
 
     const instructionsContent = hasInstructions ? (
       <Instructions
@@ -354,11 +359,17 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.Instructions] = instructionsContent;
     }
 
-    validExtraTabs.forEach(tab => {
-      tabMap[tab.id] = tab.content;
-    });
+    if (!hideNonInstructionTabs) {
+      validExtraTabs.forEach(tab => {
+        tabMap[tab.id] = tab.content;
+      });
+    }
 
-    if (validationSettings && hasValidationConditions) {
+    if (
+      !hideNonInstructionTabs &&
+      validationSettings &&
+      hasValidationConditions
+    ) {
       tabMap[Tabs.Validation] = <ValidationPanel {...validationSettings} />;
     }
 
@@ -384,9 +395,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           <AiTutorChatWithInstructionDrawer
             {...aiTutorProps}
             instructionsContent={instructionsContent}
+            instructionsText={
+              instructionsProps.dynamicInstructions ||
+              levelProperties.longInstructions
+            }
             isPredictLevel={isPredictLevel}
             aiTutorActive={currentTab === Tabs.AiTutor}
-            instructionsInitiallyOpen={instructionsInAiTutor}
+            instructionsPinned={instructionsInAiTutor}
           />
         );
       } else {
@@ -394,68 +409,70 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       }
     }
 
-    // The version history tab is hidden in permanently read-only mode with the following exception:
-    // - if a teacher is viewing a student's project (in which case they can view old versions, but not restore them).
-    // Version history is also hidden on predict levels and widget view.
-    const versionHistoryHidden =
-      (isPermanentlyReadOnly && !viewAsUserId) ||
-      isWidgetView ||
-      isReadOnlyPredict ||
-      levelProperties.hideVersionHistory;
-    if (versionHistoryProps && !versionHistoryHidden) {
-      tabMap[Tabs.VersionHistory] = (
-        <VersionHistoryPanel
-          selectedVersion={selectedVersion}
-          setSelectedVersion={setSelectedVersion}
-          startSources={versionHistoryProps.startSources}
-          levelId={levelId}
-          disabled={isTemporarilyReadOnly && !isViewingOldVersion}
-          isOpen={currentTab === Tabs.VersionHistory}
-          alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
-          onLoadVersion={versionHistoryProps.onLoadVersion}
-        />
-      );
-    }
+    if (!hideNonInstructionTabs) {
+      // The version history tab is hidden in permanently read-only mode with the following exception:
+      // - if a teacher is viewing a student's project (in which case they can view old versions, but not restore them).
+      // Version history is also hidden on predict levels and widget view.
+      const versionHistoryHidden =
+        (isPermanentlyReadOnly && !viewAsUserId) ||
+        isWidgetView ||
+        isReadOnlyPredict ||
+        levelProperties.hideVersionHistory;
+      if (versionHistoryProps && !versionHistoryHidden) {
+        tabMap[Tabs.VersionHistory] = (
+          <VersionHistoryPanel
+            selectedVersion={selectedVersion}
+            setSelectedVersion={setSelectedVersion}
+            startSources={versionHistoryProps.startSources}
+            levelId={levelId}
+            disabled={isTemporarilyReadOnly && !isViewingOldVersion}
+            isOpen={currentTab === Tabs.VersionHistory}
+            alwaysShowAutoSaves={versionHistoryProps.alwaysShowAutoSaves}
+            onLoadVersion={versionHistoryProps.onLoadVersion}
+          />
+        );
+      }
 
-    if (showRubric) {
-      tabMap[Tabs.StudentRubric] = <StudentRubricView />;
-    }
+      if (showRubric) {
+        tabMap[Tabs.StudentRubric] = <StudentRubricView />;
+      }
 
-    if (showBackpack) {
-      tabMap[Tabs.Backpack] = (
-        <UnifiedBackpackPanel
-          {...backpackProps}
-          backpackRefreshKey={backpackRefreshKey}
-        />
-      );
-    }
+      if (showBackpack) {
+        tabMap[Tabs.Backpack] = (
+          <UnifiedBackpackPanel
+            {...backpackProps}
+            backpackRefreshKey={backpackRefreshKey}
+          />
+        );
+      }
 
-    if (
-      isUserTeacher &&
-      (levelProperties.teacherMarkdown ||
-        levelProperties.predictSettings?.solution)
-    ) {
-      tabMap[Tabs.TeachersOnly] = (
-        <ForTeachersOnly
-          levelProperties={levelProperties}
-          className={classNames(styles.panelContent, styles.teachersOnlyTab)}
-        />
-      );
-    }
+      if (
+        isUserTeacher &&
+        (levelProperties.teacherMarkdown ||
+          levelProperties.predictSettings?.solution)
+      ) {
+        tabMap[Tabs.TeachersOnly] = (
+          <ForTeachersOnly
+            levelProperties={levelProperties}
+            className={classNames(styles.panelContent, styles.teachersOnlyTab)}
+          />
+        );
+      }
 
-    const shortcuts = getLabShortcuts(levelProperties.appName as AppName);
-    if (
-      levelTours.length > 0 ||
-      otherAvailableTours.length > 0 ||
-      !!shortcuts
-    ) {
-      tabMap[Tabs.StudentResources] = (
-        <StudentResourcesPanel
-          levelTours={levelTours}
-          otherAvailableTours={otherAvailableTours}
-          shortcuts={shortcuts}
-        />
-      );
+      const shortcuts = getLabShortcuts(levelProperties.appName as AppName);
+      if (
+        levelTours.length > 0 ||
+        otherAvailableTours.length > 0 ||
+        !!shortcuts
+      ) {
+        tabMap[Tabs.StudentResources] = (
+          <StudentResourcesPanel
+            levelTours={levelTours}
+            otherAvailableTours={otherAvailableTours}
+            shortcuts={shortcuts}
+          />
+        );
+      }
     }
 
     return tabMap;
@@ -774,6 +791,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             className={classNames(styles.bottomTabs)}
           >
             <ResourcePanelExtraLinks levelId={levelId} theme={theme} />
+            {footerButtons}
             {documentationUrl && (
               <IconButtonWithTooltip
                 id="documentation"

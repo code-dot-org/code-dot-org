@@ -25,6 +25,15 @@
   color: var(--text-neutral-white-fixed);
 }
 
+.pillSkipped {
+  background: var(--background-success-extra-light);
+  color: var(--text-success-primary);
+}
+
+.skippedReason {
+  color: var(--text-success-primary);
+}
+
 .requirement {
   display: flex;
   align-items: baseline;

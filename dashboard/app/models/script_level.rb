@@ -66,6 +66,7 @@ class ScriptLevel < ApplicationRecord
   belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
+  has_and_belongs_to_many :objectives
   has_many :callouts, inverse_of: :script_level
   has_many :levels_script_levels # join table. we need this association for seeding logic
 
@@ -109,7 +110,7 @@ class ScriptLevel < ApplicationRecord
     keys = keys.compact.reject {|key| key.start_with?('blockly:')}
     return [] if keys.empty?
     ui_test_script = ui_test_script?
-    keys.reject {|key| Level.ui_test_name?(key) == ui_test_script}
+    keys.reject {|key| Level.ui_test_partition_name?(key) == ui_test_script}
   end
 
   def cross_partition_levels_message(offending_level_keys)

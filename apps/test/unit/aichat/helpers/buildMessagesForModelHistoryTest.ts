@@ -73,6 +73,26 @@ describe('buildMessagesForModelHistory', () => {
     expect(buildMessagesForModelHistory(events)).toEqual([]);
   });
 
+  it('passes a host message kept in the history to the model as the assistant, and drops one not kept', () => {
+    const kept = {
+      timestamp: 5,
+      removeId: 1,
+      text: 'Not there yet. Add a heading.',
+      notificationType: 'hostMessage' as const,
+      includeInChatHistory: true,
+    };
+    const dropped = {...kept, removeId: 2, includeInChatHistory: false};
+    expect(buildMessagesForModelHistory([kept, dropped])).toEqual([
+      {
+        role: Role.ASSISTANT,
+        status: AiInteractionStatus.OK,
+        chatMessageText: 'Not there yet. Add a heading.',
+        timestamp: 5,
+        requestId: -1,
+      },
+    ]);
+  });
+
   describe('accept notification', () => {
     it('produces a single user message saying changes were accepted', () => {
       const notification = makeNotification(AI_TUTOR_VERSION_ACTION_ACCEPT, {

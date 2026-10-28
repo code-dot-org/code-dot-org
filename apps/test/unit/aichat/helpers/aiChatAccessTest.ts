@@ -4,6 +4,7 @@ import {
   canUseLessonDeepDive,
   APPS_WITH_ESSENTIAL_AI_CHAT,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
+import DCDO from '@cdo/apps/dcdo';
 
 describe('shouldShowAiTutor', () => {
   describe('when app always shows AI tutor (essential tutor apps)', () => {
@@ -124,5 +125,14 @@ describe('canUseLessonDeepDive', () => {
 
   it('returns false when access level is unknown', () => {
     expect(canUseLessonDeepDive(undefined)).toBe(false);
+  });
+
+  it('returns false when disabled via DCDO', () => {
+    DCDO.set('lesson-deep-dive-enabled', false);
+    try {
+      expect(canUseLessonDeepDive('enabled')).toBe(false);
+    } finally {
+      DCDO.reset();
+    }
   });
 });

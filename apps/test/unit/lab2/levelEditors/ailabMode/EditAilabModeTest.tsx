@@ -106,8 +106,8 @@ function fakeLab2Checkbox() {
   };
 }
 
-const DATASET_REQUIRED =
-  'Choose a dataset. The level cannot be saved without one.';
+const DEV_ONLY_WARNING =
+  'Warning: for development only. Letting students choose a dataset is not ready for real levels yet.';
 
 function datasetDropdown() {
   return screen.getByRole('combobox', {name: /^Dataset/});
@@ -119,6 +119,10 @@ function chooseDataset(datasetId: string) {
 
 function labelDropdown() {
   return screen.getByRole('combobox', {name: /^Label/});
+}
+
+function idColumnDropdown() {
+  return screen.getByRole('combobox', {name: /^ID column/});
 }
 
 function optionsOf(select: HTMLElement) {
@@ -255,7 +259,7 @@ describe('EditAilabMode', () => {
 
   it('drops the training options saved with the testing view hidden', () => {
     const savedMode = renderEditor(
-      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "randomizeTestData": true}'
+      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}}'
     );
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
@@ -265,7 +269,7 @@ describe('EditAilabMode', () => {
 
   it('clears and locks the training options while the testing view is hidden', () => {
     const savedMode = renderEditor(
-      '{"requireAccuracy": 70, "hideSave": true, "randomizeTestData": true}'
+      '{"requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}}'
     );
     const accuracy = screen.getByRole('spinbutton', {
       name: /Required accuracy/,
@@ -273,27 +277,23 @@ describe('EditAilabMode', () => {
     const hideSave = screen.getByRole('checkbox', {
       name: 'Hide the save model step',
     });
-    const randomRows = screen.getByRole('checkbox', {
-      name: 'Reserve random rows for testing instead of the last rows',
-    });
+    const k = () =>
+      screen.getByRole('spinbutton', {name: /Number of neighbors \(k\)/});
     const hideTestingView = screen.getByRole('checkbox', {
       name: 'Hide training and testing so students only explore the dataset',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave, randomRows].forEach(field =>
-      expect(field).toBeDisabled()
-    );
-    expect(accuracy).toHaveValue(null);
+    [accuracy, hideSave, k()].forEach(field => expect(field).toBeDisabled());
+    [accuracy, k()].forEach(field => expect(field).toHaveValue(null));
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
       trainer: 'knn',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave, randomRows].forEach(field =>
-      expect(field).toBeEnabled()
-    );
+    [accuracy, hideSave, k()].forEach(field => expect(field).toBeEnabled());
+    expect(k()).toHaveValue(null);
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
@@ -371,25 +371,109 @@ describe('EditAilabMode', () => {
     });
   });
 
-  it('requires a dataset until one is chosen', () => {
+  it("sets the trainer's hyperparameter and clears it when the trainer changes", () => {
+    const savedMode = renderEditor(null);
+    fireEvent.change(
+      screen.getByRole('spinbutton', {name: /Number of neighbors \(k\)/}),
+      {target: {value: '5'}}
+    );
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      hyperparameters: {k: 5},
+    });
+
+    fireEvent.change(screen.getByRole('combobox', {name: 'Trainer'}), {
+      target: {value: 'decisionTree'},
+    });
+    const maxDepth = screen.getByRole('spinbutton', {
+      name: /Maximum tree depth/,
+    });
+    expect(maxDepth).toHaveValue(null);
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'decisionTree'});
+
+    fireEvent.change(maxDepth, {target: {value: '3'}});
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'decisionTree',
+      hyperparameters: {maxDepth: 3},
+    });
+  });
+
+  it('shows a saved hyperparameter', () => {
+    renderEditor(
+      '{"trainer": "decisionTree", "hyperparameters": {"maxDepth": 4}}'
+    );
+    expect(
+      screen.getByRole('spinbutton', {name: /Maximum tree depth/})
+    ).toHaveValue(4);
+  });
+
+  it('does not save a hyperparameter that is not a whole number of at least 1', () => {
+    const savedMode = renderEditor('{"hyperparameters": {"k": 5}}');
+    const k = screen.getByRole('spinbutton', {
+      name: /Number of neighbors \(k\)/,
+    });
+    fireEvent.change(k, {target: {value: '0'}});
+    expect(
+      screen.getByText('Enter a whole number of at least 1.')
+    ).toBeInTheDocument();
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+
+    fireEvent.change(k, {target: {value: ''}});
+    expect(
+      screen.queryByText('Enter a whole number of at least 1.')
+    ).not.toBeInTheDocument();
+  });
+
+  it('lets students choose a dataset when none is set', () => {
     const savedMode = renderEditor('{"hideSave": true}');
     expect(datasetDropdown()).toHaveValue('');
-    expect(datasetDropdown()).toBeRequired();
-    expect(datasetDropdown()).toBeInvalid();
-    expect(screen.getByText(DATASET_REQUIRED)).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Students start by choosing a dataset or uploading a CSV.'
+      )
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('checkbox', {
+        name: 'Lock the label so students cannot change it',
+      })
+    ).toBeDisabled();
+    expect(featuresLock()).toBeDisabled();
+    expect(pretrainedCheckbox()).toBeDisabled();
+    expect(screen.getByText(DEV_ONLY_WARNING)).toBeInTheDocument();
 
     chooseDataset('pizza_toy');
+
+    expect(screen.queryByText(DEV_ONLY_WARNING)).not.toBeInTheDocument();
 
     expect(JSON.parse(savedMode())).toEqual({
       hideSave: true,
       trainer: 'knn',
       datasets: ['pizza_toy'],
     });
-    expect(datasetDropdown()).toBeValid();
-    expect(screen.queryByText(DATASET_REQUIRED)).not.toBeInTheDocument();
-    expect(
-      screen.queryByRole('option', {name: 'Choose a dataset'})
-    ).not.toBeInTheDocument();
+    expect(featuresLock()).toBeEnabled();
+  });
+
+  it('drops the columns when switched to students choosing', () => {
+    const savedMode = renderEditor(
+      JSON.stringify({
+        datasets: ['zoo'],
+        label: 'animal',
+        features: ['legs'],
+        hideSelectLabel: true,
+        lockFeatures: true,
+        pretrained: true,
+        hideDatasetView: true,
+        hideSave: true,
+      })
+    );
+
+    chooseDataset('');
+
+    expect(JSON.parse(savedMode())).toEqual({
+      hideSave: true,
+      reserveLastRows: true,
+      trainer: 'knn',
+    });
   });
 
   it('lists regular datasets before toy datasets', () => {
@@ -422,7 +506,10 @@ describe('EditAilabMode', () => {
       renderEditor(null);
       expect(labelDropdown()).toBeDisabled();
       expect(featuresDropdown()).toBeDisabled();
-      expect(screen.getAllByText('Choose a dataset first.')).toHaveLength(2);
+      expect(idColumnDropdown()).toBeDisabled();
+      expect(
+        screen.getAllByText('Choose a dataset to set its columns.')
+      ).toHaveLength(3);
     });
 
     it('sets the label and the features', async () => {
@@ -483,7 +570,7 @@ describe('EditAilabMode', () => {
 
     it('clears them when the dataset changes', async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"]}'
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "idColumn": "name"}'
       );
       await columnsLoaded();
 
@@ -653,16 +740,16 @@ describe('EditAilabMode', () => {
       expect(featuresLock()).toBeValid();
     });
 
-    it('pretrains with both locks, in place of random test rows and a required accuracy', async () => {
+    it('pretrains with both locks and the last rows in place of a required accuracy, then restores them', async () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "requireAccuracy": 80}'
       );
       await columnsLoaded();
       const labelLock = screen.getByRole('checkbox', {
         name: 'Lock the label so students cannot change it',
       });
-      const randomRows = screen.getByRole('checkbox', {
-        name: 'Reserve random rows for testing instead of the last rows',
+      const lastRows = screen.getByRole('checkbox', {
+        name: 'Reserve the last rows for testing instead of random rows',
       });
       const accuracy = screen.getByRole('spinbutton', {
         name: /Required accuracy/,
@@ -678,21 +765,67 @@ describe('EditAilabMode', () => {
         pretrained: true,
         hideSelectLabel: true,
         lockFeatures: true,
+        reserveLastRows: true,
       });
-      [labelLock, featuresLock(), randomRows, accuracy].forEach(field =>
+      [labelLock, featuresLock(), lastRows, accuracy].forEach(field =>
         expect(field).toBeDisabled()
       );
       expect(accuracy).toHaveValue(null);
 
       fireEvent.click(pretrainedCheckbox());
 
-      expect(JSON.parse(savedMode())).toMatchObject({
-        hideSelectLabel: true,
-        lockFeatures: true,
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+        requireAccuracy: 80,
       });
-      [labelLock, featuresLock(), randomRows, accuracy].forEach(field =>
+      [labelLock, featuresLock(), lastRows, accuracy].forEach(field =>
         expect(field).toBeEnabled()
       );
+      expect(lastRows).not.toBeChecked();
+      expect(accuracy).toHaveValue(80);
+    });
+
+    it('restores the defaults when a level saved pretrained stops pretraining', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"]}'
+      );
+      await columnsLoaded();
+
+      fireEvent.click(pretrainedCheckbox());
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+      });
+    });
+
+    it('clears the training options again when pretraining restores a hidden testing view', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "animal", "features": ["legs"], "hideTestingView": true}'
+      );
+      await columnsLoaded();
+      const hideSave = screen.getByRole('checkbox', {
+        name: 'Hide the save model step',
+      });
+
+      fireEvent.click(pretrainedCheckbox());
+      fireEvent.click(hideSave);
+      fireEvent.click(pretrainedCheckbox());
+
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'animal',
+        features: ['legs'],
+        hideTestingView: true,
+      });
+      expect(hideSave).not.toBeChecked();
+      expect(hideSave).toBeDisabled();
     });
 
     it('asks for a label and features students can choose to pretrain on', async () => {
@@ -741,13 +874,14 @@ describe('EditAilabMode', () => {
         pretrained: true,
         hideSelectLabel: true,
         lockFeatures: true,
+        reserveLastRows: true,
       });
       expect(pretrainedCheckbox()).toBeValid();
     });
 
     it('locks a saved pretrained level and drops the settings pretraining replaces', () => {
       const savedMode = renderEditor(
-        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"], "randomizeTestData": true, "requireAccuracy": 80}'
+        '{"datasets": ["zoo"], "pretrained": true, "label": "animal", "features": ["legs"], "reserveLastRows": false, "requireAccuracy": 80}'
       );
       expect(JSON.parse(savedMode())).toEqual({
         datasets: ['zoo'],
@@ -757,6 +891,7 @@ describe('EditAilabMode', () => {
         pretrained: true,
         hideSelectLabel: true,
         lockFeatures: true,
+        reserveLastRows: true,
       });
     });
 
@@ -805,6 +940,96 @@ describe('EditAilabMode', () => {
       ).toBeInTheDocument();
       expect(labelDropdown()).toBeDisabled();
       expect(featuresDropdown()).toBeDisabled();
+    });
+  });
+
+  describe('id column', () => {
+    beforeEach(() => serveFiles(FILES));
+
+    it('cannot be the label or a feature', async () => {
+      const savedMode = renderEditor(
+        '{"datasets": ["zoo"], "label": "legs", "features": ["wings"]}'
+      );
+      await columnsLoaded();
+      expect(optionsOf(idColumnDropdown())).toEqual([
+        'None: number the rows',
+        'name',
+        'legs (label)',
+        'wings (feature)',
+        'animal',
+      ]);
+
+      fireEvent.change(idColumnDropdown(), {target: {value: 'animal'}});
+      expect(JSON.parse(savedMode())).toEqual({
+        datasets: ['zoo'],
+        trainer: 'knn',
+        label: 'legs',
+        features: ['wings'],
+        idColumn: 'animal',
+      });
+      expect(optionsOf(labelDropdown())).toEqual(['None', 'legs', 'wings']);
+      expect(featureOptions()).toEqual(['wings']);
+
+      fireEvent.change(idColumnDropdown(), {target: {value: ''}});
+      expect(JSON.parse(savedMode())).not.toHaveProperty('idColumn');
+    });
+
+    it('cannot be the default label once it is locked', async () => {
+      renderEditor('{"datasets": ["zoo"], "hideSelectLabel": true}');
+      await columnsLoaded();
+      expect(optionsOf(idColumnDropdown())).toContain('animal (label)');
+    });
+
+    it('reports a saved id column the dataset does not have', async () => {
+      renderEditor('{"datasets": ["zoo"], "idColumn": "nope"}');
+      await columnsLoaded();
+      expect(idColumnDropdown()).toHaveValue('nope');
+      expect(
+        screen.getByText('This dataset has no column "nope".')
+      ).toBeInTheDocument();
+    });
+
+    describe('when the dataset names a default', () => {
+      beforeEach(() =>
+        serveFiles({
+          ...FILES,
+          'zoo.json': {
+            ...(FILES['zoo.json'] as object),
+            defaultIdColumn: 'name',
+          },
+        })
+      );
+
+      it('starts on the default and saves only a change from it', async () => {
+        const savedMode = renderEditor('{"datasets": ["zoo"]}');
+        await columnsLoaded();
+        expect(idColumnDropdown()).toHaveValue('name');
+        expect(optionsOf(idColumnDropdown())).toEqual([
+          'None: number the rows',
+          'name (default)',
+          'legs',
+          'wings',
+          'animal',
+        ]);
+
+        fireEvent.change(idColumnDropdown(), {target: {value: ''}});
+        expect(JSON.parse(savedMode())).toHaveProperty('idColumn', null);
+
+        fireEvent.change(idColumnDropdown(), {target: {value: 'legs'}});
+        expect(JSON.parse(savedMode())).toHaveProperty('idColumn', 'legs');
+
+        fireEvent.change(idColumnDropdown(), {target: {value: 'name'}});
+        expect(JSON.parse(savedMode())).not.toHaveProperty('idColumn');
+      });
+
+      it('keeps a saved None', async () => {
+        const savedMode = renderEditor(
+          '{"datasets": ["zoo"], "idColumn": null}'
+        );
+        await columnsLoaded();
+        expect(idColumnDropdown()).toHaveValue('');
+        expect(JSON.parse(savedMode())).toHaveProperty('idColumn', null);
+      });
     });
   });
 });

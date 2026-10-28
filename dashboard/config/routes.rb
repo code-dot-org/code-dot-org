@@ -343,7 +343,7 @@ Dashboard::Application.routes.draw do
 
     resources :p, path: '/p/', only: [:index] do
       collection do
-        ProjectsController::STANDALONE_PROJECTS.each do |key, value|
+        Policies::StandaloneProjects.all.each do |key, value|
           get '/' + key.to_s, to: 'projects#redirect_legacy', key: value[:name], as: key.to_s
         end
         get '/', to: redirect('/projects')
@@ -368,7 +368,7 @@ Dashboard::Application.routes.draw do
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
-        ProjectsController::STANDALONE_PROJECTS.each do |key, _|
+        Policies::StandaloneProjects.all.each do |key, _|
           get "/#{key}", to: 'projects#load', key: key.to_s, as: "#{key}_project"
           get "/#{key}/new", to: 'projects#create_new', key: key.to_s, as: "#{key}_project_create_new"
 
@@ -615,6 +615,8 @@ Dashboard::Application.routes.draw do
         get '/edit', to: 'data_docs#edit_all'
       end
     end
+
+    resources :adaptive_pathways, only: [:show, :update], constraints: {id: /[a-z0-9][a-z0-9_-]{0,63}/}
 
     resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
       resources :jit_pl_misconceptions, only: [:create, :update, :destroy] do
@@ -1530,9 +1532,18 @@ Dashboard::Application.routes.draw do
     resources :aidiff_artifacts, only: [:index, :create]
 
     resources :user_practice_problem_attempts, only: [:index, :update, :create, :show]
-    resources :practice_problems, only: [:index, :show]
+    resources :practice_problems, only: [:index, :show, :create, :update, :destroy] do
+      collection do
+        post 'generate'
+      end
+    end
 
     resources :quiz_attempts, only: [:index, :create, :update]
+    resource :adaptive_progress, controller: :adaptive_progress, only: [:show] do
+      put 'steps/:step_id/progress', action: :update_progress, as: :step_progress
+      put 'steps/:step_id/generated_instructions', action: :update_generated_instructions, as: :step_generated_instructions
+      put 'steps/:step_id/validation_history', action: :update_validation_history, as: :step_validation_history
+    end
     resources :quiz_question_responses, only: [:create]
 
     resources :challenges, only: [:index, :show] do

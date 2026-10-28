@@ -7,10 +7,15 @@ import WhiteboardChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/Challeng
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {post: jest.fn(), put: jest.fn()},
+}));
+
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImage: jest.fn(),
 }));
 
 const mockTranscribeAudio = jest.fn();
@@ -84,51 +89,49 @@ const mockRecordedAudioBlob = new Blob(['audio-bytes'], {type: 'audio/webm'});
 // - "Start Recording" signals recording-in-progress via onIsRecordingChange(true)
 // - "Stop Recording" fires the same sequence as the real onstop handler:
 //   setRecordedBlob, onRecordingChange(true), onIsRecordingChange(false)
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/AudioRecorder',
-  () => {
-    const React = require('react');
-    return {
-      __esModule: true,
-      default: (props: {
-        onRecordingChange: (hasRecording: boolean) => void;
-        onIsRecordingChange?: (isRecording: boolean) => void;
-        setRecordedBlob: (blob: Blob | null) => void;
-        disabled?: boolean;
-      }) =>
+jest.mock('@code-dot-org/lesson-deep-dive', () => {
+  const React = require('react');
+  return {
+    ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+    AudioRecorder: (props: {
+      onRecordingChange: (hasRecording: boolean) => void;
+      onIsRecordingChange?: (isRecording: boolean) => void;
+      setRecordedBlob: (blob: Blob | null) => void;
+      disabled?: boolean;
+    }) =>
+      React.createElement(
+        'div',
+        null,
         React.createElement(
-          'div',
-          null,
-          React.createElement(
-            'button',
-            {
-              type: 'button',
-              disabled: props.disabled,
-              onClick: () => props.onIsRecordingChange?.(true),
-            },
-            'Start Recording'
-          ),
-          React.createElement(
-            'button',
-            {
-              type: 'button',
-              disabled: props.disabled,
-              onClick: () => {
-                props.setRecordedBlob(mockRecordedAudioBlob);
-                props.onRecordingChange(true);
-                props.onIsRecordingChange?.(false);
-              },
-            },
-            'Stop Recording'
-          )
+          'button',
+          {
+            type: 'button',
+            disabled: props.disabled,
+            onClick: () => props.onIsRecordingChange?.(true),
+          },
+          'Start Recording'
         ),
-    };
-  }
-);
+        React.createElement(
+          'button',
+          {
+            type: 'button',
+            disabled: props.disabled,
+            onClick: () => {
+              props.setRecordedBlob(mockRecordedAudioBlob);
+              props.onRecordingChange(true);
+              props.onIsRecordingChange?.(false);
+            },
+          },
+          'Stop Recording'
+        )
+      ),
+  };
+});
 
 const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;
 const snapshot = createSketchSnapshotBlob as jest.Mock;
+const moderate = moderateImage as jest.Mock;
 
 const fakeBlob = new Blob(['png-bytes'], {type: 'image/png'});
 const createdResponse = {
@@ -163,7 +166,7 @@ const Harness: FC<{
   const [, setChallengeResponseId] = useState(0);
   // Submit now lives in ChallengeBox's top bar; the harness stands in for it,
   // holding the submit ref and reflecting submittability on a "Submit" button.
-  const submitRef = useRef<(() => void | Promise<void>) | null>(null);
+  const submitRef = useRef<(() => Promise<boolean>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
   const [canSubmit, setCanSubmit] = useState(false);
   return (
@@ -212,6 +215,8 @@ describe('WhiteboardChallenge', () => {
     post.mockReset();
     put.mockReset();
     snapshot.mockReset();
+    moderate.mockReset();
+    moderate.mockResolvedValue('safe');
     mockTranscribeAudio.mockReset();
     mockTranscribeAudio.mockResolvedValue('Hello this is a recording');
     originalFetch = (globalThis as {fetch?: typeof originalFetch}).fetch;
@@ -371,6 +376,11 @@ describe('WhiteboardChallenge', () => {
 
     await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
 
+    expect(moderate).toHaveBeenCalledWith(
+      expect.objectContaining({type: 'image/png'}),
+      'lesson-deep-dive',
+      {}
+    );
     expect(post).toHaveBeenCalledWith(
       '/challenge_responses',
       JSON.stringify({
@@ -422,6 +432,60 @@ describe('WhiteboardChallenge', () => {
     expect(post).not.toHaveBeenCalled();
     expect(submitCallback).not.toHaveBeenCalled();
     expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+  });
+
+  it('blocks the submission when moderation flags the drawing', async () => {
+    snapshot.mockResolvedValue({blob: fakeBlob});
+    moderate.mockResolvedValue('flagged');
+    const submitCallback = jest.fn();
+
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={submitCallback}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+
+    await waitFor(() =>
+      expect(
+        screen.getByText(
+          "Your drawing can't be submitted. Please change it and try again."
+        )
+      ).toBeInTheDocument()
+    );
+    expect(post).not.toHaveBeenCalled();
+    expect(put).not.toHaveBeenCalled();
+    expect(submitCallback).not.toHaveBeenCalled();
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+  });
+
+  it('submits anyway when moderation is unavailable', async () => {
+    snapshot.mockResolvedValue({blob: fakeBlob});
+    moderate.mockResolvedValue('error');
+    post.mockResolvedValue({json: async () => createdResponse});
+    put.mockResolvedValue({});
+    const submitCallback = jest.fn();
+
+    render(
+      <Harness
+        challengeId={5}
+        submitted={false}
+        submitCallback={submitCallback}
+        explanationType={ExplanationTypes.TEXT}
+        textExplanation="My explanation"
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+
+    await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
   });
 
   it('submits the typed explanation as student_text in text mode', async () => {

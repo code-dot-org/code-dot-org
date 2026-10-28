@@ -1,0 +1,20 @@
+@use '../sharedMixins' as mixins;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  box-sizing: border-box;
+  min-height: mixins.$table-action-row-height;
+  padding: 4px;
+  border-bottom: 1px solid var(--border-neutral-primary);
+  z-index: 3;
+}
+
+.controls {
+  @include mixins.action-group;
+
+  min-width: 0;
+}

@@ -32,7 +32,7 @@ class ProjectsControllerTest < ActionController::TestCase
     # Note that all this does is create blank levels with appropriate names; it
     # doesn't set them up as actual project template levels, much less give
     # them specific content.
-    ProjectsController::STANDALONE_PROJECTS.each do |type, config|
+    Policies::StandaloneProjects.all.each do |type, config|
       next if Level.exists?(name: config[:name])
       factory = FactoryBot.factories.registered?(type) ? type : :level
       create(factory, name: config[:name])
@@ -112,7 +112,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'spritelab project level has sharing meta tags' do
-    spritelab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:spritelab][:name])
+    spritelab_level = Level.where(name: Policies::StandaloneProjects.all[:spritelab][:name])
     # populate level with correct game
     spritelab_level.update(game: Game.create(app: Game::SPRITELAB))
 
@@ -129,7 +129,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'poetry_hoc project level has sharing meta tags' do
-    poetry_hoc_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:poetry_hoc][:name])
+    poetry_hoc_level = Level.where(name: Policies::StandaloneProjects.all[:poetry_hoc][:name])
     # populate level with correct game
     poetry_hoc_level.update(game: Game.create(app: Game::POETRY))
 
@@ -146,7 +146,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'applab project level has sharing meta tags' do
-    applab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:applab][:name])
+    applab_level = Level.where(name: Policies::StandaloneProjects.all[:applab][:name])
     # populate level with correct game
     applab_level.update(game: Game.create(app: Game::APPLAB))
     channel = 'fake-channel'
@@ -167,7 +167,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'playlab project level has sharing meta tags' do
-    playlab_level = Level.where(name: ProjectsController::STANDALONE_PROJECTS[:playlab][:name])
+    playlab_level = Level.where(name: Policies::StandaloneProjects.all[:playlab][:name])
     # populate level with correct game
     playlab_level.update(game: Game.create(app: Game::PLAYLAB))
 
@@ -189,7 +189,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'legacy /p/:key links redirect to /projects/:key' do
-    get :redirect_legacy, params: {key: ProjectsController::STANDALONE_PROJECTS[:artist][:name]}
+    get :redirect_legacy, params: {key: Policies::StandaloneProjects.all[:artist][:name]}
     assert_template 'projects/redirect_legacy'
   end
 

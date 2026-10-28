@@ -1,7 +1,7 @@
 {
   "key": "thinking-critically-about-ai",
   "display_name": "Thinking Critically About AI",
-  "is_featured": false,
+  "is_featured": true,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "AID",

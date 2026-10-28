@@ -1734,13 +1734,13 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
-  test 'ui_test_name? detects the "UI Test " prefix' do
-    assert Level.ui_test_name?('UI Test Some Level')
-    assert Level.ui_test_name?('ui test lowercase')
-    refute Level.ui_test_name?('Some Level')
-    refute Level.ui_test_name?('My UI Test Level')
-    refute Level.ui_test_name?('UI Testless')
-    refute Level.ui_test_name?(nil)
+  test 'ui_test_partition_name? detects the "UI Test " prefix' do
+    assert Level.ui_test_partition_name?('UI Test Some Level')
+    assert Level.ui_test_partition_name?('ui test lowercase')
+    refute Level.ui_test_partition_name?('Some Level')
+    refute Level.ui_test_partition_name?('My UI Test Level')
+    refute Level.ui_test_partition_name?('UI Testless')
+    refute Level.ui_test_partition_name?(nil)
 
     assert create(:level, name: 'UI Test predicate probe').ui_test?
     refute create(:level, name: 'Regular predicate probe').ui_test?

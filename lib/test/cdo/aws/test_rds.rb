@@ -353,4 +353,78 @@ class TestRDS < Minitest::Test
       )
     end
   end
+
+  def test_zero_etl_integration_arn_matches_the_environment_tag
+    rds_client = mock('rds_client')
+    rds_client.expects(:describe_integrations).returns(
+      describe_integrations_pages(
+        [
+          integration_stub(name: 'autoscale-test-zero-etl', environment: 'test'),
+          integration_stub(name: 'autoscale-prod-zero-etl', environment: 'production'),
+        ]
+      )
+    )
+
+    assert_equal 'arn:autoscale-prod-zero-etl',
+      Cdo::RDS.zero_etl_integration_arn(environment_type: 'production', rds_client: rds_client)
+  end
+
+  def test_zero_etl_integration_arn_spans_paginated_responses
+    rds_client = mock('rds_client')
+    rds_client.expects(:describe_integrations).returns(
+      describe_integrations_pages(
+        [integration_stub(name: 'autoscale-test-zero-etl', environment: 'test')],
+        [integration_stub(name: 'autoscale-prod-zero-etl', environment: 'production')]
+      )
+    )
+
+    assert_equal 'arn:autoscale-prod-zero-etl',
+      Cdo::RDS.zero_etl_integration_arn(environment_type: 'production', rds_client: rds_client)
+  end
+
+  def test_zero_etl_integration_arn_raises_when_no_integration_carries_the_tag
+    rds_client = mock('rds_client')
+    rds_client.expects(:describe_integrations).returns(
+      describe_integrations_pages(
+        [
+          integration_stub(name: 'autoscale-test-zero-etl', environment: 'test'),
+          integration_stub(name: 'hand-built-zero-etl'),
+        ]
+      )
+    )
+
+    error = assert_raises(ArgumentError) do
+      Cdo::RDS.zero_etl_integration_arn(environment_type: 'production', rds_client: rds_client)
+    end
+    assert_includes error.message, 'environment: production'
+  end
+
+  def test_zero_etl_integration_arn_raises_rather_than_choosing_between_duplicates
+    rds_client = mock('rds_client')
+    rds_client.expects(:describe_integrations).returns(
+      describe_integrations_pages(
+        [
+          integration_stub(name: 'autoscale-prod-zero-etl', environment: 'production'),
+          integration_stub(name: 'restored-prod-zero-etl', environment: 'production'),
+        ]
+      )
+    )
+
+    error = assert_raises(ArgumentError) do
+      Cdo::RDS.zero_etl_integration_arn(environment_type: 'production', rds_client: rds_client)
+    end
+    assert_includes error.message, 'autoscale-prod-zero-etl'
+    assert_includes error.message, 'restored-prod-zero-etl'
+  end
+
+  # Stands in for an `Aws::RDS::Types::Integration`, whose Tags come back inline on the describe.
+  private def integration_stub(name:, environment: nil)
+    tags = environment ? [stub(key: 'environment', value: environment)] : []
+    stub(integration_name: name, integration_arn: "arn:#{name}", tags: tags)
+  end
+
+  # Stands in for a pageable `describe_integrations` response, one argument per page.
+  private def describe_integrations_pages(*pages)
+    stub(each_page: pages.map {|integrations| stub(integrations: integrations)})
+  end
 end

@@ -1,0 +1,160 @@
+{
+  "script": {
+    "name": "ccsd-aif-workshop",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "has_unnumbered_lessons": true,
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-10-26 21:34:49 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "ccsd-aif-workshop"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "AIF"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Lesson 1",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e786d756-ec98-4cef-98d1-672a3c52c33b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9f930dda-dd5d-494f-a9ed-fcf9136def13",
+      "position": 1,
+      "properties": {
+        "progression_name": "U1L9"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f930dda-dd5d-494f-a9ed-fcf9136def13",
+        "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "U1L9"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-U1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "9f930dda-dd5d-494f-a9ed-fcf9136def13"
+      },
+      "level_keys": [
+        "ccsd-aif-workshop-U1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ccsd-aif-workshop-U1",
+        "script_level.level_keys": [
+          "ccsd-aif-workshop-U1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "9f930dda-dd5d-494f-a9ed-fcf9136def13"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
