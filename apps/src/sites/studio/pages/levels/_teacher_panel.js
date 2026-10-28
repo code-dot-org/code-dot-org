@@ -80,9 +80,6 @@ function renderTeacherContentToggle(store) {
         <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />
       </InstructorsOnly>
     </Provider>,
-    element,
-    {
-      legacyReactDomRender: true,
-    }
+    element
   );
 }

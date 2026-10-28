@@ -24,9 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createReactRoot(
     <LtiIframePage logoUrl={logoUrl} authUrl={authUrl} />,
-    mountPoint,
-    {
-      legacyReactDomRender: true,
-    }
+    mountPoint
   );
 });

@@ -13,9 +13,6 @@ $(document).ready(() => {
       programmingEnvironments={programmingEnvironments}
       allCategories={allCategories}
     />,
-    document.getElementById('container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('container')
   );
 });

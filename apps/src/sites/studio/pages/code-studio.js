@@ -123,10 +123,7 @@ $(document).ready(function () {
           isDialogOpen={gdprData.show_gdpr_dialog}
           currentUserId={gdprData.current_user_id}
         />,
-        document.getElementById('gdpr-dialog'),
-        {
-          legacyReactDomRender: true,
-        }
+        document.getElementById('gdpr-dialog')
       );
     }
   }

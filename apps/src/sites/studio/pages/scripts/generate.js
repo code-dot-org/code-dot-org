@@ -9,9 +9,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <UnitGenerator unit={unitData} />,
-    document.getElementById('unit-generate-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('unit-generate-container')
   );
 });

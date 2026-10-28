@@ -5,10 +5,12 @@
  * @see _school_info_confirmation_dialog.html.haml.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import SchoolInfoConfirmationDialog from '@cdo/apps/schoolInfo/SchoolInfoConfirmationDialog';
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,15 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(mountPoint);
 
   function unmount() {
-    ReactDOM.unmountComponentAtNode(mountPoint);
+    unmountReactRoot(mountPoint);
     document.body.removeChild(mountPoint);
   }
 
   createReactRoot(
     <SchoolInfoConfirmationDialog scriptData={scriptData} onClose={unmount} />,
-    mountPoint,
-    {
-      legacyReactDomRender: true,
-    }
+    mountPoint
   );
 });
