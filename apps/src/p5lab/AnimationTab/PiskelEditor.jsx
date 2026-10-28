@@ -4,10 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {
-  DefaultLocale,
-  LocaleFallbacks,
-} from '@cdo/generated-scripts/sharedConstants';
+import {getJsLocaleFallbacks} from '@cdo/apps/util/locale';
 
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
@@ -18,13 +15,6 @@ import * as shapes from '../shapes';
  */
 const PISKEL_PATH =
   '/blockly/js/piskel/index.html' + (PISKEL_DEVELOPMENT_MODE ? '?debug' : '');
-
-const toPiskelLocale = locale => locale.toLowerCase().replace('-', '_');
-
-// LocaleFallbacks keyed and valued in Piskel's format, e.g. {en_in: 'en_us'}.
-const PISKEL_LOCALE_FALLBACKS = Object.fromEntries(
-  Object.entries(LocaleFallbacks).map(locales => locales.map(toPiskelLocale))
-);
 
 /**
  * The PiskelEditor component is a wrapper for the iframe that contains the
@@ -90,12 +80,7 @@ class PiskelEditor extends React.Component {
    */
   setPiskelLocale_() {
     const win = this.iframe.contentWindow;
-
-    const locales = [
-      this.props.localeCode,
-      PISKEL_LOCALE_FALLBACKS[this.props.localeCode],
-      toPiskelLocale(DefaultLocale),
-    ];
+    const locales = getJsLocaleFallbacks(this.props.localeCode);
 
     Object.defineProperty(win, 'piskel_locale', {
       configurable: true,
