@@ -1,15 +1,13 @@
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
-import {PromptType} from '@cdo/apps/p5lab/redux/spritelabInput';
-import {SpritelabPrompt} from '@cdo/apps/types/redux';
+import {ActivePrompt} from '../../redux/spriteLab2Redux';
 
 import styles from './prompt-bar.module.scss';
 
 interface PromptBarProps {
-  /** The question at the head of the queue, if any. */
-  prompt?: SpritelabPrompt;
+  prompt: ActivePrompt | null;
   onAnswer: (variableName: string, value: string) => void;
 }
 
@@ -19,14 +17,18 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
   onAnswer,
 }) => {
   const [answer, setAnswer] = useState('');
-  const textPrompt = prompt?.promptType === PromptType.TEXT ? prompt : null;
+
+  // A half-typed answer was meant for the question just replaced.
+  useEffect(() => {
+    setAnswer('');
+  }, [prompt]);
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    if (!textPrompt) {
+    if (!prompt) {
       return;
     }
-    onAnswer(textPrompt.variableName, answer);
+    onAnswer(prompt.variableName, answer);
     setAnswer('');
   };
 
@@ -35,13 +37,13 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
       {/* Mounted before any question, so each new one is announced; focus
           stays on the game. */}
       <span className={styles.srOnly} aria-live="polite">
-        {textPrompt?.promptText}
+        {prompt?.promptText}
       </span>
-      {textPrompt && (
+      {prompt && (
         <form className={styles.promptBar} onSubmit={handleSubmit}>
           <TextField
             name="spritelabPromptAnswer"
-            label={textPrompt.promptText}
+            label={prompt.promptText}
             size="s"
             className={styles.answerField}
             value={answer}

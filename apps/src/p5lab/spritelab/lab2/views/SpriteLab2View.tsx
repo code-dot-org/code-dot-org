@@ -178,7 +178,6 @@ const p5labReducers = p5labReducersModule as unknown as Record<string, Reducer>;
 registerReducers({
   animationList: p5labReducers.animationList,
   textConsole: p5labReducers.textConsole,
-  spritelabInputList: p5labReducers.spritelabInputList,
   // Read/written by the location-picker block.
   locationPicker: p5labReducers.locationPicker,
   runState,
@@ -1121,7 +1120,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setPlayingPlatformer(engine.isPlatformScene());
   }, [dispatch, getCode, requestThumbnail]);
 
-  const pendingPrompt = useAppSelector(state => state.spritelabInputList[0]);
+  const activePrompt = useAppSelector(state => state.spriteLab2.prompt);
   const handlePromptAnswer = useCallback(
     (variableName: string, value: string) =>
       engineRef.current?.onPromptAnswer(variableName, value),
@@ -2386,7 +2385,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               }
               prompt={
                 <PromptBar
-                  prompt={pendingPrompt}
+                  prompt={activePrompt}
                   onAnswer={handlePromptAnswer}
                 />
               }
