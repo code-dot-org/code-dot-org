@@ -1181,6 +1181,63 @@ describe('QuizAttemptWorkspace', () => {
     });
   });
 
+  describe('multiple select questions', () => {
+    const MULTIPLE_SELECT = question({
+      id: 6,
+      type: 'MultipleSelectQuestion',
+      questionTitle: 'Which are even?',
+      choices: [
+        {id: 'a', text: '2'},
+        {id: 'b', text: '3'},
+        {id: 'c', text: '4'},
+      ],
+    });
+
+    it('restores every selected choice of an in-progress answer', () => {
+      renderWorkspace({
+        hookState: {
+          attempt: {
+            ...ATTEMPT,
+            questionResultsInProgress: [
+              {
+                quizQuestionId: 6,
+                questionType: 'MultipleSelectQuestion',
+                responseData: {selectedChoiceIds: ['a', 'c']},
+              },
+            ],
+          },
+        },
+        quizQuestions: [MULTIPLE_SELECT],
+      });
+
+      expect(screen.getByRole('checkbox', {name: /A\. 2/})).toBeChecked();
+      expect(screen.getByRole('checkbox', {name: /B\. 3/})).not.toBeChecked();
+      expect(screen.getByRole('checkbox', {name: /C\. 4/})).toBeChecked();
+    });
+
+    it('saves the full selection each time a choice is checked or unchecked', async () => {
+      const submitQuestionResponse = jest.fn().mockResolvedValue(undefined);
+      renderWorkspace({
+        hookState: {attempt: ATTEMPT, submitQuestionResponse},
+        quizQuestions: [MULTIPLE_SELECT],
+      });
+
+      fireEvent.click(screen.getByRole('checkbox', {name: /A\. 2/}));
+      fireEvent.click(screen.getByRole('checkbox', {name: /C\. 4/}));
+      fireEvent.click(screen.getByRole('checkbox', {name: /A\. 2/}));
+
+      expect(screen.getByRole('checkbox', {name: /A\. 2/})).not.toBeChecked();
+      expect(screen.getByRole('checkbox', {name: /C\. 4/})).toBeChecked();
+      await waitFor(() =>
+        expect(submitQuestionResponse.mock.calls).toEqual([
+          [6, {selectedChoiceIds: ['a']}],
+          [6, {selectedChoiceIds: ['a', 'c']}],
+          [6, {selectedChoiceIds: ['c']}],
+        ])
+      );
+    });
+  });
+
   describe('free response questions', () => {
     const FR_QUESTION = question({
       id: 9,
