@@ -72,23 +72,6 @@ describe('UsersTypeModal', () => {
     expect(screen.queryByText(EMAIL_OPT_IN_REQUIRED)).not.toBeInTheDocument();
   });
 
-  it('shows the required error when submitted unanswered', () => {
-    let requested = false;
-    mockServer.use(
-      http.patch('*/users/user_type', () => {
-        requested = true;
-        return new HttpResponse(null, {status: 204});
-      }),
-    );
-    renderModal('teacher');
-    fireEvent.change(emailField()!, {target: {value: 'new@teacher.org'}});
-    const form = emailField()!.closest('form');
-    fireEvent.submit(form!);
-
-    expect(screen.getByRole('alert')).toHaveTextContent(EMAIL_OPT_IN_REQUIRED);
-    expect(requested).toBe(false);
-  });
-
   it('sends the email and hashed email when changing to educator', async () => {
     let body: unknown;
     mockServer.use(

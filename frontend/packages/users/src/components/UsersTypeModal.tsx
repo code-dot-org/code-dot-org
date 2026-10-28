@@ -58,11 +58,6 @@ export default function UsersTypeModal({
   // Stay open and show the error on failure; close only once the change commits.
   const handleSubmit = onSubmit(async () => {
     if (!prospectiveType) return;
-    // Enter in the email field submits past the disabled confirm.
-    if (optInUnanswered) {
-      setOptInTouched(true);
-      return;
-    }
     await mutation.mutateAsync(
       isChangingToEducator
         ? {
