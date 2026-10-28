@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-27 02:18:10 UTC",
+    "serialized_at": "2026-10-28 03:04:52 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -94,6 +94,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "Students act as Data Scientists for a wildlife park that wants to predict when elephants will visit the waterhole. After a warm-up about two toddlers who learned from different pictures, students meet Dr. Osei, the park's data scientist. In a **Widget**, they turn camera-trap photos into records, review which part is the label and which parts are features, then test three pretrained models built from different records and find what each one gets wrong. Student end the lesson learning about PAWS, a real poaching model that only had records from where rangers walked.",
+        "student_overview": "Today you are a Data Scientist on Dr. Osei's team at a wildlife park. The park wants a model that predicts when elephants will visit the waterhole. Your job is to choose the records the model needs. Then see what happens when some records are missing."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -345,6 +347,34 @@
       "seeding_key": {
         "lesson_activity.key": "858c93a2-ce86-41fe-a525-814f0f8e136a",
         "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "29f52e9c-b9f3-482f-9910-096b4ef68986",
+      "position": 1,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "29f52e9c-b9f3-482f-9910-096b4ef68986",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "51095042-461a-45ca-bf2a-d9aa533e16da",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "51095042-461a-45ca-bf2a-d9aa533e16da",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026"
       }
@@ -921,6 +951,56 @@
       }
     },
     {
+      "key": "620adcd6-207c-4209-8cc8-0e77f52795ce",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "620adcd6-207c-4209-8cc8-0e77f52795ce",
+        "lesson_activity.key": "29f52e9c-b9f3-482f-9910-096b4ef68986"
+      }
+    },
+    {
+      "key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1",
+        "lesson_activity.key": "29f52e9c-b9f3-482f-9910-096b4ef68986"
+      }
+    },
+    {
+      "key": "f2f702f7-dbe5-412b-9768-da27b81b8b6a",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f2f702f7-dbe5-412b-9768-da27b81b8b6a",
+        "lesson_activity.key": "29f52e9c-b9f3-482f-9910-096b4ef68986"
+      }
+    },
+    {
+      "key": "682a4cac-572d-451a-8c3a-0a769d4cd06e",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "682a4cac-572d-451a-8c3a-0a769d4cd06e",
+        "lesson_activity.key": "29f52e9c-b9f3-482f-9910-096b4ef68986"
+      }
+    },
+    {
+      "key": "d4861b11-2d76-48e6-a465-5de8a2e9b247",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d4861b11-2d76-48e6-a465-5de8a2e9b247",
+        "lesson_activity.key": "51095042-461a-45ca-bf2a-d9aa533e16da"
+      }
+    },
+    {
       "key": "1c84ffc3-e06a-4897-ac61-ae3b2ce0dff0",
       "position": 1,
       "properties": {
@@ -942,13 +1022,35 @@
       }
     },
     {
-      "key": "279c6855-8308-45a0-a5f2-1cc91043ddce",
+      "key": "3c9a5a2e-507c-44bd-9551-70004a6082b9",
       "position": 2,
       "properties": {
-        "progression_name": "Room Profiles"
+        "progression_name": "Numbers Into Categories"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c9a5a2e-507c-44bd-9551-70004a6082b9",
+        "lesson_activity.key": "615f729a-7ff8-4021-a16e-06d34e5c50c9"
+      }
+    },
+    {
+      "key": "279c6855-8308-45a0-a5f2-1cc91043ddce",
+      "position": 3,
+      "properties": {
+        "progression_name": "Curating a Dataset"
       },
       "seeding_key": {
         "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce",
+        "lesson_activity.key": "615f729a-7ff8-4021-a16e-06d34e5c50c9"
+      }
+    },
+    {
+      "key": "2a86c3ec-3f1e-4b88-a9e3-e9fd674bfd91",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a86c3ec-3f1e-4b88-a9e3-e9fd674bfd91",
         "lesson_activity.key": "615f729a-7ff8-4021-a16e-06d34e5c50c9"
       }
     },
@@ -1234,6 +1336,174 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-persona"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "620adcd6-207c-4209-8cc8-0e77f52795ce"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson4-persona"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-camera-widget"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "620adcd6-207c-4209-8cc8-0e77f52795ce"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson4-camera-widget"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-cards"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson4-waterhole-cards"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-rangers"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson4-waterhole-rangers"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-dry"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson4-waterhole-dry"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-wet-cameras"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson4-waterhole-wet-cameras"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-all-cameras"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f2f702f7-dbe5-412b-9768-da27b81b8b6a"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson4-waterhole-all-cameras"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d4861b11-2d76-48e6-a465-5de8a2e9b247"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson4-vocab-flashcards"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Smart Room Inspector App"
       },
       "bonus": false,
@@ -1251,12 +1521,34 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Room Profiles"
+        "progression": "Numbers Into Categories"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-feature-transformation"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "3c9a5a2e-507c-44bd-9551-70004a6082b9"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson5-feature-transformation"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Curating a Dataset"
       },
       "bonus": false,
       "seeding_key": {
@@ -1270,6 +1562,50 @@
       },
       "level_keys": [
         "data-makes-ai-lesson5-sketch-lab"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Curating a Dataset"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-ai-studio"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson5-ai-studio"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-FRQ"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "2a86c3ec-3f1e-4b88-a9e3-e9fd674bfd91"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson5-FRQ"
       ]
     }
   ],
@@ -1420,6 +1756,102 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson4-persona",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-persona"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "620adcd6-207c-4209-8cc8-0e77f52795ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson4-camera-widget",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-camera-widget"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "620adcd6-207c-4209-8cc8-0e77f52795ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson4-waterhole-cards",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-cards"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson4-waterhole-rangers",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-rangers"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson4-waterhole-dry",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-dry"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson4-waterhole-wet-cameras",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-wet-cameras"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson4-waterhole-all-cameras",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-waterhole-all-cameras"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "f2f702f7-dbe5-412b-9768-da27b81b8b6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson4-vocab-flashcards",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson4-vocab-flashcards"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "d4861b11-2d76-48e6-a465-5de8a2e9b247"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson5-smart-room-app",
         "script_level.level_keys": [
           "data-makes-ai-lesson5-smart-room-app"
@@ -1432,6 +1864,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-makes-ai-lesson5-feature-transformation",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-feature-transformation"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "3c9a5a2e-507c-44bd-9551-70004a6082b9"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-makes-ai-lesson5-sketch-lab",
         "script_level.level_keys": [
           "data-makes-ai-lesson5-sketch-lab"
@@ -1440,6 +1884,30 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson5-ai-studio",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-ai-studio"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson5-FRQ",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson5-FRQ"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "2a86c3ec-3f1e-4b88-a9e3-e9fd674bfd91"
       }
     }
   ],
@@ -1952,6 +2420,16 @@
       }
     },
     {
+      "key": "53fca13a-30c1-4f86-83c9-309ca64a3f9c",
+      "properties": {
+        "description": "explain how a model's training records shape its predictions."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "53fca13a-30c1-4f86-83c9-309ca64a3f9c"
+      }
+    },
+    {
       "key": "841055b2-05ad-4061-ba12-944efc1c7946",
       "properties": {
         "description": "Sort the rules in a system into human-written and computer-learned"
@@ -1959,6 +2437,16 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "objective.key": "841055b2-05ad-4061-ba12-944efc1c7946"
+      }
+    },
+    {
+      "key": "9b6fd587-d4f0-4caa-b4a7-1f44d3574ba1",
+      "properties": {
+        "description": "select training data that fits a model's job."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "9b6fd587-d4f0-4caa-b4a7-1f44d3574ba1"
       }
     },
     {
@@ -1982,6 +2470,16 @@
       }
     },
     {
+      "key": "e27dce1f-3034-4ffc-9650-595c57c91922",
+      "properties": {
+        "description": "compare predictions from models trained on different records."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "e27dce1f-3034-4ffc-9650-595c57c91922"
+      }
+    },
+    {
       "key": "e5dbd318-a064-418a-921e-97eeb214a1f7",
       "properties": {
         "description": "Propose a question that fixes a wrong prediction."
@@ -1989,6 +2487,16 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "e5dbd318-a064-418a-921e-97eeb214a1f7"
+      }
+    },
+    {
+      "key": "f6c1e503-3f80-4b89-9923-8677d9e61d3e",
+      "properties": {
+        "description": "distinguish the label from the features in a dataset."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "f6c1e503-3f80-4b89-9923-8677d9e61d3e"
       }
     }
   ],

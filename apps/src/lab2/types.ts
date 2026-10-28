@@ -347,6 +347,8 @@ export interface LevelProperties {
   hideVersionHistory?: boolean;
   parentLevelName?: string;
   requireEditToContinue?: boolean;
+  /** Show only the Instructions and AI Tutor tabs in the resource panel sidebar. */
+  hideNonInstructionTabs?: boolean;
 }
 
 export type LevelPropertiesMap = {[levelId: string]: LevelProperties};

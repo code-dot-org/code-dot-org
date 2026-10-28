@@ -161,6 +161,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   completeStep,
   leaveStep,
   saveGeneratedInstructions,
+  recordValidation,
   evidence,
   saveAnswers,
 }) => {
@@ -243,6 +244,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         statusMap,
         progress,
         saveGeneratedInstructions,
+        recordValidation,
         aiContext,
       },
     [
@@ -251,6 +253,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       statusMap,
       progress,
       saveGeneratedInstructions,
+      recordValidation,
       aiContext,
     ]
   );
