@@ -1,6 +1,7 @@
 import {renderHook} from '@testing-library/react-hooks';
 
-import {useAiTutorResponseSchemaSettings} from '@cdo/apps/weblab2/hooks/useAiTutorResponseSchemaSettings';
+import {useAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useAiTutorResponseSchemaSettings';
+import * as weblab2 from '@cdo/apps/weblab2/helpers/aiTutorStructuredResponseHelper';
 
 const mockDispatch = jest.fn();
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
@@ -47,13 +48,24 @@ const proseResponse = {
   },
 };
 
+const mockOnAiTutorVersionLoaded = jest.fn();
+
+const weblab2Options = (isWidgetView?: boolean) => ({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  source: source as any,
+  isWidgetView,
+  jsonSchema: weblab2.aiTutorResponseJsonSchema,
+  acceptRejectAnswerTypes: weblab2.acceptRejectAnswerTypes,
+  acceptRejectFileTypes: weblab2.acceptRejectFileTypes,
+  onAiTutorVersionLoaded: mockOnAiTutorVersionLoaded,
+});
+
 const renderSettings = (isWidgetView?: boolean) =>
   renderHook(() =>
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    useAiTutorResponseSchemaSettings(source as any, isWidgetView)
-  ).result.current!;
+    useAiTutorResponseSchemaSettings(weblab2Options(isWidgetView))
+  ).result.current;
 
-describe('useAiTutorResponseSchemaSettings (weblab2)', () => {
+describe('useAiTutorResponseSchemaSettings', () => {
   beforeEach(() => jest.clearAllMocks());
 
   // formatForDisplay runs over every message in the transcript on every render,
@@ -69,14 +81,14 @@ describe('useAiTutorResponseSchemaSettings (weblab2)', () => {
   });
 
   it('formatForDisplay is stable across renders so the transcript memo holds', () => {
+    const options = weblab2Options(false);
     const {result, rerender} = renderHook(() =>
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      useAiTutorResponseSchemaSettings(source as any, false)
+      useAiTutorResponseSchemaSettings(options)
     );
-    const first = result.current!.formatForDisplay;
+    const first = result.current.formatForDisplay;
     rerender();
 
-    expect(result.current!.formatForDisplay).toBe(first);
+    expect(result.current.formatForDisplay).toBe(first);
   });
 
   it('onResponse loads the code and enters the review state', () => {
@@ -88,6 +100,7 @@ describe('useAiTutorResponseSchemaSettings (weblab2)', () => {
     const dispatched = mockDispatch.mock.calls.map(([action]) => action.type);
     expect(dispatched).toContain('lab2Project/setViewingAiTutorVersion');
     expect(dispatched).toContain('lab2Project/setSource');
+    expect(mockOnAiTutorVersionLoaded).toHaveBeenCalledTimes(1);
   });
 
   it('onResponse ignores a response with no code to review', () => {

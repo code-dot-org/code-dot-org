@@ -1,5 +1,6 @@
 import {Codebridge} from '@codebridge/Codebridge';
 import {ConfigType} from '@codebridge/types';
+import {getFolderPath} from '@codebridge/utils';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
@@ -9,10 +10,16 @@ import {LanguageSupport} from '@codemirror/language';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
+import {useAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useAiTutorResponseSchemaSettings';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
-import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  MultiFileSource,
+  ProjectFile,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 import {DEFAULT_START_HTML_FILE} from '@cdo/apps/weblab2/htmlPreview/constants';
 
 import {useSource} from '../codebridge/hooks/useSource';
@@ -27,7 +34,11 @@ import {
 } from './constants';
 import {AiTutorWebLab2ContextHelper} from './helpers/aiTutorContextHelper';
 import {generateAiTutorPrompt} from './helpers/aiTutorPromptGenerator';
-import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchemaSettings';
+import {
+  acceptRejectAnswerTypes,
+  acceptRejectFileTypes,
+  aiTutorResponseJsonSchema,
+} from './helpers/aiTutorStructuredResponseHelper';
 import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
@@ -36,7 +47,7 @@ import {
   syncAiTutorAssetToProject,
 } from './redux/syncAiTutorAssetToProject';
 import {Weblab2LevelProperties, ViewMode, AiTutorAnswerType} from './types';
-import {setViewMode} from './weblab2Redux';
+import {setAiFilePathToPreview, setViewMode} from './weblab2Redux';
 import {weblab2VideoFiles} from './weblab2Videos';
 
 import moduleStyles from './styles/weblab2-view.module.scss';
@@ -185,10 +196,36 @@ const Weblab2View: React.FC<
     dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
   }, [dispatch, levelProperties?.initialViewMode]);
 
-  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
-    source,
-    levelProperties?.widgetView
+  // Preview the first AI-updated HTML file, if there is one.
+  const onAiTutorVersionLoaded = useCallback(
+    (mergedSource: MultiFileSource, aiTutorVersionFiles: ProjectFile[]) => {
+      const firstHtmlFile = aiTutorVersionFiles.find(file =>
+        file.name.endsWith('.html')
+      );
+      if (!firstHtmlFile) {
+        return;
+      }
+      const folderPath = getFolderPath(
+        firstHtmlFile.folderId,
+        mergedSource.folders
+      ).substring(1);
+      const filePath =
+        folderPath === ''
+          ? firstHtmlFile.name
+          : folderPath + '/' + firstHtmlFile.name;
+      dispatch(setAiFilePathToPreview({path: filePath, timestamp: Date.now()}));
+    },
+    [dispatch]
   );
+
+  const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings({
+    source,
+    isWidgetView: levelProperties?.widgetView,
+    jsonSchema: aiTutorResponseJsonSchema,
+    acceptRejectAnswerTypes,
+    acceptRejectFileTypes,
+    onAiTutorVersionLoaded,
+  });
 
   return (
     <div className={moduleStyles.weblab2Container}>
