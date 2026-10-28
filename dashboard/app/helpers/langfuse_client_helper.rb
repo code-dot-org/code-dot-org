@@ -74,14 +74,14 @@ module LangfuseClientHelper
 
     # Create a trace span with a single generation span in one batch request.
     # Only the user's message text should be passed as input (not system prompts).
-    def create_trace_and_generation(trace_name:, generation_name:, model:, user_id: nil, input: nil, output: nil, usage: nil, metadata: nil, tags: nil, start_time: nil, end_time: nil, prompt_name: nil, prompt_version: nil, trace_id: nil, level: nil, status_message: nil)
+    def create_trace_and_generation(trace_name:, generation_name:, model:, user_id: nil, session_id: nil, input: nil, output: nil, usage: nil, metadata: nil, tags: nil, start_time: nil, end_time: nil, prompt_name: nil, prompt_version: nil, trace_id: nil, level: nil, status_message: nil)
       trace_id ||= SecureRandom.hex(16)
       root_span_id = SecureRandom.hex(8)
       start_nanos = unix_nanos(start_time)
       end_nanos = unix_nanos(end_time)
 
       shared_attributes =
-        trace_attributes(trace_name: trace_name, user_id: user_id, tags: tags, metadata: metadata) +
+        trace_attributes(trace_name: trace_name, user_id: user_id, session_id: session_id, tags: tags, metadata: metadata) +
         observation_io_attributes(input, output)
 
       root_span = otlp_span(
@@ -126,12 +126,13 @@ module LangfuseClientHelper
       }.compact
     end
 
-    private def trace_attributes(trace_name:, user_id:, tags:, metadata:)
+    private def trace_attributes(trace_name:, user_id:, session_id:, tags:, metadata:)
       attributes = [
         otlp_attribute("langfuse.trace.name", trace_name),
         otlp_attribute("langfuse.environment", langfuse_environment),
       ]
       attributes << otlp_attribute("langfuse.user.id", user_id) if user_id
+      attributes << otlp_attribute("langfuse.session.id", session_id) if session_id
       attributes << otlp_attribute("langfuse.trace.tags", tags.map(&:to_s)) if tags.present?
       metadata&.compact&.each do |key, value|
         attributes << otlp_attribute("langfuse.trace.metadata.#{key}", json_string(value))

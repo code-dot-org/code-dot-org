@@ -16,6 +16,7 @@ import {
   AI_TUTOR_VERSION_ACTION_REJECT,
   ChatEvent,
   ModelUpdate,
+  Notification,
   isChatMessage,
   isNotification,
   isModelUpdate,
@@ -31,6 +32,16 @@ import styles from './chatWorkspace.module.scss';
 
 const timestampToLocalTime = (timestamp: number) =>
   moment(timestamp).format('LT');
+
+// Alert style by notification kind; kinds left out show as success.
+const ALERT_TYPES: {
+  [kind in Notification['notificationType']]?: 'danger' | 'warning' | 'info';
+} = {
+  error: 'danger',
+  permissionsError: 'danger',
+  warning: 'warning',
+  info: 'info',
+};
 
 const chatEventDescriptionsOwner = {
   CLEAR_CHAT: 'You cleared the chat workspace.',
@@ -137,6 +148,7 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
         files,
         timestamp,
         commitDescription,
+        hideTimestamp,
       } = event;
 
       if (
@@ -180,14 +192,11 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
         );
       }
 
+      const time = hideTimestamp ? '' : timestampToLocalTime(timestamp);
       return (
         <Alert
-          text={`${text} ${timestampToLocalTime(timestamp)}`}
-          type={
-            ['error', 'permissionsError'].includes(notificationType)
-              ? 'danger'
-              : 'success'
-          }
+          text={time ? `${text} ${time}` : text}
+          type={ALERT_TYPES[notificationType] ?? 'success'}
           onClose={
             isTeacherView
               ? undefined
@@ -197,9 +206,11 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
           ref={ref}
           tabIndex={tabIndex}
           onKeyDown={onKeyDown}
-          aria-label={`Notification: ${text}, Time: ${timestampToLocalTime(
-            timestamp
-          )}`}
+          aria-label={
+            time
+              ? `Notification: ${text}, Time: ${time}`
+              : `Notification: ${text}`
+          }
           className={styles.chatMessageOutline}
         />
       );
