@@ -11,7 +11,6 @@ export type CsvResult =
   | {ok: true; rows: DataRow[]; removedRowsCount: number}
   | {ok: false; reason: DatasetError};
 
-/* Parses CSV text, only used for tests. */
 export const parseCsvText = (csv: string): CsvResult =>
   readRows(Papa.parse<Record<string, string>>(csv, PARSE_OPTIONS));
 
