@@ -229,19 +229,6 @@
   margin-right: auto;
 }
 
-.iconButton {
-  @include chrome.plain-button;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  border-color: transparent;
-  flex-shrink: 0;
-}
-
 // --- Generate view ---
 
 // Hosts the sentence's word menus; the native fieldset disable dims them

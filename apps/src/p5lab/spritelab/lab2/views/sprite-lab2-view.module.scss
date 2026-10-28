@@ -70,54 +70,6 @@ $tab-item-height: 34px;
   }
 }
 
-// --- Scene tabs ---
-
-.sceneTabName {
-  display: block;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
-  // An unpainted bold copy of the name holds the width, so bolding the
-  // selected tab nudges nothing.
-  &::after {
-    content: attr(data-label);
-    display: block;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    font-weight: 600;
-  }
-}
-
-// All scenes, after New scene: never shrinks under the overflow.
-.sceneTabBack {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: none;
-  box-sizing: border-box;
-  height: $tab-item-height;
-  margin: 0;
-  padding: 0 10px;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-  font-size: 14px;
-
-  &:hover:not(:disabled) {
-    background: var(--background-neutral-tertiary);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-}
-
 // Code | World: the scene's two editors, as one segmented control.
 .editorSwitch {
   display: flex;
@@ -948,24 +900,6 @@ $z-over-blockly: 71;
   align-items: flex-end;
   gap: 6px;
   pointer-events: auto;
-}
-
-.playControl {
-  height: $tab-item-height;
-  padding: 0 12px;
-  // Cancel the legacy global button margin; the column's gap spaces these.
-  margin: 0;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-  font-size: 14px;
-  opacity: 0.92;
-
-  &:hover {
-    opacity: 1;
-  }
 }
 
 // The instructions' card under the preview; a long step scrolls inside.

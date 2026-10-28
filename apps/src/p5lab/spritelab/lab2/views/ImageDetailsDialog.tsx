@@ -2,7 +2,7 @@ import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {Button as MuiButton} from '@mui/material';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
@@ -233,23 +233,25 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 }
               }}
             />
-            <button
-              type="button"
-              className={moduleStyles.iconButton}
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="small"
               aria-label="Save name"
               disabled={!draftUsable}
               onClick={commitRename}
             >
               <FontAwesomeV6Icon iconName="check" />
-            </button>
-            <button
-              type="button"
-              className={moduleStyles.iconButton}
+            </MuiIconButton>
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="small"
               aria-label="Cancel rename"
               onClick={cancelRename}
             >
               <FontAwesomeV6Icon iconName="xmark" />
-            </button>
+            </MuiIconButton>
             {/* Beside the field: below it would change the header's height
                   for the moment it shows. */}
             {shownNameError && (
@@ -271,9 +273,10 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
               {title}
             </span>
             {advanced && !isNew && view === 'details' && (
-              <button
-                type="button"
-                className={moduleStyles.iconButton}
+              <MuiIconButton
+                variant="text"
+                color="tertiary"
+                size="small"
                 aria-label="Rename"
                 onClick={() => {
                   setNameDraft(name || '');
@@ -282,7 +285,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
                 }}
               >
                 <FontAwesomeV6Icon iconName="pencil" />
-              </button>
+              </MuiIconButton>
             )}
           </>
         )}
