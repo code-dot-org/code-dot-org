@@ -735,6 +735,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
             width: boxSide,
             opacity: visible ? 1 : 0,
             transition: `opacity ${FADE_MS}ms ease-in`,
+            // Only clickable in Play; in preview, clicks reach the box beneath
+            // to enable things like the location picker.
+            pointerEvents: mode === 'play' ? 'auto' : 'none',
           }}
         >
           {prompt}
