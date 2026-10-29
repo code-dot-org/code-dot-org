@@ -2116,7 +2116,7 @@ class Unit < ApplicationRecord
   end
 
   def requires_inaccessible_ai_models?(user)
-    return false unless user&.blocked_aichat_model_ids.present?
+    return false unless user&.blocked_aichat_providers&.any?
     self.class.where(id: id).with_essential_us_only_ai_models.exists?
   end
 

@@ -885,8 +885,26 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
   ].freeze
 
-  # We currently block usage of gemini models for users outside the US, per our google agreement.
-  AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_GEMINI_MODEL_IDS
+  # Must match the provider names the AI gateway routes to; they travel in its
+  # access token as the blocked_providers claim.
+  AI_CHAT_PROVIDERS = {
+    GOOGLE: "google",
+    OPENAI: "openai",
+  }
+
+  # Models absent here (Mistral, served from SageMaker) are never blocked.
+  AI_CHAT_MODEL_PROVIDERS = AI_CHAT_GEMINI_MODEL_IDS.to_h {|id| [id, AI_CHAT_PROVIDERS[:GOOGLE]]}.
+    merge(AI_CHAT_MODEL_IDS[:CHATGPT] => AI_CHAT_PROVIDERS[:OPENAI]).
+    freeze
+
+  # Unavailable to users outside the US, per our agreement with Google.
+  AI_CHAT_US_ONLY_PROVIDERS = [AI_CHAT_PROVIDERS[:GOOGLE]].freeze
+
+  # For Level's SQL scope, which matches on model id.
+  AI_CHAT_US_ONLY_MODEL_IDS = AI_CHAT_MODEL_PROVIDERS.
+    select {|_, provider| AI_CHAT_US_ONLY_PROVIDERS.include?(provider)}.
+    keys.
+    freeze
 
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",

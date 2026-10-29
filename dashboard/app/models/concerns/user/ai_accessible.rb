@@ -31,13 +31,14 @@ module User::AiAccessible
     section_enabled_access_level
   end
 
-  def blocked_aichat_model_ids
+  def blocked_aichat_providers
     return [] if levelbuilder?
-    international_ai_chat_user? ? AI_CHAT_US_ONLY_MODEL_IDS : []
+    international_ai_chat_user? ? AI_CHAT_US_ONLY_PROVIDERS : []
   end
 
   def can_use_aichat_model?(model_id)
-    blocked_aichat_model_ids.exclude?(model_id)
+    provider = AI_CHAT_MODEL_PROVIDERS[model_id]
+    provider.nil? || blocked_aichat_providers.exclude?(provider)
   end
 
   # has essential or higher access to AI chat tools
