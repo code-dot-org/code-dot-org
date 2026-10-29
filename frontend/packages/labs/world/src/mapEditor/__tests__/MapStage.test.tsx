@@ -2740,3 +2740,120 @@ describe('docking on a Screen', () => {
     expect(written().layout).toMatchObject({size: 30});
   });
 });
+
+describe('a Scroll View on the stage', () => {
+  // specs/ONE_WORLD_PLAN.md, step 8: its children are drawn and hit only
+  // inside it, as the game starts; opened, all it holds can be arranged.
+  /** A 100 by 60 window at (160, 100), a row in it and a row below it. */
+  const scrolling = (): MapDoc => ({
+    type: 'map',
+    size: {width: 10, height: 10},
+    tile: {width: 32, height: 32},
+    actors: [
+      {
+        type: 'actors/scrollView',
+        id: 'List',
+        properties: {positional: {position: {x: 160, y: 100}}},
+      },
+      {
+        type: 'actors/label',
+        id: 'One',
+        properties: {positional: {position: {x: 0, y: -20}, parent: 'List'}},
+      },
+      {
+        type: 'actors/label',
+        id: 'Three',
+        properties: {positional: {position: {x: 0, y: 60}, parent: 'List'}},
+      },
+      {
+        type: 'actors/coin',
+        id: 'Coin',
+        properties: {positional: {position: {x: 48, y: 272}}},
+      },
+    ],
+  });
+  const more = {
+    schemas: {
+      'actors/scrollView': [
+        {trait: 'scrolls', traitName: 'Scrolls Its Children', props: []},
+      ],
+    } as Record<string, ActorSchema>,
+    sizes: {
+      'actors/scrollView': {width: 100, height: 60},
+      'actors/label': {width: 80, height: 20},
+    },
+  };
+  const press = (canvas: Element, map: MapDoc, at: Vec) => {
+    pointer(canvas, 'pointerdown', screenPoint(map, at));
+    pointer(canvas, 'pointerup', screenPoint(map, at));
+  };
+
+  it('cannot reach a child below its window', () => {
+    const map = scrolling();
+    const {canvas, selectedId} = mount(map, more);
+    press(canvas, map, {x: 160, y: 80});
+    expect(selectedId()).toBe('One');
+    // The row below the window is not drawn there, so it is not there.
+    press(canvas, map, {x: 160, y: 160});
+    expect(selectedId()).toBeNull();
+  });
+
+  it('opens to all it holds, and only that, and closes again', () => {
+    const map = scrolling();
+    const {canvas, selectedId, ...view} = mount(map, more);
+    press(canvas, map, {x: 160, y: 120});
+    expect(selectedId()).toBe('List');
+    fireEvent.click(view.getByRole('button', {name: 'Arrange what it holds'}));
+    expect(view.getByRole('group', {name: 'Inside List'})).toBeInTheDocument();
+
+    press(canvas, map, {x: 160, y: 160});
+    expect(selectedId()).toBe('Three');
+    // What it does not hold is behind it, and out of reach.
+    press(canvas, map, {x: 48, y: 272});
+    expect(selectedId()).toBeNull();
+
+    // …and the arrow keys go round what it holds and nothing else.
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+    expect(selectedId()).toBe('One');
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+    expect(selectedId()).toBe('Three');
+    fireEvent.keyDown(canvas, {key: 'ArrowRight'});
+    expect(selectedId()).toBe('One');
+
+    fireEvent.keyDown(canvas, {key: 'Escape'});
+    expect(view.queryByRole('group', {name: 'Inside List'})).toBeNull();
+    expect(selectedId()).toBe('List');
+  });
+
+  it('takes what is placed in it while open as its own', () => {
+    const map = scrolling();
+    const view = mount(map, more);
+    press(view.canvas, map, {x: 160, y: 120});
+    fireEvent.click(view.getByRole('button', {name: 'Arrange what it holds'}));
+    view.rerender(
+      <MapStage
+        {...stageProps(
+          map,
+          {...more, incoming: 'actors/label'},
+          view.onDocChange,
+        )}
+      />,
+    );
+    const point = screenPoint(map, {x: 160, y: 190});
+    for (const type of ['dragover', 'drop'] as const) {
+      const event = new MouseEvent(type, {
+        bubbles: true,
+        cancelable: true,
+        clientX: point.x,
+        clientY: point.y,
+      });
+      Object.defineProperty(event, 'dataTransfer', {value: {dropEffect: ''}});
+      fireEvent(view.canvas, event);
+    }
+    const placed = view.written().actors.at(-1)!;
+    expect(placed.properties?.positional?.parent).toBe('List');
+    // Stored in its frame, below the window's foot at 30.
+    const at = placed.properties?.positional?.position as Vec;
+    expect(at.y).toBeGreaterThan(30);
+  });
+});

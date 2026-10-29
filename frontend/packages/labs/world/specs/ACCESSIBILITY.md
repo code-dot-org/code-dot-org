@@ -282,6 +282,21 @@ below, and are listed last.
   hand. Target sizes are the small IconButton's and the design system's
   small TextField; neither has been measured against 24 pixels.
 
+### Opening a Scroll View (ONE_WORLD_PLAN.md, step 8)
+
+- **Opened by a button and closed by a button or Escape.** "Arrange what it
+  holds" is a row of the Scroll View's inspector, and "Done" is in the
+  stage's toolbar, in a group named "Inside ⟨id⟩"; both are said aloud
+  when used. The arrow keys go round only what an open Scroll View holds.
+- **What is outside it is shown faint, and that is all.** The stage is one
+  canvas, so the dimming is visual only; the toolbar's group is what says
+  a Scroll View is open. (1.3.1 Info and Relationships.)
+- **Closed, a row below the window is reached by the arrow keys** and not
+  by a pointer, as in the game, where the keyboard reaches a field
+  scrolled out of sight.
+- **Untested**: not through a screen reader, and the dashed edge and the
+  window's foot have not been measured for contrast against the stage.
+
 ## Not yet done for any phase
 
 - A keyboard-only pass through the shell: the breadcrumb, the palette, the

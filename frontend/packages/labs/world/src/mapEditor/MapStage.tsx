@@ -52,6 +52,7 @@ import {
   type Divider,
   type Side,
 } from '../engine/core/layout';
+import {SCROLLING} from '../engine/rules/scrolling';
 import {STYLED} from '../engine/rules/styled';
 import {VIEWPORT} from '../engine/rules/viewport';
 import fields from '../formFields.module.css';
@@ -139,6 +140,14 @@ import {
   type ResizeHandle,
 } from './rotatedResize';
 import {
+  clipCorners,
+  clipsOf,
+  insideClip,
+  isInside,
+  openedClip,
+  type Clip,
+} from './scrollViews';
+import {
   DRAW_SIZE,
   drawnSize,
   fitView,
@@ -222,6 +231,12 @@ const PICTURE_SIZE = 240;
 const PICTURE_DELAY = 1500;
 /** The corner mark on a placement whose workspace holds blocks. */
 const SCRIPT = '#7c4dff';
+/** What is not in an opened Scroll View, drawn faint behind it. */
+const OUTSIDE_ALPHA = 0.3;
+/** Behind what an opened Scroll View holds, so it reads over the rest. */
+const OPENED_BACKING = MAP_BG;
+/** Its edge and the foot of its window: the selection's blue. */
+const OPENED_EDGE = SELECT;
 const DEG2RAD = Math.PI / 180;
 
 /**
@@ -595,6 +610,8 @@ export const MapStage = ({
   const [inspectingLayer, setInspectingLayer] = useState(false);
   /** Whether the selected Viewport's camera is open in its inspector. */
   const [inspectingCamera, setInspectingCamera] = useState(false);
+  /** The Scroll View opened to arrange what it holds, by id. */
+  const [openedScroll, setOpenedScroll] = useState<string | null>(null);
   // A placement selected closes the layer's and the camera's inspectors, so
   // deselecting it goes back to the world's rather than to one nobody asked
   // for again.
@@ -804,6 +821,34 @@ export const MapStage = ({
   const sizeOf = (type: string, placement?: string) =>
     drawnSize(sizes, type, placement ? placementSizes?.[placement] : undefined);
 
+  // A SCROLL VIEW'S CHILDREN are drawn and hit only inside it, at no scroll,
+  // as the game starts; opened, it shows all it holds and only that can be
+  // touched (`scrollViews`, specs/ONE_WORLD_PLAN.md, step 8).
+  const scrollsKind = (actor: Placement) =>
+    (schemas[actor.type] ?? []).some(group => group.trait === SCROLLING.trait);
+  const boxSizeOf = (actor: Placement) =>
+    sizeOf(actor.type, placementKey(actor.type, actor.properties));
+  const opened = openedScroll
+    ? map.actors.find(actor => actor.id === openedScroll)
+    : undefined;
+  // One deleted, or undone away, while open is closed.
+  useEffect(() => {
+    if (openedScroll && !opened) {
+      setOpenedScroll(null);
+    }
+  }, [openedScroll, opened]);
+  const clipsHere = (actor: Placement, actors: readonly Placement[]) =>
+    clipsOf(actor, actors, scrollsKind, boxSizeOf, openedScroll, scales);
+  /** Whether a placement can be touched at a canvas point. */
+  const reachableAt = (actor: Placement, world: Vec): boolean => {
+    const actors = mapRef.current.actors;
+    const open = actors.find(one => one.id === openedScroll);
+    return (
+      (!open || isInside(actor, open, actors)) &&
+      clipsHere(actor, actors).every(clip => insideClip(world, clip))
+    );
+  };
+
   // The topmost placed actor under a world point, through each one's own
   // transform (`stageGeometry.hitTest`). Reads the ref rather than the state
   // so a gesture mid-drag sees the position it just wrote.
@@ -833,7 +878,14 @@ export const MapStage = ({
         : DEFAULT_LAYER,
     );
   const hitUnder = (world: Vec): Placement | undefined =>
-    hitTest(mapRef.current.actors, world, sizes, scales, placementSizes, shown);
+    hitTest(
+      mapRef.current.actors,
+      world,
+      sizes,
+      scales,
+      placementSizes,
+      actor => shown(actor) && reachableAt(actor, world),
+    );
 
   /**
    * What to STORE so that placement `id` lands at world point `at`: the
@@ -889,7 +941,8 @@ export const MapStage = ({
       sizes,
       scales,
       placementSizes,
-      actor => actor.type === selected && shown(actor),
+      actor =>
+        actor.type === selected && shown(actor) && reachableAt(actor, world),
     );
 
   /**
@@ -916,26 +969,27 @@ export const MapStage = ({
     return true;
   };
 
-  /** The map with one more of `type` at `pos`. */
+  /**
+   * The map with one more of `type` at `pos`: a child of the opened Scroll
+   * View, where one is open.
+   */
   const withNewPlacement = (map: MapDoc, type: string, pos: Vec): MapDoc => {
     const name = type.split('/').pop() ?? type;
-    return {
-      ...map,
-      actors: [
-        ...map.actors,
-        withPlacementLayer(
-          {
-            type,
-            id: `${name}-${crypto.randomUUID().slice(0, 8)}`,
-            properties: {positional: {position: pos}},
-          },
-          // On the layer the strip has selected, if the map still has it.
-          layersOf(map).some(layer => layer.id === selectedLayer)
-            ? selectedLayer
-            : DEFAULT_LAYER,
-        ),
-      ],
-    };
+    const made = withPlacementLayer(
+      {
+        type,
+        id: `${name}-${crypto.randomUUID().slice(0, 8)}`,
+        properties: {positional: {position: pos}},
+      },
+      // On the layer the strip has selected, if the map still has it.
+      layersOf(map).some(layer => layer.id === selectedLayer)
+        ? selectedLayer
+        : DEFAULT_LAYER,
+    );
+    const inside = map.actors.some(actor => actor.id === openedScroll)
+      ? withParent(made, openedScroll!, map.actors, scales)
+      : made;
+    return {...map, actors: [...map.actors, inside]};
   };
 
   /** Which cell a point of a stroke is in, as the brush snaps it. */
@@ -2219,7 +2273,15 @@ export const MapStage = ({
   // placement order and wrapping around. With nothing selected, `+1` starts at the
   // first actor and `-1` at the last. Only actors with a position participate.
   const cycleSelection = (dir: 1 | -1) => {
-    const next = nextSelection(mapRef.current.actors, selectedId, dir);
+    // While a Scroll View is open, only what it holds; closed, a row below
+    // its window is still reached, as the keyboard reaches it in the game.
+    const actors = mapRef.current.actors;
+    const open = actors.find(actor => actor.id === openedScroll);
+    const next = nextSelection(
+      open ? actors.filter(actor => isInside(actor, open, actors)) : actors,
+      selectedId,
+      dir,
+    );
     if (next) {
       setSelectedId(next.id);
       ensureVisible(worldTransformOf(next, mapRef.current.actors, scales).pos);
@@ -2425,6 +2487,12 @@ export const MapStage = ({
     if (event.key === 'Escape' && picking) {
       event.preventDefault();
       setPicking(null);
+      return;
+    }
+    // …and then closes an opened Scroll View.
+    if (event.key === 'Escape' && openedScroll && !selected) {
+      event.preventDefault();
+      closeScroll();
       return;
     }
     // WITH AN ACTOR IN HAND the arrows move a cursor cell — the ghost, where
@@ -2934,10 +3002,11 @@ export const MapStage = ({
       ctx.fillText(label, midX, midY);
       ctx.restore();
     };
-    let selectedTransform: Transform | null = null;
+    // Written by `drawPlacement`, a closure, which narrowing cannot see.
+    let selectedTransform = null as Transform | null;
     let selectedType = '';
     let selectedKey: string | undefined;
-    let hoveredTransform: Transform | null = null;
+    let hoveredTransform = null as Transform | null;
     let hoveredType = '';
     let hoveredKey: string | undefined;
     const transformById = new Map<string, Transform>();
@@ -2972,6 +3041,50 @@ export const MapStage = ({
       }
       ctx.restore();
     };
+    /** Clip what is drawn next to every rectangle in `clips`. */
+    const clipTo = (clips: readonly Clip[]) => {
+      for (const clip of clips) {
+        const [first, ...rest] = clipCorners(clip);
+        ctx.beginPath();
+        ctx.moveTo(first.x, first.y);
+        for (const corner of rest) {
+          ctx.lineTo(corner.x, corner.y);
+        }
+        ctx.closePath();
+        ctx.clip();
+      }
+    };
+    // The opened Scroll View, on the stage only: a picture is the place as
+    // the game starts.
+    const open = decorate ? opened : undefined;
+    const drawPlacement = (actor: Placement, alpha: number) => {
+      // Through the parent, so a child sits where the engine will put it
+      // and a dragged parent brings its children (specs/PARENTING.md).
+      const t = worldTransformOf(actor, map.actors, scales);
+      const key = placementKey(actor.type, actor.properties);
+      const clips = decorate
+        ? clipsHere(actor, map.actors)
+        : clipsOf(actor, map.actors, scrollsKind, boxSizeOf, null, scales);
+      ctx.save();
+      clipTo(clips);
+      drawSprite(actor.type, t, alpha, key, actor.id);
+      ctx.restore();
+      transformById.set(actor.id, t);
+      keyById.set(actor.id, key);
+      if (decorate && showIcons && hasScript(actor.blocks)) {
+        markScripted(t, actor.type, key, actor.id);
+      }
+      if (actor.id === selectedId) {
+        selectedTransform = t;
+        selectedType = actor.type;
+        selectedKey = key;
+      }
+      if (actor.id === hoveredId) {
+        hoveredTransform = t;
+        hoveredType = actor.type;
+        hoveredKey = key;
+      }
+    };
     for (const layer of layers) {
       // Not the layers in front of the one being edited; but all of them
       // in a picture, which is the place as it is.
@@ -2986,25 +3099,43 @@ export const MapStage = ({
         if (on !== layer.id || !positionOf(actor)) {
           continue;
         }
-        // Through the parent, so a child sits where the engine will put it
-        // and a dragged parent brings its children (specs/PARENTING.md).
-        const t = worldTransformOf(actor, map.actors, scales);
-        const key = placementKey(actor.type, actor.properties);
-        drawSprite(actor.type, t, 1, key, actor.id);
-        transformById.set(actor.id, t);
-        keyById.set(actor.id, key);
-        if (decorate && showIcons && hasScript(actor.blocks)) {
-          markScripted(t, actor.type, key, actor.id);
+        // What an opened Scroll View holds is drawn over the rest, below.
+        if (open && isInside(actor, open, map.actors)) {
+          continue;
         }
-        if (actor.id === selectedId) {
-          selectedTransform = t;
-          selectedType = actor.type;
-          selectedKey = key;
-        }
-        if (actor.id === hoveredId) {
-          hoveredTransform = t;
-          hoveredType = actor.type;
-          hoveredKey = key;
+        drawPlacement(actor, open && actor.id !== open.id ? OUTSIDE_ALPHA : 1);
+      }
+    }
+    // THE OPENED SCROLL VIEW: the whole of what it holds, on a backing the
+    // color of the stage, with the window's foot marked, since what is above
+    // it is what shows first.
+    if (open) {
+      const clip = openedClip(open, map.actors, boxSizeOf, scales);
+      const corners = clipCorners(clip);
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(corners[0].x, corners[0].y);
+      for (const corner of corners.slice(1)) {
+        ctx.lineTo(corner.x, corner.y);
+      }
+      ctx.closePath();
+      ctx.fillStyle = OPENED_BACKING;
+      ctx.fill();
+      ctx.strokeStyle = OPENED_EDGE;
+      ctx.lineWidth = 2 / view.scale;
+      ctx.setLineDash([6 / view.scale, 4 / view.scale]);
+      ctx.stroke();
+      const [fold] = clipCorners({...clip, below: 0}).slice(3);
+      const [, , foldEnd] = clipCorners({...clip, below: 0});
+      ctx.setLineDash([]);
+      ctx.beginPath();
+      ctx.moveTo(fold.x, fold.y);
+      ctx.lineTo(foldEnd.x, foldEnd.y);
+      ctx.stroke();
+      ctx.restore();
+      for (const actor of map.actors) {
+        if (positionOf(actor) && isInside(actor, open, map.actors)) {
+          drawPlacement(actor, 1);
         }
       }
     }
@@ -3268,6 +3399,9 @@ export const MapStage = ({
     dropAt,
     // …and the layers left undrawn while one is edited.
     [...hiddenLayers].join(' '),
+    // …and the Scroll View opened, and the schema that says which scroll.
+    openedScroll,
+    schemas,
   ]);
 
   const canvasClass = [
@@ -3368,6 +3502,35 @@ export const MapStage = ({
         })()
       : undefined;
   const inspectedCamera = Boolean(cameraEditor && inspectingCamera);
+
+  /** Open a Scroll View, so what it holds is arranged at its full height. */
+  const openScroll = (id: string) => {
+    setOpenedScroll(id);
+    setSelectedId(null);
+    say(`Opened ${id}: all it holds is shown, and what is placed goes in it.`);
+  };
+  /** …and close it, leaving it selected. */
+  const closeScroll = () => {
+    if (openedScroll) {
+      setSelectedId(openedScroll);
+      say(`Closed ${openedScroll}.`);
+    }
+    setOpenedScroll(null);
+  };
+  // A selected Scroll View, as a row of its inspector that opens it.
+  const scrollSection =
+    selectedActor && !opened && scrollsKind(selectedActor) ? (
+      <section className={styles.cameraList} aria-label="What it holds">
+        <button
+          type="button"
+          className={styles.layerRow}
+          data-testid="open-scroll-view"
+          onClick={() => openScroll(selectedActor.id)}
+        >
+          Arrange what it holds
+        </button>
+      </section>
+    ) : null;
   // A selected Viewport's camera, as a row of its inspector that opens the
   // camera's inspector in its place; its Close comes back.
   const cameraSection =
@@ -3464,6 +3627,22 @@ export const MapStage = ({
         </Tooltip>
       )}
       <div className={styles.toolbar}>
+        {/* In the toolbar, the one strip always clear of the panels. */}
+        {opened && (
+          <div
+            className={styles.openedBar}
+            role="group"
+            aria-label={`Inside ${opened.id}`}
+            data-testid="opened-scroll-view"
+          >
+            <Typography variant="body4" component="span">
+              Inside {opened.id}
+            </Typography>
+            <Button variant="contained" size="extraSmall" onClick={closeScroll}>
+              Done
+            </Button>
+          </div>
+        )}
         <Typography variant="body4" component="span" className={styles.zoom}>
           {view ? `${Math.round(view.scale * 100)}%` : '—'}
         </Typography>
@@ -3932,6 +4111,7 @@ export const MapStage = ({
                 />
               )}
             {cameraSection}
+            {scrollSection}
             {settable.length > 0 && (
               <Accordion
                 className={styles.inspectorAccordion}

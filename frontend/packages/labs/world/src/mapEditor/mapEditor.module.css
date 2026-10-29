@@ -555,3 +555,12 @@
   flex-direction: column;
   gap: 0.25rem;
 }
+
+/* In the toolbar while a Scroll View is open: which one, and the way out. */
+.openedBar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-right: 0.4rem;
+  border-right: var(--lab-border-default);
+}

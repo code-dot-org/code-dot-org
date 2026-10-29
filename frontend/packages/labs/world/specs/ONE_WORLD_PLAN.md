@@ -1,6 +1,6 @@
 # Plan: one World, seen through Viewports
 
-STATUS: BUILDING, October 2026. Steps 1 to 7 are done. Comes before
+STATUS: BUILDING, October 2026. Steps 1 to 8 are done. Comes before
 specs/SCREEN_STACK_PLAN.md, which sits on it.
 
 A game has one World. Maps fill it, and maps bring its layers. A Viewport is
@@ -333,6 +333,21 @@ map … into ⟨Game⟩`, is now a correct answer, and its test says so.
   World to the screen at the same places.
 - **Seen in the browser**: Tapper's labels draw over the game, and clicking
   two coins takes them away and the screen says `Score: 2`.
+- **Step 8 draws a Scroll View on the stage as the game starts.** Its
+  children are clipped to its window at no scroll, and one below the
+  window cannot be clicked there. The Interface Kit's last two settings
+  rows had been drawn over the Reply box below.
+- **The way in is "Arrange what it holds"**, a row of a Scroll View's
+  inspector, not a double-click, which opens a placement's code. Open, the
+  stage shows the whole of what it holds and the window's height again
+  below it, on a backing with the window's foot marked; everything else is
+  faint and out of reach, a placement made there is its child, and the
+  arrow keys go round only what it holds. "Done" in the toolbar, or
+  Escape, closes it. The geometry is `mapEditor/scrollViews`, measured as
+  the engine measures `content`.
+- **The mirror preview was already gone**, with step 3.
+- **Seen in the browser** on the Interface Kit: closed, three rows in the
+  window; open, all five, and Escape closes it.
 
 ## Not in this plan
 
