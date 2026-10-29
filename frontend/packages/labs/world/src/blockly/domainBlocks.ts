@@ -6971,33 +6971,33 @@ const worldGameIsPaused = defineBlock({
  * (specs/ONE_WORLD_PLAN.md). A level change, a restart and the overworld are
  * all this.
  *
- * The map is a value (`map ⟨…⟩`, or a path worked out in code — a level
- * chosen by number). Every map the project holds is registered on the world
- * (`worldModulePrologue`), so nothing is imported here: the world finds the
- * map by its path (`World.loadWorldMap`).
+ * The map is chosen from the project's, as a screen is for `show screen`. A
+ * path worked out in code, which a level select would want, is not offered
+ * yet (specs/SCREEN_STACK_PLAN.md, "Not in this plan"). Every map the
+ * project holds is registered on the world (`worldModulePrologue`), so
+ * nothing is imported here: the world finds the map by its path
+ * (`World.loadWorldMap`).
  */
 const worldLoadMap = defineBlock({
   type: 'world_load_map',
   message0: 'load map %1',
-  args0: [{type: 'input_value', name: 'MAP', check: 'String'}],
-  inputsInline: true,
+  args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [worldContextExtension, valueShadowExtension],
+  extensions: [worldContextExtension, mapOptionsExtension],
   style: 'setup_blocks',
   tooltip:
     'Make this map the World: everything in the World goes, and the map’s ' +
     'actors are placed. Every Viewport shows it.',
   generator: {
-    javascript(block, generator) {
-      const map = generator.valueToCode(block, 'MAP', Order.NONE) || "''";
-      return `world.loadWorldMap(${map});\n`;
+    javascript(block) {
+      const path = String(block.getFieldValue('MAP') ?? '');
+      return path && path !== NONE_VALUE
+        ? `world.loadWorldMap(${str(path)});\n`
+        : '';
     },
   },
 });
-registerValueShadows('world_load_map', [
-  {name: 'MAP', shadow: {type: 'world_map_ref'}},
-]);
 
 // ── World composition ────────────────────────────────────────────────────────
 // The game's module opens with the prologue below, written from the Main
@@ -7186,28 +7186,6 @@ export function worldModulePrologue(
     mainMap
   );
 }
-
-/**
- * `map ⟨…⟩` — a map as a VALUE: its path, which is what `load map` and `load
- * the map named` take. The shadow in `load map`'s socket.
- */
-const worldMapRef = defineBlock({
-  type: 'world_map_ref',
-  message0: 'map %1',
-  args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions}],
-  output: 'String',
-  extensions: [mapOptionsExtension],
-  style: 'setup_blocks',
-  tooltip: 'A map of this project, by name — for the World to load.',
-  generator: {
-    javascript(block) {
-      return [str(block.getFieldValue('MAP') ?? ''), Order.ATOMIC] as [
-        string,
-        number,
-      ];
-    },
-  },
-});
 
 // ── Backgrounds (BACKGROUNDS.md) ─────────────────────────────────────────────
 // A backdrop is the appearance half of an actor with none of the body: something
@@ -10361,7 +10339,6 @@ export const DOMAIN_BLOCKS = [
   worldResumeGame,
   worldGameIsPaused,
   worldLoadMap,
-  worldMapRef,
   worldRuleProperty,
   memberHead,
   stepHead,
@@ -10669,7 +10646,6 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     blocks: [
       // The World's map, replaced (specs/ONE_WORLD_PLAN.md).
       'world_load_map',
-      'world_map_ref',
       // …and the screens the game shows (specs/SCREEN_STACK_PLAN.md).
       'world_show_screen',
       'world_go_back',

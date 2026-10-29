@@ -1156,7 +1156,6 @@ export const TILES: readonly Tile[] = [
       // opens on (specs/LESSONS_AS_SCREENS_PLAN.md). `load map` makes one the
       // World's (specs/ONE_WORLD_PLAN.md).
       {kind: 'block', type: 'world_load_map'},
-      {kind: 'block', type: 'world_map_ref'},
       // How big the level is, which is an idea about a world BIGGER than the
       // view (`place/camera`). Read here; said by the map editor's Width and
       // Height, which is where it is set.

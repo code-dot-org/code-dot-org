@@ -852,7 +852,7 @@ describe('domain block generators', () => {
     // costs nothing.
     const live = [
       ['world_add_actor', 'ACTOR'],
-      ['world_map_ref', 'MAP'],
+      ['world_load_map', 'MAP'],
     ] as const;
     for (const [type, field] of live) {
       const args = (
@@ -1274,9 +1274,7 @@ describe('domain block generators', () => {
       (DOMAIN_TOOLBOX as Array<{name: string; blocks: string[]}>).find(
         c => c.name === name,
       )?.blocks;
-    expect(drawer('Map')).toEqual(
-      expect.arrayContaining(['world_load_map', 'world_map_ref']),
-    );
+    expect(drawer('Map')).toEqual(expect.arrayContaining(['world_load_map']));
     expect(drawer('World')).toEqual(
       expect.arrayContaining([
         'world_add_actor',
@@ -2559,12 +2557,12 @@ describe('world block generators', () => {
 });
 
 describe('world_load_map generator', () => {
-  it('replaces the World’s map with the one its value names', () => {
+  it('replaces the World’s map with the one its dropdown names', () => {
     // By path: every map is registered on the world, so nothing is imported
     // (specs/ONE_WORLD_PLAN.md).
     const code = generatorFor('world_load_map')(
+      {getFieldValue: () => 'maps/level1'} as never,
       {} as never,
-      {valueToCode: () => '"maps/level1"'} as never,
       {} as never,
     ) as string;
     expect(code).toBe('world.loadWorldMap("maps/level1");\n');

@@ -280,12 +280,23 @@ map`. The `Screens` rule has a demo.
   handler, and the Map drawer offers `show screen ⟨Pause Menu⟩` and
   `go back`.
 
+- **`load map` is a plain dropdown of the project's maps**, as `show
+screen` is, and `map ⟨…⟩` is gone. Nothing worked a path out in code, so
+  the socket only ever held that one block. Level select is deferred with
+  it; see below. Five lessons' instructions still sent the learner to
+  `in the map ⟨Game⟩ shows`, gone since the one-World plan's step 5, and
+  one to `load map ⟨map maps/room2⟩`; they are corrected.
+
 ## Not in this plan
 
 - **Pausing what is under a screen.** Later, as a screen's setting.
 - **Input reaching screens under the top one.** Later, as a screen's
   setting. The on-screen keyboard is the first thing that needs it.
 - **Transitions.** A screen appears and is there.
+- **Level select.** A screen raising `level chosen ⟨path⟩` for the Main
+  Screen to load wants `load map` to take a value. When it comes back, the
+  map is a string socket whose default is a dropdown of the project's maps,
+  so any string can be plugged in instead.
 - **HUD bindings.** A placed actor showing a word its screen can see, set in
   the inspector, is its own plan. It fits this model unchanged.
 - **Editing a screen's values and events in the World inspector.** Pending

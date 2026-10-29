@@ -5236,13 +5236,11 @@ describe('the two-rooms lesson’s check', () => {
       } as unknown as Row);
       return JSON.stringify(workspace);
     });
-  /** `load map ⟨map maps/room2⟩`, which replaces the World's map. */
+  /** `load map ⟨room2⟩`, which replaces the World's map. */
   const intoTheWorld = (): Row =>
     ({
       type: 'world_load_map',
-      inputs: {
-        MAP: {shadow: {type: 'world_map_ref', fields: {MAP: 'maps/room2'}}},
-      },
+      fields: {MAP: 'maps/room2'},
     }) as unknown as Row;
 
   it('refuses a door that does nothing', async () => {

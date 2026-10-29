@@ -8,10 +8,10 @@
 // the map's, and so is a `define layer`, with what its body places with
 // literals on it; a handler is the screen's. A row that says anything else is
 // code a game runs once, so it stays code: under `when this screen loads`,
-// inside `in the map ⟨Game⟩ shows`, where it acts on the level as it did on
-// the world. That pair is always there, empty or not, since it is where a
-// lesson's once-only code is written. A handler that adds to or loads into the world is wrapped the
-// same way, since the screen is now the root it runs in.
+// which is always there, empty or not, since it is where a lesson's
+// once-only code is written. A world block acts on the World from the
+// screen's code as from any (specs/ONE_WORLD_PLAN.md), so the code acts on the
+// level as it did on the world.
 
 import {activateFile} from '@code-dot-org/codebridge';
 import type {MultiFileSource} from '@code-dot-org/core/api';

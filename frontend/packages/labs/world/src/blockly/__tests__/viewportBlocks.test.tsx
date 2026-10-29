@@ -37,16 +37,12 @@ const emit = (
 };
 
 describe('the blocks', () => {
-  it('names a map by its path', () => {
-    expect(emit('world_map_ref', {MAP: 'maps/level1'})).toBe('"maps/level1"');
-  });
-
-  it('loads a map value into the World', () => {
-    expect(emit('world_load_map', {}, {MAP: '"maps/level1"'})).toBe(
+  it('loads the map its dropdown names into the World', () => {
+    expect(emit('world_load_map', {MAP: 'maps/level1'})).toBe(
       'world.loadWorldMap("maps/level1");\n',
     );
-    // An empty socket loads nothing rather than throwing on undefined.
-    expect(emit('world_load_map', {}, {})).toBe("world.loadWorldMap('');\n");
+    // A project with no maps yet loads nothing rather than an empty path.
+    expect(emit('world_load_map', {})).toBe('');
   });
 });
 

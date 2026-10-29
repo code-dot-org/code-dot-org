@@ -190,9 +190,7 @@ export const pauseHandlers = (level: string) => {
           {type: 'world_resume_game'},
           {
             type: 'world_load_map',
-            inputs: {
-              MAP: {shadow: {type: 'world_map_ref', fields: {MAP: level}}},
-            },
+            fields: {MAP: level},
           },
         ]),
       },

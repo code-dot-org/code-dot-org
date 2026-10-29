@@ -1042,7 +1042,7 @@ until something plays it.
 
 ### What you do
 
-1. In the Main Screen's code, inside **in the map ⟨Game⟩ shows**, add **play a
+1. In the Main Screen's code, inside **when this screen loads**, add **play a
    tween on ⟨any Door⟩ over 1 second**.
 2. Inside its **move** slot, put **set position of ⟨this actor⟩** and give it
    the Post's place. Run it: the Door travels there.
@@ -3292,9 +3292,8 @@ out of it: 0 keeps none, 1 keeps all of it.
 ### What you do
 
 1. Add **set bounciness of ⟨any Wall⟩ to ⟨0.5⟩** in the Main Screen's code,
-   inside **in the map ⟨Game⟩ shows**. Run
-   it: the Ball comes off the wall at half the speed, and each bounce is
-   smaller than the last.
+   inside **when this screen loads**. Run it: the Ball comes off the wall at
+   half the speed, and each bounce is smaller than the last.
 2. Turn it up until the Ball never slows down. There is exactly one value that
    does that, and it is the one that gives all the speed back.
 3. Try 1.2 and watch it get faster every time it touches anything. Nothing
@@ -4252,8 +4251,7 @@ this actor. **You find out by running it.**
    Wanderers.
 2. Run it and watch. Click again for two hundred, again for three.
 3. Print **how many actors in ⟨all actors⟩** on each click, so you know what
-   you are looking at — inside **in the map ⟨Game⟩ shows**, after the
-   repeat, since that is where the Wanderers are.
+   you are looking at — after the repeat, in the same handler.
 4. Find where it stops being smooth on YOUR machine, and write the number
    down. That number is a fact about the machine and the drawing, not about
    the lab.
@@ -5489,8 +5487,8 @@ Right now it holds room one. A room is a map, and going somewhere else is
 ### What you do
 
 1. Add **when ⟨any Door⟩ starts touching**.
-2. In it, **load map ⟨map maps/room2⟩**. What the World held goes, and room
-   two takes its place.
+2. In it, **load map ⟨room2⟩**. What the World held goes, and room two takes
+   its place.
 3. Walk into the Door. The Chest is a room-two thing, so if you can see one you
    are somewhere else.
 
@@ -6236,7 +6234,7 @@ starts and how far apart they are — written out six times over.
 
 ### What you do
 
-1. In the Main Screen's code, at the top of **in the map ⟨Game⟩ shows**,
+1. In the Main Screen's code, at the top of **when this screen loads**,
    **set ⟨gap⟩ to 100**.
 2. Put the second Post at **⟨gap⟩ + 60** and the third at **⟨gap⟩ + ⟨gap⟩ + 60**.
    Run it: nothing has changed, and that is the point.
