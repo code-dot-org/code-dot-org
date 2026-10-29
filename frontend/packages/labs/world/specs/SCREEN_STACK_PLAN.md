@@ -303,7 +303,8 @@ screen` is, and `map ⟨…⟩` is gone. Nothing worked a path out in code, so
   Screen to load wants `load map` to take a value. When it comes back, the
   map is a string socket whose default is a dropdown of the project's maps,
   so any string can be plugged in instead.
-- **HUD bindings.** A placed actor showing a word its screen can see, set in
-  the inspector, is its own plan. It fits this model unchanged.
+- **HUD bindings**, decided against: a display changes because a handler
+  changed it, not because it was bound to a value. What a HUD needs is to
+  hear the right actor's events, which is specs/PROPERTY_SUBJECTS_PLAN.md.
 - **Editing a screen's values and events in the World inspector.** Pending
   from WORLD_AS_DATA_PLAN.md, and needed by step 4's palette only as data.

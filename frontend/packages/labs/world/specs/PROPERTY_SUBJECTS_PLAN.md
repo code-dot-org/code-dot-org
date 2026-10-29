@@ -1,0 +1,145 @@
+# Plan: an actor property as an event's subject
+
+STATUS: PLANNED, October 2026. Nothing below is built.
+
+A hat can be about `this actor` or `any ⟨kind⟩`. This plan adds a third
+subject: an actor-typed property in scope. `when ⟨current player⟩ is hurt`
+hears the event for whichever actor `current player` holds at the moment
+the event happens. The game says once which actor matters, and everything
+that watches it, a health bar among them, is wired by events in the screen
+editor. Nothing is kept in step automatically; a display changes because a
+handler changed it (specs/SCREEN_STACK_PLAN.md, "Not in this plan").
+
+## What there is now
+
+- **A hat's subject is `this actor` or a kind** (`SUBJECT`,
+  `eventSubject.subjectKindOf`). `this actor` compiles to `actor.on(…)`; a
+  kind compiles to `⟨kind⟩.on(…)` on the kind's template
+  (`domainBlocks.subjectTarget`, `ActorBuilder.on`).
+- **A kind's hat in a placement's code goes wrong three ways.** The
+  template only reaches actors made after it, so the Player the World
+  already holds never hears it. Inside it `this actor` becomes the Player,
+  not the placement. Each load of the screen adds it again, and nothing
+  takes it away when the screen goes.
+- **The game's own events are heard everywhere**, by name, and a handler a
+  screen's script hangs on one comes off with the screen (`World.on`,
+  `scriptLoad`).
+- **A screen may declare actor values** (`actor`, `actors`;
+  `ruleMeta.PROPERTY_TYPES`), and the Main Screen's are read from other
+  files by name (`World.valueNamed`). An actor-typed value holds a list of
+  one.
+- **The stock Health Bar** watches its `subject` with a step that runs
+  every frame (`actors/stock/healthBar`).
+
+## The model
+
+- **Three subjects.** `this actor`, `any ⟨kind⟩`, and an actor-typed
+  property in scope. The third is attached to the PROPERTY: setting the
+  property points every handler on it at the new actor.
+- **Read when the event happens.** The handler runs when the actor the
+  event is about is one the property holds at that moment. A property that
+  holds nobody hears nothing; one that holds several (`actors`) hears each
+  of them. Nothing is registered on an actor, so nothing has to be moved
+  when the property changes and nothing is left on a removed actor.
+- **`this actor` keeps its meaning.** In a placement's code it is the
+  placement; in an actor file it is the actor. The actor the event is about
+  is `event actor`.
+- **Which properties are in scope**, by where the code is:
+  - every file: the Main Screen's actor values;
+  - a screen's own code and its placements': that screen's own actor
+    values, on the copy of the screen that is running;
+  - an actor file, and a placement's code: that actor's own actor-typed
+    properties (the Health Bar's `subject`);
+  - a map's own code and its placements': the Main Screen's, as above.
+- **The game sets the property.** Nothing does it on its own. The usual
+  place is beside the `load map` that brings a level in, and `when this
+  screen loads` for the first: `set current player to ⟨any Player⟩`.
+
+## Decisions
+
+- **Checked at dispatch, not rewired.** "When the property changes, move
+  the handlers" and "when the event happens, ask the property" mean the same
+  to a learner. The second has no state to go stale and no hook on every
+  write, so it is how it is built; the inspector and the lessons still say
+  the handler is attached to the property.
+- **Kept by the World.** A property subject's handler is held by the World
+  beside its world events, with the property it reads, and dispatched from
+  the queue when an actor's event is flushed. One hung while a screen's
+  script runs comes off with the screen (`scriptLoad`), so showing a screen
+  twice does not hear twice.
+- **A kind subject in a placement's or a screen's code is held the same
+  way**, as "any actor of this kind", so it reaches actors already in the
+  World and comes off with the screen. That fixes the three faults above
+  with the same machinery; a kind's hat in an actor file stays on the
+  template, where it is right.
+- **Nobody is a state worth seeing.** A handler on a property that holds
+  nobody fails silently, which is the lab's commonest bug
+  (specs/MAP_EVENTS_PLAN.md). The inspector shows a game value that holds
+  nobody as `(nobody)`, and a debug run says so in the console the first
+  time an event finds the property empty.
+
+## How it is built
+
+- **The hat.** `SUBJECT`'s dropdown offers `this actor`, the kinds, and the
+  actor properties in scope, each under a heading. A property is stored by
+  its member reference, the way a setter names one (`memberKey`), so
+  renaming it follows (`renameThing`).
+- **The code.** A property subject generates `world.onSubject(⟨read⟩,
+  ⟨event⟩, handler)`, where `⟨read⟩` is a function that returns what the
+  property holds: `() => world.valueNamed("current player")` for the Main
+  Screen's, `() => map.get(…)` for a screen's own, `() => actor.get(…)` for
+  an actor's own. The handler is `(world, eventActor, …values)`, and `actor`
+  is not rebound.
+- **The engine.** `World.onSubject` keeps `{read, event, handler}`; the
+  queue, flushing an actor's event, runs the actor's own handlers and then
+  every subject handler for that event whose `read()` holds the actor. A
+  kind subject in a placement's or a screen's code is the same call with a
+  `read` that asks the actor's kind.
+
+## Order of work
+
+1. This plan.
+2. Engine: `World.onSubject`, dispatch from the queue, taken off with the
+   screen that hung it. Tests: a property that changes between two events,
+   one that holds nobody, one that holds several, a removed actor, a screen
+   shown twice.
+3. Compiling: a property subject in each scope, and a kind subject in a
+   placement's or screen's code through the same path. `this actor` stays
+   the placement. Tests through compiled projects.
+4. The editor: the subject dropdown's property rows by scope, `(nobody)`
+   in the inspector, the console note in a debug run. Renaming a property
+   rewrites the hats on it.
+5. The starter: the Main Screen declares `current player`, sets it as the
+   game starts and wherever it loads a level, and the Health Bar's
+   placement code hears `when ⟨current player⟩ is hurt` and sets its own
+   fraction. The Health Bar loses its per-frame step, and becomes a
+   Progress Bar if nothing else is left of it.
+6. The shelf: which lesson grants the property subject, and its check.
+7. Specs: what this replaces, and this record.
+
+## To find out before step 2
+
+- How the queue dispatches an actor's event today, and where a subject
+  handler can run after the actor's own without changing their order.
+- What reading an actor value gives once its actor is removed.
+- How the starter's HUD, the Tapper score and the lessons that reach an
+  actor by kind would read written this way, and which of them should be.
+
+## Open
+
+- **Telling a display the subject has arrived or changed.** A handler on
+  `is hurt` does not run when the player first arrives or a new level gives
+  a new one, so a health bar starts wrong. The recommendation is that the
+  game raises its own event after it sets the property, `player arrived`,
+  and the display hears it; it is explicit and needs nothing new. The other
+  shape is a `when ⟨current player⟩ changes` hat. To decide by step 5.
+
+## Not in this plan
+
+- **An actor raising the game's events.** A map raises them by name; an
+  actor file is not offered their `emit`. Worth having as the way a kind
+  tells the game something, and separate from this.
+- **A property subject that names a placement.** A placement is one map's;
+  a game value that should follow a level is set from code.
+- **Automatic sync.** No binding keeps a display in step with a value
+  (specs/SCREEN_STACK_PLAN.md).
