@@ -407,13 +407,13 @@ const world = (held: {
     effects: () => [],
     drainSounds: () => [],
     music: () => undefined,
-    backdropSnapshot: () => [
+    screenBackdropSnapshot: () => [
       {effects: [], offset: {x: 0, y: 0}, repeat: false},
     ],
-    backdropColor: () => [0, 0, 0, 1],
+    screenColor: () => [0, 0, 0, 1],
     mapBounds: () => ({x: 320, y: 320}),
     viewSize: () => ({x: 320, y: 320}),
-    layerSnapshot: () => [
+    screenLayerSnapshot: () => [
       {
         id: 'main',
         effects: [],

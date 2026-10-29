@@ -5292,18 +5292,12 @@ describe('the two-rooms lesson’s check', () => {
       } as unknown as Row);
       return JSON.stringify(workspace);
     });
-  /** `load map ⟨map maps/room2⟩ into ⟨the Viewport⟩`. */
-  const intoTheGame = (): Row =>
+  /** `load map ⟨map maps/room2⟩`, which replaces the World's map. */
+  const intoTheWorld = (): Row =>
     ({
-      type: 'world_load_map_into',
+      type: 'world_load_map',
       inputs: {
         MAP: {shadow: {type: 'world_map_ref', fields: {MAP: 'maps/room2'}}},
-        ACTOR: {
-          block: {
-            type: 'world_actor_kind',
-            fields: {ACTOR: 'actors/viewport'},
-          },
-        },
       },
     }) as unknown as Row;
 
@@ -5312,10 +5306,10 @@ describe('the two-rooms lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
-  it('accepts loading the other room into the Viewport', async () => {
+  it('accepts loading the other room into the World', async () => {
     const {passes, result} = await check(
       'adventure/rooms',
-      doorway(intoTheGame()),
+      doorway(intoTheWorld()),
     );
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
@@ -5337,17 +5331,6 @@ describe('the two-rooms lesson’s check', () => {
       }),
     );
     expect(passes).toBe(false);
-  });
-
-  it('accepts `load map` from the door, which replaces the World’s map', async () => {
-    // There is one World, and `load map` from code in it replaces what it
-    // holds (specs/ONE_WORLD_PLAN.md). Room two is not beside room one any
-    // more; it is the World.
-    const {passes} = await check(
-      'adventure/rooms',
-      doorway({type: 'world_load_map', fields: {MAP: 'maps/room2'}} as Row),
-    );
-    expect(passes).toBe(true);
   });
 });
 

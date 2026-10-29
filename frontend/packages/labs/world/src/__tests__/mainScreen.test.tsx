@@ -55,7 +55,8 @@ describe('a Main Screen', () => {
   it('is shown at its own size', async () => {
     const {world} = await compileProject(simpleOnAScreen());
 
-    const view = world.viewSize();
+    // The screen's own view, which its camera is told.
+    const view = world.viewSize(world.camera('main'));
     expect({x: view.x, y: view.y}).toEqual({x: COLUMNS * 32, y: ROWS * 32});
   });
 
@@ -102,7 +103,7 @@ describe('a Main Screen', () => {
       simpleOnAScreen({backgroundColor: '#112233'}),
     );
 
-    expect(world.snapshot().clearColor.slice(0, 3)).toEqual([
+    expect(world.snapshot().screenColor.slice(0, 3)).toEqual([
       0x11 / 255,
       0x22 / 255,
       0x33 / 255,
@@ -125,12 +126,12 @@ describe('a Main Screen', () => {
                   block: {
                     type: 'world_set_ScreensMain_ScoreProperty',
                     // A read, which only the built World can answer: the
-                    // screen's one Viewport is already placed.
+                    // level's one Player is already placed.
                     inputs: {
                       VALUE: {
                         block: {
                           type: 'world_count_of_kind',
-                          fields: {TYPE: 'actors/viewport'},
+                          fields: {TYPE: 'actors/player'},
                           inputs: {
                             LIST: {block: {type: 'world_all_actors'}},
                           },
@@ -150,72 +151,14 @@ describe('a Main Screen', () => {
     expect(world.get(screen.ScoreProperty as never)).toBe(1);
   });
 
-  it('adds to the level from inside the map its Viewport shows', async () => {
-    // From the screen's own code an actor is the screen's; inside `in the
-    // map ⟨Game⟩ shows` it is the level's.
-    const addBall = (id: string) => ({
-      type: 'world_add_actor',
-      id,
-      fields: {ACTOR: 'actors/ball'},
-    });
-    const {world} = await compileProject(
-      simpleOnAScreen({
-        blocks: {
-          blocks: {
-            languageVersion: 0,
-            blocks: [
-              {
-                type: 'world_on_screen_loads',
-                next: {
-                  block: {
-                    ...addBall('onScreen'),
-                    next: {
-                      block: {
-                        type: 'world_in_shown_map',
-                        inputs: {
-                          ACTOR: {
-                            block: {
-                              type: 'world_actor_kind',
-                              fields: {ACTOR: 'actors/viewport'},
-                            },
-                          },
-                          DO: {block: addBall('inLevel')},
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            ],
-          },
-        },
-      }),
-    );
-
-    const [viewport] = world.actors.ofType('actors/viewport');
-    const balls = world.actors.ofType('actors/ball');
-    const spaceOf = (id: string) => {
-      const ball = balls.find(one => one.id.startsWith(id));
-      expect(ball).toBeDefined();
-      return world.spaceOf(ball!);
-    };
-    expect(spaceOf('onScreen')).toBe(world.spaceOf(viewport));
-    expect(spaceOf('inLevel')).toBe(world.viewportSpaceOf(viewport)!.mirrorOf);
-  });
-
-  it('counts every actor where the code runs, the map inside its Viewport', async () => {
-    // `all actors` is the actors here, as `add actor` adds here: inside `in
-    // the map ⟨Game⟩ shows` that is the level, and not the screen's own
-    // Viewport (specs/LESSONS_AS_SCREENS_PLAN.md).
+  it('adds to the World, and counts what is in it, from its own code', async () => {
+    // A world block means the game from any code, the screen's included
+    // (specs/ONE_WORLD_PLAN.md): `add actor` adds to the World, and `all
+    // actors` is the World's, and not the screen's own Viewport.
     const count = (kind: string) => ({
       type: 'world_count_of_kind',
       fields: {TYPE: kind},
       inputs: {LIST: {block: {type: 'world_all_actors'}}},
-    });
-    const setScore = (kind: string, next?: object) => ({
-      type: 'world_set_ScreensMain_ScoreProperty',
-      inputs: {VALUE: {block: count(kind)}},
-      ...(next ? {next: {block: next}} : {}),
     });
     const {world, modules} = await compileProject(
       simpleOnAScreen({
@@ -231,19 +174,18 @@ describe('a Main Screen', () => {
                 type: 'world_on_screen_loads',
                 next: {
                   block: {
-                    type: 'world_set_ScreensMain_BoxesProperty',
-                    inputs: {VALUE: {block: count('actors/viewport')}},
+                    type: 'world_add_actor',
+                    id: 'added',
+                    fields: {ACTOR: 'actors/ball'},
                     next: {
                       block: {
-                        type: 'world_in_shown_map',
-                        inputs: {
-                          ACTOR: {
-                            block: {
-                              type: 'world_actor_kind',
-                              fields: {ACTOR: 'actors/viewport'},
-                            },
+                        type: 'world_set_ScreensMain_BoxesProperty',
+                        inputs: {VALUE: {block: count('actors/viewport')}},
+                        next: {
+                          block: {
+                            type: 'world_set_ScreensMain_ScoreProperty',
+                            inputs: {VALUE: {block: count('actors/ball')}},
                           },
-                          DO: {block: setScore('actors/viewport')},
                         },
                       },
                     },
@@ -256,9 +198,14 @@ describe('a Main Screen', () => {
       }),
     );
 
+    // The level has a ball of its own; the screen's code added one more.
+    const [viewport] = world.actors.ofType('actors/viewport');
+    const balls = world.actors.ofType('actors/ball');
+    const level = world.viewportSpaceOf(viewport)!.mirrorOf;
+    expect(balls.every(ball => world.spaceOf(ball) === level)).toBe(true);
     const screen = modules['screens/main'];
-    // On the screen, its one Viewport; in the map, none.
-    expect(world.get(screen.BoxesProperty as never)).toBe(1);
-    expect(world.get(screen.ScoreProperty as never)).toBe(0);
+    expect(world.get(screen.BoxesProperty as never)).toBe(0);
+    expect(world.get(screen.ScoreProperty as never)).toBe(balls.length);
+    expect(balls.length).toBeGreaterThan(1);
   });
 });

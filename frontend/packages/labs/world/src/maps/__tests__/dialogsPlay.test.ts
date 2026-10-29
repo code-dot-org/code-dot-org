@@ -35,7 +35,16 @@ const SCREEN = (map: string) => ({
       blocks: [
         {
           type: 'world_on_screen_loads',
-          next: {block: {type: 'world_load_map', fields: {MAP: map}}},
+          // Over the screen, until a dialog is a screen of its own
+          // (specs/SCREEN_STACK_PLAN.md).
+          next: {
+            block: {
+              type: 'world_load_map_named',
+              inputs: {
+                PATH: {shadow: {type: 'world_map_ref', fields: {MAP: map}}},
+              },
+            },
+          },
         },
       ],
     },

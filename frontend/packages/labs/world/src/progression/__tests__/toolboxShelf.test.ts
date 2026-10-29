@@ -203,7 +203,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'simulation/neighbors': ['world_actors_within'],
   // One block and the value it wears: `map ⟨…⟩` is the shadow in its socket,
   // and `the ⟨Viewport⟩` is the kind block every handler here already uses.
-  'adventure/rooms': ['world_load_map_into'],
+  'adventure/rooms': ['world_load_map'],
   'adventure/keys': [
     'controls_if',
     'world_event_actor',

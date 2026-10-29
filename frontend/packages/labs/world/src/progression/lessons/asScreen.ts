@@ -33,19 +33,7 @@ type Block = Record<string, unknown> & {type?: string};
 
 const GAME = 'Game';
 const VIEWPORT = 'actors/viewport';
-const IN_SHOWN_MAP = 'world_in_shown_map';
 const SCREEN_LOADS = 'world_on_screen_loads';
-
-/** Rows that act on the place they run, and so must be told it is the level. */
-const PLACE_ACTING = new Set([
-  'world_add_actor',
-  'world_load_map',
-  'world_load_map_named',
-  'world_unload_newest_map',
-  'world_set_background',
-  'world_set_background_color',
-  'world_set_map_size',
-]);
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
   Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -79,20 +67,6 @@ function chain(rows: readonly Block[]): Block | undefined {
     (below, row) => (below ? {...row, next: {block: below}} : row),
     undefined,
   );
-}
-
-/** Whether any block in `node` is one of these types. */
-function holds(node: unknown, types: ReadonlySet<string>): boolean {
-  if (Array.isArray(node)) {
-    return node.some(one => holds(one, types));
-  }
-  if (!isObject(node)) {
-    return false;
-  }
-  if (typeof node.type === 'string' && types.has(node.type)) {
-    return true;
-  }
-  return Object.values(node).some(value => holds(value, types));
 }
 
 /** A literal as the data a placement or a screen holds, or nothing. */
@@ -261,28 +235,6 @@ function eventOf(row: Block): ScreenEvent {
   };
 }
 
-/** `in the map ⟨Game⟩ shows do ⟨rows⟩`. */
-const inTheLevel = (rows: readonly Block[]): Block => {
-  const first = chain(rows);
-  return {
-    type: IN_SHOWN_MAP,
-    inputs: {
-      ACTOR: {block: {type: 'world_actor_kind', fields: {ACTOR: VIEWPORT}}},
-      ...(first ? {DO: {block: first}} : {}),
-    },
-  };
-};
-
-/** A handler with its body in the level, when the body acts on a place. */
-function handlerOf(root: Block): Block {
-  const body = isObject(root.next) ? root.next.block : undefined;
-  // An actor's hat runs with its actor in hand, in the level already.
-  if (fieldsOf(root).SUBJECT !== undefined || !holds(body, PLACE_ACTING)) {
-    return root;
-  }
-  return {...root, next: {block: inTheLevel(rowsOf(body))}};
-}
-
 /** What a lesson's `main.world` is as a screen and a map. */
 export interface LessonScreen {
   screen: string;
@@ -446,17 +398,17 @@ export function screenOfWorld(
   // A level with a theme of its own beside the game's needs a map to hold it.
   const asLevel =
     screenIsLevel && !mainCamera && !(theme && typeof level.theme === 'string');
-  const handlers = roots
-    .filter(root => root !== world)
-    .map(root => (asLevel ? root : handlerOf(root)));
+  // Every world block acts on the World, from the screen's code as from any
+  // (specs/ONE_WORLD_PLAN.md), so nothing has to be told it is the level.
+  const handlers = roots.filter(root => root !== world);
   // There whether or not the world had code of its own: it is where a
   // lesson's once-only code is written, as `define world`'s body was, and
   // no early lesson's toolbox offers either block.
-  const loads: Block[] = asLevel
-    ? code.length
-      ? [{type: SCREEN_LOADS, next: {block: chain(code)}}]
-      : []
-    : [{type: SCREEN_LOADS, next: {block: inTheLevel(code)}}];
+  const first = chain(code);
+  const loads: Block[] =
+    first || !asLevel
+      ? [{type: SCREEN_LOADS, ...(first ? {next: {block: first}} : {})}]
+      : [];
   const data = {
     ...(properties.length ? {properties} : {}),
     ...(events.length ? {events} : {}),

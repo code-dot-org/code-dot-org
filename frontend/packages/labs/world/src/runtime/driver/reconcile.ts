@@ -29,8 +29,10 @@ interface ReconcilableWorld {
     /** Each rule's code, hashed (`ruleIds.ts`) — a rule EDITED, not swapped. */
     ruleCode: Record<string, string>;
     actorIds: string[];
-    /** The layers in stack order — ids only (core/Layer). */
+    /** The World's layers in stack order — ids only (core/Layer). */
     layers: string[];
+    /** …and the screen's. */
+    screenLayers: string[];
     /** How each responds to the camera. A value: read per frame, builds nothing. */
     layerMotion: Record<
       string,
@@ -61,8 +63,12 @@ interface ReconcilableWorld {
      * layer, and restarting for one would restart sixty times a second.
      */
     backdrops: SlotValues[];
-    /** The one color behind everything (engine color.ts). */
-    clearColor: [number, number, number, number];
+    /** …and the screen's layers'. */
+    screenBackdrops: SlotValues[];
+    /** The color behind the World, if it says one (engine color.ts). */
+    clearColor: [number, number, number, number] | undefined;
+    /** …and the color behind the screen. */
+    screenColor: [number, number, number, number];
     /** The track playing, or undefined for silence (specs/SOUND.md). */
     music?: string;
     world: Record<string, unknown>;
@@ -78,6 +84,13 @@ interface ReconcilableWorld {
   setBackgroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
   setBackgroundRepeat(repeat: boolean, layer?: string): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
+  setScreenBackground(sprite: string | undefined, layer?: string): unknown;
+  setScreenBackgroundOffset(
+    offset: {x: number; y: number},
+    layer?: string,
+  ): unknown;
+  setScreenBackgroundRepeat(repeat: boolean, layer?: string): unknown;
+  setScreenColor(color: readonly number[]): unknown;
   setMusic(track: string | undefined): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
   setEffectValues(
@@ -137,6 +150,7 @@ export function reconcile(
     // Phaser display list, and the ORDER is part of the value for exactly that
     // reason (see WorldSnapshot.layers).
     stable(previous.layers) === stable(snapshot.layers) &&
+    stable(previous.screenLayers) === stable(snapshot.screenLayers) &&
     // Which cameras exist is structural for the reason layers are: a viewport
     // is built to draw through one. Where they LOOK is a value, patched below.
     stable(previous.cameras) === stable(snapshot.cameras) &&
@@ -169,7 +183,9 @@ export function reconcile(
     previous.activeCamera !== snapshot.activeCamera ||
     stable(previous.layerMotion) !== stable(snapshot.layerMotion) ||
     stable(previous.backdrops) !== stable(snapshot.backdrops) ||
-    stable(previous.clearColor) !== stable(snapshot.clearColor);
+    stable(previous.screenBackdrops) !== stable(snapshot.screenBackdrops) ||
+    stable(previous.clearColor) !== stable(snapshot.clearColor) ||
+    stable(previous.screenColor) !== stable(snapshot.screenColor);
 
   // Actor values the LEARNER changed — not values that have merely moved.
   //
@@ -251,8 +267,17 @@ export function reconcile(
       running.setBackgroundOffset(slot.offset, slot.layer);
       running.setBackgroundRepeat(slot.repeat, slot.layer);
     }
-    // One sky, the world's — not a layer's (World.setBackgroundColor).
-    running.setBackgroundColor(snapshot.clearColor);
+    for (const slot of snapshot.screenBackdrops) {
+      running.setScreenBackground(slot.sprite, slot.layer);
+      running.setScreenBackgroundOffset(slot.offset, slot.layer);
+      running.setScreenBackgroundRepeat(slot.repeat, slot.layer);
+    }
+    // One sky each, the World's and the screen's — not a layer's
+    // (World.setBackgroundColor).
+    if (snapshot.clearColor) {
+      running.setBackgroundColor(snapshot.clearColor);
+    }
+    running.setScreenColor(snapshot.screenColor);
     // …and one track. Written unconditionally like the rest of the values here:
     // setting the track it already has is what "nothing changed" sounds like.
     running.setMusic(snapshot.music);

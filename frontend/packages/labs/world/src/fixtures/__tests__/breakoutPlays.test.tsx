@@ -42,7 +42,7 @@ describe('breakout, in a Viewport', () => {
     // A brick taken, and the menu up over the game.
     world.removeActor(ofKind(world, 'actors/brick')[0]);
     const menu = modules['maps/pauseMenu'] as unknown as {default: WorldMap};
-    world.loadMap(menu.default);
+    world.loadScreen(menu.default);
     world.tick(16);
     expect(ofKind(world, 'actors/brick')).toHaveLength(15);
     const panel = ofKind(world, 'actors/panel');

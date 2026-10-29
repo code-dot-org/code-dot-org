@@ -90,7 +90,7 @@ const box = (world: World, id: string) => {
 describe('a docked placement', () => {
   it('fills its region of the window, middle and box', () => {
     const world = makeWorld();
-    world.loadMap(SCREEN);
+    world.loadScreen(SCREEN);
 
     // The default window: 320 by 320.
     expect(box(world, 'hud')).toEqual({
@@ -111,7 +111,7 @@ describe('a docked placement', () => {
 
   it('leaves one in no region where the map put it', () => {
     const world = makeWorld();
-    world.loadMap(SCREEN);
+    world.loadScreen(SCREEN);
     expect(box(world, 'floating')).toEqual({
       at: new Vector(7, 9),
       width: 5,
@@ -121,7 +121,7 @@ describe('a docked placement', () => {
 
   it('follows a window resized after the map loaded', () => {
     const world = makeWorld();
-    world.loadMap(SCREEN);
+    world.loadScreen(SCREEN);
 
     world.setViewSize(20, 15);
 
@@ -136,7 +136,7 @@ describe('a docked placement', () => {
 
   it('gives a docked Viewport a window, and a space, its region’s size', () => {
     const world = makeWorld();
-    world.loadMap(SCREEN);
+    world.loadScreen(SCREEN);
     const space = world.viewportSpaceOf(named(world, 'game'))!;
 
     // What the Viewport's own camera sees through.
@@ -149,7 +149,7 @@ describe('a docked placement', () => {
 
   it('closes over one that has gone, the rest taking its region', () => {
     const world = makeWorld();
-    world.loadMap(SCREEN);
+    world.loadScreen(SCREEN);
     world.removeActor(named(world, 'hud'));
 
     world.setViewSize(10, 10);
@@ -190,17 +190,17 @@ describe('a placement pointing at a kind', () => {
   // An actor-typed property holds what it points at as a list of one.
   it('is the first of it, when there is one already', () => {
     const made = world();
-    made.loadMap(level);
-    made.loadMap(hud);
+    made.loadWorldMap(level);
+    made.loadScreen(hud);
     expect(named(made, 'bar').get(Subject)).toEqual([named(made, 'Hero')]);
   });
 
   it('is found once there is one, when the level loads after', () => {
     const made = world();
-    made.loadMap(hud);
+    made.loadScreen(hud);
     expect(named(made, 'bar').get(Subject)).toEqual([]);
 
-    made.loadMap(level);
+    made.loadWorldMap(level);
     made.tick(1 / 60);
 
     expect(named(made, 'bar').get(Subject)).toEqual([named(made, 'Hero')]);

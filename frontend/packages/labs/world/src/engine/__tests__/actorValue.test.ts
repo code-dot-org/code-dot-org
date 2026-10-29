@@ -384,7 +384,8 @@ describe('firstOf', () => {
 describe('`⟨…⟩ in this space`', () => {
   // The spatial complement `any ⟨Kind⟩` never had: every actor of a kind is in
   // every space, and a camera in a Viewport that followed the first of them
-  // followed the one in the root (specs/SPACE_CAMERAS_PLAN.md).
+  // followed the one on the screen (specs/SPACE_CAMERAS_PLAN.md). The World is
+  // what a world block means, from any code (specs/ONE_WORLD_PLAN.md).
   const Window = new ActorBuilder({id: 'window', name: 'Window'})
     .useTraits([ViewportTrait])
     .set(IntrinsicSizeProperty, new Vector(100, 80));
@@ -393,43 +394,38 @@ describe('`⟨…⟩ in this space`', () => {
     const world = new WorldBuilder({id: 'w', name: 'W'}).instantiate();
     world.define('actors/coin', Coin);
     world.define('actors/window', Window);
-    const rootCoin = world.addActor(Coin.instantiate('root', 'actors/coin'));
-    const win = world.addActor(Window.instantiate('win', 'actors/window'));
-    const [held] = world.loadMapInto(win, {
+    const [held] = world.loadWorldMap({
       actors: [{type: 'actors/coin', id: 'held'}],
     });
-    return {world, rootCoin, win, held};
+    const [onScreen, win] = world.loadScreen({
+      actors: [
+        {type: 'actors/coin', id: 'screen'},
+        {type: 'actors/window', id: 'win'},
+      ],
+    });
+    return {world, onScreen, win, held};
   };
   const coins = (world: ReturnType<typeof build>['world']) =>
     world.actors.ofType('actors/coin');
 
-  it('keeps the actors in the space of the thing in hand, and no others', () => {
-    const {world, rootCoin, win, held} = build();
-    // Nothing in hand is the root.
-    expect([...inThisSpace(world, coins(world))]).toEqual([rootCoin]);
-    // A Viewport's camera in hand is the Viewport's space.
+  it('keeps the actors in the World, and not the screen’s', () => {
+    const {world, win, held} = build();
+    expect([...inThisSpace(world, coins(world))]).toEqual([held]);
+    // A Viewport's camera looks at the World.
     const camera = world.viewportSpaceOf(win)!.camera!;
     expect(
       world.withActor(camera, () => [...inThisSpace(world, coins(world))]),
     ).toEqual([held]);
   });
 
-  it('is what `all actors` means: every actor here, taken once', () => {
-    const {world, rootCoin, win, held} = build();
-    // At the root, the root's own — the Viewport among them, and not what it
-    // holds.
-    expect(actorsHere(world)).toEqual([rootCoin, win]);
-    // In the Viewport's space, only what it holds.
-    world.enterShown(win);
-    try {
-      expect(actorsHere(world)).toEqual([held]);
-    } finally {
-      world.leave();
-    }
+  it('is what `all actors` means: every actor in the World, taken once', () => {
+    const {world, held} = build();
+    // The World's, and not the screen's coin or its Viewport.
+    expect(actorsHere(world)).toEqual([held]);
     // A copy: what a loop adds is not walked.
     const here = actorsHere(world);
     world.addActor(Coin.instantiate('late', 'actors/coin'));
-    expect(here).toHaveLength(2);
+    expect(here).toHaveLength(1);
   });
 
   it('reads the space BEFORE the walk, not per candidate', () => {
@@ -446,7 +442,7 @@ describe('`⟨…⟩ in this space`', () => {
 
   it('is empty, not the first anyway, when nothing is in this space', () => {
     const {world, win} = build();
-    world.unloadViewport(win);
+    world.loadWorldMap({actors: []});
     const camera = world.viewportSpaceOf(win)!.camera!;
     expect(
       world.withActor(camera, () => [...inThisSpace(world, coins(world))]),

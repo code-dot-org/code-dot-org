@@ -698,7 +698,7 @@ export class PhaserBinding {
     const syncBackdrops = (scene: Phaser.Scene) => {
       // One sky, the world's: a color on any layer but the bottom is behind
       // the layer under it and can never be seen (BACKGROUNDS.md).
-      const [r, g, b, a] = world.backdropColor();
+      const [r, g, b, a] = world.screenColor();
       const byte = (channel: number) => Math.round(channel * 255);
       scene.cameras.main.setBackgroundColor(
         Phaser.Display.Color.GetColor32(byte(r), byte(g), byte(b), byte(a)),
@@ -708,7 +708,7 @@ export class PhaserBinding {
       // first draws into them, so this both creates any that are empty (a layer
       // with an effect and nothing in it yet is still a layer) and brings each
       // one's filters in line.
-      const layers = world.layerSnapshot();
+      const layers = world.screenLayerSnapshot();
       // Where the view is taken from: the ACTIVE camera. A world may hold
       // several — a game camera and an overview, say — and cutting between them
       // is a value change rather than a reload, so this is read every frame.
@@ -734,7 +734,7 @@ export class PhaserBinding {
 
       syncSlots(
         scene,
-        world.backdropSnapshot() as BackdropState[],
+        world.screenBackdropSnapshot() as BackdropState[],
         backdrops,
         BACKGROUND_DEPTH,
         shiftOfLayer,

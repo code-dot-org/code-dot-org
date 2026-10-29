@@ -151,7 +151,7 @@ export function assembleMapModule(
  *
  * The same arrangement-plus-script a `.map` is, without a module of its
  * own: the data as a const, its script if any placement says anything, a
- * `define` per kind it places so `loadMap` can make them, and the load. The
+ * `define` per kind it places so `loadScreen` can make them, and the load. The
  * world's own workspace is the map's own, so there is no map-level code
  * here — a world's events are the world's.
  */
@@ -165,7 +165,7 @@ export function assembleMainMap(
     `const mainMap = ${JSON.stringify(data)};\n` +
     scriptAssignment('mainMap', [], placements) +
     defines +
-    'world.loadMap(mainMap);\n'
+    'world.loadScreen(mainMap);\n'
   );
 }
 

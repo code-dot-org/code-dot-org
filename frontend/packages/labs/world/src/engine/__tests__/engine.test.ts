@@ -391,14 +391,15 @@ describe('an actor’s own properties, enumerated', () => {
 
 describe('World.loadMap (a second map, while the game runs)', () => {
   // Loading a map was the builder's alone, so a project could describe as many
-  // maps as it liked so long as it never wanted another while it ran. A menu
-  // over a game is `load map` in a handler, which a live World has to answer.
-  // (Replacing a level is a Viewport's: `loadMapInto`, `spaces.test`.)
+  // maps as it liked so long as it never wanted another while it ran. A level
+  // change is `load map` in a handler, which a live World has to answer, and
+  // it REPLACES what the World held (specs/ONE_WORLD_PLAN.md). A menu over a
+  // game is the screen's (`loadScreen`, `mapScript.test`).
   const room = (type: string) => ({actors: [{type}]});
   const template = (id: string) =>
     new ActorBuilder({id, name: id}).useTraits([AffectedByGravityTrait]);
 
-  it('adds a second map to the first while it runs', () => {
+  it('replaces the first map with a second while it runs', () => {
     const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
       GravityRule,
     ]);
@@ -409,12 +410,12 @@ describe('World.loadMap (a second map, while the game runs)', () => {
     builder.loadMap(room('actors/tree'));
     expect([...world.actors].map(actor => actor.type)).toEqual(['actors/tree']);
 
-    // A kind defined on the live world, and a map of it loaded over the first.
+    // A kind defined on the live world, and a map of it loaded in place of
+    // the first.
     world.define('actors/throne', template('throne'));
     world.loadMap(room('actors/throne'));
 
     expect([...world.actors].map(actor => actor.type)).toEqual([
-      'actors/tree',
       'actors/throne',
     ]);
   });
@@ -604,9 +605,9 @@ describe('WorldBuilder.loadMap (Map data)', () => {
     expect([...builder.getWorld().actors].length).toBe(1);
   });
 
-  it('stacks maps rather than replacing, so a level and a HUD compose', () => {
-    // Loading is additive on purpose: a world loads a level map and a UI map,
-    // which is the whole reason there is no separate Scene concept.
+  it('stacks maps over the screen, so a level and a HUD compose', () => {
+    // Loading onto the screen is additive on purpose: a screen holds a game
+    // and a menu over it (`loadScreen`). The World's map is one at a time.
     const builder = new WorldBuilder({id: 'w', name: 'W'}).useRules([
       GravityRule,
     ]);
@@ -617,8 +618,8 @@ describe('WorldBuilder.loadMap (Map data)', () => {
       ]),
     );
 
-    builder.loadMap({actors: [{type: 'faller', id: 'a'}]});
-    builder.loadMap({actors: [{type: 'faller', id: 'b'}]});
+    builder.loadScreen({actors: [{type: 'faller', id: 'a'}]});
+    builder.loadScreen({actors: [{type: 'faller', id: 'b'}]});
 
     expect(builder.getWorld().snapshot().actorIds.sort()).toEqual(['a', 'b']);
   });

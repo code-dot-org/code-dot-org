@@ -15,20 +15,23 @@
 // definition, so with nothing else in the world the recording is one box
 // sitting still: what moves is the world going past it.
 
-import {ActorBuilder, PositionProperty, Vector} from '../../engine';
+import {
+  ActorBuilder,
+  IntrinsicSizeProperty,
+  PositionProperty,
+  Vector,
+  ViewportTrait,
+} from '../../engine';
 
-import {demoWorld, type RuleDemo, type RuleModules} from './types';
+import {DEMO_SIZE, demoWorld, type RuleDemo, type RuleModules} from './types';
 
 /**
- * The map: twice the frame across, and as tall as the ENGINE's viewport.
+ * The map: twice the frame across, and taller than it.
  *
- * The width is what makes a pan possible. The height is for Camera Confined
- * alone, and is the one place where these demos have to know that the frame
- * and the engine's viewport are different rectangles: confinement keeps the
- * VIEWPORT inside the map, so a map shorter than the viewport has no legal
- * vertical position at all and the rule pins the camera somewhere the demo
- * never meant. Ten tiles is that viewport (engine/core/viewport), so the
- * clamp is satisfied and the vertical stays where every other demo puts it.
+ * The width is what makes a pan possible. The height leaves Camera Confined
+ * room above and below the walk, so it clamps only across, which is what its
+ * strip is about. The frame is the camera's window (`frame` below), so the
+ * clamp is measured against the picture itself.
  */
 const TILES = {columns: 12, rows: 10};
 
@@ -93,8 +96,22 @@ const cameraDemo = (id: string, module: string, stage: Stage): RuleDemo => ({
       ),
     );
 
+    // THE FRAME IS A VIEWPORT, and the camera is its: a camera that follows
+    // something in the World looks through a window onto it
+    // (specs/ONE_WORLD_PLAN.md). The recorder films through it (`viewOrigin`).
+    const frame = world.addActor(
+      new ActorBuilder({id: 'frame', name: 'frame'})
+        .useTraits([ViewportTrait])
+        .set(IntrinsicSizeProperty, new Vector(DEMO_SIZE.width, DEMO_SIZE.height))
+        .set(
+          PositionProperty,
+          new Vector(DEMO_SIZE.width / 2, DEMO_SIZE.height / 2),
+        )
+        .instantiate('frame'),
+    );
     world.defineCamera({
       id: 'view',
+      viewport: frame,
       traits: [
         of('rules/cameraFollow', 'FollowsTrait'),
         ...(stage.also ?? []).map(([path, trait]) => of(path, trait)),
@@ -170,7 +187,7 @@ export const cameraConfinedDemo = cameraDemo(
   'rules/cameraConfined',
   {
     also: [['rules/cameraConfined', 'ConfinedToTheMapTrait']],
-    from: 180,
+    from: 240,
     speed: 0.4,
   },
 );

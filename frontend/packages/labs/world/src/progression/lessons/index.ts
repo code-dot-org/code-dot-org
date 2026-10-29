@@ -5409,15 +5409,15 @@ and a Door — and **maps/room2.map** is the other one, which nothing has ever
 loaded. Walk into the Door and nothing happens.
 
 Click the big box on the Main Screen. That is a **Viewport**
-called Game: a window, and what you see through it is whichever map it holds.
+called Game: a window onto the World, and the World holds one map at a time.
 Right now it holds room one. A room is a map, and going somewhere else is
-**the window holding a different one**.
+**the World holding a different one**.
 
 ### What you do
 
 1. Add **when ⟨any Door⟩ starts touching**.
-2. In it, **load map ⟨map maps/room2⟩ into ⟨the Viewport⟩**. What the Viewport
-   held goes, and room two takes its place.
+2. In it, **load map ⟨map maps/room2⟩**. What the World held goes, and room
+   two takes its place.
 3. Walk into the Door. The Chest is a room-two thing, so if you can see one you
    are somewhere else.
 

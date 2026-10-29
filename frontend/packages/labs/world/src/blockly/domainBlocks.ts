@@ -4752,16 +4752,12 @@ const worldUnloadThisMap = defineBlock({
 });
 
 /**
- * `load the map named ⟨…⟩` — a map chosen while the world runs.
+ * `load the map named ⟨…⟩` — a map put up over the screen, by path.
  *
- * `load map ⟨…⟩` names one in a dropdown, which is right when a project knows
- * which map it means and wrong when it works it out: which screen to go to,
- * which level is next. Every map a project holds is registered by path
- * (`World.defineMap`), for the reason a Viewport needs, so a path is all this
- * takes.
- *
- * A path nothing registered loads nothing. That is the answer `load map into`
- * already gives a Viewport whose property names a map that is not there.
+ * The screen's stack until screens are one (specs/SCREEN_STACK_PLAN.md): a
+ * pause menu over a game, a form over a list. `load map` is the World's.
+ * Every map a project holds is registered by path (`World.defineMap`), so a
+ * path is all this takes, and one nothing registered loads nothing.
  */
 const worldLoadMapNamed = defineBlock({
   type: 'world_load_map_named',
@@ -4773,9 +4769,8 @@ const worldLoadMapNamed = defineBlock({
   extensions: [worldContextExtension],
   style: 'setup_blocks',
   tooltip:
-    'Add a map to the world, named by its file. What is already here stays, ' +
-    'as “load map” does — so a screen loaded this way comes up over the one ' +
-    'before it.',
+    'Put a map up over the screen, named by its file. What is already there ' +
+    'stays, so a menu loaded this way comes up over the game.',
   generator: {
     javascript(block, generator) {
       const path = generator.valueToCode(block, 'PATH', Order.NONE) || "''";
@@ -6933,53 +6928,38 @@ const worldGameIsPaused = defineBlock({
   },
 });
 
+/**
+ * `load map ⟨map⟩` — the World's map replaced, from any code
+ * (specs/ONE_WORLD_PLAN.md). A level change, a restart and the overworld are
+ * all this.
+ *
+ * The map is a value (`map ⟨…⟩`, or a path worked out in code — a level
+ * chosen by number). Every map the project holds is registered on the world
+ * (`worldModulePrologue`), so nothing is imported here: the world finds the
+ * map by its path (`World.loadWorldMap`).
+ */
 const worldLoadMap = defineBlock({
   type: 'world_load_map',
   message0: 'load map %1',
-  args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions}],
+  args0: [{type: 'input_value', name: 'MAP', check: 'String'}],
+  inputsInline: true,
   previousStatement: true,
   nextStatement: true,
-  // NOT builder-only, though it was: `define` and `loadMap` are the live
-  // World's as well now, so this block means the same thing in a handler as
-  // under `define world`: it ADDS a map to the world's own, which is how a
-  // menu comes up over a game. Replacing a level is `load map ⟨…⟩ into ⟨…⟩`.
-  extensions: [
-    mapOptionsExtension,
-    mapImportFieldExtension,
-    worldContextExtension,
-    openSourceButtonExtension,
-  ],
+  extensions: [worldContextExtension, valueShadowExtension],
   style: 'setup_blocks',
   tooltip:
-    'Place all the actors a map file describes into the world. In a handler ' +
-    'it loads a map while the game runs, over what is already there — which ' +
-    'is how a menu comes up. To go from one room to another, load the map ' +
-    'into a Viewport instead.',
+    'Make this map the World: everything in the World goes, and the map’s ' +
+    'actors are placed. Every Viewport shows it.',
   generator: {
     javascript(block, generator) {
-      const map = block.getFieldValue('MAP');
-      // A map places instances of actor templates (`world.loadMap`), so each
-      // referenced template is imported and registered first. The generator
-      // reads the map's actor modules from the live project registry.
-      const defines = mapActorTypes(map)
-        .map(type => {
-          addImport(
-            generator,
-            `mod:${type}`,
-            `import ${importVar(type)} from ${str(type)};`,
-          );
-          return `world.define(${str(type)}, ${importVar(type)});\n`;
-        })
-        .join('');
-      addImport(
-        generator,
-        `map:${map}`,
-        `import ${importVar(map)} from ${str(map)};`,
-      );
-      return `${defines}world.loadMap(${importVar(map)}, ${str(DEFAULT_LAYER_ID)});\n`;
+      const map = generator.valueToCode(block, 'MAP', Order.NONE) || "''";
+      return `world.loadWorldMap(${map});\n`;
     },
   },
 });
+registerValueShadows('world_load_map', [
+  {name: 'MAP', shadow: {type: 'world_map_ref'}},
+]);
 
 // ── World composition ────────────────────────────────────────────────────────
 // The game's module opens with the prologue below, written from the Main
@@ -7164,12 +7144,8 @@ export function worldModulePrologue(
 }
 
 /**
- * `map ⟨…⟩` — a map as a VALUE: its path, which is what a Viewport's `map`
- * property holds and what `load map … into` takes (specs/VIEWPORT_PLAN.md).
- *
- * The dropdown is the same one `load map` has, shelf row and all; the block
- * exists so that a map can be named where a value is wanted — plugged into
- * `load map … into ⟨…⟩` as its shadow, or into `set map of ⟨viewport⟩`.
+ * `map ⟨…⟩` — a map as a VALUE: its path, which is what `load map` and `load
+ * the map named` take. The shadow in `load map`'s socket.
  */
 const worldMapRef = defineBlock({
   type: 'world_map_ref',
@@ -7178,109 +7154,13 @@ const worldMapRef = defineBlock({
   output: 'String',
   extensions: [mapOptionsExtension, mapImportFieldExtension],
   style: 'setup_blocks',
-  tooltip: 'A map of this project, by name — to load into a Viewport.',
+  tooltip: 'A map of this project, by name — for the World to load.',
   generator: {
     javascript(block) {
       return [str(block.getFieldValue('MAP') ?? ''), Order.ATOMIC] as [
         string,
         number,
       ];
-    },
-  },
-});
-
-/**
- * `load map ⟨map⟩ into ⟨viewport⟩` — replace what a Viewport holds.
- *
- * The map is a value (`map ⟨…⟩`, or whatever else holds a path), the
- * Viewport an actor. Every map the project holds is registered on the
- * world (`worldModulePrologue`), so nothing is imported here: the world finds the
- * map by its path (`World.loadMapInto`). Over several Viewports it loads
- * into each, as `remove actor` removes each.
- */
-const worldLoadMapInto = defineBlock({
-  type: 'world_load_map_into',
-  message0: 'load map %1 into %2',
-  args0: [
-    {type: 'input_value', name: 'MAP', check: 'String'},
-    {type: 'input_value', name: 'ACTOR', check: 'Actor'},
-  ],
-  inputsInline: true,
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [actorInputExtension, worldContextExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Show a map inside a Viewport, in place of whatever it showed. The map ' +
-    'has a space of its own: its positions are its own, and its camera ' +
-    'follows what the map says.',
-  generator: {
-    javascript(block, generator) {
-      const map = generator.valueToCode(block, 'MAP', Order.NONE) || '""';
-      const target = actorTarget(block, generator, Order.MEMBER);
-      return forEachActor(
-        target,
-        actor => `world.loadMapInto(${actor}, ${map})`,
-      );
-    },
-  },
-});
-
-/** `unload ⟨viewport⟩` — take back everything a Viewport holds. */
-const worldUnloadViewport = defineBlock({
-  type: 'world_unload_viewport',
-  message0: 'unload %1',
-  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [actorInputExtension, worldContextExtension],
-  style: 'setup_blocks',
-  tooltip: 'Empty a Viewport: remove everything the map in it placed.',
-  generator: {
-    javascript(block, generator) {
-      const target = actorTarget(block, generator, Order.MEMBER);
-      return forEachActor(target, actor => `world.unloadViewport(${actor})`);
-    },
-  },
-});
-
-/**
- * `in the map ⟨Game⟩ shows do ⟨…⟩` — code of the screen's that acts in a
- * level.
- *
- * What acts on the world acts where its code runs (specs/SIMPLE_INTERFACE.md,
- * "World blocks act where they run"), and the screen's code runs on the
- * screen. A Viewport is the one thing on a screen that is also a way into a
- * map, so this holds the map it shows for the length of the body: `add
- * actor` adds to the level, `set background` sets the level's. Over several
- * Viewports, the first; for one showing nothing, the body does not run.
- *
- * Held and let go around the body rather than wrapped in a closure, as a
- * loop over actors is (`World.enter`), so a `return` in it still leaves the
- * handler.
- */
-const worldInShownMap = defineBlock({
-  type: 'world_in_shown_map',
-  message0: 'in the map %1 shows',
-  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
-  message1: 'do %1',
-  args1: [{type: 'input_statement', name: 'DO'}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [actorInputExtension, worldContextExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Run the blocks inside in the map a Viewport shows: what they add to ' +
-    'the world, or set about it, is in that map.',
-  generator: {
-    javascript(block, generator) {
-      const viewport = oneActor(actorTarget(block, generator, Order.NONE));
-      const body = generator.statementToCode(block, 'DO');
-      return (
-        `if (world.enterShown(${viewport})) {\n` +
-        `  try {\n${generator.prefixLines(body, generator.INDENT)}` +
-        `  } finally {\n    world.leave();\n  }\n}\n`
-      );
     },
   },
 });
@@ -10519,9 +10399,6 @@ export const DOMAIN_BLOCKS = [
   worldGameIsPaused,
   worldLoadMap,
   worldMapRef,
-  worldLoadMapInto,
-  worldUnloadViewport,
-  worldInShownMap,
   worldRuleProperty,
   memberHead,
   stepHead,
@@ -10827,17 +10704,13 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     // (specs/MAP_FIRST.md). A world file sees the loading half only.
     name: 'Map',
     blocks: [
-      // Placing actors from a map file.
+      // The World's map, replaced (specs/ONE_WORLD_PLAN.md).
       'world_load_map',
+      'world_map_ref',
+      // …and a map put up over the screen, and taken down again, until
+      // screens do it (specs/SCREEN_STACK_PLAN.md).
       'world_load_map_named',
       'world_unload_newest_map',
-      // …and into a Viewport, a window onto a map in a space of its own
-      // (specs/VIEWPORT_PLAN.md).
-      'world_load_map_into',
-      'world_unload_viewport',
-      // …and code of the screen's run in the map one shows.
-      'world_in_shown_map',
-      'world_map_ref',
 
       // The root a map opens with.
       'world_map',

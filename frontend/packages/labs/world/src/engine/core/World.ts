@@ -382,6 +382,8 @@ export interface WorldSnapshot {
    * value ({@link layerMotion}) and a rule may turn it mid-game.
    */
   layers: string[];
+  /** …and the screen's, which are structural for the same reason. */
+  screenLayers: string[];
   /** How each layer responds to the camera. A value, patched like a property. */
   layerMotion: Record<string, {parallax: {x: number; y: number}; fit: boolean}>;
   /**
@@ -461,6 +463,8 @@ export interface WorldSnapshot {
    * structural exactly as it is on an actor.
    */
   backdrops: SlotValues[];
+  /** …and the screen's layers', which are values in the same way. */
+  screenBackdrops: SlotValues[];
   /**
    * The track this world is playing, or undefined for silence.
    *
@@ -470,8 +474,13 @@ export interface WorldSnapshot {
    * is deliberately not here (specs/SOUND.md).
    */
   music?: string;
-  /** The one color behind everything — a value, patched like the sky above. */
-  clearColor: Rgba;
+  /**
+   * The color behind the World, or nothing while it says none and the
+   * screen's shows through — a value, patched like the sky above.
+   */
+  clearColor: Rgba | undefined;
+  /** The color behind the screen. */
+  screenColor: Rgba;
   /** World-scoped property values, by `${ruleId}.${propId}`. */
   world: Record<string, unknown>;
   /** Per-actor property values, by actor id then `${traitId}.${propId}`. */
@@ -617,13 +626,16 @@ export interface WorldInit {
   /** Explicitly-used rules; their dependencies are pulled in implicitly. */
   rules: Rule[];
   /**
-   * The layers actors are drawn in, back to front (core/Layer).
+   * The World's layers, back to front (core/Layer), until a map that names
+   * its own is loaded into it.
    *
    * A world that names none still has one — the default — so there is never a
    * placed actor with nowhere to be. A world that names some gets exactly
    * those, in the order given, which IS the draw order.
    */
   layers?: LayerInit[];
+  /** …and the screen's, which the Main Screen's data says. */
+  screenLayers?: LayerInit[];
   /**
    * State the WORLD declared for itself, with no rule to carry it
    * (specs/WORLD_STATE.md). Seeded like a rule's world-scoped properties, and
@@ -858,11 +870,19 @@ export class World {
     // owns directly for want of a placement to own them for it
     // (specs/SPACE_CAMERAS_PLAN.md).
   );
-  private readonly worldSpace = new Space(
-    WORLD_SPACE_ID,
-    undefined,
-    new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT),
-  );
+  private readonly worldSpace = World.emptyWorld();
+  /** Whether `set map size` has said how big the World is, with no map yet. */
+  private worldSized = false;
+
+  /** The World before any map: the size of the standard window. */
+  private static emptyWorld(): Space {
+    const space = new Space(
+      WORLD_SPACE_ID,
+      undefined,
+      new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT),
+    );
+    return space;
+  }
   private readonly viewportSpaces: Space[] = [];
   /**
    * The camera traits each kind elected, by type, for the main camera of the
@@ -922,6 +942,9 @@ export class World {
   private clearColor: Rgba;
   // The layers actors are drawn in, back to front. Never empty: index 0 is the
   // default, which is where an actor placed without being told a layer goes.
+  /** The World's layers when its map names none (`WorldInit.layers`). */
+  private readonly baseLayers: readonly LayerInit[];
+  /** The SCREEN's layers, back to front; the World's are `worldSpace.layers`. */
   private readonly layerList: Layer[];
   // The cameras, and the default among them. Never empty, for the reason the
   // layer list is not: a view taken through no camera would be a second kind of
@@ -1106,7 +1129,9 @@ export class World {
     // Layers, back to front, with the default guaranteed. A world told nothing
     // has exactly one, which is every world today — so an actor always has
     // somewhere to be and nothing has to special-case its absence.
-    this.layerList = (init.layers ?? []).map(makeLayer);
+    this.baseLayers = init.layers ?? [];
+    this.worldSpace.layers = this.worldLayersFor(undefined);
+    this.layerList = (init.screenLayers ?? []).map(makeLayer);
     if (!this.layerList.some(layer => layer.id === DEFAULT_LAYER_ID)) {
       this.layerList.unshift(makeLayer({id: DEFAULT_LAYER_ID}));
     }
@@ -1393,17 +1418,18 @@ export class World {
     // The zero its age counts from. Placement is what starts the clock, so a
     // template instantiated and placed twice gives two actors of different ages.
     actor.bornAt = this.elapsed;
-    // Against the layers of the space it is going into: the world's for
-    // the root, the loaded map's for a Viewport's (specs/LAYERS_PLAN.md).
-    const target = space ?? this.spaceOf(this.inHand.at(-1));
+    // Into the space asked for; else a Viewport onto the screen, which is
+    // the only place one means anything; else the World
+    // (specs/ONE_WORLD_PLAN.md). Against that space's layers: the root's
+    // own, the World's map's (specs/LAYERS_PLAN.md).
+    const target =
+      space ?? (actor.has(ViewportTrait) ? this.rootSpace : this.here().space);
     const known =
       target === this.rootSpace
         ? this.layerIndex.has(layer)
         : target.layers.some(held => held.id === layer);
     actor.layer = known ? layer : DEFAULT_LAYER_ID;
-    // The space it is in: the one asked for, else the actor in hand's — a
-    // bullet a ball spawns lands in the ball's level — else the root.
-    actor.space = space ?? this.spaceOf(this.inHand.at(-1));
+    actor.space = target;
     // A drawn actor's size is DECLARED, so it is known the moment the actor
     // exists and never measured. Everything that asks how big an actor is
     // reads `intrinsic size` — the click box (rules/mouse), the collision box,
@@ -1437,7 +1463,9 @@ export class World {
       space.mirrorOf = this.worldSpace;
       this.viewportSpaces.push(space);
       if (this.worldSpace.loads.length === 0) {
-        this.worldSpace.bounds = this.worldFloor();
+        if (!this.worldSized) {
+          this.worldSpace.bounds = this.worldFloor();
+        }
       } else {
         // …and one placed after the World has its map is shown it at once,
         // so `when ⟨Viewport⟩ shows a map` means the same for either.
@@ -1733,24 +1761,39 @@ export class World {
     return this;
   }
 
-  /** The layers, back to front. Index is depth; index 0 is the default. */
+  /** The World's layers, back to front. Index is depth. */
   get layers(): readonly Layer[] {
-    return this.layerList;
+    return this.worldSpace.layers;
   }
 
-  /** A layer by id, or undefined. */
+  /** A layer of the World by id, or undefined. */
   layer(id: string): Layer | undefined {
-    const index = this.layerIndex.get(id);
-    return index === undefined ? undefined : this.layerList[index];
+    return this.worldSpace.layers.find(held => held.id === id);
   }
 
-  /** How deep a layer draws — its position in the stack. */
+  /** How deep a layer draws in a space — the World's when none is named. */
   depthOf(layer: string, space?: Space): number {
-    if (space && space !== this.rootSpace) {
-      const at = space.layers.findIndex(held => held.id === layer);
-      return at < 0 ? 0 : at;
+    if (space === this.rootSpace) {
+      return this.layerIndex.get(layer) ?? 0;
     }
-    return this.layerIndex.get(layer) ?? 0;
+    const at = (space ?? this.worldSpace).layers.findIndex(
+      held => held.id === layer,
+    );
+    return at < 0 ? 0 : at;
+  }
+
+  /**
+   * The World's layers for a map: the ones it names, else the ones the world
+   * was described with (`WorldInit.layers`), the default among them.
+   */
+  private worldLayersFor(named: readonly MapLayer[] | undefined): Layer[] {
+    if (named) {
+      return layersOfMap(named);
+    }
+    const made = this.baseLayers.map(makeLayer);
+    return made.some(layer => layer.id === DEFAULT_LAYER_ID)
+      ? made
+      : [makeLayer({id: DEFAULT_LAYER_ID}), ...made];
   }
 
   /**
@@ -2206,29 +2249,78 @@ export class World {
     if (subject instanceof Space) {
       return subject;
     }
-    return subject && 'space' in subject && subject.space
-      ? subject.space
-      : this.rootSpace;
+    if (subject instanceof Camera) {
+      // The world's own cameras hold no space: they are the screen's.
+      return subject.space ?? this.rootSpace;
+    }
+    return subject?.space ?? this.here().space;
   }
 
   /**
-   * Where the code that is running is: the space, and the layer if there is
-   * one to speak of.
+   * What a world block acts on: the World, and the layer of the World actor
+   * in hand if there is one (specs/ONE_WORLD_PLAN.md).
    *
-   * An actor's is the space and layer it is in AT THE TIME, not where it was
-   * put; a camera's is its space; a map's script is in the space the map was
-   * loaded into; and code with nothing in hand — the Screen's, a world event's
-   * — is in the root. What acts on "the world" acts here
-   * (specs/SIMPLE_INTERFACE.md, "World blocks act where they run").
+   * THE WORLD FROM ANY CODE, the screen's included: `add actor`, `set
+   * background` and `load map` mean the game. The screen is acted on only
+   * through the calls its own module makes for it (`loadScreen`,
+   * `setScreenColor` and the rest), which hold the root while they run.
    */
   here(): {space: Space; layer?: string} {
     const subject = this.inHand.at(-1);
-    const space = this.spaceOf(subject);
+    // The screen while its own module holds it, and while one of the world's
+    // own cameras runs, which are the screen's.
+    if (
+      subject === this.rootSpace ||
+      (subject instanceof Camera && this.spaceOf(subject) === this.rootSpace)
+    ) {
+      return {space: this.rootSpace};
+    }
+    const space = this.worldSpace;
     return subject &&
       !(subject instanceof Space) &&
-      !(subject instanceof Camera)
+      !(subject instanceof Camera) &&
+      subject.space === space
       ? {space, layer: subject.layer}
       : {space};
+  }
+
+  /** Run `fn` acting on the screen rather than the World — see `here`. */
+  private onScreen<T>(fn: () => T): T {
+    return this.withSpace(this.rootSpace, fn);
+  }
+
+  /**
+   * Place the screen's own map: the Main Screen's placements, or a map put
+   * up over them (`load the map named`). What a Viewport it places shows is
+   * the World, which the screen's module has loaded first.
+   */
+  loadScreen(map: WorldMap, layer?: string): Actor[] {
+    return this.onScreen(() => this.loadMap(map, layer));
+  }
+
+  /** How big the screen is, in tiles: its own bounds, beside `setViewSize`. */
+  setScreenSize(columns: number, rows: number): void {
+    this.onScreen(() => this.setMapSize(columns, rows));
+  }
+
+  /** The color behind the screen, which the Main Screen's data says. */
+  setScreenColor(color: ColorValue): this {
+    return this.onScreen(() => this.setBackgroundColor(color));
+  }
+
+  /** A screen layer's background, which the Main Screen's data says. */
+  setScreenBackground(sprite: string | undefined, layer?: string): this {
+    return this.onScreen(() => this.setBackground(sprite, layer));
+  }
+
+  /** …and whether it tiles. */
+  setScreenBackgroundRepeat(repeat: boolean, layer?: string): this {
+    return this.onScreen(() => this.setBackgroundRepeat(repeat, layer));
+  }
+
+  /** …and where it sits. */
+  setScreenBackgroundOffset(offset: Vector, layer?: string): this {
+    return this.onScreen(() => this.setBackgroundOffset(offset, layer));
   }
 
   /** The space a Viewport owns, or nothing for an actor that is not one. */
@@ -2274,20 +2366,6 @@ export class World {
     this.inHand.pop();
   }
 
-  /**
-   * Hold the World, as `enter` holds an actor, and say whether `viewport`
-   * is a Viewport onto it — `in the map ⟨Game⟩ shows`. What acts on the
-   * world then acts in the World, from code that is the screen's. Nothing is
-   * held for anything that is not a Viewport, and the caller runs nothing.
-   */
-  enterShown(viewport: Actor | undefined): boolean {
-    const space = viewport ? this.viewportSpaceOf(viewport) : undefined;
-    if (space) {
-      this.inHand.push(this.worldSpace);
-    }
-    return space !== undefined;
-  }
-
   /** The actor in hand, if any — for what asks after it by name. */
   actorInHand(): Actor | Camera | undefined {
     const subject = this.inHand.at(-1);
@@ -2322,7 +2400,7 @@ export class World {
     world.shown = typeof map === 'string' ? map : undefined;
     // The World's layers are the map's, made before anything is placed so
     // each placement's layer resolves against them.
-    world.layers = layersOfMap(held?.layers);
+    world.layers = this.worldLayersFor(held?.layers);
     world.bounds = this.worldFloor();
     for (const space of this.viewportSpaces) {
       space.bounds = world.bounds;
@@ -2335,6 +2413,11 @@ export class World {
       return [];
     }
     const added = this.loadInto(world, held, layer);
+    // A map that says no size leaves the World one window big rather than
+    // nowhere.
+    if (world.bounds.x === 0 && world.bounds.y === 0) {
+      world.bounds = this.worldWindow();
+    }
     for (const space of this.viewportSpaces) {
       space.bounds = world.bounds;
       this.showsThrough(space);
@@ -2364,34 +2447,6 @@ export class World {
     const first = this.viewportSpaces.find(space => space.owner)?.owner;
     const view = first ? this.viewSizeOf(first) : this.view;
     return new Vector(view.x, view.y);
-  }
-
-  /**
-   * `load map ⟨…⟩ into ⟨viewport⟩`: the World's map replaced, since every
-   * Viewport shows the World. Refuses anything that is not a Viewport.
-   */
-  loadMapInto(
-    viewport: Actor,
-    map: WorldMap | string,
-    layer?: string,
-  ): Actor[] {
-    const space = this.viewportSpaceOf(viewport);
-    if (!space) {
-      throw new Error(
-        `world-lab: “${viewport.id}” is not a Viewport, so nothing can be ` +
-          `loaded into it`,
-      );
-    }
-    return this.loadWorldMap(map, layer);
-  }
-
-  /** Take back everything the World holds — `unload ⟨viewport⟩`. */
-  unloadViewport(viewport: Actor): void {
-    const space = this.viewportSpaceOf(viewport);
-    if (space) {
-      this.unloadSpace(this.worldSpace);
-      this.worldSpace.shown = '';
-    }
   }
 
   private unloadSpace(space: Space): void {
@@ -2792,9 +2847,12 @@ export class World {
    * past this, which keeps "as big as the biggest thing in it" true.
    */
   setMapSize(columns: number, rows: number): void {
-    // The size of the space the code is in: a level's own code sizes the
-    // level, not the screen it is shown on (`here`).
-    this.here().space.bounds = new Vector(
+    // The World's, or the screen's from the screen's own module (`here`).
+    const {space} = this.here();
+    if (space === this.worldSpace) {
+      this.worldSized = true;
+    }
+    space.bounds = new Vector(
       Math.max(0, Math.round(columns)) * TILE_SIZE || VIEWPORT_WIDTH,
       Math.max(0, Math.round(rows)) * TILE_SIZE || VIEWPORT_HEIGHT,
     );
@@ -3065,20 +3123,21 @@ export class World {
    * whether or not anything imports it, for the reason a Viewport needs
    * (`defineMap`), so a path is enough.
    *
+   * OVER THE SCREEN, from any code: this and `unload the newest map` are
+   * the screen's stack until screens are (specs/SCREEN_STACK_PLAN.md), where
+   * `load map` is the World's.
+   *
    * A path nothing registered loads nothing, which is what the path says.
    */
   loadMapNamed(path: string, layer?: string): Actor[] {
     const held = this.maps.get(path);
-    return held ? this.loadMap(held, layer) : [];
+    return held ? this.loadScreen(held, layer) : [];
   }
 
   /**
-   * Close the newest map the running code's space holds, and say whether
-   * there was one — `unload the newest map`, and the whole of what "back" is.
-   *
-   * The root's from the Screen's code, which is the stack a screen sits on
-   * (specs/SCREENS_PLAN.md); a Viewport's from code in its level, which takes
-   * back what that level's code loaded over it (`here`).
+   * Close the newest map over the screen, and say whether there was one —
+   * `unload the newest map`, and the whole of what "back" is
+   * (specs/SCREENS_PLAN.md).
    *
    * The map a world was BUILT from is a load like any other, so a project
    * that goes back often enough closes its own first screen and is left with
@@ -3086,7 +3145,7 @@ export class World {
    * the rule's business, and `Screens` keeps one.
    */
   unloadNewestMap(): boolean {
-    const load = this.here().space.loads.at(-1);
+    const load = this.rootSpace.loads.at(-1);
     load?.unload();
     return load !== undefined;
   }
@@ -4537,11 +4596,21 @@ export class World {
    * by an event handler, or by the hot-reload patch — shows up on the next one.
    */
   backdropSnapshot(): readonly BackdropState[] {
+    return this.worldSpace.layers.map(layer => layer.background);
+  }
+
+  /** The color behind the World, or the screen's while it says none. */
+  backdropColor(): Rgba {
+    return this.worldSpace.clearColor ?? this.clearColor;
+  }
+
+  /** The screen's layers' backgrounds, as the driver draws them. */
+  screenBackdropSnapshot(): readonly BackdropState[] {
     return this.layerList.map(layer => layer.background);
   }
 
-  /** The one color behind everything, as the driver clears to it. */
-  backdropColor(): Rgba {
+  /** The one color behind the screen, as the driver clears to it. */
+  screenColor(): Rgba {
     return this.clearColor;
   }
 
@@ -4570,7 +4639,9 @@ export class World {
     const {space, layer} = this.here();
     const id = named ?? layer ?? DEFAULT_LAYER_ID;
     if (space === this.rootSpace || space.layers.length === 0) {
-      return this.layer(id) ?? this.layerList[this.depthOf(DEFAULT_LAYER_ID)];
+      return this.layerList[
+        this.layerIndex.get(id) ?? this.layerIndex.get(DEFAULT_LAYER_ID) ?? 0
+      ];
     }
     return (
       space.layers.find(held => held.id === id) ??
@@ -4784,6 +4855,16 @@ export class World {
     /** Whether it ignores the camera entirely — an interface layer. */
     fit: boolean;
   }> {
+    return this.worldSpace.layers.map(layer => ({
+      id: layer.id,
+      effects: layer.effects,
+      parallax: {x: layer.parallax.x, y: layer.parallax.y},
+      fit: layer.fit,
+    }));
+  }
+
+  /** …and the screen's, which the driver builds its own containers from. */
+  screenLayerSnapshot(): ReturnType<World['layerSnapshot']> {
     return this.layerList.map(layer => ({
       id: layer.id,
       effects: layer.effects,
@@ -4833,7 +4914,7 @@ export class World {
   allEffects(): AppliedEffectSpec[] {
     return [
       ...this.appliedEffects,
-      ...this.layerList.flatMap(layer => [
+      ...[...this.worldSpace.layers, ...this.layerList].flatMap(layer => [
         ...layer.effects,
         ...layer.background.effects,
       ]),
@@ -4854,7 +4935,7 @@ export class World {
       ...this.appliedEffects.map(
         effect => ['world', effect] as [string, AppliedEffectSpec],
       ),
-      ...this.layerList.flatMap(layer => [
+      ...this.worldSpace.layers.flatMap(layer => [
         ...layer.effects.map(
           effect =>
             [`layer:${layer.id}`, effect] as [string, AppliedEffectSpec],
@@ -4862,6 +4943,20 @@ export class World {
         ...layer.background.effects.map(
           effect =>
             [`backdrop:${layer.id}`, effect] as [string, AppliedEffectSpec],
+        ),
+      ]),
+      // …and the screen's, under keys of their own.
+      ...this.layerList.flatMap(layer => [
+        ...layer.effects.map(
+          effect =>
+            [`screen-layer:${layer.id}`, effect] as [string, AppliedEffectSpec],
+        ),
+        ...layer.background.effects.map(
+          effect =>
+            [`screen-backdrop:${layer.id}`, effect] as [
+              string,
+              AppliedEffectSpec,
+            ],
         ),
       ]),
       ...this.actorList.flatMap(actor =>
@@ -4903,9 +4998,11 @@ export class World {
     if (owner === 'world') {
       return retune(this.appliedEffects);
     }
-    const slot = /^backdrop:(.+)$/.exec(owner);
+    const slot = /^(screen-)?backdrop:(.+)$/.exec(owner);
     if (slot) {
-      const layer = this.layer(slot[1]);
+      const layer = slot[1]
+        ? this.layerList.find(held => held.id === slot[2])
+        : this.layer(slot[2]);
       return layer ? retune(layer.background.effects) : false;
     }
     const actor = this.actorList.find(candidate => candidate.id === owner);
@@ -4936,7 +5033,7 @@ export class World {
       });
     };
     patch(this.appliedEffects);
-    for (const layer of this.layerList) {
+    for (const layer of [...this.worldSpace.layers, ...this.layerList]) {
       patch(layer.effects);
       patch(layer.background.effects);
     }
@@ -5299,9 +5396,10 @@ export class World {
           {x: camera.position.x, y: camera.position.y},
         ]),
       ),
-      layers: this.layerList.map(layer => layer.id),
+      layers: this.worldSpace.layers.map(layer => layer.id),
+      screenLayers: this.layerList.map(layer => layer.id),
       layerMotion: Object.fromEntries(
-        this.layerList.map(layer => [
+        this.worldSpace.layers.map(layer => [
           layer.id,
           {
             parallax: {x: layer.parallax.x, y: layer.parallax.y},
@@ -5341,10 +5439,16 @@ export class World {
       ),
       // Per layer, in stack order, plus the world's one color. Values, not
       // structure: changing the sky patches the running game.
-      backdrops: this.layerList.map(layer =>
+      backdrops: this.worldSpace.layers.map(layer =>
         slotValues(layer.id, layer.background),
       ),
-      clearColor: [...this.clearColor] as Rgba,
+      screenBackdrops: this.layerList.map(layer =>
+        slotValues(layer.id, layer.background),
+      ),
+      clearColor: this.worldSpace.clearColor
+        ? ([...this.worldSpace.clearColor] as Rgba)
+        : undefined,
+      screenColor: [...this.clearColor] as Rgba,
       // The track, and not the one-shots: what is playing is state a patch can
       // set, what already played is a moment (specs/SOUND.md).
       ...(this.track === undefined ? {} : {music: this.track}),

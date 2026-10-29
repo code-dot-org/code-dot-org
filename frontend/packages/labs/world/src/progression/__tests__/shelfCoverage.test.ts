@@ -92,15 +92,9 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
   Clock: ['world_time'],
   // The two map hats. A map that does something when it loads is a real
   // thing (the pause menu is one) and no lesson reaches it. The screen's
-  // hat and the way into a Viewport's map are in every lesson's Main Screen
-  // from the start, where its once-only code goes, so none offers them
-  // (specs/LESSONS_AS_SCREENS_PLAN.md).
-  Map: [
-    'world_in_shown_map',
-    'world_on_map_loads',
-    'world_on_map_unloads',
-    'world_on_screen_loads',
-  ],
+  // hat is in every lesson's Main Screen from the start, where its once-only
+  // code goes, so none offers it (specs/LESSONS_AS_SCREENS_PLAN.md).
+  Map: ['world_on_map_loads', 'world_on_map_unloads', 'world_on_screen_loads'],
   // Parenting, and the engine's own transform vocabulary. `is created` is on
   // this list, which is worth noticing: it is where an app restores what it
   // saved (specs/SAVING_PLAN.md).

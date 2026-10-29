@@ -208,6 +208,15 @@ export function demoWorld(
  * correctly filmed and loudly out of bounds.
  */
 export function viewOrigin(world: World): {x: number; y: number} {
+  // Through the demo's Viewport where it has one, which is how a camera
+  // that follows something in the World is filmed (specs/ONE_WORLD_PLAN.md).
+  const window = world.spaces[0]?.camera;
+  if (window) {
+    return {
+      x: window.position.x - DEMO_SIZE.width / 2,
+      y: window.position.y - DEMO_SIZE.height / 2,
+    };
+  }
   const active = world.cameraSnapshot().find(one => one.active);
   return {
     x: (active?.position.x ?? 0) - DEMO_SIZE.width / 2,

@@ -130,7 +130,7 @@ export * from './rules/styled';
 export * from './rules/viewport';
 // …and a window onto its own children (specs/ONE_WORLD_PLAN.md).
 export * from './rules/scrolling';
-export {Space, ROOT_SPACE_ID} from './core/Space';
+export {Space, ROOT_SPACE_ID, WORLD_SPACE_ID} from './core/Space';
 export type {MapLayer, MapSlot} from './core/Layer';
 
 // What the driver is told of a picture, and an animation as keyframes

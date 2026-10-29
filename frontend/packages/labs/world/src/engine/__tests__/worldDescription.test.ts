@@ -192,25 +192,24 @@ describe('how big the world is', () => {
     expect(made.mapBounds()).toEqual(new Vector(960, 960));
   });
 
-  it('is the LARGEST map, not the last', () => {
-    // A world may load several — a level and a HUD. The honest answer to how
-    // big it is is as big as the biggest thing in it, so a HUD the size of the
-    // viewport must not shrink the level.
+  it('is the last map’s, which replaces the one before', () => {
+    // The World holds one map at a time; a HUD is the screen's, and does not
+    // shrink it (specs/ONE_WORLD_PLAN.md).
     const made = builder();
     made.loadMap(map(30));
     made.loadMap(map(10));
 
-    expect(made.mapBounds()).toEqual(new Vector(960, 960));
+    expect(made.mapBounds()).toEqual(new Vector(320, 320));
   });
 
-  it('ignores a map that carries no size', () => {
-    // A map block synthesises its placements without one; the world keeps
-    // whatever it had rather than collapsing to nothing.
+  it('is one window big for a map that carries no size', () => {
+    // A map block synthesises its placements without one; the World is still
+    // somewhere rather than nowhere.
     const made = builder();
     made.loadMap(map(30));
     made.loadMap({actors: []});
 
-    expect(made.mapBounds()).toEqual(new Vector(960, 960));
+    expect(made.mapBounds()).toEqual(made.viewSize());
   });
 });
 

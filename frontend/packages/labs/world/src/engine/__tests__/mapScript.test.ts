@@ -39,8 +39,8 @@ describe('a map script', () => {
       seen.push(Object.keys(placed));
     });
 
-    world.loadMap(map);
-    world.loadMap(map);
+    world.loadScreen(map);
+    world.loadScreen(map);
 
     // By the MAP's ids, not the resolved ones: the second load's buttons are
     // `Resume#2` and `Quit#2` in the world and `Resume` and `Quit` here.
@@ -53,7 +53,7 @@ describe('a map script', () => {
   it('registers on the placed actor, so a hat about it fires', () => {
     const world = makeWorld();
     const heard: string[] = [];
-    const [resume] = world.loadMap(
+    const [resume] = world.loadScreen(
       menu((_world, placed) => {
         placed.Resume.on(Ping, (_w, actor) => heard.push(actor.id));
       }),
@@ -70,12 +70,12 @@ describe('a map script', () => {
   it('unloads what it placed, and only that', () => {
     const world = makeWorld();
     let load: MapLoad | undefined;
-    world.loadMap(
+    world.loadScreen(
       menu((_world, _placed, map) => {
         load = map;
       }),
     );
-    world.loadMap(menu(undefined));
+    world.loadScreen(menu(undefined));
     expect([...world.actors].map(actor => actor.id)).toEqual([
       'Resume',
       'Quit',
@@ -95,7 +95,7 @@ describe('a map script', () => {
     const world = makeWorld();
     const order: string[] = [];
     let load: MapLoad | undefined;
-    world.loadMap(
+    world.loadScreen(
       menu((_world, placed, map) => {
         load = map;
         map.onUnload(() => order.push(`unloading:${world.actorCount()}`));
@@ -112,7 +112,7 @@ describe('a map script', () => {
   it('is deferred to the end of a tick, as any removal is', () => {
     const world = makeWorld();
     let load: MapLoad | undefined;
-    const [resume] = world.loadMap(
+    const [resume] = world.loadScreen(
       menu((_world, placed, map) => {
         load = map;
         placed.Resume.on(Ping, () => map.unload());
@@ -134,8 +134,8 @@ describe('a map script', () => {
 describe('closing the newest map', () => {
   it('takes back the last one loaded, and leaves the ones under it', () => {
     const world = makeWorld();
-    world.loadMap(menu(undefined));
-    world.loadMap(menu(undefined));
+    world.loadScreen(menu(undefined));
+    world.loadScreen(menu(undefined));
 
     expect(world.unloadNewestMap()).toBe(true);
     world.tick(1 / 60);
@@ -146,8 +146,8 @@ describe('closing the newest map', () => {
 
   it('goes back down to nothing, one at a time', () => {
     const world = makeWorld();
-    world.loadMap(menu(undefined));
-    world.loadMap(menu(undefined));
+    world.loadScreen(menu(undefined));
+    world.loadScreen(menu(undefined));
 
     expect(world.unloadNewestMap()).toBe(true);
     expect(world.unloadNewestMap()).toBe(true);
@@ -165,8 +165,8 @@ describe('closing the newest map', () => {
     // map` from inside a script is the ordinary way one goes.
     const world = makeWorld();
     let held: MapLoad | undefined;
-    world.loadMap(menu((_world, _placed, load) => (held = load)));
-    world.loadMap(menu(undefined));
+    world.loadScreen(menu((_world, _placed, load) => (held = load)));
+    world.loadScreen(menu(undefined));
     held!.unload();
     world.tick(1 / 60);
 
@@ -203,7 +203,7 @@ describe('an anchored placement', () => {
     // Twenty tiles across and ten down: 640 by 320, where the map is square.
     world.setViewSize(20, 10);
 
-    world.loadMap(cornered('bottom right') as never);
+    world.loadScreen(cornered('bottom right') as never);
 
     // Twenty in from the right and twenty up from the bottom, as it was.
     expect(placed(world)).toMatchObject({x: 620, y: 300});
@@ -213,7 +213,7 @@ describe('an anchored placement', () => {
     const world = makeWorld();
     world.setViewSize(20, 10);
 
-    world.loadMap(cornered(undefined) as never);
+    world.loadScreen(cornered(undefined) as never);
 
     expect(placed(world)).toMatchObject({x: 300, y: 300});
   });
@@ -222,7 +222,7 @@ describe('an anchored placement', () => {
     const world = makeWorld();
     world.setViewSize(10, 10);
 
-    world.loadMap(cornered('bottom right') as never);
+    world.loadScreen(cornered('bottom right') as never);
 
     expect(placed(world)).toMatchObject({x: 300, y: 300});
   });
@@ -239,7 +239,7 @@ describe('an anchored placement', () => {
     // placed against the default 320x320 window at y=264, and stayed there
     // when the body made the window 576 tall — which is the middle of it.
     const world = makeWorld();
-    world.loadMap(cornered('bottom right') as never);
+    world.loadScreen(cornered('bottom right') as never);
     expect(placed(world)).toMatchObject({x: 300, y: 300});
 
     world.setViewSize(20, 10);
@@ -253,7 +253,7 @@ describe('an anchored placement', () => {
     // Re-anchoring a thing a program has since dragged somewhere would undo
     // the program.
     const world = makeWorld();
-    world.loadMap(cornered('bottom right') as never);
+    world.loadScreen(cornered('bottom right') as never);
     const card = [...world.actors].find(one => one.id === 'card')!;
     card.set(PositionProperty, new Vector(10, 10));
 
@@ -268,7 +268,7 @@ describe('an anchored placement', () => {
     const world = makeWorld();
     world.setViewSize(20, 10);
 
-    world.loadMap(cornered('middle') as never);
+    world.loadScreen(cornered('middle') as never);
 
     expect(placed(world)).toMatchObject({x: 300, y: 300});
   });

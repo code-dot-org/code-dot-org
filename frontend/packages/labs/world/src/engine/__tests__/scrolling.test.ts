@@ -46,7 +46,7 @@ const scrolled = () => {
   const window = Window.instantiate('Window', 'actors/window');
   world.addActor(window);
   world.set(PositionProperty as never, new Vector(0, 0) as never);
-  world.loadMapInto(window, LONG);
+  world.loadWorldMap(LONG);
   world.tick(1 / 60);
   const space = world.viewportSpaceOf(window)!;
   return {

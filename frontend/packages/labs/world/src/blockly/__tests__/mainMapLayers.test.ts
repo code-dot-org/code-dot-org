@@ -20,13 +20,13 @@ const LAYERS = [
 describe('layerDeclarations', () => {
   it('declares the map’s layers in order, then sets their slots', () => {
     expect(layerDeclarations(LAYERS)).toBe(
-      'world.defineLayer({id: "layer1", name: "Sky", parallax: new WorldLab.Vector(0.2, 0)});\n' +
-        'world.defineLayer({id: "main"});\n' +
-        'world.defineLayer({id: "layer2", name: "Fog", fit: true});\n' +
-        'world.setBackground("sky.png", "layer1");\n' +
-        'world.setBackgroundRepeat(true, "layer1");\n' +
-        'world.setBackgroundOffset(new WorldLab.Vector(4, 0), "layer1");\n' +
-        'world.setBackground("fog.png", "layer2");\n',
+      'world.defineScreenLayer({id: "layer1", name: "Sky", parallax: new WorldLab.Vector(0.2, 0)});\n' +
+        'world.defineScreenLayer({id: "main"});\n' +
+        'world.defineScreenLayer({id: "layer2", name: "Fog", fit: true});\n' +
+        'world.setScreenBackground("sky.png", "layer1");\n' +
+        'world.setScreenBackgroundRepeat(true, "layer1");\n' +
+        'world.setScreenBackgroundOffset(new WorldLab.Vector(4, 0), "layer1");\n' +
+        'world.setScreenBackground("fog.png", "layer2");\n',
     );
   });
 

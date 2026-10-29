@@ -24,6 +24,7 @@ import {
   ALL_STOCK_SOURCES,
   compileStockRules,
 } from '../../__tests__/support/compileStockRules';
+import {WORLD_SPACE_ID} from '../../../engine';
 import {RULE_DEMOS} from '../index';
 import {
   DEMO_BACKGROUND,
@@ -79,8 +80,15 @@ function play(
         return;
       }
       const view = viewOrigin(world);
+      // Only what the Viewport shows, where the demo has one: the Viewport
+      // itself is the frame, not something in it.
+      const shown = world
+        .renderSnapshot()
+        .filter(
+          state => !world.spaces.length || state.space === WORLD_SPACE_ID,
+        );
       frames.push(
-        world.renderSnapshot().map(state => {
+        shown.map(state => {
           const id = (state.actor as unknown as {id: string}).id;
           const look = demo.look(id, state.actor, world);
           return {

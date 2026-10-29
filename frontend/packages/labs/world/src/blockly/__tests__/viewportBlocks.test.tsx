@@ -41,25 +41,12 @@ describe('the blocks', () => {
     expect(emit('world_map_ref', {MAP: 'maps/level1'})).toBe('"maps/level1"');
   });
 
-  it('loads a map value into an actor, or into each of several', () => {
-    expect(
-      emit('world_load_map_into', {}, {MAP: '"maps/level1"', ACTOR: 'actor'}),
-    ).toBe('world.loadMapInto(actor, "maps/level1");\n');
-    expect(
-      emit('world_load_map_into', {}, {MAP: 'm', ACTOR: 'list'}, true),
-    ).toBe(
-      'WorldLab.each(list, subject => {\nworld.loadMapInto(subject, m);\n});\n',
+  it('loads a map value into the World', () => {
+    expect(emit('world_load_map', {}, {MAP: '"maps/level1"'})).toBe(
+      'world.loadWorldMap("maps/level1");\n',
     );
     // An empty socket loads nothing rather than throwing on undefined.
-    expect(emit('world_load_map_into', {}, {ACTOR: 'actor'})).toBe(
-      'world.loadMapInto(actor, "");\n',
-    );
-  });
-
-  it('unloads a viewport', () => {
-    expect(emit('world_unload_viewport', {}, {ACTOR: 'actor'})).toBe(
-      'world.unloadViewport(actor);\n',
-    );
+    expect(emit('world_load_map', {}, {})).toBe("world.loadWorldMap('');\n");
   });
 });
 
@@ -144,11 +131,11 @@ describe('the Main Screen’s module', () => {
       js.indexOf('world.defineMap("maps/level1"'),
     );
     expect(js.indexOf('world.loadWorldMap("maps/level1");')).toBeLessThan(
-      js.indexOf('world.loadMap(mainMap);'),
+      js.indexOf('world.loadScreen(mainMap);'),
     );
     // Before the screen is loaded, so a Viewport on it finds its map.
     expect(js.indexOf('world.defineMap(')).toBeLessThan(
-      js.indexOf('world.loadMap(mainMap)'),
+      js.indexOf('world.loadScreen(mainMap)'),
     );
   });
 });

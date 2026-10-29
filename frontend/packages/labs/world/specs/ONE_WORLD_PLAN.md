@@ -1,6 +1,6 @@
 # Plan: one World, seen through Viewports
 
-STATUS: BUILDING, October 2026. Steps 1 to 4 are done. Comes before
+STATUS: BUILDING, October 2026. Steps 1 to 5 are done. Comes before
 specs/SCREEN_STACK_PLAN.md, which sits on it.
 
 A game has one World. Maps fill it, and maps bring its layers. A Viewport is
@@ -188,7 +188,8 @@ There are no migrations (specs/RETIREMENTS_PLAN.md).
 6. Cameras: one per Viewport, with the camera traits as now; `actor to
 follow` by kind. Removing camera lists, `shows through`, and the
    Viewport's own `scroll` and `content`. Tests.
-7. Layers: `fit` removed, screens lose their layers. Tapper's Interface
+7. Layers: `fit` removed, and the screen's layers (`defineScreenLayer` and
+   its backgrounds) reduced to what a flat screen needs. Tapper's Interface
    labels become Main Screen placements.
 8. The screen editor: a way into a Scroll View to arrange content taller
    than its window, and the map editor's mirror preview removed.
@@ -252,6 +253,39 @@ map … into ⟨Game⟩`, is now a correct answer, and its test says so.
   a second and dumping each actor's kind, space, layer and position and each
   Viewport's bounds and camera. Nothing differs but generated ids and what
   differs between two runs of the same code: the random lessons.
+- **Step 5 kept `here`, and narrowed it to two answers.** A world block acts
+  on the World from any code, a screen actor's handler included; it acts on
+  the screen only while the screen's own module holds it, or one of the
+  world's own cameras runs. The screen's module says what is its own through
+  calls named for it: `loadScreen` for its placements, `setScreenSize`,
+  `setScreenColor`, `defineScreenLayer` and `setScreenBackground`. They are
+  named, not held around the calls, because the builder records most calls
+  to replay into a rebuilt world, and a held context would not replay.
+- **The engine's own names now mean the World.** `layers`, `layerSnapshot`,
+  `backdropSnapshot`, `backdropColor` and the builder's `defineLayer` are the
+  World's; the renderer reads the screen through `screenLayerSnapshot`,
+  `screenBackdropSnapshot` and `screenColor`, and hot reload carries both.
+  This was step 7's in part, brought forward: with blocks acting on the World
+  and the old names describing the screen, every engine test about layers and
+  backgrounds read one thing and checked another.
+- **`load map` takes its map as a value** (`map ⟨…⟩`, or a path worked out in
+  code) and replaces the World's, which `load map … into` used to be the only
+  way to do. `load the map named` and `unload the newest map` put maps up over
+  the screen and take them down, from any code, until screens do it
+  (specs/SCREEN_STACK_PLAN.md). Breakout's pause menu uses the first.
+- **A Viewport added by code goes on the screen**, the only place one means
+  anything; everything else code adds goes into the World.
+- **A size said before any Viewport is kept.** Placing the first Viewport
+  floors an empty World at its window, unless `set map size` already said
+  how big it is; the camera demos found that by being sized first.
+- **The camera rule demos look through a Viewport** the size of their frame,
+  since a camera that follows something in the World is a Viewport's. The
+  recorder films only the World where a demo has one. The actor demo
+  recorder fails on an `image` command; it did before this step.
+- **Compared before and after** as in step 4: no difference in any of the
+  90, but the random lessons' positions.
+- **Seen in the browser**: Breakout's pause menu comes up over the game, and
+  Quit takes it away and starts the level again.
 
 ## Not in this plan
 

@@ -141,14 +141,14 @@ export const setNumber = (type: string, value: number) => ({
  * second axis"; specs/MAP_FIRST.md): P stops the game and loads the stock
  * menu. The menu's own script takes it away on Resume and says `quit` on
  * Quit, and the world decides what quitting means — here, start the level
- * over, which is loading it into the Viewport that holds it again: what the
- * Viewport held goes, and nothing outside it is touched. The menu is loaded
- * into the main map, over the Viewport, so it is not part of what restarts.
+ * over, which is loading it into the World again: what the World held goes,
+ * and the screen is not touched. The menu is put up over the screen, so it is
+ * not part of what restarts (specs/ONE_WORLD_PLAN.md).
  * The menu is the project's `maps/pauseMenu.map`, imported with the
  * kinds it places (`maps/importStockMap`), and a project may open it in the
  * map editor and move things or change what its buttons do.
  */
-export const pauseHandlers = (level: string, viewport = 'actors/viewport') => {
+export const pauseHandlers = (level: string) => {
   return [
     {
       type: 'world_on_Input_IsPressedEvent',
@@ -168,7 +168,19 @@ export const pauseHandlers = (level: string, viewport = 'actors/viewport') => {
             DO0: {
               block: stack([
                 {type: 'world_pause_game'},
-                {type: 'world_load_map', fields: {MAP: 'maps/pauseMenu'}},
+                // Over the screen, where the menu belongs, until it is a
+                // screen of its own (specs/SCREEN_STACK_PLAN.md).
+                {
+                  type: 'world_load_map_named',
+                  inputs: {
+                    PATH: {
+                      shadow: {
+                        type: 'world_map_ref',
+                        fields: {MAP: 'maps/pauseMenu'},
+                      },
+                    },
+                  },
+                },
               ]),
             },
           },
@@ -187,10 +199,9 @@ export const pauseHandlers = (level: string, viewport = 'actors/viewport') => {
         block: stack([
           {type: 'world_resume_game'},
           {
-            type: 'world_load_map_into',
+            type: 'world_load_map',
             inputs: {
               MAP: {shadow: {type: 'world_map_ref', fields: {MAP: level}}},
-              ACTOR: kind(viewport),
             },
           },
         ]),

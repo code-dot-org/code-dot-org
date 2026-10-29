@@ -1,5 +1,5 @@
 import {installAllBlocks} from '@blockly/field-colour';
-import {afterEach, describe, expect, it} from 'vitest';
+import {describe, expect, it} from 'vitest';
 
 import {Blockly} from '@code-dot-org/blockly';
 
@@ -21,7 +21,7 @@ import {
 import {paramSockets} from '../extensions/effectParamsMutator';
 import {RGBA_PREVIEW_EXTENSION} from '../extensions/rgbaPreview';
 import {WORLD_CONTEXT_EXTENSION} from '../extensions/worldContext';
-import {setProjectMaps, setProjectRuleModules} from '../moduleOptions';
+import {setProjectRuleModules} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
 import {forgetImageSizes, setProjectGrids} from '../spriteCells';
@@ -893,7 +893,7 @@ describe('domain block generators', () => {
     // costs nothing.
     const live = [
       ['world_add_actor', 'ACTOR'],
-      ['world_load_map', 'MAP'],
+      ['world_map_ref', 'MAP'],
     ] as const;
     for (const [type, field] of live) {
       const args = (
@@ -1316,7 +1316,7 @@ describe('domain block generators', () => {
         c => c.name === name,
       )?.blocks;
     expect(drawer('Map')).toEqual(
-      expect.arrayContaining(['world_load_map', 'world_load_map_into']),
+      expect.arrayContaining(['world_load_map', 'world_map_ref']),
     );
     expect(drawer('World')).toEqual(
       expect.arrayContaining([
@@ -2600,30 +2600,15 @@ describe('world block generators', () => {
 });
 
 describe('world_load_map generator', () => {
-  afterEach(() => setProjectMaps({}));
-
-  it('imports+defines each actor the map places, then loads it', () => {
-    setProjectMaps({'maps/level1': ['actors/player', 'actors/coin']});
-    const defs: Record<string, string> = {};
+  it('replaces the World’s map with the one its value names', () => {
+    // By path: every map is registered on the world, so nothing is imported
+    // (specs/ONE_WORLD_PLAN.md).
     const code = generatorFor('world_load_map')(
-      {getFieldValue: () => 'maps/level1'} as never,
-      {definitions_: defs, statementToCode: () => ''} as never,
+      {} as never,
+      {valueToCode: () => '"maps/level1"'} as never,
       {} as never,
     ) as string;
-    expect(code).toBe(
-      'world.define("actors/player", ActorsPlayer);\n' +
-        'world.define("actors/coin", ActorsCoin);\n' +
-        'world.loadMap(MapsLevel1, "main");\n',
-    );
-    expect(defs['mod:actors/player']).toBe(
-      'import ActorsPlayer from "actors/player";',
-    );
-    expect(defs['mod:actors/coin']).toBe(
-      'import ActorsCoin from "actors/coin";',
-    );
-    expect(defs['map:maps/level1']).toBe(
-      'import MapsLevel1 from "maps/level1";',
-    );
+    expect(code).toBe('world.loadWorldMap("maps/level1");\n');
   });
 });
 

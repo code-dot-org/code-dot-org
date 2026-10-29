@@ -121,17 +121,31 @@ const LEVEL: WorldMap = {
 const placeWindow = (world: World) =>
   world.addActor(Window.instantiate('win', 'actors/window'));
 
+/** A coin placed on the screen, where a world block never puts one. */
+const onScreen = (world: World, id: string, at?: Vector) =>
+  world.loadScreen({
+    actors: [
+      {
+        type: 'actors/coin',
+        id,
+        ...(at
+          ? {properties: {positional: {position: {x: at.x, y: at.y}}}}
+          : {}),
+      },
+    ],
+  })[0];
+
 /** The World a Viewport shows, which is where its maps are loaded. */
 const levelOf = (world: World, window: Actor) =>
   world.viewportSpaceOf(window)!.mirrorOf!;
 
 describe('an actor is in one space', () => {
-  it('is in the root by default, and a Viewport owns one of its own', () => {
+  it('is in the World by default, and a Viewport owns one of its own', () => {
     const world = makeWorld();
     const coin = world.addActor(Coin.instantiate('c', 'actors/coin'));
     const window = placeWindow(world);
 
-    expect(world.spaceOf(coin).id).toBe('main');
+    expect(world.spaceOf(coin).id).toBe('world');
     expect(world.spaceOf(window).id).toBe('main');
     const space = world.viewportSpaceOf(window)!;
     expect(space.owner).toBe(window);
@@ -146,8 +160,8 @@ describe('an actor is in one space', () => {
   it('takes its parent’s space when it is given a parent', () => {
     const world = makeWorld();
     const window = placeWindow(world);
-    const [inside] = world.loadMapInto(window, LEVEL);
-    const child = world.addActor(Coin.instantiate('child', 'actors/coin'));
+    const [inside] = world.loadWorldMap(LEVEL);
+    const child = onScreen(world, 'child');
     expect(world.spaceOf(child).id).toBe('main');
 
     child.setParent(inside);
@@ -162,7 +176,7 @@ describe('loading into a Viewport', () => {
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160));
 
-    const added = world.loadMapInto(window, LEVEL);
+    const added = world.loadWorldMap(LEVEL);
     const space = world.viewportSpaceOf(window)!;
 
     expect(added.map(actor => actor.id)).toEqual(['a', 'b', 'c']);
@@ -173,7 +187,8 @@ describe('loading into a Viewport', () => {
     expect(added[1].get(PositionProperty)).toEqual(new Vector(320, 160));
     expect(space.bounds).toEqual(new Vector(640, 320));
     expect(world.mapBounds(added[0])).toEqual(new Vector(640, 320));
-    expect(world.mapBounds()).toEqual(new Vector(320, 320));
+    // …which is what is asked with nothing in hand: the World's.
+    expect(world.mapBounds()).toEqual(new Vector(640, 320));
     // AND NOT FOLLOWING ANYTHING, which a map no longer says. Its camera is at
     // the middle of its own window, where a load puts it and where the
     // Viewport's `scroll` of zero keeps it (specs/SPACE_CAMERAS_PLAN.md).
@@ -189,7 +204,7 @@ describe('loading into a Viewport', () => {
     // stopped (specs/SCROLLING_PLAN.md).
     const world = makeWorld();
     const window = placeWindow(world);
-    world.loadMapInto(window, LEVEL);
+    world.loadWorldMap(LEVEL);
     const space = world.viewportSpaceOf(window)!;
 
     window.set(ViewportScrollProperty, new Vector(0, 0));
@@ -205,24 +220,24 @@ describe('loading into a Viewport', () => {
     expect(window.get(ViewportScrollProperty)).toEqual(new Vector(540, 240));
   });
 
-  it('replaces what the Viewport held, and can be emptied', () => {
+  it('replaces what the World held, and can be emptied', () => {
     const world = makeWorld();
-    const window = placeWindow(world);
-    world.loadMapInto(window, LEVEL);
-    world.loadMapInto(window, {actors: [{type: 'actors/coin', id: 'd'}]});
+    placeWindow(world);
+    world.loadWorldMap(LEVEL);
+    world.loadWorldMap({actors: [{type: 'actors/coin', id: 'd'}]});
     expect([...world.actors].map(actor => actor.id)).toEqual(['win', 'd']);
 
-    world.unloadViewport(window);
+    world.loadWorldMap({actors: []});
     expect([...world.actors].map(actor => actor.id)).toEqual(['win']);
   });
 
   it('loads by the path a map was registered under, or nothing', () => {
     const world = makeWorld();
-    const window = placeWindow(world);
+    placeWindow(world);
     world.defineMap('maps/level1', LEVEL);
 
-    expect(world.loadMapInto(window, 'maps/level1')).toHaveLength(3);
-    expect(world.loadMapInto(window, 'maps/missing')).toEqual([]);
+    expect(world.loadWorldMap('maps/level1')).toHaveLength(3);
+    expect(world.loadWorldMap('maps/missing')).toEqual([]);
     expect([...world.actors]).toHaveLength(1);
   });
 
@@ -245,16 +260,19 @@ describe('loading into a Viewport', () => {
     expect([...world.actors].map(actor => actor.id)).toEqual(['win']);
   });
 
-  it('refuses an actor that is no Viewport', () => {
+  it('puts a Viewport added by code on the screen, and anything else in the World', () => {
+    // A Viewport in the World would be a window onto the thing it is in.
     const world = makeWorld();
+    const window = placeWindow(world);
     const coin = world.addActor(Coin.instantiate('c', 'actors/coin'));
-    expect(() => world.loadMapInto(coin, LEVEL)).toThrow(/not a Viewport/);
+    expect(world.spaceOf(window).id).toBe('main');
+    expect(world.spaceOf(coin).id).toBe('world');
   });
 
   it('stays when the Viewport goes, which was a window onto it', () => {
     const world = makeWorld();
     const window = placeWindow(world);
-    world.loadMapInto(window, LEVEL);
+    world.loadWorldMap(LEVEL);
 
     world.removeActor(window);
 
@@ -265,14 +283,14 @@ describe('loading into a Viewport', () => {
   it('is one World for every Viewport, so a second shows the first’s map', () => {
     const world = makeWorld();
     const window = placeWindow(world);
-    world.loadMapInto(window, LEVEL);
+    world.loadWorldMap(LEVEL);
     const second = world.addActor(Window.instantiate('mini', 'actors/window'));
     world.tick(0);
 
     expect(levelOf(world, second)).toBe(levelOf(world, window));
     expect(world.viewportSpaceOf(second)!.bounds).toEqual(new Vector(640, 320));
     // …and a map given to either replaces the World's.
-    world.loadMapInto(second, {actors: [{type: 'actors/coin', id: 'd'}]});
+    world.loadWorldMap({actors: [{type: 'actors/coin', id: 'd'}]});
     expect(
       [...world.actors].filter(actor => actor.type === 'actors/coin'),
     ).toHaveLength(1);
@@ -283,7 +301,7 @@ describe('the actor in hand', () => {
   it('is the handler’s subject: a spawn lands in its space', () => {
     const world = makeWorld();
     const window = placeWindow(world);
-    const [inside] = world.loadMapInto(window, LEVEL);
+    const [inside] = world.loadWorldMap(LEVEL);
     inside.on(Ping, (w, actor) => {
       w.addActor(Coin, 'spawned');
       expect(w.mapBounds()).toEqual(new Vector(640, 320));
@@ -300,9 +318,9 @@ describe('the actor in hand', () => {
 
   it('is the loop’s actor and the predicate’s candidate', () => {
     const world = makeWorld();
-    const window = placeWindow(world);
-    const [inside] = world.loadMapInto(window, LEVEL);
-    const outside = world.addActor(Coin.instantiate('out', 'actors/coin'));
+    placeWindow(world);
+    const [inside] = world.loadWorldMap(LEVEL);
+    const outside = onScreen(world, 'out');
     const seen: string[] = [];
 
     each([inside, outside], actor => {
@@ -314,29 +332,26 @@ describe('the actor in hand', () => {
 
     expect(seen).toEqual(['a:640', 'out:320']);
     expect(wide).toEqual([inside]);
-    world.enter(inside);
-    expect(world.mapBounds().x).toBe(640);
-    world.leave();
+    world.enter(outside);
     expect(world.mapBounds().x).toBe(320);
+    world.leave();
+    expect(world.mapBounds().x).toBe(640);
   });
 
   it('keeps a near query inside one space', () => {
     const world = makeWorld();
-    const window = placeWindow(world);
-    const [a] = world.loadMapInto(window, LEVEL);
-    // A root coin at the same coordinates as the level's `a`.
-    const twin = world.addActor(
-      Coin.instantiate('twin', 'actors/coin').set(
-        PositionProperty,
-        new Vector(48, 48),
-      ),
-    );
+    placeWindow(world);
+    const [a] = world.loadWorldMap(LEVEL);
+    // A screen coin at the same coordinates as the level's `a`.
+    const twin = onScreen(world, 'twin', new Vector(48, 48));
 
-    expect(world.actorsNear({x: 48, y: 48}, 10)).toEqual([twin]);
-    expect(world.actorsNear({x: 48, y: 48}, 10, undefined, a)).toEqual([a]);
+    expect(world.actorsNear({x: 48, y: 48}, 10)).toEqual([a]);
+    expect(world.actorsNear({x: 48, y: 48}, 10, undefined, twin)).toEqual([
+      twin,
+    ]);
     expect(
-      world.withActor(a, () => world.actorsNear({x: 48, y: 48}, 10)),
-    ).toEqual([a]);
+      world.withActor(twin, () => world.actorsNear({x: 48, y: 48}, 10)),
+    ).toEqual([twin]);
   });
 });
 
@@ -345,17 +360,20 @@ describe('the mouse, through a Viewport', () => {
     const world = makeWorld();
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160)); // corner at (150, 120)
-    const [a] = world.loadMapInto(window, LEVEL);
+    const [a] = world.loadWorldMap(LEVEL);
     // The space's camera is where a load leaves it: the middle of its own
     // window, since a map no longer says what to follow and nothing has
     // scrolled it (specs/SPACE_CAMERAS_PLAN.md).
     window.set(ViewportScrollProperty, new Vector(270, 120));
     world.tick(0);
     world.setPointer({x: 160, y: 130}, []); // 10 in from the corner
+    const screenCoin = onScreen(world, 'screen');
 
-    expect(world.mousePosition()).toEqual(new Vector(160, 130));
+    expect(world.mousePosition(screenCoin)).toEqual(new Vector(160, 130));
     // Camera at (320,160) over a 100x80 window shows (270..370, 120..200).
     expect(world.mousePosition(a)).toEqual(new Vector(280, 130));
+    // …and with nothing in hand, the World's.
+    expect(world.mousePosition()).toEqual(new Vector(280, 130));
     expect(world.withActor(a, () => world.mousePosition())).toEqual(
       new Vector(280, 130),
     );
@@ -368,7 +386,7 @@ describe('the mouse, through a Viewport', () => {
     const world = makeWorld();
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160)); // corner at (150, 120)
-    const [a] = world.loadMapInto(window, LEVEL);
+    const [a] = world.loadWorldMap(LEVEL);
     const mini = world.addActor(Window.instantiate('mini', 'actors/window'));
     mini.set(PositionProperty, new Vector(60, 50)); // corner at (10, 10)
     world.tick(0);
@@ -386,7 +404,7 @@ describe('the mouse, through a Viewport', () => {
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160));
     window.set(ScaleProperty, new Vector(2, 2)); // 200x160 on screen
-    const [a] = world.loadMapInto(window, LEVEL);
+    const [a] = world.loadWorldMap(LEVEL);
     expect(world.viewSize(a)).toEqual(new Vector(200, 160));
   });
 });
@@ -418,7 +436,7 @@ describe('a camera’s zoom', () => {
     const world = makeWorld();
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160)); // corner at (150, 120)
-    const [a] = world.loadMapInto(window, LEVEL);
+    const [a] = world.loadWorldMap(LEVEL);
     window.set(ViewportScrollProperty, new Vector(270, 120));
     world.tick(0);
     world.viewportSpaceOf(window)!.camera!.zoom = 2;
@@ -456,8 +474,8 @@ describe('what the driver is told', () => {
     const world = makeWorld();
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160));
-    world.loadMapInto(window, LEVEL);
-    world.addActor(Coin.instantiate('root', 'actors/coin'));
+    world.loadWorldMap(LEVEL);
+    onScreen(world, 'root');
 
     const spaces = world
       .renderSnapshot()
@@ -524,8 +542,8 @@ describe('a map’s layers', () => {
 
   it('become the World’s when the map is loaded into it', () => {
     const world = makeWorld();
-    const window = placeWindow(world);
-    const [far, near, lost] = world.loadMapInto(window, LAYERED);
+    placeWindow(world);
+    const [far, near, lost] = world.loadWorldMap(LAYERED);
 
     expect(far.layer).toBe('sky');
     expect(near.layer).toBe('main');
@@ -562,35 +580,38 @@ describe('a map’s layers', () => {
 
   it('puts the default at the back of a map that does not place it', () => {
     const world = makeWorld();
-    const window = placeWindow(world);
-    world.loadMapInto(window, {layers: [{id: 'front'}], actors: []});
+    placeWindow(world);
+    world.loadWorldMap({layers: [{id: 'front'}], actors: []});
     expect(world.spaceSnapshot()[0].layers.map(layer => layer.id)).toEqual([
       'main',
       'front',
     ]);
   });
 
-  it('resolve against the world’s layers when loaded into the root', () => {
-    // A world's layer list is fixed when it is built, so a map loaded into
-    // the root adds none; a placement naming one the world has lands on it.
+  it('resolve against the screen’s layers when loaded onto the screen', () => {
+    // The screen's layer list is fixed when the world is built, so a map
+    // loaded onto it adds none; a placement naming one it has lands on it.
     const builder = new WorldBuilder({id: 'w', name: 'W'});
-    builder.defineLayer({id: 'sky'});
+    builder.defineScreenLayer({id: 'sky'});
     const world = builder.getWorld();
     world.define('actors/coin', Coin);
 
-    const [far, near, lost] = world.loadMap(LAYERED);
+    const [far, near, lost] = world.loadScreen(LAYERED);
 
     expect(far.layer).toBe('sky');
     expect(near.layer).toBe('main');
     expect(lost.layer).toBe('main');
-    expect(world.layers.map(layer => layer.id)).toEqual(['main', 'sky']);
+    expect(world.screenLayerSnapshot().map(layer => layer.id)).toEqual([
+      'main',
+      'sky',
+    ]);
   });
 
   it('start over when another map replaces the first', () => {
     const world = makeWorld();
-    const window = placeWindow(world);
-    world.loadMapInto(window, LAYERED);
-    world.loadMapInto(window, LEVEL);
+    placeWindow(world);
+    world.loadWorldMap(LAYERED);
+    world.loadWorldMap(LEVEL);
     expect(world.spaceSnapshot()[0].layers.map(layer => layer.id)).toEqual([
       'main',
     ]);
@@ -670,34 +691,37 @@ describe('what a camera step is told about its space', () => {
   it('answers with the space’s bounds, not the world’s', () => {
     const world = makeWorld();
     const win = placeWindow(world);
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
 
     const space = world.viewportSpaceOf(win)!;
     const camera = space.camera!;
-    // The level is 20 by 10 tiles of 32 — the space grew to fit it — where the
-    // root is still the default window.
+    // The level is 20 by 10 tiles of 32 — the World grew to fit it — where
+    // the screen, which the world's own camera looks at, is the default.
     expect(world.mapBounds(camera)).toEqual(new Vector(640, 320));
-    expect(world.mapBounds()).toEqual(new Vector(320, 320));
+    expect(world.mapBounds(world.camera('main'))).toEqual(new Vector(320, 320));
   });
 
   it('answers with the Viewport’s window, not the world’s view', () => {
     const world = makeWorld();
     const win = placeWindow(world);
     const camera = world.viewportSpaceOf(win)!.camera!;
-    // The Window kind is 100 by 80; the world's view is the default.
+    // The Window kind is 100 by 80; the screen's view is the default.
     expect(world.viewSize(camera)).toEqual(new Vector(100, 80));
-    expect(world.viewSize(camera)).not.toEqual(world.viewSize());
+    expect(world.viewSize(camera)).not.toEqual(
+      world.viewSize(world.camera('main')),
+    );
   });
 
-  it('leaves the world’s own cameras looking at the root', () => {
-    // They name no space, and `spaceOf` answers with the root for anything that
-    // names none — so the world's cameras behave exactly as they always have.
+  it('leaves the world’s own cameras looking at the screen', () => {
+    // They name no space, and `spaceOf` answers with the screen for a camera
+    // that names none — so the world's cameras behave as they always have.
     const world = makeWorld();
     placeWindow(world);
+    world.loadWorldMap(LEVEL);
     const own = world.camera('main');
     expect(own.space).toBeUndefined();
-    expect(world.mapBounds(own)).toEqual(world.mapBounds());
-    expect(world.viewSize(own)).toEqual(world.viewSize());
+    expect(world.mapBounds(own)).toEqual(new Vector(320, 320));
+    expect(world.viewSize(own)).toEqual(new Vector(320, 320));
   });
 
   it('gives a space’s camera the world a camera body reads', () => {
@@ -917,8 +941,8 @@ describe('a camera trait, on a space’s camera', () => {
     // with no subject gets the space's bounds and the Viewport's window, which
     // is what `Confined to the Map` needs to mean something here.
     const world = makeWorld();
-    const win = placeWindow(world);
-    world.loadMapInto(win, LEVEL);
+    placeWindow(world);
+    world.loadWorldMap(LEVEL);
     world.defineCamera({
       id: 'corner',
       viewport: 'win',
@@ -933,7 +957,7 @@ describe('a camera trait, on a space’s camera', () => {
     });
   });
 
-  it('leaves the world’s own cameras asking about the world', () => {
+  it('leaves the world’s own cameras asking about the screen', () => {
     const world = makeWorld();
     placeWindow(world);
     world.defineCamera({id: 'corner', traits: [AimsAtTheCorner]});
@@ -942,14 +966,14 @@ describe('a camera trait, on a space’s camera', () => {
     world.tick(0);
     expect(aimed.get('corner')).toEqual({
       map: new Vector(320, 320),
-      view: world.viewSize(),
+      view: new Vector(320, 320),
     });
   });
 
   it('runs for both at once, each about its own space', () => {
     const world = makeWorld();
-    const win = placeWindow(world);
-    world.loadMapInto(win, LEVEL);
+    placeWindow(world);
+    world.loadWorldMap(LEVEL);
     world.defineCamera({id: 'corner', traits: [AimsAtTheCorner]});
     world.defineCamera({
       id: 'corner',
@@ -974,7 +998,7 @@ describe('what the engine does to a camera a trait has aimed', () => {
     // (specs/SPACE_CAMERAS_PLAN.md).
     const world = makeWorld();
     const win = placeWindow(world);
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
     world.defineCamera({
       id: 'corner',
       viewport: 'win',
@@ -998,7 +1022,7 @@ describe('what the engine does to a camera a trait has aimed', () => {
     // actually stopped, so that path clamps (specs/SCROLLING_PLAN.md).
     const world = makeWorld();
     const win = placeWindow(world);
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
 
     win.set(ViewportScrollProperty, new Vector(900, 900));
     world.tick(0);
@@ -1040,7 +1064,7 @@ describe('what a camera that elects nothing looks at', () => {
   it('is the corner of the space, for a Viewport’s camera', () => {
     const world = makeWorld();
     const win = placeWindow(world);
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
     const camera = world.viewportSpaceOf(win)!.camera!;
     expect(shows(camera.position, world.viewSize(camera))).toEqual(
       new Vector(0, 0),
@@ -1052,7 +1076,7 @@ describe('what a camera that elects nothing looks at', () => {
     // a camera elects nothing (specs/SPACE_CAMERAS_PLAN.md step 6).
     const world = makeWorld();
     const win = placeWindow(world);
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
     world.tick(0);
     const camera = world.viewportSpaceOf(win)!.camera!;
     expect(shows(camera.position, world.viewSize(camera))).toEqual(
@@ -1067,12 +1091,11 @@ describe('following, from a camera in a Viewport', () => {
   // Every Pilot is in every space, and the first is the root's
   // (specs/SPACE_CAMERAS_PLAN.md).
 
-  it('follows the coin in ITS space, while the world’s camera follows the root’s', () => {
+  it('follows the coin in ITS space, while the world’s camera follows the screen’s', () => {
     const world = makeWorld();
-    const rootCoin = world.addActor(Coin.instantiate('rc', 'actors/coin'));
-    rootCoin.set(PositionProperty, new Vector(11, 12));
+    onScreen(world, 'rc', new Vector(11, 12));
     const win = placeWindow(world);
-    const [held] = world.loadMapInto(win, {
+    const [held] = world.loadWorldMap({
       actors: [
         {
           type: 'actors/coin',
@@ -1094,7 +1117,7 @@ describe('following, from a camera in a Viewport', () => {
 
   it('stays where it is when nothing of the kind is in its space', () => {
     const world = makeWorld();
-    world.addActor(Coin.instantiate('rc', 'actors/coin'));
+    onScreen(world, 'rc');
     const win = placeWindow(world);
     world.defineCamera({id: 'chase', viewport: win, traits: [FollowsACoin]});
     win.set(ViewportShowsThroughProperty, 'chase');
@@ -1128,34 +1151,25 @@ describe('when a Viewport shows a map', () => {
       });
     });
 
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
     expect(heard).toEqual([]);
     world.tick(0);
     expect(heard).toEqual([{value: '', coins: 3}]);
   });
 
-  it('runs on the screen, as every handler of a Viewport does', () => {
-    // The level is reached by naming it (`World.enterShown`), not by which
-    // event the handler is for.
+  it('adds to the World from a Viewport’s own handler', () => {
+    // A Viewport is the screen's, and what its handlers add is the World's,
+    // as from any code (specs/ONE_WORLD_PLAN.md).
     const world = makeWorld();
     const win = placeWindow(world);
     let added: Actor | undefined;
-    let inLevel: Actor | undefined;
-    win.on(ViewportShowsMapEvent, (w, actor) => {
+    win.on(ViewportShowsMapEvent, w => {
       added = w.addActor(Coin.instantiate('here', 'actors/coin'));
-      if (w.enterShown(actor)) {
-        try {
-          inLevel = w.addActor(Coin.instantiate('there', 'actors/coin'));
-        } finally {
-          w.leave();
-        }
-      }
     });
 
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
     world.tick(0);
-    expect(added!.space).toBe(world.spaceOf(win));
-    expect(inLevel!.space).toBe(levelOf(world, win));
+    expect(added!.space).toBe(levelOf(world, win));
   });
 
   it('is raised for a load by path, carrying the path', () => {
@@ -1183,17 +1197,15 @@ describe('when a Viewport shows a map', () => {
     expect(values).toEqual(['maps/level1']);
   });
 
-  it('is not raised for an unload, nor for a path that names no map', () => {
+  it('is not raised for a path that names no map', () => {
     const world = makeWorld();
     const win = placeWindow(world);
     const values: unknown[] = [];
     win.on(ViewportShowsMapEvent, (_w, _actor, value) => values.push(value));
 
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
     world.tick(0);
-    world.unloadViewport(win);
-    world.tick(0);
-    world.loadMapInto(win, 'maps/missing');
+    world.loadWorldMap('maps/missing');
     world.tick(0);
     expect(values).toEqual(['']);
   });
@@ -1201,16 +1213,15 @@ describe('when a Viewport shows a map', () => {
   it('lets a handler aim the camera at what the map brought', () => {
     // The Jetpack setup: the same level in the main world and in a Viewport,
     // and the Viewport told to follow a coin. In `on create` the snapshot is
-    // the root's coin; here it is the Viewport's own.
+    // the screen's coin; here it is the World's.
     const world = makeWorld();
-    const rootCoin = world.addActor(Coin.instantiate('rc', 'actors/coin'));
-    rootCoin.set(PositionProperty, new Vector(11, 12));
+    onScreen(world, 'rc', new Vector(11, 12));
     const win = placeWindow(world);
     world.defineCamera({id: 'chase', viewport: win, traits: [FollowsACoin]});
     win.set(ViewportShowsThroughProperty, 'chase');
     win.on(ViewportShowsMapEvent, () => undefined);
 
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
     world.tick(0);
     const held = [...world.actors].find(actor => actor.id === 'a')!;
     expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
@@ -1234,7 +1245,7 @@ describe('a Viewport that elects a camera trait', () => {
     const world = makeWorld();
     world.define('actors/follower', Follower);
     const win = world.addActor(Follower.instantiate('f1', 'actors/follower'));
-    world.loadMapInto(win, LEVEL);
+    world.loadWorldMap(LEVEL);
     return {world, win};
   };
 
@@ -1269,17 +1280,24 @@ describe('a Viewport that elects a camera trait', () => {
   });
 });
 
-describe('where the running code is', () => {
-  it('is the root with nothing in hand', () => {
+describe('what a world block acts on', () => {
+  it('is the World with nothing in hand', () => {
     const world = makeWorld();
     expect(world.here()).toEqual({space: world.spaceOf(undefined)});
-    expect(world.here().space.id).toBe('main');
+    expect(world.here().space.id).toBe('world');
+  });
+
+  it('is the World with a screen actor in hand, too', () => {
+    // A Button's handler adds to the game (specs/ONE_WORLD_PLAN.md).
+    const world = makeWorld();
+    const coin = onScreen(world, 'screen');
+    expect(world.withActor(coin, () => world.here().space.id)).toBe('world');
   });
 
   it('is an actor’s space and layer while it is in hand', () => {
     const world = makeWorld();
     const window = placeWindow(world);
-    const [inside] = world.loadMapInto(window, LEVEL);
+    const [inside] = world.loadWorldMap(LEVEL);
     const here = world.withActor(inside, () => world.here());
     expect(here.space).toBe(levelOf(world, window));
     expect(here.layer).toBe(inside.layer);
@@ -1290,9 +1308,9 @@ describe('where the running code is', () => {
     // root for that reason even when the map was a Viewport's. What it spawns
     // lands beside what the map placed.
     const world = makeWorld();
-    const window = placeWindow(world);
+    placeWindow(world);
     const seen: {here?: string; inHand?: unknown; spawned?: string} = {};
-    world.loadMapInto(window, {
+    world.loadWorldMap({
       ...LEVEL,
       script: (running, _placed, load) => {
         seen.here = running.here().space.id;
@@ -1307,14 +1325,14 @@ describe('where the running code is', () => {
       inHand: undefined,
       spawned: 'world',
     });
-    // …and back in the root after.
-    expect(world.here().space.id).toBe('main');
+    // …and still the World after.
+    expect(world.here().space.id).toBe('world');
   });
 
-  it('is the root while a map loaded there runs its script', () => {
+  it('is the screen while a map loaded onto it runs its script', () => {
     const world = makeWorld();
     let here = '';
-    world.loadMap({
+    world.loadScreen({
       ...LEVEL,
       script: running => {
         here = running.here().space.id;
@@ -1324,10 +1342,10 @@ describe('where the running code is', () => {
   });
 });
 
-describe('world blocks act where they run', () => {
-  // specs/SIMPLE_INTERFACE.md, "World blocks act where they run": the Screen's
-  // code acts on the screen, a level's on the level, an actor's on the layer
-  // it is in.
+describe('world blocks act on the World', () => {
+  // From any code (specs/ONE_WORLD_PLAN.md): a World actor's on the layer it
+  // is in, anything else's on the World's default. The screen is set only by
+  // the calls its own module makes (`setScreenBackground` and the rest).
 
   /** A level of two layers, with a coin on the front one. */
   const LAYERED: WorldMap = {
@@ -1339,7 +1357,7 @@ describe('world blocks act where they run', () => {
   const loaded = (script?: WorldMap['script']) => {
     const world = makeWorld();
     const window = placeWindow(world);
-    const [coin] = world.loadMapInto(window, {...LAYERED, script});
+    const [coin] = world.loadWorldMap({...LAYERED, script});
     return {world, window, coin, space: levelOf(world, window)};
   };
 
@@ -1351,7 +1369,7 @@ describe('world blocks act where they run', () => {
       running.setBackground('cave.png');
     });
     expect(sprites(space.layers)).toEqual(['cave.png', undefined]);
-    expect(world.backdropSnapshot()[0].sprite).toBeUndefined();
+    expect(world.screenBackdropSnapshot()[0].sprite).toBeUndefined();
   });
 
   it('sets the background of the layer an actor is in, from its code', () => {
@@ -1363,16 +1381,19 @@ describe('world blocks act where they run', () => {
     expect(sprites(space.layers)).toEqual(['cave.png', 'stars.png']);
   });
 
-  it('sets the screen’s background with nothing in hand', () => {
+  it('sets the World’s background with nothing in hand, and the screen’s only by name', () => {
     const {world, space} = loaded();
-    world.setBackground('screen.png');
-    expect(world.backdropSnapshot()[0].sprite).toBe('screen.png');
-    expect(sprites(space.layers)).toEqual([undefined, undefined]);
+    world.setBackground('level.png');
+    expect(sprites(space.layers)).toEqual(['level.png', undefined]);
+    expect(world.screenBackdropSnapshot()[0].sprite).toBeUndefined();
+    world.setScreenBackground('screen.png');
+    expect(world.screenBackdropSnapshot()[0].sprite).toBe('screen.png');
+    expect(sprites(space.layers)).toEqual(['level.png', undefined]);
   });
 
   it('gives the World a sky, and leaves it see-through until then', () => {
     const {world, coin, space} = loaded();
-    const screen = world.backdropColor();
+    const screen = world.screenColor();
     expect(world.spaceSnapshot()[0].clearColor).toBeUndefined();
 
     world.withActor(coin, () => world.setBackgroundColor('#ff0000'));
@@ -1380,30 +1401,39 @@ describe('world blocks act where they run', () => {
     // …which every Viewport onto it paints.
     expect(world.spaceSnapshot()[1].clearColor).toEqual([1, 0, 0, 1]);
     expect(space.clearColor).toEqual([1, 0, 0, 1]);
-    expect(world.backdropColor()).toEqual(screen);
+    expect(world.screenColor()).toEqual(screen);
   });
 
-  it('sizes the level, not the screen, from the level’s code', () => {
+  it('sizes the level, not the screen', () => {
     const {world, space} = loaded(running => running.setMapSize(30, 12));
     expect(space.bounds).toEqual(new Vector(30 * 32, 12 * 32));
-    expect(world.mapBounds()).not.toEqual(space.bounds);
+    expect(world.mapBounds(world.camera('main'))).not.toEqual(space.bounds);
   });
 
   it('replaces the World’s map from code in it, and leaves the screen', () => {
     // A level change, a restart and the overworld are all `load map` from
     // the level (specs/ONE_WORLD_PLAN.md).
     const {world, coin, space} = loaded();
-    const before = world.spaceOf(undefined).loads.length;
+    const before = world.spaceOf(world.camera('main')).loads.length;
     const [door] = world.withActor(coin, () =>
       world.loadMap({actors: [{type: 'actors/coin', id: 'door'}]}),
     );
     expect(world.spaceOf(door)).toBe(space);
     expect(space.loads).toHaveLength(1);
     expect(coin.world).toBeUndefined();
-    expect(world.spaceOf(undefined).loads).toHaveLength(before);
+    expect(world.spaceOf(world.camera('main')).loads).toHaveLength(before);
+  });
 
-    expect(world.withActor(door, () => world.unloadNewestMap())).toBe(true);
-    expect(space.loads).toHaveLength(0);
+  it('puts a map up over the screen by name, and takes the newest back', () => {
+    // The screen's stack until screens are (specs/SCREEN_STACK_PLAN.md).
+    const {world, coin, space} = loaded();
+    world.defineMap('maps/menu', {actors: [{type: 'actors/coin', id: 'm'}]});
+    const [menu] = world.withActor(coin, () => world.loadMapNamed('maps/menu'));
+    expect(world.spaceOf(menu).id).toBe('main');
+    expect(space.loads).toHaveLength(1);
+    expect(world.withActor(coin, () => world.unloadNewestMap())).toBe(true);
+    expect(menu.world).toBeUndefined();
+    expect(space.loads).toHaveLength(1);
   });
 });
 
@@ -1417,7 +1447,7 @@ describe('a Viewport placed by a map', () => {
     world.defineMap('maps/level', LEVEL);
     world.loadWorldMap('maps/level');
     const order: string[] = [];
-    world.loadMap({
+    world.loadScreen({
       actors: [
         {
           type: 'actors/window',

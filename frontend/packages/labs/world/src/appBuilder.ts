@@ -88,9 +88,6 @@ export const APP_HIDDEN_BLOCKS: ReadonlySet<string> = new Set([
   'world_add_camera_trait',
   'world_remove_camera_trait',
   'world_this_camera',
-  // A map loaded into a Viewport, which an app is not offered.
-  'world_load_map_into',
-  'world_unload_viewport',
 ]);
 
 /** Whether this level builds an app, for a component. */

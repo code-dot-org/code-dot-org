@@ -223,13 +223,15 @@ describe('the interface kit', () => {
     // a square screen looks like a game with a form in it. The map is said
     // to match, so nothing reads a level shorter than its window.
     const {world} = await open();
-    const view = world.viewSize();
+    // The screen's, which its own camera is told.
+    const screen = world.camera('main');
+    const view = world.viewSize(screen);
     expect(view.y).toBeGreaterThan(view.x);
     expect({x: view.x, y: view.y}).toEqual({
       x: PORTRAIT.columns * TILE_SIZE,
       y: PORTRAIT.rows * TILE_SIZE,
     });
-    expect(world.mapBounds()).toEqual(view);
+    expect(world.mapBounds(screen)).toEqual(view);
   });
 
   it('takes the typing once the field is clicked, and moves the bar', async () => {

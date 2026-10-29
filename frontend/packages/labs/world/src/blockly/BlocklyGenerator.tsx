@@ -546,6 +546,12 @@ function generateMainScreen(
     });
   }
   const themed = theme ? `world.useTheme(${importVar(theme)});\n` : '';
+  // The color behind the screen, which is the screen's own and not the
+  // World's (`setScreenColor`).
+  const colored =
+    typeof data.backgroundColor === 'string' && data.backgroundColor
+      ? `world.setScreenColor(${str(data.backgroundColor)});\n`
+      : '';
   const setup = screenSetupRows(data);
   const rows = setup
     ? asString(
@@ -575,7 +581,7 @@ function generateMainScreen(
   }
   return generator.finish(
     assembleWorldModule(
-      prologue + themed + rows,
+      prologue + themed + colored + rows,
       generated,
       // After the world's code, which places the screen's actors.
       new Set([...worldEventTypes, SCREEN_LOADS]),
@@ -604,7 +610,7 @@ const screenSize = (map: {
   const rows = extent(map.size?.height, map.tile?.height);
   return columns !== undefined && rows !== undefined
     ? `world.setViewSize(${columns}, ${rows});\n` +
-        `world.setMapSize(${columns}, ${rows});\n`
+        `world.setScreenSize(${columns}, ${rows});\n`
     : '';
 };
 

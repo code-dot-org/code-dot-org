@@ -1998,10 +1998,9 @@ describe('what the newer demos show', () => {
     const walker = cast.walker as {get(p: unknown): Vector};
     const view = viewOrigin(world);
 
-    // Stopped with the VIEWPORT's right edge on the map's. The viewport is the
-    // engine's ten tiles rather than this frame's six, which is the one place
-    // these demos have to know the two rectangles differ.
-    expect(view.x + middle + 160).toBeCloseTo(12 * 32, 0);
+    // Stopped with the frame's right edge on the map's: the frame is the
+    // camera's window (`demos/cameras`).
+    expect(view.x + DEMO_SIZE.width).toBeCloseTo(12 * 32, 0);
     const past = walker.get(PositionProperty).x - view.x;
     expect(past).toBeGreaterThan(middle + 40);
     expect(past).toBeLessThan(DEMO_SIZE.width);

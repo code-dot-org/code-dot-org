@@ -1153,12 +1153,13 @@ export const TILES: readonly Tile[] = [
       {kind: 'editor', id: 'map'},
       // …and the same arrangement in a FILE, which is what a level shared
       // between games is. The lesson's own is `main.map`, which is what it
-      // opens on (specs/LESSONS_AS_SCREENS_PLAN.md).
+      // opens on (specs/LESSONS_AS_SCREENS_PLAN.md). `load map` makes one the
+      // World's (specs/ONE_WORLD_PLAN.md).
       {kind: 'block', type: 'world_load_map'},
-      // …and the two that make maps a STACK rather than a pile: one named
-      // while the world runs, and the newest taken back again. A pause menu
-      // over a game is already this; the rule beside them gives it a
-      // vocabulary (specs/SCREENS_PLAN.md).
+      {kind: 'block', type: 'world_map_ref'},
+      // …and the two that put maps up over the screen and take them down: a
+      // pause menu over a game. The rule beside them gives it a vocabulary
+      // (specs/SCREENS_PLAN.md).
       {kind: 'block', type: 'world_load_map_named'},
       {kind: 'block', type: 'world_unload_newest_map'},
       {kind: 'rule', id: 'screens'},
@@ -2910,26 +2911,22 @@ export const TILES: readonly Tile[] = [
     task: 'Two rooms in two files, and a door that does nothing.',
     requires: ['adventure/world'],
     // NOT a Scenes rule, which is what this tile asked for while `load map`
-    // was a thing only a world being BUILT could do. A room is a map and the
-    // screen is a window onto one: the Viewport, a stock actor on the world's
-    // own map, with the blocks that change what it holds
-    // (specs/MAP_FIRST.md, "Levels: the Viewport"). A door is one of them.
+    // was a thing only a world being BUILT could do. A room is a map, the
+    // World holds one at a time, and the screen is a window onto it: the
+    // Viewport, a stock actor on the Main Screen. A door is `load map`,
+    // which replaces the World's map (specs/ONE_WORLD_PLAN.md) and which
+    // `place/map` has already given.
     //
     // It used to grant nothing, when a door was `clear world` then `load
     // map` and both were somebody else's to give. `clear world` is gone —
     // it took the score and the menu with the room — and what replaced the
     // pair is this tile's own.
-    unlocks: [
-      {kind: 'actor', id: 'viewport'},
-      {kind: 'block', type: 'world_map_ref'},
-      {kind: 'block', type: 'world_load_map_into'},
-      {kind: 'block', type: 'world_unload_viewport'},
-    ],
+    unlocks: [{kind: 'actor', id: 'viewport'}],
     check: {
       kind: 'outcome',
       says: 'Walking into the Door leaves room one behind and arrives at room two’s doorway.',
       falsePass:
-        'Teleporting within one big map, which moves the Player and leaves the Door standing — so the check reads WHICH map is loaded (a Chest that was not there, and a Door that is gone) rather than where the Player is. Loading room two onto the world’s own map, beside the Viewport rather than into it, is refused by the same reading: both rooms would be in the world at once.',
+        'Teleporting within one big map, which moves the Player and leaves the Door standing — so the check reads WHICH map is loaded (a Chest that was not there, and a Door that is gone) rather than where the Player is.',
       run: {
         probes: {
           chests: {kind: 'actorCount', of: 'Chest'},

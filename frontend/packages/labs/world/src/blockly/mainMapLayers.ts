@@ -1,11 +1,11 @@
-// The main map's layers, as the world's declaration (specs/LAYERS_PLAN.md).
+// The Main Screen's layers, as the screen's declaration (specs/LAYERS_PLAN.md).
 //
-// A world's layer list is fixed when the world is built, so a layer cannot be
-// added by loading a map; the main map is in the world's own file, though,
-// and the generator can read it. Its layers are declared in the world's
-// prologue, and each slot's starting values follow as the calls a block
-// would have made. What the map
-// editor shows is then what the game draws, with no block written.
+// The screen's layer list is fixed when the world is built, and the Main
+// Screen is the module's own file, so the generator reads it. Its layers are
+// declared in the prologue as the SCREEN's (`defineScreenLayer`), and each
+// slot's starting values follow as the screen's own calls; the World's layers
+// are its map's (specs/ONE_WORLD_PLAN.md). What the map editor shows is then
+// what the game draws, with no block written.
 
 interface Slot {
   sprite?: unknown;
@@ -47,7 +47,7 @@ const num = (value: unknown, fallback: number): number =>
 const vector = (x: number, y: number): string =>
   `new WorldLab.Vector(${x}, ${y})`;
 
-/** `world.defineLayer({…})` for one layer, with what the map says about it. */
+/** `world.defineScreenLayer({…})` for one layer, with what the map says about it. */
 const declaration = (layer: MainMapLayer): string => {
   const parts = [`id: ${q(layer.id)}`];
   if (layer.name) {
@@ -61,7 +61,7 @@ const declaration = (layer: MainMapLayer): string => {
   if (layer.fit) {
     parts.push('fit: true');
   }
-  return `world.defineLayer({${parts.join(', ')}});\n`;
+  return `world.defineScreenLayer({${parts.join(', ')}});\n`;
 };
 
 /** The calls that give one slot its starting values, or nothing to say. */
@@ -74,16 +74,18 @@ const slotCalls = (
     return '';
   }
   let code = '';
+  // The SCREEN's: these are the screen's own layers, and a block's
+  // `set background` is the World's (`World.setScreenBackground`).
   if (typeof slot.sprite === 'string' && slot.sprite) {
-    code += `world.set${which}(${q(slot.sprite)}, ${q(layer)});\n`;
+    code += `world.setScreen${which}(${q(slot.sprite)}, ${q(layer)});\n`;
   }
   if (slot.repeat === true) {
-    code += `world.set${which}Repeat(true, ${q(layer)});\n`;
+    code += `world.setScreen${which}Repeat(true, ${q(layer)});\n`;
   }
   const x = num(slot.offset?.x, 0);
   const y = num(slot.offset?.y, 0);
   if (x !== 0 || y !== 0) {
-    code += `world.set${which}Offset(${vector(x, y)}, ${q(layer)});\n`;
+    code += `world.setScreen${which}Offset(${vector(x, y)}, ${q(layer)});\n`;
   }
   return code;
 };

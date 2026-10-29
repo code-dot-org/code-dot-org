@@ -270,7 +270,7 @@ const world = (
     // Drained after every tick (specs/SOUND.md).
     drainSounds: () => [],
     music: () => undefined,
-    backdropSnapshot: () =>
+    screenBackdropSnapshot: () =>
       backdrops.map(backdrop => ({
         offset: {x: 0, y: 0},
         repeat: false,
@@ -278,13 +278,13 @@ const world = (
         effects: [],
       })),
     // One sky, the world's — not the bottom layer's (BACKGROUNDS.md).
-    backdropColor: () => clearColor,
+    screenColor: () => clearColor,
     // What a stretched slot covers: the level, not the window onto it.
     mapBounds: () => map,
     // …and the window itself, which a world states for itself. The standard
     // one here, so these expectations mean what they always did.
     viewSize: () => ({x: 320, y: 320}),
-    layerSnapshot: () =>
+    screenLayerSnapshot: () =>
       backdrops.map((_, index) => ({
         id: index === 0 ? 'main' : `layer${index}`,
         effects: [],

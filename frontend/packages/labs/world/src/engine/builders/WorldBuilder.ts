@@ -115,6 +115,7 @@ export class WorldBuilder {
   // Layers as declared, back to front. Empty until something says otherwise;
   // the World fills in the default layer either way.
   private readonly layers: LayerInit[] = [];
+  private readonly screenLayers: LayerInit[] = [];
   private readonly types = new Map<string, ActorBuilder>();
   /** The project's maps by path — see {@link defineMap}. */
   private readonly maps = new Map<string, WorldMap>();
@@ -232,6 +233,13 @@ export class WorldBuilder {
   defineLayer(layer: LayerInit): this {
     this.requireNoActors('defineLayer');
     this.layers.push(layer);
+    return this;
+  }
+
+  /** …and one of the screen's own, which its data says (`layerDeclarations`). */
+  defineScreenLayer(layer: LayerInit): this {
+    this.requireNoActors('defineScreenLayer');
+    this.screenLayers.push(layer);
     return this;
   }
 
@@ -454,21 +462,14 @@ export class WorldBuilder {
     return this;
   }
 
-  loadMapInto(
-    viewport: Actor,
-    map: WorldMap | string,
-    layer?: string,
-  ): Actor[] {
-    return this.readyWorld().loadMapInto(viewport, map, layer);
-  }
-
   /** The World's map, replaced — the map a Main Screen says it starts with. */
   loadWorldMap(map: WorldMap | string, layer?: string): Actor[] {
     return this.readyWorld().loadWorldMap(map, layer);
   }
 
-  unloadViewport(viewport: Actor): void {
-    this.getWorld().unloadViewport(viewport);
+  /** The screen's own placements. See {@link World.loadScreen}. */
+  loadScreen(map: WorldMap, layer?: string): Actor[] {
+    return this.readyWorld().loadScreen(map, layer);
   }
 
   enter(subject: Actor | Camera): void {
@@ -477,10 +478,6 @@ export class WorldBuilder {
 
   leave(): void {
     this.getWorld().leave();
-  }
-
-  enterShown(viewport: Actor | undefined): boolean {
-    return this.getWorld().enterShown(viewport);
   }
 
   withActor<T>(subject: Actor | Camera, fn: () => T): T {
@@ -532,6 +529,27 @@ export class WorldBuilder {
   /** Set the color behind the backdrop. See {@link World.setBackgroundColor}. */
   setBackgroundColor(color: ColorValue): this {
     return this.defer('setBackgroundColor', color);
+  }
+
+  /** The screen's own color, size and backgrounds, which its data says. */
+  setScreenColor(color: ColorValue): this {
+    return this.defer('setScreenColor', color);
+  }
+
+  setScreenSize(columns: number, rows: number): this {
+    return this.defer('setScreenSize', columns, rows);
+  }
+
+  setScreenBackground(sprite: string | undefined, layer?: string): this {
+    return this.defer('setScreenBackground', sprite, layer);
+  }
+
+  setScreenBackgroundRepeat(repeat: boolean, layer?: string): this {
+    return this.defer('setScreenBackgroundRepeat', repeat, layer);
+  }
+
+  setScreenBackgroundOffset(offset: Vector, layer?: string): this {
+    return this.defer('setScreenBackgroundOffset', offset, layer);
   }
 
   /** Slide a layer's background. See {@link World.setBackgroundOffset}. */
@@ -874,6 +892,7 @@ export class WorldBuilder {
       name: this.name,
       rules: this.rulesInPlay(),
       layers: this.layers.map(layer => ({...layer})),
+      screenLayers: this.screenLayers.map(layer => ({...layer})),
       ownProperties: this.own,
     });
     // What was recorded before it existed — every template, every map — so a

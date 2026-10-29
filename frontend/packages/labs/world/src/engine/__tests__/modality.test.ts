@@ -27,8 +27,8 @@ const named = (from: ReturnType<typeof world>, id: string) =>
 describe('what a modal screen covers', () => {
   it('reaches everything while nothing is modal', () => {
     const w = world();
-    w.loadMap(sheet('Home'));
-    w.loadMap(sheet('Hud'));
+    w.loadScreen(sheet('Home'));
+    w.loadScreen(sheet('Hud'));
 
     expect(w.canReach(named(w, 'Home'))).toBe(true);
     expect(w.canReach(named(w, 'Hud'))).toBe(true);
@@ -36,8 +36,8 @@ describe('what a modal screen covers', () => {
 
   it('covers what is under it, and not itself', () => {
     const w = world();
-    w.loadMap(sheet('Home'));
-    w.loadMap(sheet('Dialog', true));
+    w.loadScreen(sheet('Home'));
+    w.loadScreen(sheet('Dialog', true));
 
     expect(w.canReach(named(w, 'Home'))).toBe(false);
     expect(w.canReach(named(w, 'Dialog'))).toBe(true);
@@ -48,9 +48,9 @@ describe('what a modal screen covers', () => {
     // a form and is not itself a screen. Measured from the top of the stack
     // instead, the form it types into would be locked out.
     const w = world();
-    w.loadMap(sheet('Home'));
-    w.loadMap(sheet('Form', true));
-    w.loadMap(sheet('Keyboard'));
+    w.loadScreen(sheet('Home'));
+    w.loadScreen(sheet('Form', true));
+    w.loadScreen(sheet('Keyboard'));
 
     expect(w.canReach(named(w, 'Home'))).toBe(false);
     expect(w.canReach(named(w, 'Form'))).toBe(true);
@@ -59,9 +59,9 @@ describe('what a modal screen covers', () => {
 
   it('measures from the TOPMOST modal, with two of them stacked', () => {
     const w = world();
-    w.loadMap(sheet('Home'));
-    w.loadMap(sheet('First', true));
-    w.loadMap(sheet('Second', true));
+    w.loadScreen(sheet('Home'));
+    w.loadScreen(sheet('First', true));
+    w.loadScreen(sheet('Second', true));
 
     expect(w.canReach(named(w, 'Home'))).toBe(false);
     expect(w.canReach(named(w, 'First'))).toBe(false);
@@ -70,8 +70,8 @@ describe('what a modal screen covers', () => {
 
   it('gives it back when the screen in front goes away', () => {
     const w = world();
-    w.loadMap(sheet('Home'));
-    w.loadMap(sheet('Dialog', true));
+    w.loadScreen(sheet('Home'));
+    w.loadScreen(sheet('Dialog', true));
     expect(w.canReach(named(w, 'Home'))).toBe(false);
 
     w.unloadNewestMap();
@@ -86,7 +86,7 @@ describe('what a modal screen covers', () => {
     w.addActor(loose);
     expect(w.canReach(loose)).toBe(true);
 
-    w.loadMap(sheet('Dialog', true));
+    w.loadScreen(sheet('Dialog', true));
     expect(w.canReach(loose)).toBe(false);
   });
 });
