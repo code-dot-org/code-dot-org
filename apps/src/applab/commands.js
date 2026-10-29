@@ -867,8 +867,11 @@ applabCommands.drawImageURL = function (opts) {
     }
   };
 
-  var drawLoadedImage = function (url) {
+  var drawLoadedImage = function (url, keepCanvasReadable) {
     var image = new Image();
+    if (keepCanvasReadable) {
+      image.crossOrigin = 'anonymous';
+    }
     image.src = resolveAppLabImagePath(url);
     image.onload = function () {
       var ctx = Applab.activeCanvas && Applab.activeCanvas.getContext('2d');
@@ -909,6 +912,10 @@ applabCommands.drawImageURL = function (opts) {
       callback(true);
     };
     image.onerror = function () {
+      if (keepCanvasReadable) {
+        drawLoadedImage(url);
+        return;
+      }
       callback(false);
     };
   };
@@ -930,7 +937,7 @@ applabCommands.drawImageURL = function (opts) {
       opts.url,
       'drawImageURL',
       normalizedUrl => {
-        drawLoadedImage(normalizedUrl);
+        drawLoadedImage(normalizedUrl, true);
       },
       () => callback(false),
       warningHandler

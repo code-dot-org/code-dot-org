@@ -297,6 +297,96 @@ describe('other image command URL moderation', () => {
   });
 });
 
+describe('drawImageURL cross-origin loading', () => {
+  let originalApplab;
+  let originalImage;
+  let createdImages;
+  let drawImage;
+
+  async function drawAbsoluteImageURL(callback) {
+    applabCommands.drawImageURL({
+      url: 'https://example.com/image.png',
+      callback,
+    });
+    await flushModerationAsync();
+  }
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    clearImageUrlModerationCache();
+    moderateImageUrl.mockResolvedValue('safe');
+
+    drawImage = jest.fn();
+    const canvas = document.createElement('canvas');
+    canvas.getContext = jest.fn().mockReturnValue({
+      save: jest.fn(),
+      setTransform: jest.fn(),
+      drawImage,
+      restore: jest.fn(),
+    });
+    originalApplab = global.Applab;
+    global.Applab = {activeCanvas: canvas};
+
+    createdImages = [];
+    originalImage = global.Image;
+    global.Image = class {
+      constructor() {
+        this.width = 100;
+        this.height = 100;
+        createdImages.push(this);
+      }
+    };
+  });
+
+  afterEach(() => {
+    global.Image = originalImage;
+    global.Applab = originalApplab;
+  });
+
+  it('loads absolute URLs with CORS', async () => {
+    const callback = jest.fn();
+    await drawAbsoluteImageURL(callback);
+
+    expect(createdImages).toHaveLength(1);
+    expect(createdImages[0].crossOrigin).toBe('anonymous');
+    expect(createdImages[0].src).toBe('https://example.com/image.png');
+
+    createdImages[0].onload();
+
+    expect(drawImage).toHaveBeenCalledWith(createdImages[0], 0, 0);
+    expect(callback).toHaveBeenCalledWith(true);
+  });
+
+  it('retries without CORS when the CORS load fails', async () => {
+    const callback = jest.fn();
+    await drawAbsoluteImageURL(callback);
+
+    createdImages[0].onerror();
+
+    expect(createdImages).toHaveLength(2);
+    expect(createdImages[1].crossOrigin).toBeUndefined();
+    expect(createdImages[1].src).toBe('https://example.com/image.png');
+    expect(callback).not.toHaveBeenCalled();
+
+    createdImages[1].onload();
+
+    expect(drawImage).toHaveBeenCalledWith(createdImages[1], 0, 0);
+    expect(callback).toHaveBeenCalledWith(true);
+  });
+
+  it('invokes callback(false) once when both loads fail', async () => {
+    const callback = jest.fn();
+    await drawAbsoluteImageURL(callback);
+
+    createdImages[0].onerror();
+    createdImages[1].onerror();
+
+    expect(createdImages).toHaveLength(2);
+    expect(callback).toHaveBeenCalledTimes(1);
+    expect(callback).toHaveBeenCalledWith(false);
+  });
+});
+
 describe('rgb command', () => {
   it('returns an rgba string with no alpha', function () {
     const opts = {r: 255, g: 0, b: 75};
