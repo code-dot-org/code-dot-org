@@ -8,6 +8,7 @@ import FreeResponseAnswer from './FreeResponseAnswer';
 import MultipleChoiceAnswer from './MultipleChoiceAnswer';
 import MultipleSelectAnswer from './MultipleSelectAnswer';
 import QuestionDescription from './QuestionDescription';
+import ResultTag, {ResultTagStatus} from './ResultTag';
 import {
   isFreeResponseResponse,
   isMultipleChoiceResponse,
@@ -27,6 +28,19 @@ export interface QuestionResultCardProps {
   isViewingStudent?: boolean;
 }
 
+// null when there is nothing to tag: answered, with correctness hidden or pending.
+function getResultTagStatus(
+  result: QuizQuestionResult
+): ResultTagStatus | null {
+  if (result.correct === null) {
+    return result.answered === false ? 'skipped_ungraded' : null;
+  }
+  if (result.answered === false) {
+    return 'skipped';
+  }
+  return result.correct ? 'correct' : 'incorrect';
+}
+
 // Read-only review of one submitted question, graded or not.
 const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   question,
@@ -34,45 +48,49 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   result,
   revealAnswerExplanation,
   isViewingStudent,
-}) => (
-  <AttemptCard
-    label={questionLabel}
-    title={question.questionTitle}
-    description={<QuestionDescription markdown={question.description} />}
-  >
-    {isFreeResponseResponse(result) && (
-      <FreeResponseAnswer
-        answerText={result.responseData.answerText ?? null}
-        isViewingStudent={isViewingStudent}
-      />
-    )}
-    {isMultipleChoiceResponse(result) && (
-      <MultipleChoiceAnswer
-        question={question}
-        result={result}
-        isViewingStudent={isViewingStudent}
-      />
-    )}
-    {isMultipleSelectResponse(result) && (
-      <MultipleSelectAnswer
-        question={question}
-        result={result}
-        isViewingStudent={isViewingStudent}
-      />
-    )}
-    {revealAnswerExplanation && result.explanation && (
-      <div className={styles.explanation}>
-        <div className={styles.explanationHeader}>
-          <Typography variant="overline2" className={styles.explanationLabel}>
-            Answer explanation
+}) => {
+  const tagStatus = getResultTagStatus(result);
+  return (
+    <AttemptCard
+      label={questionLabel}
+      tag={tagStatus && <ResultTag status={tagStatus} />}
+      title={question.questionTitle}
+      description={<QuestionDescription markdown={question.description} />}
+    >
+      {isFreeResponseResponse(result) && (
+        <FreeResponseAnswer
+          answerText={result.responseData.answerText ?? null}
+          isViewingStudent={isViewingStudent}
+        />
+      )}
+      {isMultipleChoiceResponse(result) && (
+        <MultipleChoiceAnswer
+          question={question}
+          result={result}
+          isViewingStudent={isViewingStudent}
+        />
+      )}
+      {isMultipleSelectResponse(result) && (
+        <MultipleSelectAnswer
+          question={question}
+          result={result}
+          isViewingStudent={isViewingStudent}
+        />
+      )}
+      {revealAnswerExplanation && result.explanation && (
+        <div className={styles.explanation}>
+          <div className={styles.explanationHeader}>
+            <Typography variant="overline2" className={styles.explanationLabel}>
+              Answer explanation
+            </Typography>
+          </div>
+          <Typography variant="body3" className={styles.explanationBody}>
+            {result.explanation}
           </Typography>
         </div>
-        <Typography variant="body3" className={styles.explanationBody}>
-          {result.explanation}
-        </Typography>
-      </div>
-    )}
-  </AttemptCard>
-);
+      )}
+    </AttemptCard>
+  );
+};
 
 export default QuestionResultCard;

@@ -32,8 +32,18 @@
   width: 100%;
 }
 
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .label {
   color: var(--text-neutral-tertiary);
+}
+
+.tag {
+  margin-inline-start: auto;
 }
 
 .beforeFooterBorderedRow {
