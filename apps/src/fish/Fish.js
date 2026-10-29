@@ -1,5 +1,6 @@
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -116,14 +117,14 @@ Fish.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <FishView onMount={onMount} />
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <FishView onMount={onMount} />
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 };
 

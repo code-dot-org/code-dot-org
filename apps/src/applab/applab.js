@@ -8,6 +8,7 @@ import * as Observability from '@code-dot-org/core/plugins/observability';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
@@ -247,10 +248,7 @@ function renderFooterInSharedGame() {
       menuItems={menuItems}
       phoneFooter={true}
     />,
-    footerDiv,
-    {
-      legacyReactDomRender: true,
-    }
+    footerDiv
   );
 }
 
@@ -788,7 +786,8 @@ Applab.init = function (config) {
   const loader = studioApp()
     .loadLibraries(level.helperLibraries)
     .then(() => {
-      Applab.render();
+      // Synchronous: onMount builds the screens measured below.
+      flushSync(() => Applab.render());
 
       //Scale old-sized apps to fit the new sized display. Old height - 480.
       if ($('.screen').height() === 480) {
@@ -958,10 +957,7 @@ Applab.render = function () {
     <Provider store={getStore()}>
       <AppLabView {...nextProps} />
     </Provider>,
-    Applab.reactMountPoint_,
-    {
-      legacyReactDomRender: true,
-    }
+    Applab.reactMountPoint_
   );
 };
 
