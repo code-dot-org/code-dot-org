@@ -42,13 +42,16 @@
   background: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
   text-align: center;
-  cursor: pointer;
 
   &.end {
     padding-inline: 26px 16px;
   }
 
-  &:hover:not(:disabled, .cardActive) {
+  &:enabled {
+    cursor: pointer;
+  }
+
+  &:enabled:hover:not(.cardActive) {
     border-color: var(--border-neutral-secondary);
 
     .dot {
@@ -59,10 +62,6 @@
   &:focus-visible {
     outline: 2px solid var(--border-selected-primary);
     outline-offset: 2px;
-  }
-
-  &:disabled {
-    cursor: default;
   }
 }
 

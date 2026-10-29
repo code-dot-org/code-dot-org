@@ -5,12 +5,14 @@ import {QuizQuestionSummary} from '../types';
 
 import AttemptCard from './AttemptCard';
 import FreeResponseAnswer from './FreeResponseAnswer';
+import MatchAnswer from './match/MatchAnswer';
 import MultipleChoiceAnswer from './MultipleChoiceAnswer';
 import MultipleSelectAnswer from './MultipleSelectAnswer';
 import QuestionDescription from './QuestionDescription';
 import ResultTag, {ResultTagStatus} from './ResultTag';
 import {
   isFreeResponseResponse,
+  isMatchResponse,
   isMultipleChoiceResponse,
   isMultipleSelectResponse,
   QuizQuestionResult,
@@ -85,6 +87,13 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
       )}
       {isMultipleSelectResponse(result) && (
         <MultipleSelectAnswer
+          question={question}
+          result={result}
+          isViewingStudent={isViewingStudent}
+        />
+      )}
+      {isMatchResponse(result) && (
+        <MatchAnswer
           question={question}
           result={result}
           isViewingStudent={isViewingStudent}
