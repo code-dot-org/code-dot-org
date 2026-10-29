@@ -1,4 +1,4 @@
-import {render, screen, waitFor} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import '@testing-library/jest-dom';
@@ -158,6 +158,34 @@ describe('ChatEventsList', () => {
       expect.objectContaining({message: 'render failed'}),
       expect.objectContaining({componentStack: expect.any(String)})
     );
+    jest.mocked(console.error).mockRestore();
+  });
+
+  it('lets keyboard users reach a final event that failed to render', () => {
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+    const events: CompletedChatMessage[] = [
+      {
+        timestamp: Date.now(),
+        chatMessageText: mockUnrenderableText,
+        role: Role.ASSISTANT,
+        status: AiInteractionStatus.OK,
+        requestId: 1,
+      },
+    ];
+
+    render(<ChatEventsList events={events} />);
+    const chatHistory = screen.getByLabelText(
+      'Chat history: press Enter to navigate, Escape to exit'
+    );
+    const placeholder = screen
+      .getByText('This message could not be displayed.')
+      .closest('[tabindex]');
+
+    fireEvent.keyDown(chatHistory, {key: 'Enter'});
+    expect(placeholder).toHaveFocus();
+
+    fireEvent.keyDown(placeholder!, {key: 'Escape'});
+    expect(chatHistory).toHaveFocus();
     jest.mocked(console.error).mockRestore();
   });
 

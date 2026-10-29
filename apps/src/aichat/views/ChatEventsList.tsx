@@ -45,12 +45,12 @@ interface ChatEventsListProps {
   ) => React.ReactNode;
 }
 
-const unrenderableEventFallback = (
+const unrenderableEventAlert = (
   <Alert
     text="This message could not be displayed."
     type="danger"
     size="s"
-    className={moduleStyles.chatMessageOutline}
+    isImmediateImportance={false}
   />
 );
 
@@ -135,6 +135,13 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     if (e.target === e.currentTarget && e.key === 'Enter') {
       setIsInChatNavigationMode(true);
       finalEventRef.current?.focus();
+    }
+  };
+
+  const handleEventKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Escape' && e.target === e.currentTarget) {
+      setIsInChatNavigationMode(false);
+      parentRef.current?.focus();
     }
   };
 
@@ -285,10 +292,22 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
             {events.map((event, index) => {
               const isLastEvent = index === events.length - 1;
               const isLastChatMessage = index === lastChatMessageIndex;
+              const eventNavigationProps = {
+                ref: isLastEvent ? finalEventRef : undefined,
+                tabIndex: isInChatNavigationMode ? 0 : -1,
+                onKeyDown: handleEventKeyDown,
+              };
               return (
                 <ErrorBoundary
                   key={event.timestamp}
-                  fallback={unrenderableEventFallback}
+                  fallback={
+                    <div
+                      {...eventNavigationProps}
+                      className={moduleStyles.chatMessageOutline}
+                    >
+                      {unrenderableEventAlert}
+                    </div>
+                  }
                   onError={logEventRenderError}
                 >
                   <ChatEventView
@@ -302,14 +321,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                         ? resolvedLastMessagePostText
                         : undefined
                     }
-                    ref={isLastEvent ? finalEventRef : undefined}
-                    tabIndex={isInChatNavigationMode ? 0 : -1}
-                    onKeyDown={e => {
-                      if (e.key === 'Escape' && e.target === e.currentTarget) {
-                        setIsInChatNavigationMode(false);
-                        parentRef.current?.focus();
-                      }
-                    }}
+                    {...eventNavigationProps}
                   />
                 </ErrorBoundary>
               );
