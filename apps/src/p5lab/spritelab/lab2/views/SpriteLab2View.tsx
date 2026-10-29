@@ -591,7 +591,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       previous?.kind === sceneToolbox?.kind ? previous : sceneToolbox
     );
   }, [sceneToolbox]);
-  const activeWorld = worldFor(activeScene);
+  // Memoized: a scene with no saved world gets an empty one, and a fresh
+  // grid every render would re-run the objectives effect without end.
+  const activeSceneWorld = activeScene?.world;
+  const activeWorld = useMemo(
+    () => resizeWorld(activeSceneWorld, seedSceneSize),
+    [activeSceneWorld, seedSceneSize]
+  );
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);

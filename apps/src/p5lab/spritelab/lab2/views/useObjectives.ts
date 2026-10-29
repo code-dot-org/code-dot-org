@@ -184,19 +184,22 @@ export function useObjectives({
     ]
   );
   const items = objectives?.items;
+  const earnedRef = useRef(earned);
+  earnedRef.current = earned;
   useEffect(() => {
     if (!items?.length) {
       return;
     }
-    setEarned(current => {
-      const next = new Set(current);
-      items.forEach((item, index) => {
-        if (!next.has(index) && checkObjective(item.check, inputs)) {
-          next.add(index);
-        }
-      });
-      return next.size === current.size ? current : next;
-    });
+    const held = earnedRef.current;
+    const newly = items.flatMap((item, index) =>
+      !held.has(index) && checkObjective(item.check, inputs) ? [index] : []
+    );
+    // No update when nothing new holds: an input rebuilt every render would
+    // otherwise re-run this effect without end.
+    if (!newly.length) {
+      return;
+    }
+    setEarned(new Set([...held, ...newly]));
   }, [items, inputs]);
 
   // One object per change: the panel it feeds is memoized on it.
