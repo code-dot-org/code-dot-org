@@ -209,6 +209,16 @@ button.chipWord {
   opacity: 0.5;
 }
 
+// The chip's corner badge. Nested under the chip to outrank the button's
+// own shape.
+.chip .remove {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  border: 2px solid var(--background-neutral-primary);
+  border-radius: 50%;
+}
+
 .carouselBox {
   display: flex;
   flex-direction: column;

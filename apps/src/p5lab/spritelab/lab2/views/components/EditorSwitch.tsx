@@ -8,8 +8,8 @@ interface EditorSwitchProps {
   onChange: (editor: Editor) => void;
   /** The editors on offer, in order; Code and World unless told otherwise. */
   editors?: Editor[];
-  /** Editors the level has not opened yet; shown disabled, so the switch
-      keeps the shape it will have once they are. */
+  /** Editors this level does not enable; shown disabled rather than left
+      out, so the switch keeps one shape across the unit's levels. */
   disabledEditors?: Editor[];
 }
 
