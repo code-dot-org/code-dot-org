@@ -28,7 +28,10 @@ import {getStore} from '@cdo/apps/code-studio/redux';
 import initResponsive from '@cdo/apps/code-studio/responsive';
 import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 // disable import/order rule to import consoleShim after setting store.
 // This might be safe to remove but needs investigation whether any behavior is changed by order.
 /* eslint-disable import/order*/
@@ -56,6 +59,8 @@ if ($.fn.modal) {
 
 window.dashboard = window.dashboard || {};
 window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
+window.dashboard.createReactRoot = createReactRoot;
+window.dashboard.unmountReactRoot = unmountReactRoot;
 window.dashboard.createCallouts =
   require('@cdo/apps/code-studio/callouts').default;
 window.dashboard.hashEmail = hashEmail;

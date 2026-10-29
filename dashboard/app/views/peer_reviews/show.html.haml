@@ -8,7 +8,7 @@
     - course_unit = @peer_review.script.plc_course_unit
     - react_props = {unit_name: course_unit.unit_name, unit_view_path: script_path(course_unit.script), course_view_path: course_path(course_unit.plc_course.unit_group), page_name: I18n.t('peer_review.peer_review')}
     :javascript
-      ReactDOM.render(
+      dashboard.createReactRoot(
         React.createElement(window.dashboard.plcHeader, #{react_props.to_json}),
         document.getElementById('breadcrumb')
       );
