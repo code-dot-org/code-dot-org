@@ -63,7 +63,7 @@
               "like": {
                 "type": "gamelab_spriteSay",
                 "fields": {
-                  "SPEECH": "Oh no!"
+                  "SPEECH": "Oh!"
                 },
                 "inputs": {
                   "SPRITE": {
@@ -100,7 +100,7 @@
           "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
-            "SPEECH": "Oh no!"
+            "SPEECH": "Oh!"
           },
           "inputs": {
             "SPRITE": {
