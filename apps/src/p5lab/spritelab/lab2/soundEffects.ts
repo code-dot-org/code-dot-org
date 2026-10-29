@@ -105,7 +105,9 @@ const VOLUME: Record<Wave, number> = {
   clang: 0.07,
   pluck: 0.3,
 };
-// Where a wave's loudness drifts with pitch, gain follows (middle/hz)^power.
+// Loudness drifts with pitch on these waves (a bandpass passes more noise
+// the higher it sits; a plucked string dies sooner the shorter it is), so
+// their gain follows (middle hz / note hz) to this power.
 const TILT: Partial<Record<Wave, number>> = {
   noise: 0.45,
   pluck: -0.35,
@@ -127,7 +129,8 @@ const RUN_OVERLAP = 1.5;
 const WOBBLE_RATE_HZ = 8;
 // A semitone either side.
 const WOBBLE_DEPTH_CENTS = 100;
-// A wobble deepens from nothing over this long (half the note if shorter).
+// The wobble deepens from nothing over this long, so the note settles on
+// its pitch before it shakes; a short note gets half its length.
 const WOBBLE_ONSET_S = 0.12;
 // A chord's notes cycle on one voice at this rate, the frame rate the old
 // home computer games changed their notes at.
@@ -157,7 +160,9 @@ const INSTRUMENTS_PER_TIMBRE = 4;
 // Tone wants each strike later than the instrument's last; same-frame
 // strikes land this far apart.
 const RESTRIKE_GAP_S = 0.001;
-// A plucked string cannot bend: slides and wobbles play plain, chords strum.
+// A plucked string: a burst of noise into a tuned delay. Its pitch cannot
+// bend, so a slide or wobble plays as a plain pluck and a chord strums
+// its notes together.
 const PLUCK_ATTACK_NOISE = 2;
 const PLUCK_DAMPENING_HZ = 4000;
 const PLUCK_RESONANCE = 0.985;
