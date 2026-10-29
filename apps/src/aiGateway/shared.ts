@@ -1,6 +1,6 @@
 import AichatContextManager from '../aichat/aichatContextManager';
 import {AichatContext} from '../aichat/types';
-import HttpClient from '../util/HttpClient';
+import HttpClient, {isNetworkError} from '../util/HttpClient';
 
 import {
   parseTurnstileEnforcementMode,
@@ -24,27 +24,45 @@ export interface GatewayAccessToken {
 export async function fetchAccessToken(
   aichatContext: AichatContext = AichatContextManager.getContext()
 ): Promise<GatewayAccessToken> {
-  const response = await HttpClient.post(
-    '/ai_gateway/access_token',
-    JSON.stringify({aichatContext}),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
+  try {
+    const response = await HttpClient.post(
+      '/ai_gateway/access_token',
+      JSON.stringify({aichatContext}),
+      true,
+      {
+        'Content-Type': 'application/json; charset=UTF-8',
+      }
+    );
+    // turnstileEnforcementMode is deliberately typed as unknown rather than asserted: it is
+    // absent from servers predating the flag, and parseTurnstileEnforcementMode is what
+    // turns anything unexpected into a safe default.
+    const value = (await response.json()) as {
+      token: string;
+      turnstileEnforcementMode?: unknown;
+    };
+    return {
+      token: value.token,
+      turnstileEnforcementMode: parseTurnstileEnforcementMode(
+        value.turnstileEnforcementMode
+      ),
+    };
+  } catch (error) {
+    // Surface the server's specific reason (e.g. a denied safety-checks
+    // bypass request) instead of a generic "403 Forbidden". Clone before
+    // reading: reportGatewayError() further up the call chain also reads
+    // this same response body, and a body can only be consumed once
+    // without cloning first.
+    if (isNetworkError(error)) {
+      const body = await error.response
+        .clone()
+        .json()
+        .catch(() => null);
+      if (body?.message) {
+        error.message = body.message;
+      }
     }
-  );
-  // turnstileEnforcementMode is deliberately typed as unknown rather than asserted: it is
-  // absent from servers predating the flag, and parseTurnstileEnforcementMode is what
-  // turns anything unexpected into a safe default.
-  const value = (await response.json()) as {
-    token: string;
-    turnstileEnforcementMode?: unknown;
-  };
-  return {
-    token: value.token,
-    turnstileEnforcementMode: parseTurnstileEnforcementMode(
-      value.turnstileEnforcementMode
-    ),
-  };
+    throw error;
+  }
 }
 
 export function getModelString(model: unknown) {

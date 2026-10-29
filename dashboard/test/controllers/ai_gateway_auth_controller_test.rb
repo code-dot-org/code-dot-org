@@ -156,6 +156,56 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
+  [
+    [:input, :disableInputModeration, :input_moderation_disabled, :output_moderation_disabled, AiGatewayAuthController::INPUT_MODERATION_BYPASS_NOT_PERMITTED_ERROR],
+    [:output, :disableOutputModeration, :output_moderation_disabled, :input_moderation_disabled, AiGatewayAuthController::OUTPUT_MODERATION_BYPASS_NOT_PERMITTED_ERROR],
+  ].each do |check, flag, claim, other_claim, error|
+    test "grants the #{check} moderation bypass to an allowlisted client type" do
+      @params[:aichatContext] = curriculum_generator_context.merge(flag => true)
+
+      claims = mint_and_capture_claims(user: create(:levelbuilder))
+
+      assert_equal true, claims[claim]
+      assert_equal false, claims[other_claim]
+    end
+
+    test "refuses the #{check} moderation bypass to a client type not on the allowlist" do
+      sign_in(@authorized_teacher)
+      User.any_instance.stubs(:us_only_aichat_models_disabled?).returns(false)
+      @params[:aichatContext][flag] = true
+
+      post :get_access_token, params: @params, as: :json
+
+      assert_response :forbidden
+      body = JSON.parse(response.body)
+      assert_equal error, body['error']
+      assert body['message'].present?
+      assert_nil body['token']
+    end
+
+    test "signs #{claim} false when the bypass is not requested" do
+      assert_equal false, mint_and_capture_claims[claim]
+
+      @params[:aichatContext] = curriculum_generator_context
+      assert_equal false, mint_and_capture_claims(user: create(:levelbuilder))[claim]
+    end
+  end
+
+  test 'signs the spanish safety prompt locale for a level in a LATAM script' do
+    Policies::Courses.stubs(:modularity_enabled?).returns(false)
+    latam_script = create(:script, :with_levels, :in_single_unit_course, name: AichatSafetyHelper::SPANISH_SCRIPT_NAMES.first)
+    @params[:aichatContext][:currentLevelId] = latam_script.levels.first.id
+
+    assert_equal 'spanish', mint_and_capture_claims[:safety_prompt_locale]
+  end
+
+  test 'signs the american safety prompt locale for any other level, or none' do
+    assert_equal 'american', mint_and_capture_claims[:safety_prompt_locale]
+
+    @params[:aichatContext] = curriculum_generator_context
+    assert_equal 'american', mint_and_capture_claims(user: create(:levelbuilder))[:safety_prompt_locale]
+  end
+
   private def stub_turnstile_enforcement_mode(value)
     DCDO.stubs(:get).
       with(AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DCDO_KEY, AiGatewayAuthController::TURNSTILE_ENFORCEMENT_MODE_DEFAULT).
@@ -183,5 +233,13 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
 
     assert_response :success
     captured
+  end
+
+  private def curriculum_generator_context
+    {
+      clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:CURRICULUM_GENERATOR],
+      currentLevelId: nil,
+      scriptId: @script.id,
+    }
   end
 end

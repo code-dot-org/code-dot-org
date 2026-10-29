@@ -4,6 +4,22 @@ require 'cdo/aws/metrics'
 module AichatSafetyHelper
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
+  SPANISH_SCRIPT_NAMES = %w[customizing-llms-latm-pilot customizing-llms-latm-2025].freeze
+  SAFETY_PROMPT_LOCALES = {
+    AMERICAN: 'american',
+    SPANISH: 'spanish',
+  }.freeze
+
+  def self.safety_prompt_locale(level_id)
+    level = level_id && Level.find_by(id: level_id)
+    return SAFETY_PROMPT_LOCALES[:AMERICAN] unless level
+
+    in_spanish_script = [level, *BubbleChoice.parent_levels(level.name)].any? do |l|
+      l.script_levels.any? {|sl| SPANISH_SCRIPT_NAMES.include?(sl.script.name)}
+    end
+    in_spanish_script ? SAFETY_PROMPT_LOCALES[:SPANISH] : SAFETY_PROMPT_LOCALES[:AMERICAN]
+  end
+
   class ToxicityDetector
     VALID_EVALUATION_RESPONSES_SIMPLE = ['INAPPROPRIATE', 'OK']
 
@@ -98,21 +114,7 @@ module AichatSafetyHelper
     end
 
     private def get_safety_system_prompt(level_id)
-      spanish_script_names = ['customizing-llms-latm-pilot', 'customizing-llms-latm-2025']
-
-      in_spanish_script = false
-      if level_id
-        level = Level.find_by(id: level_id)
-        bubble_choice_parents = BubbleChoice.parent_levels(level.name)
-
-        any_parent_in_spanish_script = bubble_choice_parents.any? do |pl|
-          pl.script_levels.any? {|sl| spanish_script_names.include?(sl.script.name)}
-        end
-        level_in_spanish_script = level.script_levels.any? {|sl| spanish_script_names.include?(sl.script.name)}
-        in_spanish_script = any_parent_in_spanish_script || level_in_spanish_script
-      end
-
-      "You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an #{in_spanish_script ? 'Spanish' : 'American'} public middle school classroom. Examples of inappropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is inappropriate, respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`."
+      "You are a content filter trying to keep a school teacher out of trouble. Determine if chat text is inappropriate for an #{AichatSafetyHelper.safety_prompt_locale(level_id).capitalize} public middle school classroom. Examples of inappropriate content: profanity, swears, illegal behavior, insults, bullying, slurs, sex, violence, racism, sexism, threats, weapons, dirty slang, etc. If text is inappropriate, respond with the single word `INAPPROPRIATE`, otherwise respond with the single word `OK`."
     end
 
     private def get_safety_system_prompt_version

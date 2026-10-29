@@ -12,4 +12,8 @@ export type AichatContext = {
   scriptId: number | null;
   channelId: string | undefined;
   lessonId?: number;
+  // Ask for an AI Gateway token that skips the worker's input or output
+  // moderation. Rails grants each only to client types on its allowlist.
+  disableInputModeration?: boolean;
+  disableOutputModeration?: boolean;
 };

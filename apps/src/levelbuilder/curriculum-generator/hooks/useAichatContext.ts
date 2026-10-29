@@ -8,6 +8,11 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 // lesson id at the lesson scope, unit (script) id at the unit scope.
 // The server admits CURRICULUM_GENERATOR for levelbuilders only,
 // regardless of which fields are populated.
+//
+// These pages generate curriculum for trusted authors, not a student's chat
+// turn, so they ask the gateway to skip input and output moderation. Rails
+// grants each skip only to client types on that check's allowlist in
+// AiGatewayAuthController.
 
 export interface AichatContextScope {
   lessonId?: number;
@@ -22,6 +27,8 @@ export function useAichatContext({lessonId, scriptId}: AichatContextScope) {
       scriptId: scriptId ?? null,
       channelId: undefined,
       lessonId: lessonId ?? undefined,
+      disableInputModeration: true,
+      disableOutputModeration: true,
     });
   }, [lessonId, scriptId]);
 }
