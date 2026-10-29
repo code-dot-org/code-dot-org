@@ -16,6 +16,22 @@ class SectionTest < ActiveSupport::TestCase
     @jigsaw_unit.reload
   end
 
+  test 'lesson_tutor_available? is true for a section assigned an AIF course' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'ai-tutor-section', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    assert create(:section, unit_group: unit_group).lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a section assigned a non-AI course' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai-section', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
+    refute create(:section, unit_group: unit_group).lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a section with nothing assigned' do
+    refute create(:section).lesson_tutor_available?
+  end
+
   test "sections are soft-deleted" do
     assert_no_change("Section.with_deleted.count") do
       @section.destroy
@@ -833,6 +849,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -870,6 +888,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1005,6 +1025,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1068,6 +1090,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1137,6 +1161,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1205,6 +1231,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1265,6 +1293,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)

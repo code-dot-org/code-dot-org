@@ -461,4 +461,45 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       _can_use_lesson_deep_dive?.must_equal false
     end
   end
+
+  describe '#can_use_lesson_deep_dive_challenges?' do
+    subject(:can_use_lesson_deep_dive_challenges?) {user.can_use_lesson_deep_dive_challenges?}
+
+    let(:challenge_section) {create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED], ai_challenge_enabled: true)}
+
+    before do
+      allow(user).to receive(:teachers).and_return([qualified_teacher])
+    end
+
+    it 'returns true for a verified teacher' do
+      allow(user).to receive(:teacher?).and_return(true)
+      allow(user).to receive(:verified_instructor?).and_return(true)
+      _can_use_lesson_deep_dive_challenges?.must_equal true
+    end
+
+    it 'returns true for a student in an enabled section with challenges on' do
+      allow(user).to receive(:sections_as_student).and_return([challenge_section])
+      _can_use_lesson_deep_dive_challenges?.must_equal true
+    end
+
+    it 'returns false for a student in an enabled section with challenges off' do
+      challenge_section.update!(ai_challenge_enabled: false)
+      allow(user).to receive(:sections_as_student).and_return([challenge_section])
+      _can_use_lesson_deep_dive_challenges?.must_equal false
+    end
+
+    it 'returns false when challenges are on only in an essential-only section' do
+      enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+      challenge_section.update!(ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
+      allow(user).to receive(:sections_as_student).and_return([enabled_section, challenge_section])
+      _can_use_lesson_deep_dive_challenges?.must_equal false
+    end
+
+    it 'returns false when challenges are on only in a hidden section' do
+      enabled_section = create(:section, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+      challenge_section.update!(hidden: true)
+      allow(user).to receive(:sections_as_student).and_return([enabled_section, challenge_section])
+      _can_use_lesson_deep_dive_challenges?.must_equal false
+    end
+  end
 end
