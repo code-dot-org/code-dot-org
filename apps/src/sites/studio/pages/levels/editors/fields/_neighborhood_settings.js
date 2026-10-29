@@ -10,9 +10,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <EditNeighborhoodSettings initialMaze={initialMaze} />,
-    document.getElementById('neighborhood-settings-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('neighborhood-settings-editor')
   );
 });

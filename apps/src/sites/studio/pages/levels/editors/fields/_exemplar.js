@@ -19,9 +19,6 @@ $(document).ready(function () {
         initialExemplarSettings={exemplarSettings}
       />
     </div>,
-    document.getElementById('exemplar-settings-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('exemplar-settings-editor')
   );
 });
