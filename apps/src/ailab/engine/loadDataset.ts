@@ -23,7 +23,6 @@ export const loadDataset = async (
   if (!isCurrentDatasetLoad(loadId)) {
     return;
   }
-  // Ours parse cleanly, so a short table means we were served something else.
   if (!csv.ok || !meta.ok) {
     reportFailure('loadFailed');
   } else {
