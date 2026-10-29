@@ -4,20 +4,10 @@
 import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
-/** build: a world level with the Code tab beside it, opening on World. */
-export type LevelModeKind =
-  | 'code'
-  | 'world'
-  | 'build'
-  | 'play'
-  | 'image'
-  | 'freeplay';
+export type LevelModeKind = 'code' | 'world' | 'play' | 'image' | 'freeplay';
 
 export interface LevelMode {
   kind: LevelModeKind;
-  /** The tabs this level shows, in order, instead of the kind's; the
-      first is where the level opens. */
-  tabs?: Tab[];
   /** The kind of image the level is about. On a world level, the palette
       offers only the level's image of this kind (image_role_defaults, else
       the newest); a world level without one offers everything. */
@@ -45,19 +35,18 @@ export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
 const TABS: Record<LevelModeKind, Tab[]> = {
   code: ['Code', 'Play'],
   world: ['World', 'Play'],
-  build: ['World', 'Code', 'Play'],
   play: ['Play'],
   image: ['Images'],
   freeplay: ['Code', 'Images', 'World', 'Play'],
 };
 
 export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
-  return mode ? mode.tabs ?? TABS[mode.kind] : undefined;
+  return mode ? TABS[mode.kind] : undefined;
 }
 
-/** A level whose palette is about one image: world and build levels. */
+/** A level whose palette is about one image: a world level. */
 export function editsWorld(mode: LevelMode | undefined): boolean {
-  return mode?.kind === 'world' || mode?.kind === 'build';
+  return mode?.kind === 'world';
 }
 
 /** The only mode offering the prompt box and the paint tools. */
