@@ -145,7 +145,7 @@ class QuizAttemptTest < ActiveSupport::TestCase
     question = create(:multiple_choice_question)
     create(:quiz_question_placement, level: quiz, quiz_question: question)
     attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
-    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: question, response_data: [])
+    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: question, response_data: ['b'])
 
     refute attempt.question_results.first[:answered]
   end
