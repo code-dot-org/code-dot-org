@@ -431,6 +431,8 @@ class LevelTest < ActiveSupport::TestCase
   test 'updating maze level updates it in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).once
+    # Mocked too, or the test creates config/levels/custom/maze for real.
+    FileUtils.expects(:mkdir_p).once
 
     update_maze
   end
@@ -449,6 +451,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'creating maze level creates it in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.expects(:write).once
+    FileUtils.expects(:mkdir_p).once
 
     create_maze
   end
