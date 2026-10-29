@@ -19,9 +19,9 @@ describe('buildSkillMapTourSteps', () => {
     );
   });
 
-  it('targets the first available node on step 2', () => {
+  it('targets the map canvas on step 2 so all nodes are clickable', () => {
     expect(buildSkillMapTourSteps(false)[1].element).toBe(
-      '#adaptive-tour-first-available'
+      '#adaptive-tour-map-canvas'
     );
   });
 

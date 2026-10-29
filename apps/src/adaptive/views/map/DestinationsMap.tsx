@@ -64,6 +64,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
   turns,
   focusId,
   onSelect,
+  tourFocusIds,
 }) => {
   const layout = useMemo(
     () => layoutDestinations(pathway.checkpoints, turns),
@@ -74,6 +75,15 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
     () => new Map(boxes.flatMap(b => b.ids.map(id => [id, b.side]))),
     [boxes]
   );
+  const tourFocus = useMemo(() => {
+    if (!tourFocusIds?.length) return undefined;
+    const positions = tourFocusIds.map(id => layout.nodes[id]).filter(Boolean);
+    if (!positions.length) return undefined;
+    return {
+      x: positions.reduce((s, p) => s + p.x, 0) / positions.length,
+      y: positions.reduce((s, p) => s + p.y, 0) / positions.length,
+    };
+  }, [tourFocusIds, layout.nodes]);
   const firstAvailableId = useMemo(
     () => pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id,
     [pathway.checkpoints, statusMap]
@@ -90,6 +100,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
       lines={lines}
       statusMap={statusMap}
       focus={focusId ? layout.nodes[focusId] : undefined}
+      tourFocus={tourFocus}
     >
       {boxes.map(box => (
         <div

@@ -65,12 +65,14 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   // The project manager lives only while the map shows, so it never races a
   // step's manager on the same channel.
   const projectState = usePathwayProject(pathway);
-  // During the tour, show CheckpointCard for the first available checkpoint
+  // During the tour, show CheckpointCard for the user-selected checkpoint
   // without zooming the map. A zoomed map shifts the highlighted node away from
   // where IntroJS measured it, so we keep the map at its fit view.
   const [tourCheckpointId, setTourCheckpointId] = useState<
     string | undefined
   >();
+  // Tracks the active tour step so onSelect knows when to intercept map clicks.
+  const [tourStep, setTourStep] = useState(0);
   const effectiveFocusId = tourCheckpointId ?? focusId;
   const focused = effectiveFocusId
     ? pathway.checkpoints.find(c => c.id === effectiveFocusId)
@@ -93,14 +95,15 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
     setTourEnabled(false);
     setTourCheckpointId(undefined);
+    document.body.classList.remove('adaptive-tour-step-select');
   };
 
-  // Used by onBeforeChange to focus a checkpoint when advancing past step 1,
-  // so CheckpointCard (and its Start button) are in the DOM before step 4.
-  const firstAvailableId = useMemo(
-    () => pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id,
-    [pathway.checkpoints, statusMap]
-  );
+  // Center the tour zoom on the first checkpoint in the map during step 1.
+  const tourFocusIds = useMemo(() => {
+    if (!tourEnabled || tourStep !== 1) return undefined;
+    const first = pathway.checkpoints[0];
+    return first ? [first.id] : undefined;
+  }, [tourEnabled, tourStep, pathway.checkpoints]);
 
   // intro.js resolves CSS selectors eagerly at start() time. When tourCheckpointId
   // is set, React renders CheckpointCard (adding #adaptive-checkpoint-card-start to
@@ -129,10 +132,15 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
         steps={tourSteps}
         onExit={dismissTour}
         onComplete={dismissTour}
+        onChange={(stepIndex: number) => {
+          setTourStep(stepIndex);
+          document.body.classList.toggle(
+            'adaptive-tour-step-select',
+            stepIndex === 1
+          );
+        }}
         onBeforeChange={(nextStepIndex: number) => {
-          if (nextStepIndex === 1 && firstAvailableId) {
-            setTourCheckpointId(firstAvailableId);
-          } else if (nextStepIndex === 0) {
+          if (nextStepIndex === 0) {
             setTourCheckpointId(undefined);
           }
         }}
@@ -171,7 +179,17 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
             statusMap={statusMap}
             settings={mapSettings}
             focusId={focusId}
-            onSelect={id => onFocus(id === focusId ? undefined : id)}
+            tourFocusIds={tourFocusIds}
+            onSelect={id => {
+              if (tourEnabled && tourStep === 1) {
+                if (statusMap[id] !== 'locked') {
+                  setTourCheckpointId(id);
+                  stepsRef.current?.introJs?.nextStep();
+                }
+              } else {
+                onFocus(id === focusId ? undefined : id);
+              }
+            }}
           />
         </div>
         <aside id="adaptive-tour-side" className={styles.side}>

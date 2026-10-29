@@ -16,7 +16,7 @@ export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
       ),
     },
     {
-      element: '#adaptive-tour-first-available',
+      element: '#adaptive-tour-map-canvas',
       title: 'Open checkpoints',
       intro: <>Tap any highlighted checkpoint to learn what it covers.</>,
     },

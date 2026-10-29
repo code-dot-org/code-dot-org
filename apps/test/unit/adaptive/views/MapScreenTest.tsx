@@ -5,20 +5,44 @@ import {Pathway} from '@cdo/apps/adaptive/types';
 import MapScreen from '@cdo/apps/adaptive/views/MapScreen';
 import {SKILL_MAP_TOUR_STORAGE_KEY} from '@cdo/apps/adaptive/views/skillMapTourHelpers';
 
-// Stub intro.js-react's Steps as a controllable component that exposes the
-// tour callbacks through labeled buttons. forwardRef + useImperativeHandle
-// satisfies MapScreen's stepsRef without touching live intro.js DOM logic.
+// Stub intro.js-react's Steps as a controllable component.
+// - "advance" / "back" fire onBeforeChange + onChange so MapScreen's tourStep
+//   state stays in sync.
+// - ref exposes introJs.nextStep, which the onSelect handler calls when the
+//   user picks a checkpoint during step 1.
 jest.mock('intro.js-react', () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const Steps = React.forwardRef(function MockSteps(props: any, ref: any) {
-    React.useImperativeHandle(ref, () => ({introJs: {refresh: jest.fn()}}));
+    const propsRef = React.useRef(props);
+    propsRef.current = props;
+    const stepRef = React.useRef(0);
+
+    React.useImperativeHandle(ref, () => ({
+      introJs: {
+        refresh: jest.fn(),
+        nextStep: () => {
+          const next = stepRef.current + 1;
+          propsRef.current.onBeforeChange?.(next);
+          stepRef.current = next;
+          propsRef.current.onChange?.(next);
+        },
+      },
+    }));
+
     if (!props.enabled) return null;
+
+    const advance = (nextStep: number) => {
+      props.onBeforeChange?.(nextStep);
+      stepRef.current = nextStep;
+      props.onChange?.(nextStep);
+    };
+
     return (
       <div role="dialog" aria-label="tour">
-        <button type="button" onClick={() => props.onBeforeChange?.(1)}>
+        <button type="button" onClick={() => advance(1)}>
           advance
         </button>
-        <button type="button" onClick={() => props.onBeforeChange?.(0)}>
+        <button type="button" onClick={() => advance(0)}>
           back
         </button>
         <button type="button" onClick={props.onExit}>
@@ -36,10 +60,22 @@ jest.mock('intro.js-react', () => {
 jest.mock('@cdo/apps/adaptive/project/usePathwayProject', () => ({
   usePathwayProject: () => ({isLoading: false}),
 }));
+
+// MapView mock exposes onSelect so tests can simulate a checkpoint click.
 jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
   __esModule: true,
-  default: () => <div aria-label="map" />,
+  default: ({onSelect}: {onSelect?: (id: string) => void}) => (
+    <div aria-label="map">
+      <button type="button" onClick={() => onSelect?.('cp-1')}>
+        select cp-1
+      </button>
+      <button type="button" onClick={() => onSelect?.('cp-2')}>
+        select cp-2
+      </button>
+    </div>
+  ),
 }));
+
 jest.mock('@cdo/apps/adaptive/views/ProjectCard', () => ({
   __esModule: true,
   default: () => <div>project card</div>,
@@ -107,6 +143,7 @@ function renderMapScreen(
 describe('MapScreen tour', () => {
   afterEach(() => {
     localStorage.clear();
+    document.body.classList.remove('adaptive-tour-step-select');
   });
 
   it('shows the tour when the storage key is absent', () => {
@@ -139,52 +176,88 @@ describe('MapScreen tour', () => {
   });
 
   describe('step transitions', () => {
-    it('shows ProjectCard before any step advance', () => {
+    it('shows ProjectCard before any interaction', () => {
       renderMapScreen();
       expect(screen.getByText('project card')).toBeTruthy();
       expect(screen.queryByText('First Checkpoint')).toBeNull();
     });
 
-    it('shows CheckpointCard for the first available checkpoint when advancing to step 2', () => {
+    it('still shows ProjectCard after advancing to step 2 without a map click', () => {
+      // Advancing no longer auto-selects a checkpoint — user must click the map.
       renderMapScreen();
       act(() => {
         fireEvent.click(screen.getByText('advance'));
+      });
+      expect(screen.getByText('project card')).toBeTruthy();
+      expect(screen.queryByText('First Checkpoint')).toBeNull();
+    });
+
+    it('shows CheckpointCard after the user selects a checkpoint on the map', () => {
+      renderMapScreen();
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // step 1
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1'));
       });
       expect(screen.getByText('First Checkpoint')).toBeTruthy();
       expect(screen.queryByText('project card')).toBeNull();
     });
 
-    it('exposes the start button tour id when CheckpointCard is visible', () => {
+    it('exposes the start button tour id once CheckpointCard is visible', () => {
       renderMapScreen();
       act(() => {
         fireEvent.click(screen.getByText('advance'));
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1'));
       });
       expect(
         document.getElementById('adaptive-checkpoint-card-start')
       ).not.toBeNull();
     });
 
-    it('returns to ProjectCard when navigating back to step 1', () => {
+    it('ignores map clicks on locked checkpoints during the select step', () => {
       renderMapScreen();
       act(() => {
-        fireEvent.click(screen.getByText('advance'));
+        fireEvent.click(screen.getByText('advance')); // step 1
       });
       act(() => {
-        fireEvent.click(screen.getByText('back'));
+        fireEvent.click(screen.getByText('select cp-2')); // cp-2 is locked
+      });
+      expect(screen.getByText('project card')).toBeTruthy();
+      expect(screen.queryByText('Second Checkpoint')).toBeNull();
+    });
+
+    it('clears CheckpointCard when navigating back to step 1', () => {
+      renderMapScreen();
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // step 1
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1')); // step 2 with checkpoint
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('back')); // step 0
       });
       expect(screen.getByText('project card')).toBeTruthy();
       expect(screen.queryByText('First Checkpoint')).toBeNull();
     });
 
-    it('shows no CheckpointCard when there is no available checkpoint', () => {
-      renderMapScreen({
-        statusMap: {'cp-1': 'locked', 'cp-2': 'locked'},
-      });
+    it('adds the select body class when on step 2 and removes it on advance', () => {
+      renderMapScreen();
       act(() => {
-        fireEvent.click(screen.getByText('advance'));
+        fireEvent.click(screen.getByText('advance')); // step 1
       });
-      // firstAvailableId is undefined → setTourCheckpointId is never called
-      expect(screen.getByText('project card')).toBeTruthy();
+      expect(
+        document.body.classList.contains('adaptive-tour-step-select')
+      ).toBe(true);
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1')); // step 2 via nextStep
+      });
+      expect(
+        document.body.classList.contains('adaptive-tour-step-select')
+      ).toBe(false);
     });
   });
 

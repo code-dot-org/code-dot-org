@@ -94,6 +94,12 @@
   }
 }
 
+// On the "pick a checkpoint" step the user advances by clicking the map, not
+// the Next button.
+body.adaptive-tour-step-select .introjs-nextbutton {
+  display: none;
+}
+
 // Next: filled purple.
 .introjs-nextbutton {
   color: var(--text-neutral-white-fixed);

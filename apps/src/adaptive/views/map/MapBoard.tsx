@@ -11,6 +11,9 @@ import styles from './mapBoard.module.scss';
 // On-screen scale of the board when zoomed onto a checkpoint, whatever
 // the fit shrank it to.
 const FOCUS_SCALE = 2;
+// Slightly looser scale for the tour zoom so available checkpoints have
+// ~20px more breathing room around them.
+const TOUR_FOCUS_SCALE = 1.75;
 
 interface Size {
   width: number;
@@ -45,6 +48,8 @@ interface MapBoardProps {
   statusMap: CheckpointStatusMap;
   /** The checkpoint the map is zoomed onto, if any. */
   focus?: NodePosition;
+  /** Board-space point to center on during the tour (lower priority than focus). */
+  tourFocus?: {x: number; y: number};
   children: React.ReactNode;
 }
 
@@ -60,6 +65,7 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
   lines,
   statusMap,
   focus,
+  tourFocus,
   children,
 }) => {
   const [fitRef, space] = useElementSize<HTMLDivElement>();
@@ -68,12 +74,12 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
     : 1;
   const fitLeft = Math.max(0, (space.width - layout.width * fit) / 2);
   const fitTop = Math.max(0, (space.height - layout.height * fit) / 2);
-  // How far, in board units, the focused checkpoint is from the center of
-  // the space.
-  const shift = focus
+  const effectiveFocus = focus ?? tourFocus;
+  // How far, in board units, the focused point is from the center of the space.
+  const shift = effectiveFocus
     ? {
-        x: (space.width / 2 - fitLeft) / fit - focus.x,
-        y: (space.height / 2 - fitTop) / fit - focus.y,
+        x: (space.width / 2 - fitLeft) / fit - effectiveFocus.x,
+        y: (space.height / 2 - fitTop) / fit - effectiveFocus.y,
       }
     : {x: 0, y: 0};
   return (
@@ -91,10 +97,10 @@ const MapBoard: React.FunctionComponent<MapBoardProps> = ({
         <div
           className={styles.zoom}
           style={
-            focus && {
-              transformOrigin: `${focus.x}px ${focus.y}px`,
+            effectiveFocus && {
+              transformOrigin: `${effectiveFocus.x}px ${effectiveFocus.y}px`,
               transform: `translate(${shift.x}px, ${shift.y}px) scale(${
-                FOCUS_SCALE / fit
+                (focus ? FOCUS_SCALE : TOUR_FOCUS_SCALE) / fit
               })`,
             }
           }
