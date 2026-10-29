@@ -248,6 +248,28 @@ export function projectMapPaths(): string[] {
 }
 
 /**
+ * The screens the game can show, by module path, with the kinds each places:
+ * every `.screen` but the Main Screen, which is the game
+ * (specs/SCREEN_STACK_PLAN.md). Apart from the maps, which the World loads.
+ */
+let projectScreens: Record<string, string[]> = {};
+
+/** Replace the screen registry. */
+export function setProjectScreens(screens: Record<string, string[]>): void {
+  projectScreens = screens;
+}
+
+/** The actor module paths a screen places. */
+export function screenActorTypes(path: string): string[] {
+  return projectScreens[path] ?? [];
+}
+
+/** Every screen the game can show, by module path. */
+export function projectScreenPaths(): string[] {
+  return Object.keys(projectScreens).sort();
+}
+
+/**
  * Every actor module the project holds, by path.
  *
  * For the world's preamble, which registers each so a kind can be found by
@@ -787,4 +809,21 @@ export const mapOptionsExtension = liveDropdown(
   'world_map_options',
   'MAP',
   mapOptions,
+);
+
+/** The screens `show screen` can put on top: every one but the Main Screen. */
+export function screenOptions(): Array<[string, string]> {
+  return orNone(
+    projectScreenPaths().map(path => [
+      label(path.split('/').pop() ?? path),
+      path,
+    ]),
+    '(no screens yet)',
+  );
+}
+
+export const screenOptionsExtension = liveDropdown(
+  'world_screen_options',
+  'SCREEN',
+  screenOptions,
 );

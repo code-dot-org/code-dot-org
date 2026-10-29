@@ -684,6 +684,49 @@ function worldOwnEventDeclarations(meta: OwnMeta): string {
     .join('');
 }
 
+/**
+ * What a screen other than the Main Screen declares, in its own module: its
+ * values and its events as plain objects, which every copy of it on the stack
+ * reads its own of (`MapLoad.get`), and the names of the values, which its
+ * map data lists so each copy seeds them (specs/SCREEN_STACK_PLAN.md).
+ *
+ * No `defineEvent` beside each event: a screen's words are seen by its own
+ * code alone, so nothing names one from outside.
+ */
+export function screenModuleDeclarations(meta: OwnMeta): {
+  code: string;
+  values: string[];
+} {
+  const owner = JSON.stringify(meta.modulePath);
+  const code =
+    meta.properties
+      .map(property => {
+        const fields = [
+          `id: ${JSON.stringify(property.id)}`,
+          `name: ${JSON.stringify(property.name)}`,
+          `type: ${JSON.stringify(property.type)}`,
+          `default: ${JSON.stringify(property.default)}`,
+          `readonly: ${property.readonly ? 'true' : 'false'}`,
+          `scope: 'world'`,
+          `ownerId: ${owner}`,
+          `ownerKind: 'world'`,
+        ];
+        return `export const ${property.ref.exportName} = {${fields.join(', ')}};\n`;
+      })
+      .join('') +
+    meta.events
+      .map(
+        event =>
+          `export const ${event.ref.exportName} = {id: ${JSON.stringify(event.id)}, ` +
+          `name: ${JSON.stringify(event.name)}, ownerId: ${owner}};\n`,
+      )
+      .join('');
+  return {
+    code,
+    values: meta.properties.map(property => property.ref.exportName),
+  };
+}
+
 function declarations(meta: OwnMeta, receiver: string): string {
   return meta.properties
     .map(property =>

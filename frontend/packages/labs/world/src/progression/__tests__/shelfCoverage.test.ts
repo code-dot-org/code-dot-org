@@ -92,7 +92,15 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
   // thing (the pause menu is one) and no lesson reaches it. The screen's
   // hat is in every lesson's Main Screen from the start, where its once-only
   // code goes, so none offers it (specs/LESSONS_AS_SCREENS_PLAN.md).
-  Map: ['world_on_map_loads', 'world_on_map_unloads', 'world_on_screen_loads'],
+  // …and `show screen` and `go back`, which a tile grants once screens have
+  // one (specs/SCREEN_STACK_PLAN.md, step 7).
+  Map: [
+    'world_on_map_loads',
+    'world_on_map_unloads',
+    'world_on_screen_loads',
+    'world_show_screen',
+    'world_go_back',
+  ],
   // Parenting, and the engine's own transform vocabulary. `is created` is on
   // this list, which is worth noticing: it is where an app restores what it
   // saved (specs/SAVING_PLAN.md).

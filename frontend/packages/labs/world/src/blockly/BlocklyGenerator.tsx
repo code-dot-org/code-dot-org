@@ -43,6 +43,7 @@ import {setCurrentPlacements} from './moduleOptions';
 import {
   ownPropertyDeclarations,
   parseScreenOwnMeta,
+  screenModuleDeclarations,
   worldOwnPropertyDeclarations,
   parseActorOwnMeta,
   type OwnMeta,
@@ -286,8 +287,19 @@ function generateMap(
       world_lab: `import * as WorldLab from 'world-lab';`,
     });
   }
+  // A screen other than the Main Screen is one the game shows: its own values
+  // and events are declared here, and each copy on the stack holds its own
+  // (specs/SCREEN_STACK_PLAN.md).
+  const own = path.endsWith('.screen')
+    ? parseScreenOwnMeta(modulePath, contents)
+    : undefined;
   return generator.finish(
-    assembleMapModule({...data, actors}, mapLevel, placements),
+    assembleMapModule(
+      {...data, actors},
+      mapLevel,
+      placements,
+      own ? screenModuleDeclarations(own) : undefined,
+    ),
   );
 }
 

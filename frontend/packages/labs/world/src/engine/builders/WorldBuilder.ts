@@ -769,6 +769,16 @@ export class WorldBuilder {
     return this.readyWorld().unloadNewestMap();
   }
 
+  /** Put a screen on the stack. See {@link World.showScreen}. */
+  showScreen(path: string): Actor[] {
+    return this.readyWorld().showScreen(path);
+  }
+
+  /** Take the top screen off. See {@link World.goBack}. */
+  goBack(): boolean {
+    return this.readyWorld().goBack();
+  }
+
   /**
    * The world, with every template and map this builder was told about
    * handed over — what any load needs first.

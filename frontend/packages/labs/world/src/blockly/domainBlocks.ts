@@ -44,6 +44,7 @@ import {
 } from '../engine';
 import {DEFAULT_LAYER_ID} from '../engine/core/Layer';
 import {FILE_ICONS} from '../fileIcons';
+import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {VIEWPORT_TILES} from '../runtime/viewport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
@@ -173,9 +174,13 @@ import {
   mapFieldOptions,
   mapOptions,
   mapOptionsExtension,
+  screenOptions,
+  screenOptionsExtension,
   projectActorPaths,
   projectStylePaths,
   projectMapPaths,
+  projectScreenPaths,
+  screenActorTypes,
   NONE_VALUE,
   placementOptions,
   placementOptionsExtension,
@@ -1360,8 +1365,37 @@ const onWorldHandler = (
   eventRef: string,
   body: string,
   carried: readonly string[] = [CARRIED_FIRST],
+  on = 'world',
 ): string =>
-  `world.on(${eventRef}, (world, ${carried.join(', ')}) => {\n${body}});\n`;
+  `${on}.on(${eventRef}, (world, ${carried.join(', ')}) => {\n${body}});\n`;
+
+/**
+ * Where a SCREEN's own word is reached from the module being written
+ * (specs/SCREEN_STACK_PLAN.md, step 4).
+ *
+ * - `copy`: in the screen's own module, on the copy of it that is running,
+ *   which is the load its script is handed (`map`).
+ * - `named`: the Main Screen's, from a map or another screen, by name; the
+ *   Main Screen shows them, so importing it back would be a cycle.
+ * - `unseen`: another screen's, which nothing outside it sees.
+ * - `import`: everything else, as it always was.
+ */
+type ScreenReach = 'copy' | 'named' | 'unseen' | 'import';
+const screenReach = (
+  ref: MemberRef,
+  generator: JavascriptGenerator,
+): ScreenReach => {
+  const owner = refModule(ref);
+  if (!owner?.startsWith('screens/')) {
+    return 'import';
+  }
+  const self = (generator as {__ruleModule?: string}).__ruleModule;
+  if (owner === MAIN_SCREEN_PATH) {
+    const inMap = (generator as {__mapModule?: string}).__mapModule;
+    return inMap && self !== MAIN_SCREEN_PATH ? 'named' : 'import';
+  }
+  return owner === self ? 'copy' : 'unseen';
+};
 
 /**
  * The generated code of the blocks chained below `block` — its handler body.
@@ -1648,10 +1682,17 @@ const defineEventBlock = (event: EventMeta) => {
             ? carried.map((_value, index) => carriedName(index))
             : [CARRIED_FIRST];
         if (!forActor) {
+          // A screen's own event is heard on the copy of it running, and by
+          // nothing outside it (specs/SCREEN_STACK_PLAN.md).
+          const reach = screenReach(event.ref, generator);
+          if (reach === 'unseen') {
+            return '';
+          }
           return onWorldHandler(
             refCode(event.ref, generator),
             body,
             parameters,
+            reach === 'copy' ? 'map' : 'world',
           );
         }
         return onHandler(
@@ -1793,7 +1834,16 @@ const defineEmitBlock = (event: EventMeta) => {
         // made here — a map may then serve two worlds that both declare it.
         const inMap = (generator as {__mapModule?: string}).__mapModule;
         // …and the Main Screen's, which a screen project's maps raise the
-        // same way (specs/SCREEN_MAP_PLAN.md, step 4).
+        // same way (specs/SCREEN_MAP_PLAN.md, step 4). Another screen's own
+        // is raised on the copy of it running, and nowhere else
+        // (specs/SCREEN_STACK_PLAN.md).
+        const reach = screenReach(event.ref, generator);
+        if (reach === 'copy') {
+          return `map.emit(${refCode(event.ref, generator)}${values});\n`;
+        }
+        if (reach === 'unseen') {
+          return '';
+        }
         const owner = refModule(event.ref);
         if (
           inMap &&
@@ -2828,9 +2878,19 @@ const defineSetPropertyBlock = (property: PropertyMeta) => {
         }
         const set = (subject: string) =>
           `${subject}.set(${refCode(property.ref, generator)}, ${value})`;
-        return subjectScoped
-          ? forEachActor(actorTarget(block, generator, Order.MEMBER), set)
-          : `${set('world')};\n`;
+        if (subjectScoped) {
+          return forEachActor(actorTarget(block, generator, Order.MEMBER), set);
+        }
+        switch (screenReach(property.ref, generator)) {
+          case 'copy':
+            return `${set('map')};\n`;
+          case 'named':
+            return `world.setValueNamed(${str(property.id)}, ${value});\n`;
+          case 'unseen':
+            return '';
+          default:
+            return `${set('world')};\n`;
+        }
       },
     },
   });
@@ -2913,9 +2973,25 @@ const defineListPropertyBlocks = (property: PropertyMeta) => {
             change(verb)(subject)
               .replace(/REF/g, ref)
               .replace(/ITEM/g, `(${item})`);
-          return subjectScoped
-            ? forEachActor(actorTarget(block, generator, Order.MEMBER), write)
-            : `${write('world')};\n`;
+          if (subjectScoped) {
+            return forEachActor(
+              actorTarget(block, generator, Order.MEMBER),
+              write,
+            );
+          }
+          const reach = screenReach(property.ref, generator);
+          if (reach === 'unseen') {
+            return '';
+          }
+          if (reach === 'named') {
+            const id = str(property.id);
+            const held = `WorldLab.all(world.valueNamed(${id}))`;
+            const items = `WorldLab.all((${item}))`;
+            return verb === 'push'
+              ? `world.setValueNamed(${id}, [...${held}, ...${items}]);\n`
+              : `world.setValueNamed(${id}, ${held}.filter(each => !${items}.includes(each)));\n`;
+          }
+          return `${write(reach === 'copy' ? 'map' : 'world')};\n`;
         },
       },
     });
@@ -3105,16 +3181,28 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
             number,
           ];
         }
+        const reach = subjectScoped
+          ? 'import'
+          : screenReach(property.ref, generator);
+        if (reach === 'unseen') {
+          return [deadValue(property.type, generator), Order.ATOMIC] as [
+            string,
+            number,
+          ];
+        }
         const subject = subjectScoped
           ? oneActor(actorTarget(block, generator, Order.MEMBER))
-          : 'world';
+          : reach === 'copy'
+            ? 'map'
+            : 'world';
         const component = hasComponent
           ? `.${block.getFieldValue('COMPONENT')}`
           : '';
-        return [
-          `${subject}.get(${refCode(property.ref, generator)})${component}`,
-          Order.ATOMIC,
-        ] as [string, number];
+        const read =
+          reach === 'named'
+            ? `world.valueNamed(${str(property.id)})`
+            : `${subject}.get(${refCode(property.ref, generator)})`;
+        return [`${read}${component}`, Order.ATOMIC] as [string, number];
       },
     },
   });
@@ -4807,6 +4895,55 @@ const worldUnloadNewestMap = defineBlock({
   generator: {
     javascript() {
       return 'world.unloadNewestMap();\n';
+    },
+  },
+});
+
+/**
+ * `show screen ⟨…⟩` — put a screen on top of the stack (specs/SCREEN_STACK_PLAN.md).
+ *
+ * Built in, with no rule to read: pushing a screen is not code a learner
+ * learns anything from seeing. The same screen shown twice is two screens,
+ * each with its own values.
+ */
+const worldShowScreen = defineBlock({
+  type: 'world_show_screen',
+  message0: 'show screen %1',
+  args0: [{type: 'field_dropdown', name: 'SCREEN', options: screenOptions}],
+  previousStatement: true,
+  nextStatement: true,
+  extensions: [screenOptionsExtension],
+  style: 'setup_blocks',
+  tooltip:
+    'Put a screen on top of what is showing. Only the top screen takes ' +
+    'clicks and keys; go back takes it off.',
+  generator: {
+    javascript(block) {
+      const path = String(block.getFieldValue('SCREEN') ?? '');
+      return path && path !== NONE_VALUE
+        ? `world.showScreen(${str(path)});\n`
+        : '';
+    },
+  },
+});
+
+/**
+ * `go back` — take the top screen off. It carries no value: a screen that
+ * has something to say raises an event first. With only the Main Screen
+ * showing it does nothing.
+ */
+const worldGoBack = defineBlock({
+  type: 'world_go_back',
+  message0: 'go back',
+  previousStatement: true,
+  nextStatement: true,
+  style: 'setup_blocks',
+  tooltip:
+    'Take the top screen off, and whatever it put up. The Main Screen is ' +
+    'never taken off.',
+  generator: {
+    javascript() {
+      return 'world.goBack();\n';
     },
   },
 });
@@ -7020,26 +7157,34 @@ export function worldModulePrologue(
       return `world.define(${str(path)}, ${importVar(path)});\n`;
     })
     .join('');
-  const maps = projectMapPaths()
-    .map(mapPath => {
-      const defines = mapActorTypes(mapPath)
-        .map(type => {
-          addImport(
-            generator,
-            `mod:${type}`,
-            `import ${importVar(type)} from ${str(type)};`,
-          );
-          return `world.define(${str(type)}, ${importVar(type)});\n`;
-        })
-        .join('');
-      addImport(
-        generator,
-        `map:${mapPath}`,
-        `import ${importVar(mapPath)} from ${str(mapPath)};`,
-      );
-      return `${defines}world.defineMap(${str(mapPath)}, ${importVar(mapPath)});\n`;
-    })
-    .join('');
+  /** One map or screen registered by path, with the kinds it places. */
+  const registered = (mapPath: string, types: readonly string[]) => {
+    const defines = types
+      .map(type => {
+        addImport(
+          generator,
+          `mod:${type}`,
+          `import ${importVar(type)} from ${str(type)};`,
+        );
+        return `world.define(${str(type)}, ${importVar(type)});\n`;
+      })
+      .join('');
+    addImport(
+      generator,
+      `map:${mapPath}`,
+      `import ${importVar(mapPath)} from ${str(mapPath)};`,
+    );
+    return `${defines}world.defineMap(${str(mapPath)}, ${importVar(mapPath)});\n`;
+  };
+  // …and every screen other than the Main Screen, which the game shows by
+  // path (`show screen`, specs/SCREEN_STACK_PLAN.md).
+  const maps =
+    projectMapPaths()
+      .map(mapPath => registered(mapPath, mapActorTypes(mapPath)))
+      .join('') +
+    projectScreenPaths()
+      .map(screenPath => registered(screenPath, screenActorTypes(screenPath)))
+      .join('');
   // How big each of the project's images is, stated for the same reason
   // the animations above are and by the same argument: a picture's size is
   // not something a world opts into, it is a fact about what the project
@@ -10240,6 +10385,8 @@ export const DOMAIN_BLOCKS = [
   worldPlacement,
   worldUnloadThisMap,
   worldUnloadNewestMap,
+  worldShowScreen,
+  worldGoBack,
   worldLoadMapNamed,
   worldOnMapLoads,
   worldOnMapUnloads,
@@ -10594,6 +10741,9 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // screens do it (specs/SCREEN_STACK_PLAN.md).
       'world_load_map_named',
       'world_unload_newest_map',
+      // …and the screens themselves.
+      'world_show_screen',
+      'world_go_back',
 
       // The root a map opens with.
       'world_map',
@@ -11600,6 +11750,16 @@ export function buildDomainPalette(
     ),
   );
   for (const actor of options.ownProperties ?? []) {
+    // ANOTHER SCREEN'S WORDS ARE ITS OWN: its drawer is listed in its own
+    // file and no other, where the Main Screen's is listed everywhere
+    // (specs/SCREEN_STACK_PLAN.md). Its blocks stay defined, above.
+    if (
+      actor.modulePath.startsWith('screens/') &&
+      actor.modulePath !== MAIN_SCREEN_PATH &&
+      actor.modulePath !== options.ownMapModule
+    ) {
+      continue;
+    }
     // AT HOME IN WHAT IT INHERITS as well as in what it declared, which is
     // what makes a subclass an extension of its parent rather than a reader of
     // it (see `declared`).

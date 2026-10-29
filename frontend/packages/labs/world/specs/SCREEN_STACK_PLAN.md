@@ -1,6 +1,6 @@
 # Plan: screens are a stack, and each one holds its own words
 
-STATUS: BUILDING, October 2026. Steps 1 to 3 are done. Comes after
+STATUS: BUILDING, October 2026. Steps 1 to 4 are done. Comes after
 specs/ONE_WORLD_PLAN.md: it assumes one World, flat screens, and Viewports
 that look at the World.
 
@@ -199,6 +199,31 @@ Screen's color stays the main camera's clear color.
   taken away when it goes. They are registered as the screen's script
   runs, so the load can keep what its script hung and take it off with
   itself.
+- **Step 4 compiles every screen but the Main Screen as one the game
+  shows.** Its module declares its values and events as plain objects and
+  lists the values on its map data, so each copy seeds them; the game's
+  module registers it by path beside the maps, from a registry of its own
+  so a screen is never offered where a map is chosen.
+- **Where a screen's word is read is decided in one place**
+  (`screenReach`): in that screen's own module, on the copy running
+  (`map.get`, `map.set`, `map.emit`, `map.on`); the Main Screen's, from a
+  map or another screen, by name (`valueNamed`, `setValueNamed`,
+  `emitNamed`); another screen's, from anywhere else, nothing. The
+  Main Screen's own code and the actor files still import it, as before.
+- **A world handler hung while a screen's script runs goes with the
+  screen** (`World.on`, `scriptLoad`), so showing it twice does not hear
+  an event twice. A handler hung on a kind from a screen's code is not
+  covered: no content does it, and a screen's workspace is a map's, which
+  hears its own placements.
+- **`show screen ⟨…⟩` and `go back`** are in the Map drawer, beside the
+  blocks they replace, and the builder has both, so the Main Screen's own
+  code can show a screen as it loads. No tile grants them until step 7.
+- **A screen's drawer is listed in its own file only**; the Main Screen's
+  is listed everywhere. Every screen's blocks stay defined, so a file
+  already holding one still loads.
+- **Compared before and after**: no difference but the random lessons'.
+  A screen shown in the browser waits for step 5, which makes Breakout's
+  pause menu one.
 
 ## Not in this plan
 

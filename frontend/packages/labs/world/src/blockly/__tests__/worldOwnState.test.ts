@@ -187,6 +187,44 @@ describe('a Main Screen’s own EVENTS', () => {
   });
 });
 
+describe('another screen’s words', () => {
+  // specs/SCREEN_STACK_PLAN.md, step 4: a screen's own drawer is offered in
+  // its own file, and the Main Screen's everywhere.
+  const SETTINGS = screenOwnMeta('screens/settings', {
+    name: 'Settings',
+    properties: [{name: 'volume', type: 'number', value: '5'}],
+    events: [],
+  });
+  const MAIN = screenOwnMeta('screens/main', {
+    name: 'Tapper',
+    properties: [COUNT],
+    events: [],
+  });
+  const drawers = (ownMapModule?: string) =>
+    (
+      buildDomainPalette([], {
+        ownProperties: [MAIN, SETTINGS],
+        ownMapModule,
+      }).toolbox as Array<{name?: string}>
+    ).map(one => one.name);
+
+  it('are offered in that screen’s own file, beside the game’s', () => {
+    expect(drawers('screens/settings')).toEqual(
+      expect.arrayContaining(['Settings', 'Tapper']),
+    );
+  });
+
+  it('are offered nowhere else, though their blocks are defined', () => {
+    expect(drawers('maps/level')).not.toContain('Settings');
+    expect(drawers()).not.toContain('Settings');
+    expect(drawers('maps/level')).toContain('Tapper');
+    const types = buildDomainPalette([], {
+      ownProperties: [MAIN, SETTINGS],
+    }).blocks.map(block => block.type);
+    expect(types).toContain('world_get_ScreensSettings_VolumeProperty');
+  });
+});
+
 describe('renaming', () => {
   /** The block types minted for a file's own property, whatever it is called. */
   const typesFor = (root: string, name: string, path: string) => {

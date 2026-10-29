@@ -79,6 +79,10 @@ const RUNTIME_ONLY: Record<string, string> = {
     'world\u2019s body: `when \u27e8…\u27e9 is created` runs before the actor ' +
     'is first drawn, which is after the driver has lent the storage',
   forget: 'the same again',
+  valueNamed:
+    'read by name from a map or another screen, whose code runs once the ' +
+    'world is built and the screen is shown (specs/SCREEN_STACK_PLAN.md)',
+  setValueNamed: 'the same, to write one',
   rememberActors:
     'the storage is lent once the world exists, and there are no actors to ' +
     'keep while it is still being described (specs/RECORDS_PLAN.md)',

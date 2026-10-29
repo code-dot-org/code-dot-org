@@ -138,9 +138,18 @@ export function assembleMapModule(
   data: object,
   mapLevel: GeneratedBlock[],
   placements: ReadonlyArray<{id: string; blocks: GeneratedBlock[]}>,
+  /**
+   * A screen's own declarations and the names of its values, which each copy
+   * of it on the stack seeds (specs/SCREEN_STACK_PLAN.md). Absent for a map.
+   */
+  screen?: {code: string; values: readonly string[]},
 ): string {
   return (
+    (screen?.code ?? '') +
     `const mapData = ${JSON.stringify(data)};\n` +
+    (screen?.values.length
+      ? `mapData.values = [${screen.values.join(', ')}];\n`
+      : '') +
     scriptAssignment('mapData', mapLevel, placements) +
     'export default mapData;\n'
   );

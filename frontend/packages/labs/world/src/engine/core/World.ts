@@ -2092,7 +2092,23 @@ export class World {
     } else {
       this.worldHandlers.set(event, [handler]);
     }
+    // Hung by a screen's code as it was shown, it goes when the screen does,
+    // so showing it again does not hear the event twice
+    // (specs/SCREEN_STACK_PLAN.md).
+    this.scriptLoad?.onUnload(() => this.off(event, handler));
   }
+
+  /** Stop handling a world event with this handler. */
+  private off(event: GameEvent, handler: WorldEventHandler): void {
+    const list = this.worldHandlers.get(event);
+    const at = list?.indexOf(handler) ?? -1;
+    if (list && at >= 0) {
+      list.splice(at, 1);
+    }
+  }
+
+  /** The screen whose script is running, while it runs. */
+  private scriptLoad: MapLoad | undefined;
 
   /** Handlers registered for a world event; used by the EventQueue on flush. */
   handlersFor(event: GameEvent): readonly WorldEventHandler[] {
@@ -3224,9 +3240,15 @@ export class World {
       // naming an actor — a background, a spawn, another load — happens
       // there and not in the root (`here`).
       const script = map.script;
-      this.withSpace(space, () =>
-        script(this, Object.fromEntries(placed), load),
-      );
+      const outer = this.scriptLoad;
+      this.scriptLoad = screen ? load : outer;
+      try {
+        this.withSpace(space, () =>
+          script(this, Object.fromEntries(placed), load),
+        );
+      } finally {
+        this.scriptLoad = outer;
+      }
     }
     return added;
   }

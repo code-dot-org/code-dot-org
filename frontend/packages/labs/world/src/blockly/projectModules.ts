@@ -8,6 +8,7 @@
 
 import {isBackgroundPath} from '../appearance/backgroundsFolder';
 import type {EffectParameter} from '../effect/model/types';
+import {MAIN_SCREEN_PATH} from '../mainWorld';
 import {soundLabel} from '../sound/soundFiles';
 
 import {BUILTIN_RULE_META} from './builtinMeta';
@@ -276,9 +277,38 @@ export function projectLayerOptions(
 export function projectMapActorTypes(
   files: Record<string, string>,
 ): Record<string, string[]> {
+  return actorTypesOf(
+    files,
+    path => path.startsWith('maps/') && path.endsWith('.map'),
+    /\.map$/,
+  );
+}
+
+/**
+ * …and each screen's but the Main Screen's, which the game shows by path
+ * (specs/SCREEN_STACK_PLAN.md).
+ */
+export function projectScreenActorTypes(
+  files: Record<string, string>,
+): Record<string, string[]> {
+  return actorTypesOf(
+    files,
+    path =>
+      path.startsWith('screens/') &&
+      path.endsWith('.screen') &&
+      path !== `${MAIN_SCREEN_PATH}.screen`,
+    /\.screen$/,
+  );
+}
+
+function actorTypesOf(
+  files: Record<string, string>,
+  holds: (path: string) => boolean,
+  extension: RegExp,
+): Record<string, string[]> {
   const maps: Record<string, string[]> = {};
   for (const [path, contents] of Object.entries(files)) {
-    if (!path.startsWith('maps/') || !path.endsWith('.map')) {
+    if (!holds(path)) {
       continue;
     }
     let types: string[] = [];
@@ -298,7 +328,7 @@ export function projectMapActorTypes(
     } catch {
       // Not valid JSON yet (mid-edit); leave this map with no types.
     }
-    maps[path.replace(/\.map$/, '')] = types;
+    maps[path.replace(extension, '')] = types;
   }
   return maps;
 }
