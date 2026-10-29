@@ -10,8 +10,8 @@
     "instructions_important": "false",
     "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"hideSave\": true\r\n}",
     "uses_lab2": "true",
-    "short_instructions": "Enter each feature of the three cases in the activity guide\r\nClick Predict"
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"- Enter each feature of the three cases in the activity guide\\n- Click Predict\",\r\n  \"results\": \"- Enter each feature of the three cases in the activity guide\\n- Click Predict\"\r\n}"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-27T19:19:14.555+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson4-waterhole-wet-cameras\\\"\"],\"cloned_from\":\"data-makes-ai-lesson4-waterhole-wet-cameras\"},{\"changed_at\":\"2026-10-27 19:24:20 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 23:47:00 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-27T19:19:14.555+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson4-waterhole-wet-cameras\\\"\"],\"cloned_from\":\"data-makes-ai-lesson4-waterhole-wet-cameras\"},{\"changed_at\":\"2026-10-27 19:24:20 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 23:47:00 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 17:39:19 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>
