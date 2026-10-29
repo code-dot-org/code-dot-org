@@ -127,6 +127,12 @@ judgment. `/code-review`'s ranking does not carry over.
      fits. No deadline, no follow-up: pick 1, 2, or 4.
   4. fine to leave.
 
+Five of these reach the report: scenario, impact, severity, probability,
+recommendation. The other three are inputs. Current-or-latent and age
+feed probability; age applies only to EXISTING findings. Origin feeds the
+bucket in Phase 4. Mention an input in the report only where it explains
+the probability.
+
 ## Phase 4 — the report
 
 ### Buckets
@@ -198,7 +204,9 @@ Number findings once, continuously across all buckets, triaged-out ones
 included: HIGH starts at 1 and LOW ends at N. A number belongs to its
 finding for the rest of the conversation. When a finding moves between
 buckets, it keeps its number; a new finding takes the next unused number;
-a dropped finding's number is not reused.
+a dropped finding's number is not reused. A finding the body already
+owns as follow-up work is classified and numbered like any other; the
+ownership shows in its recommendation, not in its absence.
 
 Description findings are classified like any other. A body that tells the
 next reviewer not to look at a file the PR changes on the default path is
