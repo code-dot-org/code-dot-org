@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-27 19:35:38 UTC",
+    "serialized_at": "2026-10-28 16:55:47 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -112,7 +112,7 @@
       "name": "Reasoning and Its Limits",
       "absolute_position": 6,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
       },
@@ -127,7 +127,7 @@
       "name": "Conversational AI Project",
       "absolute_position": 7,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 7,
       "properties": {
       },
@@ -208,6 +208,18 @@
       "seeding_key": {
         "lesson_activity.key": "788a6c91-b08d-42f4-b6dd-d70a991d6660",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1"
+      }
+    },
+    {
+      "key": "301fe964-d750-4d96-bd79-75b67bdd24fe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "301fe964-d750-4d96-bd79-75b67bdd24fe",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-year2-unit1"
       }
@@ -365,6 +377,17 @@
       "seeding_key": {
         "activity_section.key": "77e94300-8d26-4768-a46e-533387cf7bba",
         "lesson_activity.key": "788a6c91-b08d-42f4-b6dd-d70a991d6660"
+      }
+    },
+    {
+      "key": "f801b34b-061f-43d2-ae72-0b01cea175fa",
+      "position": 1,
+      "properties": {
+        "progression_name": "Conversational AI Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa",
+        "lesson_activity.key": "301fe964-d750-4d96-bd79-75b67bdd24fe"
       }
     }
   ],
@@ -1582,6 +1605,182 @@
       "level_keys": [
         "pl-aif-y2-u1-l6-reflection"
       ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Conversational AI Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-intro"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l7-intro"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Conversational AI Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-project-pipeline"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l7-project-pipeline"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Conversational AI Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-rubric-walkthrough"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l7-rubric-walkthrough"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Conversational AI Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-project-exemplar"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l7-project-exemplar"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Conversational AI Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-pacing-notes"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l7-pacing-notes"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Conversational AI Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-facilitation"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l7-facilitation"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Conversational AI Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-reflection"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l7-reflection"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Conversational AI Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-final"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l7-final"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2255,6 +2454,102 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-year2-unit1",
         "activity_section.key": "77e94300-8d26-4768-a46e-533387cf7bba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l7-intro",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-intro"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l7-project-pipeline",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-project-pipeline"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l7-rubric-walkthrough",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-rubric-walkthrough"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l7-project-exemplar",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-project-exemplar"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l7-pacing-notes",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-pacing-notes"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l7-facilitation",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-facilitation"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l7-reflection",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-reflection"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l7-final",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-final"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
       }
     }
   ],
