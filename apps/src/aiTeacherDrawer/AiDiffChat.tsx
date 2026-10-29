@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
+import {flushSync} from 'react-dom';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -278,7 +279,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           console.log(error);
         })
         .finally(() => {
-          setIsWaitingForResponse(false);
+          // Synchronous so the input is no longer disabled when focused below.
+          flushSync(() => setIsWaitingForResponse(false));
           chatResponseCallback();
           if (userMessageEditorRef && userMessageEditorRef.current) {
             userMessageEditorRef.current?.focus();

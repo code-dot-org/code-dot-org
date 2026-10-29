@@ -9,9 +9,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <LessonGenerator lesson={lessonData} />,
-    document.getElementById('generate-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('generate-container')
   );
 });

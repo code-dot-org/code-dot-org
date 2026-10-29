@@ -4,6 +4,15 @@ export type TrainerFamily = 'knn' | 'decisionTree';
 
 export type Hyperparameters = {k: number} | {maxDepth: number};
 
+export type DatasetError = 'tooFewRows' | 'tooFewColumns' | 'loadFailed';
+
+export interface Dataset {
+  rows: DataRow[];
+  metadata: Metadata;
+  columnsByDataType: Record<string, string>;
+  removedRowsCount: number;
+}
+
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;
