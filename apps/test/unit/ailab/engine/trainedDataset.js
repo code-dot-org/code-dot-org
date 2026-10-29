@@ -1,20 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 
-import {ColumnTypes, TestDataLocations} from '@cdo/apps/ailab/engine/constants';
-import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
+import {TestDataLocations} from '@cdo/apps/ailab/engine/constants';
+import {parseCsvText} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {traceDisplayTree} from '@cdo/apps/ailab/engine/helpers/displayTreeTrace';
 import {getKeyByValue} from '@cdo/apps/ailab/engine/helpers/utils';
 import {convertValueForTraining} from '@cdo/apps/ailab/engine/helpers/valueConversion';
+import {columnTypesFromMetadata} from '@cdo/apps/ailab/engine/jsonReaderWrapper';
 import {
   resetState,
-  setColumnsByDataType,
-  setImportedMetadata,
+  setDatasetLoaded,
   setMode,
   setReserveLocation,
   setSelectedCSV,
-  setSelectedJSON,
 } from '@cdo/apps/ailab/engine/redux';
+import {getData} from '@cdo/apps/ailab/engine/selectors';
 import {getDisplayTree} from '@cdo/apps/ailab/engine/selectors/visualizationSelectors';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
@@ -42,13 +42,15 @@ export function trainDataset(
   train.reset();
   store.dispatch(setMode(mode));
   store.dispatch(setSelectedCSV(`${id}.csv`));
-  store.dispatch(setSelectedJSON(`${id}.json`));
-  parseCSV(csv, false, false);
-  store.dispatch(setImportedMetadata(metadata));
-  metadata.fields.forEach(field =>
-    store.dispatch(
-      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL)
-    )
+  store.dispatch(
+    setDatasetLoaded({
+      dataset: {
+        rows: parseCsvText(csv).rows,
+        metadata,
+        columnsByDataType: columnTypesFromMetadata(metadata),
+        removedRowsCount: 0,
+      },
+    })
   );
   store.dispatch(setReserveLocation(reserveLocation));
   const labelColumn = label || metadata.defaultLabelColumn;
@@ -57,7 +59,7 @@ export function trainDataset(
     labelColumn,
     selectedFeatures:
       features ||
-      Object.keys(store.getState().data[0]).filter(
+      Object.keys(getData(store.getState())[0]).filter(
         column => column !== labelColumn
       ),
   };
@@ -73,7 +75,7 @@ export function trainDataset(
 }
 
 export function modelInputs(state, project) {
-  return state.data.map(row =>
+  return getData(state).map(row =>
     project.selectedFeatures.map(feature =>
       convertValueForTraining(state, project, row[feature], feature)
     )
@@ -93,7 +95,7 @@ export function rowTraces(state, project, trainedModel) {
   const tree = getDisplayTree(state, project, trainedModel);
   const {root} = trainedModel.toJSON();
   const inputs = modelInputs(state, project);
-  return state.data.map((row, index) =>
+  return getData(state).map((row, index) =>
     traceDisplayTree(tree, root, inputs[index], row)
   );
 }

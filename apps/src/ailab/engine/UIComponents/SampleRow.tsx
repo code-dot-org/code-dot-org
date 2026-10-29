@@ -3,11 +3,12 @@ import {Typography} from '@mui/material';
 import React from 'react';
 
 import {useAppSelector} from '../hooks';
+import {getData} from '../selectors';
 
 import styles from './sampleRow.module.scss';
 
 const SampleRow = () => {
-  const row = useAppSelector(state => state.data[0]);
+  const row = useAppSelector(state => getData(state)[0]);
 
   return (
     <div className={styles.card}>

@@ -1122,11 +1122,13 @@ FactoryBot.define do
 
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
+    # Ensure sublevels fall on the parent's side of the standalone project partition.
     sublevels do
+      suffix = Level.standalone_partition_name?(name) ? ' Subproject' : ''
       [
-        create(:dance),
-        create(:music),
-        create(:dance)
+        create(:dance, name: "#{name} Dancer#{suffix}"),
+        create(:music, name: "#{name} Music#{suffix}"),
+        create(:dance, name: "#{name} Dance#{suffix}")
       ]
     end
   end

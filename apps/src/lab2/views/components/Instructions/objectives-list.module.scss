@@ -1,8 +1,8 @@
-@use '../sentence/sr-only' as *;
+@use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
 
 $mark-size: 22px;
-// The guide body's size, so the checklist reads as its instructions.
-$text-size: 15px;
+// The instructions panel's body size, so the checklist reads as its text.
+$text-size: 14px;
 $line-height: 1.4;
 
 .objectives {
@@ -83,6 +83,27 @@ $line-height: 1.4;
   line-height: $line-height;
 }
 
+// A clickable line keeps the text's look; the button is the hit area.
+.textButton {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--borders-brand-teal-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
 .srOnly {
-  @include sr-only;
+  @include chrome.sr-only;
 }

@@ -9,9 +9,6 @@ window.ReactDOM = require('react-dom');
 document.addEventListener('DOMContentLoaded', () => {
   createReactRoot(
     <InnerHTMLPreview />,
-    document.getElementById('codeprojects-preview-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('codeprojects-preview-container')
   );
 });

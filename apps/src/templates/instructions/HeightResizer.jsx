@@ -4,7 +4,6 @@
  * which handles any movement.
  */
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import styleConstants from '../../styleConstants';
@@ -153,23 +152,19 @@ class HeightResizer extends React.Component {
   render() {
     let mainStyle, ellipsisStyle, ellipsisClassName;
     if (this.props.vertical) {
-      mainStyle = [
-        styles.mainVertical,
-        {
-          left: this.props.position - RESIZER_HEIGHT,
-        },
-        this.props.style,
-      ];
+      mainStyle = {
+        ...styles.mainVertical,
+        left: this.props.position - RESIZER_HEIGHT,
+        ...this.props.style,
+      };
       ellipsisStyle = styles.ellipsisVertical;
       ellipsisClassName = 'fa-solid fa-ellipsis-vertical';
     } else {
-      mainStyle = [
-        styles.main,
-        {
-          top: this.props.position - RESIZER_HEIGHT,
-        },
-        this.props.style,
-      ];
+      mainStyle = {
+        ...styles.main,
+        top: this.props.position - RESIZER_HEIGHT,
+        ...this.props.style,
+      };
       ellipsisStyle = styles.ellipsis;
       ellipsisClassName = 'fa-solid fa-ellipsis';
     }
@@ -223,4 +218,4 @@ const styles = {
   },
 };
 
-export default Radium(HeightResizer);
+export default HeightResizer;

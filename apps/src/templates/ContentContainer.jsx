@@ -2,7 +2,6 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import Link from '@code-dot-org/component-library/link';
 import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
@@ -47,11 +46,13 @@ class ContentContainer extends Component {
 
     const showLinkTop = responsiveSize === 'lg' && link && linkText;
     const showLinkBottom = responsiveSize !== 'lg' && link && linkText;
-    const boxStyles = styles.boxResponsive;
-    const bottomMargin = hideBottomMargin ? '' : styles.bottomMargin;
+    const boxStyle = {
+      ...styles.boxResponsive,
+      ...(!hideBottomMargin && styles.bottomMargin),
+    };
 
     return (
-      <div style={[boxStyles, bottomMargin]}>
+      <div style={boxStyle}>
         {(heading || (link && linkText)) && (
           <div
             className={moduleStyles.contentContainerHeading}
@@ -187,4 +188,4 @@ const styles = {
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
   isRtl: state.isRtl,
-}))(Radium(ContentContainer));
+}))(ContentContainer);

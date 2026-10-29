@@ -11,7 +11,7 @@ describe('EditorStrip', () => {
     );
     expect(screen.getByRole('heading', {name: 'Workspace'})).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'World'}));
-    expect(onChange).toHaveBeenCalledWith('World', expect.anything());
+    expect(onChange).toHaveBeenCalledWith('World');
     rerender(<EditorStrip editor="World" onChange={onChange} />);
     expect(screen.getByRole('heading', {name: 'World'})).toBeTruthy();
   });

@@ -2,9 +2,9 @@ import {act, fireEvent, screen} from '@testing-library/react';
 import {createElement} from 'react';
 import {createStore} from 'redux';
 
-import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {getAvailableDatasets} from '@cdo/apps/ailab/engine/datasetManifest';
 import I18n from '@cdo/apps/ailab/engine/i18n';
+import {loadUploadedDataset} from '@cdo/apps/ailab/engine/loadDataset';
 import rootReducer, {
   setInvalidData,
   setSelectedCSV,
@@ -13,7 +13,6 @@ import SelectDataset from '@cdo/apps/ailab/engine/UIComponents/SelectDataset';
 
 import {renderWithProviders} from './renderWithProviders';
 
-jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
 jest.mock('@cdo/apps/ailab/engine/loadDataset');
 
 const UPLOAD_NAME = 'mydataset.csv';
@@ -55,7 +54,7 @@ describe('SelectDataset', () => {
       target: {files: [file]},
     });
     expect(store.getState().csvfile).toBe(file);
-    expect(parseCSV).toHaveBeenCalledWith(file, false, true);
+    expect(loadUploadedDataset).toHaveBeenCalledWith(file);
     expect(chip().getAttribute('aria-pressed')).toBe('true');
   });
 
@@ -72,7 +71,7 @@ describe('SelectDataset', () => {
     clickFirstTile();
     fireEvent.click(chip());
     expect(store.getState().csvfile).toBe(file);
-    expect(parseCSV).toHaveBeenCalledWith(file, false, true);
+    expect(loadUploadedDataset).toHaveBeenCalledWith(file);
   });
 
   test('clears the selected upload on remove', () => {

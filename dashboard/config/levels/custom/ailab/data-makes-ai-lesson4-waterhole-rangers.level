@@ -10,9 +10,8 @@
     "instructions_important": "false",
     "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true\r\n}",
     "uses_lab2": "true",
-    "short_instructions": "- Read the data card.\r\n- Click **Predict**.\r\n- Enter each of the three cases on the slide.\r\n- Write what the model says for each case.",
     "dynamic_instructions": "{\r\n  \"results\": \"- Read the data card.\\n- Click **Make a prediction**.\\n- Enter each of the three cases on the slide.\\n- Write what the model says for each case.\"\r\n}"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-27 19:10:48 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 20:46:11 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 02:20:30 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-27 19:10:48 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 20:46:11 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 02:20:30 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 17:27:52 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>

@@ -1110,25 +1110,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   height: 44px;
 }
 
-#again-button:not(.arrow-container) {
-  background-color: $green;
-  border: 1px solid $green;
-  color: white;
-  margin-left: 0;
-  margin-right: 10px;
-  text-align: center;
-}
-
-#continue-button:not(.arrow-container),
-#confirm-button:not(.arrow-container) {
-  background-color: $orange;
-  border: 1px solid $orange;
-  color: white;
-  margin-left: 0;
-  margin-right: 10px;
-  text-align: center;
-}
-
 .hide {
   display: none;
 }
