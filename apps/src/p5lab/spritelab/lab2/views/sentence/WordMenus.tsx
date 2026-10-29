@@ -3,7 +3,7 @@
 // for the set on show.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton} from '@mui/material';
+import {IconButton as MuiIconButton, SxProps} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
@@ -38,6 +38,14 @@ const wordWidth = (w: Word) =>
 
 // How many sets, in carousel order, the sentence keeps height for.
 const RESERVED_SETS = 4;
+// The chip's corner badge, over the chip's top-right edge.
+const REMOVE_BADGE_SX: SxProps = {
+  position: 'absolute',
+  top: -12,
+  right: -12,
+  border: '2px solid var(--background-neutral-primary)',
+  borderRadius: '50%',
+};
 
 const WordMenus: React.FunctionComponent<WordMenusProps> = ({
   sentence,
@@ -235,7 +243,7 @@ const WordMenus: React.FunctionComponent<WordMenusProps> = ({
               variant="contained"
               color="secondary"
               size="extraSmall"
-              className={styles.remove}
+              sx={REMOVE_BADGE_SX}
               aria-label={`Remove ${word.text}`}
               disabled={disabled}
               onClick={() => choose(s.id, undefined)}

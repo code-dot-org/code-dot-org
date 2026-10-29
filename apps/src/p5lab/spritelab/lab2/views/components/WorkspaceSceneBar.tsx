@@ -1,4 +1,5 @@
-import {Button as MuiButton, Tooltip} from '@mui/material';
+import {Button as MuiButton, buttonClasses, Tooltip} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import {blurAfterPointerClick} from '../blurAfterPointerClick';
@@ -30,23 +31,28 @@ const WorkspaceSceneBar: React.FunctionComponent<WorkspaceSceneBarProps> = ({
     <div className={moduleStyles.tabBar}>
       <SceneDropdown {...dropdown} menuPlacement="top" />
       {onManageScenes && (
-        // A disabled button takes no pointer events; the reason rides on
-        // its wrapper.
-        <Tooltip title={dropdown.locked ? dropdown.lockedReason : ''}>
-          <span>
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              size="small"
-              disabled={dropdown.locked}
-              onClick={event => {
-                blurAfterPointerClick(event);
-                onManageScenes();
-              }}
-            >
-              All scenes
-            </MuiButton>
-          </span>
+        // aria-disabled, not disabled: a locked button stays in the tab
+        // order, so its reason reaches keyboard users too.
+        <Tooltip
+          title={dropdown.locked ? dropdown.lockedReason : ''}
+          describeChild
+        >
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
+            aria-disabled={dropdown.locked}
+            className={classNames({[buttonClasses.disabled]: dropdown.locked})}
+            onClick={event => {
+              if (dropdown.locked) {
+                return;
+              }
+              blurAfterPointerClick(event);
+              onManageScenes();
+            }}
+          >
+            All scenes
+          </MuiButton>
         </Tooltip>
       )}
     </div>
