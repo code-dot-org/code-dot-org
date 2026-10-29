@@ -619,6 +619,8 @@ describe('teacherSectionsRedux', () => {
         assignedAiChatToolsDependency: undefined,
         assignedRequiredInaccessibleAiModels: undefined,
         aiChatAccessLevel: undefined,
+        aiChallengeEnabled: undefined,
+        lessonTutorAvailable: undefined,
       });
     });
   });
@@ -979,6 +981,8 @@ describe('teacherSectionsRedux', () => {
           assignedAiChatToolsDependency: undefined,
           assignedRequiredInaccessibleAiModels: undefined,
           aiChatAccessLevel: undefined,
+          aiChallengeEnabled: undefined,
+          lessonTutorAvailable: undefined,
         },
       });
     });
