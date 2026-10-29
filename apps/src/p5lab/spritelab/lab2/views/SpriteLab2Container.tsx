@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {
   toolboxToWorkspaceBlocks,
@@ -10,6 +10,7 @@ import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {LabProps} from '@cdo/apps/lab2/types';
+import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -18,6 +19,7 @@ import {
   setupSpriteLab2BlocklyEnvironment,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
+import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
 import SpriteLab2View from './SpriteLab2View';
@@ -71,14 +73,49 @@ const SpriteLab2Container: React.FunctionComponent<
     () => setSourcesReinitializedCount(c => c + 1),
     []
   );
-  const {currentSources, channel, projectManager, loadError, ...restOutputs} =
-    useSources<Sources>({
-      levelProperties,
-      defaultSources,
-      onReinitialize: handleReinitialize,
-      getToolboxEditSources,
-      computeHasEdited: isStudentEdit,
-    });
+  const {
+    currentSources: storedSources,
+    updateSources: updateStoredSources,
+    channel,
+    projectManager,
+    loadError,
+    ...restOutputs
+  } = useSources<Sources>({
+    levelProperties,
+    defaultSources,
+    onReinitialize: handleReinitialize,
+    getToolboxEditSources,
+    computeHasEdited: isStudentEdit,
+  });
+  // A level with no project (the no_project level property) has nothing in
+  // a channel: its sources are the level's own, shown read-only.
+  const projectless = levelProperties.usesProjects === false;
+  const levelSources = useMemo(
+    () =>
+      projectless
+        ? getInitialSources<Sources>(
+            levelProperties,
+            undefined,
+            getToolboxEditSources(levelProperties)
+          ) ?? defaultSources
+        : undefined,
+    [projectless, levelProperties]
+  );
+  // A level's start sources may write a scene's world in the packed form
+  // (packedWorld.ts). It is expanded here, for readers and for the base an
+  // updater builds on, so the rest of the lab only ever sees the grid.
+  const currentSources = useMemo(() => {
+    const sources = storedSources ?? levelSources;
+    return sources && unpackSources(sources);
+  }, [storedSources, levelSources]);
+  const updateSources = useCallback<typeof updateStoredSources>(
+    (next, forceSave) =>
+      updateStoredSources(
+        typeof next === 'function' ? prev => next(unpackSources(prev)) : next,
+        forceSave
+      ),
+    [updateStoredSources]
+  );
 
   // Set the project manager in the registry for external components that need it (e.g. header).
   useEffect(() => {
@@ -102,6 +139,7 @@ const SpriteLab2Container: React.FunctionComponent<
   return (
     <SpriteLab2View
       currentSources={currentSources}
+      updateSources={updateSources}
       levelProperties={levelProperties}
       channelId={channel?.id}
       sourcesReinitializedCount={sourcesReinitializedCount}

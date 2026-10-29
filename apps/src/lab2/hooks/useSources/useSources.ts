@@ -181,27 +181,6 @@ export default function useSources<T extends ProjectSources>({
     // resurrect the previous level's sources or double-attach callbacks.
     async (isCancelled: () => boolean = () => false) => {
       const {usesProjects, id, isProjectLevel} = levelProperties;
-      // A level that uses no project (the no_project level property) shows
-      // its own sources from memory. Nothing is loaded or saved.
-      if (!usesProjects) {
-        await projectManagerRef.current?.cleanUp();
-        if (isCancelled()) return;
-        projectManagerRef.current = null;
-        setChannel(undefined);
-        dispatch(setChannelAction(undefined));
-        setVersionList([]);
-        setCurrentVersion(undefined);
-        setHasEdited(false);
-        setLoadError(undefined);
-        setSources(
-          getInitialSources(
-            levelProperties,
-            undefined,
-            getToolboxEditSourcesRef.current?.(levelProperties)
-          ) || defaultSources
-        );
-        return;
-      }
       // Clear out existing data.
       setSources(undefined);
       setVersionList([]);
@@ -211,6 +190,13 @@ export default function useSources<T extends ProjectSources>({
       setChannel(undefined);
       await projectManagerRef.current?.cleanUp();
       if (isCancelled()) return;
+      // A level that uses no project has nothing to load; the lab supplies
+      // its sources, and nothing is saved.
+      if (!usesProjects) {
+        projectManagerRef.current = null;
+        dispatch(setChannelAction(undefined));
+        return;
+      }
 
       // Set up new Project Manager, unless we're in level edit mode.
       if (!isLevelEditMode) {
