@@ -1,5 +1,7 @@
 import Papa, {type ParseResult} from 'papaparse';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {ColumnTypes} from './constants';
 import {containsOnlyNumbers} from './helpers/columnDetails';
 import type {DataRow, DatasetError} from './types';
@@ -17,10 +19,7 @@ export const parseCsvText = (csv: string): CsvResult =>
 // Fetches a csv we own. Resolves even when the fetch fails.
 export const fetchCsv = async (url: string): Promise<CsvResult> => {
   try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      return LOAD_FAILED;
-    }
+    const response = await HttpClient.get(url);
     return parseCsvText(await response.text());
   } catch {
     return LOAD_FAILED;

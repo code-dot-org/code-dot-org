@@ -1,3 +1,5 @@
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {ColumnTypes} from './constants';
 import type {Metadata} from './types';
 
@@ -12,11 +14,8 @@ export const fetchMetadata = async (
   jsonfile: string
 ): Promise<MetadataResult> => {
   try {
-    const response = await fetch(jsonfile);
-    if (!response.ok) {
-      return LOAD_FAILED;
-    }
-    return {ok: true, metadata: await response.json()};
+    const {value} = await HttpClient.fetchJson<Metadata>(jsonfile);
+    return {ok: true, metadata: value};
   } catch {
     return LOAD_FAILED;
   }
