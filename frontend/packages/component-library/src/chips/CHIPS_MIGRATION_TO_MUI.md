@@ -438,3 +438,32 @@ Execute departed from the plan as follows. None changes a twin's render.
 - The sample seed was not confirmed: the local MySQL reader did not start
   (rbenv lacks the Ruby in `.ruby-version`). Migrate confirms sections 11
   and 12 before capturing.
+
+## Outcome
+
+Consumers: all six files in the PR 1 scope moved (`UnitEditor.jsx`,
+`SectionSignIn.jsx`, `GradeLevelChips.jsx`, `SingleSectionSetUp.jsx`,
+`StudentSelector.jsx`, `SingleSectionSetUpTest.jsx`), in one PR stacked on
+the Execute PR. None is left on the legacy names.
+
+Verify: green. No `/apps` file imports `Chips`, `ChipsProps` or the default
+export of `@code-dot-org/component-library/chips`; the ESLint rule in
+`apps/.eslintrc.js` now bans them.
+
+Parity: the five twins carry the Execute PR's Storybook gate; the sweep
+changed no package source, so it was not rerun.
+
+Apps parity: not sampled. No local studio was reachable during the run, so
+the three samples above are still owed before the consumer PR leaves draft.
+
+Codemod: rewrote the five source files, each to
+`import {MuiChips as Chips} from '@code-dot-org/component-library/chips'`,
+with no hand edits after. It left `SingleSectionSetUpTest.jsx` untouched;
+that file was moved by hand (the import, and `find('Chips')` to
+`find(Chips)`, without which a `toBe(0)` assertion passed vacuously). Jest:
+`StudentSelectorTest`, `PairingDialogTest`, `UnitEditorTest`,
+`SectionSignInTest`, `FinishTeacherAccountTest` and
+`SingleSectionSetUpTest`, 6 suites, 67 tests, all pass.
+
+Queued for the finish workflow: the Story gaps stories (step 4) and the
+four Deferred changes rows (step 5).
