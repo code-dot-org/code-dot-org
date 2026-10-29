@@ -262,6 +262,23 @@ describe('Design System - MuiChips', () => {
 
       expect(chip1.validity.customError).toBe(false);
     });
+
+    it('clears the custom message when required turns off without a click', () => {
+      const {rerender} = render(
+        <TestChips required requiredMessageText="Pick a grade" />,
+      );
+      const chip1 = getInput('Chip1');
+
+      chip1.checkValidity();
+      expect(chip1.validity.customError).toBe(true);
+
+      rerender(
+        <TestChips required={false} requiredMessageText="Pick a grade" />,
+      );
+
+      expect(chip1.validity.customError).toBe(false);
+      expect(chip1.checkValidity()).toBe(true);
+    });
   });
 
   describe('setValues', () => {

@@ -24,6 +24,7 @@ import type {
 const SOURCE = '@code-dot-org/component-library/chips';
 
 const RENAMES: Record<string, string> = {
+  default: 'MuiChips',
   Chips: 'MuiChips',
   ChipsProps: 'MuiChipsProps',
 };
@@ -214,6 +215,14 @@ function transformer(file: FileInfo, api: API) {
       }
       const object = returned as ObjectExpression;
       const keys = new Set(object.properties.map(keyOf));
+      // Both keys map to MuiChips, and only the file's own import says which value to keep.
+      if (keys.has('default') && keys.has('Chips') && !keys.has('MuiChips')) {
+        report(
+          path.value,
+          "jest.mock has both 'default' and 'Chips'; add 'MuiChips' by hand with the value this file imports.",
+        );
+        return;
+      }
       const properties: Property[] = [];
       for (const property of object.properties) {
         properties.push(property);

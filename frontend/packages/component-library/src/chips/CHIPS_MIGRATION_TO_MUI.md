@@ -167,14 +167,16 @@ Transforms:
    `import {MuiChips as L} from '@code-dot-org/component-library/chips'`
    (no `as` when `L` is `MuiChips`). It merges into an existing named
    value import from the same source.
-2. The named value specifier `Chips`, under any local name `L`, becomes
-   `MuiChips as L`. Local bindings, JSX and identifier references
+2. The named value specifier `Chips` or `default`, under any local name
+   `L`, becomes `MuiChips as L`. Local bindings, JSX and identifier references
    (`find(Chips)`) are left as written.
 3. The named type specifier `ChipsProps` becomes `MuiChipsProps as L`.
    `import type` and inline `type` modifiers are kept.
 4. `jest.mock('@code-dot-org/component-library/chips', factory)` where the
-   factory returns an object literal: for each `default` or `Chips` key, add
-   a `MuiChips` key with the same value unless one is already there.
+   factory returns an object literal: for a `default` or `Chips` key, add
+   a `MuiChips` key with the same value unless one is already there. A
+   factory with both keys is reported instead: only the file's import says
+   which value `MuiChips` should take.
 5. Files without the source are untouched. Specifiers already on `Mui`
    names are left alone. No prop is renamed or dropped, so no call site is
    skipped.
@@ -463,6 +465,9 @@ Execute departed from the plan as follows. None changes a twin's render.
 
 ## Outcome
 
+The result of the whole stack, as it stands once the consumer PR (#76496)
+lands; this branch alone carries the package side.
+
 Consumers: all six files in the PR 1 scope moved (`UnitEditor.jsx`,
 `SectionSignIn.jsx`, `GradeLevelChips.jsx`, `SingleSectionSetUp.jsx`,
 `StudentSelector.jsx`, `SingleSectionSetUpTest.jsx`), in one PR stacked on
@@ -480,9 +485,9 @@ the three samples above are still owed before the consumer PR leaves draft.
 
 Codemod: rewrote the five source files, each to
 `import {MuiChips as Chips} from '@code-dot-org/component-library/chips'`,
-with no hand edits after. It left `SingleSectionSetUpTest.jsx` untouched;
-that file was moved by hand (the import, and `find('Chips')` to
-`find(Chips)`, without which a `toBe(0)` assertion passed vacuously). Jest:
+with no hand edits after. In `SingleSectionSetUpTest.jsx` it rewrites the
+import and reports `find('Chips')`, which was changed by hand to
+`find(Chips)`; without that, a `toBe(0)` assertion passed vacuously. Jest:
 `StudentSelectorTest`, `PairingDialogTest`, `UnitEditorTest`,
 `SectionSignInTest`, `FinishTeacherAccountTest` and
 `SingleSectionSetUpTest`, 6 suites, 67 tests, all pass.

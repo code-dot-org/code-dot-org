@@ -40,8 +40,8 @@ Moves `Chips` imports from `@code-dot-org/component-library/chips` to `MuiChips`
 
 **What it does:**
 
-- Rewrites the default import and the named `Chips` / `ChipsProps` imports to `MuiChips` / `MuiChipsProps`, keeping local names
-- Adds a `MuiChips` key to `jest.mock` factories that return an object literal
+- Rewrites the default import (also as `{default as X}`) and the named `Chips` / `ChipsProps` imports to `MuiChips` / `MuiChipsProps`, keeping local names
+- Adds a `MuiChips` key to `jest.mock` factories that return an object literal; a factory with both `default` and `Chips` is reported instead
 - Reports Enzyme string selectors (`find('Chips')`), namespace imports, re-exports and `require()` / `import()` of the entry point, for hand work
 - Idempotent; parses `.ts` files with the `ts` parser
 
