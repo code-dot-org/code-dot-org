@@ -59,6 +59,38 @@ function parseRuntimeConfig(): ObservabilityRuntimeConfig {
   }
 }
 
+/** `<meta name="cdo-api-url" content="same-origin">` — the page's own origin. */
+const SAME_ORIGIN = 'same-origin';
+
+/**
+ * An API origin the PAGE names, overriding the one its hostname implies.
+ *
+ * The hostname decides normally, and a host the environment map does not know
+ * is treated as `development` — `http://localhost-studio.code.org:3000`. That
+ * is right for a laptop and wrong for a static build served from anywhere else
+ * over HTTPS: the browser blocks an insecure subresource as mixed content, and
+ * it blocks it BEFORE the request can reach a service worker, so a build whose
+ * API is mocked by one never gets the chance to answer itself.
+ *
+ * `same-origin` is what such a build wants: a URL the browser will allow, which
+ * the mock handlers match (they take any host), and which leaves the page only
+ * if nothing has claimed it.
+ *
+ * A meta tag rather than a build-time env var, because this is a property of
+ * the deployment, not of the bundle — and because an `import.meta.env` read
+ * inside this package is inlined when THIS package is built, long before an app
+ * that consumes its `dist` could set it.
+ */
+function parseApiUrlOverride(): string | undefined {
+  const content = document
+    .querySelector<HTMLMetaElement>('meta[name="cdo-api-url"]')
+    ?.content?.trim();
+  if (!content) {
+    return undefined;
+  }
+  return content === SAME_ORIGIN ? window.location.origin : content;
+}
+
 export class SiteConfig {
   public readonly host: ReturnType<typeof parse>;
   public readonly brand: Brand;
@@ -80,7 +112,8 @@ export class SiteConfig {
     this.host = parse(window.location.hostname);
     this.brand = getBrandFromHostname(this.host);
     this.environment = getEnvironmentFromHostname();
-    this.dashboardApiUrl = getDashboardApiUrl(this.environment);
+    this.dashboardApiUrl =
+      parseApiUrlOverride() ?? getDashboardApiUrl(this.environment);
     this.marketingOrigin = getMarketingOrigin(this.brand, this.environment);
 
     const runtime = parseRuntimeConfig();

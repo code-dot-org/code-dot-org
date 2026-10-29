@@ -32,3 +32,4 @@ export {
   resetScenarioStore,
   maybeResetFromUrl,
 } from './scenarioStore';
+export * from './users.handlers';

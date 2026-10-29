@@ -185,6 +185,24 @@ export const ConciseSectionSchema = z
     sectionInstructors: z.array(SectionInstructorInfoSchema),
     sync_enabled: z.boolean().nullable(),
     ai_tutor_enabled: z.boolean(),
+    /**
+     * How far this section's students may use AI chat tools.
+     *
+     * `SharedConstants::AI_CHAT_ACCESS_LEVELS`, set by the teacher on the AI
+     * Settings page. Read by `shouldShowAiTutor` and `disabledStateFor` in
+     * `@code-dot-org/aitutor`, which is what decides whether a tutor appears in
+     * this section at all.
+     *
+     * OPTIONAL, and absent means no. Whether the endpoints this schema parses
+     * carry the field has not been confirmed against the serializer, and the
+     * two ways of being wrong are not equal: a required field the server omits
+     * makes every section fail to parse, and a permissive default puts an AI
+     * tool in a classroom that did not ask for one. Optional-and-restrictive is
+     * wrong in neither direction.
+     */
+    ai_chat_access_level: z
+      .enum(['enabled', 'disabled', 'essential_only'])
+      .optional(),
     avatar_color: z.number(),
     avatar_emoji: z.number(),
     at_risk_age_gated_date: z.string().nullable(),
