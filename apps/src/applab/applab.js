@@ -75,6 +75,7 @@ import * as dropletConfig from './dropletConfig';
 import Exporter from './Exporter';
 import {actions, reducers} from './redux/applab';
 import {changeScreen} from './redux/screens';
+import {deferSyncRenders, renderSync} from './syncRender';
 
 const {ApplabInterfaceMode} = applabConstants;
 
@@ -787,7 +788,7 @@ Applab.init = function (config) {
     .loadLibraries(level.helperLibraries)
     .then(() => {
       // Synchronous: onMount builds the screens measured below.
-      flushSync(() => Applab.render());
+      deferSyncRenders(() => flushSync(renderAppLabView));
 
       //Scale old-sized apps to fit the new sized display. Old height - 480.
       if ($('.screen').height() === 480) {
@@ -946,6 +947,10 @@ Applab.reactMountPoint_ = null;
  * Trigger a top-level React render
  */
 Applab.render = function () {
+  renderSync('app', renderAppLabView);
+};
+
+function renderAppLabView() {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
@@ -959,7 +964,7 @@ Applab.render = function () {
     </Provider>,
     Applab.reactMountPoint_
   );
-};
+}
 
 Applab.exportApp = function () {
   // Run, grab the html from divApplab, then reset:

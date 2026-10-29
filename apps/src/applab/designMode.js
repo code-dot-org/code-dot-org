@@ -29,6 +29,7 @@ import {resolveAppLabImagePath} from './imageUrlUtils';
 import {actions} from './redux/applab';
 import * as screens from './redux/screens';
 import sanitizeHtml from './sanitizeHtml';
+import {renderSync} from './syncRender';
 
 var designMode = {};
 export default designMode;
@@ -1697,12 +1698,14 @@ designMode.renderDesignWorkspace = function (element) {
     ),
     autogenerateML,
   };
-  createReactRoot(
-    <Provider store={getStore()}>
-      <DesignWorkspace {...props} />
-    </Provider>,
-    designWorkspace
-  );
+  const render = () =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <DesignWorkspace {...props} />
+      </Provider>,
+      designWorkspace
+    );
+  renderSync('designWorkspace', render);
 };
 
 /**
