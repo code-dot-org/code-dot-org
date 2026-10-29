@@ -92,22 +92,14 @@ export interface Sources extends ProjectSources {
   blockCatalogSeen?: boolean;
 }
 
-/** An image a level gives the project: a lab asset by URL, with the
-    frame layout an animation needs. */
+/** A single-frame image a level gives the project: a lab asset by URL. */
 export interface StarterImage {
   name: string;
   imageType: ImageType;
   role?: string;
   src: string;
-  /** One frame's size in px; the whole image when it is a single frame. */
+  /** The image's size in px. */
   frameSize: {x: number; y: number};
-  /** The sheet's size in px, holding `frameCount` frames row by row. */
-  sourceSize?: {x: number; y: number};
-  frameCount?: number;
-  frameDelay?: number;
-  looping?: boolean;
-  /** A character's poses on the sheet (characterAnimations.ts). */
-  poses?: AnimationPoses;
   /** Pixel art: the size of one drawn pixel in the file, so previews
       upscale it with hard edges. */
   pixelGridSize?: number;
@@ -143,7 +135,7 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** Premade world for the pinned scene (worldStartPattern.ts): one string
       per playfield row anchored to the floor. 'B' cells take the block image
       the student made most recently, 'S' the image_role_defaults sprite,
-      'O' its object, else their first character. */
+      else their first character. */
   worldStartPattern?: string[];
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */

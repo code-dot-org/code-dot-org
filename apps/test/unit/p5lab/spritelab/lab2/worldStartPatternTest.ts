@@ -66,13 +66,6 @@ describe('patternCells', () => {
       image: 'firstCharacter',
       kind: 'sprite',
     });
-    // An object comes only from its role: there is no first-character fallback.
-    expect(patternCells(list, 'friend', 'treasure').O).toBeUndefined();
-    list.propsByKey.k1.role = 'treasure';
-    expect(patternCells(list, 'friend', 'treasure').O).toEqual({
-      image: 'firstCharacter',
-      kind: 'sprite',
-    });
   });
 
   it('offers only the characters it has images for', () => {

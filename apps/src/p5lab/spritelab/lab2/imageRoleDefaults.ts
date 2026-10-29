@@ -14,14 +14,11 @@ import {RuntimeAnimationList} from './types';
  * record through level_mode.imageRole.
  *
  *   {"sprite": "friend", "gamelab_checkTouching": ["hero", "friend"]}
- *
- * `object` is the role a premade world's 'O' cells draw (worldStartPattern.ts).
  */
 export type ImageRoleDefaults = {
   sprite?: string;
   background?: string;
   block?: string;
-  object?: string;
   [blockType: string]: string | string[] | undefined;
 };
 
