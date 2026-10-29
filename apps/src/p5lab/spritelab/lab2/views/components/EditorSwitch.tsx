@@ -1,23 +1,16 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import classNames from 'classnames';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React from 'react';
-
-import {blurAfterPointerClick} from '../blurAfterPointerClick';
-
-import moduleStyles from '../sprite-lab2-view.module.scss';
 
 export type Editor = 'Images' | 'World' | 'Code';
 
 interface EditorSwitchProps {
   value: Editor;
-  onChange: (editor: Editor, event: React.MouseEvent<HTMLElement>) => void;
+  onChange: (editor: Editor) => void;
   /** The editors on offer, in order; Code and World unless told otherwise. */
   editors?: Editor[];
-  /** Stacked, to fit within the editors' left strip. */
-  vertical?: boolean;
-  /** Editors not on offer, each with its reason on hover: shown disabled,
-      so the switch looks as it will once they are. */
-  disabledEditors?: Partial<Record<Editor, string>>;
+  /** Editors this level does not enable; shown disabled rather than left
+      out, so the switch keeps one shape across the unit's levels. */
+  disabledEditors?: Editor[];
 }
 
 const DEFAULT_EDITORS: Editor[] = ['Code', 'World'];
@@ -32,39 +25,20 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
   value,
   onChange,
   editors = DEFAULT_EDITORS,
-  vertical = false,
-  disabledEditors = {},
+  disabledEditors = [],
 }) => (
-  <div
-    className={classNames(
-      moduleStyles.editorSwitch,
-      vertical && moduleStyles.editorSwitchVertical
-    )}
-    role="group"
-    aria-label="Edit"
-  >
-    {editors.map(editor => (
-      <button
-        key={editor}
-        type="button"
-        aria-pressed={value === editor}
-        disabled={disabledEditors[editor] !== undefined}
-        title={disabledEditors[editor]}
-        className={classNames(
-          moduleStyles.editorSwitchButton,
-          value === editor && moduleStyles.editorSwitchActive
-        )}
-        onClick={event => {
-          blurAfterPointerClick(event);
-          onChange(editor, event);
-        }}
-      >
-        <FontAwesomeV6Icon iconName={ICONS[editor]} iconStyle="solid" />
-        <span className={moduleStyles.editorSwitchLabel} data-label={editor}>
-          {editor}
-        </span>
-      </button>
-    ))}
+  <div role="group" aria-label="Edit">
+    <SegmentedButtons
+      size="s"
+      selectedButtonValue={value}
+      onChange={editor => onChange(editor as Editor)}
+      buttons={editors.map(editor => ({
+        value: editor,
+        label: editor,
+        iconLeft: {iconName: ICONS[editor], iconStyle: 'solid'},
+        disabled: disabledEditors.includes(editor),
+      }))}
+    />
   </div>
 );
 
