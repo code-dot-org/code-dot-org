@@ -4,7 +4,7 @@ import {
   Experimental_TranscriptionResult as TranscriptionResult,
 } from 'ai';
 
-import HttpClient from '@cdo/apps/util/HttpClient';
+import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
 
@@ -14,7 +14,12 @@ import {
   type CurrentGatewayTranscribeResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
-import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
+import {
+  AI_GATEWAY_URL,
+  getAccessToken,
+  getModelString,
+  invalidateAccessToken,
+} from './shared';
 import {
   fetchTurnstileToken,
   turnstileErrorTags,
@@ -31,14 +36,17 @@ async function transcribeThroughGateway(
 ): Promise<TranscriptionResult> {
   const {model, audio, ...restOptions} = options;
   const modelString = getModelString(model);
-  const clientType = AichatContextManager.getContext().clientType;
+  const aichatContext = AichatContextManager.getContext();
+  const clientType = aichatContext.clientType;
 
   let schemaErrorReported = false;
   const execute = async (): Promise<TranscriptionResult> => {
     try {
       // Serialized, not parallel: the access token response carries the
       // Turnstile mode that decides whether a challenge is needed at all.
-      const {token, turnstileEnforcementMode} = await fetchAccessToken();
+      const {token, turnstileEnforcementMode} = await getAccessToken(
+        aichatContext
+      );
       const turnstileToken = await fetchTurnstileToken(
         turnstileEnforcementMode
       );
@@ -62,7 +70,13 @@ async function transcribeThroughGateway(
           'x-ai-gateway-phase': 'transcription',
           ...turnstileHeaders(turnstileToken),
         }
-      );
+      ).catch((error: unknown) => {
+        // The worker answers 401 to an expired or otherwise invalid token.
+        if (isNetworkError(error) && error.response.status === 401) {
+          invalidateAccessToken(aichatContext, token);
+        }
+        throw error;
+      });
 
       const rawResponse = await response.json();
       const parseResult =

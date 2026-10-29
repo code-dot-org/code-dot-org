@@ -1,7 +1,7 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 import {generateText, type GenerateTextResult} from 'ai';
 
-import HttpClient from '@cdo/apps/util/HttpClient';
+import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
 import {AichatContext} from '../aichat/types';
@@ -12,7 +12,12 @@ import {
   type CurrentGatewayGenerateTextResponse,
 } from './contract/gatewaySchemas';
 import {reportGatewayError} from './logHelper';
-import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
+import {
+  AI_GATEWAY_URL,
+  getAccessToken,
+  getModelString,
+  invalidateAccessToken,
+} from './shared';
 import {
   fetchTurnstileToken,
   turnstileErrorTags,
@@ -128,7 +133,7 @@ const generateTextThroughGateway = async <
       // Turnstile mode that decides whether a challenge is needed at all. The
       // manager pre-fetches a token after every delivery, so only the first
       // call of a session waits on a challenge here.
-      const {token, turnstileEnforcementMode} = await fetchAccessToken(
+      const {token, turnstileEnforcementMode} = await getAccessToken(
         aichatContext
       );
       const turnstileToken = await fetchTurnstileToken(
@@ -147,7 +152,13 @@ const generateTextThroughGateway = async <
         JSON.stringify({...payload, token}),
         false,
         headers
-      );
+      ).catch((error: unknown) => {
+        // The worker answers 401 to an expired or otherwise invalid token.
+        if (isNetworkError(error) && error.response.status === 401) {
+          invalidateAccessToken(aichatContext, token);
+        }
+        throw error;
+      });
 
       const rawResponse = await response.json();
       const parseResult =
