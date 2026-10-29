@@ -109,9 +109,6 @@ exports.checkSharedAppWarnings = function (options) {
       handleClose={handleClose}
       handleTooYoung={handleShareWarningsTooYoung}
     />,
-    document.body.appendChild(document.createElement('div')),
-    {
-      legacyReactDomRender: true,
-    }
+    document.body.appendChild(document.createElement('div'))
   );
 };

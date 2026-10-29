@@ -6,7 +6,7 @@ import Modal from '@code-dot-org/component-library/modal';
 import $ from 'jquery';
 import QRCode from 'qrcode.react';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {flushSync} from 'react-dom';
 
 import {
   blockLimitExceeded,
@@ -19,7 +19,10 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
@@ -290,10 +293,7 @@ FeedbackUtils.prototype.displayFeedback = function (
       >
         {displayShowCode && this.getShowCodeComponent_(options, true)}
       </ChallengeDialog>,
-      container,
-      {
-        legacyReactDomRender: true,
-      }
+      container
     );
     return;
   }
@@ -558,23 +558,23 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
     }
   }
 
-  createReactRoot(
-    <DialogButtons
-      tryAgain={tryAgainText}
-      continueText={
-        options.continueText ||
-        (options.finalLevel ? msg.finish() : msg.continue())
-      }
-      nextLevel={this.canContinueToNextLevel(options.feedbackType)}
-      shouldPromptForHint={this.shouldPromptForHint(options.feedbackType)}
-      isK1={options.isK1}
-      assetUrl={this.studioApp_.assetUrl}
-      freePlay={options.freePlay}
-    />,
-    buttons,
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: the buttons are queried right after this returns.
+  flushSync(() =>
+    createReactRoot(
+      <DialogButtons
+        tryAgain={tryAgainText}
+        continueText={
+          options.continueText ||
+          (options.finalLevel ? msg.finish() : msg.continue())
+        }
+        nextLevel={this.canContinueToNextLevel(options.feedbackType)}
+        shouldPromptForHint={this.shouldPromptForHint(options.feedbackType)}
+        isK1={options.isK1}
+        assetUrl={this.studioApp_.assetUrl}
+        freePlay={options.freePlay}
+      />,
+      buttons
+    )
   );
 
   return buttons;
@@ -934,9 +934,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
       var qrCode = sharingDiv.querySelector('#send-to-phone-qr-code');
       var annotatedShareLink = options.shareLink + '?qr=true';
-      createReactRoot(<QRCode value={annotatedShareLink} size={90} />, qrCode, {
-        legacyReactDomRender: true,
-      });
+      createReactRoot(<QRCode value={annotatedShareLink} size={90} />, qrCode);
 
       if (sharingPhone && options.isUS) {
         var phone = $(sharingDiv.querySelector('#phone'));
@@ -987,9 +985,10 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
   const showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
-  createReactRoot(this.getShowCodeComponent_(options), showCodeDiv, {
-    legacyReactDomRender: true,
-  });
+  // Synchronous so the dialog is complete when it is shown.
+  flushSync(() =>
+    createReactRoot(this.getShowCodeComponent_(options), showCodeDiv)
+  );
 
   return showCodeDiv;
 };
@@ -1147,7 +1146,7 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
   container.id = 'showCodeModal';
   document.body.appendChild(container);
   var close = function () {
-    ReactDOM.unmountComponentAtNode(container);
+    unmountReactRoot(container);
     container.remove();
   };
 
@@ -1171,8 +1170,7 @@ FeedbackUtils.prototype.showGeneratedCode = function (appStrings) {
         onClick: close,
       }}
     />,
-    container,
-    {legacyReactDomRender: true}
+    container
   );
 };
 
@@ -1230,25 +1228,25 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
     marginBottom: 10,
   };
   var contentDiv = document.createElement('div');
-  createReactRoot(
-    <div>
-      {options.headerText && (
-        <h5 className="dialog-title">{options.headerText}</h5>
-      )}
-      {options.bodyText && <p style={bodyTextStyle}>{options.bodyText}</p>}
-      {options.prompt && (
-        <input style={textBoxStyle} defaultValue={options.promptPrefill} />
-      )}
-      <DialogButtons
-        confirmText={options.confirmText}
-        cancelText={options.cancelText}
-        isDangerCancel={!!options.isDangerCancel}
-      />
-    </div>,
-    contentDiv,
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: the buttons and input are queried below.
+  flushSync(() =>
+    createReactRoot(
+      <div>
+        {options.headerText && (
+          <h5 className="dialog-title">{options.headerText}</h5>
+        )}
+        {options.bodyText && <p style={bodyTextStyle}>{options.bodyText}</p>}
+        {options.prompt && (
+          <input style={textBoxStyle} defaultValue={options.promptPrefill} />
+        )}
+        <DialogButtons
+          confirmText={options.confirmText}
+          cancelText={options.cancelText}
+          isDangerCancel={!!options.isDangerCancel}
+        />
+      </div>,
+      contentDiv
+    )
   );
 
   var dialog = this.createModalDialog({
@@ -1298,9 +1296,8 @@ FeedbackUtils.prototype.showToggleBlocksError = function () {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  createReactRoot(<DialogButtons ok={true} />, buttons, {
-    legacyReactDomRender: true,
-  });
+  // Synchronous: the OK button is queried below.
+  flushSync(() => createReactRoot(<DialogButtons ok={true} />, buttons));
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({
