@@ -43,10 +43,7 @@ export function shareLab2Project(dialogId, finishUrl) {
             finishUrl={finishUrl}
           />
         </Provider>,
-        dialogDom,
-        {
-          legacyReactDomRender: true,
-        }
+        dialogDom
       );
 
       getStore().dispatch(showShareDialog());
