@@ -8,7 +8,7 @@
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
-import type {Actor, World, WorldMap} from '../../engine';
+import type {Actor, World} from '../../engine';
 import {projectFiles} from '../../runtime/projectFiles';
 import {WORLD_SCENARIOS} from '../scenarios';
 
@@ -35,28 +35,28 @@ describe('breakout, in a Viewport', () => {
   });
 
   it('starts over by loading the level again, under a menu that stays', async () => {
-    const {world, modules} = await compiled();
+    const {world} = await compiled();
     world.tick(0);
     const [game] = ofKind(world, 'actors/viewport');
 
-    // A brick taken, and the menu up over the game.
+    // A brick taken, and the menu shown over the game: a screen of its own
+    // (specs/SCREEN_STACK_PLAN.md, step 5).
     world.removeActor(ofKind(world, 'actors/brick')[0]);
-    const menu = modules['maps/pauseMenu'] as unknown as {default: WorldMap};
-    world.loadScreen(menu.default);
+    world.showScreen('screens/pauseMenu');
+    expect(world.screens()).toHaveLength(2);
     world.tick(16);
     expect(ofKind(world, 'actors/brick')).toHaveLength(15);
     const panel = ofKind(world, 'actors/panel');
     expect(panel).toHaveLength(1);
 
     // BY NAME, which is how the menu's Quit button says it: `quit` is the
-    // WORLD's event and the map only declares that it raises it
-    // (specs/MAP_EVENTS_PLAN.md).
+    // Main Screen's event (specs/MAP_EVENTS_PLAN.md).
     world.emitNamed('quit');
     world.tick(16);
     world.tick(16);
 
     // The level is whole again and in the World; the Viewport is the one it
-    // was, and the menu in the root was not part of what went.
+    // was, and the menu's screen was not part of what went.
     const space = world.viewportSpaceOf(game)!.mirrorOf!;
     const bricks = ofKind(world, 'actors/brick');
     expect(bricks).toHaveLength(16);

@@ -53,6 +53,8 @@ const place = (
 
 const mapFile = (spec: {
   modal?: boolean;
+  /** A screen's own color: one shown over the game, rather than a map. */
+  backgroundColor?: string;
   anchorless?: boolean;
   actors: object[];
   workspace: object;
@@ -63,6 +65,7 @@ const mapFile = (spec: {
       size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
       tile: {width: TILE_SIZE, height: TILE_SIZE},
       ...(spec.modal ? {modal: true} : {}),
+      ...(spec.backgroundColor ? {backgroundColor: spec.backgroundColor} : {}),
       actors: spec.actors,
       blocks: spec.workspace,
     },
@@ -71,15 +74,16 @@ const mapFile = (spec: {
   );
 
 const unloadThis = {type: 'world_unload_this_map'};
+const goBack = {type: 'world_go_back'};
 
 // ── Are you sure? ───────────────────────────────────────────────────────────
 
 /**
  * A question with two answers, over whatever is behind it.
  *
- * MODAL, which is the whole point of a confirm: while it is up, the thing it
- * is asking about cannot be clicked again. Before a map could say that, this
- * would have been a panel you could click straight past.
+ * A SCREEN, which is the whole point of a confirm: while it is up, the thing
+ * it is asking about cannot be clicked again. Half clear, so what it asks
+ * about shows behind it (specs/SCREEN_STACK_PLAN.md, step 5).
  *
  * IT TAKES ITSELF AWAY either way, as the pause menu does. What the answer
  * MEANS is the project's — `yes` on a delete screen deletes, `yes` on a quit
@@ -91,7 +95,7 @@ const unloadThis = {type: 'world_unload_this_map'};
  * writes the words into the Label before it loads this.
  */
 export const confirmMap = mapFile({
-  modal: true,
+  backgroundColor: '#00000080',
   actors: [
     place('actors/panel', 'Ask', MIDDLE, MIDDLE, {
       Label: {text: ''},
@@ -107,7 +111,7 @@ export const confirmMap = mapFile({
       -56,
       28,
       {positional: {parent: 'Ask'}, Label: {text: 'YES'}, hasABox: {width: 96}},
-      script(emitWorldEvent('yes'), unloadThis),
+      script(emitWorldEvent('yes'), goBack),
     ),
     place(
       'actors/button',
@@ -115,7 +119,7 @@ export const confirmMap = mapFile({
       56,
       28,
       {positional: {parent: 'Ask'}, Label: {text: 'NO'}, hasABox: {width: 96}},
-      script(emitWorldEvent('no'), unloadThis),
+      script(emitWorldEvent('no'), goBack),
     ),
   ],
   workspace: defineMap('Are You Sure?'),

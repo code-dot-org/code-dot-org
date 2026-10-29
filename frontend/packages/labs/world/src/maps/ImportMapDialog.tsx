@@ -41,7 +41,9 @@ export const ImportMapDialog = ({onImport, onCancel}: ImportMapDialogProps) => {
       customContent={
         <div className={styles.body}>
           <ul className={styles.grid}>
-            {STOCK_MAPS.map(map => {
+            {/* Maps only: a stock screen is shown, not loaded, and is
+                not what a map's dropdown can hold (specs/SCREEN_STACK_PLAN.md). */}
+            {STOCK_MAPS.filter(map => !map.screen).map(map => {
               const picked = chosen?.id === map.id;
               return (
                 <li key={map.id} className={styles.holder}>

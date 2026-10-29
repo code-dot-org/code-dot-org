@@ -1,23 +1,20 @@
-// The pause menu, as a map with a script: a Panel, its title, and a Resume and
-// a Quit that know what they are for.
+// The pause menu, as a screen: a Panel, its title, and a Resume and a Quit
+// that know what they are for (specs/SCREEN_STACK_PLAN.md, step 5).
 //
 // The first stock interface map (specs/UI_ACTORS.md, "The second axis"), and
 // the first scripted one (specs/MAP_FIRST.md, "What a map script looks
 // like"). A menu is four actors arranged, and arranging is what a map is; the
 // title and the two buttons are the panel's CHILDREN, stored in its frame
-// (specs/PARENTING.md), so loading the map puts the menu on screen as one
-// thing and unloading it takes it away as one thing.
+// (specs/PARENTING.md), so showing the screen puts the menu up as one thing
+// and going back takes it away as one thing.
 //
 // THE BUTTONS ARE PLAIN BUTTONS WITH SCRIPTS. Resume's workspace says `when
-// this actor is clicked: resume the game; unload this map`, because resuming
-// means one thing. Quit's says `emit quit; unload this map`: `quit` is one of
-// the WORLD's events, which this map declares it RAISES and the world declares
-// and hears (specs/MAP_EVENTS_PLAN.md). What quitting means is the project's —
-// breakout starts the level over. The menu takes ITSELF away either way.
-// It used not to on Quit, while breakout answered with `clear world`, which
-// took the menu with everything else; a level restarted inside a Viewport
-// leaves the main map alone, so a menu that has been answered has to go by
-// its own hand. No kind of actor knows any of this; the map does.
+// this actor is clicked: resume the game; go back`, because resuming means
+// one thing. Quit's says `emit quit; go back`: `quit` is one of the game's
+// events, which the Main Screen declares and hears (specs/MAP_EVENTS_PLAN.md).
+// What quitting means is the project's — breakout starts the level over. The
+// menu takes ITSELF away either way. No kind of actor knows any of this; the
+// screen does.
 //
 // AT THE MIDDLE OF THE STANDARD WINDOW, which is where a project with a
 // square view wants it and which a project with another view moves in the
@@ -50,12 +47,11 @@ export const pauseMenuMap = JSON.stringify(
     type: 'map',
     size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
     tile: {width: TILE_SIZE, height: TILE_SIZE},
-    // A SCREEN: while it is up, nothing behind it can be clicked, tabbed to
-    // or typed at (specs/MODALITY_PLAN.md). `pause the game` already stops
-    // the level MOVING, and the two are not the same thing — a paused game
-    // still turns clicks into events, so without this the level's buttons
-    // were live under the menu asking whether to quit.
-    modal: true,
+    // A SCREEN, so while it is up nothing under it can be clicked, tabbed to
+    // or typed at. `pause the game` stops the level MOVING, and the two are
+    // not the same thing — a paused game still turns clicks into events.
+    // Half clear, so the game shows dimmed behind it.
+    backgroundColor: '#00000080',
     actors: [
       {
         type: 'actors/panel',
@@ -94,7 +90,7 @@ export const pauseMenuMap = JSON.stringify(
         ...script(
           whenClicked(),
           {type: 'world_resume_game'},
-          {type: 'world_unload_this_map'},
+          {type: 'world_go_back'},
         ),
       },
       {
@@ -105,7 +101,7 @@ export const pauseMenuMap = JSON.stringify(
           Label: {text: 'QUIT'},
         },
         ...script(whenClicked(), emitWorldEvent('quit'), {
-          type: 'world_unload_this_map',
+          type: 'world_go_back',
         }),
       },
     ],

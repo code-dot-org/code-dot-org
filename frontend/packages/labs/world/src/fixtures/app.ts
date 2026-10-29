@@ -7,10 +7,8 @@
 //
 // WHAT IT USES, which is the whole list:
 //
-//   • two SCREENS and a way back down (`rules/screens`);
+//   • two SCREENS and a way back down (specs/SCREEN_STACK_PLAN.md);
 //   • a FORM — a Text Input on the second screen (`actors/textInput`);
-//   • the on-screen KEYBOARD, so it can be used with a finger alone
-//     (`maps/keyboard`, specs/KEYBOARD_PLAN.md);
 //   • a LIST showing what has been written (`actors/list`);
 //   • ANCHORING, so the header and the button hold their edges on a window
 //     that is not the shape the map was drawn at (specs/ANCHORS_PLAN.md);
@@ -22,12 +20,16 @@
 // `load`." Written there as a thing to look at in a browser, and now a thing a
 // test can play.
 //
-// THE BUTTONS SPEAK THROUGH THEIR MAP'S OWN EVENTS, which is the pattern the
-// pause menu established (specs/UI_ACTORS.md) and the only one available here:
-// `the ⟨Save⟩` names a placement and is a MAP SCRIPT's block — it generates
-// `placed[…]`, so a world cannot use it — and `any ⟨Button⟩` cannot tell three
-// buttons apart. So each map declares what happens on it, a placement script
-// emits it, and the world answers. Moving a button on the map rewires nothing.
+// THE BUTTONS SPEAK THROUGH THE GAME'S EVENTS, which is the pattern the pause
+// menu established (specs/UI_ACTORS.md) and the only one available here: `the
+// ⟨Save⟩` names a placement and is a screen's own block, and `any ⟨Button⟩`
+// cannot tell three buttons apart. So a placement script on the write screen
+// raises the Main Screen's event, and the Main Screen answers. Moving a button
+// rewires nothing.
+//
+// NO ON-SCREEN KEYBOARD, for now. It typed into the form under it, and only
+// the top screen takes input until a screen can let it through
+// (specs/SCREEN_STACK_PLAN.md, "Not in this plan").
 //
 // ON A PHONE-SHAPED SCREEN, ten tiles by eighteen, the same shape the
 // Interface Kit uses and for the same reason: a form on a square window looks
@@ -49,10 +51,6 @@ import {
 } from '../actors/stock/workspace';
 import {APP_ACTORS} from '../appBuilder';
 import {MAIN_SCREEN_PATH} from '../mainWorld';
-import {importStockMap} from '../maps/importStockMap';
-import {stockMapById} from '../maps/stock';
-import {importStockRule} from '../rules/importStockRule';
-import {stockRule} from '../rules/stock';
 import {TILE_SIZE} from '../runtime/viewport';
 
 /** The screen, in tiles: the standard width, and a phone's height. */
@@ -135,15 +133,14 @@ const mainMap = (actors: object[]) => ({
   actors,
 });
 
-const mapFile = (name: string, actors: object[], modal = false) =>
+const screenFile = (name: string, actors: object[]) =>
   JSON.stringify(
     {
       type: 'map',
       size: {width: PORTRAIT.columns, height: PORTRAIT.rows},
       tile: {width: TILE_SIZE, height: TILE_SIZE},
-      ...(modal ? {modal: true} : {}),
       actors,
-      // The map's own workspace: what it is called. Which of the world's
+      // The screen's own workspace: what it is called. Which of the game's
       // events it raises is what its placements' `emit` blocks say.
       blocks: defineMap(name),
     },
@@ -162,13 +159,9 @@ const mapFile = (name: string, actors: object[], modal = false) =>
  * it is why the two of them are anchored and the list between them is not: a
  * list is the thing that should take up whatever room is left.
  *
- * Its controls do not dodge the screen that comes up over them, and for a
- * while they had to. NEW NOTE sits at the foot of the screen, which is where a
- * button like it belongs and is exactly where the on-screen keyboard's third
- * row lands: tapping `b` also pressed NEW NOTE and opened a second copy of the
- * form, mid-word. The layout was bent around that until the write map could
- * say it was a SCREEN. It says so now, so this says what it means
- * (specs/MODALITY_PLAN.md).
+ * Its controls do not dodge the screen that comes up over them: only the top
+ * screen takes input, so NEW NOTE at the foot of this one cannot be pressed
+ * through the write screen (specs/SCREEN_STACK_PLAN.md).
  */
 const HOME_MAP = mainMap([
   place('actors/label', 'Header', WIDTH / 2, 48, {
@@ -181,71 +174,43 @@ const HOME_MAP = mainMap([
   place('actors/button', 'New', WIDTH / 2, 520, {
     anchor: 'bottom',
     own: {Label: {text: 'NEW NOTE'}, hasABox: {width: 200}},
-    // IT GOES, RATHER THAN ANNOUNCING. A map that is a file has to say what
-    // happened and let the world decide, because the two are written apart;
-    // home is the world's OWN map, so the button goes to the write screen
-    // itself. Write and the keyboard still announce — they are still files
-    // (specs/MAIN_MAP_PLAN.md).
-    does: [
-      {
-        type: 'world_do_Screens_GoToScreenAction',
-        fields: {VALUE: 'maps/write'},
-      },
-      // …and the keyboard over it, so a finger has something to type on. A
-      // screen of its own, so `go back` takes both away in the order they
-      // went on.
-      {
-        type: 'world_do_Screens_GoToScreenAction',
-        fields: {VALUE: 'maps/keyboard'},
-      },
-    ],
+    // IT GOES, RATHER THAN ANNOUNCING. Home is the Main Screen, so the button
+    // shows the write screen itself; the write screen announces, since it is
+    // written apart from the handlers (specs/MAIN_MAP_PLAN.md).
+    does: [{type: 'world_show_screen', fields: {SCREEN: 'screens/write'}}],
   }),
 ]);
 
 /**
- * Write: one field, two answers, and room under them for a keyboard.
- *
- * The keyboard is NOT placed here. It is its own map, loaded over this one, so
- * what a learner reads on this screen is a form — and so the keyboard stays
- * one import rather than forty placements copied into every screen that types.
+ * Write: one field and two answers, a screen shown over home. It has no color
+ * of its own, so home shows under it.
  */
-const WRITE_MAP = mapFile(
-  'Write',
-  [
-    // A backdrop, so the form READS as a screen over the list rather than as
-    // controls floating among it. It is only paint: a Panel is not something
-    // that can be clicked, which matters — see the note above about a screen
-    // not blocking what is under it.
-    place('actors/panel', 'Sheet', WIDTH / 2, 88, {
-      anchor: 'top',
-      own: {hasABox: {width: WIDTH, height: 176}},
-    }),
-    place('actors/label', 'Prompt', WIDTH / 2, 36, {
-      anchor: 'top',
-      own: {Label: {text: 'NEW NOTE'}},
-    }),
-    place('actors/textInput', 'Entry', WIDTH / 2, 88, {
-      anchor: 'top',
-      own: {hasABox: {width: 280}},
-    }),
-    place('actors/button', 'Save', 96, 144, {
-      anchor: 'top',
-      emits: emitWorldEvent('save', undefined, MAIN_SCREEN_PATH),
-      own: {Label: {text: 'SAVE'}, hasABox: {width: 120}},
-    }),
-    place('actors/button', 'Cancel', 224, 144, {
-      anchor: 'top',
-      emits: emitWorldEvent('cancel', undefined, MAIN_SCREEN_PATH),
-      own: {Label: {text: 'CANCEL'}, hasABox: {width: 120}},
-    }),
-  ],
-  // A SCREEN, not an overlay: while it is up, nothing on home can be clicked,
-  // tabbed to or typed at (specs/MODALITY_PLAN.md). The keyboard loaded OVER
-  // it is not modal, which is the whole reason the flag is on the map rather
-  // than on whatever is topmost — a keyboard that locked out the form it fills
-  // would be useless.
-  true,
-);
+const WRITE_SCREEN = screenFile('Write', [
+  // A backdrop, so the form READS as a screen over the list rather than as
+  // controls floating among it.
+  place('actors/panel', 'Sheet', WIDTH / 2, 88, {
+    anchor: 'top',
+    own: {hasABox: {width: WIDTH, height: 176}},
+  }),
+  place('actors/label', 'Prompt', WIDTH / 2, 36, {
+    anchor: 'top',
+    own: {Label: {text: 'NEW NOTE'}},
+  }),
+  place('actors/textInput', 'Entry', WIDTH / 2, 88, {
+    anchor: 'top',
+    own: {hasABox: {width: 280}},
+  }),
+  place('actors/button', 'Save', 96, 144, {
+    anchor: 'top',
+    emits: emitWorldEvent('save', undefined, MAIN_SCREEN_PATH),
+    own: {Label: {text: 'SAVE'}, hasABox: {width: 120}},
+  }),
+  place('actors/button', 'Cancel', 224, 144, {
+    anchor: 'top',
+    emits: emitWorldEvent('cancel', undefined, MAIN_SCREEN_PATH),
+    own: {Label: {text: 'CANCEL'}, hasABox: {width: 120}},
+  }),
+]);
 
 // ── The world ───────────────────────────────────────────────────────────────
 
@@ -361,10 +326,8 @@ const MEMORY = 'notes';
 
 /**
  * The Main Screen: home, with no Viewport, since an app has no level to look
- * into (specs/SCREEN_MAP_PLAN.md). The write screen is loaded over it and
- * home is what the stack sits on, which is why the Screens rule's floor is
- * empty rather than one: with home underneath, a floor of one would mean the
- * write screen could never be closed (specs/SCREENS_PLAN.md).
+ * into (specs/SCREEN_MAP_PLAN.md). The write screen is shown over it, and
+ * `go back` never takes home off (specs/SCREEN_STACK_PLAN.md).
  */
 const MAIN_SCREEN = JSON.stringify(
   {
@@ -387,9 +350,8 @@ const MAIN_SCREEN = JSON.stringify(
       {name: 'remembered', type: 'boolean', value: 'false'},
     ],
     // …AND WHAT THE WRITE SCREEN SAYS BACK. Both events are the game's,
-    // declared here and raised by a map (`maps/write` raises them; its two
-    // buttons say them). A map declares no events of its own: one
-    // vocabulary, held where the handlers are (specs/MAP_EVENTS_PLAN.md).
+    // declared here and raised by the write screen's two buttons, by name
+    // (specs/MAP_EVENTS_PLAN.md).
     events: [{name: 'save'}, {name: 'cancel'}],
     blocks: {
       blocks: {
@@ -488,9 +450,7 @@ const MAIN_SCREEN = JSON.stringify(
                     },
                   },
                 },
-                // Twice, because the keyboard went on over the form.
-                {type: 'world_do_Screens_GoBackAction'},
-                {type: 'world_do_Screens_GoBackAction'},
+                {type: 'world_go_back'},
               ]),
             },
           },
@@ -500,10 +460,7 @@ const MAIN_SCREEN = JSON.stringify(
             x: 20,
             y: 820,
             next: {
-              block: chain([
-                {type: 'world_do_Screens_GoBackAction'},
-                {type: 'world_do_Screens_GoBackAction'},
-              ]),
+              block: {type: 'world_go_back'},
             },
           },
         ],
@@ -533,17 +490,8 @@ export const notesApp = (empty: MultiFileSource): MultiFileSource => {
   for (const actor of ACTORS) {
     source = importStockActor(source, stockActorById(actor)!).source;
   }
-  // The stack. Nothing else brings it, because nothing else needs it: a
-  // screen is a map, and every other actor here is happy with one.
-  source = importStockRule(source, stockRule('screens')!).source;
-  // …and the keyboard, which brings the Panel and the Button it places.
-  source = importStockMap(source, stockMapById('keyboard')!).source;
-
   const main = Object.values(source.files).find(
     file => file.name === 'main.screen',
-  );
-  const maps = Object.values(source.folders).find(
-    folder => folder.name === 'maps' && folder.parentId === '0',
   );
   const actorsFolder = Object.values(source.folders).find(
     folder => folder.name === 'actors' && folder.parentId === '0',
@@ -551,7 +499,6 @@ export const notesApp = (empty: MultiFileSource): MultiFileSource => {
   if (!main) {
     return source;
   }
-  const folderId = maps?.id ?? '0';
   return {
     ...source,
     files: {
@@ -567,12 +514,12 @@ export const notesApp = (empty: MultiFileSource): MultiFileSource => {
         contents: NOTE_ACTOR,
         folderId: actorsFolder?.id ?? '0',
       },
-      appWriteMap: {
-        id: 'appWriteMap',
-        name: 'write.map',
-        language: 'map',
-        contents: WRITE_MAP,
-        folderId,
+      appWriteScreen: {
+        id: 'appWriteScreen',
+        name: 'write.screen',
+        language: 'screen',
+        contents: WRITE_SCREEN,
+        folderId: main.folderId,
       },
     },
   };

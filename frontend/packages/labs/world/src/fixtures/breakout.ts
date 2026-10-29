@@ -138,15 +138,14 @@ export const setNumber = (type: string, value: number) => ({
  */
 /**
  * THE PAUSE MENU, wired the way any game wires one (specs/UI_ACTORS.md, "The
- * second axis"; specs/MAP_FIRST.md): P stops the game and loads the stock
- * menu. The menu's own script takes it away on Resume and says `quit` on
- * Quit, and the world decides what quitting means — here, start the level
- * over, which is loading it into the World again: what the World held goes,
- * and the screen is not touched. The menu is put up over the screen, so it is
- * not part of what restarts (specs/ONE_WORLD_PLAN.md).
- * The menu is the project's `maps/pauseMenu.map`, imported with the
+ * second axis"): P stops the game and shows the stock menu, a screen of its
+ * own on top of the Main Screen (specs/SCREEN_STACK_PLAN.md). The menu goes
+ * back by itself on Resume and says `quit` on Quit, and the game decides what
+ * quitting means — here, start the level over, which is loading it into the
+ * World again: what the World held goes, and the screens are not touched.
+ * The menu is the project's `screens/pauseMenu.screen`, imported with the
  * kinds it places (`maps/importStockMap`), and a project may open it in the
- * map editor and move things or change what its buttons do.
+ * editor and move things or change what its buttons do.
  */
 export const pauseHandlers = (level: string) => {
   return [
@@ -168,18 +167,9 @@ export const pauseHandlers = (level: string) => {
             DO0: {
               block: stack([
                 {type: 'world_pause_game'},
-                // Over the screen, where the menu belongs, until it is a
-                // screen of its own (specs/SCREEN_STACK_PLAN.md).
                 {
-                  type: 'world_load_map_named',
-                  inputs: {
-                    PATH: {
-                      shadow: {
-                        type: 'world_map_ref',
-                        fields: {MAP: 'maps/pauseMenu'},
-                      },
-                    },
-                  },
+                  type: 'world_show_screen',
+                  fields: {SCREEN: 'screens/pauseMenu'},
                 },
               ]),
             },
@@ -187,7 +177,7 @@ export const pauseHandlers = (level: string) => {
         },
       },
     },
-    // The menu's Resume takes the menu away itself; Quit is the game's to
+    // The menu's Resume goes back itself; Quit is the game's to
     // answer, and here it starts the level over. `quit` is the Main Screen's
     // event — declared in its data below and raised by the menu, which says
     // it raises it and declares nothing (specs/MAP_EVENTS_PLAN.md).

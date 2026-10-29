@@ -1,6 +1,6 @@
 # Plan: screens are a stack, and each one holds its own words
 
-STATUS: BUILDING, October 2026. Steps 1 to 4 are done. Comes after
+STATUS: BUILDING, October 2026. Steps 1 to 5 are done. Comes after
 specs/ONE_WORLD_PLAN.md: it assumes one World, flat screens, and Viewports
 that look at the World.
 
@@ -224,6 +224,27 @@ Screen's color stays the main camera's clear color.
 - **Compared before and after**: no difference but the random lessons'.
   A screen shown in the browser waits for step 5, which makes Breakout's
   pause menu one.
+
+- **Step 5 made the two modal stock maps stock screens**: the Pause Menu
+  and Are You Sure?. Each is imported into `screens/` as a `.screen`
+  (`StockMap.screen`), says `go back` where it said `unload this map`, and
+  has a half-clear `backgroundColor` where it said `modal`, so the game
+  shows dimmed behind it. The library's map dialog lists maps only, since
+  its choice goes into a map's dropdown; stock screens get their own entry
+  in step 7.
+- **Message, Tab Bar and the Keyboard stay maps.** None of them is modal:
+  each is meant to be used beside what is under it, which a screen does
+  not allow until input can reach the screens under the top one. Step 6
+  removes `load the map named`, which is the only way to put them up, so
+  it has to decide what becomes of them.
+- **Breakout shows the pause screen with `show screen`**, and Quit still
+  loads the level into the World again under it.
+- **The Notes app has no on-screen keyboard**, by decision: it typed into
+  the form under it. Its write form is `screens/write.screen`, NEW NOTE
+  shows it, and Save and Cancel each go back once. The play test types
+  through the World's own typing (`World.type`).
+- **Seen in the browser**: P in Breakout brings up the menu with the game
+  dimmed behind it, and Resume takes it away.
 
 ## Not in this plan
 

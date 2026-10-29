@@ -63,8 +63,9 @@ describe('a stock dialog on a Main Screen', () => {
       'no',
       'yes',
     ]);
+    // A screen of its own now (specs/SCREEN_STACK_PLAN.md, step 5).
     const map = Object.values(source.files).find(
-      file => file.name === 'confirm.map',
+      file => file.name === 'confirm.screen',
     )!;
     expect(map.contents).toContain('world_emit_ScreensMain_YesEvent');
     expect(map.contents).not.toContain('WorldsMain');
@@ -76,7 +77,7 @@ describe('a stock dialog on a Main Screen', () => {
       stockMapById('confirm')!,
     ).source;
     const {world, modules} = await compileProject(projectFiles(source));
-    world.loadMapNamed('maps/confirm');
+    world.showScreen('screens/confirm');
     world.tick(1 / 60);
     const said: unknown[] = [];
     world.on(

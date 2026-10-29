@@ -266,10 +266,10 @@ export const SCENARIOS_AS_WRITTEN: Record<WorldScenarioTag, WorldScenario> = {
       'it notices\n' +
       '- The level is `maps/main.map`, played inside the Viewport on ' +
       'the Main Screen: select it there to see which map it holds\n' +
-      '- Press P to pause: the stock Pause Menu map loads over the game, ' +
-      'which stops moving and keeps listening. Resume takes it away; Quit ' +
-      'loads the level into the Viewport again. Open `maps/pauseMenu.map` ' +
-      'to move it\n' +
+      '- Press P to pause: the stock Pause Menu screen is shown over the ' +
+      'game, which stops moving and shows dimmed behind it. Resume goes ' +
+      'back; Quit loads the level into the World again. Open ' +
+      '`screens/pauseMenu.screen` to move it\n' +
       '- Try a bouncier ball, a wider paddle, or a third row of bricks',
   },
   meteors: {

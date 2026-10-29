@@ -130,7 +130,7 @@ describe('the scenario catalogue', () => {
     // Button, which breakout has already; the panel and its title are the
     // stock Panel and Label.
     for (const file of [
-      'pauseMenu.map',
+      'pauseMenu.screen',
       'panel.actor',
       'label.actor',
       'button.actor',

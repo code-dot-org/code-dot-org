@@ -36,6 +36,11 @@ export interface StockMap {
   raises?: readonly RaisedEvent[];
   /** The `.map` JSON, copied verbatim on import. */
   contents: string;
+  /**
+   * A SCREEN the game shows over what is there, rather than a map: imported
+   * into `screens/` as a `.screen` (specs/SCREEN_STACK_PLAN.md, step 5).
+   */
+  screen?: boolean;
 }
 
 export const STOCK_MAPS: readonly StockMap[] = [
@@ -43,10 +48,11 @@ export const STOCK_MAPS: readonly StockMap[] = [
     id: 'pauseMenu',
     name: 'Pause Menu',
     description:
-      'A panel that says PAUSED with a Resume and a Quit button. Load it when a key is pressed and “pause the game”; Resume takes it away, and Quit says “quit” for the world to decide what that means.',
+      'A screen that says PAUSED with a Resume and a Quit button. Show it when a key is pressed and “pause the game”; Resume goes back, and Quit says “quit” for the game to decide what that means.',
     actors: ['panel', 'label', 'button'],
     raises: [{name: 'quit'}],
     contents: pauseMenuMap,
+    screen: true,
   },
   {
     id: 'keyboard',
@@ -64,6 +70,7 @@ export const STOCK_MAPS: readonly StockMap[] = [
     actors: ['panel', 'label', 'button'],
     raises: [{name: 'yes'}, {name: 'no'}],
     contents: confirmMap,
+    screen: true,
   },
   {
     id: 'tabs',

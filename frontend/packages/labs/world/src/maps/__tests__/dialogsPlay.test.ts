@@ -18,10 +18,11 @@ import {importStockMap} from '../importStockMap';
 import {stockMapById} from '../stock';
 
 /**
- * A button of the project's own on the Main Screen, and the map loaded over
- * it as the screen loads.
+ * A button of the project's own on the Main Screen, and the dialog put up
+ * over it as the screen loads: shown, for one that is a screen, and loaded
+ * over it, for one that is still a map (specs/SCREEN_STACK_PLAN.md).
  */
-const SCREEN = (map: string) => ({
+const SCREEN = (id: string) => ({
   actors: [
     {
       type: 'actors/button',
@@ -35,15 +36,23 @@ const SCREEN = (map: string) => ({
       blocks: [
         {
           type: 'world_on_screen_loads',
-          // Over the screen, until a dialog is a screen of its own
-          // (specs/SCREEN_STACK_PLAN.md).
           next: {
-            block: {
-              type: 'world_load_map_named',
-              inputs: {
-                PATH: {shadow: {type: 'world_map_ref', fields: {MAP: map}}},
-              },
-            },
+            block: stockMapById(id)!.screen
+              ? {
+                  type: 'world_show_screen',
+                  fields: {SCREEN: `screens/${id}`},
+                }
+              : {
+                  type: 'world_load_map_named',
+                  inputs: {
+                    PATH: {
+                      shadow: {
+                        type: 'world_map_ref',
+                        fields: {MAP: `maps/${id}`},
+                      },
+                    },
+                  },
+                },
           },
         },
       ],
@@ -72,7 +81,7 @@ const play = async (id: string) => {
         ...main,
         contents: JSON.stringify({
           ...JSON.parse(main.contents),
-          ...SCREEN(`maps/${id}`),
+          ...SCREEN(id),
         }),
       },
     },

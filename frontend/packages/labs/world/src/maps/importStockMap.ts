@@ -25,6 +25,8 @@ import {declareScreenEvents} from './declareEvents';
 import type {StockMap} from './stock';
 
 const MAPS_FOLDER = 'maps';
+/** …and a stock SCREEN's, which the game shows (specs/SCREEN_STACK_PLAN.md). */
+const SCREENS_FOLDER = 'screens';
 
 export interface ImportedMap {
   source: MultiFileSource;
@@ -32,26 +34,35 @@ export interface ImportedMap {
   path: string;
 }
 
-/** The `maps/` folder id, creating the folder if the project lacks one. */
-function mapsFolder(source: MultiFileSource): {
+/** A top-level folder's id, creating the folder if the project lacks one. */
+function topFolder(
+  source: MultiFileSource,
+  name: string,
+): {
   source: MultiFileSource;
   folderId: string;
 } {
   const existing = Object.values(source.folders).find(
-    folder => folder.name === MAPS_FOLDER && folder.parentId === '0',
+    folder => folder.name === name && folder.parentId === '0',
   );
   if (existing) {
     return {source, folderId: existing.id};
   }
-  const next = createNewFolder(source, MAPS_FOLDER);
+  const next = createNewFolder(source, name);
   const created = Object.values(next.folders).find(
-    folder => folder.name === MAPS_FOLDER && folder.parentId === '0',
+    folder => folder.name === name && folder.parentId === '0',
   );
   return {source: next, folderId: created?.id ?? '0'};
 }
 
-const alreadyImported = (source: MultiFileSource, id: string): boolean =>
-  Object.values(source.files).some(file => file.name === `${id}.map`);
+const alreadyImported = (
+  source: MultiFileSource,
+  folderId: string,
+  name: string,
+): boolean =>
+  Object.values(source.files).some(
+    file => file.name === name && file.folderId === folderId,
+  );
 
 /** The project's Main Screen's file id, if it is in that shape. */
 const mainScreenId = (source: MultiFileSource): string | undefined =>
@@ -96,10 +107,12 @@ export function importStockMap(
     }
   }
   current = withDeclaredEvents(current, map);
-  const placed = mapsFolder(current);
+  const folder = map.screen ? SCREENS_FOLDER : MAPS_FOLDER;
+  const extension = map.screen ? 'screen' : 'map';
+  const placed = topFolder(current, folder);
   current = placed.source;
-  const path = `${MAPS_FOLDER}/${map.id}`;
-  if (alreadyImported(current, map.id)) {
+  const path = `${folder}/${map.id}`;
+  if (alreadyImported(current, placed.folderId, `${map.id}.${extension}`)) {
     return {source: current, path};
   }
   const fileId = getNextFileId(Object.values(current.files));
@@ -110,8 +123,8 @@ export function importStockMap(
         ...current.files,
         [fileId]: {
           id: fileId,
-          name: `${map.id}.map`,
-          language: 'map',
+          name: `${map.id}.${extension}`,
+          language: extension,
           contents: map.contents,
           folderId: placed.folderId,
         },
