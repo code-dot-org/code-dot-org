@@ -139,6 +139,7 @@ class QuizAttemptsController < ApplicationController
           questionType: result[:quiz_question_type],
           # Its shape depends on questionType.
           responseData: result[:response_data],
+          answered: result[:answered],
           correct: result[:correct],
           explanation: result[:explanation],
           # Its fields depend on questionType.

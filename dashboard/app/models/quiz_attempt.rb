@@ -99,6 +99,7 @@ class QuizAttempt < ApplicationRecord
         quiz_question_id: response.quiz_question_id,
         quiz_question_type: response.quiz_question.type,
         response_data: response.response_data,
+        answered: response.quiz_question.answered?(response.response_data),
         correct: (show_correctness && graded) ? response.score == response.max_score : nil,
         explanation: reveal_answer ? response.quiz_question.explanation : nil,
         answer_key: reveal_answer ? answer_key : answer_key.transform_values {nil}
