@@ -32,27 +32,32 @@ const WorkspaceSceneBar: React.FunctionComponent<WorkspaceSceneBarProps> = ({
       <SceneDropdown {...dropdown} menuPlacement="top" />
       {onManageScenes && (
         // aria-disabled, not disabled: a locked button stays in the tab
-        // order, so its reason reaches keyboard users too.
+        // order, so its reason reaches keyboard users. The disabled look
+        // takes no pointer events, so the span carries the hover.
         <Tooltip
           title={dropdown.locked ? dropdown.lockedReason : ''}
           describeChild
         >
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
-            aria-disabled={dropdown.locked}
-            className={classNames({[buttonClasses.disabled]: dropdown.locked})}
-            onClick={event => {
-              if (dropdown.locked) {
-                return;
-              }
-              blurAfterPointerClick(event);
-              onManageScenes();
-            }}
-          >
-            All scenes
-          </MuiButton>
+          <span>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
+              aria-disabled={dropdown.locked}
+              className={classNames({
+                [buttonClasses.disabled]: dropdown.locked,
+              })}
+              onClick={event => {
+                if (dropdown.locked) {
+                  return;
+                }
+                blurAfterPointerClick(event);
+                onManageScenes();
+              }}
+            >
+              All scenes
+            </MuiButton>
+          </span>
         </Tooltip>
       )}
     </div>
