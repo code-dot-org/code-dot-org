@@ -47,6 +47,7 @@
     "@code-dot-org/core": "workspace:*",
     "@code-dot-org/shared-constants": "workspace:*",
     "@mui/utils": "catalog:",
+    "js-cookie": "^3.0.5",
     "tabbable": "^6.5.0"
   },
   "devDependencies": {

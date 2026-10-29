@@ -33,6 +33,7 @@ import SiteHeader from '@/components/header';
 import PageFlash from '@/components/pageFlash';
 import {
   fetchAuthOutcome,
+  identifyAnalyticsUser,
   primeCsrfToken,
   primeCurrentUser,
   useAuth,
@@ -169,6 +170,7 @@ export const Route = createRootRoute({
   beforeLoad: async () => {
     const auth = await fetchAuthOutcome();
     primeCurrentUser(queryClient, auth);
+    identifyAnalyticsUser(auth);
     // Prime a CSRF token when the shell lacks the meta, so mutations work on a
     // hard load of a subroute (and after the sign-in redirect returns here).
     await primeCsrfToken();

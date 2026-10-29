@@ -9,4 +9,22 @@ module StatsigAnalyticsHelper
   def load_web_analytics?(request)
     TARGET_PATH_PATTERNS.match?(request.path)
   end
+
+  def analytics_config
+    # Rides beside provider so a disabled page still describes itself.
+    enabled = DCDO.get('statsig-enabled', true)
+    # Set in production, on the managed test server, and in locals.yml for local work.
+    client_key = CDO.safe_statsig_api_client_key
+    return {provider: 'none', enabled: enabled} if client_key.blank?
+
+    config = {
+      provider: 'statsig',
+      enabled: enabled,
+      # The legacy bundle's path gate, so the path list has one owner.
+      statsig: {clientKey: client_key, autoCapture: load_web_analytics?(request)},
+    }
+    return config unless current_user
+
+    config.merge(user: {userId: current_user.id.to_s, userType: current_user.user_type})
+  end
 end
