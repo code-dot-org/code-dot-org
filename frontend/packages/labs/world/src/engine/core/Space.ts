@@ -8,7 +8,7 @@
 // space, and finds nothing in another.
 
 import type {Actor} from './Actor';
-import {DEFAULT_CAMERA_ID, type Camera} from './Camera';
+import type {Camera} from './Camera';
 import type {Rgba} from './color';
 import type {Layer} from './Layer';
 import type {Vector} from './Vector';
@@ -27,71 +27,21 @@ export class Space {
   /** How big the space is — the largest map loaded into it. */
   bounds: Vector;
   /**
-   * The cameras this space may be seen through, its main one first.
-   *
-   * EMPTY FOR THE ROOT, whose cameras are the world's own `cameraList` — the
-   * world owns them directly, having no placement to own them for it
-   * (specs/SPACE_CAMERAS_PLAN.md). A Viewport's are here because a camera's
-   * position belongs to a space and means nothing in another, so a Viewport
-   * showing a different scene cannot share the world's.
-   *
-   * A LIST because a Viewport may want more than one framing — a wide shot and
-   * a chase — exactly as the world may. Which of them the view is taken
-   * through is the Viewport's own business to say; until it does, it is the
-   * first, which is the space's `main`.
+   * The one camera a Viewport sees the World through; none for the root and
+   * the World themselves, whose view is the screen's own camera
+   * (specs/ONE_WORLD_PLAN.md).
    */
-  readonly cameras: Camera[];
+  camera: Camera | undefined;
 
-  /**
-   * Which of this space's cameras the view is taken through, by name.
-   *
-   * Kept in step with the owning Viewport's `shows through` property once a
-   * tick (`World.settleSpaces`), which is where the same sync notices a change
-   * to the map it holds. Here rather than read from the property directly
-   * because a space has no way to ask one: properties belong to rules, and a
-   * space is core.
-   */
-  activeCameraName: string = DEFAULT_CAMERA_ID;
-
-  /**
-   * The camera the space is currently seen through, if it has any.
-   *
-   * The one `activeCameraName` names, or the space's main camera — which is the
-   * first, always exists and cannot be taken away. `undefined` for the root,
-   * whose view is taken through the world's active camera as it always was.
-   *
-   * A name no camera has falls back rather than answering nothing, for the
-   * reason `World.camera` does the same with an unknown id: the name arrives
-   * from a field or from generated code, and a view through nothing is not a
-   * better answer than a view through the default.
-   */
-  get camera(): Camera | undefined {
-    return (
-      this.cameras.find(camera => camera.name === this.activeCameraName) ??
-      this.cameras[0]
-    );
-  }
-
-  /**
-   * One of this space's cameras by the name it was declared under.
-   *
-   * BY NAME AND NOT BY ID, because a space's camera ids carry the space —
-   * `win:wide`, so that two Viewports may each have a `wide` and a list of
-   * every camera in the world still tells them apart. What an author writes,
-   * and what the Viewport's own property holds, is the bare name.
-   */
-  cameraNamed(name: string): Camera | undefined {
-    return this.cameras.find(camera => camera.name === name);
-  }
   /**
    * The space this Viewport shows, which is the World; undefined for the
    * root and the World themselves.
    *
    * A Viewport's space holds no loads and grows nothing: its bounds are the
-   * World's, kept in step each tick, and its cameras look at the World —
+   * World's, kept in step each tick, and its camera looks at the World —
    * `Camera.space` is the World for each of them, so `in this space`, `map
    * size` and everything else asked with one in hand answers about the
-   * World. What stays the Viewport's own is its cameras and its window.
+   * World. What stays the Viewport's own is its camera and its window.
    */
   mirrorOf: Space | undefined;
 
@@ -114,15 +64,9 @@ export class Space {
   /** For the World, the path of the map it holds, when it was given one. */
   shown: string | undefined;
 
-  constructor(
-    id: string,
-    owner: Actor | undefined,
-    bounds: Vector,
-    cameras: Camera[] = [],
-  ) {
+  constructor(id: string, owner: Actor | undefined, bounds: Vector) {
     this.id = id;
     this.owner = owner;
     this.bounds = bounds;
-    this.cameras = cameras;
   }
 }

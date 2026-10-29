@@ -193,9 +193,7 @@ export function worldOfScreen(screen: string, map: string | undefined): string {
   const game = placements.find(
     one => one.id === 'Game' && one.type === VIEWPORT,
   );
-  const cameras = game?.cameras as
-    | Array<{traits: unknown; values: unknown}>
-    | undefined;
+  const camera = game?.camera as {traits: unknown; values: unknown} | undefined;
   const level = map
     ? (JSON.parse(map) as Record<string, unknown>)
     : withViewportMap(
@@ -227,8 +225,8 @@ export function worldOfScreen(screen: string, map: string | undefined): string {
         : {}),
       map: {
         ...level,
-        ...(map && cameras?.[0]
-          ? {mainCamera: {traits: cameras[0].traits, values: cameras[0].values}}
+        ...(map && camera
+          ? {mainCamera: {traits: camera.traits, values: camera.values}}
           : {}),
       },
     },

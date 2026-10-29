@@ -1,17 +1,18 @@
-// A Viewport's own cameras, as the map stores them (specs/SPACE_CAMERAS_PLAN.md).
+// A Viewport's camera, as the map stores it (specs/SPACE_CAMERAS_PLAN.md,
+// specs/ONE_WORLD_PLAN.md).
 //
-// MADE IN THE MAP EDITOR AND NOWHERE ELSE. A camera of a placed Viewport is
-// data on that placement — a name, the camera traits it elects, and the
-// starting value of each of their properties — and not blocks in the
-// placement's code, which a learner reads and may change. One place to make
-// a camera, the visual one, and nothing in the code editor to keep in step.
+// MADE IN THE MAP EDITOR AND NOWHERE ELSE. A Viewport has one camera, and what
+// it elects is data on the Viewport's placement — the camera traits, the
+// starting value of each of their properties, and its zoom — and not blocks in
+// the placement's code, which a learner reads and may change. One place to set
+// a camera up, the visual one, and nothing in the code editor to keep in step.
 //
-// WHAT THE ENGINE NEEDS is still a camera declared for that Viewport. So the
-// compiler writes a `defineCamera` for each stored camera at the head of the
-// placement's own code (`BlocklyGenerator`), which runs as the map loads —
-// after the Viewport's own map is in it, and before the first tick
-// (`World.loadMap`). The values a camera starts with are `set` rows on `this
-// camera`, made here and generated inside that call; no editor loads them.
+// WHAT THE ENGINE NEEDS is still a call. So the compiler writes a
+// `setViewportCamera` at the head of the placement's own code
+// (`BlocklyGenerator`), which runs as the screen loads — after the World has
+// its map, and before the first tick. The values the camera starts with are
+// `set` rows on `this camera`, made here and generated inside that call; no
+// editor loads them.
 //
 // Plain JSON in, plain JSON out, so the editor's writes and the compiler's
 // reading are tested without a workspace.
@@ -28,10 +29,6 @@ export interface CameraValue {
 
 /** A Viewport's camera, as its placement stores it. */
 export interface PlacementCamera {
-  /** Minted once and kept: what the engine's camera id is made from. */
-  id: string;
-  /** What the learner calls it, and what `shows through` names. */
-  name: string;
   /** The trait values it elects (`Camera Follow#FollowsTrait`). */
   traits: string[];
   values: CameraValue[];
@@ -101,9 +98,8 @@ const chain = (blocks: Block[]): Block | undefined =>
     undefined,
   );
 
-/** The id of the stack that holds `camera`'s `set` rows while it compiles. */
-export const settingsBlockId = (camera: PlacementCamera): string =>
-  `camera_settings_${camera.id}`;
+/** The id of the stack that holds the camera's `set` rows while it compiles. */
+export const CAMERA_SETTINGS_ID = 'camera_settings';
 
 /** A `set` row for each value, about `this camera`, or nothing for none. */
 const settingsOf = (camera: PlacementCamera): Block | undefined =>
@@ -122,22 +118,19 @@ const settingsOf = (camera: PlacementCamera): Block | undefined =>
   );
 
 /**
- * A placement's workspace with each stored camera's `set` rows beside it, for
- * the compiler only: one stack per camera that sets anything, under no hat,
- * which the compiler generates inside the `defineCamera` it writes for that
- * camera (`BlocklyGenerator`) rather than as code of the placement's own.
- * Identity when no camera sets anything.
+ * A placement's workspace with its camera's `set` rows beside it, for the
+ * compiler only: one stack under no hat, which the compiler generates inside
+ * the `setViewportCamera` it writes (`BlocklyGenerator`) rather than as code
+ * of the placement's own. Identity when the camera sets nothing.
  */
 export function withCameraSettings(
   state: object | undefined,
-  cameras: readonly PlacementCamera[] | undefined,
+  camera: PlacementCamera | undefined,
 ): object | undefined {
-  const stacks = (cameras ?? []).flatMap(camera => {
-    const settings = settingsOf(camera);
-    return settings
-      ? [{...settings, id: settingsBlockId(camera), x: 0, y: 0}]
-      : [];
-  });
+  const settings = camera ? settingsOf(camera) : undefined;
+  const stacks = settings
+    ? [{...settings, id: CAMERA_SETTINGS_ID, x: 0, y: 0}]
+    : [];
   if (!stacks.length) {
     return state;
   }

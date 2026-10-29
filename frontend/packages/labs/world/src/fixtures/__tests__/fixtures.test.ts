@@ -343,29 +343,22 @@ describe('the scenario catalogue', () => {
     expect(map.size.height).toBe(VIEWPORT_TILES);
 
     // The view is the Viewport's camera, kept on its placement as the map
-    // editor keeps it, and the one the Viewport looks through.
+    // editor keeps it.
     const main = contents('main.screen');
     const screen = JSON.parse(main) as {
       worldMap: string;
-      actors: Array<{
-        properties: {showsMap: {showsThrough: string}};
-        cameras: object[];
-      }>;
+      actors: Array<{camera: object}>;
     };
     // …and the World starts with the level (specs/ONE_WORLD_PLAN.md).
     expect(screen.worldMap).toBe('maps/main');
     const [viewport] = screen.actors;
-    expect(viewport.properties.showsMap).toEqual({showsThrough: 'Follow'});
-    expect(viewport.cameras).toMatchObject([
-      {
-        name: 'Follow',
-        traits: [
-          'Camera Follow#FollowsTrait',
-          'Camera Confined#ConfinedToTheMapTrait',
-        ],
-        values: [{value: 'actors/bird'}],
-      },
-    ]);
+    expect(viewport.camera).toMatchObject({
+      traits: [
+        'Camera Follow#FollowsTrait',
+        'Camera Confined#ConfinedToTheMapTrait',
+      ],
+      values: [{value: 'actors/bird'}],
+    });
   });
 
   it('holds every rule flappy needs, including the ones it did not choose', () => {

@@ -36,28 +36,18 @@ const screenOf = (source: ReturnType<typeof withActors>) => {
   return source.files[id].contents;
 };
 
-type Camera = {name: string; traits: string[]; values: {setter: string}[]};
+type Camera = {traits: string[]; values: {setter: string}[]};
 
-/** The Game Viewport, its cameras, and the one it looks through. */
+/** The Game Viewport's camera, as its placement stores it. */
 const gameOf = (contents: string) => {
   const game = (
-    JSON.parse(contents) as {
-      actors: Array<{
-        id: string;
-        cameras?: Camera[];
-        properties?: {showsMap?: {showsThrough?: string}};
-      }>;
-    }
+    JSON.parse(contents) as {actors: Array<{id: string; camera?: Camera}>}
   ).actors.find(actor => actor.id === 'Game')!;
-  const through = game.properties?.showsMap?.showsThrough;
-  return {
-    cameras: game.cameras ?? [],
-    camera: game.cameras?.find(camera => camera.name === through),
-  };
+  return {camera: game.camera};
 };
 
 describe('the camera-follow enhancement, as edits', () => {
-  it('gives the Game Viewport a camera that follows, and looks through it', () => {
+  it('gives the Game Viewport’s camera the trait that follows', () => {
     const after = cameraFollowEnhancement.apply(withActors(), GAME, PLAYER);
     const contents = screenOf(after);
 
@@ -80,7 +70,7 @@ describe('the camera-follow enhancement, as edits', () => {
     const file = JSON.parse(once.files[id].contents);
     file.actors
       .find((actor: {id: string}) => actor.id === 'Game')
-      .cameras[0].traits.push('Camera Confined#ConfinedToTheMapTrait');
+      .camera.traits.push('Camera Confined#ConfinedToTheMapTrait');
     const confined = {
       ...once,
       files: {
@@ -105,15 +95,14 @@ describe('the camera-follow enhancement, as edits', () => {
     );
   });
 
-  it('points the same camera somewhere else, rather than adding a rival', () => {
-    // A game has one view. "Follow this one" said twice is a learner changing
-    // their mind, not asking for two cameras.
+  it('points the same camera somewhere else', () => {
+    // A Viewport has one camera. "Follow this one" said twice is a learner
+    // changing their mind.
     const once = cameraFollowEnhancement.apply(withActors(), GAME, PLAYER);
     const twice = cameraFollowEnhancement.apply(once, GAME, GROUND);
 
     expect(followedIn(screenOf(twice))).toBe('actors/ground');
-    const {cameras, camera} = gameOf(screenOf(twice));
-    expect(cameras).toHaveLength(1);
+    const {camera} = gameOf(screenOf(twice));
     expect(
       camera?.values.filter(
         value =>

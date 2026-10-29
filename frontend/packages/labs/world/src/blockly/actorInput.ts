@@ -28,7 +28,6 @@ import {defineExtension, type Extension} from '@code-dot-org/blockly';
 
 import {addOnChange, isStructuralChange} from './extensions/onChange';
 import {subjectOfTraitValue} from './traitOptions';
-import {definesWorld} from './workspaceRoots';
 
 export const ACTOR_INPUT_EXTENSION = 'world_actor_input';
 export const CAMERA_INPUT_EXTENSION = 'world_camera_input';
@@ -58,53 +57,24 @@ const seedShadow = (
 export const subjectShadow = (block: Block): string => {
   // A block that NAMES a trait is a special case, and `add trait ⟨…⟩ to ⟨…⟩`
   // is the one that matters: the trait decides whose it is. A camera trait
-  // given to `this actor` is a sentence that reads fine and does nothing, and
-  // the fix was to drag `camera ⟨the main camera⟩` in every single time.
+  // given to `this actor` is a sentence that reads fine and does nothing.
   //
-  // The main camera rather than `this camera`, because `this camera`
-  // generates the bare identifier `camera`, which a world body does not bind.
+  // `camera of ⟨…⟩` rather than `this camera`, because `this camera`
+  // generates the bare identifier `camera`, which nothing outside a camera's
+  // own step binds.
   const named = block.getFieldValue?.('TRAIT');
   if (named && subjectOfTraitValue(String(named)) === 'camera') {
-    return cameraOutside(block);
+    return cameraShadow();
   }
   return 'world_this_actor';
 };
 
 /**
- * Whose a camera member is.
- *
- * IN A WORLD FILE, the main camera: `this camera` there generates an
- * identifier nothing binds.
- *
- * ANYWHERE ELSE — an actor file, a placement's script — the actor. The only
- * kind offered a camera member there is one that shows a map, whose camera
- * traits are its own (specs/SPACE_CAMERAS_PLAN.md, "simplifying"): `set actor
- * to follow of ⟨this actor⟩` in a Viewport's `on create` is the whole of how a
- * minimap follows the Pilot. Seeded with the world's main camera instead, the
- * block read as a sentence about the wrong camera and did nothing — and the
- * first person to write that row had to know to drop `this actor` over it.
+ * The subject for a member a CAMERA elects — `set look offset of ⟨…⟩` —
+ * outside a camera's own step: `camera of ⟨this actor⟩`, which in a Viewport's
+ * own placement code is that Viewport's (specs/ONE_WORLD_PLAN.md).
  */
-const cameraOutside = (block: Block): string =>
-  definesWorld(fileWorkspaceOf(block)) ? 'world_camera' : 'world_this_actor';
-
-/**
- * The workspace a block's FILE is in: a block in the flyout belongs to the
- * flyout's workspace, and the question "is this a world file" is about the
- * one it will land in — the same look-through `seedShadow` makes.
- */
-const fileWorkspaceOf = (block: Block): WorkspaceSvg | undefined => {
-  const workspace = block.workspace as WorkspaceSvg | undefined;
-  return (
-    (workspace?.isFlyout ? workspace.targetWorkspace : workspace) ?? undefined
-  );
-};
-
-/**
- * The subject for a member a CAMERA elects — `set look offset of ⟨…⟩`: the
- * world's main camera in a world file, the actor itself in an actor's or a
- * placement's.
- */
-export const cameraShadow = (block: Block): string => cameraOutside(block);
+export const cameraShadow = (): string => 'world_camera_of';
 
 /**
  * Replace the shadow when the block's surroundings change its subject.
@@ -167,7 +137,7 @@ export const cameraInputExtension: Extension = defineExtension(
   CAMERA_INPUT_EXTENSION,
   {
     extension() {
-      seedShadow(this, () => cameraShadow(this));
+      seedShadow(this, cameraShadow);
       // A block made in the flyout is seeded for the flyout's file.
       addOnChange(this, function (this: Block, event) {
         if (isStructuralChange(this, event)) {

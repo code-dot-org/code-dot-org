@@ -73,9 +73,7 @@ const NOT_TAUGHT: Record<string, readonly string[]> = {
   // Withheld whole: a world's cameras are made in the map editor, so the
   // camera lessons teach the camera inspector rather than these.
   Cameras: [
-    'world_use_camera',
-    'world_move_camera',
-    'world_camera',
+    'world_camera_of',
     'world_all_cameras',
     'world_add_camera_trait',
     'world_remove_camera_trait',

@@ -54,7 +54,6 @@ import {actorInputExtension, cameraInputExtension} from './actorInput';
 import {animationOptions, animationOptionsExtension} from './animationOptions';
 import {MEMBER_HEAD, STEP_HEAD} from './bodySurfaces';
 import {BUILTIN_RULE_META} from './builtinMeta';
-import {cameraIdFromValue, cameraOptions} from './cameras';
 import {COLOUR_CHECK} from './colorCheck';
 import {installColorMessages} from './colorMessages';
 import {END_ROW, ROW_PART, settledParts} from './designParts';
@@ -2683,13 +2682,13 @@ export interface PropertyBlockShape {
 
 /**
  * The subject a property block is asked OF, as the block that starts in its
- * socket. An actor's is `this actor`; a camera's is the main camera, because
- * `this camera` outside a camera's step names an identifier nothing binds
- * (`actorInput.cameraShadow`).
+ * socket. An actor's is `this actor`; a camera's is `camera of ⟨this actor⟩`,
+ * because `this camera` outside a camera's step names an identifier nothing
+ * binds (`actorInput.cameraShadow`).
  */
 const SUBJECT_SHADOW: Record<'actor' | 'camera', string> = {
   actor: 'world_this_actor',
-  camera: 'world_camera',
+  camera: 'world_camera_of',
 };
 
 /**
@@ -4907,41 +4906,40 @@ const worldAllActors = defineBlock({
  * chain of copies.
  */
 /**
- * One camera, by name, as an actor value.
+ * `camera of ⟨Viewport⟩` — a Viewport's one camera, as a value
+ * (specs/ONE_WORLD_PLAN.md).
  *
- * The piece that lets a WORLD wire a camera up. `all cameras` hands over the
- * set, which is what a rule wants ("whichever have this trait"); a world body
- * knows exactly which one it means, and needs to say so:
- *
- *   load map ⟨Level 1⟩
- *   set actor to follow of ⟨camera ⟨Chase⟩⟩ to ⟨first actor … is a ⟨Player⟩⟩
+ *   set actor to follow of ⟨camera of ⟨Game⟩⟩ to ⟨any ⟨Player⟩⟩
  *
  * Actor-typed like every camera value, so the generated property setters — the
- * ones a camera TRAIT brings — take it without knowing what it is.
- *
- * Naming a camera the world has not defined yet reads as the default one, the
- * same answer `World.camera` gives: the id comes from a dropdown whose block
- * may have been deleted, and a view through no camera is not an answer.
+ * ones a camera TRAIT brings — take it without knowing what it is. Of anything
+ * that is not a Viewport, nothing, which a setter then sets nothing on.
  */
-const worldCameraValue = defineBlock({
-  type: 'world_camera',
-  message0: 'camera %1',
-  args0: [{type: 'field_dropdown', name: 'CAMERA', options: cameraOptions}],
+const worldCameraOf = defineBlock({
+  type: 'world_camera_of',
+  message0: 'camera of %1',
+  args0: [{type: 'input_value', name: 'ACTOR', check: 'Actor'}],
+  inputsInline: true,
   output: 'Actor',
-  extensions: [worldContextExtension],
+  extensions: [worldContextExtension, valueShadowExtension],
   style: 'sprite_blocks',
   tooltip:
-    'One camera, to read or set something on. Its traits’ properties are set ' +
-    'like an actor’s.',
+    'A Viewport’s camera, to read or set something on. Its traits’ ' +
+    'properties are set like an actor’s.',
   generator: {
-    javascript(block) {
-      const camera = cameraIdFromValue(
-        String(block.getFieldValue('CAMERA') ?? ''),
-      );
-      return [`world.camera(${str(camera)})`, Order.MEMBER] as [string, number];
+    javascript(block, generator) {
+      const viewport =
+        generator.valueToCode(block, 'ACTOR', Order.NONE) || 'undefined';
+      return [
+        `world.cameraOf(WorldLab.one(${viewport}))`,
+        Order.FUNCTION_CALL,
+      ] as [string, number];
     },
   },
 });
+registerValueShadows('world_camera_of', [
+  {name: 'ACTOR', shadow: {type: 'world_this_actor'}},
+]);
 
 /**
  * How big the world is, in world pixels — the largest map loaded into it.
@@ -7503,81 +7501,6 @@ const EFFECT_OWNER_BLOCKS = [
     filters: 'the background only — the actors in front of it are not affected',
   }),
 ].flat();
-
-/**
- * Move the camera — where the view is taken from.
- *
- * The whole of what a camera does today. Layers respond to it by their own
- * depth setting, so moving it by (32, 0) scrolls the game a tile, drifts the
- * scenery a fifth of that, and leaves anything fixed to the screen alone.
- *
- * Runtime-shaped but valid anywhere `world` is bound: setting it under
- * `define world` chooses where the view starts, and setting it in a step is how
- * a camera follows a player.
- */
-const worldMoveCamera = defineBlock({
-  type: 'world_move_camera',
-  message0: 'move camera %1 to %2',
-  args0: [
-    {type: 'field_dropdown', name: 'CAMERA', options: cameraOptions},
-    {type: 'input_value', name: 'POSITION', check: 'Vector'},
-  ],
-  inputsInline: true,
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [worldContextExtension, valueShadowExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Point a camera at a place in the world. Everything moves with it except ' +
-    'layers fixed to the screen.',
-  generator: {
-    javascript(block, generator) {
-      const position =
-        generator.valueToCode(block, 'POSITION', Order.NONE) ||
-        'new WorldLab.Vector(0, 0)';
-      const camera = cameraIdFromValue(
-        String(block.getFieldValue('CAMERA') ?? ''),
-      );
-      return `world.setCameraPosition(${position}, ${str(camera)});\n`;
-    },
-  },
-});
-
-/**
- * Take the view through a camera — the cut.
- *
- * Which camera draws is a VALUE rather than structure: it moves a transform and
- * rebuilds nothing, so a game may cut between cameras mid-play without the
- * preview restarting around the learner.
- *
- * This is the default viewport's camera by another name. When viewports arrive
- * a viewport is told which camera to use, and this becomes that for the one
- * viewport every world already has.
- */
-const worldUseCamera = defineBlock({
-  type: 'world_use_camera',
-  message0: 'look through camera %1',
-  args0: [{type: 'field_dropdown', name: 'CAMERA', options: cameraOptions}],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [worldContextExtension],
-  style: 'setup_blocks',
-  tooltip: 'Draw the world through this camera from now on.',
-  generator: {
-    javascript(block) {
-      const camera = cameraIdFromValue(
-        String(block.getFieldValue('CAMERA') ?? ''),
-      );
-      return `world.setActiveCamera(${str(camera)});\n`;
-    },
-  },
-});
-registerValueShadows('world_move_camera', [
-  {
-    name: 'POSITION',
-    shadow: {type: 'world_vector', fields: {VECTOR: {x: 0, y: 0}}},
-  },
-]);
 
 const worldSetBackgroundColor = defineBlock({
   type: 'world_set_background_color',
@@ -10360,7 +10283,7 @@ export const DOMAIN_BLOCKS = [
   worldOnScreenLoads,
   ActorVariable.getterBlock,
   worldAllActors,
-  worldCameraValue,
+  worldCameraOf,
   worldAllCameras,
   worldThisCamera,
   worldMapSize,
@@ -10383,8 +10306,6 @@ export const DOMAIN_BLOCKS = [
   worldIsA,
   worldLayerParallax,
   worldLayerFixed,
-  worldUseCamera,
-  worldMoveCamera,
   worldAddActor,
   worldRemoveActor,
   worldPauseGame,
@@ -10725,14 +10646,11 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
     // Where the view is taken from (specs/SPACE_CAMERAS_PLAN.md).
     name: 'Cameras',
     blocks: [
-      // Which camera the view is taken from; layers respond by their own
-      // parallax. The cameras themselves are the Viewport's inspector's.
-      'world_use_camera',
-      'world_move_camera',
-      // One camera by name, for a world wiring one up; and all of them, which
-      // is the only way a RULE can reach a camera — a dropdown cannot say
-      // "whichever cameras have this trait".
-      'world_camera',
+      // A Viewport's camera, for code wiring one up; and all of them, which
+      // is how a RULE reaches a camera — a dropdown cannot say "whichever
+      // cameras have this trait". What a Viewport's camera elects is its
+      // inspector's (specs/ONE_WORLD_PLAN.md).
+      'world_camera_of',
       'world_all_cameras',
       // How a camera rule reaches the camera every world already has. Listed
       // with the camera blocks, because that is where somebody wiring one up

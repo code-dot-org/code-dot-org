@@ -1,6 +1,6 @@
 # Plan: one World, seen through Viewports
 
-STATUS: BUILDING, October 2026. Steps 1 to 5 are done. Comes before
+STATUS: BUILDING, October 2026. Steps 1 to 6 are done. Comes before
 specs/SCREEN_STACK_PLAN.md, which sits on it.
 
 A game has one World. Maps fill it, and maps bring its layers. A Viewport is
@@ -286,6 +286,30 @@ map … into ⟨Game⟩`, is now a correct answer, and its test says so.
   90, but the random lessons' positions.
 - **Seen in the browser**: Breakout's pause menu comes up over the game, and
   Quit takes it away and starts the level again.
+- **Step 6 configures a Viewport's camera in one place**: its placement's
+  `camera`, set in the camera's inspector and made into a
+  `world.setViewportCamera(…)` call by the compiler. A kind no longer elects
+  camera traits for the camera of a Viewport it is, and the per-tick copy of
+  such a kind's camera values went with them: it would have fought the
+  placement's values, and no content used it.
+- **Code reaches a Viewport's camera through `camera of ⟨Viewport⟩`**, which is
+  also the shadow a camera member's subject socket takes. `camera`,
+  `move camera` and `use camera` went with the camera lists.
+- **The stock Viewport still brings Camera Follow and Camera Confined.** It
+  elects neither now, but the camera's inspector offers only the camera
+  rules a project holds, so a new project would otherwise offer nothing.
+  The stock actors test allows the Viewport these two.
+- **The inspector's schema now carries every elected trait**, even one with
+  nothing to set. The editor finds a Viewport by its trait, and that trait
+  lost its last properties (`scroll`, `content`, `shows through`) in this
+  step; the inspector draws no group for an empty one.
+- **Compared before and after** as in step 5, with each Viewport's camera
+  position and zoom added: no difference in any of the 90, but the random
+  lessons' positions.
+- **Seen in the browser**: Flappy's camera holds at the map's left edge until
+  the bird reaches the middle of the window, then follows it. Selecting the
+  Game Viewport shows a Camera row, which opens Zoom and the camera traits,
+  with Follows aimed at any Bird.
 
 ## Not in this plan
 

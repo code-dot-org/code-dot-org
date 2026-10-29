@@ -216,7 +216,11 @@ describe('every stock actor', () => {
           one => slug(`Actors ${one.id}`).toLowerCase() === name.toLowerCase(),
         );
       const read = owners.filter(name => !fromActor(name));
-      const named = [...new Set([...elected, ...read])].sort();
+      // …and a Viewport brings the rules its camera's inspector offers, which
+      // offers only what the project holds (specs/ONE_WORLD_PLAN.md).
+      const offered =
+        actor.id === 'viewport' ? ['CameraFollow', 'CameraConfined'] : [];
+      const named = [...new Set([...elected, ...read, ...offered])].sort();
 
       expect(named, actor.id).toEqual([...actor.requires].map(slug).sort());
       // …and every actor whose declarations this one reads, or that it ACTS

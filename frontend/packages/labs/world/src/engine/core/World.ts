@@ -11,18 +11,12 @@ import {
   ScrollsTrait,
 } from '../rules/scrolling';
 import {STYLED} from '../rules/styled';
-import {
-  ViewportContentProperty,
-  ViewportScrollProperty,
-  ViewportShowsMapEvent,
-  ViewportShowsThroughProperty,
-  ViewportTrait,
-} from '../rules/viewport';
+import {ViewportShowsMapEvent, ViewportTrait} from '../rules/viewport';
 
 import type {Actor} from './Actor';
 import {anchored, isAnchor, type Anchor} from './anchors';
 import type {FrameState} from './animationTypes';
-import {DEFAULT_CAMERA_ID, makeCamera, Camera, type CameraInit} from './Camera';
+import {DEFAULT_CAMERA_ID, makeCamera, Camera, validZoom} from './Camera';
 import {
   isTimePart,
   NO_CLOCK,
@@ -122,11 +116,6 @@ export interface ActorTemplate {
    * no opinion about steps, and neither did any template before this existed.
    */
   readonly ownSteps?: readonly ActorStep[];
-  /**
-   * Camera traits the kind elected, which go to its Viewport's main camera
-   * rather than to the actor (`ActorBuilder.useCameraTraits`).
-   */
-  readonly cameraTraits?: readonly Trait[];
   /**
    * How this KIND draws itself — see `ActorBuilder.defineDrawing`. Optional for
    * the same structural reason `ownSteps` is.
@@ -397,8 +386,6 @@ export interface WorldSnapshot {
   cameras: string[];
   /** Where each camera looks from, by id. A value, patched like a property. */
   cameraPositions: Record<string, {x: number; y: number}>;
-  /** Which one the view is taken through. A value: cutting between them is not a reload. */
-  activeCamera: string;
   /**
    * Which effects are in play and what carries each — `[owner, path]` per
    * applied effect, across the world, its backdrops and every actor
@@ -669,8 +656,8 @@ class CameraCollection {
   private readonly spaces: () => readonly Space[];
 
   /**
-   * `list` is the world's own cameras — the root space's. `spaces` answers with
-   * the Viewport spaces, whose cameras are theirs (`Space.cameras`).
+   * `list` is the screen's camera. `spaces` answers with the Viewport spaces,
+   * whose cameras are theirs (`Space.camera`).
    *
    * BOTH, because a camera rule finds its subjects through here and a
    * Viewport's camera was never offered to one: the collection wrapped the
@@ -685,11 +672,13 @@ class CameraCollection {
     this.spaces = spaces;
   }
 
-  /** Every camera in the world, the root's first and then each space's. */
+  /** Every camera in the world, the screen's first and then each Viewport's. */
   private all(): Camera[] {
     const found = [...this.list];
     for (const space of this.spaces()) {
-      found.push(...space.cameras);
+      if (space.camera) {
+        found.push(space.camera);
+      }
     }
     return found;
   }
@@ -884,11 +873,6 @@ export class World {
     return space;
   }
   private readonly viewportSpaces: Space[] = [];
-  /**
-   * The camera traits each kind elected, by type, for the main camera of the
-   * space a Viewport of that kind gets (`ActorBuilder.useCameraTraits`).
-   */
-  private readonly kindCameraTraits = new Map<string, readonly Trait[]>();
 
   /**
    * The actor IN HAND: the subject whose handler is running, the actor a
@@ -946,15 +930,9 @@ export class World {
   private readonly baseLayers: readonly LayerInit[];
   /** The SCREEN's layers, back to front; the World's are `worldSpace.layers`. */
   private readonly layerList: Layer[];
-  // The cameras, and the default among them. Never empty, for the reason the
-  // layer list is not: a view taken through no camera would be a second kind of
-  // view, and every question about the view would have to answer twice.
+  // The screen's one camera, in a list of one so the collection and the
+  // snapshot read it as they read any camera. Each Viewport's is its space's.
   private readonly cameraList: Camera[];
-  // Which camera the view is taken through. One today, because a VIEWPORT is
-  // what would give a layer a different one and viewports are not built — so
-  // this is the default viewport's camera by another name, and generalises to
-  // that rather than being replaced by it.
-  private activeCameraId: string = DEFAULT_CAMERA_ID;
   private readonly cameraCollection: CameraCollection;
   // Layer id -> its index, which is its depth. Built once; layers cannot be
   // added or removed while the world runs (they are structural — a layer cannot
@@ -1138,7 +1116,6 @@ export class World {
     this.layerList.forEach((layer, index) =>
       this.layerIndex.set(layer.id, index),
     );
-    // Every world has the default camera; the rest are declared into it.
     this.cameraList = [makeCamera({id: DEFAULT_CAMERA_ID})];
     this.cameraCollection = new CameraCollection(
       this.cameraList,
@@ -1346,9 +1323,6 @@ export class World {
         effects: template.animationEffects ?? {},
       });
     }
-    if (template.cameraTraits?.length && !this.kindCameraTraits.has(type)) {
-      this.kindCameraTraits.set(type, template.cameraTraits);
-    }
     const steps = template.ownSteps ?? [];
     if (!steps.length || this.kindsWithSteps.has(type)) {
       return;
@@ -1472,19 +1446,18 @@ export class World {
         this.emit(ViewportShowsMapEvent, actor, this.worldSpace.shown ?? '');
       }
       space.bounds = this.worldSpace.bounds;
-      // THE SPACE'S MAIN CAMERA, which every space has and which cannot be
-      // taken away — the world's `main` one level down
-      // (specs/SPACE_CAMERAS_PLAN.md). Through the same door every other camera
-      // a space gets comes through, so the id is scoped and the two
-      // back-references are set in one place rather than two.
-      // …WITH THE CAMERA TRAITS THE KIND ELECTED, so a Viewport that `Follows`
-      // follows through the camera it already has, with nothing declared
-      // (specs/SPACE_CAMERAS_PLAN.md, "simplifying"). Their property values
-      // are the actor's, copied over each tick (`settleSpaces`).
-      this.addCameraTo(space, {
-        id: DEFAULT_CAMERA_ID,
-        traits: [...this.cameraTraitsOf(actor.type)],
+      // THE VIEWPORT'S ONE CAMERA, at the middle of its window, looking at
+      // the World (specs/ONE_WORLD_PLAN.md). What it elects is said by
+      // `setViewportCamera`, from what its placement stores.
+      const view = this.viewSizeOf(actor);
+      const camera = makeCamera({
+        id: `${actor.id}:${DEFAULT_CAMERA_ID}`,
+        position: new Vector(view.x / 2, view.y / 2),
       });
+      camera.space = this.worldSpace;
+      camera.window = actor;
+      camera.world = this;
+      space.camera = camera;
     }
     // …and the actor will hear that it exists, which is the one event every
     // actor gets without electing anything (`rules/spatial`). NOT HERE, so a
@@ -1572,174 +1545,65 @@ export class World {
     return this.cameraCollection;
   }
 
-  /**
-   * A camera by id, or the default.
-   *
-   * An unknown id is the default rather than an error, for the reason
-   * `addActor` gives about layers: the id comes from generated code naming a
-   * block that may since have been deleted, and a world with no view at all is
-   * not a better answer than a world looking through its default.
-   */
-  /**
-   * Declare a camera.
-   *
-   * Not hoisted, unlike a layer: a camera is an entry in a list rather than a
-   * place in a scene graph, so one can be added to a world that already exists.
-   * Declaring the same id twice is the earlier one, so a reload cannot stack
-   * duplicates.
-   */
-  defineCamera(init: CameraInit): this {
-    // A SPACE'S, if it says which. The world's own are the root's and go in the
-    // list they always went in (specs/SPACE_CAMERAS_PLAN.md).
-    if (init.viewport !== undefined) {
-      this.defineSpaceCamera(init.viewport, init);
-      return this;
-    }
-    if (!this.cameraList.some(camera => camera.id === init.id)) {
-      // A camera with no position of its own rests in the middle of THIS
-      // world's view. `Camera` defaults to the middle of the standard one,
-      // which is the wrong middle for a world that has said how wide it is —
-      // and `set size of view` runs before a camera is declared, so a camera
-      // declared afterwards would never be caught by the sweep in
-      // `setViewSize` either.
-      const camera = makeCamera({
-        ...init,
-        position: init.position ?? new Vector(this.view.x / 2, this.view.y / 2),
-      });
-      // The back-reference a camera-scoped body reads (see `Camera.world`).
-      camera.world = this;
-      this.cameraList.push(camera);
-    }
-    return this;
+  /** A Viewport's one camera, or nothing for an actor that is not one. */
+  cameraOf(viewport: Actor | undefined): Camera | undefined {
+    return viewport ? this.viewportSpaceOf(viewport)?.camera : undefined;
   }
 
   /**
-   * Add a camera to the space a Viewport owns.
+   * Set up a Viewport's camera: the traits it elects, how much it magnifies,
+   * and where it starts. What a placement's stored camera compiles to
+   * (`blockly/placementCameras`), which runs in the placement's own code where
+   * `actor` is the Viewport.
    *
-   * The id carries the space and the name does not: `win:wide` is the id, `wide`
-   * the name, so two Viewports may each have a `wide` and a list of every camera
-   * in the world still tells them apart (`Space.cameraNamed`).
-   *
-   * THROWS FOR ANYTHING THAT IS NOT A VIEWPORT, as `loadMapInto` does and for
-   * the same reason: a camera declared of a Panel can never look at anything,
-   * and holding the declaration in silence — which an earlier version of this
-   * did, forever — is the failure this lab keeps meeting. The place to declare a
-   * Viewport's camera is that Viewport's own `on create`, where it exists
-   * (specs/SPACE_CAMERAS_PLAN.md).
+   * THROWS FOR ANYTHING THAT IS NOT A VIEWPORT: a camera set up on a Panel can
+   * never look at anything, and holding it in silence is the failure this lab
+   * keeps meeting.
    */
-  private defineSpaceCamera(owner: string | Actor, init: CameraInit): void {
-    const space =
-      typeof owner === 'string'
-        ? this.viewportSpaces.find(one => one.owner?.id === owner)
-        : this.viewportSpaceOf(owner);
-    if (!space) {
-      const named = typeof owner === 'string' ? owner : owner?.id;
+  setViewportCamera(
+    viewport: Actor,
+    init: {traits?: readonly Trait[]; zoom?: number; position?: Vector},
+  ): Camera {
+    const camera = this.cameraOf(viewport);
+    if (!camera) {
       throw new Error(
-        `world-lab: a camera cannot be defined for “${named}”, which is not ` +
-          `a Viewport in this world`,
+        `world-lab: “${viewport.id}” is not a Viewport, so it has no camera ` +
+          `to set up`,
       );
     }
-    this.addCameraTo(space, init);
-  }
-
-  /** Put one declared camera into a space, unless it already has that name. */
-  private addCameraTo(space: Space, init: CameraInit): void {
-    if (space.cameraNamed(init.name ?? init.id)) {
-      return;
-    }
-    const view = space.owner ? this.viewSizeOf(space.owner) : this.view;
-    const camera = makeCamera({
-      ...init,
-      id: `${space.owner?.id ?? space.id}:${init.id}`,
-      name: init.name ?? init.id,
-      // The middle of the space's OWN window, as its main camera starts, and
-      // for the same reason the world's rest in the middle of the world's view.
-      position: init.position ?? new Vector(view.x / 2, view.y / 2),
-    });
-    camera.space = space.mirrorOf ?? space;
-    camera.window = space.owner;
-    camera.world = this;
-    space.cameras.push(camera);
-  }
-
-  /**
-   * Take the view through a different camera.
-   *
-   * A VALUE, not structure: switching cameras moves a transform and rebuilds
-   * nothing, so a game may cut between them without restarting. An unknown id
-   * leaves the view where it is rather than blacking it out.
-   */
-  setActiveCamera(id: string): this {
-    if (this.cameraList.some(camera => camera.id === id)) {
-      this.activeCameraId = id;
-      return this;
-    }
-    // …OR A VIEWPORT'S, found by the id it was declared under as `camera()`
-    // finds it. `look through camera ⟨…⟩` generates this call whichever
-    // camera the block names, and a Viewport's camera lives in the Viewport's
-    // space rather than the world's list — so it was refused here, silently,
-    // and a box that was told to look through its chase camera kept looking
-    // through its main one (specs/SPACE_CAMERAS_PLAN.md).
-    //
-    // Written to the Viewport's `shows through` and not only to the space,
-    // because the space reads that property back every tick (`showsThrough`):
-    // set only the space and the next tick would undo it.
-    for (const space of this.viewportSpaces) {
-      const found = space.cameras.find(
-        camera => camera.id === id || camera.id.endsWith(`:${id}`),
-      );
-      if (found && space.owner?.has(ViewportTrait)) {
-        space.owner.set(ViewportShowsThroughProperty, found.name);
-        space.activeCameraName = found.name;
-        return this;
+    for (const trait of init.traits ?? []) {
+      if (!camera.has(trait)) {
+        camera.addTrait(trait);
       }
     }
-    return this;
+    if (init.zoom !== undefined) {
+      camera.zoom = validZoom(init.zoom);
+    }
+    if (init.position) {
+      camera.position = new Vector(init.position.x, init.position.y);
+    }
+    return camera;
   }
 
-  /** The camera the view is currently taken through. */
+  /** The screen's camera, which the view of the screen is taken through. */
   activeCamera(): Camera {
-    return this.camera(this.activeCameraId);
+    return this.cameraList[0];
   }
 
-  camera(id: string = DEFAULT_CAMERA_ID): Camera {
-    const own = this.cameraList.find(camera => camera.id === id);
-    if (own) {
-      return own;
-    }
-    // …THEN EVERY SPACE'S, by the id it was declared under rather than the one
-    // it is held under. A space scopes its cameras' ids with the Viewport that
-    // owns them — `win:wide`, so a list of every camera in the world tells two
-    // `wide`s apart — and the generator does not know that convention and must
-    // not have to: a second place computing the same name is the silent-name
-    // failure this lab keeps meeting (specs/SPACE_CAMERAS_PLAN.md). So the
-    // engine, which owns the convention, resolves it.
-    //
-    // This is what binds `camera` for a stored camera's starting values, so
-    // that `set actor to follow` means the camera being declared.
-    for (const space of this.viewportSpaces) {
-      const found = space.cameras.find(
-        camera => camera.id === id || camera.id.endsWith(`:${id}`),
-      );
-      if (found) {
-        return found;
-      }
-    }
-    return (
-      this.cameraList.find(entry => entry.id === DEFAULT_CAMERA_ID) ??
-      this.cameraList[0]
-    );
+  /** The screen's camera. */
+  camera(): Camera {
+    return this.cameraList[0];
   }
 
   /**
-   * Move a camera, in world pixels.
+   * Move the screen's camera, in screen pixels.
    *
-   * Copied rather than adopted, like a slot's offset and for the same reason: a
-   * step that follows the player writes this every tick, and sharing one Vector
-   * with the world would let a later mutation move the view with no call.
+   * Copied rather than adopted, like a slot's offset and for the same reason:
+   * sharing one Vector with the world would let a later mutation move the view
+   * with no call.
    */
-  setCameraPosition(position: Vector, id: string = DEFAULT_CAMERA_ID): this {
-    this.camera(id).position = new Vector(position.x, position.y);
+  setCameraPosition(position: Vector): this {
+    this.cameraList[0].position = new Vector(position.x, position.y);
     return this;
   }
 
@@ -2420,8 +2284,6 @@ export class World {
     }
     for (const space of this.viewportSpaces) {
       space.bounds = world.bounds;
-      this.showsThrough(space);
-      this.settleSpace(space);
       // …and each Viewport hears that the map has landed, with the path as
       // the value when there is one. AFTER the load and queued, so a handler
       // that aims the Viewport's camera finds the map's actors already there
@@ -2456,17 +2318,13 @@ export class World {
   }
 
   /**
-   * Keep each Viewport's camera on what it follows and inside what it
-   * shows — what the camera rules do for the world's camera, done here for
-   * a camera no block can elect a trait on. Run at the end of every tick.
+   * Keep each Viewport's bounds the World's, which a map loaded into it may
+   * have grown since (`growSpaceToFit`). Where its camera looks is the
+   * camera rules' (specs/SPACE_CAMERAS_PLAN.md). Run at the end of every tick.
    */
   private settleSpaces(): void {
     for (const space of this.viewportSpaces) {
-      // The World's bounds, which a map loaded into it may have grown since
-      // (`growSpaceToFit`).
       space.bounds = this.worldSpace.bounds;
-      this.showsThrough(space);
-      this.settleSpace(space);
     }
   }
 
@@ -2519,130 +2377,6 @@ export class World {
       );
       if (asked.x !== settled.x || asked.y !== settled.y) {
         actor.set(ScrollProperty, settled);
-      }
-    }
-  }
-
-  /**
-   * Copy a Viewport's camera-trait property values onto its main camera.
-   *
-   * The values live on the ACTOR — that is what makes `actor to follow` a
-   * field in the placement inspector and a `set` on the Viewport — and the
-   * camera rules read them off the camera. One direction, once a tick and
-   * BEFORE the steps run (`tick`), for the traits the kind elected directly: a
-   * dependency's properties (`Aimed`'s goal) are the camera's own working state
-   * and copying the actor's stale copy over them would undo the aim every
-   * frame.
-   */
-  private lendCameraProperties(space: Space): void {
-    const owner = space.owner;
-    const main = space.cameras[0];
-    if (!owner || !main) {
-      return;
-    }
-    for (const trait of this.cameraTraitsOf(owner.type)) {
-      for (const property of Object.values(trait.properties)) {
-        main.set(property, owner.get(property));
-      }
-    }
-  }
-
-  /**
-   * The camera traits a kind elected.
-   *
-   * From what `useActorKind` recorded, else from the template `define`
-   * registered under the type: `addActor` given an INSTANCE rather than a
-   * template goes straight to `place` and records nothing about its kind,
-   * and a Viewport placed that way still has a camera to give the traits to.
-   */
-  private cameraTraitsOf(type: string): readonly Trait[] {
-    return (
-      this.kindCameraTraits.get(type) ??
-      this.types.get(type)?.cameraTraits ??
-      []
-    );
-  }
-
-  /**
-   * Keep the space's active camera in step with what its Viewport says.
-   *
-   * A Viewport's properties are how a project talks to its space, and a
-   * change to one is noticed once a tick rather than hooked on the write. So cutting to another
-   * camera is an ordinary `set` — `set shows through of ⟨the Minimap⟩ to
-   * ⟨"chase"⟩` — with nothing to invent and nothing to remember to call.
-   *
-   * Empty is the space's main camera, which is what a Viewport that has never
-   * heard of cameras says (`ViewportShowsThroughProperty`).
-   */
-  private showsThrough(space: Space): void {
-    const owner = space.owner;
-    if (!owner?.has(ViewportTrait)) {
-      return;
-    }
-    const named = String(owner.get(ViewportShowsThroughProperty) ?? '');
-    space.activeCameraName = named || DEFAULT_CAMERA_ID;
-  }
-
-  /**
-   * Put a space's camera where the Viewport scrolled it, and say where it is.
-   *
-   * WHAT THIS NO LONGER DOES is follow an actor. The map's `camera.follows` is
-   * gone, and with it the second implementation of following: where the view
-   * looks is logic, a map is data, and a hundred level maps should no more each
-   * configure a camera than each mint a `complete`
-   * (specs/SPACE_CAMERAS_PLAN.md, specs/MAP_EVENTS_PLAN.md). A Viewport's
-   * camera follows by electing `Follows`, as the world's always has.
-   *
-   * A CAMERA THAT ELECTS ANYTHING IS THE RULES' TO AIM, and this leaves it
-   * alone — otherwise the camera steps would aim it during the frame and this
-   * would overwrite them at the end of it, which is exactly what the branch
-   * above did. A camera that elects NOTHING is still the Viewport's to scroll,
-   * because a scroll view is the Viewport deciding about the scene it shows and
-   * not a map deciding about itself (specs/SCROLLING_PLAN.md).
-   *
-   * Confinement goes the same way: the scroll path clamps, because `scroll`
-   * promises a reading of where it actually stopped, and a camera with traits is
-   * confined by `Confined to the Map` or by nothing at all — which is how the
-   * world's cameras have always behaved.
-   */
-  private settleSpace(space: Space): void {
-    const camera = space.camera;
-    if (!camera || !space.owner) {
-      return;
-    }
-    const owner = space.owner;
-    const view = this.viewSizeOf(owner);
-    if (!camera.traits().length && owner.has(ViewportTrait)) {
-      // A scroll is measured from the top left of the content and a camera from
-      // its middle, so the two differ by half a window.
-      const scrolled = owner.get(ViewportScrollProperty) as VectorLike;
-      const at = new Vector(scrolled.x + view.x / 2, scrolled.y + view.y / 2);
-      // Inside the bounds, or at the middle of an axis the view is wider than.
-      const clamp = (value: number, half: number, size: number) =>
-        size <= half * 2
-          ? size / 2
-          : Math.min(Math.max(value, half), size - half);
-      camera.position = new Vector(
-        clamp(at.x, view.x / 2, space.bounds.x),
-        clamp(at.y, view.y / 2, space.bounds.y),
-      );
-    }
-    // …and where it ended up written back, whoever moved it, so what a project
-    // reads is where it actually is rather than what it asked for. A scrollbar
-    // drawn from an unclamped number runs off its track, and "am I at the
-    // bottom" would never be true for anybody who dragged past it.
-    if (owner.has(ViewportTrait)) {
-      const settled = new Vector(
-        camera.position.x - view.x / 2,
-        camera.position.y - view.y / 2,
-      );
-      const was = owner.get(ViewportScrollProperty) as VectorLike;
-      if (was.x !== settled.x || was.y !== settled.y) {
-        owner.set(ViewportScrollProperty, settled);
-      }
-      const bounds = owner.get(ViewportContentProperty) as VectorLike;
-      if (bounds.x !== space.bounds.x || bounds.y !== space.bounds.y) {
-        owner.set(ViewportContentProperty, space.bounds);
       }
     }
   }
@@ -3009,7 +2743,6 @@ export class World {
         ) {
           camera.position = new Vector(after.x / 2, after.y / 2);
         }
-        this.settleSpace(space);
       }
     }
   }
@@ -3108,8 +2841,6 @@ export class World {
     // first tick.
     for (const space of held) {
       space.bounds = this.worldSpace.bounds;
-      this.showsThrough(space);
-      this.settleSpace(space);
     }
     return added;
   }
@@ -4495,12 +4226,6 @@ export class World {
     this.wheel = this.pendingWheel;
     this.pendingWheel = 0;
     try {
-      // A Viewport's camera-trait values go to its camera BEFORE the steps
-      // run, so a target set on the Viewport this frame is what its camera
-      // aims at this frame (`lendCameraProperties`).
-      for (const space of this.viewportSpaces) {
-        this.lendCameraProperties(space);
-      }
       // Whatever was made since the last tick is set up before any step
       // reads it (`settleCreations`).
       this.settleCreations();
@@ -4890,7 +4615,7 @@ export class World {
       id: camera.id,
       position: {x: camera.position.x, y: camera.position.y},
       zoom: camera.zoom,
-      active: camera.id === this.activeCameraId,
+      active: true,
     }));
   }
 
@@ -5389,7 +5114,6 @@ export class World {
       ),
       actorIds: this.actorList.map(actor => actor.id).sort(),
       cameras: this.cameraList.map(camera => camera.id),
-      activeCamera: this.activeCameraId,
       cameraPositions: Object.fromEntries(
         this.cameraList.map(camera => [
           camera.id,

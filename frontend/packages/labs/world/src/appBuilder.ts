@@ -80,10 +80,8 @@ export const APP_HIDDEN_BLOCKS: ReadonlySet<string> = new Set([
   'world_is_in_layer',
   'world_add_layer_effect',
   'world_remove_layer_effect',
-  // Cameras. (Defining one is the Viewport inspector's.)
-  'world_use_camera',
-  'world_move_camera',
-  'world_camera',
+  // Cameras. (Setting one up is the Viewport inspector's.)
+  'world_camera_of',
   'world_all_cameras',
   'world_add_camera_trait',
   'world_remove_camera_trait',

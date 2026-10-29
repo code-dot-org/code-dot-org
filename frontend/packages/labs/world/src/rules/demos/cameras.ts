@@ -102,16 +102,17 @@ const cameraDemo = (id: string, module: string, stage: Stage): RuleDemo => ({
     const frame = world.addActor(
       new ActorBuilder({id: 'frame', name: 'frame'})
         .useTraits([ViewportTrait])
-        .set(IntrinsicSizeProperty, new Vector(DEMO_SIZE.width, DEMO_SIZE.height))
+        .set(
+          IntrinsicSizeProperty,
+          new Vector(DEMO_SIZE.width, DEMO_SIZE.height),
+        )
         .set(
           PositionProperty,
           new Vector(DEMO_SIZE.width / 2, DEMO_SIZE.height / 2),
         )
         .instantiate('frame'),
     );
-    world.defineCamera({
-      id: 'view',
-      viewport: frame,
+    const camera = world.setViewportCamera(frame, {
       traits: [
         of('rules/cameraFollow', 'FollowsTrait'),
         ...(stage.also ?? []).map(([path, trait]) => of(path, trait)),
@@ -120,8 +121,6 @@ const cameraDemo = (id: string, module: string, stage: Stage): RuleDemo => ({
       // about rather than on the camera hurrying to catch up.
       position: new Vector(stage.from, WALK_Y),
     });
-    world.setActiveCamera('view');
-    const camera = world.camera('view');
     const set = (path: string, name: string, value: unknown) =>
       camera.set(of(path, name), value as never);
     set('rules/cameraFollow', 'ActorToFollowProperty', walker);

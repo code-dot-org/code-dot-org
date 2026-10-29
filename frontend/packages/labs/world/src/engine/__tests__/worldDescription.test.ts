@@ -79,20 +79,17 @@ describe('the description as a call log', () => {
   });
 
   it('gives each replayed world its own copy of a pose', () => {
-    // The log holds the CameraInit the caller passed, and every replay reads
-    // that same object. A World that adopted it rather than copying would have
-    // two worlds sharing one camera position, so moving the game's camera would
+    // The log holds the Vector the caller passed, and every replay reads that
+    // same object. A World that adopted it rather than copying would have two
+    // worlds sharing one camera position, so moving the game's camera would
     // move the thumbnail renderer's.
-    const made = builder().defineCamera({
-      id: 'chase',
-      position: new Vector(2, 3),
-    });
+    const made = builder().setCameraPosition(new Vector(2, 3));
     const first = made.instantiate();
     const second = made.instantiate();
 
-    first.setCameraPosition(new Vector(80, 90), 'chase');
+    first.setCameraPosition(new Vector(80, 90));
 
-    expect(second.camera('chase').position).toEqual(new Vector(2, 3));
+    expect(second.camera().position).toEqual(new Vector(2, 3));
   });
 });
 

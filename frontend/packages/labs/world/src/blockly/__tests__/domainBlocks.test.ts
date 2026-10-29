@@ -462,30 +462,6 @@ describe('domain block generators', () => {
     expect(run('follows')).toBe('world.setLayerFit(false);\n');
   });
 
-  it('world_move_camera points a named camera at a place', () => {
-    const code = generatorFor('world_move_camera')(
-      {getFieldValue: () => 'main', workspace: {}} as never,
-      {valueToCode: () => 'new WorldLab.Vector(64, 0)'} as never,
-      {} as never,
-    ) as string;
-
-    expect(code).toBe(
-      'world.setCameraPosition(new WorldLab.Vector(64, 0), "main");\n',
-    );
-  });
-
-  it('world_use_camera cuts the view to another camera', () => {
-    // Which camera draws is a value, not structure: it moves a transform and
-    // rebuilds nothing, so a game may cut mid-play without a restart.
-    const code = generatorFor('world_use_camera')(
-      {getFieldValue: () => 'main', workspace: {}} as never,
-      {} as never,
-      {} as never,
-    ) as string;
-
-    expect(code).toBe('world.setActiveCamera("main");\n');
-  });
-
   it('world_in_this_space narrows a source to the space in hand', () => {
     // `any ⟨Pilot⟩` is every Pilot in every space; this is the ones where the
     // thing in hand is (specs/SPACE_CAMERAS_PLAN.md). The world's own actors
@@ -548,17 +524,17 @@ describe('domain block generators', () => {
     expect(setter?.message0).toContain('set actor to follow of %1');
   });
 
-  it('world_camera names the one a world means', () => {
-    // A world body knows which camera it is wiring up; a rule does not, and
-    // uses `all cameras` instead. Actor-typed, so the property setters a camera
-    // TRAIT brings take it without knowing what it is.
-    const [code] = generatorFor('world_camera')(
-      {getFieldValue: () => 'main', workspace: {}} as never,
-      {} as never,
+  it('world_camera_of names a Viewport’s camera', () => {
+    // A rule does not know which Viewport, and uses `all cameras` instead.
+    // Actor-typed, so the property setters a camera TRAIT brings take it
+    // without knowing what it is.
+    const [code] = generatorFor('world_camera_of')(
+      {workspace: {}} as never,
+      {valueToCode: () => 'game'} as never,
       {} as never,
     ) as unknown as [string, number];
 
-    expect(code).toBe('world.camera("main")');
+    expect(code).toBe('world.cameraOf(WorldLab.one(game))');
   });
 
   it('world_all_cameras is how a rule reaches a camera at all', () => {

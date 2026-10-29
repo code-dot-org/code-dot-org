@@ -461,14 +461,10 @@ export function screenOfWorld(
   const screen = JSON.parse(gameScreen(name, data)) as {
     actors: Array<Placement & Record<string, unknown>>;
   };
-  // The world's main camera is the Game Viewport's, which looks through it.
+  // The world's main camera is the Game Viewport's one camera.
   if (mainCamera) {
     const game = screen.actors.find(one => one.id === GAME)!;
-    game.cameras = [{id: 'camera1', name: 'Camera 1', ...mainCamera}];
-    game.properties = {
-      ...game.properties,
-      showsMap: {...game.properties?.showsMap, showsThrough: 'Camera 1'},
-    };
+    game.camera = {...mainCamera};
   }
   return {
     screen: JSON.stringify({...screen, ...workspace}, null, 2),

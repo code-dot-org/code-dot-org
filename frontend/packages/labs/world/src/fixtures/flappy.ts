@@ -394,25 +394,20 @@ const FLAPPY_SCREEN = JSON.stringify(
           positional: {position: {x: SCREEN / 2, y: SCREEN / 2}},
           Label: {text: ''},
           hasABox: {width: SCREEN, height: SCREEN},
-          showsMap: {showsThrough: 'Follow'},
         },
-        cameras: [
-          {
-            id: 'follow',
-            name: 'Follow',
-            traits: [
-              'Camera Follow#FollowsTrait',
-              'Camera Confined#ConfinedToTheMapTrait',
-            ],
-            values: [
-              {
-                setter: 'world_set_CameraFollow_ActorToFollowProperty',
-                type: 'actor',
-                value: 'actors/bird',
-              },
-            ],
-          },
-        ],
+        camera: {
+          traits: [
+            'Camera Follow#FollowsTrait',
+            'Camera Confined#ConfinedToTheMapTrait',
+          ],
+          values: [
+            {
+              setter: 'world_set_CameraFollow_ActorToFollowProperty',
+              type: 'actor',
+              value: 'actors/bird',
+            },
+          ],
+        },
       },
     ],
   },

@@ -34,7 +34,7 @@
 
 import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
-import type {Camera, CameraInit} from '../core/Camera';
+import type {Camera} from '../core/Camera';
 import type {ColorValue} from '../core/color';
 import {DEFAULT_LAYER_ID, type LayerInit} from '../core/Layer';
 import type {
@@ -610,34 +610,27 @@ export class WorldBuilder {
     return this.defer('setLayerFit', fit, layer);
   }
 
-  /** Declare a camera. See {@link World.defineCamera}. */
-  defineCamera(init: CameraInit): this {
-    return this.defer('defineCamera', init);
+  /** Move the screen's camera. See {@link World.setCameraPosition}. */
+  setCameraPosition(position: Vector): this {
+    return this.defer('setCameraPosition', position);
   }
 
-  /** Take the view through a different camera. See {@link World.setActiveCamera}. */
-  setActiveCamera(id: string): this {
-    return this.defer('setActiveCamera', id);
+  /** The screen's camera. See {@link World.camera}. */
+  camera(): Camera {
+    return this.getWorld().camera();
   }
 
-  /** Move a camera. See {@link World.setCameraPosition}. */
-  setCameraPosition(position: Vector, id?: string): this {
-    return this.defer('setCameraPosition', position, id);
+  /** A Viewport's one camera. See {@link World.cameraOf}. */
+  cameraOf(viewport: Actor | undefined): Camera | undefined {
+    return this.getWorld().cameraOf(viewport);
   }
 
-  /**
-   * A camera by id. See {@link World.camera}.
-   *
-   * Builds the world, because it hands back an object out of it rather than
-   * telling it something — a world body sets things ON a camera (`set actor to
-   * follow of ⟨camera ⟨Chase⟩⟩`), and inside `define world` the name `world` is
-   * this. A declaration arriving afterwards is still fine while no actor has
-   * been placed (`requireNoActors`), though the Camera read here belongs to the
-   * world that is then discarded; generated code never holds one across a
-   * declaration, since the world root emits every declaration above the body.
-   */
-  camera(id?: string): Camera {
-    return this.getWorld().camera(id);
+  /** Set up a Viewport's camera. See {@link World.setViewportCamera}. */
+  setViewportCamera(
+    viewport: Actor,
+    init: Parameters<World['setViewportCamera']>[1],
+  ): Camera {
+    return this.getWorld().setViewportCamera(viewport, init);
   }
 
   /**

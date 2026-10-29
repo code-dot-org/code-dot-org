@@ -97,13 +97,13 @@ describe('the shape a property makes', () => {
     expect(get.subject).toEqual({name: 'ACTOR', type: 'world_this_actor'});
   });
 
-  it('starts a camera property at the main camera, not at `this camera`', () => {
-    // `this camera` outside a `define camera` body generates a bare identifier
-    // nothing binds, which is why the shadow at every camera call site is the
-    // main camera (`actorInput.cameraShadow`).
+  it('starts a camera property at a Viewport’s camera, not at `this camera`', () => {
+    // `this camera` outside a camera's own step generates a bare identifier
+    // nothing binds, which is why the shadow at every camera call site is
+    // `camera of ⟨this actor⟩` (`actorInput.cameraShadow`).
     expect(shapeOf({scope: 'camera'}).set.subject).toEqual({
       name: 'ACTOR',
-      type: 'world_camera',
+      type: 'world_camera_of',
     });
   });
 

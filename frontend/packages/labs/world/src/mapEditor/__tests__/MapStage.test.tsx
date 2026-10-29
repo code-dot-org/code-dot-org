@@ -1171,24 +1171,12 @@ describe('a level, with nothing selected', () => {
     setRulesConfigHandler(null);
   });
 
-  it('edits a selected Viewport’s cameras as map data, not code', () => {
+  it('edits a selected Viewport’s camera as map data, not code', () => {
     const map = doc();
     map.actors[0] = {...map.actors[0], type: 'actors/viewport'};
     const schemas: Record<string, ActorSchema> = {
       'actors/viewport': [
-        {
-          trait: 'showsMap',
-          traitName: 'Shows a Map',
-          props: [
-            {
-              ownerId: 'showsMap',
-              propId: 'showsThrough',
-              name: 'shows through',
-              type: 'string',
-              default: '',
-            },
-          ],
-        },
+        {trait: 'showsMap', traitName: 'Shows a Map', props: []},
       ],
     };
     const {canvas, written, ...view} = mount(map, {
@@ -1197,40 +1185,25 @@ describe('a level, with nothing selected', () => {
       onEditScript: vi.fn(),
     });
     fireEvent.keyDown(canvas, {key: 'ArrowRight'});
-    // In the Viewport's own inspector: the main camera always, and a way to
-    // add another.
-    const list = view.getByTestId('camera-list');
-    expect(
-      view.getByRole('button', {name: /^Main camera/}),
-    ).toBeInTheDocument();
-    expect(list).toHaveTextContent('at the start');
-    fireEvent.click(view.getByRole('button', {name: 'Add a camera'}));
-    // Stored on the placement, and nothing written into its code.
-    expect(written().actors[0].cameras).toEqual([
-      {id: expect.any(String), name: 'Camera 2', traits: [], values: []},
-    ]);
-    expect(written().actors[0].blocks).toBeUndefined();
+    // In the Viewport's own inspector: its one camera.
+    fireEvent.click(view.getByRole('button', {name: /^Camera/}));
     expect(view.getByTestId('camera-inspector')).toBeInTheDocument();
-    fireEvent.click(
-      view.getByLabelText('This Viewport starts looking through this camera'),
-    );
-    expect(written().actors[0].properties?.showsMap?.showsThrough).toBe(
-      'Camera 2',
-    );
-    // How much it takes in, kept with the camera (specs/MIRRORING_PLAN.md,
-    // step 7); a zoom that is no zoom at all is not taken.
+    // How much it takes in, kept on the placement; a zoom that is no zoom at
+    // all is not taken.
     const zoom = view.getByLabelText('Zoom');
     fireEvent.change(zoom, {target: {value: '0.5'}});
     fireEvent.blur(zoom);
-    expect(written().actors[0].cameras?.[0].zoom).toBe(0.5);
+    expect(written().actors[0].camera?.zoom).toBe(0.5);
     fireEvent.change(zoom, {target: {value: '0'}});
     fireEvent.blur(zoom);
-    expect(written().actors[0].cameras?.[0].zoom).toBe(0.5);
+    expect(written().actors[0].camera?.zoom).toBe(0.5);
     expect(zoom).toHaveValue(0.5);
-    // Closed, the Viewport's inspector again, the new camera in its list.
+    // …and nothing written into its code.
+    expect(written().actors[0].blocks).toBeUndefined();
+    // Closed, the Viewport's inspector again.
     fireEvent.click(view.getByRole('button', {name: 'Close'}));
     expect(view.queryByTestId('camera-inspector')).toBeNull();
-    expect(view.getByRole('button', {name: /^Camera 2/})).toBeInTheDocument();
+    expect(view.getByTestId('camera-row')).toBeInTheDocument();
   });
 
   it('gives a placement that is not a Viewport no camera section', () => {

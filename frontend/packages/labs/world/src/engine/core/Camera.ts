@@ -62,25 +62,6 @@ export interface CameraInit {
   id: string;
   name?: string;
   /**
-   * The Viewport whose space this camera looks at, or that Viewport's id.
-   *
-   * Absent means the world's own — the root space — which is every camera
-   * declared before spaces had cameras of their own
-   * (specs/SPACE_CAMERAS_PLAN.md).
-   *
-   * THE ACTOR IS WHAT THE COMPILER PASSES, because a Viewport's stored camera
-   * is declared in its placement's own code, where the Viewport exists and
-   * `actor` is it (`BlocklyGenerator.cameraCode`). An id is accepted beside it
-   * for a caller that has one — the engine's own tests, and any code holding a
-   * name rather than a thing — and both are resolved when the call is made:
-   * nothing waits for a Viewport that is not there.
-   *
-   * NOT CALLED `space`, though it decides one, because {@link Camera.space} is
-   * the Space itself. One name for the thing asked for and another for the thing
-   * resolved beats one name meaning both.
-   */
-  viewport?: string | Actor;
-  /**
    * The point it shows at the MIDDLE of the view, in world pixels; defaults to
    * the middle of the world's own rectangle.
    */

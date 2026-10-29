@@ -2158,10 +2158,10 @@ describe('the camera-feel lesson’s check', () => {
     const screen = projectFiles(lesson.source)['screens/main.screen'];
     const game = (
       JSON.parse(screen) as {
-        actors: Array<{id: string; cameras?: Array<{traits: string[]}>}>;
+        actors: Array<{id: string; camera?: {traits: string[]}}>;
       }
     ).actors.find(actor => actor.id === 'Game')!;
-    expect(game.cameras?.[0].traits).toContain('Camera Follow#FollowsTrait');
+    expect(game.camera?.traits).toContain('Camera Follow#FollowsTrait');
   });
 
   it('refuses a view welded to the Hero', async () => {

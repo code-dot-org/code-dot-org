@@ -130,16 +130,15 @@ function describeActor(
           ...(options ? {options} : {}),
         };
       });
+  // Every elected trait, even one with nothing to set: the map editor knows a
+  // Viewport by its trait, which has no properties (specs/ONE_WORLD_PLAN.md).
   for (const trait of actor.traits()) {
-    const props = configurable(Object.values(trait.properties) as Property[]);
-    if (props.length) {
-      groups.push({
-        trait: trait.id,
-        traitName: trait.name,
-        ...(trait.description ? {traitDescription: trait.description} : {}),
-        props,
-      });
-    }
+    groups.push({
+      trait: trait.id,
+      traitName: trait.name,
+      ...(trait.description ? {traitDescription: trait.description} : {}),
+      props: configurable(Object.values(trait.properties) as Property[]),
+    });
   }
   // …and the ones this KIND declared for itself, which belong to no trait and
   // so appeared in no group. A `define property` invents none on purpose

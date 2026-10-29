@@ -56,7 +56,7 @@ describe('a Main Screen', () => {
     const {world} = await compileProject(simpleOnAScreen());
 
     // The screen's own view, which its camera is told.
-    const view = world.viewSize(world.camera('main'));
+    const view = world.viewSize(world.camera());
     expect({x: view.x, y: view.y}).toEqual({x: COLUMNS * 32, y: ROWS * 32});
   });
 

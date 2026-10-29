@@ -21,12 +21,7 @@ import {
   PositionProperty,
   ScaleProperty,
 } from '../rules/spatial';
-import {
-  ViewportScrollProperty,
-  ViewportShowsMapEvent,
-  ViewportShowsThroughProperty,
-  ViewportTrait,
-} from '../rules/viewport';
+import {ViewportShowsMapEvent, ViewportTrait} from '../rules/viewport';
 
 const Ping = new RuleBuilder({id: 'pinger', name: 'Pinger'}).addEvent('ping');
 
@@ -196,30 +191,6 @@ describe('loading into a Viewport', () => {
     expect(world.viewSize(added[0])).toEqual(new Vector(100, 80));
   });
 
-  it('keeps the camera inside the map as the Viewport scrolls it', () => {
-    // WHAT THIS USED TO SAY was that the camera followed the actor a map named,
-    // and that the engine clamped it. The following is gone — it is `Follows`
-    // on a camera now, elected like anything else — and the clamping stays,
-    // because a scroll view's `scroll` promises a reading of where it actually
-    // stopped (specs/SCROLLING_PLAN.md).
-    const world = makeWorld();
-    const window = placeWindow(world);
-    world.loadWorldMap(LEVEL);
-    const space = world.viewportSpaceOf(window)!;
-
-    window.set(ViewportScrollProperty, new Vector(0, 0));
-    world.tick(0);
-    expect(space.camera!.position).toEqual(new Vector(50, 40));
-
-    // Past the end on both axes: a 640 by 320 level seen through 100 by 80
-    // stops half a window from each far edge.
-    window.set(ViewportScrollProperty, new Vector(900, 900));
-    world.tick(0);
-    expect(space.camera!.position).toEqual(new Vector(590, 280));
-    // …and the clamped answer is what the project reads back.
-    expect(window.get(ViewportScrollProperty)).toEqual(new Vector(540, 240));
-  });
-
   it('replaces what the World held, and can be emptied', () => {
     const world = makeWorld();
     placeWindow(world);
@@ -361,11 +332,7 @@ describe('the mouse, through a Viewport', () => {
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160)); // corner at (150, 120)
     const [a] = world.loadWorldMap(LEVEL);
-    // The space's camera is where a load leaves it: the middle of its own
-    // window, since a map no longer says what to follow and nothing has
-    // scrolled it (specs/SPACE_CAMERAS_PLAN.md).
-    window.set(ViewportScrollProperty, new Vector(270, 120));
-    world.tick(0);
+    world.setViewportCamera(window, {position: new Vector(320, 160)});
     world.setPointer({x: 160, y: 130}, []); // 10 in from the corner
     const screenCoin = onScreen(world, 'screen');
 
@@ -417,19 +384,13 @@ describe('a camera’s zoom', () => {
   it('takes in its window over its zoom', () => {
     const world = makeWorld();
     const win = placeWindow(world);
-    world.defineCamera({id: 'wide', viewport: win, zoom: 0.5});
-    world.defineCamera({id: 'close', viewport: win, zoom: 2});
-    const space = world.viewportSpaceOf(win)!;
-
-    // The Window kind is 100 by 80.
-    expect(world.viewSize(space.cameraNamed('wide')!)).toEqual(
-      new Vector(200, 160),
-    );
-    expect(world.viewSize(space.cameraNamed('close')!)).toEqual(
-      new Vector(50, 40),
-    );
-    // …and its main camera, which says none, takes in its window.
-    expect(world.viewSize(space.camera!)).toEqual(new Vector(100, 80));
+    const camera = world.cameraOf(win)!;
+    // The Window kind is 100 by 80, which a camera that says no zoom takes in.
+    expect(world.viewSize(camera)).toEqual(new Vector(100, 80));
+    world.setViewportCamera(win, {zoom: 0.5});
+    expect(world.viewSize(camera)).toEqual(new Vector(200, 160));
+    world.setViewportCamera(win, {zoom: 2});
+    expect(world.viewSize(camera)).toEqual(new Vector(50, 40));
   });
 
   it('maps the pointer through it', () => {
@@ -437,9 +398,7 @@ describe('a camera’s zoom', () => {
     const window = placeWindow(world);
     window.set(PositionProperty, new Vector(200, 160)); // corner at (150, 120)
     const [a] = world.loadWorldMap(LEVEL);
-    window.set(ViewportScrollProperty, new Vector(270, 120));
-    world.tick(0);
-    world.viewportSpaceOf(window)!.camera!.zoom = 2;
+    world.setViewportCamera(window, {position: new Vector(320, 160), zoom: 2});
     world.setPointer({x: 160, y: 130}, []); // 10 in from the corner
 
     // At 2 the camera at (320, 160) shows 50 by 40: (295..345, 140..180),
@@ -458,13 +417,9 @@ describe('a camera’s zoom', () => {
   it('is never zero, negative or not a number', () => {
     const world = makeWorld();
     const win = placeWindow(world);
-    for (const [id, zoom] of [
-      ['none', 0],
-      ['less', -2],
-      ['nan', Number.NaN],
-    ] as const) {
-      world.defineCamera({id, viewport: win, zoom});
-      expect(world.viewportSpaceOf(win)!.cameraNamed(id)!.zoom).toBe(1);
+    for (const zoom of [0, -2, Number.NaN]) {
+      world.setViewportCamera(win, {zoom});
+      expect(world.cameraOf(win)!.zoom).toBe(1);
     }
   });
 });
@@ -647,27 +602,22 @@ describe('the cameras a world has', () => {
     expect([...world.cameras].length).toBe(before + 1);
   });
 
-  it('gives every space a main camera that is its own', () => {
-    // A camera's position belongs to a space and means nothing in another, so a
-    // Viewport showing a different scene cannot share the world's. Its main
-    // camera starts at the middle of its own window, not of the world's view.
+  it('gives every Viewport one camera that is its own', () => {
+    // It starts at the middle of its own window, not of the screen's.
     const world = makeWorld();
     const win = placeWindow(world);
     const space = world.viewportSpaceOf(win)!;
-    expect(space.cameras).toHaveLength(1);
-    expect(space.camera).toBe(space.cameras[0]);
+    expect(world.cameraOf(win)).toBe(space.camera);
     expect(space.camera!.position).toEqual(new Vector(50, 40));
-    expect(world.camera('main').position).not.toEqual(space.camera!.position);
+    expect(world.camera().position).not.toEqual(space.camera!.position);
   });
 
-  it('leaves the root space’s cameras to the world', () => {
-    // The root has none of its own: the world owns them directly, having no
-    // placement to own them for it. `space.camera` is undefined there, and the
-    // view is taken through the world's active camera as it always was.
+  it('leaves the screen’s camera to the world', () => {
+    // Neither the screen nor the World has a camera of its own space; the
+    // screen is seen through the world's one camera.
     const world = makeWorld();
-    const root = world.spaceOf(undefined);
-    expect(root.cameras).toEqual([]);
-    expect(root.camera).toBeUndefined();
+    expect(world.spaceOf(world.camera()).camera).toBeUndefined();
+    expect(world.spaceOf(undefined).camera).toBeUndefined();
     expect(world.activeCamera().id).toBe('main');
   });
 
@@ -698,7 +648,7 @@ describe('what a camera step is told about its space', () => {
     // The level is 20 by 10 tiles of 32 — the World grew to fit it — where
     // the screen, which the world's own camera looks at, is the default.
     expect(world.mapBounds(camera)).toEqual(new Vector(640, 320));
-    expect(world.mapBounds(world.camera('main'))).toEqual(new Vector(320, 320));
+    expect(world.mapBounds(world.camera())).toEqual(new Vector(320, 320));
   });
 
   it('answers with the Viewport’s window, not the world’s view', () => {
@@ -707,9 +657,7 @@ describe('what a camera step is told about its space', () => {
     const camera = world.viewportSpaceOf(win)!.camera!;
     // The Window kind is 100 by 80; the screen's view is the default.
     expect(world.viewSize(camera)).toEqual(new Vector(100, 80));
-    expect(world.viewSize(camera)).not.toEqual(
-      world.viewSize(world.camera('main')),
-    );
+    expect(world.viewSize(camera)).not.toEqual(world.viewSize(world.camera()));
   });
 
   it('leaves the world’s own cameras looking at the screen', () => {
@@ -718,7 +666,7 @@ describe('what a camera step is told about its space', () => {
     const world = makeWorld();
     placeWindow(world);
     world.loadWorldMap(LEVEL);
-    const own = world.camera('main');
+    const own = world.camera();
     expect(own.space).toBeUndefined();
     expect(world.mapBounds(own)).toEqual(new Vector(320, 320));
     expect(world.viewSize(own)).toEqual(new Vector(320, 320));
@@ -734,364 +682,74 @@ describe('what a camera step is told about its space', () => {
   });
 });
 
-describe('declaring a camera against a space', () => {
-  // A world declares cameras; a Viewport's space could not have any beyond the
-  // main one it is made with. `define camera ⟨wide⟩ of ⟨the Minimap⟩` is what
-  // this is the engine half of (specs/SPACE_CAMERAS_PLAN.md).
+describe('a camera trait, on a Viewport’s camera', () => {
+  // A camera rule's step walks `world.cameras.with(trait)`, and a Viewport's
+  // camera is in that collection — so following, easing, leading and
+  // confining reach it by being elected rather than by being written a second
+  // time in the engine (specs/SPACE_CAMERAS_PLAN.md).
 
-  it('puts a camera in the space that was named', () => {
+  it('runs for a Viewport’s camera', () => {
     const world = makeWorld();
     const win = placeWindow(world);
-    world.defineCamera({id: 'wide', viewport: 'win'});
-
-    const space = world.viewportSpaceOf(win)!;
-    expect(space.cameras.map(camera => camera.name)).toEqual(['main', 'wide']);
-    // The id carries the space so a list of every camera tells two `wide`s
-    // apart; the NAME is what an author wrote.
-    expect(space.cameraNamed('wide')!.id).toBe('win:wide');
-    // …looking at the World, which is what the Viewport shows.
-    expect(space.cameraNamed('wide')!.space).toBe(space.mirrorOf);
-    // …and the world's own list is untouched by it: `wide` is in no world list,
-    // and `World.camera` finds it only by looking through the spaces, which is
-    // what binds `camera` inside a `define camera ⟨…⟩ of ⟨…⟩` mouth.
-    expect(world.cameras.with(ViewportTrait)).toEqual([]);
-    expect(world.camera('wide').id).toBe('win:wide');
-    expect(world.camera('nothing by that name').id).toBe('main');
-  });
-
-  it('refuses a camera for something that is not a Viewport, loudly', () => {
-    // AN EARLIER VERSION HELD IT, forever and in silence, so that a world's
-    // prologue could declare a camera before the main map placed its Viewports.
-    // The place to declare a Viewport's camera is that Viewport's own `on
-    // create`, where it exists and `this actor` is it — so there is nothing to
-    // wait for, and a name that resolves to no Viewport is a mistake to say out
-    // loud (specs/SPACE_CAMERAS_PLAN.md).
-    const world = makeWorld();
-    expect(() => world.defineCamera({id: 'wide', viewport: 'win'})).toThrow(
-      /not a Viewport/,
-    );
-    // …and by ACTOR too, which is what the block passes.
-    const coin = world.addActor(Coin.instantiate('c1', 'actors/coin'));
-    expect(() => world.defineCamera({id: 'wide', viewport: coin})).toThrow(
-      /not a Viewport/,
-    );
-    expect([...world.cameras]).toHaveLength(1);
-  });
-
-  it('takes the Viewport itself, which is what `this actor` gives it', () => {
-    // The shape the block generates: `define camera ⟨wide⟩ for ⟨this actor⟩` in
-    // a Viewport placement's `on create`.
-    const world = makeWorld();
-    const win = placeWindow(world);
-    world.defineCamera({id: 'wide', viewport: win});
-    expect(
-      world.viewportSpaceOf(win)!.cameras.map(camera => camera.name),
-    ).toEqual(['main', 'wide']);
-  });
-
-  it('declares the same camera twice as once, so a reload cannot stack them', () => {
-    const world = makeWorld();
-    const win = placeWindow(world);
-    world.defineCamera({id: 'wide', viewport: 'win'});
-    world.defineCamera({id: 'wide', viewport: 'win'});
-    expect(world.viewportSpaceOf(win)!.cameras).toHaveLength(2);
-  });
-
-  it('keeps two spaces’ cameras apart, positions and all', () => {
-    const world = makeWorld();
-    const one = placeWindow(world);
-    const two = world.addActor(Window.instantiate('win2', 'actors/window'));
-    world.defineCamera({id: 'wide', viewport: 'win'});
-    world.defineCamera({id: 'wide', viewport: 'win2'});
-
-    const a = world.viewportSpaceOf(one)!.cameraNamed('wide')!;
-    const b = world.viewportSpaceOf(two)!.cameraNamed('wide')!;
-    expect(a).not.toBe(b);
-    expect([a.id, b.id]).toEqual(['win:wide', 'win2:wide']);
-
-    a.position = new Vector(7, 7);
-    expect(b.position).toEqual(new Vector(50, 40));
-  });
-
-  it('starts a space’s camera in the middle of that space’s window', () => {
-    // As the space's main camera does, and for the reason the world's rest in
-    // the middle of the world's view.
-    const world = makeWorld();
-    const win = placeWindow(world);
-    world.defineCamera({id: 'wide', viewport: 'win'});
-    expect(world.viewportSpaceOf(win)!.cameraNamed('wide')!.position).toEqual(
-      new Vector(50, 40),
-    );
-  });
-
-  it('still declares a world’s own camera exactly as before', () => {
-    const world = makeWorld();
-    world.defineCamera({id: 'wide'});
-    expect(world.camera('wide').id).toBe('wide');
-    expect(world.camera('wide').space).toBeUndefined();
-  });
-});
-
-describe('which camera a Viewport shows through', () => {
-  // A PROPERTY, because a Viewport is a placement: a field in the inspector and
-  // a `set` block come with it, so cutting to another camera is an ordinary set
-  // (specs/SPACE_CAMERAS_PLAN.md). The world has `setActiveCamera` instead, for
-  // want of a placement to hang a field on.
-
-  it('is its main camera when it says nothing', () => {
-    const world = makeWorld();
-    const win = placeWindow(world);
-    const space = world.viewportSpaceOf(win)!;
-    expect(win.get(ViewportShowsThroughProperty)).toBe('');
-    expect(space.camera).toBe(space.cameraNamed('main'));
-  });
-
-  it('cuts to another camera on the next tick, and back', () => {
-    const world = makeWorld();
-    const win = placeWindow(world);
-    world.defineCamera({id: 'chase', viewport: 'win'});
-    const space = world.viewportSpaceOf(win)!;
-
-    win.set(ViewportShowsThroughProperty, 'chase');
-    world.tick(0);
-    expect(space.camera).toBe(space.cameraNamed('chase'));
-
-    // …and back, which is the whole point of it being a value rather than
-    // structure: switching moves a transform and rebuilds nothing.
-    win.set(ViewportShowsThroughProperty, '');
-    world.tick(0);
-    expect(space.camera).toBe(space.cameraNamed('main'));
-  });
-
-  it('shows through its main camera for a name no camera has', () => {
-    // The name arrives from a field or from generated code, so an unknown one is
-    // the default rather than a black screen — the answer `World.camera` already
-    // gives for an unknown id.
-    const world = makeWorld();
-    const win = placeWindow(world);
-    const space = world.viewportSpaceOf(win)!;
-
-    win.set(ViewportShowsThroughProperty, 'nothing by that name');
-    world.tick(0);
-    expect(space.camera).toBe(space.cameraNamed('main'));
-  });
-
-  it('is what `look through camera` sets, for a Viewport’s camera too', () => {
-    // The block generates `world.setActiveCamera(id)`, which used to search
-    // the world's own list alone and refuse a Viewport's camera in silence —
-    // so a box told to look through its chase camera kept looking through
-    // its main one. Found by the declared id, as `camera()` finds it, and
-    // written to `shows through` so the tick does not undo it.
-    const world = makeWorld();
-    const win = placeWindow(world);
-    world.defineCamera({id: 'chase', viewport: win});
-    const space = world.viewportSpaceOf(win)!;
-
-    world.setActiveCamera('chase');
-    expect(space.camera).toBe(space.cameraNamed('chase'));
-    expect(win.get(ViewportShowsThroughProperty)).toBe('chase');
-    world.tick(0);
-    expect(space.camera).toBe(space.cameraNamed('chase'));
-    // …and the world's own view is untouched by it.
-    expect(world.activeCamera().id).toBe('main');
-
-    // An id nothing has still leaves every view where it was.
-    world.setActiveCamera('nothing by that name');
-    expect(space.camera).toBe(space.cameraNamed('chase'));
-    expect(world.activeCamera().id).toBe('main');
-  });
-
-  it('keeps two Viewports’ choices apart', () => {
-    const world = makeWorld();
-    const one = placeWindow(world);
-    const two = world.addActor(Window.instantiate('win2', 'actors/window'));
-    world.defineCamera({id: 'chase', viewport: 'win'});
-    world.defineCamera({id: 'chase', viewport: 'win2'});
-
-    one.set(ViewportShowsThroughProperty, 'chase');
-    world.tick(0);
-    expect(world.viewportSpaceOf(one)!.camera!.id).toBe('win:chase');
-    expect(world.viewportSpaceOf(two)!.camera!.id).toBe('win2:main');
-  });
-});
-
-describe('a camera trait, on a space’s camera', () => {
-  // WHERE THE PLAN STOPS BEING INVISIBLE. A camera rule's step walks
-  // `world.cameras.with(trait)`, and a Viewport's camera is in that collection
-  // now — so following, easing, leading and confining reach a Viewport's camera
-  // by being elected rather than by being written a second time in the engine
-  // (specs/SPACE_CAMERAS_PLAN.md).
-
-  it('runs for a camera a space owns, not only the world’s', () => {
-    const world = makeWorld();
-    placeWindow(world);
-    world.defineCamera({
-      id: 'corner',
-      viewport: 'win',
-      traits: [AimsAtTheCorner],
-    });
+    world.setViewportCamera(win, {traits: [AimsAtTheCorner]});
     aimed.clear();
 
     world.tick(0);
-    expect([...aimed.keys()]).toEqual(['win:corner']);
+    expect([...aimed.keys()]).toEqual(['win:main']);
   });
 
-  it('asks the world about ITS space while it runs', () => {
-    // The whole of why a camera knows its space. A step that asks `map size`
-    // with no subject gets the space's bounds and the Viewport's window, which
-    // is what `Confined to the Map` needs to mean something here.
+  it('asks the world about the World while it runs', () => {
+    // A step that asks `map size` with no subject gets the World's bounds and
+    // the Viewport's window, which is what `Confined to the Map` needs.
     const world = makeWorld();
-    placeWindow(world);
+    const win = placeWindow(world);
     world.loadWorldMap(LEVEL);
-    world.defineCamera({
-      id: 'corner',
-      viewport: 'win',
-      traits: [AimsAtTheCorner],
-    });
+    world.setViewportCamera(win, {traits: [AimsAtTheCorner]});
     aimed.clear();
 
     world.tick(0);
-    expect(aimed.get('win:corner')).toEqual({
+    expect(aimed.get('win:main')).toEqual({
       map: new Vector(640, 320),
       view: new Vector(100, 80),
     });
   });
 
-  it('leaves the world’s own cameras asking about the screen', () => {
+  it('runs for two Viewports at once, each through its own window', () => {
     const world = makeWorld();
-    placeWindow(world);
-    world.defineCamera({id: 'corner', traits: [AimsAtTheCorner]});
-    aimed.clear();
-
-    world.tick(0);
-    expect(aimed.get('corner')).toEqual({
-      map: new Vector(320, 320),
-      view: new Vector(320, 320),
-    });
-  });
-
-  it('runs for both at once, each about its own space', () => {
-    const world = makeWorld();
-    placeWindow(world);
+    const win = placeWindow(world);
+    const mini = world.addActor(Window.instantiate('mini', 'actors/window'));
     world.loadWorldMap(LEVEL);
-    world.defineCamera({id: 'corner', traits: [AimsAtTheCorner]});
-    world.defineCamera({
-      id: 'corner',
-      viewport: 'win',
-      traits: [AimsAtTheCorner],
-    });
+    world.setViewportCamera(win, {traits: [AimsAtTheCorner]});
+    world.setViewportCamera(mini, {traits: [AimsAtTheCorner]});
     aimed.clear();
 
     world.tick(0);
-    expect([...aimed.keys()].sort()).toEqual(['corner', 'win:corner']);
-    expect(aimed.get('corner')!.map).not.toEqual(aimed.get('win:corner')!.map);
+    expect([...aimed.keys()].sort()).toEqual(['mini:main', 'win:main']);
   });
 });
 
 describe('what the engine does to a camera a trait has aimed', () => {
   it('leaves where the trait put it', () => {
-    // THE CLAIM STEP 6 IS FOR. The trait aims the camera in the `aim` phase; the
-    // engine's own follow-and-clamp runs at the end of the tick and writes the
-    // camera position from the map's `camera.follows` or the Viewport's scroll.
-    // Two things writing one value, and the later one wins — so a Viewport's
-    // camera cannot be aimed by a rule while that branch exists
-    // (specs/SPACE_CAMERAS_PLAN.md).
+    // The trait aims the camera in the `aim` phase, and nothing in the engine
+    // writes over it at the end of the tick (specs/SPACE_CAMERAS_PLAN.md).
     const world = makeWorld();
     const win = placeWindow(world);
     world.loadWorldMap(LEVEL);
-    world.defineCamera({
-      id: 'corner',
-      viewport: 'win',
-      traits: [AimsAtTheCorner],
-    });
-    win.set(ViewportShowsThroughProperty, 'corner');
+    world.setViewportCamera(win, {traits: [AimsAtTheCorner]});
 
     world.tick(0);
-    const camera = world.viewportSpaceOf(win)!.cameraNamed('corner')!;
-    // EXACTLY WHERE THE STEP PUT IT, and not clamped. This trait does not elect
-    // `Confined to the Map`, so nothing confines it — which is how the world's
-    // cameras have always behaved, and is the difference between the engine
-    // helping and the engine overruling.
-    expect(camera.position).toEqual(new Vector(0, 0));
-  });
-
-  it('still scrolls a camera that elects nothing, and clamps that', () => {
-    // The other half of the same rule. A camera with no traits is the
-    // Viewport's to scroll, because a scroll view is the Viewport deciding
-    // about the scene it shows — and `scroll` promises a reading of where it
-    // actually stopped, so that path clamps (specs/SCROLLING_PLAN.md).
-    const world = makeWorld();
-    const win = placeWindow(world);
-    world.loadWorldMap(LEVEL);
-
-    win.set(ViewportScrollProperty, new Vector(900, 900));
-    world.tick(0);
-    expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
-      new Vector(590, 280),
-    );
-  });
-});
-
-describe('what a camera that elects nothing looks at', () => {
-  // THE TOP LEFT OF WHAT IT SHOWS, in every space alike — and it already did.
-  // specs/SPACE_CAMERAS_PLAN.md proposed changing the default to this and was
-  // describing the existing behaviour by mistake: a camera's position is the
-  // MIDDLE of the view, so one resting half a view in frames the first
-  // screenful from the corner. Nothing asserted it, which is how the plan came
-  // to argue with it, so these are the assertions.
-
-  /** Where the top-left corner of the view sits, given a camera and a window. */
-  const shows = (at: Vector, view: Vector) =>
-    new Vector(at.x - view.x / 2, at.y - view.y / 2);
-
-  it('is the corner of the world, for the world’s own camera', () => {
-    const world = makeWorld();
-    expect(shows(world.activeCamera().position, world.viewSize())).toEqual(
-      new Vector(0, 0),
-    );
-  });
-
-  it('stays the corner when the world says how wide it is', () => {
-    // `set size of view` sweeps a camera that is still where it was declared,
-    // so the framing survives a resize rather than jumping a quarter of a level.
-    const world = makeWorld();
-    world.setViewSize(26, 16);
-    expect(shows(world.activeCamera().position, world.viewSize())).toEqual(
-      new Vector(0, 0),
-    );
-  });
-
-  it('is the corner of the space, for a Viewport’s camera', () => {
-    const world = makeWorld();
-    const win = placeWindow(world);
-    world.loadWorldMap(LEVEL);
-    const camera = world.viewportSpaceOf(win)!.camera!;
-    expect(shows(camera.position, world.viewSize(camera))).toEqual(
-      new Vector(0, 0),
-    );
-  });
-
-  it('is still the corner after a tick, which is what settles a space', () => {
-    // A scroll of nothing is the corner, and that is what the engine writes when
-    // a camera elects nothing (specs/SPACE_CAMERAS_PLAN.md step 6).
-    const world = makeWorld();
-    const win = placeWindow(world);
-    world.loadWorldMap(LEVEL);
-    world.tick(0);
-    const camera = world.viewportSpaceOf(win)!.camera!;
-    expect(shows(camera.position, world.viewSize(camera))).toEqual(
-      new Vector(0, 0),
-    );
+    // EXACTLY WHERE THE STEP PUT IT, and not clamped: this trait does not
+    // elect `Confined to the Map`, so nothing confines it.
+    expect(world.cameraOf(win)!.position).toEqual(new Vector(0, 0));
   });
 });
 
 describe('following, from a camera in a Viewport', () => {
-  // The scenario that found the gap: the same level loaded in the main world
-  // AND in a Viewport, and the Viewport's camera told to follow `any ⟨Pilot⟩`.
-  // Every Pilot is in every space, and the first is the root's
+  // The scenario that found the gap: a coin on the screen AND in the World,
+  // and the Viewport's camera told to follow the first coin in its space
   // (specs/SPACE_CAMERAS_PLAN.md).
 
-  it('follows the coin in ITS space, while the world’s camera follows the screen’s', () => {
+  it('follows the coin in the World, not the one on the screen', () => {
     const world = makeWorld();
     onScreen(world, 'rc', new Vector(11, 12));
     const win = placeWindow(world);
@@ -1104,12 +762,9 @@ describe('following, from a camera in a Viewport', () => {
         },
       ],
     });
-    world.defineCamera({id: 'chase', traits: [FollowsACoin]});
-    world.defineCamera({id: 'chase', viewport: win, traits: [FollowsACoin]});
-    win.set(ViewportShowsThroughProperty, 'chase');
+    world.setViewportCamera(win, {traits: [FollowsACoin]});
 
     world.tick(0);
-    expect(world.camera('chase').position).toEqual(new Vector(11, 12));
     expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
       held.get(PositionProperty),
     );
@@ -1119,8 +774,7 @@ describe('following, from a camera in a Viewport', () => {
     const world = makeWorld();
     onScreen(world, 'rc');
     const win = placeWindow(world);
-    world.defineCamera({id: 'chase', viewport: win, traits: [FollowsACoin]});
-    win.set(ViewportShowsThroughProperty, 'chase');
+    world.setViewportCamera(win, {traits: [FollowsACoin]});
     const before = world.viewportSpaceOf(win)!.camera!.position;
 
     world.tick(0);
@@ -1217,8 +871,7 @@ describe('when a Viewport shows a map', () => {
     const world = makeWorld();
     onScreen(world, 'rc', new Vector(11, 12));
     const win = placeWindow(world);
-    world.defineCamera({id: 'chase', viewport: win, traits: [FollowsACoin]});
-    win.set(ViewportShowsThroughProperty, 'chase');
+    world.setViewportCamera(win, {traits: [FollowsACoin]});
     win.on(ViewportShowsMapEvent, () => undefined);
 
     world.loadWorldMap(LEVEL);
@@ -1227,56 +880,6 @@ describe('when a Viewport shows a map', () => {
     expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
       held.get(PositionProperty),
     );
-  });
-});
-
-describe('a Viewport that elects a camera trait', () => {
-  // THE SIMPLE CASE MADE SIMPLE. A Viewport wants to follow something, and the
-  // way to say so was: declare a camera for it, give that camera the trait,
-  // set the trait's property on it, and look through it. Four blocks, two of
-  // them ceremony. A kind that shows a map may elect the camera trait itself;
-  // it goes to the space's main camera, and the property is the Viewport's —
-  // a field in its inspector (specs/SPACE_CAMERAS_PLAN.md, "simplifying").
-  const Follower = new ActorBuilder({id: 'follower', name: 'Follower'})
-    .useTraits([ViewportTrait])
-    .useCameraTraits([FollowsACoin])
-    .set(IntrinsicSizeProperty, new Vector(100, 80));
-  const built = () => {
-    const world = makeWorld();
-    world.define('actors/follower', Follower);
-    const win = world.addActor(Follower.instantiate('f1', 'actors/follower'));
-    world.loadWorldMap(LEVEL);
-    return {world, win};
-  };
-
-  it('gives the trait to its main camera, and the camera follows', () => {
-    const {world, win} = built();
-    const space = world.viewportSpaceOf(win)!;
-    expect(space.cameras.map(camera => camera.name)).toEqual(['main']);
-    expect(space.camera!.has(FollowsACoin)).toBe(true);
-
-    world.tick(0);
-    const held = [...world.actors].find(actor => actor.id === 'a')!;
-    expect(space.camera!.position).toEqual(held.get(PositionProperty));
-  });
-
-  it('lends the trait’s properties from the Viewport to the camera each tick', () => {
-    // Set on the ACTOR, which is what the inspector writes and what
-    // `set … of ⟨this actor⟩` does; read by the rule off the camera.
-    const {world, win} = built();
-    win.set(Offset, 7);
-    world.tick(0);
-    const held = [...world.actors].find(actor => actor.id === 'a')!;
-    const at = held.get(PositionProperty) as Vector;
-    expect(world.viewportSpaceOf(win)!.camera!.position).toEqual(
-      new Vector(at.x + 7, at.y),
-    );
-  });
-
-  it('holds the trait itself too, so the property has a slot', () => {
-    const {win} = built();
-    expect(win.has(FollowsACoin)).toBe(true);
-    expect(win.get(Offset)).toBe(0);
   });
 });
 
@@ -1407,21 +1010,21 @@ describe('world blocks act on the World', () => {
   it('sizes the level, not the screen', () => {
     const {world, space} = loaded(running => running.setMapSize(30, 12));
     expect(space.bounds).toEqual(new Vector(30 * 32, 12 * 32));
-    expect(world.mapBounds(world.camera('main'))).not.toEqual(space.bounds);
+    expect(world.mapBounds(world.camera())).not.toEqual(space.bounds);
   });
 
   it('replaces the World’s map from code in it, and leaves the screen', () => {
     // A level change, a restart and the overworld are all `load map` from
     // the level (specs/ONE_WORLD_PLAN.md).
     const {world, coin, space} = loaded();
-    const before = world.spaceOf(world.camera('main')).loads.length;
+    const before = world.spaceOf(world.camera()).loads.length;
     const [door] = world.withActor(coin, () =>
       world.loadMap({actors: [{type: 'actors/coin', id: 'door'}]}),
     );
     expect(world.spaceOf(door)).toBe(space);
     expect(space.loads).toHaveLength(1);
     expect(coin.world).toBeUndefined();
-    expect(world.spaceOf(world.camera('main')).loads).toHaveLength(before);
+    expect(world.spaceOf(world.camera()).loads).toHaveLength(before);
   });
 
   it('puts a map up over the screen by name, and takes the newest back', () => {
@@ -1438,7 +1041,7 @@ describe('world blocks act on the World', () => {
 });
 
 describe('a Viewport placed by a map', () => {
-  it('looks through its chosen camera from the first frame, on the level', () => {
+  it('has its camera set up from the first frame, on the level', () => {
     // The World's map is loaded before the screen is, so a camera the
     // screen's script declares can be aimed at what the level holds; and the
     // camera it names is the one it looks through before any tick
@@ -1448,33 +1051,17 @@ describe('a Viewport placed by a map', () => {
     world.loadWorldMap('maps/level');
     const order: string[] = [];
     world.loadScreen({
-      actors: [
-        {
-          type: 'actors/window',
-          id: 'win',
-          properties: {
-            [ViewportShowsThroughProperty.ownerId]: {
-              [ViewportShowsThroughProperty.id]: 'chase',
-            },
-          },
-        },
-      ],
+      actors: [{type: 'actors/window', id: 'win'}],
       script: (running, placed) => {
         const space = levelOf(running, placed.win);
         order.push(`level holds ${space.loads[0]?.actors.length ?? 0}`);
-        running.defineCamera({
-          id: 'chase',
-          name: 'chase',
-          viewport: placed.win,
-          traits: [FollowsACoin],
-        });
+        running.setViewportCamera(placed.win, {traits: [FollowsACoin]});
       },
     });
     expect(order).toEqual(['level holds 3']);
 
     const win = [...world.actors].find(actor => actor.id === 'win')!;
     const space = world.viewportSpaceOf(win)!;
-    expect(space.camera!.name).toBe('chase');
 
     world.tick(0);
     const coin = [...world.actors].find(actor => actor.id === 'a')!;

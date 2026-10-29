@@ -124,11 +124,11 @@ export function readProbe(world: World, probe: Probe): unknown {
     case 'cameras': {
       const view = viewOf(world);
       return view
-        ? view.cameras.map(camera => ({
+        ? (view.camera ? [view.camera] : []).map(camera => ({
             id: camera.id,
             x: camera.position.x,
             y: camera.position.y,
-            active: camera === view.camera,
+            active: true,
           }))
         : world.cameraSnapshot().map(camera => ({
             id: camera.id,

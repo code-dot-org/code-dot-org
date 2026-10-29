@@ -42,8 +42,6 @@ interface ReconcilableWorld {
     cameras: string[];
     /** Where each looks from — a value, written every tick by a follow step. */
     cameraPositions: Record<string, {x: number; y: number}>;
-    /** Which one the view uses — a value: cutting between them is not a reload. */
-    activeCamera: string;
     /** Every handler in the world, hashed with its body (`Actor.handlerIds`). */
     handlerIds: string[];
     /** Which traits each actor holds — structural, like the handlers. */
@@ -77,8 +75,7 @@ interface ReconcilableWorld {
   setWorldProperty(path: string, value: unknown): boolean;
   setActorProperty(actorId: string, path: string, value: unknown): boolean;
   setBackground(sprite: string | undefined, layer?: string): unknown;
-  setCameraPosition(position: {x: number; y: number}, id?: string): unknown;
-  setActiveCamera(id: string): unknown;
+  setCameraPosition(position: {x: number; y: number}): unknown;
   setLayerParallax(parallax: {x: number; y: number}, layer?: string): unknown;
   setLayerFit(fit: boolean, layer?: string): unknown;
   setBackgroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
@@ -180,7 +177,6 @@ export function reconcile(
   // structural and live in `effectIds`.
   const backdropChanged =
     stable(previous.cameraPositions) !== stable(snapshot.cameraPositions) ||
-    previous.activeCamera !== snapshot.activeCamera ||
     stable(previous.layerMotion) !== stable(snapshot.layerMotion) ||
     stable(previous.backdrops) !== stable(snapshot.backdrops) ||
     stable(previous.screenBackdrops) !== stable(snapshot.screenBackdrops) ||
@@ -255,9 +251,10 @@ export function reconcile(
       running.setActorProperty(actorId, path, value);
     }
     for (const [id, position] of Object.entries(snapshot.cameraPositions)) {
-      running.setCameraPosition(position, id);
+      if (id === snapshot.cameras[0]) {
+        running.setCameraPosition(position);
+      }
     }
-    running.setActiveCamera(snapshot.activeCamera);
     for (const [id, motion] of Object.entries(snapshot.layerMotion)) {
       running.setLayerParallax(motion.parallax, id);
       running.setLayerFit(motion.fit, id);

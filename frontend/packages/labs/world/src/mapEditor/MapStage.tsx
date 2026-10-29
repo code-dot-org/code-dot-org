@@ -62,7 +62,6 @@ import {IMPORT_STYLE_VALUE, requestStyleImport} from '../styles/styleImport';
 
 import {AngleInput} from './AngleInput';
 import {CameraInspector} from './CameraInspector';
-import {CameraList, type ListedCamera} from './CameraList';
 import {
   dividerAt,
   dockChoices,
@@ -86,14 +85,9 @@ import {LayerPanel} from './LayerPanel';
 import styles from './mapEditor.module.css';
 import {MapInspector} from './MapInspector';
 import {
-  addPlacementCamera,
-  removePlacementCamera,
-  renamePlacementCamera,
-  showsThroughOf,
   withPlacementCameraTrait,
   withPlacementCameraValue,
   withPlacementCameraZoom,
-  withShowsThrough,
   asVec,
   extentOf,
   positionOf,
@@ -166,7 +160,7 @@ import {
 import {useAfterImport} from './useAfterImport';
 import {VectorInput} from './VectorInput';
 import {WithheldNote} from './WithheldNote';
-import {MAIN_CAMERA, type CameraProperty} from './worldCameraCode';
+import type {CameraProperty} from './worldCameraCode';
 import {WorldInspector, type WorldInspectorProps} from './WorldInspector';
 import type {CameraTraitChoice} from './worldRuleProperties';
 
@@ -490,24 +484,17 @@ const ToolbarIcon = ({
   </Tooltip>
 );
 
-/** What a Viewport's cameras can be told, from the strip and the inspector. */
+/** What a Viewport's camera can be told, from its inspector. */
 interface CameraEditor {
-  /** The camera it looks through (`MAIN_CAMERA` default). */
-  starting: string;
   /** The traits the project's rules offer a camera. */
   choices: readonly CameraTraitChoice[];
-  traitsOf: (id: string) => string[];
-  valueOf: (id: string, property: CameraProperty) => string | undefined;
-  /** Add one, answering its id. */
-  add: () => string | undefined;
-  remove: (id: string) => void;
-  rename: (id: string, name: string) => void;
-  setStarting: (id: string) => void;
-  setTrait: (id: string, trait: string, elected: boolean) => void;
-  setValue: (id: string, property: CameraProperty, value: string) => void;
-  /** A camera's zoom, 1 when it says none. */
-  zoomOf: (id: string) => number;
-  setZoom: (id: string, zoom: number) => void;
+  traits: readonly string[];
+  valueOf: (property: CameraProperty) => string | undefined;
+  setTrait: (trait: string, elected: boolean) => void;
+  setValue: (property: CameraProperty, value: string) => void;
+  /** Its zoom, 1 when it says none. */
+  zoom: number;
+  setZoom: (zoom: number) => void;
 }
 
 export const MapStage = ({
@@ -605,15 +592,15 @@ export const MapStage = ({
   /** Whether the layers in front of the selected one are drawn anyway. */
   const [allLayers, setAllLayers] = useState(false);
   const [inspectingLayer, setInspectingLayer] = useState(false);
-  /** The world's camera open in its inspector, if one is. */
-  const [inspectingCamera, setInspectingCamera] = useState<string | null>(null);
+  /** Whether the selected Viewport's camera is open in its inspector. */
+  const [inspectingCamera, setInspectingCamera] = useState(false);
   // A placement selected closes the layer's and the camera's inspectors, so
   // deselecting it goes back to the world's rather than to one nobody asked
   // for again.
   useEffect(() => {
     if (selectedId) {
       setInspectingLayer(false);
-      setInspectingCamera(null);
+      setInspectingCamera(false);
     }
   }, [selectedId]);
   /**
@@ -823,8 +810,7 @@ export const MapStage = ({
   // of rows over the top-left of the map, so they start hidden behind a
   // toolbar button. A lesson that points at them opens them
   // (`callouts/places`, `map.layers`). The cameras were the other such
-  // panel; they are a section of the inspector of what has them now
-  // (`CameraList`).
+  // panel; a Viewport's camera is a row of its own inspector now.
   const [panels, setPanels] = useState({layers: false});
   const togglePanel = (panel: 'layers') =>
     setPanels(open => ({...open, [panel]: !open[panel]}));
@@ -1654,40 +1640,6 @@ export const MapStage = ({
     // quietly. So this one is special-cased into a dropdown of the project's
     // themes, and an enum property type is what would replace it the day a
     // second property wants one (specs/STYLES_PLAN.md).
-    // WHICH CAMERA A VIEWPORT LOOKS THROUGH, by name: a dropdown of its own
-    // cameras rather than a box to type one into, where a name no camera
-    // has quietly fell back to the main one (`ViewportShowsThroughProperty`).
-    if (
-      selectedActor &&
-      prop.ownerId === VIEWPORT.trait &&
-      prop.propId === VIEWPORT.showsThrough
-    ) {
-      const names = (selectedActor.cameras ?? []).map(camera => camera.name);
-      const chosen = draft[fieldKey(prop)] ?? '';
-      return (
-        <SimpleDropdown
-          key={fieldKey(prop)}
-          name={`prop-${fieldKey(prop)}`}
-          labelText={capitalize(prop.name)}
-          size="s"
-          className={styles.inspectorDropdown}
-          disabled={locked}
-          selectedValue={chosen}
-          items={[
-            {value: '', text: 'Main camera'},
-            ...[...new Set(names)].map(name => ({value: name, text: name})),
-            // …and a name no camera has any more, shown as itself rather
-            // than as the main camera it now falls back to.
-            ...(chosen && !names.includes(chosen)
-              ? [{value: chosen, text: `${chosen} (missing)`}]
-              : []),
-          ]}
-          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-            selectOption(prop, event.target.value)
-          }
-        />
-      );
-    }
     if (prop.ownerId === STYLED.trait && prop.propId === STYLED.theme) {
       return (
         <SimpleDropdown
@@ -3077,10 +3029,7 @@ export const MapStage = ({
       // At the zoom of the camera it looks through, about the middle of the
       // box, where a camera at rest is (specs/MIRRORING_PLAN.md, step 7): so a
       // minimap reads as one before the game runs.
-      const through = owner.cameras?.find(
-        camera => camera.name === showsThroughOf(owner),
-      );
-      const zoom = through?.zoom ?? 1;
+      const zoom = owner.camera?.zoom ?? 1;
       ctx.scale(zoom, zoom);
       ctx.translate(-hw, -hh);
       for (const inside of held.actors) {
@@ -3372,104 +3321,75 @@ export const MapStage = ({
     return scriptButtonAt(corners, SCRIPT_BUTTON, size, SCRIPT_BUTTON_GAP);
   })();
 
-  // A SELECTED VIEWPORT'S cameras, edited through the list and inspector:
-  // data on the placement, made here and nowhere else, which the compiler
-  // turns into their declarations (`blockly/placementCameras`). Its `shows
-  // through` says which it looks through, by name.
+  // A SELECTED VIEWPORT'S camera, edited in its inspector: data on the
+  // placement, made here and nowhere else, which the compiler turns into its
+  // set-up (`blockly/placementCameras`).
   const isViewport = selectedSchema.some(
     group => group.trait === VIEWPORT.trait,
   );
-  const viewportCameraEditor: CameraEditor | undefined =
+  const settable = selectedSchema.filter(group => group.props.length > 0);
+  const cameraEditor: CameraEditor | undefined =
     selectedActor && isViewport && cameraChoices
       ? (() => {
           const actor = selectedActor;
-          const stored = actor.cameras ?? [];
-          const named = (id: string) => stored.find(camera => camera.id === id);
+          const held = actor.camera;
           return {
-            starting:
-              stored.find(camera => camera.name === showsThroughOf(actor))
-                ?.id ?? MAIN_CAMERA,
             choices: cameraChoices,
-            traitsOf: id => named(id)?.traits ?? [],
-            valueOf: (id, property) =>
-              named(id)?.values.find(each => each.setter === property.setter)
-                ?.value,
-            add: () => {
-              const made = addPlacementCamera(mapRef.current, actor.id);
-              commit(made.doc);
-              return made.id;
-            },
-            remove: id =>
-              commit(removePlacementCamera(mapRef.current, actor.id, id)),
-            rename: (id, name) =>
-              commit(renamePlacementCamera(mapRef.current, actor.id, id, name)),
-            setStarting: id =>
-              commit(
-                withShowsThrough(
-                  mapRef.current,
-                  actor.id,
-                  id === MAIN_CAMERA ? '' : (named(id)?.name ?? ''),
-                ),
-              ),
-            setTrait: (id, trait, elected) =>
+            traits: held?.traits ?? [],
+            valueOf: property =>
+              held?.values.find(each => each.setter === property.setter)?.value,
+            setTrait: (trait, elected) =>
               commit(
                 withPlacementCameraTrait(
                   mapRef.current,
                   actor.id,
-                  id,
                   trait,
                   elected,
                 ),
               ),
-            setValue: (id, property, value) =>
+            setValue: (property, value) =>
               commit(
-                withPlacementCameraValue(mapRef.current, actor.id, id, {
+                withPlacementCameraValue(mapRef.current, actor.id, {
                   setter: property.setter,
                   type: property.type,
                   value,
                 }),
               ),
-            zoomOf: id => named(id)?.zoom ?? 1,
-            setZoom: (id, zoom) =>
-              commit(
-                withPlacementCameraZoom(mapRef.current, actor.id, id, zoom),
-              ),
+            zoom: held?.zoom ?? 1,
+            setZoom: zoom =>
+              commit(withPlacementCameraZoom(mapRef.current, actor.id, zoom)),
           };
         })()
       : undefined;
-  const cameraEditor = viewportCameraEditor;
-  const editableCameras: readonly ListedCamera[] = selectedActor?.cameras ?? [];
-  /** The camera open in the inspector, while it still exists. */
-  const inspectedCamera =
-    cameraEditor && inspectingCamera
-      ? inspectingCamera === MAIN_CAMERA
-        ? {id: MAIN_CAMERA, name: 'Main camera'}
-        : editableCameras.find(each => each.id === inspectingCamera)
-      : undefined;
-  // A selected Viewport's cameras, as a section of its inspector; a map and
-  // a screen have none of their own (specs/SPACE_CAMERAS_PLAN.md). A row opens the camera's inspector in
-  // place of this one, and its Close comes back.
+  const inspectedCamera = Boolean(cameraEditor && inspectingCamera);
+  // A selected Viewport's camera, as a row of its inspector that opens the
+  // camera's inspector in its place; its Close comes back.
   const cameraSection =
-    !appBuilder && selectedActor && viewportCameraEditor ? (
-      <CameraList
-        cameras={editableCameras}
-        owner={selectedActor.id}
-        edits={{
-          starting: viewportCameraEditor.starting,
-          onSelect: id => {
-            setInspectingCamera(id);
+    !appBuilder && cameraEditor ? (
+      <section
+        className={styles.cameraList}
+        aria-label="Camera"
+        data-testid="camera-row"
+      >
+        <button
+          type="button"
+          className={styles.layerRow}
+          onClick={() => {
+            setInspectingCamera(true);
             setInspectingLayer(false);
-          },
-          onAdd: () => {
-            const id = viewportCameraEditor.add();
-            if (id) {
-              setInspectingCamera(id);
-              setInspectingLayer(false);
-            }
-          },
-          isReadOnly,
-        }}
-      />
+          }}
+        >
+          Camera
+          {cameraEditor.traits.length > 0 && (
+            <span className={styles.recordKind}>
+              {cameraEditor.choices
+                .filter(choice => cameraEditor.traits.includes(choice.value))
+                .map(choice => choice.name)
+                .join(', ')}
+            </span>
+          )}
+        </button>
+      </section>
     ) : null;
 
   return (
@@ -3613,7 +3533,7 @@ export const MapStage = ({
                 onSelect={id => {
                   setSelectedLayer(id);
                   setInspectingLayer(true);
-                  setInspectingCamera(null);
+                  setInspectingCamera(false);
                   setSelectedId(null);
                 }}
                 onAdd={() => {
@@ -3649,45 +3569,20 @@ export const MapStage = ({
         </div>
         {inspectedCamera && cameraEditor && (
           <CameraInspector
-            // Re-keyed on what the code says of it, so a change from outside —
-            // and a different camera — is what the fields show.
-            key={`${inspectedCamera.id}:${inspectedCamera.name}:${cameraEditor.starting}`}
-            id={inspectedCamera.id}
-            name={inspectedCamera.name}
-            starting={cameraEditor.starting === inspectedCamera.id}
-            traits={cameraEditor.traitsOf(inspectedCamera.id)}
+            // Re-keyed on whose camera it is, so another Viewport's opens
+            // with its own fields.
+            key={selectedActor?.id}
+            traits={cameraEditor.traits}
             choices={cameraEditor.choices}
-            valueOf={property =>
-              cameraEditor.valueOf(inspectedCamera.id, property)
-            }
+            valueOf={cameraEditor.valueOf}
             kinds={Object.entries(kinds ?? {})
               .map(([path, kind]) => [kind.name, path] as const)
               .sort(([a], [b]) => a.localeCompare(b))}
-            onRename={name => cameraEditor.rename(inspectedCamera.id, name)}
-            onStarting={() => cameraEditor.setStarting(inspectedCamera.id)}
-            onTrait={(trait, elected) =>
-              cameraEditor.setTrait(inspectedCamera.id, trait, elected)
-            }
-            onValue={(property, value) =>
-              cameraEditor.setValue(inspectedCamera.id, property, value)
-            }
-            zoom={cameraEditor.zoomOf(inspectedCamera.id)}
-            onZoom={zoom => cameraEditor.setZoom(inspectedCamera.id, zoom)}
-            onClose={() => setInspectingCamera(null)}
-            onRemove={() => {
-              cameraEditor.remove(inspectedCamera.id);
-              setInspectingCamera(null);
-            }}
-            looker={selectedActor ? 'This Viewport' : 'The world'}
-            // The world's main camera takes traits, stored on its main map; a
-            // Viewport's has its kind's.
-            mainTakesTraits={!selectedActor}
-            mainNote={
-              selectedActor
-                ? 'This Viewport’s own camera. What it follows is set in the ' +
-                  'Viewport’s properties; add a camera for another view.'
-                : undefined
-            }
+            onTrait={cameraEditor.setTrait}
+            onValue={cameraEditor.setValue}
+            zoom={cameraEditor.zoom}
+            onZoom={cameraEditor.setZoom}
+            onClose={() => setInspectingCamera(false)}
             isReadOnly={isReadOnly}
           />
         )}
@@ -3724,7 +3619,6 @@ export const MapStage = ({
               themeOptions={themeOptions}
               onTheme={path => world.onTheme?.(path)}
               {...backgroundProps}
-              cameras={cameraSection}
               isReadOnly={isReadOnly}
             />
           )}
@@ -4032,10 +3926,10 @@ export const MapStage = ({
                 />
               )}
             {cameraSection}
-            {selectedSchema.length > 0 && (
+            {settable.length > 0 && (
               <Accordion
                 className={styles.inspectorAccordion}
-                items={selectedSchema.map(group => ({
+                items={settable.map(group => ({
                   id: group.trait,
                   label: group.traitName,
                   content: (

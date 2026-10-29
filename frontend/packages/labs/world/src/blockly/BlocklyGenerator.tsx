@@ -30,7 +30,6 @@ import {
 } from './assembleActorModule';
 import styles from './blocklyGenerator.module.css';
 import {MEMBER_HEAD} from './bodySurfaces';
-import {cameraId} from './cameras';
 import {
   buildDomainPalette,
   importVar,
@@ -50,7 +49,7 @@ import {
   type OwnMeta,
 } from './ownProperties';
 import {
-  settingsBlockId,
+  CAMERA_SETTINGS_ID,
   withCameraSettings,
   type PlacementCamera,
 } from './placementCameras';
@@ -98,8 +97,8 @@ interface MapSource {
     id?: string;
     type?: string;
     blocks?: object;
-    /** A Viewport's own cameras, made in the map editor (`placementCameras`). */
-    cameras?: PlacementCamera[];
+    /** A Viewport's camera, set up in the map editor (`placementCameras`). */
+    camera?: PlacementCamera;
   }>;
   blocks?: object;
 }
@@ -114,15 +113,15 @@ type GeneratedWorkspaces = {
 
 /**
  * What the file is when its workspaces are taken out of it — and, for a
- * placement, its stored cameras, which are generated as code beside its
- * workspace and are nothing the running map reads as data.
+ * placement, its stored camera, which is generated as code beside its
+ * workspace and is nothing the running map reads as data.
  */
 const withoutBlocks = <T extends {blocks?: object}>(
   held: T,
 ): Omit<T, 'blocks'> => {
-  const copy: Partial<T> & {cameras?: unknown} = {...held};
+  const copy: Partial<T> & {camera?: unknown} = {...held};
   delete copy.blocks;
-  delete copy.cameras;
+  delete copy.camera;
   return copy as Omit<T, 'blocks'>;
 };
 
@@ -157,9 +156,9 @@ function generateWorkspaces(
   const generateOne = (
     state: object | undefined,
     key: string,
-    cameras: readonly PlacementCamera[] = [],
+    camera?: PlacementCamera,
   ) => {
-    if (!state && !cameras.length) {
+    if (!state && !camera) {
       return [];
     }
     workspace.clear();
@@ -169,15 +168,18 @@ function generateWorkspaces(
     generator.init(workspace);
     (generator as {__ruleModule?: string}).__ruleModule = modulePath;
     (generator as {__mapModule?: string}).__mapModule = modulePath;
-    const settingsIds = new Set(cameras.map(settingsBlockId));
-    const declared = cameras.map(camera => ({
-      type: 'camera',
-      id: camera.id,
-      code: cameraCode(generator, workspace, camera),
-    }));
+    const declared = camera
+      ? [
+          {
+            type: 'camera',
+            id: CAMERA_SETTINGS_ID,
+            code: cameraCode(generator, workspace, camera),
+          },
+        ]
+      : [];
     const generated = workspace
       .getTopBlocks(true)
-      .filter(block => block.isEnabled() && !settingsIds.has(block.id))
+      .filter(block => block.isEnabled() && block.id !== CAMERA_SETTINGS_ID)
       .map(block => ({
         type: block.type,
         id: block.id,
@@ -192,11 +194,11 @@ function generateWorkspaces(
     return [...declared, ...generated];
   };
   const mapLevel = generateOne(source.blocks, 'map');
-  // A placement's code, with its stored cameras declared ahead of it.
+  // A placement's code, with its stored camera set up ahead of it.
   const placements = (source.actors ?? []).flatMap(entry => {
-    const state = withCameraSettings(entry.blocks, entry.cameras);
-    return entry.id && (state || entry.cameras?.length)
-      ? [{id: entry.id, blocks: generateOne(state, entry.id, entry.cameras)}]
+    const state = withCameraSettings(entry.blocks, entry.camera);
+    return entry.id && (state || entry.camera)
+      ? [{id: entry.id, blocks: generateOne(state, entry.id, entry.camera)}]
       : [];
   });
   (generator as {__mapModule?: string}).__mapModule = undefined;
@@ -205,7 +207,7 @@ function generateWorkspaces(
 }
 
 /**
- * A Viewport's stored camera as the engine takes one: made in one call, then,
+ * A Viewport's stored camera as the engine takes it: set up in one call, then,
  * with it bound as `camera`, its starting values set (`placementCameras`).
  */
 function cameraCode(
@@ -213,28 +215,28 @@ function cameraCode(
   workspace: Blockly.Workspace,
   camera: PlacementCamera,
 ): string {
-  const id = str(cameraId(camera.id));
   const traits = camera.traits
     .map(refFromValue)
     .filter(refResolves)
     .map(ref => refCode(ref, generator));
-  const define =
-    `world.defineCamera({id: ${id}, name: ${str(camera.name)}, ` +
-    `viewport: WorldLab.one(actor)` +
-    (traits.length ? `, traits: [${traits.join(', ')}]` : '') +
-    (camera.zoom !== undefined && camera.zoom !== 1
-      ? `, zoom: ${camera.zoom}`
-      : '') +
-    '});\n';
-  const settings = workspace.getBlockById(settingsBlockId(camera));
+  const setUp =
+    'world.setViewportCamera(WorldLab.one(actor), {' +
+    [
+      ...(traits.length ? [`traits: [${traits.join(', ')}]`] : []),
+      ...(camera.zoom !== undefined && camera.zoom !== 1
+        ? [`zoom: ${camera.zoom}`]
+        : []),
+    ].join(', ') +
+    '})';
+  const settings = workspace.getBlockById(CAMERA_SETTINGS_ID);
   const code = settings ? generator.blockToCode(settings) : '';
   const setup = generator.prefixLines(
     Array.isArray(code) ? code[0] : code,
     generator.INDENT,
   );
   return setup.trim()
-    ? `${define}{\nconst camera = world.camera(${id});\n${setup}}\n`
-    : define;
+    ? `{\nconst camera = ${setUp};\n${setup}}\n`
+    : `${setUp};\n`;
 }
 
 /** Put the imports several workspaces needed back before `finish` reads them. */
@@ -432,10 +434,10 @@ function traitCode(generator: JavascriptGenerator, trait: string): string {
   if (!refResolves(ref)) {
     return '';
   }
-  // A camera trait goes to the Viewport's own main camera
-  // (specs/SPACE_CAMERAS_PLAN.md).
+  // A camera trait is a camera's, and a Viewport's camera is set up on its
+  // placement (specs/ONE_WORLD_PLAN.md): a kind elects none.
   return traitSubjectOfValue(trait) === 'camera'
-    ? `actor.useCameraTraits([${refCode(ref, generator)}]);\n`
+    ? ''
     : `actor.useTraits([${refCode(ref, generator)}]);\n`;
 }
 

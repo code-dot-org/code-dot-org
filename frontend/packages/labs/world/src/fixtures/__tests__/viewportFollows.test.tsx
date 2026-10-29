@@ -1,26 +1,23 @@
-// The Jetpack minimap, end to end: a second Viewport placed on the Main
-// Screen, showing the one World as every Viewport does, told in its own `on
-// create` to follow the Pilot — and nothing else. No camera declared, no trait
-// row, no `look through` (specs/SPACE_CAMERAS_PLAN.md, "simplifying";
-// specs/ONE_WORLD_PLAN.md).
+// The Jetpack minimap, end to end: a second Viewport on the Main Screen,
+// showing the one World as every Viewport does, its camera set up on its
+// placement to follow and stay in the map, and told in its own `on create`
+// whom to follow — `set actor to follow of ⟨camera of ⟨this actor⟩⟩`
+// (specs/SPACE_CAMERAS_PLAN.md, specs/ONE_WORLD_PLAN.md).
 //
-// WHY THIS EXISTS. The first report that it did not work came from a project
-// whose `actors/viewport.actor` was imported before the stock Viewport elected
-// `Follows` — a project holds its own copy of a stock actor, so a stock change
-// reaches it only by re-importing — and the one row it had left set a property
-// nothing read. This runs the whole chain against the stock actor as it ships:
-// import, the screen placement, the World it shows, the created event, the
-// property lent to the box's main camera, `Follows` aiming it through `in this
+// This runs the whole chain: the camera rules imported, the screen placement,
+// the World it shows, the camera's traits from its placement, the created
+// event, `camera of` reaching the camera, `Follows` aiming it through `in this
 // space`, and `Confined to the Map` keeping it in the level.
 
 import {describe, expect, it} from 'vitest';
 
 import {compileProject} from '../../__tests__/support/compileProject';
 import {PositionProperty} from '../../engine/rules/spatial';
+import {STOCK_RULES} from '../../rules/stock';
 import {projectFiles} from '../../runtime/projectFiles';
 import {WORLD_SCENARIOS} from '../scenarios';
 
-/** The one row: `set actor to follow of ⟨this actor⟩ to ⟨any Pilot⟩`, under `on create`. */
+/** The one row: `set actor to follow of ⟨camera of ⟨this actor⟩⟩ to ⟨any Pilot⟩`, under `on create`. */
 const FOLLOW_THE_PILOT = {
   blocks: {
     languageVersion: 0,
@@ -31,7 +28,12 @@ const FOLLOW_THE_PILOT = {
           block: {
             type: 'world_set_CameraFollow_ActorToFollowProperty',
             inputs: {
-              ACTOR: {block: {type: 'world_this_actor'}},
+              ACTOR: {
+                block: {
+                  type: 'world_camera_of',
+                  inputs: {ACTOR: {block: {type: 'world_this_actor'}}},
+                },
+              },
               VALUE: {
                 block: {
                   type: 'world_actor_kind',
@@ -48,8 +50,9 @@ const FOLLOW_THE_PILOT = {
 
 /**
  * Jetpack with a second Viewport on its Main Screen, which names no map: it
- * shows the World the Game Viewport loaded. The scenario carries the stock
- * Viewport already.
+ * shows the World the Game Viewport loaded. Its camera follows and stays in
+ * the map, and the rules that make it are the project's, as the camera's
+ * inspector imports them.
  */
 const withMinimap = (): Record<string, string> => {
   const files = projectFiles(WORLD_SCENARIOS.jetpack.source);
@@ -61,21 +64,23 @@ const withMinimap = (): Record<string, string> => {
     id: 'Mini',
     properties: {positional: {position: {x: 80, y: 60}}},
     blocks: FOLLOW_THE_PILOT,
+    camera: {
+      traits: [
+        'Camera Follow#FollowsTrait',
+        'Camera Confined#ConfinedToTheMapTrait',
+      ],
+      values: [],
+    },
   });
-  return {...files, 'screens/main.screen': JSON.stringify(screen)};
+  const rules = Object.fromEntries(
+    STOCK_RULES.filter(rule =>
+      ['camera', 'cameraFollow', 'cameraConfined'].includes(rule.id),
+    ).map(rule => [`rules/${rule.id}.rule`, rule.contents]),
+  );
+  return {...files, ...rules, 'screens/main.screen': JSON.stringify(screen)};
 };
 
 describe('a minimap of Jetpack that follows the Pilot', () => {
-  it('brings the camera rules with the Viewport', () => {
-    const files = withMinimap();
-    for (const rule of ['camera', 'cameraFollow', 'cameraConfined']) {
-      expect(files[`rules/${rule}.rule`], rule).toBeDefined();
-    }
-    expect(files['actors/viewport.actor']).toContain(
-      'Camera Follow#FollowsTrait',
-    );
-  });
-
   it('follows the Pilot from one row in `on create`, confined to the level', async () => {
     const {world} = await compileProject(withMinimap());
     const mini = [...world.actors].find(actor => actor.id === 'Mini')!;

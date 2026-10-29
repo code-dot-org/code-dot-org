@@ -11,7 +11,13 @@ import {describe, expect, it} from 'vitest';
 import type {EffectDocument} from '../../effect/model/types';
 import {DEFAULT_LAYER_ID} from '../core/Layer';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../core/viewport';
-import {ActorBuilder, PositionProperty, Vector, WorldBuilder} from '../index';
+import {
+  ActorBuilder,
+  PositionProperty,
+  Vector,
+  ViewportTrait,
+  WorldBuilder,
+} from '../index';
 import type {World} from '../index';
 
 import {
@@ -25,6 +31,12 @@ const actor = (id: string) =>
     .instantiate(id);
 
 const world = () => new WorldBuilder({id: 'w', name: 'W'}).instantiate();
+
+/** A Viewport placed on the screen, which has a camera of its own. */
+const placeViewport = (built: World, id: string) =>
+  built.addActor(
+    new ActorBuilder({id, name: id}).useTraits([ViewportTrait]).instantiate(id),
+  );
 
 /** A slot nothing has touched: nothing drawn, where it was, stretched. */
 const EMPTY_SLOT = {
@@ -414,12 +426,6 @@ describe('the camera', () => {
     expect(built.camera().position.x).toBe(10);
   });
 
-  it('answers with the default for an id nothing declares', () => {
-    // The id comes from generated code; a world with no view at all is not a
-    // better answer than a world looking through its default.
-    expect(world().camera('a-camera-that-was-deleted').id).toBe('main');
-  });
-
   it('is not an actor', () => {
     const built = world();
     const player = built.addActor(actor('player'));
@@ -430,55 +436,40 @@ describe('the camera', () => {
     expect([...built.actors]).toHaveLength(0);
   });
 
-  it('can be joined by another, and the view cut to it', () => {
-    const built = world();
-    built.defineCamera({id: 'overview', name: 'Overview'});
-    built.setCameraPosition(new Vector(500, 0), 'overview');
-
-    // Still looking through the default until told otherwise.
-    expect(built.activeCamera().id).toBe('main');
-
-    built.setActiveCamera('overview');
-    expect(built.activeCamera().position).toEqual(new Vector(500, 0));
-    expect(built.cameraSnapshot().find(c => c.active)?.id).toBe('overview');
-  });
-
   it('lets a world wire up a camera trait’s property after placing actors', () => {
     // The whole point of a camera holding traits, exercised the way a world
-    // does it: place the level, then tell the camera what to follow.
+    // does it: set up a Viewport's camera, then tell it what to follow.
     //
-    //   load map ⟨Level 1⟩
-    //   set actor to follow of ⟨camera ⟨Chase⟩⟩ to ⟨first actor … ⟨Player⟩⟩
+    //   set actor to follow of ⟨camera of ⟨Game⟩⟩ to ⟨any ⟨Player⟩⟩
     const builder = new WorldBuilder({id: 'w', name: 'W'});
-    builder.defineCamera({id: 'chase', traits: [AffectedByGravityTrait]});
-    const player = actor('player');
-    builder.getWorld().addActor(player);
+    const game = placeViewport(builder.getWorld(), 'game');
+    builder.setViewportCamera(game, {traits: [AffectedByGravityTrait]});
+    builder.getWorld().addActor(actor('player'));
 
-    // Through the builder, which is what `world` is inside `define world`.
-    builder.camera('chase').set(GravityScaleProperty, 7);
+    // Through the builder, which is what `world` is in a screen's module.
+    builder.cameraOf(game)!.set(GravityScaleProperty, 7);
 
-    expect(builder.getWorld().camera('chase').get(GravityScaleProperty)).toBe(
+    expect(builder.getWorld().cameraOf(game)!.get(GravityScaleProperty)).toBe(
       7,
     );
   });
 
-  it('ignores a cut to a camera that is not there', () => {
-    // Leaving the view where it is beats blacking it out: the id comes from
-    // generated code naming a block that may have been deleted.
+  it('does not stack a trait elected twice, so a reload cannot', () => {
     const built = world();
-    built.setActiveCamera('a-camera-that-was-deleted');
+    const game = placeViewport(built, 'game');
+    built.setViewportCamera(game, {traits: [AffectedByGravityTrait]});
+    const once = built.cameraOf(game)!.traits().length;
+    built.setViewportCamera(game, {traits: [AffectedByGravityTrait]});
 
-    expect(built.activeCamera().id).toBe('main');
+    // The screen's camera and the Viewport's, and the trait once.
+    expect([...built.cameras]).toHaveLength(2);
+    expect(built.cameraOf(game)!.traits()).toHaveLength(once);
   });
 
-  it('does not stack duplicates when the same camera is declared twice', () => {
-    // A reload runs the world body again; two cameras with one id would be two
-    // entries the dropdown shows twice.
+  it('refuses to set up a camera for something that is not a Viewport', () => {
     const built = world();
-    built.defineCamera({id: 'overview'});
-    built.defineCamera({id: 'overview'});
-
-    expect([...built.cameras]).toHaveLength(2);
+    const player = built.addActor(actor('player'));
+    expect(() => built.setViewportCamera(player, {})).toThrow(/not a Viewport/);
   });
 
   it('holds traits, which is what makes it something a rule can act on', () => {
@@ -486,14 +477,14 @@ describe('the camera', () => {
     // that elected its trait exactly as gravity's step walks the ACTORS that
     // elected its own. Same trait machinery, different collection.
     const built = world();
-    built.defineCamera({id: 'follower', traits: [AffectedByGravityTrait]});
-    built.defineCamera({id: 'static'});
+    const follower = placeViewport(built, 'follower');
+    const still = placeViewport(built, 'still');
+    built.setViewportCamera(follower, {traits: [AffectedByGravityTrait]});
 
-    expect(built.cameras.with(AffectedByGravityTrait).map(c => c.id)).toEqual([
-      'follower',
+    expect(built.cameras.with(AffectedByGravityTrait)).toEqual([
+      built.cameraOf(follower),
     ]);
-    expect(built.camera('follower').has(AffectedByGravityTrait)).toBe(true);
-    expect(built.camera('static').has(AffectedByGravityTrait)).toBe(false);
+    expect(built.cameraOf(still)!.has(AffectedByGravityTrait)).toBe(false);
   });
 
   it('answers the position property with its own pose', () => {
@@ -523,8 +514,9 @@ describe('the camera', () => {
 
   it('carries the properties its traits declare', () => {
     const built = world();
-    built.defineCamera({id: 'follower', traits: [AffectedByGravityTrait]});
-    const camera = built.camera('follower');
+    const camera = built.setViewportCamera(placeViewport(built, 'follower'), {
+      traits: [AffectedByGravityTrait],
+    });
 
     // The slot exists because the trait brought it, and takes a value.
     expect(camera.hasProperty(GravityScaleProperty)).toBe(true);
@@ -550,18 +542,6 @@ describe('the camera', () => {
 
     expect(after.cameras).toEqual(before.cameras);
     expect(after.cameraPositions).not.toEqual(before.cameraPositions);
-  });
-
-  it('cuts between cameras as a value, so the game does not restart', () => {
-    const built = world();
-    built.defineCamera({id: 'overview'});
-    const before = built.snapshot();
-    built.setActiveCamera('overview');
-    const after = built.snapshot();
-
-    // Which cameras EXIST is unchanged; which one draws is not structure.
-    expect(after.cameras).toEqual(before.cameras);
-    expect(after.activeCamera).not.toEqual(before.activeCamera);
   });
 });
 

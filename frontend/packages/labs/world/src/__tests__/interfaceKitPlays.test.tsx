@@ -224,7 +224,7 @@ describe('the interface kit', () => {
     // to match, so nothing reads a level shorter than its window.
     const {world} = await open();
     // The screen's, which its own camera is told.
-    const screen = world.camera('main');
+    const screen = world.camera();
     const view = world.viewSize(screen);
     expect(view.y).toBeGreaterThan(view.x);
     expect({x: view.x, y: view.y}).toEqual({

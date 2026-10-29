@@ -15,10 +15,9 @@
 // one. So the subject is the game, and the actor is an ANSWER: the shelf asks
 // which one to follow, under the row, from the actors the game can name.
 //
-// ONE VIEW PER GAME, so enhancing a second actor REPOINTS the camera rather
-// than adding a rival: "follow this one" said twice is a learner changing
-// their mind rather than asking for two cameras. Whatever else that camera
-// elects is left as it was.
+// ONE CAMERA PER VIEWPORT, so enhancing a second actor REPOINTS it: "follow
+// this one" said twice is a learner changing their mind. Whatever else the
+// camera elects is left as it was.
 
 import type {MultiFileSource} from '@code-dot-org/core/api';
 
@@ -36,14 +35,12 @@ const ACTOR_TO_FOLLOW = 'world_set_CameraFollow_ActorToFollowProperty';
 
 /** The Viewport the Main Screen shows its level through. */
 const GAME = 'Game';
-/** The first camera a Viewport is given, as the lessons give one. */
-const FIRST = {id: 'camera1', name: 'Camera 1'};
 
 type Placement = {
   id: string;
   type: string;
   properties?: Record<string, Record<string, unknown>>;
-  cameras?: PlacementCamera[];
+  camera?: PlacementCamera;
 };
 
 /** A Main Screen, as much of it as this reads. */
@@ -52,14 +49,12 @@ interface ScreenFile {
   [key: string]: unknown;
 }
 
-/** The Game Viewport, and the camera of its own it looks through, if any. */
+/** The Game Viewport, and its camera if its placement sets one up. */
 const viewOf = (screen: ScreenFile) => {
   const game = (screen.actors ?? []).find(
     one => one.id === GAME && one.type === 'actors/viewport',
   );
-  const through = game?.properties?.showsMap?.showsThrough;
-  const camera = game?.cameras?.find(one => one.name === through);
-  return {game, camera};
+  return {game, camera: game?.camera};
 };
 
 /**
@@ -90,8 +85,7 @@ const aimedAt = (contents: string): string | undefined => {
 };
 
 /**
- * The Main Screen with the camera its Game Viewport looks through following
- * `actor` — one given to it when it looks through its main camera.
+ * The Main Screen with its Game Viewport's camera following `actor`.
  *
  * In place: a value already there is replaced where it stands, so asking
  * twice for the same actor writes the same file.
@@ -102,7 +96,7 @@ const following = (contents: string, actor: string): string => {
   if (!game) {
     return contents;
   }
-  const held = camera ?? {...FIRST, traits: [], values: []};
+  const held: PlacementCamera = camera ?? {traits: [], values: []};
   const aim = {setter: ACTOR_TO_FOLLOW, type: 'actor', value: actor};
   const values = held.values.some(value => value.setter === ACTOR_TO_FOLLOW)
     ? held.values.map(value => (value.setter === ACTOR_TO_FOLLOW ? aim : value))
@@ -114,17 +108,7 @@ const following = (contents: string, actor: string): string => {
       : [...held.traits, FOLLOWS],
     values,
   };
-  const cameras = camera
-    ? (game.cameras ?? []).map(one => (one === camera ? aimed : one))
-    : [...(game.cameras ?? []), aimed];
-  const next: Placement = {
-    ...game,
-    cameras,
-    properties: {
-      ...game.properties,
-      showsMap: {...game.properties?.showsMap, showsThrough: aimed.name},
-    },
-  };
+  const next: Placement = {...game, camera: aimed};
   return JSON.stringify(
     {
       ...screen,

@@ -1,17 +1,12 @@
-// The inspector for one camera, a Viewport's or the world's
-// (specs/SPACE_CAMERAS_PLAN.md, step 9c), opened from a row of the camera
-// list in that Viewport's or world's own inspector (`CameraList`) and closed
-// back to it: its name, whether its owner starts looking through it, the
-// camera traits it elects, and a field per property of each — `actor to
-// follow`, `look offset` — which is what a placement's inspector does for an
-// actor's traits. An added camera is removed here.
+// The inspector for a Viewport's one camera (specs/SPACE_CAMERAS_PLAN.md,
+// specs/ONE_WORLD_PLAN.md), opened from the Viewport's own inspector and
+// closed back to it: its zoom, the camera traits it elects, and a field per
+// property of each — `actor to follow`, `look offset` — which is what a
+// placement's inspector does for an actor's traits.
 //
 // What it shows and writes is data kept on the Viewport's placement, which
-// the compiler turns into a `defineCamera` call (`blockly/placementCameras`).
-//
-// The main camera has no traits of its own here: every world has it, and it
-// shows the map from its top left. Following something is what an added
-// camera is for, looked through from the start.
+// the compiler turns into a `setViewportCamera` call
+// (`blockly/placementCameras`).
 
 import {Button, Typography} from '@mui/material';
 import type {ChangeEvent, KeyboardEvent} from 'react';
@@ -28,16 +23,11 @@ import fields from '../formFields.module.css';
 
 import styles from './mapEditor.module.css';
 import {useAfterImport} from './useAfterImport';
-import {MAIN_CAMERA, type CameraProperty} from './worldCameraCode';
+import type {CameraProperty} from './worldCameraCode';
 import {parseVectorText, vectorText} from './worldProperties';
 import type {CameraTraitChoice} from './worldRuleProperties';
 
 export interface CameraInspectorProps {
-  /** The camera's block id, or `MAIN_CAMERA`. */
-  id: string;
-  name: string;
-  /** Whether the world starts looking through it. */
-  starting: boolean;
   /** The trait values it elects. */
   traits: readonly string[];
   /** The traits the project's rules offer a camera. */
@@ -46,25 +36,12 @@ export interface CameraInspectorProps {
   valueOf: (property: CameraProperty) => string | undefined;
   /** The project's actor kinds, as `[name, module path]`. */
   kinds: ReadonlyArray<readonly [string, string]>;
-  onRename: (name: string) => void;
-  onStarting: () => void;
   onTrait: (trait: string, elected: boolean) => void;
   onValue: (property: CameraProperty, value: string) => void;
-  /** How much it magnifies (`Camera.zoom`); the main camera's is not set here. */
+  /** How much it magnifies (`Camera.zoom`). */
   zoom?: number;
-  onZoom?: (zoom: number) => void;
+  onZoom: (zoom: number) => void;
   onClose: () => void;
-  /** Take the camera away; absent for the main camera, which cannot go. */
-  onRemove?: () => void;
-  /** What is said of the main camera. */
-  mainNote?: string;
-  /**
-   * Whether the main camera takes traits here: the WORLD's does, stored on
-   * its main map; a Viewport's has its kind's, set where the kind is.
-   */
-  mainTakesTraits?: boolean;
-  /** Whose view it starts: "The world", "This Viewport". */
-  looker?: string;
   isReadOnly: boolean;
 }
 
@@ -72,32 +49,20 @@ const capitalize = (text: string) =>
   text ? text[0].toUpperCase() + text.slice(1) : text;
 
 export const CameraInspector = ({
-  id,
-  name,
-  starting,
   traits,
   choices,
   valueOf,
   kinds,
-  onRename,
-  onStarting,
   onTrait,
   onValue,
   zoom = 1,
   onZoom,
   onClose,
-  onRemove,
-  mainNote = 'Every world has this camera. It shows the map from its top ' +
-    'left until a camera rule moves it.',
-  looker = 'The world',
-  mainTakesTraits = false,
   isReadOnly,
 }: CameraInspectorProps) => {
-  const main = id === MAIN_CAMERA;
   // What is being typed, committed on blur or Enter; the parent re-keys this
   // when the camera changes from outside.
   const [draft, setDraft] = useState<Record<string, string>>({
-    name,
     zoom: String(zoom),
   });
   const blurOnEnter = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -221,155 +186,98 @@ export const CameraInspector = ({
     >
       <div className={styles.inspectorHead}>
         <Typography variant="subtitle2" component="span">
-          Camera: {main ? 'Main camera' : name}
+          Camera
         </Typography>
         <Button variant="text" size="extraSmall" onClick={onClose}>
           Close
         </Button>
       </div>
-      {!main && (
-        <TextField
-          name="camera-name"
-          label="Name"
-          size="s"
-          value={draft.name}
-          disabled={isReadOnly}
-          onChange={(event: ChangeEvent<HTMLInputElement>) =>
-            setDraft(was => ({...was, name: event.target.value}))
-          }
-          onBlur={() => {
-            const next = draft.name.trim();
-            if (next && next !== name) {
-              onRename(next);
-            } else {
-              setDraft(was => ({...was, name}));
+      {/* Above 1 the view takes in less and shows it larger; below 1, more. */}
+      <TextField
+        name="camera-zoom"
+        label="Zoom"
+        inputType="number"
+        size="s"
+        value={draft.zoom}
+        disabled={isReadOnly}
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          setDraft(was => ({...was, zoom: event.target.value}))
+        }
+        onBlur={() => {
+          const typed = Number(draft.zoom);
+          if (Number.isFinite(typed) && typed > 0) {
+            if (typed !== zoom) {
+              onZoom(typed);
             }
-          }}
-          onKeyDown={blurOnEnter}
-        />
-      )}
-      {!main && onZoom && (
-        // Above 1 the view takes in less and shows it larger; below 1, more.
-        <TextField
-          name="camera-zoom"
-          label="Zoom"
-          inputType="number"
-          size="s"
-          value={draft.zoom}
-          disabled={isReadOnly}
-          onChange={(event: ChangeEvent<HTMLInputElement>) =>
-            setDraft(was => ({...was, zoom: event.target.value}))
+          } else {
+            setDraft(was => ({...was, zoom: String(zoom)}));
           }
-          onBlur={() => {
-            const typed = Number(draft.zoom);
-            if (Number.isFinite(typed) && typed > 0) {
-              if (typed !== zoom) {
-                onZoom(typed);
-              }
-            } else {
-              setDraft(was => ({...was, zoom: String(zoom)}));
-            }
-          }}
-          onKeyDown={blurOnEnter}
-        />
-      )}
-      <Checkbox
-        name="camera-starting"
-        label={`${looker} starts looking through this camera`}
-        checked={starting}
-        // Unticking means another camera, and which one is said by ticking
-        // that one: the box only ever turns ON.
-        disabled={isReadOnly || starting}
-        onChange={() => onStarting()}
+        }}
+        onKeyDown={blurOnEnter}
       />
-      {main && (
+      {choices.length === 0 ? (
         <Typography
           variant="body3"
           component="span"
           className={styles.inspectorNote}
         >
-          {mainNote}
+          A camera does more with a camera rule: following something, easing
+          after it, staying inside the map.
         </Typography>
+      ) : (
+        // One closed control however many rules the project holds; what
+        // each ticked trait is FOR is said below it, beside its fields.
+        <CheckboxDropdown
+          name="camera-traits"
+          labelText="Camera traits"
+          size="s"
+          className={styles.traitPicker}
+          styleAsFormField
+          hideControls
+          disabled={isReadOnly}
+          allOptions={choices.map(choice => ({
+            value: choice.value,
+            label: choice.name,
+          }))}
+          checkedOptions={elected.map(choice => choice.value)}
+          onChange={(event: ChangeEvent<HTMLInputElement>) =>
+            onTrait(event.target.value, event.target.checked)
+          }
+        />
       )}
-      {main && !mainTakesTraits ? null : (
-        <>
-          {choices.length === 0 ? (
-            <Typography
-              variant="body3"
-              component="span"
-              className={styles.inspectorNote}
-            >
-              A camera does more with a camera rule: following something, easing
-              after it, staying inside the map.
-            </Typography>
-          ) : (
-            // One closed control however many rules the project holds; what
-            // each ticked trait is FOR is said below it, beside its fields.
-            <CheckboxDropdown
-              name="camera-traits"
-              labelText="Camera traits"
-              size="s"
-              className={styles.traitPicker}
-              styleAsFormField
-              hideControls
-              disabled={isReadOnly}
-              allOptions={choices.map(choice => ({
-                value: choice.value,
-                label: choice.name,
-              }))}
-              checkedOptions={elected.map(choice => choice.value)}
-              onChange={(event: ChangeEvent<HTMLInputElement>) =>
-                onTrait(event.target.value, event.target.checked)
-              }
-            />
-          )}
-          {/* The camera rules' own shelf (`ImportRuleDialog`, subject
+      {/* The camera rules' own shelf (`ImportRuleDialog`, subject
               camera): what a camera can be taught, and nothing an actor is.
               The rule it brings is ticked on THIS camera, so "make it
               follow" is one errand and not two. */}
-          <Button
-            variant="outlined"
-            color="secondary"
-            size="small"
-            disabled={isReadOnly}
-            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
-            onClick={() => importRuleThen(requestCameraRuleImport, undefined)}
-          >
-            Add a camera rule…
-          </Button>
-        </>
-      )}
-      {(!main || mainTakesTraits) &&
-        elected.map(choice => (
-          // A ticked trait: its name, what it does — a name like "Aimed"
-          // says little — and then what can be set on it.
-          <section key={choice.value} className={styles.inspectorGroup}>
-            <Typography variant="body2" component="h3">
-              {choice.name}
+      <Button
+        variant="outlined"
+        color="secondary"
+        size="small"
+        disabled={isReadOnly}
+        startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+        onClick={() => importRuleThen(requestCameraRuleImport, undefined)}
+      >
+        Add a camera rule…
+      </Button>
+      {elected.map(choice => (
+        // A ticked trait: its name, what it does — a name like "Aimed"
+        // says little — and then what can be set on it.
+        <section key={choice.value} className={styles.inspectorGroup}>
+          <Typography variant="body2" component="h3">
+            {choice.name}
+          </Typography>
+          {choice.description && (
+            <Typography
+              variant="body3"
+              component="p"
+              className={styles.inspectorNote}
+            >
+              {choice.description}
             </Typography>
-            {choice.description && (
-              <Typography
-                variant="body3"
-                component="p"
-                className={styles.inspectorNote}
-              >
-                {choice.description}
-              </Typography>
-            )}
-            {choice.properties.map(renderField)}
-          </section>
-        ))}
-      {!main && onRemove && (
-        <Button
-          variant="text"
-          size="small"
-          disabled={isReadOnly}
-          startIcon={<FontAwesomeV6Icon iconName="trash" iconStyle="solid" />}
-          onClick={onRemove}
-        >
-          Remove this camera
-        </Button>
-      )}
+          )}
+          {choice.properties.map(renderField)}
+        </section>
+      ))}
     </div>
   );
 };

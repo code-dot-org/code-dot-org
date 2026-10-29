@@ -1,8 +1,5 @@
-// What a camera's inspector names: the main camera, and a camera trait's
-// properties (specs/SPACE_CAMERAS_PLAN.md).
-
-/** What a Viewport looks through when nothing says otherwise. */
-export const MAIN_CAMERA = 'main';
+// What a camera's inspector names: a camera trait's properties
+// (specs/SPACE_CAMERAS_PLAN.md).
 
 /** One property of a camera trait, as a camera's inspector edits it. */
 export interface CameraProperty {
