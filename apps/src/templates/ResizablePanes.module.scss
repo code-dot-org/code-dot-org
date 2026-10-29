@@ -1,0 +1,10 @@
+.resizer {
+  border-left: 5px solid;
+  border-right: 5px solid;
+  border-color: rgb(255 255 255 / 0);
+
+  &:hover {
+    transition: all 2s ease;
+    border-color: rgb(0 0 0 / 0.5);
+  }
+}
