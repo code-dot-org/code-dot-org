@@ -68,6 +68,13 @@ mysql_defaults: &mysql_defaults
   default_group: 'cdo'
   database_timezone: :utc
 
+  # Rails 7.1 added a limit to the query cache, which was formerly unbounded.
+  # Unfortunately, their recommended default of 100 is too low for some of our
+  # code paths. Temporarily set to something much higher to preserve backwards
+  # compatibility while we work on optimizing some of our inefficient queries.
+  # TODO infra: find a better long-term value for this; ideally the default.
+  query_cache: 10_000
+
   # ActiveRecord connection-pool settings:
   # See: https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html
   # maximum number of connections the pool may manage (default 5).
