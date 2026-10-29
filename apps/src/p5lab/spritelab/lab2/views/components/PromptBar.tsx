@@ -15,7 +15,6 @@ interface PromptBarProps {
   disabled?: boolean;
 }
 
-/** The answer box, or choice buttons, for the "prompt user for variable" blocks. */
 const PromptBar: React.FunctionComponent<PromptBarProps> = ({
   prompt,
   onAnswer,

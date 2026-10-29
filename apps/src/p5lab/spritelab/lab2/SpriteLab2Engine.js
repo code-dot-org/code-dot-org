@@ -646,7 +646,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       this.triggerSceneJump_(this.onGoToExternalScene, String(sceneKey));
     };
     getStore().dispatch(clearPrompt());
-    const ask = (promptText, variableName, setterCallback, choices) => {
+    const promptUser = (promptText, variableName, setterCallback, choices) => {
       library.registerPrompt(promptText, variableName, setterCallback);
       // Last prompt always wins, so we only ever have 1 active prompt unlike legacy.
       library.numActivePrompts = 1;
@@ -659,7 +659,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       );
     };
     library.commands.setPrompt = (promptText, variableName, setterCallback) =>
-      ask(promptText, variableName, setterCallback);
+      promptUser(promptText, variableName, setterCallback);
     library.commands.setPromptWithChoices = (
       promptText,
       variableName,
@@ -672,8 +672,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         .filter(choice => choice !== undefined && choice !== null)
         .map(String)
         .filter(choice => choice !== '');
-      // With every choice blank, a typed answer is the only way to answer.
-      ask(
+      promptUser(
         promptText,
         variableName,
         setterCallback,
