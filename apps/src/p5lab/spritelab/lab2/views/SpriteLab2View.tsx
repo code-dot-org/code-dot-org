@@ -123,6 +123,7 @@ import {
 } from '../scenesApi';
 import {sceneMetadataFor} from '../sceneThumbnails';
 import SpriteLab2Engine from '../SpriteLab2Engine';
+import {clearRoom} from '../stackRoom';
 import {
   RuntimeAnimationList,
   SpriteLab2LevelProperties,
