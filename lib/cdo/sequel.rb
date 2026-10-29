@@ -41,7 +41,7 @@ module Cdo
     # @param validation_frequency [number] How often to validate the connection. If set to -1,
     #   validate each time a request is made.
     # @param query_timeout [number] The execution timeout for SELECT statements, in seconds.
-    def self.database_connection_pool(writer, reader, validation_frequency: nil, query_timeout: nil, multi_statements: false)
+    def self.database_connection_pool(writer, validation_frequency: nil, query_timeout: nil, multi_statements: false)
       # Enable symbol splitting of qualified identifiers for backwards compatibility.
       ::Sequel.split_symbols = true
       # Enable deprecated Dataset#and method for backwards compatibility.
@@ -49,7 +49,6 @@ module Cdo
       # Enable string literals in dataset filtering methods for backwards compatibility.
       ::Sequel::Database.extension :auto_literal_strings
 
-      reader = reader.gsub 'mysql:', 'mysql2:'
       writer = writer.gsub 'mysql:', 'mysql2:'
 
       db_options = {
@@ -103,14 +102,16 @@ module Cdo
         db_options[:flags] = Mysql2::Client::MULTI_STATEMENTS
       end
 
-      if (reader_uri = URI(reader)) != URI(writer) && Gatekeeper.allows('pegasus_read_replica')
-        db_options[:servers] = {read_only: ::Sequel::Database.send(:uri_to_options, reader_uri)}
-      end
       db = ::Sequel.connect writer, db_options
 
       # Enable read splitting with the `with_server` method.
       # https://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/server_block_rb.html
       db.extension :server_block
+
+      # AWS EC2 Instances that use Nitro v6 (e.g. `m8i`) timeout TCP idle TCP connections after 350s.
+      # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts
+      db.extension :connection_expiration
+      db.pool.connection_expiration_timeout = 300
 
       # Check if validation frequency is valid and then use it to specify how often to
       # verify the db connection

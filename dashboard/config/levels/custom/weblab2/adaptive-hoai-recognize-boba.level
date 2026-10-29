@@ -1,0 +1,27 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-09T22:59:27.000Z",
+  "level_num": "custom",
+  "properties": {
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Pearl &amp; Pour Boba Truck</title>\n    <style>\n      body {\n        margin: 0;\n        font-family: system-ui, Arial, sans-serif;\n        color: #2b1b17;\n        background: #f6f2ff;\n        line-height: 1.5;\n      }\n\n      .top {\n        background: #1f3a2e;\n        color: #f6f2ff;\n        text-align: center;\n        padding: 80px 20px;\n      }\n      .top h1 {\n        font-family: \"Trebuchet MS\", Arial, sans-serif;\n        font-size: 3rem;\n        margin: 0 0 12px;\n      }\n      .top p {\n        font-size: 1.25rem;\n        max-width: 480px;\n        margin: 0 auto;\n      }\n\n      .menu {\n        display: flex;\n        flex-wrap: wrap;\n        gap: 20px;\n        justify-content: center;\n        padding: 50px 20px;\n      }\n      .box {\n        background: white;\n        border: 3px solid #cdb8f0;\n        border-radius: 16px;\n        padding: 20px;\n        width: 220px;\n        text-align: center;\n      }\n      .box h2 {\n        margin: 0 0 8px;\n        font-size: 1.3rem;\n      }\n      .box p {\n        margin: 0;\n      }\n\n      .play {\n        text-align: center;\n        padding: 20px 20px 50px;\n      }\n      .play h2 {\n        margin: 0 0 4px;\n      }\n      .play canvas {\n        background: #ffffff;\n        border: 3px solid #1f3a2e;\n        border-radius: 16px;\n        cursor: pointer;\n        max-width: 100%;\n      }\n\n      .order {\n        background: #ff8fb1;\n        text-align: center;\n        padding: 50px 20px;\n      }\n      .order h2 {\n        margin: 0 0 16px;\n        font-size: 1.8rem;\n      }\n      .order button {\n        background: #2b1b17;\n        color: white;\n        border: none;\n        border-radius: 30px;\n        padding: 14px 32px;\n        font-size: 1.2rem;\n        cursor: pointer;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"top\">\n      <h1>Pearl &amp; Pour</h1>\n      <p>Fresh milk tea and chewy pearls, parked near you.</p>\n    </div>\n\n    <div class=\"menu\">\n      <div class=\"box\">\n        <h2>Brown Sugar Milk Tea</h2>\n        <p>Black tea, cold milk, and warm brown sugar syrup.</p>\n      </div>\n      <div class=\"box\">\n        <h2>Matcha Cloud</h2>\n        <p>Whisked matcha topped with sweet foam.</p>\n      </div>\n      <div class=\"box\">\n        <h2>Mango Pop</h2>\n        <p>Mango juice with popping pearls that burst.</p>\n      </div>\n    </div>\n\n    <div class=\"play\">\n      <h2>Fill your cup</h2>\n      <p>Click inside the cup to drop in pearls.</p>\n      <canvas id=\"cup\" width=\"300\" height=\"360\"></canvas>\n    </div>\n\n    <div class=\"order\">\n      <h2>Today's stop: Maple Street, 11am to 4pm</h2>\n      <button id=\"find\">Find the truck</button>\n    </div>\n\n    <script>\n      var canvas = document.getElementById(\"cup\");\n      var ctx = canvas.getContext(\"2d\");\n      var pearls = [];\n\n      function drawCup() {\n        ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n        // the cup\n        ctx.beginPath();\n        ctx.moveTo(60, 40);\n        ctx.lineTo(240, 40);\n        ctx.lineTo(215, 330);\n        ctx.lineTo(85, 330);\n        ctx.closePath();\n        ctx.fillStyle = \"#e8d5b5\";\n        ctx.fill();\n        ctx.lineWidth = 4;\n        ctx.strokeStyle = \"#1f3a2e\";\n        ctx.stroke();\n\n        // the pearls\n        ctx.fillStyle = \"#2b1b17\";\n        for (var i = 0; i < pearls.length; i++) {\n          ctx.beginPath();\n          ctx.arc(pearls[i].x, pearls[i].y, 12, 0, Math.PI * 2);\n          ctx.fill();\n        }\n      }\n\n      canvas.addEventListener(\"click\", function (event) {\n        var box = canvas.getBoundingClientRect();\n        var x = event.clientX - box.left;\n        var y = event.clientY - box.top;\n        if (y > 60 && y < 320 && x > 90 && x < 210) {\n          pearls.push({ x: x, y: y });\n          if (pearls.length > 40) {\n            pearls = [];\n          }\n          drawCup();\n        }\n      });\n\n      document.getElementById(\"find\").addEventListener(\"click\", function () {\n        alert(\"The truck is on Maple Street today!\");\n      });\n\n      drawCup();\n    </script>\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "hide_share_and_remix": true,
+    "long_instructions": "1.  Pick one section of the page.\n2.  Tell the AI to make that section’s background pink. Describe which section it is so the AI could find it without seeing the page."
+  },
+  "published": true
+}]]></config>
+</Weblab2>

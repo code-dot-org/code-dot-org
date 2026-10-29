@@ -13,7 +13,7 @@ import {ImageType} from '../ai/images/types';
 import {noteImageFieldValue} from '../imageReferences';
 import {defaultImageName, ImageSlot} from '../imageRoleDefaults';
 import {getImageThumbnail} from '../imageTrim';
-import {setActiveTab} from '../redux/spriteLab2Redux';
+import {requestPicture} from '../picturePicker';
 import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
 
 import moduleStyles from './image-dropdown.module.scss';
@@ -42,15 +42,21 @@ const EMPTY_IMAGE_OPTION: [string, string][] = [
   ],
 ];
 
-// One button below the image grid: jump to the Images tab, where images are
-// made. Doubles as the empty state's affordance.
-const MAKE_IMAGE_BUTTONS = [
-  {
-    text: 'Make an image',
-    action: () => getStore().dispatch(setActiveTab('Images')),
-    className: moduleStyles.makeImageButton,
-  },
-];
+// Asks for a new picture of the field's kind, which lands in the field
+// once made; also the empty state's affordance.
+function makeImageButtons(field: () => Lab2AnimationDropdown) {
+  return [
+    {
+      text: 'Make an image',
+      action: () =>
+        requestPicture({
+          imageType: IMAGE_TYPE_OF[field().kind],
+          onPicked: name => field().setValue(`"${name}"`),
+        }),
+      className: moduleStyles.makeImageButton,
+    },
+  ];
+}
 
 type AnimationKind = 'costume' | 'background' | 'block';
 
@@ -195,11 +201,11 @@ function animationDropdown(
   kind: AnimationKind,
   Ctor: typeof Lab2AnimationDropdown = Lab2AnimationDropdown
 ): Lab2AnimationDropdown {
-  const field = new Ctor(
+  const field: Lab2AnimationDropdown = new Ctor(
     () => animationOptions(kind),
     THUMBNAIL_SIZE[kind],
     THUMBNAIL_SIZE[kind],
-    MAKE_IMAGE_BUTTONS
+    makeImageButtons(() => field)
   );
   field.kind = kind;
   return field;

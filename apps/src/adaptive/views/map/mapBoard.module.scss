@@ -1,0 +1,40 @@
+// The board at its own size, scaled down to fit the space it is given; the
+// zoom layer inside it scales up about the focused checkpoint.
+.fit {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.board {
+  position: relative;
+  transform-origin: left top;
+}
+
+.zoom {
+  position: absolute;
+  inset: 0;
+  transition: transform 450ms ease;
+}
+
+.edges {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: visible;
+}
+
+.edge {
+  fill: none;
+  stroke: var(--borders-neutral-primary);
+  stroke-width: 3;
+  stroke-dasharray: 1 8;
+  stroke-linecap: round;
+  transition: stroke 300ms;
+}
+
+.edgeActive {
+  stroke: var(--borders-success-primary);
+  stroke-dasharray: none;
+}
+

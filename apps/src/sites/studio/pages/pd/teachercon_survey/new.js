@@ -7,9 +7,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 document.addEventListener('DOMContentLoaded', function (event) {
   createReactRoot(
     <TeacherconSurvey {...getScriptData('props')} />,
-    document.getElementById('application-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('application-container')
   );
 });

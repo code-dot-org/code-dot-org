@@ -1,0 +1,16 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2026-10-20T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "hoai2026_intro",
+    "uses_lab2": "true",
+    "video_full_width": true,
+    "encrypted": "false",
+    "header_label": "Getting started"
+  }
+}]]></config>
+</StandaloneVideo>

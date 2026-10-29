@@ -59,10 +59,7 @@ function initPage() {
         scriptName={config.script_name}
         courseName={config.course_name}
       />,
-      redirectDialogMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      redirectDialogMountPoint
     );
   }
 
@@ -100,10 +97,7 @@ function initPage() {
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton {...props} />
       </Provider>,
-      mountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      mountPoint
     );
   };
 
@@ -133,10 +127,7 @@ function initPage() {
       <Provider store={getStore()}>
         <ScrapbookButton />
       </Provider>,
-      scrapbookMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      scrapbookMountPoint
     );
   }
 
@@ -195,10 +186,7 @@ function initPage() {
               levelType={levelType}
             />
           </Provider>,
-          rubricFabMountPoint,
-          {
-            legacyReactDomRender: true,
-          }
+          rubricFabMountPoint
         );
         // The branch above doesn't mount the AI TA drawer (it renders the
         // legacy floating rubric panel instead), so on rubric levels

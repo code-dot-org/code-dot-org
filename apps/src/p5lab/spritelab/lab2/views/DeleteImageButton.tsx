@@ -1,6 +1,5 @@
+import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
-
-import moduleStyles from './image-details-dialog.module.scss';
 
 /**
  * The image dialog's Delete button: confirming swaps it for an inline
@@ -13,29 +12,32 @@ const DeleteImageButton: React.FunctionComponent<{onDelete: () => void}> = ({
   return confirming ? (
     <>
       <span>Delete this image?</span>
-      <button
-        type="button"
-        className={moduleStyles.dangerButton}
+      <MuiButton
+        variant="contained"
+        color="error"
+        size="small"
         onClick={onDelete}
       >
         Delete
-      </button>
-      <button
-        type="button"
-        className={moduleStyles.button}
+      </MuiButton>
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
         onClick={() => setConfirming(false)}
       >
         Keep
-      </button>
+      </MuiButton>
     </>
   ) : (
-    <button
-      type="button"
-      className={moduleStyles.dangerButton}
+    <MuiButton
+      variant="outlined"
+      color="error"
+      size="small"
       onClick={() => setConfirming(true)}
     >
       Delete
-    </button>
+    </MuiButton>
   );
 };
 

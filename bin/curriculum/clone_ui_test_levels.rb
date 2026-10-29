@@ -103,7 +103,7 @@ def clone_dsl_level(level, new_name)
   if level.level_encrypted? && CDO.properties_encryption_key.blank?
     raise "cannot clone encrypted level #{level.name.dump}: reading its dsl text requires " \
       "properties_encryption_key in locals.yml. Either set the key, or write a plaintext " \
-      "replacement level and point the unit at that instead (see dashboard/test/ui/config/README.md)."
+      "replacement level and point the unit at that instead (see dashboard/config/PARTITIONS.md)."
   end
 
   dsl_text = level.dsl_text

@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-10T04:49:39.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Programming Languages vs. Natural Languages\r\n\r\nWhat is the difference between a programming language and natural (every-day) language? ",
+    "encrypted_solution": "raTt8TqIFuZC28WEQ1OKxBI1AZRDcZOfLf/owYZOQngN4cyM9iGJUy3Mb8Ab\n6tirDqPTmE7L0NcABE0n/SmR+zztA6vs3JKv5RPwR2+mzCSSs1QV7hvxq/L+\nhhI7JJfYZVEiKVV/xKxdcvEoimV+nQKoRQloNclutqZG2aZbBGgsTvdHSAd7\nG67GC8lxIzFV44evfBBXzcVJHoXHPATTgODpaboa7SIAE6GfCAq6Ci8oosAR\nEyY77VHGDfGPpBL1nsi5jbTRd/jgEppP0KiwNKM5lO6vgttzIOliX/dzCeyQ\nLvy+2lHeIMN2c8akiW7rwbX9IsnSS84PmL+2cAWKrb9K+7uKNSDhbAWi0eEy\nRaRijESo5YFuwDb1nbjyHeCWFSc4lTPE1OMmo1ui5p+00mRzMG6c+ImgRXKU\nhn4zwAT14w2mYh7QxNtlTsV+qqVI3ufSsFensWWjJG72ulWMKjW2Hy6kts/7\naizt94KFQHZdbwQqfzrY/TmaETfw1txHYEzVMU6p7FSdme5ONc93UkBjjHOp\ngvWEdKKEju3C44c8CP6zx6vLAGyQw25fctxGfUQ4edsWPoMF7Qxt2X7Ag58I\n2IiaVDqNlUY9XA28lmRPDak0AtDh1X4YK+2THdtS\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19163,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-10-10T04:49:39.493+00:00\",\"changed\":[\"cloned from \\\"U3L5 CSP CFU natural language_2025\\\"\"],\"cloned_from\":\"U3L5 CSP CFU natural language_2025\"},{\"changed_at\":\"2026-10-10 04:50:19 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

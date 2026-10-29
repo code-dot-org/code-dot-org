@@ -89,6 +89,8 @@ export async function withApplitoolsCheck(
     configuration.setBranchName(branchName);
   }
   configuration.setDontCloseBatches(dontCloseBatches);
+  // Else eyes.open runs git merge-base, which on a shallow CI checkout falls back to fetching the full history.
+  configuration.setIgnoreGitMergeBase(true);
 
   const batch = new BatchInfo({
     id: batchId,

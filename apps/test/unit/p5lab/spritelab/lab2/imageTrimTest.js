@@ -133,6 +133,29 @@ describe('SpriteLab2 trimAnimationListImages save-time flag', () => {
     expect(out.propsByKey.a.dataURI).toBe(dataURI);
     expect(getImageThumbnail('wizard')).toBe(dataURI);
   });
+
+  it('thumbnails: false trims without touching the thumbnail cache', async () => {
+    const mine = 'data:image/png;base64,mine';
+    const other = 'data:image/png;base64,other';
+    await trimAnimationListImages({
+      orderedKeys: ['a', 'w'],
+      propsByKey: {
+        a: {name: 'Sprite 1', dataURI: mine, trimmed: true},
+        w: {name: 'wizard', dataURI: other, trimmed: true},
+      },
+    });
+    const theirs = 'data:image/png;base64,theirs';
+    const out = await trimAnimationListImages(
+      {
+        orderedKeys: ['b'],
+        propsByKey: {b: {name: 'Sprite 1', dataURI: theirs, trimmed: true}},
+      },
+      {thumbnails: false}
+    );
+    expect(out.propsByKey.b.dataURI).toBe(theirs);
+    expect(getImageThumbnail('Sprite 1')).toBe(mine);
+    expect(getImageThumbnail('wizard')).toBe(other);
+  });
 });
 
 describe('SpriteLab2 filterAnimationsToNames', () => {

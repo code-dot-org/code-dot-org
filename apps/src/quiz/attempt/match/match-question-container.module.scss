@@ -1,0 +1,118 @@
+.board {
+  position: relative;
+  display: flex;
+  gap: 56px;
+  width: 100%;
+}
+
+.lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.line {
+  fill: none;
+  stroke: var(--border-selected-primary);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.column {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+// Extra padding on the dot's side keeps text clear of it.
+.card {
+  position: relative;
+  // Grow to fill a taller column, but never shrink below the text.
+  flex: 1 0 auto;
+  min-height: 46px;
+  padding-block: 10px;
+  padding-inline: 16px 22px;
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: var(--shape-sm);
+  background: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  text-align: center;
+  cursor: pointer;
+
+  &.end {
+    padding-inline: 26px 16px;
+  }
+
+  &:hover:not(:disabled, .cardActive) {
+    border-color: var(--border-neutral-secondary);
+
+    .dot {
+      background: var(--background-neutral-tertiary);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--border-selected-primary);
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+// A selected card and a paired card look the same, as in the design.
+.cardActive {
+  border-color: var(--border-selected-primary);
+  background: var(--background-brand-light);
+
+  .dot {
+    border-color: var(--background-selected-primary);
+    background: var(--background-selected-primary);
+    color: var(--text-selected-primary);
+  }
+}
+
+.startText {
+  font-weight: 600;
+}
+
+// Centered on the card's inner edge, facing the other column.
+.dot {
+  position: absolute;
+  top: 50%;
+  inset-inline-end: -12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border-neutral-secondary);
+  border-radius: 50%;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font-size: var(--font-size-body-xs);
+  font-weight: 600;
+  // The glyph sits in the circle; normal leading would overflow it.
+  line-height: 1;
+  transform: translateY(-50%);
+
+  .end & {
+    inset-inline: -12px auto;
+  }
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

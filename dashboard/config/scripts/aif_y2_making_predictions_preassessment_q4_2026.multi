@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q4-2026'
+
+right 'A numeric representation of non-numeric data'
+wrong 'A table of numbers used as the input to a model'
+wrong 'A way of hiding data so that only the model can read it'
+wrong 'A copy of the data with the errors removed'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+In machine learning, what is an encoding?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Encodings
+MARKDOWN

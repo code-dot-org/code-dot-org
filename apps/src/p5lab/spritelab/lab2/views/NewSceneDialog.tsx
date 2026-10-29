@@ -2,6 +2,7 @@ import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
 import React, {useCallback, useState} from 'react';
+import {createPortal} from 'react-dom';
 
 import {SceneType} from '../types';
 
@@ -40,7 +41,16 @@ const NewSceneDialog: React.FunctionComponent<NewSceneDialogProps> = ({
     onClose();
   }, [name, type, onCreate, onClose]);
 
-  return (
+  // Mounted at the lab's theme root, outside any stacked bar that would
+  // otherwise cap the overlay below the playspace, and inside the theme's
+  // variables, which a portal to the body would leave behind.
+  const [host, setHost] = useState<Element | null>(null);
+  const anchorRef = useCallback(
+    (anchor: HTMLElement | null) =>
+      setHost(anchor?.closest('[data-theme]') ?? document.body),
+    []
+  );
+  const dialog = (
     <Dialog
       title="New scene"
       onClose={onClose}
@@ -83,6 +93,12 @@ const NewSceneDialog: React.FunctionComponent<NewSceneDialogProps> = ({
         onClick: onClose,
       }}
     />
+  );
+  return (
+    <>
+      <span ref={anchorRef} hidden />
+      {host && createPortal(dialog, host)}
+    </>
   );
 };
 

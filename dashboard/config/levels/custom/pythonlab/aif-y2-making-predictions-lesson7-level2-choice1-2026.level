@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T20:05:24.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-making-predictions-lesson7-choice1-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Test the model using `model.score` and print the score.\r\n- Classify a new unknown object seen by an astronomer by using `model.predict` and print the prediction.\r\n\r\n💻 Coding Tip\r\n\r\nRemember that you can score a model with a line like:\r\n\r\n```\r\nmodel.score(test_inputs, test_outputs)\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n0LJyVT+0Qh90xbLYYF4w\n",
+    "display_name": "Astronomer",
+    "bubble_choice_description": "An astronomer studies planets, stars, galaxies, and other celestial obejcts.",
+    "thumbnail_url": "https://images.code.org/f20a5e4ed56b50cccfc145cdd607cb5b-space.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 20:07:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:07:57 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:08:13 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:16:34 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

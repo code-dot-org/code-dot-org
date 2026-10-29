@@ -69,11 +69,13 @@ class QuizAttempt < ApplicationRecord
   def question_results_in_progress
     return nil if submitted_at.present?
 
-    quiz_question_responses.in_quiz(level).filter_map do |response|
-      selected_choice_id = response.response_data['selectedChoiceId']
-      # TODO: other question types - each needs its own notion of "unanswered".
-      next if selected_choice_id.blank?
-      {quiz_question_id: response.quiz_question_id, selected_choice_id: selected_choice_id}
+    quiz_question_responses.in_quiz(level).includes(:quiz_question).filter_map do |response|
+      next unless response.quiz_question.answered?(response.response_data)
+      {
+        quiz_question_id: response.quiz_question_id,
+        quiz_question_type: response.quiz_question.type,
+        response_data: response.response_data
+      }
     end
   end
 
@@ -89,15 +91,17 @@ class QuizAttempt < ApplicationRecord
 
     quiz_question_responses.in_quiz(level).includes(:quiz_question).map do |response|
       reveal_answer = show_correctness && reveal_answer_explanation
+      answer_key = response.quiz_question.answer_key_json
       # Pending/manual/ungraded responses have no score yet - report nil rather than false,
       # or an ungraded response would be shown to the student as incorrect.
       graded = response.score.present? && response.max_score.present?
       {
         quiz_question_id: response.quiz_question_id,
-        selected_choice_id: response.response_data['selectedChoiceId'],
+        quiz_question_type: response.quiz_question.type,
+        response_data: response.response_data,
         correct: (show_correctness && graded) ? response.score == response.max_score : nil,
         explanation: reveal_answer ? response.quiz_question.explanation : nil,
-        correct_choice_id: reveal_answer ? response.quiz_question.content['correct_choice_id'] : nil
+        answer_key: reveal_answer ? answer_key : answer_key.transform_values {nil}
       }
     end
   end

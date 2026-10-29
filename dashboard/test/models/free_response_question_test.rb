@@ -26,7 +26,20 @@ class FreeResponseQuestionTest < ActiveSupport::TestCase
     assert_equal expected, question.attempt_content_json
   end
 
+  test "answered? is true only for non-blank answerText" do
+    question = build(:free_response_question)
+    assert question.answered?({'answerText' => 'Because'})
+    refute question.answered?({'answerText' => '  '})
+    refute question.answered?({})
+  end
+
   test "description must be a string" do
     refute build(:free_response_question, content: {question_title: 'Why?', description: ['x']}).valid?
+  end
+
+  test "placeholder_content is valid" do
+    question = build(:free_response_question)
+    question.content = question.placeholder_content
+    assert question.valid?
   end
 end

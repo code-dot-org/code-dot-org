@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 <h1>Curriculum Overview</h1>
 
-<h2>What is AI and the Systems that Power It about?</h2>
+<h2>What is AI and the Systems That Power It about?</h2>
 
 <p>This unit explores how AI and computing systems process information and interact with hardware and software, through hands-on design, troubleshooting, and ethical evaluation of AI's real-world impact.</p>
 
 <div style="background-color:#F7F7FB; border-left:4px solid #4C42CF; border-radius:8px; padding:12px 16px; margin:20px 0;">
 <div style="font-size:16px;">
-<p>This is the second unit in the six unit <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/" target="_blank" rel="noopener noreferrer"><b>AI Foundations</b></a> semester 1 course. This professional learning module prepares you to teach it!</p>
+<p>This is the second unit in the six-unit <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2026/" target="_blank" rel="noopener noreferrer"><b>AI Foundations</b></a> semester 1 course. This professional learning module prepares you to teach it!</p>
 </div>
 </div>
 
@@ -32,9 +32,9 @@ markdown <<MARKDOWN
 <p><b>Total Duration:</b> Approximately 3 weeks<br>
 <b>Structure:</b> Twelve 45-minute lessons and one 3-day culminating project</p>
 
-<h2>Unit Calendar</h2>
+<h3>Unit Calendar</h3>
 
-<p>Take a quick look at the lessons included in this unit using the calendar tool. This version of the calendar assumes 5 45-minute lessons per week.</p>
+<p>Take a quick look at the lessons included in this unit using the calendar tool. This version of the calendar assumes five 45-minute lessons per week.</p>
 
 <div style="max-width:860px; margin:0 auto 20px auto; border-radius:10px; overflow:hidden; border:1.5px solid #ACA8EA;">
 

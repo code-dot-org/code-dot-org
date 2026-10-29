@@ -8,7 +8,9 @@
 #
 # What it sets up (all local, no secrets, RAILS_ENV=test as in the image):
 #   - MySQL 8.0 on /var/run/mysqld/mysqld.sock and 127.0.0.1:3306, user root
-#     with an empty password (what config/test.yml.erb expects: mysql://root@localhost/)
+#     with an empty password (what config/test.yml.erb expects: mysql://root@localhost/),
+#     and the `writer` and `reader` users config/test.yml.erb names for the
+#     replica and reporting connections
 #   - dashboard_test   <- `rails db:test:prepare`, as CI does: schema.rb, test
 #                         fixtures and `seed:test` (no curriculum content)
 #   - pegasus_test     <- pegasus/migrations       (Sequel migrations)
@@ -87,8 +89,19 @@ load_schemas() {
   echo "schemas: dashboard_test, pegasus_test ready"
 }
 
+provision_sql_users() {
+  # What `rake db:provision_sql_users` does in CI and development. That task
+  # runs only when CI is set, and CI also points the test config at CI-only
+  # hostnames, so call the provisioner directly. Idempotent.
+  (cd "$SRC" && bundle exec ruby -Ilib -r ./deployment -r cdo/sql_user_provisioner \
+     -e 'Cdo::SqlUserProvisioner.provision_from_config!') >"$LOG/sql-users.log" 2>&1 \
+    || { echo "SQL user provisioning FAILED, see $LOG/sql-users.log"; tail -20 "$LOG/sql-users.log"; return 1; }
+  echo "SQL users: writer, reader ready"
+}
+
 reset=0
 [ "${1:-}" = "--reset" ] && reset=1
 start_mysql
 start_redis
+provision_sql_users
 load_schemas "$reset"

@@ -112,6 +112,8 @@ services:
 # These should match the docker image's USERNAME, UID and GID args
 #
 # NOTE: uid and gid are overridden to root by Skaffold due to a sync bug.
+# The chart refuses to render RAILS_ENV=production with uid or gid 0; see
+# templates/dashboard/_dashboard.yaml.
 user:
   username: cdo
   uid: 1000
@@ -119,10 +121,11 @@ user:
   home: /home/cdo
   allowSudo: false
 
-# Reserved for a future local dashboard profile. There is no Skaffold profile
-# that enables these mounts while the root docker family lacks an image with
-# the frontend assets.
 localDev:
+  # Local-only credentials and boot defaults; live deployments use external secrets.
+  stubSecrets: false
+
+  # Reserved for a future local dashboard profile with frontend assets.
   mounts:
     mountDotAWS: false
     mountDotConfigGcloud: false
@@ -136,3 +139,15 @@ localDev:
 scheduling:
   nodeSelector: {}
   tolerations: []
+
+# Kubernetes ServiceAccount the dashboard, worker, and job pods run as. The
+# name is fixed rather than derived from the release because an IAM trust
+# policy names it (system:serviceaccount:<namespace>:cdo-app); one release
+# per namespace is assumed. On EKS, k8s-gitops sets the IRSA annotation
+# (eks.amazonaws.com/role-arn) per envType so the AWS SDK can assume the
+# role with no static credentials. The pod never needs the Kubernetes API,
+# so the API token is not mounted; the IRSA webhook adds its own token volume.
+serviceAccount:
+  create: true
+  name: cdo-app
+  annotations: {}

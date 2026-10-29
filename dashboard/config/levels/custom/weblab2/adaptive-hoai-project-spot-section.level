@@ -1,0 +1,13 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-10T00:29:12.000Z",
+  "level_num": "custom",
+  "properties": {
+    "project_template_level_name": "adaptive-hoai-template",
+    "hide_share_and_remix": true,
+    "long_instructions": "**Do This**\n\n1.  Look at your page and find the **hero section**, the **feature cards**, the **interactive canvas**, and the **call-to-action**.\n2.  Pick two of them.\n3.  Ask the AI to change each one, using its name in your prompt.\n4.  Check the preview. Did each change land on the right block?\n\nMissing a section? Say “I don’t have this one yet,” or ask the AI to add it."
+  },
+  "published": true
+}]]></config>
+</Weblab2>

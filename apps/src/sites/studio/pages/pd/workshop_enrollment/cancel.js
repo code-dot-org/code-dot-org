@@ -7,9 +7,6 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 document.addEventListener('DOMContentLoaded', function () {
   createReactRoot(
     <EnrollmentCancelButton {...getScriptData('props')} />,
-    document.getElementById('workshop-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('workshop-container')
   );
 });

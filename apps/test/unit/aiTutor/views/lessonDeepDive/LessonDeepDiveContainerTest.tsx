@@ -17,17 +17,13 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   LessonSummaryCard: () => <div>lesson-summary</div>,
   PreSkillsCheck: () => <div>pre-skills-check</div>,
   TutorSummaryBox: () => <div>tutor-summary</div>,
+  NextStepPicker: () => <div>next-step</div>,
 }));
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/Reflection/ReflectionBox',
   () => ({__esModule: true, default: () => <div>reflection</div>})
 );
-
-jest.mock('@cdo/apps/aiTutor/views/lessonDeepDive/NextStepPicker', () => ({
-  __esModule: true,
-  default: () => <div>next-step</div>,
-}));
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox',

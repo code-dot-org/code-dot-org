@@ -7,15 +7,28 @@ import {createContext} from 'react';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
 
-import {CheckpointStatusMap, StepContext} from '../progress/model';
-import {Checkpoint, Pathway} from '../types';
+import {
+  CheckpointStatusMap,
+  GeneratedContent,
+  Progress,
+  ValidationAttempt,
+} from '../progress/model';
+import {Checkpoint, Pathway, Step} from '../types';
 
 export interface PathwayContextValue {
   pathway: Pathway;
   checkpoint: Checkpoint;
   statusMap: CheckpointStatusMap;
-  stepContextMap: {[stepId: string]: StepContext};
-  updateStepContext: (stepId: string, patch: StepContext) => void;
+  progress: Progress;
+  saveGeneratedInstructions: (
+    stepId: string,
+    content: GeneratedContent
+  ) => void;
+  /** Records one check of a project step's work. */
+  recordValidation: (
+    step: Step,
+    attempt: Omit<ValidationAttempt, 'at'>
+  ) => void;
   /** What the shell's own AI calls present for an access token. */
   aiContext: AichatContext;
 }

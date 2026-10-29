@@ -812,6 +812,21 @@ describe('lab2ProjectRedux', () => {
       expect(state.viewingOldVersion).toBe(false);
       expect(state.restoredOldVersion).toBe(false);
     });
+
+    it('should clear a pending AI tutor review', () => {
+      const stateUnderReview = {
+        ...initialState,
+        viewingAiTutorVersion: true,
+        aiTutorVersionFiles: [createMockFile('1')],
+        projectSourceBeforeAiTutorVersion: createMockMultiFileSource(),
+      };
+
+      const state = reducer(stateUnderReview, resetProjectMetadata());
+
+      expect(state.viewingAiTutorVersion).toBe(false);
+      expect(state.aiTutorVersionFiles).toBeUndefined();
+      expect(state.projectSourceBeforeAiTutorVersion).toBeUndefined();
+    });
   });
 
   describe('resetHasEditedSinceLastVersionSave', () => {

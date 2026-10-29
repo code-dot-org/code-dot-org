@@ -6,6 +6,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
+import {canUseLessonDeepDive} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -46,6 +47,7 @@ class ProgressLesson extends React.Component {
     userId: PropTypes.number,
     userType: PropTypes.string,
     unitName: PropTypes.string,
+    aiChatAccessLevel: PropTypes.string,
   };
 
   constructor(props) {
@@ -102,6 +104,7 @@ class ProgressLesson extends React.Component {
       unitHasUnnumberedLessons,
       isOnLevelView,
       userId,
+      aiChatAccessLevel,
     } = this.props;
 
     if (!isVisible) {
@@ -122,7 +125,10 @@ class ProgressLesson extends React.Component {
     // These lessons don't have lesson plans, so we can use that as a proxy for
     // whether or not to show the Lesson Tutor button.
     const showLessonTutorButton =
-      lesson.lessonTutorPath && lesson.hasLessonPlan && userId;
+      lesson.lessonTutorPath &&
+      lesson.hasLessonPlan &&
+      userId &&
+      canUseLessonDeepDive(aiChatAccessLevel);
 
     // Adjust caret style if locale is RTL
     const caretStyle = isRtl ? styles.caretRTL : styles.caret;
@@ -390,4 +396,5 @@ export default connect((state, ownProps) => ({
   userId: state.currentUser.userId,
   userType: state.currentUser.userType,
   unitName: state.progress.unitTitle,
+  aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
 }))(ProgressLesson);

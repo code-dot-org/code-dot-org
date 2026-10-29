@@ -1,0 +1,132 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-16T06:06:34.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "require_edit_to_continue": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "script.js",
+          "contents": "const byId = (id) => document.getElementById(id);\n\nfunction setImageState(image, state) {\n  const source = image.dataset[`${state}Src`];\n  if (source) {\n    image.src = source;\n    image.alt = image.dataset[`${state}Alt`];\n  }\n}\n\nfunction activateHotspot(hotspot) {\n  const image = hotspot.querySelector('.hotspot-image');\n  setImageState(image, 'active');\n  hotspot.classList.add('is-active');\n  hotspot.querySelector('.click-hint').hidden = true;\n  if (hotspot.dataset.caption) {\n    byId(hotspot.dataset.caption).textContent = hotspot.dataset.message;\n  }\n  byId(hotspot.dataset.reveal).hidden = false;\n}\n\nfunction resetHotspot(hotspot) {\n  setImageState(hotspot.querySelector('.hotspot-image'), 'idle');\n  hotspot.classList.remove('is-active');\n  hotspot.querySelector('.click-hint').hidden = false;\n  if (hotspot.dataset.caption) {\n    byId(hotspot.dataset.caption).textContent = '';\n  }\n  byId(hotspot.dataset.reveal).hidden = true;\n}\n\nfunction showScreen(screenId) {\n  document.querySelectorAll('.screen').forEach((screen) => {\n    screen.hidden = screen.id !== screenId;\n  });\n  window.scrollTo(0, 0);\n  byId(screenId).querySelector('h2').focus();\n}\n\nfunction goTo(button) {\n  if (button.hasAttribute('data-reset')) {\n    document.querySelectorAll('.hotspot').forEach(resetHotspot);\n  }\n  showScreen(button.dataset.go);\n}\n\nfunction init() {\n  document.querySelectorAll('.hotspot').forEach((hotspot) => {\n    hotspot.addEventListener('click', () => activateHotspot(hotspot));\n  });\n  document.querySelectorAll('[data-go]').forEach((button) => {\n    button.addEventListener('click', () => goTo(button));\n  });\n}\n\ntry {\n  init();\n} catch (error) {\n  byId('app-error').hidden = false;\n  document.querySelectorAll('.screen').forEach((screen) => {\n    screen.hidden = true;\n  });\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": ":root {\n  --indigo: #3743c4;\n  --indigo-dark: #2a3399;\n  --ink: #1c2233;\n  --surface: #ffffff;\n  --page: #eef1f6;\n  --forest: #3f5a2e;\n  --panel: rgba(20, 25, 40, 0.84);\n  --warn-bg: #fdecec;\n  --warn-ink: #7f1d1d;\n  --radius: 0.75rem;\n}\n\n[hidden] {\n  display: none !important;\n}\n\n* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  min-height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: flex-start;\n  padding: 1rem;\n  background: var(--page);\n  color: var(--ink);\n  font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif;\n  font-size: 1rem;\n  line-height: 1.45;\n}\n\n.app {\n  width: 100%;\n  max-width: 28rem;\n  min-height: 36rem;\n  display: flex;\n  flex-direction: column;\n  background: var(--surface);\n  border-radius: 1.5rem;\n  box-shadow: 0 8px 24px rgba(28, 34, 51, 0.18);\n  overflow: hidden;\n}\n\n.app-header {\n  padding: 1rem 1.25rem;\n  background: var(--indigo);\n  color: #ffffff;\n}\n\n.app-title {\n  margin: 0;\n  font-size: 1.25rem;\n  line-height: 1.2;\n}\n\n.notice {\n  margin: 1rem 1.25rem 0;\n  padding: 0.75rem 1rem;\n  border-radius: var(--radius);\n  background: var(--warn-bg);\n  color: var(--warn-ink);\n  font-weight: 600;\n}\n\n.screen {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  gap: 0.875rem;\n  padding: 1.25rem;\n}\n\n.screen h2 {\n  margin: 0;\n  font-size: 1.375rem;\n  line-height: 1.25;\n}\n\n.screen h2:focus {\n  outline: none;\n}\n\n.screen p {\n  margin: 0;\n}\n\n.screen-photo {\n  background: url(\"milkweed.jpg\") center / cover no-repeat, var(--forest);\n}\n\n.screen-heading {\n  align-self: flex-start;\n  padding: 0.25rem 0.75rem;\n  border-radius: 0.5rem;\n  background: var(--panel);\n  color: #ffffff;\n}\n\n.hotspot {\n  align-self: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 0.5rem;\n  margin-block: auto;\n  padding: 0.75rem;\n  border: 2px solid transparent;\n  border-radius: var(--radius);\n  background: var(--panel);\n  color: #ffffff;\n  font: inherit;\n  cursor: pointer;\n}\n\n.hotspot-light {\n  margin-block: 0;\n  background: transparent;\n  color: var(--ink);\n}\n\n.hotspot:hover {\n  border-color: #ffffff;\n}\n\n.hotspot-light:hover {\n  border-color: var(--indigo);\n}\n\n.hotspot:focus-visible {\n  outline: 3px solid #ffffff;\n  outline-offset: 2px;\n}\n\n.hotspot-light:focus-visible {\n  outline-color: var(--indigo);\n}\n\n.hotspot-image {\n  display: block;\n  max-width: 100%;\n  height: auto;\n}\n\n.caterpillar-image {\n  width: 7rem;\n}\n\n.chrysalis-image {\n  width: 5rem;\n}\n\n.butterfly-image {\n  width: 9rem;\n}\n\n.hotspot.is-active .caterpillar-image {\n  width: 14rem;\n}\n\n.hotspot.is-active .chrysalis-image {\n  width: 16rem;\n}\n\n.click-hint {\n  font-weight: 700;\n}\n\n.caption {\n  padding: 0.75rem 1rem;\n  border-radius: var(--radius);\n  background: var(--panel);\n  color: #ffffff;\n}\n\n.caption:empty {\n  display: none;\n}\n\n.emerging-image {\n  display: block;\n  width: 100%;\n  height: auto;\n  border-radius: var(--radius);\n}\n\n.screen-actions {\n  display: flex;\n  justify-content: flex-end;\n  margin-top: auto;\n  padding-top: 0.5rem;\n}\n\n.primary-button {\n  min-width: 6rem;\n  min-height: 2.75rem;\n  padding: 0.5rem 1.5rem;\n  border: 2px solid var(--indigo);\n  border-radius: var(--radius);\n  background: var(--indigo);\n  color: #ffffff;\n  font: inherit;\n  font-weight: 700;\n  cursor: pointer;\n}\n\n.primary-button:hover {\n  background: var(--indigo-dark);\n  border-color: var(--indigo-dark);\n}\n\n.primary-button:focus-visible {\n  outline: 3px solid var(--indigo);\n  outline-offset: 2px;\n}\n\n.screen-photo .primary-button:focus-visible {\n  outline-color: #ffffff;\n}\n\n@media (max-width: 22rem) {\n  body {\n    padding: 0;\n  }\n\n  .app {\n    border-radius: 0;\n  }\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <title>Monarch Butterflies</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n  <main class=\"app\">\n    <header class=\"app-header\">\n      <h1 class=\"app-title\">Monarch Butterflies</h1>\n    </header>\n\n    <noscript><p class=\"notice\">This app needs JavaScript to run.</p></noscript>\n    <p id=\"app-error\" class=\"notice\" hidden>Something went wrong loading this app. Please refresh the page.</p>\n\n    <section id=\"screen-caterpillar\" class=\"screen screen-photo\" aria-labelledby=\"caterpillar-heading\">\n      <h2 id=\"caterpillar-heading\" class=\"screen-heading\" tabindex=\"-1\">The caterpillar</h2>\n      <button type=\"button\" class=\"hotspot\" data-caption=\"caterpillar-caption\" data-reveal=\"caterpillar-next\"\n              data-message=\"After exiting the egg, the monarch butterfly begins life as a larva, or caterpillar. It can be recognized by its distinctive yellow, white, and black bands across the body.\">\n        <img class=\"hotspot-image caterpillar-image\" src=\"caterpillar.png\" width=\"680\" height=\"340\" alt=\"A monarch caterpillar with yellow, white, and black bands\">\n        <span class=\"click-hint\">Click Me!</span>\n      </button>\n      <p id=\"caterpillar-caption\" class=\"caption\" role=\"status\" aria-live=\"polite\"></p>\n      <div class=\"screen-actions\">\n        <button type=\"button\" id=\"caterpillar-next\" class=\"primary-button\" data-go=\"screen-chrysalis\" hidden>Next</button>\n      </div>\n    </section>\n\n    <section id=\"screen-chrysalis\" class=\"screen screen-photo\" aria-labelledby=\"chrysalis-heading\" hidden>\n      <h2 id=\"chrysalis-heading\" class=\"screen-heading\" tabindex=\"-1\">The chrysalis</h2>\n      <button type=\"button\" class=\"hotspot\" data-caption=\"chrysalis-caption\" data-reveal=\"chrysalis-next\"\n              data-message=\"The caterpillar (now called a pupa) encases itself in a cocoon or chrysalis before entering the next stage in its life cycle. The pupa remains in the chrysalis for around ten days.\">\n        <img class=\"hotspot-image chrysalis-image\" src=\"cocoon.png\" width=\"766\" height=\"1042\"\n             alt=\"A green monarch chrysalis\"\n             data-idle-src=\"cocoon.png\" data-idle-alt=\"A green monarch chrysalis\"\n             data-active-src=\"chrysalis.jpg\" data-active-alt=\"A row of monarch caterpillars on a branch, each one further along in forming a green chrysalis\">\n        <span class=\"click-hint\">Click Me!</span>\n      </button>\n      <p id=\"chrysalis-caption\" class=\"caption\" role=\"status\" aria-live=\"polite\"></p>\n      <div class=\"screen-actions\">\n        <button type=\"button\" id=\"chrysalis-next\" class=\"primary-button\" data-go=\"screen-butterfly\" hidden>Next</button>\n      </div>\n    </section>\n\n    <section id=\"screen-butterfly\" class=\"screen\" aria-labelledby=\"butterfly-heading\" hidden>\n      <img class=\"emerging-image\" src=\"hatching.jpg\" width=\"300\" height=\"209\" alt=\"A row of monarch chrysalises on a branch, with butterflies emerging from them\">\n      <h2 id=\"butterfly-heading\" tabindex=\"-1\">The butterfly</h2>\n      <p>Finally it's time for the butterfly to emerge! An adult butterfly can live for two to six weeks. It will lay eggs that start the cycle for a new generation of butterflies.</p>\n      <button type=\"button\" class=\"hotspot hotspot-light\" data-reveal=\"home-button\">\n        <img class=\"hotspot-image butterfly-image\" src=\"butterfly.png\" width=\"969\" height=\"1024\" alt=\"A monarch butterfly with orange and black wings\">\n        <span class=\"click-hint\">Click Me!</span>\n      </button>\n      <div class=\"screen-actions\">\n        <button type=\"button\" id=\"home-button\" class=\"primary-button\" data-go=\"screen-caterpillar\" data-reset hidden>Home</button>\n      </div>\n    </section>\n  </main>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "hatching.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample5_dev_27_28/uuid/3b0e0ecb-7af2-4577-8477-5ee260ee9da2.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "chrysalis.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample5_dev_27_28/uuid/ddceb0c6-fb73-4290-a9a2-0403fb165330.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "caterpillar.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample5_dev_27_28/uuid/34723133-7275-4ffb-a527-6eedff30f3bd.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "big-caterpillar.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample5_dev_27_28/uuid/742a4594-e7f6-469f-b438-e20c23a185dc.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "milkweed.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample5_dev_27_28/uuid/d0a1698a-ffc3-4cac-83c5-c682145e386d.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "cocoon.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample5_dev_27_28/uuid/a97d82b1-653d-4a84-8225-386dbf4a2449.png",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "butterfly.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/csp_unit1_lesson2_sample5_dev_27_28/uuid/bcb05190-626c-4fc3-9671-a38f20445b72.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+
+      ]
+    },
+    "long_instructions": "### Do This\r\n\r\nWith a partner, explore the app. Try every button and picture you can find. Then discuss:\r\n\r\n- How does the user interact with the app?\r\n- What is the purpose of this app?\r\n- Who is the target audience?"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-16T06:06:34.144+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson2_sample4_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson2_sample4_dev_27_28\"},{\"changed_at\":\"2026-10-16 06:06:54 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-16 06:16:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>

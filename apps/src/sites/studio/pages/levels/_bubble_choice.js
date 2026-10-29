@@ -18,8 +18,5 @@ reportTeacherReviewingStudentNonLabLevel();
 
 createReactRoot(
   <BubbleChoice level={level} />,
-  document.querySelector('#bubble-choice'),
-  {
-    legacyReactDomRender: true,
-  }
+  document.querySelector('#bubble-choice')
 );

@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-10-09T00:25:35.000Z",
   "level_num": "custom",
@@ -30,8 +31,7 @@
         "temperature": "hidden",
         "systemPrompt": "hidden",
         "retrievalContexts": "hidden",
-        "modelCardInfo": "hidden",
-        "responseJsonSchema": "hidden"
+        "modelCardInfo": "hidden"
       },
       "levelSystemPrompt": "TODOs:\n- Limit response length to 3-5 sentences.\n- Ensure the bot does not generate code or images.\n- Refuse to discuss topics unrelated to web design prompts.\n- Prioritize asking clarifying questions over making assumptions.",
       "hidePresentationPanel": false,
@@ -40,11 +40,14 @@
       ],
       "multimodalEnabled": false
     },
-    "long_instructions": "TODOs:\r\n- Try asking the bot to describe a web page.\r\n- Then, try adding more specific details to your description.\r\n- Use the web design terms you've learned to make your prompt more precise.\r\n- Observe how the bot's response changes with more detailed prompts.",
+    "long_instructions": "TODOs:\r\n- Prompt AI to build a web page.\r\n- Try adding more specific details to your description.\r\n  - Use specific web design terms you've learned to make your prompt more precise.\r\n  - Observe how AI's output changes with more detailed prompts.",
     "generate_aichat_preset": "explore",
-    "generate_outline": "Engage with an AI to practice crafting effective prompts for web design. Start by outlining your desired web page elements, then refine your prompt by adding concrete details and using the web component vocabulary to achieve a more precise AI-generated result."
+    "generate_outline": "Engage with an AI to practice crafting effective prompts for web design. Start by outlining your desired web page elements, then refine your prompt by adding concrete details and using the web component vocabulary to achieve a more precise AI-generated result.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-10-09 00:25:40 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:25:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:26:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:26:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-09 00:25:40 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:25:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:26:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 00:26:03 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-09 15:30:10 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>

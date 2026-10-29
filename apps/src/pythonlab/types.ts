@@ -20,6 +20,9 @@ export interface PyodideMessage {
   wav?: Uint8Array<ArrayBuffer>;
   // Only on 'theater_media' messages: how long the gif runs, in milliseconds.
   gifDurationMs?: number;
+  // Only on 'theater_media' messages: the scene described for a screen reader.
+  summary?: string;
+  transcript?: string;
 }
 
 export type MessageType =

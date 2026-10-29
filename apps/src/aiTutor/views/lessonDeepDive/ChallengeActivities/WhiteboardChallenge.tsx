@@ -2,7 +2,7 @@ import {
   useTheme,
   ThemeProvider,
 } from '@code-dot-org/component-library/common/contexts';
-import {ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
+import {AudioRecorder, ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
 import {createTheme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -15,10 +15,10 @@ import ReactFlowCanvas from '@cdo/apps/sketchlab/reactFlow/components/ReactFlowC
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import AudioRecorder from './AudioRecorder';
 import {requestEvaluation} from './requestEvaluation';
 
 import styles from './whiteboard-challenge.module.scss';
@@ -132,7 +132,7 @@ interface WhiteboardChallengeProps {
   // top-bar "Submit for feedback" / "Start over" buttons this modality's
   // submit and reset handlers.
   onSubmittableChange: (canSubmit: boolean) => void;
-  submitRef: React.MutableRefObject<(() => void | Promise<void>) | null>;
+  submitRef: React.MutableRefObject<(() => Promise<boolean>) | null>;
   resetRef: React.MutableRefObject<(() => void) | null>;
 }
 
@@ -241,9 +241,9 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   // Snapshot the canvas as a PNG, create the challenge response, and PUT
   // the image bytes to the asset upload endpoint (which stores them in S3
   // server-side; the bucket has no CORS rules for direct browser PUTs).
-  const handleSubmit = async () => {
+  const handleSubmit = async (): Promise<boolean> => {
     if (challengeId === null) {
-      return;
+      return false;
     }
     setSubmitting(true);
     setSubmitError(null);
@@ -253,10 +253,23 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
         throw new Error(error ?? 'Could not capture your drawing.');
       }
 
+      // Overlaps transcription. 'error' (moderation unavailable) fails open.
+      const moderation = moderateImage(
+        new File([blob], 'whiteboard.png', {type: 'image/png'}),
+        clientType,
+        {}
+      );
+
       const transcript =
         explanationType === ExplanationTypes.AUDIO && hasRecording
           ? await transcribeAudio()
           : null;
+
+      if ((await moderation) === 'flagged') {
+        throw new Error(
+          "Your drawing can't be submitted. Please change it and try again."
+        );
+      }
 
       const text =
         explanationType === ExplanationTypes.TEXT ? textExplanation : null;
@@ -294,12 +307,14 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
       setChallengeResponseId(created.id);
       setEvaluationStatus(status);
       submitCallback(true);
+      return true;
     } catch (error) {
       setSubmitError(
         error instanceof Error
           ? error.message
           : 'Something went wrong. Please try again.'
       );
+      return false;
     } finally {
       setSubmitting(false);
     }

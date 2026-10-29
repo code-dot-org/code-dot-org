@@ -1,5 +1,5 @@
 // Writing a made or edited picture into the project's animation list,
-// shared by the image dialog and the explore scene.
+// shared by the image dialog and the sentence scene.
 
 import {AnyAction, Dispatch} from 'redux';
 

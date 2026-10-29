@@ -1,0 +1,23 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-09T23:59:42.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Speak the language of web development \n\n**HTML** says what’s on the page.\n\n**CSS** says how it looks.\n\n**JavaScript** says what it does.",
+        "imageUrl": "https://images.code.org/114ece31c663d795d0e4238bba6a6ca4-button-stages-labeled.png",
+        "key": "adaptive-test-speak-web-dev-f0bfc4b1-acf3-47d0-83bd-1d310892f3fd",
+        "layout": "text-top-center"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-10 00:01:26 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-10 00:01:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-10 00:02:01 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

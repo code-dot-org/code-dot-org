@@ -1,0 +1,55 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-10T21:09:22.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Jade's Boba Shop",
+    "long_instructions": "If tomorrow afternoon hits 85 degrees, how many drinks should Jade prepare for?\r\nThe client’s records are in the program: afternoon temperature (℉), and drinks sold, for five days of records. Right now the program stops with an error.\r\n\r\n**☑️ Do This:**\r\n\r\n- Run this program and notice the error in the console. Consider why the error might be happening.\r\n- `scikit-learn` requires that each input example is wrapped in its own list, like `[[1], [2], [3]]`. Rewrite temperatures as a list of lists, then run the program again.\r\n- Make the prediction you made on paper: `value = model.predict([[85]])[0]`, then print it with `print(f\"Prediction for 85: {value}\")`.\r\n- If time allows, discuss with your partner: if the client asked you to predict for 104 degrees, could your paper plot have answered that?\r\n\r\n**💻 Coding Tip**\r\n\r\n`model.fit(inputs, outputs)` trains the model, and scikit-learn expects every input wrapped in its own list. `model.predict([[85]])` returns a list holding one prediction, so `[0]` takes the number out of it.\r\n",
+    "bubble_choice_description": "Help Jade predict how many drinks to prepare.",
+    "thumbnail_url": "https://images.code.org/83d5031a89fe1afeede82261f0bbb585-boba.jpg",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\n\n# TODO 1: Fix the definition of temperatures\ntemperatures = [62, 70, 78, 82, 92]\ndrinks = [30, 43, 53, 67, 80]\n\n# This line confirms how many examples the data holds:\nprint(\"Data loaded:\", len(temperatures), \"examples\")\n\n# This line creates a new, untrained model:\nmodel = LinearRegression()\n\n# This line trains the model on the client's data:\nmodel.fit(temperatures, drinks)\n\n# TODO 2: Predict the value you made on paper\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr8vlYtaKFsTUwh\nhabxkWiEMfCQ5wWo0QcBkmICDyTPheVaXyXRXfJVZKmclJE7s7q9wc2AfXSt\npSWMr3YwnOUTT325TzZY9wTYx7jA8siTW2LSdHDvADUD1RevCd3wHpkp9u/P\nDc88lsRBaqn7zp0FnugU96jzUEYg9qfTC9mOc/2/V4WvWmtaUF4fTlxtBZfw\n+obfxceiEiK22FI0QB/e7IO+TCsOobbiLA/lMQ7JcoFXAyOOF/uicBO3SZiX\nx7HtmK1m0rxECDfMcRkqAPhYjMd2E2Zu20D7MFgr4zX+MKXUUsw90qYCMxNT\nZNivkdqrkcwljQ95EBBMfFZxOSBTVeojloCMjk8on4qI2E3EQPM2Q14xVgL/\nsWq18LSic31ZvHuVV/IH4CMBnd38sT44hMA/4aEjJeR/uwufcQuGWOvq+MJ+\nWdXrSzCO1MHdMcn4BbwZ8xp+gbum3P5qX3VN\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-10 21:19:01 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 21:19:13 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-10 21:19:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

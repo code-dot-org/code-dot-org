@@ -58,6 +58,26 @@ describe('QuizConfigurationPanel', () => {
     put.mockReset();
   });
 
+  it('turns the intro screen toggle off when the workspace removes the intro screen', () => {
+    const {rerender} = render(
+      <QuizConfigurationPanel
+        quizId={42}
+        initialValues={INITIAL_VALUES}
+        onSaved={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Show intro screen')).toBeChecked();
+
+    rerender(
+      <QuizConfigurationPanel
+        quizId={42}
+        initialValues={{...INITIAL_VALUES, showIntroScreen: false}}
+        onSaved={jest.fn()}
+      />
+    );
+    expect(screen.getByLabelText('Show intro screen')).not.toBeChecked();
+  });
+
   it('shows the chooser when no purpose is set yet, and saves the chosen purpose', async () => {
     put.mockResolvedValue(jsonResponse({...INITIAL_VALUES, purpose: 'exam'}));
     const {onSaved} = renderPanel({
@@ -232,15 +252,27 @@ describe('QuizConfigurationPanel', () => {
     expect(put).not.toHaveBeenCalled();
   });
 
-  it('does not save, and reverts, when turning off show intro screen while a time limit is set', async () => {
+  it('locks show intro screen on while a time limit is saved, and says why', () => {
     renderPanel({
       initialValues: {...INITIAL_VALUES, timeLimitMinutes: 10},
     });
 
-    const toggle = screen.getByLabelText(
-      'Show intro screen'
-    ) as HTMLInputElement;
-    fireEvent.click(toggle);
+    const toggle = screen.getByLabelText('Show intro screen');
+    expect(toggle).toBeChecked();
+    expect(toggle).toBeDisabled();
+    expect(toggle).toHaveAccessibleDescription(
+      'A timed quiz must have an intro screen, remove the time limit first.'
+    );
+  });
+
+  it('does not save a time limit while show intro screen is off', async () => {
+    renderPanel({
+      initialValues: {...INITIAL_VALUES, showIntroScreen: false},
+    });
+    const field = screen.getByLabelText(TIME_LIMIT_LABEL);
+
+    fireEvent.change(field, {target: {value: '10'}});
+    fireEvent.blur(field);
 
     expect(
       await screen.findByText(
@@ -248,7 +280,6 @@ describe('QuizConfigurationPanel', () => {
       )
     ).toBeInTheDocument();
     expect(put).not.toHaveBeenCalled();
-    expect(toggle.checked).toBe(true);
   });
 
   it("two saves for different fields in flight at once never carry each other's field, regardless of resolve order", async () => {

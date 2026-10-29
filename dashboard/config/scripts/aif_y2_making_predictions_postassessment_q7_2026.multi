@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q7-2026'
+
+wrong 'Training outputs and test outputs'
+wrong 'Training inputs and test inputs'
+right 'Test inputs and test outputs'
+wrong 'Training inputs and training outputs'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A machine learning engineer splits data into training inputs, training outputs, test inputs, and test outputs. Which values should be used to evaluate how well the machine learning model performs?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Training and Test Sets
+MARKDOWN

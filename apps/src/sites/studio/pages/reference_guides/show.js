@@ -14,9 +14,6 @@ $(() => {
       referenceGuides={referenceGuides}
       baseUrl={baseUrl}
     />,
-    document.getElementById('show-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('show-container')
   );
 });

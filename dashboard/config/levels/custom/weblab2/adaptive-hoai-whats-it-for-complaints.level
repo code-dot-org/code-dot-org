@@ -1,0 +1,27 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-10-10T00:53:29.000Z",
+  "level_num": "custom",
+  "properties": {
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Sprout House</title>\n    <style>\n      body {\n        margin: 0;\n        font-family: system-ui, Arial, sans-serif;\n        color: #1e2d24;\n        background: #f3f8ee;\n        line-height: 1.5;\n      }\n\n      .top {\n        background: #2f6b45;\n        color: #f3f8ee;\n        text-align: center;\n        padding: 80px 20px;\n      }\n      .top h1 {\n        font-size: 3rem;\n        margin: 0 0 12px;\n      }\n      .top p {\n        font-size: 1.25rem;\n        max-width: 480px;\n        margin: 0 auto;\n      }\n\n      .cards {\n        display: flex;\n        flex-wrap: wrap;\n        gap: 20px;\n        justify-content: center;\n        padding: 50px 20px;\n      }\n      .card {\n        background: white;\n        border: 3px solid #b7d9a8;\n        border-radius: 16px;\n        padding: 20px;\n        width: 220px;\n        text-align: center;\n      }\n      .card h2 {\n        margin: 0 0 8px;\n        font-size: 1.3rem;\n      }\n      .card p {\n        margin: 0;\n      }\n\n      .play {\n        text-align: center;\n        padding: 20px 20px 50px;\n      }\n      .play h2 {\n        margin: 0 0 4px;\n      }\n      .play canvas {\n        background: #ffffff;\n        border: 3px solid #2f6b45;\n        border-radius: 16px;\n        cursor: pointer;\n        max-width: 100%;\n      }\n\n      .bottom {\n        background: #ffd76e;\n        text-align: center;\n        padding: 50px 20px;\n      }\n      .bottom h2 {\n        margin: 0 0 16px;\n        font-size: 1.8rem;\n      }\n      .bottom button {\n        background: #1e2d24;\n        color: white;\n        border: none;\n        border-radius: 30px;\n        padding: 14px 32px;\n        font-size: 1.2rem;\n        cursor: pointer;\n      }\n    </style>\n  </head>\n  <body>\n    <div class=\"top\">\n      <h1>Welcome!</h1>\n      <p>We're so happy you're here.</p>\n    </div>\n\n    <div class=\"cards\">\n      <div class=\"card\">\n        <h2>Option 1</h2>\n        <p>This one is really good.</p>\n      </div>\n      <div class=\"card\">\n        <h2>Option 2</h2>\n        <p>People like this one a lot.</p>\n      </div>\n      <div class=\"card\">\n        <h2>Option 3</h2>\n        <p>Our newest thing.</p>\n      </div>\n    </div>\n\n    <div class=\"play\">\n      <h2>Grow a sprout</h2>\n      <p>Click to water your plant and watch it grow.</p>\n      <canvas id=\"garden\" width=\"300\" height=\"360\"></canvas>\n    </div>\n\n    <div class=\"bottom\">\n      <h2>Ready?</h2>\n      <button id=\"go\">Click here</button>\n    </div>\n\n    <script>\n      var canvas = document.getElementById(\"garden\");\n      var ctx = canvas.getContext(\"2d\");\n      var leaves = 0;\n\n      function drawPlant() {\n        ctx.clearRect(0, 0, canvas.width, canvas.height);\n\n        var stemTop = 260 - leaves * 25;\n        ctx.strokeStyle = \"#2f6b45\";\n        ctx.lineWidth = 6;\n        ctx.beginPath();\n        ctx.moveTo(150, 260);\n        ctx.lineTo(150, stemTop);\n        ctx.stroke();\n\n        ctx.fillStyle = \"#5fb36b\";\n        for (var i = 1; i <= leaves; i++) {\n          var side = i % 2 === 0 ? 1 : -1;\n          ctx.beginPath();\n          ctx.ellipse(150 + side * 22, 260 - i * 25, 20, 9, side * 0.4, 0, Math.PI * 2);\n          ctx.fill();\n        }\n\n        if (leaves === 8) {\n          ctx.fillStyle = \"#ff8fb1\";\n          ctx.beginPath();\n          ctx.arc(150, stemTop, 18, 0, Math.PI * 2);\n          ctx.fill();\n        }\n\n        ctx.fillStyle = \"#c8693c\";\n        ctx.beginPath();\n        ctx.moveTo(90, 260);\n        ctx.lineTo(210, 260);\n        ctx.lineTo(190, 340);\n        ctx.lineTo(110, 340);\n        ctx.closePath();\n        ctx.fill();\n      }\n\n      canvas.addEventListener(\"click\", function () {\n        leaves = leaves === 8 ? 0 : leaves + 1;\n        drawPlant();\n      });\n\n      document.getElementById(\"go\").addEventListener(\"click\", function () {\n        alert(\"Thanks!\");\n      });\n\n      drawPlant();\n    </script>\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "hide_share_and_remix": true,
+    "long_instructions": "A visitor left three complaints about this page. For each one, find the section that should fix it and improve its words. Ask the AI or edit them yourself.\n\n1.  “I can’t tell what this site is.”\n2.  “I don’t know what they sell.”\n3.  “I don’t know what to click.”"
+  },
+  "published": true
+}]]></config>
+</Weblab2>

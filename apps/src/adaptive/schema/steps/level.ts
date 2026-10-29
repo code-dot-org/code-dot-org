@@ -1,7 +1,8 @@
 import {z} from 'zod';
 
 import {LevelProperties} from '@cdo/apps/lab2/types';
-import {coerceStringBooleans} from '@cdo/apps/lab2/utils';
+// Not the barrel: it drags Lab2Registry into the level editor bundle.
+import {coerceStringBooleans} from '@cdo/apps/lab2/utils/coerceStringBooleans';
 
 import {stepBaseSchema} from './base';
 
@@ -21,6 +22,21 @@ export const levelPropertiesSchema = z
     {message: 'expected Lab2 level properties with a numeric id and appName'}
   )
   .transform((value): LevelProperties => coerceStringBooleans(value));
+
+/**
+ * How a project step's work is judged: the work done in the step is checked
+ * against `condition` for a pass, and rated on the skill in `measures` using
+ * that skill's evidence levels.
+ */
+export const validationSchema = z.strictObject({
+  /** What the work must show to pass, written to the student. */
+  condition: z.string().min(1),
+  /**
+   * The skill the work is rated on, by id. Must be one of the checkpoint's
+   * `skillIds` and describe `evidenceLevels`.
+   */
+  measures: z.strictObject({skillId: z.string().min(1)}),
+});
 
 /**
  * A step that plays an existing level. A level whose project template is the
@@ -47,6 +63,8 @@ export const levelStepSourceSchema = stepBaseSchema.extend({
    * flag must not. Absent for sandboxes.
    */
   project: z.literal(true).optional(),
+  /** How the student's work on this step is judged. Only on project steps. */
+  validation: validationSchema.optional(),
 });
 
 /** A level step as served, with the referenced level's properties inlined. */

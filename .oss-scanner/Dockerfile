@@ -11,7 +11,7 @@
 # Exact Ruby from .ruby-version, taken from the official image. Its binaries
 # are built on Debian bookworm and run on Ubuntu 24.04 (newer glibc, same
 # library sonames).
-FROM docker.io/library/ruby:3.2.11-slim-bookworm@sha256:84140472007d27c7ec641dbc606a47ff9c0aa5f358445947b7350392fa5115e5 AS ruby
+FROM docker.io/library/ruby:3.3.12-slim-bookworm@sha256:74f681701c1e7e862d5f143e4a70bdb8b3ed08b2150c6209f54d5972feef517d AS ruby
 
 # Ubuntu 24.04 rather than Debian: it ships MySQL 8.0 (what the app targets),
 # and matches the Ubuntu base of docker/ci/Dockerfile.
@@ -167,7 +167,7 @@ RUN uv sync --frozen --dev && uv run --no-sync python -c 'import pycdo; print("p
 # ~/.yarn/berry/cache) are not needed to run anything; dropping them in the
 # same layer saves several GB. Re-installing offline is therefore not possible.
 RUN cd /src/apps && yarn install --immutable && yarn cache clean --all \
-    && ./script/build-frontend-dependencies.sh \
+    && ./script/frontend-dependencies.sh \
     && (cd /src/frontend && yarn cache clean --all) \
     && rm -rf /root/.yarn/berry/cache /root/.cache/node-gyp /tmp/*
 

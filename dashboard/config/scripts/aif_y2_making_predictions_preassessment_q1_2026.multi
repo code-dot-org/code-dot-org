@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q1-2026'
+
+wrong 'The model is created, with no training yet'
+right 'The model is trained on the data it is given'
+wrong 'The model makes a prediction for a new input'
+wrong 'The model checks how accurate its predictions are'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What happens when a program using `scikit-learn` calls `fit` on a machine learning model?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Machine Learning in Python
+MARKDOWN

@@ -103,6 +103,22 @@ describe('WorldTab palette', () => {
     );
   });
 
+  it('offers a New square above the palette only when asked to', () => {
+    const onNewPicture = jest.fn();
+    const {unmount} = renderTab({onNewPicture});
+    const newSquare = screen.getByRole('button', {name: 'New'});
+    expect(
+      screen
+        .getByRole('radiogroup', {name: 'Items to place'})
+        .contains(newSquare)
+    ).toBe(false);
+    fireEvent.click(newSquare);
+    expect(onNewPicture).toHaveBeenCalled();
+    unmount();
+    renderTab();
+    expect(screen.queryByRole('button', {name: 'New'})).toBeNull();
+  });
+
   it('drops a dragged item onto the cell under the pointer', () => {
     const {onPaintCell, onSelect} = renderTab();
     const stone = screen.getByRole('radio', {name: /Stone, block/});

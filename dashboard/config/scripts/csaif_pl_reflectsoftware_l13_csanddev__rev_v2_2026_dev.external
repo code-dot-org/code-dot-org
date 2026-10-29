@@ -3,69 +3,58 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching about Software
+<h1>Teaching about Software</h1>
 
+<h2>Real-World Scenarios</h2>
 
-## Real-world Scenarios 
+<p>Using real-world scenarios to analyze the software needs of different careers helps students develop <b>critical thinking</b> and <b>problem-solving</b> skills by connecting classroom learning to practical applications.</p>
 
-Using real-world scenarios to analyze the software needs of different careers helps students develop **critical thinking** and **problem-solving** skills by connecting classroom learning to practical applications. 
-
-This approach **enhances engagement**, fosters **career awareness**, and encourages students to **think like professionals**, preparing them to make informed decisions about technology in various fields.
+<p>This approach <b>enhances engagement</b>, fosters <b>career awareness</b>, and encourages students to <b>think like professionals</b>, preparing them to make informed decisions about technology in various fields.</p>
 
 <div style="width: 90%; margin: 20px auto; display: flex; flex-direction: column; align-items: center; gap: 20px;">
 
   <!-- First Row -->
-<div style="display: flex; justify-content: center; gap: 20px; width: 100%;">
-    
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
-      <h3><b>Social Media Influencer</b></h3>
+  <div style="display: flex; justify-content: center; gap: 20px; width: 100%; flex-wrap: wrap;">
+
+<div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; text-align: center; flex: 1; min-width: 220px;">
+      <h3>Social Media Influencer</h3>
       <img src="https://images.code.org/4d8f7eaf35c246b09762e60d73f183f9-image-1742396640357.png" alt="Social Media Influencer" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
-      <ul style="font-size: 14pt; list-style-type: none; padding: 0;">
-        <li>Video editing apps (CapCut, Adobe Premiere Rush)</li>
-        <li>Social media platforms (Instagram, TikTok)</li>
-        <li>Analytics tools (Google Analytics)</li>
-      </ul>
+      <p style="margin: 0 0 6px 0;">• Video editing apps (CapCut, Adobe Premiere Rush)</p>
+      <p style="margin: 0 0 6px 0;">• Social media platforms (Instagram, TikTok)</p>
+      <p style="margin: 0;">• Analytics tools (Google Analytics)</p>
     </div>
 
-<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
-      <h3><b>College Student</b></h3>
+   <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; text-align: center; flex: 1; min-width: 220px;">
+      <h3>College Student</h3>
       <img src="https://images.code.org/40771b728a6adbe25587e2a8c48c82ff-image-1742396716246.png" alt="College Student" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
-      <ul style="font-size: 14pt; list-style-type: none; padding: 0;">
-        <li>Office suite (Microsoft Office, Google Workspace)</li>
-        <li>Video conferencing software (Zoom, Teams)</li>
-        <li>Project management tools (Trello, Notion)</li>
-      </ul>
+      <p style="margin: 0 0 6px 0;">• Office suite (Microsoft Office, Google Workspace)</p>
+      <p style="margin: 0 0 6px 0;">• Video conferencing software (Zoom, Teams)</p>
+      <p style="margin: 0;">• Project management tools (Trello, Notion)</p>
     </div>
 
   </div>
 
   <!-- Second Row -->
-<div style="display: flex; justify-content: center; gap: 20px; width: 100%;">
-    
-    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
-      <h3><b>Geologist</b></h3>
-      <img src="https://images.code.org/785cd94eed8f6282da0a144dc345ee32-image-1742396825378.png" alt="Geologist" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
-      <ul style="font-size: 14pt; list-style-type: none; padding: 0;">
-        <li>GPS mapping software</li>
-        <li>Data collection tools (ArcGIS Field Maps)</li>
-        <li>Note-taking apps optimized for offline use</li>
-      </ul>
-    </div>
+  <div style="display: flex; justify-content: center; gap: 20px; width: 100%; flex-wrap: wrap;">
 
-<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); text-align: center; width: 45%;">
-      <h3><b>VR Designer</b></h3>
+ <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; text-align: center; flex: 1; min-width: 220px;">
+      <h3>Geologist</h3>
+      <img src="https://images.code.org/785cd94eed8f6282da0a144dc345ee32-image-1742396825378.png" alt="Geologist" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
+      <p style="margin: 0 0 6px 0;">• GPS mapping software</p>
+      <p style="margin: 0 0 6px 0;">• Data collection tools (ArcGIS Field Maps)</p>
+      <p style="margin: 0;">• Note-taking apps optimized for offline use</p>
+    </div>
+    <div style="background-color: #F7F7FB; border: 1px solid #E4E2F8; padding: 20px; border-radius: 10px; text-align: center; flex: 1; min-width: 220px;">
+      <h3>VR Designer</h3>
       <img src="https://images.code.org/4f9bb0b308fc1def313f9755c7e73acd-image-1742396949547.png" alt="VR Designer" style="width: 100px; height: auto; margin: 15px auto; display: block; border-radius: 5px;">
-      <ul style="font-size: 14pt; list-style-type: none; padding: 0;">
-        <li>3D modeling software (Blender, Unity)</li>
-        <li>VR presentation platforms</li>
-        <li>Project collaboration tools</li>
-      </ul>
+      <p style="margin: 0 0 6px 0;">• 3D modeling software (Blender, Unity)</p>
+      <p style="margin: 0 0 6px 0;">• VR presentation platforms</p>
+      <p style="margin: 0;">• Project collaboration tools</p>
     </div>
 
   </div>
 
 </div>
-
 ---
 
 ## Analogies 
@@ -89,18 +78,15 @@ They set up the lights, adjust the microphones, and troubleshoot issues so the p
 
 ### **The House Analogy**  
 - **Operating System**: The foundation and structure of the house  
-  #### It holds everything together, provides support, and makes sure all rooms and systems function properly.  
+   It holds everything together, provides support, and makes sure all rooms and systems function properly.  
 
 - **Application Software**: The furniture and appliances  
-  #### They provide the functionality you need for daily life, like a couch for relaxing, a stove for cooking, or a TV for entertainment.  
+  They provide the functionality you need for daily life, like a couch for relaxing, a stove for cooking, or a TV for entertainment.  
 
 - **Utility Software**: The maintenance tools and security systems  
-  #### They help keep the house in good condition, like a vacuum cleaner for cleaning, a thermostat for regulating temperature, or a security system for protection.  
+They help keep the house in good condition, like a vacuum cleaner for cleaning, a thermostat for regulating temperature, or a security system for protection.  
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 4. You can find more details in the full <a href='https://studio.code.org/courses/artificial-intelligence-foundations-2026/units/3/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
-</p>
 
----
-*Images are AI generated.*
+
+
 MARKDOWN

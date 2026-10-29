@@ -65,6 +65,7 @@ jobs:
             .github/actions/cdo-deps-key
             docker/build
             docker/deps
+            docker/scripts
 
       - name: Compute the dependency-layer content key
         id: key

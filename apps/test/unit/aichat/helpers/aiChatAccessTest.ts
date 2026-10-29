@@ -1,8 +1,10 @@
 import {
   shouldShowAiTutor,
   areAiChatToolsEnabled,
+  canUseLessonDeepDive,
   APPS_WITH_ESSENTIAL_AI_CHAT,
 } from '@cdo/apps/aichat/helpers/aiChatAccess';
+import DCDO from '@cdo/apps/dcdo';
 
 describe('shouldShowAiTutor', () => {
   describe('when app always shows AI tutor (essential tutor apps)', () => {
@@ -105,5 +107,32 @@ describe('areAiChatToolsEnabled', () => {
         })
       ).toBe(false);
     });
+  });
+});
+
+describe('canUseLessonDeepDive', () => {
+  it('returns true when access level is enabled', () => {
+    expect(canUseLessonDeepDive('enabled')).toBe(true);
+  });
+
+  it('returns false when access level is essential_only', () => {
+    expect(canUseLessonDeepDive('essential_only')).toBe(false);
+  });
+
+  it('returns false when access level is disabled', () => {
+    expect(canUseLessonDeepDive('disabled')).toBe(false);
+  });
+
+  it('returns false when access level is unknown', () => {
+    expect(canUseLessonDeepDive(undefined)).toBe(false);
+  });
+
+  it('returns false when disabled via DCDO', () => {
+    DCDO.set('lesson-deep-dive-enabled', false);
+    try {
+      expect(canUseLessonDeepDive('enabled')).toBe(false);
+    } finally {
+      DCDO.reset();
+    }
   });
 });

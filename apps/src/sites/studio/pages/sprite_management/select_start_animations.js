@@ -9,9 +9,6 @@ $(document).ready(function () {
   const useAllSprites = query['library'] === 'all';
   createReactRoot(
     <SelectStartAnimations useAllSprites={useAllSprites} />,
-    document.getElementById('select_start_animations'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('select_start_animations')
   );
 });

@@ -1,0 +1,12 @@
+name 'data-makes-ai-lesson1-choice-level'
+display_name 'Pick a level to sort!'
+description '####Pick a level and sort the items on screen. Then, find a partner who will act as the computer. Your partner will have to guess how you sorted your items.'
+
+sublevels
+level 'data-makes-ai-lesson1-choiceA'
+level 'data-makes-ai-lesson1-choiceB'
+level 'data-makes-ai-lesson1-choiceC'
+level 'data-makes-ai-lesson1-choiceD'
+
+
+

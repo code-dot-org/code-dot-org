@@ -1,0 +1,38 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-10T00:40:49.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "**AI learns from lots of training examples.**\n\nIt learns patterns that repeat across those examples.\n\nWhat it learns helps it make something new later.",
+        "imageUrl": "https://images.code.org/21dc8bc583c9ef2c63d3d6f50276bcf3-codeai-scanner-learning-box-16x9.gif",
+        "key": "adaptive-test-debug-panel-935f641d-7a93-44e8-81ce-6ded8f68ea2e"
+      },
+      {
+        "text": "Training examples show different cats.\n\nTheir colors and markings vary.\n\n**AI learns shared patterns, like pointed ears.**",
+        "imageUrl": "https://images.code.org/a2b43d0612d01a0b36a1af06686fb1ba-codeai-cat-pattern-grid-16x9.gif",
+        "key": "adaptive-test-debug-panel-b1f698e8-6cee-47e4-9b38-59e7d8253e5b"
+      },
+      {
+        "text": "AI uses learned patterns to make a new image.\n\nYour prompt helps guide what it makes.\n\n**But, what if some kinds of cats were missing from its training examples?**",
+        "imageUrl": "https://images.code.org/dd5379f1ec65be075369af4c08a672f2-codeai-prompt-cat-noise-16x9.gif",
+        "key": "adaptive-test-debug-panel-5b46df30-8529-4368-84d7-7e9d4c52c78c"
+      },
+      {
+        "text": "###Clues to give the AI\n\n- What you see: a broken-picture icon\n- What the error says: the file name and “Not Found”\n\nThe more clues you give, the better the fix.",
+        "imageUrl": "https://images.code.org/cbf8eaca3145a78c6bb9a734abb14993-Broken image, linked code clue.png",
+        "key": "adaptive-test-debug-panel-7c58b191-99aa-48b8-a5a0-cb52c9832b63",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-10 00:42:12 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-10 00:44:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-10 00:51:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 03:34:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 03:49:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 03:53:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 03:53:41 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 04:10:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-14 04:12:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

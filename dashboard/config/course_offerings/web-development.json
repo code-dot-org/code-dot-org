@@ -1,7 +1,7 @@
 {
   "key": "web-development",
   "display_name": "Web Development",
-  "is_featured": false,
+  "is_featured": true,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
   "marketing_initiative": "AID",

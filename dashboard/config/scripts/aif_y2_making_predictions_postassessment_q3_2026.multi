@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-postassessment-q3-2026'
+
+wrong "A number that adjusts the model's prediction no matter what the input is"
+right "A number that controls how much an input affects the model's prediction"
+wrong 'The number of inputs the model uses'
+wrong "The model's error on its training data"
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+In a regression model, what is a weight?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Multiple Linear Regression
+MARKDOWN

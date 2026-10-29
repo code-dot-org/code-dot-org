@@ -138,7 +138,7 @@ The image is built by `.oss-scanner/Dockerfile`. Everything below was verified w
 
 **What is installed:**
 
-- Ruby 3.2.11 with every Gemfile group.
+- Ruby 3.3.12 (from `.ruby-version`) with every Gemfile group.
 - Node 20 with yarn 4: `apps/` and `frontend/` dependencies installed, and the `frontend/packages` that `apps/` consumes already built.
 - The uv venv, Python 3.12 with the dev group.
 - MySQL 8.0 and Redis, with:
@@ -151,7 +151,7 @@ The image is built by `.oss-scanner/Dockerfile`. Everything below was verified w
 **Start the services first.** This takes about 1s, because the data is already in the image. Rails needs MySQL even to boot.
 
 ```bash
-/src/.oss-scanner/start-services.sh            # MySQL 8 (root, no password, socket + 127.0.0.1:3306) + Redis
+/src/.oss-scanner/start-services.sh            # MySQL 8 (root, no password, socket + 127.0.0.1:3306; plus `writer`/`reader`) + Redis
 /src/.oss-scanner/start-services.sh --reset    # drop and re-prepare the test DBs (~2 min)
 ```
 

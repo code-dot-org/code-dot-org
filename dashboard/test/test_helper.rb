@@ -1,5 +1,6 @@
 require 'test_reporter'
 require 'faker'
+require 'tmpdir'
 
 require_relative '../../lib/cdo/ci_utils'
 
@@ -69,7 +70,7 @@ Devise.mailer.default_url_options = Dashboard::Application.routes.default_url_op
 require 'rails/test_help'
 
 # Raise exceptions instead of rendering exception templates.
-Dashboard::Application.config.action_dispatch.show_exceptions = false
+Dashboard::Application.config.action_dispatch.show_exceptions = :none
 
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/dcdo'
@@ -276,6 +277,17 @@ class ActiveSupport::TestCase
 
   def set_request_locale(locale)
     I18n.locale = locale
+  end
+
+  # Points Rails.root at an empty directory for the block, so a test can write
+  # curriculum files there instead of into the repo's trees.
+  def with_tmp_rails_root
+    Dir.mktmpdir do |dir|
+      Rails.stubs(:root).returns(Pathname.new(dir))
+      yield Rails.root
+    ensure
+      Rails.unstub(:root)
+    end
   end
 
   def with_default_locale(locale)

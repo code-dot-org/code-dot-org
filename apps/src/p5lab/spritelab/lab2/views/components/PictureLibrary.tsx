@@ -1,0 +1,275 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import classNames from 'classnames';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+
+import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+
+import AnimatedSheetPreview from '../AnimatedSheetPreview';
+import ImagePaneButton from '../ImagePaneButton';
+
+import moduleStyles from './picture-library.module.scss';
+import dialogStyles from '../image-details-dialog.module.scss';
+
+export interface LibraryPicture {
+  key: string;
+  name?: string;
+  /** The small image for its tile. */
+  thumb?: string;
+  /** The full image for the jumbo. */
+  src?: string;
+  /** Pixel art upscales with hard edges. */
+  pixelated?: boolean;
+  /** Set for a character set: its sheet, played in the jumbo. */
+  sheet?: {
+    src: string;
+    frameSize: {x: number; y: number};
+    poses: AnimationPoses;
+  };
+}
+
+export interface LibraryGroup {
+  id: string;
+  title: string;
+  pictures: LibraryPicture[];
+}
+
+interface PictureLibraryProps {
+  groups: LibraryGroup[];
+  chosenKey: string | null;
+  onChoose: (key: string) => void;
+  /** The New image button. */
+  onNew: (event: React.MouseEvent<HTMLElement>) => void;
+  /** Paint the chosen picture; absent when it cannot be painted. */
+  onPaint?: () => void;
+  /** Delete the chosen picture; absent with nothing chosen. */
+  onDelete?: () => void;
+  /** Which side the jumbo takes; the strips take the other. */
+  jumboSide?: 'left' | 'right';
+}
+
+// The pane's padding, the gap between the halves, and the least the strips
+// keep: the jumbo takes what is left, up to the pane's height and to its
+// share of the width, so a tall window does not starve the library.
+const PAD_PX = 16;
+const GAP_PX = 24;
+const STRIPS_MIN_PX = 320;
+const JUMBO_MIN_PX = 160;
+const JUMBO_MAX_SHARE = 0.4;
+// Under the jumbo: the Delete row.
+const ACTIONS_PX = 48;
+
+/**
+ * The Images editor: the chosen picture large on one side, and on the
+ * other every picture as tiles in a strip per kind, under a New image
+ * button, scrolling when they run past the bottom.
+ */
+const PictureLibrary: React.FunctionComponent<PictureLibraryProps> = ({
+  groups,
+  chosenKey,
+  onChoose,
+  onNew,
+  onPaint,
+  onDelete,
+  jumboSide = 'right',
+}) => {
+  // Delete asks once; a new choice withdraws the question.
+  const [confirmingDelete, setConfirmingDelete] = useState(false);
+  useEffect(() => setConfirmingDelete(false), [chosenKey]);
+  // Measured: the jumbo is a square sized from the pane, which a flex
+  // item's percentage height cannot give before layout.
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [size, setSize] = useState({w: 0, h: 0});
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el || typeof ResizeObserver === 'undefined') {
+      return;
+    }
+    const observer = new ResizeObserver(entries => {
+      const {width, height} = entries[0].contentRect;
+      setSize({w: Math.floor(width), h: Math.floor(height)});
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+  const jumboPx = size.w
+    ? Math.max(
+        JUMBO_MIN_PX,
+        Math.min(
+          size.h - ACTIONS_PX,
+          size.w - GAP_PX - STRIPS_MIN_PX,
+          Math.floor(size.w * JUMBO_MAX_SHARE)
+        )
+      )
+    : undefined;
+  const chosen = groups
+    .flatMap(group => group.pictures)
+    .find(picture => picture.key === chosenKey);
+  // With the jumbo at the right the strips take the width their rows fill,
+  // so the jumbo sits against the last tile: a wrapped flex box keeps the
+  // width it shrank to, not the width its groups use. The rows are laid out
+  // in the full room first and measured; the widest row's width is then
+  // set, which leaves every row where it was.
+  const hug = jumboSide === 'right';
+  const stripsRef = useRef<HTMLDivElement>(null);
+  const [stripsWidth, setStripsWidth] = useState<number | undefined>();
+  useLayoutEffect(() => {
+    setStripsWidth(undefined);
+  }, [groups, size, hug]);
+  useLayoutEffect(() => {
+    const el = stripsRef.current;
+    if (!hug || stripsWidth !== undefined || !el) {
+      return;
+    }
+    const left = el.getBoundingClientRect().left + el.clientLeft;
+    const padding = parseFloat(getComputedStyle(el).paddingLeft) || 0;
+    // The first child is the New image row, which spans whatever width the
+    // box has; the groups after it are what the rows are made of.
+    let widest = 0;
+    for (const child of [...el.children].slice(1)) {
+      widest = Math.max(widest, child.getBoundingClientRect().right - left);
+    }
+    setStripsWidth(Math.ceil(widest - padding));
+  }, [hug, stripsWidth, groups, size]);
+
+  return (
+    <div
+      ref={rootRef}
+      className={classNames(
+        moduleStyles.library,
+        jumboSide === 'right' && moduleStyles.libraryJumboRight
+      )}
+      style={{padding: PAD_PX, gap: GAP_PX}}
+    >
+      <div className={moduleStyles.jumboColumn}>
+        {/* The dialog's pane, at the jumbo's side: a button into paint
+            where the picture can be painted, a plain pane otherwise. */}
+        <div
+          className={classNames(dialogStyles.dialogHost, moduleStyles.jumbo)}
+          style={{'--jumbo-side': `${jumboPx ?? 0}px`} as React.CSSProperties}
+        >
+          {chosen && onPaint ? (
+            <ImagePaneButton
+              thumb={chosen.src}
+              pixelated={chosen.pixelated}
+              iconName="pen"
+              label="Edit with paint tools"
+              onClick={onPaint}
+            />
+          ) : (
+            <div
+              className={classNames(
+                dialogStyles.imagePane,
+                chosen && dialogStyles.imagePaneChecker
+              )}
+              role="img"
+              aria-label={chosen?.name ?? 'No picture chosen'}
+            >
+              {chosen?.sheet ? (
+                <AnimatedSheetPreview {...chosen.sheet} />
+              ) : (
+                chosen?.src && (
+                  <img
+                    src={chosen.src}
+                    alt=""
+                    className={classNames(
+                      chosen.pixelated && dialogStyles.pixelArt
+                    )}
+                  />
+                )
+              )}
+            </div>
+          )}
+        </div>
+        {chosen && onDelete && (
+          <div className={moduleStyles.jumboActions}>
+            {confirmingDelete ? (
+              <>
+                <span>Delete this image?</span>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="small"
+                  onClick={() => setConfirmingDelete(false)}
+                >
+                  Cancel
+                </MuiButton>
+                <MuiButton
+                  variant="contained"
+                  color="error"
+                  size="small"
+                  onClick={onDelete}
+                >
+                  Delete
+                </MuiButton>
+              </>
+            ) : (
+              <MuiButton
+                variant="outlined"
+                color="error"
+                size="small"
+                onClick={() => setConfirmingDelete(true)}
+              >
+                Delete
+              </MuiButton>
+            )}
+          </div>
+        )}
+      </div>
+      <div
+        ref={stripsRef}
+        className={moduleStyles.strips}
+        style={{width: stripsWidth}}
+      >
+        <div>
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            className={moduleStyles.newButton}
+            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+            onClick={onNew}
+          >
+            New image
+          </MuiButton>
+        </div>
+        {groups.map(group => (
+          <section
+            key={group.id}
+            className={moduleStyles.group}
+            aria-label={group.title}
+          >
+            <MuiTypography
+              component="h3"
+              variant="overline2"
+              className={moduleStyles.groupTitle}
+            >
+              {group.title}
+            </MuiTypography>
+            <div className={moduleStyles.strip}>
+              {group.pictures.map(picture => {
+                const isChosen = picture.key === chosenKey;
+                return (
+                  <button
+                    key={picture.key}
+                    type="button"
+                    className={classNames(
+                      moduleStyles.tile,
+                      isChosen && moduleStyles.tileChosen
+                    )}
+                    aria-pressed={isChosen}
+                    aria-label={picture.name || 'image'}
+                    onClick={() => onChoose(picture.key)}
+                  >
+                    {picture.thumb && <img src={picture.thumb} alt="" />}
+                  </button>
+                );
+              })}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default PictureLibrary;

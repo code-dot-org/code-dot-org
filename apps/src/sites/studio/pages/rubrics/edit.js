@@ -17,9 +17,6 @@ $(document).ready(() => {
       submittableLevels={submittableLevels}
       rubric={rubric}
     />,
-    document.getElementById('form'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('form')
   );
 });

@@ -2,7 +2,10 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import Tags from '@code-dot-org/component-library/tags';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
+
+import {sendTaEvent} from './analytics';
 
 import styles from './prepare-list.module.scss';
 
@@ -68,10 +71,15 @@ const SectionPodcastCard: React.FC<SectionPodcastCardProps> = ({
     if (isPlaying) {
       audio.pause();
     } else {
+      sendTaEvent(EVENTS.AI_TA_PODCAST_CLICKED, {
+        lesson_id: lesson?.lesson_id,
+        // Where in the episode play resumed; 0 on a first listen.
+        start_position_seconds: Math.round(audio.currentTime),
+      });
       audio.play().catch(() => {});
     }
     setIsPlaying(p => !p);
-  }, [isPlaying]);
+  }, [isPlaying, lesson?.lesson_id]);
 
   const handleProgressClick = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {

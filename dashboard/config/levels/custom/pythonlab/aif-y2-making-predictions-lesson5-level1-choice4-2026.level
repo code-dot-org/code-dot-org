@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-11T00:03:52.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-making-predictions-lesson5-choice4-2026 + template",
+    "long_instructions": "Jordan runs a social media account and has data from 20 of their past posts: video length, how often they post per week, how many hashtags they used, and how many views each video got. They want a model that predicts views before posting, so they know which videos are worth prioritizing.\r\n\r\nBut if Jordan only tests the model on the same 20 videos it learned from, they won't know if it actually works, that's just checking whether the model memorized its own answer key. What they really need is to test it on videos it's never seen before.\r\n\r\n**☑️ Do This:**\r\n- Import the `train_test_split` function.\r\n- Split the data into training and test sets. 20% of the data should be in the test set.\r\n\r\nSave TODOs 3–5 for the next level.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember that to use the `train_test_split` function, you should import it with:\r\n\r\n```\r\nfrom sklearn.model_selection import train_test_split\r\n```\r\n\r\nThe `train_test_split` function takes `input` and `output` as its first two arguments. To put 20% of the data in a test set, set the `test_size` parameter to `0.2`.\r\n\r\nThe return value will be four separate lists, always in this order: `train_inputs`, `test_inputs`, `train_outputs`, `test_outputs`. Be sure to unpack all four when you call the function, or you'll get an error.\r\n\r\n```\r\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\r\n  inputs, outputs, test_size=0.2\r\n)\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY6ThEomLz4MAQvs\nXPQgObyOKsPU/VVj4V1OfRRwtZyrtUgtQAeqpPgYBLdo1eMpmzOobKouqU+V\n93LTJPwC2AJOhxw92mxCF+tRiWJCY4csz1NSdmammASrk0RpKV8JY/8rD/HD\nq0Uyd8oFGdpDNvVzoTRNnOmCh6gPxRpnGW3YC6HY3vO+kva3N4ZXWXNGdcF/\n397/FTXLeMfJY3WrF35JeUdlqDs/rEticHGZbxFSVsvTRbE/nxT9W2XWhXDk\nPZIbzs+1jhHV5aWlQdrCElugMPlZEz8YPrjjIZ+ogoca5exz2qhcKW6Jfp5r\n8R6lpBWJA2lQp4L7ok+eK39BOAPVXkUuCiek/UIvEXw5WNQRv67T4yVwDM0k\nMm1kxeEEA0REcqG4VnKYsD4z/W99EvjppoN5cs3cWCEkyigBFZW/IwBjvVpG\nhvoo1UThAmi9un1WnoLkB8qWc9SlMaPStccSQRvumylLfVuyaOyCV98VPNZH\nV7fSa11fEOyYTvSTSpWe+UoJfD7bdGkFBw5/8b/9zqRL9OOwpy8lwGkD+CYv\n50OVf5x93J1RIaSSWEW2IwYVmGwE0GJRsb1fHRTxKvYqZj8a4Fo0R3jQl7LN\nFC5nLNlpWexp+yl8lnuDifD4/4CBFBj1oQpRaB42ljoTj1Zk2ZOG95rZ8+LC\nmQaWB5ObrqgreBrdcMkWD9iNo4Hn6i1n5jzGfjHQwO1Dwge5xQN15eRfpe7f\nBD79YV3T3nWfyY+QnQ1brh/tnooWVioMdf3P3goU8BLfvKKU4gE46bGJGaZI\ne/akiwGWVqFrq7M78zibD7CuvK+Sr13m2L7ESARJbMM8TVO3PYvGGrdWU2H+\npcSPIl7QYlbAKjjgHkcoGMxw4qXC3YTFG3Hs9K1uw0GvdE0XxoHlVCWJXqEr\nMfLviGfizjnnFg7H5xJlS1hz+ghCSMy+KUitwAM8ma9MVSfyQh01V4yz3xaS\nsKmajBrJEt3A9FZnoYLMvqcrcehVg8/C3I/IaRrzBrdkC0WVvZunDnquF+Cw\nUQUj+hP4BSXNZ809hKEWNskinVdhrHkvNTyibYQBenvx5425WVzkPqIRazLQ\nw9EILoognhwvIR6gjDdJhfXG+HJyT48ISIsAh3bNw6tRL73rK6Qe57D6Lgey\n8+XME0pAEuPVn45kT5F9VTdLzKMjGdIaeWGaIEvAOEl0luZO2hiiDM+p81/V\njh4d6YlA0NEfUyk3At8O9UgpUkCU1UlgpbhDfGSYYFfHbaFlgIzxNdfm7FDA\n0JDsylIBpBNZc+x2wp+tJDpsAfh70NLK37/FWBRFXTn0KOc1Sw6nFcfE/4D+\n+D9pukElgz4pAJBsLzGhEKecXyN28OGzOjiQdb4WxB2Jc0CpY5h7QtBQybZO\nlZYPmeb4vsxV5SP4KrQK22v9O3uPYnjtEOjxomBDbq7lzSW4jX4deH71d5OW\nOjxDthXJOQ10+BMXtkgM4o4aCeBwZEd/I/Wuf4AcU29pzuPLDO/iCeHJtasM\nxvFcsigs2oXk+kTfBjJ0TOm8dquGOJuvgf0D4jq0Fzmo0FkeMyNiCEYm9tyU\nNb1CqsGv6qifAIc28KgnpIAuVTA=\n",
+    "display_name": "Going Viral (Or Not)",
+    "bubble_choice_description": "Help a student predict whether a post will go viral.",
+    "thumbnail_url": "https://images.code.org/641892d3517949b373ce013cbcb73fad-going-viral.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:12:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:12:14 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:14:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:16:04 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:23:09 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

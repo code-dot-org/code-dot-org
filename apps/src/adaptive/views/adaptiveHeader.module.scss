@@ -1,0 +1,66 @@
+$inset: 2px;
+
+.bar {
+  display: flex;
+  align-items: stretch;
+  gap: 4px;
+  min-width: 0;
+  padding: $inset;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+
+  > :global(.MuiButton-root) {
+    flex: none;
+  }
+}
+
+// The only part that shrinks: a long title ellipsizes before a button clips.
+// It fills the bar's height, past the inset the buttons sit in.
+.title {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  margin-block: -$inset;
+  padding: 0 16px;
+  border-inline: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+
+  &:first-child {
+    margin-inline-start: -$inset;
+    border-inline-start: none;
+    border-start-start-radius: calc(var(--shape-lg) - 1px);
+    border-end-start-radius: calc(var(--shape-lg) - 1px);
+  }
+
+  &:last-child {
+    margin-inline-end: -$inset;
+    border-inline-end: none;
+    border-start-end-radius: calc(var(--shape-lg) - 1px);
+    border-end-end-radius: calc(var(--shape-lg) - 1px);
+  }
+}
+
+.titleText {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.saveIcon {
+  flex: none;
+  color: var(--text-neutral-quaternary);
+}
+
+// Until the page header's slot exists, or on a page without one.
+.inline {
+  display: flex;
+  justify-content: center;
+  padding: 4px 12px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-secondary);
+}
