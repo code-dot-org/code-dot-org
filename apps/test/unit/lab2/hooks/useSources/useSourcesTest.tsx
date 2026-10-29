@@ -167,12 +167,22 @@ describe('useSources', () => {
       expect(result.current.currentSources).toEqual(DEFAULT_SOURCES);
     });
 
-    it('does not load when the level does not use projects', async () => {
+    it('keeps a level without a project in memory, from its own sources', async () => {
       const {result} = renderUseSources({...LEVEL_ONE, usesProjects: false});
       await flush();
 
       expect(mockGetProjectManagerForLevel).not.toHaveBeenCalled();
-      expect(result.current.currentSources).toBeUndefined();
+      expect(result.current.projectManager).toBeNull();
+      expect(result.current.currentSources).toEqual(DEFAULT_SOURCES);
+      expect(result.current.isEditable).toBe(true);
+
+      act(() => result.current.updateSources({source: 'edited'}));
+      expect(result.current.currentSources).toEqual({source: 'edited'});
+      expect(result.current.hasEdited).toBe(true);
+
+      act(() => result.current.startOver());
+      expect(result.current.currentSources).toEqual(DEFAULT_SOURCES);
+      expect(result.current.hasEdited).toBe(false);
     });
 
     it('surfaces load errors', async () => {

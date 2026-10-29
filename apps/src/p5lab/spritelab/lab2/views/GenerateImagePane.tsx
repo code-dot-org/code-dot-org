@@ -177,6 +177,8 @@ interface GenerateImagePaneProps {
   onGenerate?: () => void;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
+  /** The level rates every picture (ImageDetailsDialog). */
+  verdictRequired?: boolean;
   /** A picture asked for from a block or the world palette: opens the
       new-image dialog on its kind. A new object each time. */
   pickRequest?: PictureRequest | null;
@@ -246,6 +248,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   onImageCreated,
   onPickCancel,
   jumboSide,
+  verdictRequired,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -925,6 +928,7 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
           defaultStyle={defaultStyle}
           generationsLeft={generationsLeft}
           paintDisabled={paintDisabled}
+          verdictRequired={verdictRequired}
           pixelated={!!(targetProps?.pixelGridSize ?? detectedGridSize)}
           // A sheet's resolution is its frame: the image the pane shows.
           resolution={creating ? undefined : targetProps?.frameSize}

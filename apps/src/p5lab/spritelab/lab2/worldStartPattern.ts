@@ -1,6 +1,6 @@
 // The premade world a level can hand a student, painted into its pinned scene.
 
-import {useEffect, useRef} from 'react';
+import {useEffect, useState} from 'react';
 
 import {imageTypeFromCategories} from './imageGallery';
 import {imageNamedForRole} from './imageRoleDefaults';
@@ -11,12 +11,14 @@ import {createEmptyWorld, sceneGridSize, World, WorldCell} from './world';
 /**
  * Which image each pattern character draws: 'B' the block the student made
  * most recently, 'S' the sprite carrying spriteRole (the level's default
- * sprite), else their first character. orderedKeys is newest-first,
- * because Sprite Lab prepends new animations.
+ * sprite), else their first character, and 'O' the sprite carrying
+ * objectRole. orderedKeys is newest-first, because Sprite Lab prepends new
+ * animations.
  */
 export function patternCells(
   animations: RuntimeAnimationList,
-  spriteRole?: string
+  spriteRole?: string,
+  objectRole?: string
 ): {[char: string]: WorldCell} {
   const {orderedKeys, propsByKey} = animations;
   const typeOf = (key: string) =>
@@ -34,35 +36,11 @@ export function patternCells(
   if (spriteName) {
     cells.S = {image: spriteName, kind: 'sprite'};
   }
+  const objectName = imageNamedForRole(animations, 'sprite', objectRole);
+  if (objectName) {
+    cells.O = {image: objectName, kind: 'sprite'};
+  }
   return cells;
-}
-
-// The pick is not stored: the grid keeps it, since a later level seeds only
-// the kinds the grid still lacks.
-export function chooseStartPattern(
-  pattern: string[] | string[][] | undefined,
-  {
-    hasProject,
-    roll,
-    override,
-  }: {hasProject: boolean; roll: number; override?: number}
-): string[] | undefined {
-  if (!pattern?.length) {
-    return undefined;
-  }
-  if (!Array.isArray(pattern[0])) {
-    return pattern as string[];
-  }
-  const layouts = pattern as string[][];
-  if (override !== undefined && layouts[override]) {
-    return layouts[override];
-  }
-  if (!hasProject) {
-    return layouts[0];
-  }
-  return layouts[
-    Math.min(layouts.length - 1, Math.floor(roll * layouts.length))
-  ];
 }
 
 /**
@@ -133,36 +111,30 @@ function soleCellOf(
 /** Seeds the pattern whenever the image list changes. A trigger keyed on
     Start Over itself would fire with the pre-reset list. */
 export function useWorldStartPattern({
-  pattern: patternOrLayouts,
-  channelId,
-  layoutOverride,
+  pattern,
   pinnedSceneId,
   enabled,
   animations,
   spriteRole,
+  objectRole,
   updateSources,
 }: {
-  pattern: string[] | string[][] | undefined;
-  channelId: string | undefined;
-  layoutOverride?: number;
+  pattern: string[] | undefined;
   pinnedSceneId: string | undefined;
   enabled: boolean;
   animations: RuntimeAnimationList;
   spriteRole?: string;
+  objectRole?: string;
   updateSources: (updater: (prev: Sources) => Sources) => void;
-}): void {
-  // The effect runs again on every animation change and must not reroll.
-  const roll = useRef(Math.random());
+}): World | null {
+  // The world as the pattern left it: what a level's "changed" check
+  // measures the student's edits against.
+  const [painted, setPainted] = useState<World | null>(null);
   useEffect(() => {
-    const pattern = chooseStartPattern(patternOrLayouts, {
-      hasProject: !!channelId,
-      roll: roll.current,
-      override: layoutOverride,
-    });
-    if (!pattern || !pinnedSceneId || !enabled) {
+    if (!pattern?.length || !pinnedSceneId || !enabled) {
       return;
     }
-    const cellFor = patternCells(animations, spriteRole);
+    const cellFor = patternCells(animations, spriteRole, objectRole);
     updateSources(prev => {
       const scenes: Scene[] = prev.scenes ?? [];
       const index = scenes.findIndex(scene => scene.id === pinnedSceneId);
@@ -175,16 +147,17 @@ export function useWorldStartPattern({
       }
       const next = [...scenes];
       next[index] = {...scenes[index], world};
+      setPainted(world);
       return {...prev, scenes: next};
     });
   }, [
-    patternOrLayouts,
-    channelId,
-    layoutOverride,
+    pattern,
     pinnedSceneId,
     enabled,
     animations,
     spriteRole,
+    objectRole,
     updateSources,
   ]);
+  return painted;
 }

@@ -15,6 +15,9 @@ export type LevelModeKind =
 
 export interface LevelMode {
   kind: LevelModeKind;
+  /** The tabs this level shows, in order, instead of the kind's; the
+      first is where the level opens. */
+  tabs?: Tab[];
   /** The kind of image the level is about. On a world level, the palette
       offers only the level's image of this kind (image_role_defaults, else
       the newest); a world level without one offers everything. */
@@ -26,22 +29,9 @@ export interface LevelMode {
       is the image_role_defaults level property (imageRoleDefaults.ts), which code
       and world levels use to open their dropdowns on an image by role. */
   imageRole?: string;
-  /** A world level that places one thing: no Erase, the image goes on an
-      empty cell, and choosing another cell moves it. */
-  placeOne?: boolean;
-  /** Which scene tabs a pinned level shows: its own scene's (the default),
-      or every scene's, the others locked, where a level first shows the
-      student the scenes they have. */
-  sceneTabs?: 'pinned' | 'all';
-  /** The sentence scene's sentence, by id in sentences.json; the
-      image type's own sentence when unset. */
-  sentence?: string;
-  /** An image level's instructions once a picture is made, markdown, in
-      place of its objectives title. */
-  generatedInstructions?: string;
-  /** An image level's instructions while the student draws, markdown, in
-      place of its objectives title, which is gone while drawing either way. */
-  paintInstructions?: string;
+  /** The World palette offers the images in these roles, of any kind,
+      instead of the level's one image. */
+  paletteRoles?: string[];
 }
 
 /** Generations a level before free play allows; free play has no limit. */
@@ -51,29 +41,23 @@ export const GENERATION_LIMIT = 5;
     pixel art only. */
 export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
 
-/** The tabs a kind shows, the first being where the level opens. An image
-    level has none: its panel replaces the tab shell. */
+/** The tabs a kind shows, the first being where the level opens. */
 const TABS: Record<LevelModeKind, Tab[]> = {
   code: ['Code', 'Play'],
   world: ['World', 'Play'],
   build: ['World', 'Code', 'Play'],
   play: ['Play'],
-  image: [],
+  image: ['Images'],
   freeplay: ['Code', 'Images', 'World', 'Play'],
 };
 
 export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
-  return mode ? TABS[mode.kind] : undefined;
+  return mode ? mode.tabs ?? TABS[mode.kind] : undefined;
 }
 
 /** A level whose palette is about one image: world and build levels. */
 export function editsWorld(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'world' || mode?.kind === 'build';
-}
-
-/** The image panel is the whole level, in place of the tabs and the stage. */
-export function isImageMode(mode: LevelMode | undefined): boolean {
-  return mode?.kind === 'image';
 }
 
 /** The only mode offering the prompt box and the paint tools. */

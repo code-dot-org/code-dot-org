@@ -3,7 +3,8 @@ import {BlocklyLevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
 import {RGBA} from '@cdo/apps/pixelEditor/tools';
 
 import {AddBlockEntry} from './addBlocks';
-import {ImageGenerationMetadata} from './ai/images/types';
+import {ImageGenerationMetadata, ImageType} from './ai/images/types';
+import {LevelCallout} from './callouts';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
@@ -58,9 +59,6 @@ export interface RuntimeAnimationList {
   propsByKey: {[key: string]: RuntimeAnimationProps};
 }
 
-/** What a scene is for: the blocks it offers and how big its sprites are. */
-export type SceneType = 'story' | 'platform';
-
 /**
  * A named code workspace. The id is the source of truth, being what the
  * go-to-scene block stores; scenes[0] is where Play starts.
@@ -68,8 +66,6 @@ export type SceneType = 'story' | 'platform';
 export interface Scene {
   id: string;
   name: string;
-  /** Absent on scenes created before scene types. */
-  type?: SceneType;
   /** This scene's Blockly workspace serialization. */
   source?: WorkspaceSerialization;
   /** Starter sprite and block placements, spawned ahead of the program. */
@@ -96,31 +92,59 @@ export interface Sources extends ProjectSources {
   blockCatalogSeen?: boolean;
 }
 
+/** An image a level gives the project: a lab asset by URL, with the
+    frame layout an animation needs. */
+export interface StarterImage {
+  name: string;
+  imageType: ImageType;
+  role?: string;
+  src: string;
+  /** One frame's size in px; the whole image when it is a single frame. */
+  frameSize: {x: number; y: number};
+  /** The sheet's size in px, holding `frameCount` frames row by row. */
+  sourceSize?: {x: number; y: number};
+  frameCount?: number;
+  frameDelay?: number;
+  looping?: boolean;
+  /** A character's poses on the sheet (characterAnimations.ts). */
+  poses?: AnimationPoses;
+  /** Pixel art: the size of one drawn pixel in the file, so previews
+      upscale it with hard edges. */
+  pixelGridSize?: number;
+}
+
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** What kind of level this is; decides the tabs and the image controls. */
   levelMode?: LevelMode;
   /** The one scene this level edits, created on first load if the project
       lacks it. The id is the key the go-to-scene block stores; the name is
-      what the student sees, applied only at creation. The id must not be
-      'scene-1' (the id synthesized for sources saved before scenes). */
+      what the student sees, applied only at creation. The id 'scene-1' is
+      the default scene a scene-less project synthesizes from its top-level
+      code: a pin with that id adopts it instead of adding a scene. */
   pinnedScene?: {
     id: string;
     name: string;
-    type?: SceneType;
+    /** The scene's code when the level creates it; the default workspace
+        when unset. */
+    source?: WorkspaceSerialization;
+  };
+  /** A second scene the level creates beside the pinned one, for a level
+      about jumping between scenes; its premade world works like
+      world_start_pattern. */
+  extraScene?: {
+    id: string;
+    name: string;
+    source?: WorkspaceSerialization;
+    worldStartPattern?: string[];
   };
   /** The level's objectives (objectives.ts): the Guide's text, checklist
       and Continue gate. */
   objectives?: Objectives;
-  /** Premade world for the pinned scene, one string per playfield row
-      anchored to the floor. 'B' cells take the block image the student made
-      most recently, 'S' the image_role_defaults sprite, else their first
-      character. */
-  /** Rows of a premade world (worldStartPattern.ts), or several such
-      layouts, one of which the project draws by its channel id. */
-  worldStartPattern?: string[] | string[][];
-  /** Block types no earlier level of the unit offered in its toolbox,
-      computed by the server: what the new-block catalog offers. */
-  newBlocks?: string[];
+  /** Premade world for the pinned scene (worldStartPattern.ts): one string
+      per playfield row anchored to the floor. 'B' cells take the block image
+      the student made most recently, 'S' the image_role_defaults sprite,
+      'O' its object, else their first character. */
+  worldStartPattern?: string[];
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
@@ -133,6 +157,11 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       An entry with `attachTo` instead hangs its shadow on the end of the
       stack already there whose top block has that type. */
   addBlocks?: AddBlockEntry[];
+  /** Arrows at the lab's tabs while a condition holds (callouts.ts). */
+  callouts?: LevelCallout[];
+  /** Images the level gives the project on arrival, when it has no image
+      of that name or in that role yet. */
+  starterImages?: StarterImage[];
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
   /** Runtime libraries the level opts into (see usesPlatformPhysics). */

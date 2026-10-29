@@ -67,6 +67,9 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
   /** No paint entry points: the pane is a plain preview and new images
       offer no blank canvas. */
   paintDisabled?: boolean;
+  /** The level rates every picture: the dialog stays open and Keep waits
+      until a fresh picture has its thumb. */
+  verdictRequired?: boolean;
   /** Stored pixel size of the image (one frame of a sheet). */
   resolution?: {x: number; y: number};
   /** Pixel art's physical px per art pixel; sets the resolution row's
@@ -142,6 +145,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   defaultStyle,
   generationsLeft,
   paintDisabled,
+  verdictRequired,
   pixelated,
   resolution,
   pixelGridSize,
@@ -157,6 +161,9 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );
+  // Without onClose the dialog has no close button and ignores Escape.
+  const [awaitingVerdict, setAwaitingVerdict] = useState(false);
+  const closable = !awaitingVerdict;
   // The student's generate view hosts the sentence scene; the advanced
   // dialog keeps its full form. Both want room for the word menus.
   const sentenceView = view === 'generate' && !advanced;
@@ -316,6 +323,8 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
             setView('details');
           }}
           onCancel={onClose}
+          verdictRequired={verdictRequired}
+          onAwaitingVerdict={setAwaitingVerdict}
           onPaintManually={
             isNew && !paintDisabled && onPaintNew
               ? draft =>
@@ -489,7 +498,7 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
     <div className={moduleStyles.dialogHost}>
       <CustomDialog
         aria-label={title}
-        onClose={onClose}
+        onClose={closable ? onClose : undefined}
         mode={mode}
         className={classNames(
           moduleStyles.dialog,

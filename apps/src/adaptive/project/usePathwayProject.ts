@@ -66,5 +66,13 @@ export function usePathwayProject(pathway: Pathway): PathwayProjectState {
     [projectManager]
   );
 
-  return {channel, isLoading, isEditable, loadError, editProject};
+  // Without a template there is no channel to edit, whatever useSources
+  // makes of a level that uses no project.
+  return {
+    channel,
+    isLoading,
+    isEditable: !!channel && isEditable,
+    loadError,
+    editProject,
+  };
 }

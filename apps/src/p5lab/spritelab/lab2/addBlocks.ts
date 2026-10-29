@@ -49,6 +49,14 @@ export function matchesEntry(present: PresentBlock, entry: AddBlock): boolean {
   );
 }
 
+/** Whether a top block is one this level has the student build: a block
+    the level adds, by type and tag. */
+export function ownsTop(entries: AddBlockEntry[], top: PresentBlock): boolean {
+  return entries.some(
+    entry => !isAttachShadow(entry) && matchesEntry(top, entry)
+  );
+}
+
 /** The blocks the workspace lacks (see matchesEntry). */
 export function missingBlocks(
   present: Iterable<PresentBlock>,
@@ -90,11 +98,17 @@ function samePlaceholder(a: Shadow | null | undefined, b: Shadow): boolean {
   return !!a && a.type === b.type && likeKey(a) === likeKey(b);
 }
 
+function isBlank(shadow: Shadow | null | undefined): boolean {
+  return !!(shadow?.extraState as {blank?: boolean} | undefined)?.blank;
+}
+
 /**
  * The connection under a stack's last real block, if `shadow` can hang
  * there. Blockly keeps a connection's shadow recorded while a real block
  * covers it, so a stack that already had this placeholder, filled in or
- * not, gets it nowhere else.
+ * not, gets it nowhere else. A saved project keeps the placeholder as
+ * the level drew it at the time, so one still waiting whose blank flag
+ * no longer matches the level's is hung again, in place.
  */
 export function freeStackEnd(
   top: BlocklyCore.Block,
@@ -102,12 +116,19 @@ export function freeStackEnd(
 ): BlocklyCore.Connection | null {
   for (let block: BlocklyCore.Block = top; ; ) {
     const connection = block.nextConnection;
-    if (!connection || samePlaceholder(connection.getShadowState(), shadow)) {
+    if (!connection) {
       return null;
     }
+    const recorded = connection.getShadowState();
     const next = connection.targetBlock();
+    if (samePlaceholder(recorded, shadow)) {
+      const waiting = !next || next.isShadow();
+      return waiting && isBlank(recorded) !== isBlank(shadow)
+        ? connection
+        : null;
+    }
     if (!next) {
-      return connection.getShadowState() ? null : connection;
+      return recorded ? null : connection;
     }
     if (next.isShadow()) {
       return null;

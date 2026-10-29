@@ -41,6 +41,9 @@ interface SentenceDialogBodyProps {
       and style; the host names it. */
   onPaintManually?: (draft: Omit<NewImageDraft, 'name'>) => void;
   onGenerateStart?: () => void;
+  /** See SentenceScene: a fresh picture waits for its thumb. */
+  verdictRequired?: boolean;
+  onAwaitingVerdict?: (awaiting: boolean) => void;
 }
 
 const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
@@ -52,6 +55,8 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
   onCancel,
   onPaintManually,
   onGenerateStart,
+  verdictRequired,
+  onAwaitingVerdict,
 }) => {
   const layout = (parts: SentenceSceneParts) => {
     const result = parts.mode === 'result';
@@ -133,7 +138,7 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
             variant="outlined"
             color="secondary"
             size="small"
-            disabled={parts.busy}
+            disabled={parts.busy || parts.awaitingVerdict}
             onClick={onCancel}
           >
             Cancel
@@ -164,7 +169,7 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
                 color="primary"
                 size="small"
                 startIcon={<FontAwesomeV6Icon iconName="check" />}
-                disabled={parts.busy}
+                disabled={parts.busy || parts.awaitingVerdict}
                 onClick={parts.keep}
               >
                 Keep
@@ -193,6 +198,8 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
       imageSubject={imageSubject}
       typeChoice={typeChoice}
       generationsLeft={generationsLeft}
+      verdictRequired={verdictRequired}
+      onAwaitingVerdict={onAwaitingVerdict}
       onKeep={onKeep}
       onGenerateStart={onGenerateStart}
       method="dialog"

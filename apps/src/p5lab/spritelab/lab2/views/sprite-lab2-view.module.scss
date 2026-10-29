@@ -229,6 +229,12 @@ $z-over-blockly: 71;
   text-transform: none;
 }
 
+// Still, it keeps its colors: it is a label, not a button that is off.
+.sceneDropdown > button.sceneTriggerStill:disabled {
+  border-color: var(--borders-neutral-strong);
+  color: var(--text-neutral-primary);
+}
+
 .sceneTriggerName {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -609,28 +615,6 @@ $z-over-blockly: 71;
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.sceneTypeGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  border: none;
-
-  // The global legend style carries a fixed dark color and a full-width
-  // underline, neither of which suits a themed dialog. Sized to read as a
-  // peer of the name field's label above it.
-  legend {
-    width: auto;
-    margin-bottom: 4px;
-    padding: 0;
-    border: none;
-    color: var(--text-neutral-primary);
-    font-size: 14px;
-    line-height: inherit;
-  }
 }
 
 .guideBody {
@@ -1022,16 +1006,4 @@ $z-over-blockly: 71;
   @include chrome.sr-only;
 }
 
-// The lab's own ground, which the dance generator also sits on: black in
-// dark mode, so the panel and the floating guide read as the level itself.
-.imageLevelArea {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex: 1;
-  min-width: 0;
-  padding: 24px 16px;
-  overflow: auto;
-  background-color: var(--background-neutral-primary);
-}
+

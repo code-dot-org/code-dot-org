@@ -106,6 +106,8 @@ interface ResultActionsProps {
   onContinue: () => void;
   /** No generations left: Regenerate alone goes off. */
   regenerateDisabled?: boolean;
+  /** The picture still wants its thumb: Continue alone goes off. */
+  continueDisabled?: boolean;
 }
 
 const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
@@ -115,6 +117,7 @@ const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
   onContinue,
   disabled,
   regenerateDisabled,
+  continueDisabled,
 }) => (
   <>
     <hr className={styles.resultDivider} />
@@ -148,7 +151,7 @@ const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
               aria-hidden
             />
           }
-          disabled={disabled}
+          disabled={disabled || continueDisabled}
           onClick={onContinue}
         >
           Continue

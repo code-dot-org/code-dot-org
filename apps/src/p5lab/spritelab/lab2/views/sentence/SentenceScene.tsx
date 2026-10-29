@@ -129,6 +129,8 @@ export interface SentenceSceneParts {
   fact: React.ReactNode;
   /** The question and the thumbs, once there is a picture. */
   verdict: React.ReactNode;
+  /** The level wants the picture rated and it is not yet: keep waits. */
+  awaitingVerdict: boolean;
   /** The level's generations are used up: Generate stays off. */
   exhausted: boolean;
   generate: () => void;
@@ -166,6 +168,11 @@ interface SentenceSceneProps {
   onGenerateStart?: () => void;
   /** Analytics: which surface generated. */
   method?: string;
+  /** The level asks for a thumb on every picture (a `rated` objective):
+      a fresh picture cannot be kept until it has one. */
+  verdictRequired?: boolean;
+  /** Whether a picture is waiting for its thumb, as that changes. */
+  onAwaitingVerdict?: (awaiting: boolean) => void;
   /** Lay the parts out instead of the level's two halves. */
   layout?: (parts: SentenceSceneParts) => React.ReactNode;
 }
@@ -185,6 +192,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onKeep,
   onGenerateStart,
   method = 'scene',
+  verdictRequired,
+  onAwaitingVerdict,
   layout,
 }) => {
   const dispatch = useAppDispatch();
@@ -212,6 +221,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // it; one swapped back in does neither.
   const [freshId, setFreshId] = useState<string | null>(null);
   const [verdict, setVerdict] = useState<Verdict | null>(null);
+  const awaitingVerdict =
+    !!verdictRequired && mode === 'result' && !!made && !verdict;
+  useEffect(() => {
+    onAwaitingVerdict?.(awaitingVerdict);
+  }, [awaitingVerdict, onAwaitingVerdict]);
+  // Unmounting answers nothing, so the host is released.
+  useEffect(() => () => onAwaitingVerdict?.(false), [onAwaitingVerdict]);
   const [reason, setReason] = useState<VerdictReason | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [fact, setFact] = useState<string | null>(null);
@@ -333,15 +349,19 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   ]);
 
   const keep = useCallback(async () => {
-    if (!made) {
+    if (!made || awaitingVerdict) {
       return;
     }
     setSaving(true);
+    // The thumb, if given, is recorded on the image.
+    const result = verdict
+      ? {...made.result, generation: {...made.result.generation, verdict}}
+      : made.result;
     try {
       if (onKeep) {
-        await onKeep(made.result);
+        await onKeep(result);
       } else {
-        await saveGeneratedImage(dispatch, made.result, {
+        await saveGeneratedImage(dispatch, result, {
           uploadImage,
           imageType,
           imageRole,
@@ -355,7 +375,16 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       // On the last level with no finish URL, the lesson does not move on.
       setSaving(false);
     }
-  }, [made, onKeep, dispatch, uploadImage, imageType, imageRole]);
+  }, [
+    made,
+    awaitingVerdict,
+    verdict,
+    onKeep,
+    dispatch,
+    uploadImage,
+    imageType,
+    imageRole,
+  ]);
 
   const startPaint = useCallback(() => {
     setError(null);
@@ -430,9 +459,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
 
   // Another picture into the frame; a swap plays no reveal and ends the
   // question.
+  // The thumb belongs to the picture it was given for.
   const choosePicture = useCallback((id: string) => {
     setChosenId(id);
     setFreshId(null);
+    setVerdict(null);
+    setReason(null);
   }, []);
 
   const generating = mode === 'generating';
@@ -673,12 +705,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       disabled={busy}
     />
   );
-  // Asked of the picture just made, while it is in the frame; boxed in a
-  // host's own panel, plain among the level's buttons.
+  // Asked of the picture just made, while it is in the frame, or of any
+  // picture there when the level wants every one rated; boxed in a host's
+  // own panel, plain among the level's buttons.
   const verdictRow = (boxed: boolean) =>
     showingResult &&
     made &&
-    made.id === freshId && (
+    (made.id === freshId || verdictRequired) && (
       <VerdictRow
         verdict={verdict}
         onJudge={judge}
@@ -722,6 +755,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           progress: progressNode,
           fact: factNode,
           verdict: verdictRow(true),
+          awaitingVerdict,
           exhausted,
           generate,
           changeWords,
@@ -755,6 +789,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           onGenerateAgain={generate}
           onContinue={keep}
           disabled={busy}
+          continueDisabled={awaitingVerdict}
           regenerateDisabled={exhausted}
         />
       ) : generating ? (

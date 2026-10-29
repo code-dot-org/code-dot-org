@@ -1,0 +1,203 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-28T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "no_project": true,
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "spritelab",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "level_mode": {
+      "kind": "play"
+    },
+    "pinned_scene": {
+      "id": "demo-scene",
+      "name": "Demo",
+      "source": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "gamelab_setBackgroundImageAs",
+                  "fields": {
+                    "IMG": "\"Forest\""
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_setAsPlatformPlayer",
+                      "fields": {
+                        "ANIMATION_NAME": "\"Blob\""
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "gamelab_checkTouching",
+              "x": 20,
+              "y": 220,
+              "fields": {
+                "CONDITION": "\"when\""
+              },
+              "inputs": {
+                "SPRITE1": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "fields": {
+                      "ANIMATION": "\"Blob\""
+                    }
+                  }
+                },
+                "SPRITE2": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "fields": {
+                      "ANIMATION": "\"Crystal\""
+                    }
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "spritelab2_burst",
+                  "fields": {
+                    "COUNT": 20,
+                    "LOOK": "confetti",
+                    "ORIGIN": "\"Crystal\""
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_playSound",
+                      "fields": {
+                        "SOUND": "sound://category_achievements/melodic_win_1.mp3"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "starter_images": [
+      {
+        "name": "Blob",
+        "imageType": "sprite",
+        "role": "demo-hero",
+        "src": "/blockly/media/spritelab_lab2/demo/blob.png",
+        "frameSize": {
+          "x": 512,
+          "y": 512
+        },
+        "sourceSize": {
+          "x": 2560,
+          "y": 512
+        },
+        "frameCount": 5,
+        "frameDelay": 20,
+        "looping": true,
+        "poses": {
+          "stand-right": {
+            "start": 0,
+            "count": 2,
+            "frameDelay": 20
+          },
+          "walk-right": {
+            "start": 1,
+            "count": 2,
+            "frameDelay": 8
+          },
+          "jump-right": {
+            "start": 3,
+            "count": 2,
+            "frameDelay": 8
+          }
+        }
+      },
+      {
+        "name": "Crystal",
+        "imageType": "sprite",
+        "role": "demo-treasure",
+        "src": "/blockly/media/spritelab_lab2/demo/treasure.png",
+        "frameSize": {
+          "x": 128,
+          "y": 128
+        }
+      },
+      {
+        "name": "Stone",
+        "imageType": "block",
+        "src": "/blockly/media/spritelab_lab2/blocks/block-2.png",
+        "frameSize": {
+          "x": 256,
+          "y": 256
+        },
+        "pixelGridSize": 7,
+        "role": "block"
+      },
+      {
+        "name": "Forest",
+        "imageType": "background",
+        "src": "/blockly/media/spritelab_lab2/demo/background.png",
+        "frameSize": {
+          "x": 600,
+          "y": 600
+        }
+      }
+    ],
+    "image_role_defaults": {
+      "sprite": "demo-hero",
+      "object": "demo-treasure"
+    },
+    "world_start_pattern": [
+      "..........",
+      "..........",
+      "...O......",
+      "..BBB.....",
+      "..........",
+      ".....BBB..",
+      "..........",
+      "..BBB.....",
+      "S.........",
+      "BBBBBBBBBB"
+    ],
+    "objectives": {
+      "title": "**Try the demo**\n\nHere is a game like the one you will make.",
+      "items": [
+        {
+          "text": "Use the arrow keys to run and jump up to the crystal.",
+          "check": {
+            "kind": "reach",
+            "role": "demo-treasure"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Try the demo\nHere is a game like the one you will make. Use the arrow keys to run and jump up to the crystal.",
+    "header_label": "Try the demo"
+  }
+}]]></config>
+</GamelabJr>

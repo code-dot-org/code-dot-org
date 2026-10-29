@@ -3,17 +3,12 @@
 
 import {ImageType} from './ai/images/types';
 import {ImageCounts} from './projectCounts';
-import {Tab} from './redux/spriteLab2Redux';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE, WorldCell} from './world';
 
 /** One kind of thing a level can ask for. */
 export type ObjectiveCheck =
-  | {
-      kind: 'image';
-      imageType: ImageType;
-      /** Images of the type made on this level; 1 when omitted. */
-      count?: number;
-    }
+  /** An image of the type was made on this level. */
+  | {kind: 'image'; imageType: ImageType}
   | {
       kind: 'block';
       /** The block type a real (not shadow) block must have, or any of
@@ -25,35 +20,28 @@ export type ObjectiveCheck =
       data?: string;
       /** Field values the block must carry. */
       fields?: Record<string, string>;
-      /** A block type that must sit inside the block (an input). */
-      contains?: string;
     }
   | {
       kind: 'world';
-      /** A cell showing the image that carries this role. */
+      /** A cell showing an image that carries this role; with neither this
+          nor `changed`, any cell at all. */
       role?: string;
-      /** At least this many cells of this kind. */
-      cellKind?: WorldCell['kind'];
-      count?: number;
       /** Any difference from the grid the level opened with. */
       changed?: boolean;
     }
-  | {
-      kind: 'play';
-      /** The game ran this long in one go. */
-      seconds?: number;
-    }
+  /** The student pressed Play. */
+  | {kind: 'play'}
   | {
       kind: 'reach';
-      /** The player touched the sprite whose image carries this role. */
+      /** The player touched a sprite whose image carries this role. */
       role?: string;
-      /** The player's feet rose this far up the view, 0 at the floor to 1. */
-      height?: number;
       /** The player ran a cell sideways or left the ground. */
       moved?: boolean;
     }
+  /** A jump landed on the scene. */
   | {kind: 'scene'; id: string}
-  | {kind: 'tab'; name: Tab};
+  /** The student answered the question about a generated picture. */
+  | {kind: 'rated'};
 
 export interface Objective {
   /** Names the item to the lab's hover and click handling. */
@@ -74,12 +62,8 @@ export interface Objectives {
 
 /** What the running game has done so far on this level. */
 export interface RuntimeProgress {
-  /** Seconds the game has run in one go, at its longest. */
-  longestRunSeconds: number;
   /** Image names of sprites the player has touched. */
   touched: ReadonlySet<string>;
-  /** The highest the player's feet have been, 0 at the floor to 1. */
-  highest: number;
   /** The farthest the player has run from where a run started, in px. */
   farthest: number;
   /** The most the feet have risen above a run's lowest point, 0 to 1. */
@@ -90,20 +74,15 @@ export interface RuntimeProgress {
 
 /** Which of the running game's reports the checklist reads. */
 export interface RuntimeNeeds {
-  seconds: boolean;
   touch: boolean;
-  height: boolean;
   move: boolean;
 }
 
 export function runtimeNeeds(objectives: Objectives | undefined): RuntimeNeeds {
-  const needs = {seconds: false, touch: false, height: false, move: false};
+  const needs = {touch: false, move: false};
   objectives?.items?.forEach(({check}) => {
-    if (check.kind === 'play' && check.seconds !== undefined) {
-      needs.seconds = true;
-    } else if (check.kind === 'reach') {
+    if (check.kind === 'reach') {
       needs.touch ||= check.role !== undefined;
-      needs.height ||= check.height !== undefined;
       needs.move ||= check.moved === true;
     }
   });
@@ -116,9 +95,7 @@ export const MOVED_PX = cellSize(DEFAULT_SCENE_GRID_SIZE);
 export const JUMPED_RISE = 0.1;
 
 export const EMPTY_RUNTIME: RuntimeProgress = {
-  longestRunSeconds: 0,
   touched: new Set(),
-  highest: 0,
   farthest: 0,
   risen: 0,
   scenesLanded: new Set(),
@@ -144,11 +121,12 @@ export interface ObjectiveInputs {
   grid?: (WorldCell | null)[][];
   /** The grid the level opened with. */
   baselineGrid?: (WorldCell | null)[][];
-  /** Image name by role. */
-  imageForRole: Record<string, string | undefined>;
+  /** Image names by role: a student can make a role's image more than
+      once, and every one counts. */
+  imagesForRole: Record<string, readonly string[] | undefined>;
   source?: WorkspaceSource;
-  activeTab: Tab;
   everPlayed: boolean;
+  rated: boolean;
   runtime: RuntimeProgress;
 }
 
@@ -177,6 +155,10 @@ export function* realBlocks(
   yield* realBlocks(block.next?.block);
 }
 
+function inRole(inputs: ObjectiveInputs, role: string, image: string): boolean {
+  return !!inputs.imagesForRole[role]?.includes(image);
+}
+
 function matchesBlock(
   block: BlockState,
   check: Extract<ObjectiveCheck, {kind: 'block'}>
@@ -190,19 +172,14 @@ function matchesBlock(
       return false;
     }
   }
-  if (check.contains) {
-    const inside = [...realBlocks(block)].slice(1);
-    if (!inside.some(b => b.type === check.contains)) {
-      return false;
-    }
-  }
   return true;
 }
 
 function hasBlock(
-  source: WorkspaceSource | undefined,
-  check: Extract<ObjectiveCheck, {kind: 'block'}>
+  check: Extract<ObjectiveCheck, {kind: 'block'}>,
+  inputs: ObjectiveInputs
 ): boolean {
+  const {source} = inputs;
   const tops = (source?.blocks?.blocks ?? []).filter(
     top =>
       (check.under === undefined || top.type === check.under) &&
@@ -245,13 +222,10 @@ function worldHolds(
   }
   const cells = cellsOf(inputs.grid);
   if (check.role !== undefined) {
-    const image = inputs.imageForRole[check.role];
-    return image !== undefined && cells.some(cell => cell.image === image);
+    const role = check.role;
+    return cells.some(cell => inRole(inputs, role, cell.image));
   }
-  const ofKind = check.cellKind
-    ? cells.filter(cell => cell.kind === check.cellKind)
-    : cells;
-  return ofKind.length >= (check.count ?? 1);
+  return cells.length > 0;
 }
 
 /** Whether one check holds right now. */
@@ -261,33 +235,29 @@ export function checkObjective(
 ): boolean {
   switch (check.kind) {
     case 'image':
-      return inputs.images[check.imageType] >= (check.count ?? 1);
+      return inputs.images[check.imageType] >= 1;
     case 'block':
-      return hasBlock(inputs.source, check);
+      return hasBlock(check, inputs);
     case 'world':
       return worldHolds(check, inputs);
     case 'play':
-      return check.seconds === undefined
-        ? inputs.everPlayed
-        : inputs.runtime.longestRunSeconds >= check.seconds;
+      return inputs.everPlayed;
     case 'reach': {
       if (check.role !== undefined) {
-        const image = inputs.imageForRole[check.role];
-        return image !== undefined && inputs.runtime.touched.has(image);
-      }
-      if (check.moved) {
-        return (
-          inputs.runtime.farthest >= MOVED_PX ||
-          inputs.runtime.risen >= JUMPED_RISE
+        const role = check.role;
+        return [...inputs.runtime.touched].some(image =>
+          inRole(inputs, role, image)
         );
       }
       return (
-        check.height !== undefined && inputs.runtime.highest >= check.height
+        !!check.moved &&
+        (inputs.runtime.farthest >= MOVED_PX ||
+          inputs.runtime.risen >= JUMPED_RISE)
       );
     }
     case 'scene':
       return inputs.runtime.scenesLanded.has(check.id);
-    case 'tab':
-      return inputs.activeTab === check.name;
+    case 'rated':
+      return inputs.rated;
   }
 }

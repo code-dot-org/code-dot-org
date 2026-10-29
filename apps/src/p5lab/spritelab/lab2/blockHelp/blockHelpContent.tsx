@@ -16,8 +16,9 @@ import {PLATFORM_GRAVITY} from '../platformPhysics';
  * What the new-block catalog says about a block: a `summary` sentence,
  * then the `body`, markdown, one more sentence at most, beside an
  * `animation` (a looping GIF of the block in action, or a still picture
- * where one says enough). Content lives here rather than in the level so
- * it can carry pictures and the lab's numbers; a level-authored source can
+ * where one says enough; an entry without one gets an empty outline until
+ * its picture is made). Content lives here rather than in the level so it
+ * can carry pictures and the lab's numbers; a level-authored source can
  * replace this table later.
  */
 export interface BlockHelp {
@@ -102,5 +103,31 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     animation: {src: animWhenClicked, alt: 'The when clicked block in action.'},
     summary: 'Runs the blocks below when a sprite is clicked or tapped.',
     body: '**while** keeps them running as long as the button is held down.',
+  },
+  gamelab_spriteSay: {
+    title: 'Say',
+    summary: 'Shows words in a speech bubble over a sprite.',
+    body: 'Put it under an event, so the words come at the right moment.',
+  },
+  spritelab2_restartScene: {
+    title: 'Restart scene',
+    summary: 'Starts the scene over from the beginning.',
+    body:
+      'Try it under "when touching" a foe, so a touch sends the player back ' +
+      'to the start.',
+  },
+  gamelab_atTime: {
+    title: 'At time',
+    summary: 'Runs the blocks below once, when the scene has run this long.',
+    body:
+      '**seconds** counts from when the scene starts; **frames** counts ' +
+      'frames instead.',
+  },
+  spritelab2_whenPlayer: {
+    title: 'When player',
+    summary:
+      'Runs the blocks below each time the player walks, jumps, lands or ' +
+      'bumps into something.',
+    body: 'Pick the moment from the dropdown.',
   },
 };

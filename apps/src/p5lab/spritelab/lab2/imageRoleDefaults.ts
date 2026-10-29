@@ -14,11 +14,14 @@ import {RuntimeAnimationList} from './types';
  * record through level_mode.imageRole.
  *
  *   {"sprite": "friend", "gamelab_checkTouching": ["hero", "friend"]}
+ *
+ * `object` is the role a premade world's 'O' cells draw (worldStartPattern.ts).
  */
 export type ImageRoleDefaults = {
   sprite?: string;
   background?: string;
   block?: string;
+  object?: string;
   [blockType: string]: string | string[] | undefined;
 };
 
@@ -47,22 +50,33 @@ export function defaultRole(
   return typeof forKind === 'string' ? forKind : undefined;
 }
 
+/** Every image of the kind carrying the role, by name, newest first. */
+export function imagesNamedForRole(
+  list: RuntimeAnimationList,
+  kind: ImageType,
+  role: string | undefined
+): string[] {
+  if (!role) {
+    return [];
+  }
+  return (list.orderedKeys || [])
+    .filter(k => {
+      const props = list.propsByKey[k];
+      return (
+        props?.role === role &&
+        imageTypeFromCategories(props.categories) === kind
+      );
+    })
+    .map(k => list.propsByKey[k].name);
+}
+
 /** The newest image of the kind carrying the role, by name. */
 export function imageNamedForRole(
   list: RuntimeAnimationList,
   kind: ImageType,
   role: string | undefined
 ): string | undefined {
-  if (!role) {
-    return undefined;
-  }
-  const key = (list.orderedKeys || []).find(k => {
-    const props = list.propsByKey[k];
-    return (
-      props?.role === role && imageTypeFromCategories(props.categories) === kind
-    );
-  });
-  return key ? list.propsByKey[key].name : undefined;
+  return imagesNamedForRole(list, kind, role)[0];
 }
 
 /**

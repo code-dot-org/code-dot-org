@@ -152,6 +152,7 @@ export default function useSources<T extends ProjectSources>({
   // edit mode is always editable.
   const isEditable =
     isLevelEditMode ||
+    (!levelProperties.usesProjects && !levelProperties.widgetView) ||
     (!isLoading &&
       isOwner &&
       !channel?.frozen &&
@@ -181,7 +182,25 @@ export default function useSources<T extends ProjectSources>({
     // resurrect the previous level's sources or double-attach callbacks.
     async (isCancelled: () => boolean = () => false) => {
       const {usesProjects, id, isProjectLevel} = levelProperties;
+      // A level without a project keeps its sources in memory: the level's
+      // own to start, edited but never saved.
       if (!usesProjects) {
+        await projectManagerRef.current?.cleanUp();
+        if (isCancelled()) return;
+        projectManagerRef.current = null;
+        setChannel(undefined);
+        dispatch(setChannelAction(undefined));
+        setVersionList([]);
+        setCurrentVersion(undefined);
+        setHasEdited(false);
+        setLoadError(undefined);
+        setSources(
+          getInitialSources(
+            levelProperties,
+            undefined,
+            getToolboxEditSourcesRef.current?.(levelProperties)
+          ) || defaultSources
+        );
         return;
       }
       // Clear out existing data.

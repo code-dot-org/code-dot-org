@@ -1,6 +1,5 @@
 import {
   isFreeplayMode,
-  isImageMode,
   tabsForMode,
 } from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 
@@ -12,8 +11,14 @@ describe('tabsForMode', () => {
     expect(tabsForMode({kind: 'play'})).toEqual(['Play']);
   });
 
-  it('gives an image level no tabs: its panel replaces them', () => {
-    expect(tabsForMode({kind: 'image'})).toEqual([]);
+  it('gives an image level the Images tab alone', () => {
+    expect(tabsForMode({kind: 'image'})).toEqual(['Images']);
+  });
+
+  it("takes a level's own tabs over its kind's", () => {
+    expect(
+      tabsForMode({kind: 'code', tabs: ['Images', 'Code', 'Play']})
+    ).toEqual(['Images', 'Code', 'Play']);
   });
 
   it('leaves a level with no mode on the lab default', () => {
@@ -21,10 +26,8 @@ describe('tabsForMode', () => {
   });
 });
 
-describe('isImageMode / isFreeplayMode', () => {
-  it('names one kind each', () => {
-    expect(isImageMode({kind: 'image'})).toBe(true);
-    expect(isImageMode({kind: 'freeplay'})).toBe(false);
+describe('isFreeplayMode', () => {
+  it('names one kind', () => {
     expect(isFreeplayMode({kind: 'freeplay'})).toBe(true);
     expect(isFreeplayMode(undefined)).toBe(false);
   });

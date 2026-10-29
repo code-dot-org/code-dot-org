@@ -136,6 +136,19 @@ describe('addBlocks', () => {
     ).toBeNull();
   });
 
+  it('hangs a waiting placeholder again when its outline no longer matches', () => {
+    const BLANK_SAY = {
+      ...SAY,
+      extraState: {...SAY.extraState, blank: true},
+    };
+    const top = stack({shadow: BLANK_SAY, next: true}, {isShadow: true});
+    expect(freeStackEnd(top, SAY)).toBe(top.nextConnection);
+    // Covered by the student's block, it is left alone.
+    expect(
+      freeStackEnd(stack({shadow: BLANK_SAY, next: true}, {}), SAY)
+    ).toBeNull();
+  });
+
   it('hangs its placeholder once: a filled one is not hung again below', () => {
     // when run -> say (the student's block over the say placeholder).
     const filled = stack({shadow: SAY, next: true}, {});
