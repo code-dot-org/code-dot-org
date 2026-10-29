@@ -237,6 +237,27 @@ describe('useSources', () => {
       });
     });
 
+    it('drops an update that lands while a reload has cleared the sources', async () => {
+      const {result, rerender} = renderUseSources();
+      await flush();
+      expect(result.current.currentSources).toEqual(SAVED_SOURCES);
+
+      // The next level's load never settles; its start has already
+      // cleared the sources, as it does before the old view unmounts.
+      (fakeManager.load as jest.Mock).mockReturnValue(new Promise(() => {}));
+      rerender({levelProperties: LEVEL_TWO});
+      await flush();
+      expect(result.current.currentSources).toBeUndefined();
+
+      expect(() =>
+        act(() => {
+          result.current.updateSources(prev => ({...prev, source: 'late'}));
+        })
+      ).not.toThrow();
+      expect(fakeManager.save).not.toHaveBeenCalled();
+      expect(result.current.currentSources).toBeUndefined();
+    });
+
     it('ignores updates when the viewer is not the project owner', async () => {
       (fakeManager.load as jest.Mock).mockResolvedValue({
         sources: SAVED_SOURCES,
