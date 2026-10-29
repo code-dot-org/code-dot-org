@@ -12,6 +12,7 @@ import {localization} from '@code-dot-org/core/plugins/localization';
 import {IMPORT_ACTOR_VALUE} from '../actors/actorImport';
 import {IMPORT_BACKGROUND_VALUE} from '../appearance/appearanceImport';
 import type {EffectParameter} from '../effect/model/types';
+import {IMPORT_SCREEN_VALUE} from '../maps/screenImport';
 import {IMPORT_SOUND_VALUE} from '../sound/soundImport';
 
 import {actorIconImage} from './actorIcons';
@@ -807,15 +808,22 @@ export const mapOptionsExtension = liveDropdown(
   mapOptions,
 );
 
-/** The screens `show screen` can put on top: every one but the Main Screen. */
+/**
+ * The screens `show screen` can put on top: every one but the Main Screen,
+ * and the shelf's, which a pause menu or a confirm arranged already
+ * (`maps/stock`). The row is answered by `screenImportField`.
+ */
 export function screenOptions(): Array<[string, string]> {
-  return orNone(
-    projectScreenPaths().map(path => [
-      label(path.split('/').pop() ?? path),
-      path,
-    ]),
-    '(no screens yet)',
-  );
+  return [
+    ...orNone(
+      projectScreenPaths().map(path => [
+        label(path.split('/').pop() ?? path),
+        path,
+      ]),
+      '(no screens yet)',
+    ),
+    ['(import…)', IMPORT_SCREEN_VALUE],
+  ];
 }
 
 export const screenOptionsExtension = liveDropdown(

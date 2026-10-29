@@ -1,6 +1,6 @@
 // Choosing a theme to copy into the project.
 //
-// `ImportMapDialog`'s sibling, and the smallest of the three pickers: a theme
+// `ImportScreenDialog`'s sibling, and the smallest of the three pickers: a theme
 // brings nothing with it. What there is to show is its name and one line on
 // what it looks like — the tiles share the actor dialog's styles, so the
 // pickers read as one shelf.

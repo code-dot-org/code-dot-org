@@ -2782,6 +2782,47 @@ export const TILES: readonly Tile[] = [
     },
   },
   {
+    id: 'story/screen',
+    region: 'story',
+    // Past the tile that put a Button and a pause on the shelf: a menu of
+    // answers is what pausing is usually for, and a screen is what a menu is.
+    at: at('story', 4, 2),
+    title: 'A screen over the game',
+    teaches:
+      'A screen goes on top of what is showing and comes off again, and only the one on top is listened to.',
+    task: 'P pauses the game and nothing says so. Show the Pause Menu when P is pressed.',
+    requires: ['story/choice'],
+    unlocks: [
+      // Built in rather than a rule's: pushing a screen and taking it off is
+      // not code a learner learns anything from reading
+      // (specs/SCREEN_STACK_PLAN.md).
+      {kind: 'block', type: 'world_show_screen'},
+      {kind: 'block', type: 'world_go_back'},
+    ],
+    check: {
+      kind: 'outcome',
+      says: 'P brings up the Pause Menu over the game, and Resume takes it off again.',
+      falsePass:
+        'Placing the menu on the Main Screen and showing it some other way, which looks the same until Resume is clicked — so the check clicks it and asks that the menu is gone, which only a screen taken off does.',
+      run: {
+        probes: {panel: {kind: 'positions', of: 'Panel'}},
+        // P, then a click on Resume, which is 4 below the middle of the
+        // panel at the middle of the window.
+        trace: [
+          {hold: ['p'], seconds: 0.1},
+          {hold: [], seconds: 0.2},
+          {pointer: {x: 160, y: 164, buttons: ['left']}, seconds: 0.1},
+          {pointer: {x: 160, y: 164}, seconds: 0.1},
+          {seconds: 0.1},
+        ],
+      },
+      passes: ({samples}) => {
+        const panels = (samples.panel ?? []) as unknown[][];
+        return panels[1]?.length === 1 && panels.at(-1)?.length === 0;
+      },
+    },
+  },
+  {
     id: 'story/scene',
     region: 'story',
     at: at('story', 2, 3),

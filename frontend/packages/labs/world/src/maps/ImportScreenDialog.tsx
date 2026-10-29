@@ -1,8 +1,9 @@
-// Choosing a stock map to copy into the project.
+// Choosing a stock screen to copy into the project.
 //
-// `ImportActorDialog`'s sibling, smaller: a map is an arrangement, and what
+// `ImportActorDialog`'s sibling, smaller: a screen is an arrangement, and what
 // there is to show is its name and what it brings. The tiles share the actor
-// dialog's styles, so the two pickers read as one shelf.
+// dialog's styles, so the two pickers read as one shelf
+// (specs/SCREEN_STACK_PLAN.md, step 7).
 
 import {Typography} from '@mui/material';
 import {useState} from 'react';
@@ -14,22 +15,25 @@ import {stockActorById} from '../actors/stock';
 
 import {STOCK_MAPS, type StockMap} from './stock';
 
-export interface ImportMapDialogProps {
-  onImport: (map: StockMap) => void;
+export interface ImportScreenDialogProps {
+  onImport: (screen: StockMap) => void;
   onCancel: () => void;
 }
 
-/** What the map places, by the actors' own names. */
+/** What the screen places, by the actors' own names. */
 const brings = (map: StockMap): string[] =>
   map.actors.map(id => stockActorById(id)?.name ?? id);
 
-export const ImportMapDialog = ({onImport, onCancel}: ImportMapDialogProps) => {
+export const ImportScreenDialog = ({
+  onImport,
+  onCancel,
+}: ImportScreenDialogProps) => {
   const [chosen, setChosen] = useState<StockMap | null>(null);
   return (
     <Dialog
       role="dialog"
-      title="Add a map"
-      description="Pick an arrangement to copy into your project, with the actors it places. Load it from a world, and open it in the map editor to move things."
+      title="Add a screen"
+      description="Pick a screen to copy into your project, with the actors it places. Show it with “show screen”, and open it in the editor to move things."
       onClose={onCancel}
       closeLabel="Close"
       primaryButtonProps={{
@@ -41,9 +45,7 @@ export const ImportMapDialog = ({onImport, onCancel}: ImportMapDialogProps) => {
       customContent={
         <div className={styles.body}>
           <ul className={styles.grid}>
-            {/* Maps only: a stock screen is shown, not loaded, and is
-                not what a map's dropdown can hold (specs/SCREEN_STACK_PLAN.md). */}
-            {STOCK_MAPS.filter(map => !map.screen).map(map => {
+            {STOCK_MAPS.filter(map => map.screen).map(map => {
               const picked = chosen?.id === map.id;
               return (
                 <li key={map.id} className={styles.holder}>

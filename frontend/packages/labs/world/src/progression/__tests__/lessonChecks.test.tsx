@@ -2318,6 +2318,46 @@ describe('the layers lesson’s check', () => {
   });
 });
 
+describe('the screen lesson’s check', () => {
+  // specs/SCREEN_STACK_PLAN.md, step 7.
+  const lesson = LESSONS['story/screen'];
+
+  /** The P handler with `show screen ⟨pauseMenu⟩` under its pause. */
+  const shown = editing(lesson.source, 'main.screen', contents => {
+    const screen = JSON.parse(contents) as {
+      blocks: {blocks: {blocks: Array<Record<string, unknown>>}};
+    };
+    for (const root of screen.blocks.blocks.blocks) {
+      if (root.type !== 'world_on_Input_IsPressedEvent') {
+        continue;
+      }
+      root.next = {
+        block: {
+          type: 'world_pause_game',
+          next: {
+            block: {
+              type: 'world_show_screen',
+              fields: {SCREEN: 'screens/pauseMenu'},
+            },
+          },
+        },
+      };
+    }
+    return JSON.stringify(screen);
+  });
+
+  it('refuses a pause nothing shows', async () => {
+    const {passes} = await check('story/screen', lesson.source);
+    expect(passes).toBe(false);
+  });
+
+  it('accepts the menu shown on P and taken off by Resume', async () => {
+    const {passes, result} = await check('story/screen', shown);
+    expect(result.error).toBeUndefined();
+    expect(passes).toBe(true);
+  });
+});
+
 describe('the placement-script lesson’s check', () => {
   const lesson = LESSONS['place/script'];
 

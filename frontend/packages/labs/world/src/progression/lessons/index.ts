@@ -3909,6 +3909,74 @@ branching — no new machinery, just a jump.
 `.trim(),
 };
 
+// ── story/screen ─────────────────────────────────────────────────────────────
+
+/**
+ * `when ⟨p⟩ is pressed: pause the game` — the Main Screen's, which stops the
+ * game and says nothing about it. The lesson is the block that goes under it.
+ */
+const pauseOnP = {
+  type: 'world_on_Input_IsPressedEvent',
+  fields: {FILTER0: 'p'},
+  next: {block: {type: 'world_pause_game'}},
+};
+
+const screenLesson: WorldScenario = {
+  name: 'A screen over the game',
+  description:
+    'P stops the game, and nothing on screen says so or says how to go on.',
+  // The stock Pause Menu, a screen of its own, imported as a project would
+  // import one and shown by nothing yet (specs/SCREEN_STACK_PLAN.md, step 7).
+  source: lessonSource({
+    world: worldFile({
+      name: 'My World',
+      rows: [
+        // The game's `quit`, which the menu's Quit button raises.
+        {
+          type: 'world_rule_event',
+          extraState: {parts: [{kind: 'label', text: 'quit'}]},
+        },
+        addActor(actorPath('hero'), [placeAt(160, 160)]),
+      ],
+      actors: [
+        {
+          id: 'hero',
+          name: 'Hero',
+          rows: [
+            useTrait('Arrow Keys#MovesAcrossTrait'),
+            setSprite('player.png'),
+          ],
+        },
+      ],
+      handlers: [pauseOnP],
+    }),
+    sprites: ['player'],
+    rules: ['arrows', 'input', 'mouse'],
+    stockScreens: ['pauseMenu'],
+  }),
+  instructions: `
+## A screen over the game
+
+Walk the Hero about, then press P. It stops — the game is paused — and
+nothing on screen says so, or says how to carry on.
+
+A **screen** is put on top of what is showing, and taken off again. Only the
+screen on top takes clicks and keys, so the game under it waits for an
+answer. This project already has one: open **screens/pauseMenu.screen** to
+see it, a panel with a Resume and a Quit button.
+
+### What you do
+
+1. Open the Main Screen's code and find **when ⟨p⟩ is pressed**.
+2. Under **pause the game**, add **show screen ⟨Pause Menu⟩** from the
+   **Map** drawer.
+3. Run it and press P. The menu comes up over the game, which shows dimmed
+   behind it.
+4. Click **Resume**. The button's own code says **resume the game** and
+   **go back**, which takes the menu off and leaves the game where it was.
+`.trim(),
+};
+
 // ── story/form ───────────────────────────────────────────────────────────────
 
 /**
@@ -6569,6 +6637,7 @@ const written: Readonly<Record<TileId, WorldScenario>> = {
   'story/reveal': reveal,
   'story/script': script,
   'story/choice': choice,
+  'story/screen': screenLesson,
   'story/form': form,
   'story/scene': scene,
   'simulation/many': crowd,

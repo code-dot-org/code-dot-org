@@ -71,9 +71,9 @@ import {ImportEffectDialog} from '../effect/ImportEffectDialog';
 import {importStockEffect} from '../effect/importStockEffect';
 import type {StockEffect} from '../effect/stock';
 import {requestFileAct} from '../files/fileActs';
-import {ImportMapDialog} from '../maps/ImportMapDialog';
+import {ImportScreenDialog} from '../maps/ImportScreenDialog';
 import {importStockMap} from '../maps/importStockMap';
-import {setMapImportHandler} from '../maps/mapImport';
+import {setScreenImportHandler} from '../maps/screenImport';
 import type {StockMap} from '../maps/stock';
 import {ImportRuleDialog} from '../rules/ImportRuleDialog';
 import {importStockRule} from '../rules/importStockRule';
@@ -109,7 +109,7 @@ type Shelf =
   | 'effect'
   | 'rule'
   | 'actor'
-  | 'map'
+  | 'screen'
   | 'style'
   | 'cameraRule'
   | AppearanceKind
@@ -158,7 +158,7 @@ export const LibraryImports = () => {
     setRuleImportHandler(() => open('rule'));
     setCameraRuleImportHandler(() => open('cameraRule'));
     setActorImportHandler(() => open('actor'));
-    setMapImportHandler(() => open('map'));
+    setScreenImportHandler(() => open('screen'));
     setStyleImportHandler(() => open('style'));
     setActorEnhanceHandler((target: EnhanceTarget) =>
       open({enhancing: target}),
@@ -171,7 +171,7 @@ export const LibraryImports = () => {
       setRuleImportHandler(null);
       setCameraRuleImportHandler(null);
       setActorImportHandler(null);
-      setMapImportHandler(null);
+      setScreenImportHandler(null);
       setStyleImportHandler(null);
       setActorEnhanceHandler(null);
       setSoundImportHandler(null);
@@ -402,10 +402,10 @@ export const LibraryImports = () => {
           onCancel={cancel}
         />
       )}
-      {shelf === 'map' && (
-        <ImportMapDialog
+      {shelf === 'screen' && (
+        <ImportScreenDialog
           onImport={(map: StockMap) => {
-            // The MAP's path, which is what a `load map` dropdown stores.
+            // The SCREEN's path, which is what `show screen` stores.
             const {source, path} = importStockMap(
               sourcesRef.current.source,
               map,

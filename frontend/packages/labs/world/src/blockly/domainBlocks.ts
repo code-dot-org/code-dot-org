@@ -116,10 +116,10 @@ import {
 } from './extensions/eventActorToolbox';
 import {installIfPlusMinus} from './extensions/ifPlusMinus';
 import {lessonButtonExtension} from './extensions/lessonButton';
-import {mapImportFieldExtension} from './extensions/mapImportField';
 import {missingRuleExtension} from './extensions/missingRule';
 import {openSourceButtonExtension} from './extensions/openSourceButton';
 import {rgbaPreviewExtension} from './extensions/rgbaPreview';
+import {screenImportFieldExtension} from './extensions/screenImportField';
 import {sliderRangeMutator} from './extensions/sliderRange';
 import {soundImportFieldExtension} from './extensions/soundImportField';
 import {spritePickExtension} from './extensions/spritePickField';
@@ -4850,7 +4850,7 @@ const worldShowScreen = defineBlock({
   args0: [{type: 'field_dropdown', name: 'SCREEN', options: screenOptions}],
   previousStatement: true,
   nextStatement: true,
-  extensions: [screenOptionsExtension],
+  extensions: [screenOptionsExtension, screenImportFieldExtension],
   style: 'setup_blocks',
   tooltip:
     'Put a screen on top of what is showing. Only the top screen takes ' +
@@ -7196,7 +7196,7 @@ const worldMapRef = defineBlock({
   message0: 'map %1',
   args0: [{type: 'field_dropdown', name: 'MAP', options: mapOptions}],
   output: 'String',
-  extensions: [mapOptionsExtension, mapImportFieldExtension],
+  extensions: [mapOptionsExtension],
   style: 'setup_blocks',
   tooltip: 'A map of this project, by name — for the World to load.',
   generator: {

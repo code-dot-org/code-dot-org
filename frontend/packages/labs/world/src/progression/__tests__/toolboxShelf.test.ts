@@ -172,6 +172,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   // The three rows a form's order is set with, and nothing else: the fields
   // and the rule arrive placed and elected, so what the lesson asks for is the
   // property, the actor to hang it on, and a number to put in it.
+  'story/screen': ['world_show_screen'],
   'story/form': [
     'world_set_TabNavigation_TabOrderProperty',
     'world_this_actor',

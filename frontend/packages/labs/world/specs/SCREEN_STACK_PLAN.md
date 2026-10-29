@@ -1,6 +1,6 @@
 # Plan: screens are a stack, and each one holds its own words
 
-STATUS: BUILDING, October 2026. Steps 1 to 6 are done. Comes after
+STATUS: BUILDING, October 2026. Steps 1 to 7 are done. Comes after
 specs/ONE_WORLD_PLAN.md: it assumes one World, flat screens, and Viewports
 that look at the World.
 
@@ -146,7 +146,7 @@ Screen's color stays the main camera's clear color.
 **What was found** (October 2026):
 
 - **The Notes app** (`fixtures/app`) uses the `Screens` rule: two `go to
-  screen` and four `go back`, modal maps for its screens, and the
+screen` and four `go back`, modal maps for its screens, and the
   on-screen keyboard loaded over its form, not modal so the form still
   takes its typing. The keyboard needs input to reach the screen under
   it, which this plan leaves for later.
@@ -155,8 +155,8 @@ Screen's color stays the main camera's clear color.
 - **The stock maps**: Pause Menu, Are You Sure? and Message are modal;
   Keyboard and Tab Bar are overlays. All five are in the library.
 - **The lessons**: `place/map` grants `load the map named`, `unload the
-  newest map` and the `Screens` rule; `place/script` grants `unload this
-  map`. The `Screens` rule has a demo.
+newest map` and the `Screens` rule; `place/script` grants `unload this
+map`. The `Screens` rule has a demo.
 - **The Interface Kit** uses none of these; step 5 has nothing to move.
 - **The editor** already makes a `.screen` ("New screen" in the place
   switcher) and opens it. A screen other than `main` compiles as a map but
@@ -259,6 +259,26 @@ Screen's color stays the main camera's clear color.
 - **Seen in the browser**: in the Notes app, NEW NOTE shows the write
   screen over home, typing fills the field, and SAVE goes back with the
   note listed.
+
+- **Step 7 made the map shelf the screen shelf.** The stock shelf held only
+  the two screens, so the map import seam, its field extension and its
+  dialog became the screen's (`screenImport`, `screenImportField`,
+  `ImportScreenDialog`): `show screen`'s dropdown offers `(import…)`, and
+  choosing Pause Menu or Are You Sure? imports it and selects its path.
+- **No demo.** The plan's demo was the `Screens` rule's library card, and
+  built-in blocks have none; Breakout's pause screen and the Notes app's
+  write screen show screens in use.
+- **The tile is `story/screen`, "A screen over the game"**, after
+  `story/choice`, which grants pausing: a Hero, a Main Screen whose P
+  pauses and shows nothing, and the stock Pause Menu imported. The learner
+  adds `show screen ⟨Pause Menu⟩`; the check presses P, finds the menu's
+  Panel, clicks Resume and finds it gone. It grants `show screen` and
+  `go back`. A lesson imports stock screens once its world is a Main
+  Screen (`LessonSpec.stockScreens`), and its world declares the `quit`
+  the menu raises.
+- **Seen in the browser**: the lesson opens on the Main Screen's P
+  handler, and the Map drawer offers `show screen ⟨Pause Menu⟩` and
+  `go back`.
 
 ## Not in this plan
 

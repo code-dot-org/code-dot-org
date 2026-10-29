@@ -24,6 +24,8 @@ import {
 } from '../../appearance/importStock';
 import {stockAnimation, stockSprite} from '../../appearance/stock';
 import {buildProject, type ProjectSpec} from '../../constants';
+import {importStockMap} from '../../maps/importStockMap';
+import {stockMapById} from '../../maps/stock';
 import {importStockRule} from '../../rules/importStockRule';
 import {stockRule} from '../../rules/stock';
 
@@ -80,6 +82,13 @@ export interface LessonSpec {
   animations?: readonly string[];
   /** Stock actors to import, by id. Each brings its rules and pictures. */
   stockActors?: readonly string[];
+  /**
+   * Stock screens to import, by id: `pauseMenu` becomes
+   * `screens/pauseMenu.screen`. Imported once the world is a Main Screen,
+   * whose data declares the events a screen raises
+   * (specs/SCREEN_STACK_PLAN.md).
+   */
+  stockScreens?: readonly string[];
 }
 
 /**
@@ -180,7 +189,14 @@ export const lessonSource = (spec: LessonSpec): MultiFileSource => {
   // and events, made in the Actor Editor, and no actor is opened as a `define
   // actor` (specs/ACTORS_AS_DATA_PLAN.md, step 5). A lesson writes its
   // actors as workspaces because that is how they are easiest to write.
-  return rememberWorld(inDataShape(asScreenProject(source)), world);
+  let screen = asScreenProject(source);
+  for (const id of spec.stockScreens ?? []) {
+    screen = importStockMap(
+      screen,
+      need(stockMapById(id), 'screen', id),
+    ).source;
+  }
+  return rememberWorld(inDataShape(screen), world);
 };
 
 /** A stock item, or a thrown error naming what was asked for. */

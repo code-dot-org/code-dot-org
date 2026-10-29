@@ -29,6 +29,7 @@ vi.mock('@code-dot-org/lab/contexts', () => ({
 const {LibraryImports} = await import('../LibraryImports');
 const {requestRuleImport} = await import('../../blockly/ruleImport');
 const {requestActorEnhance} = await import('../../actors/enhance/actorEnhance');
+const {requestScreenImport} = await import('../../maps/screenImport');
 
 describe('the import shelves', () => {
   beforeEach(() => {
@@ -55,6 +56,20 @@ describe('the import shelves', () => {
     // …and the file is in the project before the value is handed over: the
     // dropdown rebuilds from the registry, and a value with no matching option
     // is dropped by Blockly.
+    expect(updateSources).toHaveBeenCalled();
+  });
+
+  it('offers the stock screens, and hands back the path `show screen` holds', async () => {
+    // specs/SCREEN_STACK_PLAN.md, step 7: the shelf a SCREEN dropdown asks.
+    render(<LibraryImports />);
+    const asked = requestScreenImport();
+    expect(
+      await screen.findByRole('button', {name: 'Pause Menu'}),
+    ).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Are You Sure?'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Import'}));
+
+    await expect(asked).resolves.toBe('screens/confirm');
     expect(updateSources).toHaveBeenCalled();
   });
 
