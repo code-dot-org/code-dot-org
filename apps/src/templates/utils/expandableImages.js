@@ -43,10 +43,7 @@ export function renderExpandableImages(node, showImageDialog) {
           showImageDialog(expandableImg.dataset.url, expandableImg.textContent)
         }
       />,
-      expandableImg,
-      {
-        legacyReactDomRender: true,
-      }
+      expandableImg
     );
   }
 }

@@ -22,10 +22,7 @@ function openModal(type, callback, table) {
         element.parentNode.removeChild(element);
       }}
     />,
-    document.querySelector('#modalDiv'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.querySelector('#modalDiv')
   );
 }
 

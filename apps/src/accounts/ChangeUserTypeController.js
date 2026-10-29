@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/locale';
 
 import * as utils from '../utils';
@@ -71,16 +73,13 @@ export default class ChangeUserTypeController {
         handleSubmit={this.submitUserTypeChange}
         handleCancel={this.hideChangeUserTypeModal}
       />,
-      this.mountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      this.mountPoint
     );
   }
 
   hideChangeUserTypeModal = () => {
     if (this.mountPoint) {
-      ReactDOM.unmountComponentAtNode(this.mountPoint);
+      unmountReactRoot(this.mountPoint);
       document.body.removeChild(this.mountPoint);
       delete this.mountPoint;
     }
