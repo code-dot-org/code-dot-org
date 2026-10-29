@@ -532,19 +532,20 @@ class LevelsControllerTest < ActionController::TestCase
     Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
     level_name = 'TestCustomLevel'
-    begin
+    # The file goes to a temp dir: CI has no config/levels, and the real
+    # location would keep its directory after the destroy.
+    Dir.mktmpdir do |dir|
+      file_path = Pathname(dir).join("#{level_name}.level")
+      Policies::LevelFiles.stubs(:level_file_path).returns(file_path)
       post :create, params: {
         level: {name: level_name, type: 'Artist', published: true},
         game_id: Game.find_by_name("Custom").id,
         program: @program
       }
       level = Level.find_by(name: level_name)
-      file_path = Policies::LevelFiles.level_file_path(level)
-      assert_equal true, file_path && File.exist?(file_path)
+      assert_equal true, File.exist?(file_path)
       delete :destroy, params: {id: level}
-      assert_equal false, file_path && File.exist?(file_path)
-    ensure
-      File.delete(file_path) if file_path && File.exist?(file_path)
+      assert_equal false, File.exist?(file_path)
     end
   end
 
@@ -770,16 +771,33 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load file contents when editing a dsl defined level" do
-    level_path = "#{Rails.root}/config/scripts/test_demo_level.external"
-    contents = File.read(level_path)
-    data, _ = External.parse(contents, level_path)
-    External.setup data
+    # The DSL file sits in a temp dir: CI has no config/scripts. The level
+    # finds its file through existing_filename, which greps config/scripts.
+    Dir.mktmpdir do |dir|
+      level_path = "#{dir}/test_demo_level.external"
+      External.any_instance.stubs(:existing_filename).returns(level_path)
+      contents = <<~DSL
+        name 'test demo level'
+        title 'demo title'
+        description 'demo description'
+        css 'unplugged'
 
-    level = Level.find_by_name 'Test Demo Level'
-    get :edit, params: {id: level.id}
+        markdown <<MARKDOWN
+        # Header
 
-    assert_equal level_path, assigns(:level).filename
-    assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
+        paragraph text
+        MARKDOWN
+      DSL
+      File.write(level_path, contents)
+      data, _ = External.parse(contents, level_path)
+      External.setup data
+
+      level = Level.find_by_name 'Test Demo Level'
+      get :edit, params: {id: level.id}
+
+      assert_equal level_path, assigns(:level).filename
+      assert_equal "name 'test demo level'", assigns(:level).dsl_text.split("\n").first
+    end
   end
 
   # Covers DSLDefined.decrypt_dsl_text_if_necessary returning the ciphertext

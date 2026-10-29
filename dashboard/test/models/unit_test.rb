@@ -2286,9 +2286,11 @@ class UnitTest < ActiveSupport::TestCase
     unit_in_course = create(:script, is_migrated: true, name: 'coursename1-2021')
     course_unit_group = create(:unit_group)
     unit_gp_unit = create(:unit_group_unit, unit_group: course_unit_group, script: unit_in_course, position: 1)
+    # Before add_course_offering: in levelbuilder mode it writes the offering's
+    # file, and CI has no config/course_offerings to write into.
+    File.stubs(:write)
     CourseOffering.add_course_offering(course_unit_group)
 
-    File.stubs(:write)
     UnitGroup.any_instance.expects(:write_serialization).once
 
     course_unit_group.reload
@@ -2309,6 +2311,7 @@ class UnitTest < ActiveSupport::TestCase
     course_unit_group = create(:unit_group)
     unit_gp_unit = create(:unit_group_unit, unit_group: course_unit_group, script: unit_in_course, position: 1)
     unit_in_course.update!(original_unit_group: nil)
+    File.stubs(:write)
     CourseOffering.add_course_offering(course_unit_group)
 
     UnitGroup.any_instance.expects(:write_serialization).never
@@ -2606,18 +2609,20 @@ class UnitTest < ActiveSupport::TestCase
   test 'write_script_json updates md5 in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns(true)
 
-    unit = create(:unit, name: 'test-write-md5')
-    unit.write_script_json
+    # Written to a temp dir: CI has no config/scripts_json.
+    Dir.mktmpdir do |dir|
+      Unit.stubs(:unit_json_directory).returns(dir)
+      unit = create(:unit, name: 'test-write-md5')
+      unit.write_script_json
 
-    unit.reload
-    refute_nil unit.md5
+      unit.reload
+      refute_nil unit.md5
 
-    # Verify MD5 matches file contents
-    filepath = Unit.script_json_filepath(unit.name)
-    expected_md5 = Digest::MD5.hexdigest(File.read(filepath))
-    assert_equal expected_md5, unit.md5
-  ensure
-    FileUtils.rm_f(Unit.script_json_filepath('test-write-md5'))
+      # Verify MD5 matches file contents
+      filepath = Unit.script_json_filepath(unit.name)
+      expected_md5 = Digest::MD5.hexdigest(File.read(filepath))
+      assert_equal expected_md5, unit.md5
+    end
   end
 
   test 'write_script_json does nothing outside levelbuilder mode' do
