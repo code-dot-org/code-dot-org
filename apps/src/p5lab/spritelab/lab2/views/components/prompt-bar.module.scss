@@ -57,3 +57,10 @@
   margin: 0;
   overflow-wrap: anywhere;
 }
+
+// Keep disabled button text visible, as buttons are disabled
+// while in preview mode.
+.promptBar .submitButton:disabled,
+.promptBar .choiceButton:disabled {
+  color: var(--text-neutral-tertiary);
+}
