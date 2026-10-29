@@ -40,7 +40,7 @@ Dashboard::Application.configure do
   config.action_mailer.show_previews = true
 
   # Raise exceptions instead of rendering exception templates.
-  config.action_dispatch.show_exceptions = true
+  config.action_dispatch.show_exceptions = :all
 
   # Enable request forgery protection in the test environment. Unit tests
   # disable it at the runtime layer in test_helper.rb.
