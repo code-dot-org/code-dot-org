@@ -1,7 +1,19 @@
 import {TestResults} from '@cdo/apps/constants';
 
 var $ = require('jquery');
+var {flushSync} = require('react-dom');
 var ReactTestUtils = require('react-dom/test-utils');
+
+// Simulate is not a browser event, so createRoot would defer its updates.
+function simulate(eventName, ...args) {
+  flushSync(() => ReactTestUtils.Simulate[eventName](...args));
+}
+
+// createRoot applies a click's updates once the event has returned, which
+// a test that asserts right after clicking never lets happen.
+function clickAndFlush(selector) {
+  flushSync(() => $(selector).click());
+}
 
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
@@ -125,7 +137,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
@@ -166,10 +178,9 @@ module.exports = {
         );
 
         // Change to screen1 using dropdown
-        ReactTestUtils.Simulate.change(
-          document.getElementById('screenSelector'),
-          {target: {value: 'screen1'}}
-        );
+        simulate('change', document.getElementById('screenSelector'), {
+          target: {value: 'screen1'},
+        });
 
         validatePropertyRow(0, 'id', 'screen1', assert);
         validateElementSelect(['screen1'], assert);
@@ -192,7 +203,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         var screenSelector = document.getElementById('screenSelector');
 
         // drag a new screen in
@@ -226,7 +237,7 @@ module.exports = {
 
         // Both screen 1 and 2 should have delete buttons
         $('#screenSelector').val('screen1');
-        ReactTestUtils.Simulate.change(screenSelector);
+        simulate('change', screenSelector);
         deleteButton = $('#design-properties button').eq(0);
         validatePropertyRow(0, 'id', 'screen1', assert);
         assert.equal(
@@ -236,7 +247,7 @@ module.exports = {
         );
 
         $('#screenSelector').val('screen2');
-        ReactTestUtils.Simulate.change(screenSelector);
+        simulate('change', screenSelector);
         validatePropertyRow(0, 'id', 'screen2', assert);
         deleteButton = $('#design-properties button').eq(0);
         assert.equal(
@@ -245,7 +256,7 @@ module.exports = {
           'first button is delete button'
         );
 
-        ReactTestUtils.Simulate.click(deleteButton[0]);
+        simulate('click', deleteButton[0]);
 
         // Should have resulted in two new buttons
         assert.equal(
@@ -265,7 +276,7 @@ module.exports = {
           'expected default screen property row container'
         );
 
-        ReactTestUtils.Simulate.click($('#design-properties button').eq(0)[0]);
+        simulate('click', $('#design-properties button').eq(0)[0]);
 
         assert.equal(
           $('#propertyRowContainer input:eq(0)').val(),
@@ -299,7 +310,7 @@ module.exports = {
 
         // Change name
         var inputId = $('#design-properties input').first();
-        ReactTestUtils.Simulate.change(inputId[0], {
+        simulate('change', inputId[0], {
           target: {value: 'renamed_screen'},
         });
         assert(document.getElementById('design_renamed_screen'));
@@ -388,7 +399,7 @@ module.exports = {
         'button("button2", "my_button_text");',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
 
         // drag a new screen in
         testUtils.dragToVisualization('SCREEN', 10, 10);
@@ -453,7 +464,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         assertPressed('#designModeButton', true, assert);
         assertPressed('#codeModeButton', false, assert);
         // add a screen
@@ -476,7 +487,7 @@ module.exports = {
         );
 
         // return to code mode
-        $('#codeModeButton').click();
+        clickAndFlush('#codeModeButton');
         assertPressed('#designModeButton', false, assert);
         assertPressed('#codeModeButton', true, assert);
 
@@ -532,7 +543,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
 
         // add a screen
         testUtils.dragToVisualization('SCREEN', 10, 10);
@@ -593,7 +604,7 @@ module.exports = {
       xml: 'setScreen("screen2");',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
 
         // add a screen
         testUtils.dragToVisualization('SCREEN', 10, 10);
@@ -643,7 +654,7 @@ module.exports = {
           );
 
           // return to code mode, screen 2 still visible
-          $('#codeModeButton').click();
+          clickAndFlush('#codeModeButton');
           assert.equal(
             $('#divApplab').is(':visible'),
             true,
@@ -684,16 +695,15 @@ module.exports = {
         '</div>',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
 
         assert.equal($('#design_default_screen').is(':visible'), true);
         assert.equal($('#design_other_screen').is(':visible'), false);
 
         // change to other screen
-        ReactTestUtils.Simulate.change(
-          document.getElementById('screenSelector'),
-          {target: {value: 'other_screen'}}
-        );
+        simulate('change', document.getElementById('screenSelector'), {
+          target: {value: 'other_screen'},
+        });
 
         assert.equal($('#design_default_screen').is(':visible'), false);
         assert.equal($('#design_other_screen').is(':visible'), true);
@@ -728,7 +738,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         assert.equal(
           $('#designModeViz').is(':visible'),
           true,
@@ -755,7 +765,7 @@ module.exports = {
         var deleteButton = $('#design-properties button').eq(0);
         assert.equal(deleteButton.text(), 'Delete');
 
-        ReactTestUtils.Simulate.click(deleteButton[0]);
+        simulate('click', deleteButton[0]);
 
         // outdiv and child should have gone away
         assert.equal(screenElement.children.length, 0);
@@ -784,7 +794,7 @@ module.exports = {
         var assetUrl = '/base/static/flappy_promo.png';
         var imageInput = $('#design-properties input').eq(2)[0];
 
-        ReactTestUtils.Simulate.change(imageInput, {
+        simulate('change', imageInput, {
           target: {value: assetUrl},
         });
 
@@ -829,7 +839,7 @@ module.exports = {
           '/base/test/integration/assets/applab-channel-id/flappy%20(1).png';
         var imageInput = $('#design-properties input').eq(2)[0];
 
-        ReactTestUtils.Simulate.change(imageInput, {
+        simulate('change', imageInput, {
           target: {value: assetUrl},
         });
 
@@ -863,7 +873,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         assert.equal(
           $('#designModeViz').is(':visible'),
           true,
@@ -886,10 +896,9 @@ module.exports = {
         );
 
         // New screen via dropdown
-        ReactTestUtils.Simulate.change(
-          document.getElementById('screenSelector'),
-          {target: {value: 'New screen...'}}
-        );
+        simulate('change', document.getElementById('screenSelector'), {
+          target: {value: 'New screen...'},
+        });
 
         assert.equal(
           $('#designModeViz').children().length,
@@ -912,7 +921,7 @@ module.exports = {
       xml: '',
       runBeforeClick: function (assert) {
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         assert.equal(
           $('#designModeViz').is(':visible'),
           true,
@@ -930,7 +939,7 @@ module.exports = {
         assert.equal(screenElement.children.length, 1);
 
         // duplicate screen1
-        ReactTestUtils.Simulate.change($('div#emptyTab').find('select')[0], {
+        simulate('change', $('div#emptyTab').find('select')[0], {
           target: {value: 'screen1'},
         });
 
@@ -943,7 +952,7 @@ module.exports = {
           'duplicate button on screen 1 should say duplicate'
         );
 
-        ReactTestUtils.Simulate.click(duplicateButton[0]);
+        simulate('click', duplicateButton[0]);
 
         assert.equal(
           $('#designModeViz').children().length,
@@ -1008,7 +1017,7 @@ module.exports = {
         );
 
         // enter design mode
-        $('#designModeButton').click();
+        clickAndFlush('#designModeButton');
         assert.equal(
           $('#designModeViz').is(':visible'),
           true,
@@ -1066,10 +1075,9 @@ module.exports = {
         );
 
         // New screen via dropdown
-        ReactTestUtils.Simulate.change(
-          document.getElementById('screenSelector'),
-          {target: {value: 'New screen...'}}
-        );
+        simulate('change', document.getElementById('screenSelector'), {
+          target: {value: 'New screen...'},
+        });
 
         assert.equal(
           $('#designModeViz').children().length,
