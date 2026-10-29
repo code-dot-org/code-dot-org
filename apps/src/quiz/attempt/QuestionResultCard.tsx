@@ -63,7 +63,7 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   return (
     <AttemptCard
       label={questionLabel}
-      tag={tagStatus && <ResultTag status={tagStatus} />}
+      statusTag={tagStatus && <ResultTag status={tagStatus} />}
       title={question.questionTitle}
       description={<QuestionDescription markdown={question.description} />}
     >
