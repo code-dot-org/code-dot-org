@@ -10,10 +10,12 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "GameDev"
     ],
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "zGameDev"
     ],
     "use_default_sprites": "true",
     "hide_animation_mode": "true",
@@ -43,7 +45,536 @@
     "start_in_animation_tab": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "enable_big_playspace": "false"
+    "enable_big_playspace": "false",
+    "toolbox_definition": {
+      "kind": "categoryToolbox",
+      "contents": [
+        {
+          "kind": "category",
+          "name": "World",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_setBackgroundImageAs"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setBackground",
+              "inputs": {
+                "COLOR": {
+                  "shadow": {
+                    "type": "colour_picker"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setPlatformGravity"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setCameraZoom"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setWeather"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setForegroundEffect"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_burst"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_makeBurst",
+              "inputs": {
+                "NUM": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 10
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Sprites",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_makePlatformPlayer"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makePlatformBlocks"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeSpriteAtGrid"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_makeSpriteAtPosition",
+              "fields": {
+                "POSITION": "left"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_makeNewSpriteAnon",
+              "inputs": {
+                "LOCATION": {
+                  "shadow": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": "{\"x\":200,\"y\":200}"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_makeSpritesGrid"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setAsPlatformPlayer"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_thePlayer"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_allSpritesWithAnimation"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_location_picker"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSay",
+              "fields": {
+                "SPEECH": "Hello!"
+              },
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSayTime",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "TEXT1": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "Hello!"
+                    }
+                  }
+                },
+                "NUM": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 2
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_moveForward",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "DISTANCE": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 20
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_moveBackward",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "DISTANCE": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 20
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_moveInDirection",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "DISTANCE": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 100
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Events",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_whenPlayer"
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteClicked",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_checkTouching",
+              "inputs": {
+                "SPRITE1": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "SPRITE2": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_atTime",
+              "inputs": {
+                "N": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 3
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Behaviors",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_beginsBehavior",
+              "fields": {
+                "BEHAVIOR": "patrollingOnBlocks"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_addBehaviorSimple",
+              "inputs": {
+                "SPRITE": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "BEHAVIOR": {
+                  "block": {
+                    "type": "spritelab2_movingWithArrowKeys"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_movingLeft"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_movingWithArrowKeys"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_patrollingLeftRight"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Scenes",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_goToScene"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_goToExternalScene"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_restartScene"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Sound",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_playSound"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_playMusic"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Math",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "math_number"
+            },
+            {
+              "kind": "block",
+              "type": "math_change",
+              "inputs": {
+                "DELTA": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 1
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "math_random_int",
+              "inputs": {
+                "FROM": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 1
+                    }
+                  }
+                },
+                "TO": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 100
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "math_arithmetic"
+            },
+            {
+              "kind": "block",
+              "type": "math_round"
+            },
+            {
+              "kind": "block",
+              "type": "math_single"
+            },
+            {
+              "kind": "block",
+              "type": "math_modulo"
+            },
+            {
+              "kind": "block",
+              "type": "math_number_property"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Logic",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "controls_if"
+            },
+            {
+              "kind": "block",
+              "type": "logic_compare"
+            },
+            {
+              "kind": "block",
+              "type": "logic_operation"
+            },
+            {
+              "kind": "block",
+              "type": "logic_negate"
+            },
+            {
+              "kind": "block",
+              "type": "logic_boolean"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Loops",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "controls_repeat_ext",
+              "inputs": {
+                "TIMES": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 10
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "controls_whileUntil"
+            },
+            {
+              "kind": "block",
+              "type": "controls_for",
+              "inputs": {
+                "FROM": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 1
+                    }
+                  }
+                },
+                "TO": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 10
+                    }
+                  }
+                },
+                "BY": {
+                  "shadow": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 1
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "controls_flow_statements"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Text",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "text_join_simple"
+            },
+            {
+              "kind": "block",
+              "type": "text"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Color",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "colour_picker"
+            },
+            {
+              "kind": "block",
+              "type": "colour_random"
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Variables",
+          "custom": "VARIABLE"
+        },
+        {
+          "kind": "category",
+          "name": "Functions",
+          "custom": "PROCEDURE"
+        }
+      ]
+    }
   },
   "audit_log": "[{\"changed_at\":\"2026-10-29 12:31:19 -0700\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
