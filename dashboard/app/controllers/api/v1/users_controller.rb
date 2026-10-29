@@ -75,6 +75,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         is_levelbuilder: current_user.levelbuilder?,
         ai_chat_access_level: current_user.ai_chat_access_level,
         us_only_aichat_models_disabled: current_user.us_only_aichat_models_disabled?,
+        can_use_lesson_deep_dive_challenges: current_user.can_use_lesson_deep_dive_challenges?,
       }
     else
       render json: {
