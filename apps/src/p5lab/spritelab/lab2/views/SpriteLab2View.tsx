@@ -58,7 +58,7 @@ import {
 import {toolboxBlockTypes} from '../blockLocks';
 import {
   refreshSceneDropdowns,
-  setEditingSceneId,
+  setSceneMenuActiveId,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
@@ -250,7 +250,8 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const START_OVER_MESSAGE =
   "This deletes your blocks and your images. You can't undo it.";
 const START_OVER_RETURNS_MESSAGE = `${START_OVER_MESSAGE} You'll start again from the first level.`;
-// A level with no project (no_project) has nothing of the student's to lose.
+// Start Over on a level outside a lesson resets only that level. A level
+// with no project (no_project) has no saved work of the student's to lose.
 const START_OVER_RESETS_LEVEL_MESSAGE =
   'This puts the level back the way it started.';
 const START_OVER_LEAVES_MESSAGE = "You'll start again from the first level.";
@@ -335,10 +336,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const [previewWidth, setPreviewWidth] = useState(0);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   // The project is shared by every level of the lesson, so Start Over sends
-  // the student back to its first level to remake it. A level outside a
-  // lesson has no first level to go to, so it puts itself back. A level with
-  // no project (no_project) leaves too, since a lesson's reset is the first
-  // level; its own content comes back on the way through.
+  // the student back to the lesson's first level to remake it. A level
+  // outside a lesson has no first level to go to, so it resets itself in
+  // place. A level with no project (no_project) also leaves for the first
+  // level, since that is where a lesson's reset begins; the level's own
+  // content is restored when the student reaches it again.
   const projectless = levelProperties.usesProjects === false;
   const firstLevelId = useAppSelector(
     state => getCurrentLevels(state)?.[0]?.id as string | undefined
@@ -412,11 +414,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     )
   );
   const earlierLevels = useMemo(() => {
-    const at = lessonLevelIds?.indexOf(String(levelProperties.id)) ?? -1;
-    return at < 0
+    const currentLevelIndex =
+      lessonLevelIds?.indexOf(String(levelProperties.id)) ?? -1;
+    return currentLevelIndex < 0
       ? undefined
       : (lessonLevelIds ?? [])
-          .slice(0, at)
+          .slice(0, currentLevelIndex)
           .map(id => levelPropertiesMap[id] as SpriteLab2LevelProperties)
           .filter(Boolean);
   }, [lessonLevelIds, levelPropertiesMap, levelProperties.id]);
@@ -464,13 +467,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
 
-  // Create the pinned scene on first load, and again after
-  // Start Over (the reinit count in the deps). On a scene-less project the
-  // pin becomes the only scene — materializing the synthesized default too
-  // would leave a stray "Scene 1" in every level sharing the project — and
-  // a pin with the default's own id adopts that scene, however it was saved.
-  // A toolbox has no scenes to pin. Cleared at the one read of the
-  // property, so every downstream consumer sees no pin.
+  // Create the pinned scene on first load, and again after Start Over (the
+  // reinit count is in the deps). On a project with no scenes the pinned
+  // scene becomes the only one: materializing the synthesized default scene
+  // too would leave a stray "Scene 1" in every level sharing the project.
+  // A pin whose id is the default scene's adopts that scene however it was
+  // saved. Toolbox mode has no scenes to pin, so the property is cleared at
+  // this one read and everything below sees no pin.
   const pinnedScene = isToolboxMode ? undefined : levelProperties.pinnedScene;
   const pinnedSceneId = pinnedScene?.id;
   const pinnedSceneName = pinnedScene?.name;
@@ -518,13 +521,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const activeScene = scenes.find(s => s.id === activeSceneId) ?? scenes[0];
   const enabledTabs = tabs;
-  // What the level withholds is disabled rather than missing, so free play
-  // holds no surprises later.
-  // Any editor tab shows the strip, the others dimmed, so the student can
-  // see where they are.
+  // Any editor tab shows the editor strip, with the other editors dimmed, so
+  // the student can see where they are.
   const editorsShown = tabs.some(
     tab => tab === 'Images' || tab === 'Code' || tab === 'World'
   );
+  // An editor the level withholds is shown disabled rather than left out, so
+  // nothing new appears in free play.
   const disabledEditors = useMemo<Editor[]>(
     () => [
       ...(picturesOffered ? [] : (['Images'] as Editor[])),
@@ -545,8 +548,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         : {...levelProperties, hideNonInstructionTabs: true},
     [guideUnderPreview, levelProperties]
   );
-  // Classic puts the guide under the preview, which the Images pane covers:
-  // a level that is only Images takes the panel's instructions instead.
+  // In the classic layout the guide sits under the preview, which the Images
+  // pane covers, so a level that is only the Images tab takes the panel's
+  // instructions instead.
   const imagesOnly = tabs.every(tab => tab === 'Images');
   const panelIsSidebar =
     guideUnderPreview && !!levelProperties.levelMode && !imagesOnly;
@@ -636,7 +640,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     objectRole: levelProperties.imageRoleDefaults?.object,
     updateSources,
   });
-  // The extra scene's premade world, by the same rules.
+  // The extra scene's premade world, painted by the same rules.
   useWorldStartPattern({
     pattern: extraScene?.worldStartPattern,
     pinnedSceneId: extraScene?.id,
@@ -753,7 +757,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     imageNames,
     dispatch,
   ]);
-  // An image made on this level carries the student's thumb.
+  // Whether an image made on this level (not in the sources the level opened
+  // with) carries the student's rating in its generation metadata.
   const rated = useMemo(() => {
     const before = new Set(
       Object.values(initialSources.animations?.propsByKey ?? {}).map(
@@ -777,7 +782,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     runtime: playProgress.runtime,
   });
 
-  // The arrow at a tab, while the level's condition holds.
+  // The callout arrow at a tab, shown while the level's condition holds.
   const calloutDone = useMemo(
     () =>
       new Set(objectives.items.flatMap((item, i) => (item.done ? [i] : []))),
@@ -818,19 +823,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     });
   }, [choosePaletteSelection]);
 
-  // Preselect the level's image of its imageType. Backgrounds are excluded,
-  // a world cell being a sprite or a block; a selection whose image is gone
-  // counts as none.
+  // The World palette preselects the level's image of its imageType. A
+  // background is never preselected, since a world cell holds a sprite or a
+  // block. A selection whose image has since been deleted counts as none.
   const focusImageType = levelProperties.levelMode?.imageType;
   const focusImageRole = levelProperties.levelMode?.imageRole;
   const imageRoleDefaults = levelProperties.imageRoleDefaults;
   const paletteRoles = levelProperties.levelMode?.paletteRoles;
-  // The palette's starting pick. A level about one kind of image: the one
-  // made on this level (its imageRole) first, then the image_role_defaults
-  // role, else the newest of the kind (orderedKeys is newest-first: Sprite
-  // Lab prepends new animations). A world level with palette roles and no
-  // kind: the first image in its first role, so the treasure comes up
-  // picked on a level that places the treasure and the blocks.
+  // The palette's starting selection. On a level about one kind of image:
+  // the image made on this level (its imageRole) first, then the
+  // image_role_defaults image for that role, else the newest image of the
+  // kind (orderedKeys is newest-first, since Sprite Lab prepends new
+  // animations). On a world level with palette roles and no kind: the first
+  // image of the first role, so the treasure comes up selected on the level
+  // that places the treasure and the blocks.
   const focusImage = useMemo<WorldCell | undefined>(() => {
     if (focusImageType === 'background') {
       return undefined;
@@ -902,7 +908,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     refreshSceneDropdowns();
   }, [sceneMetadata, dispatch]);
   useEffect(() => {
-    setEditingSceneId(activeSceneId);
+    setSceneMenuActiveId(activeSceneId);
     refreshSceneDropdowns();
   }, [activeSceneId]);
 
@@ -1107,8 +1113,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // images come from the Images tab, so p5 preload completes immediately.
   useEffect(() => {
     if (isToolboxMode) {
-      // No stage: toolbox editing puts the toolbox in the workspace. With
-      // no engine the run machinery no-ops, and no stray canvas mounts.
+      // Toolbox mode has no stage: the toolbox being edited takes the
+      // workspace. With no engine the run machinery does nothing and no
+      // stray canvas mounts.
       return;
     }
     let canceled = false;
@@ -1632,8 +1639,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       onSceneLanded(sceneId);
       if (scenes.some(s => s.id === sceneId)) {
-        // Follow the jump in the editor too: leaving Play lands on the
-        // scene that was just playing. A pinned level edits one scene, and
+        // Follow the jump in the editor too, so leaving Play lands on the
+        // scene that was just playing. A pinned level edits one scene only;
         // moving its editor would be undone at once, re-running the pinned
         // scene under the game.
         if (!pinnedSceneId) {
@@ -1695,8 +1702,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   ]);
 
   // Start the live preview once the engine is ready. A level that opens on
-  // Play starts the game instead: the preview holds its first frame. By
-  // ref, so later scene edits do not restart the game.
+  // the Play tab starts the game instead, and the preview holds its first
+  // frame. Read through a ref so later scene edits do not restart the game.
   const openingRef = useRef({
     onPlay: activeTab === 'Play',
     runScene,
@@ -1718,8 +1725,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       runProgram();
     }
   }, [engineReady, runProgram]);
-  // The premade world can paint after the engine is ready, once the images
-  // it names exist; a level that opened on Play restarts with it.
+  // The premade world is painted once the engine is ready and the images it
+  // names exist. A level that opened on Play restarts the game with it.
   useEffect(() => {
     const opening = openingRef.current;
     if (engineReady && paintedWorld && opening.onPlay) {
@@ -1741,10 +1748,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (activeTab === 'Play') {
       runScene(playStartSceneId ?? defaultPlaySceneId);
     } else if (activeTab === 'Code' || activeTab === 'World') {
-      // Only when the stage shows something else: after Play, or after a
-      // jump or an external scene. Code, World and Images share one
-      // preview, so moving between them leaves it as it is. The preview
-      // is the held first frame, not the game Play left running.
+      // Only when the stage is showing something else: after Play, after a
+      // jump, or after an external scene. Code, World and Images share one
+      // preview, so moving between them leaves it as it is. The preview is
+      // the held first frame, not a game Play left running.
       const playing = currentPlayingRef.current;
       const previewingActive =
         playing?.kind === 'local' && playing.scene.id === activeSceneId;
@@ -1895,8 +1902,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const leavingResetRef = useRef<{level: number; reinitBefore: number}>();
   useEffect(() => {
     leavingResetRef.current = undefined;
-    // A level with no added blocks runs no pass to replace the last
-    // level's reserved rooms.
+    // A level with no added blocks runs no add-blocks pass, which is what
+    // would otherwise drop the previous level's reserved rooms.
     const workspace = Blockly.getMainWorkspace?.() as
       | BlocklyCore.WorkspaceSvg
       | undefined;
@@ -1971,11 +1978,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     sceneLoadsRef.current++;
-    // Before free play, what an earlier level built cannot be deleted; this
-    // level's own stacks, added by it or built from its toolbox, stay free.
+    // Before free play, blocks built on an earlier level cannot be deleted.
+    // This level's own stacks, added by it or built from its toolbox, stay
+    // deletable.
     loadCode(source, {
       lock: !isLevelEditMode && !isFreeplayMode(levelProperties.levelMode),
-      own: top =>
+      isOwnStack: top =>
         ownsTop(levelProperties.addBlocks ?? [], top) ||
         ownToolboxTypes.has(top.type),
     });
@@ -2210,8 +2218,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // A toolbox has no scenes: New scene would put the student default into
   // the saved toolbox.
   const scenesOffered = animationsSeeded && !isToolboxMode;
-  // The scene controls, for the scene row or the workspace bar: a pinned
-  // level shows its own scene alone.
+  // The scene controls for the scene row or the workspace bar. A pinned
+  // level shows only its own scene.
   const sceneControls = {
     scenes: pinnedSceneId
       ? sceneMetadata.filter(scene => scene.id === pinnedSceneId)
@@ -2463,8 +2471,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             columnShare={previewShare}
             controls={
               <PlayControls
-                // On a pinned-scene level the game IS the one scene, so no
-                // whole-game restart.
+                // On a pinned-scene level the game is that one scene, so there
+                // is no whole-game restart.
                 onRestartGame={
                   pinnedSceneId
                     ? undefined

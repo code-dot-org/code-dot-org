@@ -30,9 +30,9 @@ export interface AttachShadow {
 }
 
 /**
- * Room kept under a stack already in the workspace for a block the student
- * will put there, with no outline: the gap is the whole hint. It closes
- * once a block of the type is in the stack.
+ * Empty room kept under a stack already in the workspace, where the student
+ * is expected to attach a block. Nothing is drawn there: the gap itself is
+ * the hint. The room closes once a block of the type is in the stack.
  */
 export interface AttachRoom {
   /** The type of the stack's top block. */
@@ -53,8 +53,8 @@ export function isAttachRoom(entry: AddBlockEntry): entry is AttachRoom {
   return 'attachTo' in entry && 'room' in entry;
 }
 
-/** An entry that adds no block of its own: a placeholder or room hung on
-    a stack already there. */
+/** An entry that adds no block of its own: a placeholder shadow or empty
+    room attached to a stack already in the workspace. */
 export function isAttachment(
   entry: AddBlockEntry
 ): entry is AttachShadow | AttachRoom {
@@ -77,8 +77,8 @@ export function matchesEntry(present: PresentBlock, entry: AddBlock): boolean {
   );
 }
 
-/** Whether a top block is one this level has the student build: a block
-    the level adds, by type and tag. */
+/** Whether a stack's top block is one this level added for the student to
+    build on, matched by type and tag. */
 export function ownsTop(entries: AddBlockEntry[], top: PresentBlock): boolean {
   return entries.some(
     entry => !isAttachment(entry) && matchesEntry(top, entry)
@@ -131,12 +131,13 @@ function isBlank(shadow: Shadow | null | undefined): boolean {
 }
 
 /**
- * The connection under a stack's last real block, if `shadow` can hang
- * there. Blockly keeps a connection's shadow recorded while a real block
- * covers it, so a stack that already had this placeholder, filled in or
- * not, gets it nowhere else. A saved project keeps the placeholder as
- * the level drew it at the time, so one still waiting whose blank flag
- * no longer matches the level's is hung again, in place.
+ * The connection under a stack's last real block, if `shadow` can be
+ * attached there. Blockly keeps a connection's shadow recorded even while a
+ * real block covers it, so a stack that already received this placeholder,
+ * filled in or not, gets it nowhere else. A saved project keeps the
+ * placeholder as it was when the level drew it, so a placeholder still
+ * empty whose blank flag no longer matches the level's is attached again
+ * in its place.
  */
 export function freeStackEnd(
   top: BlocklyCore.Block,
@@ -255,7 +256,8 @@ export async function addMissingBlocks(
   if (!workspace.rendered) {
     return 0;
   }
-  // The level's rooms replace the last level's: the workspace outlives it.
+  // Reserved rooms belong to a level and the workspace is reused across
+  // levels, so the previous level's rooms are dropped first.
   clearRoom(workspace);
   const blocks = entries.filter(
     (entry): entry is AddBlock => !isAttachment(entry)
@@ -308,8 +310,9 @@ export async function addMissingBlocks(
   return added.length;
 }
 
-/** The rendered height of a block of the type, read off a throwaway block.
-    Events are off around it: the probe is not an edit. */
+/** The rendered height of a block of the type, measured on a throwaway
+    block. Blockly events are disabled around it so the probe does not count
+    as an edit. */
 function blockHeight(
   workspace: BlocklyCore.WorkspaceSvg,
   type: string

@@ -44,7 +44,8 @@ export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
   return mode ? TABS[mode.kind] : undefined;
 }
 
-/** A level whose palette is about one image: a world level. */
+/** Whether the level is a world level: its work is placing images on the
+    World grid. */
 export function editsWorld(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'world';
 }

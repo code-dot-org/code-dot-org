@@ -89,7 +89,7 @@ const PAINT_COLORS: readonly PaletteColor[] = [
 // One brush, the finest on the pixel grid.
 const PAINT_BRUSH_SIZES: readonly number[] = [1];
 
-interface Made {
+interface GeneratedPicture {
   /** The result's filename, unique per generation. */
   id: string;
   result: GeneratedImageResult;
@@ -213,7 +213,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const [mode, setMode] = useState<Mode>('edit');
   // Every picture made this session; the chosen one shows in the frame
   // and is what Keep saves.
-  const [history, setHistory] = useState<Made[]>([]);
+  const [history, setHistory] = useState<GeneratedPicture[]>([]);
   const [chosenId, setChosenId] = useState<string | null>(null);
   const chosenPicture = history.find(m => m.id === chosenId) ?? null;
   // freshId marks the picture just generated: it plays the reveal and gets
@@ -226,7 +226,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   useEffect(() => {
     onAwaitingVerdict?.(awaitingVerdict);
   }, [awaitingVerdict, onAwaitingVerdict]);
-  // Unmounting answers nothing, so the host is released.
+  // On unmount, tell the owner that no rating is pending any more.
   useEffect(() => () => onAwaitingVerdict?.(false), [onAwaitingVerdict]);
   const [reason, setReason] = useState<VerdictReason | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -308,7 +308,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       if (run !== runRef.current) {
         return;
       }
-      const entry: Made = {
+      const entry: GeneratedPicture = {
         id: result.filename,
         result,
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
@@ -493,8 +493,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     ? 'Your picture is ready.'
     : '';
 
-  // The steps have the panel while a picture is made, and the level's
-  // instructions ask for a prompt, so drawing shows none.
+  // No instructions text while generating, when the progress steps use the
+  // panel, or while painting, since the level's instructions ask for a
+  // prompt and do not apply to drawing.
   const instructionsText =
     generating || mode === 'paint'
       ? undefined
@@ -708,9 +709,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       disabled={busy}
     />
   );
-  // Asked of the picture just made, while it is in the frame, or of any
-  // picture there when the level wants every one rated; boxed in a host's
-  // own panel, plain among the level's buttons.
+  // The rating question. It is asked of the picture just generated while it
+  // is in the frame, or of any picture in the frame when the level requires
+  // a rating on every picture. `boxed` draws it in its own panel for a host
+  // that lays the parts out; otherwise it sits plain among the buttons.
   const verdictRow = (boxed: boolean) =>
     showingResult &&
     chosenPicture &&

@@ -22,13 +22,14 @@ export interface LevelCallout {
   };
 }
 
-/** What the level has seen the student do so far, and where they are. */
+/** What the student has done so far and which tab they are on, for the
+    callout conditions. */
 export interface CalloutState {
   done: ReadonlySet<number>;
   tab: Tab;
 }
 
-/** The element a target names, as the lab renders it. */
+/** The CSS selector for the element a target names, as the lab renders it. */
 export function calloutSelector(target: CalloutTarget): string {
   switch (target) {
     case 'images-tab':

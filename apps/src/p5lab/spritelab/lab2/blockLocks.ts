@@ -1,8 +1,8 @@
 // Blocks a student built on an earlier level cannot be deleted on later
-// ones: a stack deleted by accident would strand the student. They can
-// still be moved. The locks are the level's, set as the scene loads and
-// never saved, so free play loads the same project with every block free
-// again.
+// levels: a stack deleted by accident would leave the student with no way to
+// continue. They can still be moved. The locks belong to the level, are set
+// as the scene loads and are never saved, so free play loads the same
+// project with every block deletable again.
 
 import * as BlocklyCore from 'blockly/core';
 
@@ -10,8 +10,6 @@ import {WHEN_RUN_BLOCK_TYPE} from './blockly/blockDefinitions/whenRun';
 
 type BlockState = BlocklyCore.serialization.blocks.State;
 
-/** Keep every real block in the workspace from deletion, but for the
-    stacks `own` claims: the level's own, built on it and still free. */
 /** Every block type a toolbox offers, through its categories. */
 export function toolboxBlockTypes(
   toolbox: BlocklyCore.utils.toolbox.ToolboxInfo | undefined
@@ -33,12 +31,14 @@ export function toolboxBlockTypes(
   return types;
 }
 
+/** Make every real block in the workspace undeletable, except the stacks
+    `isOwnStack` claims as the level's own. */
 export function lockBlocks(
   workspace: BlocklyCore.Workspace,
-  own: (top: BlocklyCore.Block) => boolean = () => false
+  isOwnStack: (top: BlocklyCore.Block) => boolean = () => false
 ): void {
   workspace.getTopBlocks(false).forEach(top => {
-    if (own(top)) {
+    if (isOwnStack(top)) {
       return;
     }
     top.getDescendants(false).forEach(block => {
@@ -51,7 +51,8 @@ export function lockBlocks(
 
 function stripLocks(block: BlockState): BlockState {
   const {deletable, movable, ...rest} = block;
-  // When-run is pinned by the project's own sources, not by a level.
+  // The when-run block's flags come from the project's own sources, not
+  // from a level lock, so they are kept.
   const kept = block.type === WHEN_RUN_BLOCK_TYPE ? {deletable, movable} : {};
   const out: BlockState = {...rest, ...kept};
   if (block.inputs) {

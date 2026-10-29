@@ -64,9 +64,9 @@ function isStack(block: BlocklyCore.Block): boolean {
   return !block.outputConnection;
 }
 
-/** Room a level keeps under the stack whose top block is `attachTo` (and
-    carries `data`, when set), for a block of `type` the student has yet to
-    put there. */
+/** Empty room a level keeps under the stack whose top block is `attachTo`
+    (carrying `data`, when set), for a block of `type` the student has not
+    yet attached. */
 export interface ReservedRoom {
   attachTo: string;
   data?: string;
@@ -76,8 +76,8 @@ export interface ReservedRoom {
 }
 const reservations = new WeakMap<BlocklyCore.WorkspaceSvg, ReservedRoom[]>();
 
-/** Keep room under a stack; a reservation for the same stack and block
-    replaces the last. The next pass applies it. */
+/** Reserve room under a stack. A reservation for the same stack and block
+    type replaces the earlier one; the next add-blocks pass applies it. */
 export function reserveRoom(
   workspace: BlocklyCore.WorkspaceSvg,
   room: ReservedRoom
@@ -91,8 +91,8 @@ export function reserveRoom(
   reservations.set(workspace, [...kept, room]);
 }
 
-/** Drop every reservation: a level's rooms are its own, and the workspace
-    outlives the level. */
+/** Drop every reservation. Rooms belong to a level, and the workspace is
+    reused across levels. */
 export function clearRoom(workspace: BlocklyCore.WorkspaceSvg): void {
   reservations.delete(workspace);
 }

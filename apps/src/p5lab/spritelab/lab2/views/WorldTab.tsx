@@ -229,10 +229,10 @@ type Refusal = 'stays';
 /** What a change to a cell did, for narration. */
 type Change = 'placed' | 'removed' | Refusal | null;
 
-/** Why a held cell refuses a change, or null: an image the palette does
-    not offer stays (nothing could put it back). On a level whose palette is
-    the treasure and the blocks, that keeps the player where the student
-    put it. */
+/** Why a cell refuses a change, or null when it allows one. A cell showing
+    an image the palette does not offer stays as it is, since nothing could
+    put it back. On a level whose palette is only the treasure and the
+    blocks, that keeps the player where the student placed it. */
 export function cellRefusal(
   cell: WorldCell | null | undefined,
   offered: ReadonlySet<string>

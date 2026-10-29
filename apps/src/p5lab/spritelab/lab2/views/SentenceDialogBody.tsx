@@ -41,7 +41,8 @@ interface SentenceDialogBodyProps {
       and style; the host names it. */
   onPaintManually?: (draft: Omit<NewImageDraft, 'name'>) => void;
   onGenerateStart?: () => void;
-  /** See SentenceScene: a fresh picture waits for its thumb. */
+  /** The level requires a rating on every generated picture; passed through
+      to SentenceScene. */
   verdictRequired?: boolean;
   onAwaitingVerdict?: (awaiting: boolean) => void;
 }

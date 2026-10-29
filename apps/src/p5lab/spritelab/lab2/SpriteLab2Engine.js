@@ -66,8 +66,8 @@ const NOOP = () => {};
 // the stragglers.
 const IMAGE_LOAD_GRACE_MS = 10000;
 
-// The position block's three lanes. Sized so a left and a right character
-// stand in one scene; y puts feet near the ground line.
+// The three positions of the story position block. Sized so a left and a
+// right character fit in one scene; y puts their feet near the ground line.
 const STORY_LANE_X = {left: 100, center: 200, right: 300};
 const STORY_LANE_Y = 270;
 const STORY_LANE_SPRITE_SIZE = 210;

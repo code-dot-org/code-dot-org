@@ -13,13 +13,13 @@ import {MAX_ZOOM, MIN_ZOOM} from '../camera';
 import {PLATFORM_GRAVITY} from '../platformPhysics';
 
 /**
- * What the new-block catalog says about a block: a `summary` sentence,
- * then the `body`, markdown, one more sentence at most, beside an
- * `animation` (a looping GIF of the block in action, or a still picture
- * where one says enough; an entry without one gets an empty outline until
- * its picture is made). Content lives here rather than in the level so it
- * can carry pictures and the lab's numbers; a level-authored source can
- * replace this table later.
+ * What the new-block catalog says about a block: a `summary` sentence, then
+ * the `body` in markdown (one more sentence at most), beside an `animation`:
+ * a looping GIF of the block in action, or a still picture where one says
+ * enough. An entry without one shows an empty outline until its picture is
+ * made. The content lives here rather than in the level so it can carry
+ * pictures and the lab's own numbers; a level-authored source can replace
+ * this table later.
  */
 export interface BlockHelp {
   title: string;

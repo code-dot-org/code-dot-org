@@ -45,7 +45,8 @@ const sameRect = (a: TargetRect | null, b: TargetRect | null) =>
     a.right === b.right &&
     a.bottom === b.bottom);
 
-/** Where the arrow's box anchors; the direction's transform does the rest. */
+/** The point the arrow's box is anchored at; the direction's CSS transform
+    turns the box from there. */
 const anchorFor = (
   rect: TargetRect,
   direction: CalloutDirection,

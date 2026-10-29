@@ -13,13 +13,13 @@ export interface CatalogEntry {
   help: BlockHelp;
 }
 
-// Serialized state under a block that is not a block: a field's value, a
-// mutator's extra state, an icon's.
+// Keys in serialized block state whose values are not child blocks: a
+// field's value, a mutator's extra state, an icon's state.
 const NON_BLOCK_KEYS = new Set(['fields', 'extraState', 'icons']);
 
-/** The block types in a toolbox or block-state tree, in order. Shadows are
-    not blocks of their own (a block's inputs, a dashed placeholder), nor is
-    a category. */
+/** The block types in a toolbox or serialized block tree, in order. Shadow
+    blocks (a block's input defaults, a dashed placeholder) and categories
+    are not counted. */
 export function blockTypesIn(node: unknown, shadow = false): string[] {
   if (Array.isArray(node)) {
     return node.flatMap(value => blockTypesIn(value, shadow));
@@ -43,8 +43,8 @@ export function blockTypesIn(node: unknown, shadow = false): string[] {
 
 const unique = (types: string[]) => [...new Set(types)];
 
-/** The blocks a level hands a student: its toolbox, and the blocks
-    add_blocks places in the workspace ahead of them. */
+/** The block types a level offers a student: its toolbox, plus the blocks
+    add_blocks places in the workspace before the student starts. */
 export function offeredBlockTypes(level: SpriteLab2LevelProperties): string[] {
   return unique([
     ...blockTypesIn(level.toolboxDefinition),
@@ -52,11 +52,11 @@ export function offeredBlockTypes(level: SpriteLab2LevelProperties): string[] {
   ]);
 }
 
-/** The blocks a student had to use on a level: the block a checklist item
-    names (one type; an item that takes any of several names none), the
-    block it must hang under, and the blocks add_blocks placed for them to
-    build on (an attachTo entry hangs a placeholder or keeps room, and
-    places nothing). */
+/** The block types a student had to use on a level: the block a checklist
+    item names (an item that accepts any of several types names none), the
+    block it must sit under, and the blocks add_blocks placed for the
+    student to build on. An attachTo entry adds a placeholder or empty room
+    and places no block, so it is not counted. */
 export function requiredBlockTypes(level: SpriteLab2LevelProperties): string[] {
   const fromChecks = (level.objectives?.items ?? []).flatMap(({check}) =>
     check.kind === 'block'
@@ -70,9 +70,9 @@ export function requiredBlockTypes(level: SpriteLab2LevelProperties): string[] {
   ]);
 }
 
-/** The blocks a level offers that no earlier level of the lesson required:
-    the ones a student meets here first, and the ones an earlier level
-    offered without needing them for its checklist. */
+/** The block types a level offers that no earlier level of the lesson
+    required: the blocks a student meets here for the first time, plus any
+    an earlier level offered without its checklist needing them. */
 export function newBlockTypes(
   level: SpriteLab2LevelProperties,
   earlier: readonly SpriteLab2LevelProperties[]

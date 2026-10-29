@@ -97,7 +97,8 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
                       alt={selected.help.animation.alt}
                     />
                   ) : (
-                    // The picture's place, until the block has one.
+                    // An empty outline where the block's picture goes, for an
+                    // entry that has none yet.
                     <div
                       className={classNames(
                         moduleStyles.animation,

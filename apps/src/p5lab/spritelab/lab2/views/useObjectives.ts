@@ -43,11 +43,11 @@ export interface PlayerProgressReport {
 /**
  * The running game's progress for the checklist: touches and moves from
  * the engine, and scene landings. Each only grows while the level stays
- * open. The engine also reports during the Code
- * tab's preview; those are dropped, since only a run the student started
- * with Play should count, and Play respawns the player. Reports the level
- * never reads are not kept, since each one re-renders the view; the
- * engine's callback is null when nothing wants it.
+ * open. The engine also reports during the Code tab's preview; those are
+ * dropped, since only a run the student started with Play should count,
+ * and Play respawns the player. Reports the level never reads are not
+ * kept, since each one re-renders the view; the engine's callback is null
+ * when nothing wants it.
  */
 export function usePlayProgress(
   playing: boolean,

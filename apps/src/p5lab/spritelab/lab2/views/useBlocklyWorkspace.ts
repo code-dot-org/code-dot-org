@@ -59,11 +59,15 @@ interface UseBlocklyWorkspaceResult {
   getToolboxDefinition: () => BlocklyCore.utils.toolbox.ToolboxInfo | null;
   /** Re-render the toolbox, so flyout dropdowns show data fetched since. */
   refreshToolbox: (definition?: BlocklyCore.utils.toolbox.ToolboxInfo) => void;
-  /** Load code into the workspace; `lock` keeps every loaded block from
-      deletion but the level's own stacks (blockLocks.ts). */
+  /** Load code into the workspace. With `lock`, every loaded block is made
+      undeletable except the stacks `isOwnStack` claims as the level's own
+      (blockLocks.ts). */
   loadCode: (
     source: WorkspaceSerialization,
-    options?: {lock?: boolean; own?: (top: BlocklyCore.Block) => boolean}
+    options?: {
+      lock?: boolean;
+      isOwnStack?: (top: BlocklyCore.Block) => boolean;
+    }
   ) => void;
   /**
    * Register the change listeners:
@@ -226,7 +230,9 @@ export default function useBlocklyWorkspace({
       let serialized = Blockly.serialization.workspaces.save(
         workspaceRef.current
       ) as WorkspaceSerialization;
-      // Levelbuilder's own locks are authored; a student's are the level's.
+      // A levelbuilder editing the level authors its locks, so they are kept.
+      // For a student the locks come from the level, not from the saved
+      // project, so any saved ones are stripped.
       if (!isToolboxMode && !isStartMode) {
         serialized = withoutLocks(serialized);
       }
@@ -292,7 +298,10 @@ export default function useBlocklyWorkspace({
   const loadCode = useCallback(
     (
       source: WorkspaceSerialization,
-      options?: {lock?: boolean; own?: (top: BlocklyCore.Block) => boolean}
+      options?: {
+        lock?: boolean;
+        isOwnStack?: (top: BlocklyCore.Block) => boolean;
+      }
     ) => {
       const workspace = workspaceRef.current;
       if (!workspace) {
@@ -302,7 +311,7 @@ export default function useBlocklyWorkspace({
       try {
         loadBlocksToWorkspace(workspace, JSON.stringify(source));
         if (options?.lock) {
-          lockBlocks(workspace, options.own);
+          lockBlocks(workspace, options.isOwnStack);
         }
         // Update ref here (instead of in change listener) since callers may read this synchronously.
         currentBlocksRef.current = source;

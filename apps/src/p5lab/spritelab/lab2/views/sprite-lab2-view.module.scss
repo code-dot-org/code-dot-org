@@ -229,7 +229,8 @@ $z-over-blockly: 71;
   text-transform: none;
 }
 
-// Still, it keeps its colors: it is a label, not a button that is off.
+// A single-scene dropdown is disabled but keeps its normal colors: it reads
+// as a label, not as a button that is off.
 .sceneDropdown > button.sceneTriggerStill:disabled {
   border-color: var(--borders-neutral-strong);
   color: var(--text-neutral-primary);

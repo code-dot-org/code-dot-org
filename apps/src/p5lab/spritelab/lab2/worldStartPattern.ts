@@ -127,8 +127,8 @@ export function useWorldStartPattern({
   objectRole?: string;
   updateSources: (updater: (prev: Sources) => Sources) => void;
 }): World | null {
-  // The world as the pattern left it: what a level's "changed" check
-  // measures the student's edits against.
+  // The world as the pattern painted it: the baseline a level's "changed"
+  // check compares the student's edits against.
   const [painted, setPainted] = useState<World | null>(null);
   useEffect(() => {
     if (!pattern?.length || !pinnedSceneId || !enabled) {

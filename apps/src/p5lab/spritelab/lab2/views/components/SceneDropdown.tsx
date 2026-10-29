@@ -124,8 +124,9 @@ export interface SceneDropdownProps {
 
 /**
  * A dropdown of the scenes with their pictures, the current one marked,
- * with New scene and All scenes at its foot when offered. With one scene
- * and nothing else to pick, it is a still label in the same clothes.
+ * with New scene and All scenes at the foot when offered. With one scene
+ * and nothing else to pick, it renders as a non-interactive label with the
+ * same look.
  */
 const SceneDropdown: React.FunctionComponent<SceneDropdownProps> = ({
   scenes,

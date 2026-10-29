@@ -129,8 +129,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     source?: WorkspaceSerialization;
   };
   /** A second scene the level creates beside the pinned one, for a level
-      about jumping between scenes; its premade world works like
-      world_start_pattern. */
+      about jumping between scenes. Its premade world follows the same rules
+      as world_start_pattern. */
   extraScene?: {
     id: string;
     name: string;

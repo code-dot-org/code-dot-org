@@ -23,8 +23,8 @@ export type ObjectiveCheck =
     }
   | {
       kind: 'world';
-      /** A cell showing an image that carries this role; with neither this
-          nor `changed`, any cell at all. */
+      /** A cell showing an image that carries this role. With neither this
+          nor `changed` set, any cell at all counts. */
       role?: string;
       /** Any difference from the grid the level opened with. */
       changed?: boolean;

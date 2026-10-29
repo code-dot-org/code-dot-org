@@ -67,8 +67,9 @@ interface ImageDetailsDialogProps extends ImageFormOptions {
   /** No paint entry points: the pane is a plain preview and new images
       offer no blank canvas. */
   paintDisabled?: boolean;
-  /** The level rates every picture: the dialog stays open and Keep waits
-      until a fresh picture has its thumb. */
+  /** The level requires a rating (thumbs up or down) on every generated
+      picture. While a fresh picture is unrated, Keep is disabled and the
+      dialog cannot be closed. */
   verdictRequired?: boolean;
   /** Stored pixel size of the image (one frame of a sheet). */
   resolution?: {x: number; y: number};
@@ -161,9 +162,11 @@ const ImageDetailsDialog: React.FunctionComponent<ImageDetailsDialogProps> = ({
   const [view, setView] = useState<'details' | 'generate'>(
     isNew ? 'generate' : 'details'
   );
-  // Without onClose the dialog has no close button and ignores Escape.
+  // SentenceScene reports when a generated picture still needs its rating.
+  // While one does, the dialog is given no onClose, which removes its close
+  // button and makes it ignore Escape.
   const [awaitingVerdict, setAwaitingVerdict] = useState(false);
-  const closable = !awaitingVerdict;
+  const closable = !verdictRequired || !awaitingVerdict;
   // The student's generate view hosts the sentence scene; the advanced
   // dialog keeps its full form. Both want room for the word menus.
   const sentenceView = view === 'generate' && !advanced;

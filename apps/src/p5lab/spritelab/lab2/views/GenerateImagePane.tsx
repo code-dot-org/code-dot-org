@@ -177,7 +177,7 @@ interface GenerateImagePaneProps {
   onGenerate?: () => void;
   /** No paint entry points anywhere in the dialog. */
   paintDisabled?: boolean;
-  /** The level rates every picture (ImageDetailsDialog). */
+  /** The level requires a rating on every generated picture. */
   verdictRequired?: boolean;
   /** A picture asked for from a block or the world palette: opens the
       new-image dialog on its kind. A new object each time. */
@@ -271,7 +271,6 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // Gallery thumbnails prefer the border-trimmed image (backgrounds aren't
   // trimmed and fall through). Trims land as the engine preloads; re-render
   // when they do.
-  // Thumbnails land after the list does; the gallery is rebuilt when they do.
   const [trimVersion, setTrimVersion] = useState(0);
   useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
 

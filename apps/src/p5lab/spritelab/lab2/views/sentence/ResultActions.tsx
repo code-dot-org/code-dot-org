@@ -104,9 +104,9 @@ interface ResultActionsProps {
   onChangeWords: () => void;
   onGenerateAgain: () => void;
   onContinue: () => void;
-  /** No generations left: Regenerate alone goes off. */
+  /** Disable Regenerate alone, when no generations are left. */
   regenerateDisabled?: boolean;
-  /** The picture still wants its thumb: Continue alone goes off. */
+  /** Disable Continue alone, while the picture still needs its rating. */
   continueDisabled?: boolean;
 }
 

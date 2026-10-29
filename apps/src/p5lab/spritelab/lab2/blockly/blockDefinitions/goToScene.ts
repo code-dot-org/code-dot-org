@@ -11,12 +11,12 @@ import moduleStyles from '../scene-dropdown.module.scss';
 export const GO_TO_SCENE_BLOCK_TYPE = 'spritelab2_goToScene';
 export const FIELD_SCENE_DROPDOWN_TYPE = 'field_spritelab2_scene';
 
-// The scene whose code is being edited: a jump to it from itself would
-// loop the scene, so the menu leaves it out.
-let editingSceneId: string | null = null;
+// The scene whose code is being edited (the lab's active scene). The menu
+// leaves it out, since a jump from a scene to itself would only restart it.
+let activeSceneId: string | null = null;
 
-export function setEditingSceneId(id: string | null): void {
-  editingSceneId = id;
+export function setSceneMenuActiveId(id: string | null): void {
+  activeSceneId = id;
 }
 
 // Dropdown options: [friendly name, scene id]. The id is the saved value.
@@ -24,7 +24,7 @@ export function setEditingSceneId(id: string | null): void {
 function sceneMenuOptions(): [string, string][] {
   const scenes: {id: string; name: string}[] =
     getStore().getState().spriteLab2?.scenes || [];
-  const others = scenes.filter(s => s.id !== editingSceneId);
+  const others = scenes.filter(s => s.id !== activeSceneId);
   if (others.length === 0) {
     return [['no scenes', '']];
   }
