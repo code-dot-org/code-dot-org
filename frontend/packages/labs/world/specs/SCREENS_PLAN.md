@@ -3,6 +3,12 @@
 STATUS: BUILT, not yet seen in the browser. What turns the Interface Kit from one screen into an
 app. The working record, as the other plans are.
 
+SUPERSEDED (specs/SCREEN_STACK_PLAN.md). Screens are built in, not a rule's:
+the `Screens` rule, `load the map named` and `unload the newest map` are
+gone. A screen is a `.screen` file, `show screen ⟨…⟩` puts one on top of the
+stack, and `go back` takes the top one off and never the Main Screen. What
+follows is the design as it was built.
+
 SINCE: the screen everything sits on is a FILE now, the Main Screen
 (`screens/main.screen`), and what a world's main map was is that file
 (specs/SCREEN_MAP_PLAN.md). The stack below is unchanged: a map loaded from

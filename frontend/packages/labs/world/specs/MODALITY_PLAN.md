@@ -1,5 +1,14 @@
 # A screen over a screen
 
+STATUS: SUPERSEDED (specs/SCREEN_STACK_PLAN.md). A map no longer says it
+covers what is under it: the modal flag, the inspector's "Covers what is
+under it" and `canReach`'s walk over modal loads are gone. Covering is what
+a screen does: only the top screen takes input, and the World only through
+that screen's Viewports. The case this plan was built around, an on-screen
+keyboard over the form it types into, waits for a screen that lets input
+through to the screens under it. What follows is the design as it was
+built.
+
 A dialog takes the clicks. Everybody knows this and nothing in the lab said
 it, so the first app built here had a key on its on-screen keyboard also
 pressing the button on the screen behind it, opening a second copy of the form

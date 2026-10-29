@@ -129,7 +129,9 @@ rule over what already works, not new machinery.
 ### 6. Text entry
 
 BUILT, keyboard and all — specs/FIELDS_PLAN.md and
-specs/KEYBOARD_PLAN.md. A hint, a number kind, a "looks wrong" a project
+specs/KEYBOARD_PLAN.md. (Since: the stock keyboard map is gone, and the
+Notes app has none; it waits for a screen that lets input through to the
+one under it, specs/SCREEN_STACK_PLAN.md.) A hint, a number kind, a "looks wrong" a project
 sets, and Enter saying the answer is finished; and `maps/keyboard`, five
 rows of Buttons that type.
 

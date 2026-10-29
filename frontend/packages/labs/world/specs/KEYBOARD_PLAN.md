@@ -1,5 +1,10 @@
 # The on-screen keyboard
 
+STATUS: SUPERSEDED IN PART (specs/SCREEN_STACK_PLAN.md, step 6): the stock
+keyboard map is gone. It typed into the form under it, and only the top
+screen takes input until a screen can let input through. `type ⟨…⟩`, `press
+the ⟨…⟩ key` and `takes the keyboard`, which it was built from, stand.
+
 The Text Input is a field now (specs/FIELDS_PLAN.md) and it fills the way a
 field fills — from what was typed — so an app needs something that types. That
 is this plan, and it is the last item on the apps list (specs/APPS.md).

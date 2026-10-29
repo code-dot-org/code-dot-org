@@ -2,6 +2,12 @@
 
 STATUS: BUILT, October 2026, but for steps 4 to 6, which are later.
 
+SUPERSEDED IN ONE PART (specs/SCREEN_STACK_PLAN.md): the Main Screen is no
+longer the only screen whose data declares values and events. Every screen
+does, and each copy of a screen on the stack holds its own; the Main
+Screen's are the game's, read from other files by name. What else is here
+stands.
+
 A game is a Main Screen, and what the Main Screen declares is data
 (`blockly/screenData`): its name, its own values and events, the rule
 settings that differ from the rules', its background color and its theme.

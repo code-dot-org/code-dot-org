@@ -1,6 +1,6 @@
 # Plan: screens are a stack, and each one holds its own words
 
-STATUS: BUILDING, October 2026. Steps 1 to 7 are done. Comes after
+STATUS: BUILT, October 2026. All eight steps are in. Comes after
 specs/ONE_WORLD_PLAN.md: it assumes one World, flat screens, and Viewports
 that look at the World.
 
@@ -286,6 +286,12 @@ screen` is, and `map ⟨…⟩` is gone. Nothing worked a path out in code, so
   it; see below. Five lessons' instructions still sent the learner to
   `in the map ⟨Game⟩ shows`, gone since the one-World plan's step 5, and
   one to `load map ⟨map maps/room2⟩`; they are corrected.
+
+- **Step 8 marked what this replaces**: SCREENS_PLAN.md and
+  MODALITY_PLAN.md as superseded, WORLD_AS_DATA_PLAN.md in the part about
+  the Main Screen being the only screen with words of its own, and
+  KEYBOARD_PLAN.md, APPS.md and SCREEN_MAP_PLAN.md where they named the
+  stock keyboard map or `unload the newest map` as current.
 
 ## Not in this plan
 
