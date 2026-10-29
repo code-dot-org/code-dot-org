@@ -538,10 +538,7 @@ function showFallbackPlayerCaptionLink(inDialog) {
   if (mountPoint) {
     createReactRoot(
       <FallbackPlayerCaptionDialogLink inDialog={inDialog} />,
-      mountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      mountPoint
     );
   }
 }

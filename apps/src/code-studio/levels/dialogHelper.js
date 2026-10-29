@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
+import {flushSync} from 'react-dom';
 
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {
@@ -31,9 +32,8 @@ export function showDialog(component, callback, onHidden) {
     return;
   }
   const div = document.createElement('div');
-  createReactRoot(component, div, {
-    legacyReactDomRender: true,
-  });
+  // Synchronous: the rendered content is read and moved below.
+  flushSync(() => createReactRoot(component, div));
   const content = div.childNodes[0];
   const dialog = new LegacyDialog({
     // Content is a div with a specific expected structure. See LegacyDialog.
@@ -161,17 +161,17 @@ export function processResults(onComplete, beforeHook) {
           const lessonName = `${i18n.lesson()} ${lessonInfo.position}: ${
             lessonInfo.name
           }`;
-          createReactRoot(
-            <PlayZone
-              lessonName={lessonName}
-              onContinue={() => {
-                dialog.hide();
-              }}
-            />,
-            body,
-            {
-              legacyReactDomRender: true,
-            }
+          // Synchronous so the dialog is complete when it is shown.
+          flushSync(() =>
+            createReactRoot(
+              <PlayZone
+                lessonName={lessonName}
+                onContinue={() => {
+                  dialog.hide();
+                }}
+              />,
+              body
+            )
           );
           const dialog = new LegacyDialog({
             body: body,
