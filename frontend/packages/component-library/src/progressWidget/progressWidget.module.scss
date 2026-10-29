@@ -1,0 +1,88 @@
+$narrow: 991.98px;
+
+.widget {
+  display: inline-flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 30px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: var(--shape-md);
+  background-color: var(--background-neutral-secondary);
+  font-family: var(--font-family-main);
+}
+
+.lesson {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding-block: 0;
+  padding-inline: 3px 6px;
+}
+
+// CADS Dropdown Button; two classes to beat MUI's emotion styles.
+.lesson .lessonButton {
+  min-width: 0;
+  height: 24px;
+  border-color: var(--borders-neutral-strong);
+  font-weight: var(--font-weight-regular);
+
+  &:hover {
+    border-color: var(--borders-neutral-strong);
+  }
+
+  @media (max-width: $narrow) {
+    max-width: 120px;
+  }
+}
+
+.lessonLabel {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.saveStatus {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--text-neutral-tertiary);
+  font-size: 12px;
+}
+
+.bubbles {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  border-inline: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-primary);
+
+  // Without an action the bubbles end the widget and take its corners.
+  &:last-child,
+  &:has(+ .action:empty) {
+    border-inline-end: 0;
+    border-start-end-radius: calc(var(--shape-md) - 1px);
+    border-end-end-radius: calc(var(--shape-md) - 1px);
+  }
+
+  // Only when some bubble is current, so the row is never left empty.
+  @media (max-width: $narrow) {
+    &:has(> [aria-current]) > :not([aria-current]) {
+      display: none;
+    }
+  }
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  padding-block: 0;
+  padding-inline: 3px;
+
+  // An action component may render nothing.
+  &:empty {
+    display: none;
+  }
+}
