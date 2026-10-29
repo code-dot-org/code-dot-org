@@ -49,6 +49,7 @@ const CODE_STUDIO_ENTRIES = {
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
   'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'musiclab/embed': './src/sites/studio/pages/musiclab/embed.js',
+  'miniapplab/show': './src/sites/studio/pages/miniapplab/show.js',
   'policy_compliance/parental_permission/_banner': './src/sites/studio/pages/policy_compliance/parental_permission/_banner.js',
   'policy_compliance/parental_permission/_modal': './src/sites/studio/pages/policy_compliance/parental_permission/_modal.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',

@@ -1,0 +1,11 @@
+@import '@cdo/apps/lab2/views/common.scss';
+
+// Fill the window below the studio header, like a Lab2 level page.
+.page {
+  position: absolute;
+  top: $top-spacing;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 13px;
+}
