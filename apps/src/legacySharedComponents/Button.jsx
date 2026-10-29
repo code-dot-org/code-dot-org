@@ -91,7 +91,8 @@ class Button extends React.Component {
 
   render() {
     const {
-      type,
+      // Untyped, a button inside a form submits it.
+      type = 'button',
       color = ButtonColor.orange,
       size = ButtonSize.default,
       href,
