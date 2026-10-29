@@ -1,6 +1,6 @@
 # Plan: screens are a stack, and each one holds its own words
 
-STATUS: PLANNED, October 2026. Nothing below is built. Comes after
+STATUS: BUILDING, October 2026. Step 1 is done. Comes after
 specs/ONE_WORLD_PLAN.md: it assumes one World, flat screens, and Viewports
 that look at the World.
 
@@ -109,19 +109,58 @@ There are no migrations (specs/RETIREMENTS_PLAN.md).
 4. Compiling: every `.screen` file compiles and is registered by path, as
    maps are. A screen's palette offers its own words and the Main Screen's.
    The `show screen` and `go back` blocks. Tests.
-5. The pause menu and the dialogs as stock screens. The Interface Kit and
-   the Notes app move off the `Screens` rule.
+5. The pause menu and the dialogs as stock screens. Breakout and the
+   Notes app move off the `Screens` rule.
 6. Deleting what goes, above.
 7. The shelf: library entry, demo, tile.
 8. Specs: SCREENS_PLAN.md, MODALITY_PLAN.md and WORLD_AS_DATA_PLAN.md
    marked superseded where this replaces them, and this record.
 
-## To find out before step 2
+## How it is built
 
-- Which fixtures and lessons use the `Screens` rule, `load the map named`,
-  `unload the newest map` or a modal map, and what each becomes.
-- What the screen editor needs to open a `.screen` other than `main`, and
-  how a project adds one.
+**A screen is a load on the root.** The root already keeps a stack of
+loads, oldest first, each closed over the actors it placed (`MapLoad`), and
+`unloadNewestMap` already takes the top one off. A screen is such a load
+marked as one: the Main Screen's is the bottom, `showScreen` pushes one and
+`goBack` pops the top screen with whatever was loaded over it. Until step 6
+the old maps over the screen are loads that are not screens, so the pause
+menu and the dialogs keep working while the screens arrive beside them.
+
+**Input is `canReach`.** The pointer's hit test, the keyboard's listeners
+and the focus route all ask it already (`scripts/rules/pointing`, `input`,
+`tabNavigation`). It answers for the top screen: an actor that screen, or a
+load over it, placed; and an actor in the World only while that screen
+holds a Viewport. The modal walk stays beside it until step 6.
+
+**Drawing leaves a covered screen out of the snapshots.** A screen whose
+`backgroundColor` is opaque covers every screen under it, so their actors
+are left out of `renderSnapshot` and their Viewports out of
+`spaceSnapshot`; the binding already takes away what a snapshot no longer
+holds, and a World no Viewport shows is not drawn. A screen's color is a
+rectangle the size of the window, put just before its first actor in the
+root's draw order. The root's actors draw in the order they were placed,
+and the bands give a root object the camera of the Viewport it follows, so
+a half-clear screen over a game dims the World's window too. The Main
+Screen's color stays the main camera's clear color.
+
+**What was found** (October 2026):
+
+- **The Notes app** (`fixtures/app`) uses the `Screens` rule: two `go to
+  screen` and four `go back`, modal maps for its screens, and the
+  on-screen keyboard loaded over its form, not modal so the form still
+  takes its typing. The keyboard needs input to reach the screen under
+  it, which this plan leaves for later.
+- **Breakout** brings up the stock pause menu with `load the map named`,
+  and the menu takes itself away with `unload this map` and raises `quit`.
+- **The stock maps**: Pause Menu, Are You Sure? and Message are modal;
+  Keyboard and Tab Bar are overlays. All five are in the library.
+- **The lessons**: `place/map` grants `load the map named`, `unload the
+  newest map` and the `Screens` rule; `place/script` grants `unload this
+  map`. The `Screens` rule has a demo.
+- **The Interface Kit** uses none of these; step 5 has nothing to move.
+- **The editor** already makes a `.screen` ("New screen" in the place
+  switcher) and opens it. A screen other than `main` compiles as a map but
+  is not registered by path, so nothing can show it until step 4.
 
 ## Not in this plan
 
