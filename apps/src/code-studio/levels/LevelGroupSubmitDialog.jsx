@@ -1,9 +1,11 @@
 import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
@@ -67,7 +69,7 @@ export function showLevelGroupSubmitDialog(dialogProps, onConfirm) {
   document.body.appendChild(container);
 
   const close = () => {
-    ReactDOM.unmountComponentAtNode(container);
+    unmountReactRoot(container);
     container.remove();
   };
 
@@ -80,7 +82,6 @@ export function showLevelGroupSubmitDialog(dialogProps, onConfirm) {
         onConfirm();
       }}
     />,
-    container,
-    {legacyReactDomRender: true}
+    container
   );
 }

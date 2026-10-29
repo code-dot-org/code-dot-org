@@ -19,13 +19,7 @@ export function VersionNotFoundAlert() {
 }
 
 export default () => {
-  createReactRoot(
-    <VersionNotFoundAlert />,
-    document.getElementById('codeApp'),
-    {
-      legacyReactDomRender: true,
-    }
-  );
+  createReactRoot(<VersionNotFoundAlert />, document.getElementById('codeApp'));
 };
 
 const styles = {

@@ -83,6 +83,17 @@ describe('ShareAllowedDialog', () => {
         screen.queryByText(/Copy Link to Project/i)
       ).not.toBeInTheDocument();
     });
+
+    it('shows the disabled dialog when first mounted open', () => {
+      renderWithStore({
+        appType: 'spritelab',
+        userSharingDisabled: true,
+        isOpen: true,
+      });
+      expect(
+        document.getElementById('uitest-sharing-disabled-button')
+      ).toBeInTheDocument();
+    });
   });
 
   describe('normal share dialog', () => {
