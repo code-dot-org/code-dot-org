@@ -57,7 +57,8 @@ export type ChoiceResultStatus =
 
 export type QuizQuestionResult = QuizQuestionResponse & {
   quizQuestionId: number;
-  answered: boolean;
+  // Absent before submission.
+  answered?: boolean;
   correct: boolean | null;
   explanation: string | null;
   // The answer key, by question type; null when hidden.

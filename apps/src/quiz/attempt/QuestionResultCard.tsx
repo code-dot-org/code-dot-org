@@ -38,7 +38,11 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
 }) => (
   <AttemptCard
     label={questionLabel}
-    tag={!result.answered && <SkippedTag isGraded={result.correct !== null} />}
+    tag={
+      result.answered === false && (
+        <SkippedTag isGraded={result.correct !== null} />
+      )
+    }
     title={question.questionTitle}
     description={<QuestionDescription markdown={question.description} />}
   >

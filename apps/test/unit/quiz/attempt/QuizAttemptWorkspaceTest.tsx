@@ -937,6 +937,7 @@ describe('QuizAttemptWorkspace', () => {
 
       expect(screen.getByText('What is the value of x?')).toBeInTheDocument();
       expect(screen.getByText('What is the value of y?')).toBeInTheDocument();
+      expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: /Next|Submit|Finish|Begin/})
@@ -957,7 +958,7 @@ describe('QuizAttemptWorkspace', () => {
             ],
           },
         },
-        quizQuestions: [question({id: 1})],
+        quizQuestions: [question({id: 1}), question({id: 2, page: 2})],
         viewAsUserId: 99,
       });
 
@@ -965,6 +966,7 @@ describe('QuizAttemptWorkspace', () => {
       expect(alert).toHaveTextContent(
         'Aisha Khan is still working on this assessment.'
       );
+      expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
       expect(alert).toHaveAttribute('data-type', 'warning');
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(

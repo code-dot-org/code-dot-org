@@ -599,23 +599,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             {/* A student who hasn't started (attempt is null) shows teacher every question unanswered. */}
             {attempt !== undefined &&
               renderQuestionResults(
-                quizQuestions.map(question => {
-                  // Only answered questions are sent while in progress.
-                  const response = attempt?.questionResultsInProgress?.find(
+                quizQuestions.map(question => ({
+                  ...(attempt?.questionResultsInProgress?.find(
                     r => r.quizQuestionId === question.id
-                  );
-                  return {
-                    ...(response ?? {
-                      quizQuestionId: question.id,
-                      questionType: question.type,
-                      responseData: {},
-                    }),
-                    answered: !!response,
-                    correct: null,
-                    explanation: null,
-                    correctChoiceId: null,
-                  };
-                })
+                  ) ?? {
+                    quizQuestionId: question.id,
+                    questionType: question.type,
+                    responseData: {},
+                  }),
+                  correct: null,
+                  explanation: null,
+                  correctChoiceId: null,
+                }))
               )}
           </div>
         ) : isIntroOpen ? (
