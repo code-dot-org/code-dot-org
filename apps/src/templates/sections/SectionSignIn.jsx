@@ -1,5 +1,5 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import Chips from '@code-dot-org/component-library/chips';
+import {MuiChips as Chips} from '@code-dot-org/component-library/chips';
 import TextField from '@code-dot-org/component-library/textField';
 import {Typography as MuiTypography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';

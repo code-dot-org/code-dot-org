@@ -1,4 +1,4 @@
-import Chips from '@code-dot-org/component-library/chips';
+import {MuiChips as Chips} from '@code-dot-org/component-library/chips';
 import TextField from '@code-dot-org/component-library/textField';
 import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
