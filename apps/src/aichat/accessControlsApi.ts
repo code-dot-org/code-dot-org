@@ -6,14 +6,15 @@ import {repackageError} from '../metrics/analyticsUtils';
 
 import {AiChatAccessLevel} from './types';
 
-export const handleUpdateSectionAiChatAccessLevel = async (
+const updateSectionAiSetting = async (
   sectionId: number,
-  newAccessLevel: AiChatAccessLevel
+  setting: 'ai_chat_access_level' | 'ai_challenge_enabled',
+  value: AiChatAccessLevel | boolean
 ) => {
   try {
     await HttpClient.post(
-      `/api/v1/sections/${sectionId}/ai_chat_access_level`,
-      JSON.stringify({ai_chat_access_level: newAccessLevel}),
+      `/api/v1/sections/${sectionId}/${setting}`,
+      JSON.stringify({[setting]: value}),
       true,
       {
         'Content-Type': 'application/json; charset=UTF-8',
@@ -28,3 +29,13 @@ export const handleUpdateSectionAiChatAccessLevel = async (
     throw error;
   }
 };
+
+export const handleUpdateSectionAiChatAccessLevel = (
+  sectionId: number,
+  newAccessLevel: AiChatAccessLevel
+) => updateSectionAiSetting(sectionId, 'ai_chat_access_level', newAccessLevel);
+
+export const handleUpdateSectionAiChallengeEnabled = (
+  sectionId: number,
+  enabled: boolean
+) => updateSectionAiSetting(sectionId, 'ai_challenge_enabled', enabled);

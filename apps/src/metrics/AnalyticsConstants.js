@@ -565,6 +565,7 @@ const EVENTS = {
 
   // AI Chat Access Control Settings
   AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED: 'AI Chat section access level updated',
+  AI_CHALLENGE_SECTION_ENABLED_UPDATED: 'AI Challenge section enabled updated',
 
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
