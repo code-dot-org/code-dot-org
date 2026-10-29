@@ -25,19 +25,9 @@ export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
       title: 'Checkpoint details',
       intro: (
         <>
-          When you select a checkpoint, its details appear here — what you'll
-          learn, how long it takes, and any prereqs.
-        </>
-      ),
-    },
-    {
-      element: '#adaptive-checkpoint-card-start',
-      position: 'left',
-      title: 'Starting a checkpoint',
-      intro: (
-        <>
-          When you're ready to begin, hit the Start button inside the panel. You
-          can come back to the map any time.
+          Here you can see what you'll learn, how long it takes, and any
+          prereqs. When you're ready, hit Start — you can come back to pick a
+          different checkpoint any time.
         </>
       ),
     },

@@ -6,7 +6,7 @@ import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {useEffect, useMemo, useRef, useState} from 'react';
+import React, {useMemo, useRef, useState} from 'react';
 
 import {CheckpointStatusMap} from '../progress';
 import {usePathwayProject} from '../project/usePathwayProject';
@@ -95,7 +95,10 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
     setTourEnabled(false);
     setTourCheckpointId(undefined);
-    document.body.classList.remove('adaptive-tour-step-select');
+    document.body.classList.remove(
+      'adaptive-tour-step-select',
+      'adaptive-tour-no-next'
+    );
   };
 
   // Center the tour zoom on the first checkpoint in the map during step 1.
@@ -105,16 +108,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     return first ? [first.id] : undefined;
   }, [tourEnabled, tourStep, pathway.checkpoints]);
 
-  // intro.js resolves CSS selectors eagerly at start() time. When tourCheckpointId
-  // is set, React renders CheckpointCard (adding #adaptive-checkpoint-card-start to
-  // the DOM). We then call refresh(true) so intro.js re-runs its element resolver
-  // and picks up the button for step 4.
   const stepsRef = useRef<Steps | null>(null);
-  useEffect(() => {
-    if (tourCheckpointId) {
-      stepsRef.current?.introJs?.refresh(true);
-    }
-  }, [tourCheckpointId]);
 
   // A click on the map background while zoomed returns to the full map.
   const onMapClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -137,6 +131,12 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
           document.body.classList.toggle(
             'adaptive-tour-step-select',
             stepIndex === 1
+          );
+          // On the sidebar step and beyond, the user ends the tour by clicking
+          // Start — hide the Next/Done button so there's only one path forward.
+          document.body.classList.toggle(
+            'adaptive-tour-no-next',
+            stepIndex >= 2
           );
         }}
         onBeforeChange={(nextStepIndex: number) => {
@@ -200,7 +200,10 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               status={statusMap[focused.id]}
               statusMap={statusMap}
               evidence={evidence}
-              onStart={() => onStart(focused.id)}
+              onStart={() => {
+                if (tourEnabled) dismissTour();
+                onStart(focused.id);
+              }}
               onSelectCheckpoint={onFocus}
             />
           ) : (

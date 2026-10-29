@@ -5,12 +5,12 @@ import {
 } from '@cdo/apps/adaptive/views/skillMapTourHelpers';
 
 describe('buildSkillMapTourSteps', () => {
-  it('returns 4 steps without skipped checkpoints', () => {
-    expect(buildSkillMapTourSteps(false)).toHaveLength(4);
+  it('returns 3 steps without skipped checkpoints', () => {
+    expect(buildSkillMapTourSteps(false)).toHaveLength(3);
   });
 
-  it('returns 5 steps with skipped checkpoints', () => {
-    expect(buildSkillMapTourSteps(true)).toHaveLength(5);
+  it('returns 4 steps with skipped checkpoints', () => {
+    expect(buildSkillMapTourSteps(true)).toHaveLength(4);
   });
 
   it('targets the map canvas on step 1', () => {
@@ -31,18 +31,8 @@ describe('buildSkillMapTourSteps', () => {
     );
   });
 
-  it('targets the start button on step 4', () => {
-    expect(buildSkillMapTourSteps(false)[3].element).toBe(
-      '#adaptive-checkpoint-card-start'
-    );
-  });
-
   it('positions step 1 to the right of the map canvas', () => {
     expect(buildSkillMapTourSteps(false)[0].position).toBe('right');
-  });
-
-  it('positions step 4 to the left of the side panel', () => {
-    expect(buildSkillMapTourSteps(false)[3].position).toBe('left');
   });
 
   it('wraps every intro in a React element so intro.js does not render raw HTML', () => {

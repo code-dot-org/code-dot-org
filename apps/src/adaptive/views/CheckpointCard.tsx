@@ -156,11 +156,7 @@ const CheckpointCard: React.FunctionComponent<CheckpointCardProps> = ({
       )}
 
       {status !== 'locked' && (
-        <MuiButton
-          id="adaptive-checkpoint-card-start"
-          variant="contained"
-          onClick={onStart}
-        >
+        <MuiButton variant="contained" onClick={onStart}>
           {ACTION_LABELS[status]}
         </MuiButton>
       )}

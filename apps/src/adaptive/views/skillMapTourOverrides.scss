@@ -100,6 +100,12 @@ body.adaptive-tour-step-select .introjs-nextbutton {
   display: none;
 }
 
+// On the sidebar step and beyond the user ends the tour by clicking Start,
+// not the Done button.
+body.adaptive-tour-no-next .introjs-nextbutton {
+  display: none;
+}
+
 // Next: filled purple.
 .introjs-nextbutton {
   color: var(--text-neutral-white-fixed);

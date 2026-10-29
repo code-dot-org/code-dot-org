@@ -143,7 +143,10 @@ function renderMapScreen(
 describe('MapScreen tour', () => {
   afterEach(() => {
     localStorage.clear();
-    document.body.classList.remove('adaptive-tour-step-select');
+    document.body.classList.remove(
+      'adaptive-tour-step-select',
+      'adaptive-tour-no-next'
+    );
   });
 
   it('shows the tour when the storage key is absent', () => {
@@ -204,19 +207,6 @@ describe('MapScreen tour', () => {
       expect(screen.queryByText('project card')).toBeNull();
     });
 
-    it('exposes the start button tour id once CheckpointCard is visible', () => {
-      renderMapScreen();
-      act(() => {
-        fireEvent.click(screen.getByText('advance'));
-      });
-      act(() => {
-        fireEvent.click(screen.getByText('select cp-1'));
-      });
-      expect(
-        document.getElementById('adaptive-checkpoint-card-start')
-      ).not.toBeNull();
-    });
-
     it('ignores map clicks on locked checkpoints during the select step', () => {
       renderMapScreen();
       act(() => {
@@ -244,7 +234,7 @@ describe('MapScreen tour', () => {
       expect(screen.queryByText('First Checkpoint')).toBeNull();
     });
 
-    it('adds the select body class when on step 2 and removes it on advance', () => {
+    it('sets body classes correctly across step transitions', () => {
       renderMapScreen();
       act(() => {
         fireEvent.click(screen.getByText('advance')); // step 1
@@ -252,12 +242,33 @@ describe('MapScreen tour', () => {
       expect(
         document.body.classList.contains('adaptive-tour-step-select')
       ).toBe(true);
+      expect(document.body.classList.contains('adaptive-tour-no-next')).toBe(
+        false
+      );
       act(() => {
         fireEvent.click(screen.getByText('select cp-1')); // step 2 via nextStep
       });
       expect(
         document.body.classList.contains('adaptive-tour-step-select')
       ).toBe(false);
+      expect(document.body.classList.contains('adaptive-tour-no-next')).toBe(
+        true
+      );
+    });
+
+    it('dismisses the tour when the Start button is clicked', () => {
+      renderMapScreen();
+      act(() => {
+        fireEvent.click(screen.getByText('advance')); // step 1
+      });
+      act(() => {
+        fireEvent.click(screen.getByText('select cp-1')); // step 2
+      });
+      act(() => {
+        fireEvent.click(screen.getByRole('button', {name: 'Start'}));
+      });
+      expect(screen.queryByRole('dialog', {name: 'tour'})).toBeNull();
+      expect(localStorage.getItem(SKILL_MAP_TOUR_STORAGE_KEY)).toBe('1');
     });
   });
 
