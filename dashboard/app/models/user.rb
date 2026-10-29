@@ -610,7 +610,7 @@ class User < ApplicationRecord
 
   def enable_sharing_for_teachers
     return unless teacher?
-    self.sharing_disabled = false
+    self.sharing_disabled = false if sharing_disabled?
   end
 
   def normalize_email
