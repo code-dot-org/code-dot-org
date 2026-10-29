@@ -84,7 +84,8 @@ class DCDO < DynamicConfigBase
       # AI descriptions of Python Lab theater output; also gates the access token server-side.
       'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false),
       # Kill switch for Tutor+ (lesson deep dive); also gates its endpoints and chat server-side.
-      'lesson-deep-dive-enabled': DCDO.get('lesson-deep-dive-enabled', true)
+      'lesson-deep-dive-enabled': DCDO.get('lesson-deep-dive-enabled', true),
+      'statsig-enabled': DCDO.get('statsig-enabled', true)
     }
   end
 end
