@@ -560,7 +560,7 @@ function toneWaveOf(note: Note): ToneWave {
 function endAfterRelease(voice: Voice, at: number): void {
   getContext().setTimeout(
     () => live.delete(voice),
-    at + SYNTH_RELEASE_S - getContext().now()
+    at + SYNTH_RELEASE_S - getContext().immediate()
   );
 }
 
@@ -584,7 +584,7 @@ function freshPitch(
 /** Silences a synth now, a note it has not yet started included: Tone's
     release alone ignores an envelope still at zero. */
 function hush(synth: MonoSynth | NoiseSynth | Instrument): void {
-  const now = getContext().now();
+  const now = getContext().immediate();
   synth.envelope.cancel(now);
   synth.triggerRelease(now);
 }
@@ -659,7 +659,7 @@ function strikePluck(note: Note, hz: number, start: number): Voice {
     detune: undefined,
     end: when => endAfterRelease(voice, when),
     cut: () => {
-      const now = getContext().now();
+      const now = getContext().immediate();
       strings.forEach(pluck =>
         pluck.gain.gain.cancelScheduledValues(now).setValueAtTime(0, now)
       );
@@ -714,7 +714,9 @@ function schedule(notes: Note[]): void {
   if (liveCost() + cost > MAX_LIVE_VOICES) {
     return;
   }
-  const now = getContext().now();
+  // Tone's now() pads the audio clock by its 100 ms look-ahead for the
+  // Transport's sake; a sound fired by a game event wants the clock itself.
+  const now = getContext().immediate();
   const humanize = 1 + (Math.random() * 2 - 1) * HUMANIZE;
   for (const note of notes) {
     const nudge = note.exact ? 1 : humanize;

@@ -122,7 +122,7 @@ jest.mock('tone', () => {
   // Fresh per test: the module keeps its bus and instruments per context.
   const makeContext = () => ({
     state: 'running',
-    now: () => 10,
+    immediate: () => 10,
     setTimeout: jest.fn(),
   });
   let context = makeContext();
