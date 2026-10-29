@@ -53,7 +53,7 @@
           }
         },
         {
-          "text": "In **World**, click a square on top of some blocks to put them there.",
+          "text": "In **World**, click a square on top of some blocks to put them there. Add more if you like.",
           "check": {
             "kind": "world",
             "role": "friend"
@@ -61,7 +61,7 @@
         }
       ]
     },
-    "long_instructions": "# Friend or foe?\nIn **Images**, click **New image** and make a friend or a foe. Then, in **World**, put them on top of some blocks.",
+    "long_instructions": "# Friend or foe?\nIn **Images**, click **New image** and make a friend or a foe. Then, in **World**, put them on top of some blocks. You can add as many as you like.",
     "header_label": "Friend or foe?",
     "callouts": [
       {
