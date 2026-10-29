@@ -69,7 +69,7 @@
       }
     ],
     "objectives": {
-      "title": "**A whole new scene**\n\nWe made you a second scene.",
+      "title": "**A new scene**\n\nWe made you a second scene.",
       "items": [
         {
           "text": "Drag **go to scene** under one of your **when touches** events.",
@@ -90,8 +90,8 @@
         }
       ]
     },
-    "long_instructions": "# A whole new scene\nWe made you a second scene. Drag **go to scene** under one of your **when touches** events, then click **Play** and get there.",
-    "header_label": "A whole new scene"
+    "long_instructions": "# A new scene\nWe made you a second scene. Drag **go to scene** under one of your **when touches** events, then click **Play** and get there.",
+    "header_label": "A new scene"
   }
 }]]></config>
 </GamelabJr>

@@ -114,7 +114,7 @@
       ]
     },
     "objectives": {
-      "title": "**What happens when collected?**",
+      "title": "**Collected?**",
       "items": [
         {
           "text": "Drag **burst**, **play sound**, **say** or **set zoom** onto the dotted outline under **when touches**.",
@@ -138,8 +138,8 @@
         }
       ]
     },
-    "long_instructions": "# What happens when collected?\nDrag **burst**, **play sound**, **say** or **set zoom** onto the dotted outline under **when touches**. Then click **Play** and collect the treasure.",
-    "header_label": "What happens when collected?"
+    "long_instructions": "# Collected?\nDrag **burst**, **play sound**, **say** or **set zoom** onto the dotted outline under **when touches**. Then click **Play** and collect the treasure.",
+    "header_label": "Collected?"
   }
 }]]></config>
 </GamelabJr>
