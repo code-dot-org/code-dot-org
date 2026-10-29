@@ -974,7 +974,7 @@ describe('QuizAttemptWorkspace', () => {
       ).not.toBeInTheDocument();
     });
 
-    it('shows score, question results, and the explanation even when the quiz hides them, without Try again', () => {
+    it('shows score, question results, result tags, and the explanation even when the quiz hides them, without Try again', () => {
       renderWorkspace({
         hookState: {attempt: SUBMITTED},
         quizQuestions: [question({id: 1})],
@@ -989,6 +989,7 @@ describe('QuizAttemptWorkspace', () => {
       );
       expect(alert).toHaveAttribute('data-type', 'info');
       expect(screen.getByText('100%')).toBeInTheDocument();
+      expect(screen.getByText('Correct')).toBeInTheDocument();
       expect(screen.getByText('Because 3 + 5 = 8.')).toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: 'Try again'})

@@ -46,6 +46,7 @@ const renderCard = (
     <QuestionResultCard
       question={QUESTION}
       result={result}
+      isSubmitted
       showCorrectness={result.correct !== null}
       {...props}
     />
@@ -197,7 +198,7 @@ describe('QuestionResultCard', () => {
   it('tags nothing before the attempt is submitted', () => {
     renderCard(
       {responseData: {selectedChoiceId: '2'}, answered: undefined},
-      {showCorrectness: true}
+      {isSubmitted: false, showCorrectness: true}
     );
 
     expect(
@@ -291,6 +292,7 @@ describe('QuestionResultCard', () => {
         <QuestionResultCard
           question={MS_QUESTION}
           result={result}
+          isSubmitted
           showCorrectness={result.correct !== null}
           {...props}
         />
@@ -367,6 +369,7 @@ describe('QuestionResultCard', () => {
       render(
         <QuestionResultCard
           question={FR_QUESTION}
+          isSubmitted
           result={{
             ...BASE_RESULT,
             questionType: 'FreeResponseQuestion',
@@ -383,6 +386,7 @@ describe('QuestionResultCard', () => {
       render(
         <QuestionResultCard
           question={FR_QUESTION}
+          isSubmitted
           result={{
             ...BASE_RESULT,
             questionType: 'FreeResponseQuestion',
@@ -401,6 +405,7 @@ describe('QuestionResultCard', () => {
       render(
         <QuestionResultCard
           question={FR_QUESTION}
+          isSubmitted
           result={{
             ...BASE_RESULT,
             questionType: 'FreeResponseQuestion',
@@ -418,6 +423,7 @@ describe('QuestionResultCard', () => {
       render(
         <QuestionResultCard
           question={FR_QUESTION}
+          isSubmitted
           result={{
             ...BASE_RESULT,
             questionType: 'FreeResponseQuestion',
@@ -437,6 +443,7 @@ describe('QuestionResultCard', () => {
       render(
         <QuestionResultCard
           question={FR_QUESTION}
+          isSubmitted
           result={{
             ...BASE_RESULT,
             questionType: 'FreeResponseQuestion',
@@ -455,6 +462,7 @@ describe('QuestionResultCard', () => {
       render(
         <QuestionResultCard
           question={FR_QUESTION}
+          isSubmitted
           result={{
             ...BASE_RESULT,
             questionType: 'FreeResponseQuestion',

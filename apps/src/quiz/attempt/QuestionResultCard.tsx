@@ -24,6 +24,7 @@ export interface QuestionResultCardProps {
   questionLabel?: string;
   result: QuizQuestionResult;
   revealAnswerExplanation?: boolean;
+  isSubmitted?: boolean;
   showCorrectness?: boolean;
   // A teacher viewing a student's attempt; the selected answer is the student's.
   isViewingStudent?: boolean;
@@ -33,9 +34,10 @@ export interface QuestionResultCardProps {
 // correctness hidden.
 function getResultTagStatus(
   result: QuizQuestionResult,
+  isSubmitted: boolean,
   showCorrectness: boolean
 ): ResultTagStatus | null {
-  if (result.answered === undefined) {
+  if (!isSubmitted) {
     return null;
   }
   if (!showCorrectness) {
@@ -56,10 +58,11 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   questionLabel,
   result,
   revealAnswerExplanation,
+  isSubmitted = false,
   showCorrectness = false,
   isViewingStudent,
 }) => {
-  const tagStatus = getResultTagStatus(result, showCorrectness);
+  const tagStatus = getResultTagStatus(result, isSubmitted, showCorrectness);
   return (
     <AttemptCard
       label={questionLabel}
