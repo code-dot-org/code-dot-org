@@ -230,7 +230,7 @@ const METEOR_ACTOR = JSON.stringify({
           ]),
         },
       },
-      // `event actor` is the other side of the contact — the ball — so
+      // `object actor` is the other side of the contact — the ball — so
       // both go, and one zap does not clear the whole field.
       {
         type: 'world_on_Collisions_StartsTouchingEvent',
@@ -249,7 +249,7 @@ const METEOR_ACTOR = JSON.stringify({
             },
             {
               type: 'world_remove_actor',
-              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+              inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
             },
             {type: 'world_remove_actor', inputs: {ACTOR: me()}},
           ]),

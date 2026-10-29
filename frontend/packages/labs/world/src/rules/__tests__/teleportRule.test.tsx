@@ -110,7 +110,7 @@ describe('a traveler that comes to rest', () => {
     // written into five actor files and a sixth traveler would have arrived
     // with no fade and nothing saying why.
     //
-    // The pad's side reaches the traveler as `event actor`, so one handler on
+    // The pad's side reaches the traveler as `object actor`, so one handler on
     // one pad covers every traveler there will ever be.
     const meta = parseRuleMeta(
       'rules/teleport',

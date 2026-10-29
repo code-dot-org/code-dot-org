@@ -1,4 +1,5 @@
-// Which KIND `this actor` and `event actor` are about, and the picture of it.
+// Which KIND `this actor`, `subject actor` and `object actor` are about, and
+// the picture of it.
 //
 // Every other block that names a kind of actor shows one: a dropdown's options
 // are pictures where the project has them (`moduleOptions.pictured`), because a
@@ -13,7 +14,8 @@
 //   under `define actor`                     → that actor
 //   in the body of `add actor ⟨Coin⟩`        → a Coin
 //   in a hat whose subject is `any ⟨Crate⟩`  → a Crate
-//   `event actor` under a hat filtered on ⟨Mark⟩ → a Mark
+//   `subject actor` under a hat about `any ⟨Crate⟩` → a Crate
+//   `object actor` under a hat filtered on ⟨Mark⟩ → a Mark
 //   anywhere else                            → nobody knows
 //
 // THE LAST ROW IS THE IMPORTANT ONE. A block that shows a picture sometimes is
@@ -32,10 +34,11 @@ import {Blockly, defineExtension, type Extension} from '@code-dot-org/blockly';
 import {actorIconImage} from './actorIcons';
 import {actorIcon, actorThumbnail} from './actorThumbnails';
 import {editingActorModule} from './editingRule';
-import {SUBJECT_FIELD} from './eventSubject';
+import {SUBJECT_FIELD, subjectPropertyOf} from './eventSubject';
 import {NAME_FIELD, NAMED} from './extensions/addActorName';
 import {addOnChange, isStructuralChange} from './extensions/onChange';
 import {DEFINE_TWEEN, PLAY_TWEEN_HERE} from './tweens';
+import {definesWorld} from './workspaceRoots';
 
 /** How big the picture is drawn on a block, square. */
 const PICTURE = 20;
@@ -110,7 +113,13 @@ const kindOfValue = (
 
 /** The kind a handler is about: its subject, when that is `any ⟨Kind⟩`. */
 const subjectOf = (hat: Surroundings): ActorAbout | undefined =>
-  kindOfValue(hat.getFieldValue?.(SUBJECT_FIELD));
+  subjectPropertyOf(hat as never)
+    ? undefined
+    : kindOfValue(hat.getFieldValue?.(SUBJECT_FIELD));
+
+/** Whether the code is the game's own, where a kind's hat binds `this actor`. */
+const inGameCode = (block: Surroundings): boolean =>
+  Boolean(block.workspace && definesWorld(block.workspace as never));
 
 /**
  * The kind of actor a block is about, or nothing when nothing says.
@@ -122,7 +131,7 @@ const subjectOf = (hat: Surroundings): ActorAbout | undefined =>
  */
 export function actorAbout(
   block: Surroundings,
-  which: 'this' | 'event',
+  which: 'this' | 'subject' | 'object',
 ): ActorAbout | undefined {
   let child = block;
   for (
@@ -153,11 +162,20 @@ export function actorAbout(
       continue;
     }
     if (type.startsWith('world_on_')) {
+      if (which === 'subject') {
+        return subjectOf(at);
+      }
       if (which === 'this') {
-        // A world's hat names a kind; an actor file's is `this actor`, and
-        // then the answer is the file's own — so a subject that is not a kind
-        // is not an answer of "nobody", it is no answer at all.
-        return subjectOf(at) ?? fileActor(block);
+        // A world's hat names a kind, and in the game's own code `this actor`
+        // is that kind's actor. In a map's or a placement's code it is the
+        // placement, whatever the hat is about (specs/PROPERTY_SUBJECTS_PLAN.md).
+        // An actor file's hat is `this actor`, and then the answer is the
+        // file's own.
+        const subject = at.getFieldValue?.(SUBJECT_FIELD);
+        if (subject) {
+          return inGameCode(block) ? subjectOf(at) : undefined;
+        }
+        return fileActor(block);
       }
       const field = kindFilterField(type);
       return field ? kindOfValue(at.getFieldValue?.(field)) : undefined;
@@ -165,7 +183,7 @@ export function actorAbout(
     if (type === 'world_actor') {
       // An `.actor` file's root: the file, which the workspace was told about
       // when it opened (`editingRule`).
-      if (which === 'event') {
+      if (which !== 'this') {
         return undefined; // an actor file's handlers carry their own filter
       }
       return fileActor(block);
@@ -182,7 +200,7 @@ export function actorAbout(
     //
     // Drawing the containing actor's picture on it was an outright lie, and
     // the Pad is where it read as one: its tweens fade whatever steps on it,
-    // played on `event actor` from the pad's own handlers, and every `this
+    // played on `object actor` from the pad's own handlers, and every `this
     // actor` inside them wore a picture of the pad.
     if (type === DEFINE_TWEEN || type === PLAY_TWEEN_HERE) {
       return undefined;
@@ -200,7 +218,12 @@ export const actorPicture = (type: string): string | undefined =>
 
 /** Put the picture on the block, or take it off, as its surroundings say. */
 function drawActor(block: Blockly.Block): void {
-  const which = block.type === 'world_event_actor' ? 'event' : 'this';
+  const which =
+    block.type === 'world_object_actor'
+      ? 'object'
+      : block.type === 'world_subject_actor'
+        ? 'subject'
+        : 'this';
   const input = block.inputList?.[0];
   if (!input) {
     return;
@@ -268,7 +291,8 @@ export function refreshActorPictures(workspace: Blockly.Workspace): void {
   for (const block of workspace.getAllBlocks(false)) {
     if (
       block.type === 'world_this_actor' ||
-      block.type === 'world_event_actor'
+      block.type === 'world_subject_actor' ||
+      block.type === 'world_object_actor'
     ) {
       drawActor(block);
     }

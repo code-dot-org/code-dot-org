@@ -126,7 +126,7 @@ const padColor = pad.color('pad color', '#4da3ff');
  * pad's — the pad is the thing doing something to whatever steps on it — so
  * the pad needs an event of its own, and this is it. One handler on one pad
  * covers every traveler there will ever be, and reaches the traveler as
- * `event actor`.
+ * `object actor`.
  *
  * BOTH SIDES ARE RAISED, always, because which one a project wants is the
  * project's business. A game where only the player fades wants the traveler's

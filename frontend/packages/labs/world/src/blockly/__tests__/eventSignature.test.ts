@@ -19,7 +19,11 @@ import {Blockly} from '@code-dot-org/blockly';
 
 import {inputRule} from '../../rules/stock/input';
 import {buildDomainPalette} from '../domainBlocks';
-import {eventFlyoutBlocks} from '../extensions/eventActorToolbox';
+import {
+  eventFlyoutBlocks,
+  hatFlyoutBlocks,
+  registerEventFlyout,
+} from '../extensions/eventActorToolbox';
 import {setProjectActors} from '../moduleOptions';
 import {parseRuleMeta} from '../ruleMeta';
 import {registerProjectRules} from '../ruleRegistry';
@@ -524,7 +528,7 @@ describe('an event that carries several values', () => {
     };
 
     expect(hat.extensions.map(extension => extension.name)).toContain(
-      'world_event_values_toolbox',
+      'world_event_hat_toolbox',
     );
     expect(eventFlyoutBlocks(hat.type)).toEqual([
       {
@@ -538,9 +542,9 @@ describe('an event that carries several values', () => {
     ]);
   });
 
-  it('binds no local for a lone actor, which `event actor` names', () => {
+  it('binds no local for a lone actor, which `object actor` names', () => {
     // Every contact hat in the library. Two names for one value is worse
-    // than either alone, and of the two `event actor` is the one the lessons
+    // than either alone, and of the two `object actor` is the one the lessons
     // point at and the one that draws the kind it was filtered to.
     const hat = hatFor(
       ruleWithEvent({
@@ -552,9 +556,28 @@ describe('an event that carries several values', () => {
     ) as unknown as {type: string; extensions: Array<{name: string}>};
 
     expect(hat.extensions.map(extension => extension.name)).toContain(
-      'world_event_actor_toolbox',
+      'world_event_hat_toolbox',
     );
     expect(eventFlyoutBlocks(hat.type)).toEqual([]);
+  });
+
+  it('offers the subject by its role, and the object beside it', () => {
+    // specs/PROPERTY_SUBJECTS_PLAN.md: `this actor` where the hat is about
+    // this actor, `subject actor` where it is about a kind or a property.
+    registerEventFlyout('test_on_touched', {
+      subject: true,
+      object: true,
+      values: [],
+    });
+
+    expect(hatFlyoutBlocks('test_on_touched', '')).toEqual([
+      'world_this_actor',
+      'world_object_actor',
+    ]);
+    expect(hatFlyoutBlocks('test_on_touched', 'actors/crate')).toEqual([
+      'world_subject_actor',
+      'world_object_actor',
+    ]);
   });
 
   it('opens the handler by binding each name to its value', () => {

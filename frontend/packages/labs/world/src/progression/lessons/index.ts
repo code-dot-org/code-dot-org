@@ -1300,13 +1300,13 @@ a spike is not.
 
 The handler is told WHICH actor it touched. What it has no way to say yet is
 what sort of thing that actor is, and that is a question you can ask at any
-moment: **⟨event actor⟩ is a ⟨Coin⟩**.
+moment: **⟨object actor⟩ is a ⟨Coin⟩**.
 
 ### What you do
 
 1. Find the **when ⟨any Ball⟩ starts touching**
-   handler. The **event actor** block inside it is the thing that was touched.
-2. Wrap the print in an **if**, and ask whether the event actor **is a Coin**.
+   handler. The **object actor** block inside it is the thing that was touched.
+2. Wrap the print in an **if**, and ask whether the object actor **is a Coin**.
    Say something about coins there.
 3. Add a second **if** for the Spike, and say something else.
 4. Note what you did NOT do: two handlers. One handler that asks is a handler
@@ -3216,7 +3216,7 @@ because it is not a fact about either of them.
 1. The world keeps a value, **won**, which starts false, and nothing sets
    it.
 2. Add **when ⟨any Hero⟩ starts touching**, and inside it ask
-   **if ⟨event actor⟩ is a ⟨Flag⟩** — the same question the Ball asked about
+   **if ⟨object actor⟩ is a ⟨Flag⟩** — the same question the Ball asked about
    Coins and Spikes.
 3. Set **won** to true in there, and print something.
 4. Run it and walk the whole level. Take the coins: nothing. Walk into the
@@ -3495,7 +3495,7 @@ const bricks: WorldScenario = {
           next: {
             block: {
               type: 'world_remove_actor',
-              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+              inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
             },
           },
         },
@@ -3897,7 +3897,7 @@ branching — no new machinery, just a jump.
 ### What you do
 
 1. Add **when ⟨any Button⟩ is clicked**. In it ask which Button was clicked —
-   \`text of ⟨event actor⟩\` says which — and **send ⟨the Speech Box⟩ to line**
+   \`text of ⟨object actor⟩\` says which — and **send ⟨the Speech Box⟩ to line**
    3 for "Open it" and 4 for "Walk away".
 2. Run it, click through to the question, and answer. The two answers go to
    two different lines.
@@ -5561,11 +5561,11 @@ door is how you will know you got it right.
 
 1. Add **when ⟨any Player⟩ collects ⟨item⟩ → ⟨this actor⟩ takes ⟨event
    actor⟩**. Collecting is picking it up off the floor; taking is having it,
-   and **event actor** is the thing that was picked up.
+   and **object actor** is the thing that was picked up.
 2. Add **when ⟨any Door⟩ starts touching ⟨Player⟩** — the second dropdown is
    what the door listens for, so a Crate rolling into it is not somebody
    arriving with a key.
-3. In it: **if ⟨event actor⟩ has a ⟨Key⟩ → ⟨event actor⟩ spends a ⟨Key⟩**, then
+3. In it: **if ⟨object actor⟩ has a ⟨Key⟩ → ⟨object actor⟩ spends a ⟨Key⟩**, then
    **remove ⟨this actor⟩**. Both **⟨Key⟩**s are dropdowns of the actors in your
    project, like the one on the hat.
 4. Fetch the Key, open the first door, and walk into the second one. It stays

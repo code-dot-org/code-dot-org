@@ -581,7 +581,7 @@ const PILOT_TRIP = 0.4;
  * The fade is not here any more. It was — four roots, copied into all five
  * kinds that teleport — and what a trip LOOKS like turned out not to be a fact
  * about the traveler at all. The pad is the thing doing something to whatever
- * steps on it, so the pad performs it, once, on `event actor` (`padActor`).
+ * steps on it, so the pad performs it, once, on `object actor` (`padActor`).
  *
  * WHAT IS LEFT IS THE ONE THING THAT REALLY IS THE PILOT'S. Only an actor with
  * `Has Health` can be made safe, and asking one without it throws — "Enemy0 has
@@ -1366,7 +1366,7 @@ const switchActor = (name: string, color: string) =>
  *
  * `sends` and `receives` are the pad's own events (`rules/teleport`), raised
  * beside the traveler's `starts traveling` and `arrives`. The traveler
- * reaches this handler as `event actor`.
+ * reaches this handler as `object actor`.
  *
  * A TWEEN IS A FUNCTION OF ONE ACTOR, defined in the file that holds it and
  * called with whoever it is played on — so the pad's `fade out` runs on the
@@ -1445,7 +1445,7 @@ const padActor = (seconds: number) =>
             block: {
               type: 'world_play_tween',
               fields: {TWEEN: 'padFadeOut'},
-              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+              inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
             },
           },
         },
@@ -1457,7 +1457,7 @@ const padActor = (seconds: number) =>
             block: {
               type: 'world_play_tween',
               fields: {TWEEN: 'padFadeIn'},
-              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+              inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
             },
           },
         },

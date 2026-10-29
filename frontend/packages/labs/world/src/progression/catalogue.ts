@@ -603,7 +603,7 @@ export const TILES: readonly Tile[] = [
       {kind: 'block', type: 'world_has_trait'},
       // …and the one the question is asked ABOUT: the other actor, inside a
       // handler for an event that carries one.
-      {kind: 'block', type: 'world_event_actor'},
+      {kind: 'block', type: 'world_object_actor'},
     ],
     check: {
       kind: 'trace',
@@ -1973,7 +1973,7 @@ export const TILES: readonly Tile[] = [
     offers: [
       {kind: 'block', type: 'controls_if'},
       {kind: 'block', type: 'world_is_a'},
-      {kind: 'block', type: 'world_event_actor'},
+      {kind: 'block', type: 'world_object_actor'},
       {kind: 'block', type: 'logic_boolean'},
     ],
     check: {
@@ -2365,7 +2365,7 @@ export const TILES: readonly Tile[] = [
     unlocks: [{kind: 'rule', id: 'goals'}],
     // Only the number. The kind this handler cares about is chosen on the hat
     // itself — `when ⟨any Crate⟩ starts touching ⟨Mark ▾⟩` — so the lesson
-    // needs no `if`, no `is a` and no `event actor`, which is three blocks of
+    // needs no `if`, no `is a` and no `object actor`, which is three blocks of
     // scaffolding gone from in front of the thing it is about.
     offers: [{kind: 'block', type: 'math_number'}],
     check: {
@@ -2624,7 +2624,7 @@ export const TILES: readonly Tile[] = [
     offers: [
       {kind: 'block', type: 'controls_if'},
       {kind: 'block', type: 'logic_compare'},
-      {kind: 'block', type: 'world_event_actor'},
+      {kind: 'block', type: 'world_object_actor'},
       {kind: 'block', type: 'math_number'},
       {kind: 'block', type: 'logic_boolean'},
     ],
@@ -3060,7 +3060,7 @@ export const TILES: readonly Tile[] = [
     // grant the two ways of reading what an event carried.
     offers: [
       {kind: 'block', type: 'controls_if'},
-      {kind: 'block', type: 'world_event_actor'},
+      {kind: 'block', type: 'world_object_actor'},
       {kind: 'block', type: 'text'},
     ],
     check: {

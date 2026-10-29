@@ -5,7 +5,7 @@
 // choices too, just the project's own rather than a fixed one. Either way the
 // hat generates a guard that leaves when this is not the event you meant.
 //
-// The value itself is reached with `event actor`, a block. An earlier version
+// The value itself is reached with `object actor`, a block. An earlier version
 // bound it to a variable field on the hat, which listed every other Actor
 // variable in the file as though picking one were a choice — when the hat has
 // exactly one thing to hand over and there is nothing to choose.
@@ -60,7 +60,7 @@ describe('an event that carries an actor', () => {
   });
 
   it('binds nothing — no variable, no renamed argument', () => {
-    // The handler still receives `eventValue`; `event actor` is what reads it.
+    // The handler still receives `eventValue`; `object actor` is what reads it.
     const emitted = generate(CONTACT_HAT);
 
     expect(emitted).toContain('(world, actor, eventValue) =>');

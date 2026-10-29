@@ -1269,7 +1269,7 @@ describe('the kinds lesson’s check', () => {
             block: {
               type: 'world_is_a',
               fields: {TYPE: actorPath(kind)},
-              inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+              inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
             },
           },
           DO0: {
@@ -1308,7 +1308,7 @@ describe('the kinds lesson’s check', () => {
               block: {
                 type: 'world_is_a',
                 fields: {TYPE: actorPath('coin')},
-                inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+                inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
               },
             },
             DO0: {
@@ -2934,7 +2934,7 @@ describe('the level lesson’s check', () => {
                     block: {
                       type: 'world_is_a',
                       fields: {TYPE: actorPath('flag')},
-                      inputs: {ACTOR: {block: {type: 'world_event_actor'}}},
+                      inputs: {ACTOR: {block: {type: 'world_object_actor'}}},
                     },
                   },
                   DO0: {block: win},
@@ -4631,7 +4631,7 @@ describe('the goal lesson’s check', () => {
           x: 1400,
           y: by > 0 ? 20 : 220,
           // The KIND, on the hat. It is the same guard the learner would
-          // otherwise write with `if ⟨event actor⟩ is a ⟨Mark⟩`, and it is
+          // otherwise write with `if ⟨object actor⟩ is a ⟨Mark⟩`, and it is
           // three blocks shorter.
           fields: {FILTER0: actorPath('mark'), SUBJECT: actorPath('crate')},
           next: {block: scoring(by)},
@@ -5080,7 +5080,7 @@ describe('the dials lesson’s check', () => {
 
 describe('the key lesson’s check', () => {
   const lesson = LESSONS['adventure/keys'];
-  const eventActor = () => ({block: {type: 'world_event_actor'}});
+  const eventActor = () => ({block: {type: 'world_object_actor'}});
   const thisActor = () => ({block: {type: 'world_this_actor'}});
   /** The kind, as its dropdown holds it: a world's own actor by its id. */
   const KEY = actorPath('key');
@@ -5105,7 +5105,7 @@ describe('the key lesson’s check', () => {
               type: 'world_do_Inventory_TakesAction',
               inputs: {
                 ACTOR: thisActor(),
-                VALUE: {block: {type: 'world_event_actor'}},
+                VALUE: {block: {type: 'world_object_actor'}},
               },
             },
           },
@@ -5266,7 +5266,7 @@ describe('the two-rooms lesson’s check', () => {
       doorway({
         type: 'world_set_position',
         inputs: {
-          ACTOR: {block: {type: 'world_event_actor'}},
+          ACTOR: {block: {type: 'world_object_actor'}},
           X: {shadow: {type: 'math_number', fields: {NUM: 48}}},
           Y: {shadow: {type: 'math_number', fields: {NUM: 176}}},
         },

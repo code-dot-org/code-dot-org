@@ -112,8 +112,7 @@ import {
 } from './extensions/effectParamsMutator';
 import {enhanceButtonExtension} from './extensions/enhanceButton';
 import {
-  eventActorToolboxExtension,
-  eventValuesToolboxExtension,
+  eventHatToolboxExtension,
   registerEventFlyout,
 } from './extensions/eventActorToolbox';
 import {installIfPlusMinus} from './extensions/ifPlusMinus';
@@ -1448,7 +1447,7 @@ const filterFieldName = (index: number): string => `FILTER${index}`;
  *
  * Unchanged since there was only one, which is the point: every handler
  * written before an event could carry two generates exactly what it did, and
- * `event value` and `event actor` go on meaning this.
+ * `event value` and `object actor` go on meaning this.
  */
 const CARRIED_FIRST = 'eventValue';
 
@@ -1594,10 +1593,10 @@ const defineEventBlock = (event: EventMeta) => {
   }
   // What the `+` offers, and whether there is one at all.
   //
-  // A LONE ACTOR KEEPS `event actor`. That is every contact hat in the
+  // A LONE ACTOR KEEPS `object actor`. That is every contact hat in the
   // library — `when ⟨this actor⟩ starts touching ⟨Brick⟩` carries one actor,
   // which the stock rule's signature calls `other` — and of the two names for
-  // that one value, `event actor` is the one the lessons point at and the one
+  // that one value, `object actor` is the one the lessons point at and the one
   // that draws the kind it was filtered to. Two names for one value would be
   // worse than either alone, so the author's name is not also offered there,
   // and the hat binds no local. Every other shape of signature hands its
@@ -1611,22 +1610,27 @@ const defineEventBlock = (event: EventMeta) => {
     name: value.name,
     type: paramFlavour(value.type).type,
   }));
-  if (lonelyActor) {
-    extensions.push(eventActorToolboxExtension);
-  } else if (carried.length > 0) {
+  if (!lonelyActor && carried.length > 0) {
     registerEventLocals(eventBlockType(event), locals);
-    registerEventFlyout(
-      eventBlockType(event),
-      carried.map((value, index) => ({
-        type: paramFlavour(value.type).getterType,
-        // BY NAME, not by id. The getter is offered in a file that has never
-        // seen this event's declaration, so the name is the only thing the
-        // two ends share; Blockly makes the variable real when the block is
-        // dragged out (`Workspace.getPotentialVariableMap`).
-        fields: {VAR: {name: locals[index].name, type: locals[index].type}},
-      })),
-    );
-    extensions.push(eventValuesToolboxExtension);
+  }
+  // The hat's `+`: the subject, the object, and the named values
+  // (`extensions/eventActorToolbox`, specs/PROPERTY_SUBJECTS_PLAN.md).
+  registerEventFlyout(eventBlockType(event), {
+    subject: forActor,
+    object: Boolean(lonelyActor),
+    values: lonelyActor
+      ? []
+      : carried.map((value, index) => ({
+          type: paramFlavour(value.type).getterType,
+          // BY NAME, not by id. The getter is offered in a file that has never
+          // seen this event's declaration, so the name is the only thing the
+          // two ends share; Blockly makes the variable real when the block is
+          // dragged out (`Workspace.getPotentialVariableMap`).
+          fields: {VAR: {name: locals[index].name, type: locals[index].type}},
+        })),
+  });
+  if (forActor || lonelyActor || carried.length > 0) {
+    extensions.push(eventHatToolboxExtension);
   }
   registerMemberBlockType(eventBlockType(event), event.ref);
   return defineBlock({
@@ -4210,7 +4214,9 @@ registerValueShadows('world_kind_of', [
 ]);
 
 /**
- * The actor an event was about — the one just touched, the one just hit.
+ * The OBJECT of an event: the one actor it carries — the one just touched,
+ * the one just hit. Beside `subject actor`, the actor the event happened to
+ * (specs/PROPERTY_SUBJECTS_PLAN.md).
  *
  * `event value` says the same thing untyped, and would do: this is that block
  * with a name and a type. Both matter here. The name, because "the actor this
@@ -4228,19 +4234,56 @@ registerValueShadows('world_kind_of', [
  * unguarded for the reason `event value` is: what an event carries depends on
  * the event, and a block cannot know which handler it will end up in.
  */
-const worldEventActor = defineBlock({
-  type: 'world_event_actor',
+const worldObjectActor = defineBlock({
+  type: 'world_object_actor',
   message0: '%1',
-  args0: [{type: 'field_label', name: 'WORD', text: 'event actor'}],
+  args0: [{type: 'field_label', name: 'WORD', text: 'object actor'}],
   output: 'Actor',
   style: 'sprite_blocks',
   extensions: [actorPictureExtension],
   tooltip:
-    'The actor this event is about — the one that was just touched. Only ' +
-    'meaningful inside a “when” block for an event that carries an actor.',
+    'The other actor this event carries — the one that was just touched. ' +
+    'Only meaningful inside a “when” block for an event that carries an actor.',
   generator: {
     javascript() {
       return ['eventValue', Order.ATOMIC] as [string, number];
+    },
+  },
+});
+
+/**
+ * The SUBJECT of an event: the actor it happened to — the Player in `when
+ * ⟨current player⟩ is damaged` (specs/PROPERTY_SUBJECTS_PLAN.md).
+ *
+ * Where the subject is `this actor` the two are the same actor, and the hat
+ * offers `this actor` instead. Where the World holds the handler — a subject
+ * that is a property, or a kind heard from a map's, a screen's or a
+ * placement's code — it is the handler's `subject`; anywhere else the
+ * handler's actor.
+ */
+const worldSubjectActor = defineBlock({
+  type: 'world_subject_actor',
+  message0: '%1',
+  args0: [{type: 'field_label', name: 'WORD', text: 'subject actor'}],
+  output: 'Actor',
+  style: 'sprite_blocks',
+  extensions: [actorPictureExtension],
+  tooltip:
+    'The actor this event happened to. Only meaningful inside a “when” ' +
+    'block.',
+  generator: {
+    javascript(block, generator) {
+      let hat: Block | null = block.getParent();
+      while (hat && !hat.type.startsWith('world_on_')) {
+        hat = hat.getParent();
+      }
+      const inMap = (generator as {__mapModule?: string}).__mapModule;
+      const heldByWorld =
+        hat && (subjectPropertyOf(hat) || (subjectKindOf(hat) && inMap));
+      return [heldByWorld ? 'subject' : 'actor', Order.ATOMIC] as [
+        string,
+        number,
+      ];
     },
   },
 });
@@ -10316,7 +10359,8 @@ export const DOMAIN_BLOCKS = [
   ...QUERY_BLOCKS,
   ...EVENT_BLOCKS,
   worldPrint,
-  worldEventActor,
+  worldObjectActor,
+  worldSubjectActor,
   worldEventValue,
   worldKindOf,
   worldListAdd,
@@ -10619,7 +10663,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // compares against to know it is done.
       'world_actor_age',
       // The actor an event was about, inside a handler for one that carries it.
-      'world_event_actor',
+      'world_object_actor',
       // …and the other half of what a hat hands over: what the event CARRIED —
       // the key that was pressed, the frame an animation reached. It was in
       // Console, which it had nothing to do with: it landed there because

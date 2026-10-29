@@ -70,7 +70,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'logic/kinds': [
     'controls_if',
     'world_is_a',
-    'world_event_actor',
+    'world_object_actor',
     'world_print',
   ],
   // The two Memory lessons need numbers and arithmetic, which are Place's
@@ -163,7 +163,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
     'logic_compare',
     'math_number',
   ],
-  'story/choice': ['controls_if', 'logic_compare', 'world_event_actor'],
+  'story/choice': ['controls_if', 'logic_compare', 'world_object_actor'],
   'story/scene': [
     'world_set_sprite',
     'world_set_background',
@@ -207,7 +207,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'adventure/rooms': ['world_load_map'],
   'adventure/keys': [
     'controls_if',
-    'world_event_actor',
+    'world_object_actor',
     'world_remove_actor',
     'text',
   ],
@@ -231,7 +231,7 @@ const ASKS_FOR: Partial<Record<TileId, readonly string[]>> = {
   'platformer/level': [
     'controls_if',
     'world_is_a',
-    'world_event_actor',
+    'world_object_actor',
     'world_print',
   ],
 };

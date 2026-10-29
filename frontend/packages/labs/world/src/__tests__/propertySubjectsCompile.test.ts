@@ -21,8 +21,22 @@ const says = (words: string) => ({
   },
 });
 
+/** `set text of ⟨this actor⟩ to ⟨kind of ⟨subject actor⟩⟩`. */
+const saysSubject = () => ({
+  type: 'world_set_ActorsLabel_TextProperty',
+  inputs: {
+    ACTOR: {shadow: {type: 'world_this_actor'}},
+    VALUE: {
+      block: {
+        type: 'world_kind_of',
+        inputs: {ACTOR: {block: {type: 'world_subject_actor'}}},
+      },
+    },
+  },
+});
+
 /** The Scoreboard's own code: `when ⟨subject⟩ is damaged: say "hurt"`. */
-const scoreboardHears = (subject: string) => ({
+const scoreboardHears = (subject: string, body: object = says('hurt')) => ({
   blocks: {
     languageVersion: 0,
     blocks: [
@@ -31,7 +45,7 @@ const scoreboardHears = (subject: string) => ({
         fields: {SUBJECT: subject},
         x: 20,
         y: 20,
-        next: {block: says('hurt')},
+        next: {block: body},
       },
     ],
   },
@@ -41,7 +55,11 @@ const scoreboardHears = (subject: string) => ({
  * The starter, its Main Screen holding `current player`, set to the Player
  * as the screen loads, and the Scoreboard hearing `subject`.
  */
-const project = (subject: string, setsPlayer = true) => {
+const project = (
+  subject: string,
+  setsPlayer = true,
+  body: object = says('hurt'),
+) => {
   const files = projectFiles(DEFAULT_PROJECT.source);
   const screen = JSON.parse(files[SCREEN]) as {
     properties?: object[];
@@ -54,7 +72,7 @@ const project = (subject: string, setsPlayer = true) => {
   ];
   screen.actors = screen.actors.map(actor =>
     actor.id === 'Scoreboard'
-      ? {...actor, blocks: scoreboardHears(subject)}
+      ? {...actor, blocks: scoreboardHears(subject, body)}
       : actor,
   );
   if (setsPlayer) {
@@ -165,5 +183,25 @@ describe('a hat about a kind, in a placement’s own code', () => {
     );
     hurt(player());
     expect(scoreboard()).toBe('hurt');
+  }, 60000);
+});
+
+describe('`subject actor`', () => {
+  // specs/PROPERTY_SUBJECTS_PLAN.md: the actor the event happened to, beside
+  // `this actor`, which is still the placement.
+  it('is the actor a property holds', async () => {
+    const {scoreboard, hurt, player} = await play(
+      project(CURRENT, true, saysSubject()),
+    );
+    hurt(player());
+    expect(scoreboard()).toBe('actors/player');
+  }, 60000);
+
+  it('is the actor of a kind heard from a placement’s code', async () => {
+    const {scoreboard, hurt, player} = await play(
+      project('actors/player', false, saysSubject()),
+    );
+    hurt(player());
+    expect(scoreboard()).toBe('actors/player');
   }, 60000);
 });

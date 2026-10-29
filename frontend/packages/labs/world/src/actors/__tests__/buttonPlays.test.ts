@@ -65,7 +65,7 @@ const WORLD = JSON.stringify({
                 block: {
                   type: 'world_get_ActorsLabel_TextProperty',
                   // `this actor` inside an actor-scoped hat is the one the
-                  // event was about. `event actor` is for an event that CARRIES
+                  // event was about. `object actor` is for an event that CARRIES
                   // one, and this one carries a mouse button.
                   inputs: {ACTOR: me()},
                 },

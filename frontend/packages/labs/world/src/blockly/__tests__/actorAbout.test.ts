@@ -1,4 +1,4 @@
-// Which kind `this actor` and `event actor` are about (blockly/actorAbout).
+// Which kind `this actor` and `object actor` are about (blockly/actorAbout).
 //
 // The picture is the point, and the resolver is what decides whether there is
 // one: a block that shows a picture SOMETIMES is only worth having if the rule
@@ -74,6 +74,8 @@ const aWorld = () => {
     {id: 'w1', type: 'world_world', getFieldValue: () => 'My World'},
   ];
   return {
+    // The game's own code (`markCode`), where a kind's hat binds `this actor`.
+    holdsCodeOf: 'world',
     getTopBlocks: () => blocks,
     getBlockById: (wanted: string) =>
       blocks.find(block => block.id === wanted) ?? null,
@@ -169,7 +171,7 @@ describe('what `this actor` is about', () => {
 
   it('is nobody inside a tween, whose actor is whoever plays it', () => {
     // THE PAD IS WHY. Its tweens fade whatever steps on it — they are played
-    // on `event actor` from the pad's own handlers — and every `this actor`
+    // on `object actor` from the pad's own handlers — and every `this actor`
     // inside them wore a picture of the pad, which is a picture of the wrong
     // actor. A tween is a function of the actor it is played on
     // (`domainBlocks`, the `define tween` generator says so outright), so at
@@ -213,7 +215,7 @@ describe('what `this actor` is about', () => {
   });
 });
 
-describe('what `event actor` is about', () => {
+describe('what `object actor` is about', () => {
   it('is the kind the hat is filtered to', () => {
     const workspace = aWorld();
     const hat = {
@@ -222,7 +224,7 @@ describe('what `event actor` is about', () => {
       fields: {FILTER0: 'actors/mark'},
     };
 
-    expect(actorAbout(asBlock({parent: hat, workspace}), 'event')).toEqual({
+    expect(actorAbout(asBlock({parent: hat, workspace}), 'object')).toEqual({
       type: 'actors/mark',
       name: 'mark',
     });
@@ -236,7 +238,7 @@ describe('what `event actor` is about', () => {
       fields: {FILTER0: ''},
     };
 
-    expect(actorAbout(asBlock({parent: hat}), 'event')).toBeUndefined();
+    expect(actorAbout(asBlock({parent: hat}), 'object')).toBeUndefined();
   });
 
   it("is still the hat's, inside an `add actor` body under it", () => {
@@ -260,7 +262,7 @@ describe('what `event actor` is about', () => {
     };
     body.parent = add;
 
-    expect(actorAbout(asBlock(body), 'event')).toEqual({
+    expect(actorAbout(asBlock(body), 'object')).toEqual({
       type: 'actors/mark',
       name: 'mark',
     });
@@ -275,7 +277,7 @@ describe('what `event actor` is about', () => {
       fields: {FILTER0: 'space'},
     };
 
-    expect(actorAbout(asBlock({parent: hat}), 'event')).toBeUndefined();
+    expect(actorAbout(asBlock({parent: hat}), 'object')).toBeUndefined();
   });
 });
 

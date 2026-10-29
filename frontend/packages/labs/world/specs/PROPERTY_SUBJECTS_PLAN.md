@@ -1,6 +1,6 @@
 # Plan: an actor property as an event's subject
 
-STATUS: BUILDING, October 2026. Steps 1 to 3 are done.
+STATUS: BUILDING, October 2026. Steps 1 to 3 are done, and step 4 is begun.
 
 A hat can be about `this actor` or `any ⟨kind⟩`. This plan adds a third
 subject: an actor-typed property in scope. `when ⟨current player⟩ is hurt`
@@ -42,8 +42,19 @@ handler changed it (specs/SCREEN_STACK_PLAN.md, "Not in this plan").
   of them. Nothing is registered on an actor, so nothing has to be moved
   when the property changes and nothing is left on a removed actor.
 - **`this actor` keeps its meaning.** In a placement's code it is the
-  placement; in an actor file it is the actor. Which block names the actor
-  the event happened to is open (see "Open").
+  placement; in an actor file it is the actor.
+- **A handler names what its event is about by role.** `subject actor` is
+  the actor the event happened to, and `object actor` the one actor it
+  carries, the other side of a contact; `event actor` is renamed to it,
+  since beside a subject it could mean either. Where the subject is `this
+actor` the two are the same and the handler reads `this actor`. A value
+  the event names as an argument is read with the variable getter, as now
+  (specs/EVENT_VALUES_PLAN.md). Where the kind is known, the blocks show it:
+  `subject ⟨picture⟩`, `object ⟨picture⟩`.
+- **The hat's `+` offers them.** Every hat's `+` holds the subject (`this
+actor`, or `subject actor` where the subject is a kind or a property),
+  then `object actor` where the event carries one actor, then the getters
+  of its named values.
 - **Which properties are in scope**, by where the code is:
   - every file: the Main Screen's actor values;
   - a screen's own code and its placements': that screen's own actor
@@ -106,9 +117,10 @@ screen loads` for the first: `set current player to ⟨any Player⟩`.
 3. Compiling: a property subject in each scope, and a kind subject in a
    placement's or screen's code through the same path. `this actor` stays
    the placement. Tests through compiled projects.
-4. The editor: the subject dropdown's property rows by scope, `(nobody)`
-   in the inspector, the console note in a debug run. Renaming a property
-   rewrites the hats on it.
+4. The roles: `subject actor`, `event actor` renamed `object actor`, and
+   the hat's `+` offering them. Then the editor: the subject dropdown's
+   property rows by scope, `(nobody)` in the inspector, the console note in
+   a debug run. Renaming a property rewrites the hats on it.
 5. The starter: the Main Screen declares `current player`, sets it as the
    game starts and wherever it loads a level, and the Health Bar's
    placement code hears `when ⟨current player⟩ is hurt` and sets its own
@@ -157,15 +169,18 @@ screen loads` for the first: `set current player to ⟨any Player⟩`.
   map's as well as a screen's; `World.on` still ties only a screen's.
 - **Compared before and after**: no difference but the random lessons'.
   No content uses a property subject or a kind in placement code yet.
+- **Step 4 began with the roles.** `event actor` is `object actor` now,
+  the block type and every lesson, fixture and drawer that named it, with
+  no shim for the old type (specs/RETIREMENTS_PLAN.md). `subject actor` is
+  new: the handler's `subject` where the World holds it, its actor
+  anywhere else. Every hat that has something to name gets one `+`
+  (`eventHatToolboxExtension`), whose list is rewritten as the hat's
+  subject changes, since the mini toolbox reads it each time it opens.
+- **`this actor` under a kind's hat is that kind only in the game's own
+  code**, where the handler binds it; in a map's or a placement's code it is
+  the placement, and is drawn with no picture of the hat's kind.
 
 ## Open
-
-- **Naming the actor the event happened to.** The plan said `event actor`,
-  and that is wrong: `event actor` is the value an event carries (the other
-  actor in a contact), not the actor it happened to. A property subject is
-  read through the property itself (`health of ⟨current player⟩`), so it
-  needs nothing. A kind heard from a placement's code does: the handler
-  binds it as `subject`, and no block reads that yet. Before step 4.
 
 - **Telling a display the subject has arrived or changed.** A handler on
   `is hurt` does not run when the player first arrives or a new level gives
