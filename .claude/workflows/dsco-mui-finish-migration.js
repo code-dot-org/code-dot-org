@@ -129,7 +129,11 @@ const DISCOVER_SCHEMA = {
     eslintBanPresent: {type: 'boolean'},
     codemod: {type: 'string', description: 'The component codemod path, or ""'},
     rows: {type: 'array', items: ROW_SCHEMA, description: 'The Deferred changes table, in table order'},
-    storyGaps: {type: 'array', items: {type: 'string'}, description: 'State cells of the "Story gaps" table, in table order; [] when the section is absent or says None'},
+    storyGaps: {
+      type: 'array',
+      description: 'Rows of the "Story gaps" table, in table order; [] when the section is absent or says None',
+      items: {type: 'object', required: ['state', 'why'], properties: {state: {type: 'string'}, why: {type: 'string'}}},
+    },
     reference: {type: 'string', description: 'A reference implementation the plan names (PR number, branch), or ""'},
     consumerFiles: {type: 'array', items: {type: 'string'}, description: 'Every file outside the component directory that imports from its entry point, sources and tests'},
     consumerTestFiles: {type: 'array', items: {type: 'string'}, description: 'apps/ and frontend/ test files of the consumers'},
@@ -167,7 +171,8 @@ ${TREE_RULES}
   row read after and movesDom from the After and Moves DOM columns; when a plan predates
   them, infer after from the prose around the table ("X goes before Y") and movesDom from
   what the row says MUI would do. ticket is the bare key from the Ticket column, without
-  any qualifier. storyGaps: the State cells of the "Story gaps" table, if the plan has one.
+  any qualifier. storyGaps: the State and Why cells of each "Story gaps" row, if the plan
+  has that section.
   reference: a PR or branch the plan names as the reference implementation.
 
 ─── STEP 2 — The tree ─────────────────────────────────────────────────────────
@@ -189,8 +194,8 @@ ${TREE_RULES}
   next.behavior is then the cell's text verbatim.
   - delete-legacy is allowed when legacySourceFiles is non-empty, legacyImports is empty
     and eslintBanPresent is true.
-  - Step 4 is complete when legacySourceFiles, legacyExports and legacyImports are empty
-    and eslintBanPresent is false.
+  - Step 4 is complete when legacySourceFiles, legacyExports, legacyImports and storyGaps
+    are empty and eslintBanPresent is false.
   - A row is allowed when step 4 is complete and every row in its after list is gone from
     the table.
   - With no request: delete-legacy if legacySourceFiles is non-empty, else the first
@@ -213,21 +218,23 @@ const step4Left = [
   discover.eslintBanPresent && `the ${ESLINT_APPS} ban`,
   discover.storyGaps.length && `${discover.storyGaps.length} story gap(s)`,
 ].filter(Boolean)
+// delete-legacy needs legacy source, so once it is gone no run can finish step 4.
+const halfDone =
+  !discover.legacySourceFiles.length && step4Left.length
+    ? `. Step 4 is half done: ${step4Left.join(', ')} remain with the legacy source gone; finish them by hand${discover.storyGaps.length ? ` (a story per "Story gaps" row in ${PLAN_DOC}, then delete the section)` : ''}`
+    : ''
 if (stepArg && next.kind !== 'blocked') {
   const picked = next.kind === 'behavior' ? next.behavior : next.kind
   if (cell(picked) !== cell(stepArg)) throw new Error(`Requested step "${stepArg}", but Discover picked "${picked}"`)
 }
 if (next.kind === 'done') {
   if (step4Left.length || discover.rows.length) {
-    throw new Error(`Discover reported done, but ${[...step4Left, discover.rows.length && `${discover.rows.length} deferred row(s)`].filter(Boolean).join(', ')} remain`)
+    throw new Error(`Discover reported done, but ${[...step4Left, discover.rows.length && `${discover.rows.length} deferred row(s)`].filter(Boolean).join(', ')} remain${halfDone}`)
   }
   log(`${component}: nothing left to finish (${next.reason})`)
   return {component, step: 'done', reason: next.reason}
 }
-if (next.kind === 'blocked') {
-  const halfDone = !discover.legacySourceFiles.length && step4Left.length
-  throw new Error(`${component}: ${next.reason}${halfDone ? `. Step 4 is half done: ${step4Left.join(', ')} remain with the legacy source gone; finish them by hand` : ''}`)
-}
+if (next.kind === 'blocked') throw new Error(`${component}: ${next.reason}${halfDone}`)
 const row = next.kind === 'behavior' ? discover.rows.find(r => cell(r.behavior) === cell(next.behavior)) : null
 if (next.kind === 'behavior' && !row) throw new Error(`Discover picked "${next.behavior}", which is not a row of the table`)
 // Checks the pick against Discover's own facts; Verify's import audit catches a wrong fact.
@@ -240,7 +247,7 @@ if (next.kind === 'delete-legacy') {
   if (why.length) throw new Error(`delete-legacy is not allowed: ${why.join('; ')}`)
 }
 if (row) {
-  if (step4Left.length) throw new Error(`"${row.behavior}" must wait until step 4 is complete: ${step4Left.join(', ')} remain`)
+  if (step4Left.length) throw new Error(`"${row.behavior}" must wait until step 4 is complete: ${step4Left.join(', ')} remain${halfDone}`)
   const pending = row.after.filter(b => discover.rows.some(r => cell(r.behavior) === cell(b)))
   if (pending.length) throw new Error(`"${row.behavior}" must follow ${pending.join(', ')}, still in the table`)
 }
@@ -316,8 +323,9 @@ STORY GAPS: ${JSON.stringify(gaps)}
 5. Docs: ${STATUS_DOC} row notes step 4 is done; ${remainingAfter.length ? `keep its state, since ${remainingAfter.length} deferred row(s) remain` : 'the table is empty, so set it to **Migrated**'}; the component README
    loses its legacy section; ${SKILL_DOC} names the plain import; ${PLAN_DOC} gains a
    "Legacy source deleted" paragraph under its Outcome.${gaps.length ? `
-6. Stories: add one story per STORY GAPS state, beside the renamed stories, then delete
-   the "Story gaps" section from ${PLAN_DOC}.` : ''}${codemodGoes(gaps.length ? 7 : 6)}`
+6. Stories: add one story per STORY GAPS row, beside the renamed stories; each must
+   render its state and exercise what its why says the twins miss. Then delete the
+   "Story gaps" section from ${PLAN_DOC}.` : ''}${codemodGoes(gaps.length ? 7 : 6)}`
 
 const rowBrief = row && `STEP 5, one deferred behavior: ${JSON.stringify(row)}
 OTHER ROWS (leave them alone; their legacy behavior stays): ${JSON.stringify(remainingAfter.map(r => r.behavior))}
@@ -401,7 +409,7 @@ CONSUMER TESTS: ${JSON.stringify(discover.consumerTestFiles)}
 6. UI-test hooks: grep ${UI_TEST_DIRS} for selectors that depend on what changed. List each
    feature or spec in uiTestsNotRun; a selector that no longer matches the new DOM is a
    failure.${!row && gaps.length ? `
-7. Story gaps: ${COMPONENT_DIR}/stories has a story for each of ${JSON.stringify(gaps)}, and
+7. Story gaps: ${COMPONENT_DIR}/stories has a story for each of ${JSON.stringify(gaps.map(g => g.state))}, and
    ${PLAN_DOC} has no "Story gaps" section. In ${STORYBOOK}: yarn vitest --run
    --project=storybook ../../packages/component-library/src/${component} (axe on every
    story; CI runs the same).` : ''}
