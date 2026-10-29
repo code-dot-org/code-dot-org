@@ -7,11 +7,15 @@ import {
   Compressor,
   FatOscillator,
   Filter,
+  FMSynth,
   Gain,
   getContext,
   LFO,
+  MembraneSynth,
+  MetalSynth,
   Noise,
   Oscillator,
+  PluckSynth,
   start as startAudio,
   ToneAudioNode,
 } from 'tone';
@@ -23,6 +27,10 @@ export const WAVES = [
   'sawtooth',
   'double',
   'noise',
+  'drum',
+  'bell',
+  'clang',
+  'pluck',
 ] as const;
 export const PITCHES = ['low', 'middle', 'high'] as const;
 export const LENGTHS = ['short', 'medium', 'long'] as const;
@@ -38,6 +46,10 @@ export const PATTERNS = [
 ] as const;
 
 export type Wave = (typeof WAVES)[number];
+/** Waves an instrument plays rather than an oscillator: a drum skin, a
+    bell, a struck cymbal, a plucked string. */
+export type SynthWave = 'drum' | 'bell' | 'clang' | 'pluck';
+const SYNTH_WAVES: readonly string[] = ['drum', 'bell', 'clang', 'pluck'];
 export type Pitch = (typeof PITCHES)[number];
 export type Length = (typeof LENGTHS)[number];
 export type Pattern = (typeof PATTERNS)[number];
@@ -54,8 +66,9 @@ export interface Note {
   /** Seconds after the sound starts. */
   at: number;
   seconds: number;
-  /** Noise is white noise through a bandpass filter centered on hz. */
-  type: OscillatorType | 'noise';
+  /** Noise is white noise through a bandpass filter centered on hz; a
+      synth wave is an instrument pitched at hz. */
+  type: OscillatorType | 'noise' | SynthWave;
   /** Peak gain, 0 to 1. */
   volume: number;
   /** The frequency reached as the note ends, for a slide. */
@@ -86,6 +99,10 @@ const VOLUME: Record<Wave, number> = {
   sawtooth: 0.08,
   double: 0.08,
   noise: 0.3,
+  drum: 0.4,
+  bell: 0.2,
+  clang: 0.12,
+  pluck: 0.45,
 };
 const DOUBLE_VOICES = 2;
 // How narrow the band of noise is; higher rings closer to a pitch.
@@ -97,8 +114,8 @@ const RUN_NOTES: Record<Length, number> = {short: 2, medium: 3, long: 4};
 // Each note of a run rings past the next one's start.
 const RUN_OVERLAP = 1.5;
 const WOBBLE_RATE_HZ = 8;
-// About a semitone either side.
-const WOBBLE_DEPTH = 0.06;
+// A semitone either side.
+const WOBBLE_DEPTH_CENTS = 100;
 // The wobble deepens from nothing over this long, so the note settles on
 // its pitch before it shakes; a short note gets half its length.
 const WOBBLE_ONSET_S = 0.12;
@@ -109,6 +126,27 @@ const CHORD_RATIOS = [1, 5 / 4, 3 / 2] as const;
 const MINOR_CHORD_RATIOS = [1, 6 / 5, 3 / 2] as const;
 // How far apart unison oscillators sit, in cents, end to end.
 const UNISON_SPREAD_CENTS = 16;
+// A drum's pitch drops from this many octaves above the note over this
+// long: the thump of a struck skin.
+const DRUM_OCTAVES = 4;
+const DRUM_PITCH_DECAY_S = 0.05;
+// A bell is a sine modulated by another a little over three times as fast,
+// which gives the clashing overtones of struck metal.
+const BELL_HARMONICITY = 3.01;
+const BELL_MODULATION_INDEX = 12;
+// A clang is a cymbal: a bright, inharmonic ring under a high-pass sweep.
+const CLANG_HARMONICITY = 5.1;
+const CLANG_MODULATION_INDEX = 24;
+const CLANG_RESONANCE_HZ = 3000;
+const CLANG_OCTAVES = 1.5;
+// How long an instrument's release rings past the note's end.
+const SYNTH_RELEASE_S = 0.1;
+// A plucked string: a burst of noise into a tuned delay. Its pitch cannot
+// bend, so a slide or wobble plays as a plain pluck and a chord strums
+// its notes together.
+const PLUCK_ATTACK_NOISE = 1;
+const PLUCK_DAMPENING_HZ = 4000;
+const PLUCK_RESONANCE = 0.9;
 
 /** The effect four strings name, or null when any is not an option. */
 export function asSoundEffect(
@@ -284,18 +322,24 @@ const FILTER_MAX_HZ = 12000;
 const FILTER_MIN_HZ = 200;
 
 interface Voice {
-  source: Oscillator | FatOscillator | Noise;
-  /** A wobble's vibrato, started and stopped with the source. */
-  lfo?: LFO;
   /** Oscillators sounding, for the voice cap. */
   cost: number;
-  /** The pitch a slide, wobble or arpeggio drives: the oscillator's
-      frequency, or a noise voice's bandpass center. */
-  frequency: Oscillator['frequency'] | Filter['frequency'];
+  /** The pitch a slide or arpeggio drives: the oscillator's or
+      instrument's frequency, or a noise voice's bandpass center; none for
+      a pluck, whose pitch is set when the string is struck. */
+  frequency: Oscillator['frequency'] | Filter['frequency'] | undefined;
+  /** The pitch's offset in cents, which a wobble sways. A signal fed into
+      another signal takes it over, so the wobble rides here, where the
+      resting value is zero, not on the frequency. */
+  detune: Oscillator['detune'] | undefined;
   /** The node the voice's filter attaches to. */
   tail: ToneAudioNode;
   /** Everything to dispose once the voice has ended. */
   nodes: ToneAudioNode[];
+  /** Ends the sound at the context time, then lets the nodes go. */
+  end: (at: number) => void;
+  /** Cuts the sound now. */
+  cut: () => void;
 }
 
 let bus: Compressor | null = null;
@@ -320,6 +364,31 @@ const muted = (): boolean =>
   typeof window !== 'undefined' &&
   new URLSearchParams(window.location.search).has('quiet');
 
+function endVoice(voice: Voice): void {
+  live.delete(voice);
+  voice.nodes.forEach(node => node.dispose());
+}
+
+/** A voice around a started source: it ends when the source stops. */
+function sourceVoice(
+  source: Oscillator | FatOscillator | Noise,
+  voice: Omit<Voice, 'end' | 'cut'>
+): Voice {
+  const full: Voice = {
+    ...voice,
+    end: at => {
+      source.stop(at);
+      source.onstop = () => endVoice(full);
+    },
+    cut: () => {
+      source.onstop = () => undefined;
+      source.stop();
+      endVoice(full);
+    },
+  };
+  return full;
+}
+
 function startOscillator(
   type: OscillatorType,
   hz: number,
@@ -341,13 +410,13 @@ function startOscillator(
   const sum = new Gain(1 / Math.sqrt(count));
   source.connect(sum);
   source.start(start);
-  return {
-    source,
+  return sourceVoice(source, {
     cost: count,
     frequency: source.frequency,
+    detune: source.detune,
     tail: sum,
     nodes: [source, sum],
-  };
+  });
 }
 
 /** White noise through a bandpass filter whose center frequency plays the
@@ -357,13 +426,100 @@ function startNoise(hz: number, start: number): Voice {
   const band = new Filter({type: 'bandpass', frequency: hz, Q: NOISE_Q});
   source.connect(band);
   source.start(start);
-  return {
-    source,
+  return sourceVoice(source, {
     cost: 1,
     frequency: band.frequency,
+    detune: band.detune,
     tail: band,
     nodes: [source, band],
+  });
+}
+
+/** Lets an instrument go once its release has rung past the end. */
+function endAfterRelease(voice: Voice, at: number): void {
+  getContext().setTimeout(
+    () => endVoice(voice),
+    at + SYNTH_RELEASE_S - getContext().now()
+  );
+}
+
+/** Strings plucked together: one for the note, or one per chord note. */
+function startPluck(
+  hz: number,
+  start: number,
+  seconds: number,
+  ratios: readonly number[]
+): Voice {
+  const strings = ratios.map(ratio => {
+    const string = new PluckSynth({
+      attackNoise: PLUCK_ATTACK_NOISE,
+      dampening: PLUCK_DAMPENING_HZ,
+      resonance: PLUCK_RESONANCE,
+      release: seconds,
+    });
+    string.triggerAttack(hz * ratio, start);
+    return string;
+  });
+  const sum = new Gain(1 / Math.sqrt(strings.length));
+  strings.forEach(string => string.connect(sum));
+  const voice: Voice = {
+    cost: strings.length,
+    frequency: undefined,
+    detune: undefined,
+    tail: sum,
+    nodes: [...strings, sum],
+    end: at => endAfterRelease(voice, at),
+    cut: () => endVoice(voice),
   };
+  return voice;
+}
+
+/** An instrument struck once for the note; its own envelope rings a
+    release past the end. */
+function startSynth(
+  type: Exclude<SynthWave, 'pluck'>,
+  hz: number,
+  start: number,
+  seconds: number
+): Voice {
+  const envelope = {
+    attack: ATTACK_S,
+    decay: seconds,
+    sustain: 0,
+    release: SYNTH_RELEASE_S,
+  };
+  const synth =
+    type === 'drum'
+      ? new MembraneSynth({
+          pitchDecay: DRUM_PITCH_DECAY_S,
+          octaves: DRUM_OCTAVES,
+          envelope,
+        })
+      : type === 'bell'
+      ? new FMSynth({
+          harmonicity: BELL_HARMONICITY,
+          modulationIndex: BELL_MODULATION_INDEX,
+          envelope,
+          modulationEnvelope: envelope,
+        })
+      : new MetalSynth({
+          harmonicity: CLANG_HARMONICITY,
+          modulationIndex: CLANG_MODULATION_INDEX,
+          resonance: CLANG_RESONANCE_HZ,
+          octaves: CLANG_OCTAVES,
+          envelope,
+        });
+  synth.triggerAttackRelease(hz, seconds, start);
+  const voice: Voice = {
+    cost: 1,
+    frequency: synth.frequency,
+    detune: synth.detune,
+    tail: synth,
+    nodes: [synth],
+    end: at => endAfterRelease(voice, at),
+    cut: () => endVoice(voice),
+  };
+  return voice;
 }
 
 const liveCost = (): number =>
@@ -372,14 +528,18 @@ const liveCost = (): number =>
 const clampHz = (hz: number) =>
   Math.min(FILTER_MAX_HZ, Math.max(FILTER_MIN_HZ, hz));
 
-function endVoice(voice: Voice): void {
-  live.delete(voice);
-  voice.nodes.forEach(node => node.dispose());
-}
+const isSynthWave = (type: Note['type']): type is SynthWave =>
+  SYNTH_WAVES.includes(type);
 
 function schedule(notes: Note[]): void {
   const cost = notes.reduce(
-    (sum, note) => sum + (note.type === 'noise' ? 1 : note.unison ?? 1),
+    (sum, note) =>
+      sum +
+      (note.type === 'noise'
+        ? 1
+        : note.type === 'pluck'
+        ? note.arpeggio?.length ?? 1
+        : note.unison ?? 1),
     0
   );
   if (liveCost() + cost > MAX_LIVE_VOICES) {
@@ -395,8 +555,12 @@ function schedule(notes: Note[]): void {
     const voice =
       note.type === 'noise'
         ? startNoise(hz, start)
+        : note.type === 'pluck'
+        ? startPluck(hz, start, note.seconds, note.arpeggio ?? [1])
+        : isSynthWave(note.type)
+        ? startSynth(note.type, hz, start, note.seconds)
         : startOscillator(note.type, hz, start, note.unison ?? 1);
-    const {frequency} = voice;
+    const {frequency, detune} = voice;
     const top = Math.max(
       hz,
       (note.slideTo ?? 0) * nudge,
@@ -416,12 +580,12 @@ function schedule(notes: Note[]): void {
       .exponentialRampToValueAtTime(SILENCE, end);
     voice.tail.chain(filter, gain, outputBus());
     voice.nodes.push(filter, gain);
-    if (note.slideTo) {
+    if (note.slideTo && frequency) {
       frequency
         .setValueAtTime(hz, start)
         .exponentialRampToValueAtTime(note.slideTo * nudge, end);
     }
-    if (note.arpeggio?.length) {
+    if (note.arpeggio?.length && frequency) {
       const ratios = note.arpeggio;
       const step = 1 / ARPEGGIO_RATE_HZ;
       for (let i = 0; start + i * step < end; i++) {
@@ -431,22 +595,23 @@ function schedule(notes: Note[]): void {
         );
       }
     }
-    if (note.wobble) {
-      const depth = hz * WOBBLE_DEPTH;
-      const lfo = new LFO({frequency: WOBBLE_RATE_HZ, min: -depth, max: depth});
+    if (note.wobble && detune) {
+      const lfo = new LFO({
+        frequency: WOBBLE_RATE_HZ,
+        min: -WOBBLE_DEPTH_CENTS,
+        max: WOBBLE_DEPTH_CENTS,
+      });
       lfo.amplitude
         .setValueAtTime(0, start)
         .linearRampToValueAtTime(
           1,
           start + Math.min(WOBBLE_ONSET_S, note.seconds / 2)
         );
-      lfo.connect(frequency);
+      lfo.connect(detune);
       lfo.start(start).stop(end);
-      voice.lfo = lfo;
       voice.nodes.push(lfo);
     }
-    voice.source.stop(end);
-    voice.source.onstop = () => endVoice(voice);
+    voice.end(end);
     live.add(voice);
   }
 }
@@ -489,11 +654,8 @@ export function playNotes(notes: Note[]): void {
 /** Silences every sound still playing or scheduled. */
 export function stopSoundEffects(): void {
   pending = null;
-  for (const voice of live) {
-    voice.source.onstop = () => undefined;
-    voice.source.stop();
-    voice.lfo?.stop();
-    voice.nodes.forEach(node => node.dispose());
+  for (const voice of [...live]) {
+    voice.cut();
   }
   live.clear();
 }
