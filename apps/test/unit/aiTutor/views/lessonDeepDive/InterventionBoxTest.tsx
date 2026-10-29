@@ -5,7 +5,6 @@ import React from 'react';
 import InterventionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import experiments from '@cdo/apps/util/experiments';
 
 // The modality content components pull in heavy dependencies (audio, video,
 // chat, redux) that are irrelevant to the navigation behavior under test, so
@@ -49,10 +48,15 @@ const LESSON_NAME = 'Variables';
 
 interface RenderOpts {
   focusTopic?: string;
+  challengeEnabled?: boolean;
   onDone?: () => void;
 }
 
-function renderInterventionBox({focusTopic, onDone}: RenderOpts = {}) {
+function renderInterventionBox({
+  focusTopic,
+  challengeEnabled = true,
+  onDone,
+}: RenderOpts = {}) {
   render(
     <InterventionBox
       lessonId={LESSON_ID}
@@ -64,6 +68,7 @@ function renderInterventionBox({focusTopic, onDone}: RenderOpts = {}) {
       jsonVideos={[]}
       reflectionData={null}
       focusTopic={focusTopic}
+      challengeEnabled={challengeEnabled}
       onDone={onDone}
     />
   );
@@ -72,16 +77,10 @@ function renderInterventionBox({focusTopic, onDone}: RenderOpts = {}) {
 describe('InterventionBox', () => {
   beforeEach(() => {
     sendEventMock.mockReset();
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
   });
 
-  afterEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
-  });
-
-  it('Does not list the Challenge option in the practice menu if no experiment', () => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
-    renderInterventionBox();
+  it('Does not list the Challenge option when challenges are disabled', () => {
+    renderInterventionBox({challengeEnabled: false});
     expect(
       screen.queryByRole('button', {name: /I want a challenge instead/i})
     ).not.toBeInTheDocument();
@@ -162,6 +161,7 @@ describe('InterventionBox', () => {
           jsonVideos={[]}
           reflectionData={null}
           initialSelection="challenge"
+          challengeEnabled
         />
       );
       expect(screen.getByText('challenge content')).toBeInTheDocument();
