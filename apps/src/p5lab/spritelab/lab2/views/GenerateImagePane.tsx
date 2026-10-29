@@ -271,7 +271,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
   // Gallery thumbnails prefer the border-trimmed image (backgrounds aren't
   // trimmed and fall through). Trims land as the engine preloads; re-render
   // when they do.
-  const [, setTrimVersion] = useState(0);
+  // Thumbnails land after the list does; the gallery is rebuilt when they do.
+  const [trimVersion, setTrimVersion] = useState(0);
   useEffect(() => onTrimsUpdated(() => setTrimVersion(v => v + 1)), []);
 
   // Compute trims for images added after the initial load (a fresh
@@ -854,7 +855,8 @@ const GenerateImagePane: React.FunctionComponent<GenerateImagePaneProps> = ({
       });
     });
     return [...byId.values()].filter(group => group.pictures.length > 0);
-  }, [images]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [images, trimVersion]);
 
   const creating = dialogTarget === 'new';
   // Backgrounds paint over the stage's opaque ground instead of
