@@ -1,10 +1,10 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Markdown} from '@code-dot-org/markdown';
 import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
+import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 
 import {CatalogEntry} from '../blockCatalog';
@@ -39,8 +39,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
   onAdd,
   onClose,
 }) => {
-  const {theme} = useTheme();
-  const mode = theme === 'Dark' ? 'dark' : 'light';
+  const mode = useThemeMode();
   // Opens on the first block not yet added, so the next choice is in view.
   const [selectedType, setSelectedType] = useState(
     () => (entries.find(entry => !chosen.has(entry.type)) ?? entries[0])?.type
@@ -49,7 +48,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
   const added = !!selected && chosen.has(selected.type);
 
   return (
-    <div className={moduleStyles.dialogHost} data-theme={mode}>
+    <div className={moduleStyles.dialogHost}>
       <CustomDialog
         aria-label={TITLE}
         onClose={onClose}
