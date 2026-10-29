@@ -385,7 +385,7 @@ const PLAN_SCHEMA = {
   required: [
     'planDoc', 'approach', 'exportPolicy', 'muiComponents', 'propMap', 'codemod', 'twins',
     'parityNotes', 'legacyDefectsToFix', 'sharedGlobals', 'appsParitySample', 'chunkSize',
-    'docsPlan', 'risks', 'deferredChanges',
+    'docsPlan', 'risks', 'deferredChanges', 'storyGaps',
   ],
   properties: {
     planDoc: {type: 'string', description: `Must be ${PLAN_DOC}`},
@@ -441,7 +441,7 @@ const PLAN_SCHEMA = {
     },
     twins: {
       type: 'array',
-      description: 'One MUI story per DSCO story, same state; the gate compares each pair',
+      description: 'One MUI story per dscoStories entry, same state, and no others; the gate compares each pair',
       items: {
         type: 'object',
         required: ['dscoStoryId', 'muiTitle', 'muiExportName', 'muiStoryId'],
@@ -489,6 +489,18 @@ const PLAN_SCHEMA = {
           uiTestsAtRisk: {type: 'array', items: {type: 'string'}, description: 'uiTestFiles entries (file:line) and consumer selectors the change would break, or []'},
           after: {type: 'array', items: {type: 'string'}, description: 'behavior values of the rows this one must follow, or []'},
           movesDom: {type: 'boolean', description: 'true when adopting it moves elements in the DOM or changes rendering, so eyes and the test build must run before its PR merges'},
+        },
+      },
+    },
+    storyGaps: {
+      type: 'array',
+      description: 'States no DSCO story renders. Not storied here: dsco-mui-finish-migration adds each as an MUI story when it deletes the legacy source. [] if none.',
+      items: {
+        type: 'object',
+        required: ['state', 'why'],
+        properties: {
+          state: {type: 'string', description: 'e.g. "checked, and disabled+checked"'},
+          why: {type: 'string', description: 'What it would catch that the twins do not'},
         },
       },
     },
@@ -552,7 +564,9 @@ Decide, in this order, reading the precedents and MUI's own component docs as ne
    cancel it: the transform leaves a file that passes the dropped prop untouched and
    lists it for hand work. Specify each transform (import specifier, JSX name, prop
    renames, the skip rule) and the residue it leaves.
-4. Twins: one MUI story per DSCO story with the same state.
+4. Twins: one MUI story per dscoStories entry with the same state, and no others. Do
+   not add a DSCO story: the gate rejects an id Discover did not find. A state no story
+   renders goes in storyGaps, for the finish workflow to add as an MUI story.
 5. Legacy defects to fix while here (from legacyDefects; e.g. a fixed min-width that
    clips at high zoom, literal alt text, missing roles) and which story renders they
    change. A defect qualifies only when no uiTestFiles entry depends on the old behavior;
@@ -570,7 +584,8 @@ ${LIB_SRC}/button/BUTTON_MIGRATION_TO_MUI.md for the register): Summary; Approac
 exports; Prop map (table); Codemod (transforms, residue, how to run); Parity (tolerance,
 twins, intended deviations); Legacy defects fixed while here; Shared globals; Deferred
 changes (table: Behavior, Legacy today, With MUI, UI tests at risk, After, Moves DOM, and
-an empty Ticket column that holds only a ticket key once one is filed); Consumer chunks;
+an empty Ticket column that holds only a ticket key once one is filed); Story gaps
+(table: State, Why; "None." when empty); Consumer chunks;
 Docs; Risks; Deviations (empty, Execute fills it). Run prettier on it from ${LIB}
 (../../node_modules/.bin/prettier --write).
 
@@ -1489,7 +1504,7 @@ const ticketTail = `Plan: ${PLAN_DOC}. Status: ${STATUS_DOC}.${jira ? ` Parent: 
 const followUpTickets = [
   {
     title: `MUI ${componentTitle}: delete the legacy DSCO source`,
-    description: `Lifecycle step 4. After the consumer PRs merge${allSkippedFiles.length ? ` and the consumers left on legacy move (${allSkippedFiles.join(', ')})` : ''}, delete the legacy source and exports (${legacyExports.join(', ') || 'none named'}) per the export policy in the plan.${plan.deferredChanges.length ? ' The deferred-behavior tickets wait on this one.' : ''} ${ticketTail}`,
+    description: `Lifecycle step 4. After the consumer PRs merge${allSkippedFiles.length ? ` and the consumers left on legacy move (${allSkippedFiles.join(', ')})` : ''}, delete the legacy source and exports (${legacyExports.join(', ') || 'none named'}) per the export policy in the plan.${plan.storyGaps.length ? ` Add an MUI story for each state in the plan's Story gaps (${plan.storyGaps.map(g => g.state).join('; ')}).` : ''}${plan.deferredChanges.length ? ' The deferred-behavior tickets wait on this one.' : ''} ${ticketTail}`,
   },
   ...plan.deferredChanges.map(d => ({
     title: `MUI ${componentTitle}: hand ${d.behavior} to MUI`,

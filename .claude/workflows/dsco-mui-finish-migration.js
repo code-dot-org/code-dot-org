@@ -285,7 +285,7 @@ const TOUCHED_SCHEMA = {
 // The codemod outlives step 4 so branches cut earlier can still move their imports.
 const codemodGoes = remainingAfter.length
   ? ''
-  : `\n6. Last step: delete ${discover.codemod || 'the component codemod'}, its entry in
+  : `\n7. Last step: delete ${discover.codemod || 'the component codemod'}, its entry in
    ${CODEMODS_DIR}/README.md, and every mention of it in ${STATUS_DOC}, the component
    README, ${SKILL_DOC} and ${ESLINT_APPS}. Nothing is left for it to rewrite.`
 const deleteLegacyBrief = `STEP 4: delete the legacy DSCO source. Behavior must not change: leave every disable*
@@ -310,7 +310,9 @@ CODEMOD: ${discover.codemod || 'none'}
    bans no longer exist.
 5. Docs: ${STATUS_DOC} row notes step 4 is done; ${remainingAfter.length ? `keep its state, since ${remainingAfter.length} deferred row(s) remain` : 'the table is empty, so set it to **Migrated**'}; the component README
    loses its legacy section; ${SKILL_DOC} names the plain import; ${PLAN_DOC} gains a
-   "Legacy source deleted" paragraph under its Outcome.${codemodGoes}`
+   "Legacy source deleted" paragraph under its Outcome.
+6. Stories: add one story per row of ${PLAN_DOC}'s "Story gaps" table, beside the renamed
+   stories, then delete the section. Skip this if the plan has none.${codemodGoes}`
 
 const rowBrief = row && `STEP 5, one deferred behavior: ${JSON.stringify(row)}
 OTHER ROWS (leave them alone; their legacy behavior stays): ${JSON.stringify(remainingAfter.map(r => r.behavior))}
