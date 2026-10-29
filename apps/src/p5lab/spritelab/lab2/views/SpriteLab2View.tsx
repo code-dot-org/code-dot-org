@@ -823,27 +823,51 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const focusImageType = levelProperties.levelMode?.imageType;
   const focusImageRole = levelProperties.levelMode?.imageRole;
   const imageRoleDefaults = levelProperties.imageRoleDefaults;
-  // The level's image of its kind: the one made on this level (its
-  // imageRole) first, then the image_role_defaults role, else the newest of
-  // the kind (orderedKeys is newest-first: Sprite Lab prepends new
-  // animations).
-  const focusImageName = useMemo(() => {
-    if (!focusImageType || focusImageType === 'background') {
+  const paletteRoles = levelProperties.levelMode?.paletteRoles;
+  // The palette's starting pick. A level about one kind of image: the one
+  // made on this level (its imageRole) first, then the image_role_defaults
+  // role, else the newest of the kind (orderedKeys is newest-first: Sprite
+  // Lab prepends new animations). A world level with palette roles and no
+  // kind: the first image in its first role, so the treasure comes up
+  // picked on a level that places the treasure and the blocks.
+  const focusImage = useMemo<WorldCell | undefined>(() => {
+    if (focusImageType === 'background') {
       return undefined;
     }
-    const newest = animationList.orderedKeys.find(
-      key =>
-        imageTypeFromCategories(animationList.propsByKey[key]?.categories) ===
-        focusImageType
-    );
-    return (
-      imagesNamedForRole(animationList, focusImageType, focusImageRole)[0] ??
-      defaultImageName(animationList, imageRoleDefaults, focusImageType) ??
-      (newest ? animationList.propsByKey[newest]?.name : undefined)
-    );
-  }, [focusImageType, focusImageRole, animationList, imageRoleDefaults]);
+    if (focusImageType) {
+      const newest = animationList.orderedKeys.find(
+        key =>
+          imageTypeFromCategories(animationList.propsByKey[key]?.categories) ===
+          focusImageType
+      );
+      const name =
+        imagesNamedForRole(animationList, focusImageType, focusImageRole)[0] ??
+        defaultImageName(animationList, imageRoleDefaults, focusImageType) ??
+        (newest ? animationList.propsByKey[newest]?.name : undefined);
+      return name ? {image: name, kind: focusImageType} : undefined;
+    }
+    for (const role of paletteRoles ?? []) {
+      for (const kind of ['sprite', 'block'] as const) {
+        const name = imagesNamedForRole(animationList, kind, role)[0];
+        if (name) {
+          return {image: name, kind};
+        }
+      }
+    }
+    return undefined;
+  }, [
+    focusImageType,
+    focusImageRole,
+    paletteRoles,
+    animationList,
+    imageRoleDefaults,
+  ]);
+  const focusImageName = focusImage?.image;
   useEffect(() => {
-    if (!focusImageType || focusImageType === 'background') {
+    if (focusImageType === 'background') {
+      return;
+    }
+    if (!focusImageType && !paletteRoles?.length) {
       return;
     }
     const names = new Set(
@@ -857,13 +881,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     const current =
       worldPaletteSelection === 'erase' ? null : worldPaletteSelection?.image;
-    if ((focusImageName ?? null) === (current ?? null)) {
+    if ((focusImage?.image ?? null) === (current ?? null)) {
       return;
     }
-    setWorldPaletteSelection(
-      focusImageName ? {image: focusImageName, kind: focusImageType} : null
-    );
-  }, [worldPaletteSelection, focusImageType, focusImageName, animationList]);
+    setWorldPaletteSelection(focusImage ?? null);
+  }, [
+    worldPaletteSelection,
+    focusImageType,
+    focusImage,
+    paletteRoles,
+    animationList,
+  ]);
 
   // Store scenes in redux for Blockly dropdowns and AI prompt.
   // TODO: does this need to live in redux?
@@ -1771,7 +1799,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   // A world level about one kind of image offers the palette only the
   // level's image of that kind.
-  const paletteRoles = levelProperties.levelMode?.paletteRoles;
   const paletteOnly = useMemo(() => {
     if (paletteRoles) {
       return animationList.orderedKeys
