@@ -1,8 +1,20 @@
 // Short synthesized sounds. The play-sound-effect block builds one from
 // four choices: the wave, how high, how long, and how the pitch moves. A
-// preset is a named sequence of notes.
+// preset is a named sequence of notes. They play on Tone.js, which the
+// play-music block already loads, so the sounds share its context.
 
-import {wake} from './audioFeedback/audioVoice';
+import {
+  Compressor,
+  FatOscillator,
+  Filter,
+  Gain,
+  getContext,
+  LFO,
+  Noise,
+  Oscillator,
+  start as startAudio,
+  ToneAudioNode,
+} from 'tone';
 
 export const WAVES = [
   'sine',
@@ -78,7 +90,6 @@ const VOLUME: Record<Wave, number> = {
 const DOUBLE_VOICES = 2;
 // How narrow the band of noise is; higher rings closer to a pitch.
 const NOISE_Q = 1.5;
-const NOISE_SECONDS = 1;
 // A major arpeggio, the steps of a run. A run up starts at the root, a run
 // down at the octave.
 const RUN_RATIOS = [1, 5 / 4, 3 / 2, 2];
@@ -258,9 +269,8 @@ const SILENCE = 0.0001;
 // unless this long has passed.
 const STALE_MS = 1000;
 // A block fired every frame could pile up voices; past this many, a new
-// sound is dropped. A voice is a source per unison oscillator, a low-pass
-// filter and a gain, plus a bandpass filter for noise and an extra
-// oscillator for wobble. Unison counts each oscillator.
+// sound is dropped. A voice costs one per oscillator, so a unison voice
+// costs its count.
 const MAX_LIVE_VOICES = 32;
 // Every play is nudged up to this far in pitch, so repeats don't sound
 // mechanical; one factor per play keeps a run in tune with itself.
@@ -273,45 +283,35 @@ const FILTER_CLOSED_RATIO = 1.5;
 const FILTER_MAX_HZ = 12000;
 const FILTER_MIN_HZ = 200;
 
-interface Playing {
-  sources: AudioScheduledSourceNode[];
-  gain: GainNode;
+interface Voice {
+  source: Oscillator | FatOscillator | Noise;
+  /** A wobble's vibrato, started and stopped with the source. */
+  lfo?: LFO;
+  /** Oscillators sounding, for the voice cap. */
+  cost: number;
+  /** The pitch a slide, wobble or arpeggio drives: the oscillator's
+      frequency, or a noise voice's bandpass center. */
+  frequency: Oscillator['frequency'] | Filter['frequency'];
+  /** The node the voice's filter attaches to. */
+  tail: ToneAudioNode;
+  /** Everything to dispose once the voice has ended. */
+  nodes: ToneAudioNode[];
 }
 
-let context: AudioContext | null = null;
-let bus: DynamicsCompressorNode | null = null;
-let noise: AudioBuffer | null = null;
-const live = new Set<Playing>();
+let bus: Compressor | null = null;
+const live = new Set<Voice>();
 let pending: {notes: Note[]; askedAt: number} | null = null;
-
-function audioContext(): AudioContext | null {
-  if (
-    typeof window === 'undefined' ||
-    typeof window.AudioContext !== 'function'
-  ) {
-    return null;
-  }
-  try {
-    context ??= new window.AudioContext();
-  } catch {
-    // Chrome caps the contexts a page may hold.
-    return null;
-  }
-  return context;
-}
 
 /** A compressor evens the loudness of overlapping sounds and of the waves
     against each other; its makeup gain lifts every sound by several dB. */
-function outputBus(ctx: AudioContext): AudioNode {
-  if (!bus) {
-    bus = ctx.createDynamicsCompressor();
-    bus.threshold.value = -18;
-    bus.knee.value = 12;
-    bus.ratio.value = 4;
-    bus.attack.value = 0.003;
-    bus.release.value = 0.15;
-    bus.connect(ctx.destination);
-  }
+function outputBus(): Compressor {
+  bus ??= new Compressor({
+    threshold: -18,
+    knee: 12,
+    ratio: 4,
+    attack: 0.003,
+    release: 0.15,
+  }).toDestination();
   return bus;
 }
 
@@ -320,84 +320,64 @@ const muted = (): boolean =>
   typeof window !== 'undefined' &&
   new URLSearchParams(window.location.search).has('quiet');
 
-function noiseBuffer(ctx: AudioContext): AudioBuffer {
-  if (!noise) {
-    noise = ctx.createBuffer(1, ctx.sampleRate * NOISE_SECONDS, ctx.sampleRate);
-    const samples = noise.getChannelData(0);
-    for (let i = 0; i < samples.length; i++) {
-      samples[i] = Math.random() * 2 - 1;
-    }
-  }
-  return noise;
-}
-
-interface Voice extends Playing {
-  /** The pitches a slide, wobble or arpeggio drives: each oscillator's
-      frequency, or a noise voice's bandpass center. */
-  frequencies: AudioParam[];
-  /** The node the voice's filter attaches to; unison oscillators are
-      summed into it. */
-  tail: AudioNode;
-}
-
-function startOscillators(
-  ctx: AudioContext,
+function startOscillator(
   type: OscillatorType,
   hz: number,
   start: number,
   unison: number
 ): Voice {
   const count = Math.max(1, Math.floor(unison));
-  const sum = ctx.createGain();
+  const source =
+    count > 1
+      ? new FatOscillator({
+          type,
+          frequency: hz,
+          count,
+          spread: UNISON_SPREAD_CENTS,
+        })
+      : new Oscillator({type, frequency: hz});
   // Summing doubles the energy per doubling of voices; this holds the
   // loudness about even.
-  sum.gain.value = 1 / Math.sqrt(count);
-  const sources = Array.from({length: count}, (_, i) => {
-    const source = ctx.createOscillator();
-    source.type = type;
-    source.frequency.value = hz;
-    if (count > 1) {
-      source.detune.value = UNISON_SPREAD_CENTS * (i / (count - 1) - 0.5);
-    }
-    source.connect(sum);
-    source.start(start);
-    return source;
-  });
+  const sum = new Gain(1 / Math.sqrt(count));
+  source.connect(sum);
+  source.start(start);
   return {
-    sources,
-    gain: ctx.createGain(),
-    frequencies: sources.map(source => source.frequency),
+    source,
+    cost: count,
+    frequency: source.frequency,
     tail: sum,
+    nodes: [source, sum],
   };
 }
 
-/** Looped white noise through a bandpass filter whose center frequency
-    plays the part an oscillator's frequency does. */
-function startNoise(ctx: AudioContext, hz: number, start: number): Voice {
-  const source = ctx.createBufferSource();
-  source.buffer = noiseBuffer(ctx);
-  source.loop = true;
-  const band = ctx.createBiquadFilter();
-  band.type = 'bandpass';
-  band.frequency.value = hz;
-  band.Q.value = NOISE_Q;
+/** White noise through a bandpass filter whose center frequency plays the
+    part an oscillator's frequency does. */
+function startNoise(hz: number, start: number): Voice {
+  const source = new Noise({type: 'white'});
+  const band = new Filter({type: 'bandpass', frequency: hz, Q: NOISE_Q});
   source.connect(band);
   source.start(start);
   return {
-    sources: [source],
-    gain: ctx.createGain(),
-    frequencies: [band.frequency],
+    source,
+    cost: 1,
+    frequency: band.frequency,
     tail: band,
+    nodes: [source, band],
   };
 }
 
 const liveCost = (): number =>
-  [...live].reduce((sum, voice) => sum + voice.sources.length, 0);
+  [...live].reduce((sum, voice) => sum + voice.cost, 0);
 
 const clampHz = (hz: number) =>
   Math.min(FILTER_MAX_HZ, Math.max(FILTER_MIN_HZ, hz));
 
-function schedule(ctx: AudioContext, notes: Note[]): void {
+function endVoice(voice: Voice): void {
+  live.delete(voice);
+  voice.nodes.forEach(node => node.dispose());
+}
+
+function schedule(notes: Note[]): void {
   const cost = notes.reduce(
     (sum, note) => sum + (note.type === 'noise' ? 1 : note.unison ?? 1),
     0
@@ -405,7 +385,7 @@ function schedule(ctx: AudioContext, notes: Note[]): void {
   if (liveCost() + cost > MAX_LIVE_VOICES) {
     return;
   }
-  const now = ctx.currentTime;
+  const now = getContext().now();
   const humanize = 1 + (Math.random() * 2 - 1) * HUMANIZE;
   for (const note of notes) {
     const nudge = note.exact ? 1 : humanize;
@@ -414,65 +394,60 @@ function schedule(ctx: AudioContext, notes: Note[]): void {
     const end = start + note.seconds;
     const voice =
       note.type === 'noise'
-        ? startNoise(ctx, hz, start)
-        : startOscillators(ctx, note.type, hz, start, note.unison ?? 1);
-    const {sources, gain, frequencies, tail} = voice;
-    const filter = ctx.createBiquadFilter();
-    filter.type = 'lowpass';
+        ? startNoise(hz, start)
+        : startOscillator(note.type, hz, start, note.unison ?? 1);
+    const {frequency} = voice;
     const top = Math.max(
       hz,
       (note.slideTo ?? 0) * nudge,
       hz * Math.max(0, ...(note.arpeggio ?? []))
     );
-    filter.frequency.setValueAtTime(clampHz(hz * FILTER_OPEN_RATIO), start);
-    filter.frequency.exponentialRampToValueAtTime(
-      clampHz(top * FILTER_CLOSED_RATIO),
-      end
-    );
-    tail.connect(filter);
-    filter.connect(gain);
-    gain.connect(outputBus(ctx));
-    gain.gain.setValueAtTime(0, start);
-    gain.gain.linearRampToValueAtTime(note.volume, start + ATTACK_S);
-    gain.gain.exponentialRampToValueAtTime(SILENCE, end);
+    const filter = new Filter({
+      type: 'lowpass',
+      frequency: clampHz(hz * FILTER_OPEN_RATIO),
+    });
+    filter.frequency
+      .setValueAtTime(clampHz(hz * FILTER_OPEN_RATIO), start)
+      .exponentialRampToValueAtTime(clampHz(top * FILTER_CLOSED_RATIO), end);
+    const gain = new Gain(0);
+    gain.gain
+      .setValueAtTime(0, start)
+      .linearRampToValueAtTime(note.volume, start + ATTACK_S)
+      .exponentialRampToValueAtTime(SILENCE, end);
+    voice.tail.chain(filter, gain, outputBus());
+    voice.nodes.push(filter, gain);
     if (note.slideTo) {
-      const slideTo = note.slideTo * nudge;
-      frequencies.forEach(frequency => {
-        frequency.setValueAtTime(hz, start);
-        frequency.exponentialRampToValueAtTime(slideTo, end);
-      });
+      frequency
+        .setValueAtTime(hz, start)
+        .exponentialRampToValueAtTime(note.slideTo * nudge, end);
     }
     if (note.arpeggio?.length) {
       const ratios = note.arpeggio;
       const step = 1 / ARPEGGIO_RATE_HZ;
       for (let i = 0; start + i * step < end; i++) {
-        const target = hz * ratios[i % ratios.length];
-        frequencies.forEach(frequency =>
-          frequency.setValueAtTime(target, start + i * step)
+        frequency.setValueAtTime(
+          hz * ratios[i % ratios.length],
+          start + i * step
         );
       }
     }
     if (note.wobble) {
-      const lfo = ctx.createOscillator();
-      const depth = ctx.createGain();
-      lfo.frequency.value = WOBBLE_RATE_HZ;
-      depth.gain.setValueAtTime(0, start);
-      depth.gain.linearRampToValueAtTime(
-        hz * WOBBLE_DEPTH,
-        start + Math.min(WOBBLE_ONSET_S, note.seconds / 2)
-      );
-      lfo.connect(depth);
-      frequencies.forEach(frequency => depth.connect(frequency));
-      lfo.start(start);
-      lfo.stop(end);
+      const depth = hz * WOBBLE_DEPTH;
+      const lfo = new LFO({frequency: WOBBLE_RATE_HZ, min: -depth, max: depth});
+      lfo.amplitude
+        .setValueAtTime(0, start)
+        .linearRampToValueAtTime(
+          1,
+          start + Math.min(WOBBLE_ONSET_S, note.seconds / 2)
+        );
+      lfo.connect(frequency);
+      lfo.start(start).stop(end);
+      voice.lfo = lfo;
+      voice.nodes.push(lfo);
     }
-    sources.forEach(source => source.stop(end));
+    voice.source.stop(end);
+    voice.source.onstop = () => endVoice(voice);
     live.add(voice);
-    sources[0].onended = () => {
-      live.delete(voice);
-      sources.forEach(source => source.disconnect());
-      gain.disconnect();
-    };
   }
 }
 
@@ -481,28 +456,27 @@ function schedule(ctx: AudioContext, notes: Note[]): void {
  * user gesture yet) gets only the latest request, and only once it runs.
  */
 export function playNotes(notes: Note[]): void {
-  const ctx = muted() ? null : audioContext();
-  if (!ctx) {
+  if (muted()) {
     return;
   }
-  if (ctx.state === 'running') {
-    schedule(ctx, notes);
+  const context = getContext();
+  if (context.state === 'running') {
+    schedule(notes);
     return;
   }
   const first = pending === null;
   pending = {notes, askedAt: Date.now()};
-  wake(ctx);
   if (first) {
-    ctx.resume().then(
+    startAudio().then(
       () => {
         const request = pending;
         pending = null;
         if (
           request &&
-          ctx.state === 'running' &&
+          context.state === 'running' &&
           Date.now() - request.askedAt < STALE_MS
         ) {
-          schedule(ctx, request.notes);
+          schedule(request.notes);
         }
       },
       () => {
@@ -515,15 +489,11 @@ export function playNotes(notes: Note[]): void {
 /** Silences every sound still playing or scheduled. */
 export function stopSoundEffects(): void {
   pending = null;
-  for (const {sources, gain} of live) {
-    gain.gain.cancelScheduledValues(0);
-    gain.gain.value = 0;
-    sources.forEach(source => {
-      source.onended = null;
-      source.stop();
-      source.disconnect();
-    });
-    gain.disconnect();
+  for (const voice of live) {
+    voice.source.onstop = () => undefined;
+    voice.source.stop();
+    voice.lfo?.stop();
+    voice.nodes.forEach(node => node.dispose());
   }
   live.clear();
 }
