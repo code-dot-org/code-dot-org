@@ -66,14 +66,5 @@ export function usePathwayProject(pathway: Pathway): PathwayProjectState {
     [projectManager]
   );
 
-  // Without a resolved template there is no channel, so nothing is editable
-  // here even though useSources reports isEditable for a level with no
-  // project of its own.
-  return {
-    channel,
-    isLoading,
-    isEditable: !!channel && isEditable,
-    loadError,
-    editProject,
-  };
+  return {channel, isLoading, isEditable, loadError, editProject};
 }

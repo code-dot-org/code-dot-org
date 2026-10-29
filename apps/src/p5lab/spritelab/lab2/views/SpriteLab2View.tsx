@@ -342,6 +342,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // level, since that is where a lesson's reset begins; the level's own
   // content is restored when the student reaches it again.
   const projectless = levelProperties.usesProjects === false;
+  // A level with no project is not editable, but Start Over still leaves it
+  // for the lesson's first level.
+  const startOverOffered = isEditable || projectless;
   const firstLevelId = useAppSelector(
     state => getCurrentLevels(state)?.[0]?.id as string | undefined
   );
@@ -2258,7 +2261,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   return (
     <div className={moduleStyles.labRow}>
-      {showStartOver && isEditable && (
+      {showStartOver && startOverOffered && (
         <StartOverDialog
           onConfirm={() => {
             const leaving = !!firstLevelId && firstLevelId !== currentLevelId;
@@ -2322,7 +2325,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         }
         hideContinueIfDisabled={!panelIsSidebar}
         footerButtons={
-          isEditable && (
+          startOverOffered && (
             <IconButtonWithTooltip
               id="start-over"
               label="Start Over"
