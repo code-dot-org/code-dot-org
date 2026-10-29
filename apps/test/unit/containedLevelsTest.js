@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {flushSync} from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
@@ -51,17 +52,18 @@ describe('getContainedLevelResultInfo', () => {
     registerReducers(commonReducers);
 
     gameButtons = document.createElement('div');
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <GameButtons
-          hideRunButton={false}
-          runButtonText={'Run'}
-          nextLevelUrl={'nextUrl'}
-          showSkipButton
-          showFinishButton
-        />
-      </Provider>,
-      gameButtons
+    flushSync(() =>
+      createRoot(gameButtons).render(
+        <Provider store={getStore()}>
+          <GameButtons
+            hideRunButton={false}
+            runButtonText={'Run'}
+            nextLevelUrl={'nextUrl'}
+            showSkipButton
+            showFinishButton
+          />
+        </Provider>
+      )
     );
     document.body.appendChild(gameButtons);
 
