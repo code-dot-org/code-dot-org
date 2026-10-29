@@ -32,6 +32,7 @@ class LessonsControllerTest < ActionController::TestCase
     )
 
     User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
+    User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(true)
     # The lesson tutor deep dive is scoped to AIF/AID student courses, so tutor
     # tests need a course whose offering carries an AI marketing initiative.
     @ai_script = create(:script, name: 'ai-unit-1')
@@ -296,6 +297,20 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in create(:student)
     get :tutor_gallery, params: {course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}
     assert_response :forbidden
+  end
+
+  test 'tutor gallery is forbidden without lesson deep dive challenge access' do
+    User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(false)
+    sign_in create(:student)
+    get :tutor_gallery, params: {course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}
+    assert_response :forbidden
+  end
+
+  test 'tutor is allowed without lesson deep dive challenge access' do
+    User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(false)
+    sign_in create(:student)
+    get :tutor, params: {course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}
+    assert_response :success
   end
 
   test 'show includes correct SEO data' do
