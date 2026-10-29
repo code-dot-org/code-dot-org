@@ -5,6 +5,8 @@ module Services
     test 'can write custom level file' do
       Policies::LevelFiles.stubs(:write_to_file?).returns(true)
       level = build(:maze, name: "Testing Level File Writing", published: true)
+      # Stubbed too, or the test creates config/levels/custom/maze for real.
+      FileUtils.expects(:mkdir_p).with(Rails.root.join("config/levels/custom/maze").to_s)
       File.expects(:write).with do |path, _data|
         assert_equal path, Rails.root.join("config/levels/custom/maze/Testing Level File Writing.level")
       end

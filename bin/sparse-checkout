@@ -1,0 +1,58 @@
+#!/bin/bash
+# Switch this clone's sparse checkout between the pattern sets in
+# sparse-patterns/. On a complete clone, a mode only trims the working tree;
+# the omitted files have already been transferred. To never transfer them,
+# clone with --filter=blob:none --no-checkout, check out bin/ and
+# sparse-patterns/ in cone mode, then run this; .drone.yml does so.
+#
+# Usage: bin/sparse-checkout default|no-production-curriculum|verify
+set -e
+
+MODE="${1:-}"
+PATTERNS_DIR="sparse-patterns"
+PATTERNS="$PATTERNS_DIR/no-production-curriculum"
+
+# The trees a pattern file leaves out: its "!<tree>/**" lines.
+omitted_trees() {
+  sed -n 's#^!\(.*\)/\*\*$#\1#p' "$1"
+}
+
+case "$MODE" in
+  default)
+    rm -f "$(git rev-parse --git-path info/sparse-checkout)"
+    git sparse-checkout disable
+    ;;
+  no-production-curriculum)
+    # Only non-cone patterns can say "everything except these trees". The
+    # patterns file is written directly: `sparse-checkout set` needs
+    # --no-cone to take them as written, which git 2.25 (the CI image) lacks,
+    # and without it git 2.37 and later rewrite them as cone directories.
+    git config core.sparseCheckout true
+    git config core.sparseCheckoutCone false
+    cp "$PATTERNS" "$(git rev-parse --git-path info/sparse-checkout)"
+    git sparse-checkout reapply
+    ;;
+  verify)
+    # Report what the clone holds, and fail if an omitted tree is present in
+    # the working tree. The blob count is the number the clone has fetched;
+    # a rise between two reports means something read omitted content.
+    # stderr dropped: git 2.25 warns about every .rev file a newer git wrote,
+    # and cat-file warns that promisor objects may be missing, which is the
+    # point.
+    git count-objects -v 2>/dev/null
+    echo "blobs present: $(git cat-file --batch-all-objects --batch-check --unordered 2>/dev/null | awk '$2 == "blob"' | wc -l)"
+    echo "working tree files: $(find . -type f -not -path './.git/*' -not -path '*/node_modules/*' | wc -l)"
+    status=0
+    for tree in $(omitted_trees "$PATTERNS"); do
+      if [ -d "$tree" ]; then
+        echo "ERROR: $tree is present with $(find "$tree" -type f | wc -l) files" >&2
+        status=1
+      fi
+    done
+    exit $status
+    ;;
+  *)
+    echo "Usage: $0 default|no-production-curriculum|verify" >&2
+    exit 1
+    ;;
+esac

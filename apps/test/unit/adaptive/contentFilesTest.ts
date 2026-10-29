@@ -74,9 +74,16 @@ const pathwayFiles = fs
   .filter(f => f.endsWith('.json'))
   .map(f => path.join(CONTENT_DIR, f));
 
+// Drone checks the repo out without dashboard/config/levels (see
+// sparse-patterns/no-production-curriculum), so the checks that read level
+// files run only on a complete checkout, such as the staging build.
+const itWithLevelFiles = fs.existsSync(LEVELS_DIR) ? it : it.skip;
+
 let levelFiles: Map<string, string>;
 beforeAll(() => {
-  levelFiles = levelFilesUnder(LEVELS_DIR);
+  levelFiles = fs.existsSync(LEVELS_DIR)
+    ? levelFilesUnder(LEVELS_DIR)
+    : new Map();
 });
 
 describe('adaptive content files', () => {
@@ -101,7 +108,7 @@ describe('adaptive content files', () => {
       expect(() => parsePathway(fakeResolve(source()))).not.toThrow();
     });
 
-    it('names only levels that have a level file', () => {
+    itWithLevelFiles('names only levels that have a level file', () => {
       const referenced = [
         source().project.templateLevel,
         ...levelSteps().map(({step}) => step.level),
@@ -109,28 +116,34 @@ describe('adaptive content files', () => {
       expect(referenced.filter(name => !levelFiles.has(name))).toEqual([]);
     });
 
-    it('names a template level that is not itself templated', () => {
-      const template = levelFiles.get(source().project.templateLevel);
-      if (!template) return;
-      expect(
-        readLevelFile(template).properties.project_template_level_name
-      ).toBeUndefined();
-    });
+    itWithLevelFiles(
+      'names a template level that is not itself templated',
+      () => {
+        const template = levelFiles.get(source().project.templateLevel);
+        if (!template) return;
+        expect(
+          readLevelFile(template).properties.project_template_level_name
+        ).toBeUndefined();
+      }
+    );
 
-    it('marks exactly the steps whose level shares the project template', () => {
-      const template = source().project.templateLevel;
-      const mismatched = levelSteps().flatMap(({checkpoint, step}) => {
-        const file = levelFiles.get(step.level);
-        if (!file) return [];
-        const sharesProject =
-          step.level === template ||
-          readLevelFile(file).properties.project_template_level_name ===
-            template;
-        return sharesProject === !!step.project
-          ? []
-          : [`${checkpoint.id}/${step.id}`];
-      });
-      expect(mismatched).toEqual([]);
-    });
+    itWithLevelFiles(
+      'marks exactly the steps whose level shares the project template',
+      () => {
+        const template = source().project.templateLevel;
+        const mismatched = levelSteps().flatMap(({checkpoint, step}) => {
+          const file = levelFiles.get(step.level);
+          if (!file) return [];
+          const sharesProject =
+            step.level === template ||
+            readLevelFile(file).properties.project_template_level_name ===
+              template;
+          return sharesProject === !!step.project
+            ? []
+            : [`${checkpoint.id}/${step.id}`];
+        });
+        expect(mismatched).toEqual([]);
+      }
+    );
   });
 });

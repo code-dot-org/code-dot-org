@@ -1371,9 +1371,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal [ui_test_level], script_level.reload.levels.to_a
   end
 
-  test 'level_keys and their script must be on the same side of the UI Test partition' do
+  test 'level_keys and their script must be in the same partition' do
     ui_test_level = create(:level, name: 'UI Test ScriptLevelTest level')
     prod_level = create(:level, name: 'ScriptLevelTest prod level')
+    standalone_level = create(:level, name: 'New ScriptLevelTest Project')
 
     script_level = create(:script_level, script: create(:script, name: 'ui-test-script-level-test'))
     script_level.level_keys = [ui_test_level.key]
@@ -1381,6 +1382,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level.level_keys = [prod_level.key]
     refute script_level.valid?
     assert_includes script_level.errors.full_messages.first, prod_level.name
+    script_level.level_keys = [standalone_level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, standalone_level.name
 
     script_level = create(:script_level, script: create(:script, name: 'script-level-test-prod'))
     script_level.level_keys = [prod_level.key]
@@ -1388,9 +1392,12 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level.level_keys = [ui_test_level.key]
     refute script_level.valid?
     assert_includes script_level.errors.full_messages.first, ui_test_level.name
+    script_level.level_keys = [standalone_level.key]
+    refute script_level.valid?
+    assert_includes script_level.errors.full_messages.first, standalone_level.name
   end
 
-  test 'deprecated blockly levels are exempt from the UI Test partition' do
+  test 'deprecated blockly levels are exempt from the partition rule' do
     blockly_level = create(:level, level_num: 'script_level_test_maze', game: Game.find_by_name('maze'))
     assert_equal 'blockly:Maze:script_level_test_maze', blockly_level.key
 
@@ -1401,15 +1408,20 @@ class ScriptLevelTest < ActiveSupport::TestCase
     end
   end
 
-  test 'update_levels enforces the UI Test partition in both directions' do
+  test 'update_levels enforces the partition rule' do
     ui_test_level = create(:level, name: 'UI Test ScriptLevelTest attach')
     prod_level = create(:level, name: 'ScriptLevelTest prod attach')
+    standalone_level = create(:level, name: 'New ScriptLevelTest Attach Project')
 
     prod_script_level = create(:script_level, script: create(:script, name: 'script-level-attach-prod'))
     error = assert_raises RuntimeError do
       prod_script_level.update_levels([{'id' => ui_test_level.id}])
     end
     assert_includes error.message, ui_test_level.name
+    error = assert_raises RuntimeError do
+      prod_script_level.update_levels([{'id' => standalone_level.id}])
+    end
+    assert_includes error.message, standalone_level.name
     prod_script_level.update_levels([{'id' => prod_level.id}])
     assert_equal [prod_level], prod_script_level.levels.to_a
 

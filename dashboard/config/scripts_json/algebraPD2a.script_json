@@ -2226,54 +2226,6 @@
       "level_keys": [
         "Big Game Final"
       ]
-    },
-    {
-      "chapter": 70,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Calc Free Play"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Calc Free Play"
-        ],
-        "lesson.key": "Free Play",
-        "lesson_group.key": "",
-        "script.name": "algebraPD2a",
-        "activity_section.key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b"
-      },
-      "level_keys": [
-        "Calc Free Play"
-      ]
-    },
-    {
-      "chapter": 71,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Eval Free Play"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Eval Free Play"
-        ],
-        "lesson.key": "Free Play",
-        "lesson_group.key": "",
-        "script.name": "algebraPD2a",
-        "activity_section.key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b"
-      },
-      "level_keys": [
-        "Eval Free Play"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -3103,30 +3055,6 @@
         "lesson_group.key": "",
         "script.name": "algebraPD2a",
         "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Calc Free Play",
-        "script_level.level_keys": [
-          "Calc Free Play"
-        ],
-        "lesson.key": "Free Play",
-        "lesson_group.key": "",
-        "script.name": "algebraPD2a",
-        "activity_section.key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Eval Free Play",
-        "script_level.level_keys": [
-          "Eval Free Play"
-        ],
-        "lesson.key": "Free Play",
-        "lesson_group.key": "",
-        "script.name": "algebraPD2a",
-        "activity_section.key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b"
       }
     }
   ],
