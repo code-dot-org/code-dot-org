@@ -6,7 +6,7 @@ import type {Grade} from '../helpers/displayTreeNodeContent';
 import {rowCountText} from '../helpers/utils';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
-import {getIdColumn} from '../selectors';
+import {getData, getIdColumn} from '../selectors';
 import {useDatasetTableView} from '../useDatasetTableView';
 import {useGradedView} from '../useGradedView';
 
@@ -39,7 +39,7 @@ const RowsPanel = ({
 }: RowsPanelProps) => {
   const descriptionId = useId();
   const {project} = useProject();
-  const data = useAppSelector(state => state.data);
+  const data = useAppSelector(getData);
   const idColumn = useAppSelector(getIdColumn);
   const columns = useMemo(
     () => dataColumnsFor(data, project, showAllColumns, idColumn),

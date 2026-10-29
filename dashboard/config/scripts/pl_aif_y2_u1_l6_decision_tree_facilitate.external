@@ -1,0 +1,74 @@
+name 'pl-aif-y2-u1-l6-decision-tree-facilitate'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Decision Trees
+
+Students move from a physical guessing game into tracing a tree as a group, then into reading and extending nested conditionals in code.
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>10 Questions warm-up:</strong> in pairs, one partner thinks of a classroom item, the other asks up to 10 yes-or-no questions to guess it, then they switch</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Tracing Decision Trees Together:</strong> you walk the whole class through reading an example tree, calling on students at each branching point</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Decision Trees in Code (Levels 1-4):</strong> students predict a tree's output, implement a one-question tree, extend it to two questions, then describe a tree in words for a Check for Understanding</div>
+  </div>
+</div>
+
+<hr>
+
+## Watch for: Tangled Nested Conditionals
+
+This is the real circulate note from the teaching guide, not an inference.
+
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #611D00; line-height: 1.5;">
+    <strong>&#9888; What to watch for:</strong> students getting tangled in nested conditional statements, losing track of which <code>if</code> belongs inside which.
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222; margin-bottom: 8px;">&bull; Walk through the indentation as a tree shape: each deeper indent is one branch further down the tree.</div>
+  <div style="font-size: 16px; color: #222222;">&bull; Have the student write a comment above each nested block naming which branch it represents.</div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#128161; For early finishers:</strong> challenge them to extend their Level 3 tree with a third, fourth, or fifth level of nesting.
+  </div>
+</div>
+
+### Wrap-Up: What Problems Fit a Decision Tree?
+
+The closing discussion asks students what kinds of problems decision trees can solve. Strong and weak answers look different.
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Weaker: Any Decision at All</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Names any problem where it'd be "helpful to decide something," without checking whether the inputs are actually known or askable.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Known Inputs, Askable Questions</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Names a problem with known inputs, like "what to wear," where the forecast and the day's plans can genuinely be asked about in sequence.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Is it actually possible to know this problem's inputs, and ask questions about them that lead somewhere?"</div>
+</div>
+MARKDOWN

@@ -8,6 +8,12 @@
 INSTANCE_NAME="${1?
 Usage: $0 INSTANCE_NAME [OPTION]...}"
 
+# aws ssm start-session exits 0 silently when the plugin exists but cannot run, so check it first.
+if ! PLUGIN_ERROR=$(session-manager-plugin --version 2>&1); then
+  echo "session-manager-plugin failed to run: $PLUGIN_ERROR" >&2
+  exit 1
+fi
+
 if [[ "$INSTANCE_NAME" =~ ^i- ]]; then
   INSTANCE_ID="$INSTANCE_NAME"
 else

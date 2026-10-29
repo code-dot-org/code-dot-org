@@ -14,6 +14,7 @@ import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
 import {useProject} from '../ProjectContext';
 import {setCurrentColumn} from '../redux';
+import {getDatasetId} from '../selectors';
 import {
   getCategoricalColumnDetails,
   getCurrentColumnDetails,
@@ -38,7 +39,7 @@ const formatNumber = (value: number) =>
 const ColumnAnalysis = () => {
   const dispatch = useAppDispatch();
   const {project} = useProject();
-  const datasetId = useAppSelector(state => state.metadata?.name || '');
+  const datasetId = useAppSelector(state => getDatasetId(state) || '');
   const columnDetails = useAppSelector(state =>
     getCurrentColumnDetails(state, project)
   );

@@ -1,0 +1,59 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-28T04:19:14.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "explainCode",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "time = int(input(\"What hour is it? \"))\ncan_go = time < 8\nif can_go:\n    print(\"I can go to the movies!\")",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMph5wJ/wDNYhgSH\nFGPWawvIIeBYg7MQoAyNlp0EuUwZ3U1a7N8B5eCGVEDaTAnfMOrDMmk03aL9\nGYonYzoWaQYlv8iTNLSAhF21l06UxWl4HyowkZd+EGv3rozPLdkO8joo1ez+\nY1i+5+KjymPx+ETBaooJNYeD5UaAwnsFjTNUfORl76F6nms6lvjLMcWzp66+\n/X5FiHu9jc9DqUHb9FVrJPxrTVtytFReolPxH24WK0UDMTB7bu38sDwCEK6U\nOOvmEm87sYan2m/9UvIvIQlxyT2eC3FPLuuZk17JyjoF37qly9f1z+qiVOX6\n9jtGyngMmnqd1Aj7HpzsWJDjPNBu\n",
+    "teacher_markdown": "Misconceptions and what to test for:\r\n\r\n- This is the first else students write, so the main test is that exactly one branch runs. Have students run with 7 and with 9 and say which line printed each time.\r\n- Forgetting the colon after else, or not indenting the line under it, is the most common error. Validate reports a SyntaxError for it.\r\n- Else never takes a condition. Writing else can_go == False: is a syntax error.\r\n- Putting the message at the same level as the if, not inside else, prints it every time. Validate reports \"printed 2 messages\" for time = 7.\r\n- Copying the \"can go\" message into the else branch passes the if check but fails the else check. Students should write a message that fits the False case.\r\n- A student can handle the False case with a second if (if not can_go:) instead of an else. That works, and it previews the idea that separate ifs are separate decisions. Validate still asks for an else because this level practices else. Ask: \"When would you want two ifs instead of an else?\"\r\n- Boundary: at time = 8, can_go is False, so the else branch runs. Ask: \"Is 8 less than 8?\"\r\n- Validate expects exactly one printed line each time. A student who adds an extra print, like \"Program finished,\" will fail the one-message check. Ask them to remove it.\r\n- Accept any wording for the else message.\r\n- If a student uses Build Python, they still own the program. Ask them to explain which line printed for time = 9.\r\n\r\nValidation runs the program with time = 7 and time = 9 by supplying the hour in place of input().",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import io\nimport re\nfrom contextlib import redirect_stdout\nfrom unittest import TestCase\n\nGO_MESSAGE = \"I can go to the movies!\"\n\n\ndef read_code():\n    with open('main.py') as main_file:\n        return main_file.read()\n\n\ndef run_with_time(hour):\n    \"\"\"Run the student's main.py as if the user typed this hour.\"\"\"\n    code = read_code()\n    output = io.StringIO()\n    error = None\n    fake_globals = {'input': lambda prompt='': str(hour), '__name__': '__main__'}\n    try:\n        with redirect_stdout(output):\n            exec(code, fake_globals)\n    except Exception as e:\n        error = e\n    lines = [line.strip() for line in output.getvalue().splitlines() if line.strip()]\n    return lines, error\n\n\ndef stopped_message(hour, error):\n    return (f\"Your program stopped with a {type(error).__name__} when time was {hour}. \"\n            \"Fix that error first. Check that your else line ends with a colon and that the lines under it are indented.\")\n\n\nclass TestMoviesModify(TestCase):\n    def test_before_8_goes(self):\n        \"\"\"Your program still says you can go before 8 o'clock\"\"\"\n        lines, error = run_with_time(7)\n        if error:\n            self.fail(stopped_message(7, error))\n        if GO_MESSAGE not in lines:\n            self.fail(f\"With time = 7, your program should still print \\\"{GO_MESSAGE}\\\". Keep the if branch the way it was.\")\n\n    def test_else_prints_a_message(self):\n        \"\"\"Your program prints a message when it's 8 o'clock or later\"\"\"\n        lines, error = run_with_time(9)\n        if error:\n            self.fail(stopped_message(9, error))\n        if not lines:\n            self.fail(\"With time = 9, can_go is False and your program printed nothing. Add an else branch that prints a message.\")\n        if GO_MESSAGE in lines:\n            self.fail(f\"With time = 9, your program still prints \\\"{GO_MESSAGE}\\\". The else message should only print when you can't go.\")\n\n    def test_only_one_message(self):\n        \"\"\"Only one message prints each time\"\"\"\n        for hour in (7, 9):\n            lines, error = run_with_time(hour)\n            if error:\n                self.fail(stopped_message(hour, error))\n            if hour == 9 and not lines:\n                self.skipTest(\"Add an else branch first, then we can check this.\")\n            if len(lines) != 1:\n                self.fail(f\"With time = {hour}, your program printed {len(lines)} messages. Exactly one message should print each time. Check that your else message is inside the else branch.\")\n\n    def test_uses_else(self):\n        \"\"\"Your program uses an else branch\"\"\"\n        if not re.search(r'^\\s*else\\s*:', read_code(), re.MULTILINE):\n            self.fail(\"This level asks you to add an else branch. Add else: after your if, with an indented line that prints a message.\")",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "long_instructions": "# Modify: Add the Else\r\n\r\nYour Task: This program decides whether you can go to the movies. Right now it only does something when the answer is True. Add a path for when it's False.\r\n\r\nDo This:\r\n\r\n1. Run the program. When it asks for the hour, type `7`. Run it again and type `9`. What happens when `can_go` is False?\r\n2. Add an `else` branch that prints a message when you can't go to the movies.\r\n3. Run your program with `7` and with `9`. Check that exactly one message prints each time.\r\n4. Use Validate to check your work."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-28T04:19:14.855+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson8-make-console_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson8-make-console_27_28\"},{\"changed_at\":\"2026-10-28 04:21:16 +0000\",\"changed\":[\"predict_settings\",\"ai_tutor_prompt_settings\",\"teacher_markdown\",\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 04:21:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 04:21:45 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 04:23:09 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import AccountEditHeader from '@cdo/apps/accounts/AccountEditHeader';
@@ -56,10 +57,7 @@ $(document).ready(() => {
         title={accountEditHeaderMountPoint.dataset.title}
         backLabel={accountEditHeaderMountPoint.dataset.backLabel}
       />,
-      accountEditHeaderMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      accountEditHeaderMountPoint
     );
   }
 
@@ -71,10 +69,7 @@ $(document).ready(() => {
       <Provider store={store}>
         <MigrateToMultiAuth />
       </Provider>,
-      migrateMultiAuthMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      migrateMultiAuthMountPoint
     );
   }
 
@@ -84,10 +79,7 @@ $(document).ready(() => {
   if (accountInformationMountPoint) {
     createReactRoot(
       <AccountInformation {...scriptData} />,
-      accountInformationMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      accountInformationMountPoint
     );
   }
 
@@ -96,34 +88,32 @@ $(document).ready(() => {
   if (schoolInformationMountPoint) {
     createReactRoot(
       <SchoolInformation {...scriptData} />,
-      schoolInformationMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      schoolInformationMountPoint
     );
   }
 
-  // Render the React "For Parents and Guardians" section before constructing the
-  // parent-email controllers below, which attach to the Update/Remove links it
-  // renders (by id).
+  // Render the React "For Parents and Guardians" section synchronously: the
+  // parent-email controllers below attach to the Update/Remove links it renders
+  // (by id).
   const forParentsMountPoint = document.getElementById('add-parent-email');
   if (forParentsMountPoint) {
-    createReactRoot(
-      <ForParentsAndGuardians
-        heading={forParentsMountPoint.dataset.heading}
-        intro={forParentsMountPoint.dataset.intro}
-        emailLabel={forParentsMountPoint.dataset.emailLabel}
-        currentEmail={forParentsMountPoint.dataset.currentEmail}
-        updateLabel={forParentsMountPoint.dataset.updateLabel}
-        hasParentEmail={forParentsMountPoint.dataset.hasParentEmail === 'true'}
-        orLabel={forParentsMountPoint.dataset.orLabel}
-        removeLabel={forParentsMountPoint.dataset.removeLabel}
-        note={forParentsMountPoint.dataset.note}
-      />,
-      forParentsMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+    flushSync(() =>
+      createReactRoot(
+        <ForParentsAndGuardians
+          heading={forParentsMountPoint.dataset.heading}
+          intro={forParentsMountPoint.dataset.intro}
+          emailLabel={forParentsMountPoint.dataset.emailLabel}
+          currentEmail={forParentsMountPoint.dataset.currentEmail}
+          updateLabel={forParentsMountPoint.dataset.updateLabel}
+          hasParentEmail={
+            forParentsMountPoint.dataset.hasParentEmail === 'true'
+          }
+          orLabel={forParentsMountPoint.dataset.orLabel}
+          removeLabel={forParentsMountPoint.dataset.removeLabel}
+          note={forParentsMountPoint.dataset.note}
+        />,
+        forParentsMountPoint
+      )
     );
   }
 
@@ -167,10 +157,7 @@ $(document).ready(() => {
         buttonLabel={changeUserTypeMountPoint.dataset.buttonLabel}
         onConfirm={changeUserTypeController.handleConfirm}
       />,
-      changeUserTypeMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      changeUserTypeMountPoint
     );
   }
 
@@ -198,10 +185,7 @@ $(document).ready(() => {
         formId={'lti-sync-settings-form'}
         lmsName={lmsName}
       />,
-      ltiSyncSettingsMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      ltiSyncSettingsMountPoint
     );
   }
 
@@ -235,10 +219,7 @@ $(document).ready(() => {
         )}
         usState={lockoutLinkedAccountsMountPoint.getAttribute('data-us-state')}
       />,
-      lockoutLinkedAccountsMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      lockoutLinkedAccountsMountPoint
     );
   }
 
@@ -250,10 +231,7 @@ $(document).ready(() => {
       <Provider store={store}>
         <TurnOffAiDiff />
       </Provider>,
-      turnOffAiDiffMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      turnOffAiDiffMountPoint
     );
   }
 
@@ -285,10 +263,7 @@ $(document).ready(() => {
         canDelete={deleteAccountMountPoint.dataset.canDelete === 'true'}
         managedNote={deleteAccountMountPoint.dataset.managedNote}
       />,
-      deleteAccountMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      deleteAccountMountPoint
     );
   }
 
@@ -303,10 +278,7 @@ $(document).ready(() => {
         description={expireOtherSessionsMountPoint.dataset.description}
         buttonLabel={expireOtherSessionsMountPoint.dataset.buttonLabel}
       />,
-      expireOtherSessionsMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      expireOtherSessionsMountPoint
     );
   }
 
@@ -338,10 +310,7 @@ $(document).ready(() => {
         submitLabel={data.submitLabel}
         lockIconSrc={data.lockIconSrc}
       />,
-      createPersonalLoginMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      createPersonalLoginMountPoint
     );
   }
 

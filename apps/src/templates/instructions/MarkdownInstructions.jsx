@@ -1,7 +1,6 @@
 import {extensions} from '@code-dot-org/markdown';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
@@ -94,11 +93,11 @@ class MarkdownInstructions extends React.Component {
     return (
       <div
         className="instructions-markdown"
-        style={[
-          styles.standard,
-          inTopPane && styles.inTopPane,
-          inTopPane && canCollapse && styles.inTopPaneCanCollapse,
-        ]}
+        style={{
+          ...styles.standard,
+          ...(inTopPane && styles.inTopPane),
+          ...(inTopPane && canCollapse && styles.inTopPaneCanCollapse),
+        }}
       >
         {isBlockly ? (
           <BlocklyMarkdown
@@ -132,7 +131,7 @@ const styles = {
   },
 };
 
-export const UnconnectedMarkdownInstructions = Radium(MarkdownInstructions);
+export const UnconnectedMarkdownInstructions = MarkdownInstructions;
 
 export default connect(
   state => ({

@@ -9,8 +9,7 @@ function mount() {
 
   createReactRoot(
     <SectionSignIn {...data} />,
-    document.getElementById('section-sign-in'),
-    {legacyReactDomRender: true}
+    document.getElementById('section-sign-in')
   );
 }
 
