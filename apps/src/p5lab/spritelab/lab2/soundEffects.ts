@@ -48,8 +48,8 @@ export const PATTERNS = [
 export type Wave = (typeof WAVES)[number];
 /** Waves an instrument plays rather than an oscillator: a drum skin, a
     bell, a struck cymbal, a plucked string. */
-export type SynthWave = 'drum' | 'bell' | 'clang' | 'pluck';
-const SYNTH_WAVES: readonly string[] = ['drum', 'bell', 'clang', 'pluck'];
+const SYNTH_WAVES = ['drum', 'bell', 'clang', 'pluck'] as const;
+export type SynthWave = (typeof SYNTH_WAVES)[number];
 export type Pitch = (typeof PITCHES)[number];
 export type Length = (typeof LENGTHS)[number];
 export type Pattern = (typeof PATTERNS)[number];
@@ -105,9 +105,7 @@ const VOLUME: Record<Wave, number> = {
   clang: 0.07,
   pluck: 0.3,
 };
-// Loudness drifts with pitch on these waves (a bandpass passes more noise
-// the higher it sits; a plucked string dies sooner the shorter it is), so
-// their gain follows (middle hz / note hz) to this power.
+// Where a wave's loudness drifts with pitch, gain follows (middle/hz)^power.
 const TILT: Partial<Record<Wave, number>> = {
   noise: 0.45,
   pluck: -0.35,
@@ -129,8 +127,7 @@ const RUN_OVERLAP = 1.5;
 const WOBBLE_RATE_HZ = 8;
 // A semitone either side.
 const WOBBLE_DEPTH_CENTS = 100;
-// The wobble deepens from nothing over this long, so the note settles on
-// its pitch before it shakes; a short note gets half its length.
+// A wobble deepens from nothing over this long (half the note if shorter).
 const WOBBLE_ONSET_S = 0.12;
 // A chord's notes cycle on one voice at this rate, the frame rate the old
 // home computer games changed their notes at.
@@ -154,16 +151,13 @@ const CLANG_RESONANCE_HZ = 3000;
 const CLANG_OCTAVES = 1.5;
 // How long an instrument's release rings past the note's end.
 const SYNTH_RELEASE_S = 0.1;
-// Every sound is an instrument built once per timbre and struck again for
-// each note: building one costs up to a frame, striking it a fraction of a
-// millisecond. A run's notes overlap, so each timbre keeps this many.
+// Building an instrument costs up to a frame, striking one microseconds.
+// A run's notes overlap, so each timbre keeps this many.
 const INSTRUMENTS_PER_TIMBRE = 4;
-// An instrument refuses a strike no later than its last; two sounds in one
-// frame land this far apart instead.
+// Tone wants each strike later than the instrument's last; same-frame
+// strikes land this far apart.
 const RESTRIKE_GAP_S = 0.001;
-// A plucked string: a burst of noise into a tuned delay. Its pitch cannot
-// bend, so a slide or wobble plays as a plain pluck and a chord strums
-// its notes together.
+// A plucked string cannot bend: slides and wobbles play plain, chords strum.
 const PLUCK_ATTACK_NOISE = 2;
 const PLUCK_DAMPENING_HZ = 4000;
 const PLUCK_RESONANCE = 0.985;
@@ -389,8 +383,6 @@ interface Rig {
   noises: NoiseVoice[];
   instruments: Record<Exclude<SynthWave, 'pluck'>, Instrument[]>;
   plucks: Pluck[];
-  /** The next instrument to strike, per timbre. */
-  turn: Record<Wave, number>;
 }
 
 // ?quiet on the URL turns the sounds off.
@@ -403,12 +395,17 @@ const live = new Set<Voice>();
 let pending: {notes: Note[]; askedAt: number} | null = null;
 /** When a pooled instrument was last struck, by object. */
 const lastStruck = new WeakMap<object, number>();
+/** The wobble riding each instrument's detune, by that signal. */
+const wobbles = new Map<object, LFO>();
 
 /** The rig for the current context. Its compressor evens the loudness of
     overlapping sounds and of the waves against each other. */
 function currentRig(): Rig {
   const context = getContext();
   if (rig?.context !== context) {
+    // The old context's voices would never end; their timers died with it.
+    live.clear();
+    wobbles.clear();
     rig = {
       context,
       bus: new Compressor({
@@ -422,18 +419,6 @@ function currentRig(): Rig {
       noises: [],
       instruments: {drum: [], bell: [], clang: []},
       plucks: [],
-      turn: {
-        sine: 0,
-        triangle: 0,
-        square: 0,
-        sawtooth: 0,
-        double: 0,
-        noise: 0,
-        drum: 0,
-        bell: 0,
-        clang: 0,
-        pluck: 0,
-      },
     };
   }
   return rig;
@@ -523,17 +508,19 @@ function buildPluck(): Pluck {
   return {string, gain};
 }
 
-/** The pooled instrument whose turn it is, built on first use. */
-function takeTurn<T>(wave: Wave, pool: T[], build: () => T): T {
-  const current = currentRig();
-  const slot = current.turn[wave] % INSTRUMENTS_PER_TIMBRE;
-  current.turn[wave] = slot + 1;
-  pool[slot] ??= build();
-  return pool[slot];
+/** The pool's longest-idle instrument, or a new one while the pool is
+    short. */
+function takeTurn<T extends object>(pool: T[], build: () => T): T {
+  if (pool.length < INSTRUMENTS_PER_TIMBRE) {
+    const made = build();
+    pool.push(made);
+    return made;
+  }
+  return pool.reduce((idle, next) =>
+    (lastStruck.get(next) ?? 0) < (lastStruck.get(idle) ?? 0) ? next : idle
+  );
 }
 
-/** An instrument refuses a strike no later than its last; two sounds in
-    one frame land this far apart instead. */
 function strikeTime(instrument: object, start: number): number {
   const last = lastStruck.get(instrument);
   const at =
@@ -549,7 +536,7 @@ const clampHz = (hz: number) =>
   Math.min(FILTER_MAX_HZ, Math.max(FILTER_MIN_HZ, hz));
 
 const isSynthWave = (type: Note['type']): type is SynthWave =>
-  SYNTH_WAVES.includes(type);
+  (SYNTH_WAVES as readonly string[]).includes(type);
 
 /** The pooled oscillator wave a note plays on; unison sawtooths are the
     double wave, and a type the block never makes falls back to sine. */
@@ -572,6 +559,11 @@ function endAfterRelease(voice: Voice, at: number): void {
   );
 }
 
+function endWobble(detune: object): void {
+  wobbles.get(detune)?.dispose();
+  wobbles.delete(detune);
+}
+
 /** The voice's frequency and detune, cleared of the last note's slide or
     wobble, which must not carry into this one. */
 function freshPitch(
@@ -581,6 +573,15 @@ function freshPitch(
 ): void {
   frequency.cancelScheduledValues(at);
   detune.cancelScheduledValues(at).setValueAtTime(0, at);
+  endWobble(detune);
+}
+
+/** Silences a synth now, a note it has not yet started included: Tone's
+    release alone ignores an envelope still at zero. */
+function hush(synth: MonoSynth | NoiseSynth | Instrument): void {
+  const now = getContext().now();
+  synth.envelope.cancel(now);
+  synth.triggerRelease(now);
 }
 
 function strikeTone(
@@ -590,7 +591,7 @@ function strikeTone(
   top: number,
   start: number
 ): Voice {
-  const synth = takeTurn(wave, currentRig().tones[wave], () => buildTone(wave));
+  const synth = takeTurn(currentRig().tones[wave], () => buildTone(wave));
   const at = strikeTime(synth, start);
   const closed = clampHz(top * FILTER_CLOSED_RATIO);
   synth.envelope.decay = note.seconds;
@@ -607,7 +608,7 @@ function strikeTone(
     detune: synth.detune,
     end: when => endAfterRelease(voice, when),
     cut: () => {
-      synth.triggerRelease();
+      hush(synth);
       live.delete(voice);
     },
   };
@@ -615,8 +616,9 @@ function strikeTone(
 }
 
 function strikeNoise(note: Note, hz: number, start: number): Voice {
-  const {synth, band} = takeTurn('noise', currentRig().noises, buildNoise);
-  const at = strikeTime(synth, start);
+  const noise = takeTurn(currentRig().noises, buildNoise);
+  const {synth, band} = noise;
+  const at = strikeTime(noise, start);
   synth.envelope.decay = note.seconds;
   freshPitch(band.frequency, band.detune, at);
   band.frequency.setValueAtTime(hz, at);
@@ -627,7 +629,7 @@ function strikeNoise(note: Note, hz: number, start: number): Voice {
     detune: band.detune,
     end: when => endAfterRelease(voice, when),
     cut: () => {
-      synth.triggerRelease();
+      hush(synth);
       live.delete(voice);
     },
   };
@@ -638,7 +640,7 @@ function strikeNoise(note: Note, hz: number, start: number): Voice {
 function strikePluck(note: Note, hz: number, start: number): Voice {
   const ratios = note.arpeggio ?? [1];
   const strings = ratios.map(ratio => {
-    const pluck = takeTurn('pluck', currentRig().plucks, buildPluck);
+    const pluck = takeTurn(currentRig().plucks, buildPluck);
     const at = strikeTime(pluck, start);
     pluck.string.release = note.seconds;
     // Summing doubles the energy per doubling of strings.
@@ -652,7 +654,10 @@ function strikePluck(note: Note, hz: number, start: number): Voice {
     detune: undefined,
     end: when => endAfterRelease(voice, when),
     cut: () => {
-      strings.forEach(pluck => pluck.gain.gain.setValueAtTime(0, 0));
+      const now = getContext().now();
+      strings.forEach(pluck =>
+        pluck.gain.gain.cancelScheduledValues(now).setValueAtTime(0, now)
+      );
       live.delete(voice);
     },
   };
@@ -667,7 +672,7 @@ function strikeInstrument(
   hz: number,
   start: number
 ): Voice {
-  const instrument = takeTurn(type, currentRig().instruments[type], () =>
+  const instrument = takeTurn(currentRig().instruments[type], () =>
     buildInstrument(type)
   );
   const at = strikeTime(instrument, start);
@@ -683,7 +688,7 @@ function strikeInstrument(
     detune: instrument.detune,
     end: when => endAfterRelease(voice, when),
     cut: () => {
-      instrument.triggerRelease();
+      hush(instrument);
       live.delete(voice);
     },
   };
@@ -754,12 +759,14 @@ function schedule(notes: Note[]): void {
         );
       lfo.connect(detune);
       lfo.start(start).stop(end);
+      wobbles.set(detune, lfo);
       // Tone cannot free the wobble from its own stop in an offline render.
       if (!lfo.context.isOffline) {
-        getContext().setTimeout(
-          () => lfo.dispose(),
-          end - now + SYNTH_RELEASE_S
-        );
+        getContext().setTimeout(() => {
+          if (wobbles.get(detune) === lfo) {
+            endWobble(detune);
+          }
+        }, end - now + SYNTH_RELEASE_S);
       }
     }
     voice.end(end);
@@ -809,6 +816,7 @@ export function stopSoundEffects(): void {
     voice.cut();
   }
   live.clear();
+  [...wobbles.keys()].forEach(endWobble);
 }
 
 export function playSoundEffect(effect: SoundEffect): void {

@@ -6,6 +6,8 @@ import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 import {playPreset, synthPresetOf, synthSoundUrl} from '../../soundEffects';
 
+import {isUnderWhenRun} from './whenRun';
+
 export const PLAY_SOUND_BLOCK_TYPE = 'spritelab2_playSound';
 /** The toolbox's starting sound; the list itself starts with boom. */
 export const PLAY_SOUND_DEFAULT = synthSoundUrl('jump');
@@ -55,6 +57,10 @@ export class SoundDropdown extends BlocklyCore.FieldDropdown {
     menuItem: BlocklyCore.MenuItem
   ) {
     super.onItemSelected_(menu, menuItem);
+    // Under "when run" the edit's rerun plays the sound itself.
+    if (isUnderWhenRun(this.getSourceBlock())) {
+      return;
+    }
     const url = this.getValue();
     const preset = synthPresetOf(url);
     if (preset) {

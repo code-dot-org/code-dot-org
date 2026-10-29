@@ -1,3 +1,5 @@
+import * as BlocklyCore from 'blockly/core';
+
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import playSound, {
   PLAY_SOUND_OPTIONS,
@@ -91,6 +93,24 @@ describe('spritelab2_playSound', () => {
     const field = new SoundDropdown(PLAY_SOUND_OPTIONS);
     pick(field, valueOf('hop'));
     expect(soundEffects.playPreset).toHaveBeenCalledWith('jump');
+    expect(audioCommands.playSound).not.toHaveBeenCalled();
+  });
+
+  it('leaves a block under "when run" to the rerun, which plays it', () => {
+    const field = new SoundDropdown(PLAY_SOUND_OPTIONS);
+    (field as unknown as {sourceBlock_: unknown}).sourceBlock_ = {
+      getRootBlock: () => ({type: 'spritelab2_whenRun'}),
+    };
+    // With a source block, setValue fires a change event; the fake has no
+    // workspace to receive it.
+    BlocklyCore.Events.disable();
+    try {
+      pick(field, valueOf('hop'));
+      pick(field, valueOf('coin'));
+    } finally {
+      BlocklyCore.Events.enable();
+    }
+    expect(soundEffects.playPreset).not.toHaveBeenCalled();
     expect(audioCommands.playSound).not.toHaveBeenCalled();
   });
 

@@ -13,7 +13,7 @@ import {
   WAVES,
 } from '../../soundEffects';
 
-import {LEGACY_WHEN_RUN_BLOCK_TYPE, WHEN_RUN_BLOCK_TYPE} from './whenRun';
+import {isUnderWhenRun} from './whenRun';
 
 export const PLAY_SOUND_EFFECT_BLOCK_TYPE = 'spritelab2_playSoundEffect';
 export const FIELD_EFFECT_OPTION_TYPE = 'field_spritelab2_effect_option';
@@ -39,20 +39,9 @@ export function effectOf(
   return asSoundEffect(wave, pitch, length, pattern);
 }
 
-const WHEN_RUN_TYPES: readonly string[] = [
-  WHEN_RUN_BLOCK_TYPE,
-  LEGACY_WHEN_RUN_BLOCK_TYPE,
-];
-const underWhenRun = (block: BlocklyCore.Block | null) =>
-  !!block && WHEN_RUN_TYPES.includes(block.getRootBlock().type);
-
-/**
- * One of the block's dropdowns. Picking from the open menu plays the
- * block's whole sound once, the same way the block does at run time; a
- * value set any other way (a saved block loading) stays silent. Under
- * "when run" the edit restarts the program, which plays the sound itself,
- * so the preview stays out of its way.
- */
+/** A dropdown that previews the block's whole sound when picked from its
+    menu; not when set (a saved block loading), and not under "when run",
+    where the edit's rerun plays it. */
 export class EffectOptionDropdown extends BlocklyCore.FieldDropdown {
   static fromJson(options: BlocklyCore.FieldDropdownFromJsonConfig) {
     if (!options.options) {
@@ -68,7 +57,7 @@ export class EffectOptionDropdown extends BlocklyCore.FieldDropdown {
     super.onItemSelected_(menu, menuItem);
     const block = this.getSourceBlock();
     const effect = effectOf(block);
-    if (effect && !underWhenRun(block)) {
+    if (effect && !isUnderWhenRun(block)) {
       playSoundEffect(effect);
     }
   }

@@ -32,7 +32,7 @@ jest.mock('tone', () => {
   class Synth extends Node {
     frequency = param();
     detune = param();
-    envelope = {decay: 0};
+    envelope = {decay: 0, cancel: jest.fn()};
     modulationEnvelope = {decay: 0};
     triggerAttackRelease: Fn = jest.fn(() => this);
     triggerRelease: Fn = jest.fn(() => this);
@@ -47,7 +47,7 @@ jest.mock('tone', () => {
   class MonoSynth extends Node {
     frequency = param();
     detune = param();
-    envelope = {decay: 0};
+    envelope = {decay: 0, cancel: jest.fn()};
     filterEnvelope = {decay: 0, baseFrequency: 0, octaves: 0};
     triggerAttackRelease: Fn = jest.fn(() => this);
     triggerRelease: Fn = jest.fn(() => this);
@@ -61,7 +61,7 @@ jest.mock('tone', () => {
     }
   }
   class NoiseSynth extends Node {
-    envelope = {decay: 0};
+    envelope = {decay: 0, cancel: jest.fn()};
     triggerAttackRelease: Fn = jest.fn(() => this);
     triggerRelease: Fn = jest.fn(() => this);
     constructor(public options: object) {
@@ -311,11 +311,12 @@ describe('playNotes', () => {
     setValueAtTime: jest.Mock;
     linearRampToValueAtTime: jest.Mock;
     exponentialRampToValueAtTime: jest.Mock;
+    cancelScheduledValues: jest.Mock;
   }
   interface Struck {
     frequency: Param;
     detune: Param;
-    envelope: {decay: number};
+    envelope: {decay: number; cancel: jest.Mock};
     triggerAttackRelease: jest.Mock;
     triggerRelease: jest.Mock;
     dispose: jest.Mock;
@@ -332,6 +333,7 @@ describe('playNotes', () => {
     connect: jest.Mock;
     start: jest.Mock;
     stop: jest.Mock;
+    dispose: jest.Mock;
   }
   const fake = tone as unknown as {
     __made: {
@@ -517,13 +519,42 @@ describe('playNotes', () => {
     expect(strikes()).toHaveLength(PRESETS.reveal.length);
   });
 
-  it('cuts every live voice', () => {
+  it('cuts every live voice, the notes not yet started included', () => {
     playPreset('reveal');
     stopSoundEffects();
     made.tones.forEach(synth => {
-      expect(synth.triggerRelease).toHaveBeenCalled();
+      expect(synth.envelope.cancel).toHaveBeenCalledWith(10);
+      expect(synth.triggerRelease).toHaveBeenCalledWith(10);
       expect(synth.dispose).not.toHaveBeenCalled();
     });
+    playSoundEffect({...jump, wave: 'pluck', pattern: 'steady'});
+    stopSoundEffects();
+    const gain = made.gains.at(-1)!.gain;
+    expect(gain.cancelScheduledValues).toHaveBeenCalledWith(10);
+    expect(gain.setValueAtTime).toHaveBeenLastCalledWith(0, 10);
+  });
+
+  it('ends a wobble when its instrument is struck again, or on stop', () => {
+    playSoundEffect({...jump, pattern: 'wobble', length: 'long'});
+    for (let i = 0; i < 3; i++) {
+      playSoundEffect({...jump, pattern: 'steady'});
+    }
+    expect(made.lfos[0].dispose).not.toHaveBeenCalled();
+    playSoundEffect({...jump, pattern: 'steady'});
+    expect(made.lfos[0].dispose).toHaveBeenCalledTimes(1);
+    playSoundEffect({...jump, pattern: 'wobble'});
+    stopSoundEffects();
+    expect(made.lfos[1].dispose).toHaveBeenCalledTimes(1);
+  });
+
+  it('strikes the longest-idle instrument, not the next in line', () => {
+    const notes = notesFor({...jump, pattern: 'run up', length: 'long'});
+    // The run's later notes are still ahead; a sound now takes the first.
+    playNotes(notes);
+    playSoundEffect({...jump, pattern: 'steady'});
+    expect(made.tones).toHaveLength(4);
+    expect(made.tones[0].triggerAttackRelease).toHaveBeenCalledTimes(2);
+    expect(made.tones[1].triggerAttackRelease).toHaveBeenCalledTimes(1);
   });
 
   it('never strikes a pooled instrument twice at one instant', () => {
