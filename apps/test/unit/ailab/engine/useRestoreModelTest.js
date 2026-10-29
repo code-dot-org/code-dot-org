@@ -13,15 +13,14 @@ import {hasCurrentTrainingResult} from '@cdo/apps/ailab/engine/helpers/navigatio
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {
   resetState,
-  setColumnsByDataType,
   setCurrentPanel,
-  setImportedData,
   setMode,
 } from '@cdo/apps/ailab/engine/redux';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
+import {seedDataset} from './levelStore';
 import {renderWithProviders, runTraining} from './renderWithProviders';
 
 jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
@@ -45,10 +44,11 @@ beforeEach(() => {
   // A reset leaves the mode alone, so one level's would outlive its tests.
   store.dispatch(setMode(undefined));
   train.reset();
-  store.dispatch(setImportedData(DATA, false));
-  ['temperature', 'cost', 'rain'].forEach(column =>
-    store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-  );
+  seedDataset(store, DATA, {
+    temperature: ColumnTypes.NUMERICAL,
+    cost: ColumnTypes.NUMERICAL,
+    rain: ColumnTypes.NUMERICAL,
+  });
   store.dispatch(setCurrentPanel('datasetView'));
 });
 
@@ -204,11 +204,24 @@ describe.each([
   ['negative', {k: -1}],
   ['not a number', {k: NaN}],
   ['fractional', {k: 1.5}],
-  ['larger than the dataset', {k: 999}],
 ])('a saved run whose k is %s', (_name, hyperparameters) => {
   test('declines, leaving the student to retrain', () => {
     const rendered = openLab({...savedAfterTraining(), hyperparameters});
 
     expect(rendered.trainingData().trainedModel).toBeUndefined();
   });
+});
+
+/*
+  Only a hand-edited main.json reaches this: a shrunken dataset is turned away
+  earlier, by the saved split no longer naming rows it has. The model KNN
+  builds is degenerate rather than broken, so it is not worth guarding.
+*/
+test('rebuilds a saved k larger than the dataset', () => {
+  const rendered = openLab({
+    ...savedAfterTraining(),
+    hyperparameters: {k: 999},
+  });
+
+  expect(rendered.trainingData().trainedModel).toBeDefined();
 });

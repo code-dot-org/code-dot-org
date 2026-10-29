@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "has_unnumbered_lessons": true,
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-22 22:01:38 UTC",
+    "serialized_at": "2026-10-28 20:43:37 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -47,6 +48,21 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "ccsd-aif-workshop"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Unit 6 Project",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop"
+      }
     }
   ],
   "lesson_activities": [
@@ -58,6 +74,18 @@
       "seeding_key": {
         "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop"
+      }
+    },
+    {
+      "key": "d3a28fc5-d094-4b55-851d-d5491074a5b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d3a28fc5-d094-4b55-851d-d5491074a5b9",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "ccsd-aif-workshop"
       }
@@ -73,6 +101,16 @@
       "seeding_key": {
         "activity_section.key": "9f930dda-dd5d-494f-a9ed-fcf9136def13",
         "lesson_activity.key": "e786d756-ec98-4cef-98d1-672a3c52c33b"
+      }
+    },
+    {
+      "key": "6a067e2c-b1c9-4591-a5f4-605c565ea594",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594",
+        "lesson_activity.key": "d3a28fc5-d094-4b55-851d-d5491074a5b9"
       }
     }
   ],
@@ -98,6 +136,132 @@
       "level_keys": [
         "ccsd-aif-workshop-U1"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-weblab-template-test_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-weblab-template-test_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-brandkit_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-brandkit_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-sitemap_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-sitemap_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level1_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-level1_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level2_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-level2_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level4_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson13-level4_2026"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -111,6 +275,78 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "ccsd-aif-workshop",
         "activity_section.key": "9f930dda-dd5d-494f-a9ed-fcf9136def13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-weblab-template-test_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-weblab-template-test_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-brandkit_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-brandkit_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-sitemap_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-sitemap_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-level1_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level1_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-level2_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level2_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson13-level4_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson13-level4_2026"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "ccsd-aif-workshop",
+        "activity_section.key": "6a067e2c-b1c9-4591-a5f4-605c565ea594"
       }
     }
   ],

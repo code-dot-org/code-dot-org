@@ -6,9 +6,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 $(document).ready(() => {
   createReactRoot(
     <PersonalizationCollectorContainer />,
-    document.getElementById('personalization-information'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('personalization-information')
   );
 });

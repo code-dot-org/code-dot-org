@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
       courseList={getScriptData('courseList')}
       courseUnitMap={getScriptData('courseUnitMap')}
     />,
-    document.getElementById('dashboard-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('dashboard-container')
   );
 });

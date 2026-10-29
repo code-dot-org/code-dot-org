@@ -1,6 +1,46 @@
 {
   "datasets": [
     {
+      "id": "SC1-L07-previs-base",
+      "name": "Amazon Future Engineer - Previsualization",
+      "path": "datasets/SC1-L07-previs-base.csv",
+      "metadataPath": "datasets/SC1-L07-previs-base.json",
+      "isToy": true,
+      "rowCount": 79
+    },
+    {
+      "id": "SC1-L07-previs-variant-budget",
+      "name": "Amazon Future Engineer - Previsualization",
+      "path": "datasets/SC1-L07-previs-variant-budget.csv",
+      "metadataPath": "datasets/SC1-L07-previs-variant-budget.json",
+      "isToy": true,
+      "rowCount": 79
+    },
+    {
+      "id": "SC1-L07-previs-variant-famous-actor",
+      "name": "Amazon Future Engineer - Previsualization",
+      "path": "datasets/SC1-L07-previs-variant-famous-actor.csv",
+      "metadataPath": "datasets/SC1-L07-previs-variant-famous-actor.json",
+      "isToy": true,
+      "rowCount": 79
+    },
+    {
+      "id": "SC1-L07-previs-variant-filmed-again",
+      "name": "Amazon Future Engineer - Previsualization",
+      "path": "datasets/SC1-L07-previs-variant-filmed-again.csv",
+      "metadataPath": "datasets/SC1-L07-previs-variant-filmed-again.json",
+      "isToy": true,
+      "rowCount": 79
+    },
+    {
+      "id": "smart_room_training",
+      "name": "Smart Room Training",
+      "path": "datasets/smart_room_training.csv",
+      "metadataPath": "datasets/smart_room_training.json",
+      "isToy": true,
+      "rowCount": 6
+    },
+    {
       "id": "songs",
       "name": "Top Songs",
       "path": "datasets/songs.csv",

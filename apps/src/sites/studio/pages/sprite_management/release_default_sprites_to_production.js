@@ -6,9 +6,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 $(document).ready(function () {
   createReactRoot(
     <ReleaseDefaultSprites />,
-    document.getElementById('release-default-sprites-to-production-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('release-default-sprites-to-production-container')
   );
 });

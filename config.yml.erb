@@ -698,6 +698,13 @@ active_job_queue_priorities:
   :default: 0
   :low_priority: 10
 
+# Active Job priority range for the workers started by `rake build:start_active_job_workers`.
+# Blank leaves the range open. Ensure that another worker pool consumes the remaining jobs
+# if you restrict the priority range here.
+# Command-line --min-priority/--max-priority flags take precedence.
+active_job_worker_min_priority:
+active_job_worker_max_priority:
+
 # ActiveJob Queue Adapter
 active_job_queue_adapter: :delayed_job
 
