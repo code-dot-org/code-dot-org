@@ -946,6 +946,61 @@ export class PhaserBinding {
     };
 
     /**
+     * Each screen's color over the screens under it, the size of the window,
+     * just before the screen's first actor in the root's draw order
+     * (specs/SCREEN_STACK_PLAN.md). Before `band`, which then gives it the
+     * camera of the Viewport it follows, so a half-clear screen dims the
+     * World's window too. The Main Screen's is the main camera's own.
+     */
+    const screenFills = new Map<number, Phaser.GameObjects.Rectangle>();
+    const fillScreens = (
+      scene: Phaser.Scene,
+      byId: ReadonlyMap<string, RenderState>,
+      stateOf: ReadonlyMap<unknown, RenderState>,
+    ) => {
+      const fills = world.screenColors?.() ?? [];
+      const live = new Set(fills.map(fill => fill.id));
+      for (const [id, rect] of screenFills) {
+        if (!live.has(id)) {
+          rect.destroy();
+          screenFills.delete(id);
+        }
+      }
+      if (!fills.length) {
+        return;
+      }
+      const container = containerFor(scene, 0);
+      const view = world.viewSize();
+      const byte = (channel: number) => Math.round(channel * 255);
+      for (const fill of fills) {
+        const [r, g, b, a] = fill.color;
+        let rect = screenFills.get(fill.id);
+        if (!rect) {
+          rect = scene.add.rectangle(0, 0, view.x, view.y);
+          rect.setDepth(ACTOR_DEPTH);
+          screenFills.set(fill.id, rect);
+        }
+        rect.setSize(view.x, view.y);
+        rect.setFillStyle((byte(r) << 16) | (byte(g) << 8) | byte(b), a);
+        // Over the window wherever the screen's layer has been moved.
+        rect.setPosition(view.x / 2 - container.x, view.y / 2 - container.y);
+        // The top-level object the screen's first actor is, or is in.
+        let top = fill.first ? byId.get(fill.first) : undefined;
+        while (top?.parent && stateOf.get(top.parent)) {
+          top = stateOf.get(top.parent);
+        }
+        const marker = top && (groups.get(top.actor) ?? objects.get(top.actor));
+        container.remove(rect);
+        const at = marker ? container.getIndex(marker as never) : -1;
+        if (at >= 0) {
+          container.addAt(rect, at);
+        } else {
+          container.add(rect);
+        }
+      }
+    };
+
+    /**
      * A Scroll View's clip: a rectangle its group is masked to
      * (specs/ONE_WORLD_PLAN.md, "Clipping"). A mask FILTER, which clips in
      * WebGL where `setMask` does nothing. The rectangle is drawn in the
@@ -1431,6 +1486,7 @@ export class PhaserBinding {
           Phaser.Display.Color.GetColor32(byte(r), byte(g), byte(b), byte(a)),
         );
       }
+      fillScreens(scene, byId, stateOf);
       band(scene, spaces, byId, stateOf);
     };
 

@@ -79,6 +79,12 @@ vi.mock('phaser', () => {
     set cameraFilter(filter: number) {
       this.record.filter = filter;
     }
+    get x() {
+      return this.record.x;
+    }
+    get y() {
+      return this.record.y;
+    }
     setDepth(depth: number) {
       this.record.depth = depth;
       return this;
@@ -126,7 +132,15 @@ vi.mock('phaser', () => {
       return this;
     }
   }
-  class Rectangle extends Base {}
+  class Rectangle extends Base {
+    setSize(width: number, height: number) {
+      this.record.size = [width, height];
+      return this;
+    }
+    setFillStyle() {
+      return this;
+    }
+  }
   class Container extends Base {
     list: Base[] = [];
     add(child: Base) {
@@ -154,6 +168,9 @@ vi.mock('phaser', () => {
     }
     sort() {
       return this;
+    }
+    getIndex(child: Base) {
+      return this.list.indexOf(child);
     }
     setMask() {
       this.record.masked = true;
@@ -393,6 +410,8 @@ const world = (held: {
   /** The box's camera's zoom, and a still layer over its map. */
   zoom?: number;
   weather?: boolean;
+  /** A half-clear screen over the game, whose first actor is the Score. */
+  screen?: boolean;
 }) => {
   const shown = () => held.window !== false;
   const camera = () => ({x: 320, y: 160, zoom: held.zoom ?? 1});
@@ -408,6 +427,8 @@ const world = (held: {
       {effects: [], offset: {x: 0, y: 0}, repeat: false},
     ],
     screenColor: () => [0, 0, 0, 1],
+    screenColors: () =>
+      held.screen ? [{id: 7, color: [0, 0, 0, 0.5], first: SCORE.id}] : [],
     mapBounds: () => ({x: 320, y: 320}),
     viewSize: () => ({x: 320, y: 320}),
     screenLayerSnapshot: () => [
@@ -649,6 +670,27 @@ describe('what the root holds around a Viewport', () => {
     expect(floor.filter).toBe(over.id);
     expect(viewport.filter).toBe(over.id);
     expect(score.filter).toBe(MAIN_ID);
+  });
+
+  it('paints a screen’s color just before its first actor, over the World', () => {
+    // specs/SCREEN_STACK_PLAN.md, step 2: a half-clear screen over the game
+    // dims the Viewport's window too, so its color is drawn by `over`.
+    const held = {spaces: true, around: true, screen: true};
+    new PhaserBinding(world(held), pane());
+    runFrame();
+
+    const [, , , over] = cameras;
+    const [, viewport, fill, score] = rootChildren();
+    expect(fill.size).toEqual([320, 320]);
+    expect([fill.x, fill.y]).toEqual([160, 160]);
+    expect(viewport.filter).toBe(over.id);
+    expect(fill.filter).toBe(MAIN_ID);
+    expect(score.filter).toBe(MAIN_ID);
+
+    // …and it goes with the screen.
+    held.screen = false;
+    runFrame();
+    expect(fill.destroyed).toBe(true);
   });
 
   it('draws the cameras in band order: main, the space, then what is over it', () => {

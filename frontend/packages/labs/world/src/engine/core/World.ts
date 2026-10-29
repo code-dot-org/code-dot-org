@@ -176,6 +176,12 @@ export interface WorldMap {
    */
   modal?: boolean;
   /**
+   * A screen's color, behind its placements (specs/SCREEN_STACK_PLAN.md).
+   * Opaque, it covers the screens under it, which are not drawn; partly
+   * clear, they show through. Read when the map is shown as a screen.
+   */
+  backgroundColor?: ColorValue;
+  /**
    * The theme this map's controls are painted out of, by module path.
    *
    * THE MIDDLE OF THREE. A drawing names a class and never a file; which file
@@ -244,6 +250,16 @@ export interface WorldMap {
   script?: (world: World, placed: Record<string, Actor>, map: MapLoad) => void;
 }
 
+/** The index of the last item that answers yes, or -1 (ES2023's `findLastIndex`). */
+const lastIndexWhere = <T>(items: readonly T[], test: (item: T) => boolean) => {
+  for (let at = items.length - 1; at >= 0; at -= 1) {
+    if (test(items[at])) {
+      return at;
+    }
+  }
+  return -1;
+};
+
 /**
  * One loading of a map: what it placed, and the way to take it back.
  *
@@ -288,12 +304,27 @@ export class MapLoad {
   /** The theme this map named, or empty — see `WorldMap.theme`. */
   readonly theme: string;
 
+  /**
+   * Whether this load is a SCREEN on the stack, rather than a map put up over
+   * one (specs/SCREEN_STACK_PLAN.md). The Main Screen's is the bottom one.
+   */
+  readonly screen: boolean;
+
+  /** A screen's own color, or none — see `WorldMap.backgroundColor`. */
+  readonly color: Rgba | undefined;
+
+  /** Which load this is, for the driver to keep a screen's color by. */
+  readonly id: number;
+  private static loaded = 0;
+
   constructor(
     world: World,
     actors: readonly Actor[],
     space: Space,
     modal = false,
     theme = '',
+    screen = false,
+    color?: Rgba,
   ) {
     this.world = world;
     this.actors = actors;
@@ -301,6 +332,9 @@ export class MapLoad {
     this.among = space.loads;
     this.modal = modal;
     this.theme = theme;
+    this.screen = screen;
+    this.color = color;
+    this.id = MapLoad.loaded += 1;
   }
 
   /**
@@ -2146,7 +2180,39 @@ export class World {
    * the World, which the screen's module has loaded first.
    */
   loadScreen(map: WorldMap, layer?: string): Actor[] {
-    return this.onScreen(() => this.loadMap(map, layer));
+    return this.onScreen(() => this.placeOnScreen(map, layer, true));
+  }
+
+  /**
+   * Put a screen the project holds on top of the stack, by path — `show
+   * screen ⟨…⟩` (specs/SCREEN_STACK_PLAN.md). The same screen shown twice is
+   * two screens. A path nothing registered shows nothing.
+   */
+  showScreen(path: string): Actor[] {
+    const held = this.maps.get(path);
+    return held ? this.loadScreen(held) : [];
+  }
+
+  /**
+   * Take the top screen off, with whatever was put up over it, and say
+   * whether there was one to take — `go back`. The Main Screen is never
+   * taken off.
+   */
+  goBack(): boolean {
+    const loads = this.rootSpace.loads;
+    const screens = loads.filter(load => load.screen);
+    if (screens.length < 2) {
+      return false;
+    }
+    for (const load of loads.slice(loads.indexOf(screens.at(-1)!)).reverse()) {
+      load.unload();
+    }
+    return true;
+  }
+
+  /** The screens on the stack, the Main Screen first. */
+  screens(): readonly MapLoad[] {
+    return this.rootSpace.loads.filter(load => load.screen);
   }
 
   /** How big the screen is, in tiles: its own bounds, beside `setViewSize`. */
@@ -2395,8 +2461,15 @@ export class World {
   }> {
     const world = this.worldSpace;
     const sky = world.clearColor ? ([...world.clearColor] as Rgba) : undefined;
+    // …and the Viewports on one, which leaves the World undrawn when no
+    // Viewport onto it is.
+    const covered = this.coveredLoads();
     const windows = this.viewportSpaces.flatMap(space => {
-      if (!space.owner || !space.camera) {
+      if (
+        !space.owner ||
+        !space.camera ||
+        this.isCovered(space.owner, covered)
+      ) {
         return [];
       }
       const view = this.viewSizeOf(space.owner);
@@ -2794,21 +2867,39 @@ export class World {
     if (this.here().space === this.worldSpace) {
       return this.loadWorldMap(map, layer);
     }
+    return this.placeOnScreen(map, layer, false);
+  }
+
+  /**
+   * Place a map over what the screen holds: a screen on the stack, or a map
+   * put up over one until screens replace those (specs/SCREEN_STACK_PLAN.md).
+   */
+  private placeOnScreen(
+    map: WorldMap,
+    layer: string | undefined,
+    screen: boolean,
+  ): Actor[] {
     // Over what the screen holds. A Viewport this map placed looks at the
     // World, which the screen's module loads first, so its cameras can be
     // aimed BEFORE THIS MAP'S SCRIPT, which is where they are declared and
     // told what to follow (`placementCameras`).
     const held: Space[] = [];
-    const added = this.loadInto(this.here().space, map, layer, placed => {
-      for (const actor of placed) {
-        const space = actor.has(ViewportTrait)
-          ? this.viewportSpaceOf(actor)
-          : undefined;
-        if (space) {
-          held.push(space);
+    const added = this.loadInto(
+      this.rootSpace,
+      map,
+      layer,
+      placed => {
+        for (const actor of placed) {
+          const space = actor.has(ViewportTrait)
+            ? this.viewportSpaceOf(actor)
+            : undefined;
+          if (space) {
+            held.push(space);
+          }
         }
-      }
-    });
+      },
+      screen,
+    );
     // The World is at least as big as the first window onto it, measured
     // now that the screen's layout has sized it, as a map loaded after the
     // Viewport would be (`loadWorldMap`).
@@ -2847,7 +2938,9 @@ export class World {
    */
   loadMapNamed(path: string, layer?: string): Actor[] {
     const held = this.maps.get(path);
-    return held ? this.loadScreen(held, layer) : [];
+    return held
+      ? this.onScreen(() => this.placeOnScreen(held, layer, false))
+      : [];
   }
 
   /**
@@ -2877,6 +2970,7 @@ export class World {
     map: WorldMap,
     layer?: string,
     beforeScript?: (placed: readonly Actor[]) => void,
+    screen = false,
   ): Actor[] {
     this.growSpaceToFit(space, map);
     const lookup = this.propertyLookup();
@@ -3020,6 +3114,10 @@ export class World {
       space,
       map.modal === true,
       typeof map.theme === 'string' ? map.theme : '',
+      screen,
+      screen && map.backgroundColor !== undefined
+        ? rgba(map.backgroundColor)
+        : undefined,
     );
     space.loads.push(load);
     for (const actor of added) {
@@ -4120,6 +4218,39 @@ export class World {
    * INSIDE a Viewport is not a case anybody has needed and is not answered.
    */
   canReach(actor: Actor): boolean {
+    return this.onTopScreen(actor) && this.underNoModal(actor);
+  }
+
+  /**
+   * Whether input reaches this actor through the screen stack: only the top
+   * screen's actors, and what was put up over it, take it
+   * (specs/SCREEN_STACK_PLAN.md). The World's are reached while the Main
+   * Screen is on top, as the game is the World whether or not a Viewport
+   * shows it; under another screen, only through that screen's Viewports.
+   * An actor on the screen that no map placed is the Main Screen's.
+   */
+  private onTopScreen(actor: Actor): boolean {
+    const loads = this.rootSpace.loads;
+    const top = lastIndexWhere(loads, load => load.screen);
+    const bottom = loads.findIndex(load => load.screen);
+    if (top === bottom) {
+      return true;
+    }
+    if (actor.space === this.worldSpace) {
+      return loads
+        .slice(top)
+        .some(load =>
+          load.actors.some(
+            one => one.world === this && one.has(ViewportTrait),
+          ),
+        );
+    }
+    const load = this.loadOf.get(actor);
+    return load ? loads.indexOf(load) >= top : false;
+  }
+
+  /** …and through the modal loads, until screens replace them. */
+  private underNoModal(actor: Actor): boolean {
     const loads = this.rootSpace.loads;
     let topModal = -1;
     for (let at = loads.length - 1; at >= 0; at -= 1) {
@@ -4133,6 +4264,54 @@ export class World {
     }
     const load = this.loadOf.get(actor);
     return load ? loads.indexOf(load) >= topModal : false;
+  }
+
+  /**
+   * The loads on the screen that are not drawn: every one under the topmost
+   * screen whose color is opaque, since that screen covers them.
+   */
+  private coveredLoads(): ReadonlySet<MapLoad> {
+    const loads = this.rootSpace.loads;
+    const cover = lastIndexWhere(
+      loads,
+      load => load.screen && load.color !== undefined && load.color[3] >= 1,
+    );
+    return new Set(cover > 0 ? loads.slice(0, cover) : []);
+  }
+
+  /** Whether an actor on the screen is under a screen that covers it. */
+  private isCovered(actor: Actor, covered: ReadonlySet<MapLoad>): boolean {
+    if (actor.space === this.worldSpace || covered.size === 0) {
+      return false;
+    }
+    const load = this.loadOf.get(actor);
+    // One no map placed is the Main Screen's, which is the bottom.
+    return load ? covered.has(load) : true;
+  }
+
+  /**
+   * The screens drawn with a color of their own, bottom first: what the
+   * driver paints behind each screen's actors, the size of the window. The
+   * Main Screen's color is the screen's own (`screenColor`).
+   */
+  screenColors(): ReadonlyArray<{
+    id: number;
+    color: Rgba;
+    /** The first actor the screen placed that is still in the world. */
+    first: string | undefined;
+  }> {
+    const covered = this.coveredLoads();
+    return this.rootSpace.loads.flatMap(load =>
+      load.screen && load.color && !covered.has(load)
+        ? [
+            {
+              id: load.id,
+              color: [...load.color] as Rgba,
+              first: load.actors.find(actor => actor.world === this)?.id,
+            },
+          ]
+        : [],
+    );
   }
 
   /**
@@ -4924,8 +5103,11 @@ export class World {
     };
 
     const states: RenderState[] = [];
+    // A screen under one that covers it is not drawn
+    // (specs/SCREEN_STACK_PLAN.md).
+    const covered = this.coveredLoads();
     for (const actor of this.actorList) {
-      if (!actor.has(positional)) {
+      if (!actor.has(positional) || this.isCovered(actor, covered)) {
         continue;
       }
       const position = actor.get(positionProp);

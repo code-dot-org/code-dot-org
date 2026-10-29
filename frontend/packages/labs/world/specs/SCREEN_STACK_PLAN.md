@@ -1,6 +1,6 @@
 # Plan: screens are a stack, and each one holds its own words
 
-STATUS: BUILDING, October 2026. Step 1 is done. Comes after
+STATUS: BUILDING, October 2026. Steps 1 and 2 are done. Comes after
 specs/ONE_WORLD_PLAN.md: it assumes one World, flat screens, and Viewports
 that look at the World.
 
@@ -161,6 +161,28 @@ Screen's color stays the main camera's clear color.
 - **The editor** already makes a `.screen` ("New screen" in the place
   switcher) and opens it. A screen other than `main` compiles as a map but
   is not registered by path, so nothing can show it until step 4.
+
+## Learned while building
+
+- **Step 2 marks a load as a screen** (`MapLoad.screen`): `loadScreen`,
+  which the Main Screen's module calls, and `showScreen(path)`. `goBack`
+  takes the top screen off with every load over it, and never the bottom.
+  `load the map named` still puts up a map that is not a screen, so the
+  pause menu and the dialogs work as they did until step 5.
+- **The World is reached while the Main Screen is on top**, whether or not
+  a Viewport shows it, and under another screen only through that screen's
+  Viewports. A game's Main Screen always has its Game Viewport, so this
+  changes nothing for one; it keeps the tests written as worlds, whose
+  level has no Viewport and whose code adds to the World, reaching what
+  they add.
+- **A screen's color is `WorldMap.backgroundColor`**, kept on its load. An
+  opaque one leaves every load under it out of `renderSnapshot` and their
+  Viewports out of `spaceSnapshot`; `screenColors` says the rest, and the
+  binding paints each as a window-sized rectangle just before the screen's
+  first actor, so the bands give it the camera of the Viewport it follows.
+- **Compared before and after**: every scenario and lesson draws the same
+  and reaches the same, but the random lessons' positions. Nothing shows a
+  second screen yet, so seeing one in the browser waits for step 4.
 
 ## Not in this plan
 
