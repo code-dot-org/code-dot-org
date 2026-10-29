@@ -1,6 +1,5 @@
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
-
-import moduleStyles from '../sprite-lab2-view.module.scss';
 
 interface PlayControlsProps {
   /** Absent on a pinned-scene level, where the game is the one scene. */
@@ -15,21 +14,23 @@ const PlayControls: React.FunctionComponent<PlayControlsProps> = ({
 }) => (
   <>
     {onRestartGame && (
-      <button
-        type="button"
-        className={moduleStyles.playControl}
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
         onClick={onRestartGame}
       >
         Restart game
-      </button>
+      </MuiButton>
     )}
-    <button
-      type="button"
-      className={moduleStyles.playControl}
+    <MuiButton
+      variant="outlined"
+      color="secondary"
+      size="small"
       onClick={onRestartScene}
     >
       Restart scene
-    </button>
+    </MuiButton>
   </>
 );
 

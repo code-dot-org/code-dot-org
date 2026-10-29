@@ -2,6 +2,7 @@
 // the dialog's chrome.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -128,53 +129,58 @@ const SentenceDialogBody: React.FunctionComponent<SentenceDialogBodyProps> = ({
           </section>
         </div>
         <div className={moduleStyles.footer}>
-          <button
-            type="button"
-            className={moduleStyles.button}
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             disabled={parts.busy}
             onClick={onCancel}
           >
             Cancel
-          </button>
+          </MuiButton>
           {result ? (
             <>
-              <button
-                type="button"
-                className={moduleStyles.button}
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
                 disabled={parts.busy}
                 onClick={parts.changeWords}
               >
                 Modify prompt
-              </button>
-              <button
-                type="button"
-                className={moduleStyles.button}
+              </MuiButton>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
                 disabled={parts.busy || parts.exhausted}
                 onClick={parts.generate}
               >
-                <FontAwesomeV6Icon iconName="sparkles" />
                 Regenerate
-              </button>
-              <button
-                type="button"
-                className={moduleStyles.primaryButton}
+              </MuiButton>
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="small"
+                startIcon={<FontAwesomeV6Icon iconName="check" />}
                 disabled={parts.busy}
                 onClick={parts.keep}
               >
-                <FontAwesomeV6Icon iconName="check" />
                 Keep
-              </button>
+              </MuiButton>
             </>
           ) : (
-            <button
-              type="button"
-              className={moduleStyles.primaryButton}
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="small"
+              startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
               disabled={!parts.complete || parts.busy || parts.exhausted}
               onClick={parts.generate}
             >
-              <FontAwesomeV6Icon iconName="sparkles" />
               {generating ? 'Generating…' : 'Generate'}
-            </button>
+            </MuiButton>
           )}
         </div>
       </>

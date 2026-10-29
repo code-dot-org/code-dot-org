@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {
@@ -9,6 +8,7 @@ import React, {
   useState,
 } from 'react';
 
+import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import ColorPicker from './ColorPicker';
@@ -193,8 +193,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   brushSizes,
   children,
 }) => {
-  const {theme} = useTheme();
-  const themeMode = theme === 'Dark' ? 'dark' : 'light';
+  const themeMode = useThemeMode();
   const shownTools = tools ? TOOLS.filter(t => tools.includes(t.id)) : TOOLS;
   // For the window keydown listener, which is bound once.
   const shownToolsRef = useRef(shownTools);
@@ -1588,11 +1587,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   };
 
   return (
-    // display: contents host carrying the theme for the parts wherever the
-    // host puts them; in the modal its selector also outranks CustomDialog's.
-    <div className={moduleStyles.dialogHost} data-theme={themeMode}>
-      {children(parts)}
-    </div>
+    // display: contents host for the chrome wherever the host puts the
+    // parts; in the modal its selector also outranks CustomDialog's.
+    <div className={moduleStyles.dialogHost}>{children(parts)}</div>
   );
 };
 
