@@ -1,8 +1,11 @@
 import * as BlocklyCore from 'blockly/core';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {flushSync} from 'react-dom';
 
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
@@ -153,7 +156,8 @@ export default class FieldChord extends BlocklyCore.Field {
   protected showEditor_() {
     super.showEditor_();
 
-    const editor = this.createDropdown();
+    // Synchronous: the drop-down is sized from this content when shown.
+    const editor = flushSync(() => this.createDropdown());
     BlocklyCore.DropDownDiv.getContentDiv().appendChild(editor);
 
     const style = (this.sourceBlock_ as BlocklyCore.BlockSvg).style;
@@ -191,10 +195,7 @@ export default class FieldChord extends BlocklyCore.Field {
         initValue: this.getValue(),
         onChange: this.onValueChange,
       }),
-      this.newDiv,
-      {
-        legacyReactDomRender: true,
-      }
+      this.newDiv
     );
   }
 
@@ -203,7 +204,7 @@ export default class FieldChord extends BlocklyCore.Field {
       return;
     }
 
-    ReactDOM.unmountComponentAtNode(this.newDiv);
+    unmountReactRoot(this.newDiv);
     this.newDiv = null;
   }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
@@ -556,19 +557,19 @@ export default class Craft {
       });
     };
 
-    createReactRoot(
-      <Provider store={getStore()}>
-        <AppView
-          visualizationColumn={
-            <CraftVisualizationColumn showScore={!!config.level.useScore} />
-          }
-          onMount={onMount}
-        />
-      </Provider>,
-      document.getElementById(config.containerId),
-      {
-        legacyReactDomRender: true,
-      }
+    // Synchronous: onMount initializes the app before init returns.
+    flushSync(() =>
+      createReactRoot(
+        <Provider store={getStore()}>
+          <AppView
+            visualizationColumn={
+              <CraftVisualizationColumn showScore={!!config.level.useScore} />
+            }
+            onMount={onMount}
+          />
+        </Provider>,
+        document.getElementById(config.containerId)
+      )
     );
   }
 

@@ -8,6 +8,7 @@ import Hammer from 'hammerjs';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
@@ -453,36 +454,36 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <div>
-        <ThemeProvider theme={minecraftMuiTheme}>
-          <AppView
-            upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
-            downIcon={
-              <img style={{width: '15px'}} src={downButtonImg} alt="" />
-            }
-            visualizationColumn={
-              <CraftVisualizationColumn
-                showFinishButton={!config.level.isProjectLevel}
-                showScore={!!config.level.useScore}
-              />
-            }
-            onMount={onMount}
-          />
-          <PlayerSelectionDialog
-            players={[CHARACTER_ALEX, CHARACTER_STEVE]}
-            title={craftMsg.playerSelectChooseCharacter()}
-            titleClassName="minecraft-big-gray-header"
-            hideSubtitle
-          />
-        </ThemeProvider>
-      </div>
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <div>
+          <ThemeProvider theme={minecraftMuiTheme}>
+            <AppView
+              upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
+              downIcon={
+                <img style={{width: '15px'}} src={downButtonImg} alt="" />
+              }
+              visualizationColumn={
+                <CraftVisualizationColumn
+                  showFinishButton={!config.level.isProjectLevel}
+                  showScore={!!config.level.useScore}
+                />
+              }
+              onMount={onMount}
+            />
+            <PlayerSelectionDialog
+              players={[CHARACTER_ALEX, CHARACTER_STEVE]}
+              title={craftMsg.playerSelectChooseCharacter()}
+              titleClassName="minecraft-big-gray-header"
+              hideSubtitle
+            />
+          </ThemeProvider>
+        </div>
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 };
 

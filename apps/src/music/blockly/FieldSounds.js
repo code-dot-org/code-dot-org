@@ -1,5 +1,6 @@
 import * as BlocklyCore from 'blockly/core';
 import React from 'react';
+import {flushSync} from 'react-dom';
 
 import color from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
@@ -109,7 +110,8 @@ class FieldSounds extends BlocklyCore.Field {
 
     super.showEditor_();
 
-    const editor = this.dropdownCreate_();
+    // Synchronous: the drop-down is sized from this content when shown.
+    const editor = flushSync(() => this.dropdownCreate_());
     Blockly.DropDownDiv.getContentDiv().appendChild(editor);
 
     Blockly.DropDownDiv.setColour(
@@ -183,10 +185,7 @@ class FieldSounds extends BlocklyCore.Field {
         }}
         onSelect={value => this.setValue(value)}
       />,
-      this.newDiv_,
-      {
-        legacyReactDomRender: true,
-      }
+      this.newDiv_
     );
   }
 
