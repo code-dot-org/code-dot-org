@@ -1,0 +1,17 @@
+@import 'color.scss';
+
+.menuButton:hover,
+.menuButton:active {
+  box-shadow: none;
+}
+
+.dropdownOption {
+  &:hover {
+    background-color: $lightest_gray;
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+}
