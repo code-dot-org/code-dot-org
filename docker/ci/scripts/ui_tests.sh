@@ -7,8 +7,9 @@
 
 source docker/ci/scripts/prepare_ci_env.sh
 
-# Skip rake install in ui pipeline. This is safe because we've already run rake install
-# in the cache-staging-build pipeline, and the ui pipeline re-uses that cache.
+# The ui pipeline builds from a fresh clone (see the checkout step in
+# .drone.yml), so nothing has run rake install for it yet.
+bundle exec rake install
 
 bundle exec rake build
 
