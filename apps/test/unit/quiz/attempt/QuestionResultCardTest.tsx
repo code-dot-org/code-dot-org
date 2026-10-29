@@ -158,6 +158,38 @@ describe('QuestionResultCard', () => {
     expect(screen.getByText('Skipped')).toBeInTheDocument();
   });
 
+  it('tags a correct answer as correct', () => {
+    renderCard({
+      responseData: {selectedChoiceId: '1'},
+      answered: true,
+      correct: true,
+    });
+
+    expect(screen.getByText('Correct')).toBeInTheDocument();
+  });
+
+  it('tags an incorrect answer as incorrect', () => {
+    renderCard({
+      responseData: {selectedChoiceId: '2'},
+      answered: true,
+      correct: false,
+    });
+
+    expect(screen.getByText('Incorrect')).toBeInTheDocument();
+  });
+
+  it('tags nothing for an answer when correctness is hidden', () => {
+    renderCard({responseData: {selectedChoiceId: '2'}, answered: true});
+
+    expect(screen.queryByText(/^(Correct|Incorrect|Skipped)$/)).toBeNull();
+  });
+
+  it('still tags a skipped question when correctness is hidden', () => {
+    renderCard();
+
+    expect(screen.getByText('Skipped')).toBeInTheDocument();
+  });
+
   it('does not tag an answered question as skipped', () => {
     renderCard({
       responseData: {selectedChoiceId: '1'},
@@ -262,7 +294,7 @@ describe('QuestionResultCard', () => {
       expect(choiceItem('Daikon')).toHaveTextContent(/^D\. Daikon$/);
     });
 
-    it('shows selected choices as plain answers and the overall result when the key is hidden', () => {
+    it('shows selected choices as plain answers and tags the result when the key is hidden', () => {
       renderMsCard({correctChoiceIds: null});
 
       expect(
@@ -272,7 +304,7 @@ describe('QuestionResultCard', () => {
         within(choiceItem('Carrot')).getByText('Your answer')
       ).toBeInTheDocument();
       expect(screen.queryByText(/Correct answer/)).toBeNull();
-      expect(screen.getByText('Your answer is incorrect')).toBeInTheDocument();
+      expect(screen.getByText('Incorrect')).toBeInTheDocument();
     });
 
     it("names the student's answer for a teacher viewing a student", () => {
@@ -282,8 +314,9 @@ describe('QuestionResultCard', () => {
       );
 
       expect(
-        screen.getByText("Student's answer is correct")
+        within(choiceItem('Banana')).getByText("Student's answer")
       ).toBeInTheDocument();
+      expect(screen.getByText('Correct')).toBeInTheDocument();
     });
 
     it('shows no grading when correctness is hidden', () => {
@@ -292,7 +325,8 @@ describe('QuestionResultCard', () => {
       expect(
         within(choiceItem('Banana')).getByText('Your answer')
       ).toBeInTheDocument();
-      expect(screen.queryByText(/is (in)?correct/)).toBeNull();
+      expect(screen.queryByText('Correct')).toBeNull();
+      expect(screen.queryByText('Incorrect')).toBeNull();
     });
 
     it('tags an empty selection as skipped', () => {

@@ -1,4 +1,4 @@
-// Ungraded colors match the design-system default Tag.
+// Default colors match the design-system default Tag.
 .tag {
   display: inline-flex;
   align-items: center;
@@ -18,7 +18,13 @@
   }
 }
 
-.tagGraded {
+.correct {
+  color: var(--text-success-secondary);
+  background: var(--background-success-light);
+  border-color: var(--border-success-mid);
+}
+
+.error {
   color: var(--text-error-secondary);
   background: var(--background-error-light);
   border-color: var(--border-error-mid);
