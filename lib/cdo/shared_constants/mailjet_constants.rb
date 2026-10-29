@@ -91,7 +91,7 @@ module MailjetConstants
   CONTACT_LISTS = {
     welcome_series: {
       production: {
-        default: 10_353_815,
+        default: 10_500_331,
         'es-MX': 10_353_822,
         'es-ES': 10_353_822,
       },
