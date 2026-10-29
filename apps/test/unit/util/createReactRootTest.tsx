@@ -31,16 +31,11 @@ describe('unmountReactRoot', () => {
     expect(container.textContent).toBe('');
   });
 
-  it('unmounts a legacy tree', () => {
-    act(() =>
-      createReactRoot(<span>hello</span>, container, {
-        legacyReactDomRender: true,
-      })
-    );
-    expect(container.textContent).toBe('hello');
+  it('ignores a container it never rendered into', () => {
+    container.textContent = 'server markup';
 
     act(() => unmountReactRoot(container));
-    expect(container.textContent).toBe('');
+    expect(container.textContent).toBe('server markup');
   });
 
   it('allows rendering again after unmount', () => {
