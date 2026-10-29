@@ -140,6 +140,16 @@ class QuizAttemptTest < ActiveSupport::TestCase
     refute results[skipped_question.id][:answered]
   end
 
+  test "question_results reports non-Hash response data as unanswered" do
+    quiz = create(:quiz)
+    question = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    attempt = create(:quiz_attempt, level: quiz, submitted_at: Time.now)
+    create(:quiz_question_response, quiz_attempt: attempt, quiz_question: question, response_data: [])
+
+    refute attempt.question_results.first[:answered]
+  end
+
   test "question_results overrides can reveal correctness/explanation regardless of the quiz's own settings" do
     quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
     question = create(:multiple_choice_question, explanation: 'because math')

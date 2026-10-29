@@ -131,6 +131,7 @@ class MultipleChoiceQuestionTest < ActiveSupport::TestCase
     assert question.answered?({'selectedChoiceId' => 'b'})
     refute question.answered?({'selectedChoiceId' => ''})
     refute question.answered?({})
+    refute question.answered?([])
   end
 
   test "placeholder_content is valid" do
