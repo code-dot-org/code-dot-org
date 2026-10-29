@@ -231,8 +231,8 @@ type Change = 'placed' | 'removed' | Refusal | null;
 
 /** Why a cell refuses a change, or null when it allows one. A cell showing
     an image the palette does not offer stays as it is, since nothing could
-    put it back. On a level whose palette is only the treasure and the
-    blocks, that keeps the player where the student placed it. */
+    put it back; a level that narrows the palette to a few roles thereby
+    protects the cells placed by earlier levels. */
 export function cellRefusal(
   cell: WorldCell | null | undefined,
   offered: ReadonlySet<string>

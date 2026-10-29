@@ -835,8 +835,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // image_role_defaults image for that role, else the newest image of the
   // kind (orderedKeys is newest-first, since Sprite Lab prepends new
   // animations). On a world level with palette roles and no kind: the first
-  // image of the first role, so the treasure comes up selected on the level
-  // that places the treasure and the blocks.
+  // image of the first role, so the role the level lists first is what the
+  // student places first.
   const focusImage = useMemo<WorldCell | undefined>(() => {
     if (focusImageType === 'background') {
       return undefined;

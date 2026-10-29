@@ -182,10 +182,9 @@ export default function useSources<T extends ProjectSources>({
     // resurrect the previous level's sources or double-attach callbacks.
     async (isCancelled: () => boolean = () => false) => {
       const {usesProjects, id, isProjectLevel} = levelProperties;
-      // A level that uses no project (the no_project level property; the
-      // hoai2026 unit's demo level) keeps its sources in memory: it starts
-      // from the level's own sources, edits last for the visit, and nothing
-      // is saved.
+      // A level that uses no project (the no_project level property) keeps
+      // its sources in memory: it starts from the level's own sources, edits
+      // last for the visit, and nothing is saved.
       if (!usesProjects) {
         await projectManagerRef.current?.cleanUp();
         if (isCancelled()) return;
