@@ -110,7 +110,7 @@ const DISCOVER_SCHEMA = {
   required: [
     'preflight', 'headOnBase', 'branchOwner', 'finishBranches', 'preexistingUntracked', 'planDocFound', 'statusState',
     'legacySourceFiles', 'legacyExports', 'legacyImports', 'eslintBanPresent', 'codemod', 'rows',
-    'reference', 'consumerFiles', 'consumerTestFiles', 'next', 'notes',
+    'storyGaps', 'reference', 'consumerFiles', 'consumerTestFiles', 'next', 'notes',
   ],
   properties: {
     preflight: {type: 'array', items: {type: 'string'}, description: 'Blockers found in step 0; [] if none'},
@@ -129,6 +129,7 @@ const DISCOVER_SCHEMA = {
     eslintBanPresent: {type: 'boolean'},
     codemod: {type: 'string', description: 'The component codemod path, or ""'},
     rows: {type: 'array', items: ROW_SCHEMA, description: 'The Deferred changes table, in table order'},
+    storyGaps: {type: 'array', items: {type: 'string'}, description: 'State cells of the "Story gaps" table, in table order; [] when the section is absent or says None'},
     reference: {type: 'string', description: 'A reference implementation the plan names (PR number, branch), or ""'},
     consumerFiles: {type: 'array', items: {type: 'string'}, description: 'Every file outside the component directory that imports from its entry point, sources and tests'},
     consumerTestFiles: {type: 'array', items: {type: 'string'}, description: 'apps/ and frontend/ test files of the consumers'},
@@ -166,7 +167,8 @@ ${TREE_RULES}
   row read after and movesDom from the After and Moves DOM columns; when a plan predates
   them, infer after from the prose around the table ("X goes before Y") and movesDom from
   what the row says MUI would do. ticket is the bare key from the Ticket column, without
-  any qualifier. reference: a PR or branch the plan names as the reference implementation.
+  any qualifier. storyGaps: the State cells of the "Story gaps" table, if the plan has one.
+  reference: a PR or branch the plan names as the reference implementation.
 
 ─── STEP 2 — The tree ─────────────────────────────────────────────────────────
   legacySourceFiles: the deprecated files under ${COMPONENT_DIR} (the export policy in the
@@ -209,6 +211,7 @@ const step4Left = [
   discover.legacyExports.length && `legacy exports ${discover.legacyExports.join(', ')}`,
   discover.legacyImports.length && `${discover.legacyImports.length} legacy import(s)`,
   discover.eslintBanPresent && `the ${ESLINT_APPS} ban`,
+  discover.storyGaps.length && `${discover.storyGaps.length} story gap(s)`,
 ].filter(Boolean)
 if (stepArg && next.kind !== 'blocked') {
   const picked = next.kind === 'behavior' ? next.behavior : next.kind
@@ -283,17 +286,19 @@ const TOUCHED_SCHEMA = {
 }
 
 // The codemod outlives step 4 so branches cut earlier can still move their imports.
-const codemodGoes = remainingAfter.length
+const codemodGoes = n => remainingAfter.length
   ? ''
-  : `\n7. Last step: delete ${discover.codemod || 'the component codemod'}, its entry in
+  : `\n${n}. Last step: delete ${discover.codemod || 'the component codemod'}, its entry in
    ${CODEMODS_DIR}/README.md, and every mention of it in ${STATUS_DOC}, the component
    README, ${SKILL_DOC} and ${ESLINT_APPS}. Nothing is left for it to rewrite.`
+const gaps = discover.storyGaps
 const deleteLegacyBrief = `STEP 4: delete the legacy DSCO source. Behavior must not change: leave every disable*
 flag, slot override and legacy hook the MUI version still uses exactly as it is.
 
 LEGACY FILES: ${JSON.stringify(discover.legacySourceFiles)}
 LEGACY EXPORTS: ${JSON.stringify(discover.legacyExports)}
 CODEMOD: ${discover.codemod || 'none'}
+STORY GAPS: ${JSON.stringify(gaps)}
 
 1. Delete the legacy files and anything that exists only to serve them.
 2. Exports, per the plan's export policy: the MUI version takes the plain names at the
@@ -310,9 +315,9 @@ CODEMOD: ${discover.codemod || 'none'}
    bans no longer exist.
 5. Docs: ${STATUS_DOC} row notes step 4 is done; ${remainingAfter.length ? `keep its state, since ${remainingAfter.length} deferred row(s) remain` : 'the table is empty, so set it to **Migrated**'}; the component README
    loses its legacy section; ${SKILL_DOC} names the plain import; ${PLAN_DOC} gains a
-   "Legacy source deleted" paragraph under its Outcome.
-6. Stories: add one story per row of ${PLAN_DOC}'s "Story gaps" table, beside the renamed
-   stories, then delete the section. Skip this if the plan has none.${codemodGoes}`
+   "Legacy source deleted" paragraph under its Outcome.${gaps.length ? `
+6. Stories: add one story per STORY GAPS state, beside the renamed stories, then delete
+   the "Story gaps" section from ${PLAN_DOC}.` : ''}${codemodGoes(gaps.length ? 7 : 6)}`
 
 const rowBrief = row && `STEP 5, one deferred behavior: ${JSON.stringify(row)}
 OTHER ROWS (leave them alone; their legacy behavior stays): ${JSON.stringify(remainingAfter.map(r => r.behavior))}
@@ -333,7 +338,7 @@ REFERENCE IMPLEMENTATION: ${discover.reference || 'none named'}
    data-testid first). Report each edit in uiTestEdits. Do not run Cucumber or Playwright.
 5. Docs: delete the row from ${PLAN_DOC}'s Deferred changes table, and add one line under
    its Outcome saying what changed. ${remainingAfter.length ? `${STATUS_DOC}: keep the state, and drop this behavior from the row's note.` : `${STATUS_DOC}: the table is now empty, so set the row to **Migrated** and say so in the note.`}
-   Update the component README where it describes this behavior.${codemodGoes}`
+   Update the component README where it describes this behavior.${codemodGoes(6)}`
 
 const exec = await agent(
   `You EXECUTE one finishing step of the MUI "${component}" migration. Edit files only;
@@ -395,7 +400,11 @@ CONSUMER TESTS: ${JSON.stringify(discover.consumerTestFiles)}
    or path this step removed. Any hit is a failure.
 6. UI-test hooks: grep ${UI_TEST_DIRS} for selectors that depend on what changed. List each
    feature or spec in uiTestsNotRun; a selector that no longer matches the new DOM is a
-   failure.
+   failure.${!row && gaps.length ? `
+7. Story gaps: ${COMPONENT_DIR}/stories has a story for each of ${JSON.stringify(gaps)}, and
+   ${PLAN_DOC} has no "Story gaps" section. In ${STORYBOOK}: yarn vitest --run
+   --project=storybook ../../packages/component-library/src/${component} (axe on every
+   story; CI runs the same).` : ''}
 
 pass is true only when every check is clean. Name suspect files for each failure.`
 

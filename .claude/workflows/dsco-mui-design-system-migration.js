@@ -785,7 +785,8 @@ Do, in order:
    order cannot decide it. Set box-sizing explicitly where a width rule assumes it:
    Storybook and studio lack Bootstrap's global border-box reset.
 3. Stories: one MUI story per twin, same visual state, same launcher pattern as the DSCO
-   story. Keep the DSCO stories untouched. Confirm every muiStoryId in
+   story, and no others: the plan's Story gaps wait for lifecycle step 4. Keep the DSCO
+   stories untouched. Confirm every muiStoryId in
    dist/component-library-storybook/index.json after building Storybook.
 4. Tests: vitest coverage for every propMap entry and every sharedGlobals rule (for a
    shared scroll lock: open a legacy and an MUI instance, close them out of order, assert
@@ -1052,7 +1053,7 @@ ${publish ? `
    Deployment notes and Privacy; end with "${PR_FOOTER}". Summary includes: the approach
    and export policy in two sentences and a link to ${PLAN_DOC} for the rest; the dropped
    props ${JSON.stringify(dropped.map(p => p.dscoProp))}; the legacy defects fixed on purpose
-   ${JSON.stringify(plan.legacyDefectsToFix.map(d => d.defect))}; ${plan.deferredChanges.length ? `a "Follow-up" section listing the deferred MUI behaviors, one line each with the UI tests at risk, ${JSON.stringify(plan.deferredChanges)}` : 'no Follow-up section (nothing deferred)'}; a Parity section with a table
+   ${JSON.stringify(plan.legacyDefectsToFix.map(d => d.defect))}; ${plan.storyGaps.length ? `the states left unstoried until step 4 ${JSON.stringify(plan.storyGaps.map(g => g.state))}; ` : ''}${plan.deferredChanges.length ? `a "Follow-up" section listing the deferred MUI behaviors, one line each with the UI tests at risk, ${JSON.stringify(plan.deferredChanges)}` : 'no Follow-up section (nothing deferred)'}; a Parity section with a table
    Story | Theme | DSCO | MUI (one row per showcase pair, images by the URL form, ratio per
    row), ${mismatches.length ? `an "Open mismatches" list ${JSON.stringify(mismatches.map(m => ({story: m.muiStoryId, theme: m.theme, dir: m.dir, notes: m.notes})))}` : 'a line that every render passed the gate'}${intendedPairs.length ? `, and an "Intended deviations" list ${JSON.stringify(intendedPairs.map(m => ({story: m.muiStoryId, theme: m.theme, notes: m.notes})))}` : ''};
    deviations from the plan ${JSON.stringify(exec.deviations)}; a "Stack" section saying the
