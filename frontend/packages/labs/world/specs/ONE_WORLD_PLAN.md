@@ -1,6 +1,6 @@
 # Plan: one World, seen through Viewports
 
-STATUS: BUILDING, October 2026. Steps 1 to 3 are done. Comes before
+STATUS: BUILDING, October 2026. Steps 1 to 4 are done. Comes before
 specs/SCREEN_STACK_PLAN.md, which sits on it.
 
 A game has one World. Maps fill it, and maps bring its layers. A Viewport is
@@ -235,6 +235,23 @@ world` and a layer's `inMirrors` mean nothing, and leaving them for three
 map … into ⟨Game⟩`, is now a correct answer, and its test says so.
 - **Seen in the browser**: Breakout, Flappy, Tapper, Meteors and the
   Interface Kit draw as before, and Meteors moves.
+- **Step 4 put the first map on the Main Screen as `worldMap`**, and took
+  the Viewport's `map` property away with it rather than in step 5: once the
+  screen names the World's map, a Viewport's would be a second answer. The
+  World inspector has a "World starts with" field, and every Viewport on the
+  stage previews that map.
+- **The screen's module loads the World's map before it places the
+  screen**, so a camera the screen aims at `any ⟨Player⟩` finds the Player,
+  as it did when the Viewport loaded its level during placement. The
+  World's actors therefore come before the screen's in the actor list. A
+  Viewport placed after the World has its map still hears `shows a map`.
+- **The World is at least as big as the first window onto it**, measured
+  once the screen's layout has docked that window. Measured at placement,
+  before docking, the Simple scenario's World took the HUD bar's height too.
+- **Compared before and after** by running all 90 scenarios and lessons for
+  a second and dumping each actor's kind, space, layer and position and each
+  Viewport's bounds and camera. Nothing differs but generated ids and what
+  differs between two runs of the same code: the random lessons.
 
 ## Not in this plan
 

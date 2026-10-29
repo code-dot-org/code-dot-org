@@ -17,6 +17,7 @@ import {
   writeScreenPropertyDefault,
   writeScreenRuleValue,
   writeScreenTheme,
+  writeScreenWorldMap,
 } from './screenProperties';
 import type {WorldHeader, WorldRuleProperty} from './worldProperties';
 
@@ -55,6 +56,8 @@ export interface MapDocumentAdapter {
     writeBackgroundColor(contents: string, color: string): string;
     /** …and the theme it is painted in. */
     writeTheme(contents: string, theme: string | undefined): string;
+    /** …and the map the World starts with. */
+    writeWorldMap(contents: string, path: string | undefined): string;
     /** What the inspector's head calls it. */
     title: string;
     /** A new value of the game's own. */
@@ -77,6 +80,7 @@ const SCREEN_KEYS = [
   'events',
   'rules',
   'backgroundColor',
+  'worldMap',
 ] as const;
 
 /**
@@ -111,6 +115,7 @@ export const screenFileDocument: MapDocumentAdapter = {
     writeRuleValue: writeScreenRuleValue,
     writeBackgroundColor: writeScreenBackgroundColor,
     writeTheme: writeScreenTheme,
+    writeWorldMap: writeScreenWorldMap,
     addProperty: addScreenProperty,
   },
 };

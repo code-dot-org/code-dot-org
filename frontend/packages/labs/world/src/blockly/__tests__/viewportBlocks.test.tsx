@@ -100,12 +100,13 @@ const WINDOW = JSON.stringify({
     ],
   },
 });
-/** A Main Screen with a Viewport on it, showing the level. */
+/** A Main Screen with a Viewport on it, and a World that starts with the level. */
 const SCREEN = JSON.stringify({
   type: 'map',
   name: 'Main',
   size: {width: 10, height: 10},
   tile: {width: 32, height: 32},
+  worldMap: 'maps/level1',
   actors: [
     {
       type: 'actors/window',
@@ -115,7 +116,6 @@ const SCREEN = JSON.stringify({
           position: {x: 160, y: 160},
           intrinsicSize: {x: 100, y: 80},
         },
-        showsMap: {map: 'maps/level1'},
       },
     },
   ],
@@ -138,6 +138,14 @@ describe('the Main Screen’s module', () => {
     expect(js).toContain('import MapsLevel1 from "maps/level1";');
     expect(js).toContain('world.define("actors/coin", ActorsCoin);');
     expect(js).toContain('world.defineMap("maps/level1", MapsLevel1);');
+    // …and loads the World's map before it places the screen, so a camera
+    // the screen aims finds what the level holds (specs/ONE_WORLD_PLAN.md).
+    expect(js.indexOf('world.loadWorldMap("maps/level1");')).toBeGreaterThan(
+      js.indexOf('world.defineMap("maps/level1"'),
+    );
+    expect(js.indexOf('world.loadWorldMap("maps/level1");')).toBeLessThan(
+      js.indexOf('world.loadMap(mainMap);'),
+    );
     // Before the screen is loaded, so a Viewport on it finds its map.
     expect(js.indexOf('world.defineMap(')).toBeLessThan(
       js.indexOf('world.loadMap(mainMap)'),
@@ -146,21 +154,23 @@ describe('the Main Screen’s module', () => {
 });
 
 describe('a placed Viewport', () => {
-  it('shows the map its property names, in the World it looks at', async () => {
+  it('shows the map the World starts with', async () => {
     const {world} = await compileProject(FILES);
-    const [window] = [...world.actors];
+    const window = [...world.actors].find(actor => actor.id === 'Game')!;
     expect(window.has(ViewportTrait)).toBe(true);
-    // The level is in the world as soon as the main map is loaded, with no
-    // tick run: a world is handed over holding what its Viewports hold.
+    // The level is in the world as soon as the module has run, with no tick:
+    // the World's map is loaded before the screen is placed.
     expect([...world.actors]).toHaveLength(3);
 
     world.tick(0);
 
     const ids = [...world.actors].map(actor => actor.id);
-    expect(ids).toEqual(['Game', 'a', 'b']);
+    expect(ids).toEqual(['a', 'b', 'Game']);
     const space = world.viewportSpaceOf(window)!;
     expect(
-      [...world.actors].slice(1).every(actor => actor.space === space.mirrorOf),
+      [...world.actors]
+        .filter(actor => actor !== window)
+        .every(actor => actor.space === space.mirrorOf),
     ).toBe(true);
     expect(space.bounds).toEqual({x: 640, y: 320});
     // The middle of the window it is seen through. A map no longer says what to

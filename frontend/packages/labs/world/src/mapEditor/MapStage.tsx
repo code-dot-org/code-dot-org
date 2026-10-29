@@ -379,15 +379,8 @@ export interface MapStageProps {
    */
   cameraChoices?: readonly CameraTraitChoice[];
   /**
-   * The project's maps as `[name, path]`, for a Viewport's `map` property
-   * (specs/VIEWPORT_PLAN.md) — the one string the inspector offers a list
-   * for that the sandbox cannot supply, since which maps a project holds is
-   * the editor's to know.
-   */
-  mapChoices?: ReadonlyArray<readonly [string, string]>;
-  /**
-   * The map each Viewport placement holds, by placement id, parsed by the
-   * editor from the file its `map` names — drawn inside the Viewport's box,
+   * The map each Viewport placement shows, by placement id: the map the
+   * World starts with, parsed by the editor — drawn inside the Viewport's box,
    * dimmed, so the main map reads as the game rather than as a readout over
    * an empty box.
    */
@@ -537,7 +530,6 @@ export const MapStage = ({
   mapScriptLabel = 'Map code',
   screenCode = false,
   world,
-  mapChoices,
   heldMaps,
   backgroundChoices,
   backgroundImages,
@@ -1632,30 +1624,6 @@ export const MapStage = ({
             Add
           </Button>
         </div>
-      );
-    }
-    if (prop.ownerId === 'showsMap' && prop.propId === 'map') {
-      // A Viewport's map: the project's maps, by name (`mapChoices`).
-      return (
-        <SimpleDropdown
-          key={fieldKey(prop)}
-          name={`prop-${fieldKey(prop)}`}
-          labelText="Map"
-          size="s"
-          className={styles.inspectorDropdown}
-          disabled={locked}
-          selectedValue={draft[fieldKey(prop)] ?? ''}
-          items={[
-            {value: '', text: '(none)'},
-            ...(mapChoices ?? []).map(([name, path]) => ({
-              value: path,
-              text: name,
-            })),
-          ]}
-          onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-            selectOption(prop, event.target.value)
-          }
-        />
       );
     }
     if (prop.type === 'string' && prop.options) {

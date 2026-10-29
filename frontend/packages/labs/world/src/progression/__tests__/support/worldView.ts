@@ -24,6 +24,7 @@ const SCREEN_KEYS = [
   'rules',
   'backgroundColor',
   'blocks',
+  'worldMap',
 ];
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
@@ -75,6 +76,35 @@ function literal(type: string, value: string): Block {
   return {type: 'text', fields: {TEXT: value}};
 }
 
+/**
+ * A screen that is its own level, with the map the World starts with put back
+ * on its first Viewport, where a world said it (`asScreen`).
+ */
+const withViewportMap = (
+  level: Record<string, unknown>,
+  worldMap: string | undefined,
+): Record<string, unknown> => {
+  const actors = level.actors as Array<Record<string, unknown>> | undefined;
+  const at = actors?.findIndex(one => one.type === VIEWPORT) ?? -1;
+  if (!worldMap || !actors || at < 0) {
+    return level;
+  }
+  const viewport = actors[at];
+  const properties = (viewport.properties ?? {}) as Record<
+    string,
+    Record<string, unknown>
+  >;
+  const next = [...actors];
+  next[at] = {
+    ...viewport,
+    properties: {
+      ...properties,
+      showsMap: {map: worldMap, ...properties.showsMap},
+    },
+  };
+  return {...level, actors: next};
+};
+
 /** The `main.world` a screen and its map stand for. */
 export function worldOfScreen(screen: string, map: string | undefined): string {
   const held = JSON.parse(screen) as Record<string, unknown> & {
@@ -86,6 +116,7 @@ export function worldOfScreen(screen: string, map: string | undefined): string {
       carries?: {id: string; name: string; type: string};
     }>;
     theme?: string;
+    worldMap?: string;
     actors?: Array<Record<string, unknown>>;
     blocks?: {blocks?: {blocks?: Block[]}; variables?: unknown[]};
   };
@@ -167,8 +198,11 @@ export function worldOfScreen(screen: string, map: string | undefined): string {
     | undefined;
   const level = map
     ? (JSON.parse(map) as Record<string, unknown>)
-    : Object.fromEntries(
-        Object.entries(held).filter(([key]) => !SCREEN_KEYS.includes(key)),
+    : withViewportMap(
+        Object.fromEntries(
+          Object.entries(held).filter(([key]) => !SCREEN_KEYS.includes(key)),
+        ),
+        held.worldMap,
       );
   const first = chain(rows);
   return JSON.stringify(

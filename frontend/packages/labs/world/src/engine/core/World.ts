@@ -13,7 +13,6 @@ import {
 import {STYLED} from '../rules/styled';
 import {
   ViewportContentProperty,
-  ViewportMapProperty,
   ViewportScrollProperty,
   ViewportShowsMapEvent,
   ViewportShowsThroughProperty,
@@ -1439,6 +1438,10 @@ export class World {
       this.viewportSpaces.push(space);
       if (this.worldSpace.loads.length === 0) {
         this.worldSpace.bounds = this.worldFloor();
+      } else {
+        // …and one placed after the World has its map is shown it at once,
+        // so `when ⟨Viewport⟩ shows a map` means the same for either.
+        this.emit(ViewportShowsMapEvent, actor, this.worldSpace.shown ?? '');
       }
       space.bounds = this.worldSpace.bounds;
       // THE SPACE'S MAIN CAMERA, which every space has and which cannot be
@@ -2177,7 +2180,7 @@ export class World {
       return this.viewSizeOf(space.owner);
     }
     return space === this.worldSpace
-      ? this.worldFloor()
+      ? this.worldWindow()
       : new Vector(this.view.x, this.view.y);
   }
 
@@ -2349,9 +2352,15 @@ export class World {
 
   /**
    * How big the World is before a map says: the first Viewport's window, or
-   * the screen's for a World nothing shows.
+   * nothing for a World no Viewport shows yet, which a map then sizes.
    */
   private worldFloor(): Vector {
+    const first = this.viewportSpaces.find(space => space.owner)?.owner;
+    return first ? this.viewSizeOf(first) : new Vector(0, 0);
+  }
+
+  /** The window the World is seen through: the first Viewport's, or the screen's. */
+  private worldWindow(): Vector {
     const first = this.viewportSpaces.find(space => space.owner)?.owner;
     const view = first ? this.viewSizeOf(first) : this.view;
     return new Vector(view.x, view.y);
@@ -2373,9 +2382,6 @@ export class World {
           `loaded into it`,
       );
     }
-    if (typeof map === 'string') {
-      this.nowShows(viewport, space, map);
-    }
     return this.loadWorldMap(map, layer);
   }
 
@@ -2385,24 +2391,6 @@ export class World {
     if (space) {
       this.unloadSpace(this.worldSpace);
       this.worldSpace.shown = '';
-      this.nowShows(viewport, space, '');
-    }
-  }
-
-  /**
-   * Record the path a Viewport asked for, in its space AND in its `map`
-   * property. Both, because `showHeldMap` loads whatever the property names
-   * whenever that differs from what the Viewport last asked for: a load by
-   * path that left the property naming the old map was undone on the next
-   * tick, by the engine loading the old map back.
-   */
-  private nowShows(viewport: Actor, space: Space, path: string): void {
-    space.shown = path;
-    if (
-      viewport.has(ViewportTrait) &&
-      String(viewport.get(ViewportMapProperty) ?? '') !== path
-    ) {
-      viewport.set(ViewportMapProperty, path);
     }
   }
 
@@ -2419,7 +2407,6 @@ export class World {
    */
   private settleSpaces(): void {
     for (const space of this.viewportSpaces) {
-      this.showHeldMap(space);
       // The World's bounds, which a map loaded into it may have grown since
       // (`growSpaceToFit`).
       space.bounds = this.worldSpace.bounds;
@@ -2524,9 +2511,8 @@ export class World {
   /**
    * Keep the space's active camera in step with what its Viewport says.
    *
-   * Beside `showHeldMap`, and for the same reason it is there: a Viewport's
-   * properties are how a project talks to its space, and a change to one is
-   * noticed once a tick rather than hooked on the write. So cutting to another
+   * A Viewport's properties are how a project talks to its space, and a
+   * change to one is noticed once a tick rather than hooked on the write. So cutting to another
    * camera is an ordinary `set` — `set shows through of ⟨the Minimap⟩ to
    * ⟨"chase"⟩` — with nothing to invent and nothing to remember to call.
    *
@@ -2540,30 +2526,6 @@ export class World {
     }
     const named = String(owner.get(ViewportShowsThroughProperty) ?? '');
     space.activeCameraName = named || DEFAULT_CAMERA_ID;
-  }
-
-  /**
-   * Load the map a Viewport's `map` property names into the World, when the
-   * Viewport has not asked for it yet: at the first tick after the Viewport
-   * is placed, and again whenever the property changes (`rules/viewport`).
-   * Compared with what THIS Viewport last asked for, not with what the World
-   * holds, so two Viewports naming two maps do not take turns every tick:
-   * the one that changed last wins.
-   */
-  private showHeldMap(space: Space): void {
-    const owner = space.owner;
-    if (!owner || !owner.has(ViewportTrait)) {
-      return;
-    }
-    const path = String(owner.get(ViewportMapProperty) ?? '');
-    if (path === (space.shown ?? '')) {
-      return;
-    }
-    space.shown = path;
-    if (path === (this.worldSpace.shown ?? '')) {
-      return;
-    }
-    this.loadWorldMap(path);
   }
 
   /**
@@ -2681,7 +2643,7 @@ export class World {
       ];
     });
     const first = windows[0];
-    const view = this.worldFloor();
+    const view = this.worldWindow();
     return [
       {
         id: world.id,
@@ -3051,24 +3013,15 @@ export class World {
    * (specs/SIMPLE_INTERFACE.md, "World blocks act where they run").
    */
   loadMap(map: WorldMap, layer?: string): Actor[] {
-    // Over what the running code's space holds: the root for the Screen's
-    // code, a level's Viewport for a door in the level (`here`).
-    // A Viewport this map placed holds its map FROM HERE, not from the end
-    // of the next tick, which is when `settleSpaces` would get to it. A
-    // world built from a main map with a Viewport on it has its level in it
-    // when it is handed over, and a handler in the first frame — the key
-    // that serves the ball — finds the ball. One level deep on purpose: a
-    // Viewport inside the map just shown waits for the tick, so a map that
-    // holds a Viewport onto itself grows a level a tick and not a stack.
-    //
-    // BEFORE THIS MAP'S SCRIPT, which is where a Viewport's cameras are
-    // declared and told what to follow (`placementCameras`): `any ⟨Player⟩`
-    // is read when its row runs, and the Player is in the level.
     // From code in the World, the World's map is replaced: a level change,
     // a restart and the overworld are all this (specs/ONE_WORLD_PLAN.md).
     if (this.here().space === this.worldSpace) {
       return this.loadWorldMap(map, layer);
     }
+    // Over what the screen holds. A Viewport this map placed looks at the
+    // World, which the screen's module loads first, so its cameras can be
+    // aimed BEFORE THIS MAP'S SCRIPT, which is where they are declared and
+    // told what to follow (`placementCameras`).
     const held: Space[] = [];
     const added = this.loadInto(this.here().space, map, layer, placed => {
       for (const actor of placed) {
@@ -3076,15 +3029,27 @@ export class World {
           ? this.viewportSpaceOf(actor)
           : undefined;
         if (space) {
-          this.showHeldMap(space);
           held.push(space);
         }
       }
     });
+    // The World is at least as big as the first window onto it, measured
+    // now that the screen's layout has sized it, as a map loaded after the
+    // Viewport would be (`loadWorldMap`).
+    if (held.length) {
+      const floor = this.worldFloor();
+      this.worldSpace.bounds = this.worldSpace.loads.length
+        ? new Vector(
+            Math.max(this.worldSpace.bounds.x, floor.x),
+            Math.max(this.worldSpace.bounds.y, floor.y),
+          )
+        : floor;
+    }
     // …and each looks through the camera it names from the first frame,
     // which the script has now declared, rather than from the end of the
     // first tick.
     for (const space of held) {
+      space.bounds = this.worldSpace.bounds;
       this.showsThrough(space);
       this.settleSpace(space);
     }

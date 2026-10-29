@@ -2,10 +2,10 @@
 // (specs/ONE_WORLD_PLAN.md).
 //
 // An actor that `Shows a Map` is given a space of its own when it is placed
-// (`World.place`): its camera and its window, looking at the World. The map
-// its `map` property names is loaded into the World the first time the world
-// runs it. That much is the engine's: a space is not a thing a rule can
-// invent, any more than a position is (`rules/spatial`).
+// (`World.place`): its camera and its window, looking at the World, whose map
+// the Main Screen names (`worldMap`). That much is the engine's: a space is
+// not a thing a rule can invent, any more than a position is
+// (`rules/spatial`).
 //
 // WHERE THE VIEW LOOKS IS NOT. The space's camera used to be kept on what the
 // map's `camera.follows` named, which was following written a second time in the
@@ -24,7 +24,6 @@ import {RuleBuilder} from '../builders/RuleBuilder';
 export const VIEWPORT = {
   rule: 'viewport',
   trait: 'showsMap',
-  map: 'map',
   scroll: 'scroll',
   content: 'content',
   showsThrough: 'showsThrough',
@@ -42,18 +41,6 @@ export const ViewportTrait = rule.addTrait({
   name: 'Shows a Map',
   description: 'Shows the World inside it, through a camera of its own.',
 });
-
-/**
- * The map the World holds, as this Viewport asks for it, by module path —
- * `maps/level1`. Every Viewport shows the one World, so setting this on any
- * of them replaces the World's map.
- */
-export const ViewportMapProperty = ViewportTrait.addProperty(
-  VIEWPORT.map,
-  'string',
-  '',
-  {name: 'map'},
-);
 
 /**
  * How far the window has been scrolled over what it holds, in pixels.

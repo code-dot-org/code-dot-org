@@ -48,6 +48,11 @@ export interface ScreenData {
   backgroundColor?: string;
   /** A map's own key, read here because a screen's theme is the game's. */
   theme?: string;
+  /**
+   * The map the World starts with, by module path — `maps/main`
+   * (specs/ONE_WORLD_PLAN.md). Absent for a game whose World starts empty.
+   */
+  worldMap?: string;
 }
 
 /** A Blockly block as JSON, as much of one as is built here. */

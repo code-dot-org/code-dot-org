@@ -68,6 +68,7 @@ export function readScreenHeader(
     name: data.name || DEFAULT_SCREEN_NAME,
     properties,
     backgroundColor: {color: data.backgroundColor || undefined, inCode: false},
+    ...(data.worldMap ? {worldMap: data.worldMap} : {}),
     theme: data.theme || undefined,
   };
 }
@@ -99,6 +100,19 @@ export const writeScreenTheme = (
       data.theme = theme;
     } else {
       delete data.theme;
+    }
+    return true;
+  });
+
+export const writeScreenWorldMap = (
+  contents: string,
+  path: string | undefined,
+): string =>
+  rewrite(contents, data => {
+    if (path) {
+      data.worldMap = path;
+    } else {
+      delete data.worldMap;
     }
     return true;
   });

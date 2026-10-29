@@ -445,14 +445,15 @@ const SCREEN = ALL_COLUMNS.length * TILE_SIZE;
 /**
  * The Main Screen: the window the level is played in, and the game's own
  * code, which serves the ball and pauses (specs/SCREEN_MAP_PLAN.md). The
- * level is `maps/main.map`, held by path; starting it over is loading it
- * into the Viewport again.
+ * level is `maps/main.map`, which the World starts with; starting it over is
+ * loading it again (specs/ONE_WORLD_PLAN.md).
  */
 const BREAKOUT_SCREEN = JSON.stringify({
   type: 'map',
   name: 'Breakout',
   size: {width: ALL_COLUMNS.length, height: ALL_COLUMNS.length},
   tile: {width: TILE_SIZE, height: TILE_SIZE},
+  worldMap: 'maps/main',
   // The one word the pause menu says back. The import adds it when a
   // learner adds the menu themselves (`maps/declareEvents`); here the
   // fixture ships with it.
@@ -473,7 +474,6 @@ const BREAKOUT_SCREEN = JSON.stringify({
         positional: {position: {x: SCREEN / 2, y: SCREEN / 2}},
         Label: {text: ''},
         hasABox: {width: SCREEN, height: SCREEN},
-        showsMap: {map: 'maps/main'},
       },
     },
   ],

@@ -48,6 +48,7 @@ import {
   projectRuleOptions,
   projectStyleFileOptions,
 } from '../blockly/projectModules';
+import {parseScreenData} from '../blockly/screenData';
 import {setRevealer} from '../callouts/reveal';
 import fields from '../formFields.module.css';
 import {useScriptStep} from '../layout/TrailContext';
@@ -93,6 +94,9 @@ import {cameraTraitChoices, worldRuleProperties} from './worldRuleProperties';
 
 /** How long after the last keystroke a placement's picture is asked for. */
 const PICTURE_DEBOUNCE_MS = 150;
+
+/** What a kind's file says when it elects Shows a Map, which a Viewport is. */
+const VIEWPORT_TRAIT_REF = 'Viewport#ViewportTrait';
 
 /** Which workspace the editor is showing instead of the map, if any. */
 
@@ -271,12 +275,7 @@ export const MapEditor = ({
   }, []);
   const worldPath = useMemo(() => gameModuleOf(files) ?? '', [files]);
 
-  /**
-   * The project's maps, for a Viewport's `map` property, and the map each
-   * Viewport on this map holds, read from the file its property names
-   * (specs/VIEWPORT_PLAN.md). Parsed here rather than in the stage, which
-   * knows nothing of files.
-   */
+  /** The project's maps, for the map the World starts with. */
   const mapChoices = useMemo(
     () =>
       Object.keys(projectMapActorTypes(files))
@@ -599,14 +598,22 @@ export const MapEditor = ({
   const isMainScreen =
     document.scriptKind === 'screen' &&
     filePath(currentSources.source, fileId) === `${MAIN_SCREEN_PATH}.screen`;
+  // What every Viewport here shows: the map the World starts with, which
+  // the Main Screen names (specs/ONE_WORLD_PLAN.md).
   const heldMaps = useMemo(() => {
     const held: Record<string, MapDoc> = {};
+    const screen = parseScreenData(files[`${MAIN_SCREEN_PATH}.screen`] ?? '');
+    const contents = screen?.worldMap
+      ? files[`${screen.worldMap}.map`]
+      : undefined;
+    if (!contents) {
+      return held;
+    }
+    const world = parseMap(contents);
     for (const actor of map.actors) {
-      const path = actor.properties?.showsMap?.map;
-      const contents =
-        typeof path === 'string' && path ? files[`${path}.map`] : undefined;
-      if (contents) {
-        held[actor.id] = parseMap(contents);
+      // A Viewport is a kind that elects Shows a Map.
+      if ((files[`${actor.type}.actor`] ?? '').includes(VIEWPORT_TRAIT_REF)) {
+        held[actor.id] = world;
       }
     }
     return held;
@@ -699,6 +706,10 @@ export const MapEditor = ({
                   document.world!.addProperty!(contentsRef.current, name, type),
                 )
             : undefined,
+          // …and the map the World starts with.
+          mapChoices,
+          onWorldMap: (path: string | undefined) =>
+            writeFile(document.world!.writeWorldMap(contentsRef.current, path)),
           // …and how many rules it holds, for the button that opens them.
           ruleCount: projectRuleOptions(files).length,
           // …and the color behind the background, a row in the world's code.
@@ -973,7 +984,6 @@ export const MapEditor = ({
           screenCode={isMainScreen}
           world={worldInspector}
           cameraChoices={cameraChoices}
-          mapChoices={mapChoices}
           heldMaps={heldMaps}
           backgroundChoices={backgroundChoices}
           backgroundImages={images}

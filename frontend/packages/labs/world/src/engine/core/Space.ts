@@ -111,11 +111,7 @@ export class Space {
    * to build, so a map brings them.
    */
   layers: Layer[] = [];
-  /**
-   * The path the Viewport's `map` property held when it last asked for it,
-   * so a change to the property is noticed (`World.showHeldMap`). For the
-   * World, the path of the map it holds.
-   */
+  /** For the World, the path of the map it holds, when it was given one. */
   shown: string | undefined;
 
   constructor(

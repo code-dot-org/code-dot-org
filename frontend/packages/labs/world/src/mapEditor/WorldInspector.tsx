@@ -59,6 +59,12 @@ export interface WorldInspectorProps {
   themeOptions: ReadonlyArray<readonly [string, string]>;
   onTheme: (path: string | undefined) => void;
   /**
+   * The map the World starts with, and the project's maps to choose from, as
+   * `[label, path]` (specs/ONE_WORLD_PLAN.md). Only a Main Screen has one.
+   */
+  mapChoices?: ReadonlyArray<readonly [string, string]>;
+  onWorldMap?: (path: string | undefined) => void;
+  /**
    * The background image of the main map's back layer, the one `set
    * background to` sets — on the MAP, like the theme, and written there.
    */
@@ -107,6 +113,8 @@ export const WorldInspector = ({
   theme,
   themeOptions,
   onTheme,
+  mapChoices = [],
+  onWorldMap,
   background,
   backgrounds = [],
   onBackground,
@@ -420,6 +428,28 @@ export const WorldInspector = ({
             ),
           }))}
         />
+      )}
+      {onWorldMap && (
+        <div className={styles.inspectorGroup}>
+          <SimpleDropdown
+            name="world-map"
+            labelText="World starts with"
+            size="s"
+            className={styles.inspectorDropdown}
+            disabled={isReadOnly}
+            selectedValue={header.worldMap ?? ''}
+            items={[
+              {value: '', text: '(nothing)'},
+              ...mapChoices.map(([label, path]) => ({
+                value: path,
+                text: label,
+              })),
+            ]}
+            onChange={(event: ChangeEvent<HTMLSelectElement>) =>
+              onWorldMap(event.target.value || undefined)
+            }
+          />
+        </div>
       )}
       {onBackground && (
         <BackgroundField

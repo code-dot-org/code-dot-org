@@ -22,7 +22,6 @@ import {
   ScaleProperty,
 } from '../rules/spatial';
 import {
-  ViewportMapProperty,
   ViewportScrollProperty,
   ViewportShowsMapEvent,
   ViewportShowsThroughProperty,
@@ -227,35 +226,23 @@ describe('loading into a Viewport', () => {
     expect([...world.actors]).toHaveLength(1);
   });
 
-  it('keeps showing a map loaded by path, which its property then names', () => {
+  it('loads the map the World starts with, by path, before the screen', () => {
+    // What a Main Screen's module does: the World's map, then the screen's
+    // placements, so a Viewport placed after it shows it at once
+    // (specs/ONE_WORLD_PLAN.md).
     const world = makeWorld();
-    const window = placeWindow(world);
     world.defineMap('maps/level1', LEVEL);
-    world.defineMap('maps/level2', {
-      actors: [{type: 'actors/coin', id: 'z'}],
-    });
-    window.set(ViewportMapProperty, 'maps/level1');
-    world.tick(0);
-    expect([...world.actors].map(actor => actor.id)).toContain('a');
-
-    // The property named level1 when this ran. Were it left saying so, the
-    // next tick would see a Viewport not showing what its property names
-    // and load level1 back.
-    world.loadMapInto(window, 'maps/level2');
-    world.tick(16);
-    world.tick(16);
-    expect([...world.actors].map(actor => actor.id)).toEqual(['win', 'z']);
-    expect(window.get(ViewportMapProperty)).toBe('maps/level2');
-
-    // …and an unloaded Viewport names nothing, so naming level1 again is a
-    // change, and loads it.
-    world.unloadViewport(window);
-    world.tick(16);
+    world.loadWorldMap('maps/level1');
+    const window = placeWindow(world);
+    expect([...world.actors].map(actor => actor.id)).toEqual([
+      'a',
+      'b',
+      'c',
+      'win',
+    ]);
+    expect(world.viewportSpaceOf(window)!.bounds).toEqual(new Vector(640, 320));
+    expect(world.loadWorldMap('maps/missing')).toEqual([]);
     expect([...world.actors].map(actor => actor.id)).toEqual(['win']);
-    expect(window.get(ViewportMapProperty)).toBe('');
-    window.set(ViewportMapProperty, 'maps/level1');
-    world.tick(16);
-    expect([...world.actors].map(actor => actor.id)).toContain('a');
   });
 
   it('refuses an actor that is no Viewport', () => {
@@ -1178,8 +1165,20 @@ describe('when a Viewport shows a map', () => {
     const values: unknown[] = [];
     win.on(ViewportShowsMapEvent, (_w, _actor, value) => values.push(value));
 
-    win.set(ViewportMapProperty, 'maps/level1');
+    world.loadWorldMap('maps/level1');
     world.tick(0);
+    expect(values).toEqual(['maps/level1']);
+  });
+
+  it('is raised for a Viewport placed after the World has its map', () => {
+    // So it means the same whichever came first: a Main Screen's module
+    // loads the World's map before it places the screen.
+    const world = makeWorld();
+    world.defineMap('maps/level1', LEVEL);
+    world.loadWorldMap('maps/level1');
+    const values: unknown[] = [];
+    const win = placeWindow(world);
+    win.on(ViewportShowsMapEvent, (_w, _actor, value) => values.push(value));
     world.tick(0);
     expect(values).toEqual(['maps/level1']);
   });
@@ -1410,12 +1409,13 @@ describe('world blocks act where they run', () => {
 
 describe('a Viewport placed by a map', () => {
   it('looks through its chosen camera from the first frame, on the level', () => {
-    // Its level is loaded before the placing map's script runs, so a camera
-    // that script declares can be aimed at what the level holds; and the
+    // The World's map is loaded before the screen is, so a camera the
+    // screen's script declares can be aimed at what the level holds; and the
     // camera it names is the one it looks through before any tick
-    // (specs/SCREEN_MAP_PLAN.md, step three).
+    // (specs/SCREEN_MAP_PLAN.md, step three; specs/ONE_WORLD_PLAN.md).
     const world = makeWorld();
     world.defineMap('maps/level', LEVEL);
+    world.loadWorldMap('maps/level');
     const order: string[] = [];
     world.loadMap({
       actors: [
@@ -1423,8 +1423,7 @@ describe('a Viewport placed by a map', () => {
           type: 'actors/window',
           id: 'win',
           properties: {
-            [ViewportMapProperty.ownerId]: {
-              [ViewportMapProperty.id]: 'maps/level',
+            [ViewportShowsThroughProperty.ownerId]: {
               [ViewportShowsThroughProperty.id]: 'chase',
             },
           },

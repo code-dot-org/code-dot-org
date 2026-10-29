@@ -800,6 +800,37 @@ describe('the world, with nothing selected', () => {
     expect(view.queryByRole('button', {name: /Enhance/})).toBeNull();
   });
 
+  it('offers the project’s maps for the World to start with, and says which', () => {
+    // On the Main Screen, not on a Viewport: every Viewport shows the one
+    // World (specs/ONE_WORLD_PLAN.md).
+    const onWorldMap = vi.fn();
+    const view = mount(doc(), {
+      world: {
+        header: {...header, worldMap: 'maps/level1'},
+        onRename: vi.fn(),
+        onSetDefault: vi.fn(),
+        mapChoices: [
+          ['Level1', 'maps/level1'],
+          ['Menu', 'maps/menu'],
+        ],
+        onWorldMap,
+      },
+    });
+    const select = view.container.querySelector(
+      'select[name="world-map"]',
+    ) as HTMLSelectElement;
+    expect([...select.options].map(option => option.text)).toEqual([
+      '(nothing)',
+      'Level1',
+      'Menu',
+    ]);
+    expect(select.value).toBe('maps/level1');
+    fireEvent.change(select, {target: {value: 'maps/menu'}});
+    expect(onWorldMap).toHaveBeenCalledWith('maps/menu');
+    fireEvent.change(select, {target: {value: ''}});
+    expect(onWorldMap).toHaveBeenLastCalledWith(undefined);
+  });
+
   it('is shown until a placement is, and edits go back by name', () => {
     const map = doc();
     const onRename = vi.fn();
@@ -1648,36 +1679,6 @@ describe('a Viewport on the map', () => {
         properties: {positional: {position: {x: 30, y: 20}}},
       },
     ],
-  });
-
-  it('offers the project’s maps for its map, and writes the path', () => {
-    const {map, schemas} = withViewport();
-    const {canvas, written, ...view} = mount(map, {
-      schemas,
-      mapChoices: [
-        ['Level1', 'maps/level1'],
-        ['Menu', 'maps/menu'],
-      ],
-      sizes: {'actors/viewport': {width: 100, height: 80}},
-    });
-    pointer(canvas, 'pointerdown', screenPoint(map, {x: 160, y: 160}));
-    pointer(canvas, 'pointerup', screenPoint(map, {x: 160, y: 160}));
-
-    const select = view.container.querySelector(
-      'select[name="prop-showsMap.map"]',
-    ) as HTMLSelectElement;
-    expect([...select.options].map(option => option.text)).toEqual([
-      '(none)',
-      'Level1',
-      'Menu',
-    ]);
-    expect(select.value).toBe('maps/level1');
-
-    fireEvent.change(select, {target: {value: 'maps/menu'}});
-    expect(
-      written().actors.find(actor => actor.id === 'Game')!.properties?.showsMap
-        ?.map,
-    ).toBe('maps/menu');
   });
 
   it('draws what it holds inside its box, dimmed and clipped', () => {

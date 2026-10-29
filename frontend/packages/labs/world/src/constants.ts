@@ -279,6 +279,9 @@ export const gameScreen = (
       name,
       size,
       tile: {width: TILE_SIZE, height: TILE_SIZE},
+      // The World starts with the level, which the Viewport shows
+      // (specs/ONE_WORLD_PLAN.md).
+      worldMap: 'maps/main',
       ...data,
       // The Viewport docked to the whole screen, so it is the screen's size
       // in any window and an interface docked beside it takes its share
@@ -292,7 +295,6 @@ export const gameScreen = (
             positional: {position: {x: width / 2, y: height / 2}},
             Label: {text: ''},
             hasABox: {width, height},
-            showsMap: {map: 'maps/main'},
           },
         },
         ...(hud?.actors ?? []),

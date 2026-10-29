@@ -372,6 +372,7 @@ const FLAPPY_SCREEN = JSON.stringify(
     name: 'Flappy',
     size: {width: VIEWPORT_TILES, height: VIEWPORT_TILES},
     tile: {width: TILE_SIZE, height: TILE_SIZE},
+    worldMap: 'maps/main',
     // The Viewport docked to the whole screen (specs/DOCKING_PLAN.md).
     layout: {dock: 'Game'},
     // Said out loud although it is also the rule's default, because it is
@@ -393,7 +394,7 @@ const FLAPPY_SCREEN = JSON.stringify(
           positional: {position: {x: SCREEN / 2, y: SCREEN / 2}},
           Label: {text: ''},
           hasABox: {width: SCREEN, height: SCREEN},
-          showsMap: {map: 'maps/main', showsThrough: 'Follow'},
+          showsMap: {showsThrough: 'Follow'},
         },
         cameras: [
           {

@@ -560,7 +560,14 @@ function generateMainScreen(
     hoisted: [],
     own: own ? worldOwnPropertyDeclarations(own) : '',
     mapLayers: screenLayersOf(contents),
-    mainMap: screenSize(map) + (load?.code ?? ''),
+    // The World's map before the screen's placements, so a camera the
+    // screen aims at `any ⟨Player⟩` finds the Player (specs/ONE_WORLD_PLAN.md).
+    mainMap:
+      screenSize(map) +
+      (typeof data.worldMap === 'string' && data.worldMap
+        ? `world.loadWorldMap(${str(data.worldMap)});\n`
+        : '') +
+      (load?.code ?? ''),
   });
   (generator as {__ruleModule?: string}).__ruleModule = undefined;
   if (load) {

@@ -48,6 +48,8 @@ export interface WorldHeader {
   backgroundColor?: BackgroundColor;
   /** The theme the game is painted in, or nothing. */
   theme?: string;
+  /** The map the World starts with, by path, or nothing. */
+  worldMap?: string;
 }
 
 /**

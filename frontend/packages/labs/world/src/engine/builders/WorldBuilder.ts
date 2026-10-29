@@ -462,6 +462,11 @@ export class WorldBuilder {
     return this.readyWorld().loadMapInto(viewport, map, layer);
   }
 
+  /** The World's map, replaced — the map a Main Screen says it starts with. */
+  loadWorldMap(map: WorldMap | string, layer?: string): Actor[] {
+    return this.readyWorld().loadWorldMap(map, layer);
+  }
+
   unloadViewport(viewport: Actor): void {
     this.getWorld().unloadViewport(viewport);
   }

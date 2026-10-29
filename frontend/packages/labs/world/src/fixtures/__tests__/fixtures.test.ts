@@ -345,14 +345,17 @@ describe('the scenario catalogue', () => {
     // The view is the Viewport's camera, kept on its placement as the map
     // editor keeps it, and the one the Viewport looks through.
     const main = contents('main.screen');
-    const [viewport] = JSON.parse(main).actors as Array<{
-      properties: {showsMap: {map: string; showsThrough: string}};
-      cameras: object[];
-    }>;
-    expect(viewport.properties.showsMap).toEqual({
-      map: 'maps/main',
-      showsThrough: 'Follow',
-    });
+    const screen = JSON.parse(main) as {
+      worldMap: string;
+      actors: Array<{
+        properties: {showsMap: {showsThrough: string}};
+        cameras: object[];
+      }>;
+    };
+    // …and the World starts with the level (specs/ONE_WORLD_PLAN.md).
+    expect(screen.worldMap).toBe('maps/main');
+    const [viewport] = screen.actors;
+    expect(viewport.properties.showsMap).toEqual({showsThrough: 'Follow'});
     expect(viewport.cameras).toMatchObject([
       {
         name: 'Follow',

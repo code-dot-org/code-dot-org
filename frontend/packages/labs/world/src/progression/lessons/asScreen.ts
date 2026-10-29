@@ -485,6 +485,9 @@ export function screenOfWorld(
     if (mainCamera) {
       throw new Error('a world whose own map has a Viewport and a camera');
     }
+    // The map a Viewport was given is the one the World starts with, said
+    // on the screen rather than on the Viewport (specs/ONE_WORLD_PLAN.md).
+    const worldMap = withoutViewportMaps(placements);
     return {
       screen: JSON.stringify(
         {
@@ -492,6 +495,7 @@ export function screenOfWorld(
           type: 'map',
           name,
           ...sized,
+          ...(worldMap ? {worldMap} : {}),
           ...data,
           ...mapLayers,
           actors: placements,
@@ -529,6 +533,36 @@ export function screenOfWorld(
     ),
   };
 }
+
+/**
+ * Take the `map` off every Viewport placement in `placements`, in place, and
+ * say the first one found: the map the World starts with.
+ */
+const withoutViewportMaps = (placements: Placement[]): string | undefined => {
+  let first: string | undefined;
+  for (const placement of placements) {
+    const properties = placement.properties;
+    const shows = properties?.showsMap;
+    if (
+      placement.type !== VIEWPORT ||
+      !properties ||
+      !shows ||
+      !('map' in shows)
+    ) {
+      continue;
+    }
+    const {map, ...rest} = shows;
+    if (typeof map === 'string' && map && first === undefined) {
+      first = map;
+    }
+    if (Object.keys(rest).length) {
+      properties.showsMap = rest;
+    } else {
+      delete properties.showsMap;
+    }
+  }
+  return first;
+};
 
 /**
  * The `main.world` a converted project was written as, for the check tests,
