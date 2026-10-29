@@ -146,7 +146,7 @@ describe('the Main Screen’s module', () => {
 });
 
 describe('a placed Viewport', () => {
-  it('shows the map its property names, in a space of its own', async () => {
+  it('shows the map its property names, in the World it looks at', async () => {
     const {world} = await compileProject(FILES);
     const [window] = [...world.actors];
     expect(window.has(ViewportTrait)).toBe(true);
@@ -160,15 +160,16 @@ describe('a placed Viewport', () => {
     expect(ids).toEqual(['Game', 'a', 'b']);
     const space = world.viewportSpaceOf(window)!;
     expect(
-      [...world.actors].slice(1).every(actor => actor.space === space),
+      [...world.actors].slice(1).every(actor => actor.space === space.mirrorOf),
     ).toBe(true);
     expect(space.bounds).toEqual({x: 640, y: 320});
     // The middle of the window it is seen through. A map no longer says what to
     // follow — a Viewport's camera elects `Follows`, as the world's always has
     // (specs/SPACE_CAMERAS_PLAN.md).
     expect(space.camera!.position).toEqual({x: 50, y: 40});
-    expect(world.spaceSnapshot()[0]).toMatchObject({
+    expect(world.spaceSnapshot()[1]).toMatchObject({
       owner: 'Game',
+      mirrors: 'world',
       view: {x: 100, y: 80},
     });
   });

@@ -357,7 +357,7 @@ describe('a gated first lesson', () => {
     expect(offered.size).toBeLessThan(35);
   });
 
-  it('and seventeen of what it offers are a FOUNDATION rule’s own blocks', () => {
+  it('and sixteen of what it offers are a FOUNDATION rule’s own blocks', () => {
     // Which is where the number above actually comes from, and is worth
     // asserting rather than leaving as a surprise. A rule's own property
     // blocks are never gated — that is deliberate, and it is what lets a
@@ -366,10 +366,12 @@ describe('a gated first lesson', () => {
     // setters are in play in every lesson, including the one whose detail
     // pane says it unlocks the Actor drawer.
     //
-    // Nine, then eleven, then thirteen, then seventeen. `Has a Style` is the
-    // fourth foundation trait and cost two (specs/STYLES_PLAN.md); a Viewport's
-    // `shows through` cost two the same way (specs/SPACE_CAMERAS_PLAN.md); its
-    // `mirrors the world` and `mirrors` cost four (specs/MIRRORING_PLAN.md).
+    // Nine, then eleven, then thirteen, then seventeen, then sixteen. `Has a
+    // Style` is the fourth foundation trait and cost two
+    // (specs/STYLES_PLAN.md); a Viewport's `shows through` cost two the same
+    // way (specs/SPACE_CAMERAS_PLAN.md); its `mirrors the world` and
+    // `mirrors` cost four and went with one World, and a Scroll View's
+    // `scroll` and `content` cost three (specs/ONE_WORLD_PLAN.md).
     // Nobody chose any of them and nothing is broken by them; the day it
     // matters, the fix is to gate a foundation rule's blocks with the trait
     // that elects them, which is a curriculum decision rather than a styling,
@@ -380,9 +382,9 @@ describe('a gated first lesson', () => {
     // test above — the one that says the lesson is small enough to read — is
     // the one that will fail eventually.
     const foundation = [...offeredAt('origin/first-world')].filter(type =>
-      /^world_(get|set)_(Boxed|Styled|Viewport)_/.test(type),
+      /^world_(get|set)_(Boxed|Styled|Viewport|Scrolling)_/.test(type),
     );
-    expect(foundation).toHaveLength(17);
+    expect(foundation).toHaveLength(16);
   });
 
   it('is not so small the lesson cannot be done', () => {

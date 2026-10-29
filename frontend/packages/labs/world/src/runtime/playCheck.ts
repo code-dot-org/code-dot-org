@@ -122,13 +122,13 @@ export function readProbe(world: World, probe: Probe): unknown {
           ];
     }
     case 'cameras': {
-      const level = levelOf(world);
-      return level
-        ? level.cameras.map(camera => ({
+      const view = viewOf(world);
+      return view
+        ? view.cameras.map(camera => ({
             id: camera.id,
             x: camera.position.x,
             y: camera.position.y,
-            active: camera === level.camera,
+            active: camera === view.camera,
           }))
         : world.cameraSnapshot().map(camera => ({
             id: camera.id,
@@ -145,12 +145,18 @@ export function readProbe(world: World, probe: Probe): unknown {
 }
 
 /**
- * The level the game shows: the space of its first Viewport, which a game's
- * Main Screen docks over the whole of itself (specs/LESSONS_AS_SCREENS_PLAN.md).
- * A probe of the view, its backdrop and its cameras is a probe of that. None
- * for a world with no Viewport, whose view is its own.
+ * The game's first Viewport, which a game's Main Screen docks over the whole
+ * of itself (specs/LESSONS_AS_SCREENS_PLAN.md): a probe of the cameras is a
+ * probe of its. None for a world with no Viewport, whose view is its own.
  */
-const levelOf = (world: World) => world.spaces[0];
+const viewOf = (world: World) => world.spaces[0];
+
+/**
+ * The level the game shows: the World that Viewport looks at
+ * (specs/ONE_WORLD_PLAN.md). A probe of its actors and backdrop is a probe of
+ * that.
+ */
+const levelOf = (world: World) => viewOf(world)?.mirrorOf;
 
 /** Whether an actor is in what the game shows, rather than around it. */
 const inLevel = (world: World, actor: Actor): boolean => {

@@ -14,8 +14,6 @@ import {STYLED} from '../rules/styled';
 import {
   ViewportContentProperty,
   ViewportMapProperty,
-  ViewportMirrorsProperty,
-  ViewportMirrorsTheWorldProperty,
   ViewportScrollProperty,
   ViewportShowsMapEvent,
   ViewportShowsThroughProperty,
@@ -60,7 +58,7 @@ import {parentingKeys} from './parenting';
 import {phaseIndex} from './phases';
 import {ruleContentHash} from './ruleIds';
 import {Scheduler} from './Scheduler';
-import {ROOT_SPACE_ID, Space} from './Space';
+import {ROOT_SPACE_ID, Space, WORLD_SPACE_ID} from './Space';
 import {SpatialIndex} from './spatialIndex';
 import {APPEARANCE, SPATIAL} from './spatialKeys';
 import {text} from './textValue';
@@ -848,9 +846,10 @@ export class World {
    */
   private readonly worldHandlers = new Map<GameEvent, WorldEventHandler[]>();
   /**
-   * The world's spaces (specs/VIEWPORT_PLAN.md): the root, which the main
-   * map and every `load map` fill, and one per Viewport placed. Every actor
-   * is in exactly one; see `Actor.space`.
+   * The world's spaces (specs/ONE_WORLD_PLAN.md): the root, which is the
+   * screen; the World, which maps fill; and one per Viewport placed, which
+   * is that Viewport's camera and window onto the World. Every actor is in
+   * the root or the World; see `Actor.space`.
    */
   private readonly rootSpace = new Space(
     ROOT_SPACE_ID,
@@ -859,6 +858,11 @@ export class World {
     // No cameras of its own: the root's are the world's `cameraList`, which it
     // owns directly for want of a placement to own them for it
     // (specs/SPACE_CAMERAS_PLAN.md).
+  );
+  private readonly worldSpace = new Space(
+    WORLD_SPACE_ID,
+    undefined,
+    new Vector(VIEWPORT_WIDTH, VIEWPORT_HEIGHT),
   );
   private readonly viewportSpaces: Space[] = [];
   /**
@@ -1424,13 +1428,19 @@ export class World {
     // that starts at the middle of what it shows (`rules/viewport`). After
     // its size is known, since the space is as big as the window at first.
     if (actor.has(ViewportTrait) && !this.viewportSpaceOf(actor)) {
-      const view = this.viewSizeOf(actor);
       const space = new Space(
         `${ROOT_SPACE_ID}/${actor.id}`,
         actor,
-        new Vector(view.x, view.y),
+        this.worldSpace.bounds,
       );
+      // Every Viewport shows the World (specs/ONE_WORLD_PLAN.md), which
+      // until a map says otherwise is as big as the first Viewport's window.
+      space.mirrorOf = this.worldSpace;
       this.viewportSpaces.push(space);
+      if (this.worldSpace.loads.length === 0) {
+        this.worldSpace.bounds = this.worldFloor();
+      }
+      space.bounds = this.worldSpace.bounds;
       // THE SPACE'S MAIN CAMERA, which every space has and which cannot be
       // taken away — the world's `main` one level down
       // (specs/SPACE_CAMERAS_PLAN.md). Through the same door every other camera
@@ -1801,11 +1811,10 @@ export class World {
     // be able to reach the world it used to be in, nor claim a layer in it.
     actor.world = undefined;
     actor.layer = undefined;
-    // A Viewport removed takes what it holds with it, as a parent takes its
-    // children: the level in it has nowhere to be seen.
+    // A Viewport removed takes its camera and window with it. The World it
+    // showed is not its, and stays.
     const space = this.viewportSpaceOf(actor);
     if (space) {
-      this.unloadSpace(space);
       this.viewportSpaces.splice(this.viewportSpaces.indexOf(space), 1);
     }
     actor.space = undefined;
@@ -2156,9 +2165,19 @@ export class World {
     if (subject instanceof Camera && subject.window) {
       return this.viewSizeOf(subject.window);
     }
-    const space = this.spaceOf(subject);
-    return space.owner
-      ? this.viewSizeOf(space.owner)
+    return this.windowOf(this.spaceOf(subject));
+  }
+
+  /**
+   * The window a space is seen through: a Viewport's own, the first
+   * Viewport's for the World, and the screen's for the root.
+   */
+  private windowOf(space: Space): Vector {
+    if (space.owner) {
+      return this.viewSizeOf(space.owner);
+    }
+    return space === this.worldSpace
+      ? this.worldFloor()
       : new Vector(this.view.x, this.view.y);
   }
 
@@ -2253,15 +2272,15 @@ export class World {
   }
 
   /**
-   * Hold the space `viewport` shows, as `enter` holds an actor, and say
-   * whether it shows one — `in the map ⟨Game⟩ shows`. What acts on the
-   * world then acts in that map, from code that is the screen's. Nothing is
-   * held for a Viewport showing nothing, and the caller runs nothing.
+   * Hold the World, as `enter` holds an actor, and say whether `viewport`
+   * is a Viewport onto it — `in the map ⟨Game⟩ shows`. What acts on the
+   * world then acts in the World, from code that is the screen's. Nothing is
+   * held for anything that is not a Viewport, and the caller runs nothing.
    */
   enterShown(viewport: Actor | undefined): boolean {
     const space = viewport ? this.viewportSpaceOf(viewport) : undefined;
     if (space) {
-      this.inHand.push(space);
+      this.inHand.push(this.worldSpace);
     }
     return space !== undefined;
   }
@@ -2287,10 +2306,60 @@ export class World {
   }
 
   /**
-   * Replace what `viewport` holds with `map` — by value, or by the path a
-   * property holds. What it held is unloaded first, so a Viewport shows one
-   * map at a time; the space's bounds start over at the map's size, and its
-   * camera at the middle of the window it is seen through.
+   * Replace what the World holds with `map` — by value, or by the path a
+   * property holds — and say so to every Viewport onto it. What it held is
+   * unloaded first, so the World holds one map at a time; its bounds start
+   * over at the map's size, and each Viewport's camera at the middle of its
+   * window.
+   */
+  loadWorldMap(map: WorldMap | string, layer?: string): Actor[] {
+    const world = this.worldSpace;
+    this.unloadSpace(world);
+    const held = typeof map === 'string' ? this.maps.get(map) : map;
+    world.shown = typeof map === 'string' ? map : undefined;
+    // The World's layers are the map's, made before anything is placed so
+    // each placement's layer resolves against them.
+    world.layers = layersOfMap(held?.layers);
+    world.bounds = this.worldFloor();
+    for (const space of this.viewportSpaces) {
+      space.bounds = world.bounds;
+      if (space.camera && space.owner) {
+        const view = this.viewSizeOf(space.owner);
+        space.camera.position = new Vector(view.x / 2, view.y / 2);
+      }
+    }
+    if (!held) {
+      return [];
+    }
+    const added = this.loadInto(world, held, layer);
+    for (const space of this.viewportSpaces) {
+      space.bounds = world.bounds;
+      this.showsThrough(space);
+      this.settleSpace(space);
+      // …and each Viewport hears that the map has landed, with the path as
+      // the value when there is one. AFTER the load and queued, so a handler
+      // that aims the Viewport's camera finds the map's actors already there
+      // — which an `on create` handler does not (`ViewportShowsMapEvent`).
+      if (space.owner?.has(ViewportTrait)) {
+        this.emit(ViewportShowsMapEvent, space.owner, world.shown ?? '');
+      }
+    }
+    return added;
+  }
+
+  /**
+   * How big the World is before a map says: the first Viewport's window, or
+   * the screen's for a World nothing shows.
+   */
+  private worldFloor(): Vector {
+    const first = this.viewportSpaces.find(space => space.owner)?.owner;
+    const view = first ? this.viewSizeOf(first) : this.view;
+    return new Vector(view.x, view.y);
+  }
+
+  /**
+   * `load map ⟨…⟩ into ⟨viewport⟩`: the World's map replaced, since every
+   * Viewport shows the World. Refuses anything that is not a Viewport.
    */
   loadMapInto(
     viewport: Actor,
@@ -2304,60 +2373,28 @@ export class World {
           `loaded into it`,
       );
     }
-    // What it held goes first, whatever comes: a path nothing registered
-    // leaves a Viewport showing nothing, which is what the path says. A mirror
-    // stops being one for the same reason — it is about to show a map of its
-    // own (specs/MIRRORING_PLAN.md).
-    this.stopMirroring(space);
-    this.unloadSpace(space);
-    const held = typeof map === 'string' ? this.maps.get(map) : map;
     if (typeof map === 'string') {
       this.nowShows(viewport, space, map);
     }
-    // The space's layers are the map's, made before anything is placed so
-    // each placement's layer resolves against them.
-    space.layers = layersOfMap(held?.layers);
-    if (!held) {
-      return [];
-    }
-    const view = this.viewSizeOf(viewport);
-    space.bounds = new Vector(view.x, view.y);
-    space.camera!.position = new Vector(view.x / 2, view.y / 2);
-    const added = this.loadInto(space, held, layer);
-    this.showsThrough(space);
-    this.settleSpace(space);
-    // …and the Viewport hears that its map has landed, with the path as the
-    // value when there is one. AFTER the load and queued, so a handler that
-    // aims the Viewport's camera finds the map's actors already there — which
-    // an `on create` handler does not (`ViewportShowsMapEvent`).
-    if (viewport.has(ViewportTrait)) {
-      this.emit(
-        ViewportShowsMapEvent,
-        viewport,
-        typeof map === 'string' ? map : (space.shown ?? ''),
-      );
-    }
-    return added;
+    return this.loadWorldMap(map, layer);
   }
 
-  /** Take back everything loaded into `viewport`. */
+  /** Take back everything the World holds — `unload ⟨viewport⟩`. */
   unloadViewport(viewport: Actor): void {
     const space = this.viewportSpaceOf(viewport);
     if (space) {
-      this.stopMirroring(space);
-      this.unloadSpace(space);
+      this.unloadSpace(this.worldSpace);
+      this.worldSpace.shown = '';
       this.nowShows(viewport, space, '');
     }
   }
 
   /**
-   * Record the path a Viewport shows, in the space AND in the Viewport's
-   * `map` property. Both, because `showHeldMap` loads whatever the property
-   * names whenever that differs from what is shown: a load by path that left
-   * the property naming the old map was undone on the next tick, by the
-   * engine loading the old map back. With the property written, it is also
-   * what a block reading it and the inspector are told, and setting it back
-   * to an earlier path is a change again.
+   * Record the path a Viewport asked for, in its space AND in its `map`
+   * property. Both, because `showHeldMap` loads whatever the property names
+   * whenever that differs from what the Viewport last asked for: a load by
+   * path that left the property naming the old map was undone on the next
+   * tick, by the engine loading the old map back.
    */
   private nowShows(viewport: Actor, space: Space, path: string): void {
     space.shown = path;
@@ -2383,11 +2420,9 @@ export class World {
   private settleSpaces(): void {
     for (const space of this.viewportSpaces) {
       this.showHeldMap(space);
-      // A mirror's bounds are the root's, which a `load map` may have grown
-      // since (`growSpaceToFit`).
-      if (space.mirrorOf) {
-        space.bounds = space.mirrorOf.bounds;
-      }
+      // The World's bounds, which a map loaded into it may have grown since
+      // (`growSpaceToFit`).
+      space.bounds = this.worldSpace.bounds;
       this.showsThrough(space);
       this.settleSpace(space);
     }
@@ -2508,101 +2543,27 @@ export class World {
   }
 
   /**
-   * Load the map a Viewport's `map` property names, when it is not the one
-   * shown: at the first tick after the Viewport is placed, and again
-   * whenever the property changes (`rules/viewport`). A path nothing
-   * registered shows nothing, as `loadMapInto` says.
+   * Load the map a Viewport's `map` property names into the World, when the
+   * Viewport has not asked for it yet: at the first tick after the Viewport
+   * is placed, and again whenever the property changes (`rules/viewport`).
+   * Compared with what THIS Viewport last asked for, not with what the World
+   * holds, so two Viewports naming two maps do not take turns every tick:
+   * the one that changed last wins.
    */
   private showHeldMap(space: Space): void {
     const owner = space.owner;
     if (!owner || !owner.has(ViewportTrait)) {
       return;
     }
-    // A MIRROR FIRST, and a mirror shows no map: `mirrors` and `mirrors the
-    // world` say which scene this box shows instead of one of its own, and
-    // while either does, `map` is what it would show if it stopped
-    // (specs/MIRRORING_PLAN.md).
-    const target = this.mirrorTargetOf(owner);
-    if (target) {
-      if (space.mirrorOf !== target) {
-        this.mirrorInto(space, target);
-      }
-      return;
-    }
-    if (space.mirrors) {
-      this.stopMirroring(space);
-      // …and the map it names is shown again from scratch, as if just set.
-      space.shown = undefined;
-    }
     const path = String(owner.get(ViewportMapProperty) ?? '');
     if (path === (space.shown ?? '')) {
       return;
     }
     space.shown = path;
-    this.loadMapInto(owner, path);
-  }
-
-  /**
-   * The space a Viewport says it shows instead of its own, if it says one.
-   *
-   * `mirrors` — another Viewport — before `mirrors the world`, on the grounds
-   * that the more specific thing was said on purpose. A mirror of a mirror
-   * shows what the END of the chain shows, and a chain that comes back to
-   * itself shows nothing: a Viewport cannot show a scene whose definition is
-   * "whatever this Viewport shows". Nothing rather than the root, because the
-   * root is an answer and this question has none.
-   */
-  private mirrorTargetOf(viewport: Actor): Space | undefined {
-    const seen = new Set<Actor>();
-    let at: Actor | undefined = viewport;
-    while (at && !seen.has(at)) {
-      seen.add(at);
-      if (!at.has(ViewportTrait)) {
-        return undefined;
-      }
-      const named: Actor | undefined = (
-        at.get(ViewportMirrorsProperty) as readonly Actor[]
-      )[0];
-      if (named) {
-        at = named;
-        continue;
-      }
-      if (at.get(ViewportMirrorsTheWorldProperty) === true) {
-        return this.rootSpace;
-      }
-      // The end of the chain: a Viewport with a scene of its own — its own
-      // space, unless it is the one asked about, which mirrors nothing.
-      return at === viewport ? undefined : this.viewportSpaceOf(at);
-    }
-    return undefined;
-  }
-
-  /**
-   * Bind a Viewport to another scene (specs/MIRRORING_PLAN.md).
-   *
-   * What it held goes, since a Viewport shows one thing at a time; its
-   * cameras are pointed at the target, so a query with one in hand answers
-   * about the scene it shows; and its bounds become the target's, kept in step
-   * each tick, so a camera confined to the map is confined to the target's.
-   */
-  private mirrorInto(space: Space, target: Space): void {
-    this.unloadSpace(space);
-    space.mirrorOf = target;
-    space.bounds = target.bounds;
-    for (const camera of space.cameras) {
-      camera.space = target;
-    }
-  }
-
-  /** The other way: a Viewport that mirrored is about to show a map of its own. */
-  private stopMirroring(space: Space): void {
-    if (!space.mirrors) {
+    if (path === (this.worldSpace.shown ?? '')) {
       return;
     }
-    space.mirrorOf = undefined;
-    for (const camera of space.cameras) {
-      camera.space = space;
-    }
+    this.loadWorldMap(path);
   }
 
   /**
@@ -2670,30 +2631,34 @@ export class World {
   }
 
   /**
-   * Every Viewport's space, for the driver: whose it is, where its camera
-   * looks, how much of it is shown, and how big it is.
+   * The World's space and every Viewport's, for the driver: whose each is,
+   * where its camera looks, how much of it is shown, and how big it is.
+   *
+   * THE WORLD FIRST, with no owner: the driver holds its actors and layers
+   * and draws them only through the Viewports onto it, each of which says
+   * `mirrors` with the World's id. Its camera and view are the first
+   * Viewport's, which is what its layers' parallax is measured against.
    */
   spaceSnapshot(): ReadonlyArray<{
     id: string;
     owner: string;
     mirrors: string | undefined;
-    /** Whether `mirrors` is the root, which is no space host of the driver's. */
-    mirrorsRoot: boolean;
     camera: {x: number; y: number; zoom: number};
     view: {x: number; y: number};
     bounds: {x: number; y: number};
-    /** The color behind its map, or none for a see-through box. */
+    /** The color behind the World, or none for a see-through box. */
     clearColor: Rgba | undefined;
-    /** The space's own layers, back to front, as `layerSnapshot` gives the world's. */
+    /** The World's layers, back to front, as `layerSnapshot` gives the root's. */
     layers: ReadonlyArray<{
       id: string;
       parallax: {x: number; y: number};
       fit: boolean;
-      inMirrors: boolean;
       background: BackdropState;
     }>;
   }> {
-    return this.viewportSpaces.flatMap(space => {
+    const world = this.worldSpace;
+    const sky = world.clearColor ? ([...world.clearColor] as Rgba) : undefined;
+    const windows = this.viewportSpaces.flatMap(space => {
       if (!space.owner || !space.camera) {
         return [];
       }
@@ -2702,11 +2667,7 @@ export class World {
         {
           id: space.id,
           owner: space.owner.id,
-          // The space whose scene the box shows instead of its own, by id —
-          // the root's, or another Viewport's — which the driver draws through
-          // that space's display list (specs/MIRRORING_PLAN.md).
-          mirrors: space.mirrorOf?.id,
-          mirrorsRoot: space.mirrorOf === this.rootSpace,
+          mirrors: world.id,
           camera: {
             x: space.camera.position.x,
             y: space.camera.position.y,
@@ -2714,23 +2675,31 @@ export class World {
           },
           view: {x: view.x, y: view.y},
           bounds: {x: space.bounds.x, y: space.bounds.y},
-          clearColor: space.clearColor
-            ? ([...space.clearColor] as Rgba)
-            : undefined,
-          // A mirror has no layers of its own to draw: what it shows is the
-          // target's scene, layers and all, through the target's containers.
-          // Reporting the target's here would have the driver build a second
-          // set of backdrops inside the box (specs/MIRRORING_PLAN.md).
-          layers: (space.mirrorOf ? [] : space.layers).map(layer => ({
-            id: layer.id,
-            parallax: {x: layer.parallax.x, y: layer.parallax.y},
-            fit: layer.fit,
-            inMirrors: layer.inMirrors,
-            background: layer.background,
-          })),
+          clearColor: sky,
+          layers: [],
         },
       ];
     });
+    const first = windows[0];
+    const view = this.worldFloor();
+    return [
+      {
+        id: world.id,
+        owner: '',
+        mirrors: undefined,
+        camera: first?.camera ?? {x: view.x / 2, y: view.y / 2, zoom: 1},
+        view: first?.view ?? {x: view.x, y: view.y},
+        bounds: {x: world.bounds.x, y: world.bounds.y},
+        clearColor: sky,
+        layers: world.layers.map(layer => ({
+          id: layer.id,
+          parallax: {x: layer.parallax.x, y: layer.parallax.y},
+          fit: layer.fit,
+          background: layer.background,
+        })),
+      },
+      ...windows,
+    ];
   }
 
   /**
@@ -2800,7 +2769,7 @@ export class World {
     const view = this.viewSize();
     for (const actor of this.actorList) {
       const hold = this.anchorHolds.get(actor);
-      if (!hold || hold.space.owner || actor.parent()) {
+      if (!hold || hold.space !== this.rootSpace || actor.parent()) {
         continue;
       }
       const at = actor.get(property) as Vector;
@@ -2913,7 +2882,7 @@ export class World {
       map.size.width * map.tile.width,
       map.size.height * map.tile.height,
     );
-    const view = space.owner ? this.viewSize(space.owner) : this.viewSize();
+    const view = this.windowOf(space);
     for (const [actor, anchor] of anchoring) {
       if (actor.parent()) {
         continue;
@@ -2984,9 +2953,7 @@ export class World {
     if (!position) {
       return;
     }
-    const view = held.space.owner
-      ? this.viewSizeOf(held.space.owner)
-      : this.viewSize();
+    const view = this.windowOf(held.space);
     const present = (id: string) => {
       const actor = held.placed.get(id);
       return Boolean(actor && actor.world === this && !actor.parent());
@@ -3097,6 +3064,11 @@ export class World {
     // BEFORE THIS MAP'S SCRIPT, which is where a Viewport's cameras are
     // declared and told what to follow (`placementCameras`): `any ⟨Player⟩`
     // is read when its row runs, and the Player is in the level.
+    // From code in the World, the World's map is replaced: a level change,
+    // a restart and the overworld are all this (specs/ONE_WORLD_PLAN.md).
+    if (this.here().space === this.worldSpace) {
+      return this.loadWorldMap(map, layer);
+    }
     const held: Space[] = [];
     const added = this.loadInto(this.here().space, map, layer, placed => {
       for (const actor of placed) {
@@ -4193,7 +4165,13 @@ export class World {
     // hit-testing asks, one candidate at a time in hand — is found by the
     // mirror's camera and not by the scene's own. The topmost mirror wins
     // where two overlap, which is the last placed, as the driver draws them.
-    const mirror = this.mirrorUnderPointer(space);
+    // …and the World, which only Viewports show, is asked through the first
+    // of them when the pointer is over none.
+    const mirror =
+      this.mirrorUnderPointer(space) ??
+      (space === this.worldSpace
+        ? this.viewportSpaces.find(one => one.owner && one.camera)
+        : undefined);
     if (mirror) {
       return this.throughWindow(mirror.owner!, mirror.camera!);
     }
@@ -4840,15 +4818,12 @@ export class World {
     parallax: {x: number; y: number};
     /** Whether it ignores the camera entirely — an interface layer. */
     fit: boolean;
-    /** Whether a mirror of this scene shows it. */
-    inMirrors: boolean;
   }> {
     return this.layerList.map(layer => ({
       id: layer.id,
       effects: layer.effects,
       parallax: {x: layer.parallax.x, y: layer.parallax.y},
       fit: layer.fit,
-      inMirrors: layer.inMirrors,
     }));
   }
 

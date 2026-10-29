@@ -19,13 +19,13 @@ const ofKind = (world: World, kind: string): Actor[] =>
   [...world.actors].filter(actor => actor.type === kind);
 
 describe('breakout, in a Viewport', () => {
-  it('plays its level in the Viewport’s space, and nothing in the root', async () => {
+  it('plays its level in the World the Viewport shows, and nothing in the root', async () => {
     const {world} = await compiled();
     world.tick(0);
 
     const [game] = ofKind(world, 'actors/viewport');
     expect(game.id).toBe('Game');
-    const space = world.viewportSpaceOf(game)!;
+    const space = world.viewportSpaceOf(game)!.mirrorOf!;
     expect(space.bounds).toEqual({x: 320, y: 320});
 
     const level = [...world.actors].filter(actor => actor !== game);
@@ -55,9 +55,9 @@ describe('breakout, in a Viewport', () => {
     world.tick(16);
     world.tick(16);
 
-    // The level is whole again and in the same space; the Viewport is the
-    // one it was, and the menu in the root was not part of what went.
-    const space = world.viewportSpaceOf(game)!;
+    // The level is whole again and in the World; the Viewport is the one it
+    // was, and the menu in the root was not part of what went.
+    const space = world.viewportSpaceOf(game)!.mirrorOf!;
     const bricks = ofKind(world, 'actors/brick');
     expect(bricks).toHaveLength(16);
     expect(bricks.every(brick => brick.space === space)).toBe(true);

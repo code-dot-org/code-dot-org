@@ -97,8 +97,6 @@ export interface LayerInit {
   parallax?: Vector;
   /** Ignore the view and fit this layer to the surface; defaults to false. */
   fit?: boolean;
-  /** Whether a Viewport that mirrors this scene shows it; defaults to true. */
-  inMirrors?: boolean;
 }
 
 /** A layer, as the world holds it. */
@@ -115,12 +113,6 @@ export interface Layer {
   parallax: Vector;
   /** Whether it ignores the camera entirely. A value too, for the same reason. */
   fit: boolean;
-  /**
-   * Whether a mirror of this scene shows it (specs/MIRRORING_PLAN.md, step
-   * 8). A level's own hearts and score are the game's, and a minimap of the
-   * level leaves them out.
-   */
-  inMirrors: boolean;
   /** Drawn behind this layer's actors. Mutable: a handler may change it. */
   readonly background: LayerSlot;
   /**
@@ -149,7 +141,6 @@ export interface MapLayer {
   name?: string;
   parallax?: {x: number; y: number};
   fit?: boolean;
-  inMirrors?: boolean;
   background?: MapSlot;
 }
 
@@ -183,7 +174,6 @@ export function layersOfMap(layers: readonly MapLayer[] | undefined): Layer[] {
         ? new Vector(layer.parallax.x, layer.parallax.y)
         : undefined,
       fit: layer.fit,
-      inMirrors: layer.inMirrors,
     }),
     background: slotFrom(layer.background),
   }));
@@ -198,7 +188,6 @@ export function makeLayer(init: LayerInit): Layer {
     name: init.name ?? init.id,
     parallax: init.parallax ? Vector.from(init.parallax) : new Vector(1, 1),
     fit: init.fit ?? false,
-    inMirrors: init.inMirrors ?? true,
     effects: [],
     background: emptySlot(),
   };

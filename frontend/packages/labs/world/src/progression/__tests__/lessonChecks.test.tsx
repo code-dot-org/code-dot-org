@@ -2327,7 +2327,7 @@ describe('the layers lesson’s check', () => {
     const {world} = await compileProject(
       projectFiles(onTheMap({fixed: true, parallax: true})),
     );
-    const layers = world.spaces[0].layers;
+    const layers = world.spaces[0].mirrorOf!.layers;
     expect(layers.map(layer => layer.id)).toEqual(['layer2', 'main', 'layer1']);
     expect({x: layers[0].parallax.x, y: layers[0].parallax.y}).toEqual({
       x: 0.4,
@@ -5339,16 +5339,15 @@ describe('the two-rooms lesson’s check', () => {
     expect(passes).toBe(false);
   });
 
-  it('refuses loading the second room beside the Viewport', async () => {
-    // `load map` alone puts room two on the world's own map, over the
-    // window rather than in it: both rooms in the world at once, with two
-    // Players — which looks right for a moment, because a Chest really has
-    // arrived.
+  it('accepts `load map` from the door, which replaces the World’s map', async () => {
+    // There is one World, and `load map` from code in it replaces what it
+    // holds (specs/ONE_WORLD_PLAN.md). Room two is not beside room one any
+    // more; it is the World.
     const {passes} = await check(
       'adventure/rooms',
       doorway({type: 'world_load_map', fields: {MAP: 'maps/room2'}} as Row),
     );
-    expect(passes).toBe(false);
+    expect(passes).toBe(true);
   });
 });
 

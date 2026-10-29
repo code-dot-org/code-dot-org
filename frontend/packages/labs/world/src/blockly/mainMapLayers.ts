@@ -18,7 +18,6 @@ export interface MainMapLayer {
   name?: string;
   parallax?: {x: number; y: number};
   fit?: boolean;
-  inMirrors?: boolean;
   background?: Slot;
 }
 
@@ -61,9 +60,6 @@ const declaration = (layer: MainMapLayer): string => {
   }
   if (layer.fit) {
     parts.push('fit: true');
-  }
-  if (layer.inMirrors === false) {
-    parts.push('inMirrors: false');
   }
   return `world.defineLayer({${parts.join(', ')}});\n`;
 };

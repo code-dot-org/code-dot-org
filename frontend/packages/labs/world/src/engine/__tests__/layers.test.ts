@@ -9,7 +9,7 @@
 import {describe, expect, it} from 'vitest';
 
 import type {EffectDocument} from '../../effect/model/types';
-import {DEFAULT_LAYER_ID, layersOfMap} from '../core/Layer';
+import {DEFAULT_LAYER_ID} from '../core/Layer';
 import {VIEWPORT_HEIGHT, VIEWPORT_WIDTH} from '../core/viewport';
 import {ActorBuilder, PositionProperty, Vector, WorldBuilder} from '../index';
 import type {World} from '../index';
@@ -81,28 +81,6 @@ describe('a world that names layers', () => {
       .defineLayer({id: DEFAULT_LAYER_ID})
       .defineLayer({id: 'hud', fit: true})
       .instantiate();
-
-  it('says which a mirror of the scene shows, all of them unless told', () => {
-    // specs/MIRRORING_PLAN.md, step 8.
-    const world = new WorldBuilder({id: 'w', name: 'W'})
-      .defineLayer({id: DEFAULT_LAYER_ID})
-      .defineLayer({id: 'hud', fit: true, inMirrors: false})
-      .instantiate();
-    expect(world.layerSnapshot().map(layer => layer.inMirrors)).toEqual([
-      true,
-      false,
-    ]);
-    // …and a map's own, made whole when it is loaded into a Viewport.
-    expect(
-      layersOfMap([{id: 'hearts', inMirrors: false}]).map(layer => [
-        layer.id,
-        layer.inMirrors,
-      ]),
-    ).toEqual([
-      [DEFAULT_LAYER_ID, true],
-      ['hearts', false],
-    ]);
-  });
 
   it('keeps them in declaration order, which is depth', () => {
     expect(built().layers.map(layer => layer.id)).toEqual([

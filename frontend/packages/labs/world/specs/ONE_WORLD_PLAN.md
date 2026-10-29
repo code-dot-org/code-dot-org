@@ -1,6 +1,6 @@
 # Plan: one World, seen through Viewports
 
-STATUS: BUILDING, October 2026. Steps 1 and 2 are done. Comes before
+STATUS: BUILDING, October 2026. Steps 1 to 3 are done. Comes before
 specs/SCREEN_STACK_PLAN.md, which sits on it.
 
 A game has one World. Maps fill it, and maps bring its layers. A Viewport is
@@ -186,8 +186,8 @@ There are no migrations (specs/RETIREMENTS_PLAN.md).
 5. World blocks act on the World: `here` and `in the map ⟨…⟩ shows` go, and
    with them `load map … into` and `unload ⟨Viewport⟩`.
 6. Cameras: one per Viewport, with the camera traits as now; `actor to
-follow` by kind. Removing camera lists, `shows through`, choosing a mirror
-   target, and the Viewport's own `scroll` and `content`. Tests.
+follow` by kind. Removing camera lists, `shows through`, and the
+   Viewport's own `scroll` and `content`. Tests.
 7. Layers: `fit` removed, screens lose their layers. Tapper's Interface
    labels become Main Screen placements.
 8. The screen editor: a way into a Scroll View to arrange content taller
@@ -215,6 +215,26 @@ pointer` joins `can be reached` in the shared hit test of Mouse and
   what is typed into it.
 - **Seen in the browser** on the Interface Kit: the rows are clipped at both
   edges of the window, and the wheel moves them and the scrollbar.
+- **Step 3 took choosing a mirror target with it**, which the plan had put
+  in step 6. Once every Viewport shows the World, `mirrors`, `mirrors the
+world` and a layer's `inMirrors` mean nothing, and leaving them for three
+  steps would have left fields in the inspector that do nothing. The map
+  editor's mirror preview went with them.
+- **The World's host has two cameras that draw nothing.** The renderer's
+  hosts each have a camera and an `over`; the World's are made and hidden,
+  and left out of the root's bands, rather than making both optional.
+- **The World's parallax is measured against the first Viewport's camera.**
+  Its layers are containers shared by every Viewport, so a second Viewport
+  sees them placed for the first's view. A minimap over a parallax layer
+  shows it where the main view has it.
+- **A Viewport's `map` loads when that Viewport's property changes**, not
+  when it differs from what the World holds. Two Viewports naming two maps
+  would otherwise take turns every tick; the one that changed last wins.
+- **`load map` from code in the World replaces the World's map.** The
+  two-rooms lesson's near miss, `load map` from the door instead of `load
+map … into ⟨Game⟩`, is now a correct answer, and its test says so.
+- **Seen in the browser**: Breakout, Flappy, Tapper, Meteors and the
+  Interface Kit draw as before, and Meteors moves.
 
 ## Not in this plan
 

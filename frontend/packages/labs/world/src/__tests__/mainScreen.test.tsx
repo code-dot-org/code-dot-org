@@ -44,10 +44,11 @@ describe('a Main Screen', () => {
     const [player] = world.actors.ofType('actors/player');
     expect(viewport).toBeDefined();
     expect(player).toBeDefined();
-    // The Viewport is the screen's; the player is the level's, in the
-    // Viewport's space.
+    // The Viewport is the screen's; the player is the level's, in the World
+    // the Viewport shows (specs/ONE_WORLD_PLAN.md).
     expect(world.spaceOf(viewport).id).toBe('main');
-    expect(world.spaceOf(player)).toBe(world.spaces[0]);
+    expect(world.spaceOf(player)).toBe(world.spaces[0].mirrorOf);
+    expect(world.spaceOf(player).id).toBe('world');
     expect(world.spaces).toHaveLength(1);
   });
 
@@ -199,7 +200,7 @@ describe('a Main Screen', () => {
       return world.spaceOf(ball!);
     };
     expect(spaceOf('onScreen')).toBe(world.spaceOf(viewport));
-    expect(spaceOf('inLevel')).toBe(world.viewportSpaceOf(viewport));
+    expect(spaceOf('inLevel')).toBe(world.viewportSpaceOf(viewport)!.mirrorOf);
   });
 
   it('counts every actor where the code runs, the map inside its Viewport', async () => {

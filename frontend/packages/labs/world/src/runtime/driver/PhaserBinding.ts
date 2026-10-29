@@ -292,12 +292,13 @@ export class PhaserBinding {
      */
     const groups = new Map<Actor, Phaser.GameObjects.Container>();
     /**
-     * One Container and one Phaser camera per Viewport's space
-     * (specs/VIEWPORT_PLAN.md). The container holds the space's actors, at
-     * the top level of the scene; the camera draws it alone, into the
-     * Viewport's rectangle on the canvas, scrolled to the space's camera —
-     * and the main camera ignores it. Keyed by the space's id, as the frame
-     * names it.
+     * One Container and one Phaser camera per space beside the root
+     * (specs/ONE_WORLD_PLAN.md). The World's container holds the World's
+     * actors, at the top level of the scene, and its own cameras draw
+     * nothing. Each Viewport's camera draws the World's container into the
+     * Viewport's rectangle on the canvas, scrolled to that Viewport's camera
+     * — and the main camera ignores both. Keyed by the space's id, as the
+     * frame names it.
      *
      * A camera rather than a mask, because in this Phaser a mask is a filter
      * and `setMask` does nothing in WebGL; and rather than a container
@@ -316,11 +317,10 @@ export class PhaserBinding {
          */
         over: Phaser.Cameras.Scene2D.Camera;
         /**
-         * The space this box MIRRORS, by id, or undefined for a box with a
-         * scene of its own (specs/MIRRORING_PLAN.md). A mirror's `camera`
-         * draws the target's display list rather than `inner`, which stays
-         * empty; the ignore lists are set at creation from this, so a change
-         * to it takes the host down to be made again.
+         * The space this box shows, by id — the World's, for a Viewport —
+         * or undefined for the World. A Viewport's `camera` draws the
+         * World's display list rather than `inner`, which stays empty; the
+         * ignore lists are set at creation from this.
          */
         mirrors: string | undefined;
         /**
@@ -330,11 +330,6 @@ export class PhaserBinding {
          */
         layers: Array<Phaser.GameObjects.Container | undefined>;
         backdrops: Array<SlotObject | undefined>;
-        /**
-         * For a mirror, the layers of the scene it shows that its camera
-         * ignores, since they say mirrors leave them out.
-         */
-        hidden: Set<Phaser.GameObjects.Container>;
       }
     >();
     // The backdrop layers' images, by layer index — created on demand, because
@@ -910,7 +905,10 @@ export class PhaserBinding {
       const main = scene.cameras.main;
       let every = main.id;
       for (const host of spaceHosts.values()) {
-        every |= host.over.id;
+        // The World's own cameras draw nothing, and have no band.
+        if (host.mirrors) {
+          every |= host.over.id;
+        }
       }
       const ordered: string[] = [];
       let drawnBy = main;
@@ -1139,8 +1137,11 @@ export class PhaserBinding {
       const owners = new Set<unknown>();
       const spaces = world.spaceSnapshot();
       for (const space of spaces) {
+        // The World has no owner: its host holds its actors and layers, and
+        // only the Viewports onto it draw them.
+        const world = !space.owner;
         const owner = byId.get(space.owner);
-        if (!owner) {
+        if (!owner && !world) {
           continue;
         }
         liveSpaces.add(space.id);
@@ -1148,7 +1149,9 @@ export class PhaserBinding {
         // the group's world transform is where its rectangle is read from
         // — made at the Viewport's turn among the actors below, so that it
         // lands where the Viewport is in the draw order.
-        owners.add(owner.actor);
+        if (owner) {
+          owners.add(owner.actor);
+        }
         let host = spaceHosts.get(space.id);
         // A box that now mirrors something else — or has stopped — has ignore
         // lists that say otherwise. Phaser keeps those as bits on the objects
@@ -1165,31 +1168,22 @@ export class PhaserBinding {
           const camera = scene.cameras.add(0, 0, 1, 1);
           camera.setZoom(RENDER_SCALE);
           const over = scene.cameras.add(0, 0, 1, 1);
-          // WHICH SCENE THE BOX'S CAMERA DRAWS. A box with a scene of its own
-          // draws its own container and nothing else — not the layers, not
-          // another space. A MIRROR draws the scene it mirrors instead
-          // (specs/MIRRORING_PLAN.md): the world's layers for a mirror of the
-          // root, or the target's container for a mirror of another box —
-          // and its own container, which stays empty, is nobody's to draw.
-          // `band` leaves a mirror's camera out of the bits it hands root
-          // objects, so a root mirror sees every one of them, including what
-          // sits in front of some other Viewport.
+          // WHICH SCENE THE BOX'S CAMERA DRAWS. A Viewport mirrors the World
+          // (specs/ONE_WORLD_PLAN.md): its camera draws the World's container
+          // and nothing else — not the root's layers, not another box — and
+          // its own container, which stays empty, is nobody's to draw. The
+          // World's own cameras draw nothing at all.
           //
-          // The main and `over` cameras never draw a space's container, a
-          // mirror's included.
-          // Told by the engine rather than compared against its root id: the
-          // driver reads the engine as types only — `world-lab` is the
-          // sandbox's bundle, not a module this can import a value from — and
-          // a root id spelled twice is the silent-name failure this lab keeps
-          // meeting.
-          const mirrorsRoot = space.mirrorsRoot;
+          // The main and `over` cameras never draw a space's container.
           scene.cameras.main.ignore(inner);
           over.ignore(inner);
-          if (!mirrorsRoot) {
-            for (const container of containers) {
-              if (container) {
-                camera.ignore(container);
-              }
+          if (world) {
+            camera.setVisible(false);
+            over.setVisible(false);
+          }
+          for (const container of containers) {
+            if (container) {
+              camera.ignore(container);
             }
           }
           // A mirror's own container stays empty and is nobody's to draw; a
@@ -1218,7 +1212,6 @@ export class PhaserBinding {
             mirrors: space.mirrors,
             layers: [],
             backdrops: [],
-            hidden: new Set(),
           };
           spaceHosts.set(space.id, host);
         }
@@ -1406,49 +1399,6 @@ export class PhaserBinding {
         // too; the image inside is then left solid, or the group's would
         // be counted twice.
         object.setAlpha(group ? 1 : state.opacity);
-      }
-
-      // What a mirror leaves out: the layers of the scene it shows that say
-      // so (specs/MIRRORING_PLAN.md, step 8). Hidden as they appear, since a
-      // layer's container may be made after the mirror's host is; one shown
-      // again takes the host down to be made again next frame, as Phaser
-      // keeps an ignore and offers no way to take it back.
-      const rootLayers = world.layerSnapshot();
-      for (const space of spaces) {
-        const host = spaceHosts.get(space.id);
-        if (!host || !space.mirrors) {
-          continue;
-        }
-        const target = space.mirrorsRoot
-          ? undefined
-          : spaces.find(other => other.id === space.mirrors);
-        const targetHost = target && spaceHosts.get(target.id);
-        const shown: Array<
-          [{inMirrors: boolean}, Phaser.GameObjects.Container | undefined]
-        > = space.mirrorsRoot
-          ? rootLayers.map((layer, index) => [layer, containers[index]])
-          : (target?.layers ?? []).map((layer, index) => [
-              layer,
-              targetHost?.layers[index],
-            ]);
-        const leftOut = new Set(
-          shown.flatMap(([layer, container]) =>
-            container && !layer.inMirrors ? [container] : [],
-          ),
-        );
-        if ([...host.hidden].some(container => !leftOut.has(container))) {
-          scene.cameras.remove(host.camera);
-          scene.cameras.remove(host.over);
-          host.inner.destroy();
-          spaceHosts.delete(space.id);
-          continue;
-        }
-        for (const container of leftOut) {
-          if (!host.hidden.has(container)) {
-            host.camera.ignore(container);
-            host.hidden.add(container);
-          }
-        }
       }
 
       // The space cameras LAST, once every group is where this frame put

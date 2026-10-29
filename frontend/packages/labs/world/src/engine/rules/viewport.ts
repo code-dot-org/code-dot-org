@@ -1,9 +1,10 @@
-// The Viewport's rule: what makes an actor a window onto a map of its own
-// (specs/MAP_FIRST.md, "Levels: the Viewport"; specs/VIEWPORT_PLAN.md).
+// The Viewport's rule: what makes an actor a window onto the World
+// (specs/ONE_WORLD_PLAN.md).
 //
 // An actor that `Shows a Map` is given a space of its own when it is placed
-// (`World.place`), and its map is loaded into that space the first time the
-// world runs it. That much is the engine's: a space is not a thing a rule can
+// (`World.place`): its camera and its window, looking at the World. The map
+// its `map` property names is loaded into the World the first time the world
+// runs it. That much is the engine's: a space is not a thing a rule can
 // invent, any more than a position is (`rules/spatial`).
 //
 // WHERE THE VIEW LOOKS IS NOT. The space's camera used to be kept on what the
@@ -19,7 +20,6 @@
 // not a project ever mentions this rule.
 
 import {RuleBuilder} from '../builders/RuleBuilder';
-import type {Actor} from '../core/Actor';
 
 export const VIEWPORT = {
   rule: 'viewport',
@@ -29,8 +29,6 @@ export const VIEWPORT = {
   content: 'content',
   showsThrough: 'showsThrough',
   showsMap: 'showsMap',
-  mirrorsTheWorld: 'mirrorsTheWorld',
-  mirrors: 'mirrors',
 } as const;
 
 const rule = new RuleBuilder({
@@ -42,10 +40,14 @@ const rule = new RuleBuilder({
 export const ViewportTrait = rule.addTrait({
   id: VIEWPORT.trait,
   name: 'Shows a Map',
-  description: 'Shows a map inside it, through a camera of its own.',
+  description: 'Shows the World inside it, through a camera of its own.',
 });
 
-/** The map the viewport holds, by module path — `maps/level1`. */
+/**
+ * The map the World holds, as this Viewport asks for it, by module path —
+ * `maps/level1`. Every Viewport shows the one World, so setting this on any
+ * of them replaces the World's map.
+ */
 export const ViewportMapProperty = ViewportTrait.addProperty(
   VIEWPORT.map,
   'string',
@@ -137,48 +139,5 @@ export const ViewportShowsThroughProperty = ViewportTrait.addProperty(
 export const ViewportShowsMapEvent = rule.addEvent(VIEWPORT.showsMap, {
   name: 'shows a map',
 });
-
-/**
- * Whether this Viewport shows the WORLD'S OWN SCENE rather than a map of its
- * own (specs/MIRRORING_PLAN.md).
- *
- * A property and not a word in `map`, which is where the first build put it:
- * `map` means "which map I hold", and the world is not one. A Viewport that
- * mirrors holds no map and loads nothing; it is bound to the root space, its
- * cameras look at the root, and what it draws is the one game there is — a
- * minimap, a second shot, a menu screen showing the game already in play.
- *
- * Two properties rather than one, because the world is not an actor and so
- * cannot be the value of {@link ViewportMirrorsProperty}. A string that meant
- * either would want a dropdown of its own in the inspector, and that is the
- * third such dropdown — the point at which the abstraction should be built
- * rather than a fourth special case (specs/SPACE_CAMERAS_PLAN.md).
- */
-export const ViewportMirrorsTheWorldProperty = ViewportTrait.addProperty(
-  VIEWPORT.mirrorsTheWorld,
-  'boolean',
-  false,
-  {name: 'mirrors the world'},
-);
-
-/**
- * Another Viewport whose scene this one shows, or none.
- *
- * WHY A VIEWPORT AND NOT ONLY THE WORLD: the app progression puts the game
- * itself inside a Viewport — a level in a box on a menu screen — so a minimap
- * of that game has to mirror the box, not the world, whose root holds the
- * menu. A mirror of a mirror shows what the end of the chain shows; a chain
- * that comes back to itself shows nothing, which is the honest answer to a
- * question with no answer (`World.mirrorTargetOf`).
- *
- * An actor reference, so the map editor offers this map's placements with a
- * pick-on-canvas, and `loadMap` resolves the id in its second pass as it does
- * `parent`. Held as a list like every actor-typed property; the first is the
- * one meant. Takes precedence over `mirrors the world` when both are set, on
- * the grounds that the more specific thing was said on purpose.
- */
-export const ViewportMirrorsProperty = ViewportTrait.addProperty<
-  readonly Actor[]
->(VIEWPORT.mirrors, 'actor', [], {name: 'mirrors'});
 
 export const ViewportRule = rule.build();

@@ -132,17 +132,6 @@ export const LayerInspector = ({
           onChange({fit: event.target.checked || undefined})
         }
       />
-      {/* A minimap of this scene leaves out what is unchecked here: the
-          game's own hearts and score (specs/MIRRORING_PLAN.md, step 8). */}
-      <Checkbox
-        name="layer-in-mirrors"
-        label="Shown in mirrors"
-        checked={layer.inMirrors !== false}
-        disabled={isReadOnly}
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onChange({inMirrors: event.target.checked ? undefined : false})
-        }
-      />
       {background}
     </div>
   );

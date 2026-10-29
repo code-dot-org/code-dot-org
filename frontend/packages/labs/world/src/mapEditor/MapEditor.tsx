@@ -84,7 +84,6 @@ import {
   type WorkspaceState,
 } from './mapModel';
 import {MapStage} from './MapStage';
-import {withMirrors} from './mirrorPreview';
 import {PlaceHeading} from './PlaceHeading';
 import {PlacementScriptEditor} from './PlacementScriptEditor';
 import {withPlacePicture} from './placePicture';
@@ -610,12 +609,8 @@ export const MapEditor = ({
         held[actor.id] = parseMap(contents);
       }
     }
-    // …and what a mirror shows instead, the world's own scene being the Main
-    // Screen (`mirrorPreview`).
-    const screen = files[`${MAIN_SCREEN_PATH}.screen`];
-    const root = isMainScreen ? map : screen ? parseMap(screen) : undefined;
-    return withMirrors(map, held, root);
-  }, [map, files, isMainScreen]);
+    return held;
+  }, [map, files]);
 
   const commit = (next: MapDoc, group?: string) => {
     // A change to the layout, or to the size it divides, moves what is

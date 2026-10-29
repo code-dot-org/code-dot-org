@@ -1,13 +1,11 @@
-// A coordinate space: what a map is loaded INTO (specs/VIEWPORT_PLAN.md).
+// A coordinate space (specs/ONE_WORLD_PLAN.md).
 //
-// Every actor is in exactly one. The world's root space is the main map's,
-// and is all a world has until a Viewport is placed: a Viewport owns a space
-// of its own, with bounds of its own that grow with the maps loaded into it,
-// a camera of its own between the space and the Viewport's rectangle, and the
-// loads it holds so they can be taken back. Positions are the space's; the
-// only thing between a space and the screen is its camera, and the only
-// thing between two spaces is nothing at all — a query for what is near a
-// point is asked of the point's space, and finds nothing in another.
+// Every actor is in exactly one. There are three kinds: the ROOT, which is
+// the screen and what it places; the WORLD, which maps fill and which every
+// Viewport shows; and one for each Viewport, which holds no actors and is
+// the Viewport's camera and window onto the World (`mirrorOf`). Positions
+// are the space's; a query for what is near a point is asked of the point's
+// space, and finds nothing in another.
 
 import type {Actor} from './Actor';
 import {DEFAULT_CAMERA_ID, type Camera} from './Camera';
@@ -18,6 +16,9 @@ import type {MapLoad} from './World';
 
 /** The root space's id, which is also the default camera's. */
 export const ROOT_SPACE_ID = 'main';
+
+/** The World's space, which every Viewport shows. */
+export const WORLD_SPACE_ID = 'world';
 
 export class Space {
   readonly id: string;
@@ -83,22 +84,16 @@ export class Space {
     return this.cameras.find(camera => camera.name === name);
   }
   /**
-   * The space this Viewport SHOWS instead of one of its own — the root, or
-   * another Viewport's — or undefined for a Viewport with a scene of its own
-   * (specs/MIRRORING_PLAN.md).
+   * The space this Viewport shows, which is the World; undefined for the
+   * root and the World themselves.
    *
-   * A mirror holds no loads and grows nothing: its bounds are its target's,
-   * kept in step each tick, and its cameras look at the target — `Camera.space`
-   * is the target for each of them, so `in this space`, `map size` and
-   * everything else asked with one in hand answers about the scene it shows.
-   * What stays the mirror's own is its cameras and its window.
+   * A Viewport's space holds no loads and grows nothing: its bounds are the
+   * World's, kept in step each tick, and its cameras look at the World —
+   * `Camera.space` is the World for each of them, so `in this space`, `map
+   * size` and everything else asked with one in hand answers about the
+   * World. What stays the Viewport's own is its cameras and its window.
    */
   mirrorOf: Space | undefined;
-
-  /** Whether this Viewport shows some other space's scene. */
-  get mirrors(): boolean {
-    return this.mirrorOf !== undefined;
-  }
 
   /**
    * The color behind the map this space shows, or none: a Viewport is
@@ -117,8 +112,9 @@ export class Space {
    */
   layers: Layer[] = [];
   /**
-   * The path the Viewport's `map` property held when its map was last
-   * loaded, so a change to the property is noticed (`World.showHeldMap`).
+   * The path the Viewport's `map` property held when it last asked for it,
+   * so a change to the property is noticed (`World.showHeldMap`). For the
+   * World, the path of the map it holds.
    */
   shown: string | undefined;
 

@@ -110,8 +110,6 @@ export interface MapLayerDoc {
   parallax?: Vec;
   /** Fixed to the screen: it does not consult the camera at all. */
   fit?: boolean;
-  /** Left out of a mirror of this scene; absent is shown. */
-  inMirrors?: false;
   background?: MapSlotDoc;
 }
 
