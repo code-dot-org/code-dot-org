@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {CheckpointStatusMap} from '../../progress';
+import {CheckpointStatusMap} from '../../progress/model';
 import {Pathway} from '../../types';
 
 import DestinationsMap from './DestinationsMap';
@@ -13,6 +13,13 @@ export interface MapProps {
   statusMap: CheckpointStatusMap;
   /** Checkpoint the map is zoomed onto, if any. */
   focusId?: string;
+  /**
+   * When set, the board fills the width at this multiple of that scale and
+   * scrolls; otherwise it shrinks until it fits.
+   */
+  zoom?: number;
+  /** Checkpoint a zoomed board first scrolls to the center of the view. */
+  startId?: string;
   onSelect: (id: string) => void;
 }
 

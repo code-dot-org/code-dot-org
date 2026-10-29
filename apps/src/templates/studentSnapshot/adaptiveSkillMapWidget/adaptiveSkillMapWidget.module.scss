@@ -1,0 +1,21 @@
+// The map measures this box to scale itself, so it needs a definite height
+// and a flex column for the map's own flex: 1.
+.map {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-neutral-secondary);
+  text-align: center;
+}
+
+.zoomControls {
+  display: flex;
+  gap: 4px;
+}

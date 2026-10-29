@@ -17,10 +17,7 @@ class AdaptiveProgressController < ApplicationController
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
-    rows = adaptive_user_level&.user_adaptive_steps || []
-    steps = rows.filter_map {|row| (entry = row_json(row)) && [row.step_id, entry]}.to_h
-    steps.merge!(level_step_progress) {|_step_id, entry, progress| entry.merge(progress)}
-    render json: {steps: steps}
+    render json: @level.progress_json(user_id: current_user.id, script_id: @unit.id)
   end
 
   # PUT /adaptive_progress/steps/:step_id/progress
@@ -65,7 +62,7 @@ class AdaptiveProgressController < ApplicationController
     row = step_row(step)
     row.update!(generated_instructions: instructions)
 
-    render json: row_json(row)
+    render json: row.step_json
   end
 
   # PUT /adaptive_progress/steps/:step_id/validation_history
@@ -80,7 +77,7 @@ class AdaptiveProgressController < ApplicationController
     row = step_row(step)
     row.record_validation!(attempt)
 
-    render json: row_json(row)
+    render json: row.step_json
   end
 
   private def load_adaptive
@@ -112,28 +109,6 @@ class AdaptiveProgressController < ApplicationController
       locale: I18n.locale
     )
     user_level
-  end
-
-  # Step id => progress, for each level step the student has a UserLevel on.
-  private def level_step_progress
-    levels = @level.step_levels
-    user_levels = UserLevel.where(user_id: current_user.id, script_id: @unit.id, level_id: levels.values.map(&:id)).index_by(&:level_id)
-    levels.filter_map {|step_id, level| [step_id, user_level_json(user_levels[level.id])] if user_levels[level.id]}.to_h
-  end
-
-  private def row_json(row)
-    return nil unless row.progress || row.generated_instructions || row.validation_history
-    entry = {'timeSpent' => 0}.merge(row.progress_json)
-    entry['generatedInstructions'] = row.generated_instructions if row.generated_instructions
-    entry['validationHistory'] = row.validation_history if row.validation_history
-    entry
-  end
-
-  private def user_level_json(user_level)
-    {
-      'status' => user_level.passing? ? 'complete' : 'started',
-      'timeSpent' => user_level.time_spent || 0,
-    }
   end
 
   private def valid_json_value?(value)

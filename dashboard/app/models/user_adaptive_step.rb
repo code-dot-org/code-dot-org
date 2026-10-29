@@ -61,6 +61,15 @@ class UserAdaptiveStep < ApplicationRecord
     end
   end
 
+  # The step's entry in a student's pathway progress, or nil when the row holds nothing.
+  def step_json
+    return nil unless progress || generated_instructions || validation_history
+    entry = {'timeSpent' => 0}.merge(progress_json)
+    entry['generatedInstructions'] = generated_instructions if generated_instructions
+    entry['validationHistory'] = validation_history if validation_history
+    entry
+  end
+
   def progress_json
     return {} unless progress
     {
