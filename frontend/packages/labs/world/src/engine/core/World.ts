@@ -14,6 +14,7 @@ import {STYLED} from '../rules/styled';
 import {ViewportShowsMapEvent, ViewportTrait} from '../rules/viewport';
 
 import type {Actor} from './Actor';
+import {all, type ActorValue} from './actorValue';
 import {anchored, isAnchor, type Anchor} from './anchors';
 import type {FrameState} from './animationTypes';
 import {DEFAULT_CAMERA_ID, makeCamera, Camera, validZoom} from './Camera';
@@ -65,6 +66,7 @@ import type {Trait} from './Trait';
 import {DependencySet} from './traits';
 import type {
   AppliedEffectSpec,
+  EventHandler,
   GameEvent,
   Property,
   Rule,
@@ -2087,6 +2089,54 @@ export class World {
 
   /** The screen whose script is running, while it runs. */
   private scriptLoad: MapLoad | undefined;
+
+  /**
+   * Hear an actor's event for whichever actor `subject` holds when it
+   * happens — `when ⟨current player⟩ is hurt` (specs/PROPERTY_SUBJECTS_PLAN.md).
+   *
+   * `subject` is read at dispatch, not now: a property set to another actor
+   * points the handler at it with nothing moved, and one that holds nobody
+   * hears nothing. It is also how a kind is heard from a screen's or a
+   * placement's code, with a `subject` that answers the kind's actors, so
+   * the actors already in the World hear it too. Hung while a screen's
+   * script runs, it goes when the screen does.
+   */
+  onSubject(
+    subject: () => ActorValue | undefined,
+    event: GameEvent,
+    handler: EventHandler,
+  ): void {
+    const entry = {subject, event, handler};
+    this.subjectHandlers.push(entry);
+    this.scriptLoad?.onUnload(() => {
+      const at = this.subjectHandlers.indexOf(entry);
+      if (at >= 0) {
+        this.subjectHandlers.splice(at, 1);
+      }
+    });
+  }
+
+  private readonly subjectHandlers: Array<{
+    subject: () => ActorValue | undefined;
+    event: GameEvent;
+    handler: EventHandler;
+  }> = [];
+
+  /**
+   * The subject handlers for `event` whose subject holds `actor` now; used
+   * by the EventQueue on flush, after the actor's own.
+   */
+  subjectHandlersFor(event: GameEvent, actor: Actor): EventHandler[] {
+    return this.subjectHandlers
+      .filter(entry => {
+        if (entry.event !== event) {
+          return false;
+        }
+        const held = entry.subject();
+        return held !== undefined && all(held).includes(actor);
+      })
+      .map(entry => entry.handler);
+  }
 
   /** Handlers registered for a world event; used by the EventQueue on flush. */
   handlersFor(event: GameEvent): readonly WorldEventHandler[] {

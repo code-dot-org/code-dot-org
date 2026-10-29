@@ -89,6 +89,11 @@ export class EventQueue {
       for (const handler of actor.handlersFor(event)) {
         world.withActor(actor, () => handler(world, actor, ...values));
       }
+      // …and whoever hears it through a subject that holds this actor now
+      // (specs/PROPERTY_SUBJECTS_PLAN.md).
+      for (const handler of world.subjectHandlersFor(event, actor)) {
+        world.withActor(actor, () => handler(world, actor, ...values));
+      }
     }
   }
 }

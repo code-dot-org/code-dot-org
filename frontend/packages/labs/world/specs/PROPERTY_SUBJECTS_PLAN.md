@@ -1,6 +1,6 @@
 # Plan: an actor property as an event's subject
 
-STATUS: PLANNED, October 2026. Nothing below is built.
+STATUS: BUILDING, October 2026. Steps 1 and 2 are done.
 
 A hat can be about `this actor` or `any ⟨kind⟩`. This plan adds a third
 subject: an actor-typed property in scope. `when ⟨current player⟩ is hurt`
@@ -53,7 +53,7 @@ handler changed it (specs/SCREEN_STACK_PLAN.md, "Not in this plan").
   - a map's own code and its placements': the Main Screen's, as above.
 - **The game sets the property.** Nothing does it on its own. The usual
   place is beside the `load map` that brings a level in, and `when this
-  screen loads` for the first: `set current player to ⟨any Player⟩`.
+screen loads` for the first: `set current player to ⟨any Player⟩`.
 
 ## Decisions
 
@@ -85,7 +85,7 @@ handler changed it (specs/SCREEN_STACK_PLAN.md, "Not in this plan").
   its member reference, the way a setter names one (`memberKey`), so
   renaming it follows (`renameThing`).
 - **The code.** A property subject generates `world.onSubject(⟨read⟩,
-  ⟨event⟩, handler)`, where `⟨read⟩` is a function that returns what the
+⟨event⟩, handler)`, where `⟨read⟩` is a function that returns what the
   property holds: `() => world.valueNamed("current player")` for the Main
   Screen's, `() => map.get(…)` for a screen's own, `() => actor.get(…)` for
   an actor's own. The handler is `(world, eventActor, …values)`, and `actor`
@@ -117,13 +117,28 @@ handler changed it (specs/SCREEN_STACK_PLAN.md, "Not in this plan").
 6. The shelf: which lesson grants the property subject, and its check.
 7. Specs: what this replaces, and this record.
 
-## To find out before step 2
+## What was found before step 2
 
-- How the queue dispatches an actor's event today, and where a subject
-  handler can run after the actor's own without changing their order.
-- What reading an actor value gives once its actor is removed.
-- How the starter's HUD, the Tapper score and the lessons that reach an
-  actor by kind would read written this way, and which of them should be.
+- **The queue** runs an actor's own handlers in `EventQueue.flush`, each
+  with the actor in hand (`withActor`). A subject handler runs straight
+  after them, the same way, so the actor's own order is unchanged.
+- **A removed actor stays in the values that held it.** Nothing clears an
+  actor value when its actor goes; the actor's `world` is unset. A removed
+  actor raises nothing, so dispatch is not affected, but a handler reading
+  `health of ⟨current player⟩` reads the removed one, and `(nobody)` in
+  the inspector has to count a removed actor as nobody (step 4).
+- **Only the starter, Tapper and Jetpack have a HUD.** The starter's Health
+  Bar names the Player's kind as its `subject`; Tapper's score label hears
+  the game's `scored`; the lessons reach actors by kind from the game's own
+  code, which this plan leaves alone.
+
+## Learned while building
+
+- **Step 2 is `World.onSubject(subject, event, handler)`**, with `subject` a
+  function read when the event happens, and `subjectHandlersFor`, which
+  the queue asks after an actor's own handlers. One hung while a screen's
+  script runs comes off with the screen, as a world handler does. The
+  handler is handed the actor the event is about, as an actor's own is.
 
 ## Open
 
