@@ -39,6 +39,8 @@ export interface TabsProps {
   tabPanelsContainerId?: string;
   /** hide the Tab Panels container */
   hidePanels?: boolean;
+  /** Accessible name for the tab list */
+  tabListAriaLabel?: string;
   /** Scroll the tab strip horizontally instead of wrapping, with an edge fade
    * on whichever side is hiding tabs */
   scrollable?: boolean;
@@ -68,6 +70,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   tabPanelsContainerId,
   tabPanelsContainerClassName,
   hidePanels,
+  tabListAriaLabel,
   scrollable = false,
   type = 'primary',
   mode = 'light',
@@ -122,7 +125,7 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
         id={tabsContainerId}
       >
         {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role */}
-        <ul role="tablist">
+        <ul role="tablist" aria-label={tabListAriaLabel}>
           {tabs.map(tab => (
             <_Tab
               {...tab}

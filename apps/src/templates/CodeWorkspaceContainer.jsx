@@ -4,7 +4,6 @@
  */
 import $ from 'jquery';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
@@ -59,7 +58,7 @@ class CodeWorkspaceContainer extends React.Component {
   }
 }
 
-export const TestableCodeWorkspaceContainer = Radium(CodeWorkspaceContainer);
+export const TestableCodeWorkspaceContainer = CodeWorkspaceContainer;
 export default connect(
   state => ({
     hidden:

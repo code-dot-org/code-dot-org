@@ -6,9 +6,6 @@ import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 $(document).ready(() => {
   createReactRoot(
     <NewProgrammingEnvironmentForm />,
-    document.getElementById('form'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('form')
   );
 });

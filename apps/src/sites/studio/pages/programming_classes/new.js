@@ -12,9 +12,6 @@ $(document).ready(() => {
     <NewProgrammingClassForm
       programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
     />,
-    document.getElementById('form'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('form')
   );
 });

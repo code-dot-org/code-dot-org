@@ -11,6 +11,7 @@ import {getConvertedPredictedLabel} from '../helpers/valueConversion';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getDatasetId} from '../selectors';
 import {
   getPredictionStep,
   getPredictionTrace,
@@ -23,7 +24,7 @@ import styles from './predictionResult.module.scss';
 import appStyles from '../app.module.scss';
 
 const PredictionResult = () => {
-  const datasetId = useAppSelector(state => state.metadata?.name || '');
+  const datasetId = useAppSelector(state => getDatasetId(state) || '');
   const {project} = useProject();
   const labelColumn = project.labelColumn || '';
   const predictedLabel = useAppSelector(state =>

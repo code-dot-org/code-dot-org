@@ -3,6 +3,8 @@
 
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
+import {ObjectiveItem, ObjectivesChecklist} from '@cdo/apps/lab2/types';
+
 import {
   checkObjective,
   EMPTY_RUNTIME,
@@ -16,18 +18,12 @@ import {ImageCounts} from '../projectCounts';
 import {Tab} from '../redux/spriteLab2Redux';
 import {WorldCell} from '../world';
 
-export interface ObjectiveItemState {
-  text: string;
-  done: boolean;
-}
+export type ObjectiveItemState = ObjectiveItem;
 
-export interface ObjectivesState {
+/** The level's checklist as the panel and the guide show it. */
+export interface ObjectivesState extends ObjectivesChecklist {
   /** The level declares a checklist. */
   active: boolean;
-  title?: string;
-  items: ObjectiveItemState[];
-  allDone: boolean;
-  collapsedText?: string;
 }
 
 /** A frame's move past the player's speed by this much is a teleport. */
@@ -229,18 +225,22 @@ export function useObjectives({
     });
   }, [items, inputs]);
 
-  if (!objectives) {
-    return {active: false, items: [], allDone: false};
-  }
-  const states = (items ?? []).map((item, index) => ({
-    text: item.text,
-    done: earned.has(index),
-  }));
-  return {
-    active: true,
-    title: objectives.title,
-    items: states,
-    allDone: states.every(item => item.done),
-    collapsedText: objectives.collapsedText,
-  };
+  // One object per change: the panel it feeds is memoized on it.
+  return useMemo<ObjectivesState>(() => {
+    if (!objectives) {
+      return {active: false, items: [], allDone: false};
+    }
+    const states = (items ?? []).map((item, index) => ({
+      id: item.id,
+      text: item.text,
+      done: earned.has(index),
+    }));
+    return {
+      active: true,
+      title: objectives.title,
+      items: states,
+      allDone: states.every(item => item.done),
+      collapsedText: objectives.collapsedText,
+    };
+  }, [objectives, items, earned]);
 }

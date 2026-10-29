@@ -1,29 +1,61 @@
 module Policies
   module LevelFiles
-    # The two level trees never overlap: a "UI Test " level never resolves to
-    # config/levels/**, and vice versa. See dashboard/test/ui/config/README.md.
+    # A level's name selects exactly one of these trees, so no two trees ever
+    # define the same level. See dashboard/config/PARTITIONS.md.
     LEVELS_SUBDIR = {
-      production: 'config/levels',
-      ui_test: 'test/ui/config/levels',
+      production_curriculum: 'config/levels',
+      ui_test_curriculum: 'test/ui/config/levels',
+      standalone_projects: 'config/standalone_projects/levels',
     }.freeze
 
-    def self.tree_for_name(level_name)
-      Level.ui_test_name?(level_name) ? :ui_test : :production
+    # Raises on a name that matches both the "UI Test " and the standalone
+    # project rules.
+    def self.partition_for_name(level_name)
+      ui_test = Level.ui_test_partition_name?(level_name)
+      standalone = Level.standalone_partition_name?(level_name)
+      if ui_test && standalone
+        raise ArgumentError, "level name #{level_name.to_s.dump} matches both the \"UI Test \" " \
+          "and the standalone project partition rules; a name may match only one"
+      end
+      return :ui_test_curriculum if ui_test
+      return :standalone_projects if standalone
+      :production_curriculum
     end
 
-    # Which tree the given definition file path (.level or DSL) lies in:
-    # files under test/ui/config define ui_test content, everything else is
-    # production. Seed tasks compare this against tree_for_name to refuse
-    # misfiled definitions.
-    def self.tree_for_path(path)
-      path.to_s.include?('test/ui/config/') ? :ui_test : :production
+    # Unlike partition_for_name, never raises, so validations can call it. A
+    # name matching multiple partitions (and thus invalid) is treated as
+    # different from any name in only one partition.
+    def self.same_partition?(name, other_name)
+      [Level.ui_test_partition_name?(name), Level.standalone_partition_name?(name)] ==
+        [Level.ui_test_partition_name?(other_name), Level.standalone_partition_name?(other_name)]
+    end
+
+    # Completes "copy it ..." in the errors refusing a child from another
+    # partition than its parent's.
+    def self.copy_into_partition_of(parent_name)
+      if Level.standalone_partition_name?(parent_name)
+        'to a name ending in " Subproject"'
+      elsif Level.ui_test_partition_name?(parent_name)
+        'to a name beginning with "UI Test "'
+      else
+        'to a name without the "UI Test ...", "New ... Project", or "... Subproject" form'
+      end
+    end
+
+    # Which partition the level defined by the given file (.level or DSL)
+    # belongs to, based on which tree its path falls under.
+    def self.partition_for_path(path)
+      path = path.to_s
+      return :ui_test_curriculum if path.include?('test/ui/config/')
+      return :standalone_projects if path.include?('config/standalone_projects/')
+      :production_curriculum
     end
 
     # We organize new level files into a `levels` directory to keep them
     # separate from scripts and further organize them by the associated Game if
     # it has one, to avoid packing too many files into a single directory.
     def self.default_level_file_path(level)
-      subdir = LEVELS_SUBDIR[tree_for_name(level.name)]
+      subdir = LEVELS_SUBDIR[partition_for_name(level.name)]
       return Rails.root.join(*[subdir, 'custom', level.game&.app, "#{level.name}.level"].compact)
     end
 
@@ -51,12 +83,12 @@ module Policies
     end
 
     # Return a glob which can be used either to find the specified level file
-    # by name if provided, or all level files if not. With a name, the tree is
-    # selected by the name's prefix; without one, `tree` picks which tree's
-    # levels to enumerate.
-    def self.level_file_glob(level_name, root_dir = '.', tree: nil)
-      tree ||= level_name ? tree_for_name(level_name) : :production
-      "#{root_dir}/#{LEVELS_SUBDIR.fetch(tree)}/**/#{level_name || '*'}.level"
+    # by name if provided, or all level files if not. With a name, the
+    # partition is selected by the name; without one, `partition` picks which
+    # partition's levels to enumerate.
+    def self.level_file_glob(level_name, root_dir = '.', partition: nil)
+      partition ||= level_name ? partition_for_name(level_name) : :production_curriculum
+      "#{root_dir}/#{LEVELS_SUBDIR.fetch(partition)}/**/#{level_name || '*'}.level"
     end
   end
 end
