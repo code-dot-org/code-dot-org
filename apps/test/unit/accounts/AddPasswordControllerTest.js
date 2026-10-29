@@ -1,8 +1,8 @@
 import $ from 'jquery';
-import ReactDOM from 'react-dom';
 import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
+import * as createReactRootModule from '@cdo/apps/util/createReactRoot';
 
 import {expect, assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -20,19 +20,19 @@ describe('AddPasswordController', () => {
     document.body.appendChild(mockMountPoint);
     controller = new AddPasswordController(form, mockMountPoint);
 
-    spy(ReactDOM, 'render');
+    spy(createReactRootModule, 'createReactRoot');
   });
 
   afterEach(() => {
-    ReactDOM.render.restore();
+    createReactRootModule.createReactRoot.restore();
     document.body.removeChild(mockMountPoint);
   });
 
   describe('renderAddPasswordForm', () => {
     it('renders AddPasswordForm', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(createReactRootModule.createReactRoot).not.to.have.been.called;
       controller.renderAddPasswordForm();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
     });
   });
 
