@@ -145,14 +145,29 @@ CRITICAL findings stay in HIGH regardless.
 ```
 ## PR description
 
-Audit the body against `.github/pull_request_template.md` and the PR
-description rules in `.github/PULL_REQUEST_GUIDELINES.md`: sections the
-template asks for that are missing or still hold their comment markers,
-unchecked vetting boxes, an Authorship section that doesn't separate what
-the human did from what an agent did, and the writing-style rules — plain
-English over AI jargon, "I" only for the human author, no walkthrough of
-how the change works. Then the claims that don't match the code, and the
-omissions that would mislead the next reviewer. One line if it's accurate.
+Audit the body for the substance `.github/pull_request_template.md` asks
+for, not its line items. The headings, the Jira line, the checkboxes, and
+the per-section prompts are reminders to the author. Leaving one out says
+the author had nothing to put there, and that is a finding only when the
+diff shows otherwise. Report:
+
+- a claim the code contradicts;
+- an omission with evidence behind it: a migration, a flag, a new API
+  surface, new PII, or a changed default path the body doesn't mention; a
+  PR large enough to split with no reason given; work the diff leaves
+  unfinished (a stub, a TODO, a skipped test) that the body doesn't own;
+- authorship that doesn't let a reader tell the human's work from an
+  agent's, when any of the work was an agent's;
+- the writing-style rules in `.github/PULL_REQUEST_GUIDELINES.md`: "I" for
+  anyone but the human author, AI jargon, a walkthrough of how the change
+  works.
+
+Not findings, on their own: a missing heading or Jira line; a Validation
+section that names only manual testing when the diff adds the tests; an
+Authorship section with no direction or context; unchecked boxes; comment
+markers left in place. When the body is accurate, say so in one line.
+Optionally add one more line naming what the body leaves out, as a prompt
+for what to ask the author, without grading it.
 
 ## Previously raised feedback
 
@@ -188,7 +203,8 @@ a dropped finding's number is not reused.
 Description findings are classified like any other. A body that tells the
 next reviewer not to look at a file the PR changes on the default path is
 severity HIGH: the scenario is this review, the impact is an unreviewed
-change shipping.
+change shipping. An absent template line item on its own is not a finding
+and takes no number.
 
 ## Tunables
 
