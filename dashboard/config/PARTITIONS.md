@@ -55,3 +55,15 @@ For implementation of these rules, see:
 - validations on `Level`, `ScriptLevel`, `LevelsWithinLevels`, and
 `ParentLevelsChildLevel`
 - seed logic in `seed.rake` and `level_loader.rb`
+
+## Checkouts without production curriculum
+
+A checkout can leave the production curriculum trees out entirely:
+`bin/sparse-checkout no-production-curriculum` applies the git sparse-checkout
+patterns in `sparse-patterns/no-production-curriculum`, which omit
+`config/levels`, `config/scripts`, `config/scripts_json`, `config/courses` and
+`config/course_offerings`. On an existing clone that only trims the working
+tree. Drone instead clones with `--filter=blob:none` and applies the patterns
+before the first checkout, so those files are never transferred; see the
+checkout steps in `.drone.yml`. Tests therefore must not read those trees;
+`test/fixtures/levels` holds level files for tests that need one.
