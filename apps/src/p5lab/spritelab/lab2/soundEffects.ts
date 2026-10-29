@@ -18,29 +18,31 @@ import {
   start as startAudio,
 } from 'tone';
 
+// Pure tones first, brightening, then the instruments, then noise.
 export const WAVES = [
   'sine',
   'triangle',
   'square',
   'sawtooth',
   'double',
-  'noise',
-  'drum',
-  'bell',
-  'clang',
   'pluck',
+  'bell',
+  'drum',
+  'clang',
+  'noise',
 ] as const;
 export const PITCHES = ['low', 'middle', 'high'] as const;
 export const LENGTHS = ['short', 'medium', 'long'] as const;
+// One note's shapes, then the chords and runs.
 export const PATTERNS = [
   'steady',
+  'wobble',
   'slide up',
   'slide down',
-  'run up',
-  'run down',
-  'wobble',
   'chord',
   'minor chord',
+  'run up',
+  'run down',
 ] as const;
 
 export type Wave = (typeof WAVES)[number];
