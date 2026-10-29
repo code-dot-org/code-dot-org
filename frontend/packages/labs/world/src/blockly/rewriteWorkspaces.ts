@@ -13,6 +13,10 @@ import {asActorData, isDataShaped, viewOf} from '../actors/actorData';
 import {asRuleData, ruleViewOf} from '../rules/ruleData';
 import {resolveRuleContents} from '../rules/ruleReference';
 
+/** A hat's subject field (`eventSubject.SUBJECT_FIELD`), named here so this
+ *  walk stays free of Blockly. */
+const SUBJECT_FIELD = 'SUBJECT';
+
 /**
  * File kinds that hold Blockly workspaces, and so can hold a reference. A map
  * and a screen are documents, but their own code and each placement's are
@@ -61,7 +65,17 @@ export function rewriteWorkspace(
       node.type = rewriter.type(blockType);
     }
     if (node.fields && typeof node.fields === 'object') {
-      rewriter.fields(node.fields as Record<string, unknown>, blockType);
+      const fields = node.fields as Record<string, unknown>;
+      // A hat about a PROPERTY names it by its getter's block type, which is
+      // renamed with the property (specs/PROPERTY_SUBJECTS_PLAN.md).
+      if (
+        rewriter.type &&
+        typeof fields[SUBJECT_FIELD] === 'string' &&
+        (fields[SUBJECT_FIELD] as string).startsWith('world_get_')
+      ) {
+        fields[SUBJECT_FIELD] = rewriter.type(fields[SUBJECT_FIELD] as string);
+      }
+      rewriter.fields(fields, blockType);
     }
     for (const child of Object.values(node)) {
       walk(child);

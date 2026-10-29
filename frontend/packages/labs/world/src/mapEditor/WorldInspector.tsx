@@ -102,6 +102,9 @@ const NEW_VALUE_TYPES = [
   ['Number', 'number'],
   ['Text', 'string'],
   ['True or false', 'boolean'],
+  // …and one actor, which a hat may be about: `when ⟨current player⟩ is
+  // damaged` (specs/PROPERTY_SUBJECTS_PLAN.md).
+  ['Actor', 'actor'],
 ] as const;
 
 export const WorldInspector = ({
@@ -284,6 +287,22 @@ export const WorldInspector = ({
             />
           ))}
         </div>
+      );
+    }
+    if (property.type === 'actor' || property.type === 'actors') {
+      // Set by code, never here: the game starts holding nobody until it
+      // says who, and saying so is what makes a hat on it hear nothing.
+      return (
+        <TextField
+          key={key}
+          name={`world-${key}`}
+          label={label}
+          size="s"
+          value="(nobody)"
+          disabled
+          helperMessage="Set by code"
+          onChange={() => {}}
+        />
       );
     }
     return property.type === 'boolean' ? (

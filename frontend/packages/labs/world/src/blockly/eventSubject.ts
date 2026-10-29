@@ -28,12 +28,16 @@ import type {Block, BlockSvg, FieldDropdown} from 'blockly';
 import {defineExtension, type Extension} from '@code-dot-org/blockly';
 import {localization} from '@code-dot-org/core/plugins/localization';
 
+import {MAIN_SCREEN_PATH} from '../mainWorld';
+
+import {editingActorModule, editingFileModule} from './editingRule';
 import {
   actorFieldOptions,
   bindLiveOptions,
   type DropdownOptions,
 } from './moduleOptions';
 import type {PropertyMeta} from './ruleMeta';
+import {refModule} from './ruleRegistry';
 import {definesWorld, workspaceOfBlock} from './workspaceRoots';
 
 /** The stored field: empty for this actor, a kind's module path otherwise. */
@@ -84,7 +88,7 @@ const inWorld = (block: Block): boolean =>
  * dropdown can name it, and so a handler pasted from one kind of file into
  * the other can be set right from the menu.
  */
-const subjectOptions = (field?: FieldDropdown): DropdownOptions => {
+export const subjectOptions = (field?: FieldDropdown): DropdownOptions => {
   const block = field?.getSourceBlock();
   const empty = block && inWorld(block) ? '(pick a kind)' : 'this actor';
   return [
@@ -92,12 +96,38 @@ const subjectOptions = (field?: FieldDropdown): DropdownOptions => {
     // `actorFieldOptions` says "(no actors yet)" with the empty value when
     // there are none, which here is the row above.
     ...actorFieldOptions().filter(([, value]) => value !== ''),
-    // …and the actor properties, by name.
-    ...[...subjectProperties].map(
-      ([getterType, property]) =>
-        [property.name, getterType] as [string, string],
-    ),
+    // …and the actor properties in scope, by name.
+    ...[...subjectProperties]
+      .filter(
+        ([getterType, property]) =>
+          !block ||
+          inScope(block, property) ||
+          block.getFieldValue(SUBJECT_FIELD) === getterType,
+      )
+      .map(
+        ([getterType, property]) =>
+          [property.name, getterType] as [string, string],
+      ),
   ];
+};
+
+/**
+ * Whether a hat in this block's file may be about this property
+ * (specs/PROPERTY_SUBJECTS_PLAN.md): the Main Screen's values everywhere, a
+ * screen's own in its own code and its placements', and in a placement's
+ * code its kind's own. A workspace that says no file — the headless
+ * generator's — sees them all, since what it loads has to keep its subject.
+ */
+const inScope = (block: Block, property: PropertyMeta): boolean => {
+  const file = editingFileModule(block);
+  if (!file) {
+    return true;
+  }
+  const owner = refModule(property.ref);
+  if (property.scope === 'world') {
+    return owner === MAIN_SCREEN_PATH || owner === file;
+  }
+  return owner !== undefined && owner === editingActorModule(block);
 };
 
 const setVisible = (block: Block, input: string, visible: boolean) => {

@@ -1,7 +1,7 @@
 // An actor's event heard through a subject read when it happens
 // (specs/PROPERTY_SUBJECTS_PLAN.md, step 2).
 
-import {describe, expect, it} from 'vitest';
+import {describe, expect, it, vi} from 'vitest';
 
 import {ActorBuilder} from '../builders/ActorBuilder';
 import {WorldBuilder} from '../builders/WorldBuilder';
@@ -133,5 +133,44 @@ describe('a subject read when the event happens', () => {
     world.goBack();
     hurt(world, one);
     expect(heard).toEqual(['heard']);
+  });
+});
+
+describe('a subject that holds nobody', () => {
+  it('says so once, by the property’s name', () => {
+    const {world, one} = makeWorld();
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    world.onSubject(
+      () => [],
+      HURT,
+      () => {},
+      'current player',
+    );
+
+    hurt(world, one);
+    hurt(world, one);
+
+    expect(warn).toHaveBeenCalledTimes(1);
+    expect(warn.mock.calls[0][0]).toContain('“current player” holds nobody');
+    warn.mockRestore();
+  });
+
+  it('counts a removed actor as nobody', () => {
+    const {world, one, two} = makeWorld();
+    const heard: string[] = [];
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    world.onSubject(
+      () => [one],
+      HURT,
+      (_world, actor) => heard.push(actor.id),
+      'current player',
+    );
+    world.removeActor(one);
+    world.tick(1 / 60);
+
+    hurt(world, two);
+    expect(heard).toEqual([]);
+    expect(warn).toHaveBeenCalledTimes(1);
+    warn.mockRestore();
   });
 });

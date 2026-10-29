@@ -1747,7 +1747,9 @@ const defineEventBlock = (event: EventMeta) => {
           return (
             `world.onSubject((world) => ${read}, ` +
             `${refCode(event.ref, generator)}, ` +
-            `(world, subject, ${parameters.join(', ')}) => {\n${body}});\n`
+            `(world, subject, ${parameters.join(', ')}) => {\n${body}}` +
+            (property ? `, ${str(property.name)}` : '') +
+            ');\n'
           );
         }
         return onHandler(

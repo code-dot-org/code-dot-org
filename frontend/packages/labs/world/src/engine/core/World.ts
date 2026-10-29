@@ -2107,8 +2107,14 @@ export class World {
     subject: (world: World) => ActorValue | undefined,
     event: GameEvent,
     handler: EventHandler,
+    /**
+     * The property's name, for the console to say so the first time the
+     * event finds it holding nobody. None for a kind, which may have no
+     * actors and mean nothing by it.
+     */
+    named?: string,
   ): void {
-    const entry = {subject, event, handler};
+    const entry = {subject, event, handler, named, warned: false};
     this.subjectHandlers.push(entry);
     this.scriptLoad?.onUnload(() => {
       const at = this.subjectHandlers.indexOf(entry);
@@ -2122,6 +2128,8 @@ export class World {
     subject: (world: World) => ActorValue | undefined;
     event: GameEvent;
     handler: EventHandler;
+    named: string | undefined;
+    warned: boolean;
   }> = [];
 
   /**
@@ -2134,8 +2142,20 @@ export class World {
         if (entry.event !== event) {
           return false;
         }
-        const held = entry.subject(this);
-        return held !== undefined && all(held).includes(actor);
+        // A removed actor is nobody: it is in the value still, and in no
+        // world (specs/PROPERTY_SUBJECTS_PLAN.md).
+        const held = all(entry.subject(this) ?? []).filter(
+          one => one.world === this,
+        );
+        if (held.length === 0 && entry.named && !entry.warned) {
+          entry.warned = true;
+          console.warn(
+            `world-lab: “${entry.named}” holds nobody, so a handler about ` +
+              `it did not hear “${entry.event.name ?? entry.event.id}”. Set ` +
+              'it in code, as the game starts and after each load map.',
+          );
+        }
+        return held.includes(actor);
       })
       .map(entry => entry.handler);
   }

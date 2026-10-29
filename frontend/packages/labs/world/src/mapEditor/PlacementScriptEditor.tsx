@@ -40,6 +40,7 @@ import {useLocalization} from '@code-dot-org/core/plugins/localization';
 import {useSources} from '@code-dot-org/lab/contexts';
 
 import {buildDomainPalette} from '../blockly/domainBlocks';
+import {setEditingActor, setEditingFile} from '../blockly/editingRule';
 import {type EventChoice} from '../blockly/eventChoices';
 import type {FileKind} from '../blockly/fileKind';
 import {eventsNarrowerFor, eventsUnheardBy} from '../blockly/kindEvents';
@@ -264,6 +265,14 @@ export const PlacementScriptEditor = ({
                 kind === 'screen' && mapModule === MAIN_SCREEN_PATH
                   ? 'world'
                   : undefined,
+              );
+              // Which file this is, and which actor a placement's code is
+              // about: what `this actor` draws, and which actor properties a
+              // hat may be about (`eventSubject`).
+              setEditingFile(workspace, mapModule);
+              setEditingActor(
+                workspace,
+                kind === 'placement' ? actorKind : undefined,
               );
               sections.onInject(workspace);
             }}

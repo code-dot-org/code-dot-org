@@ -759,8 +759,9 @@ export class WorldBuilder {
     subject: (world: World) => ActorValue | undefined,
     event: GameEvent,
     handler: EventHandler,
+    named?: string,
   ): this {
-    return this.defer('onSubject', subject, event, handler);
+    return this.defer('onSubject', subject, event, handler, named);
   }
 
   /** Put a screen on the stack. See {@link World.showScreen}. */

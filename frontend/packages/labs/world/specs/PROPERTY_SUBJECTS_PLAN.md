@@ -1,6 +1,6 @@
 # Plan: an actor property as an event's subject
 
-STATUS: BUILDING, October 2026. Steps 1 to 3 are done, and step 4 is begun.
+STATUS: BUILDING, October 2026. Steps 1 to 4 are done.
 
 A hat can be about `this actor` or `any ⟨kind⟩`. This plan adds a third
 subject: an actor-typed property in scope. `when ⟨current player⟩ is hurt`
@@ -179,6 +179,21 @@ screen loads` for the first: `set current player to ⟨any Player⟩`.
 - **`this actor` under a kind's hat is that kind only in the game's own
   code**, where the handler binds it; in a map's or a placement's code it is
   the placement, and is drawn with no picture of the hat's kind.
+- **Step 4's editor half scopes the subject list by the workspace's tags.**
+  The placement editor now tags its workspace with its file and, for a
+  placement, its actor (`setEditingFile`, `setEditingActor`), so
+  `subjectOptions` offers the Main Screen's values everywhere, a screen's
+  own in that screen's files, and an actor's own in its placements. A
+  workspace with no file tagged offers every property, and a hat keeps the
+  property it already holds even where it is out of scope, so a load never
+  drops a subject.
+- **The inspector adds `Actor` values**, shown as `(nobody)` and marked
+  "Set by code"; nothing sets one by hand.
+- **The console note is the World's**, said once per handler, naming the
+  property (`onSubject`'s `named`). A removed actor counts as nobody, so a
+  subject left holding the Player after it went says so.
+- **Renaming a property rewrites the hats about it**: `rewriteWorkspace`
+  maps a `SUBJECT` holding a getter's block type as it maps the getter.
 
 ## Open
 
