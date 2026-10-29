@@ -581,6 +581,7 @@ describe('QuizAttemptWorkspace', () => {
               quizQuestionId: 1,
               questionType: 'MultipleChoiceQuestion',
               responseData: {selectedChoiceId: 'a'},
+              answered: true,
               correct: true,
               explanation: null,
               correctChoiceId: 'a',
@@ -589,6 +590,7 @@ describe('QuizAttemptWorkspace', () => {
               quizQuestionId: 2,
               questionType: 'MultipleChoiceQuestion',
               responseData: {selectedChoiceId: 'b'},
+              answered: true,
               correct: false,
               explanation: null,
               correctChoiceId: 'a',
@@ -872,6 +874,7 @@ describe('QuizAttemptWorkspace', () => {
           quizQuestionId: 1,
           questionType: 'MultipleChoiceQuestion',
           responseData: {selectedChoiceId: 'b'},
+          answered: true,
           correct: true,
           explanation: 'Because 3 + 5 = 8.',
           correctChoiceId: 'b',
@@ -934,6 +937,7 @@ describe('QuizAttemptWorkspace', () => {
 
       expect(screen.getByText('What is the value of x?')).toBeInTheDocument();
       expect(screen.getByText('What is the value of y?')).toBeInTheDocument();
+      expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(
         screen.queryByRole('button', {name: /Next|Submit|Finish|Begin/})
@@ -954,7 +958,7 @@ describe('QuizAttemptWorkspace', () => {
             ],
           },
         },
-        quizQuestions: [question({id: 1})],
+        quizQuestions: [question({id: 1}), question({id: 2, page: 2})],
         viewAsUserId: 99,
       });
 
@@ -962,6 +966,7 @@ describe('QuizAttemptWorkspace', () => {
       expect(alert).toHaveTextContent(
         'Aisha Khan is still working on this assessment.'
       );
+      expect(screen.queryByText('Skipped')).not.toBeInTheDocument();
       expect(alert).toHaveAttribute('data-type', 'warning');
       expect(screen.queryByRole('radio')).not.toBeInTheDocument();
       expect(
@@ -1153,6 +1158,7 @@ describe('QuizAttemptWorkspace', () => {
                 quizQuestionId: 1,
                 questionType: 'MultipleChoiceQuestion',
                 responseData: {selectedChoiceId: 'a'},
+                answered: true,
                 correct: true,
                 explanation: null,
                 correctChoiceId: 'a',
@@ -1161,6 +1167,7 @@ describe('QuizAttemptWorkspace', () => {
                 quizQuestionId: 2,
                 questionType: 'MultipleChoiceQuestion',
                 responseData: {selectedChoiceId: 'b'},
+                answered: true,
                 correct: false,
                 explanation: null,
                 correctChoiceId: 'a',
@@ -1450,6 +1457,7 @@ describe('QuizAttemptWorkspace', () => {
                 quizQuestionId: 9,
                 questionType: 'FreeResponseQuestion',
                 responseData: {answerText: 'x > 3'},
+                answered: true,
                 correct: null,
                 explanation: null,
                 correctChoiceId: null,

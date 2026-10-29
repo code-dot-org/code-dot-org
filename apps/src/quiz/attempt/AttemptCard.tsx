@@ -5,6 +5,8 @@ import styles from './attempt-card.module.scss';
 
 export interface AttemptCardProps {
   label?: string;
+  // Shown at the end of the label line, e.g. a status tag.
+  tag?: React.ReactNode;
   title: string;
   description?: React.ReactNode;
   children?: React.ReactNode;
@@ -18,6 +20,7 @@ export interface AttemptCardProps {
 // Shared card shell for the intro screen and every question type.
 const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
   label,
+  tag,
   title,
   description,
   children,
@@ -29,10 +32,15 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
     <div className={styles.content}>
       <div className={styles.headerRow}>
         <div className={styles.header}>
-          {label && (
-            <Typography variant="overline2" className={styles.label}>
-              {label}
-            </Typography>
+          {(label || tag) && (
+            <div className={styles.labelRow}>
+              {label && (
+                <Typography variant="overline2" className={styles.label}>
+                  {label}
+                </Typography>
+              )}
+              {tag && <div className={styles.tag}>{tag}</div>}
+            </div>
           )}
           <Typography
             ref={headingRef}
