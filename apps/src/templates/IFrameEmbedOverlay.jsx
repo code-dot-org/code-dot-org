@@ -1,14 +1,15 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 
 import msg from '@cdo/locale';
 
 import {singleton as studioApp} from '../StudioApp';
-import * as color from '../util/color';
 
 const PHONE_MARGIN = 68;
-const PLAY_BUTTON_SIZE = 26;
+// The medium MUI IconButton.
+const PLAY_BUTTON_SIZE = 40;
 
 class IFrameEmbedOverlay extends Component {
   static propTypes = {
@@ -39,15 +40,13 @@ class IFrameEmbedOverlay extends Component {
   render() {
     return (
       <div
-        style={[
-          styles.overlay.wrapper,
-          {
-            width: this.props.appWidth,
-            height: this.props.appHeight,
-          },
-          !this.state.tooYoung && {cursor: 'cursor'},
-          this.props.style,
-        ]}
+        style={{
+          ...styles.overlay.wrapper,
+          width: this.props.appWidth,
+          height: this.props.appHeight,
+          ...(!this.state.tooYoung && {cursor: 'cursor'}),
+          ...this.props.style,
+        }}
         onClick={this.onClick}
       >
         {this.state.tooYoung ? (
@@ -55,20 +54,19 @@ class IFrameEmbedOverlay extends Component {
         ) : (
           <div>
             <div style={styles.overlay.clickText}>Tap or click to run</div>
-            <div
-              style={[
-                styles.playButtonWrapper,
-                {
-                  left:
-                    this.props.appWidth / 2 -
-                    PLAY_BUTTON_SIZE / 2 -
-                    styles.playButtonWrapper.padding / 2,
-                },
-                this.props.playButtonStyle,
-              ]}
+            <MuiIconButton
+              variant="contained"
+              color="secondary"
+              size="medium"
+              aria-label={msg.runProgram()}
+              style={{
+                ...styles.playButton,
+                left: this.props.appWidth / 2 - PLAY_BUTTON_SIZE / 2,
+                ...this.props.playButtonStyle,
+              }}
             >
-              <span className="fa-solid fa-play" style={styles.playButton} />
-            </div>
+              <FontAwesomeV6Icon iconName="play" iconStyle="solid" />
+            </MuiIconButton>
           </div>
         )}
       </div>
@@ -97,33 +95,14 @@ var styles = {
       cursor: 'default',
     },
   },
-  playButtonWrapper: {
-    color: 'white',
-    position: 'absolute',
-    bottom: -PHONE_MARGIN / 2 - PLAY_BUTTON_SIZE / 2 - 5,
-    fontSize: 22,
-    height: PLAY_BUTTON_SIZE,
-    width: PLAY_BUTTON_SIZE,
-    lineHeight: `${PLAY_BUTTON_SIZE}px`,
-    padding: 7,
-    borderRadius: 5,
-    backgroundColor: color.dark_charcoal,
-    borderColor: color.dark_charcoal,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    cursor: 'pointer',
-    ':hover': {
-      boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.3)',
-    },
-    ':active': {
-      borderWidth: 1,
-      borderStyle: 'solid',
-      borderColor: '#888',
-    },
-  },
+  // A fixed size keeps the button from stretching when playButtonStyle
+  // supplies top alongside this bottom.
   playButton: {
-    paddingLeft: 4,
+    position: 'absolute',
+    bottom: -PHONE_MARGIN / 2 - PLAY_BUTTON_SIZE / 2,
+    width: PLAY_BUTTON_SIZE,
+    height: PLAY_BUTTON_SIZE,
   },
 };
 
-export default Radium(IFrameEmbedOverlay);
+export default IFrameEmbedOverlay;

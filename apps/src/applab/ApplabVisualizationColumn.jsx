@@ -1,3 +1,5 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -8,10 +10,9 @@ import i18n from '@cdo/locale';
 import * as dom from '../dom';
 import BelowVisualization from '../templates/BelowVisualization';
 import CompletionButton from '../templates/CompletionButton';
-import GameButtons, {ResetButton} from '../templates/GameButtons';
+import GameButtons from '../templates/GameButtons';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import * as color from '../util/color';
 
 import {getAppWidth, APP_HEIGHT} from './constants';
 import PhoneFrame from './PhoneFrame';
@@ -134,7 +135,17 @@ class ApplabVisualizationColumn extends React.Component {
         {visualization}
         {isIframeEmbed && !widgetMode && (
           <div style={styles.resetButtonWrapper}>
-            <ResetButton hideText style={styles.resetButton} />
+            {/* Hidden until StudioApp#toggleRunReset shows it on run. */}
+            <MuiIconButton
+              id="resetButton"
+              variant="contained"
+              color="secondary"
+              size="medium"
+              aria-label={i18n.resetProgram()}
+              style={{display: 'none'}}
+            >
+              <FontAwesomeV6Icon iconName="rotate-right" iconStyle="solid" />
+            </MuiIconButton>
           </div>
         )}
         {/* The playspace phone frame has a run/reset button, so we don't need to render and hide
@@ -172,15 +183,6 @@ const styles = {
     bottom: 5,
     textAlign: 'center',
     width: '100%',
-  },
-  resetButton: {
-    display: 'inline-block',
-    backgroundColor: color.dark_charcoal,
-    borderColor: color.dark_charcoal,
-    marginLeft: 5,
-    position: 'relative',
-    left: 2,
-    bottom: 2,
   },
   containedInstructions: {
     marginTop: 10,
