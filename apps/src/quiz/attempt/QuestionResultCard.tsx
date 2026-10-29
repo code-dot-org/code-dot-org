@@ -24,19 +24,28 @@ export interface QuestionResultCardProps {
   questionLabel?: string;
   result: QuizQuestionResult;
   revealAnswerExplanation?: boolean;
+  showCorrectness?: boolean;
   // A teacher viewing a student's attempt; the selected answer is the student's.
   isViewingStudent?: boolean;
 }
 
-// null when there is nothing to tag: answered, with correctness hidden or pending.
+// null when there is nothing to tag: not yet submitted, or answered with
+// correctness hidden.
 function getResultTagStatus(
-  result: QuizQuestionResult
+  result: QuizQuestionResult,
+  showCorrectness: boolean
 ): ResultTagStatus | null {
-  if (result.correct === null) {
-    return result.answered === false ? 'skipped_ungraded' : null;
+  if (result.answered === undefined) {
+    return null;
   }
-  if (result.answered === false) {
+  if (!showCorrectness) {
+    return result.answered ? null : 'skipped_ungraded';
+  }
+  if (!result.answered) {
     return 'skipped';
+  }
+  if (result.correct === null) {
+    return 'ungraded';
   }
   return result.correct ? 'correct' : 'incorrect';
 }
@@ -47,9 +56,10 @@ const QuestionResultCard: React.FunctionComponent<QuestionResultCardProps> = ({
   questionLabel,
   result,
   revealAnswerExplanation,
+  showCorrectness = false,
   isViewingStudent,
 }) => {
-  const tagStatus = getResultTagStatus(result);
+  const tagStatus = getResultTagStatus(result, showCorrectness);
   return (
     <AttemptCard
       label={questionLabel}

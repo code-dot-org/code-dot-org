@@ -560,6 +560,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   revealAnswerExplanation={
                     isViewingStudent || toBool(revealAnswerExplanation)
                   }
+                  showCorrectness={isViewingStudent || toBool(showCorrectness)}
                   isViewingStudent={isViewingStudent}
                 />
               )

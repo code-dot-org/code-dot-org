@@ -36,17 +36,21 @@ const BASE_RESULT: MultipleChoiceResult = {
   correctChoiceId: null,
 };
 
+// showCorrectness defaults to what the server implies: correct is set.
 const renderCard = (
   resultOverrides: Partial<MultipleChoiceResult> = {},
   props: Partial<QuestionResultCardProps> = {}
-) =>
-  render(
+) => {
+  const result = {...BASE_RESULT, ...resultOverrides};
+  return render(
     <QuestionResultCard
       question={QUESTION}
-      result={{...BASE_RESULT, ...resultOverrides}}
+      result={result}
+      showCorrectness={result.correct !== null}
       {...props}
     />
   );
+};
 
 // Choice text shares a text node with the "A." letter prefix, so no element's
 // full text content is the choice text alone - a regex matches the substring.
@@ -190,6 +194,17 @@ describe('QuestionResultCard', () => {
     expect(screen.getByText('Skipped')).toBeInTheDocument();
   });
 
+  it('tags nothing before the attempt is submitted', () => {
+    renderCard(
+      {responseData: {selectedChoiceId: '2'}, answered: undefined},
+      {showCorrectness: true}
+    );
+
+    expect(
+      screen.queryByText(/^(Correct|Incorrect|Skipped|Ungraded)$/)
+    ).toBeNull();
+  });
+
   it('does not tag an answered question as skipped', () => {
     renderCard({
       responseData: {selectedChoiceId: '1'},
@@ -261,23 +276,26 @@ describe('QuestionResultCard', () => {
     const renderMsCard = (
       overrides: Partial<MultipleSelectResult> = {},
       props: Partial<QuestionResultCardProps> = {}
-    ) =>
-      render(
+    ) => {
+      const result: MultipleSelectResult = {
+        quizQuestionId: 3,
+        questionType: 'MultipleSelectQuestion',
+        responseData: {selectedChoiceIds: ['b', 'c']},
+        answered: true,
+        correct: false,
+        explanation: null,
+        correctChoiceIds: ['a', 'b'],
+        ...overrides,
+      };
+      return render(
         <QuestionResultCard
           question={MS_QUESTION}
-          result={{
-            quizQuestionId: 3,
-            questionType: 'MultipleSelectQuestion',
-            responseData: {selectedChoiceIds: ['b', 'c']},
-            answered: true,
-            correct: false,
-            explanation: null,
-            correctChoiceIds: ['a', 'b'],
-            ...overrides,
-          }}
+          result={result}
+          showCorrectness={result.correct !== null}
           {...props}
         />
       );
+    };
 
     it('marks each choice against the answer key when it is revealed', () => {
       renderMsCard();
@@ -359,6 +377,41 @@ describe('QuestionResultCard', () => {
       );
 
       expect(screen.getByText('Skipped')).toBeInTheDocument();
+    });
+
+    it('tags an answer as ungraded when correctness is shown', () => {
+      render(
+        <QuestionResultCard
+          question={FR_QUESTION}
+          result={{
+            ...BASE_RESULT,
+            questionType: 'FreeResponseQuestion',
+            quizQuestionId: 2,
+            responseData: {answerText: 'x > 3'},
+            answered: true,
+          }}
+          showCorrectness
+        />
+      );
+
+      expect(screen.getByText('Ungraded')).toBeInTheDocument();
+    });
+
+    it('tags nothing for an answer when correctness is hidden', () => {
+      render(
+        <QuestionResultCard
+          question={FR_QUESTION}
+          result={{
+            ...BASE_RESULT,
+            questionType: 'FreeResponseQuestion',
+            quizQuestionId: 2,
+            responseData: {answerText: 'x > 3'},
+            answered: true,
+          }}
+        />
+      );
+
+      expect(screen.queryByText('Ungraded')).toBeNull();
     });
 
     it("shows the student's answer text, without a choice list", () => {

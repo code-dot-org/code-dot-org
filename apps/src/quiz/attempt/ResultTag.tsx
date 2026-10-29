@@ -9,7 +9,8 @@ export type ResultTagStatus =
   | 'correct'
   | 'incorrect'
   | 'skipped'
-  | 'skipped_ungraded';
+  | 'skipped_ungraded'
+  | 'ungraded';
 
 const TAGS: Record<
   ResultTagStatus,
@@ -19,6 +20,7 @@ const TAGS: Record<
   incorrect: {label: 'Incorrect', iconName: 'xmark', className: styles.error},
   skipped: {label: 'Skipped', iconName: 'xmark', className: styles.error},
   skipped_ungraded: {label: 'Skipped'},
+  ungraded: {label: 'Ungraded'},
 };
 
 // Not the design-system Tags, which have no success or error color.
