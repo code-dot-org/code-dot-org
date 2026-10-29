@@ -4,6 +4,7 @@ import {describe, expect, it} from 'vitest';
 
 import {ActorBuilder} from '../builders/ActorBuilder';
 import {WorldBuilder} from '../builders/WorldBuilder';
+import type {GameEvent, Property} from '../core/types';
 import type {World, WorldMap} from '../core/World';
 import {
   BoxedRule,
@@ -182,5 +183,89 @@ describe('drawing the stack', () => {
     expect(world.screenColors()).toEqual([
       expect.objectContaining({color: [0, 0, 0, 1], first: 'Resume'}),
     ]);
+  });
+});
+
+describe('what a screen holds of its own', () => {
+  // specs/SCREEN_STACK_PLAN.md, step 3: a screen's words are its copy's.
+  const VOLUME: Property<number> = {
+    id: 'volume',
+    type: 'number',
+    default: 5,
+    readonly: false,
+    scope: 'world',
+    ownerId: 'screens/settings',
+    ownerKind: 'world',
+  };
+  const CHANGED: GameEvent = {id: 'changed', ownerId: 'screens/settings'};
+  const SETTINGS: WorldMap = {
+    values: [VOLUME as Property<unknown>],
+    actors: [at('actors/panel', 'Slider')],
+  };
+  const withSettings = () => {
+    const world = makeWorld();
+    world.defineMap('screens/settings', SETTINGS);
+    return world;
+  };
+  const shown = (world: World) => {
+    world.showScreen('screens/settings');
+    return world.screens().at(-1)!;
+  };
+
+  it('is a copy for each time it is shown, from its defaults', () => {
+    const world = withSettings();
+    const first = shown(world);
+    first.set(VOLUME, 9);
+    const second = shown(world);
+    expect(second.get(VOLUME)).toBe(5);
+    expect(first.get(VOLUME)).toBe(9);
+    // Taken off and shown again, it starts over.
+    world.goBack();
+    world.goBack();
+    expect(shown(world).get(VOLUME)).toBe(5);
+  });
+
+  it('is nothing the Main Screen holds', () => {
+    const world = withSettings();
+    expect(() => world.screens()[0].get(VOLUME)).toThrow(/no value 'volume'/);
+  });
+
+  it('hears its own events, in that copy alone, after the tick', () => {
+    const world = withSettings();
+    const heard: string[] = [];
+    const first = shown(world);
+    const second = shown(world);
+    first.on(CHANGED, (_world, value) => heard.push(`first ${value}`));
+    second.on(CHANGED, (_world, value) => heard.push(`second ${value}`));
+
+    first.emit(CHANGED, 'loud');
+    expect(heard).toEqual([]);
+    world.tick(1 / 60);
+    expect(heard).toEqual(['first loud']);
+  });
+
+  it('hears nothing once it is taken off', () => {
+    const world = withSettings();
+    const heard: unknown[] = [];
+    const screen = shown(world);
+    screen.on(CHANGED, () => heard.push('heard'));
+    screen.emit(CHANGED);
+    world.goBack();
+    world.tick(1 / 60);
+    expect(heard).toEqual([]);
+  });
+});
+
+describe('the Main Screen’s values, by name', () => {
+  it('are read and set from anywhere without importing it', () => {
+    const builder = new WorldBuilder({id: 'w', name: 'W'});
+    const score = builder.defineProperty('score', 'number', 0, {name: 'score'});
+    const world = builder.instantiate();
+
+    expect(world.valueNamed('score')).toBe(0);
+    expect(world.setValueNamed('score', 3)).toBe(true);
+    expect(world.get(score)).toBe(3);
+    expect(world.valueNamed('lives')).toBeUndefined();
+    expect(world.setValueNamed('lives', 1)).toBe(false);
   });
 });

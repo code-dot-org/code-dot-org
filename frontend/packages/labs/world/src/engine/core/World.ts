@@ -33,7 +33,7 @@ import {
   type DrawCommand,
 } from './drawing';
 import {effectContentHash, effectSlotId} from './effectIds';
-import {EventQueue} from './EventQueue';
+import {EventQueue, type EventHolder} from './EventQueue';
 import {valueAt, type Timeline} from './keyframes';
 import {KEY_REPEAT_DELAY, KEY_REPEAT_INTERVAL, RESERVED_KEYS} from './keys';
 import {
@@ -182,6 +182,11 @@ export interface WorldMap {
    */
   backgroundColor?: ColorValue;
   /**
+   * A screen's own values, which each screen on the stack holds a copy of,
+   * seeded from their defaults when it is shown (specs/SCREEN_STACK_PLAN.md).
+   */
+  values?: readonly Property<unknown>[];
+  /**
    * The theme this map's controls are painted out of, by module path.
    *
    * THE MIDDLE OF THREE. A drawing names a class and never a file; which file
@@ -317,6 +322,14 @@ export class MapLoad {
   readonly id: number;
   private static loaded = 0;
 
+  /**
+   * A screen's own values: this copy's, which its code reads and sets and
+   * nothing else sees. Lost when the screen is taken off.
+   */
+  private readonly store = new Map<Property<unknown>, unknown>();
+  /** …and the handlers its code hung on its own events. */
+  private readonly handlers = new Map<GameEvent, WorldEventHandler[]>();
+
   constructor(
     world: World,
     actors: readonly Actor[],
@@ -325,6 +338,7 @@ export class MapLoad {
     theme = '',
     screen = false,
     color?: Rgba,
+    values: readonly Property<unknown>[] = [],
   ) {
     this.world = world;
     this.actors = actors;
@@ -335,6 +349,47 @@ export class MapLoad {
     this.screen = screen;
     this.color = color;
     this.id = MapLoad.loaded += 1;
+    for (const property of values) {
+      this.store.set(property, coerce(property, property.default));
+    }
+  }
+
+  /** Whether this load is still where it was put. */
+  get live(): boolean {
+    return this.among.includes(this);
+  }
+
+  /** One of this screen's own values, as this copy holds it. */
+  get<T>(property: Property<T>): T {
+    if (!this.store.has(property as Property<unknown>)) {
+      throw new Error(`This screen has no value '${property.id}'`);
+    }
+    return this.store.get(property as Property<unknown>) as T;
+  }
+
+  /** …and set it, for this copy alone. */
+  set<T>(property: Property<T>, value: T): void {
+    if (!this.store.has(property as Property<unknown>)) {
+      throw new Error(`This screen has no value '${property.id}'`);
+    }
+    this.store.set(property as Property<unknown>, coerce(property, value));
+  }
+
+  /** Hear one of this screen's own events, raised by this copy. */
+  on(event: GameEvent, handler: WorldEventHandler): void {
+    this.handlers.set(event, [...(this.handlers.get(event) ?? []), handler]);
+  }
+
+  handlersFor(event: GameEvent): readonly WorldEventHandler[] {
+    return this.handlers.get(event) ?? [];
+  }
+
+  /**
+   * Raise one of this screen's own events: its handlers run after the tick,
+   * as every event's do, and only while it is still on the stack.
+   */
+  emit(event: GameEvent, ...values: readonly unknown[]): void {
+    this.world.emitTo(this, event, ...values);
   }
 
   /**
@@ -1948,6 +2003,44 @@ export class World {
     this.events.enqueue(event, undefined, ...values);
   }
 
+  /** Queue a screen's own event for that screen alone (`MapLoad.emit`). */
+  emitTo(
+    holder: EventHolder,
+    event: GameEvent,
+    ...values: readonly unknown[]
+  ): void {
+    this.events.enqueueTo(holder, event, ...values);
+  }
+
+  /**
+   * One of the Main Screen's values, by the name it was declared with, or
+   * undefined for a name it did not declare.
+   *
+   * BY NAME, as its events are (`emitNamed`): another screen, a map, a
+   * placement or a kind reads the game's values without importing the Main
+   * Screen, which shows them and so cannot be imported back
+   * (specs/SCREEN_STACK_PLAN.md).
+   */
+  valueNamed(name: string): unknown {
+    const property = this.ownPropertyNamed(name);
+    return property ? this.get(property) : undefined;
+  }
+
+  /** …and set it, saying whether there was one by that name. */
+  setValueNamed(name: string, value: unknown): boolean {
+    const property = this.ownPropertyNamed(name);
+    if (property) {
+      this.set(property, value);
+    }
+    return property !== undefined;
+  }
+
+  private ownPropertyNamed(name: string): Property<unknown> | undefined {
+    return this.ownProperties.find(
+      property => property.id === name || property.name === name,
+    );
+  }
+
   /**
    * Register one of the world's own events under the name it reads by.
    *
@@ -3118,6 +3211,7 @@ export class World {
       screen && map.backgroundColor !== undefined
         ? rgba(map.backgroundColor)
         : undefined,
+      screen ? (map.values ?? []) : [],
     );
     space.loads.push(load);
     for (const actor of added) {
@@ -4240,9 +4334,7 @@ export class World {
       return loads
         .slice(top)
         .some(load =>
-          load.actors.some(
-            one => one.world === this && one.has(ViewportTrait),
-          ),
+          load.actors.some(one => one.world === this && one.has(ViewportTrait)),
         );
     }
     const load = this.loadOf.get(actor);

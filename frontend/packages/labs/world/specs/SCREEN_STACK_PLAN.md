@@ -1,6 +1,6 @@
 # Plan: screens are a stack, and each one holds its own words
 
-STATUS: BUILDING, October 2026. Steps 1 and 2 are done. Comes after
+STATUS: BUILDING, October 2026. Steps 1 to 3 are done. Comes after
 specs/ONE_WORLD_PLAN.md: it assumes one World, flat screens, and Viewports
 that look at the World.
 
@@ -183,6 +183,22 @@ Screen's color stays the main camera's clear color.
 - **Compared before and after**: every scenario and lesson draws the same
   and reaches the same, but the random lessons' positions. Nothing shows a
   second screen yet, so seeing one in the browser waits for step 4.
+
+- **Step 3 keeps a screen's words on its load.** A shown screen's map
+  names its values (`WorldMap.values`), and each load seeds a copy of them
+  from their defaults: `MapLoad.get` and `set` read and write that copy and
+  no other. Its events are hung and raised on the load too (`MapLoad.on`
+  and `emit`); they go through the World's queue, so they run after the
+  tick as every event does, and a screen taken off hears nothing more.
+- **The Main Screen's values are read by name** (`valueNamed`,
+  `setValueNamed`) beside its events (`emitNamed`), so a screen, a map, a
+  placement or a kind reaches the game's values without importing the
+  Main Screen.
+- **Left for step 4**: a screen's code can also hang handlers on the
+  World's events and on kinds, which outlive the screen unless they are
+  taken away when it goes. They are registered as the screen's script
+  runs, so the load can keep what its script hung and take it off with
+  itself.
 
 ## Not in this plan
 

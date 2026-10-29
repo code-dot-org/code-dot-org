@@ -4,13 +4,22 @@
 // queue once, after all Steps have run.
 
 import type {Actor} from './Actor';
-import type {GameEvent} from './types';
+import type {GameEvent, WorldEventHandler} from './types';
 import type {World} from './World';
+
+/** What holds a screen's own handlers: one screen on the stack. */
+export interface EventHolder {
+  handlersFor(event: GameEvent): readonly WorldEventHandler[];
+  /** Whether it is still on the stack; a screen taken off hears nothing. */
+  readonly live: boolean;
+}
 
 interface QueuedEvent {
   event: GameEvent;
   /** Absent for a world event — there is nobody it happened to. */
   actor?: Actor;
+  /** A screen's own event, heard by that screen and nothing else. */
+  holder?: EventHolder;
   /**
    * What the event carries, one per value its signature names.
    *
@@ -34,6 +43,15 @@ export class EventQueue {
     this.pending.push({event, actor, values});
   }
 
+  /** Queue a screen's own event, for that screen's handlers alone. */
+  enqueueTo(
+    holder: EventHolder,
+    event: GameEvent,
+    ...values: readonly unknown[]
+  ): void {
+    this.pending.push({event, holder, values});
+  }
+
   size(): number {
     return this.pending.length;
   }
@@ -48,7 +66,15 @@ export class EventQueue {
   flush(world: World): void {
     const batch = this.pending;
     this.pending = [];
-    for (const {event, actor, values} of batch) {
+    for (const {event, actor, holder, values} of batch) {
+      if (holder) {
+        if (holder.live) {
+          for (const handler of holder.handlersFor(event)) {
+            handler(world, ...values);
+          }
+        }
+        continue;
+      }
       if (!actor) {
         // A world event: the world holds the handlers, and there is no subject
         // to pass. One dispatch, however many actors are in the world.
