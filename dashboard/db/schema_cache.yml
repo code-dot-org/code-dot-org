@@ -9851,7 +9851,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: activities
     name: index_activities_on_user_id_and_level_id
@@ -9865,7 +9868,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   activity_sections:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: activity_sections
@@ -9879,7 +9885,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: activity_sections
     name: index_activity_sections_on_lesson_activity_id
@@ -9892,7 +9901,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   ai_interaction_feedbacks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: ai_interaction_feedbacks
@@ -9907,7 +9919,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   ai_lesson_summaries:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: ai_lesson_summaries
@@ -9922,7 +9937,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: ai_lesson_summaries
     name: index_ai_lesson_summaries_on_lesson_id
@@ -9935,7 +9953,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   ai_student_podcast_objectives:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: ai_student_podcast_objectives
@@ -9950,7 +9971,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: ai_student_podcast_objectives
     name: index_ai_student_podcast_objectives_on_ai_student_podcast_id
@@ -9963,7 +9987,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: ai_student_podcast_objectives
     name: index_ai_student_podcast_objectives_on_objective_id
@@ -9976,7 +10003,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   ai_student_podcasts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: ai_student_podcasts
@@ -9991,7 +10021,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: ai_student_podcasts
     name: index_ai_student_podcasts_on_lesson_id
@@ -10004,7 +10037,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   aichat_events:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_events
@@ -10020,7 +10056,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_events
     name: index_aichat_events_on_request_id
@@ -10033,7 +10072,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_events
     name: index_ace_user_project
@@ -10047,7 +10089,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_events
     name: index_ace_user_level_script_id
@@ -10063,7 +10108,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_events
     name: index_ace_user_project_id
@@ -10078,7 +10126,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_events
     name: index_ace_lesson_user
@@ -10092,7 +10143,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_events
     name: index_aichat_events_on_created_at
@@ -10105,7 +10159,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   aichat_requests:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_requests
@@ -10119,7 +10176,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_requests
     name: index_aichat_requests_on_created_at
@@ -10132,7 +10192,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   aichat_sessions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_sessions
@@ -10148,7 +10211,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   aidiff_artifact_associations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_artifact_associations
@@ -10162,7 +10228,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_artifact_associations
     name: index_aidiff_artifact_associations_on_section_id
@@ -10175,7 +10244,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_artifact_associations
     name: index_aidiff_artifact_associations_on_lesson_id
@@ -10188,7 +10260,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_artifact_associations
     name: index_aidiff_artifact_associations_on_unit_id
@@ -10201,7 +10276,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_artifact_associations
     name: index_aidiff_artifact_associations_on_unit_group_id
@@ -10214,7 +10292,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   aidiff_artifacts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_artifacts
@@ -10228,7 +10309,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_artifacts
     name: index_aidiff_artifacts_on_user_id
@@ -10241,7 +10325,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   aidiff_message_feedbacks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_message_feedbacks
@@ -10255,7 +10342,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   aidiff_messages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_messages
@@ -10269,7 +10359,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   aidiff_threads:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aidiff_threads
@@ -10283,7 +10376,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   anonymous_level_geos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: anonymous_level_geos
@@ -10297,7 +10393,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   anonymous_level_progresses:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: anonymous_level_progresses
@@ -10313,7 +10412,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   ar_internal_metadata: []
   assessment_activities:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -10330,7 +10432,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   authentication_options:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: authentication_options
@@ -10346,7 +10451,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: authentication_options
     name: index_authentication_options_on_email_and_deleted_at
@@ -10360,7 +10468,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: authentication_options
     name: index_authentication_options_on_hashed_email_and_deleted_at
@@ -10374,7 +10485,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: authentication_options
     name: index_authentication_options_on_user_id_and_deleted_at
@@ -10388,7 +10502,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   authored_hint_view_requests:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: authored_hint_view_requests
@@ -10402,7 +10519,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: authored_hint_view_requests
     name: index_authored_hint_view_requests_on_script_id_and_level_id
@@ -10416,7 +10536,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: authored_hint_view_requests
     name: index_authored_hint_view_requests_on_all_related_ids
@@ -10432,7 +10555,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   backpacks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: backpacks
@@ -10446,7 +10572,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: backpacks
     name: index_backpacks_on_user_id_and_game_id
@@ -10460,7 +10589,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   blocks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: blocks
@@ -10475,7 +10607,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: blocks
     name: index_blocks_on_deleted_at
@@ -10488,7 +10623,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   callouts: []
   cap_user_events:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -10503,7 +10641,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: cap_user_events
     name: index_cap_user_events_on_name_and_policy
@@ -10517,7 +10658,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: cap_user_events
     name: index_cap_user_events_on_policy
@@ -10530,7 +10674,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   census_state_course_codes:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: census_state_course_codes
@@ -10545,7 +10692,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   census_submission_form_maps:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: census_submission_form_maps
@@ -10559,7 +10709,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: census_submission_form_maps
     name: index_census_submission_form_maps_on_form_id
@@ -10572,7 +10725,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   census_submissions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: census_submissions
@@ -10587,7 +10743,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   census_submissions_school_infos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: census_submissions_school_infos
@@ -10602,7 +10761,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: census_submissions_school_infos
     name: school_info_id_census_submission
@@ -10616,7 +10778,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   census_summaries:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: census_summaries
@@ -10631,7 +10796,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   challenge_response_assets:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: challenge_response_assets
@@ -10645,7 +10813,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   challenge_response_reactions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: challenge_response_reactions
@@ -10661,7 +10832,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: challenge_response_reactions
     name: index_challenge_response_reactions_on_challenge_response_id
@@ -10674,7 +10848,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: challenge_response_reactions
     name: index_challenge_response_reactions_on_user_id
@@ -10687,7 +10864,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   challenge_responses:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: challenge_responses
@@ -10701,7 +10881,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: challenge_responses
     name: index_challenge_responses_on_challenge_user_created
@@ -10716,7 +10899,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   challenges:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: challenges
@@ -10730,7 +10916,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   channel_tokens:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: channel_tokens
@@ -10747,7 +10936,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: channel_tokens
     name: index_channel_tokens_on_storage_app_id
@@ -10760,7 +10952,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: channel_tokens
     name: index_channel_tokens_on_storage_id
@@ -10773,7 +10968,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   code_review_comments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_review_comments
@@ -10787,7 +10985,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   code_review_group_members:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_review_group_members
@@ -10801,7 +11002,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_review_group_members
     name: index_code_review_group_members_on_follower_id
@@ -10814,7 +11018,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   code_review_groups:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_review_groups
@@ -10828,7 +11035,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   code_review_requests:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_review_requests
@@ -10846,7 +11056,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   code_reviews:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_reviews
@@ -10863,7 +11076,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_reviews
     name: index_code_reviews_on_project_id_and_deleted_at
@@ -10877,7 +11093,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_reviews
     name: index_code_reviews_for_peer_lookup
@@ -10894,7 +11113,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   concepts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: concepts
@@ -10908,7 +11130,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   concepts_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: concepts_levels
@@ -10922,7 +11147,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: concepts_levels
     name: index_concepts_levels_on_level_id
@@ -10935,7 +11163,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   contact_rollups_pardot_memory:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: contact_rollups_pardot_memory
@@ -10949,7 +11180,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: contact_rollups_pardot_memory
     name: index_contact_rollups_pardot_memory_on_pardot_id
@@ -10962,7 +11196,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: contact_rollups_pardot_memory
     name: index_contact_rollups_pardot_memory_on_marked_for_deletion_at
@@ -10975,7 +11212,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   contact_rollups_processed:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: contact_rollups_processed
@@ -10989,7 +11229,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   contact_rollups_raw: []
   contained_level_answers:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -11004,7 +11247,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   contained_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: contained_levels
@@ -11018,7 +11264,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: contained_levels
     name: index_contained_levels_on_level_group_level_id
@@ -11031,7 +11280,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   course_offerings:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_offerings
@@ -11045,7 +11297,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   course_offerings_pd_workshops:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_offerings_pd_workshops
@@ -11059,7 +11314,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_offerings_pd_workshops
     name: index_course_offerings_pd_workshops_on_course_offering_id
@@ -11072,7 +11330,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   course_scripts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_scripts
@@ -11086,7 +11347,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_scripts
     name: index_course_scripts_on_script_id
@@ -11099,7 +11363,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   course_versions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_versions
@@ -11114,7 +11381,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_versions
     name: index_course_versions_on_course_offering_id
@@ -11127,7 +11397,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: course_versions
     name: index_course_versions_on_content_root_id
@@ -11140,7 +11413,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   courses:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: courses
@@ -11154,7 +11430,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   data_docs:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: data_docs
@@ -11168,7 +11447,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: data_docs
     name: index_data_docs_on_name
@@ -11181,7 +11463,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   datablock_storage_kvps:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: datablock_storage_kvps
@@ -11195,7 +11480,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   datablock_storage_library_manifest:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: datablock_storage_library_manifest
@@ -11209,7 +11497,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   datablock_storage_records:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: datablock_storage_records
@@ -11223,7 +11514,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: datablock_storage_records
     name: index_datablock_storage_records_on_project_id_and_table_name
@@ -11237,7 +11531,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   datablock_storage_tables:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: datablock_storage_tables
@@ -11251,7 +11548,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   delayed_jobs:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: delayed_jobs
@@ -11266,7 +11566,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   demo_students:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: demo_students
@@ -11281,7 +11584,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: demo_students
     name: index_demo_students_on_demo_type_and_user_id
@@ -11295,7 +11601,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   donor_schools: []
   donors: []
   email_preferences:
@@ -11311,7 +11620,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   experiments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: experiments
@@ -11325,7 +11637,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: experiments
     name: index_experiments_on_max_user_id
@@ -11338,7 +11653,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: experiments
     name: index_experiments_on_min_user_id
@@ -11351,7 +11669,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: experiments
     name: index_experiments_on_overflow_max_user_id
@@ -11364,7 +11685,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: experiments
     name: index_experiments_on_section_id
@@ -11377,7 +11701,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: experiments
     name: index_experiments_on_start_at
@@ -11390,7 +11717,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   external_notifications:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: external_notifications
@@ -11405,7 +11735,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: external_notifications
     name: index_external_notifications_on_user_id_and_created_at
@@ -11419,7 +11752,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   failed_delayed_jobs:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: failed_delayed_jobs
@@ -11433,7 +11769,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   featured_projects:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: featured_projects
@@ -11447,7 +11786,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: featured_projects
     name: index_featured_projects_on_topic
@@ -11460,7 +11802,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   followers:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: followers
@@ -11475,7 +11820,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: followers
     name: index_followers_on_student_user_id
@@ -11488,7 +11836,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   foorm_forms:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: foorm_forms
@@ -11503,7 +11854,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   foorm_libraries:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: foorm_libraries
@@ -11518,7 +11872,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   foorm_library_questions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: foorm_library_questions
@@ -11534,7 +11891,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   foorm_simple_survey_forms:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: foorm_simple_survey_forms
@@ -11548,7 +11908,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   foorm_simple_survey_submissions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: foorm_simple_survey_submissions
@@ -11562,7 +11925,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: foorm_simple_survey_submissions
     name: index_foorm_simple_survey_submissions_on_user_id
@@ -11575,7 +11941,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   foorm_submissions: []
   frameworks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -11590,7 +11959,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   games:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: games
@@ -11604,7 +11976,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   google_sheets_shared_cdo_languages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: google_sheets_shared_cdo_languages
@@ -11618,7 +11993,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: google_sheets_shared_cdo_languages
     name: google_sheets_shared_cdo_languages_supported_codeorg_b_index
@@ -11631,7 +12009,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   hint_view_requests:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: hint_view_requests
@@ -11646,7 +12027,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: hint_view_requests
     name: index_hint_view_requests_on_user_id
@@ -11659,7 +12043,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_concepts: []
   jit_pl_concepts_json_videos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -11675,7 +12062,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_concepts_json_videos
     name: index_concepts_json_videos_on_video_id_and_concept_id
@@ -11689,7 +12079,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_concepts_lessons:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_concepts_lessons
@@ -11704,7 +12097,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_concepts_lessons
     name: index_jit_pl_concepts_lessons_on_lesson_id_and_jit_pl_concept_id
@@ -11718,7 +12114,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_concepts_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_concepts_resources
@@ -11733,7 +12132,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_concepts_resources
     name: index_concepts_resources_on_resource_id_and_concept_id
@@ -11747,7 +12149,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_concepts_rubrics:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_concepts_rubrics
@@ -11762,7 +12167,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_concepts_rubrics
     name: index_jit_pl_concepts_rubrics_on_rubric_id_and_jit_pl_concept_id
@@ -11776,7 +12184,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_exemplars:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_exemplars
@@ -11790,7 +12201,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_exemplars
     name: index_jit_pl_exemplars_on_jit_pl_misconception_id
@@ -11803,7 +12217,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_exemplars_json_videos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_exemplars_json_videos
@@ -11818,7 +12235,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_exemplars_json_videos
     name: index_exemplars_json_videos_on_video_id_and_exemplar_id
@@ -11832,7 +12252,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_exemplars_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_exemplars_resources
@@ -11847,7 +12270,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_exemplars_resources
     name: index_exemplars_resources_on_resource_id_and_exemplar_id
@@ -11861,7 +12287,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_misconceptions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_misconceptions
@@ -11875,7 +12304,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_misconceptions_json_videos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_misconceptions_json_videos
@@ -11890,7 +12322,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_misconceptions_json_videos
     name: index_misconceptions_json_videos_on_video_id_and_misc_id
@@ -11904,7 +12339,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_misconceptions_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_misconceptions_resources
@@ -11919,7 +12357,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_misconceptions_resources
     name: index_misconceptions_resources_on_resource_and_misconception_ids
@@ -11933,7 +12374,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_teaching_tips:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_teaching_tips
@@ -11947,7 +12391,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   jit_pl_teaching_tips_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_teaching_tips_resources
@@ -11962,7 +12409,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: jit_pl_teaching_tips_resources
     name: index_teaching_tips_resources_on_resource_and_tip_ids
@@ -11976,7 +12426,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   json_video_objectives:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: json_video_objectives
@@ -11991,7 +12444,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: json_video_objectives
     name: index_json_video_objectives_on_objective_id
@@ -12004,7 +12460,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   json_videos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: json_videos
@@ -12018,7 +12477,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   learning_goal_ai_evaluation_feedbacks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goal_ai_evaluation_feedbacks
@@ -12032,7 +12494,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   learning_goal_ai_evaluations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goal_ai_evaluations
@@ -12046,7 +12511,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goal_ai_evaluations
     name: index_learning_goal_ai_evaluations_on_learning_goal_id
@@ -12059,7 +12527,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   learning_goal_evidence_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goal_evidence_levels
@@ -12074,7 +12545,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   learning_goal_teacher_evaluations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goal_teacher_evaluations
@@ -12088,7 +12562,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goal_teacher_evaluations
     name: index_learning_goal_teacher_evaluations_on_user_and_teacher_id
@@ -12102,7 +12579,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goal_teacher_evaluations
     name: index_learning_goal_teacher_evaluations_on_teacher_id
@@ -12115,7 +12595,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   learning_goals:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goals
@@ -12130,7 +12613,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lesson_activities:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lesson_activities
@@ -12144,7 +12630,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lesson_activities
     name: index_lesson_activities_on_lesson_id
@@ -12157,7 +12646,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lesson_feedbacks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lesson_feedbacks
@@ -12172,7 +12664,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lesson_groups:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lesson_groups
@@ -12187,7 +12682,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lesson_insights:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lesson_insights
@@ -12203,7 +12701,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lessons_opportunity_standards:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lessons_opportunity_standards
@@ -12218,7 +12719,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lessons_opportunity_standards
     name: index_lessons_opportunity_standards_on_standard_id_and_lesson_id
@@ -12232,7 +12736,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lessons_programming_expressions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lessons_programming_expressions
@@ -12247,7 +12754,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lessons_programming_expressions
     name: programming_expression_lesson
@@ -12261,7 +12771,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lessons_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lessons_resources
@@ -12276,7 +12789,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lessons_resources
     name: index_lessons_resources_on_resource_id_and_lesson_id
@@ -12290,7 +12806,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lessons_vocabularies:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lessons_vocabularies
@@ -12305,7 +12824,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lessons_vocabularies
     name: index_lessons_vocabularies_on_vocabulary_id_and_lesson_id
@@ -12319,7 +12841,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   level_concept_difficulties:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: level_concept_difficulties
@@ -12333,7 +12858,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   level_source_images:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: level_source_images
@@ -12347,7 +12875,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   level_sources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: level_sources
@@ -12362,7 +12893,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   level_sources_multi_types:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: level_sources_multi_types
@@ -12376,7 +12910,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: level_sources_multi_types
     name: index_level_sources_multi_types_on_level_source_id
@@ -12389,7 +12926,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: levels
@@ -12403,7 +12943,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: levels
     name: index_levels_on_name
@@ -12416,7 +12959,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: levels
     name: index_levels_on_level_num
@@ -12429,7 +12975,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: levels
     name: index_levels_on_type
@@ -12442,7 +12991,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   levels_script_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: levels_script_levels
@@ -12456,7 +13008,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: levels_script_levels
     name: index_levels_script_levels_on_script_level_id
@@ -12469,7 +13024,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   libraries: []
   lti_courses:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -12483,7 +13041,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_courses
     name: index_lti_courses_on_lti_integration_id
@@ -12496,7 +13057,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_courses
     name: fk_rails_19886eb632
@@ -12509,7 +13073,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_courses
     name: index_on_course_id_and_lti_integration_id
@@ -12523,7 +13090,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_courses
     name: index_lti_courses_on_deleted_at
@@ -12536,7 +13106,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lti_deployments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_deployments
@@ -12550,7 +13123,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_deployments
     name: index_lti_deployments_on_deployment_id
@@ -12563,7 +13139,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lti_deployments_user_identities:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_deployments_user_identities
@@ -12577,7 +13156,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_deployments_user_identities
     name: index_lti_deployments_user_identities_on_lti_user_identity_id
@@ -12590,7 +13172,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lti_integrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_integrations
@@ -12604,7 +13189,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_integrations
     name: index_lti_integrations_on_issuer
@@ -12617,7 +13205,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_integrations
     name: index_lti_integrations_on_client_id
@@ -12630,7 +13221,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lti_sections:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_sections
@@ -12644,7 +13238,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_sections
     name: index_lti_sections_on_section_id
@@ -12657,7 +13254,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_sections
     name: index_lti_sections_on_deleted_at
@@ -12670,7 +13270,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   lti_user_identities:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_user_identities
@@ -12684,7 +13287,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_user_identities
     name: index_lti_user_identities_on_user_id
@@ -12697,7 +13303,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_user_identities
     name: index_lti_user_identities_on_subject
@@ -12710,7 +13319,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_user_identities
     name: index_lti_user_identities_on_deleted_at
@@ -12723,7 +13335,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   metrics: []
   new_feature_feedbacks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -12739,7 +13354,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: new_feature_feedbacks
     name: index_new_feature_feedbacks_on_user_id
@@ -12752,7 +13370,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: new_feature_feedbacks
     name: index_new_feature_feedbacks_on_satisfied
@@ -12765,7 +13386,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   objectives:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: objectives
@@ -12779,7 +13403,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: objectives
     name: index_objectives_on_lesson_id
@@ -12792,7 +13419,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   objectives_practice_problems:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: objectives_practice_problems
@@ -12807,7 +13437,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: objectives_practice_problems
     name: index_practice_prob_objectives_on_objective_and_prob_ids
@@ -12821,7 +13454,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   objectives_script_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: objectives_script_levels
@@ -12836,7 +13472,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: objectives_script_levels
     name: index_objectives_script_levels_on_objective_id
@@ -12849,7 +13488,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   paired_user_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: paired_user_levels
@@ -12863,7 +13505,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: paired_user_levels
     name: index_paired_user_levels_on_navigator_user_level_id
@@ -12876,7 +13521,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   parent_levels_child_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: parent_levels_child_levels
@@ -12890,7 +13538,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: parent_levels_child_levels
     name: index_parent_levels_child_levels_on_parent_level_id
@@ -12903,7 +13554,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   parental_permission_requests:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: parental_permission_requests
@@ -12917,7 +13571,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: parental_permission_requests
     name: index_parental_permission_requests_on_uuid
@@ -12930,7 +13587,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_accepted_programs: []
   pd_application_emails:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -12945,7 +13605,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_application_tags:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_application_tags
@@ -12959,7 +13622,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_application_tags_applications:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_application_tags_applications
@@ -12973,7 +13639,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_application_tags_applications
     name: index_pd_application_tags_applications_on_pd_application_tag_id
@@ -12986,7 +13655,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_applications:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_applications
@@ -13000,7 +13672,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_applications
     name: index_pd_applications_on_application_type
@@ -13013,7 +13688,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_applications
     name: index_pd_applications_on_application_year
@@ -13026,7 +13704,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_applications
     name: index_pd_applications_on_course
@@ -13039,7 +13720,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_applications
     name: index_pd_applications_on_regional_partner_id
@@ -13052,7 +13736,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_applications
     name: index_pd_applications_on_status
@@ -13065,7 +13752,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_applications
     name: index_pd_applications_on_type
@@ -13078,7 +13768,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_applications
     name: index_pd_applications_on_user_id
@@ -13091,7 +13784,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_applications_status_logs: []
   pd_attendances:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -13107,7 +13803,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_attendances
     name: index_pd_attendances_on_marked_by_user_id
@@ -13120,7 +13819,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_attendances
     name: index_pd_attendances_on_pd_enrollment_id
@@ -13133,7 +13835,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_attendances
     name: index_pd_attendances_on_teacher_id
@@ -13146,7 +13851,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_course_facilitators:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_course_facilitators
@@ -13161,7 +13869,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_course_facilitators
     name: index_pd_course_facilitators_on_course
@@ -13174,7 +13885,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_enrollment_notifications:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_enrollment_notifications
@@ -13188,7 +13902,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_enrollments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_enrollments
@@ -13202,7 +13919,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_enrollments
     name: index_pd_enrollments_on_email
@@ -13215,7 +13935,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_enrollments
     name: index_pd_enrollments_on_pd_workshop_id
@@ -13228,7 +13951,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_enrollments
     name: index_pd_enrollments_on_user_id
@@ -13241,7 +13967,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_facilitator_program_registrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_facilitator_program_registrations
@@ -13256,7 +13985,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_facilitator_teachercon_attendances:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_facilitator_teachercon_attendances
@@ -13270,7 +14002,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_fit_weekend1819_registrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_fit_weekend1819_registrations
@@ -13284,7 +14019,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_fit_weekend_registrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_fit_weekend_registrations
@@ -13298,7 +14036,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_fit_weekend_registrations
     name: index_pd_fit_weekend_registrations_on_registration_year
@@ -13311,7 +14052,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_international_opt_ins:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_international_opt_ins
@@ -13325,7 +14069,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_legacy_survey_summaries: []
   pd_misc_surveys:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -13340,7 +14087,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_misc_surveys
     name: index_pd_misc_surveys_on_form_id
@@ -13353,7 +14103,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_misc_surveys
     name: index_pd_misc_surveys_on_user_id
@@ -13366,7 +14119,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_post_course_surveys:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_post_course_surveys
@@ -13380,7 +14136,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_post_course_surveys
     name: index_pd_post_course_surveys_on_user_form_year_course
@@ -13396,7 +14155,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_post_course_surveys
     name: index_pd_post_course_surveys_on_form_id
@@ -13409,7 +14171,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_post_course_surveys
     name: index_pd_post_course_surveys_on_user_id
@@ -13422,7 +14187,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_pre_workshop_surveys:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_pre_workshop_surveys
@@ -13436,7 +14204,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_regional_partner_cohorts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_cohorts
@@ -13450,7 +14221,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_cohorts
     name: index_pd_regional_partner_cohorts_on_summer_workshop_id
@@ -13463,7 +14237,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_regional_partner_cohorts_users:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_cohorts_users
@@ -13477,7 +14254,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_cohorts_users
     name: index_pd_regional_partner_cohorts_users_on_user_id
@@ -13490,7 +14270,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_regional_partner_contacts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_contacts
@@ -13504,7 +14287,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_contacts
     name: index_pd_regional_partner_contacts_on_user_id
@@ -13517,7 +14303,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_regional_partner_mappings:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_mappings
@@ -13533,7 +14322,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_mappings
     name: index_pd_regional_partner_mappings_on_regional_partner_id
@@ -13546,7 +14338,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_regional_partner_mini_contacts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_mini_contacts
@@ -13560,7 +14355,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_mini_contacts
     name: index_pd_regional_partner_mini_contacts_on_user_id
@@ -13573,7 +14371,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_regional_partner_program_registrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_regional_partner_program_registrations
@@ -13588,7 +14389,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_scholarship_infos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_scholarship_infos
@@ -13604,7 +14408,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_scholarship_infos
     name: index_pd_scholarship_infos_on_pd_application_id
@@ -13617,7 +14424,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_scholarship_infos
     name: index_pd_scholarship_infos_on_pd_enrollment_id
@@ -13630,7 +14440,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_scholarship_infos
     name: index_pd_scholarship_infos_on_user_id
@@ -13643,7 +14456,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_sessions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_sessions
@@ -13657,7 +14473,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_sessions
     name: index_pd_sessions_on_pd_workshop_id
@@ -13670,7 +14489,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_survey_questions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_survey_questions
@@ -13684,7 +14506,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_teacher_applications:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_teacher_applications
@@ -13698,7 +14523,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_teacher_applications
     name: index_pd_teacher_applications_on_primary_email
@@ -13711,7 +14539,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_teacher_applications
     name: index_pd_teacher_applications_on_secondary_email
@@ -13724,7 +14555,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_teachercon1819_registrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_teachercon1819_registrations
@@ -13738,7 +14572,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_teachercon1819_registrations
     name: index_pd_teachercon1819_registrations_on_regional_partner_id
@@ -13751,7 +14588,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_teachercon1819_registrations
     name: index_pd_teachercon1819_registrations_on_user_id
@@ -13764,7 +14604,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_teachercon_surveys:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_teachercon_surveys
@@ -13778,7 +14621,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_workshop_daily_surveys:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_daily_surveys
@@ -13792,7 +14638,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_daily_surveys
     name: index_pd_workshop_daily_surveys_on_user_workshop_day_form
@@ -13808,7 +14657,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_daily_surveys
     name: index_pd_workshop_daily_surveys_on_form_id
@@ -13821,7 +14673,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_daily_surveys
     name: index_pd_workshop_daily_surveys_on_pd_session_id
@@ -13834,7 +14689,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_daily_surveys
     name: index_pd_workshop_daily_surveys_on_pd_workshop_id
@@ -13847,7 +14705,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_daily_surveys
     name: index_pd_workshop_daily_surveys_on_user_id
@@ -13860,7 +14721,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_workshop_facilitator_daily_surveys:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_facilitator_daily_surveys
@@ -13874,7 +14738,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_facilitator_daily_surveys
     name: index_pd_workshop_facilitator_daily_surveys_unique
@@ -13890,7 +14757,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_facilitator_daily_surveys
     name: index_pd_workshop_facilitator_daily_surveys_on_day
@@ -13903,7 +14773,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_facilitator_daily_surveys
     name: index_pd_workshop_facilitator_daily_surveys_on_form_id
@@ -13916,7 +14789,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_facilitator_daily_surveys
     name: index_pd_workshop_facilitator_daily_surveys_on_pd_session_id
@@ -13929,7 +14805,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_facilitator_daily_surveys
     name: index_pd_workshop_facilitator_daily_surveys_on_pd_workshop_id
@@ -13942,7 +14821,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_facilitator_daily_surveys
     name: index_pd_workshop_facilitator_daily_surveys_on_user_id
@@ -13955,7 +14837,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_workshop_survey_foorm_submissions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_survey_foorm_submissions
@@ -13969,7 +14854,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_survey_foorm_submissions
     name: index_pd_workshop_survey_foorm_submissions_on_pd_session_id
@@ -13982,7 +14870,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_survey_foorm_submissions
     name: index_pd_workshop_survey_foorm_submissions_on_pd_workshop_id
@@ -13995,7 +14886,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshop_survey_foorm_submissions
     name: index_pd_workshop_survey_foorm_submissions_on_user_id
@@ -14008,7 +14902,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_workshops:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshops
@@ -14022,7 +14919,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshops
     name: index_pd_workshops_on_regional_partner_id
@@ -14035,7 +14935,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pd_workshops_facilitators:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshops_facilitators
@@ -14049,7 +14952,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pd_workshops_facilitators
     name: index_pd_workshops_facilitators_on_user_id
@@ -14062,7 +14968,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   peer_reviews:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: peer_reviews
@@ -14076,7 +14985,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: peer_reviews
     name: index_peer_reviews_on_level_source_id
@@ -14089,7 +15001,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: peer_reviews
     name: index_peer_reviews_on_reviewer_id
@@ -14102,7 +15017,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: peer_reviews
     name: index_peer_reviews_on_script_id
@@ -14115,7 +15033,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: peer_reviews
     name: index_peer_reviews_on_submitter_id
@@ -14128,7 +15049,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   pilots:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: pilots
@@ -14142,7 +15066,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   plc_course_units:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_course_units
@@ -14156,7 +15083,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_course_units
     name: index_plc_course_units_on_script_id
@@ -14169,7 +15099,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   plc_courses:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_courses
@@ -14183,7 +15116,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   plc_enrollment_module_assignments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_enrollment_module_assignments
@@ -14197,7 +15133,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_enrollment_module_assignments
     name: module_assignment_lm_index
@@ -14210,7 +15149,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_enrollment_module_assignments
     name: index_plc_enrollment_module_assignments_on_user_id
@@ -14223,7 +15165,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   plc_enrollment_unit_assignments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_enrollment_unit_assignments
@@ -14237,7 +15182,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_enrollment_unit_assignments
     name: enrollment_unit_assignment_course_enrollment_index
@@ -14250,7 +15198,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_enrollment_unit_assignments
     name: index_plc_enrollment_unit_assignments_on_user_id
@@ -14263,7 +15214,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   plc_learning_modules:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_learning_modules
@@ -14277,7 +15231,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_learning_modules
     name: index_plc_learning_modules_on_stage_id
@@ -14290,7 +15247,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   plc_user_course_enrollments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_user_course_enrollments
@@ -14305,7 +15265,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: plc_user_course_enrollments
     name: index_plc_user_course_enrollments_on_plc_course_id
@@ -14318,7 +15281,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   potential_teachers:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: potential_teachers
@@ -14332,7 +15298,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   practice_problems:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: practice_problems
@@ -14346,7 +15315,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   programming_classes:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_classes
@@ -14361,7 +15333,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_classes
     name: index_programming_classes_on_key_and_category_id
@@ -14375,7 +15350,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   programming_environment_categories:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_environment_categories
@@ -14390,7 +15368,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_environment_categories
     name: index_programming_environment_categories_on_environment_id
@@ -14403,7 +15384,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   programming_environments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_environments
@@ -14417,7 +15401,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   programming_expressions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_expressions
@@ -14432,7 +15419,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_expressions
     name: index_programming_expressions_on_programming_environment_id
@@ -14445,7 +15435,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_expressions
     name: index_programming_expressions_on_environment_category_id
@@ -14458,7 +15451,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_expressions
     name: index_programming_expressions_on_name_and_category
@@ -14472,7 +15468,10 @@ indexes:
     where: 
     type: :fulltext
     using: 
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   programming_methods:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_methods
@@ -14487,7 +15486,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: programming_methods
     name: index_programming_methods_on_class_id_and_overload_of
@@ -14501,7 +15503,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   project_commits:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: project_commits
@@ -14516,7 +15521,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: project_commits
     name: index_project_commits_on_storage_app_id
@@ -14529,7 +15537,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   project_storage_geos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: project_storage_geos
@@ -14543,7 +15554,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   projects:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
@@ -14557,7 +15571,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
     name: storage_apps_storage_id_index
@@ -14570,7 +15587,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
     name: storage_apps_published_at_index
@@ -14583,7 +15603,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
     name: storage_apps_standalone_index
@@ -14596,7 +15619,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
     name: storage_apps_project_type_index
@@ -14609,7 +15635,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
     name: storage_apps_storage_id_state_index
@@ -14623,7 +15652,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   puzzle_ratings:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: puzzle_ratings
@@ -14639,7 +15671,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: puzzle_ratings
     name: index_puzzle_ratings_on_script_id_and_level_id
@@ -14653,7 +15688,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   queued_account_purges:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: queued_account_purges
@@ -14667,7 +15705,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   quiz_attempts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_attempts
@@ -14684,7 +15725,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_attempts
     name: index_quiz_attempts_on_user_id
@@ -14697,7 +15741,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_attempts
     name: index_quiz_attempts_on_level_id
@@ -14710,7 +15757,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_attempts
     name: index_quiz_attempts_on_unit_id
@@ -14723,7 +15773,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   quiz_question_placements:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_question_placements
@@ -14738,7 +15791,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_question_placements
     name: index_quiz_question_placements_on_level_id
@@ -14751,7 +15807,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_question_placements
     name: index_quiz_question_placements_on_quiz_question_id
@@ -14764,7 +15823,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   quiz_question_responses:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_question_responses
@@ -14779,7 +15841,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_question_responses
     name: index_quiz_question_responses_on_quiz_attempt_id
@@ -14792,7 +15857,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_question_responses
     name: index_quiz_question_responses_on_quiz_question_id
@@ -14805,7 +15873,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   quiz_question_standards:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_question_standards
@@ -14820,7 +15891,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_question_standards
     name: index_quiz_question_standards_on_quiz_question_id
@@ -14833,7 +15907,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_question_standards
     name: index_quiz_question_standards_on_standard_id
@@ -14846,7 +15923,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   quiz_questions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_questions
@@ -14860,7 +15940,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_questions
     name: index_quiz_questions_on_created_at
@@ -14873,7 +15956,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: quiz_questions
     name: index_quiz_questions_on_name
@@ -14886,7 +15972,10 @@ indexes:
     where: 
     type: :fulltext
     using: 
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   reference_guides:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: reference_guides
@@ -14901,7 +15990,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: reference_guides
     name: index_reference_guides_on_course_version_id_and_parent_key
@@ -14915,7 +16007,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   regional_partner_program_managers:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: regional_partner_program_managers
@@ -14929,7 +16024,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: regional_partner_program_managers
     name: index_regional_partner_program_managers_on_regional_partner_id
@@ -14942,7 +16040,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   regional_partners: []
   regional_partners_school_districts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -14957,7 +16058,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: regional_partners_school_districts
     name: index_regional_partners_school_districts_on_school_district_id
@@ -14970,7 +16074,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: resources
@@ -14985,7 +16092,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: resources
     name: index_resources_on_name_and_url
@@ -14999,7 +16109,10 @@ indexes:
     where: 
     type: :fulltext
     using: 
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   rubric_ai_evaluations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: rubric_ai_evaluations
@@ -15013,7 +16126,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: rubric_ai_evaluations
     name: rubric_ai_evaluation_requester_index
@@ -15026,7 +16142,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: rubric_ai_evaluations
     name: rubric_ai_evaluation_rubric_index
@@ -15039,7 +16158,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   rubrics:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: rubrics
@@ -15054,7 +16176,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: rubrics
     name: index_rubrics_on_lesson_id
@@ -15067,7 +16192,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   schema_migrations: []
   school_districts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -15082,7 +16210,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: school_districts
     name: index_school_districts_on_name_and_city
@@ -15096,7 +16227,10 @@ indexes:
     where: 
     type: :fulltext
     using: 
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   school_infos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: school_infos
@@ -15110,7 +16244,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: school_infos
     name: index_school_infos_on_school_id
@@ -15123,7 +16260,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: school_infos
     name: index_school_infos_on_school_name_and_country_and_school_type
@@ -15138,7 +16278,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   school_stats_by_years:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: school_stats_by_years
@@ -15152,7 +16295,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   schools:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: schools
@@ -15166,7 +16312,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: schools
     name: index_schools_on_zip
@@ -15179,7 +16328,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: schools
     name: index_schools_on_last_known_school_year_open
@@ -15192,7 +16344,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: schools
     name: index_schools_on_name_and_city
@@ -15206,7 +16361,10 @@ indexes:
     where: 
     type: :fulltext
     using: 
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   scrapbook_entries:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scrapbook_entries
@@ -15222,7 +16380,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scrapbook_entries
     name: index_scrapbook_entries_on_user_id_and_channel_id
@@ -15236,7 +16397,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scrapbook_entries
     name: index_scrapbook_entries_on_user_id
@@ -15249,7 +16413,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   script_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: script_levels
@@ -15263,7 +16430,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: script_levels
     name: index_script_levels_on_activity_section_id
@@ -15276,7 +16446,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: script_levels
     name: index_script_levels_on_script_id
@@ -15289,7 +16462,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: script_levels
     name: index_script_levels_on_stage_id
@@ -15302,7 +16478,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   scripts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts
@@ -15316,7 +16495,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts
     name: index_scripts_on_new_name
@@ -15329,7 +16511,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts
     name: index_scripts_on_family_name
@@ -15342,7 +16527,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts
     name: index_scripts_on_wrapup_video_id
@@ -15355,7 +16543,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts
     name: index_scripts_on_published_state
@@ -15368,7 +16559,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts
     name: index_scripts_on_instruction_type
@@ -15381,7 +16575,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts
     name: index_scripts_on_instructor_audience
@@ -15394,7 +16591,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts
     name: index_scripts_on_participant_audience
@@ -15407,7 +16607,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts
     name: index_scripts_on_original_unit_group_id
@@ -15420,7 +16623,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   scripts_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts_resources
@@ -15435,7 +16641,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts_resources
     name: index_scripts_resources_on_resource_id_and_script_id
@@ -15449,7 +16658,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   scripts_student_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts_student_resources
@@ -15464,7 +16676,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts_student_resources
     name: index_scripts_student_resources_on_resource_id_and_script_id
@@ -15478,7 +16693,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   secret_pictures:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: secret_pictures
@@ -15492,7 +16710,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: secret_pictures
     name: index_secret_pictures_on_path
@@ -15505,7 +16726,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   secret_words:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: secret_words
@@ -15519,7 +16743,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   section_hidden_scripts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: section_hidden_scripts
@@ -15533,7 +16760,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: section_hidden_scripts
     name: index_section_hidden_scripts_on_section_id
@@ -15546,7 +16776,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   section_hidden_stages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: section_hidden_stages
@@ -15560,7 +16793,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: section_hidden_stages
     name: index_section_hidden_stages_on_stage_id
@@ -15573,7 +16809,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   section_instructors:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: section_instructors
@@ -15588,7 +16827,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: section_instructors
     name: index_section_instructors_on_instructor_id
@@ -15601,7 +16843,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: section_instructors
     name: index_section_instructors_on_section_id
@@ -15614,7 +16859,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: section_instructors
     name: index_section_instructors_on_invited_by_id
@@ -15627,7 +16875,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: section_instructors
     name: index_section_instructors_on_deleted_at
@@ -15640,7 +16891,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   sections:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: sections
@@ -15654,7 +16908,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: sections
     name: index_sections_on_user_id_and_demo_type
@@ -15669,7 +16926,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: sections
     name: fk_rails_20b1e5de46
@@ -15682,7 +16942,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: sections
     name: index_sections_on_user_id
@@ -15695,7 +16958,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: sections
     name: fk_rails_f0d4df9901
@@ -15708,7 +16974,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: sections
     name: index_sections_on_script_id
@@ -15721,7 +16990,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   seed_info:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: seed_info
@@ -15735,7 +17007,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   seeded_s3_objects:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: seeded_s3_objects
@@ -15751,7 +17026,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   shared_blockly_functions: []
   sign_ins:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -15766,7 +17044,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: sign_ins
     name: index_sign_ins_on_user_id
@@ -15779,7 +17060,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   stages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: stages
@@ -15794,7 +17078,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: stages
     name: index_stages_on_lesson_group_id_and_key
@@ -15808,7 +17095,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   stages_standards:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: stages_standards
@@ -15822,7 +17112,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: stages_standards
     name: index_stages_standards_on_standard_id
@@ -15835,7 +17128,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   standard_categories:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: standard_categories
@@ -15850,7 +17146,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: standard_categories
     name: index_standard_categories_on_parent_category_id
@@ -15863,7 +17162,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   standards:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: standards
@@ -15877,7 +17179,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: standards
     name: index_standards_on_framework_id_and_shortcode
@@ -15891,7 +17196,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: standards
     name: index_standards_on_description
@@ -15904,7 +17212,10 @@ indexes:
     where: 
     type: :fulltext
     using: 
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   student_work_evaluation_summaries:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: student_work_evaluation_summaries
@@ -15918,7 +17229,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: student_work_evaluation_summaries
     name: fk_rails_d50fa61780
@@ -15931,7 +17245,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   student_work_evaluations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: student_work_evaluations
@@ -15945,7 +17262,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: student_work_evaluations
     name: index_student_work_evaluations_on_student_id
@@ -15958,7 +17278,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: student_work_evaluations
     name: index_student_work_evaluations_on_level_id
@@ -15971,7 +17294,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   studio_people: []
   survey_results:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
@@ -15986,7 +17312,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: survey_results
     name: index_survey_results_on_user_id
@@ -15999,7 +17328,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   teacher_feedbacks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: teacher_feedbacks
@@ -16015,7 +17347,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: teacher_feedbacks
     name: index_teacher_feedbacks_on_teacher_id
@@ -16028,7 +17363,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   teacher_notifications:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: teacher_notifications
@@ -16043,7 +17381,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: teacher_notifications
     name: index_teacher_notifications_on_user_id_and_created_at
@@ -16057,7 +17398,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: teacher_notifications
     name: index_teacher_notifications_on_user_id_and_is_dismissed
@@ -16071,7 +17415,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   teacher_profiles:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: teacher_profiles
@@ -16085,7 +17432,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   teacher_scores:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: teacher_scores
@@ -16099,7 +17449,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   teaching_profile_data:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: teaching_profile_data
@@ -16113,7 +17466,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   unit_groups:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: unit_groups
@@ -16127,7 +17483,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: unit_groups
     name: index_unit_groups_on_published_state
@@ -16140,7 +17499,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: unit_groups
     name: index_unit_groups_on_instruction_type
@@ -16153,7 +17515,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: unit_groups
     name: index_unit_groups_on_instructor_audience
@@ -16166,7 +17531,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: unit_groups
     name: index_unit_groups_on_participant_audience
@@ -16179,7 +17547,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   unit_groups_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: unit_groups_resources
@@ -16194,7 +17565,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: unit_groups_resources
     name: index_unit_groups_resources_on_resource_id_and_unit_group_id
@@ -16208,7 +17582,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   unit_groups_student_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: unit_groups_student_resources
@@ -16223,7 +17600,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: unit_groups_student_resources
     name: index_ug_student_resources_on_resource_id_and_unit_group_id
@@ -16237,7 +17617,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_adaptive_steps:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_adaptive_steps
@@ -16252,7 +17635,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_data_retention_statuses:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_data_retention_statuses
@@ -16266,7 +17652,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_data_retention_statuses
     name: index_user_data_retention_statuses_on_pii_scrubbed_at
@@ -16279,7 +17668,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_data_retention_statuses
     name: index_user_data_retention_statuses_on_anonymized_at
@@ -16292,7 +17684,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_data_retention_statuses
     name: index_user_data_retention_statuses_on_warning_email_sent_at
@@ -16305,7 +17700,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_facilitator_infos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_facilitator_infos
@@ -16319,7 +17717,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_geos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_geos
@@ -16333,7 +17734,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_geos
     name: index_user_geos_on_user_id
@@ -16346,7 +17750,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_lesson_objective_reflections:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_lesson_objective_reflections
@@ -16360,7 +17767,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_lesson_objective_reflections
     name: index_user_lesson_objective_reflections_on_student_id
@@ -16373,7 +17783,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_lesson_objective_reflections
     name: index_ulor_on_objective_and_student
@@ -16387,7 +17800,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_lesson_reflections:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_lesson_reflections
@@ -16401,7 +17817,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_lesson_reflections
     name: index_user_lesson_reflections_on_student_id
@@ -16414,7 +17833,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_lesson_reflections
     name: index_user_lesson_reflections_on_lesson_id_and_student_id
@@ -16428,7 +17850,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_level_interactions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_level_interactions
@@ -16442,7 +17867,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_level_interactions
     name: index_user_level_interactions_on_level_id
@@ -16455,7 +17883,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_levels:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_levels
@@ -16472,7 +17903,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_log_tokens:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_log_tokens
@@ -16488,7 +17922,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_log_tokens
     name: index_user_log_tokens_on_uuid
@@ -16501,7 +17938,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_ml_models:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_ml_models
@@ -16515,7 +17955,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_ml_models
     name: index_user_ml_models_on_model_id
@@ -16528,7 +17971,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_module_task_assignments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_module_task_assignments
@@ -16542,7 +17988,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_module_task_assignments
     name: task_assignment_to_module_assignment_index
@@ -16555,7 +18004,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_permissions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_permissions
@@ -16570,7 +18022,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_practice_problem_attempts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_practice_problem_attempts
@@ -16584,7 +18039,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_practice_problem_attempts
     name: index_user_practice_problem_attempts_on_practice_problem_id
@@ -16597,7 +18055,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_preferences:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_preferences
@@ -16611,7 +18072,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_product_tours:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_product_tours
@@ -16626,7 +18090,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_proficiencies:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_proficiencies
@@ -16640,7 +18107,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_project_storage_ids:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_project_storage_ids
@@ -16654,7 +18124,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_project_storage_ids
     name: user_storage_ids_user_id_index
@@ -16667,7 +18140,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_school_infos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_school_infos
@@ -16681,7 +18157,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   user_scripts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_scripts
@@ -16698,7 +18177,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_scripts
     name: index_user_scripts_on_script_id
@@ -16711,7 +18193,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   users:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
@@ -16725,7 +18210,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_provider_and_uid_and_deleted_at
@@ -16740,7 +18228,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_reset_password_token_and_deleted_at
@@ -16754,7 +18245,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_username_and_deleted_at
@@ -16768,7 +18262,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_unlock_token
@@ -16781,7 +18278,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_birthday
@@ -16794,7 +18294,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_current_sign_in_at
@@ -16807,7 +18310,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_deleted_at
@@ -16820,7 +18326,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_email_and_deleted_at
@@ -16834,7 +18343,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_hashed_email_and_deleted_at
@@ -16848,7 +18360,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_invitations_count
@@ -16861,7 +18376,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_invited_by_id
@@ -16874,7 +18392,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_parent_email
@@ -16887,7 +18408,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_purged_at
@@ -16900,7 +18424,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_school_info_id
@@ -16913,7 +18440,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_studio_person_id
@@ -16926,7 +18456,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
     name: index_users_on_cap_status_and_cap_status_date
@@ -16940,7 +18473,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   videos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: videos
@@ -16955,7 +18491,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   vocabularies:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: vocabularies
@@ -16970,7 +18509,10 @@ indexes:
     where: 
     type: 
     using: :btree
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: vocabularies
     name: index_vocabularies_on_word_and_definition
@@ -16984,7 +18526,10 @@ indexes:
     where: 
     type: :fulltext
     using: 
+    include: 
+    nulls_not_distinct: 
     comment: 
+    valid: true
 version: 20261026120000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
