@@ -8,8 +8,31 @@ import msg from '@cdo/locale';
 import {singleton as studioApp} from '../StudioApp';
 
 const PHONE_MARGIN = 68;
+const OVERLAY_LEFT = 16;
 // The medium MUI IconButton.
 const PLAY_BUTTON_SIZE = 40;
+
+// Centers the play button in the phone frame's bottom margin, measured from
+// the overlay's top left corner.
+function playButtonOffset(appWidth, appHeight) {
+  return {
+    top: appHeight + PHONE_MARGIN / 2 - PLAY_BUTTON_SIZE / 2,
+    left: appWidth / 2 - PLAY_BUTTON_SIZE / 2,
+  };
+}
+
+/**
+ * Position, in the overlay's containing block, of the play button. App Lab's
+ * embed reset button takes this spot once the app runs.
+ */
+export function playButtonPosition(appWidth, appHeight) {
+  const {top, left} = playButtonOffset(appWidth, appHeight);
+  return {
+    ...styles.playButton,
+    top: PHONE_MARGIN + top,
+    left: OVERLAY_LEFT + left,
+  };
+}
 
 class IFrameEmbedOverlay extends Component {
   static propTypes = {
@@ -61,7 +84,7 @@ class IFrameEmbedOverlay extends Component {
               aria-label={msg.runProgram()}
               style={{
                 ...styles.playButton,
-                left: this.props.appWidth / 2 - PLAY_BUTTON_SIZE / 2,
+                ...playButtonOffset(this.props.appWidth, this.props.appHeight),
                 ...this.props.playButtonStyle,
               }}
             >
@@ -79,7 +102,7 @@ var styles = {
     wrapper: {
       position: 'absolute',
       top: PHONE_MARGIN,
-      left: 16,
+      left: OVERLAY_LEFT,
       zIndex: 5,
       textAlign: 'center',
     },
@@ -95,11 +118,8 @@ var styles = {
       cursor: 'default',
     },
   },
-  // A fixed size keeps the button from stretching when playButtonStyle
-  // supplies top alongside this bottom.
   playButton: {
     position: 'absolute',
-    bottom: -PHONE_MARGIN / 2 - PLAY_BUTTON_SIZE / 2,
     width: PLAY_BUTTON_SIZE,
     height: PLAY_BUTTON_SIZE,
   },

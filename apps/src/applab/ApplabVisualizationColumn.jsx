@@ -11,7 +11,9 @@ import * as dom from '../dom';
 import BelowVisualization from '../templates/BelowVisualization';
 import CompletionButton from '../templates/CompletionButton';
 import GameButtons from '../templates/GameButtons';
-import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
+import IFrameEmbedOverlay, {
+  playButtonPosition,
+} from '../templates/IFrameEmbedOverlay';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 
 import {getAppWidth, APP_HEIGHT} from './constants';
@@ -134,19 +136,20 @@ class ApplabVisualizationColumn extends React.Component {
         )}
         {visualization}
         {isIframeEmbed && !widgetMode && (
-          <div style={styles.resetButtonWrapper}>
-            {/* Hidden until StudioApp#toggleRunReset shows it on run. */}
-            <MuiIconButton
-              id="resetButton"
-              variant="contained"
-              color="secondary"
-              size="medium"
-              aria-label={i18n.resetProgram()}
-              style={{display: 'none'}}
-            >
-              <FontAwesomeV6Icon iconName="rotate-right" iconStyle="solid" />
-            </MuiIconButton>
-          </div>
+          // Hidden until StudioApp#toggleRunReset shows it on run.
+          <MuiIconButton
+            id="resetButton"
+            variant="contained"
+            color="secondary"
+            size="medium"
+            aria-label={i18n.resetProgram()}
+            style={{
+              ...playButtonPosition(getAppWidth(this.props), APP_HEIGHT),
+              display: 'none',
+            }}
+          >
+            <FontAwesomeV6Icon iconName="rotate-right" iconStyle="solid" />
+          </MuiIconButton>
         )}
         {/* The playspace phone frame has a run/reset button, so we don't need to render and hide
             run/reset in GameButtons */}
@@ -177,12 +180,6 @@ const styles = {
     marginLeft: 'auto',
     marginRight: 'auto',
     textAlign: 'center',
-  },
-  resetButtonWrapper: {
-    position: 'absolute',
-    bottom: 5,
-    textAlign: 'center',
-    width: '100%',
   },
   containedInstructions: {
     marginTop: 10,
