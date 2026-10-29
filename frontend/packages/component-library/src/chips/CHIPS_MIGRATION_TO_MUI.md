@@ -329,6 +329,28 @@ workflow adds each as an MUI story when it deletes the legacy source.
 | Hover and pressed, unchecked and checked                               | MUI's root `transition` and `background-color` sit under these rules; needs a pseudo-state tool or an interaction test                                                                           |
 | A chip wider than its row (long label, narrow container)               | Shows the wrapping fix; the legacy chip overflows the row, so no DSCO twin can exist                                                                                                             |
 
+## Follow-ups
+
+New features, not part of the migration. They do not gate **Migrated**.
+
+**Icons.** Neither `Chips` nor `MuiChips` can show an icon: an option is
+`{value, label}`, and `MuiChipOption` puts only the input and the text in
+MUI's `label` slot. The Figma chip has a start and an end icon, either or
+both. The shape is open; candidates:
+
+- `iconLeft?` and `iconRight?: FontAwesomeV6IconProps` on each option, as
+  `Button` takes them, drawn inside the `<label>` beside the text. The whole
+  chip stays the click target and the spacing stays in `muiChips.module.scss`.
+- MUI `Chip`'s `icon` prop for the start icon. It renders outside the label
+  content, so the click target and spacing need checking, and `Chip` has no
+  end slot but `deleteIcon`, which belongs to `onDelete`.
+- `label: ReactNode`, leaving icons to the caller. Most flexible, but no
+  longer one size and color rule per chip size and state.
+
+Needs from Figma: icon size per chip size (xs to l), and color in the checked
+and disabled states. Lands after lifecycle step 4, so it is built in
+`MuiChips` alone.
+
 ## Consumer chunks
 
 Chunk size 25. One PR, stacked on the Execute PR.
