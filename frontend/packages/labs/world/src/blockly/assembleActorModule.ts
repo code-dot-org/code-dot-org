@@ -99,9 +99,14 @@ export function assembleWorldModule(
   // and the whole project stopped — and because esbuild rewrites the `const`,
   // it threw as "Cannot read properties of undefined (reading 'on')" rather
   // than as the use-before-declaration it actually is.
+  //
+  // An actor's hat about a PROPERTY is held by the world (`world.onSubject`),
+  // so it goes with the world's (specs/PROPERTY_SUBJECTS_PLAN.md).
   const handlers = blocks.filter(block => block.type.startsWith('world_on_'));
-  const onActors = handlers.filter(block => !worldEventTypes.has(block.type));
-  const onWorld = handlers.filter(block => worldEventTypes.has(block.type));
+  const heldByWorld = (block: GeneratedBlock) =>
+    worldEventTypes.has(block.type) || block.code.startsWith('world.');
+  const onActors = handlers.filter(block => !heldByWorld(block));
+  const onWorld = handlers.filter(heldByWorld);
   const rest = blocks.filter(
     block => !tweens.includes(block) && !handlers.includes(block),
   );

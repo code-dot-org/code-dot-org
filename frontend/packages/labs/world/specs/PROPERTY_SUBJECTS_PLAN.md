@@ -1,6 +1,6 @@
 # Plan: an actor property as an event's subject
 
-STATUS: BUILDING, October 2026. Steps 1 and 2 are done.
+STATUS: BUILDING, October 2026. Steps 1 to 3 are done.
 
 A hat can be about `this actor` or `any ⟨kind⟩`. This plan adds a third
 subject: an actor-typed property in scope. `when ⟨current player⟩ is hurt`
@@ -42,8 +42,8 @@ handler changed it (specs/SCREEN_STACK_PLAN.md, "Not in this plan").
   of them. Nothing is registered on an actor, so nothing has to be moved
   when the property changes and nothing is left on a removed actor.
 - **`this actor` keeps its meaning.** In a placement's code it is the
-  placement; in an actor file it is the actor. The actor the event is about
-  is `event actor`.
+  placement; in an actor file it is the actor. Which block names the actor
+  the event happened to is open (see "Open").
 - **Which properties are in scope**, by where the code is:
   - every file: the Main Screen's actor values;
   - a screen's own code and its placements': that screen's own actor
@@ -139,8 +139,33 @@ screen loads` for the first: `set current player to ⟨any Player⟩`.
   the queue asks after an actor's own handlers. One hung while a screen's
   script runs comes off with the screen, as a world handler does. The
   handler is handed the actor the event is about, as an actor's own is.
+- **Step 3 stores a property subject as its getter's block type** in
+  `SUBJECT`, beside this actor (empty) and a kind (its path). Every
+  `actor` and `actors` property is registered as a subject as its getter is
+  defined (`registerSubjectProperty`), and the field offers them all; which
+  are offered where is step 4. The subject's code is what the getter would
+  read from there: the Main Screen's by name from a map or screen, a
+  screen's own on its copy, a placement's own on `actor`.
+- **A kind heard from a map's, a screen's or a placement's code goes the
+  same way**, through `world.ofType`, so the actor the World already held
+  hears it and `this actor` stays the placement.
+- **The Main Screen's module puts these hats after `const world`**, with
+  the world's own, since they call `world.onSubject`; the builder records
+  the call. A subject is handed the World, since a module's `world` is the
+  builder.
+- **Any load's script now owns what it hangs through `onSubject`**, a
+  map's as well as a screen's; `World.on` still ties only a screen's.
+- **Compared before and after**: no difference but the random lessons'.
+  No content uses a property subject or a kind in placement code yet.
 
 ## Open
+
+- **Naming the actor the event happened to.** The plan said `event actor`,
+  and that is wrong: `event actor` is the value an event carries (the other
+  actor in a contact), not the actor it happened to. A property subject is
+  read through the property itself (`health of ⟨current player⟩`), so it
+  needs nothing. A kind heard from a placement's code does: the handler
+  binds it as `subject`, and no block reads that yet. Before step 4.
 
 - **Telling a display the subject has arrived or changed.** A handler on
   `is hurt` does not run when the player first arrives or a new level gives

@@ -77,7 +77,9 @@ import {
   ANY_INPUT,
   eventSubjectExtension,
   SUBJECT_FIELD,
+  registerSubjectProperty,
   subjectKindOf,
+  subjectPropertyOf,
   THIS_FIELD,
   THIS_INPUT,
 } from './eventSubject';
@@ -1381,6 +1383,33 @@ const onWorldHandler = (
  * - `import`: everything else, as it always was.
  */
 type ScreenReach = 'copy' | 'named' | 'unseen' | 'import';
+
+/**
+ * What an actor property holds, as code read when an event happens — a
+ * handler's subject (specs/PROPERTY_SUBJECTS_PLAN.md). A game value by
+ * where it is reached from (`screenReach`); an actor's own property on the
+ * placement whose code this is, `actor`, which a game's own code has none of.
+ * Nothing for one that cannot be reached from here.
+ */
+const subjectRead = (
+  property: PropertyMeta,
+  generator: JavascriptGenerator,
+): string | undefined => {
+  const inMap = (generator as {__mapModule?: string}).__mapModule;
+  if (property.scope !== 'world') {
+    return inMap ? `actor.get(${refCode(property.ref, generator)})` : undefined;
+  }
+  switch (screenReach(property.ref, generator)) {
+    case 'copy':
+      return `map.get(${refCode(property.ref, generator)})`;
+    case 'named':
+      return `world.valueNamed(${str(property.id)})`;
+    case 'unseen':
+      return undefined;
+    default:
+      return `world.get(${refCode(property.ref, generator)})`;
+  }
+};
 const screenReach = (
   ref: MemberRef,
   generator: JavascriptGenerator,
@@ -1693,6 +1722,28 @@ const defineEventBlock = (event: EventMeta) => {
             body,
             parameters,
             reach === 'copy' ? 'map' : 'world',
+          );
+        }
+        // ABOUT A PROPERTY, or a kind heard from a map's, a screen's or a
+        // placement's code: held by the World and read when the event
+        // happens, so it reaches the actors already there, follows a property
+        // set to another, and goes with the load that hung it. `actor` is not
+        // rebound, so `this actor` is still the placement; the actor the event
+        // happened to is `subject` (specs/PROPERTY_SUBJECTS_PLAN.md).
+        const property = subjectPropertyOf(block);
+        const kind = subjectKindOf(block);
+        const inMap = (generator as {__mapModule?: string}).__mapModule;
+        if (property || (kind && inMap)) {
+          const read = property
+            ? subjectRead(property, generator)
+            : `world.actors.ofType(${str(kind!)})`;
+          if (read === undefined) {
+            return '';
+          }
+          return (
+            `world.onSubject((world) => ${read}, ` +
+            `${refCode(event.ref, generator)}, ` +
+            `(world, subject, ${parameters.join(', ')}) => {\n${body}});\n`
           );
         }
         return onHandler(
@@ -3152,6 +3203,9 @@ const defineGetPropertyBlock = (property: PropertyMeta) => {
     // store narrows it (Traited), and this is what covers every path that does
     // not go through the store.
     registerManyActorBlock(type);
+    // …and a handler may be about whichever actor it holds
+    // (specs/PROPERTY_SUBJECTS_PLAN.md).
+    registerSubjectProperty(type, property);
   }
   registerMemberBlockType(type, property.ref);
 

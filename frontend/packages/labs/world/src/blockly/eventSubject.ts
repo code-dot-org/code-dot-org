@@ -13,8 +13,10 @@
 // built — and one thing broken: `this actor` in a world, which names an actor
 // nobody declared there and stopped the project as it loaded.
 //
-// ONE STORED FIELD, `SUBJECT`: empty means this actor, and a kind's module
-// path means any actor of that kind. The field decides what the block says,
+// ONE STORED FIELD, `SUBJECT`: empty means this actor, a kind's module path
+// means any actor of that kind, and an actor property's getter block type
+// means whichever actor that property holds when the event happens
+// (specs/PROPERTY_SUBJECTS_PLAN.md). The field decides what the block says,
 // so what it says follows from what is stored rather than from guessing the
 // file while a block loads — the file a block is in is not known until the
 // rest of the file has loaded around it. Which kind of file it is still
@@ -31,6 +33,7 @@ import {
   bindLiveOptions,
   type DropdownOptions,
 } from './moduleOptions';
+import type {PropertyMeta} from './ruleMeta';
 import {definesWorld, workspaceOfBlock} from './workspaceRoots';
 
 /** The stored field: empty for this actor, a kind's module path otherwise. */
@@ -46,9 +49,29 @@ export const EVENT_SUBJECT_EXTENSION = 'world_event_subject';
 
 const translate = (text: string): string => localization.translate(text);
 
-/** The kind a handler is about, or undefined for this actor. */
-export const subjectKindOf = (block: Block): string | undefined =>
-  (block.getFieldValue(SUBJECT_FIELD) as string | null) || undefined;
+/**
+ * The actor properties a handler may be about, by their getter's block type:
+ * every `actor` and `actors` property the palette defines.
+ */
+const subjectProperties = new Map<string, PropertyMeta>();
+
+/** Offer an actor property as a subject, under its getter's block type. */
+export const registerSubjectProperty = (
+  getterType: string,
+  property: PropertyMeta,
+): void => {
+  subjectProperties.set(getterType, property);
+};
+
+/** The property a handler is about, or undefined for this actor or a kind. */
+export const subjectPropertyOf = (block: Block): PropertyMeta | undefined =>
+  subjectProperties.get(String(block.getFieldValue(SUBJECT_FIELD) ?? ''));
+
+/** The kind a handler is about, or undefined for this actor or a property. */
+export const subjectKindOf = (block: Block): string | undefined => {
+  const value = (block.getFieldValue(SUBJECT_FIELD) as string | null) || '';
+  return value && !subjectProperties.has(value) ? value : undefined;
+};
 
 /** Whether the block sits in a world file, asking through a flyout. */
 const inWorld = (block: Block): boolean =>
@@ -69,6 +92,11 @@ const subjectOptions = (field?: FieldDropdown): DropdownOptions => {
     // `actorFieldOptions` says "(no actors yet)" with the empty value when
     // there are none, which here is the row above.
     ...actorFieldOptions().filter(([, value]) => value !== ''),
+    // …and the actor properties, by name.
+    ...[...subjectProperties].map(
+      ([getterType, property]) =>
+        [property.name, getterType] as [string, string],
+    ),
   ];
 };
 
@@ -92,10 +120,14 @@ export function syncSubject(block: Block): void {
   if (!block.getField(SUBJECT_FIELD)) {
     return;
   }
-  const kind = subjectKindOf(block);
+  const kind = subjectKindOf(block) ?? subjectPropertyOf(block)?.name;
   const picking = !kind && inWorld(block);
   setVisible(block, THIS_INPUT, !kind && !picking);
   setVisible(block, ANY_INPUT, Boolean(kind) || picking);
+  // `any` before a kind, and nothing before a property, which names one.
+  block
+    .getField(ANY_FIELD)
+    ?.setValue(subjectPropertyOf(block) ? '' : translate('any'));
   (block as BlockSvg).queueRender?.();
 }
 

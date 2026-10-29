@@ -34,11 +34,13 @@
 
 import type {EffectDocument} from '../../effect/model/types';
 import type {Actor} from '../core/Actor';
+import type {ActorValue} from '../core/actorValue';
 import type {Camera} from '../core/Camera';
 import type {ColorValue} from '../core/color';
 import {DEFAULT_LAYER_ID, type LayerInit} from '../core/Layer';
 import type {
   AppliedEffectSpec,
+  EventHandler,
   GameEvent,
   Property,
   PropertyType,
@@ -750,6 +752,15 @@ export class WorldBuilder {
    */
   loadMap(map: WorldMap, layer?: string): Actor[] {
     return this.readyWorld().loadMap(map, layer);
+  }
+
+  /** Hear an actor's event through a subject. See {@link World.onSubject}. */
+  onSubject(
+    subject: (world: World) => ActorValue | undefined,
+    event: GameEvent,
+    handler: EventHandler,
+  ): this {
+    return this.defer('onSubject', subject, event, handler);
   }
 
   /** Put a screen on the stack. See {@link World.showScreen}. */

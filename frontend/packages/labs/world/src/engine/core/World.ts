@@ -2075,7 +2075,9 @@ export class World {
     // Hung by a screen's code as it was shown, it goes when the screen does,
     // so showing it again does not hear the event twice
     // (specs/SCREEN_STACK_PLAN.md).
-    this.scriptLoad?.onUnload(() => this.off(event, handler));
+    if (this.scriptLoad?.screen) {
+      this.scriptLoad.onUnload(() => this.off(event, handler));
+    }
   }
 
   /** Stop handling a world event with this handler. */
@@ -2087,7 +2089,7 @@ export class World {
     }
   }
 
-  /** The screen whose script is running, while it runs. */
+  /** The load whose script is running, while it runs. */
   private scriptLoad: MapLoad | undefined;
 
   /**
@@ -2098,11 +2100,11 @@ export class World {
    * points the handler at it with nothing moved, and one that holds nobody
    * hears nothing. It is also how a kind is heard from a screen's or a
    * placement's code, with a `subject` that answers the kind's actors, so
-   * the actors already in the World hear it too. Hung while a screen's
-   * script runs, it goes when the screen does.
+   * the actors already in the World hear it too. Hung while a map's or a
+   * screen's script runs, it goes when that load does.
    */
   onSubject(
-    subject: () => ActorValue | undefined,
+    subject: (world: World) => ActorValue | undefined,
     event: GameEvent,
     handler: EventHandler,
   ): void {
@@ -2117,7 +2119,7 @@ export class World {
   }
 
   private readonly subjectHandlers: Array<{
-    subject: () => ActorValue | undefined;
+    subject: (world: World) => ActorValue | undefined;
     event: GameEvent;
     handler: EventHandler;
   }> = [];
@@ -2132,7 +2134,7 @@ export class World {
         if (entry.event !== event) {
           return false;
         }
-        const held = entry.subject();
+        const held = entry.subject(this);
         return held !== undefined && all(held).includes(actor);
       })
       .map(entry => entry.handler);
@@ -3230,7 +3232,7 @@ export class World {
       // there and not in the root (`here`).
       const script = map.script;
       const outer = this.scriptLoad;
-      this.scriptLoad = screen ? load : outer;
+      this.scriptLoad = load;
       try {
         this.withSpace(space, () =>
           script(this, Object.fromEntries(placed), load),
