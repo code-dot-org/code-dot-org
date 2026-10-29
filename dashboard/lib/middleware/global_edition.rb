@@ -64,8 +64,8 @@ module Middleware
         return app.call(env) if Cdo::GlobalEdition.excluded_path?(request.path)
 
         # Allows setting the GE region via the URL parameter `?ge_region=<region_code>`.
-        if request.GET.key?(REGION_KEY)
-          new_region = request.GET[REGION_KEY].presence
+        if query_params.key?(REGION_KEY)
+          new_region = query_params[REGION_KEY].presence
 
           redirect_path =
             if new_region.nil? || Cdo::GlobalEdition.region_available?(new_region)
@@ -74,9 +74,9 @@ module Middleware
               original_path
             end
 
-          redirect_uri = URI(redirect_path)
-          redirect_uri.query = URI.encode_www_form(request.GET.except(REGION_KEY)).presence
-          redirect_path = ActionDispatch::Journey::Router::Utils.normalize_path(redirect_uri.to_s)
+          redirect_path = ActionDispatch::Journey::Router::Utils.normalize_path(
+            [redirect_path, query_params.except(REGION_KEY).to_query.presence].compact.join('?')
+          )
 
           setup_redirect_to(redirect_path)
           setup_region(new_region)
@@ -123,6 +123,14 @@ module Middleware
       private def response
         return @redirect_response if @redirect_response
         @response ||= Rack::Response[*app.call(env)]
+      end
+
+      private def query_params
+        @query_params ||= begin
+          request.GET
+        rescue ActionController::BadRequest
+          {}
+        end
       end
 
       private def path_match

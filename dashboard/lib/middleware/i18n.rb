@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'uri'
 require 'cdo/i18n'
 require 'cdo/rack/response'
 
@@ -31,12 +30,10 @@ module Middleware
         if param_locale
           response = Rack::Response.new
           response.set_cdo_cookie(LOCALE_COOKIE_KEY, param_locale)
-
-          redirect_uri = URI(request.path)
-          redirect_uri.query = request.GET.except(LOCALE_PARAM_KEY).to_query.presence
-
-          response.redirect redirect_uri.to_s
           response.do_not_cache!
+          response.redirect ActionDispatch::Journey::Router::Utils.normalize_path(
+            [request.path, request.GET.except(LOCALE_PARAM_KEY).to_query.presence].compact.join('?')
+          )
         else
           request_locale = cookie_locale || http_locale
           ::I18n.locale = request_locale || Cdo::I18n::DEFAULT_LOCALE
@@ -65,6 +62,9 @@ module Middleware
 
       private def param_locale
         @param_locale ||= resolve_locale(request.GET[LOCALE_PARAM_KEY])
+      rescue Rack::Utils::InvalidParameterError, Rack::Utils::ParameterTypeError, Rack::QueryParser::ParamsTooDeepError
+        # Rails rejects a malformed query string with a 400 further down the stack.
+        nil
       end
 
       private def cookie_locale
