@@ -24,11 +24,13 @@ case "$MODE" in
     ;;
   no-production-curriculum)
     # Only non-cone patterns can say "everything except these trees". The
-    # mode is set through config because --no-cone needs git 2.35 and the CI
-    # image has 2.25.
+    # patterns file is written directly: `sparse-checkout set` needs
+    # --no-cone to take them as written, which git 2.25 (the CI image) lacks,
+    # and without it git 2.37 and later rewrite them as cone directories.
     git config core.sparseCheckout true
     git config core.sparseCheckoutCone false
-    git sparse-checkout set --stdin < "$PATTERNS"
+    cp "$PATTERNS" "$(git rev-parse --git-path info/sparse-checkout)"
+    git sparse-checkout reapply
     ;;
   verify)
     # Report what the clone holds, and fail if an omitted tree is present in
