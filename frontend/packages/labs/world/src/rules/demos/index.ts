@@ -23,6 +23,7 @@ import {dragDemo} from './drag';
 import {driveDemo} from './drive';
 import {expiresDemo} from './expires';
 import {flappingDemo} from './flapping';
+import {gesturesDemo} from './gestures';
 import {goalsDemo} from './goals';
 import {gravityDemo} from './gravity';
 import {gridDemo} from './grid';
@@ -32,8 +33,6 @@ import {inputDemo} from './input';
 import {inventoryDemo} from './inventory';
 import {jetpackDemo} from './jetpack';
 import {jumpDemo} from './jump';
-import {gesturesDemo} from './gestures';
-import {screensDemo} from './screens';
 import {mouseDemo} from './mouse';
 import {pathDemo} from './path';
 import {patrolDemo} from './patrol';
@@ -76,7 +75,6 @@ export const RULE_DEMOS: Readonly<Record<string, RuleDemo>> = {
   turns: turnsDemo,
   input: inputDemo,
   gestures: gesturesDemo,
-  screens: screensDemo,
   mouse: mouseDemo,
   arrows: arrowsDemo,
   gravity: gravityDemo,

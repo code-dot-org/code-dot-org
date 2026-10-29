@@ -168,14 +168,6 @@ export interface WorldMap {
   size?: {width: number; height: number};
   tile?: {width: number; height: number};
   /**
-   * Whether loading this map COVERS what is already there.
-   *
-   * A screen says yes and an overlay says no. It is a fact about the map
-   * rather than about the block that loads it: a dialog is a dialog wherever
-   * it is put on, and a HUD is never one (specs/MODALITY_PLAN.md).
-   */
-  modal?: boolean;
-  /**
    * A screen's color, behind its placements (specs/SCREEN_STACK_PLAN.md).
    * Opaque, it covers the screens under it, which are not drawn; partly
    * clear, they show through. Read when the map is shown as a screen.
@@ -294,18 +286,6 @@ export class MapLoad {
   readonly space: Space;
   /** Every actor this load placed, in placement order. */
   readonly actors: readonly Actor[];
-  /**
-   * Whether this load COVERS what is under it — a dialog rather than a HUD.
-   *
-   * Input stops at the topmost modal load: everything placed by it or by a
-   * load above it can be clicked, tabbed to and typed at, and everything
-   * below cannot (`World.canReach`). A screen is modal; an overlay is not,
-   * and the difference is not "which is on top" — an on-screen keyboard sits
-   * ABOVE the form it types into and must not lock it out
-   * (specs/MODALITY_PLAN.md).
-   */
-  readonly modal: boolean;
-
   /** The theme this map named, or empty — see `WorldMap.theme`. */
   readonly theme: string;
 
@@ -334,7 +314,6 @@ export class MapLoad {
     world: World,
     actors: readonly Actor[],
     space: Space,
-    modal = false,
     theme = '',
     screen = false,
     color?: Rgba,
@@ -344,7 +323,6 @@ export class MapLoad {
     this.actors = actors;
     this.space = space;
     this.among = space.loads;
-    this.modal = modal;
     this.theme = theme;
     this.screen = screen;
     this.color = color;
@@ -2284,9 +2262,9 @@ export class World {
   }
 
   /**
-   * Place the screen's own map: the Main Screen's placements, or a map put
-   * up over them (`load the map named`). What a Viewport it places shows is
-   * the World, which the screen's module has loaded first.
+   * Place a screen on the stack: the Main Screen's placements, or a screen
+   * shown over them (`showScreen`). What a Viewport it places shows is the
+   * World, which the Main Screen's module has loaded first.
    */
   loadScreen(map: WorldMap, layer?: string): Actor[] {
     return this.onScreen(() => this.placeOnScreen(map, layer, true));
@@ -3031,44 +3009,6 @@ export class World {
   }
 
   /**
-   * Load a map the project holds, BY PATH — `load the map named ⟨…⟩`.
-   *
-   * The counterpart of `loadMap`, which takes the map itself and so can only
-   * name one a file imported. A path can be worked out: which screen to go
-   * to, which level is next. Every map a project holds is registered here
-   * whether or not anything imports it, for the reason a Viewport needs
-   * (`defineMap`), so a path is enough.
-   *
-   * OVER THE SCREEN, from any code: this and `unload the newest map` are
-   * the screen's stack until screens are (specs/SCREEN_STACK_PLAN.md), where
-   * `load map` is the World's.
-   *
-   * A path nothing registered loads nothing, which is what the path says.
-   */
-  loadMapNamed(path: string, layer?: string): Actor[] {
-    const held = this.maps.get(path);
-    return held
-      ? this.onScreen(() => this.placeOnScreen(held, layer, false))
-      : [];
-  }
-
-  /**
-   * Close the newest map over the screen, and say whether there was one —
-   * `unload the newest map`, and the whole of what "back" is
-   * (specs/SCREENS_PLAN.md).
-   *
-   * The map a world was BUILT from is a load like any other, so a project
-   * that goes back often enough closes its own first screen and is left with
-   * nothing. That is what it asked for; a rule that keeps a floor under it is
-   * the rule's business, and `Screens` keeps one.
-   */
-  unloadNewestMap(): boolean {
-    const load = this.rootSpace.loads.at(-1);
-    load?.unload();
-    return load !== undefined;
-  }
-
-  /**
    * Place a map's actors into `space` — `loadMap`'s body, for any space.
    *
    * `beforeScript` is told what was placed once every reference is followed
@@ -3221,7 +3161,6 @@ export class World {
       this,
       added,
       space,
-      map.modal === true,
       typeof map.theme === 'string' ? map.theme : '',
       screen,
       screen && map.backgroundColor !== undefined
@@ -3564,7 +3503,7 @@ export class World {
    *
    * `loadOf` is what makes the middle one possible, and it was already there:
    * the world keeps which load placed each actor so `canReach` can ask
-   * (specs/MODALITY_PLAN.md).
+   * (specs/SCREEN_STACK_PLAN.md).
    */
   themeFor(actor: Actor): ResolvedTheme {
     // ASKED WHETHER IT HAS ONE, not assumed. `use style` is a pen block and
@@ -4309,32 +4248,12 @@ export class World {
   }
 
   /**
-   * Whether input reaches this actor — `⟨…⟩ can be reached`.
-   *
-   * FALSE WHILE SOMETHING MODAL COVERS IT. A screen loaded over another is a
-   * dialog: the one in front takes the clicks, the tabbing and the typing,
-   * and what is behind waits. Every interface anybody has used works this
-   * way, and nothing here said so until an on-screen keyboard's keys started
-   * pressing the button on the screen behind them (specs/MODALITY_PLAN.md).
-   *
-   * MEASURED FROM THE TOPMOST MODAL LOAD, not from the top of the stack, and
-   * that is the whole of the design. A keyboard sits ABOVE the form it fills
-   * and must not lock it out; a dialog sits above a list and must. So a map
-   * says which it is (`WorldMap.modal`), and everything placed by the topmost
-   * modal load OR BY ANYTHING ABOVE IT can be reached.
-   *
-   * AN ACTOR NO MAP PLACED IS BEHIND EVERYTHING. `add actor` in a world's
-   * body, a bullet a handler made: they belong to no load, which puts them
-   * under the bottom one, so a dialog covers them too. That is what a dialog
-   * over a game has to mean.
-   *
-   * THE ROOT SPACE DECIDES FOR EVERYBODY. Screens are the root's stack, and a
-   * level playing inside a Viewport is behind whatever is over the window —
-   * so a modal in the root covers the other spaces whole. A modal loaded
-   * INSIDE a Viewport is not a case anybody has needed and is not answered.
+   * Whether input reaches this actor — `⟨…⟩ can be reached`: whether it is
+   * on the top screen, or in the World through that screen's Viewports
+   * (specs/SCREEN_STACK_PLAN.md).
    */
   canReach(actor: Actor): boolean {
-    return this.onTopScreen(actor) && this.underNoModal(actor);
+    return this.onTopScreen(actor);
   }
 
   /**
@@ -4361,23 +4280,6 @@ export class World {
     }
     const load = this.loadOf.get(actor);
     return load ? loads.indexOf(load) >= top : false;
-  }
-
-  /** …and through the modal loads, until screens replace them. */
-  private underNoModal(actor: Actor): boolean {
-    const loads = this.rootSpace.loads;
-    let topModal = -1;
-    for (let at = loads.length - 1; at >= 0; at -= 1) {
-      if (loads[at].modal) {
-        topModal = at;
-        break;
-      }
-    }
-    if (topModal < 0) {
-      return true;
-    }
-    const load = this.loadOf.get(actor);
-    return load ? loads.indexOf(load) >= topModal : false;
   }
 
   /**

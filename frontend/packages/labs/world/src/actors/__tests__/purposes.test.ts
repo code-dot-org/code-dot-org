@@ -18,7 +18,7 @@ describe('what the shelves hold is for', () => {
     }
     const of = (purpose: OfferedTo) =>
       STOCK_RULES.filter(rule => rule.for === purpose).map(rule => rule.name);
-    expect(of('interface')).toEqual(['Screens', 'Tab Navigation']);
+    expect(of('interface')).toEqual(['Tab Navigation']);
     expect(of('both')).toEqual([
       'Health',
       'Time',

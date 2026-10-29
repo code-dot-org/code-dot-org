@@ -444,9 +444,8 @@ export const SCENARIOS_AS_WRITTEN: Record<WorldScenarioTag, WorldScenario> = {
   app: {
     name: 'Notes',
     description:
-      'An app rather than a game: two screens, a form with an on-screen ' +
-      'keyboard, a list of what you wrote, and it is all still there after a ' +
-      'reload.',
+      'An app rather than a game: two screens, a form, a list of what you ' +
+      'wrote, and it is all still there after a reload.',
     source: notesApp(buildProject(EMPTY_APP_SPEC).source),
     // App Builder: no game rules or actors on offer, and no layers or
     // cameras in the map editor (`appBuilder`, specs/APPS.md).
@@ -455,14 +454,10 @@ export const SCENARIOS_AS_WRITTEN: Record<WorldScenarioTag, WorldScenario> = {
       '## Notes\n\nWrite something down. Come back tomorrow and it is ' +
       'still there.\n\n' +
       '- Every piece of this was built on its own and this is where they ' +
-      'meet: two SCREENS, a FORM, a KEYBOARD, a LIST, ANCHORING and ' +
-      'SAVING (specs/APPS.md)\n' +
-      '- NEW NOTE is `go to screen`, which puts a map over what is showing; ' +
-      'SAVE and CANCEL are `go back`, twice, because the keyboard went on ' +
-      'over the form and comes off with it\n' +
-      '- The keys type. None of them names the field — each one raises what ' +
-      'a real keyboard raises, so the field that has the focus is the one ' +
-      'that fills, and you can use your own keyboard instead\n' +
+      'meet: two SCREENS, a FORM, a LIST, ANCHORING and SAVING ' +
+      '(specs/APPS.md)\n' +
+      '- NEW NOTE is `show screen`, which puts the write screen on top of ' +
+      'home; SAVE and CANCEL are `go back`, which takes it off\n' +
       '- The notes are a game-wide value, kept in the Main Screen, so ' +
       '`save what the world remembers` is one block and not a format. ' +
       'Reload the preview and ' +

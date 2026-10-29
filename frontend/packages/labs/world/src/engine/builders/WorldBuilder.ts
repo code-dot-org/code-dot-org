@@ -752,23 +752,6 @@ export class WorldBuilder {
     return this.readyWorld().loadMap(map, layer);
   }
 
-  /** …and one named by its path, which a description may also say. */
-  loadMapNamed(path: string, layer?: string): Actor[] {
-    return this.readyWorld().loadMapNamed(path, layer);
-  }
-
-  /**
-   * …and taking the newest one back, which a description may also say.
-   *
-   * Here for the same reason `loadMap` is: the block means the same thing in
-   * a handler as it does under `define world` (`domainBlocks.worldLoadMap`),
-   * and a surface that carried one and not the other would make the pair mean
-   * two different things depending on where it was written.
-   */
-  unloadNewestMap(): boolean {
-    return this.readyWorld().unloadNewestMap();
-  }
-
   /** Put a screen on the stack. See {@link World.showScreen}. */
   showScreen(path: string): Actor[] {
     return this.readyWorld().showScreen(path);
@@ -890,8 +873,8 @@ export class WorldBuilder {
     //
     // BEFORE THE LOG, which is the whole of why this is here rather than
     // around the call that builds the world. A deferred call may NEED one of
-    // them: `go to screen ⟨maps/home⟩` in a world's body is a rule action that
-    // loads a map by path, and `add actor ⟨Coin⟩` needs the template. Replayed
+    // them: `show screen ⟨screens/home⟩` in a world's body shows a screen by
+    // path, and `add actor ⟨Coin⟩` needs the template. Replayed
     // against a world that has not been told, each one quietly does nothing —
     // no throw, no empty map, just a screen that never appears. That is how
     // the Notes fixture opened on a blank world (specs/APPS.md).

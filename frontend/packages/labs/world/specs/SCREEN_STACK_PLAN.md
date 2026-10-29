@@ -1,6 +1,6 @@
 # Plan: screens are a stack, and each one holds its own words
 
-STATUS: BUILDING, October 2026. Steps 1 to 5 are done. Comes after
+STATUS: BUILDING, October 2026. Steps 1 to 6 are done. Comes after
 specs/ONE_WORLD_PLAN.md: it assumes one World, flat screens, and Viewports
 that look at the World.
 
@@ -245,6 +245,20 @@ Screen's color stays the main camera's clear color.
   through the World's own typing (`World.type`).
 - **Seen in the browser**: P in Breakout brings up the menu with the game
   dimmed behind it, and Resume takes it away.
+
+- **Step 6 deleted what the plan said goes**: the `Screens` rule, its
+  demo, the `place/map` tile's grant of it and of `load the map named` and
+  `unload the newest map`; both blocks and the engine's `loadMapNamed` and
+  `unloadNewestMap`; `WorldMap.modal`, `MapLoad.modal`, the walk over
+  modal loads in `canReach`, and the map inspector's "Covers what is under
+  it". `canReach` is the top screen's question and nothing else.
+- **The Keyboard, Tab Bar and Message stock maps went too**, by decision:
+  each is used beside what is under it, which waits for a screen that lets
+  input through. The stock shelf of maps holds the two screens now, so a
+  map's dropdown no longer offers `(import…)`.
+- **Seen in the browser**: in the Notes app, NEW NOTE shows the write
+  screen over home, typing fills the field, and SAVE goes back with the
+  note listed.
 
 ## Not in this plan
 

@@ -98,15 +98,6 @@ describe('the stack of screens', () => {
     expect(named(world, 'Resume')).toBeDefined();
   });
 
-  it('takes off what was put up over the top screen with it', () => {
-    const world = makeWorld();
-    world.showScreen('screens/pause');
-    world.loadMapNamed('screens/peek');
-    world.goBack();
-    expect(named(world, 'Score')).toBeUndefined();
-    expect(world.screens()).toHaveLength(1);
-  });
-
   it('shows nothing for a path nothing registered', () => {
     const world = makeWorld();
     expect(world.showScreen('screens/nowhere')).toEqual([]);
@@ -133,14 +124,6 @@ describe('input on the stack', () => {
     expect(world.canReach(coin)).toBe(false);
     world.showScreen('screens/peek');
     expect(world.canReach(coin)).toBe(true);
-  });
-
-  it('reaches what was put up over the top screen', () => {
-    const world = makeWorld();
-    world.showScreen('screens/pause');
-    world.loadMapNamed('screens/peek');
-    expect(world.canReach(named(world, 'Score'))).toBe(true);
-    expect(world.canReach(named(world, 'Resume'))).toBe(true);
   });
 });
 

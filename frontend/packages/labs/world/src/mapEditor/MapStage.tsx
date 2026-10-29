@@ -3812,14 +3812,6 @@ export const MapStage = ({
           !inspectedCamera &&
           !world && (
             <MapInspector
-              modal={map.modal === true}
-              // `undefined` and not `false` for the off state: every map written
-              // before modality existed says nothing, and writing `false` into all
-              // of them would be a diff per map for no change in meaning
-              // (specs/MODALITY_PLAN.md).
-              onModal={modal =>
-                commit({...mapRef.current, modal: modal || undefined})
-              }
               theme={map.theme}
               themeOptions={themeOptions}
               onTheme={path => commit({...mapRef.current, theme: path})}

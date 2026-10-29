@@ -338,24 +338,12 @@ export interface MapDoc {
   tile: Tile;
   actors: Placement[];
   /**
-   * Whether loading this map COVERS what is already there.
-   *
-   * A screen says yes and an overlay says no: while a modal map is on, input
-   * stops at it and nothing under it can be clicked, tabbed to or typed at
-   * (`World.canReach`, specs/MODALITY_PLAN.md). Absent reads as false, which
-   * is every map written before the flag existed and every HUD since.
-   */
-  modal?: boolean;
-  /**
    * The theme everything this map places is painted out of, by module path.
    *
    * THE MIDDLE OF THREE. A drawing names a class and never a file; which file
    * cascades — the world sets the base, this overrides it for the map, and a
    * placement overrides that (specs/STYLES_PLAN.md). Absent takes the
    * world's, which is every map written before this.
-   *
-   * Beside `modal` because it is the same kind of fact: something true of the
-   * map rather than of any one thing on it, and edited in the same panel.
    */
   theme?: string;
   /**
@@ -448,9 +436,7 @@ export function mapFromRaw(raw: Partial<MapDoc>): MapDoc {
       : {}),
     // …and the facts about the map as a whole, which were left behind here
     // once: the editor read a map without them, and its next save wrote the
-    // map back without them, so a screen stopped covering what was under it
-    // and a theme went back to the world's.
-    ...(raw.modal === true ? {modal: true} : {}),
+    // map back without them, so a theme went back to the world's.
     ...(isLayout(raw.layout) ? {layout: raw.layout} : {}),
     ...(typeof raw.theme === 'string' && raw.theme ? {theme: raw.theme} : {}),
   };

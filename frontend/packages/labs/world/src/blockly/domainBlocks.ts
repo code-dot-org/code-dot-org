@@ -4838,68 +4838,6 @@ const worldUnloadThisMap = defineBlock({
 });
 
 /**
- * `load the map named ⟨…⟩` — a map put up over the screen, by path.
- *
- * The screen's stack until screens are one (specs/SCREEN_STACK_PLAN.md): a
- * pause menu over a game, a form over a list. `load map` is the World's.
- * Every map a project holds is registered by path (`World.defineMap`), so a
- * path is all this takes, and one nothing registered loads nothing.
- */
-const worldLoadMapNamed = defineBlock({
-  type: 'world_load_map_named',
-  message0: 'load the map named %1',
-  args0: [{type: 'input_value', name: 'PATH', check: 'String'}],
-  previousStatement: true,
-  nextStatement: true,
-  inputsInline: true,
-  extensions: [worldContextExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Put a map up over the screen, named by its file. What is already there ' +
-    'stays, so a menu loaded this way comes up over the game.',
-  generator: {
-    javascript(block, generator) {
-      const path = generator.valueToCode(block, 'PATH', Order.NONE) || "''";
-      return `world.loadMapNamed(${path});\n`;
-    },
-  },
-});
-
-/**
- * `unload the newest map` — close the screen on top, from anywhere.
- *
- * The counterpart of the block above, and the one thing a stack of screens
- * needed that the lab did not have (specs/SCREENS_PLAN.md). `unload this map`
- * says "this one", through a binding only a map's own script is given; a Back
- * button on the screen BELOW, or a rule that manages screens, has no such
- * binding and no way to say what it means.
- *
- * THE WORLD'S OWN MAPS, not a Viewport's. A Viewport shows one map and
- * swapping it is `load map ⟨…⟩ into ⟨…⟩`, which says so; this is about the
- * maps a world loads over itself, which is what a screen is.
- *
- * Nothing loaded is not an error. A project that goes back once too often has
- * asked for an empty world and gets one, and a rule that wants a floor under
- * its stack keeps one itself.
- */
-const worldUnloadNewestMap = defineBlock({
-  type: 'world_unload_newest_map',
-  message0: 'unload the newest map',
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [worldContextExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Remove everything the most recently loaded map placed. What was here ' +
-    'before it — including the map under it — stays.',
-  generator: {
-    javascript() {
-      return 'world.unloadNewestMap();\n';
-    },
-  },
-});
-
-/**
  * `show screen ⟨…⟩` — put a screen on top of the stack (specs/SCREEN_STACK_PLAN.md).
  *
  * Built in, with no rule to read: pushing a screen is not code a learner
@@ -9642,18 +9580,15 @@ const worldPixelsPerUnit = defineBlock({
 });
 
 /**
- * `⟨actor⟩ can be reached` — whether input gets to it, or something covers it.
+ * `⟨actor⟩ can be reached` — whether input gets to it, or a screen covers it.
  *
- * THE ONE QUESTION EVERY INPUT RULE HAS TO ASK. A screen loaded over another
- * is a dialog: the one in front takes the clicks, the tabbing and the typing.
- * Before this, both screens took everything, and a key on an on-screen
- * keyboard also pressed the button on the screen behind it
- * (`World.canReach`, specs/MODALITY_PLAN.md).
+ * THE ONE QUESTION EVERY INPUT RULE HAS TO ASK. Only the top screen takes the
+ * clicks, the tabbing and the typing, and the World only through that
+ * screen's Viewports (`World.canReach`, specs/SCREEN_STACK_PLAN.md).
  *
  * IN THE ENGINE DRAWER, because it is a rule's question rather than a
- * project's. A `.world` that asked it would be second-guessing the rules that
- * deliver its events; what a project says instead is which of its MAPS are
- * screens, and it says that in the map.
+ * project's: a project says which screen is on top, and the rules that
+ * deliver its events ask this.
  */
 const worldCanReach = defineBlock({
   type: 'world_can_reach',
@@ -10384,10 +10319,8 @@ export const DOMAIN_BLOCKS = [
   worldActorKind,
   worldPlacement,
   worldUnloadThisMap,
-  worldUnloadNewestMap,
   worldShowScreen,
   worldGoBack,
-  worldLoadMapNamed,
   worldOnMapLoads,
   worldOnMapUnloads,
   worldOnScreenLoads,
@@ -10737,11 +10670,7 @@ const TOOLBOX_HEAD: ToolboxCategory[] = [
       // The World's map, replaced (specs/ONE_WORLD_PLAN.md).
       'world_load_map',
       'world_map_ref',
-      // …and a map put up over the screen, and taken down again, until
-      // screens do it (specs/SCREEN_STACK_PLAN.md).
-      'world_load_map_named',
-      'world_unload_newest_map',
-      // …and the screens themselves.
+      // …and the screens the game shows (specs/SCREEN_STACK_PLAN.md).
       'world_show_screen',
       'world_go_back',
 
@@ -10855,9 +10784,8 @@ const ENGINE_CATEGORY: ToolboxCategory = {
   name: 'Engine',
   blocks: [
     'world_is_key_down', // the polling side: "while held"
-    // …and who is allowed to hear any of it. A screen over a screen is a
-    // dialog, and every rule that delivers input has to ask
-    // (specs/MODALITY_PLAN.md).
+    // …and who is allowed to hear any of it: only the top screen
+    // (specs/SCREEN_STACK_PLAN.md).
     'world_can_reach',
     // …and whether a Scroll View hides it where the pointer is.
     'world_shows_at_pointer',

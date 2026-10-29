@@ -26,14 +26,13 @@ import {buildsApps, type WorldLevelProperties} from './levelData';
  * The stock rules an app is offered, by `rules/stock` id.
  *
  * Input and the pointer, a finger's gestures, focus moving between fields,
- * screens to go to and back from, the clock, and undo.
+ * the clock, and undo. Screens are built in (specs/SCREEN_STACK_PLAN.md).
  */
 export const APP_RULES: ReadonlySet<string> = new Set([
   'input',
   'mouse',
   'gestures',
   'tabNavigation',
-  'screens',
   'time',
   'history',
 ]);

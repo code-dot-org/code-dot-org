@@ -1096,26 +1096,6 @@ describe('a level, with nothing selected', () => {
     expect(view.queryByLabelText('Camera follows')).toBeNull();
   });
 
-  it('marks the map as a screen, and unmarks it back to absent', () => {
-    // A dialog covers what is under it and a HUD does not, which is a fact
-    // about the MAP (specs/MODALITY_PLAN.md). Unticking writes `undefined`
-    // rather than `false`, so a map that is not a screen reads exactly as every
-    // map written before the flag existed.
-    const {written, ...view} = mount(doc());
-    const box = view.getByLabelText('Covers what is under it');
-    expect(box).not.toBeChecked();
-
-    fireEvent.click(box);
-    expect(written().modal).toBe(true);
-
-    fireEvent.click(view.getByLabelText('Covers what is under it'));
-    expect(written().modal).toBeUndefined();
-    // …and the claim that is about the FILE rather than the object: `undefined`
-    // is a key in memory and nothing at all once serialized, which is why
-    // unticking leaves no trace rather than writing `false` into every map.
-    expect(JSON.stringify(written())).not.toContain('modal');
-  });
-
   it('sets the background of the layer at the back', () => {
     // The map's background is its back layer's, the one `set background to`
     // sets — offered here so a map has one without the Layers panel.

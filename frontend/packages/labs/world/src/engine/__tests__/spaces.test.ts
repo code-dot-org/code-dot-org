@@ -1019,18 +1019,6 @@ describe('world blocks act on the World', () => {
     expect(coin.world).toBeUndefined();
     expect(world.spaceOf(world.camera()).loads).toHaveLength(before);
   });
-
-  it('puts a map up over the screen by name, and takes the newest back', () => {
-    // The screen's stack until screens are (specs/SCREEN_STACK_PLAN.md).
-    const {world, coin, space} = loaded();
-    world.defineMap('maps/menu', {actors: [{type: 'actors/coin', id: 'm'}]});
-    const [menu] = world.withActor(coin, () => world.loadMapNamed('maps/menu'));
-    expect(world.spaceOf(menu).id).toBe('main');
-    expect(space.loads).toHaveLength(1);
-    expect(world.withActor(coin, () => world.unloadNewestMap())).toBe(true);
-    expect(menu.world).toBeUndefined();
-    expect(space.loads).toHaveLength(1);
-  });
 });
 
 describe('a Viewport placed by a map', () => {

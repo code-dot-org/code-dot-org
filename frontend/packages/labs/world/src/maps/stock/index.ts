@@ -12,8 +12,7 @@
 
 import type {RaisedEvent} from '../declareEvents';
 
-import {confirmMap, messageMap, tabsMap} from './dialogs';
-import {keyboardMap} from './keyboard';
+import {confirmMap} from './confirm';
 import {pauseMenuMap} from './pauseMenu';
 
 export interface StockMap {
@@ -55,14 +54,6 @@ export const STOCK_MAPS: readonly StockMap[] = [
     screen: true,
   },
   {
-    id: 'keyboard',
-    name: 'On-Screen Keyboard',
-    description:
-      'Five rows of keys that type. Load it when a text field takes the focus and unload it when nothing has the focus — every key types as if the real keyboard had, so whichever field is focused fills.',
-    actors: ['panel', 'button'],
-    contents: keyboardMap,
-  },
-  {
     id: 'confirm',
     name: 'Are You Sure?',
     description:
@@ -71,37 +62,6 @@ export const STOCK_MAPS: readonly StockMap[] = [
     raises: [{name: 'yes'}, {name: 'no'}],
     contents: confirmMap,
     screen: true,
-  },
-  {
-    id: 'tabs',
-    name: 'Tab Bar',
-    description:
-      'A row of tabs across the foot of the screen. Each says which was chosen, by the word on it, so the project decides what screen each one goes to — and adding a fourth tab is adding a button.',
-    actors: ['panel', 'button'],
-    // THE ONE STOCK EVENT THAT CARRIES A VALUE: the caption of whichever tab
-    // was pressed, so that adding a fourth tab is adding a Button rather than
-    // a fourth event named for a screen the map should not know about.
-    raises: [
-      {
-        name: 'a tab is chosen',
-        carries: {
-          id: 'tabsWhich',
-          name: 'which',
-          type: 'string',
-          binds: 'String',
-        },
-      },
-    ],
-    contents: tabsMap,
-  },
-  {
-    id: 'message',
-    name: 'Message',
-    description:
-      'A line of words over the app with a way to be rid of it. Load it to say something happened; it goes when it is tapped, or when the project takes it away.',
-    actors: ['panel', 'label', 'button'],
-    raises: [{name: 'dismissed'}],
-    contents: messageMap,
   },
 ];
 

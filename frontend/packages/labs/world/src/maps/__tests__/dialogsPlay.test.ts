@@ -1,10 +1,9 @@
-// The three arrangements, PLAYED.
+// The stock confirm, PLAYED.
 //
-// Each is a Panel and some Buttons, so what is worth pinning is not that they
-// draw — it is what they SAY and what they cover. A confirm that could be
-// clicked past would be a picture of a dialog; a tab bar that named the
-// project's screens would not be reusable; a message that stopped the app
-// would be a dialog (specs/UI_ACTORS.md, specs/MODALITY_PLAN.md).
+// A Panel and some Buttons, so what is worth pinning is not that it draws —
+// it is what it SAYS and what it covers. A confirm that could be clicked past
+// would be a picture of a dialog (specs/UI_ACTORS.md,
+// specs/SCREEN_STACK_PLAN.md).
 
 import {describe, expect, it} from 'vitest';
 
@@ -18,9 +17,8 @@ import {importStockMap} from '../importStockMap';
 import {stockMapById} from '../stock';
 
 /**
- * A button of the project's own on the Main Screen, and the dialog put up
- * over it as the screen loads: shown, for one that is a screen, and loaded
- * over it, for one that is still a map (specs/SCREEN_STACK_PLAN.md).
+ * A button of the project's own on the Main Screen, and the dialog shown over
+ * it as the screen loads (specs/SCREEN_STACK_PLAN.md).
  */
 const SCREEN = (id: string) => ({
   actors: [
@@ -37,22 +35,10 @@ const SCREEN = (id: string) => ({
         {
           type: 'world_on_screen_loads',
           next: {
-            block: stockMapById(id)!.screen
-              ? {
-                  type: 'world_show_screen',
-                  fields: {SCREEN: `screens/${id}`},
-                }
-              : {
-                  type: 'world_load_map_named',
-                  inputs: {
-                    PATH: {
-                      shadow: {
-                        type: 'world_map_ref',
-                        fields: {MAP: `maps/${id}`},
-                      },
-                    },
-                  },
-                },
+            block: {
+              type: 'world_show_screen',
+              fields: {SCREEN: `screens/${id}`},
+            },
           },
         },
       ],
@@ -151,48 +137,5 @@ describe('the confirm dialog', () => {
     tap(named('No')!);
     expect(said).toHaveLength(1);
     expect(named('Ask')).toBeFalsy();
-  });
-});
-
-describe('the tab bar', () => {
-  it('says which tab, by the word on it', async () => {
-    const {named, tap, counting} = await play('tabs');
-    const said = counting('ATabIsChosenEvent');
-    tap(named('Tab SEARCH')!);
-    expect(said).toEqual(['SEARCH']);
-  });
-
-  it('stays, because a tab bar is the thing that does not go away', async () => {
-    const {named, tap} = await play('tabs');
-    tap(named('Tab HOME')!);
-    expect(named('Bar')).toBeTruthy();
-  });
-
-  it('does not cover the app under it', async () => {
-    const {world} = await play('tabs');
-    const behind = [...world.actors].find(
-      one => one.type === 'actors/button' && !one.id.startsWith('Tab '),
-    )!;
-    expect(world.canReach(behind)).toBe(true);
-  });
-});
-
-describe('the message', () => {
-  it('goes when it is dismissed, and says so', async () => {
-    const {named, tap, counting} = await play('message');
-    const said = counting('DismissedEvent');
-    expect(named('Note')).toBeTruthy();
-
-    tap(named('Dismiss')!);
-    expect(said).toHaveLength(1);
-    expect(named('Note')).toBeFalsy();
-  });
-
-  it('leaves the app usable while it is up', async () => {
-    const {world} = await play('message');
-    const behind = [...world.actors].find(
-      one => one.type === 'actors/button' && one.id !== 'Dismiss',
-    )!;
-    expect(world.canReach(behind)).toBe(true);
   });
 });

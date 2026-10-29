@@ -1157,12 +1157,6 @@ export const TILES: readonly Tile[] = [
       // World's (specs/ONE_WORLD_PLAN.md).
       {kind: 'block', type: 'world_load_map'},
       {kind: 'block', type: 'world_map_ref'},
-      // …and the two that put maps up over the screen and take them down: a
-      // pause menu over a game. The rule beside them gives it a vocabulary
-      // (specs/SCREENS_PLAN.md).
-      {kind: 'block', type: 'world_load_map_named'},
-      {kind: 'block', type: 'world_unload_newest_map'},
-      {kind: 'rule', id: 'screens'},
       // How big the level is, which is an idea about a world BIGGER than the
       // view (`place/camera`). Read here; said by the map editor's Width and
       // Height, which is where it is set.

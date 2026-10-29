@@ -280,15 +280,12 @@ describe('MapEditor size controls', () => {
   });
 
   it('keeps only the frame in the strip, not the map’s properties', () => {
-    // "Covers what is under it" and "Theme" were here, beside the sizes. Both
-    // are properties of the map rather than the frame it is drawn inside, so
-    // they moved to the inspector with nothing selected, where a reader looks
-    // for properties — and the modal one is then absent on a world's main map
-    // for free, since that shows the world instead (`MapStage`, `MapInspector`).
+    // "Theme" was here, beside the sizes. It is a property of the map rather
+    // than the frame it is drawn inside, so it moved to the inspector with
+    // nothing selected, where a reader looks for properties (`MapInspector`).
     open();
     expect(screen.getByLabelText('Width')).toBeInTheDocument();
     expect(screen.getByLabelText('Height')).toBeInTheDocument();
-    expect(screen.queryByLabelText('Covers what is under it')).toBeNull();
     expect(screen.queryByLabelText('Theme')).toBeNull();
   });
 

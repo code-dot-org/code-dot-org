@@ -124,7 +124,7 @@ describe('the rule library in an app', () => {
   it('offers the app’s rules and not a game’s', {timeout: 20000}, () => {
     inLevel('app', <ImportRuleDialog onImport={vi.fn()} onCancel={vi.fn()} />);
     expect(
-      screen.getByRole('button', {name: 'Shows Screens'}),
+      screen.getByRole('button', {name: 'Moves Focus with Tab'}),
     ).toBeInTheDocument();
     expect(screen.queryByRole('button', {name: 'Has Gravity'})).toBeNull();
   });

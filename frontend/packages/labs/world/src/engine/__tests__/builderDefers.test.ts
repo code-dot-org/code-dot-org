@@ -21,12 +21,12 @@ import type {WorldMap} from '../core/World';
 
 const CARD: WorldMap = {actors: [{type: 'actors/card', id: 'Card'}]};
 
-/** A rule with one action, which is how `go to screen` reaches a map. */
+/** A rule with one action that shows a screen, deferred like any row. */
 const opener = () => {
   const rule = new RuleBuilder({id: 'screens', name: 'Screens'});
   const Open = rule.addAction(
     'open',
-    (world, path) => void world.loadMapNamed(String(path)),
+    (world, path) => void world.showScreen(String(path)),
     {params: [{name: 'screen', type: 'string'}]},
   );
   return {Rule: rule.build(), Open};
@@ -78,7 +78,7 @@ describe('what a world body defers', () => {
     // loaded on the first tick by whatever asks.
     const world = builder.getWorld();
     expect([...world.actors]).toHaveLength(0);
-    expect(world.loadMapNamed('maps/home').map(actor => actor.id)).toEqual([
+    expect(world.showScreen('maps/home').map(actor => actor.id)).toEqual([
       'Card',
     ]);
   });
