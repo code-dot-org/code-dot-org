@@ -91,6 +91,12 @@ export function reserveRoom(
   reservations.set(workspace, [...kept, room]);
 }
 
+/** Drop every reservation: a level's rooms are its own, and the workspace
+    outlives the level. */
+export function clearRoom(workspace: BlocklyCore.WorkspaceSvg): void {
+  reservations.delete(workspace);
+}
+
 // The room reserved under a stack, while it still lacks the block.
 function reservedBelow(
   workspace: BlocklyCore.WorkspaceSvg,
@@ -100,7 +106,13 @@ function reservedBelow(
   if (!rooms?.length) {
     return 0;
   }
-  const held = new Set(top.getDescendants(false).map(b => b.type));
+  // A placeholder of the type is an outline, not the block.
+  const held = new Set(
+    top
+      .getDescendants(false)
+      .filter(b => !b.isShadow?.())
+      .map(b => b.type)
+  );
   return rooms
     .filter(
       r =>

@@ -395,17 +395,27 @@ export default function useSources<T extends ProjectSources>({
   useEffect(() => {
     let cancelled = false;
     setIsLoading(true);
+    // Counted once: a load given up on counts out when it is cancelled,
+    // whether or not it ever settles.
+    let counted = true;
     loadsInFlight.current++;
+    const done = () => {
+      if (counted) {
+        counted = false;
+        loadsInFlight.current--;
+      }
+    };
     loadProject(() => cancelled)
       .catch(error => {
         if (!cancelled) setLoadError(error);
       })
       .finally(() => {
-        loadsInFlight.current--;
+        done();
         if (!cancelled) setIsLoading(false);
       });
     return () => {
       cancelled = true;
+      done();
     };
   }, [loadProject]);
 

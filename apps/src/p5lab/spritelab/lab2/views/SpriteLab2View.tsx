@@ -1205,10 +1205,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSceneIdRef = useRef<string | undefined>(undefined);
   const activeSceneRef = useRef<Scene | undefined>(undefined);
   useEffect(() => {
-    activeWorldRef.current = worldFor(activeScene);
+    activeWorldRef.current = activeWorld;
     activeSceneIdRef.current = activeScene?.id;
     activeSceneRef.current = activeScene;
-  }, [activeScene, worldFor]);
+  }, [activeScene, activeWorld]);
 
   const requestThumbnail = useSceneThumbnails({
     engineRef,
@@ -1894,6 +1894,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const leavingResetRef = useRef<{level: number; reinitBefore: number}>();
   useEffect(() => {
     leavingResetRef.current = undefined;
+    // A level with no added blocks runs no pass to replace the last
+    // level's reserved rooms.
+    const workspace = Blockly.getMainWorkspace?.() as
+      | BlocklyCore.WorkspaceSvg
+      | undefined;
+    if (workspace) {
+      clearRoom(workspace);
+    }
   }, [levelProperties.id]);
   // The level's added blocks join the pinned scene once it is on screen:
   // once per level, load, sources generation and workspace. A level reached

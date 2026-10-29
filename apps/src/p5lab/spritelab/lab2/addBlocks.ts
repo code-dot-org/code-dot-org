@@ -6,6 +6,7 @@ import * as BlocklyCore from 'blockly/core';
 
 import {scrollIntoView} from './scrollIntoView';
 import {
+  clearRoom,
   ensureRoom,
   heightsSettled,
   measureStack,
@@ -45,7 +46,7 @@ export interface AttachRoom {
 export type AddBlockEntry = AddBlock | AttachShadow | AttachRoom;
 
 export function isAttachShadow(entry: AddBlockEntry): entry is AttachShadow {
-  return 'attachTo' in entry && 'shadow' in entry;
+  return 'attachTo' in entry && !('room' in entry);
 }
 
 export function isAttachRoom(entry: AddBlockEntry): entry is AttachRoom {
@@ -254,6 +255,8 @@ export async function addMissingBlocks(
   if (!workspace.rendered) {
     return 0;
   }
+  // The level's rooms replace the last level's: the workspace outlives it.
+  clearRoom(workspace);
   const blocks = entries.filter(
     (entry): entry is AddBlock => !isAttachment(entry)
   );
@@ -311,18 +314,18 @@ function blockHeight(
   workspace: BlocklyCore.WorkspaceSvg,
   type: string
 ): number {
+  let probe: BlocklyCore.BlockSvg | undefined;
   BlocklyCore.Events.disable();
   try {
-    const probe = workspace.newBlock(type) as BlocklyCore.BlockSvg;
+    probe = workspace.newBlock(type) as BlocklyCore.BlockSvg;
     probe.initSvg();
     probe.render();
-    const {height} = probe.getHeightWidth();
-    probe.dispose(false);
-    return height;
+    return probe.getHeightWidth().height;
   } catch (e) {
     console.warn(`add_blocks room for ${type} not measured:`, e);
     return STACK_GAP_PX;
   } finally {
+    probe?.dispose(false);
     BlocklyCore.Events.enable();
   }
 }
