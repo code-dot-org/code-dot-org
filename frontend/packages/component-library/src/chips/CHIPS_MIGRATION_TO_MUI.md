@@ -172,8 +172,9 @@ Transforms:
    (`find(Chips)`) are left as written.
 3. The named type specifier `ChipsProps` becomes `MuiChipsProps as L`.
    `import type` and inline `type` modifiers are kept.
-4. `jest.mock('@code-dot-org/component-library/chips', factory)` where the
-   factory returns an object literal: for a `default` or `Chips` key, add
+4. `jest.mock`, `jest.doMock`, `vi.mock` or `vi.doMock` of the entry point
+   where the factory returns one object literal (a return inside a branch is
+   reported): for a `default` or `Chips` key, add
    a `MuiChips` key with the same value unless one is already there. A
    factory with both keys is reported instead: only the file's import says
    which value `MuiChips` should take.
@@ -181,7 +182,8 @@ Transforms:
    names are left alone. No prop is renamed or dropped, so no call site is
    skipped.
 6. Reported per file for hand work, not rewritten: enzyme string selectors
-   `'Chips'` passed to `find`, `filter`, `closest`, `children`, `parents`,
+   that name `Chips` as a type (`'Chips'`, `'.x Chips'`, `'Chips[name]'`),
+   also through `?.`, passed to `find`, `filter`, `closest`, `children`, `parents`,
    `exists`, `is`, `not`, `some` or `every`; namespace imports; re-exports;
    `require()` / `import()` of the entry point.
 7. `.ts` files are parsed with the `ts` parser, others with `tsx`.

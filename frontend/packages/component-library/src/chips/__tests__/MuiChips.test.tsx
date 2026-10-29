@@ -252,7 +252,17 @@ describe('Design System - MuiChips', () => {
 
     it('clears the custom message on change', async () => {
       const user = userEvent.setup();
-      render(<TestChips required requiredMessageText="Pick a grade" />);
+      // A setValues that never updates state, so no re-render runs the reset effect.
+      render(
+        <MuiChips
+          name="test-chips"
+          values={[]}
+          setValues={vi.fn()}
+          options={options}
+          required
+          requiredMessageText="Pick a grade"
+        />,
+      );
       const chip1 = getInput('Chip1');
 
       chip1.checkValidity();
@@ -552,6 +562,24 @@ describe('muiChips.module.scss', () => {
       'overflow-wrap': 'anywhere',
     });
     expect(source).not.toMatch(/white-space:\s*nowrap/);
+  });
+
+  it('fills a checked chip and rings a focused one', () => {
+    expect(
+      declsOf(".chips fieldset .chip:has(input[type='checkbox']:checked)"),
+    ).toEqual({
+      border: '1px solid var(--borders-brand-teal-primary)',
+      'background-color': 'var(--background-brand-teal-primary)',
+      color: 'var(--text-neutral-white-fixed)',
+    });
+    expect(
+      declsOf(
+        ".chips fieldset .chip:has(input[type='checkbox']:focus-visible)",
+      ),
+    ).toEqual({
+      outline: '2px solid var(--borders-brand-teal-primary)',
+      'outline-offset': '2px',
+    });
   });
 
   it('ports the codeai-next brand block', () => {
