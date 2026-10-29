@@ -20,6 +20,13 @@
   min-width: 25%;
 }
 
+// The panel's column in the default layout: a fixed width, so the
+// workspace keeps the room its blocks need as the window narrows.
+.instructionsColumn {
+  flex: 0 0 280px;
+  min-width: 280px;
+}
+
 .divider {
   width: 1px;
   height: 100%;
@@ -39,51 +46,11 @@
 // 1px outlines).
 $tab-item-height: 34px;
 
-.tabContainer {
-  display: flex;
-  align-items: center;
-  padding: 6px 8px;
-  background: var(--background-neutral-secondary);
-  border-bottom: 1px solid var(--borders-neutral-primary);
-  justify-content: space-between;
-}
-
 // The Images editor's pane.
 .picturesEditor {
   overflow: auto;
   background: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
-}
-
-// ?bar=bottom: the same bar under the workspace, ruled off above instead.
-.tabContainerBottom {
-  border-bottom: none;
-  border-top: 1px solid var(--borders-neutral-primary);
-}
-
-// ?resources=bar: the resource panel's buttons at the scene row's end.
-.toolButtons {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-.toolSettings {
-  position: relative;
-}
-
-// The settings panel drops from its button, over the editors.
-.toolSettingsPanel {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: variables.$z-index-overlay + 1;
-  width: 320px;
-  margin-top: 6px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 35%);
 }
 
 .tabBar {
@@ -103,263 +70,6 @@ $tab-item-height: 34px;
   }
 }
 
-// --- Scene tabs ---
-
-// The project's scenes as tabs; overflow hides under the row's end.
-.sceneTabs {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 0;
-  height: $tab-item-height;
-}
-
-.sceneTabsRow {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
-// A scene's tab: its picture and name.
-.sceneTab {
-  display: flex;
-  align-items: stretch;
-  flex: 0 1 auto;
-  box-sizing: border-box;
-  height: $tab-item-height;
-  min-width: 64px;
-  max-width: 180px;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px 4px 0 0;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  overflow: hidden;
-}
-
-.sceneTabMain {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: 0 1 auto;
-  min-width: 0;
-  height: 100%;
-  margin: 0;
-  padding: 0 10px;
-  border: none;
-  background: transparent;
-  color: inherit;
-  cursor: pointer;
-  font-size: 14px;
-
-  &:hover:not(:disabled) {
-    background: var(--background-neutral-tertiary);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-}
-
-.sceneTabActive {
-  // Filled, not underlined, so the open scene reads at a glance.
-  border-color: var(--borders-brand-teal-primary);
-  background: var(--borders-brand-teal-primary);
-  color: #fff;
-
-  .sceneTabMain {
-    font-weight: 600;
-    cursor: default;
-
-    &:hover:not(:disabled) {
-      background: transparent;
-    }
-  }
-}
-
-.sceneTabName {
-  display: block;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
-  // An unpainted bold copy of the name holds the width, so bolding the
-  // selected tab nudges nothing.
-  &::after {
-    content: attr(data-label);
-    display: block;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    font-weight: 600;
-  }
-}
-
-// All scenes, after New scene: never shrinks under the overflow.
-.sceneTabBack {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: none;
-  box-sizing: border-box;
-  height: $tab-item-height;
-  margin: 0;
-  padding: 0 10px;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-  font-size: 14px;
-
-  &:hover:not(:disabled) {
-    background: var(--background-neutral-tertiary);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-}
-
-// Code | World: the scene's two editors, as one segmented control.
-.editorSwitch {
-  display: flex;
-  flex: none;
-  height: $tab-item-height;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  overflow: hidden;
-  background: var(--background-neutral-primary);
-}
-
-.editorSwitchButton {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 100%;
-  margin: 0;
-  padding: 0 12px;
-  border: none;
-  border-left: 1px solid var(--borders-neutral-primary);
-  background: transparent;
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-  font-size: 14px;
-
-  // An editor the level withholds: present, dimmed, inert.
-  &:disabled {
-    opacity: 0.45;
-    cursor: default;
-  }
-
-  &:first-child {
-    border-left: none;
-  }
-
-  &:hover {
-    background: var(--background-neutral-tertiary);
-  }
-}
-
-// A hidden bold copy sets the label's width, so bolding the active editor
-// moves none of the others.
-.editorSwitchLabel {
-  display: inline-grid;
-  justify-items: start;
-
-  &::after {
-    content: attr(data-label);
-    grid-area: 1 / 1;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
-    font-weight: 600;
-  }
-}
-
-.editorSwitchActive {
-  font-weight: 600;
-  box-shadow: inset 0 -2px 0 var(--borders-brand-teal-primary);
-  cursor: default;
-
-  &:hover {
-    background: transparent;
-  }
-}
-
-// Stacked: each editor its own row, dividers between rows.
-.editorSwitchVertical {
-  flex-direction: column;
-  height: auto;
-
-  .editorSwitchButton {
-    height: $tab-item-height - 2px;
-    border-left: none;
-    border-top: 1px solid var(--borders-neutral-primary);
-
-    &:first-child {
-      border-top: none;
-    }
-  }
-
-  .editorSwitchActive {
-    box-shadow: inset 3px 0 0 var(--borders-brand-teal-primary);
-  }
-}
-
-// New scene: a square beside the tabs.
-.sceneTabButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  box-sizing: border-box;
-  width: $tab-item-height;
-  height: $tab-item-height;
-  margin: 0;
-  padding: 0;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-
-  &:hover:not(:disabled) {
-    background: var(--background-neutral-tertiary);
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-}
-
-// The song a playing game is using, sized to sit among the tab controls.
-.musicBar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: $tab-item-height;
-  box-sizing: border-box;
-  padding: 0 10px;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  color: var(--text-neutral-primary);
-  font-size: 12px;
-  line-height: 1.2;
-  max-width: 220px;
-}
-
-.musicBarTitle {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 
 .tabContent {
   position: relative;
@@ -574,7 +284,7 @@ $z-over-blockly: 71;
 
   .sceneThumb {
     color: var(--text-neutral-white-fixed);
-    background: rgb(255 255 255 / 25%);
+    background: color-mix(in srgb, var(--neutral-base-white) 25%, transparent);
   }
 }
 
@@ -986,7 +696,7 @@ $z-over-blockly: 71;
   }
 
   a {
-    color: #8ab4f8;
+    color: var(--text-info-primary);
   }
 }
 
@@ -1062,13 +772,20 @@ $z-over-blockly: 71;
   top: 0;
   left: 0;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 16px;
   pointer-events: none;
 
+  // On a narrow column a button's text wraps; the button grows with it
+  // and the bar's measured height makes room.
   button {
     pointer-events: auto;
+    height: auto;
+    min-height: 2rem;
+    white-space: normal;
+    line-height: 1.25;
+    text-align: center;
   }
 }
 
@@ -1103,24 +820,6 @@ $z-over-blockly: 71;
 .playspacePrompt {
   position: absolute;
   transform: translateY(-100%);
-}
-
-.playControl {
-  height: $tab-item-height;
-  padding: 0 12px;
-  // Cancel the legacy global button margin; the column's gap spaces these.
-  margin: 0;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: var(--background-neutral-primary);
-  color: var(--text-neutral-primary);
-  cursor: pointer;
-  font-size: 14px;
-  opacity: 0.92;
-
-  &:hover {
-    opacity: 1;
-  }
 }
 
 // The instructions' card under the preview; a long step scrolls inside.
@@ -1158,14 +857,6 @@ $z-over-blockly: 71;
     font-size: 12px;
     line-height: 1.4;
   }
-}
-
-// The start scene's mark, when there is more than one scene.
-.sceneTabStart {
-  display: inline-flex;
-  flex: none;
-  color: var(--text-neutral-secondary);
-  font-size: 12px;
 }
 
 // A sheet under the scene row, over the whole area below. Closed, the
@@ -1228,7 +919,7 @@ $z-over-blockly: 71;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: var(--text-neutral-white-fixed);
     font-size: 32px;
     opacity: 0;
     transition: opacity 0.12s ease-in;
@@ -1236,7 +927,7 @@ $z-over-blockly: 71;
 
   &:hover,
   &:focus-visible {
-    background: rgb(0 0 0 / 28%);
+    background: color-mix(in srgb, var(--neutral-base-true-black) 28%, transparent);
   }
 
   &:hover::after,
@@ -1265,14 +956,14 @@ $z-over-blockly: 71;
 .sceneCover {
   position: absolute;
   inset: 0;
-  background: #000;
+  background: var(--neutral-base-true-black);
   pointer-events: none;
 }
 
 .sceneFade {
   position: absolute;
   inset: 0;
-  background: #000;
+  background: var(--neutral-base-true-black);
   opacity: 0;
   animation: scene-fade-in 0.45s ease-out;
   pointer-events: none;
@@ -1296,7 +987,7 @@ $z-over-blockly: 71;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(0 0 0 / 55%);
+  background: color-mix(in srgb, var(--neutral-base-true-black) 55%, transparent);
   opacity: 0;
   animation: scene-loading-fade-in 0.4s ease-in 1.5s both;
   pointer-events: none;
@@ -1305,8 +996,8 @@ $z-over-blockly: 71;
 .sceneLoadingSpinner {
   width: 48px;
   height: 48px;
-  border: 5px solid rgb(255 255 255 / 30%);
-  border-top-color: #fff;
+  border: 5px solid color-mix(in srgb, var(--neutral-base-white) 30%, transparent);
+  border-top-color: var(--borders-neutral-white-fixed);
   border-radius: 50%;
   animation: scene-loading-spin 0.9s linear infinite;
 }

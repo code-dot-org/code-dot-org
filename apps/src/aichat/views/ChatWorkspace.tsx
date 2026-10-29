@@ -29,6 +29,7 @@ import {
   clearChatMessages,
   clearStagedFiles,
   fetchUserChatHistory,
+  removeUpdateMessage,
   selectAllVisibleMessages,
   setClientType,
   setNewChatSession,
@@ -327,27 +328,29 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
     }, [dispatch, previousParameters, modelParameters]);
 
     // Sets up the chat host's handle, if there is one. Posts get added as
-    // notifications and each build the student accepts gets emitted through
-    // the listener.
+    // notifications, each build the student accepts gets emitted through
+    // the listener, and the host can switch sending off and on.
     const host = useChatHost();
     const buildListeners = useRef(new Set<(build: AcceptedBuild) => void>());
     const lastBuildAt = useRef(Date.now());
+    const [hostDisabledSend, setHostDisabledSend] = useState(false);
     useEffect(() => {
       host?.onChatReady({
-        post: notification =>
+        post: notification => {
+          const removeId = getNewRemoveId();
           dispatch(
-            addChatEvent({
-              ...notification,
-              timestamp: Date.now(),
-              removeId: getNewRemoveId(),
-            })
-          ),
+            addChatEvent({...notification, timestamp: Date.now(), removeId})
+          );
+          return () => dispatch(removeUpdateMessage(removeId));
+        },
         onBuildAccepted: listener => {
           buildListeners.current.add(listener);
           return () => {
             buildListeners.current.delete(listener);
           };
         },
+        disableSend: () => setHostDisabledSend(true),
+        enableSend: () => setHostDisabledSend(false),
       });
     }, [host, dispatch]);
     useEffect(() => {
@@ -514,7 +517,7 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
               uploadDisabled={uploadDisabled}
               currentLevelId={levelId}
               chatDisabled={disabled || disableSendingMessages}
-              sendDisabled={sendDisabled}
+              sendDisabled={sendDisabled || hostDisabledSend}
               onMessageSent={onMessageSent}
               onSchemaResponse={onSchemaResponse}
               formatSchemaResponseForDisplay={formatSchemaResponseForDisplay}

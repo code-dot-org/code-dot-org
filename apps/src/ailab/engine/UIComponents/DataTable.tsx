@@ -9,7 +9,7 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getShowColumnClicking, getTableData, setCurrentColumn} from '../redux';
-import {getIdColumn} from '../selectors';
+import {getDatasetId, getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
 
 import ColumnHeader from './ColumnHeader';
@@ -45,7 +45,7 @@ const DataTable = ({
     state => getTableData(state, project, !!useResultsData),
     deepEqual
   );
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const labelColumn = project.labelColumn || 'unknown';
   const selectedFeatures = project.selectedFeatures;
   const currentColumn = useAppSelector(state => state.currentColumn);

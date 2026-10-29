@@ -12,7 +12,7 @@ $border-subtle: chrome.$border-subtle;
 .dialogHost {
   display: contents;
 
-  // The host carries data-theme; the chrome colors follow it.
+  // The chrome's palette, on the page's tokens.
   @include chrome.theme;
 }
 

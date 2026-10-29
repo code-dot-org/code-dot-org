@@ -110,4 +110,56 @@ describe('EditAiTutorPromptSettings', () => {
       expect(screen.getByRole('button', {name: 'Disable All'})).toBeDisabled();
     });
   });
+
+  describe('Enable commit messages toggle', () => {
+    // The submitted value lives in a hidden input, which has no accessible role.
+    const serialized = (container: HTMLElement) => {
+      const name = '[name="level[ai_tutor_prompt_settings]"]';
+      // eslint-disable-next-line no-restricted-properties
+      const input = container.querySelector(name) as HTMLInputElement;
+      return JSON.parse(input.value);
+    };
+    const toggle = () =>
+      screen.getByRole('checkbox', {name: /Enable commit messages/});
+
+    it('is absent unless requested', () => {
+      render(<EditAiTutorPromptSettings {...WEBLAB2_PROPS} />);
+      expect(
+        screen.queryByRole('checkbox', {name: /Enable commit messages/})
+      ).not.toBeInTheDocument();
+    });
+
+    it('is on and omits the setting by default', () => {
+      const {container} = render(
+        <EditAiTutorPromptSettings
+          {...WEBLAB2_PROPS}
+          showCommitMessagesToggle
+        />
+      );
+      expect(toggle()).toBeChecked();
+      expect(serialized(container)).not.toHaveProperty('disableCommitMessages');
+    });
+
+    it('serializes disableCommitMessages once turned off', () => {
+      const {container} = render(
+        <EditAiTutorPromptSettings
+          {...WEBLAB2_PROPS}
+          showCommitMessagesToggle
+        />
+      );
+      fireEvent.click(toggle());
+      expect(serialized(container).disableCommitMessages).toBe(true);
+    });
+
+    it('loads a saved disableCommitMessages as off', () => {
+      render(
+        <EditAiTutorPromptSettings
+          {...WEBLAB2_PROPS}
+          promptSettings={{answerTypes: ['ask'], disableCommitMessages: true}}
+          showCommitMessagesToggle
+        />
+      );
+      expect(toggle()).not.toBeChecked();
+    });
+  });
 });

@@ -56,6 +56,8 @@ export type ObjectiveCheck =
   | {kind: 'tab'; name: Tab};
 
 export interface Objective {
+  /** Names the item to the lab's hover and click handling. */
+  id?: string;
   /** Markdown. */
   text: string;
   check: ObjectiveCheck;

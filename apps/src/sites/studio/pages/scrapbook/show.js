@@ -13,9 +13,6 @@ $(document).ready(function () {
     <Provider store={getStore()}>
       <ScrapbookGallery userName={userName} />
     </Provider>,
-    document.getElementById('scrapbook-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('scrapbook-container')
   );
 });

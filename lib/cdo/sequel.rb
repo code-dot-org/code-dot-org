@@ -108,6 +108,11 @@ module Cdo
       # https://sequel.jeremyevans.net/rdoc-plugins/files/lib/sequel/extensions/server_block_rb.html
       db.extension :server_block
 
+      # AWS EC2 Instances that use Nitro v6 (e.g. `m8i`) timeout TCP idle TCP connections after 350s.
+      # https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html#connection-tracking-timeouts
+      db.extension :connection_expiration
+      db.pool.connection_expiration_timeout = 300
+
       # Check if validation frequency is valid and then use it to specify how often to
       # verify the db connection
       if validation_frequency && (validation_frequency == -1 || validation_frequency > 0)

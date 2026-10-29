@@ -1,3 +1,5 @@
+import {Button as MuiButton, buttonClasses, Tooltip} from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
 import {blurAfterPointerClick} from '../blurAfterPointerClick';
@@ -29,20 +31,34 @@ const WorkspaceSceneBar: React.FunctionComponent<WorkspaceSceneBarProps> = ({
     <div className={moduleStyles.tabBar}>
       <SceneDropdown {...dropdown} menuPlacement="top" />
       {onManageScenes && (
-        <button
-          type="button"
-          disabled={dropdown.locked}
-          title={dropdown.locked ? dropdown.lockedReason : undefined}
-          className={moduleStyles.sceneTabBack}
-          onClick={event => {
-            blurAfterPointerClick(event);
-            onManageScenes();
-          }}
+        // aria-disabled, not disabled: a locked button stays in the tab
+        // order, so its reason reaches keyboard users. The disabled look
+        // takes no pointer events, so the span carries the hover.
+        <Tooltip
+          title={dropdown.locked ? dropdown.lockedReason : ''}
+          describeChild
         >
-          <span className={moduleStyles.sceneTabName} data-label="All scenes">
-            All scenes
+          <span>
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
+              aria-disabled={dropdown.locked}
+              className={classNames({
+                [buttonClasses.disabled]: dropdown.locked,
+              })}
+              onClick={event => {
+                if (dropdown.locked) {
+                  return;
+                }
+                blurAfterPointerClick(event);
+                onManageScenes();
+              }}
+            >
+              All scenes
+            </MuiButton>
           </span>
-        </button>
+        </Tooltip>
       )}
     </div>
     <div className={moduleStyles.tabBar}>{rightExtra}</div>
