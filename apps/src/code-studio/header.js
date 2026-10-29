@@ -135,10 +135,7 @@ header.build = function (
     );
     createReactRoot(
       <Provider store={getStore()}>{middle}</Provider>,
-      document.querySelector('.header_level'),
-      {
-        legacyReactDomRender: true,
-      }
+      document.querySelector('.header_level')
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
@@ -160,10 +157,7 @@ header.build = function (
 
       createReactRoot(
         <SignInCalloutWrapper />,
-        document.querySelector('.signin_callout_wrapper'),
-        {
-          legacyReactDomRender: true,
-        }
+        document.querySelector('.signin_callout_wrapper')
       );
     }
   });
@@ -179,10 +173,7 @@ header.buildProjectInfoOnly = function (currentLevelId) {
     <Provider store={store}>
       <HeaderMiddle projectInfoOnly={true} />
     </Provider>,
-    document.querySelector('.header_level'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.querySelector('.header_level')
   );
 };
 
@@ -193,10 +184,7 @@ header.buildScriptNameOnly = function (scriptNameData) {
     <Provider store={getStore()}>
       <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
     </Provider>,
-    document.querySelector('.header_level'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.querySelector('.header_level')
   );
 };
 
