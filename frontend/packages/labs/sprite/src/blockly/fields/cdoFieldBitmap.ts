@@ -1,0 +1,57 @@
+import {FieldBitmap} from '@blockly/field-bitmap';
+import * as BlocklyCore from 'blockly/core';
+
+// The bitmap editor's "Clear" button text; apps took it from commonI18n.
+BlocklyCore.Msg['BUTTON_LABEL_CLEAR'] = 'Clear';
+
+/**
+ * Custom FieldBitmap class with additional hooks for XML serialization.
+ */
+export class CdoFieldBitmap extends FieldBitmap {
+  /**
+   * Converts the field's value to XML representation.
+   * @param {Element} fieldElement - The XML element to populate with field data.
+   * @returns {Element} The populated XML element.
+   */
+  toXml(fieldElement: Element): Element {
+    fieldElement.textContent = JSON.stringify(this.getValue());
+    return fieldElement;
+  }
+
+  /**
+   * Converts XML data to the field's value.
+   * Converts a string of binary values into a 2d array with specified height/width.
+   * @param {Element} fieldElement - The XML element containing field data.
+   */
+  fromXml(fieldElement: Element): void {
+    const bitmap = JSON.parse(fieldElement.textContent || '[]');
+    this.setValue(bitmap);
+  }
+
+  /**
+   * JSON serialization: the bitmap itself. Without these hooks Blockly
+   * routes JSON-serialized field state through the legacy XML path.
+   */
+  saveState(): number[][] | null {
+    return this.getValue();
+  }
+
+  loadState(state: unknown): void {
+    if (typeof state === 'string') {
+      const text = state.trim();
+      // States saved before these hooks existed are legacy XML strings;
+      // toolbox defaults may carry the bitmap as a JSON string.
+      if (text.startsWith('<')) {
+        this.fromXml(BlocklyCore.utils.xml.textToDom(text));
+        return;
+      }
+      try {
+        this.setValue(JSON.parse(text));
+      } catch (e) {
+        console.warn("Invalid state; can't parse JSON:", text, e);
+      }
+      return;
+    }
+    this.setValue(state);
+  }
+}

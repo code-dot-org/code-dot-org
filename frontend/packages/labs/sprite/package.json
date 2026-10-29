@@ -1,0 +1,124 @@
+{
+  "name": "@code-dot-org/sprite-lab",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Sprite Lab, the Lab2 Blockly lab for building scenes and games with sprites",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/labs/sprite/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/labs/sprite"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./mocks": {
+      "types": "./dist/fixtures/index.d.ts",
+      "import": "./dist/fixtures/index.mjs",
+      "require": "./dist/fixtures/index.cjs"
+    },
+    "./sprites": {
+      "types": "./dist/sprites/index.d.ts",
+      "import": "./dist/sprites/index.mjs",
+      "require": "./dist/sprites/index.cjs"
+    },
+    "./engine": {
+      "types": "./dist/engine/index.d.ts",
+      "import": "./dist/engine/index.mjs",
+      "require": "./dist/engine/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "build:pages": "vite build --mode pages",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "preview": "vite preview",
+    "stylelint": "stylelint --allow-empty-input \"src/**/*.{css,scss,sass}\"",
+    "stylelint:fix": "yarn run stylelint --fix",
+    "test": "vitest --run",
+    "test:ui": "playwright test",
+    "test:ui:ci": "CI=true playwright test",
+    "test:visual:prove": "prove-visual",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@blockly/field-bitmap": "^13.3.0",
+    "@blockly/field-grid-dropdown": "^13.3.0",
+    "@code-dot-org/audio": "workspace:*",
+    "@code-dot-org/blockly": "workspace:*",
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/lab": "workspace:*",
+    "@code-dot-org/music-lab": "workspace:*",
+    "@reduxjs/toolkit": "catalog:",
+    "blockly": "^13.1.0",
+    "classnames": "catalog:",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "p5": "^2.3.4"
+  },
+  "devDependencies": {
+    "@code-dot-org/component-library-styles": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/playwright-support": "workspace:*",
+    "@emotion/react": "catalog:",
+    "@emotion/styled": "catalog:",
+    "@mui/material": "catalog:",
+    "@tanstack/react-query": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@types/lodash": "^4",
+    "@types/md5": "^2.3.5",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "acorn": "^8.15.0",
+    "eslint": "catalog:",
+    "jsdom": "catalog:",
+    "playwright": "catalog:",
+    "prettier": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "stylelint": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vitest": "catalog:",
+    "vitest-canvas-mock": "^1.1.0"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@mui/material": "^7.0.0",
+    "@tanstack/react-query": "*",
+    "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  }
+}
