@@ -10,7 +10,10 @@ import {
   AI_TUTOR_FAQ_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '@cdo/apps/aichat/constants';
-import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {
+  areAiChatToolsEnabled,
+  isAiChatModelBlocked,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import type {AiChatDisabledState} from '@cdo/apps/aichat/types';
 import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
 import type {ModelParameters} from '@cdo/apps/aichat/types/model';
@@ -45,7 +48,7 @@ interface UseAiChatDisabledStateParams {
  * Computes whether AI chat is disabled and what message to show, consolidating:
  * - which aiChatAccessLevel applies (section override for teachers, or user's own)
  * - whether the access level permits chat for the current app & access level
- * - models blocked for this user, e.g. US only models outside the US
+ * - models whose provider is blocked for this user, e.g. Google outside the US
  *   (pass selectedModelId to enable)
  * - predict level gating
  * - teacher vs. student messaging
@@ -64,8 +67,8 @@ export function useAiChatDisabledState({
   const userAccessLevel = useAppSelector(
     state => state.currentUser.aiChatAccessLevel
   );
-  const blockedAichatModelIds = useAppSelector(
-    state => state.currentUser.blockedAichatModelIds
+  const blockedAichatProviders = useAppSelector(
+    state => state.currentUser.blockedAichatProviders
   );
   const isLevelbuilder = useAppSelector(
     state => state.currentUser.isLevelbuilder
@@ -93,7 +96,10 @@ export function useAiChatDisabledState({
       };
     }
 
-    if (selectedModelId && blockedAichatModelIds.includes(selectedModelId)) {
+    if (
+      selectedModelId &&
+      isAiChatModelBlocked(selectedModelId, blockedAichatProviders)
+    ) {
       if (!isTeacher) {
         return {
           disabled: true,
@@ -166,7 +172,7 @@ export function useAiChatDisabledState({
     enabledForUser,
     sectionAccessLevel,
     isLevelbuilder,
-    blockedAichatModelIds,
+    blockedAichatProviders,
   ]);
 
   return disabledState;

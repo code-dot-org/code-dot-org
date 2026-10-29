@@ -47,7 +47,7 @@ const SIGNED_IN_RESPONSE = {
   has_seen_homepage_welcome: false,
   has_dismissed_personalization_alert: false,
   ai_chat_access_level: 'enabled',
-  blocked_aichat_model_ids: [],
+  blocked_aichat_providers: [],
   ai_rubrics_disabled: null,
   ai_differentiation_enabled: false,
   has_seen_ai_assessments_announcement: false,

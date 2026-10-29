@@ -352,14 +352,20 @@ export const AiChatGeminiModelIds = [
   "gemini-3.1-flash-image"
 ] as const;
 
-export const AiChatUsOnlyModelIds = [
-  "gemini-2.0-flash",
-  "gemini-2.5-flash",
-  "gemini-2.5-flash-lite",
-  "gemini-2.5-pro",
-  "gemini-2.5-flash-image",
-  "gemini-3.1-flash-image"
-] as const;
+export const AiChatProviders = {
+  "GOOGLE": "google",
+  "OPENAI": "openai"
+} as const;
+
+export const AiChatModelProviders = {
+  "gemini-2.0-flash": "google",
+  "gemini-2.5-flash": "google",
+  "gemini-2.5-flash-lite": "google",
+  "gemini-2.5-pro": "google",
+  "gemini-2.5-flash-image": "google",
+  "gemini-3.1-flash-image": "google",
+  "gpt-4o-mini": "openai"
+} as const;
 
 export const AiChatClientTypes = {
   "AI_CHAT_LAB": "ai-chat-lab",

@@ -4,7 +4,10 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
-import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {
+  areAiChatToolsEnabled,
+  isAiChatModelBlocked,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {generateText} from '@cdo/apps/aiGateway';
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -76,7 +79,10 @@ export function canRequestTheaterDescription(): boolean {
   const appName = lab.levelProperties?.appName;
   return (
     !!appName &&
-    !currentUser.blockedAichatModelIds.includes(DESCRIPTION_MODEL_ID) &&
+    !isAiChatModelBlocked(
+      DESCRIPTION_MODEL_ID,
+      currentUser.blockedAichatProviders
+    ) &&
     areAiChatToolsEnabled({
       appName,
       aiChatAccessLevel: currentUser.aiChatAccessLevel,

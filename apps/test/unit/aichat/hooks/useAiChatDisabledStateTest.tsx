@@ -17,13 +17,14 @@ import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teac
 import {
   AiChatClientTypes,
   AiChatModelIds,
+  AiChatProviders,
 } from '@cdo/generated-scripts/sharedConstants';
 
 let mockState = {
   currentUser: {
     isTeacher: false,
     aiChatAccessLevel: 'enabled',
-    blockedAichatModelIds: [] as string[],
+    blockedAichatProviders: [] as string[],
     isLevelbuilder: false,
   },
 };
@@ -62,9 +63,7 @@ const mockGetIsStartMode = getIsStartMode as jest.MockedFunction<
   typeof getIsStartMode
 >;
 
-// The hook only asks whether the selected model is in this list, so tests
-// need a list containing the model under test rather than the real US only set.
-const BLOCKED_MODEL_IDS = [AiChatModelIds.GEMINI_2_5_FLASH];
+const BLOCKED_PROVIDERS = [AiChatProviders.GOOGLE];
 
 describe('useAiChatDisabledState', () => {
   beforeEach(() => {
@@ -72,7 +71,7 @@ describe('useAiChatDisabledState', () => {
       currentUser: {
         isTeacher: false,
         aiChatAccessLevel: 'enabled',
-        blockedAichatModelIds: [] as string[],
+        blockedAichatProviders: [] as string[],
         isLevelbuilder: false,
       },
     };
@@ -159,7 +158,7 @@ describe('useAiChatDisabledState', () => {
   });
 
   it('returns the standard student message when a US only model is blocked', () => {
-    mockState.currentUser.blockedAichatModelIds = BLOCKED_MODEL_IDS;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -176,7 +175,7 @@ describe('useAiChatDisabledState', () => {
 
   it('returns the tutor-specific region message and FAQ link for blocked teachers in ai tutor', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.blockedAichatModelIds = BLOCKED_MODEL_IDS;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -201,7 +200,7 @@ describe('useAiChatDisabledState', () => {
 
   it('returns the level-scoped region message and FAQ link for blocked teachers in the aichat lab', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.blockedAichatModelIds = BLOCKED_MODEL_IDS;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -224,7 +223,7 @@ describe('useAiChatDisabledState', () => {
 
   it('omits the FAQ link for blocked teachers when clientType is unknown', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.blockedAichatModelIds = BLOCKED_MODEL_IDS;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -241,7 +240,7 @@ describe('useAiChatDisabledState', () => {
 
   it('does not block models available outside the US for blocked users', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.blockedAichatModelIds = BLOCKED_MODEL_IDS;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({
@@ -265,7 +264,7 @@ describe('useAiChatDisabledState', () => {
   });
 
   it('does not block when no selectedModelId is provided', () => {
-    mockState.currentUser.blockedAichatModelIds = BLOCKED_MODEL_IDS;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({appName: 'pythonlab'})
@@ -276,7 +275,7 @@ describe('useAiChatDisabledState', () => {
 
   it('shows predict gating before the blocked message for teachers on an unsubmitted predict level', () => {
     mockState.currentUser.isTeacher = true;
-    mockState.currentUser.blockedAichatModelIds = BLOCKED_MODEL_IDS;
+    mockState.currentUser.blockedAichatProviders = BLOCKED_PROVIDERS;
 
     const {result} = renderHook(() =>
       useAiChatDisabledState({

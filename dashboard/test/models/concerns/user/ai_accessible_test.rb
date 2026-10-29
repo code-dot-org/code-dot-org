@@ -185,15 +185,15 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
   end
 
-  describe '#blocked_aichat_model_ids' do
-    subject(:blocked_aichat_model_ids) {user.blocked_aichat_model_ids}
+  describe '#blocked_aichat_providers' do
+    subject(:blocked_aichat_providers) {user.blocked_aichat_providers}
 
     context 'when a teacher is in a non-US school' do
-      it 'blocks US only models even for a verified teacher' do
+      it 'blocks US only providers even for a verified teacher' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:verified_instructor?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _blocked_aichat_model_ids.must_equal SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS
+        _blocked_aichat_providers.must_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS
       end
     end
 
@@ -201,16 +201,16 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
       it 'blocks nothing' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_us))
-        _blocked_aichat_model_ids.must_be_empty
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
     context 'when a teacher has no school_info but a non-US geolocation' do
-      it 'blocks US only models' do
+      it 'blocks US only providers' do
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(nil)
         allow(user).to receive(:user_geos).and_return([build(:user_geo, :sydney)])
-        _blocked_aichat_model_ids.must_equal SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS
+        _blocked_aichat_providers.must_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS
       end
     end
 
@@ -219,7 +219,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(nil)
         allow(user).to receive(:user_geos).and_return([])
-        _blocked_aichat_model_ids.must_be_empty
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
@@ -228,16 +228,16 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_without_country))
         allow(user).to receive(:user_geos).and_return([build(:user_geo, :seattle)])
-        _blocked_aichat_model_ids.must_be_empty
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
     context 'when all of a student\'s teachers are non-US' do
-      it 'blocks US only models' do
+      it 'blocks US only providers' do
         non_us_teacher = create(:teacher)
         allow(non_us_teacher).to receive(:school_info).and_return(build(:school_info_non_us))
         allow(user).to receive(:teachers).and_return([non_us_teacher])
-        _blocked_aichat_model_ids.must_equal SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS
+        _blocked_aichat_providers.must_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS
       end
     end
 
@@ -248,7 +248,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         us_teacher = qualified_teacher
         allow(us_teacher).to receive(:school_info).and_return(build(:school_info_us))
         allow(user).to receive(:teachers).and_return([non_us_teacher, us_teacher])
-        _blocked_aichat_model_ids.must_be_empty
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
@@ -257,7 +257,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(DCDO).to receive(:get).with("allow_international_usage_all_models", false).and_return(true)
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _blocked_aichat_model_ids.must_be_empty
+        _blocked_aichat_providers.must_be_empty
       end
     end
 
@@ -266,7 +266,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
         allow(user).to receive(:levelbuilder?).and_return(true)
         allow(user).to receive(:teacher?).and_return(true)
         allow(user).to receive(:school_info).and_return(build(:school_info_non_us))
-        _blocked_aichat_model_ids.must_be_empty
+        _blocked_aichat_providers.must_be_empty
       end
     end
   end
@@ -277,9 +277,9 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     let(:mistral_model) {SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL]}
     let(:openai_model) {SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]}
 
-    context 'when US only models are blocked' do
+    context 'when US only providers are blocked' do
       before do
-        allow(user).to receive(:blocked_aichat_model_ids).and_return(SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS)
+        allow(user).to receive(:blocked_aichat_providers).and_return(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
       end
 
       it 'blocks every US only model, including image generation' do
@@ -297,7 +297,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
 
     context 'when nothing is blocked' do
       before do
-        allow(user).to receive(:blocked_aichat_model_ids).and_return([])
+        allow(user).to receive(:blocked_aichat_providers).and_return([])
       end
 
       it 'allows all models' do

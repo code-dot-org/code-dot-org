@@ -724,7 +724,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def requires_inaccessible_ai_models?(user)
-    return false unless user&.blocked_aichat_model_ids.present?
+    return false unless user&.blocked_aichat_providers&.any?
     default_units.with_essential_us_only_ai_models.exists?
   end
 

@@ -10,7 +10,7 @@ import {
   requestTheaterDescription,
   withTimeout,
 } from '@cdo/apps/pythonlab/theaterDescription';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+import {AiChatProviders} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aiGateway', () => ({generateText: jest.fn()}));
 jest.mock('@cdo/apps/aichat/api/client/helpers/modelHelpers', () => ({
@@ -26,7 +26,7 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   },
 }));
 const mockCurrentUser = {
-  blockedAichatModelIds: [] as string[],
+  blockedAichatProviders: [] as string[],
   aiChatAccessLevel: 'enabled',
 };
 jest.mock('@cdo/apps/redux', () => ({
@@ -57,7 +57,7 @@ describe('theaterDescription', () => {
   describe('canRequestTheaterDescription', () => {
     afterEach(() => {
       Object.assign(mockCurrentUser, {
-        blockedAichatModelIds: [],
+        blockedAichatProviders: [],
         aiChatAccessLevel: 'enabled',
       });
     });
@@ -71,10 +71,8 @@ describe('theaterDescription', () => {
       expect(canRequestTheaterDescription()).toBe(false);
     });
 
-    it('refuses a user blocked from the description model', () => {
-      mockCurrentUser.blockedAichatModelIds = [
-        AiChatModelIds.GEMINI_2_5_FLASH_LITE,
-      ];
+    it('refuses a user blocked from the description model provider', () => {
+      mockCurrentUser.blockedAichatProviders = [AiChatProviders.GOOGLE];
       expect(canRequestTheaterDescription()).toBe(false);
     });
   });

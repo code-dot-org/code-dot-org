@@ -2051,13 +2051,13 @@ class SectionTest < ActiveSupport::TestCase
     # The instructor can use US only models, so nothing is inaccessible. The
     # assigned unit is still asked; it is the one that returns early without
     # scanning levels.
-    User.any_instance.stubs(:blocked_aichat_model_ids).returns([])
+    User.any_instance.stubs(:blocked_aichat_providers).returns([])
     refute us_only_section.required_inaccessible_ai_models?
     refute openai_section.required_inaccessible_ai_models?
 
     # The instructor has US only models disabled, so it depends on the curriculum.
-    User.any_instance.unstub(:blocked_aichat_model_ids)
-    User.any_instance.stubs(:blocked_aichat_model_ids).returns(SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS)
+    User.any_instance.unstub(:blocked_aichat_providers)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
     assert us_only_section.required_inaccessible_ai_models?
     refute openai_section.required_inaccessible_ai_models?
     refute no_course_section.required_inaccessible_ai_models?
@@ -2075,7 +2075,7 @@ class SectionTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, script: reachable_unit, position: 1)
     create(:unit_group_unit, unit_group: unit_group, script: blocked_unit, position: 2)
 
-    User.any_instance.stubs(:blocked_aichat_model_ids).returns(SharedConstants::AI_CHAT_US_ONLY_MODEL_IDS)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
 
     # Assigned the whole course, so any blocked unit in it counts.
     course_section = create(:section, teacher: @teacher, unit_group: unit_group)
