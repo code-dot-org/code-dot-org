@@ -238,6 +238,7 @@ Dashboard::Application.routes.draw do
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
           post 'ai_chat_access_level', to: 'sections#set_ai_chat_access_level'
+          post 'ai_challenge_enabled', to: 'sections#set_ai_challenge_enabled'
           get 'suggested_lesson'
         end
         collection do
