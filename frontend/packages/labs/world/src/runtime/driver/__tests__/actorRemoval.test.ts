@@ -154,7 +154,7 @@ const world = (actors: string[]) => {
       mapBounds: () => ({x: 320, y: 320}),
       viewSize: () => ({x: 320, y: 320}),
       screenLayerSnapshot: () => [
-        {id: 'main', effects: [], parallax: {x: 1, y: 1}, fit: false},
+        {id: 'main', effects: [], parallax: {x: 1, y: 1}},
       ],
       cameraSnapshot: () => [
         {id: 'main', position: {x: 0, y: 0}, active: true},

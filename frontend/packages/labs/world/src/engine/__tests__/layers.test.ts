@@ -82,7 +82,6 @@ describe('a world that names no layers', () => {
     const [layer] = world().layers;
 
     expect(layer.parallax).toEqual(new Vector(1, 1));
-    expect(layer.fit).toBe(false);
   });
 });
 
@@ -91,14 +90,14 @@ describe('a world that names layers', () => {
     new WorldBuilder({id: 'w', name: 'W'})
       .defineLayer({id: 'sky', parallax: new Vector(0.2, 0)})
       .defineLayer({id: DEFAULT_LAYER_ID})
-      .defineLayer({id: 'hud', fit: true})
+      .defineLayer({id: 'fog'})
       .instantiate();
 
   it('keeps them in declaration order, which is depth', () => {
     expect(built().layers.map(layer => layer.id)).toEqual([
       'sky',
       DEFAULT_LAYER_ID,
-      'hud',
+      'fog',
     ]);
   });
 
@@ -106,20 +105,16 @@ describe('a world that names layers', () => {
     const world = built();
     world.addActor(actor('cloud'), 'sky');
     world.addActor(actor('player'));
-    world.addActor(actor('score'), 'hud');
+    world.addActor(actor('mist'), 'fog');
 
-    expect(depths(world)).toEqual({cloud: 0, player: 1, score: 2});
+    expect(depths(world)).toEqual({cloud: 0, player: 1, mist: 2});
   });
 
   it('keeps each layer’s own settings', () => {
-    const [sky, , hud] = built().layers;
+    const [sky, , fog] = built().layers;
 
     expect(sky.parallax).toEqual(new Vector(0.2, 0));
-    expect(sky.fit).toBe(false);
-    // A factor of (0,0) is not `fit` — the factor is translation only. Nothing
-    // reads either yet; this pins that they are stored apart.
-    expect(hud.fit).toBe(true);
-    expect(hud.parallax).toEqual(new Vector(1, 1));
+    expect(fog.parallax).toEqual(new Vector(1, 1));
   });
 
   it('puts an actor in the default layer when told nothing', () => {
@@ -144,12 +139,12 @@ describe('a world that names layers', () => {
 
   it('adds the default layer at the back when it is not named', () => {
     const world = new WorldBuilder({id: 'w', name: 'W'})
-      .defineLayer({id: 'hud', fit: true})
+      .defineLayer({id: 'fog'})
       .instantiate();
 
     expect(world.layers.map(layer => layer.id)).toEqual([
       DEFAULT_LAYER_ID,
-      'hud',
+      'fog',
     ]);
   });
 });

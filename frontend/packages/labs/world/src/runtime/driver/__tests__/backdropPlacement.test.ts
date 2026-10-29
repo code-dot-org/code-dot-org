@@ -23,10 +23,9 @@ import {
   type Shift,
 } from '../backdropPlacement';
 
-const MOVES_WITH_VIEW: LayerMotion = {parallax: {x: 1, y: 1}, fit: false};
-const SKY: LayerMotion = {parallax: {x: 0.2, y: 0}, fit: false};
-const INTERFACE: LayerMotion = {parallax: {x: 1, y: 1}, fit: true};
-const PINNED: LayerMotion = {parallax: {x: 0, y: 0}, fit: false};
+const MOVES_WITH_VIEW: LayerMotion = {parallax: {x: 1, y: 1}};
+const SKY: LayerMotion = {parallax: {x: 0.2, y: 0}};
+const PINNED: LayerMotion = {parallax: {x: 0, y: 0}};
 
 // The window onto the world, which a world states for itself and these pass in
 // (`World.viewSize`). The standard one, so every expectation below still reads
@@ -55,12 +54,6 @@ describe('layerShift', () => {
   it('scales a parallax layer per axis', () => {
     // A sky that shifts as the player walks and stays put when they jump.
     expect(layerShift(SKY, {x: 100, y: 50})).toEqual({x: 20, y: 0});
-  });
-
-  it('does not move a fit layer, whatever its parallax says', () => {
-    // `fit` does not consult the camera at all — that is what makes an
-    // interface layer an interface layer, and it wins over the factor.
-    expect(layerShift(INTERFACE, {x: 100, y: 50})).toEqual({x: 0, y: 0});
   });
 
   it('does not move a layer at factor zero', () => {
@@ -139,7 +132,7 @@ describe('a stretched slot', () => {
    */
   const covers = (parallax: {x: number; y: number}, camera: Shift) => {
     const {position, size} = stretchedPlacement(NO_OFFSET, MAP, parallax, VIEW);
-    const shift = layerShift({parallax, fit: false}, camera);
+    const shift = layerShift({parallax}, camera);
     const left = -shift.x + position.x - size.x / 2;
     const top = -shift.y + position.y - size.y / 2;
     return (
@@ -193,10 +186,10 @@ describe('a stretched slot', () => {
     expect(acrossTheMap({x: -0.5, y: -0.5})).toEqual([]);
   });
 
-  it('is one viewport at rest for a fixed layer, exactly as before', () => {
-    // `fit` is parallax zero here — its container never moves — so screen
-    // furniture is untouched by any of this.
-    const fixed = placementParallax(INTERFACE);
+  it('is one viewport at rest for the screen’s layer, exactly as before', () => {
+    // The screen's layer has no motion, which is parallax zero here — its
+    // container never moves — so the screen is untouched by any of this.
+    const fixed = placementParallax(undefined);
     const {position, size} = stretchedPlacement(NO_OFFSET, MAP, fixed, VIEW);
 
     expect(fixed).toEqual({x: 0, y: 0});
@@ -280,7 +273,7 @@ describe('a world with a window of its own size', () => {
         ROOM,
       );
       for (const at of [0, (map.x - ROOM.x) / 2, map.x - ROOM.x]) {
-        const shift = layerShift({parallax, fit: false}, {x: at, y: 0});
+        const shift = layerShift({parallax}, {x: at, y: 0});
         const left = -shift.x + position.x - size.x / 2;
 
         expect(left).toBeLessThanOrEqual(0);

@@ -29,7 +29,7 @@
 // THE GAUGE IS AN ACTOR, because everything is. It is the stock Progress Bar's
 // drawing with a step of its own, and the step reaches the pilot BY KIND —
 // `first actor in ⟨any Pilot⟩` — which is the one cross-actor line in the
-// project. It sits over the ceiling rather than in a fixed layer: the whole
+// project. It sits over the ceiling rather than on the Main Screen: the whole
 // room is on screen and the view never moves, so a world position at the top
 // of the room is a heads-up display and needs nothing to make it one.
 //

@@ -289,9 +289,10 @@ describe('what a tile promises', () => {
   //
   //   memory/variable — a name for a value, which is a fact about the workspace
   //     and nothing else: the same program runs the same either way.
-  //   place/layers    — fixed and parallax are applied by the DRIVER as it
-  //     draws, so an actor in a fixed layer is at the same world position as one
-  //     that is not. What the lesson makes is the declaration.
+  //   place/layers    — parallax is applied by the DRIVER as it draws, so an
+  //     actor in a lagging layer is at the same world position as one that is
+  //     not. What the lesson makes is the declaration, and where the Score is
+  //     placed.
   //   making/read     — the product is having opened a file.
   it('leans on shape checks only where there is no state to read', () => {
     const shapes = TILES.filter(t => t.check.kind === 'shape').map(t => t.id);

@@ -120,6 +120,7 @@ import {
   withPlacementAnchor,
   withPlacementLayer,
   withBackground,
+  withScreenBackground,
   withEventHandler,
   type MapSlotDoc,
   toLocalPosition,
@@ -3291,13 +3292,18 @@ export const MapStage = ({
 
   // THE MAP'S BACKGROUND is its back layer's — the one `set background to`
   // sets — offered in the inspector with nothing selected, so that a map has
-  // a background without the Layers panel having to be found first.
+  // a background without the Layers panel having to be found first. A
+  // screen's is its own, since a screen has no layers.
   const backLayer = layersOf(map)[0];
   const backgroundProps = {
-    background: backLayer.background,
+    background: canDock ? map.background : backLayer.background,
     backgrounds: backgroundChoices ?? [],
     onBackground: (change: Partial<MapSlotDoc>) =>
-      commit(withBackground(mapRef.current, backLayer.id, change)),
+      commit(
+        canDock
+          ? withScreenBackground(mapRef.current, change)
+          : withBackground(mapRef.current, backLayer.id, change),
+      ),
   };
 
   // The selection's Script button, floated just outside its top-right corner

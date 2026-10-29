@@ -1235,8 +1235,8 @@ export const TILES: readonly Tile[] = [
     at: at('place', 2, 1),
     title: 'What is in front',
     teaches:
-      'Drawing order is a thing you declare, and some things should not move with the view at all.',
-    task: 'The score scrolls away with the scenery. Give it a layer that ignores the camera, and the hills one that lags.',
+      'Drawing order is a thing you declare, and what should not move with the view belongs on the screen, not in the level.',
+    task: 'The score scrolls away with the scenery. Put it on the Main Screen, and give the hills a layer that lags.',
     requires: ['place/map'],
     unlocks: [
       // Where a layer is made: the map editor's strip, a layer's inspector,
@@ -1247,19 +1247,20 @@ export const TILES: readonly Tile[] = [
     ],
     check: {
       kind: 'shape',
-      says: 'The Score is in a layer fixed to the screen, and the Hills are in one that moves less than the camera.',
+      says: 'The Score is on the Main Screen and not in the level, and the Hills are in a layer that moves less than the camera.',
       falsePass:
-        'Moving the Score every frame to wherever the camera is, which looks identical and is a thing to keep in step by hand for the rest of the project. The check reads the map\u2019s LAYER, which is the declaration that makes it true once.',
+        'Moving the Score every frame to wherever the camera is, which looks identical and is a thing to keep in step by hand for the rest of the project. The check reads where the Score is PLACED, which is the declaration that makes it true once.',
       run: {probes: {view: {kind: 'cameras'}}, trace: [{seconds: 0.1}]},
       inspect: files => {
         const layers = mainMapLayers(files);
-        const onMap = (is: (layer: MapLayerShape) => boolean, who: string) =>
-          layers.some(layer => is(layer) && layer.holds.includes(who));
+        const score = 'actors/score';
         return (
-          onMap(layer => layer.fit === true, 'actors/score') &&
-          onMap(
-            layer => !layer.fit && (layer.parallax?.x ?? 1) < 1,
-            'actors/hill',
+          screenPlacementKinds(files).includes(score) &&
+          !layers.some(layer => layer.holds.includes(score)) &&
+          layers.some(
+            layer =>
+              (layer.parallax?.x ?? 1) < 1 &&
+              layer.holds.includes('actors/hill'),
           )
         );
       },
@@ -3758,7 +3759,6 @@ function scriptedPlacements(files: Record<string, string>): number {
 
 /** A main map's layer, as a check reads it: how it moves, and the kinds on it. */
 interface MapLayerShape {
-  fit?: boolean;
   parallax?: {x?: number; y?: number};
   holds: string[];
 }
@@ -3773,12 +3773,27 @@ function mainMapLayers(files: Record<string, string>): MapLayerShape[] {
     layers?: Array<{id: string} & Omit<MapLayerShape, 'holds'>>;
     actors?: Array<{type?: string; layer?: string}>;
   };
-  return (map.layers ?? []).map(layer => ({
+  const layers = map.layers?.length ? map.layers : [{id: 'main'}];
+  return layers.map(layer => ({
     ...layer,
     holds: (map.actors ?? [])
       .filter(actor => (actor.layer ?? 'main') === layer.id)
       .flatMap(actor => (actor.type ? [actor.type] : [])),
   }));
+}
+
+/** The kinds the Main Screen places, the level's Viewport among them. */
+function screenPlacementKinds(files: Record<string, string>): string[] {
+  try {
+    const screen = JSON.parse(files['screens/main.screen'] ?? '{}') as {
+      actors?: Array<{type?: string}>;
+    };
+    return (screen.actors ?? []).flatMap(actor =>
+      actor.type ? [actor.type] : [],
+    );
+  } catch {
+    return [];
+  }
 }
 
 /** A rule file as data, whatever shape it is stored in. */

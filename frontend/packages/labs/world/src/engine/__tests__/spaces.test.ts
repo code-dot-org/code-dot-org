@@ -486,7 +486,7 @@ describe('a map’s layers', () => {
       },
       {id: 'main'},
       // Fog over the game: a layer above it, with a background of its own.
-      {id: 'fog', fit: true, background: {sprite: 'fog.png'}},
+      {id: 'fog', background: {sprite: 'fog.png'}},
     ],
     actors: [
       {type: 'actors/coin', id: 'far', layer: 'sky'},
@@ -517,7 +517,6 @@ describe('a map’s layers', () => {
       {
         id: 'sky',
         parallax: {x: 0.2, y: 0},
-        fit: false,
         background: expect.objectContaining({
           sprite: 'sky.png',
           repeat: true,
@@ -527,7 +526,6 @@ describe('a map’s layers', () => {
       expect.objectContaining({id: 'main', parallax: {x: 1, y: 1}}),
       expect.objectContaining({
         id: 'fog',
-        fit: true,
         background: expect.objectContaining({sprite: 'fog.png'}),
       }),
     ]);
@@ -543,22 +541,17 @@ describe('a map’s layers', () => {
     ]);
   });
 
-  it('resolve against the screen’s layers when loaded onto the screen', () => {
-    // The screen's layer list is fixed when the world is built, so a map
-    // loaded onto it adds none; a placement naming one it has lands on it.
-    const builder = new WorldBuilder({id: 'w', name: 'W'});
-    builder.defineScreenLayer({id: 'sky'});
-    const world = builder.getWorld();
+  it('are not the screen’s when loaded onto it, which is flat', () => {
+    // The screen has one layer, so a map loaded onto it adds none, and every
+    // placement lands on that one (specs/ONE_WORLD_PLAN.md).
+    const world = new WorldBuilder({id: 'w', name: 'W'}).getWorld();
     world.define('actors/coin', Coin);
 
-    const [far, near, lost] = world.loadScreen(LAYERED);
+    const placed = world.loadScreen(LAYERED);
 
-    expect(far.layer).toBe('sky');
-    expect(near.layer).toBe('main');
-    expect(lost.layer).toBe('main');
+    expect(placed.map(coin => coin.layer)).toEqual(['main', 'main', 'main']);
     expect(world.screenLayerSnapshot().map(layer => layer.id)).toEqual([
       'main',
-      'sky',
     ]);
   });
 

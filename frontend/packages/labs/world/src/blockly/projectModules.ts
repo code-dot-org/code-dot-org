@@ -236,8 +236,9 @@ export function projectEffectParameters(
 }
 
 /**
- * Every layer the project's maps and screens hold, as `[name, id]`, each id
- * once and the first name it is given: what a LAYER dropdown offers.
+ * Every layer the project's maps hold, as `[name, id]`, each id once and the
+ * first name it is given: what a LAYER dropdown offers. A screen has none
+ * (specs/ONE_WORLD_PLAN.md).
  */
 export function projectLayerOptions(
   files: Record<string, string>,
@@ -245,7 +246,7 @@ export function projectLayerOptions(
   const rows: Array<[string, string]> = [];
   const taken = new Set<string>();
   for (const path of Object.keys(files).sort()) {
-    if (!/^(maps\/.*\.map|screens\/.*\.screen)$/.test(path)) {
+    if (!/^maps\/.*\.map$/.test(path)) {
       continue;
     }
     let layers: unknown;

@@ -356,25 +356,22 @@ const slot = (sprite?: string) => ({
 });
 
 /** The World's layers: a half-speed `sky` with a backdrop, and `main`. */
-const layersOf = (hud?: boolean) => [
+const layersOf = (weather?: boolean) => [
   {
     id: 'sky',
     parallax: {x: 0.5, y: 0},
-    fit: false,
     background: slot('sky.png'),
   },
   {
     id: 'main',
     parallax: {x: 1, y: 1},
-    fit: false,
     background: slot(),
   },
-  ...(hud
+  ...(weather
     ? [
         {
-          id: 'hud',
+          id: 'weather',
           parallax: {x: 0, y: 0},
-          fit: true,
           background: slot(),
         },
       ]
@@ -393,9 +390,9 @@ const world = (held: {
   carried?: boolean;
   /** A second Viewport at (60,60), onto the same World. */
   mini?: boolean;
-  /** The box's camera's zoom, and a fit layer over its map. */
+  /** The box's camera's zoom, and a still layer over its map. */
   zoom?: number;
-  hud?: boolean;
+  weather?: boolean;
 }) => {
   const shown = () => held.window !== false;
   const camera = () => ({x: 320, y: 160, zoom: held.zoom ?? 1});
@@ -418,7 +415,6 @@ const world = (held: {
         id: 'main',
         effects: [],
         parallax: {x: 1, y: 1},
-        fit: false,
       },
     ],
     cameraSnapshot: () => [
@@ -452,7 +448,7 @@ const world = (held: {
               camera: camera(),
               view: {x: 100, y: 80},
               bounds: {x: 640, y: 320},
-              layers: layersOf(held.hud),
+              layers: layersOf(held.weather),
             },
             ...(shown()
               ? [
@@ -532,18 +528,19 @@ describe('drawing the World through a Viewport', () => {
   it('zooms the box’s camera, and measures its layers from what it shows', () => {
     // At 2 the camera at (320,160) takes in 50 by 40, from (295,140)
     // (specs/MIRRORING_PLAN.md, step 7).
-    new PhaserBinding(world({spaces: true, zoom: 2, hud: true}), pane());
+    new PhaserBinding(world({spaces: true, zoom: 2, weather: true}), pane());
     runFrame();
 
     expect(box().zoom).toBe(3 * 2);
-    const [sky, main, hud] = inner()!.children;
+    const [sky, main, weather] = inner()!.children;
     expect([main.x, main.y]).toEqual([0, 0]);
     // Half the travel across, none up, from the corner the zoom shows.
     expect([sky.x, sky.y]).toEqual([147.5, 140]);
-    // A fit layer is the window's: at the corner, with the zoom taken off.
-    expect([hud.x, hud.y]).toEqual([295, 140]);
-    expect(hud.scale).toBe(0.5);
-    expect(sky.scale).toBe(1);
+    // A layer at (0, 0) stays at the corner the zoom shows, and is never
+    // scaled back: it zooms with the camera, which is what weather in the
+    // scene wants (specs/ONE_WORLD_PLAN.md).
+    expect([weather.x, weather.y]).toEqual([295, 140]);
+    expect(weather.scale).toBeUndefined();
   });
 
   it('holds the World’s actors in a container the main camera ignores', () => {

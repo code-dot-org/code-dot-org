@@ -206,7 +206,6 @@ const prologueOf = (
       name,
       hoisted: [],
       own: '',
-      mapLayers: [],
       mainMap: '',
     },
   );
@@ -444,22 +443,6 @@ describe('domain block generators', () => {
     expect(run({x: 0, y: 0.5})).toBe(
       'world.setLayerParallax(new WorldLab.Vector(0, 0.5));\n',
     );
-  });
-
-  it('world_layer_fixed is a separate block, and a word not a number', () => {
-    // Its own question: the factor says how much of the camera's motion a layer
-    // takes, this says whether it looks at the camera at all. Folding them
-    // together left a vector on the block doing nothing whenever the answer was
-    // "fixed" — a field that lies about mattering.
-    const run = (fixed: string) =>
-      generatorFor('world_layer_fixed')(
-        {getFieldValue: () => fixed} as never,
-        {} as never,
-        {} as never,
-      ) as string;
-
-    expect(run('fixed')).toBe('world.setLayerFit(true);\n');
-    expect(run('follows')).toBe('world.setLayerFit(false);\n');
   });
 
   it('world_in_this_space narrows a source to the space in hand', () => {

@@ -3,21 +3,15 @@
 //
 // A layer is NOT a coordinate system of its own and NOT a camera. Cameras
 // belong to the world and are applied to a viewport; a layer says only how much
-// of whatever camera is drawing it applies to its contents. Two knobs:
+// of whatever camera is drawing it applies to its contents: `parallax`, a
+// per-axis multiplier on the view's motion. `(1, 1)` moves with it, `(0.2, 0)`
+// is the sky in a side-scroller — shifts as the player walks, stays put when
+// they jump, which is the case a single scalar cannot say and the one that
+// reads as broken when it is wrong.
 //
-//   - `parallax`, a per-axis multiplier on the view's motion. `(1, 1)` moves
-//     with it, `(0.2, 0)` is the sky in a side-scroller — shifts as the player
-//     walks, stays put when they jump, which is the case a single scalar cannot
-//     say and the one that reads as broken when it is wrong.
-//   - `fit`, which ignores the view entirely and fits the layer to the surface.
-//     This is what an interface layer is, and it is why one is not a special
-//     kind of object.
-//
-// `parallax: (0, 0)` is NOT `fit`. The factor covers translation only, so a
-// layer at zero still takes the camera's SCALE — and a HUD in a world whose map
-// put the camera at quarter scale would be drawn at quarter scale. `fit` does
-// not consult the camera at all. The two look identical until a map is large
-// enough to move the camera off 1:1.
+// `(0, 0)` stays put and still takes the camera's SCALE, which is right for
+// weather in the scene. What must ignore the camera altogether, a HUD, is on
+// a screen and not in a layer (specs/ONE_WORLD_PLAN.md).
 //
 // NOTHING HERE MOVES YET. A world with no camera has a view that never moves,
 // so every parallax value produces the same picture; what layers do before
@@ -95,8 +89,6 @@ export interface LayerInit {
   name?: string;
   /** Per-axis multiplier on the view's motion; defaults to `(1, 1)`. */
   parallax?: Vector;
-  /** Ignore the view and fit this layer to the surface; defaults to false. */
-  fit?: boolean;
 }
 
 /** A layer, as the world holds it. */
@@ -111,8 +103,6 @@ export interface Layer {
    * turn it while the game runs, and doing so must not restart anything.
    */
   parallax: Vector;
-  /** Whether it ignores the camera entirely. A value too, for the same reason. */
-  fit: boolean;
   /** Drawn behind this layer's actors. Mutable: a handler may change it. */
   readonly background: LayerSlot;
   /**
@@ -140,7 +130,6 @@ export interface MapLayer {
   id: string;
   name?: string;
   parallax?: {x: number; y: number};
-  fit?: boolean;
   background?: MapSlot;
 }
 
@@ -173,7 +162,6 @@ export function layersOfMap(layers: readonly MapLayer[] | undefined): Layer[] {
       parallax: layer.parallax
         ? new Vector(layer.parallax.x, layer.parallax.y)
         : undefined,
-      fit: layer.fit,
     }),
     background: slotFrom(layer.background),
   }));
@@ -187,7 +175,6 @@ export function makeLayer(init: LayerInit): Layer {
     id: init.id,
     name: init.name ?? init.id,
     parallax: init.parallax ? Vector.from(init.parallax) : new Vector(1, 1),
-    fit: init.fit ?? false,
     effects: [],
     background: emptySlot(),
   };

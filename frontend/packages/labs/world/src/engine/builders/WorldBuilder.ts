@@ -115,7 +115,6 @@ export class WorldBuilder {
   // Layers as declared, back to front. Empty until something says otherwise;
   // the World fills in the default layer either way.
   private readonly layers: LayerInit[] = [];
-  private readonly screenLayers: LayerInit[] = [];
   private readonly types = new Map<string, ActorBuilder>();
   /** The project's maps by path — see {@link defineMap}. */
   private readonly maps = new Map<string, WorldMap>();
@@ -233,13 +232,6 @@ export class WorldBuilder {
   defineLayer(layer: LayerInit): this {
     this.requireNoActors('defineLayer');
     this.layers.push(layer);
-    return this;
-  }
-
-  /** …and one of the screen's own, which its data says (`layerDeclarations`). */
-  defineScreenLayer(layer: LayerInit): this {
-    this.requireNoActors('defineScreenLayer');
-    this.screenLayers.push(layer);
     return this;
   }
 
@@ -540,16 +532,16 @@ export class WorldBuilder {
     return this.defer('setScreenSize', columns, rows);
   }
 
-  setScreenBackground(sprite: string | undefined, layer?: string): this {
-    return this.defer('setScreenBackground', sprite, layer);
+  setScreenBackground(sprite: string | undefined): this {
+    return this.defer('setScreenBackground', sprite);
   }
 
-  setScreenBackgroundRepeat(repeat: boolean, layer?: string): this {
-    return this.defer('setScreenBackgroundRepeat', repeat, layer);
+  setScreenBackgroundRepeat(repeat: boolean): this {
+    return this.defer('setScreenBackgroundRepeat', repeat);
   }
 
-  setScreenBackgroundOffset(offset: Vector, layer?: string): this {
-    return this.defer('setScreenBackgroundOffset', offset, layer);
+  setScreenBackgroundOffset(offset: Vector): this {
+    return this.defer('setScreenBackgroundOffset', offset);
   }
 
   /** Slide a layer's background. See {@link World.setBackgroundOffset}. */
@@ -603,11 +595,6 @@ export class WorldBuilder {
   /** How much of the camera's motion a layer takes. See {@link World.setLayerParallax}. */
   setLayerParallax(parallax: Vector, layer?: string): this {
     return this.defer('setLayerParallax', parallax, layer);
-  }
-
-  /** Whether a layer ignores the camera. See {@link World.setLayerFit}. */
-  setLayerFit(fit: boolean, layer?: string): this {
-    return this.defer('setLayerFit', fit, layer);
   }
 
   /** Move the screen's camera. See {@link World.setCameraPosition}. */
@@ -885,7 +872,6 @@ export class WorldBuilder {
       name: this.name,
       rules: this.rulesInPlay(),
       layers: this.layers.map(layer => ({...layer})),
-      screenLayers: this.screenLayers.map(layer => ({...layer})),
       ownProperties: this.own,
     });
     // What was recorded before it existed — every template, every map — so a

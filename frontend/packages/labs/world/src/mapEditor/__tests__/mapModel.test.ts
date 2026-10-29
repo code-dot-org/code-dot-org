@@ -24,6 +24,7 @@ import {
   withLayer,
   withPlacementLayer,
   withBackground,
+  withScreenBackground,
   renamePlacementReferences,
   withoutPlacement,
   MAX_MAP_TILES,
@@ -629,6 +630,19 @@ describe('a map’s layers', () => {
       repeat: true,
     });
     expect(first.layers).toEqual([{id: 'main', background: {repeat: true}}]);
+  });
+
+  it('gives a screen one background of its own, and no layers', () => {
+    // A screen is flat (specs/ONE_WORLD_PLAN.md).
+    const screen = {...base(), layers: undefined};
+    const drawn = withScreenBackground(screen, {sprite: 'title.png'});
+    expect(drawn.background).toEqual({sprite: 'title.png'});
+    expect(drawn.layers).toBeUndefined();
+    const tiled = withScreenBackground(drawn, {repeat: true});
+    expect(tiled.background).toEqual({sprite: 'title.png', repeat: true});
+    // …and one with nothing left to say is dropped from the document.
+    const cleared = withScreenBackground(drawn, {sprite: ''});
+    expect('background' in cleared).toBe(false);
   });
 
   it('puts a placement on a layer, the default by saying nothing', () => {

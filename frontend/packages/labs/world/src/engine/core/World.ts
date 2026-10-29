@@ -371,10 +371,8 @@ export interface WorldSnapshot {
    * value ({@link layerMotion}) and a rule may turn it mid-game.
    */
   layers: string[];
-  /** …and the screen's, which are structural for the same reason. */
-  screenLayers: string[];
   /** How each layer responds to the camera. A value, patched like a property. */
-  layerMotion: Record<string, {parallax: {x: number; y: number}; fit: boolean}>;
+  layerMotion: Record<string, {parallax: {x: number; y: number}}>;
   /**
    * Which cameras exist, in declaration order.
    *
@@ -450,8 +448,8 @@ export interface WorldSnapshot {
    * structural exactly as it is on an actor.
    */
   backdrops: SlotValues[];
-  /** …and the screen's layers', which are values in the same way. */
-  screenBackdrops: SlotValues[];
+  /** …and the screen's, which is a value in the same way. */
+  screenBackdrop: SlotValues;
   /**
    * The track this world is playing, or undefined for silence.
    *
@@ -621,8 +619,6 @@ export interface WorldInit {
    * those, in the order given, which IS the draw order.
    */
   layers?: LayerInit[];
-  /** …and the screen's, which the Main Screen's data says. */
-  screenLayers?: LayerInit[];
   /**
    * State the WORLD declared for itself, with no rule to carry it
    * (specs/WORLD_STATE.md). Seeded like a rule's world-scoped properties, and
@@ -928,7 +924,7 @@ export class World {
   // default, which is where an actor placed without being told a layer goes.
   /** The World's layers when its map names none (`WorldInit.layers`). */
   private readonly baseLayers: readonly LayerInit[];
-  /** The SCREEN's layers, back to front; the World's are `worldSpace.layers`. */
+  /** The SCREEN's one layer, as a list; the World's are `worldSpace.layers`. */
   private readonly layerList: Layer[];
   // The screen's one camera, in a list of one so the collection and the
   // snapshot read it as they read any camera. Each Viewport's is its space's.
@@ -1109,13 +1105,10 @@ export class World {
     // somewhere to be and nothing has to special-case its absence.
     this.baseLayers = init.layers ?? [];
     this.worldSpace.layers = this.worldLayersFor(undefined);
-    this.layerList = (init.screenLayers ?? []).map(makeLayer);
-    if (!this.layerList.some(layer => layer.id === DEFAULT_LAYER_ID)) {
-      this.layerList.unshift(makeLayer({id: DEFAULT_LAYER_ID}));
-    }
-    this.layerList.forEach((layer, index) =>
-      this.layerIndex.set(layer.id, index),
-    );
+    // The screen is flat: one layer, which its actors and background are on
+    // (specs/ONE_WORLD_PLAN.md).
+    this.layerList = [makeLayer({id: DEFAULT_LAYER_ID})];
+    this.layerIndex.set(DEFAULT_LAYER_ID, 0);
     this.cameraList = [makeCamera({id: DEFAULT_CAMERA_ID})];
     this.cameraCollection = new CameraCollection(
       this.cameraList,
@@ -1616,12 +1609,6 @@ export class World {
    */
   setLayerParallax(parallax: Vector, layer?: string): this {
     this.layerHere(layer).parallax = new Vector(parallax.x, parallax.y);
-    return this;
-  }
-
-  /** Whether a layer ignores the camera entirely — what a HUD is. */
-  setLayerFit(fit: boolean, layer?: string): this {
-    this.layerHere(layer).fit = fit;
     return this;
   }
 
@@ -2172,19 +2159,19 @@ export class World {
     return this.onScreen(() => this.setBackgroundColor(color));
   }
 
-  /** A screen layer's background, which the Main Screen's data says. */
-  setScreenBackground(sprite: string | undefined, layer?: string): this {
-    return this.onScreen(() => this.setBackground(sprite, layer));
+  /** The screen's background, which the Main Screen's data says. */
+  setScreenBackground(sprite: string | undefined): this {
+    return this.onScreen(() => this.setBackground(sprite));
   }
 
   /** …and whether it tiles. */
-  setScreenBackgroundRepeat(repeat: boolean, layer?: string): this {
-    return this.onScreen(() => this.setBackgroundRepeat(repeat, layer));
+  setScreenBackgroundRepeat(repeat: boolean): this {
+    return this.onScreen(() => this.setBackgroundRepeat(repeat));
   }
 
   /** …and where it sits. */
-  setScreenBackgroundOffset(offset: Vector, layer?: string): this {
-    return this.onScreen(() => this.setBackgroundOffset(offset, layer));
+  setScreenBackgroundOffset(offset: Vector): this {
+    return this.onScreen(() => this.setBackgroundOffset(offset));
   }
 
   /** The space a Viewport owns, or nothing for an actor that is not one. */
@@ -2403,7 +2390,6 @@ export class World {
     layers: ReadonlyArray<{
       id: string;
       parallax: {x: number; y: number};
-      fit: boolean;
       background: BackdropState;
     }>;
   }> {
@@ -2445,7 +2431,6 @@ export class World {
         layers: world.layers.map(layer => ({
           id: layer.id,
           parallax: {x: layer.parallax.x, y: layer.parallax.y},
-          fit: layer.fit,
           background: layer.background,
         })),
       },
@@ -4329,7 +4314,7 @@ export class World {
     return this.worldSpace.clearColor ?? this.clearColor;
   }
 
-  /** The screen's layers' backgrounds, as the driver draws them. */
+  /** The screen's background, in a list of one, as the driver draws it. */
   screenBackdropSnapshot(): readonly BackdropState[] {
     return this.layerList.map(layer => layer.background);
   }
@@ -4577,14 +4562,11 @@ export class World {
     effects: readonly AppliedEffectSpec[];
     /** How much of the camera's motion this layer takes, per axis. */
     parallax: {x: number; y: number};
-    /** Whether it ignores the camera entirely — an interface layer. */
-    fit: boolean;
   }> {
     return this.worldSpace.layers.map(layer => ({
       id: layer.id,
       effects: layer.effects,
       parallax: {x: layer.parallax.x, y: layer.parallax.y},
-      fit: layer.fit,
     }));
   }
 
@@ -4594,7 +4576,6 @@ export class World {
       id: layer.id,
       effects: layer.effects,
       parallax: {x: layer.parallax.x, y: layer.parallax.y},
-      fit: layer.fit,
     }));
   }
 
@@ -5121,14 +5102,10 @@ export class World {
         ]),
       ),
       layers: this.worldSpace.layers.map(layer => layer.id),
-      screenLayers: this.layerList.map(layer => layer.id),
       layerMotion: Object.fromEntries(
         this.worldSpace.layers.map(layer => [
           layer.id,
-          {
-            parallax: {x: layer.parallax.x, y: layer.parallax.y},
-            fit: layer.fit,
-          },
+          {parallax: {x: layer.parallax.x, y: layer.parallax.y}},
         ]),
       ),
       // By actor id so the list is stable, but NOT sorted within an actor:
@@ -5166,8 +5143,9 @@ export class World {
       backdrops: this.worldSpace.layers.map(layer =>
         slotValues(layer.id, layer.background),
       ),
-      screenBackdrops: this.layerList.map(layer =>
-        slotValues(layer.id, layer.background),
+      screenBackdrop: slotValues(
+        DEFAULT_LAYER_ID,
+        this.layerList[0].background,
       ),
       clearColor: this.worldSpace.clearColor
         ? ([...this.worldSpace.clearColor] as Rgba)

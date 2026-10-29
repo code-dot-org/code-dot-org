@@ -1,6 +1,6 @@
 # Plan: one World, seen through Viewports
 
-STATUS: BUILDING, October 2026. Steps 1 to 6 are done. Comes before
+STATUS: BUILDING, October 2026. Steps 1 to 7 are done. Comes before
 specs/SCREEN_STACK_PLAN.md, which sits on it.
 
 A game has one World. Maps fill it, and maps bring its layers. A Viewport is
@@ -310,6 +310,29 @@ map … into ⟨Game⟩`, is now a correct answer, and its test says so.
   the bird reaches the middle of the window, then follows it. Selecting the
   Game Viewport shows a Camera row, which opens Zoom and the camera traits,
   with Follows aimed at any Bird.
+- **Step 7 left a screen one layer and one background.** `defineScreenLayer`
+  and the screen's list of layers are gone; the screen's data says
+  `background` (a picture, whether it tiles, where it sits) beside
+  `backgroundColor`, and the generator says it as `setScreenBackground` and
+  its two companions, with no layer. No screen in the content had layers,
+  and the converter now refuses a world whose map is a screen with layers.
+- **`fit` went with the `this layer is fixed` block, `setLayerFit` and the
+  inspector's Fixed to the screen.** A layer at parallax (0, 0) is what is
+  left, and it zooms with the camera, as weather in the scene should.
+- **Tapper was the only content with a fixed layer**, and its score label was
+  not even on it: the label was added by code inside `define layer`, and code
+  there places into the default layer. Its four labels are now Main Screen
+  placements. The coin raises `scored` and the Score label's own code answers
+  it, since screen code cannot name a placement (`the ⟨…⟩` is a map's and a
+  placement's block).
+- **The layers lesson (`place/layers`) taught the fixed layer.** It now asks
+  for the Score on the Main Screen, out of the level, and the Hills on a
+  layer that lags; its check reads where the Score is placed.
+- **Compared before and after** as in step 6: no difference in any of the 90
+  but the random lessons' positions and Tapper's labels, which moved from the
+  World to the screen at the same places.
+- **Seen in the browser**: Tapper's labels draw over the game, and clicking
+  two coins takes them away and the screen says `Score: 2`.
 
 ## Not in this plan
 

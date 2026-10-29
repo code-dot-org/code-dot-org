@@ -10,13 +10,14 @@ import {projectLayerOptions} from '../projectModules';
 afterEach(() => setProjectLayers([]));
 
 describe('the layers a LAYER dropdown offers', () => {
-  it('are every map’s and screen’s, each id once, by name', () => {
+  it('are every map’s, each id once, by name, and never a screen’s', () => {
     const files = {
       'maps/level.map': JSON.stringify({
         layers: [{id: 'layer1', name: 'Sky'}, {id: 'main'}],
       }),
+      // A screen is flat, and a list it held anyway is not offered.
       'screens/main.screen': JSON.stringify({
-        layers: [{id: 'hud', name: 'Interface', fit: true}],
+        layers: [{id: 'hud', name: 'Interface'}],
       }),
       // The same id in a second map is the same layer to a dropdown.
       'maps/other.map': JSON.stringify({
@@ -29,15 +30,14 @@ describe('the layers a LAYER dropdown offers', () => {
     expect(projectLayerOptions(files)).toEqual([
       ['Sky', 'layer1'],
       ['main', 'main'],
-      ['Interface', 'hud'],
     ]);
   });
 
   it('lead with the default, which every map has', () => {
-    setProjectLayers([['Interface', 'hud']]);
+    setProjectLayers([['Sky', 'layer1']]);
     expect(layerOptions()).toEqual([
       ['Main', DEFAULT_LAYER_ID],
-      ['Interface', 'hud'],
+      ['Sky', 'layer1'],
     ]);
     // A project with no layers still has the default to offer.
     setProjectLayers([]);

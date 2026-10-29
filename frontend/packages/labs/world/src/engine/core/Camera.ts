@@ -13,8 +13,8 @@
 // through it, and why a camera is not a thing that draws.
 //
 // Cameras belong to the WORLD, not to a layer. A layer says only how much of
-// whichever camera is drawing it applies to its contents (`Layer.parallax`,
-// `Layer.fit`); it does not own the pose. That separation is what lets a second
+// whichever camera is drawing it applies to its contents (`Layer.parallax`);
+// it does not own the pose. That separation is what lets a second
 // view of the same layer exist later — a minimap, a split screen — without the
 // contents knowing.
 //

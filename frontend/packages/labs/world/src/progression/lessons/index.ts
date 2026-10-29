@@ -1587,22 +1587,27 @@ const layers: WorldScenario = {
 ## What is in front
 
 Walk right. The score goes with the scenery and off the side of the screen,
-because it is a thing in the world like the hills and the floor — and nothing
+because it is a thing in the level like the hills and the floor — and nothing
 has ever said otherwise.
 
-A **layer** is a group with a drawing order and its own relationship to the
-camera. Everything so far has been in one layer, which is why everything so
-far has moved together. A map's layers are listed beside it, front at the top.
+The level is what the camera looks at. The **Main Screen** is what the level
+is shown on: the window onto it, and anything drawn over that window, which
+stays where it is put whatever the camera does. A score belongs there.
+
+A **layer** is a group in the level with a drawing order and its own
+relationship to the camera. Everything so far has been in one layer, which is
+why everything so far has moved together. A map's layers are listed beside
+it, front at the top.
 
 ### What you do
 
-1. On the map, add a layer in the **Layers** list and call it
-   Interface. Tick **Fixed to the screen**.
-2. Click the Score on the map and set its **Layer** to Interface. Run it: the
-   score stays where it is drawn, whatever the camera does.
-3. Add another layer, call it Hills, and move it BACK until it is at the
-   bottom of the list — lower in the list is further back, and the hills
-   belong behind the floor.
+1. On the map, select the Score and delete it.
+2. Open the **Main Screen**, and from the **Game** tab of the actor list put a
+   Score where it should be drawn. Run it: the score stays where it is,
+   whatever the camera does.
+3. Back on the map, add a layer in the **Layers** list, call it Hills, and
+   move it BACK until it is at the bottom of the list — lower in the list is
+   further back, and the hills belong behind the floor.
 4. Set its **Moves X** to 0.4 and leave **Moves Y** at 1, then put the three
    Hills on it. They now drift slower than the floor, which is what makes
    them look far away.

@@ -7,9 +7,10 @@
 //
 // AND THE SCORE, which is what all of that was for. `define property ⟨score⟩`
 // sits in `define world` (specs/WORLD_STATE.md), so the count outlives the coin
-// that raised the event — and a Label draws it, so the game says it to the
-// player rather than to the console. This scenario ended with `log ⟨Got one!⟩`
-// for as long as neither of those existed.
+// that raised the event — and a Label on the Main Screen draws it, so the game
+// says it to the player rather than to the console. The coin raises `scored`,
+// and the Label's own code answers it: events are how the game talks to its
+// screen (specs/SCREEN_STACK_PLAN.md).
 //
 // THREE TELLINGS OF ONE PRESS, which is the shape of the mouse rule and the
 // reason it has two traits:
@@ -37,6 +38,7 @@
 // what makes a game feel aimed rather than merely clicked at.
 
 import {labelActor} from '../actors/stock/label';
+import {emitWorldEvent, hearWorldEvent} from '../actors/stock/workspace';
 import {
   buildProject,
   stack,
@@ -54,28 +56,19 @@ import {me, number} from './meteors';
 const COIN = 'actors/coin';
 const SCOREBOARD = 'actors/scoreboard';
 
-/** The Label the score is written on, named the same way. */
-const LABEL = {
-  block: {type: 'world_actor_kind', fields: {ACTOR: 'actors/label'}},
-};
-
-/** The variable the spawn binds, so the body can dress the new Label. */
-const SCORE_VAR = {id: 'tapperScoreVar', name: 'score label', type: 'Actor'};
-
-const scoreLabel = () => ({
-  block: {type: 'variables_get_Actor', fields: {VAR: SCORE_VAR}},
-});
-
 /**
  * `get score` — the world's own, with no subject to name.
  *
- * Named for the FILE (`worlds/main`) and not for the world (`Tapper`): a name
- * is a label here, and renaming the world must not turn every block that reads
- * its state into a stand-in (`memberKey`, specs/WORLD_STATE.md).
+ * Named for the FILE and not for the world (`Tapper`): a name is a label
+ * here, and renaming the world must not turn every block that reads its state
+ * into a stand-in (`memberKey`, specs/WORLD_STATE.md). The world's code says
+ * `worlds/main`, which the converter renames; the screen's is said as it is.
  */
-const score = () => ({block: {type: 'world_get_WorldsMain_ScoreProperty'}});
+const score = (file = 'WorldsMain') => ({
+  block: {type: `world_get_${file}_ScoreProperty`},
+});
 
-/** `set text of ⟨who⟩ to ⟨join "Score: " ⟨score⟩⟩`. */
+/** `set text of ⟨who⟩ to ⟨join "Score: " ⟨score⟩⟩`, on the Main Screen. */
 const scoreText = (who: object) => ({
   type: 'world_set_ActorsLabel_TextProperty',
   inputs: {
@@ -85,7 +78,12 @@ const scoreText = (who: object) => ({
         type: 'text',
         fields: {TEXT: 'Score: '},
         inputs: {
-          ADD: {block: {type: 'world_as_text', inputs: {VALUE: score()}}},
+          ADD: {
+            block: {
+              type: 'world_as_text',
+              inputs: {VALUE: score('ScreensMain')},
+            },
+          },
         },
       },
     },
@@ -118,61 +116,59 @@ const actorFile = (name: string, rows: object[]) =>
   });
 
 /**
- * The furniture: Labels that say the same thing for the whole game.
- *
- * One `add actor` each, dressed in its own `do` body — the same shape the score
- * Label uses two blocks up. NOT `create ⟨Label⟩ in map` with the words written
- * into each placement: that popup places prefabs and nothing else (its own
- * header says "no inspector"), so a placement's properties are not a thing a
- * learner can set there. A fixture that carried them would be showing a file
- * format rather than a program anybody could have written.
+ * The Main Screen's Labels: the score, which its own code keeps up to date,
+ * and the furniture, which says the same thing for the whole game.
  *
  * WHERE THEY GO IS ARITHMETIC, not taste. A Label is a 96 by 24 canvas with its
  * words in the middle of it (`actors/stock/label`), so two of them less than 24
- * apart overlap however small the type is — which is what these three did at
- * 300, 288 and 276, with the title UNDER its own hints. The coins fill y 32 to
- * 256, so the title goes in the band above them and the hints in the band
- * below, a canvas apart.
+ * apart overlap however small the type is. The coins fill y 32 to 256, so the
+ * title goes in the band above them and the hints in the band below, a canvas
+ * apart. The score is at y=16 and not 32: the top row of coins is centered at
+ * 48 and is 32 tall, so a Label centered at 32 has its lower half behind the
+ * first coin.
  */
-const HUD: Array<[string, number, string, number]> = [
-  ['TAPPER', 16, '#ffffff', 14],
-  ['click a coin', 282, '#8890b0', 9],
-  ['the right button too', 306, '#8890b0', 9],
-];
-
-/** `set ⟨what⟩ of this actor to ⟨value⟩`, for a property the Writing rule has. */
-const dress = (exportName: string, value: object) => ({
-  type: `world_set_ActorsLabel_${exportName}`,
-  inputs: {ACTOR: me(), VALUE: value},
-});
-
-/** One line of furniture: place a Label, then say what it is. */
-const hudLabel = ([text, y, color, size]: [
-  string,
-  number,
-  string,
-  number,
-]) => ({
-  type: 'world_add_actor',
-  fields: {ACTOR: 'actors/label'},
-  inputs: {
-    DO: {
-      block: stack([
-        {
-          type: 'world_set_position',
-          inputs: {ACTOR: me(), X: number(160), Y: number(y)},
-        },
-        dress('TextProperty', {
-          shadow: {type: 'text', fields: {TEXT: text}},
-        }),
-        dress('TextColorProperty', {
-          shadow: {type: 'colour_picker', fields: {COLOUR: color}},
-        }),
-        dress('TextSizeProperty', number(size)),
-      ]),
+const label = (
+  id: string,
+  [x, y]: [number, number],
+  text: string,
+  color: string,
+  size?: number,
+) => ({
+  type: 'actors/label',
+  id,
+  properties: {
+    positional: {position: {x, y}},
+    Label: {
+      text,
+      text_color: color,
+      ...(size === undefined ? {} : {text_size: size}),
     },
   },
 });
+
+const SCORE_LABEL = {
+  ...label('Score', [48, 16], 'Score: 0', '#ffcc00'),
+  blocks: {
+    blocks: {
+      languageVersion: 0,
+      blocks: [
+        {
+          type: hearWorldEvent('scored'),
+          x: 20,
+          y: 20,
+          next: {block: scoreText(me())},
+        },
+      ],
+    },
+  },
+};
+
+const INTERFACE = [
+  SCORE_LABEL,
+  label('Title', [160, 16], 'TAPPER', '#ffffff', 14),
+  label('Hint', [160, 282], 'click a coin', '#8890b0', 9),
+  label('Hint2', [160, 306], 'the right button too', '#8890b0', 9),
+];
 
 /** The counters the coin grid runs on — numbers, so the body can read them. */
 const ROW_VAR = {id: 'tapperRowVar', name: 'row', type: 'Number'};
@@ -447,7 +443,7 @@ const MAIN_WORLD = JSON.stringify({
                 DEFAULT: '0',
               },
             },
-            // THE GAME, in the default layer, which is drawn first.
+            // THE GAME. Its interface is the Main Screen's (`INTERFACE`).
             COIN_GRID,
             {
               type: 'world_add_actor',
@@ -456,70 +452,6 @@ const MAIN_WORLD = JSON.stringify({
             {
               type: 'world_add_actor',
               fields: {ACTOR: 'actors/crosshair'},
-            },
-            // THE INTERFACE, which is a layer of the map and nothing else —
-            // fixed to the screen, it ignores the camera altogether, so what
-            // is on it is in screen space (specs/VIEWPORT.md,
-            // specs/UI_ACTORS.md). After the default, so it sits over the
-            // game. The converter makes it the map's (`lessons/asScreen`).
-            {
-              type: 'world_define_layer',
-              fields: {NAME: 'Interface'},
-              inputs: {
-                DO: {
-                  block: stack([
-                    {type: 'world_layer_fixed', fields: {FIXED: 'fixed'}},
-                    // The one that CHANGES, so it is placed by hand and bound
-                    // to a variable the handlers can reach. A `create in map`
-                    // placement has no name a block can say
-                    // (specs/UI_ACTORS.md).
-                    {
-                      type: 'world_add_actor',
-                      fields: {
-                        ACTOR: 'actors/label',
-                        NAMED: 'named',
-                        VAR: SCORE_VAR,
-                      },
-                      extraState: {named: true},
-                      inputs: {
-                        DO: {
-                          block: stack([
-                            // y=16 and not 32: the top row of coins is
-                            // centered at 48 and is 32 tall, so a Label centered
-                            // at 32 has its lower half behind the first coin.
-                            {
-                              type: 'world_set_position',
-                              inputs: {
-                                ACTOR: scoreLabel(),
-                                X: number(48),
-                                Y: number(16),
-                              },
-                            },
-                            {
-                              type: 'world_set_ActorsLabel_TextColorProperty',
-                              inputs: {
-                                ACTOR: scoreLabel(),
-                                VALUE: {
-                                  shadow: {
-                                    type: 'colour_picker',
-                                    fields: {COLOUR: '#ffcc00'},
-                                  },
-                                },
-                              },
-                            },
-                            scoreText(scoreLabel()),
-                          ]),
-                        },
-                      },
-                    },
-                    // …and the ones that do NOT change. Three of one kind,
-                    // each saying something different, which is why a picker
-                    // cannot identify a Label by its picture
-                    // (specs/UI_ACTORS.md).
-                    ...HUD.map(hudLabel),
-                  ]),
-                },
-              },
             },
           ]),
         },
@@ -565,7 +497,8 @@ const MAIN_WORLD = JSON.stringify({
                 },
               },
             },
-            scoreText(LABEL),
+            // …and the screen is told, which is how its Label hears.
+            emitWorldEvent('scored'),
             {type: 'world_remove_actor', inputs: {ACTOR: me()}},
           ]),
         },
@@ -644,9 +577,41 @@ export const TAPPER_SPEC: ProjectSpec = {
 };
 
 const built = buildProject(TAPPER_SPEC);
+const converted = asScreenProject(built.source);
 
 /**
  * Written as a world, and a game as a Main Screen showing its map
- * (`asScreen`, specs/LESSONS_AS_SCREENS_PLAN.md).
+ * (`asScreen`, specs/LESSONS_AS_SCREENS_PLAN.md), with its interface and the
+ * event that keeps it current added to that screen.
  */
-export const TAPPER_PROJECT = {...built, source: asScreenProject(built.source)};
+export const TAPPER_PROJECT = {
+  ...built,
+  source: {
+    ...converted,
+    files: Object.fromEntries(
+      Object.entries(converted.files).map(([id, file]) => {
+        if (file.name !== 'main.screen') {
+          return [id, file];
+        }
+        const screen = JSON.parse(file.contents ?? '{}') as {
+          actors: object[];
+        };
+        return [
+          id,
+          {
+            ...file,
+            contents: JSON.stringify(
+              {
+                ...screen,
+                events: [{name: 'scored'}],
+                actors: [...screen.actors, ...INTERFACE],
+              },
+              null,
+              2,
+            ),
+          },
+        ];
+      }),
+    ),
+  },
+};

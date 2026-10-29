@@ -22,15 +22,14 @@ export interface Shift {
 /** What the driver needs to know about a layer to place it. */
 export interface LayerMotion {
   parallax: {x: number; y: number};
-  fit: boolean;
 }
 
 /**
  * How far the camera has slid one layer, in screen pixels.
  *
  * `(1, 1)` moves with the view, `(0.2, 0)` is a sky that shifts as the player
- * walks and stays put when they jump, and a `fit` layer does not consult the
- * camera at all — which is what makes an interface layer an interface layer.
+ * walks and stays put when they jump, and `(0, 0)` stays put. The screen's
+ * layer has no motion, and does not consult the camera at all.
  *
  * The layer's CONTAINER is then positioned at the negative of this: the world
  * moves opposite the camera.
@@ -39,7 +38,7 @@ export const layerShift = (
   layer: LayerMotion | undefined,
   cameraOffset: Shift,
 ): Shift =>
-  !layer || layer.fit
+  !layer
     ? {x: 0, y: 0}
     : {
         x: cameraOffset.x * layer.parallax.x,
@@ -148,11 +147,8 @@ export const stretchedPlacement = (
 };
 
 /**
- * What a layer's parallax is FOR PLACEMENT: zero when it is fixed.
- *
- * A `fit` layer's container never moves, and that is the same arithmetic as a
- * factor of zero — so saying it once here keeps {@link stretchedPlacement} from
- * having to know what `fit` is.
+ * What a layer's parallax is FOR PLACEMENT: zero for the screen's, whose
+ * container never moves.
  */
 export const placementParallax = (layer: LayerMotion | undefined): Shift =>
-  !layer || layer.fit ? {x: 0, y: 0} : layer.parallax;
+  layer ? layer.parallax : {x: 0, y: 0};

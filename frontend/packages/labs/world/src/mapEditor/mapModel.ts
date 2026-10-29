@@ -108,8 +108,6 @@ export interface MapLayerDoc {
   name?: string;
   /** How much of the camera's motion it takes, per axis; `(1, 1)` unless said. */
   parallax?: Vec;
-  /** Fixed to the screen: it does not consult the camera at all. */
-  fit?: boolean;
   background?: MapSlotDoc;
 }
 
@@ -214,6 +212,22 @@ export function withBackground(
   const empty =
     !next.sprite && !next.repeat && !(next.offset?.x || next.offset?.y);
   return withLayer(doc, id, {background: empty ? undefined : next});
+}
+
+/** A screen's background changed; one that draws nothing is said by nothing. */
+export function withScreenBackground(
+  doc: MapDoc,
+  change: Partial<MapSlotDoc>,
+): MapDoc {
+  const next: MapSlotDoc = {...doc.background, ...change};
+  if (!next.sprite) {
+    delete next.sprite;
+  }
+  const empty =
+    !next.sprite && !next.repeat && !(next.offset?.x || next.offset?.y);
+  const rest = {...doc};
+  delete rest.background;
+  return empty ? rest : {...rest, background: next};
 }
 
 /** A placement on a layer; the default is said by saying nothing. */
@@ -352,6 +366,8 @@ export interface MapDoc {
   blocks?: WorkspaceState;
   /** The map's layers, back to front; absent, the one default. */
   layers?: MapLayerDoc[];
+  /** A screen's background: a screen is flat and has no layers. */
+  background?: MapSlotDoc;
   /**
    * The grid layout its placements dock into (`engine/core/layout`,
    * specs/DOCKING_PLAN.md). A Screen's; absent, everything floats.

@@ -31,13 +31,8 @@ interface ReconcilableWorld {
     actorIds: string[];
     /** The World's layers in stack order — ids only (core/Layer). */
     layers: string[];
-    /** …and the screen's. */
-    screenLayers: string[];
     /** How each responds to the camera. A value: read per frame, builds nothing. */
-    layerMotion: Record<
-      string,
-      {parallax: {x: number; y: number}; fit: boolean}
-    >;
+    layerMotion: Record<string, {parallax: {x: number; y: number}}>;
     /** Which cameras exist — structural, like the layers. */
     cameras: string[];
     /** Where each looks from — a value, written every tick by a follow step. */
@@ -61,8 +56,8 @@ interface ReconcilableWorld {
      * layer, and restarting for one would restart sixty times a second.
      */
     backdrops: SlotValues[];
-    /** …and the screen's layers'. */
-    screenBackdrops: SlotValues[];
+    /** …and the screen's one. */
+    screenBackdrop: SlotValues;
     /** The color behind the World, if it says one (engine color.ts). */
     clearColor: [number, number, number, number] | undefined;
     /** …and the color behind the screen. */
@@ -77,16 +72,12 @@ interface ReconcilableWorld {
   setBackground(sprite: string | undefined, layer?: string): unknown;
   setCameraPosition(position: {x: number; y: number}): unknown;
   setLayerParallax(parallax: {x: number; y: number}, layer?: string): unknown;
-  setLayerFit(fit: boolean, layer?: string): unknown;
   setBackgroundOffset(offset: {x: number; y: number}, layer?: string): unknown;
   setBackgroundRepeat(repeat: boolean, layer?: string): unknown;
   setBackgroundColor(color: readonly number[]): unknown;
-  setScreenBackground(sprite: string | undefined, layer?: string): unknown;
-  setScreenBackgroundOffset(
-    offset: {x: number; y: number},
-    layer?: string,
-  ): unknown;
-  setScreenBackgroundRepeat(repeat: boolean, layer?: string): unknown;
+  setScreenBackground(sprite: string | undefined): unknown;
+  setScreenBackgroundOffset(offset: {x: number; y: number}): unknown;
+  setScreenBackgroundRepeat(repeat: boolean): unknown;
   setScreenColor(color: readonly number[]): unknown;
   setMusic(track: string | undefined): unknown;
   setEffectDocument(path: string, document: unknown): boolean;
@@ -147,7 +138,6 @@ export function reconcile(
     // Phaser display list, and the ORDER is part of the value for exactly that
     // reason (see WorldSnapshot.layers).
     stable(previous.layers) === stable(snapshot.layers) &&
-    stable(previous.screenLayers) === stable(snapshot.screenLayers) &&
     // Which cameras exist is structural for the reason layers are: a viewport
     // is built to draw through one. Where they LOOK is a value, patched below.
     stable(previous.cameras) === stable(snapshot.cameras) &&
@@ -179,7 +169,7 @@ export function reconcile(
     stable(previous.cameraPositions) !== stable(snapshot.cameraPositions) ||
     stable(previous.layerMotion) !== stable(snapshot.layerMotion) ||
     stable(previous.backdrops) !== stable(snapshot.backdrops) ||
-    stable(previous.screenBackdrops) !== stable(snapshot.screenBackdrops) ||
+    stable(previous.screenBackdrop) !== stable(snapshot.screenBackdrop) ||
     stable(previous.clearColor) !== stable(snapshot.clearColor) ||
     stable(previous.screenColor) !== stable(snapshot.screenColor);
 
@@ -257,18 +247,16 @@ export function reconcile(
     }
     for (const [id, motion] of Object.entries(snapshot.layerMotion)) {
       running.setLayerParallax(motion.parallax, id);
-      running.setLayerFit(motion.fit, id);
     }
     for (const slot of snapshot.backdrops) {
       running.setBackground(slot.sprite, slot.layer);
       running.setBackgroundOffset(slot.offset, slot.layer);
       running.setBackgroundRepeat(slot.repeat, slot.layer);
     }
-    for (const slot of snapshot.screenBackdrops) {
-      running.setScreenBackground(slot.sprite, slot.layer);
-      running.setScreenBackgroundOffset(slot.offset, slot.layer);
-      running.setScreenBackgroundRepeat(slot.repeat, slot.layer);
-    }
+    const screen = snapshot.screenBackdrop;
+    running.setScreenBackground(screen.sprite);
+    running.setScreenBackgroundOffset(screen.offset);
+    running.setScreenBackgroundRepeat(screen.repeat);
     // One sky each, the World's and the screen's — not a layer's
     // (World.setBackgroundColor).
     if (snapshot.clearColor) {

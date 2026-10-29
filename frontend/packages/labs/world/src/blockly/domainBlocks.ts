@@ -144,14 +144,12 @@ import {visibilityEye} from './fields/visibilityEye';
 import {ROOT_HOMES, type FileKind} from './fileKind';
 import {
   DEFAULT_PARALLAX,
-  LAYER_FIXED_OPTIONS,
   layerIdFromValue,
   layerOptions,
   layerOptionsExtension,
 } from './layers';
 import {lessonFlyoutButton} from './lessonFlyoutButton';
 import {localizeText} from './localizeBlocks';
-import {layerDeclarations, type MainMapLayer} from './mainMapLayers';
 import {registerManyActorBlock, yieldsMany} from './manyActors';
 import {memberHead} from './memberHead';
 import {
@@ -213,6 +211,7 @@ import {
   pathSlug,
   refResolves,
 } from './ruleRegistry';
+import {screenBackgroundCalls, type ScreenBackground} from './screenBackground';
 import {measuredImages, parseSpriteRef, spriteCell} from './spriteCells';
 import {stepHead} from './stepHead';
 import {TOOLBOX_HEADING, toolboxHeading} from './toolboxStyle';
@@ -5452,10 +5451,9 @@ const worldClearActors = defineBlock({
 /**
  * Every actor drawn in one layer (specs/VIEWPORT.md).
  *
- * `all actors` narrowed to a group. Most programs never need it — you place
- * game actors in a game layer and widgets in an interface layer, so a loop over
+ * `all actors` narrowed to a group. Most programs never need it — a loop over
  * "all actors" is usually already the ones you meant — but a rule that must not
- * reach the HUD has no other way to say so.
+ * reach the scenery in a layer behind the game has no other way to say so.
  *
  * A copy, like `all actors`, because a source is read once at the top of a
  * loop: a rule that adds actors while iterating them terminates.
@@ -6668,39 +6666,6 @@ const worldLayerParallax = defineBlock({
   },
 });
 
-/**
- * Whether this layer consults the camera at all — what a HUD is.
- *
- * A separate block from the factor above, because it is a separate question.
- * Folding them together left a vector sitting on the block doing nothing
- * whenever the answer was "fixed", which is a field that lies about mattering.
- *
- * A WORD and never the vector `0, 0`. The two look identical until a camera has
- * a zoom — a layer at zero still zooms, a fixed one does not — so a score that
- * would shrink when the player zooms out must not be expressible by typing two
- * zeros into the block above.
- */
-const worldLayerFixed = defineBlock({
-  type: 'world_layer_fixed',
-  message0: 'this layer %1',
-  args0: [
-    {type: 'field_dropdown', name: 'FIXED', options: LAYER_FIXED_OPTIONS},
-  ],
-  previousStatement: true,
-  nextStatement: true,
-  extensions: [worldContextExtension],
-  style: 'setup_blocks',
-  tooltip:
-    'Fixed to the screen ignores the camera altogether, which is what an ' +
-    'interface layer wants. Following the camera is what every other layer does.',
-  generator: {
-    javascript(block) {
-      const fixed = block.getFieldValue('FIXED') === 'fixed';
-      return `world.setLayerFit(${fixed});\n`;
-    },
-  },
-});
-
 // ── Pausing (specs/UI_ACTORS.md, "The second axis") ──────────────────────────
 //
 // A paused world keeps sensing and keeps answering events, and nothing in it
@@ -6971,8 +6936,8 @@ export interface WorldPrologue {
   hoisted: readonly string[];
   /** The world's own declarations (`worldOwnPropertyDeclarations`). */
   own: string;
-  /** The layers of the map the world is, with their slots. */
-  mapLayers: readonly MainMapLayer[];
+  /** The screen's background, as its data states it. */
+  screenBackground?: ScreenBackground;
   /** That map's load (`assembleMainMap`), or nothing. */
   mainMap: string;
 }
@@ -7096,13 +7061,11 @@ export function worldModulePrologue(
   const imageSizes = Object.keys(sizes).length
     ? `world.useImageSizes(${JSON.stringify(sizes)});\n`
     : '';
-  // …with the MAIN MAP's ahead of them, slots and all: the world's file
-  // holds the map, so the generator hands its layers over
-  // (`BlocklyGenerator`, specs/LAYERS_PLAN.md).
-  const layers = layerDeclarations(prologue.mapLayers);
-  // The world's OWN state, hoisted for the same reason the layers above
-  // are: a declaration cannot be emitted where its block sits when the body
-  // around it reads the const it makes. `add actor … set text to ⟨score⟩`
+  // …and the screen's background, which its data says
+  // (`BlocklyGenerator`, specs/ONE_WORLD_PLAN.md).
+  const background = screenBackgroundCalls(prologue.screenBackground);
+  // The world's OWN state, hoisted: a declaration cannot be emitted where
+  // its block sits when the body around it reads the const it makes. `add actor … set text to ⟨score⟩`
   // written above the `define property` compiled to a use before the
   // declaration — which esbuild rewrites, so it threw as "Cannot read
   // properties of undefined" rather than as the temporal-dead-zone error it
@@ -7136,7 +7099,7 @@ export function worldModulePrologue(
     kinds +
     maps +
     imageSizes +
-    layers +
+    background +
     mainMap
   );
 }
@@ -10305,7 +10268,6 @@ export const DOMAIN_BLOCKS = [
   worldForEach,
   worldIsA,
   worldLayerParallax,
-  worldLayerFixed,
   worldAddActor,
   worldRemoveActor,
   worldPauseGame,
@@ -11354,7 +11316,6 @@ export const ESTABLISHED_ELSEWHERE: ReadonlySet<string> = new Set([
   'world_set_map_size',
   'world_set_view_size',
   'world_layer_parallax',
-  'world_layer_fixed',
   MEMBER_HEAD,
   STEP_HEAD,
 ]);

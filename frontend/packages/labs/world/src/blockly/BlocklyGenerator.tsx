@@ -39,7 +39,6 @@ import {
   SCREEN_LOADS,
 } from './domainBlocks';
 import {fileKindOf, moduleShape} from './fileKind';
-import {screenLayersOf} from './mainMapLayers';
 import {setCurrentPlacements} from './moduleOptions';
 import {
   ownPropertyDeclarations,
@@ -63,6 +62,7 @@ import {
   type RuleMeta,
 } from './ruleMeta';
 import {refFromValue, refResolves} from './ruleRegistry';
+import {screenBackgroundOf} from './screenBackground';
 import {
   DEFAULT_SCREEN_NAME,
   MAIN_SCREEN_PATH,
@@ -343,6 +343,7 @@ const SCREEN_KEYS: ReadonlySet<string> = new Set([
   'events',
   'rules',
   'backgroundColor',
+  'background',
   'theme',
   'blocks',
 ]);
@@ -567,7 +568,7 @@ function generateMainScreen(
     name: typeof name === 'string' && name ? name : DEFAULT_SCREEN_NAME,
     hoisted: [],
     own: own ? worldOwnPropertyDeclarations(own) : '',
-    mapLayers: screenLayersOf(contents),
+    screenBackground: screenBackgroundOf(contents),
     // The World's map before the screen's placements, so a camera the
     // screen aims at `any ⟨Player⟩` finds the Player (specs/ONE_WORLD_PLAN.md).
     mainMap:

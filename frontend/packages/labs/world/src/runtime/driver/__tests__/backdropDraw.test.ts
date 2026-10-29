@@ -249,7 +249,6 @@ const world = (
     y: VIEWPORT_HEIGHT / 2,
   },
   parallaxes: Array<{x: number; y: number}> = [],
-  fits: boolean[] = [],
   /** How big the level is. One viewport, as a world with no map really is. */
   map: {x: number; y: number} = {x: VIEWPORT_WIDTH, y: VIEWPORT_HEIGHT},
 ) =>
@@ -289,7 +288,6 @@ const world = (
         id: index === 0 ? 'main' : `layer${index}`,
         effects: [],
         parallax: parallaxes[index] ?? {x: 1, y: 1},
-        fit: fits[index] ?? false,
       })),
     cameraSnapshot: () => [
       // An inactive camera first, so a driver that took `[0]` rather than the
@@ -414,7 +412,7 @@ describe('drawing the backdrop', () => {
     // clear-color for the other two.
     const map = {x: VIEWPORT_WIDTH * 3, y: VIEWPORT_HEIGHT};
     new PhaserBinding(
-      world([{sprite: 'cave.png'}], [0, 0, 0, 1], undefined, [], [], map),
+      world([{sprite: 'cave.png'}], [0, 0, 0, 1], undefined, [], map),
       pane(),
     );
 
@@ -433,7 +431,7 @@ describe('drawing the backdrop', () => {
     // As far right as a camera confined to the map can look.
     const far = {x: map.x - VIEWPORT_WIDTH / 2, y: VIEWPORT_HEIGHT / 2};
     new PhaserBinding(
-      world([{sprite: 'cave.png'}], [0, 0, 0, 1], far, [], [], map),
+      world([{sprite: 'cave.png'}], [0, 0, 0, 1], far, [], map),
       pane(),
     );
 
@@ -509,16 +507,6 @@ describe('drawing the backdrop', () => {
       [-0, -0],
       [-0, -0],
     ]);
-  });
-
-  it('leaves a layer fixed to the screen where it is', () => {
-    // What an interface layer is: it does not consult the camera at all.
-    new PhaserBinding(
-      world([{}, {}], [0, 0, 0, 1], {x: 100, y: 50}, [], [false, true]),
-      pane(),
-    );
-
-    expect(layers[1]).toMatchObject({x: -0, y: -0});
   });
 
   it('draws nothing for a layer with no image, or an image the project lost', () => {

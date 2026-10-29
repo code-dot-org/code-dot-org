@@ -600,14 +600,13 @@ export class PhaserBinding {
       depth: number,
       /** How far the camera has slid this slot's layer — see `layerShift`. */
       shiftOf: (index: number) => {x: number; y: number},
-      /** That layer's factor, zero when it is fixed — `placementParallax`. */
+      /** That layer's factor, zero for the screen's — `placementParallax`. */
       parallaxOf: (index: number) => {x: number; y: number},
       /** How big the level is, which is what a stretched slot covers. */
       mapSize: {x: number; y: number},
       /**
        * How much of it is on screen, in the layer's own pixels — `World.viewSize`
-       * for the world's; for a space's, what its camera takes in, or its
-       * window for a fit layer, which keeps its size however the camera zooms.
+       * for the world's; for a space's, what its camera takes in.
        */
       viewOf: (index: number) => {x: number; y: number},
       /**
@@ -749,8 +748,7 @@ export class PhaserBinding {
         // The whole of what a layer's parallax means: move the container
         // opposite the camera, scaled per axis. `(1, 1)` moves with the view,
         // `(0.2, 0)` is a sky that shifts as the player walks and stays put
-        // when they jump, and `fit` does not consult the camera at all — which
-        // is what makes an interface layer an interface layer.
+        // when they jump.
         //
         // Measured from the camera's RESTING position, not from the world
         // origin, because a camera's position is the point it shows at the
@@ -1231,7 +1229,6 @@ export class PhaserBinding {
           x: space.camera.x - seen.x / 2,
           y: space.camera.y - seen.y / 2,
         };
-        const fitAt = (index: number) => Boolean(space.layers[index]?.fit);
         const shiftOf = (index: number) =>
           layerShift(space.layers[index], offset);
         space.layers.forEach((_layer, index) => {
@@ -1245,9 +1242,6 @@ export class PhaserBinding {
           }
           const shift = shiftOf(index);
           container.setPosition(offset.x - shift.x, offset.y - shift.y);
-          // A fit layer is the window's and not the scene's, so the camera's
-          // zoom is taken back off it.
-          container.setScale(fitAt(index) ? 1 / zoom : 1);
           if (unsorted.has(container)) {
             container.sort('depth');
             unsorted.delete(container);
@@ -1277,7 +1271,7 @@ export class PhaserBinding {
           shiftOf,
           parallaxOf,
           space.bounds,
-          index => (fitAt(index) ? space.view : seen),
+          () => seen,
           intoSpaceLayer,
         );
         if (unsorted.has(host.inner)) {

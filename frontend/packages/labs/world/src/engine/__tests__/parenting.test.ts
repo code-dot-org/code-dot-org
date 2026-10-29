@@ -197,13 +197,13 @@ describe('set parent', () => {
   it('gives the child its parent’s layer', () => {
     const w = new WorldBuilder({id: 'w', name: 'W'})
       .defineLayer({id: DEFAULT_LAYER_ID})
-      .defineLayer({id: 'hud', fit: true})
+      .defineLayer({id: 'fog'})
       .instantiate();
-    const panel = place(w, 'panel', 0, 0, 'hud');
+    const panel = place(w, 'panel', 0, 0, 'fog');
     const button = place(w, 'button');
     expect(button.layer).toBe(DEFAULT_LAYER_ID);
     button.setParent(panel);
-    expect(button.layer).toBe('hud');
+    expect(button.layer).toBe('fog');
   });
 
   it('lists the children in placement order', () => {

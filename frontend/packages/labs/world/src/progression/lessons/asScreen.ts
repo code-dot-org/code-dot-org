@@ -150,7 +150,6 @@ type Placement = {
 type Layer = {
   id: string;
   name: string;
-  fit?: boolean;
   parallax?: {x: number; y: number};
 };
 
@@ -316,10 +315,6 @@ export function screenOfWorld(
       const name = String(fields.NAME ?? 'Layer');
       const layer: Layer = {id: slug(name), name};
       for (const inner of rowsOf(inputOf(row, 'DO'))) {
-        if (inner.type === 'world_layer_fixed') {
-          layer.fit = fieldsOf(inner).FIXED === 'fixed';
-          continue;
-        }
         if (inner.type === 'world_layer_parallax') {
           const {x, y} = (fieldsOf(inner).PARALLAX ?? {}) as {
             x?: number;
@@ -437,6 +432,10 @@ export function screenOfWorld(
     if (mainCamera) {
       throw new Error('a world whose own map has a Viewport and a camera');
     }
+    // A screen is flat (specs/ONE_WORLD_PLAN.md).
+    if (allLayers.length) {
+      throw new Error('a world whose own map is a screen, with layers');
+    }
     // The map a Viewport was given is the one the World starts with, said
     // on the screen rather than on the Viewport (specs/ONE_WORLD_PLAN.md).
     const worldMap = withoutViewportMaps(placements);
@@ -449,7 +448,6 @@ export function screenOfWorld(
           ...sized,
           ...(worldMap ? {worldMap} : {}),
           ...data,
-          ...mapLayers,
           actors: placements,
           ...workspace,
         },

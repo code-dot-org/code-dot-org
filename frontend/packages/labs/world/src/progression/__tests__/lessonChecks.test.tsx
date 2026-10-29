@@ -2204,146 +2204,75 @@ describe('the layers lesson’s check', () => {
     actors: Array<{type: string; id: string; layer?: string}>;
   }
 
-  /** The lesson done where it is taught: layers on the map, and what is on them. */
-  const onTheMap = (
-    options: {fixed?: boolean; parallax?: boolean},
-    from: MultiFileSource = lesson.source,
-  ) =>
-    editing(from, 'main.world', contents => {
-      const file = JSON.parse(contents) as {map: MainMap};
-      const put = (kind: string, layer: string) => {
-        file.map.actors = file.map.actors.map(actor =>
-          actor.type === actorPath(kind) ? {...actor, layer} : actor,
-        );
-      };
+  /** The Hills on a layer of the map's that lags: the lesson's second half. */
+  const hillsLag = (from: MultiFileSource = lesson.source) =>
+    editing(from, 'main.map', contents => {
+      const map = JSON.parse(contents) as MainMap;
       // Back to front, as a map lists them: the hills behind everything.
-      file.map.layers = [
-        ...(options.parallax
-          ? [{id: 'layer2', name: 'Hills', parallax: {x: 0.4, y: 1}}]
-          : []),
+      map.layers = [
+        {id: 'layer2', name: 'Hills', parallax: {x: 0.4, y: 1}},
         {id: 'main'},
-        ...(options.fixed
-          ? [{id: 'layer1', name: 'Interface', fit: true}]
-          : []),
       ];
-      if (options.parallax) {
-        put('hill', 'layer2');
-      }
-      if (options.fixed) {
-        put('score', 'layer1');
-      }
-      return JSON.stringify(file);
-    });
-
-  /**
-   * The same in blocks, which is how it was taught first and is still a way
-   * to do it: the Hills and the Score come off the map and into `define
-   * layer` stacks, as `add actor` rows.
-   */
-  const inBlocks = (
-    options: {fixed?: boolean; parallax?: boolean},
-    from: MultiFileSource = lesson.source,
-  ) =>
-    editing(from, 'main.world', contents => {
-      const file = JSON.parse(contents) as {
-        blocks: {blocks: Row[]};
-        map: MainMap;
-      };
-      const kept = rowsOf(file);
-      const moved = (kind: string): Row[] =>
-        file.map.actors
-          .filter(actor => actor.type === actorPath(kind))
-          .map(
-            () =>
-              ({
-                type: 'world_add_actor',
-                fields: {ACTOR: actorPath(kind)},
-              }) as unknown as Row,
-          );
-      const inside = (rowsIn: Row[], settings: Row[], name: string): Row => ({
-        type: 'world_define_layer',
-        fields: {NAME: name},
-        inputs: {
-          DO: {
-            block: [...settings, ...rowsIn].reduceRight((next, row) => ({
-              ...row,
-              next: {block: next},
-            })),
-          },
-        },
-      });
-      const declared: Row[] = [
-        ...(options.parallax
-          ? [
-              inside(
-                moved('hill'),
-                [
-                  {
-                    type: 'world_layer_parallax',
-                    fields: {PARALLAX: {x: 0.4, y: 1}},
-                  },
-                ],
-                'Hills',
-              ),
-            ]
-          : []),
-        ...(options.fixed
-          ? [
-              inside(
-                moved('score'),
-                [{type: 'world_layer_fixed', fields: {FIXED: 'fixed'}}],
-                'Interface',
-              ),
-            ]
-          : []),
-      ];
-      file.map.actors = file.map.actors.filter(
-        actor =>
-          !(options.parallax && actor.type === actorPath('hill')) &&
-          !(options.fixed && actor.type === actorPath('score')),
+      map.actors = map.actors.map(actor =>
+        actor.type === actorPath('hill') ? {...actor, layer: 'layer2'} : actor,
       );
-      file.blocks.blocks[0].next = {
-        block: [...declared, ...kept].reduceRight((next, row) => ({
-          ...row,
-          next: {block: next},
-        })),
-      };
-      return JSON.stringify(file);
+      return JSON.stringify(map);
     });
 
-  it('accepts a fixed interface and hills that lag, made on the map', async () => {
+  /** The Score off the map and onto the Main Screen: the first half. */
+  const scoreOnScreen = (from: MultiFileSource = lesson.source) =>
+    editing(
+      editing(from, 'main.map', contents => {
+        const map = JSON.parse(contents) as MainMap;
+        map.actors = map.actors.filter(
+          actor => actor.type !== actorPath('score'),
+        );
+        return JSON.stringify(map);
+      }),
+      'main.screen',
+      contents => {
+        const screen = JSON.parse(contents) as {actors: object[]};
+        screen.actors.push({
+          type: actorPath('score'),
+          id: 'Score',
+          properties: {positional: {position: {x: 60, y: 30}}},
+        });
+        return JSON.stringify(screen);
+      },
+    );
+
+  it('accepts a Score on the Main Screen and Hills that lag', async () => {
     const {passes, result} = await check(
       'place/layers',
-      onTheMap({fixed: true, parallax: true}),
+      scoreOnScreen(hillsLag()),
     );
     expect(result.error).toBeUndefined();
     expect(passes).toBe(true);
   });
 
-  it('is a world whose Score is on a fixed layer and whose Hills lag', async () => {
-    // The check reads the file. This reads the WORLD the file builds, so
-    // what the check accepts is what a learner sees: the map's layers are
-    // the level's, in the map's order, and each thing is on the one it names.
+  it('is a game whose Score is on the screen and whose Hills lag', async () => {
+    // The check reads the files. This reads the game they build, so what the
+    // check accepts is what a learner sees: the map's layers are the World's,
+    // in the map's order, and the Score is the screen's, which no camera moves.
     const {world} = await compileProject(
-      projectFiles(onTheMap({fixed: true, parallax: true})),
+      projectFiles(scoreOnScreen(hillsLag())),
     );
-    const layers = world.spaces[0].mirrorOf!.layers;
-    expect(layers.map(layer => layer.id)).toEqual(['layer2', 'main', 'layer1']);
+    const layers = world.layers;
+    expect(layers.map(layer => layer.id)).toEqual(['layer2', 'main']);
     expect({x: layers[0].parallax.x, y: layers[0].parallax.y}).toEqual({
       x: 0.4,
       y: 1,
     });
-    expect(layers[2].fit).toBe(true);
-    const on = (type: string) => [
+    const spaces = (type: string) => [
       ...new Set(
-        [...world.actors]
-          .filter(actor => actor.type === type)
-          .map(actor => actor.layer),
+        world
+          .renderSnapshot()
+          .filter(drawn => drawn.actor.type === type)
+          .map(drawn => drawn.space ?? 'screen'),
       ),
     ];
-    expect(on('actors/score')).toEqual(['layer1']);
-    expect(on('actors/hill')).toEqual(['layer2']);
-    expect(on('actors/ground')).toEqual(['main']);
+    expect(spaces('actors/score')).toEqual(['screen']);
+    expect(spaces('actors/hill')).toEqual(['world']);
   });
 
   it('follows a Hero who is on the map, from a camera under `define world`', async () => {
@@ -2366,51 +2295,26 @@ describe('the layers lesson’s check', () => {
     expect(at(-1)).toBeGreaterThan(at(0) + 100);
   });
 
-  it('refuses a fixed score with the hills left behind', async () => {
-    const {passes} = await check('place/layers', onTheMap({fixed: true}));
+  it('refuses a Score on the screen with the Hills left behind', async () => {
+    const {passes} = await check('place/layers', scoreOnScreen());
     expect(passes).toBe(false);
   });
 
-  it('refuses layers that are declared and hold nothing', async () => {
-    // The strip used and the Layer dropdown not: two layers on the map, and
-    // everything still on `main`.
-    const source = editing(
-      onTheMap({fixed: true, parallax: true}),
-      'main.world',
-      contents => {
-        const file = JSON.parse(contents) as {map: MainMap};
-        file.map.actors = file.map.actors.map(actor => ({
-          type: actor.type,
-          id: actor.id,
-          ...('properties' in actor
-            ? {properties: (actor as {properties: object}).properties}
-            : {}),
-        }));
-        return JSON.stringify(file);
-      },
-    );
+  it('refuses Hills that lag with the Score left in the level', async () => {
+    const {passes} = await check('place/layers', hillsLag());
+    expect(passes).toBe(false);
+  });
+
+  it('refuses a layer that is declared and holds nothing', async () => {
+    // The strip used and the Layer dropdown not: a lagging layer on the map,
+    // and the Hills still on `main`.
+    const source = editing(scoreOnScreen(hillsLag()), 'main.map', contents => {
+      const map = JSON.parse(contents) as MainMap;
+      map.actors = map.actors.map(actor => ({type: actor.type, id: actor.id}));
+      return JSON.stringify(map);
+    });
     const {passes} = await check('place/layers', source);
     expect(passes).toBe(false);
-  });
-
-  it('accepts the same said in blocks', async () => {
-    const {passes, result} = await check(
-      'place/layers',
-      inBlocks({fixed: true, parallax: true}),
-    );
-    expect(result.error).toBeUndefined();
-    expect(passes).toBe(true);
-  });
-
-  it('accepts one half on the map and the other in blocks', async () => {
-    // The Hills on a layer of the map's, the Score in a `define layer` the
-    // converter makes the map's.
-    const {passes, result} = await check(
-      'place/layers',
-      inBlocks({fixed: true}, onTheMap({parallax: true})),
-    );
-    expect(result.error).toBeUndefined();
-    expect(passes).toBe(true);
   });
 });
 

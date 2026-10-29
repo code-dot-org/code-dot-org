@@ -4,17 +4,15 @@
 //
 // Shown when a layer is opened from the strip and no placement is selected.
 // A factor is a multiplier per axis — `(1, 1)` moves with the view, `(0.2,
-// 0)` is a sky that shifts as the player walks and stays put when they jump
-// — and FIXED is not a factor of zero: a fixed layer does not consult the
-// camera at all, which is what makes an interface layer one. Each slot is an
-// image from the project's backgrounds, stretched over the map or tiled
-// across it, and an offset.
+// 0)` is a sky that shifts as the player walks and stays put when they jump.
+// What must ignore the camera altogether is a screen's, not a layer's
+// (specs/ONE_WORLD_PLAN.md). Each slot is an image from the project's
+// backgrounds, stretched over the map or tiled across it, and an offset.
 
 import {Button, Typography} from '@mui/material';
 import type {ChangeEvent, KeyboardEvent} from 'react';
 import {useState} from 'react';
 
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 
 import fields from '../formFields.module.css';
@@ -106,7 +104,7 @@ export const LayerInspector = ({
           inputType="number"
           size="s"
           value={draft.px}
-          disabled={isReadOnly || Boolean(layer.fit)}
+          disabled={isReadOnly}
           onChange={type('px')}
           onBlur={commitParallax}
           onKeyDown={blurOnEnter}
@@ -117,21 +115,12 @@ export const LayerInspector = ({
           inputType="number"
           size="s"
           value={draft.py}
-          disabled={isReadOnly || Boolean(layer.fit)}
+          disabled={isReadOnly}
           onChange={type('py')}
           onBlur={commitParallax}
           onKeyDown={blurOnEnter}
         />
       </div>
-      <Checkbox
-        name="layer-fixed"
-        label="Fixed to the screen"
-        checked={Boolean(layer.fit)}
-        disabled={isReadOnly}
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onChange({fit: event.target.checked || undefined})
-        }
-      />
       {background}
     </div>
   );

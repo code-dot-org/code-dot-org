@@ -11,6 +11,7 @@ import {compileProject} from '../../__tests__/support/compileProject';
 import {viewOf} from '../../actors/actorData';
 import {RotationProperty} from '../../engine';
 import {keyName, KEY_CHOICES} from '../../engine/core/keys';
+import {PositionProperty} from '../../engine/rules/spatial';
 import {entryFileOf} from '../../mainWorld';
 import {lessonChannel} from '../../progression/lessonRoute';
 import {LESSONS} from '../../progression/lessons';
@@ -160,6 +161,27 @@ describe('the scenario catalogue', () => {
     world.tick(1 / 60);
     world.tick(1 / 60);
     expect(coin.get(RotationProperty)).not.toBe(before);
+  }, 60000);
+
+  it('keeps tapper’s score on the Main Screen, from the event a click raises', async () => {
+    // The Label is the screen's, and the coin is the World's: the click is
+    // heard in the World, and the screen hears `scored` (specs/ONE_WORLD_PLAN.md).
+    const {world, modules} = await compileProject(
+      projectFiles(WORLD_SCENARIOS.tapper.source),
+    );
+    const text = modules['actors/label'].TextProperty as never;
+    const label = [...world.actors].find(actor => actor.id === 'Score')!;
+    world.tick(1 / 60);
+    const coin = [...world.actors].find(actor => actor.type === 'actors/coin')!;
+    // The level is the screen's size, so a point in it is a point on screen.
+    const at = coin.get(PositionProperty);
+
+    world.setPointer(at, ['left']);
+    world.tick(1 / 60);
+    world.setPointer(at, []);
+    world.tick(1 / 60);
+
+    expect(label.get(text)).toBe('Score: 1');
   }, 60000);
 
   it('gives tapper the mouse, and the rules a click is made of', () => {
