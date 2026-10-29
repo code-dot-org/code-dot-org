@@ -36,8 +36,11 @@ case "$MODE" in
     # Report what the clone holds, and fail if an omitted tree is present in
     # the working tree. The blob count is the number the clone has fetched;
     # a rise between two reports means something read omitted content.
-    git count-objects -v
-    echo "blobs present: $(git cat-file --batch-all-objects --batch-check --unordered | awk '$2 == "blob"' | wc -l)"
+    # stderr dropped: git 2.25 warns about every .rev file a newer git wrote,
+    # and cat-file warns that promisor objects may be missing, which is the
+    # point.
+    git count-objects -v 2>/dev/null
+    echo "blobs present: $(git cat-file --batch-all-objects --batch-check --unordered 2>/dev/null | awk '$2 == "blob"' | wc -l)"
     echo "working tree files: $(find . -type f -not -path './.git/*' -not -path '*/node_modules/*' | wc -l)"
     status=0
     for tree in $(omitted_trees "$PATTERNS"); do
