@@ -1,0 +1,402 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-28T05:53:41.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "explainCode",
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+        "documentation": "Also cover methods from the neighborhood module (e.g. can_move(), has_paint(), is_on_bucket(), is_on_paint(), take_paint(), turn_left()) using the same placeholder rules as built-ins.",
+        "explainCode": "Only explain code the student has already written and run. Do not describe what ready_to_paint or needs_supplies should contain, or preview what either variable’s value will be before the student has written and tested it themselves.",
+        "hint": "Do not state which function not should apply to in ready_to_paint or needs_supplies — deciding that is the point of the task. Point toward re-reading the instruction’s two clauses (e.g. “True if standing on a bucket, or True if out of paint”) rather than toward a specific line of code."
+      }
+    },
+    "long_instructions": "# Modify: Debug\r\n\r\nYour Task: A painter should take paint when it's standing on a paint bucket, and paint the square when it isn't. This program has the two branches mixed up. Find the bug and fix it so the Painter does the right thing in each situation.\r\n\r\nDo This:\r\n\r\n1. Run the code and read what the console says.\r\n2. Look at where the Painter ended up. Is it on a bucket? Does it have any paint?\r\n3. Trace the code. Which branch ran? Is that the right thing for the Painter to do on a bucket?\r\n4. Fix the bug. There is more than one way to fix it.\r\n5. Run again to check your fix, then use Validate.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from neighborhood import *\n\n# Painter setup: this line moves the Painter onto the bucket\nmove()\n\n# Your code goes below\nif is_on_bucket():\n    paint(\"white\")\nelse:\n    take_paint()",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 5,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 46
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "mini_app": "neighborhood",
+    "mini_app_variant": "functional",
+    "encrypted_exemplar_sources": "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\nTn/saoWnqBOJ/fzMnA==\n",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "contents": "import re\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\ndef read_code():\n    with open('main.py') as main_file:\n        return main_file.read()\n\n\nclass TestBucketDebug(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and save the results\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        cls.painter = cls.log.painter_logs[0] if cls.log.painter_logs else None\n\n    def test_keeps_the_setup(self):\n        \"\"\"Your program keeps the move() that puts the Painter on the bucket\"\"\"\n        if not re.search(r'^\\s*move\\s*\\(\\s*\\)', read_code(), re.MULTILINE):\n            self.fail(\"Keep the move() line under the setup comment. It puts the Painter on the bucket.\")\n\n    def test_keeps_the_bucket_check(self):\n        \"\"\"Your program still checks is_on_bucket()\"\"\"\n        if not re.search(r'is_on_bucket\\s*\\(\\s*\\)', read_code()):\n            self.fail(\"Keep the is_on_bucket() check. The fix is about which branch does what.\")\n\n    def test_uses_else(self):\n        \"\"\"Your program still uses an else branch\"\"\"\n        if not re.search(r'^\\s*else\\s*:', read_code(), re.MULTILINE):\n            self.fail(\"Keep the if/else. Each branch should handle one situation.\")\n\n    def test_painter_has_paint(self):\n        \"\"\"Your Painter ends holding paint\"\"\"\n        if self.painter is None:\n            self.skipTest(\"Your code didn't run far enough to check yet. Make sure the starter code is still there and run again.\")\n        self.assertGreaterEqual(\n            self.painter.ending_paint_count,\n            1,\n            \"Your Painter ended with no paint. When the Painter is on a bucket, which command should it use? Trace which branch runs on the bucket.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "teacher_markdown": "Misconceptions and what to test for:\r\n\r\n- The bug: each branch does the opposite of what it should. On the bucket, the Painter tries to paint instead of taking paint.\r\n- The console message is accurate. The Painter has no paint, so painting does nothing. Ask: \"What did the Painter try to do? What should it have done?\"\r\n- There are two valid fixes: swap the two branch bodies, or negate the condition with not. Both end with paint in the Painter's bucket. For the discussion, ask: \"Which fix would you choose, and why?\"\r\n- Changing only one branch, such as replacing take_paint() with paint(), does not fix it. Validate checks that the Painter ends holding paint.\r\n- Deleting the else and writing two separate if statements works, but the level asks students to keep the if/else. Ask: \"What are the two ways to write this?\"\r\n- If a student gives the Painter paint first and then paints on the bucket, the console shows \"Painter tried to paint off the grid or over an obstacle.\" That message is misleading. The cause is painting on a bucket square, not an obstacle. Point them to the bucket.\r\n- The setup comment marks the move() line. A student who deletes it will fail the first check.\r\n- If a student uses Build Python, they still own the program. Ask them to explain which branch ran on the bucket.\r\n\r\nValidation checks that the program keeps the setup move(), keeps the is_on_bucket() check, uses an else, and ends with the Painter holding paint."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-28T05:53:41.731+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson11-modify2_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson11-modify2_27_28\"},{\"changed_at\":\"2026-10-28 05:54:10 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\",\"serialized_maze\",\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 05:54:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 05:55:02 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 05:55:41 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-10-28 05:57:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Pythonlab>

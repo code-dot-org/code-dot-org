@@ -389,6 +389,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         onAssetUploaded,
         onAssetRemoved,
         initialWelcomeMessage,
+        disableCommitMessages:
+          levelProperties.aiTutorPromptSettings?.disableCommitMessages,
       };
       if (usesSharedInstructionsDrawer) {
         tabMap[Tabs.AiTutor] = (
@@ -402,6 +404,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
             isPredictLevel={isPredictLevel}
             aiTutorActive={currentTab === Tabs.AiTutor}
             instructionsPinned={instructionsInAiTutor}
+            spotlightInstructions={!!levelProperties.spotlightInstructions}
           />
         );
       } else {

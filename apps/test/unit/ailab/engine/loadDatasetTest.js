@@ -1,17 +1,26 @@
-import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
-import {parseJSON} from '@cdo/apps/ailab/engine/jsonReaderWrapper';
-import {loadDataset} from '@cdo/apps/ailab/engine/loadDataset';
+import {fetchCsv, parseCsvFile} from '@cdo/apps/ailab/engine/csvReaderWrapper';
+import {invalidatePendingDatasetLoads} from '@cdo/apps/ailab/engine/datasetLoad';
+import {fetchMetadata} from '@cdo/apps/ailab/engine/jsonReaderWrapper';
+import {
+  loadDataset,
+  loadUploadedDataset,
+} from '@cdo/apps/ailab/engine/loadDataset';
 import {
   resetState,
-  setColumnsByDataType,
-  setImportedData,
-  setImportedMetadata,
+  setDatasetLoaded,
   setMode,
 } from '@cdo/apps/ailab/engine/redux';
 import {store} from '@cdo/apps/ailab/engine/store';
 
-jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
-jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
+jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper', () => ({
+  ...jest.requireActual('@cdo/apps/ailab/engine/csvReaderWrapper'),
+  fetchCsv: jest.fn(),
+  parseCsvFile: jest.fn(),
+}));
+jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper', () => ({
+  ...jest.requireActual('@cdo/apps/ailab/engine/jsonReaderWrapper'),
+  fetchMetadata: jest.fn(),
+}));
 
 const ROWS = [
   {name: 'Tom', legs: '4', animal: 'cat'},
@@ -28,66 +37,55 @@ const METADATA = {
   ],
 };
 
-let finishCSV;
-let finishJSON;
+const ROWS_READ = {ok: true, rows: ROWS, removedRowsCount: 0};
 
 beforeEach(() => {
   store.dispatch(resetState());
-  parseCSV.mockImplementation(
-    () =>
-      new Promise(resolve => {
-        finishCSV = () => {
-          store.dispatch(setImportedData(ROWS, false));
-          resolve();
-        };
-      })
-  );
-  parseJSON.mockImplementation(
-    () =>
-      new Promise(resolve => {
-        finishJSON = () => {
-          store.dispatch(setImportedMetadata(METADATA));
-          for (const field of METADATA.fields) {
-            store.dispatch(setColumnsByDataType(field.id, field.type));
-          }
-          resolve();
-        };
-      })
-  );
+  invalidatePendingDatasetLoads();
+  fetchCsv.mockResolvedValue(ROWS_READ);
+  parseCsvFile.mockResolvedValue(ROWS_READ);
+  fetchMetadata.mockResolvedValue({ok: true, metadata: METADATA});
 });
 
-afterEach(() => jest.restoreAllMocks());
+afterEach(() => jest.clearAllMocks());
 
 async function load(mode) {
   store.dispatch(setMode(mode));
-  const loaded = loadDataset('animals.csv', 'animals.json');
-  finishCSV();
-  finishJSON();
-  await loaded;
+  await loadDataset('animals.csv', 'animals.json');
   const {labelColumn, selectedFeatures} = store.getState().presetColumns;
   return {labelColumn, selectedFeatures};
 }
 
 describe('loadDataset', () => {
-  test.each([
-    ['rows', () => finishCSV(), () => finishJSON()],
-    ['metadata', () => finishJSON(), () => finishCSV()],
-  ])(
-    'waits for the metadata and the rows when the %s arrive first',
-    async (_, finishFirst, finishSecond) => {
-      store.dispatch(setMode({label: 'animal', features: ['legs']}));
-      const loaded = loadDataset('animals.csv', 'animals.json');
+  test('writes the rows, the metadata and the column types together', async () => {
+    await loadDataset('animals.csv', 'animals.json');
 
-      finishFirst();
-      await Promise.resolve();
-      finishSecond();
-      await loaded;
-      expect(store.getState().presetColumns).toEqual({
-        labelColumn: 'animal',
-        selectedFeatures: ['legs'],
-      });
-    }
-  );
+    expect(store.getState().dataset).toEqual({
+      rows: ROWS,
+      metadata: METADATA,
+      columnsByDataType: {legs: 'numerical', animal: 'categorical'},
+      removedRowsCount: 0,
+    });
+  });
+
+  test('replaces the column types rather than adding to them', async () => {
+    store.dispatch(
+      setDatasetLoaded({
+        dataset: {
+          rows: ROWS,
+          metadata: METADATA,
+          columnsByDataType: {wings: 'numerical'},
+          removedRowsCount: 0,
+        },
+      })
+    );
+
+    await loadDataset('animals.csv', 'animals.json');
+
+    expect(store.getState().dataset.columnsByDataType).not.toHaveProperty(
+      'wings'
+    );
+  });
 
   test("locks the dataset's default label when no label is set", async () => {
     expect((await load({hideSelectLabel: true})).labelColumn).toBe('animal');
@@ -122,5 +120,106 @@ describe('loadDataset', () => {
       'AI Lab mode: "wings" is not a selectable column of this dataset.',
       'AI Lab mode: "name" is not a selectable column of this dataset.',
     ]);
+  });
+
+  /*
+    `animal` is typed and has few enough values to train on, so only the id
+    rule keeps it out.
+  */
+  describe('the id column is never a preset', () => {
+    beforeEach(() => jest.spyOn(console, 'error').mockImplementation(() => {}));
+
+    test('when the level names it', async () => {
+      expect(
+        await load({idColumn: 'animal', features: ['animal', 'legs']})
+      ).toEqual({labelColumn: undefined, selectedFeatures: ['legs']});
+    });
+
+    test('when the dataset names it', async () => {
+      fetchMetadata.mockResolvedValue({
+        ok: true,
+        metadata: {...METADATA, defaultIdColumn: 'animal'},
+      });
+
+      expect(await load({label: 'animal', features: ['legs']})).toEqual({
+        labelColumn: undefined,
+        selectedFeatures: ['legs'],
+      });
+    });
+  });
+});
+
+describe('a dataset that will not load', () => {
+  test('reports a failure when the rows cannot be read', async () => {
+    fetchCsv.mockResolvedValue({ok: false, reason: 'tooFewRows'});
+
+    await loadDataset('animals.csv', 'animals.json');
+
+    expect(store.getState().invalidData).toBe('tooFewRows');
+    expect(store.getState().dataset).toBeUndefined();
+  });
+
+  test('reports a failure when the metadata cannot be read', async () => {
+    fetchMetadata.mockResolvedValue({ok: false, reason: 'loadFailed'});
+
+    await loadDataset('animals.csv', 'animals.json');
+
+    expect(store.getState().invalidData).toBe('loadFailed');
+    expect(store.getState().dataset).toBeUndefined();
+  });
+});
+
+describe('a load a newer one has superseded', () => {
+  const supersede = async result => {
+    let finish;
+    fetchCsv.mockReturnValue(new Promise(resolve => (finish = resolve)));
+    const loading = loadDataset('animals.csv', 'animals.json');
+    invalidatePendingDatasetLoads();
+    finish(result);
+    await loading;
+  };
+
+  test('writes no dataset', async () => {
+    await supersede(ROWS_READ);
+
+    expect(store.getState().dataset).toBeUndefined();
+  });
+
+  test('reports no failure, which would outlive the load that replaced it', async () => {
+    await supersede({ok: false, reason: 'tooFewRows'});
+
+    expect(store.getState().invalidData).toBeUndefined();
+  });
+});
+
+describe('loadUploadedDataset', () => {
+  const file = {name: 'mine.csv'};
+
+  test('reads the column types from the rows, having no metadata', async () => {
+    await loadUploadedDataset(file);
+
+    const {dataset} = store.getState();
+    expect(dataset.rows).toEqual(ROWS);
+    expect(dataset.columnsByDataType).toEqual({
+      name: 'categorical',
+      legs: 'numerical',
+      animal: 'categorical',
+    });
+  });
+
+  test("leaves the level's preset columns alone", async () => {
+    store.dispatch(setMode({label: 'animal', features: ['legs']}));
+
+    await loadUploadedDataset(file);
+
+    expect(store.getState().presetColumns).toBeUndefined();
+  });
+
+  test('reports a failure the same way', async () => {
+    parseCsvFile.mockResolvedValue({ok: false, reason: 'tooFewColumns'});
+
+    await loadUploadedDataset(file);
+
+    expect(store.getState().invalidData).toBe('tooFewColumns');
   });
 });

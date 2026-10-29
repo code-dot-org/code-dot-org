@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-10-27T18:31:48.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "##Curating a Dataset\r\n\r\nSomeone already picked these four features:\r\n* Floor Mess\r\n* Dirty Dishes, Cups, Cans\r\n* Bed Status\r\n* Posters on Wall\r\n\r\nWhat did they leave out, and what does the Smart Room Inspector app lose because of it?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "Write your response here",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-27 18:31:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

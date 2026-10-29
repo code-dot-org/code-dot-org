@@ -345,7 +345,7 @@ export const getDisplayTreeRows = createSelector(
       trainedModel,
     (_state: RootState, project: AilabProject) =>
       project.accuracyCheckRowIndices,
-    (state: RootState) => state.data.length,
+    (state: RootState) => getData(state).length,
     (state: RootState) => state.trainingExamples,
     (state: RootState) => state.accuracyCheckExamples,
     getAccuracyGrades,

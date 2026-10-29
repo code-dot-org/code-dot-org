@@ -10,24 +10,18 @@ import {
   convertValueForTraining,
   getConvertedPredictedLabel,
 } from '@cdo/apps/ailab/engine/helpers/valueConversion';
-import rootReducer, {
-  setImportedData,
-  setColumnsByDataType,
-  setMode,
-  setTestData,
-} from '@cdo/apps/ailab/engine/redux';
+import rootReducer, {setMode, setTestData} from '@cdo/apps/ailab/engine/redux';
 import train from '@cdo/apps/ailab/engine/train';
 import {buildTrainer} from '@cdo/apps/ailab/engine/trainers';
 import {defaultProject} from '@cdo/apps/ailab/engine/types';
+
+import {seedDataset} from './levelStore';
 
 function setUp(data, columns, label, mode = {}) {
   const store = createStore(rootReducer);
 
   store.dispatch(setMode({trainer: 'decisionTree', ...mode}));
-  store.dispatch(setImportedData(data, false));
-  Object.entries(columns).forEach(([column, type]) =>
-    store.dispatch(setColumnsByDataType(column, type))
-  );
+  seedDataset(store, data, columns);
   const project = {
     ...defaultProject,
     labelColumn: label,

@@ -1,0 +1,17 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-10-27T19:19:14.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"hideSave\": true\r\n}",
+    "uses_lab2": "true",
+    "short_instructions": "Enter each feature of the three cases in the activity guide\r\nClick Predict"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-27T19:19:14.555+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson4-waterhole-wet-cameras\\\"\"],\"cloned_from\":\"data-makes-ai-lesson4-waterhole-wet-cameras\"},{\"changed_at\":\"2026-10-27 19:24:20 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 23:47:00 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>
