@@ -59,6 +59,15 @@
         }
       ]
     },
+    "add_blocks": [
+      {
+        "attachTo": "gamelab_checkTouching",
+        "data": "treasure-touch",
+        "room": {
+          "type": "spritelab2_goToScene"
+        }
+      }
+    ],
     "objectives": {
       "title": "**A whole new scene**\n\nWe made you a second scene.",
       "items": [

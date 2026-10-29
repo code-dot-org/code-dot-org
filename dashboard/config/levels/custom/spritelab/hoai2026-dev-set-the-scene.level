@@ -47,6 +47,14 @@
         }
       ]
     },
+    "add_blocks": [
+      {
+        "attachTo": "spritelab2_whenRun",
+        "room": {
+          "type": "gamelab_setBackgroundImageAs"
+        }
+      }
+    ],
     "objectives": {
       "title": "**Set the scene**",
       "items": [

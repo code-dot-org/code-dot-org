@@ -1,6 +1,8 @@
 import {
   freeStackEnd,
+  isAttachRoom,
   isAttachShadow,
+  ownsTop,
   matchesEntry,
   missingBlocks,
   placeBelow,
@@ -175,6 +177,18 @@ describe('addBlocks', () => {
     const filled = stack({shadow: SAY, next: true}, {});
     expect(freeStackEnd(filled, GO_TO_SCENE)).toBe(
       filled.nextConnection.targetBlock().nextConnection
+    );
+  });
+
+  it('a room entry adds no block, owns no stack, and waits on no outline', () => {
+    const room = {
+      attachTo: 'spritelab2_whenRun',
+      room: {type: 'gamelab_setBackgroundImageAs'},
+    };
+    expect(isAttachRoom(room)).toBe(true);
+    expect(isAttachShadow(room)).toBe(false);
+    expect(ownsTop([room], {type: 'spritelab2_whenRun', data: null})).toBe(
+      false
     );
   });
 

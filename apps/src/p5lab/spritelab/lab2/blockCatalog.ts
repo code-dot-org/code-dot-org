@@ -3,7 +3,7 @@
 
 import {filterToolboxBlocks} from '@cdo/apps/blockly/utils/toolbox';
 
-import {isAttachShadow} from './addBlocks';
+import {isAttachment} from './addBlocks';
 import {BLOCK_HELP, BlockHelp} from './blockHelp/blockHelpContent';
 import {ToolboxInfo} from './blockly/toolbox/types';
 import {SpriteLab2LevelProperties} from './types';
@@ -55,16 +55,15 @@ export function offeredBlockTypes(level: SpriteLab2LevelProperties): string[] {
 /** The blocks a student had to use on a level: the block a checklist item
     names (one type; an item that takes any of several names none), the
     block it must hang under, and the blocks add_blocks placed for them to
-    build on (an attachTo entry hangs a placeholder, which places nothing). */
+    build on (an attachTo entry hangs a placeholder or keeps room, and
+    places nothing). */
 export function requiredBlockTypes(level: SpriteLab2LevelProperties): string[] {
   const fromChecks = (level.objectives?.items ?? []).flatMap(({check}) =>
     check.kind === 'block'
       ? [typeof check.type === 'string' ? check.type : undefined, check.under]
       : []
   );
-  const placed = (level.addBlocks ?? []).filter(
-    entry => !isAttachShadow(entry)
-  );
+  const placed = (level.addBlocks ?? []).filter(entry => !isAttachment(entry));
   return unique([
     ...fromChecks.filter((type): type is string => !!type),
     ...blockTypesIn(placed),
