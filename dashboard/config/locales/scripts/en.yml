@@ -31159,6 +31159,8 @@ en:
           lessons:
             lesson-1:
               name: Lesson 1
+            lesson-2:
+              name: Unit 6 Project
           lesson_groups:
             lessonGroup-2:
               display_name: AIF

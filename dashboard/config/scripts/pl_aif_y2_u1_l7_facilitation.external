@@ -1,0 +1,36 @@
+name 'pl-aif-y2-u1-l7-facilitation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating: The Shallow Tree
+
+The rubric's own "Limited" tier describes this exactly: conditional logic is present, but only one question actually creates a branch. The program runs. It just doesn't do much.
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: One Real Branch</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6; font-family: 'Consolas', 'Courier New', monospace;">if ask("Do you like writing?"):<br>&nbsp;&nbsp;print("Try Creative Writing!")<br>else:<br>&nbsp;&nbsp;print("Try Robotics!")</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Branches Lead to More Branches</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Four real questions, each one narrowing toward a different outcome, the exemplar's eight possible endings from four or five questions.</div>
+  </div>
+</div>
+
+This usually isn't a syntax problem, the code works. It's a planning problem: the student picked a topic with only one real decision in it, or never revised their Day 1 tree to add depth.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222; margin-bottom: 8px;">&bull; "If someone answered this question differently, would they actually end up somewhere new, or back at the same two outcomes?"</div>
+  <div style="font-size: 16px; color: #222222;">&bull; "What's one more question you could ask after this branch that would split it further?"</div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Catch it early:</strong> this is exactly why Day 2's partner feedback step matters. A tree that looks shallow on paper is much easier to fix before any code exists than after.
+  </div>
+</div>
+MARKDOWN
