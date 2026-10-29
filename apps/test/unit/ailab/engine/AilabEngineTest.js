@@ -2,14 +2,15 @@ import {act, screen} from '@testing-library/react';
 import React from 'react';
 
 import AilabEngine from '@cdo/apps/ailab/engine/AilabEngine';
+import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {loadLevel} from '@cdo/apps/ailab/engine/levelLoad';
 import {store} from '@cdo/apps/ailab/engine/store';
 
+import {seedDataset} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
-jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
-jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
+jest.mock('@cdo/apps/ailab/engine/loadDataset');
 
 afterEach(() => I18n.reset());
 
@@ -25,6 +26,12 @@ test('renders the app for a loaded level', () => {
     {store}
   );
   act(() => loadLevel({datasets: ['songs']}));
+  act(() =>
+    seedDataset(store, [{artist: 'a', year: '2001'}], {
+      artist: ColumnTypes.CATEGORICAL,
+      year: ColumnTypes.CATEGORICAL,
+    })
+  );
 
   expect(screen.getByRole('combobox', {name: 'Predict'})).not.toBeNull();
 });

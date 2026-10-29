@@ -1,16 +1,22 @@
-import {fireEvent, screen, within} from '@testing-library/react';
+import {fireEvent, screen, waitFor, within} from '@testing-library/react';
 import {createElement} from 'react';
 
+import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
   setAccuracyCheckPredictedLabels,
-  setImportedData,
 } from '@cdo/apps/ailab/engine/redux';
 import ResultsDetails from '@cdo/apps/ailab/engine/UIComponents/ResultsDetails';
 
-import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
+import {
+  ANIMAL_COLUMNS,
+  ANIMALS,
+  levelProject,
+  levelStore,
+  seedDataset,
+} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
@@ -26,10 +32,20 @@ function renderScorecard({
   predictedLabels = ['bird', 'dog', 'bird'],
   accuracyCheckRowIndices = [0, 1, 2],
   project = levelProject(),
+  mode,
 } = {}) {
-  const store = levelStore();
+  const store = levelStore(mode);
   if (data) {
-    store.dispatch(setImportedData(data, false));
+    seedDataset(
+      store,
+      data,
+      Object.fromEntries(
+        Object.keys(data[0]).map(column => [
+          column,
+          column === 'legs' ? ColumnTypes.NUMERICAL : ColumnTypes.CATEGORICAL,
+        ])
+      )
+    );
   }
   store.dispatch(setAccuracyCheckExamples(examples));
   store.dispatch(setAccuracyCheckLabels(labels));
@@ -118,21 +134,36 @@ describe('ResultsDetails', () => {
   test('shows the other dataset columns on request', () => {
     renderScorecard({data: NAMED_ANIMALS});
 
-    fireEvent.click(screen.getByLabelText('Show all columns'));
+    fireEvent.click(screen.getByRole('button', {name: 'Expand columns'}));
 
     expect(headerRows()).toEqual([
       ['', 'name', 'legs', 'animal', 'AI predicts'],
     ]);
     expect(bodyRows()[0]).toEqual(['1', 'Tweety', '2', 'bird', 'bird']);
 
-    fireEvent.click(screen.getByLabelText('Show only features and label'));
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse columns'}));
 
     expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
   });
 
+  test('an id column names each row, even with only the model columns shown', () => {
+    renderScorecard({data: NAMED_ANIMALS, mode: {idColumn: 'name'}});
+
+    expect(headerRows()).toEqual([
+      ['', 'name', 'legs', 'animal', 'AI predicts'],
+    ]);
+    expect(bodyRows()).toEqual([
+      ['1', 'Tweety', '2', 'bird', 'bird'],
+      ['2', 'Fido', '4', 'dog', 'dog'],
+    ]);
+    expect(
+      screen.getAllByRole('rowheader').map(header => header.textContent)
+    ).toEqual(['Tweety', 'Fido']);
+  });
+
   test('sorts another dataset column by its own row', () => {
     renderScorecard({data: NAMED_ANIMALS, accuracyCheckRowIndices: [3, 4, 5]});
-    fireEvent.click(screen.getByLabelText('Show all columns'));
+    fireEvent.click(screen.getByRole('button', {name: 'Expand columns'}));
     fireEvent.click(sortButton('Sort by name A-Z'));
     fireEvent.click(sortButton('Sort by name Z-A'));
 
@@ -156,5 +187,25 @@ describe('ResultsDetails', () => {
       ['1', 'bird', '1.5', '1.5'],
       ['3', 'snake', '10', '10'],
     ]);
+  });
+
+  test('filters by the AI prediction, counts each grade, and says when no shown row matches', async () => {
+    renderScorecard();
+    expect(screen.getByRole('button', {name: 'Correct (2)'})).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Incorrect (1)'})).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', {name: 'Filter'}));
+    fireEvent.click(screen.getByRole('button', {name: /^AI predicts/}));
+    fireEvent.click(screen.getByRole('checkbox', {name: 'dog'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Done (1)'}));
+    const incorrect = await waitFor(() =>
+      screen.getByRole('button', {name: 'Incorrect (0)'})
+    );
+    expect(screen.getByRole('button', {name: 'Correct (1)'})).toBeTruthy();
+    expect(bodyRows()).toEqual([['2', '4', 'dog', 'dog']]);
+
+    fireEvent.click(incorrect);
+
+    expect(screen.getByText('No rows match this filter.')).toBeTruthy();
   });
 });

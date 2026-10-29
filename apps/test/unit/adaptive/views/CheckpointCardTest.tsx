@@ -36,8 +36,7 @@ const evidence: PathwayEvidence = {
   build: {
     skillId: 'build',
     evidenceLevel: 1,
-    source: 'questions',
-    from: [{kind: 'question', stepId: 'intro-check', questionId: 1}],
+    from: [{kind: 'questions', stepId: 'intro-check', questionId: 1}],
   },
 };
 

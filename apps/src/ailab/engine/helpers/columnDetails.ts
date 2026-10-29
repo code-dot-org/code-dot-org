@@ -18,12 +18,14 @@ export interface Extrema {
   range: number;
 }
 
+const rowsOf = (state: RootState): DataRow[] => state.dataset?.rows ?? [];
+
 export function isColumnCategorical(state: RootState, column: string): boolean {
-  return state.columnsByDataType[column] === ColumnTypes.CATEGORICAL;
+  return state.dataset?.columnsByDataType[column] === ColumnTypes.CATEGORICAL;
 }
 
 export function isColumnNumerical(state: RootState, column: string): boolean {
-  return state.columnsByDataType[column] === ColumnTypes.NUMERICAL;
+  return state.dataset?.columnsByDataType[column] === ColumnTypes.NUMERICAL;
 }
 
 export function isRegression(state: RootState, project: AilabProject): boolean {
@@ -45,16 +47,38 @@ export function getColumnRole(
   return undefined;
 }
 
+export function withIdColumnFirst(
+  columns: string[],
+  idColumn: string | undefined
+): string[] {
+  return idColumn
+    ? [idColumn, ...columns.filter(column => column !== idColumn)]
+    : columns;
+}
+
+export function idColumnOf(
+  data: DataRow[],
+  levelIdColumn: string | null | undefined,
+  defaultIdColumn: string | undefined
+): string | undefined {
+  const idColumn =
+    levelIdColumn === null ? undefined : levelIdColumn ?? defaultIdColumn;
+  return idColumn !== undefined && Object.hasOwn(data[0] ?? {}, idColumn)
+    ? idColumn
+    : undefined;
+}
+
 export function dataColumnsFor(
   data: DataRow[],
   project: AilabProject,
-  showAllColumns: boolean
+  showAllColumns: boolean,
+  idColumn?: string
 ): string[] {
   const labelColumn = project.labelColumn || 'unknown';
   const columns = showAllColumns
     ? Object.keys(data[0] ?? {}).filter(column => column !== labelColumn)
     : project.selectedFeatures;
-  return [...columns, labelColumn];
+  return withIdColumnFirst([...columns, labelColumn], idColumn);
 }
 
 export function filterColumnsByType(
@@ -167,7 +191,7 @@ export function containsOnlyNumbers(data: DataRow[], column: string): boolean {
 
 export function getColumnDescription(
   columnId: string,
-  metadata: Metadata,
+  metadata: Metadata | undefined,
   trainedModelDetails: TrainedModelDetailsSave
 ): string | null {
   // Use metadata if available.
@@ -213,7 +237,7 @@ export function buildOptionNumberKey(
   feature: string
 ): Record<string, number> {
   const optionsMappedToNumbers: Record<string, number> = {};
-  const uniqueOptions = getUniqueOptions(state.data, feature);
+  const uniqueOptions = getUniqueOptions(rowsOf(state), feature);
   uniqueOptions.forEach(
     (option: string | number) =>
       (optionsMappedToNumbers[String(option)] = uniqueOptions.indexOf(option))
@@ -227,12 +251,15 @@ export function getColumnDataToSave(
 ): ModelCardColumn {
   const columnData: ModelCardColumn = {id: column};
   columnData.description =
-    getColumnDescription(column, state.metadata, state.trainedModelDetails) ??
-    undefined;
+    getColumnDescription(
+      column,
+      state.dataset?.metadata,
+      state.trainedModelDetails
+    ) ?? undefined;
   if (isColumnCategorical(state, column)) {
-    columnData.values = getUniqueOptions(state.data, column).map(String);
+    columnData.values = getUniqueOptions(rowsOf(state), column).map(String);
   } else if (isColumnNumerical(state, column)) {
-    const {max, min} = getExtrema(state.data, column);
+    const {max, min} = getExtrema(rowsOf(state), column);
     columnData.max = max;
     columnData.min = min;
   }

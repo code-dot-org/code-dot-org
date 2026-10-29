@@ -19,23 +19,23 @@ import fs from 'fs';
 import KNN from 'ml-knn';
 import path from 'path';
 
-import {ColumnTypes, TestDataLocations} from '@cdo/apps/ailab/engine/constants';
-import {parseCSV} from '@cdo/apps/ailab/engine/csvReaderWrapper';
+import {TestDataLocations} from '@cdo/apps/ailab/engine/constants';
+import {parseCsvText} from '@cdo/apps/ailab/engine/csvReaderWrapper';
 import {getPercentCorrect} from '@cdo/apps/ailab/engine/helpers/accuracy';
 import I18n from '@cdo/apps/ailab/engine/i18n';
+import {columnTypesFromMetadata} from '@cdo/apps/ailab/engine/jsonReaderWrapper';
 import {
   resetState,
-  setColumnsByDataType,
-  setImportedMetadata,
   setReserveLocation,
   setSelectedCSV,
-  setSelectedJSON,
 } from '@cdo/apps/ailab/engine/redux';
+import {getData, getRemovedRowsCount} from '@cdo/apps/ailab/engine/selectors';
 import {getTrainedModelDataToSave} from '@cdo/apps/ailab/engine/selectors/saveSelectors';
 import {store} from '@cdo/apps/ailab/engine/store';
 import train from '@cdo/apps/ailab/engine/train';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
+import {seedDataset} from './levelStore';
 import {projectFromRun} from './renderWithProviders';
 
 const DIR = path.join(__dirname, '../../../../static/skins/ailab/datasets');
@@ -69,24 +69,22 @@ function load(id, features) {
   train.reset();
   // A string here is what makes `isUserUploaded` false, as it is for a level.
   store.dispatch(setSelectedCSV(`${id}.csv`));
-  store.dispatch(setSelectedJSON(`${id}.json`));
-  parseCSV(csv, false, false);
-  store.dispatch(setImportedMetadata(metadata));
-  metadata.fields.forEach(field =>
-    store.dispatch(
-      setColumnsByDataType(field.id, field.type || ColumnTypes.CATEGORICAL)
-    )
+  seedDataset(
+    store,
+    parseCsvText(csv).rows,
+    columnTypesFromMetadata(metadata),
+    metadata
   );
   // Set explicitly rather than relying on the initial state, so a change of
   // default cannot silently make these tests non-deterministic.
   store.dispatch(setReserveLocation(TestDataLocations.END));
 
   const project = {
-    ...initialProject,
+    ...defaultProject,
     labelColumn: metadata.defaultLabelColumn,
     selectedFeatures:
       features ||
-      Object.keys(store.getState().data[0]).filter(
+      Object.keys(getData(store.getState())[0]).filter(
         column => column !== metadata.defaultLabelColumn
       ),
   };
@@ -121,9 +119,9 @@ describe('shipped dataset fingerprints', () => {
   test('shapes_v1_toy is 100 clean rows over 6 columns', () => {
     const {state, project} = load('shapes_v1_toy');
 
-    expect(state.data.length).toBe(100);
-    expect(state.removedRowsCount).toBe(0);
-    expect(Object.keys(state.data[0])).toEqual([
+    expect(getData(state).length).toBe(100);
+    expect(getRemovedRowsCount(state)).toBe(0);
+    expect(Object.keys(getData(state)[0])).toEqual([
       'sides',
       'border color',
       'fill color',
@@ -137,8 +135,8 @@ describe('shipped dataset fingerprints', () => {
   test('jeans is 80 clean rows with a numerical label', () => {
     const {state, project} = load('jeans');
 
-    expect(state.data.length).toBe(80);
-    expect(state.removedRowsCount).toBe(0);
+    expect(getData(state).length).toBe(80);
+    expect(getRemovedRowsCount(state)).toBe(0);
     expect(project.labelColumn).toBe('Price in dollars');
     expect(project.selectedFeatures.length).toBe(13);
   });

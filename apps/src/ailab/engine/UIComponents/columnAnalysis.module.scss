@@ -56,34 +56,6 @@
   margin-top: 8px;
 }
 
-.emptyGraph {
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  text-align: center;
-}
-
-.emptyGraphIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
-  border-radius: var(--shape-round);
-  font-size: 24px;
-  color: var(--text-neutral-primary-inverse);
-  background-color: var(--background-neutral-septenary);
-}
-
-.emptyGraph .emptyGraphTitle {
-  margin-bottom: 2px;
-}
-
-.emptyGraph .emptyGraphMessage {
-  color: var(--text-neutral-secondary);
-}
-
 .distribution .distributionTitle {
   font-weight: 600;
 }

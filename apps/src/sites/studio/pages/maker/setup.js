@@ -10,9 +10,6 @@ $(function () {
     <Provider store={getStore()}>
       <SetupGuide />
     </Provider>,
-    document.getElementById('maker-setup'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('maker-setup')
   );
 });

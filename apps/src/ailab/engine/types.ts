@@ -4,14 +4,26 @@ export type TrainerFamily = 'knn' | 'decisionTree';
 
 export type Hyperparameters = {k: number} | {maxDepth: number};
 
+export type DatasetError = 'tooFewRows' | 'tooFewColumns' | 'loadFailed';
+
+export interface Dataset {
+  rows: DataRow[];
+  metadata: Metadata;
+  columnsByDataType: Record<string, string>;
+  removedRowsCount: number;
+}
+
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;
+  hyperparameters?: Hyperparameters;
   label?: string;
   features?: string[];
   // Locks the label: `label` if set, else the dataset's default label.
   hideSelectLabel?: boolean;
   lockFeatures?: boolean;
+  // Column that names each row. Default to the dataset's 'defaultIdColumn'; null for none.
+  idColumn?: string | null;
   // Trains on `label` and `features` when the level loads. Requires both locks and `reserveLastRows`.
   pretrained?: boolean;
   // Opens on the results once pretrained, with no way back. Requires `pretrained`.
@@ -36,12 +48,24 @@ export type SortDirection = 'ascending' | 'descending';
 
 export type ColumnId = string | symbol;
 
+export interface ColumnFilter {
+  column: ColumnId;
+  values: string[];
+}
+
 export interface TableView {
   rows: number[];
+  totalRowCount: number;
   columns: ColumnId[];
+  shownFilterableColumns: ColumnId[];
+  filter: ColumnFilter | undefined;
+  valueAt(row: number, column: ColumnId): string | number;
   isNumerical(column: ColumnId): boolean;
   sortDirection(column: ColumnId): SortDirection | undefined;
   toggleSort(column: ColumnId): void;
+  filterOptions(column: ColumnId): string[];
+  filterBy(column: ColumnId, values: string[]): void;
+  clearFilter(): void;
 }
 
 export interface DatasetTableView extends TableView {
@@ -115,6 +139,7 @@ export interface Metadata {
   name?: string;
   card: MetadataCard;
   defaultLabelColumn?: string;
+  defaultIdColumn?: string;
   fields?: MetadataField[];
 }
 
@@ -191,7 +216,7 @@ export interface AilabProject {
   historicResults: HistoricResult[];
 }
 
-export const initialProject: AilabProject = {
+export const defaultProject: AilabProject = {
   labelColumn: undefined,
   selectedFeatures: [],
   hyperparameters: undefined,

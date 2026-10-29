@@ -44,6 +44,27 @@ export function generateInputsHash(prompt: string): string {
   return hashString(prompt);
 }
 
+/** One check of a project step's work, as the judge reported it. */
+export interface ValidationAttempt {
+  /** When the server recorded it. */
+  at: string;
+  pass: boolean;
+  /** On the evidence levels of the skill the step measures. */
+  evidenceLevel: number;
+  /** Addressed to the student. */
+  reason: string;
+  /** The Langfuse trace the judge ran under. */
+  traceId?: string;
+}
+
+/** The verdict in force on a step; undefined before its first check. */
+export function latestValidation(
+  entry: StepProgress | undefined
+): ValidationAttempt | undefined {
+  const history = entry?.validationHistory;
+  return history?.[history.length - 1];
+}
+
 /** Id of the project screen's step, which records no progress. */
 export const PROJECT_STEP_ID = 'project';
 
@@ -57,6 +78,8 @@ export interface StepProgress {
   submitted?: boolean;
   answers?: StepAnswers;
   generatedInstructions?: GeneratedContent;
+  /** Every check of a project step's work, oldest first. */
+  validationHistory?: ValidationAttempt[];
 }
 
 export interface Progress {
@@ -64,6 +87,19 @@ export interface Progress {
 }
 
 export const EMPTY_PROGRESS: Progress = {steps: {}};
+
+/**
+ * The step id to resume in a checkpoint: the first step that is not yet
+ * complete. Returns undefined when all steps are complete.
+ */
+export function stepIdToResume(
+  checkpoint: Checkpoint,
+  progress: Progress
+): string | undefined {
+  return checkpoint.steps.find(
+    step => progress.steps[step.id]?.status !== 'complete'
+  )?.id;
+}
 
 /** Whether the student finished the checkpoint: its last step is complete. */
 export const isComplete = (checkpoint: Checkpoint, progress: Progress) => {

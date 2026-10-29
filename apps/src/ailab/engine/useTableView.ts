@@ -1,15 +1,8 @@
-import {useCallback, useMemo, useState} from 'react';
+import {useMemo, useState} from 'react';
 
 import {ColumnTypes} from './constants';
 import {compareText} from './helpers/utils';
-import {getLocalizedValue} from './helpers/valueDetails';
-import {useAppSelector} from './hooks';
-import type {
-  ColumnId,
-  DatasetTableView,
-  SortDirection,
-  TableView,
-} from './types';
+import type {ColumnFilter, ColumnId, SortDirection, TableView} from './types';
 
 interface TableSort {
   column: ColumnId;
@@ -21,6 +14,7 @@ interface TableViewSource {
   rows: number[];
   columns: ColumnId[];
   columnTypes: Partial<Record<ColumnId, string>>;
+  filterableColumns: ColumnId[];
   valueAt: (row: number, column: ColumnId) => string | number;
 }
 
@@ -56,28 +50,60 @@ export function useTableView({
   rows,
   columns,
   columnTypes,
+  filterableColumns,
   valueAt,
 }: TableViewSource): TableView {
   const [sort, setSort] = useState<TableSort>();
+  const [filter, setFilter] = useState<ColumnFilter>();
   const isNumerical = (column: ColumnId) =>
     columnTypes[column] === ColumnTypes.NUMERICAL;
 
-  const sortedRows = useMemo(() => {
-    if (!sort || !columns.includes(sort.column)) {
+  const matchingRows = useMemo(() => {
+    if (!filter) {
       return rows;
+    }
+    const checked = new Set(filter.values);
+    return rows.filter(row => checked.has(String(valueAt(row, filter.column))));
+  }, [rows, valueAt, filter]);
+
+  const shownRows = useMemo(() => {
+    if (!sort || !columns.includes(sort.column)) {
+      return matchingRows;
     }
     const {column, direction} = sort;
     const sign = direction === 'ascending' ? 1 : -1;
     const numerical = columnTypes[column] === ColumnTypes.NUMERICAL;
-    const values = new Map(rows.map(row => [row, valueAt(row, column)]));
-    return [...rows].sort(
+    const values = new Map(
+      matchingRows.map(row => [row, valueAt(row, column)])
+    );
+    return [...matchingRows].sort(
       (a, b) => sign * compareValues(values.get(a)!, values.get(b)!, numerical)
     );
-  }, [rows, columns, columnTypes, valueAt, sort]);
+  }, [matchingRows, columns, columnTypes, valueAt, sort]);
+
+  const rowOptions = useMemo(() => {
+    const optionsByColumn = new Map<ColumnId, string[]>();
+    return (column: ColumnId) => {
+      let options = optionsByColumn.get(column);
+      if (!options) {
+        options = [...new Set(rows.map(row => String(valueAt(row, column))))]
+          .filter(option => option !== '')
+          .sort(compareText);
+        optionsByColumn.set(column, options);
+      }
+      return options;
+    };
+  }, [rows, valueAt]);
 
   return {
-    rows: sortedRows,
+    rows: shownRows,
+    totalRowCount: rows.length,
     columns,
+    shownFilterableColumns: columns.filter(column =>
+      filterableColumns.includes(column)
+    ),
+    filter,
+    valueAt,
     isNumerical,
     sortDirection: column =>
       sort?.column === column ? sort.direction : undefined,
@@ -88,20 +114,19 @@ export function useTableView({
         );
         return direction && {column, direction};
       }),
+    // A checked value stays listed after the rows change, so it can be unchecked.
+    filterOptions: column => {
+      const options = rowOptions(column);
+      const missingChecked =
+        filter?.column === column
+          ? filter.values.filter(value => !options.includes(value))
+          : [];
+      return missingChecked.length
+        ? [...options, ...missingChecked].sort(compareText)
+        : options;
+    },
+    filterBy: (column, values) =>
+      setFilter(values.length ? {column, values} : undefined),
+    clearFilter: () => setFilter(undefined),
   };
-}
-
-export function useDatasetTableView(
-  rows: number[],
-  columns: string[]
-): DatasetTableView {
-  const data = useAppSelector(state => state.data);
-  const columnTypes = useAppSelector(state => state.columnsByDataType);
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
-  const valueAt = useCallback(
-    (row: number, column: ColumnId) =>
-      getLocalizedValue(data[row][column as string], datasetId),
-    [data, datasetId]
-  );
-  return {...useTableView({rows, columns, columnTypes, valueAt}), columns};
 }

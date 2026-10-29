@@ -3,7 +3,6 @@ import reducer, {
   initialState,
   setCurrentPanel,
   setCurrentColumn,
-  setColumnsByDataType,
   setInstructionsEnabled,
   setTestData,
   setPrediction,
@@ -12,13 +11,18 @@ import reducer, {
   stepPredictionByHand,
   setMode,
   setReserveLocation,
-  setImportedData,
+  setDatasetLoaded,
+  setSelectedCSV,
   resetState,
   setSaveStatus,
   saveModel,
   setTrainingModalStep,
 } from '@cdo/apps/ailab/engine/redux';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
+
+import {dataset} from './levelStore';
+
+const DATASET = dataset([{a: '1'}], {a: ColumnTypes.NUMERICAL});
 
 describe('ailab reducer', () => {
   describe('instructionsEnabled gates the panel overlay', () => {
@@ -106,7 +110,9 @@ describe('ailab reducer', () => {
     test('selects the label column on the dataset view', () => {
       let state = reducer(
         initialState,
-        setColumnsByDataType('lbl', ColumnTypes.NUMERICAL)
+        setDatasetLoaded({
+          dataset: dataset([{lbl: '1'}], {lbl: ColumnTypes.NUMERICAL}),
+        })
       );
       state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('lbl'));
@@ -215,21 +221,26 @@ describe('ailab reducer', () => {
     });
 
     test('selecting a feature column leaves the instructions alone', () => {
-      let state = reducer(
-        initialState,
-        setColumnsByDataType('a', ColumnTypes.NUMERICAL)
-      );
+      let state = reducer(initialState, setDatasetLoaded({dataset: DATASET}));
       state = reducer(state, setCurrentPanel('datasetView'));
       const next = reducer(state, setCurrentColumn('a'));
       expect(next.currentColumn).toBe('a');
       expect(next.instructionsKey).toBe('datasetView');
     });
 
-    test('importing a dataset records uploaded vs selected', () => {
-      const uploaded = reducer(initialState, setImportedData([], true));
-      expect(uploaded.instructionsKey).toBe('uploadedDataset');
-      const selected = reducer(initialState, setImportedData([], false));
-      expect(selected.instructionsKey).toBe('selectedDataset');
+    test('loading a dataset records uploaded vs selected', () => {
+      const loadedOver = csvfile =>
+        reducer(
+          reducer(initialState, setSelectedCSV(csvfile)),
+          setDatasetLoaded({dataset: DATASET})
+        );
+
+      expect(loadedOver(new File([''], 'mine.csv')).instructionsKey).toBe(
+        'uploadedDataset'
+      );
+      expect(loadedOver('datasets/animals.csv').instructionsKey).toBe(
+        'selectedDataset'
+      );
     });
   });
 
@@ -246,7 +257,7 @@ describe('ailab reducer', () => {
       };
       saveModel(
         save,
-        {...initialProject, labelColumn: 'a'},
+        {...defaultProject, labelColumn: 'a'},
         trainedModel
       )(
         action => actions.push(action),

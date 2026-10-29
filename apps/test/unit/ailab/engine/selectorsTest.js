@@ -13,19 +13,27 @@ import {
   getUniqueOptionsByColumn,
   getExtremaByColumn,
   getSelectableColumns,
+  getFilterableColumns,
+  getColumnsByDataType,
+  getData,
+  getIdColumn,
+  getMetadata,
+  getTrainableColumns,
 } from '@cdo/apps/ailab/engine/selectors';
 
 import {
-  classificationState,
+  classificationRows,
+  classificationColumnTypes,
   classificationProject,
-  allNumericalState,
+  allNumericalRows,
+  allNumericalColumnTypes,
   allNumericalProject,
 } from './testData';
 
 describe('selecting columns by data type', () => {
   test('gets selected categorical features', async () => {
     const categoricalColumns = getCategoricalColumns
-      .resultFunc(classificationState.columnsByDataType)
+      .resultFunc(classificationColumnTypes)
       .sort();
     expect(categoricalColumns).toEqual(['play', 'temp', 'weather']);
     const result = getSelectedCategoricalFeatures.resultFunc(
@@ -37,7 +45,7 @@ describe('selecting columns by data type', () => {
 
   test('gets selected numerical features', async () => {
     const numericalColumns = getNumericalColumns.resultFunc(
-      allNumericalState.columnsByDataType
+      allNumericalColumnTypes
     );
     expect(numericalColumns).toEqual(['batCount', 'mosquitoCount']);
     const result = getSelectedNumericalFeatures.resultFunc(
@@ -51,7 +59,7 @@ describe('selecting columns by data type', () => {
 describe('getting category options', () => {
   test('gets unique options by column', async () => {
     const categoricalColumns = getCategoricalColumns
-      .resultFunc(classificationState.columnsByDataType)
+      .resultFunc(classificationColumnTypes)
       .sort();
     const selectedColumns = getSelectedColumns.resultFunc(
       classificationProject.selectedFeatures,
@@ -63,7 +71,7 @@ describe('getting category options', () => {
     );
     const uniqueOptionsByColumn = getUniqueOptionsByColumn.resultFunc(
       selectedCategoricalColumns,
-      classificationState.data
+      classificationRows
     );
     expect(uniqueOptionsByColumn['play']).toEqual(['no', 'yes']);
     expect(uniqueOptionsByColumn['temp']).toEqual(['cool', 'hot', 'mild']);
@@ -78,7 +86,7 @@ describe('getting category options', () => {
 describe('getting extrema', () => {
   test('gets extrema by column', async () => {
     const numericalColumns = getNumericalColumns.resultFunc(
-      allNumericalState.columnsByDataType
+      allNumericalColumnTypes
     );
     const selectedColumns = getSelectedColumns.resultFunc(
       allNumericalProject.selectedFeatures,
@@ -90,7 +98,7 @@ describe('getting extrema', () => {
     );
     const extremaByColumn = getExtremaByColumn.resultFunc(
       selectedNumericalColumns,
-      allNumericalState.data
+      allNumericalRows
     );
     expect(extremaByColumn['batCount'].max).toBe(100);
     expect(extremaByColumn['batCount'].min).toBe(40);
@@ -101,7 +109,7 @@ describe('getting extrema', () => {
   });
 });
 
-describe('getSelectableColumns', () => {
+describe('getTrainableColumns', () => {
   const tooManyOptions = Array.from({length: UNIQUE_OPTIONS_MAX + 1}, (_, i) =>
     String(i)
   );
@@ -120,13 +128,75 @@ describe('getSelectableColumns', () => {
   };
 
   test('keeps numbers-only numerical and small categorical columns', () => {
-    expect(getSelectableColumns.resultFunc(data, columnsByDataType)).toEqual([
+    expect(getTrainableColumns.resultFunc(data, columnsByDataType)).toEqual([
       'count',
       'color',
     ]);
   });
 
   test('returns nothing when there is no data', () => {
-    expect(getSelectableColumns.resultFunc([], columnsByDataType)).toEqual([]);
+    expect(getTrainableColumns.resultFunc([], columnsByDataType)).toEqual([]);
+  });
+});
+
+describe('getSelectableColumns', () => {
+  test('leaves out the id column', () => {
+    expect(
+      getSelectableColumns.resultFunc(['count', 'color'], 'color')
+    ).toEqual(['count']);
+  });
+});
+
+describe('getIdColumn', () => {
+  const data = [{name: 'Fido', legs: '4'}];
+
+  test("is the mode's id column when the dataset has it", () => {
+    expect(getIdColumn.resultFunc(data, 'name')).toBe('name');
+  });
+
+  test('is undefined when the dataset lacks it or the mode sets none', () => {
+    expect(getIdColumn.resultFunc(data, 'nope')).toBeUndefined();
+    expect(getIdColumn.resultFunc([], 'name')).toBeUndefined();
+    expect(getIdColumn.resultFunc(data, undefined)).toBeUndefined();
+  });
+
+  test("falls back to the dataset's default when the mode sets none", () => {
+    expect(getIdColumn.resultFunc(data, undefined, 'name')).toBe('name');
+    expect(getIdColumn.resultFunc(data, 'legs', 'name')).toBe('legs');
+  });
+
+  test('is undefined when the mode turns off the default', () => {
+    expect(getIdColumn.resultFunc(data, null, 'name')).toBeUndefined();
+  });
+
+  test('ignores names inherited by every object', () => {
+    expect(getIdColumn.resultFunc(data, 'constructor')).toBeUndefined();
+  });
+});
+
+describe('getFilterableColumns', () => {
+  test('keeps the selectable columns that are categorical', () => {
+    expect(
+      getFilterableColumns.resultFunc(['count', 'color'], ['color', 'id'])
+    ).toEqual(['color']);
+  });
+});
+
+describe('reading a dataset that has not loaded', () => {
+  const empty = {dataset: undefined};
+
+  test('gives the same rows, column types and metadata each time', () => {
+    expect(getData(empty)).toBe(getData(empty));
+    expect(getColumnsByDataType(empty)).toBe(getColumnsByDataType(empty));
+    expect(getMetadata(empty)).toBe(getMetadata(empty));
+  });
+
+  test('leaves the selectors built on them memoized', () => {
+    getSelectableColumns(empty);
+    const computations = getSelectableColumns.recomputations();
+
+    getSelectableColumns({...empty, currentColumn: 'something else'});
+
+    expect(getSelectableColumns.recomputations()).toBe(computations);
   });
 });

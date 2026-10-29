@@ -9,9 +9,15 @@ import React, {
   type ReactNode,
 } from 'react';
 
+import {
+  applyPresetColumns,
+  keepSelectableColumns,
+  sortByColumnOrder,
+} from './helpers/projectColumns';
 import {useAppSelector} from './hooks';
+import {getData, getSelectableColumns} from './selectors';
 import type {TrainingRun} from './trainers/types';
-import {initialProject, type AilabProject, type DataRow} from './types';
+import {defaultProject, type AilabProject} from './types';
 import {useResetSignal} from './useResetSignal';
 
 /*
@@ -26,6 +32,9 @@ type TrainingRunOutputs = Pick<
 
 interface ProjectContextValue {
   project: AilabProject;
+  openProject: (saved: AilabProject) => void;
+  isProjectLoaded: boolean;
+  isProjectLoading: boolean;
   setLabelColumn: (column?: string) => void;
   addSelectedFeature: (feature: string) => void;
   removeSelectedFeature: (feature: string) => void;
@@ -35,41 +44,47 @@ interface ProjectContextValue {
   restoreTrainingRun: () => void;
 }
 
-function sortByColumnOrder(features: string[], data: DataRow[]): string[] {
-  const columns = Object.keys(data[0] ?? {});
-  return [...features].sort((a, b) => columns.indexOf(a) - columns.indexOf(b));
-}
-
 const ProjectContext = createContext<ProjectContextValue | undefined>(
   undefined
 );
 
 interface ProjectProviderProps {
   children: ReactNode;
-  project?: AilabProject;
+  initialProject?: AilabProject;
+  onProjectChange?: (project: AilabProject) => void;
 }
 
 export const ProjectProvider = ({
   children,
-  project: openWith,
+  initialProject,
+  onProjectChange,
 }: ProjectProviderProps) => {
-  const [project, setProject] = useState<AilabProject>(
-    openWith ?? initialProject
-  );
+  const [project, setProject] = useState<AilabProject>(defaultProject);
+  const [isProjectLoaded, setIsProjectLoaded] = useState(false);
   const previousRun = useRef<TrainingRunOutputs | undefined>(undefined);
-  const data = useAppSelector(state => state.data);
+  const onProjectChangeRef = useRef(onProjectChange);
+  onProjectChangeRef.current = onProjectChange;
+  // A project waiting for the dataset to load.
+  const [pendingProject, setPendingProject] = useState<
+    AilabProject | undefined
+  >();
+  const datasetSelectionPending = useAppSelector(
+    state => !!state.csvfile && !state.invalidData
+  );
+  const isProjectLoading =
+    pendingProject !== undefined && datasetSelectionPending;
+  const isDefaultProject = project === defaultProject;
+  const data = useAppSelector(getData);
   const presetColumns = useAppSelector(state => state.presetColumns);
+  const selectableColumns = useAppSelector(getSelectableColumns);
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
+  const datasetLoaded = useAppSelector(state => !!state.dataset);
 
   useResetSignal(
-    useCallback((keepsHistoricResults: boolean) => {
+    useCallback(() => {
       previousRun.current = undefined;
-      setProject(previous =>
-        keepsHistoricResults
-          ? {...initialProject, historicResults: previous.historicResults}
-          : initialProject
-      );
+      setProject(defaultProject);
     }, [])
   );
 
@@ -124,42 +139,75 @@ export const ProjectProvider = ({
     [data]
   );
 
-  /*
-    Handle the preset columns for the project. A locked column always
-    wins, since the student has no way to change it. An unlocked one will
-    never replace a choice already in the project.
-  */
   useEffect(() => {
     if (!presetColumns) {
       return;
     }
-    setProject(previous => {
-      let labelColumn = previous.labelColumn;
-      if (
-        presetColumns.labelColumn !== undefined &&
-        (lockedLabel || previous.labelColumn === undefined)
-      ) {
-        labelColumn = presetColumns.labelColumn;
-      }
-
-      let features = previous.selectedFeatures;
-      if (
-        presetColumns.selectedFeatures &&
-        (lockedFeatures || previous.selectedFeatures.length === 0)
-      ) {
-        features = presetColumns.selectedFeatures;
-      }
-
-      return {
-        ...previous,
-        labelColumn,
-        selectedFeatures: sortByColumnOrder(
-          features.filter(feature => feature !== labelColumn),
-          data
-        ),
-      };
-    });
+    setProject(previous =>
+      applyPresetColumns(
+        previous,
+        presetColumns,
+        lockedLabel,
+        lockedFeatures,
+        data
+      )
+    );
   }, [presetColumns, lockedLabel, lockedFeatures, data]);
+
+  const applyProject = useCallback(
+    (saved: AilabProject) => {
+      previousRun.current = undefined;
+      const reconciledProject = keepSelectableColumns(
+        saved,
+        selectableColumns,
+        data
+      );
+      setProject(
+        presetColumns
+          ? applyPresetColumns(
+              reconciledProject,
+              presetColumns,
+              lockedLabel,
+              lockedFeatures,
+              data
+            )
+          : reconciledProject
+      );
+      setIsProjectLoaded(true);
+    },
+    [selectableColumns, data, presetColumns, lockedLabel, lockedFeatures]
+  );
+
+  const openProject = useCallback((saved: AilabProject) => {
+    setPendingProject(saved);
+  }, []);
+
+  /*
+    This is done in an effect to ensure the level has loaded and cleared
+    previous data.
+    TODO: see if we can refactor things to not need an effect here.
+  */
+  useEffect(() => {
+    if (initialProject) {
+      setPendingProject(initialProject);
+    }
+  }, [initialProject]);
+
+  useEffect(() => {
+    if (pendingProject && datasetLoaded) {
+      setPendingProject(undefined);
+      applyProject(pendingProject);
+    }
+  }, [pendingProject, datasetLoaded, applyProject]);
+
+  // TODO: skip notifying on project change if the change is due to on-load
+  // reconciliation of the project with the saved state, as that is not a user
+  // change and shouldn't count as an 'edit'.
+  useEffect(() => {
+    if (isProjectLoaded && !isDefaultProject) {
+      onProjectChangeRef.current?.(project);
+    }
+  }, [isProjectLoaded, isDefaultProject, project]);
 
   const applyTrainingRun = useCallback((run?: TrainingRun) => {
     if (!run) {
@@ -192,6 +240,9 @@ export const ProjectProvider = ({
   const value = useMemo(
     () => ({
       project,
+      openProject,
+      isProjectLoaded,
+      isProjectLoading,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,
@@ -202,6 +253,9 @@ export const ProjectProvider = ({
     }),
     [
       project,
+      openProject,
+      isProjectLoaded,
+      isProjectLoading,
       setLabelColumn,
       addSelectedFeature,
       removeSelectedFeature,

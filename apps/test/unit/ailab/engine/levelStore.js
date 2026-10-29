@@ -2,12 +2,11 @@ import {createStore} from 'redux';
 
 import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import rootReducer, {
-  setColumnsByDataType,
   setCurrentPanel,
-  setImportedData,
+  setDatasetLoaded,
   setMode,
 } from '@cdo/apps/ailab/engine/redux';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
 // `legs` fixes `animal`, so a trained model reaches 100%.
 export const ANIMALS = [
@@ -28,6 +27,16 @@ export const ANIMAL_COLUMNS = {
   legs: ColumnTypes.NUMERICAL,
 };
 
+export function dataset(rows, columnsByDataType, metadata = {card: {}}) {
+  return {rows, metadata, columnsByDataType, removedRowsCount: 0};
+}
+
+export function seedDataset(store, rows, columnsByDataType, metadata) {
+  store.dispatch(
+    setDatasetLoaded({dataset: dataset(rows, columnsByDataType, metadata)})
+  );
+}
+
 export function seedLevel(
   store,
   mode,
@@ -36,10 +45,7 @@ export function seedLevel(
 ) {
   store.dispatch(setMode(mode));
   store.dispatch(setCurrentPanel('datasetView'));
-  store.dispatch(setImportedData(data, false));
-  Object.entries(columns).forEach(([column, type]) =>
-    store.dispatch(setColumnsByDataType(column, type))
-  );
+  seedDataset(store, data, columns);
 
   return store;
 }
@@ -51,7 +57,7 @@ export function levelStore(...level) {
 // The columns a level opens with: every one except the label is a feature.
 export function levelProject(columns = ANIMAL_COLUMNS, label = 'animal') {
   return {
-    ...initialProject,
+    ...defaultProject,
     labelColumn: label,
     selectedFeatures: Object.keys(columns).filter(column => column !== label),
   };

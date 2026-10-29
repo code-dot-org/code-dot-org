@@ -318,6 +318,25 @@ const EVENTS = {
   AI_DIFF_NOTIFICATION_AI_PROMPT_CLICKED:
     'AI Differentiation Notification AI Prompt Clicked',
 
+  // AI Teaching Assistant drawer. These names are snake_case rather than the
+  // Title Case used above because the TA event plan pins them to Statsig's
+  // naming guide: ai_ta_<object>_<past-tense verb>, no spaces.
+  AI_TA_PANEL_OPENED: 'ai_ta_panel_opened',
+  AI_TA_TAB_CLICKED: 'ai_ta_tab_clicked',
+  AI_TA_PRESET_PROMPT_CLICKED: 'ai_ta_preset_prompt_clicked',
+  AI_TA_RESPONSE_RECEIVED: 'ai_ta_response_received',
+  AI_TA_SUGGEST_PROMPTS_OPENED: 'ai_ta_suggest_prompts_opened',
+  AI_TA_PROMPT_CATEGORY_CLICKED: 'ai_ta_prompt_category_clicked',
+  AI_TA_NEW_CHAT_STARTED: 'ai_ta_new_chat_started',
+  AI_TA_THREAD_LIST_OPENED: 'ai_ta_thread_list_opened',
+  AI_TA_PREP_SECTION_CLICKED: 'ai_ta_prep_section_clicked',
+  AI_TA_PODCAST_CLICKED: 'ai_ta_podcast_clicked',
+  AI_TA_PREP_DATE_FILTER_CHANGED: 'ai_ta_prep_date_filter_changed',
+  AI_TA_ROSTER_STUDENT_CLICKED: 'ai_ta_roster_student_clicked',
+  AI_TA_ROSTER_SECTION_CHANGED: 'ai_ta_roster_section_changed',
+  AI_TA_ROSTER_STUDENT_NAVIGATED: 'ai_ta_roster_student_navigated',
+  AI_TA_EXAMPLE_SOLUTION_CLICKED: 'ai_ta_example_solution_clicked',
+
   // AI Tutor
   AI_TUTOR_SIDEBAR_CLICK: 'AI Tutor Sidebar Suggested Prompt Clicked',
   AI_TUTOR_SIDEBAR_OPEN: 'User opened AI Tutor from Sidebar',

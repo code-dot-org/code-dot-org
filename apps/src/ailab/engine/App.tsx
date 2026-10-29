@@ -19,6 +19,7 @@ import {
   saveModel,
   setCurrentPanel,
 } from './redux';
+import {getData} from './selectors';
 import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
@@ -38,6 +39,7 @@ import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
 import {usePretrainOnLoad} from './usePretrainOnLoad';
+import {useRestoreModel} from './useRestoreModel';
 
 import styles from './app.module.scss';
 
@@ -245,7 +247,7 @@ const App = ({
   onTrained,
 }: AppProps) => {
   const dispatch = useAppDispatch();
-  const {project} = useProject();
+  const {project, isProjectLoading} = useProject();
   const panelButtons = useAppSelector<PrevNextButtons>(
     state => getPanelButtons(state, project),
     panelButtonsEqual
@@ -262,7 +264,20 @@ const App = ({
   const hideTestingView = useAppSelector(getHideTestingView);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
-  usePretrainOnLoad();
+  const restoringModel = useRestoreModel();
+  usePretrainOnLoad(restoringModel);
+
+  const datasetPending = useAppSelector(
+    state =>
+      !!state.csvfile && getData(state).length === 0 && !state.invalidData
+  );
+  /*
+    Datasets load while on the select dataset panel, don't hide that panel
+    while datasets are still loading.
+  */
+  const loading =
+    currentPanel !== 'selectDataset' &&
+    (datasetPending || isProjectLoading || restoringModel);
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -286,6 +301,11 @@ const App = ({
     // As above: report a result once, not once per render of the consumer.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestResult]);
+
+  // TODO: don't load forever if the dataset fails to load.
+  if (loading) {
+    return <div className={styles.app} style={colorVariables} />;
+  }
 
   return (
     <div className={styles.app} style={colorVariables}>

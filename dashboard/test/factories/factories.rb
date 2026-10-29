@@ -1122,11 +1122,13 @@ FactoryBot.define do
 
   factory :music_dance_ai, parent: :bubble_choice_level do
     sequence(:name) {|n| "Music_Dance_AI_Level_#{n}"}
+    # Ensure sublevels fall on the parent's side of the standalone project partition.
     sublevels do
+      suffix = Level.standalone_partition_name?(name) ? ' Subproject' : ''
       [
-        create(:dance),
-        create(:music),
-        create(:dance)
+        create(:dance, name: "#{name} Dancer#{suffix}"),
+        create(:music, name: "#{name} Music#{suffix}"),
+        create(:dance, name: "#{name} Dance#{suffix}")
       ]
     end
   end
@@ -1464,7 +1466,7 @@ FactoryBot.define do
     active {false}
     problem_text {'fake problem text'}
     problem_type {'multiple_choice_single_select'}
-    solution {{}}
+    solution {[{option: 'a', correct: true}, {option: 'b', correct: false}]}
   end
 
   factory :user_practice_problem_attempt do
@@ -1494,6 +1496,10 @@ FactoryBot.define do
   factory :challenge_response do
     association :challenge
     association :user, factory: :student
+
+    trait :evaluated do
+      evaluation_status {:success}
+    end
   end
 
   factory :challenge_response_asset do

@@ -4,16 +4,14 @@ import {ColumnTypes, TestDataLocations} from '@cdo/apps/ailab/engine/constants';
 import {getConvertedPredictedLabel} from '@cdo/apps/ailab/engine/helpers/valueConversion';
 import rootReducer, {
   getTrainingResults,
-  setImportedData,
-  setColumnsByDataType,
   setMode,
   setReserveLocation,
   setTestData,
 } from '@cdo/apps/ailab/engine/redux';
 import train from '@cdo/apps/ailab/engine/train';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
 
-import {levelProject, levelStore} from './levelStore';
+import {levelProject, levelStore, seedDataset} from './levelStore';
 
 describe('train functions', () => {
   test('train and predict with numerical data', async () => {
@@ -26,12 +24,13 @@ describe('train functions', () => {
       {temperature: '150', cost: '35', rain: '1030'},
     ];
 
-    store.dispatch(setImportedData(data, false));
-    store.dispatch(setColumnsByDataType('cost', ColumnTypes.NUMERICAL));
-    store.dispatch(setColumnsByDataType('rain', ColumnTypes.NUMERICAL));
-    store.dispatch(setColumnsByDataType('temperature', ColumnTypes.NUMERICAL));
+    seedDataset(store, data, {
+      cost: ColumnTypes.NUMERICAL,
+      rain: ColumnTypes.NUMERICAL,
+      temperature: ColumnTypes.NUMERICAL,
+    });
     const project = {
-      ...initialProject,
+      ...defaultProject,
       labelColumn: 'cost',
       selectedFeatures: ['temperature', 'rain'],
     };
@@ -63,12 +62,13 @@ describe('train functions', () => {
       {color: 'blue', flavor: 'sweet', texture: 'soft'},
     ];
 
-    store.dispatch(setImportedData(data, false));
-    store.dispatch(setColumnsByDataType('color', ColumnTypes.CATEGORICAL));
-    store.dispatch(setColumnsByDataType('flavor', ColumnTypes.CATEGORICAL));
-    store.dispatch(setColumnsByDataType('texture', ColumnTypes.CATEGORICAL));
+    seedDataset(store, data, {
+      color: ColumnTypes.CATEGORICAL,
+      flavor: ColumnTypes.CATEGORICAL,
+      texture: ColumnTypes.CATEGORICAL,
+    });
     const project = {
-      ...initialProject,
+      ...defaultProject,
       labelColumn: 'color',
       selectedFeatures: ['flavor', 'texture'],
     };
@@ -124,13 +124,14 @@ describe('train.cancel', () => {
       {animal: 'dog', legs: '4', tail: 'no'},
       {animal: 'snake', legs: '0', tail: 'yes'},
     ];
-    store.dispatch(setImportedData(data, false));
-    store.dispatch(setColumnsByDataType('animal', ColumnTypes.CATEGORICAL));
-    store.dispatch(setColumnsByDataType('legs', ColumnTypes.NUMERICAL));
-    store.dispatch(setColumnsByDataType('tail', ColumnTypes.CATEGORICAL));
+    seedDataset(store, data, {
+      animal: ColumnTypes.CATEGORICAL,
+      legs: ColumnTypes.NUMERICAL,
+      tail: ColumnTypes.CATEGORICAL,
+    });
 
     const onLegs = {
-      ...initialProject,
+      ...defaultProject,
       labelColumn: 'animal',
       selectedFeatures: ['legs'],
     };
@@ -164,11 +165,12 @@ describe('the accuracy-check split', () => {
       legs: String(index),
     }));
 
-    store.dispatch(setImportedData(rows, false));
-    store.dispatch(setColumnsByDataType('animal', ColumnTypes.CATEGORICAL));
-    store.dispatch(setColumnsByDataType('legs', ColumnTypes.NUMERICAL));
+    seedDataset(store, rows, {
+      animal: ColumnTypes.CATEGORICAL,
+      legs: ColumnTypes.NUMERICAL,
+    });
     train.init(store, {
-      ...initialProject,
+      ...defaultProject,
       labelColumn: 'animal',
       selectedFeatures: ['legs'],
     });
@@ -225,7 +227,7 @@ const COLUMNS = {
 };
 
 const PROJECT = {
-  ...initialProject,
+  ...defaultProject,
   labelColumn: 'animal',
   selectedFeatures: ['legs', 'tail'],
 };
@@ -233,10 +235,7 @@ const PROJECT = {
 function loadedStore(mode, reserveLocation) {
   const store = createStore(rootReducer);
   store.dispatch(setMode(mode));
-  store.dispatch(setImportedData(ROWS, false));
-  Object.entries(COLUMNS).forEach(([column, type]) =>
-    store.dispatch(setColumnsByDataType(column, type))
-  );
+  seedDataset(store, ROWS, COLUMNS);
   store.dispatch(setReserveLocation(reserveLocation));
   return store;
 }

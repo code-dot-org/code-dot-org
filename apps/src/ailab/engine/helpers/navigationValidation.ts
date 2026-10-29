@@ -1,5 +1,6 @@
 import I18n from '../i18n';
 import type {RootState} from '../redux';
+import {getData} from '../selectors';
 import type {AilabProject, NavButton, PrevNextButtons} from '../types';
 
 import {areArraysEqual} from './utils';
@@ -80,7 +81,7 @@ function isPanelAvailable(state: RootState, panelId: string): boolean {
 }
 
 function isDataUploaded(state: RootState): boolean {
-  return state.data.length > 0 && !state.invalidData;
+  return getData(state).length > 0 && !state.invalidData;
 }
 
 export function uniqLabelFeaturesSelected(project: AilabProject): boolean {
@@ -141,8 +142,9 @@ export function prevNextButtons(
   let prev: NavButton | undefined, next: NavButton | undefined;
 
   if (state.currentPanel === 'selectDataset') {
+    // The About this data panel's own button moves on to the dataset.
     prev = undefined;
-    next = {panel: 'datasetView', text: I18n.t('navigateForward')};
+    next = undefined;
   } else if (state.currentPanel === 'datasetView') {
     // The Train panel's own button moves on to training.
     prev = isPanelAvailable(state, 'selectDataset')

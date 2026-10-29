@@ -3,6 +3,8 @@ import {act, renderHook} from '@testing-library/react-hooks';
 import {
   EMPTY_PROGRESS,
   Progress,
+  latestValidation,
+  stepIdToResume,
   useProgress,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
@@ -101,6 +103,51 @@ describe('routeStatusMap without evidence', () => {
   });
 });
 
+describe('stepIdToResume', () => {
+  const level: Step = {id: 'try', title: 'Try', kind: 'level', level: 'x'};
+  const multi = checkpoint('multi', undefined, [
+    panels('one'),
+    panels('two'),
+    level,
+  ]);
+
+  const resume = (steps: Progress['steps']) => stepIdToResume(multi, {steps});
+
+  it('returns the first step when none are complete', () => {
+    expect(resume({})).toBe('one');
+    expect(resume({one: {status: 'started', timeSpent: 0}})).toBe('one');
+  });
+
+  it('returns the first incomplete step', () => {
+    expect(resume({one: {status: 'complete', timeSpent: 1}})).toBe('two');
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+      })
+    ).toBe('try');
+  });
+
+  it('returns undefined when all steps are complete', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'complete', timeSpent: 2},
+        try: {status: 'complete', timeSpent: 3},
+      })
+    ).toBeUndefined();
+  });
+
+  it('returns a started step as the next step to complete', () => {
+    expect(
+      resume({
+        one: {status: 'complete', timeSpent: 1},
+        two: {status: 'started', timeSpent: 0},
+      })
+    ).toBe('two');
+  });
+});
+
 describe('routeStatusMap from progress', () => {
   it('skips a demonstrated skippable checkpoint and un-skips it once started', () => {
     const routed = {
@@ -149,6 +196,49 @@ describe('routeStatusMap from progress', () => {
     expect(statusMapOf(routed, reopened).a).toBe('inProgress');
   });
 
+  it("skips a demonstrated skippable checkpoint once a project step's check shows the skill", () => {
+    const routed = {
+      checkpoints: [
+        checkpoint('intro', undefined, [
+          {
+            id: 'build-page',
+            title: 'Build',
+            kind: 'level',
+            level: 'x',
+            project: true,
+            validation: {
+              condition: 'Adds a heading.',
+              measures: {skillId: 'build'},
+            },
+          } as unknown as Step,
+        ]),
+        {
+          ...checkpoint('a', ['intro']),
+          skillIds: ['build'],
+          skippable: true,
+          targetEvidenceLevels: {build: 2},
+        },
+      ],
+    } as unknown as Pathway;
+    const checkedAt2: Progress = {
+      steps: {
+        'build-page': {
+          status: 'complete',
+          timeSpent: 1,
+          validationHistory: [
+            {
+              at: '2026-10-22T10:00:00Z',
+              pass: true,
+              evidenceLevel: 2,
+              reason: 'Done.',
+            },
+          ],
+        },
+      },
+    };
+    expect(statusMapOf(routed, checkedAt2).a).toBe('skipped');
+  });
+
   it('maps every checkpoint id to its status', () => {
     expect(statusMapOf(pathway, progressOf(['intro', 'a'], []))).toEqual({
       intro: 'complete',
@@ -187,6 +277,7 @@ describe('useProgress', () => {
       load: jest.fn().mockResolvedValue(loaded),
       saveStep: jest.fn().mockResolvedValue(undefined),
       saveInstructions: jest.fn().mockResolvedValue(undefined),
+      saveValidation: jest.fn().mockResolvedValue(undefined),
     };
     return store as typeof store & ProgressStore;
   };
@@ -320,6 +411,31 @@ describe('useProgress', () => {
       'try',
       generatedInstructions
     );
+  });
+
+  it('appends a validation attempt, dated, without starting the step', async () => {
+    const store = fakeStore();
+    const {result, reportLevelStep} = await renderProgress(store);
+    const attempt = {pass: false, evidenceLevel: 1, reason: 'Not yet.'};
+
+    act(() => result.current.recordValidation(sandbox, attempt));
+    act(() =>
+      result.current.recordValidation(sandbox, {...attempt, pass: true})
+    );
+
+    const history = result.current.progress?.steps.try.validationHistory;
+    expect(history).toHaveLength(2);
+    expect(history?.[0]).toMatchObject(attempt);
+    expect(latestValidation(result.current.progress?.steps.try)?.pass).toBe(
+      true
+    );
+    expect(typeof history?.[1].at).toBe('string');
+    expect(result.current.statusMap.intro).toBe('available');
+    expect(store.saveValidation).toHaveBeenLastCalledWith(key, 'try', {
+      ...attempt,
+      pass: true,
+    });
+    expect(reportLevelStep).not.toHaveBeenCalled();
   });
 
   it('restores loaded generated instructions', async () => {

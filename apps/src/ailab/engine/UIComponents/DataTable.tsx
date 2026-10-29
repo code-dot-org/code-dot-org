@@ -9,9 +9,12 @@ import {getLocalizedValue} from '../helpers/valueDetails';
 import {deepEqual, useAppDispatch, useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
 import {getShowColumnClicking, getTableData, setCurrentColumn} from '../redux';
+import {getDatasetId, getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
 
 import ColumnHeader from './ColumnHeader';
+import DataCell from './DataCell';
+import RowNumberCell from './RowNumberCell';
 
 import styles from './dataTable.module.scss';
 
@@ -42,11 +45,12 @@ const DataTable = ({
     state => getTableData(state, project, !!useResultsData),
     deepEqual
   );
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const labelColumn = project.labelColumn || 'unknown';
   const selectedFeatures = project.selectedFeatures;
   const currentColumn = useAppSelector(state => state.currentColumn);
   const showColumnClicking = useAppSelector(getShowColumnClicking);
+  const idColumn = useAppSelector(getIdColumn);
   const headerButtons = useRef<Record<string, HTMLButtonElement | null>>({});
   const previousColumn = useRef(currentColumn);
 
@@ -72,6 +76,7 @@ const DataTable = ({
       [styles.headerLabel]: role === 'label',
       [styles.headerFeature]: role === 'feature',
       [styles.headerSelected]: isSelected(key),
+      [styles.idHeader]: key === idColumn,
       [styles.clickable]: isClickable,
     });
   };
@@ -87,7 +92,7 @@ const DataTable = ({
       variant = styles.bodyCellFeature;
     }
 
-    return classNames('uitest-data-table-column', styles.bodyCell, variant, {
+    return classNames('uitest-data-table-column', variant, {
       [styles.clickable]: isClickable,
     });
   };
@@ -134,7 +139,9 @@ const DataTable = ({
         <tr>
           {showRowNumbers && (
             <th
-              className={classNames(styles.indexCell, styles.indexHeader)}
+              className={classNames(styles.indexCell, styles.indexHeader, {
+                [styles.frozenIndex]: idColumn,
+              })}
               aria-label="Row"
             />
           )}
@@ -186,33 +193,25 @@ const DataTable = ({
           return (
             <tr key={row} className={styles.row}>
               {showRowNumbers && (
-                <th scope="row" className={styles.indexCell}>
-                  <Typography
-                    component="span"
-                    variant="body4"
-                    className={styles.cellText}
-                  >
-                    {row + 1}
-                  </Typography>
-                </th>
+                <RowNumberCell
+                  rowNumber={row + 1}
+                  besideIdColumn={!!idColumn}
+                />
               )}
               {getColumns().map(columnId => {
                 return (
-                  <td
+                  <DataCell
                     key={columnId}
+                    isIdColumn={columnId === idColumn}
+                    rowNumber={row + 1}
+                    value={
+                      startingRow !== undefined && index <= startingRow
+                        ? ' '
+                        : getLocalizedValue(data[row][columnId], datasetId)
+                    }
                     className={getColumnCellClassName(columnId)}
                     onClick={() => handleSetCurrentColumn(columnId)}
-                  >
-                    <Typography
-                      component="span"
-                      variant="body4"
-                      className={styles.cellText}
-                    >
-                      {startingRow !== undefined && index <= startingRow
-                        ? ' '
-                        : getLocalizedValue(data[row][columnId], datasetId)}
-                    </Typography>
-                  </td>
+                  />
                 );
               })}
             </tr>

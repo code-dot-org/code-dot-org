@@ -4,6 +4,7 @@ import {
 } from '@code-dot-org/component-library/dropdown';
 import React from 'react';
 
+import localization from '@cdo/apps/localization';
 import currentLocale from '@cdo/apps/util/currentLocale';
 
 import './style.scss';
@@ -20,7 +21,11 @@ const I18nDropdown: React.FC<I18nDropdownProps> = ({
   options = [],
 }) => {
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    event.target.form?.submit();
+    if (localization.isLocalizeJS()) {
+      localization.locale = event.target.value;
+    } else {
+      event.target.form?.submit();
+    }
   };
 
   return (
