@@ -14,9 +14,20 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/soundEffects', () => ({
 
 const played = soundEffects.playSoundEffect as jest.Mock;
 
-function blockWith(values: Record<string, string | null>) {
-  return {getFieldValue: (name: string) => values[name] ?? null};
+function blockWith(
+  values: Record<string, string | null>,
+  rootType = 'spritelab2_whenTouched'
+) {
+  return {
+    getFieldValue: (name: string) => values[name] ?? null,
+    getRootBlock: () => ({type: rootType}),
+  };
 }
+
+const pickFromMenu = (field: EffectOptionDropdown, value: string) =>
+  (
+    field as unknown as {onItemSelected_: (m: never, i: never) => void}
+  ).onItemSelected_({} as never, {getValue: () => value} as never);
 
 describe('spritelab2_playSoundEffect', () => {
   // setValue fires a change event when the field has a source block; the
@@ -86,10 +97,7 @@ describe('spritelab2_playSoundEffect', () => {
     (field as unknown as {sourceBlock_: unknown}).sourceBlock_ = block;
     field.setValue('slide up');
     expect(played).not.toHaveBeenCalled();
-    const menuItem = {getValue: () => 'steady'} as never;
-    (
-      field as unknown as {onItemSelected_: (m: never, i: never) => void}
-    ).onItemSelected_({} as never, menuItem);
+    pickFromMenu(field, 'steady');
     expect(played).toHaveBeenCalledTimes(1);
     expect(played).toHaveBeenCalledWith({
       wave: 'triangle',
@@ -97,6 +105,18 @@ describe('spritelab2_playSoundEffect', () => {
       length: 'short',
       pattern: 'steady',
     });
+  });
+
+  it('leaves a block under "when run" to the rerun, which plays it', () => {
+    for (const root of ['spritelab2_whenRun', 'when_run']) {
+      const field = new EffectOptionDropdown([['steady', 'steady']]);
+      (field as unknown as {sourceBlock_: unknown}).sourceBlock_ = blockWith(
+        {WAVE: 'triangle', PITCH: 'middle', LENGTH: 'short', PATTERN: 'steady'},
+        root
+      );
+      pickFromMenu(field, 'steady');
+    }
+    expect(played).not.toHaveBeenCalled();
   });
 
   it('builds from JSON with its options and refuses without them', () => {
