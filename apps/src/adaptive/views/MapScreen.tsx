@@ -47,7 +47,6 @@ interface MapScreenProps {
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
   onWorkOnProject: () => void;
-  /** True when at least one checkpoint has been skipped by the router. */
   hasSkippedCheckpoints: boolean;
 }
 

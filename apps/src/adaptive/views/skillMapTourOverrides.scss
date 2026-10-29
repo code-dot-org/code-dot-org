@@ -1,18 +1,11 @@
 // code.org theme overrides for the adaptive skill map IntroJS product tour.
-// Base styles ship with the library and are imported separately
-// ('intro.js/introjs.css' in MapScreen.tsx). Only deltas from those defaults
-// live here. Selectors mirror the library's, so this file must load after the
-// base stylesheet to win on equal specificity.
 
 @import '@code-dot-org/component-library-styles/font';
 
-// Spotlight: dim the page around the highlighted element.
 .introjs-helperLayer {
   box-shadow: var(--neutral-black-alpha-50) 0 0 0 5000px !important;
 }
 
-
-// Larger tooltip arrows, repositioned to sit clear of the wider border.
 .introjs-arrow {
   border-width: 10px;
 }
@@ -37,7 +30,6 @@
   left: -18px;
 }
 
-// Wider tooltip with a code.org surface and shadow.
 .introjs-tooltip {
   width: 400px;
   max-width: 400px;
@@ -65,7 +57,6 @@
   padding: 10px 24px;
 }
 
-// Buttons: code.org typography and shape.
 .introjs-button {
   @include main-font-regular;
   padding: 8px 16px 6px;
@@ -77,7 +68,6 @@
   box-shadow: 0 0 0 0.2rem var(--text-neutral-tertiary);
 }
 
-// Previous: outlined purple.
 .introjs-prevbutton {
   color: var(--text-brand-purple-primary);
   border: 1px solid var(--borders-brand-purple-primary);
@@ -106,7 +96,6 @@ body.adaptive-tour-no-next .introjs-nextbutton {
   display: none;
 }
 
-// Next: filled purple.
 .introjs-nextbutton {
   color: var(--text-neutral-white-fixed);
   border: none;

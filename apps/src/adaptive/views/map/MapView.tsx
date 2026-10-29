@@ -14,7 +14,6 @@ export interface MapProps {
   /** Checkpoint the map is zoomed onto, if any. */
   focusId?: string;
   onSelect: (id: string) => void;
-  /** IDs to compute a tour-zoom centroid from; active only during the tour. */
   tourFocusIds?: string[];
 }
 

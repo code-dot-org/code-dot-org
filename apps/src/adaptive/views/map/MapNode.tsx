@@ -31,7 +31,6 @@ interface MapNodeProps {
   /** Rendered after the circle. */
   children?: React.ReactNode;
   onSelect: (id: string) => void;
-  /** DOM id for product tour targeting. */
   tourId?: string;
 }
 

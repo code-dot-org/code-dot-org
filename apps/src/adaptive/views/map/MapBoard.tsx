@@ -11,8 +11,6 @@ import styles from './mapBoard.module.scss';
 // On-screen scale of the board when zoomed onto a checkpoint, whatever
 // the fit shrank it to.
 const FOCUS_SCALE = 2;
-// Slightly looser scale for the tour zoom so available checkpoints have
-// ~20px more breathing room around them.
 const TOUR_FOCUS_SCALE = 1.75;
 
 interface Size {
@@ -48,7 +46,6 @@ interface MapBoardProps {
   statusMap: CheckpointStatusMap;
   /** The checkpoint the map is zoomed onto, if any. */
   focus?: NodePosition;
-  /** Board-space point to center on during the tour (lower priority than focus). */
   tourFocus?: {x: number; y: number};
   children: React.ReactNode;
 }
