@@ -1,0 +1,55 @@
+{
+  "name": "@code-dot-org/frontend",
+  "private": true,
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "packages/labs/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "dev": "turbo clean --filter '@code-dot-org/studio...' && turbo watch dev --filter @code-dot-org/studio",
+    "format": "prettier --check *",
+    "format:fix": "prettier --write .",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "release:dryrun": "turbo release:dryrun",
+    "start": "yarn dev",
+    "test": "turbo test",
+    "test:ui:ci": "turbo test:ui:ci",
+    "test:ui:local": "turbo test:ui:local",
+    "test:unit": "yarn test",
+    "typecheck": "turbo typecheck"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "resolutions": {
+    "vite": "7.2.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "@turbo/gen": "^2.6.3",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "rimraf": "catalog:",
+    "turbo": "^2.9.14",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
+  },
+  "packageManager": "yarn@4.12.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

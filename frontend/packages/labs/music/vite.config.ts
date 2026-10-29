@@ -1,0 +1,53 @@
+import react from '@vitejs/plugin-react';
+import {defineConfig} from 'vite';
+import dts from 'vite-plugin-dts';
+import {externalizeDeps} from 'vite-plugin-externalize-deps';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [
+    // Enable React support
+    react(),
+    // Generate Typescript declaration files using the Vite default tsconfig
+    dts({tsconfigPath: './tsconfig.app.json', entryRoot: 'src'}),
+    // Ensure dependencies are externalized for library build
+    // Libraries such as react, react-dom, lodash, etc. should not be bundled by the library.
+    // Instead, they are expected to be provided by the host application.
+    externalizeDeps(),
+  ],
+  server: {
+    allowedHosts: ['localhost-studio.code.org'],
+  },
+  build: {
+    // Emptying dist mid-build breaks consumers watching it; on macOS webpack
+    // never recovers (INF-2257). `turbo clean` empties it once per session.
+    emptyOutDir: false,
+    lib: {
+      // Object-form entry so the fixtures chunk emits at dist/fixtures/index.*
+      // alongside the main dist/index.* — the `./mocks` export subpath
+      // resolves to the former.
+      entry: {
+        index: 'src/index.ts',
+        'fixtures/index': 'src/fixtures/index.ts',
+      },
+      name: 'music-lab',
+      formats: ['es', 'cjs'],
+    },
+    rollupOptions: {
+      output: [
+        {
+          format: 'es',
+          entryFileNames: '[name].mjs',
+          preserveModules: false,
+          dir: 'dist',
+        },
+        {
+          format: 'cjs',
+          entryFileNames: '[name].cjs',
+          preserveModules: false,
+          dir: 'dist',
+        },
+      ],
+    },
+  },
+});

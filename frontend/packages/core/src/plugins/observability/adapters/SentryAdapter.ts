@@ -1,0 +1,223 @@
+import * as Sentry from '@sentry/browser';
+import {flatten} from 'flat';
+
+import {CodeStudioConfig} from '../../../index';
+import {getAllowedTracingTargets} from '../getAllowedTracingTargets';
+import type {ObservabilityConfig, SpanOptions, TagValue} from '../types';
+
+import {BaseAdapter} from './BaseAdapter';
+
+/**
+ * Sentry-backed implementation of the provider-agnostic observability client.
+ */
+export class SentryAdapter extends BaseAdapter {
+  /**
+   * Initialize the Sentry SDK using the normalized runtime configuration.
+   * @param config Normalized runtime configuration for the Sentry provider.
+   */
+  protected initProvider(config: ObservabilityConfig): void {
+    if (!config.sentry?.dsn) {
+      throw new Error(
+        '[observability] provider "sentry" requires config.sentry.dsn',
+      );
+    }
+
+    // Logs and metrics are sampled independently so the rollout can be tuned
+    // without changing tracing or error-reporting behavior.
+    const enableLogs = this.isLogSampled(config.sampling?.logSampleRate);
+    const enableMetrics = this.isMetricsSampled(
+      config.sampling?.metricsSampleRate,
+    );
+
+    const integrations: Array<
+      | ReturnType<typeof Sentry.browserTracingIntegration>
+      | ReturnType<typeof Sentry.consoleLoggingIntegration>
+    > = [Sentry.browserTracingIntegration()];
+    if (enableLogs) {
+      integrations.push(Sentry.consoleLoggingIntegration({levels: ['error']}));
+    }
+
+    Sentry.init({
+      dsn: config.sentry.dsn,
+      environment: CodeStudioConfig.environment,
+      sendDefaultPii: false,
+      integrations,
+      propagateTraceparent: true, // Enables trace propagation via the W3C Trace Context standard
+      tracePropagationTargets:
+        config.tracePropagationTargets ??
+        getAllowedTracingTargets(CodeStudioConfig.environment),
+      sampleRate: config.sampling?.errorSampleRate ?? 1.0,
+      tracesSampleRate: config.sampling?.tracesSampleRate ?? 0,
+      enableLogs,
+      enableMetrics,
+    });
+  }
+
+  /**
+   * Consent is represented as a user id in Sentry so future events can be
+   * associated with the current signed-in user only after consent is granted.
+   * @param userId Signed-in user id, or `null` when consent is revoked.
+   */
+  protected applyConsentToProvider(userId: string | null): void {
+    Sentry.setUser(userId ? {id: userId} : null);
+  }
+
+  /**
+   * Apply a low-cardinality tag to the global Sentry scope.
+   * @param key Tag name.
+   * @param value Primitive tag value.
+   */
+  protected applyTagToProvider(key: string, value: TagValue): void {
+    Sentry.setTag(key, value);
+  }
+
+  /**
+   * Attach a structured context blob to subsequent events.
+   * @param name Context name.
+   * @param ctx Structured context object, or `null` to clear.
+   */
+  protected applyContextToProvider(
+    name: string,
+    ctx: Record<string, unknown> | null,
+  ): void {
+    Sentry.setContext(name, ctx);
+  }
+
+  /**
+   * Wrap the Sentry logger so SDK failures degrade to console warnings instead
+   * of breaking the caller's code path.
+   */
+  protected initLogger(): void {
+    const sentryLoggerMethods = {
+      trace: Sentry.logger.trace,
+      debug: Sentry.logger.debug,
+      info: Sentry.logger.info,
+      warn: Sentry.logger.warn,
+      error: Sentry.logger.error,
+      fatal: Sentry.logger.fatal,
+    } as const;
+
+    const makeMethod =
+      (level: keyof typeof sentryLoggerMethods) =>
+      (message: string, attributes?: Record<string, unknown>) => {
+        try {
+          // Sentry's does not support nested objects as log attributes, so flatten them with dot notation
+          const flatAttributes = attributes
+            ? flatten<Record<string, unknown>, Record<string, unknown>>(
+                attributes,
+              )
+            : undefined;
+
+          // Log to Sentry
+          sentryLoggerMethods[level](message, flatAttributes);
+        } catch (error) {
+          console.warn(
+            `[observability] SentryAdapter.logger.${level} failed:`,
+            error,
+          );
+        }
+      };
+
+    this.logger = {
+      trace: makeMethod('trace'),
+      debug: makeMethod('debug'),
+      info: makeMethod('info'),
+      warn: makeMethod('warn'),
+      error: makeMethod('error'),
+      fatal: makeMethod('fatal'),
+    };
+  }
+
+  /**
+   * Wrap Sentry metrics so SDK failures degrade to console warnings instead of
+   * breaking the caller's code path.
+   */
+  protected initMetrics(): void {
+    this.metrics = {
+      count: (name, value = 1, attributes) => {
+        try {
+          Sentry.metrics.count(name, value, {attributes});
+        } catch (error) {
+          console.warn(
+            '[observability] SentryAdapter.metrics.count failed:',
+            error,
+          );
+        }
+      },
+      gauge: (name, value, attributes) => {
+        try {
+          Sentry.metrics.gauge(name, value, {attributes});
+        } catch (error) {
+          console.warn(
+            '[observability] SentryAdapter.metrics.gauge failed:',
+            error,
+          );
+        }
+      },
+      distribution: (name, value, attributes) => {
+        try {
+          Sentry.metrics.distribution(name, value, {attributes});
+        } catch (error) {
+          console.warn(
+            '[observability] SentryAdapter.metrics.distribution failed:',
+            error,
+          );
+        }
+      },
+    };
+  }
+
+  /**
+   * Run callback inside a Sentry span, if initialized.
+   * Degrades to a plain callback invocation if Sentry is not ready.
+   */
+  startSpan<T>(options: SpanOptions, callback: () => T): T {
+    if (!this.initialized) {
+      return callback();
+    }
+
+    try {
+      return Sentry.startSpan(
+        {name: options.name, op: options.op, attributes: options.attributes},
+        callback,
+      );
+    } catch (error) {
+      console.warn('[observability] SentryAdapter.startSpan failed:', error);
+      return callback();
+    }
+  }
+
+  /**
+   * Capture an exception with optional structured context and per-event tags.
+   * @param error The thrown value or exception-like object to record.
+   * @param context Optional structured metadata to attach to the error event.
+   * @param tags Optional low-cardinality tags indexed by Sentry for filtering.
+   */
+  recordError(
+    error: unknown,
+    context?: Record<string, unknown>,
+    tags?: Record<string, TagValue>,
+  ): string | undefined {
+    if (!this.initialized) {
+      return undefined;
+    }
+
+    try {
+      return Sentry.captureException(error, {extra: context, tags});
+    } catch (sdkError) {
+      console.warn(
+        '[observability] SentryAdapter.recordError failed:',
+        sdkError,
+      );
+      return undefined;
+    }
+  }
+
+  /**
+   * Flush and close the Sentry client.
+   * @returns A promise that resolves once Sentry has flushed and closed.
+   */
+  async shutdown(): Promise<void> {
+    await Sentry.close();
+  }
+}

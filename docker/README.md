@@ -1,0 +1,153 @@
+# Overview
+
+**Warning, this project is still in the early stages**
+
+This directory contains Docker Compose files for running the code.org website locally for development and CI purposes.
+
+# Quick start
+
+Build the image family and boot the Rails API against local MySQL and Redis.
+All builds run from the repo root; `podman` works everywhere `docker` appears.
+
+```sh
+# Build the toolchain and dependency layers
+docker build -t cdo-build:local docker/build/
+docker build -f docker/deps/Dockerfile \
+  --build-arg BUILD_IMAGE=cdo-build:local \
+  -t cdo-deps:local .
+
+# Build the Rails image
+docker build -f docker/rails/Dockerfile \
+  --build-arg DEPS_IMAGE=cdo-deps:local \
+  -t cdo-rails:local .
+
+# Run
+export IMAGE=cdo-rails:local
+cd docker/rails
+docker compose up -d --wait mysql redis
+docker compose exec mysql mysql -uroot \
+  -e 'CREATE DATABASE dashboard_adhoc; CREATE DATABASE pegasus_adhoc;'
+docker compose run --rm --no-deps web bundle exec rails db:schema:load
+docker compose up -d --wait web
+docker compose port web 3000    # prints the host address serving the API
+```
+
+Each step is documented in [build/](build/README.md), [deps/](deps/README.md),
+and [rails/](rails/README.md). To check an image, run its `smoke-test.sh`; to
+exercise the full stack, run [rails/verify.sh](rails/README.md#test).
+
+# The image family
+
+A layered set of container images: one shared base, with each image stacked on
+it in order of how often its contents change. Every image in the family builds
+on both docker and podman from the same Dockerfile.
+
+| image | directory | adds | published as |
+|---|---|---|---|
+| cdo-base | [base/](base/README.md) | Ruby on slim Debian, mysql client, ImageMagick, jemalloc, locales, the uid-1000 `cdo` user | `ghcr.io/code-dot-org/cdo-base` |
+| cdo-build | [build/](build/README.md) | the compile toolchain, Node, and uv; builds the dependency layer and is then discarded | not published |
+| cdo-deps | [deps/](deps/README.md) | the production gem bundle and the python venv, named by a content key over its inputs | `ghcr.io/code-dot-org/cdo-deps` |
+| cdo-rails | [rails/](rails/README.md) | the Rails source slice; runs as api or worker | `ghcr.io/code-dot-org/cdo-rails` |
+
+Each build takes its parent as a build argument, so a caller can pin the parent
+by digest. `cdo-deps` is resolved by content key rather than by tag — see
+[deps/README.md](deps/README.md#the-content-key) — so a source image is always
+built against the dependency layer its own lockfiles imply.
+
+`smoke-harness.sh` is the assertion harness the family's smoke tests share.
+Source it first thing in a `smoke-test.sh`; it consumes the script's
+`<image-ref> <engine>` arguments and provides `run`, `fails_with`,
+`assert_no_toolchain`, and `report`.
+
+Publish automation is in `.github/workflows/cdo-*-image.yml`. Each workflow is
+chained off its parent's, so a flavor rebuilds on the parent that just shipped
+and a failed parent rebuilds nothing.
+
+# Prerequisites
+
+Caveats:
+
+- Only practical on Linux right now - technically works on Mac, but the site runs too slowly to be usable due to poor file system performance for bind-mounted volumes in Docker for Mac.
+- Google OAuth for AWS credentials works slightly differently, since code inside the container can't open access your browser directly. Instead, when you need to authenticate, the console will output a link, which you copy and open in your browser, and then paste the auth token you get back into the console. (EC2 users can ignore this.)
+
+Install:
+
+- Docker
+- Docker Compose
+
+# Local Development Usage
+
+Run all docker-compose commands from this directory.
+
+## One-time setup
+
+1. Add these lines to your .bashrc or .bash_profile to set the FIXUID and FIXGID env variables automatically. Then `source` your .bashrc/.bash_profile.
+   ```
+   export FIXUID=$(id -u)
+   export FIXGID=$(id -g)
+   ```
+2. Run the following command. This recreates most of the SETUP.md instructions, and will probably take a long time:
+
+   ```
+   docker-compose -f setup-compose.yml up
+   ```
+
+3. Setup the rest of your locals.yml file as normal.
+
+## Usage
+
+Run the code.org website locally:
+
+```
+docker-compose -f site-compose.yml up
+```
+
+File changes on your host machine will be picked up by the server like normal.
+
+Stop the server:
+
+```
+docker-compose -f site-compose.yml down
+```
+
+Start bash in a new container (for now, this is how you do anything else, e.g. run bin/ scripts or tests):
+
+```
+docker-compose -f site-compose.yml run site bash
+```
+
+Clean up stopped containers:
+
+```
+docker-compose -f site-compose.yml down
+```
+
+The Docker Compose files use a bind-mount to make the entire code-dot-org source directory readable and writeable from within the container. They also use volume mounts to persist stateful data across multiple container runs, such as the mysql tables, rbenv gems, etc. If needed, you can manage containers and volumes using the docker CLI.
+
+## Updating the Docker Hub image
+
+Make sure everything works locally using the instructions above.
+
+```
+cd docker/ci
+```
+
+Sign in to Docker Hub through the command line; when prompted, enter the password found under "access token for docker cli authentication" in the lastpass docker hub notes field
+
+```
+docker login -u codedotorg
+```
+
+Build an x86 image and tag it with an incremented version number. Our CI
+containers run on x86 (linux/amd64), so the `--platform` flag is required
+when building on ARM machines (such as those using Apple Silicon).
+
+```
+docker buildx build . --platform linux/amd64 --tag codedotorg/cdo-ci:<version>
+```
+
+Upload the image to docker hub
+
+```
+docker push codedotorg/cdo-ci:<version>
+```
