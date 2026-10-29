@@ -129,9 +129,10 @@ export default function useSources<T extends ProjectSources>({
   // Synchronous mirror of currentSources: written concurrently with
   // setCurrentSources so updater-form updates and getSources always see the latest value.
   const currentSourcesRef = useRef<T>();
-  // Loads in flight. A reload clears the sources before the view that
-  // showed them has unmounted, so its effects can still send an update.
-  const loadsInFlight = useRef(0);
+  // Set while the current load runs. A load clears the sources before the
+  // view that showed them has re-rendered, so a view effect can still write
+  // in between; such a write has nothing to land on and is dropped.
+  const loadPending = useRef(false);
   const setSources = useCallback((sources: T | undefined) => {
     currentSourcesRef.current = sources;
     setCurrentSources(sources);
@@ -280,9 +281,7 @@ export default function useSources<T extends ProjectSources>({
       // drop each other's fields.
       const prevSources = currentSourcesRef.current;
       if (prevSources === undefined) {
-        // Nothing to land on: a reload is replacing the sources, and the
-        // view's state goes with them.
-        if (loadsInFlight.current > 0) return;
+        if (loadPending.current) return;
         throw new Error('updateSources called before sources loaded');
       }
       const newSources =
@@ -376,27 +375,20 @@ export default function useSources<T extends ProjectSources>({
   useEffect(() => {
     let cancelled = false;
     setIsLoading(true);
-    // Counted once: a load given up on counts out when it is cancelled,
-    // whether or not it ever settles.
-    let counted = true;
-    loadsInFlight.current++;
-    const done = () => {
-      if (counted) {
-        counted = false;
-        loadsInFlight.current--;
-      }
-    };
+    loadPending.current = true;
     loadProject(() => cancelled)
       .catch(error => {
         if (!cancelled) setLoadError(error);
       })
       .finally(() => {
-        done();
-        if (!cancelled) setIsLoading(false);
+        if (!cancelled) {
+          loadPending.current = false;
+          setIsLoading(false);
+        }
       });
     return () => {
       cancelled = true;
-      done();
+      loadPending.current = false;
     };
   }, [loadProject]);
 
