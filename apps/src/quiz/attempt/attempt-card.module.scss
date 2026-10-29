@@ -44,6 +44,8 @@
 
 .tag {
   margin-inline-start: auto;
+  // Keeps the row at the label's height; the taller tag extends past it.
+  margin-block: -3px;
 }
 
 .beforeFooterBorderedRow {
