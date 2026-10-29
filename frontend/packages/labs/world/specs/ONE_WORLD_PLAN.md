@@ -1,6 +1,6 @@
 # Plan: one World, seen through Viewports
 
-STATUS: BUILDING, October 2026. Steps 1 to 8 are done. Comes before
+STATUS: BUILT, October 2026. All nine steps are in. Comes before
 specs/SCREEN_STACK_PLAN.md, which sits on it.
 
 A game has one World. Maps fill it, and maps bring its layers. A Viewport is
@@ -348,6 +348,14 @@ map … into ⟨Game⟩`, is now a correct answer, and its test says so.
 - **The mirror preview was already gone**, with step 3.
 - **Seen in the browser** on the Interface Kit: closed, three rows in the
   window; open, all five, and Escape closes it.
+- **Step 9 marked what this replaces**: MIRRORING_PLAN.md and
+  SCROLLING_PLAN.md as superseded, and SPACE_CAMERAS_PLAN.md,
+  VIEWPORT_PLAN.md, VIEWPORT.md, LAYERS_PLAN.md and SIMPLE_INTERFACE.md in
+  the parts this changed. Four more said a removed thing as current, and
+  are marked the same way: UI_ACTORS.md (a HUD as a fixed layer),
+  CURRICULUM_PLAN.md (the layers lesson), LESSONS_AS_SCREENS_PLAN.md (`in
+  the map ⟨Game⟩ shows`) and SCREEN_MAP_PLAN.md (a Viewport's own space).
+  Passing mentions in the records of other plans are left as history.
 
 ## Not in this plan
 

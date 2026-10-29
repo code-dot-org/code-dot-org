@@ -154,6 +154,9 @@ over.
 - `place/layers` still teaches a layer fixed to the screen (`fit`), not a
   Viewport with the interface outside it. MAP_FIRST.md retires `fit` when
   lessons teach the Viewport for an interface; they do not yet.
+  (Done since: `fit` is gone, and the lesson puts the Score on the Main
+  Screen and the Hills on a layer that lags; specs/ONE_WORLD_PLAN.md,
+  step 7.)
 - No lesson teaches a MAP's own script and its events (`define event` in
   a `.map`, `when ⟨quit⟩` in the world), which is the pause menu's other
   half. `place/script` grants the way in and stops at the placement.
@@ -167,7 +170,9 @@ In a gated lab a lesson's world should show both tabs, Map and World, whatever
 has been done. With `place/map` open, the world should open on the map, with
 no Layers list and no Script button. `place/layers` should open on the map
 with the Layers list: adding a layer, ticking Fixed to the screen and setting
-the Score's Layer should pass the check when run. `place/script` should open
+the Score's Layer should pass the check when run. (Since step 7 of
+specs/ONE_WORLD_PLAN.md: moving the Score to the Main Screen and putting the
+Hills on a layer that lags.) `place/script` should open
 on the map with two Buttons and a sign: a Button's properties should offer
 Script, the workspace should offer `the ⟨Sign⟩` under Map, and each Button
 should get its corner mark. Any other lesson should open on its workspace,

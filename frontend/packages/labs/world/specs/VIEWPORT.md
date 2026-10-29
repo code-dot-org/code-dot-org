@@ -50,6 +50,10 @@ any map that is larger, which is the editor saying exactly this.
 
 ### Fit, which is a LAYER's business and not the map's
 
+(Superseded: `fit` is gone (specs/ONE_WORLD_PLAN.md, step 7). What must
+ignore the camera is on a screen, and a layer at parallax `(0, 0)` stays put
+and still zooms with the camera. What follows is the design as it was.)
+
 `fit` survives this correction, because it was never about scaling the map. It
 is one of the two ways a LAYER responds to the camera drawing it:
 
@@ -348,6 +352,11 @@ that made a learner type the level's size would be wrong the moment they resized
 the map.
 
 ## Layers
+
+(Superseded in part: an interface is not a layer. Lives and a score are
+placements on a screen, which no camera moves, and `fit` is gone; a layer is
+a map's, with a name, a parallax and a background (specs/ONE_WORLD_PLAN.md).
+What follows is the design as it was.)
 
 The introduction of a Camera means that we may need to render the Camera output
 independently of other Actors which might not be part of the game scene. We

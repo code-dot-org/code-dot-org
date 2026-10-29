@@ -2,6 +2,10 @@
 
 STATUS: BUILT, October 2026.
 
+SUPERSEDED IN ONE PART: `in the map ⟨Game⟩ shows` is gone, and the lessons'
+code is no longer wrapped in it. A world block acts on the one World from
+any code, the screen's included (specs/ONE_WORLD_PLAN.md, step 5).
+
 A game is a Main Screen whose Viewport is docked over the whole surface and
 shows `main.map` (specs/SCREEN_MAP_PLAN.md). Every stock game is written
 that way. The lessons are not: each is a `main.world`, a `define world`

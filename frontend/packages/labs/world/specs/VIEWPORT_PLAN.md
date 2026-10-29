@@ -6,6 +6,13 @@ specs/MAIN_MAP_PLAN.md: a stock actor placed on the main map that holds a
 map in a coordinate space of its own, with a camera between that space and
 the screen. The working record, as before.
 
+SUPERSEDED IN PART (specs/ONE_WORLD_PLAN.md). A Viewport no longer holds a
+map in a space of its own: there is one World, every Viewport shows it, and
+the map it starts with is named on the Main Screen (`worldMap`, "World
+starts with" in its inspector). The Viewport's `map` property, `load map …
+into` and `unload ⟨Viewport⟩` are gone; `load map` replaces the World's map.
+A Viewport keeps a space only to hold its camera and its window.
+
 ## What is being built
 
 - **A space.** The engine gains spaces: a coordinate system holding actors,

@@ -12,6 +12,13 @@ was given cameras of its own (specs/SPACE_CAMERAS_PLAN.md) and after the first
 person to build one asked for it: a minimap, a second shot of the same level,
 a box on a menu screen showing the game already in play.
 
+SUPERSEDED, all but the zoom (specs/ONE_WORLD_PLAN.md). There is one World,
+and every Viewport is a window onto it, so there is nothing to choose to
+mirror: `mirrors the world`, `mirrors`, chains of mirrors, a layer's
+`inMirrors` and the editor's mirror preview are gone. What survives is the
+drawing path, a Viewport drawn through the World's container, and step 7's
+zoom, which is now the zoom of a Viewport's one camera.
+
 ## What a Viewport is today, and why that is not this
 
 A Viewport OWNS a space. Its `map` names a level, `showHeldMap` loads that

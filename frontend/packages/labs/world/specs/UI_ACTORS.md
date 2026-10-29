@@ -30,6 +30,8 @@ layer ⟨fixed to the screen⟩` (`blockly/layers`, `world_layer_fixed`) compile
    altogether — screen space, 1:1, never scrolls (`core/Layer`, VIEWPORT.md,
    which writes this exact worked example). A HUD is a layer. A layer's contents
    are actors.
+   (Superseded: a HUD is a screen's placements, and `fit` is gone;
+   specs/ONE_WORLD_PLAN.md, step 7.)
 2. **The map editor already edits an actor's per-instance properties, including
    strings.** `describeActor` walks every trait an actor carries — AND the
    properties the kind declared for itself, which belong to no trait

@@ -98,6 +98,10 @@ already loading a Main Map, as Viewports elect to show a Map. When you click
 on a Viewport Actor, there is an option to select the map and to open that
 map. The Game itself is made via the Map Editor via this Viewport.
 
+(Superseded in part: a Viewport shows the one World, and the map the World
+starts with is the Main Screen's, chosen as "World starts with" in its
+inspector (specs/ONE_WORLD_PLAN.md).)
+
 Since the Viewport is docked into the Grid Layout as the only Actor, there are
 now docking regions that appear when you drag or otherwise move an Interface
 Actor on the Main Screen. If you drag a Panel to one of the sides, you are
@@ -409,6 +413,11 @@ automatically a `define drawing <width of actor> by <height of actor>`.
 The overall Effect Editor stays as it is currently.
 
 ## Cameras
+
+(Superseded in part: a Viewport has exactly one camera, set up in a Camera
+row of its inspector; there is no list of cameras, no Main Camera to
+toggle and no `look through` block (specs/ONE_WORLD_PLAN.md, step 6). What
+follows is the design as it was.)
 
 Cameras are only owned by Viewports since the World is now a Screen. A Screen
 does not have a Camera. A Camera is used to decide how a Viewport sees which

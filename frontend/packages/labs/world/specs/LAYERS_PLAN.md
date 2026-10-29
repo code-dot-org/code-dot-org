@@ -7,6 +7,12 @@ a map's layers and their backgrounds are part of the map, made in the
 map editor. The working record, as before. (Foregrounds were here too and
 are retired; see "Foregrounds retired" at the end.)
 
+SUPERSEDED IN PART (specs/ONE_WORLD_PLAN.md, step 7). A layer is no longer
+fixed to the screen: `fit`, the inspector's "Fixed to the screen" and `this
+layer is fixed` are gone, since what must ignore the camera is on a screen.
+A screen has no layers either; it has one background of its own, which its
+data says as `background`. Everything else here stands for a map's layers.
+
 ## What is being built
 
 - **Layers in the map document.** A map — a `.map`, or a world's `map` —

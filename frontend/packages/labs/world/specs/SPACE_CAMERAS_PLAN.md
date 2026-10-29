@@ -8,6 +8,15 @@ camera`, with the strip's "in code" rows, went with the rule blocks
 (COMPILE_FROM_DATA_PLAN.md, step 5a). The compiler writes a stored camera as
 a `defineCamera` call (`BlocklyGenerator.cameraCode`).
 
+SUPERSEDED IN PART (specs/ONE_WORLD_PLAN.md, step 6). A Viewport has exactly
+one camera, set up on its placement's `camera` in the camera's inspector; the
+list of cameras on a placement, camera ids, `shows through` and the blocks
+that name a camera are gone, and code reaches a Viewport's camera through
+`camera of ⟨Viewport⟩`. A kind no longer elects camera traits for the camera
+of a Viewport it is. What stands is the claim this plan was for: a
+Viewport's camera elects `Follows`, `Eases` and `Confined to the Map` as any
+camera does, and the camera rules aim it.
+
 ONE REFINEMENT THE BUILD FORCED, in step 6. `settleSpace` did three jobs, not
 one: it followed what the map named, it positioned the camera from the
 Viewport's `scroll`, and it clamped. Only the first was the duplicate. The

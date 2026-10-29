@@ -4,6 +4,10 @@ STATUS: BUILT. Phase one is done; tapper, novel and the lessons stay
 worlds until they are rewritten. The working record, as the
 other plans are.
 
+SUPERSEDED IN PART (specs/ONE_WORLD_PLAN.md): a Viewport no longer has a
+space with a map of its own, or cameras to choose between. There is one
+World, every Viewport shows it, and each has one camera.
+
 The first phase of the simple interface: make a Screen and a Map concrete as
 files, and make the engine bear the game living inside a Viewport. No new
 editor shell yet; the tabs and folder menus stay, and open the new kinds.

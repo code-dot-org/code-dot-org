@@ -1,5 +1,13 @@
 # Showing more than fits
 
+STATUS: SUPERSEDED (specs/ONE_WORLD_PLAN.md, step 2, and "Clipping"). The
+Scroll View is no longer a Viewport onto a map of its own: there is one
+World, and a Scroll View holding a map would be a second. Its content is its
+children, placed under it on the screen; Phaser 4's mask FILTER, which this
+plan did not know of, clips them, and `scroll` and `content` belong to its
+`Scrolls Its Children` trait. The screen editor opens one to arrange what it
+holds (step 8). What follows is the design as it was built first.
+
 A Label wraps and a List scrolls rows of WORDS. Neither answers the ordinary
 case an app is made of: a settings page longer than the window, a form that
 runs off the bottom, a feed, a list whose rows are real actors with a picture
