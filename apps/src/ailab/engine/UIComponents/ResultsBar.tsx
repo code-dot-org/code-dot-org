@@ -42,7 +42,10 @@ const ResultsBar = () => {
             onClick={() => setOpenTab('scorecard')}
           >
             <span className={styles.accuracyIcon}>
-              <FontAwesomeV6Icon iconName="calculator" />
+              <FontAwesomeV6Icon
+                iconName="clipboard-list-check"
+                aria-hidden="true"
+              />
             </span>
             <span className={styles.accuracyText}>{accuracy} Accuracy</span>
           </Button>
