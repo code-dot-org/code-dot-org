@@ -106,4 +106,44 @@ describe('PromptBar', () => {
     );
     expect((screen.getByRole('textbox') as HTMLInputElement).value).toBe('');
   });
+
+  describe('with choices', () => {
+    const colorPrompt: ActivePrompt = {
+      promptText: 'Pick a color',
+      variableName: 'color',
+      choices: ['red', 'blue', 'red'],
+    };
+
+    it('offers a button per choice, grouped under the question', () => {
+      render(<PromptBar prompt={colorPrompt} onAnswer={jest.fn()} />);
+      const group = screen.getByRole('group', {name: 'Pick a color'});
+      expect(group.querySelectorAll('button')).toHaveLength(3);
+      expect(screen.queryByRole('textbox')).toBeNull();
+    });
+
+    it('answers with the chosen choice', () => {
+      const onAnswer = jest.fn();
+      render(<PromptBar prompt={colorPrompt} onAnswer={onAnswer} />);
+      fireEvent.click(screen.getByRole('button', {name: 'blue'}));
+      expect(onAnswer).toHaveBeenCalledWith('color', 'blue');
+    });
+
+    it('takes no answer while disabled', () => {
+      const onAnswer = jest.fn();
+      render(<PromptBar prompt={colorPrompt} onAnswer={onAnswer} disabled />);
+      const blue = screen.getByRole('button', {name: 'blue'});
+      expect((blue as HTMLButtonElement).disabled).toBe(true);
+      fireEvent.click(blue);
+      expect(onAnswer).not.toHaveBeenCalled();
+    });
+
+    it('replaces a typed question', () => {
+      const {rerender} = render(
+        <PromptBar prompt={namePrompt} onAnswer={jest.fn()} />
+      );
+      rerender(<PromptBar prompt={colorPrompt} onAnswer={jest.fn()} />);
+      expect(screen.queryByRole('textbox')).toBeNull();
+      expect(screen.getByRole('group', {name: 'Pick a color'})).toBeTruthy();
+    });
+  });
 });
