@@ -15,12 +15,14 @@ export interface MatchQuestionContainerProps {
   question: Omit<QuizQuestionSummary, 'page'>;
   // Omit for a quiz with only one question.
   questionLabel?: string;
-  matchSets: MatchSets;
   pairs: MatchPairs;
   onChangePairs: (pairs: MatchPairs) => void;
   headingRef?: React.Ref<HTMLHeadingElement>;
   disabled?: boolean;
 }
+
+// A constant, so the line measurement effect doesn't rerun every render.
+const NO_MATCH_SETS: MatchSets = [[], []];
 
 interface Point {
   x: number;
@@ -39,15 +41,8 @@ function curvePath(start: Point, end: Point): string {
 
 const MatchQuestionContainer: React.FunctionComponent<
   MatchQuestionContainerProps
-> = ({
-  question,
-  questionLabel,
-  matchSets,
-  pairs,
-  onChangePairs,
-  headingRef,
-  disabled,
-}) => {
+> = ({question, questionLabel, pairs, onChangePairs, headingRef, disabled}) => {
+  const matchSets = question.matchSets ?? NO_MATCH_SETS;
   // The currently selected items in each column, if any.
   // Once both are set, a pair is formed, and the selection is subsequently cleared (see handleClick).
   // For example, {start: 'abc-123', end: undefined} means the first column has item with ID 'abc-123' selected,

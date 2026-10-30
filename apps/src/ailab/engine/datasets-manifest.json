@@ -1,6 +1,46 @@
 {
   "datasets": [
     {
+      "id": "SC1-L04-waterhole-west-cameras",
+      "name": "Camera Trap Records",
+      "path": "datasets/SC1-L04-waterhole-west-cameras.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-west-cameras.json",
+      "isToy": true,
+      "rowCount": 80
+    },
+    {
+      "id": "SC1-L04-waterhole-ranger-patrols",
+      "name": "Ranger Patrol Records",
+      "path": "datasets/SC1-L04-waterhole-ranger-patrols.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-ranger-patrols.json",
+      "isToy": true,
+      "rowCount": 100
+    },
+    {
+      "id": "SC1-L04-waterhole-north-cameras",
+      "name": "North Camera Records",
+      "path": "datasets/SC1-L04-waterhole-north-cameras.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-north-cameras.json",
+      "isToy": true,
+      "rowCount": 80
+    },
+    {
+      "id": "SC1-L04-waterhole-south-cameras",
+      "name": "South Camera Records",
+      "path": "datasets/SC1-L04-waterhole-south-cameras.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-south-cameras.json",
+      "isToy": true,
+      "rowCount": 80
+    },
+    {
+      "id": "SC1-L04-waterhole-lake-cameras",
+      "name": "Lake Camera Records",
+      "path": "datasets/SC1-L04-waterhole-lake-cameras.csv",
+      "metadataPath": "datasets/SC1-L04-waterhole-lake-cameras.json",
+      "isToy": true,
+      "rowCount": 100
+    },
+    {
       "id": "SC1-L07-previs-base",
       "name": "Amazon Future Engineer - Previsualization",
       "path": "datasets/SC1-L07-previs-base.csv",

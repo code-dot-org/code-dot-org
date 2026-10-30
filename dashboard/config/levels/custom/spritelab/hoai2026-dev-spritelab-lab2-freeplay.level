@@ -86,7 +86,20 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_playSound"
+              "type": "spritelab2_playSound",
+              "fields": {
+                "SOUND": "synth://jump"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_playSoundEffect",
+              "fields": {
+                "WAVE": "square",
+                "PITCH": "high",
+                "LENGTH": "short",
+                "PATTERN": "slide up"
+              }
             },
             {
               "kind": "block",
@@ -170,7 +183,20 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_playSound"
+              "type": "spritelab2_playSound",
+              "fields": {
+                "SOUND": "synth://jump"
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_playSoundEffect",
+              "fields": {
+                "WAVE": "square",
+                "PITCH": "high",
+                "LENGTH": "short",
+                "PATTERN": "slide up"
+              }
             },
             {
               "kind": "block",

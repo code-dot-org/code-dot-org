@@ -7408,7 +7408,7 @@ columns:
     collation: utf8mb3_unicode_ci
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: ai_tutor_enabled
+    name: ai_challenge_enabled
     sql_type_metadata: *20
     'null': false
     default: '0'
@@ -16985,7 +16985,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20261026120000
+version: 20261029140602
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

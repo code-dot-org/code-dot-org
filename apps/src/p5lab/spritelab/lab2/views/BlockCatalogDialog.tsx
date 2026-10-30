@@ -2,24 +2,17 @@ import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/d
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Markdown} from '@code-dot-org/markdown';
 import {Button as MuiButton} from '@mui/material';
+import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 
 import {CatalogEntry} from '../blockCatalog';
-import {SceneType} from '../types';
 
 import moduleStyles from './block-catalog.module.scss';
 
 const TITLE = 'Discover blocks';
-
-// Where a block can be used, by the scene type whose toolbox offers it.
-const SCENE_TYPE_NOTES: Record<SceneType, string> = {
-  platform: 'For platformer scenes',
-  story: 'For story scenes',
-};
-const ANY_SCENE_NOTE = 'For any scene';
 
 interface BlockCatalogDialogProps {
   entries: readonly CatalogEntry[];
@@ -95,18 +88,23 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
               <>
                 <div className={moduleStyles.infoHeader}>
                   <h3>{selected.help.title}</h3>
-                  <span className={moduleStyles.scenePill}>
-                    {selected.sceneType
-                      ? SCENE_TYPE_NOTES[selected.sceneType]
-                      : ANY_SCENE_NOTE}
-                  </span>
                 </div>
                 <div className={moduleStyles.infoRow}>
-                  {selected.help.animation && (
+                  {selected.help.animation ? (
                     <img
                       className={moduleStyles.animation}
                       src={selected.help.animation.src}
                       alt={selected.help.animation.alt}
+                    />
+                  ) : (
+                    // An empty outline where the block's picture goes, for an
+                    // entry that has none yet.
+                    <div
+                      className={classNames(
+                        moduleStyles.animation,
+                        moduleStyles.animationPending
+                      )}
+                      aria-hidden
                     />
                   )}
                   <div className={moduleStyles.infoText}>
