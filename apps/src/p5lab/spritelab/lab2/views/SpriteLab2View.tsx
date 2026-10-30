@@ -3,6 +3,7 @@ import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {shallowEqual} from 'react-redux';
 import {AnyAction, Reducer} from 'redux';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
@@ -415,10 +416,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The catalog's blocks are the ones no earlier level of the lesson
   // required (blockCatalog.ts); outside a lesson there are none.
   const {levelPropertiesMap} = useLevelProperties();
-  const lessonLevelIds = useAppSelector(state =>
-    (getCurrentLevels(state) as {id: string | number}[] | undefined)?.map(
-      level => String(level.id)
-    )
+  // getCurrentLevels returns a new list every time it is called. shallowEqual
+  // compares the ids one by one, so this value only changes when the lesson's
+  // levels do. Without it, every render would rebuild the toolbox.
+  const lessonLevelIds = useAppSelector(
+    state =>
+      (getCurrentLevels(state) as {id: string | number}[] | undefined)?.map(
+        level => String(level.id)
+      ),
+    shallowEqual
   );
   const earlierLevels = useMemo(() => {
     const currentLevelIndex =
