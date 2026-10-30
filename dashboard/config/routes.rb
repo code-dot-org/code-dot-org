@@ -464,6 +464,9 @@ Dashboard::Application.routes.draw do
 
       resource :quiz_configuration, only: [:show, :update], controller: 'quizzes'
       resources :quiz_question_placements, only: [:create, :destroy] do
+        collection do
+          put 'reorder'
+        end
         member do
           post 'attach'
           delete 'detach'
