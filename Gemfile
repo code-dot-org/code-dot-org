@@ -197,7 +197,7 @@ gem 'nokogiri', '~> 1.18.9'
 
 gem 'highline', '~> 3.1.0'
 
-gem 'honeybadger', '~> 5.1.0' # error monitoring
+gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
