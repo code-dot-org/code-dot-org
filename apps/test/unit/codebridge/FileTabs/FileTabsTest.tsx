@@ -1,6 +1,7 @@
 import {FileTabs} from '@codebridge/FileTabs/FileTabs';
+import type {DndContextProps, DragEndEvent} from '@dnd-kit/core';
 import {Store} from '@reduxjs/toolkit';
-import {render, screen} from '@testing-library/react';
+import {act, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -21,6 +22,20 @@ import {
 
 import '@testing-library/jest-dom';
 import {initProgressPayload} from '../test-files';
+
+let dndContextProps: DndContextProps;
+jest.mock('@dnd-kit/core', () => {
+  const actual = jest.requireActual('@dnd-kit/core');
+  return {
+    ...actual,
+    DndContext: (props: DndContextProps) => {
+      dndContextProps = props;
+      return jest
+        .requireActual('react')
+        .createElement(actual.DndContext, props);
+    },
+  };
+});
 
 const project: ProjectSources = {
   source: {
@@ -108,5 +123,18 @@ describe('FileTabs', () => {
     expect(
       screen.queryByRole('button', {name: 'close file file1.py'})
     ).not.toBeInTheDocument();
+  });
+
+  it('keeps the tab order when a drag ends without a drop target', () => {
+    renderDefault();
+    act(() =>
+      dndContextProps.onDragEnd?.({
+        active: {id: '1'},
+        over: null,
+      } as unknown as DragEndEvent)
+    );
+    const newSource = store.getState().lab2Project.projectSources
+      .source as MultiFileSource;
+    expect(newSource.openFiles).toEqual(['1', '2']);
   });
 });
