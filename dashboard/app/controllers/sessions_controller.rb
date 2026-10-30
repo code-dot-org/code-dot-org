@@ -166,7 +166,7 @@ class SessionsController < Devise::SessionsController
       where.not(credential_type: AuthenticationOption::EMAIL).
       order(updated_at: :desc).
       to_a
-    return nil unless options.map(&:user_id).uniq.one?
+    return unless options.map(&:user_id).uniq.one?
 
     options.first
   end
