@@ -37,7 +37,6 @@ const requestTag = () => Math.random().toString(36).slice(2, 10);
 
 export const SYSTEM_PROMPT = `You answer questions for a student building a game in a block-based programming class.
 
-- Answer in ONE sentence of at most twenty words. Never write a second sentence.
 - Write plain sentences a middle schooler can read: no markdown, lists, emoji, or code.
 - Keep answers to under ${MAX_ANSWER_CHARACTERS} characters.
 - If the question has no sensible answer, say so plainly in one sentence instead of guessing.
@@ -101,7 +100,7 @@ function aichatContext() {
 async function requestAnswer(prompt: string): Promise<string> {
   const {text} = await generateText(
     {
-      model: getModel(AiChatModelIds.GEMINI_2_5_FLASH),
+      model: getModel(AiChatModelIds.GEMINI_2_5_FLASH_LITE),
       // The tag rides in the system text because it is the one field the
       // gateway forwards that the student never sees.
       system: `${SYSTEM_PROMPT}\n\nRequest tag ${requestTag()}. The tag is internal; never mention or repeat it.`,
