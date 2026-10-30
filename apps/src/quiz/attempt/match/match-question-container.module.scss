@@ -21,6 +21,16 @@
   stroke-linecap: round;
 }
 
+.lineCorrect {
+  stroke: var(--border-success-primary);
+}
+
+// Dashed, so an incorrect pair doesn't rely on color alone.
+.lineIncorrect {
+  stroke: var(--border-error-primary);
+  stroke-dasharray: 4 5;
+}
+
 .column {
   display: flex;
   flex: 1 0 0;
@@ -82,6 +92,28 @@
     border-color: var(--background-selected-primary);
     background: var(--background-selected-primary);
     color: var(--text-selected-primary);
+  }
+}
+
+.cardCorrect {
+  border-color: var(--border-success-mid);
+  background: var(--background-success-light);
+
+  .dot {
+    border-color: var(--background-success-primary);
+    background: var(--background-success-primary);
+    color: var(--text-neutral-white-fixed);
+  }
+}
+
+.cardIncorrect {
+  border-color: var(--border-error-mid);
+  background: var(--background-error-light);
+
+  .dot {
+    border-color: var(--background-error-primary);
+    background: var(--background-error-primary);
+    color: var(--text-neutral-white-fixed);
   }
 }
 

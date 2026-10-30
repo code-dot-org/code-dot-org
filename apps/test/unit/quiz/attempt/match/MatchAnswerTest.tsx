@@ -45,15 +45,21 @@ const renderAnswer = (
     />
   );
 
-// A card's text as a screen reader reads it, without the aria-hidden dot.
-const spokenTextFor = (text: string) => {
-  const card = screen
+// Each card's text as a screen reader reads it, without the aria-hidden dot:
+// the start column, then the end column.
+const spokenTexts = (boardName: string) =>
+  within(screen.getByRole('group', {name: boardName}))
     .getAllByRole('listitem')
-    .find(item => within(item).queryByText(text))!
-    .cloneNode(true) as Element;
-  card.querySelectorAll('[aria-hidden="true"]').forEach(el => el.remove());
-  return card.textContent;
-};
+    .map(item => {
+      const card = item.cloneNode(true) as Element;
+      card.querySelectorAll('[aria-hidden="true"]').forEach(el => el.remove());
+      return card.textContent;
+    });
+
+const CORRECT_PAIRS: [string, string][] = [
+  ['a', 'y'],
+  ['b', 'x'],
+];
 
 describe('MatchAnswer', () => {
   it('shows the pairs as two lists of read-only cards, not buttons', () => {
@@ -69,10 +75,12 @@ describe('MatchAnswer', () => {
   it('states each card’s partner, or that it was left unmatched', () => {
     renderAnswer();
 
-    expect(spokenTextFor('1 + 1')).toBe('1 + 1, matched with 2');
-    expect(spokenTextFor('2')).toBe('2, matched with 1 + 1');
-    expect(spokenTextFor('2 + 1')).toBe('2 + 1, not matched');
-    expect(spokenTextFor('3')).toBe('3, not matched');
+    expect(spokenTexts('Your answer')).toEqual([
+      '1 + 1, matched with 2',
+      '2 + 1, not matched',
+      '3, not matched',
+      '2, matched with 1 + 1',
+    ]);
   });
 
   it("labels the board as the student's answer for a teacher viewing it", () => {
@@ -81,5 +89,50 @@ describe('MatchAnswer', () => {
     expect(
       screen.getByRole('group', {name: "Student's answer"})
     ).toBeInTheDocument();
+  });
+
+  it('marks each pair and shows the correct answer when the key is revealed', () => {
+    renderAnswer({
+      responseData: {pairs: [['b', 'y']]},
+      correct: false,
+      correctPairs: CORRECT_PAIRS,
+    });
+
+    expect(spokenTexts('Your answer')).toEqual([
+      '1 + 1, not matched',
+      '2 + 1, matched with 2, incorrect',
+      '3, not matched',
+      '2, matched with 2 + 1, incorrect',
+    ]);
+    expect(spokenTexts('Correct answer')).toEqual([
+      '1 + 1, matched with 2, correct',
+      '2 + 1, matched with 3, correct',
+      '3, matched with 2 + 1, correct',
+      '2, matched with 1 + 1, correct',
+    ]);
+  });
+
+  it('shows no correct answer for a correct response', () => {
+    renderAnswer({
+      responseData: {pairs: CORRECT_PAIRS},
+      correct: true,
+      correctPairs: CORRECT_PAIRS,
+    });
+
+    expect(spokenTexts('Your answer')).toContain(
+      '1 + 1, matched with 2, correct'
+    );
+    expect(
+      screen.queryByRole('group', {name: 'Correct answer'})
+    ).not.toBeInTheDocument();
+  });
+
+  it('marks nothing when the key is hidden', () => {
+    renderAnswer({correct: false, correctPairs: null});
+
+    expect(spokenTexts('Your answer')[0]).toBe('1 + 1, matched with 2');
+    expect(
+      screen.queryByRole('group', {name: 'Correct answer'})
+    ).not.toBeInTheDocument();
   });
 });
