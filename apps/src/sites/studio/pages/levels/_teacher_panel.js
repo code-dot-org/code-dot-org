@@ -3,8 +3,10 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {getStudentsForSection} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {setViewAsUserId} from '@cdo/apps/code-studio/progressRedux';
 import {
   renderTeacherPanel,
   renderTeacherPanelHandle,
@@ -16,6 +18,7 @@ import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
+import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -37,9 +40,13 @@ function initPage() {
     renderTeacherContentToggle(store);
   }
 
+  const viewAsUserId = parseInt(queryParams('user_id'), 10) || null;
+
   if (teacherPanelData.is_instructor) {
     store.dispatch(setViewType(queryParams('viewAs') || ViewType.Instructor));
     store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+    // Lab2 levels load the project of viewAsUserId.
+    viewAsUserId && store.dispatch(setViewAsUserId(viewAsUserId));
   }
 
   // If a teacher is peer-reviewing another teacher in a workshop, don't render
@@ -56,6 +63,16 @@ function initPage() {
       experiments.isEnabled('ta-teacher-panel')
     ) {
       renderTeacherPanelHandle(store);
+      // Names the viewed student before the drawer's panel loads the roster.
+      if (viewAsUserId) {
+        getStudentsForSection().then(
+          section =>
+            section &&
+            store.dispatch(
+              setStudentsForCurrentSection(section.id, section.students)
+            )
+        );
+      }
     } else {
       renderTeacherPanel(
         store,

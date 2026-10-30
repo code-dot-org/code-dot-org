@@ -212,7 +212,10 @@ class TeacherPanel extends React.Component {
       hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
 
     return (
-      <TeacherPanelContainer className={moduleStyles.teacherPanelContainer}>
+      <TeacherPanelContainer
+        className={moduleStyles.teacherPanelContainer}
+        collapsible={!inTaDrawer}
+      >
         <Typography variant="h6" component="h3" gutterBottom>
           {i18n.teacherPanel()}
         </Typography>
