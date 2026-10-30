@@ -53,7 +53,7 @@ export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
 
   steps.push(
     {
-      element: '#adaptive-tour-map-canvas',
+      element: '#adaptive-tour-map',
       title: 'Open checkpoints',
       intro: <>Tap any highlighted checkpoint to learn what it covers.</>,
     },

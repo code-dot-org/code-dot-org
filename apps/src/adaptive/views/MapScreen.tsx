@@ -106,17 +106,20 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     );
   };
 
-  // Center the tour zoom on the first checkpoint during the "pick" step.
+  // During the "pick" step, zoom to the centroid of all open checkpoints.
   const tourFocusIds = useMemo(() => {
     if (!tourEnabled || tourStep !== tourStepIndices.pickCheckpoint)
       return undefined;
-    const first = pathway.checkpoints[0];
-    return first ? [first.id] : undefined;
+    const open = pathway.checkpoints
+      .filter(c => statusMap[c.id] !== 'locked')
+      .map(c => c.id);
+    return open.length > 0 ? open : undefined;
   }, [
     tourEnabled,
     tourStep,
     tourStepIndices.pickCheckpoint,
     pathway.checkpoints,
+    statusMap,
   ]);
 
   const stepsRef = useRef<Steps | null>(null);

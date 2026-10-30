@@ -20,10 +20,8 @@ describe('buildSkillMapTourSteps', () => {
     );
   });
 
-  it('targets the map canvas on step 2 so all nodes are clickable', () => {
-    expect(buildSkillMapTourSteps(false)[1].element).toBe(
-      '#adaptive-tour-map-canvas'
-    );
+  it('targets the map area on step 2 so the spotlight contains zoomed nodes', () => {
+    expect(buildSkillMapTourSteps(false)[1].element).toBe('#adaptive-tour-map');
   });
 
   it('targets the side panel on step 3', () => {
@@ -45,7 +43,7 @@ describe('buildSkillMapTourSteps', () => {
 
     it('moves the open-checkpoints step to index 2', () => {
       expect(buildSkillMapTourSteps(true)[2].element).toBe(
-        '#adaptive-tour-map-canvas'
+        '#adaptive-tour-map'
       );
     });
 

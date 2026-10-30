@@ -2,7 +2,16 @@
 
 @import '@code-dot-org/component-library-styles/font';
 
+// The overlay is position:absolute by default, relative to document.body.
+// CSS-transformed map nodes are promoted to GPU compositing layers and can
+// paint above an absolute overlay. Fixed positions to the viewport instead,
+// ensuring it composites above all map elements.
+.introjs-overlay {
+  position: fixed !important;
+}
+
 .introjs-helperLayer {
+  position: fixed !important;
   box-shadow: var(--neutral-black-alpha-50) 0 0 0 5000px !important;
 }
 

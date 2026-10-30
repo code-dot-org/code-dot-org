@@ -33,7 +33,11 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
     if (!positions.length) return undefined;
     return {
       x: positions.reduce((s, p) => s + p.x, 0) / positions.length,
-      y: positions.reduce((s, p) => s + p.y, 0) / positions.length,
+      // Shift up by half the label height so the title above each circle
+      // is included in the zoomed view, not cropped at the top.
+      y:
+        positions.reduce((s, p) => s + p.y, 0) / positions.length -
+        LABEL_HEIGHT / 2,
     };
   }, [tourFocusIds, layout.nodes]);
   const firstSkippedId = useMemo(
