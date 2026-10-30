@@ -1,5 +1,5 @@
+import {getMergedAiTutorCodeWithSource} from '@cdo/apps/aiTutor/helpers/aiTutorResponseHelpers';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
-import {getMergedAiTutorCodeWithSource} from '@cdo/apps/weblab2/helpers/aiTutorStructuredResponseHelper';
 
 // Helper to create a MultiFileSource.
 const createSource = (

@@ -23,10 +23,8 @@ export const loadDataset = async (
   if (!isCurrentDatasetLoad(loadId)) {
     return;
   }
-  if (!csv.ok) {
-    reportFailure(csv.reason);
-  } else if (!meta.ok) {
-    reportFailure(meta.reason);
+  if (!csv.ok || !meta.ok) {
+    reportFailure('loadFailed');
   } else {
     const dataset = {
       rows: csv.rows,

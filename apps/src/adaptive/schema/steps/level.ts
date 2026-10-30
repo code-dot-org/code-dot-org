@@ -58,6 +58,12 @@ export const levelStepSourceSchema = stepBaseSchema.extend({
    */
   instructionsPrompt: z.string().min(1).optional(),
   /**
+   * Brief for building the student's first version of the project from
+   * their free response answers. Runs once, when the step opens on a project
+   * with no saved work. Only on project steps.
+   */
+  projectPrompt: z.string().min(1).optional(),
+  /**
    * Marks a step that edits the student's project. Its level must name the
    * pathway's template level as its project template; a step without this
    * flag must not. Absent for sandboxes.

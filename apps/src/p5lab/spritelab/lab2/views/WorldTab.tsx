@@ -95,10 +95,7 @@ interface WorldRowProps {
   thumbsByImage: ReadonlyMap<string, string | undefined>;
   /** The cursor's column while it is on this row; -1 otherwise. */
   cursorCol: number;
-  lockedKinds: ReadonlySet<Kind>;
-  placeOne: boolean;
-  /** The item a press would place, for the cells that would refuse it. */
-  item: WorldCell | null;
+  offered: ReadonlySet<string>;
   registerCell: (
     row: number,
     col: number,
@@ -130,9 +127,7 @@ const WorldRow = React.memo<WorldRowProps>(
     cells,
     thumbsByImage,
     cursorCol,
-    lockedKinds,
-    placeOne,
-    item,
+    offered,
     registerCell,
     onCellPointerDown,
     onCellPointerEnter,
@@ -142,7 +137,7 @@ const WorldRow = React.memo<WorldRowProps>(
       {Array.from({length: sceneSize}, (_, col) => {
         const cell = cells?.[col];
         const thumb = cell ? thumbsByImage.get(cell.image) : undefined;
-        const refusal = cellRefusal(cell, lockedKinds, placeOne, item);
+        const refusal = cellRefusal(cell, offered);
         return (
           <button
             key={col}
@@ -230,31 +225,19 @@ interface PaletteItem extends WorldCell {
 // What the palette can choose: a placeable cell, or the eraser.
 type PaletteSelection = WorldCell | 'erase';
 
-type Kind = WorldCell['kind'];
-
-type Refusal = 'stays' | 'taken';
+type Refusal = 'stays';
 /** What a change to a cell did, for narration. */
 type Change = 'placed' | 'removed' | Refusal | null;
 
-/** Why a held cell refuses a change, or null: a kind the palette does not
-    offer stays (nothing could put it back); placing one thing, a held cell
-    is taken for any other item. */
+/** Why a cell refuses a change, or null when it allows one. A cell showing
+    an image the palette does not offer stays as it is, since nothing could
+    put it back; a level that narrows the palette to a few roles thereby
+    protects the cells placed by earlier levels. */
 export function cellRefusal(
   cell: WorldCell | null | undefined,
-  lockedKinds: ReadonlySet<Kind>,
-  placeOne: boolean,
-  item: WorldCell | null
+  offered: ReadonlySet<string>
 ): Refusal | null {
-  if (!cell) {
-    return null;
-  }
-  if (lockedKinds.has(cell.kind)) {
-    return 'stays';
-  }
-  if (placeOne && item && item.image !== cell.image) {
-    return 'taken';
-  }
-  return null;
+  return cell && !offered.has(cell.image) ? 'stays' : null;
 }
 
 interface WorldTabProps {
@@ -266,11 +249,9 @@ interface WorldTabProps {
   onPaintCell: (row: number, col: number, cell: WorldCell | null) => void;
   // Shown with nothing to place; the owner knows where images come from.
   emptyMessage: string;
-  // The one image the palette offers: a world level's image of its kind.
-  only?: string;
-  // Present when the level places one thing (level_mode.placeOne): no Erase,
-  // the image goes on an empty cell, and choosing another cell moves it there.
-  onMoveCell?: (row: number, col: number, cell: WorldCell) => void;
+  // The images the palette offers, when the level narrows it: a world
+  // level's image of its kind, or the images in the roles it names.
+  only?: string[];
   // Palette selection, owned by the view so it survives tab switches (this
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
@@ -299,12 +280,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   onPaintCell,
   emptyMessage,
   only,
-  onMoveCell,
   selected,
   onSelect,
   onNewPicture,
 }) => {
-  const placeOne = !!onMoveCell;
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails prefer the engine's trimmed image (a sprite sheet's is its
   // first frame; the raw sheet would show every frame side by side). Trims
@@ -330,36 +309,31 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     [animationList, trimVersion]
   );
   const palette = useMemo(
-    () => placeable.filter(item => !only || item.image === only),
+    () => placeable.filter(item => !only || only.includes(item.image)),
     [placeable, only]
   );
   const thumbsByImage = useMemo(
     () => new Map(placeable.map(item => [item.image, item.thumb])),
     [placeable]
   );
-  const lockedKinds = useMemo(() => {
-    const offered = new Set(palette.map(item => item.kind));
-    return new Set<Kind>(
-      (['block', 'sprite'] as const).filter(kind => !offered.has(kind))
-    );
-  }, [palette]);
-  // The palette plus Erase, in keyboard order. Placing one thing has no
-  // Erase: choosing its cell again removes it.
+  const offered = useMemo(
+    () => new Set(palette.map(item => item.image)),
+    [palette]
+  );
+  // The palette plus Erase, in keyboard order.
   const selections: PaletteSelection[] = useMemo(
     () => [
       ...palette.map(item => ({image: item.image, kind: item.kind})),
-      ...(placeOne ? [] : ['erase' as const]),
+      'erase' as const,
     ],
-    [palette, placeOne]
+    [palette]
   );
   // A selection can outlive its image (deleted or recategorized on the
   // Images tab — the reference scrub covers cells and blocks, not this);
   // one the palette no longer offers counts as no selection.
   const effectiveSelected =
-    (selected === 'erase' && !placeOne) ||
-    (selected &&
-      selected !== 'erase' &&
-      palette.some(item => item.image === selected.image))
+    selected === 'erase' ||
+    (selected && palette.some(item => item.image === selected.image))
       ? selected
       : null;
   const selectedIndex =
@@ -394,7 +368,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     next: WorldCell | null
   ): Change => {
     const held = grid[row]?.[col];
-    const refusal = cellRefusal(held, lockedKinds, placeOne, next);
+    const refusal = cellRefusal(held, offered);
     if (refusal) {
       return refusal;
     }
@@ -402,20 +376,10 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       if (!held) {
         return null;
       }
-      if (placeOne && !palette.some(item => item.image === held.image)) {
-        return null;
-      }
       onPaintCell(row, col, null);
       return 'removed';
     }
-    if (onMoveCell) {
-      if (held) {
-        return 'taken';
-      }
-      onMoveCell(row, col, next);
-    } else {
-      onPaintCell(row, col, next);
-    }
+    onPaintCell(row, col, next);
     return 'placed';
   };
   const announceResult = (did: Change, image: string) => {
@@ -423,8 +387,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       announce(`${image} placed.`);
     } else if (did === 'removed') {
       announce('Removed.');
-    } else if (did === 'taken') {
-      announce('That square is taken.');
     } else if (did === 'stays') {
       announce('That one stays.');
     }
@@ -512,7 +474,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       }
       return true;
     }
-    if (event.key === ERASE_SHORTCUT && !placeOne) {
+    if (event.key === ERASE_SHORTCUT) {
       chooseAt(selections.length - 1);
       return true;
     }
@@ -521,11 +483,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
 
   const activateCellByKeyboard = (row: number, col: number) => {
     if (!effectiveSelected) {
-      announce(
-        placeOne
-          ? 'Choose an item first: press 1 to 9.'
-          : 'Choose an item first: press 1 to 9, or 0 for Erase.'
-      );
+      announce('Choose an item first: press 1 to 9, or 0 for Erase.');
       return;
     }
     announceResult(
@@ -554,8 +512,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     if (step) {
       event.preventDefault();
       const {row, col} = moveCursor(step[0], step[1]);
-      // No painting along the way when placing one thing: it would drag along.
-      if (paintKeyHeld.current && selected && !placeOne) {
+      if (paintKeyHeld.current && selected) {
         paintCell(row, col, strokeErase.current);
       }
       return;
@@ -618,12 +575,11 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
       row: number,
       col: number
     ) => {
-      // No drag painting when placing one thing: it would drag along.
-      if (strokeActive.current && !placeOne) {
+      if (strokeActive.current) {
         latest.current.paintCell(row, col, strokeErase.current);
       }
     },
-    [placeOne]
+    []
   );
   // Physical Enter and Space are handled in keydown; a detail-0 click is
   // assistive tech activating the cell without key events.
@@ -931,43 +887,40 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
             </PaletteTooltip>
           ))}
           {/* With no images left, Erase is still the only way a pointer user
-            can clear placed cells; only placing one thing does without it. */}
-          {!placeOne && (
-            <PaletteTooltip
-              tooltipId="world-palette-erase"
-              text={`Erase (${ERASE_SHORTCUT})`}
+            can clear placed cells. */}
+          <PaletteTooltip
+            tooltipId="world-palette-erase"
+            text={`Erase (${ERASE_SHORTCUT})`}
+          >
+            <button
+              ref={el => (paletteRefs.current[palette.length] = el)}
+              type="button"
+              role="radio"
+              aria-checked={effectiveSelected === 'erase'}
+              aria-keyshortcuts={ERASE_SHORTCUT}
+              tabIndex={Math.max(selectedIndex, 0) === palette.length ? 0 : -1}
+              className={classNames(
+                moduleStyles.worldPaletteItem,
+                moduleStyles.worldPaletteErase,
+                effectiveSelected === 'erase' &&
+                  moduleStyles.worldPaletteSelected
+              )}
+              onClick={event => {
+                event.currentTarget.focus();
+                choose('erase');
+              }}
             >
-              <button
-                ref={el => (paletteRefs.current[palette.length] = el)}
-                type="button"
-                role="radio"
-                aria-checked={effectiveSelected === 'erase'}
-                aria-keyshortcuts={ERASE_SHORTCUT}
-                tabIndex={
-                  Math.max(selectedIndex, 0) === palette.length ? 0 : -1
-                }
-                className={classNames(
-                  moduleStyles.worldPaletteItem,
-                  moduleStyles.worldPaletteErase,
-                  effectiveSelected === 'erase' &&
-                    moduleStyles.worldPaletteSelected
-                )}
-                onClick={event => {
-                  event.currentTarget.focus();
-                  choose('erase');
-                }}
-              >
-                <FontAwesomeV6Icon iconName="eraser" />
-                Erase
-              </button>
-            </PaletteTooltip>
-          )}
+              <FontAwesomeV6Icon iconName="eraser" />
+              Erase
+            </button>
+          </PaletteTooltip>
         </div>
       </div>
       <p id="world-grid-help" className={moduleStyles.srOnly}>
-        {placeOne
-          ? 'Arrow keys move around the grid. Enter or Space puts the chosen item on an empty cell, or moves it there; on its own cell, it removes it. Delete removes it. Number keys 1 to 9 choose an item.'
-          : 'Arrow keys move around the grid. Enter or Space places the chosen item, or removes it if the cell already holds it; hold the key down and move to keep painting. Delete clears the cell. Number keys 1 to 9 choose an item; 0 chooses Erase.'}
+        Arrow keys move around the grid. Enter or Space places the chosen item,
+        or removes it if the cell already holds it; hold the key down and move
+        to keep painting. Delete clears the cell. Number keys 1 to 9 choose an
+        item; 0 chooses Erase.
       </p>
       <div className={moduleStyles.worldGridColumn}>
         {!palette.length && (
@@ -988,13 +941,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
           >
             {Array.from({length: sceneSize}, (_, row) => (
               <WorldRow
-                lockedKinds={lockedKinds}
-                placeOne={placeOne}
-                item={
-                  effectiveSelected && effectiveSelected !== 'erase'
-                    ? effectiveSelected
-                    : null
-                }
+                offered={offered}
                 key={row}
                 row={row}
                 sceneSize={sceneSize}

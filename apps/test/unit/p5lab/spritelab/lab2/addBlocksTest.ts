@@ -1,6 +1,8 @@
 import {
   freeStackEnd,
+  isAttachRoom,
   isAttachShadow,
+  ownsTop,
   matchesEntry,
   missingBlocks,
   placeBelow,
@@ -136,6 +138,19 @@ describe('addBlocks', () => {
     ).toBeNull();
   });
 
+  it('hangs a waiting placeholder again when its outline no longer matches', () => {
+    const BLANK_SAY = {
+      ...SAY,
+      extraState: {...SAY.extraState, blank: true},
+    };
+    const top = stack({shadow: BLANK_SAY, next: true}, {isShadow: true});
+    expect(freeStackEnd(top, SAY)).toBe(top.nextConnection);
+    // Covered by the student's block, it is left alone.
+    expect(
+      freeStackEnd(stack({shadow: BLANK_SAY, next: true}, {}), SAY)
+    ).toBeNull();
+  });
+
   it('hangs its placeholder once: a filled one is not hung again below', () => {
     // when run -> say (the student's block over the say placeholder).
     const filled = stack({shadow: SAY, next: true}, {});
@@ -162,6 +177,18 @@ describe('addBlocks', () => {
     const filled = stack({shadow: SAY, next: true}, {});
     expect(freeStackEnd(filled, GO_TO_SCENE)).toBe(
       filled.nextConnection.targetBlock().nextConnection
+    );
+  });
+
+  it('a room entry adds no block, owns no stack, and waits on no outline', () => {
+    const room = {
+      attachTo: 'spritelab2_whenRun',
+      room: {type: 'gamelab_setBackgroundImageAs'},
+    };
+    expect(isAttachRoom(room)).toBe(true);
+    expect(isAttachShadow(room)).toBe(false);
+    expect(ownsTop([room], {type: 'spritelab2_whenRun', data: null})).toBe(
+      false
     );
   });
 
