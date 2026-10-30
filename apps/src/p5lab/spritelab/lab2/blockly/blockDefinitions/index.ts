@@ -24,7 +24,6 @@ import setCameraZoom from './setCameraZoom';
 import setPlatformGravity from './setPlatformGravity';
 import setWeather from './setWeather';
 import thePlayer from './thePlayer';
-import whenAiAnswers from './whenAiAnswers';
 import whenPlayer from './whenPlayer';
 import whenRun from './whenRun';
 
@@ -58,7 +57,6 @@ const labBlockDefinitions: {
   burst,
   thePlayer,
   askAi,
-  whenAiAnswers,
   placeholder,
   // Toolbox edit mode's category marker blocks.
   category,

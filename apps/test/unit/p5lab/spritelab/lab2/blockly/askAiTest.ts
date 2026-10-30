@@ -1,5 +1,4 @@
 import askAi from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/askAi';
-import whenAiAnswers from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/whenAiAnswers';
 
 // A VAR socket holding the given block, or nothing when it is null.
 const blockWithVar = (target: {type: string} | null) => ({
@@ -57,26 +56,5 @@ describe('spritelab2_askAI', () => {
       } as never
     );
     expect(code).toContain("askAI('', 'myAnswer'");
-  });
-});
-
-describe('spritelab2_whenAIAnswers', () => {
-  it('wraps the blocks below it in a handler', () => {
-    const block = {nextConnection: {targetBlock: () => ({})}};
-    const code = whenAiAnswers.generator(
-      block as never,
-      {
-        blockToCode: () => 'sayIt();\n',
-        prefixLines: (text: string, prefix: string) => prefix + text,
-      } as never
-    );
-    expect(code).toBe('whenAIAnswers(function () {\n  sayIt();\n});\n');
-  });
-
-  it('generates an empty handler when nothing hangs below', () => {
-    const block = {nextConnection: {targetBlock: () => null}};
-    expect(whenAiAnswers.generator(block as never, {} as never)).toBe(
-      'whenAIAnswers(function () {\n});\n'
-    );
   });
 });

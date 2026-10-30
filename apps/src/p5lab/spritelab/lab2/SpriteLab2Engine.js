@@ -205,7 +205,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Bumped per run, so an AI answer in flight when the program restarts
     // is dropped instead of writing into the new run's variables.
     this.askAiRunId_ = 0;
-    this.aiAnswerCallbacks_ = [];
     // True from a jump trigger until the target runs; repeat triggers are
     // ignored meanwhile.
     this.sceneJumpInFlight_ = false;
@@ -674,30 +673,28 @@ export default class SpriteLab2Engine extends SpriteLab {
         showPrompt({promptText: String(promptText ?? ''), variableName})
       );
     };
-    // Deliberately apart from the prompt plumbing above: that path carries
-    // UI state, number coercion and a prompt count that mean nothing here.
-    this.aiAnswerCallbacks_ = [];
     // Answers from a previous run must not land in this one's variables.
     const askAiRun = ++this.askAiRunId_;
-    library.commands.whenAIAnswers = callback => {
-      this.aiAnswerCallbacks_.push(callback);
-    };
     library.commands.askAI = (promptText, variableName, setterCallback) => {
       if (!this.canAskAi_()) {
         return;
       }
+      // Registering under the variable name is what lets "when <variable>
+      // answered" wait on an AI answer the same way it waits on a prompt.
+      library.registerPrompt(promptText, variableName, setterCallback);
       askAiText(String(promptText ?? '')).then(
         text => {
           if (this.destroyed_ || askAiRun !== this.askAiRunId_) {
             return;
           }
-          setterCallback?.(text);
-          this.aiAnswerCallbacks_.forEach(callback => callback());
+          this.deliverAiAnswer_(library, variableName, text);
         },
         error => {
           if (this.destroyed_ || askAiRun !== this.askAiRunId_) {
             return;
           }
+          // registerPrompt counted this one, and nothing will answer it now.
+          library.numActivePrompts--;
           // The variable keeps whatever it had: a refusal is not an answer.
           console.warn(
             error instanceof AskAiError
@@ -708,6 +705,23 @@ export default class SpriteLab2Engine extends SpriteLab {
       );
     };
     return library;
+  }
+
+  /**
+   * Hand an answer to the blocks waiting on `variableName`. CoreLibrary's
+   * onPromptAnswer would read "3 cats walk into a bar" as the number 3; an
+   * AI answer is prose, so it is delivered as written.
+   */
+  deliverAiAnswer_(library, variableName, text) {
+    library.numActivePrompts--;
+    library.promptVars[variableName] = text;
+    const callbacks = library.userInputEventCallbacks[variableName];
+    if (!callbacks) {
+      return;
+    }
+    // Setter first: a user callback reads the variable it sets.
+    callbacks.setterCallbacks.forEach(callback => callback(text));
+    callbacks.userCallbacks.forEach(callback => callback());
   }
 
   // Mirrors the gateway's own check (User::AiAccessible), so a request it

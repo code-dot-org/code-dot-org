@@ -64,7 +64,6 @@ import {
   setSceneMenuActiveId,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
-import {WHEN_AI_ANSWERS_BLOCK_TYPE} from '../blockly/blockDefinitions/whenAiAnswers';
 import {setExternalSceneRefreshHandler} from '../blockly/externalSceneDropdown';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {activeCallout, calloutSelector} from '../callouts';
@@ -204,8 +203,8 @@ const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 const LOCKED_REASON = 'Unlocks later in the lesson.';
 
 // Levelbuilders only, for now. The gateway enforces this too; hiding the
-// blocks keeps a student from dragging out one that could only fail.
-const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE, WHEN_AI_ANSWERS_BLOCK_TYPE];
+// block keeps a student from dragging out one that could only fail.
+const AI_BLOCK_TYPES = [ASK_AI_BLOCK_TYPE];
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';

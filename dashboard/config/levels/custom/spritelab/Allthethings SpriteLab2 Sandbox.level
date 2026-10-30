@@ -345,7 +345,19 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_whenAIAnswers"
+              "type": "gamelab_whenPromptAnswered",
+              "inputs": {
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "fields": {
+                      "VAR": {
+                        "name": "AI answer"
+                      }
+                    }
+                  }
+                }
+              }
             }
           ]
         },
