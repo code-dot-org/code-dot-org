@@ -13,6 +13,8 @@ import type {
   ActorAction,
   AppliedEffectSpec,
   EventHandler,
+  OwnSubject,
+  OwnSubjectHandler,
   GameEvent,
   Property,
   PropertyType,
@@ -64,6 +66,7 @@ export class ActorBuilder {
   private traits: Trait[] = [];
   private readonly overrides: Array<[Property, unknown]> = [];
   private readonly handlers: Array<[GameEvent, EventHandler]> = [];
+  private readonly ownSubjects: OwnSubject[] = [];
   private readonly effects: AppliedEffectSpec[] = [];
   private readonly steps: ActorStep[] = [];
   private drawing: ActorDrawing | undefined;
@@ -171,6 +174,7 @@ export class ActorBuilder {
     this.data = this.data || other.data;
     this.overrides.push(...other.overrides);
     this.handlers.push(...other.handlers);
+    this.ownSubjects.push(...other.ownSubjects);
     this.steps.push(...other.steps);
     // Through `addEffect` rather than pushed, so one path is worn once: the
     // parent RETUNES an effect the child already wears rather than adding a
@@ -421,6 +425,21 @@ export class ActorBuilder {
   }
 
   /**
+   * Hear `event` when this actor's own `property` holds the actor it
+   * happened to — `when ⟨subject⟩ is damaged` in an actor file
+   * (specs/OWN_SUBJECTS_PLAN.md). Every actor of the kind is a listener,
+   * asked when the event happens.
+   */
+  onOwnSubject(
+    property: Property,
+    event: GameEvent,
+    handler: OwnSubjectHandler,
+  ): this {
+    this.ownSubjects.push({property, event, handler});
+    return this;
+  }
+
+  /**
    * Play an effect on this actor's image (specs/EFFECT_EDITOR.md).
    *
    * Sits beside `useTraits` rather than being one, because an effect is not
@@ -488,6 +507,7 @@ export class ActorBuilder {
         : [...FOUNDATION_TRAITS, ...this.traits],
       overrides: [...this.overrides],
       handlers: [...this.handlers],
+      ownSubjects: [...this.ownSubjects],
       effects: [...this.effects],
     });
   }

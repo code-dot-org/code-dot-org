@@ -311,6 +311,25 @@ export type EventHandler = (
 ) => void;
 
 /**
+ * A kind's handler about its own actor-typed property: `actor` is the one
+ * that hears, `subject` the one the event happened to
+ * (specs/OWN_SUBJECTS_PLAN.md).
+ */
+export type OwnSubjectHandler = (
+  world: World,
+  actor: Actor,
+  subject: Actor,
+  ...values: readonly unknown[]
+) => void;
+
+/** One such handler, with the property and event it is about. */
+export interface OwnSubject {
+  property: Property;
+  event: GameEvent;
+  handler: OwnSubjectHandler;
+}
+
+/**
  * A handler for an event that is about the WORLD rather than about an actor.
  *
  * An event belongs to whatever it is about, the way a property does: declared

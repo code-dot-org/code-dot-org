@@ -1,6 +1,6 @@
 # Plan: a kind's hat about its own property
 
-STATUS: PLANNED, October 2026. Follows specs/PROPERTY_SUBJECTS_PLAN.md,
+STATUS: BUILDING, October 2026. Step 2 is done. Follows specs/PROPERTY_SUBJECTS_PLAN.md,
 whose one open item this is.
 
 A hat in an actor file may be about that actor's own actor-typed property:
@@ -79,11 +79,11 @@ the step that runs every frame.
   pairs after the subject handlers.
 - **The code.** In an actor file a hat about the actor's own property
   generates `⟨kind⟩.onOwnSubject(⟨property⟩, ⟨event⟩, (world, actor,
-  subject, …) => {…})`, on the template the file's other hats use
+subject, …) => {…})`, on the template the file's other hats use
   (`subjectTarget`). `subject actor` there reads `subject`, as where the World
   holds a handler; `this actor` reads `actor`, as in any actor file.
 - **The Health Bar.** Its step goes. Its file hears `when ⟨subject⟩ is
-  damaged` and `when ⟨subject⟩ is healed` and sets its own fraction from
+damaged` and `when ⟨subject⟩ is healed` and sets its own fraction from
   `subject actor`. A bar that holds nobody stays as it was drawn last,
   which is full.
 
@@ -104,6 +104,17 @@ the step that runs every frame.
    its subject as it paints; PROPERTY_SUBJECTS_PLAN.md's open item; this
    record.
 
+## Learned while building
+
+- **Step 2 is `ActorBuilder.onOwnSubject(property, event, handler)`**,
+  copied into each instance as handlers are, and by `actsLike`. The World
+  keeps its listeners in `addActor` and `detach`, the two places an actor
+  joins or leaves its list, and `ownSubjectHandlersFor` answers the queue
+  with listener and handler pairs. A subject not in the listener's World is
+  held by nobody.
+- **A listener's hats count in `handlerIds`**, by event, property and
+  source, so editing one restarts the game as editing a handler does.
+
 ## Open
 
 - **A bar pointed at somebody already hurt.** The bar is full until the next
@@ -120,5 +131,5 @@ the step that runs every frame.
 ## Not in this plan
 
 - **A property of another actor as a subject**, `when ⟨subject of ⟨any
-  ⟨Health Bar⟩⟩⟩ is damaged`. A hat is about something the code it is in
+⟨Health Bar⟩⟩⟩ is damaged`. A hat is about something the code it is in
   can name; this is a query, and a different feature.

@@ -94,6 +94,16 @@ export class EventQueue {
       for (const handler of world.subjectHandlersFor(event, actor)) {
         world.withActor(actor, () => handler(world, actor, ...values));
       }
+      // …and every actor whose own property holds it, with the listener in
+      // hand, since that is whose code runs (specs/OWN_SUBJECTS_PLAN.md).
+      for (const [listener, handler] of world.ownSubjectHandlersFor(
+        event,
+        actor,
+      )) {
+        world.withActor(listener, () =>
+          handler(world, listener, actor, ...values),
+        );
+      }
     }
   }
 }

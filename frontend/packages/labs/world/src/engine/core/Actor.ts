@@ -23,6 +23,7 @@ import type {
   AppliedEffectSpec,
   EventHandler,
   GameEvent,
+  OwnSubject,
   Property,
   Query,
 } from './types';
@@ -42,6 +43,8 @@ export interface ActorInit {
   overrides: Array<[Property, unknown]>;
   /** Event handlers the actor registered. */
   handlers: Array<[GameEvent, EventHandler]>;
+  /** Handlers about its own actor properties (`ActorBuilder.onOwnSubject`). */
+  ownSubjects?: readonly OwnSubject[];
   /** Effects played on this actor's image, in application order. */
   effects?: AppliedEffectSpec[];
 }
@@ -97,6 +100,7 @@ export class Actor {
   /** Its traits, and a slot for every property they declare (core/Traited). */
   private readonly traited: Traited;
   private readonly handlers = new Map<GameEvent, EventHandler[]>();
+  private readonly ownSubjects: OwnSubject[];
   // Held, not interpreted: the engine never looks inside an effect document.
   // Mutable because effects can be added and removed while the game runs — the
   // driver re-reads this list every frame through `renderSnapshot`.
@@ -117,6 +121,7 @@ export class Actor {
     for (const [event, handler] of init.handlers) {
       this.on(event, handler);
     }
+    this.ownSubjects = [...(init.ownSubjects ?? [])];
     this.appliedEffects = init.effects ? [...init.effects] : [];
   }
 
@@ -349,6 +354,26 @@ export class Actor {
     return this.handlers.get(event) ?? [];
   }
 
+  /** Whether this actor hears anything through its own properties. */
+  hasOwnSubjects(): boolean {
+    return this.ownSubjects.length > 0;
+  }
+
+  /**
+   * Its handlers about `event` whose property holds `subject` now; a removed
+   * actor is held by nobody (specs/OWN_SUBJECTS_PLAN.md).
+   */
+  ownSubjectHandlersFor(event: GameEvent, subject: Actor) {
+    return this.ownSubjects
+      .filter(
+        entry =>
+          entry.event === event &&
+          subject.world === this.world &&
+          all((this.get(entry.property) ?? []) as never).includes(subject),
+      )
+      .map(entry => entry.handler);
+  }
+
   /**
    * What this actor responds to, and with what — one `<event>@<hash of the
    * handler's source>` per registered handler, in the order they will run.
@@ -374,6 +399,11 @@ export class Actor {
       for (const handler of handlers) {
         ids.push(`${event.ownerId}.${event.id}@${fnv1a(handler.toString())}`);
       }
+    }
+    for (const {property, event, handler} of this.ownSubjects) {
+      ids.push(
+        `${event.ownerId}.${event.id}/${property.id}@${fnv1a(handler.toString())}`,
+      );
     }
     return ids;
   }

@@ -67,6 +67,7 @@ import {DependencySet} from './traits';
 import type {
   AppliedEffectSpec,
   EventHandler,
+  OwnSubjectHandler,
   GameEvent,
   Property,
   Rule,
@@ -1484,6 +1485,9 @@ export class World {
       }
     }
     this.actorList.push(actor);
+    if (actor.hasOwnSubjects()) {
+      this.listeners.push(actor);
+    }
     this.actorsById.set(actor.id, (this.actorsById.get(actor.id) ?? 0) + 1);
     // A Viewport gets a space of its own, seen through a camera of its own
     // that starts at the middle of what it shows (`rules/viewport`). After
@@ -1766,6 +1770,10 @@ export class World {
     const index = this.actorList.indexOf(actor);
     if (index >= 0) {
       this.actorList.splice(index, 1);
+      const listening = this.listeners.indexOf(actor);
+      if (listening >= 0) {
+        this.listeners.splice(listening, 1);
+      }
       const left = (this.actorsById.get(actor.id) ?? 1) - 1;
       if (left > 0) {
         this.actorsById.set(actor.id, left);
@@ -2158,6 +2166,27 @@ export class World {
         return held.includes(actor);
       })
       .map(entry => entry.handler);
+  }
+
+  /**
+   * The actors here that hear something through their own properties
+   * (specs/OWN_SUBJECTS_PLAN.md), so dispatch need not ask every actor.
+   */
+  private readonly listeners: Actor[] = [];
+
+  /**
+   * Each listener whose own property holds `actor` now, with its handler
+   * for `event`; used by the EventQueue on flush, after the subject handlers.
+   */
+  ownSubjectHandlersFor(
+    event: GameEvent,
+    actor: Actor,
+  ): Array<[Actor, OwnSubjectHandler]> {
+    return this.listeners.flatMap(listener =>
+      listener
+        .ownSubjectHandlersFor(event, actor)
+        .map(handler => [listener, handler] as [Actor, OwnSubjectHandler]),
+    );
   }
 
   /** Handlers registered for a world event; used by the EventQueue on flush. */
