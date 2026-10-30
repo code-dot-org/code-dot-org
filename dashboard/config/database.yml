@@ -70,10 +70,14 @@ mysql_defaults: &mysql_defaults
 
   # Rails 7.1 added a limit to the query cache, which was formerly unbounded.
   # Unfortunately, their recommended default of 100 is too low for some of our
-  # code paths. Temporarily set to something much higher to preserve backwards
-  # compatibility while we work on optimizing some of our inefficient queries.
+  # code paths. Fortunately, there is an *undocumented* option to disable the
+  # limit while preserving the query cache, with which we can *temporarily*
+  # preserve existing behavior while we work on optimizing the relevant
+  # queries. Note that this option may cease to work without warning in any
+  # future version of Rails.
+  # See: https://github.com/rails/rails/blob/v7.1.6/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb#L183-L192
   # TODO infra: find a better long-term value for this; ideally the default.
-  query_cache: 10_000
+  query_cache: true # no limit
 
   # ActiveRecord connection-pool settings:
   # See: https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/ConnectionPool.html
