@@ -234,7 +234,10 @@ describe('LessonEditor', () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
-    let returnData = {activities: []};
+    const savedObjectives = [
+      {id: 7, key: 'saved-key', description: 'saved', scriptLevelIds: ['12']},
+    ];
+    let returnData = {activities: [], objectives: savedObjectives};
     let server = sinon.fakeServer.create();
     server.respondWith('PUT', `/lessons/1`, [
       200,
@@ -264,6 +267,7 @@ describe('LessonEditor', () => {
     expect(utils.navigateToHref).to.not.have.been.called;
     expect(lessonEditor.state().isSaving).to.equal(false);
     expect(lessonEditor.state().lastSaved).to.equal(expectedLastSaved);
+    expect(lessonEditor.state().objectives).to.deep.equal(savedObjectives);
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     //check that last saved message is showing
     expect(wrapper.find('.lastSavedMessage').length).to.equal(1);

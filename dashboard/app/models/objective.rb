@@ -23,7 +23,8 @@ class Objective < ApplicationRecord
 
   belongs_to :lesson, optional: true
   has_and_belongs_to_many :json_videos, join_table: :json_video_objectives
-  has_and_belongs_to_many :script_levels
+  has_many :objectives_script_levels, dependent: :delete_all
+  has_many :script_levels, through: :objectives_script_levels
 
   serialized_attrs %w(
     description
@@ -32,7 +33,7 @@ class Objective < ApplicationRecord
   validates_presence_of :description
 
   def summarize_for_edit
-    {id: id, description: description, key: key}
+    {id: id, description: description, key: key, scriptLevelIds: script_level_ids.map(&:to_s)}
   end
 
   def summarize_for_lesson_show

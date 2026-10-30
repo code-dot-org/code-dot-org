@@ -895,13 +895,28 @@ class Lesson < ApplicationRecord
     reload
   end
 
-  def update_objectives(objectives)
+  # @param [Hash<Integer, Array<Integer>>] previous_level_ids_by_script_level_id - level ids of each
+  #   script level before update_activities, used to follow a level that moved to another activity
+  #   section, since the move recreates its script level under a new id.
+  def update_objectives(objectives, previous_level_ids_by_script_level_id = {})
     return unless objectives
+
+    script_level_id_by_level_ids = script_levels.includes(:levels).to_h {|sl| [sl.level_ids.sort, sl.id]}
+    current_script_level_ids = script_level_id_by_level_ids.values.to_set
+    resolve_script_level_id = lambda do |id|
+      next id if current_script_level_ids.include?(id)
+      script_level_id_by_level_ids[previous_level_ids_by_script_level_id[id]&.sort]
+    end
 
     self.objectives = objectives.filter_map do |objective|
       next nil if objective['description'].blank?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
+      if objective.key?('scriptLevelIds')
+        persisted_objective.script_level_ids = objective['scriptLevelIds'].filter_map do |id|
+          resolve_script_level_id.call(Integer(id, exception: false))
+        end.uniq
+      end
       persisted_objective.save!
       persisted_objective
     end
@@ -1092,6 +1107,7 @@ class Lesson < ApplicationRecord
     copied_lesson.save! if copied_lesson.changed?
 
     # Copy lesson activities, activity sections, and script levels
+    copied_script_level_ids_by_original_id = {}
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
       copied_lesson_activity = original_lesson_activity.dup
       copied_lesson_activity.key = SecureRandom.uuid
@@ -1130,7 +1146,12 @@ class Lesson < ApplicationRecord
             "levels" => [copied_level]
           }
         end
-        copied_activity_section.update_script_levels(sl_data) if sl_data.present?
+        if sl_data.present?
+          copied_script_levels = copied_activity_section.update_script_levels(sl_data)
+          original_activity_section.script_levels.zip(copied_script_levels) do |original_script_level, copied_script_level|
+            copied_script_level_ids_by_original_id[original_script_level.id] = copied_script_level.id
+          end
+        end
         copied_activity_section
       end
       copied_lesson_activity
@@ -1140,6 +1161,7 @@ class Lesson < ApplicationRecord
     copied_lesson.objectives = objectives.map do |original_objective|
       copied_objective = original_objective.dup
       copied_objective.key = SecureRandom.uuid
+      copied_objective.script_level_ids = copied_script_level_ids_by_original_id.values_at(*original_objective.script_level_ids).compact
       copied_objective
     end
 

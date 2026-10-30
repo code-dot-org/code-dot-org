@@ -532,6 +532,22 @@ export const getSerializedActivities = rawActivities => {
   return JSON.stringify(activities);
 };
 
+// Script levels new since the last save have no id yet, so they can't be tagged.
+export const getTaggableScriptLevels = activities =>
+  activities
+    .flatMap(activity => activity.activitySections)
+    .flatMap(activitySection => activitySection.scriptLevels)
+    .filter(scriptLevel => scriptLevel.id !== NEW_LEVEL_ID)
+    .map(scriptLevel => {
+      const activeLevel =
+        scriptLevel.levels.find(level => level.id === scriptLevel.activeId) ||
+        scriptLevel.levels[0];
+      return {
+        id: scriptLevel.id,
+        label: `${scriptLevel.levelNumber}. ${activeLevel.name}`,
+      };
+    });
+
 export const mapActivityDataForEditor = rawActivities => {
   const activities = _.cloneDeep(rawActivities);
   // Rename any keys that are different on the backend.

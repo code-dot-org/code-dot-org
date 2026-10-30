@@ -1141,6 +1141,59 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal 'edited description', objective.description
   end
 
+  test 'update lesson tags objectives with script levels in the lesson' do
+    sign_in @levelbuilder
+    script_level = create_script_level_in_new_section(@lesson)
+    other_lesson_script_level = create_script_level_in_new_section(create(:lesson, script: @lesson.script))
+    objective = create(:objective, description: 'tagged', lesson: @lesson)
+
+    objective_data = objective.summarize_for_edit.merge(scriptLevelIds: [script_level.id.to_s, other_lesson_script_level.id.to_s])
+    put :update, params: @update_params.merge({objectives: [objective_data].to_json})
+    assert_response :success
+
+    assert_equal [script_level], objective.reload.script_levels
+    assert_equal [script_level.id.to_s], JSON.parse(response.body)['objectives'].first['scriptLevelIds']
+  end
+
+  test 'objective tags follow a level moved to another activity section' do
+    sign_in @levelbuilder
+    sections = [1, 2].map do |i|
+      activity = @lesson.lesson_activities.create(name: 'activity name', position: i, key: "activity-key-#{i}")
+      activity.activity_sections.create(name: 'section name', position: 1, key: "section-key-#{i}")
+    end
+    moved_level = create(:level, name: 'moved-level')
+    original_script_level = sections.first.script_levels.create(
+      position: 1, activity_section_position: 1, lesson: @lesson, script: @lesson.script, levels: [moved_level]
+    )
+    objective = create(:objective, description: 'tagged', lesson: @lesson)
+    objective.script_levels = [original_script_level]
+
+    activities_data = @lesson.lesson_activities.map(&:summarize_for_lesson_edit)
+    script_level_data = activities_data.first[:activitySections].first[:scriptLevels].pop
+    activities_data.last[:activitySections].first[:scriptLevels].push(script_level_data)
+    put :update, params: @update_params.merge(
+      activities: activities_data.to_json,
+      objectives: [objective.summarize_for_edit].to_json
+    )
+    assert_response :success
+
+    assert_nil ScriptLevel.find_by(id: original_script_level.id)
+    assert_equal [[moved_level]], objective.reload.script_levels.map(&:levels)
+    assert_equal sections.last, objective.script_levels.first.activity_section
+  end
+
+  test 'objectives sent without scriptLevelIds keep their tags' do
+    sign_in @levelbuilder
+    script_level = create_script_level_in_new_section(@lesson)
+    objective = create(:objective, description: 'tagged', lesson: @lesson)
+    objective.script_levels = [script_level]
+
+    put :update, params: @update_params.merge({objectives: [{id: objective.id, description: 'edited'}].to_json})
+    assert_response :success
+
+    assert_equal [script_level], objective.reload.script_levels
+  end
+
   test 'objectives with empty description are removed' do
     sign_in @levelbuilder
     objective_to_keep = create(:objective, description: 'to keep', lesson: @lesson)
@@ -1800,5 +1853,12 @@ class LessonsControllerTest < ActionController::TestCase
                                   params: -> {modular_course_params},
                                   name: 'pilot teacher can view pilot modular course'
     end
+  end
+
+  # The lesson editor refuses lessons holding script levels outside an activity section.
+  private def create_script_level_in_new_section(lesson)
+    activity = create(:lesson_activity, lesson: lesson)
+    section = create(:activity_section, lesson_activity: activity)
+    create(:script_level, script: lesson.script, lesson: lesson, activity_section: section)
   end
 end

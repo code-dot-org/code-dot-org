@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-p-xs);
+  padding: var(--spacing-p-xs);
+}
+
+.summary {
+  color: var(--text-neutral-secondary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-p-xxs);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+

@@ -231,8 +231,9 @@ class LessonsController < ApplicationController
       @lesson.programming_expressions = programming_expressions.compact
       @lesson.jit_pl_concepts = jit_pl_concepts
       @lesson.update!(lesson_params.except(:resources, :vocabularies, :objectives, :standards, :opportunity_standards, :programming_expressions, :jit_pl_concept_ids, :original_lesson_data))
+      previous_level_ids_by_script_level_id = @lesson.script_levels.includes(:levels).to_h {|sl| [sl.id, sl.level_ids]}
       @lesson.update_activities(JSON.parse(params[:activities])) if params[:activities]
-      @lesson.update_objectives(JSON.parse(params[:objectives])) if params[:objectives]
+      @lesson.update_objectives(JSON.parse(params[:objectives]), previous_level_ids_by_script_level_id) if params[:objectives]
 
       if @lesson.lockable
         msg = "The last level in a lockable lesson must be a LevelGroup and an assessment."
