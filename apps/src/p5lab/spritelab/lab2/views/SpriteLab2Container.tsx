@@ -1,15 +1,17 @@
-import {isEqual} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {
   toolboxToWorkspaceBlocks,
   toolboxXmlToDefinition,
 } from '@cdo/apps/blockly/utils/toolbox';
-import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {LabProps} from '@cdo/apps/lab2/types';
 import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
 import Loading from '@cdo/apps/lab2/views/Loading';
@@ -26,6 +28,10 @@ import type {SpriteLab2LevelProperties, Sources} from '../types';
 import SpriteLab2View from './SpriteLab2View';
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+const isLevelEditMode =
+  getAppOptionsEditBlocks() === START_SOURCES ||
+  isToolboxMode ||
+  !!getAppOptionsEditingExemplar();
 
 /**
  * Returns the level's toolbox as workspace blocks, if in toolbox mode.
@@ -78,7 +84,6 @@ const SpriteLab2Container: React.FunctionComponent<
     currentSources: storedSources,
     updateSources: updateStoredSources,
     patchSources: patchStoredSources,
-    startOver: startStoredOver,
     channel,
     projectManager,
     loadError,
@@ -91,61 +96,47 @@ const SpriteLab2Container: React.FunctionComponent<
     computeHasEdited: isStudentEdit,
   });
   // A level with no project (the no_project level property) has nothing in
-  // a channel. Its sources are the level's own, held here in memory: a
-  // student sees them read-only, levelbuilder's start-sources mode edits
-  // them, and nothing is ever saved to a project. A world in them may be
-  // packed (packedWorld.ts); it is expanded once here, so the rest of the
-  // lab only sees the grid.
-  const projectless = levelProperties.usesProjects === false;
+  // a channel, and for a student the hook loads nothing: the level's own
+  // sources are shown read-only, and the lab's writes are dropped here
+  // rather than reaching a hook that may still hold the previous level.
+  // Levelbuilder's edit modes load them through the hook, like any level's.
+  const readOnlyLevel =
+    levelProperties.usesProjects === false && !isLevelEditMode;
   const levelSources = useMemo(
     () =>
-      projectless
-        ? unpackSources(
-            getInitialSources<Sources>(
-              levelProperties,
-              undefined,
-              getToolboxEditSources(levelProperties)
-            ) ?? (defaultSources as Sources)
-          )
+      readOnlyLevel
+        ? getInitialSources<Sources>(
+            levelProperties,
+            undefined,
+            getToolboxEditSources(levelProperties)
+          ) ?? (defaultSources as Sources)
         : undefined,
-    [projectless, levelProperties]
+    [readOnlyLevel, levelProperties]
   );
-  const [own, setOwn] = useState<{from?: Sources; sources?: Sources}>({});
-  let ownSources = own.sources;
-  if (own.from !== levelSources) {
-    ownSources = levelSources;
-    setOwn({from: levelSources, sources: levelSources});
-  }
-  const currentSources = projectless ? ownSources : storedSources;
+  // Such a level's start sources may write a scene's world in the packed
+  // form (packedWorld.ts). It is expanded here, for readers and for the base
+  // an updater builds on, so the rest of the lab only sees the grid.
+  const currentSources = useMemo(() => {
+    const sources = readOnlyLevel ? levelSources : storedSources;
+    return sources && unpackSources(sources);
+  }, [readOnlyLevel, levelSources, storedSources]);
   const updateSources = useCallback<typeof updateStoredSources>(
     (next, forceSave) => {
-      if (!projectless) {
-        updateStoredSources(next, forceSave);
+      if (readOnlyLevel) {
         return;
       }
-      setOwn(prev => {
-        if (!prev.sources) {
-          return prev;
-        }
-        const sources = typeof next === 'function' ? next(prev.sources) : next;
-        return isEqual(sources, prev.sources) ? prev : {...prev, sources};
-      });
+      updateStoredSources(
+        typeof next === 'function' ? prev => next(unpackSources(prev)) : next,
+        forceSave
+      );
     },
-    [projectless, updateStoredSources]
+    [readOnlyLevel, updateStoredSources]
   );
   const patchSources = useCallback<typeof patchStoredSources>(
     (patch, forceSave) =>
       updateSources(prev => ({...prev, ...patch}), forceSave),
     [updateSources]
   );
-  const startOver = useCallback(() => {
-    if (!projectless) {
-      startStoredOver();
-      return;
-    }
-    setOwn({from: levelSources, sources: levelSources});
-    handleReinitialize();
-  }, [projectless, startStoredOver, levelSources, handleReinitialize]);
 
   // Set the project manager in the registry for external components that need it (e.g. header).
   useEffect(() => {
@@ -174,7 +165,6 @@ const SpriteLab2Container: React.FunctionComponent<
       currentSources={currentSources}
       updateSources={updateSources}
       patchSources={patchSources}
-      startOver={startOver}
       levelProperties={levelProperties}
       channelId={channel?.id}
       sourcesReinitializedCount={sourcesReinitializedCount}

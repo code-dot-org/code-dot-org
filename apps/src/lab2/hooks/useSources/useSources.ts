@@ -191,8 +191,10 @@ export default function useSources<T extends ProjectSources>({
       await projectManagerRef.current?.cleanUp();
       if (isCancelled()) return;
       // A level that uses no project has nothing to load; the lab supplies
-      // its sources, and nothing is saved.
-      if (!usesProjects) {
+      // its sources, and nothing is saved. Level edit mode goes on to load
+      // the level's own sources below, as it does for any level, so a
+      // levelbuilder can edit them.
+      if (!usesProjects && !isLevelEditMode) {
         projectManagerRef.current = null;
         dispatch(setChannelAction(undefined));
         return;
