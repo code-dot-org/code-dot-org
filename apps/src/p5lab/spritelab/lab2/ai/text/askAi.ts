@@ -27,7 +27,9 @@ const ASK_AI_METRIC = 'spritelab-lab2.ask_ai';
 export const ASK_AI_TIMEOUT_MS = 15000;
 
 // The answer goes in a speech bubble, so a long one is unusable anyway.
-export const MAX_ANSWER_TOKENS = 120;
+// Thinking is off below; left on, its tokens count against this cap and the
+// model can spend the whole budget before writing a word.
+export const MAX_ANSWER_TOKENS = 160;
 export const MAX_PROMPT_CHARACTERS = 1000;
 
 export const SYSTEM_PROMPT = `You answer questions for a student building a game in a block-based programming class.
@@ -100,6 +102,8 @@ async function requestAnswer(prompt: string): Promise<string> {
       prompt,
       temperature: 0.7,
       maxOutputTokens: MAX_ANSWER_TOKENS,
+      // A student is waiting on this, and a short answer needs no thinking.
+      providerOptions: {google: {thinkingConfig: {thinkingBudget: 0}}},
     },
     {phase: 'generation', aichatContext: aichatContext()}
   );

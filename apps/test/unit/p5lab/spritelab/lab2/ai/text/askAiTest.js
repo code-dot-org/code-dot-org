@@ -6,6 +6,7 @@ import {
   AskAiError,
   cleanAnswer,
   isAskAiEnabled,
+  MAX_ANSWER_TOKENS,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -64,6 +65,15 @@ describe('askAiText', () => {
       AiChatClientTypes.SPRITELAB_ASK_AI
     );
     expect(extra.aichatContext.currentLevelId).toBe(7);
+  });
+
+  // Thinking tokens count against maxOutputTokens: left on, the model can
+  // spend the cap thinking and return nothing, which the gateway 500s on.
+  it('turns thinking off so the token cap buys actual output', async () => {
+    await askAiText('hello');
+    const [sent] = generateText.mock.calls[0];
+    expect(sent.providerOptions.google.thinkingConfig.thinkingBudget).toBe(0);
+    expect(sent.maxOutputTokens).toBe(MAX_ANSWER_TOKENS);
   });
 
   it('throws with the prompt phase when the question is flagged', async () => {
