@@ -1,0 +1,31 @@
+.studentListContainer {
+  max-height: 320px;
+  margin-top: 8px;
+  overflow-y: auto;
+}
+
+.selectAllRow {
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
+.studentGrid {
+  column-count: 3;
+  column-gap: 36px;
+  width: 100%;
+}
+
+.studentCheckboxItem {
+  margin-bottom: 8px;
+  break-inside: avoid;
+}
+
+.reasonField {
+  margin-top: 16px;
+}
+
+.error {
+  margin-top: 8px;
+  color: var(--text-error-primary);
+}
