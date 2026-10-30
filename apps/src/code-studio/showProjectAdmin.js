@@ -62,7 +62,14 @@ export default project => {
   if (project.getCurrentId()) {
     $('.admin-abuse-score').text(project.getAbuseScore());
     $('#admin-abuse-reset').click(function () {
-      project.adminResetAbuseScore(0);
+      project
+        .adminResetAbuseScore()
+        .then(() => $('.admin-abuse-score').text(0))
+        .catch(() =>
+          $('.admin-abuse-score').text(
+            'There was an error resetting abuse score to 0. Please try again.'
+          )
+        );
     });
   }
 

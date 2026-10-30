@@ -10,7 +10,7 @@ describe('showProjectAdmin', () => {
     beforeEach(() => {
       project = {
         getCurrentId: jest.fn().mockReturnValue('channel-id'),
-        adminResetAbuseScore: jest.fn(),
+        adminResetAbuseScore: jest.fn().mockResolvedValue(),
         isPublished: jest.fn(),
         isProjectLevel: jest.fn(),
         shouldHideShareAndRemix: jest.fn(),
@@ -109,14 +109,26 @@ describe('showProjectAdmin', () => {
           assertHidden('.reported-abuse');
         });
 
-        it('shows the abuse score and resets it', () => {
+        it('shows the abuse score and resets it', async () => {
           project.getAbuseScore.mockReturnValue(15);
           showProjectAdmin(project);
-          expect(document.querySelector('.admin-abuse-score').textContent).toBe(
-            '15'
-          );
+          const score = document.querySelector('.admin-abuse-score');
+          expect(score.textContent).toBe('15');
           document.querySelector('#admin-abuse-reset').click();
-          expect(project.adminResetAbuseScore).toHaveBeenCalledWith(0);
+          await new Promise(resolve => setTimeout(resolve));
+          expect(project.adminResetAbuseScore).toHaveBeenCalled();
+          expect(score.textContent).toBe('0');
+        });
+
+        it('shows an error when the reset fails', async () => {
+          project.getAbuseScore.mockReturnValue(15);
+          project.adminResetAbuseScore.mockRejectedValue(new Error());
+          showProjectAdmin(project);
+          document.querySelector('#admin-abuse-reset').click();
+          await new Promise(resolve => setTimeout(resolve));
+          expect(document.querySelector('.admin-abuse-score').textContent).toBe(
+            'There was an error resetting abuse score to 0. Please try again.'
+          );
         });
       });
 
