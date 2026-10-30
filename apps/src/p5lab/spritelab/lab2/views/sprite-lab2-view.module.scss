@@ -802,6 +802,11 @@ $z-over-blockly: 71;
   pointer-events: auto;
 }
 
+.playspacePrompt {
+  position: absolute;
+  transform: translateY(-100%);
+}
+
 // The instructions' card under the preview; a long step scrolls inside.
 .previewBelow {
   position: absolute;
