@@ -221,7 +221,7 @@ const step4Left = [
 // delete-legacy needs legacy source, so once it is gone no run can finish step 4.
 const halfDone =
   !discover.legacySourceFiles.length && step4Left.length
-    ? `. Step 4 is half done: ${step4Left.join(', ')} remain with the legacy source gone; finish them by hand${discover.storyGaps.length ? ` (a story per "Story gaps" row in ${PLAN_DOC}, then delete the section)` : ''}`
+    ? `. Step 4 is half done: ${step4Left.join(', ')} remain with the legacy source gone; finish them by hand${discover.storyGaps.length ? ` (add the story for each "Story gaps" row in ${PLAN_DOC} that has none, then delete the section)` : ''}`
     : ''
 if (stepArg && next.kind !== 'blocked') {
   const picked = next.kind === 'behavior' ? next.behavior : next.kind
@@ -324,8 +324,8 @@ STORY GAPS: ${JSON.stringify(gaps)}
    loses its legacy section; ${SKILL_DOC} names the plain import; ${PLAN_DOC} gains a
    "Legacy source deleted" paragraph under its Outcome.${gaps.length ? `
 6. Stories: add one story per STORY GAPS row, beside the renamed stories; each must
-   render its state and exercise what its why says the twins miss. Then delete the
-   "Story gaps" section from ${PLAN_DOC}.` : ''}${codemodGoes(gaps.length ? 7 : 6)}`
+   render its state and exercise what its why says the twins miss. Leave the "Story gaps"
+   section in ${PLAN_DOC}: Publish deletes it once Verify passes.` : ''}${codemodGoes(gaps.length ? 7 : 6)}`
 
 const rowBrief = row && `STEP 5, one deferred behavior: ${JSON.stringify(row)}
 OTHER ROWS (leave them alone; their legacy behavior stays): ${JSON.stringify(remainingAfter.map(r => r.behavior))}
@@ -409,8 +409,8 @@ CONSUMER TESTS: ${JSON.stringify(discover.consumerTestFiles)}
 6. UI-test hooks: grep ${UI_TEST_DIRS} for selectors that depend on what changed. List each
    feature or spec in uiTestsNotRun; a selector that no longer matches the new DOM is a
    failure.${!row && gaps.length ? `
-7. Story gaps: ${COMPONENT_DIR}/stories has a story for each of ${JSON.stringify(gaps.map(g => g.state))}, and
-   ${PLAN_DOC} has no "Story gaps" section. In ${STORYBOOK}: yarn vitest --run
+7. Story gaps: ${COMPONENT_DIR}/stories has a story for each of ${JSON.stringify(gaps.map(g => g.state))}.
+   In ${STORYBOOK}: yarn vitest --run
    --project=storybook ../../packages/component-library/src/${component} (axe on every
    story; CI runs the same).` : ''}
 
@@ -455,8 +455,11 @@ phase('Publish')
 const subject = row
   ? `[MUI Migration] ${componentTitle}: hand ${row.behavior.replace(/`/g, '')} to MUI`
   : `[MUI Migration] ${componentTitle}: delete the legacy DSCO source`
+// Deleting the gaps before Verify passes would let a merged failing PR read as a finished step 4.
+const gapsOpen = !row && gaps.length > 0
+const closeGaps = gapsOpen && verify.pass
 const requiredRuns = row && row.movesDom ? 'Eyes and the test build must run before merge: this change moves DOM or changes rendering.' : ''
-const failingNote = verify.pass ? '' : `Verify was still failing when the heal budget ran out: ${JSON.stringify(verify.failures)}`
+const failingNote = verify.pass ? '' : `Verify was still failing when the heal budget ran out: ${JSON.stringify(verify.failures)}${gapsOpen ? `. The "Story gaps" section stays in ${PLAN_DOC} until its stories pass` : ''}`
 
 const PUBLISH_SCHEMA = {
   type: 'object',
@@ -475,7 +478,8 @@ const published = await agent(
 Run from the repo root and stop at the first git error rather than improvising.
 
 1. git branch --show-current must print ${branch}; if it does not, stop and report that
-   in leftovers.
+   in leftovers.${closeGaps ? `
+   Then delete the "Story gaps" section from ${PLAN_DOC}: Verify found its stories.` : ''}
 2. git add -- the files that changed and exist or were deleted, from this list:
    ${JSON.stringify(touched)}
    Then run git status --porcelain and git add every other changed, deleted or untracked
