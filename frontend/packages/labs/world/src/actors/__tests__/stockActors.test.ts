@@ -349,21 +349,30 @@ describe('Progress Bar', () => {
 });
 
 describe('Health Bar', () => {
-  it('asks for the health, and fills a progress bar with it', () => {
+  it('hears its subject damaged and healed, and fills a progress bar', () => {
     // IT IS A PROGRESS BAR THAT WORKS OUT ITS OWN FRACTION — literally, since
     // it acts like one. `fraction` is that actor's own property, so the block
     // this writes carries THAT file and this one has the slot because the
     // description came across (`ActorBuilder.actsLike`).
     //
-    // The reads are the same reads; where they happen is the difference. A
-    // fraction worked out once a frame in a step is a fraction, and a drawing
-    // that only draws is a drawing.
+    // By events about its own `subject`, not by a step once a frame
+    // (specs/OWN_SUBJECTS_PLAN.md).
     const held = types(healthBarActor);
+    const hats = [...healthBarActor.matchAll(/"SUBJECT": "([^"]+)"/g)].map(
+      match => match[1],
+    );
 
-    expect(held).toContain('world_get_ActorsHealthBar_SubjectProperty');
+    expect(held).toContain('world_on_Health_IsDamagedEvent');
+    expect(held).toContain('world_on_Health_IsHealedEvent');
+    expect(hats).toEqual([
+      'world_get_ActorsHealthBar_SubjectProperty',
+      'world_get_ActorsHealthBar_SubjectProperty',
+    ]);
+    expect(held).toContain('world_subject_actor');
     expect(held).toContain('world_get_Health_HealthProperty');
     expect(held).toContain('world_get_Health_MostHealthProperty');
     expect(held).toContain('world_set_ActorsProgressBar_FractionProperty');
+    expect(held).not.toContain('world_trait_step');
     // …and NOT the picture, which is the Progress Bar's along with the colors
     // it reads. A second copy of the track, the fill and the expression
     // between them would be somewhere for the two to disagree — this file
@@ -396,14 +405,6 @@ describe('Health Bar', () => {
     // Attachment is a project's to add, and composes: set both and it is a
     // bar that rides above the actor it is about.
     expect(healthBarActor).not.toContain('Attachment#');
-  });
-
-  it('draws an empty bar rather than throwing at nobody', () => {
-    // Attached to nothing is the state of every one of these until something
-    // points it, and a drawing runs on every paint — so the guard is
-    // load-bearing rather than defensive.
-    expect(types(healthBarActor)).toContain('world_any_actors');
-    expect(types(healthBarActor)).toContain('logic_ternary');
   });
 });
 

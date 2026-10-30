@@ -2,18 +2,13 @@
 //
 // A bar is placed before it is wired: `subject` starts empty, and a learner who
 // drags one in and reads the instructions has a bar watching nothing for as
-// long as that takes. The bar works out `health ÷ most health` once a frame,
-// and `health of ⟨nothing⟩` throws — from a step, every frame, forever, with
-// nothing on screen saying which block did it.
+// long as that takes. It used to work out `health ÷ most health` in a step,
+// once a frame, and needed a guard so `health of ⟨nothing⟩` did not throw.
+// It fills itself by events about its subject now (specs/OWN_SUBJECTS_PLAN.md),
+// and a bar about nobody hears none: it runs without throwing and stays full.
 //
-// SO THE GUARD IS THE SUBJECT OF THIS FILE. It was written into the drawing
-// when the bar asked the world for itself, moved into the step when the bar
-// became a Progress Bar that fills itself in, and was covered by neither: the
-// starter wires its bar up before the first tick, so removing the guard
-// altogether broke no test. That is what this closes.
-//
-// The other half — that a wired bar actually empties — is `starterPlays`,
-// which reads the fraction as the crawler takes the player apart.
+// The other half — that a wired bar actually empties — is the enhancement's
+// test, which hurts and heals the actor a bar is about.
 
 import {describe, expect, it} from 'vitest';
 
@@ -89,9 +84,7 @@ describe('a Health Bar pointed at nobody', () => {
     expect(modules['actors/progressBar']).toBeDefined();
   });
 
-  it('runs, and draws an empty bar rather than throwing', async () => {
-    // Ticked, not merely built: the step is where the division is, so a bar
-    // that is going to throw does it on the first frame and not before.
+  it('runs, and stays as it was drawn', async () => {
     const {world, modules} = await compileProject(projectFiles(unwired()));
     const fraction = modules['actors/progressBar'].FractionProperty;
 
@@ -103,10 +96,8 @@ describe('a Health Bar pointed at nobody', () => {
 
     const bar = [...world.actors][0];
     expect(bar).toBeDefined();
-    // EMPTY, not full. `fraction` defaults to 1, so a bar that never ran its
-    // step would read as a full bar over an actor that does not exist — which
-    // is the wrong picture and the one this used to draw.
-    expect(bar.get(fraction as never) as unknown as number).toBe(0);
+    // FULL: `fraction` defaults to 1, and nothing has told it otherwise.
+    expect(bar.get(fraction as never) as unknown as number).toBe(1);
   });
 
   it('is a Progress Bar’s size, having inherited its picture', async () => {
@@ -125,8 +116,7 @@ describe('a Health Bar pointed at nobody', () => {
 
   it('draws without throwing before anything has ticked', async () => {
     // The thumbnail path: `renderSnapshot` runs the drawing on a world nobody
-    // has stepped. The drawing only reads `fraction` now, so there is nothing
-    // here to divide — which is the point of having moved the division out.
+    // has stepped. The drawing only reads `fraction`.
     const {world} = await compileProject(projectFiles(unwired()));
 
     expect(() => world.renderSnapshot()).not.toThrow();

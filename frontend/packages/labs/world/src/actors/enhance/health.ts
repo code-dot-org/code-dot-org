@@ -17,6 +17,7 @@
 //                            when ⟨this actor⟩ is created:
 //                              add actor ⟨Health Bar⟩ as ⟨bar⟩ do:
 //                                set subject of ⟨bar⟩ to ⟨this actor⟩
+//                                set fraction of ⟨bar⟩ to ⟨health ÷ most health⟩
 //                                set parent of ⟨bar⟩ to ⟨this actor⟩
 //                                set local position of ⟨bar⟩ to x 0 y −24
 //                                set ⟨health bar⟩ of ⟨this actor⟩ to ⟨bar⟩
@@ -128,6 +129,20 @@ const declaresBar = (
       block.fields?.NAME === BAR_PROPERTY,
   );
 
+/** `health of ⟨who⟩ ÷ most health of ⟨who⟩`. */
+export const healthLeftOf = (who: () => object) => {
+  const of = (exportName: string) => ({
+    block: {type: `world_get_Health_${exportName}`, inputs: {ACTOR: who()}},
+  });
+  return {
+    block: {
+      type: 'math_arithmetic',
+      fields: {OP: 'DIVIDE'},
+      inputs: {A: of('HealthProperty'), B: of('MostHealthProperty')},
+    },
+  };
+};
+
 /** The hat this adds: when this actor is created, it brings its own bar. */
 const handler = (target: EnhanceTarget): BlockJson => {
   const variable = barVariable(target);
@@ -149,28 +164,39 @@ const handler = (target: EnhanceTarget): BlockJson => {
               inputs: {ACTOR: bar, VALUE: me()},
               next: {
                 block: {
-                  // …and whose it is, which is a separate question from what
-                  // it is about: a HUD bar shows the player and must not
-                  // follow it. A child goes where its parent goes, and goes
-                  // when its parent goes (specs/PARENTING.md).
-                  type: 'world_set_Space_ParentProperty',
-                  inputs: {ACTOR: bar, VALUE: me()},
+                  // …and what it shows now. The bar hears damage and healing
+                  // after this, and nothing before it
+                  // (specs/OWN_SUBJECTS_PLAN.md).
+                  type: 'world_set_ActorsProgressBar_FractionProperty',
+                  inputs: {ACTOR: bar, VALUE: healthLeftOf(me)},
                   next: {
                     block: {
-                      // …and where it sits on its parent: over the head.
-                      type: 'world_set_local_position',
-                      inputs: {
-                        ACTOR: bar,
-                        X: {block: {type: 'math_number', fields: {NUM: 0}}},
-                        Y: {block: {type: 'math_number', fields: {NUM: -24}}},
-                      },
+                      // …and whose it is, which is a separate question from what
+                      // it is about: a HUD bar shows the player and must not
+                      // follow it. A child goes where its parent goes, and goes
+                      // when its parent goes (specs/PARENTING.md).
+                      type: 'world_set_Space_ParentProperty',
+                      inputs: {ACTOR: bar, VALUE: me()},
                       next: {
                         block: {
-                          // …and the actor remembers it, because `as ⟨bar⟩`
-                          // is a block scope and a project may want to say
-                          // things about the bar later.
-                          type: `world_set_${pathSlug(ownerOf(target))}_${BAR_PROPERTY_EXPORT}`,
-                          inputs: {ACTOR: me(), VALUE: bar},
+                          // …and where it sits on its parent: over the head.
+                          type: 'world_set_local_position',
+                          inputs: {
+                            ACTOR: bar,
+                            X: {block: {type: 'math_number', fields: {NUM: 0}}},
+                            Y: {
+                              block: {type: 'math_number', fields: {NUM: -24}},
+                            },
+                          },
+                          next: {
+                            block: {
+                              // …and the actor remembers it, because `as ⟨bar⟩`
+                              // is a block scope and a project may want to say
+                              // things about the bar later.
+                              type: `world_set_${pathSlug(ownerOf(target))}_${BAR_PROPERTY_EXPORT}`,
+                              inputs: {ACTOR: me(), VALUE: bar},
+                            },
+                          },
                         },
                       },
                     },

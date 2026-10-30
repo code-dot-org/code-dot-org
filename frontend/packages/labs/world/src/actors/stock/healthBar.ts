@@ -40,9 +40,11 @@
 // of ⟨any ⟨Progress Bar⟩⟩` does not reach into the health bars. What carries
 // is the trait, which is the relationship that asks what a thing can do.
 //
-// So the fraction is worked out where a fraction belongs — in a step, once a
-// frame. What is left here is the only thing that is this bar's own: which
-// actor it is about.
+// IT FILLS ITSELF BY EVENTS, not by a step once a frame: `when ⟨subject⟩ is
+// damaged` and `when ⟨subject⟩ is healed`, heard by every Health Bar about
+// its own `subject` (specs/OWN_SUBJECTS_PLAN.md). Whoever points the bar sets
+// its fraction then, since nothing has happened to the subject yet; a bar
+// pointed at nobody stays as it was last drawn, which is full.
 
 import {actorFile, actsLike, me, showAs} from './workspace';
 
@@ -62,86 +64,58 @@ export const HEALTH_BAR_SUBJECT = {
   },
 };
 
-/**
- * The step that fills the bar, given the blocks that read `subject` and write
- * `fraction`.
- *
- * PARAMETERISED TWICE, because an own property's block type carries the path
- * of the file that declared it (`blockly/ownProperties`). `subject` is this
- * bar's own — `ActorsHealthBar_…` for this file, another file's for a bar
- * that declares it itself. `fraction` is the PROGRESS BAR's, which this actor
- * acts like, so its default is that file's; a bar that declares its own passes
- * it here.
- *
- * IN `react`, after everything has moved and been hurt, so the bar shows what
- * just happened rather than what was true at the top of the frame. The same
- * moment the Fuel Bar reads its tank in.
- *
- * ATTACHED TO NOBODY IS AN EMPTY BAR, not a crash. `subject` starts unset and a
- * learner can leave it that way; `health of ⟨nothing⟩` would throw once a
- * frame, forever, from a step nobody would think to look at. The guard was in
- * the drawing before and is the same guard.
- */
-export const healthBarStep = (
-  subjectGetType: string,
-  fractionSetType = 'world_set_ActorsProgressBar_FractionProperty',
-) => {
-  const subject = () => ({
-    block: {type: subjectGetType, inputs: {ACTOR: me()}},
-  });
-  /** `⟨name⟩ of ⟨the subject⟩`, for a property the Health rule declares. */
-  const healthOf = (exportName: string) => ({
+/** `health of ⟨subject actor⟩ ÷ most health of ⟨subject actor⟩`. */
+const healthLeft = () => {
+  const of = (exportName: string) => ({
     block: {
       type: `world_get_Health_${exportName}`,
-      inputs: {ACTOR: subject()},
+      inputs: {ACTOR: {block: {type: 'world_subject_actor'}}},
     },
   });
   return {
-    type: 'world_trait_step',
-    fields: {PHASE: 'react', NAME: 'show the subject’s health'},
-    inputs: {
-      DO: {
-        block: {
-          type: fractionSetType,
-          inputs: {
-            ACTOR: me(),
-            VALUE: {
-              block: {
-                type: 'logic_ternary',
-                inputs: {
-                  IF: {
-                    block: {
-                      type: 'world_any_actors',
-                      inputs: {LIST: subject()},
-                    },
-                  },
-                  THEN: {
-                    block: {
-                      type: 'math_arithmetic',
-                      fields: {OP: 'DIVIDE'},
-                      inputs: {
-                        A: healthOf('HealthProperty'),
-                        B: healthOf('MostHealthProperty'),
-                      },
-                    },
-                  },
-                  ELSE: {block: {type: 'math_number', fields: {NUM: 0}}},
-                },
-              },
-            },
-          },
-        },
-      },
+    block: {
+      type: 'math_arithmetic',
+      fields: {OP: 'DIVIDE'},
+      inputs: {A: of('HealthProperty'), B: of('MostHealthProperty')},
     },
   };
 };
 
-export const healthBarActor = actorFile('Health Bar', [
-  // FIRST, so everything below overrides it rather than the other way about —
-  // that is what reading a file downwards means, and what lets a bar that
-  // wanted its own picture simply say so underneath.
-  actsLike('actors/progressBar'),
-  HEALTH_BAR_SUBJECT,
-  showAs('health'),
-  healthBarStep('world_get_ActorsHealthBar_SubjectProperty'),
-]);
+/**
+ * `when ⟨subject⟩ ⟨event⟩: set fraction of ⟨this actor⟩ to what is left`,
+ * for a Health event, given the getter of the `subject` this bar declares.
+ */
+export const healthBarHears = (event: string, subjectGetType: string) => ({
+  type: `world_on_Health_${event}`,
+  fields: {SUBJECT: subjectGetType},
+  next: {
+    block: {
+      type: 'world_set_ActorsProgressBar_FractionProperty',
+      inputs: {ACTOR: me(), VALUE: healthLeft()},
+    },
+  },
+});
+
+export const healthBarActor = actorFile(
+  'Health Bar',
+  [
+    // FIRST, so everything below overrides it rather than the other way about —
+    // that is what reading a file downwards means, and what lets a bar that
+    // wanted its own picture simply say so underneath.
+    actsLike('actors/progressBar'),
+    HEALTH_BAR_SUBJECT,
+    showAs('health'),
+  ],
+  {
+    handlers: [
+      healthBarHears(
+        'IsDamagedEvent',
+        'world_get_ActorsHealthBar_SubjectProperty',
+      ),
+      healthBarHears(
+        'IsHealedEvent',
+        'world_get_ActorsHealthBar_SubjectProperty',
+      ),
+    ],
+  },
+);

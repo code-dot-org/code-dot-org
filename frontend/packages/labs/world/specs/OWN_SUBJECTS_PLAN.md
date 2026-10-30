@@ -1,6 +1,6 @@
 # Plan: a kind's hat about its own property
 
-STATUS: BUILDING, October 2026. Steps 2 and 3 are done. Follows specs/PROPERTY_SUBJECTS_PLAN.md,
+STATUS: BUILDING, October 2026. Steps 2 to 4 are done. Follows specs/PROPERTY_SUBJECTS_PLAN.md,
 whose one open item this is.
 
 A hat in an actor file may be about that actor's own actor-typed property:
@@ -122,15 +122,21 @@ damaged` and `when ⟨subject⟩ is healed` and sets its own fraction from
   listener, so neither block changed. A property the kind has through
   `acts like` is handled the same way, since the generator does not ask
   which file declared it.
+- **Step 4 settled the open question: whoever sets `subject` sets
+  `fraction`.** The Health enhancement writes `set fraction of ⟨bar⟩ to
+health ÷ most health` beside `set subject`, and the shelf's description
+  says to. The stock bar's step is gone; its file holds `when ⟨subject⟩ is
+damaged` and `when ⟨subject⟩ is healed` (`healthBarHears`).
+- **A bar pointed at nobody is full now, not empty.** The step drew nobody as
+  an empty track; with no event to hear, `fraction` keeps its default of 1.
+  The plan chose that, and the tests say so.
+- **A game that sets `health` directly is not seen.** The enhancement's test
+  used to halve health with `set`; it hurts and heals through the rule now,
+  which is how a game says it. A bar filled by events follows what is raised,
+  and `set health of` raises nothing.
 
 ## Open
 
-- **A bar pointed at somebody already hurt.** The bar is full until the next
-  damage or heal, as the starter's was before `player arrived`. The
-  enhancement sets `subject` as it adds the bar, when its target is usually
-  full, so this is wrong only for a bar pointed later. One answer is a
-  `when ⟨this actor⟩'s ⟨subject⟩ changes` hat; another is that whoever sets
-  `subject` also sets `fraction`. To decide by step 4.
 - **Whether a placement's code should use this too.** A placement's own
   property subject is held by the World for the one placement today; the
   same hat in a kind's file would now mean every actor of the kind. The two

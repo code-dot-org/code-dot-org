@@ -116,7 +116,7 @@ export const STOCK_ACTORS: readonly StockActor[] = [
     for: 'interface',
     name: 'Health Bar',
     description:
-      'A bar that fills itself in. Point it at an actor with “subject” and it shows how much health that actor has left. Put it in the corner for a HUD, or set its parent to have it ride above the actor it is about.',
+      'A bar that fills itself in. Point it at an actor with “subject”, set its “fraction” to that actor’s health, and it follows each time the actor is damaged or healed. Put it in the corner for a HUD, or set its parent to have it ride above the actor it is about.',
     // HEALTH ALONE, for what it READS. The health belongs to the actor this
     // bar is pointed at, and a `world_get_Health_…` block in a project without
     // that rule is one the palette never mints — the file then fails to

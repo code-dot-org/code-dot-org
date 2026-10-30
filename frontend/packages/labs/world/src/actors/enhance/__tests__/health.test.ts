@@ -66,6 +66,9 @@ describe('the health enhancement, as edits', () => {
     expect(actor).toContain('world_on_Space_CreatedEvent');
     expect(actor).toContain('world_add_actor');
     expect(actor).toContain('ActorsHealthBar_SubjectProperty');
+    // …and fills it there, since the bar hears only what happens next
+    // (specs/OWN_SUBJECTS_PLAN.md).
+    expect(actor).toContain('world_set_ActorsProgressBar_FractionProperty');
     expect(actor).toContain('world_set_Space_ParentProperty');
     expect(actor).toContain('world_set_local_position');
     // Named, so `this actor` in the body still means the actor that was
@@ -174,6 +177,8 @@ describe('the health enhancement, played', () => {
       HasHealthTrait: never;
       HealthProperty: never;
       MostHealthProperty: never;
+      TakeDamageAction: never;
+      HealAction: never;
     };
     // The bar is there before anything is drawn (`World.settleCreations`);
     // two ticks so it has also been laid out and filled by its steps.
@@ -226,19 +231,20 @@ describe('the health enhancement, played', () => {
     const [bar] = bars;
 
     const whole = filled(world, bar);
-    // Full, because a Player arrives at full health and the bar reads it off
-    // whoever it was pointed at. A bar pointed at NOBODY draws an empty track,
-    // which is what this looked like before the wiring existed.
+    // Full, because a Player arrives at full health and the enhancement
+    // sets the bar's fraction as it points it.
     expect(whole).toBeGreaterThan(0);
 
-    // Now hurt it, which is the line a game writes: the bar is not told.
-    player.set(
-      health.HealthProperty,
-      ((player.get(health.MostHealthProperty) as number) / 2) as never,
-    );
+    // Now hurt it, which is the line a game writes: the bar is not told, and
+    // hears `is damaged` about its subject (specs/OWN_SUBJECTS_PLAN.md).
+    player.act(health.TakeDamageAction, 1);
     world.tick(1 / 60);
+    expect(filled(world, bar)).toBeCloseTo((whole * 2) / 3, 3);
 
-    expect(filled(world, bar)).toBeCloseTo(whole / 2, 3);
+    // …and healed.
+    player.act(health.HealAction, 1);
+    world.tick(1 / 60);
+    expect(filled(world, bar)).toBeCloseTo(whole, 3);
   }, 60000);
 
   it('rides above the actor it is about, and follows it', async () => {
