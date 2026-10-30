@@ -1,6 +1,6 @@
 # Plan: an actor property as an event's subject
 
-STATUS: BUILDING, October 2026. Steps 1 to 6 are done.
+STATUS: BUILT, October 2026. All seven steps are in.
 
 A hat can be about `this actor` or `any ⟨kind⟩`. This plan adds a third
 subject: an actor-typed property in scope. `when ⟨current player⟩ is hurt`
@@ -225,6 +225,12 @@ player` and the event, and its `when this screen loads` sets the one and
   is open takes effect when it is next opened.
 - **The lesson is not written as a world**, since its HUD and the bar's own
   code have no `define world` form; the world-view test passes over it.
+- **Step 7 marked what this changes**: DOCKING_PLAN.md, whose step 6 had
+  the starter's bar follow the Player's kind; EVENTS.md, UI_ACTORS.md and
+  EVENT_VALUES_PLAN.md where they named `event actor`; and PROGRESSION.md's
+  Story table, which gains `story/screen` and `story/watch`. The stock
+  Health Bar's own passages (UI_ACTORS.md, ENHANCEMENTS.md, MAPS.md) stand,
+  since that bar is unchanged.
 
 ## Open
 

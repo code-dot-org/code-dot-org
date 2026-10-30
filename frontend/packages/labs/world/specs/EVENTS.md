@@ -15,7 +15,8 @@ actors — and which of those answers a game would want too.
   `emitToWorld(event, detail?)` (`engine/core/World.ts`); the queue holds
   `{event, actor?, detail?}` (`engine/core/EventQueue.ts`). A handler reads
   it with `event value`, whose output type is `null` — it fits any socket
-  — or with `event actor`, which is the same one thing typed as an Actor.
+  — or with `object actor`, which is the same one thing typed as an Actor
+  (`event actor` until specs/PROPERTY_SUBJECTS_PLAN.md renamed it).
 - **It is declared, not invented.** `define event ⟨quit⟩` in an actor, a
   map or a rule; a rule's own events are the world's, a trait's are an
   actor's (`EventMeta.scope`). There is no string-keyed bus.

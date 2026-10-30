@@ -165,6 +165,11 @@ and the Health Bar watching the Player in the Viewport's space. In the
 browser: walking right took two coins and ran into the Crawler, and the
 bar at the top drained to empty while the Scoreboard said GAME OVER.
 
+(Since: the starter's bar is a plain Progress Bar filled by its own
+handlers on the game's `current player`, specs/PROPERTY_SUBJECTS_PLAN.md.
+A placement value naming a kind still resolves as above; the stock Health
+Bar placed by the Health enhancement uses it.)
+
 ### 7. Documents and the browser
 
 BUILT. SIMPLE_INTERFACE.md names this plan; ANCHORS_PLAN.md's "no

@@ -995,7 +995,8 @@ who knows what they drew.
 ## The blocks that name an actor without a dropdown
 
 Every actor dropdown draws a picture where the project has one. The two blocks
-that name an actor and have no dropdown — `this actor` and `event actor` — were
+that name an actor and have no dropdown — `this actor` and `object actor`, once
+`event actor` (specs/PROPERTY_SUBJECTS_PLAN.md) — were
 the exception, and they are the two a learner most often has to hold in their
 head: "which actor is `this actor` here?" is the question a handler asks and
 does not answer.
@@ -1007,7 +1008,7 @@ They answer it now, from where the block SITS (`blockly/actorAbout`):
 | anywhere in an `.actor` file                  | that actor    |
 | in a world hat whose subject is `any ⟨Crate⟩` | a Crate       |
 | in the body of `add actor ⟨Coin⟩`             | a Coin        |
-| `event actor` under a hat filtered on ⟨Mark⟩  | a Mark        |
+| `object actor` under a hat filtered on ⟨Mark⟩ | a Mark        |
 | a rule's trait step, or the toolbox           | the word      |
 
 **The last row is what makes the rest legible.** A block that shows a picture
@@ -1017,7 +1018,7 @@ rule, `this actor` is whatever elects the trait — a different answer per proje
 — and a picture there would be a guess.
 
 It also gives the hat's kind filter a second job: pick ⟨Mark⟩ on the hat and the
-`event actor` below it starts showing a Mark, which says what the filter did
+`object actor` below it starts showing a Mark, which says what the filter did
 better than a sentence about it can.
 
 **The picture does not replace the name.** The word beside it stays — `this

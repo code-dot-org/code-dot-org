@@ -489,6 +489,8 @@ any lesson.
 | `story/reveal` | A few letters at a time, and a click that says "all of it now".                          | `add trait` (the Speech Box types itself out)   | `[o]` the line is partial at 0.2s and whole after the click |
 | `story/script` | A conversation is a place in a list. Each line is an event; what a line MEANS is yours.  | Conversation rule                               | `[t]` the line event fired once per advance                 |
 | `story/choice` | A question that sends the talk somewhere else, and a variable that remembers the answer. | `go to line`                                    | `[o]` two scripted runs reach two different endings         |
+| `story/screen` | A screen goes on top of what is showing and comes off again.                             | `show screen`; `go back`                        | `[o]` P shows the Pause Menu, and Resume takes it off       |
+| `story/watch`  | A handler about a value rather than an actor: a HUD bar hears `current player`.          | properties as a hat's subject; `subject actor`  | `[o]` the bar ends at the Player's health over three        |
 | `story/scene`  | Portrait, backdrop, music: the same script, staged.                                      | Portrait actor; `set music`; the story template | `[o]` the portrait and backdrop change on the right lines   |
 
 ### Genre: Adventure — entered from Look and Place

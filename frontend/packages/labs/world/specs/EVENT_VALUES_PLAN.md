@@ -4,6 +4,9 @@ STATUS: BUILT, not yet seen in the browser. The first two ideas of
 specs/EVENTS.md, which is otherwise deferred. The working record, as the
 other plans are.
 
+Since: `event actor` is `object actor` (specs/PROPERTY_SUBJECTS_PLAN.md).
+What is said of it here holds under the new name.
+
 ## What an event can say today, and what it cannot
 
 - **One value.** `emit(event, actor, detail?)`, a queue of
