@@ -297,7 +297,7 @@ describe('pixelArt', () => {
     });
   });
 
-  it('caps the crisp storage scale', () => {
+  it('caps the crisp display scale', () => {
     // crispScaleFor = clamp(floor(640 / longSide), 1, 8).
     expect(crispScaleFor(8, 8)).toBe(8);
     expect(crispScaleFor(64, 64)).toBe(8);

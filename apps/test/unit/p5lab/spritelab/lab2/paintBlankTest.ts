@@ -4,18 +4,18 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
 
 describe('blankPaintSpec', () => {
-  it('sizes pixel style on the generation grid, upscaled for storage', () => {
+  it('sizes pixel style on the generation grid, at its logical size', () => {
     const spec = blankPaintSpec('sprite', 'pixel');
-    // 1024/16 logical pixels at the crisp storage scale.
-    expect(spec.pixelGridSize).toBe(8);
-    expect(spec.size).toBe(64 * 8);
+    // 1024/16 logical pixels, one canvas pixel each.
+    expect(spec.pixelGridSize).toBe(1);
+    expect(spec.size).toBe(64);
   });
 
   it('gives pixel backgrounds the finer per-type grid', () => {
     const spec = blankPaintSpec('background', 'pixel');
-    // 1024/8 logical pixels at the crisp storage scale.
-    expect(spec.pixelGridSize).toBe(5);
-    expect(spec.size).toBe(128 * 5);
+    // 1024/8 logical pixels, one canvas pixel each.
+    expect(spec.pixelGridSize).toBe(1);
+    expect(spec.size).toBe(128);
   });
 
   it('sizes smooth style at the stored ceiling for its type, with no grid', () => {
@@ -39,6 +39,6 @@ describe('blankPaintImage', () => {
   it('renders the spec to a PNG data URI', () => {
     const image = blankPaintImage('background', 'pixel');
     expect(image.dataURI.startsWith('data:image/png')).toBe(true);
-    expect(image.pixelGridSize).toBe(5);
+    expect(image.pixelGridSize).toBe(1);
   });
 });
