@@ -40,8 +40,14 @@ const TABS: Record<LevelModeKind, Tab[]> = {
   freeplay: ['Code', 'Images', 'World', 'Play'],
 };
 
+/** The tabs a level shows. A code or world level that names an imageType
+    makes that picture first, so Images comes before its own tabs. */
 export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
-  return mode ? TABS[mode.kind] : undefined;
+  if (!mode) {
+    return undefined;
+  }
+  const own = TABS[mode.kind];
+  return mode.imageType && !own.includes('Images') ? ['Images', ...own] : own;
 }
 
 /** Whether the level is a world level: its work is placing images on the

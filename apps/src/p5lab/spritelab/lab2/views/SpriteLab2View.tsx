@@ -98,7 +98,11 @@ import {
 } from '../musicProjects';
 import {runtimeNeeds, WorkspaceSource} from '../objectives';
 import {requestPicture} from '../picturePicker';
-import {countImagesByType, imageCountsDelta} from '../projectCounts';
+import {
+  countImagesByType,
+  ImageCounts,
+  imageCountsDelta,
+} from '../projectCounts';
 import reseedablePageConstants, {
   RESET_PAGE_CONSTANTS,
 } from '../redux/reseedablePageConstants';
@@ -196,6 +200,7 @@ const LOCKED_REASON = 'Unlocks later in the lesson.';
 
 const DEFAULT_SCENE_SOURCE = defaultSources.source;
 const DEFAULT_SCENE_ID = 'scene-1';
+const NO_IMAGES: ImageCounts = {sprite: 0, background: 0, block: 0};
 
 // How long workspace injection may wait on a fetched dropdown list.
 const LIST_FETCH_TIMEOUT_MS = 5000;
@@ -674,9 +679,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const playProgress = usePlayProgress(playing, needs);
   const {onPlayerProgress, onSceneLanded} = playProgress;
+  // Nothing counts until this level's list is seeded: before that the store
+  // still holds the previous level's images, and an item they earned would
+  // stay earned.
   const objectiveImages = useMemo(
-    () => imageCountsDelta(countImagesByType(animationList), baselineImages),
-    [animationList, baselineImages]
+    () =>
+      animationsSeeded
+        ? imageCountsDelta(countImagesByType(animationList), baselineImages)
+        : NO_IMAGES,
+    [animationsSeeded, animationList, baselineImages]
   );
   // The World grid a "changed" check compares against: the pinned scene's
   // world as the level opened, from the same load-time sources as the image
