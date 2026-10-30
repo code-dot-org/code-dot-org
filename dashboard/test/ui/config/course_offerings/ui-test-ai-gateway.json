@@ -1,0 +1,21 @@
+{
+  "key": "ui-test-ai-gateway",
+  "display_name": "UI Test AI Gateway",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Course",
+  "marketing_initiative": null,
+  "grade_levels": "2,3,4,5,6,7,8,9,10,11,12",
+  "header": null,
+  "image": null,
+  "cs_topic": null,
+  "school_subject": "",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": "An AI chat level whose model is served through the AI gateway, for the Turnstile e2e tests.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2015-01-01 11:00:00 UTC",
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": null
+}

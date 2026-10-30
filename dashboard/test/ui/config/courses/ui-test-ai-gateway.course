@@ -1,0 +1,20 @@
+{
+  "name": "ui-test-ai-gateway",
+  "script_names": [
+    "ui-test-ai-gateway"
+  ],
+  "original_script_names": [
+    "ui-test-ai-gateway"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "ui-test-ai-gateway",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [],
+  "student_resources": []
+}
