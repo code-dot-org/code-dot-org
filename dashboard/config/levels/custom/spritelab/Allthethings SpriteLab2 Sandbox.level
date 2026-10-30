@@ -314,6 +314,30 @@
         },
         {
           "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_askAI",
+              "inputs": {
+                "PROMPT": {
+                  "shadow": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": "Tell me a joke about cats"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_whenAIAnswers"
+            }
+          ]
+        },
+        {
+          "kind": "category",
           "name": "Behaviors",
           "contents": [
             {
