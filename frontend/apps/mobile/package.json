@@ -1,0 +1,30 @@
+{
+  "name": "@code-dot-org/mobile",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "android:open": "cap open android",
+    "android:sync": "yarn run -T turbo build:mobile --filter @code-dot-org/studio && cap sync android",
+    "dev": "yarn workspace @code-dot-org/studio dev:mobile",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "@capacitor/android": "^7.6.9",
+    "@capacitor/core": "^7.6.9"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.6.9",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/studio": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "~5.9.3"
+  }
+}

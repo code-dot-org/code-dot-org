@@ -6,6 +6,7 @@ import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 jest.mock('@statsig/js-client', () => ({
   StatsigClient: jest.fn().mockImplementation(() => ({
     initializeAsync: jest.fn().mockResolvedValue(undefined),
+    updateUserAsync: jest.fn().mockResolvedValue(undefined),
     logEvent: jest.fn(),
   })),
 }));
@@ -14,6 +15,7 @@ jest.mock('@cdo/apps/metrics/statsigHelpers', () => ({
   findOrCreateStableId: jest.fn().mockResolvedValue('initial-id'),
   getUserID: jest.fn(),
   getUserType: jest.fn(),
+  formatUserId: jest.fn(id => `test-${id}`),
 }));
 jest.mock('@cdo/apps/util/experiments', () => ({
   getEnabledExperiments: () => [],
@@ -51,5 +53,32 @@ describe('StatsigReporter async initialization', () => {
       {value: 1}
     );
     expect(StatsigClient).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('StatsigReporter user agent', () => {
+  beforeAll(async () => {
+    await statsigReporter.readyPromise;
+  });
+
+  it('sends user agent as custom property', async () => {
+    findOrCreateStableId.mockResolvedValue('stable-id');
+    const reporter = new statsigReporter.constructor();
+    await reporter.readyPromise;
+
+    expect(reporter.user.custom.userAgent).toBe(navigator.userAgent);
+  });
+
+  it('keeps user agent when user properties change', async () => {
+    findOrCreateStableId.mockResolvedValue('stable-id');
+    const reporter = new statsigReporter.constructor();
+    await reporter.readyPromise;
+    await reporter.setUserProperties({userId: 1, userType: 'student'});
+
+    expect(reporter.statsigClient.updateUserAsync).toHaveBeenCalledWith(
+      expect.objectContaining({
+        custom: expect.objectContaining({userAgent: navigator.userAgent}),
+      })
+    );
   });
 });
