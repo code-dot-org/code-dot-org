@@ -178,9 +178,14 @@ Every line of it lands in the ACTOR:
                              when ⟨this actor⟩ is created:
                                add actor ⟨Health Bar⟩ as ⟨bar⟩ do:
                                  set subject of ⟨bar⟩ to ⟨this actor⟩
+                                 set fraction of ⟨bar⟩ to ⟨health ÷ most health⟩
                                  set parent of ⟨bar⟩ to ⟨this actor⟩
                                  set local position of ⟨bar⟩ to x 0 y −24
                                  set ⟨health bar⟩ of ⟨this actor⟩ to ⟨bar⟩
+
+The `set fraction` row is there because the bar fills itself by events about
+its subject (specs/OWN_SUBJECTS_PLAN.md), and none has happened when it is
+made.
 
 (An earlier version added a `when ⟨this actor⟩ is removed: remove actor ⟨health
 bar of this actor⟩` hat and elected the Attachment rule's `Attached` on the

@@ -215,12 +215,17 @@ this one ACT LIKE it, and the slots come across with the picture.
 It is not a HEALTH bar. What fills it is a project's own handler, and health is
 one of the things that might — which is what the fourth stock actor is.
 
-**Health Bar** carries the actor it is about and asks that actor as it paints.
-One property, one picture, no rule and no trait:
+**Health Bar** carries the actor it is about, and hears that actor damaged
+and healed. One property, two hats, no rule and no trait:
 
 ```
 set subject of ⟨any ⟨Health Bar⟩⟩ to ⟨this actor⟩
+set fraction of ⟨any ⟨Health Bar⟩⟩ to ⟨health ÷ most health of this actor⟩
 ```
+
+(It asked its subject in a step once a frame until a kind's hat could be about
+its own property, specs/OWN_SUBJECTS_PLAN.md: `when ⟨subject⟩ is damaged` in
+its file. Whoever points it fills it then, since nothing has happened yet.)
 
 WHERE IT SITS IS A SEPARATE QUESTION, and that is the design. A bar in the
 corner of the screen shows the player and must not follow the player; a bar

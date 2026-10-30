@@ -1,6 +1,6 @@
 # Plan: a kind's hat about its own property
 
-STATUS: BUILDING, October 2026. Steps 2 to 4 are done. Follows specs/PROPERTY_SUBJECTS_PLAN.md,
+STATUS: BUILT, October 2026. All five steps are in. Follows specs/PROPERTY_SUBJECTS_PLAN.md,
 whose one open item this is.
 
 A hat in an actor file may be about that actor's own actor-typed property:
@@ -134,6 +134,11 @@ damaged` and `when ⟨subject⟩ is healed` (`healthBarHears`).
   used to halve health with `set`; it hurts and heals through the rule now,
   which is how a game says it. A bar filled by events follows what is raised,
   and `set health of` raises nothing.
+- **Step 5 marked what this changes**: UI_ACTORS.md, where the Health Bar
+  asked its subject as it painted; ENHANCEMENTS.md, whose recipe gains the
+  `set fraction` row; and PROPERTY_SUBJECTS_PLAN.md, whose open item this
+  was. RULE_DEMOS.md stands: the bar still needs an actor with health to
+  show anything.
 
 ## Open
 

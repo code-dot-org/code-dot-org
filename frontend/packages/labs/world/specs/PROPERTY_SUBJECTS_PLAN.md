@@ -205,7 +205,8 @@ player` and the event, and its `when this screen loads` sets the one and
   the Main Screen's `when this screen loads` runs while `world` is still the
   builder. Outside a frame it is deferred, and the World made from the
   description dispatches it on its first tick, after every handler is hung.
-- **The stock Health Bar keeps its step.** The Health enhancement gives
+- **The stock Health Bar keeps its step** (since retired,
+  specs/OWN_SUBJECTS_PLAN.md). The Health enhancement gives
   each actor a bar of its own and sets the bar's `subject`; for that bar to
   be event-driven, a hat in an actor file would have to be about the
   actor's own property, held once per instance. No scope compiles that
@@ -239,7 +240,7 @@ player` and the event, and its `when this screen loads` sets the one and
 ## Open
 
 - **An actor file's hat about its own property**, as above, which is what
-  would retire the Health Bar's step. Planned in specs/OWN_SUBJECTS_PLAN.md.
+  would retire the Health Bar's step. Built in specs/OWN_SUBJECTS_PLAN.md.
 
 ## Not in this plan
 
