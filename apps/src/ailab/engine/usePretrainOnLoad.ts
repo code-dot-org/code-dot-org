@@ -28,7 +28,6 @@ export function usePretrainOnLoad(restoringModel: boolean): boolean {
   const lockedLabel = useAppSelector(state => !!state.mode?.hideSelectLabel);
   const lockedFeatures = useAppSelector(state => !!state.mode?.lockFeatures);
   const data = useAppSelector(getData);
-  // Unset until the metadata is in, and applied to the project an effect later.
   const willTrain =
     !presetColumns ||
     readyToTrain(

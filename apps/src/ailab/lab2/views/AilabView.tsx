@@ -13,6 +13,8 @@ import {AilabLevelProperties} from '../types';
 
 import AilabWorkspace from './AilabWorkspace';
 
+import styles from './ailab-view.module.scss';
+
 const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   levelProperties,
 }) => {
@@ -59,7 +61,6 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   );
 
   const isLoading = !currentSources || isWorkspaceLoading;
-  // The overlay leaves the workspace in the tab order; React 18's JSX has no inert.
   const workspaceRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (workspaceRef.current) {
@@ -70,7 +71,7 @@ const AilabView: React.FC<LabProps<AilabLevelProperties>> = ({
   return (
     <>
       {currentSources && (
-        <div ref={workspaceRef} style={{display: 'contents'}}>
+        <div ref={workspaceRef} className={styles.loadingGate}>
           <AilabWorkspace
             key={reinitializedCount}
             levelProperties={levelProperties}
