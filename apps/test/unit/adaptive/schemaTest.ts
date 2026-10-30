@@ -465,13 +465,32 @@ describe('findReferenceProblems', () => {
   });
 
   describe('plan', () => {
-    // A plan template on the intro, filled by its quiz question.
+    const review = (id: string, questionId = 9): Step => ({
+      id,
+      title: id,
+      kind: 'review',
+      questionId,
+    });
+    // A plan question in the intro, then the review, then a step that builds.
     const planned = (): Raw => {
       const raw = served();
       raw.checkpoints[0].plan = {template: 'A site that is {which}.'};
       Object.assign(questionOf(raw), {plan: 'which'});
+      raw.checkpoints[0].steps.push(review('review'), {
+        id: 'starter',
+        title: 'Starter',
+        kind: 'level',
+        level: 'web-starter',
+        project: true,
+        projectPrompt: 'A first version.',
+        levelProperties: levelProperties(9, 'web-starter', 'web-template'),
+      });
       return raw;
     };
+
+    it('accepts a review step between plan questions and a project step with a prompt', () => {
+      expect(problemsOf(planned())).toEqual([]);
+    });
 
     it('flags a template slot no question fills, and a question filling a slot the template lacks', () => {
       const raw = planned();
@@ -484,11 +503,55 @@ describe('findReferenceProblems', () => {
       ]);
     });
 
-    it('flags a plan question in a checkpoint with no plan', () => {
+    it('flags a plan question and a review step in a checkpoint with no plan', () => {
       const raw = planned();
       delete raw.checkpoints[0].plan;
       expect(problemsOf(raw)).toEqual([
         'checkpoints.intro.steps.quiz.questions.0.plan: the checkpoint has no plan template',
+        "checkpoints.intro.steps.review: a review step needs the checkpoint's plan template",
+      ]);
+    });
+
+    it('flags a review step with no later project step to build', () => {
+      const raw = planned();
+      raw.checkpoints[0].steps.pop();
+      expect(problemsOf(raw)).toEqual([
+        'checkpoints.intro.steps.review: no later project step with a projectPrompt to build',
+      ]);
+    });
+
+    it("counts a review step's question id with the others", () => {
+      const raw = planned();
+      raw.checkpoints[0].steps.splice(-1, 0, review('again', 1));
+      expect(problemsOf(raw)).toEqual([
+        "checkpoints: question id '1' is used more than once",
+      ]);
+    });
+
+    it('accepts a branch on a review decision and flags any other condition on it', () => {
+      const raw = planned();
+      raw.checkpoints[0].steps.push({
+        ...panels('built'),
+        showIf: {stepId: 'review', questionId: 9, choiceId: 'build'},
+      });
+      expect(problemsOf(raw)).toEqual([]);
+
+      const where = 'checkpoints.intro.steps.built.showIf';
+      raw.checkpoints[0].steps.at(-1)!.showIf = {
+        stepId: 'review',
+        questionId: 9,
+        choiceId: 'maybe',
+      };
+      expect(problemsOf(raw)).toEqual([
+        `${where}: 'maybe' is not a review decision (build, skip)`,
+      ]);
+      raw.checkpoints[0].steps.at(-1)!.showIf = {
+        stepId: 'review',
+        questionId: 1,
+        choiceId: 'build',
+      };
+      expect(problemsOf(raw)).toEqual([
+        `${where}: 'review' saves its decision under question 9, not 1`,
       ]);
     });
   });

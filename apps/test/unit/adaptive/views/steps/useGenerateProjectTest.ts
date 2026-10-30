@@ -57,7 +57,6 @@ const options = (
   checkpoint: {id: 'intro'} as never,
   step,
   progress: {steps: {}},
-  projectInfo: {},
   aichatContext: {
     clientType: AiChatClientTypes.ADAPTIVE,
     currentLevelId: 1,
@@ -100,7 +99,7 @@ describe('useGenerateProject', () => {
     await flush();
 
     expect(mockGenerate).toHaveBeenCalledWith(
-      expect.objectContaining({step, sources: template, projectInfo: {}})
+      expect.objectContaining({step, sources: template})
     );
     expect(opts.updateSources).toHaveBeenCalledWith(seeded, true);
     expect(opts.projectManager?.updateChannel).toHaveBeenCalledWith(

@@ -34,7 +34,6 @@ import {isAdaptiveAiEnabled} from '../../ai/generate';
 import {buildTutorContext} from '../../ai/tutorContext';
 import {workAdapterFor} from '../../ai/validation/adapters';
 import {latestValidation} from '../../progress/model';
-import {generationTraceId} from '../../project/projectGeneration';
 import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
@@ -102,6 +101,15 @@ type LevelPlayerProps = LevelStepProps & {
   View: Lab2EntryPoint['view'];
 };
 
+/** The project template's start sources as the level carries them, if any. */
+function templateStartSources(
+  levelProperties: LevelProperties
+): ProjectSources | undefined {
+  const sources = levelProperties.templateSources;
+  if (!sources) return undefined;
+  return 'source' in sources ? sources : {source: sources};
+}
+
 /** Loads the level's project, then mounts the lab view over it. */
 const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   step,
@@ -117,7 +125,6 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     loadError,
     isLoading,
     isEditable,
-    hasSavedSources,
     updateSources,
   } = useSources({
     levelProperties,
@@ -132,32 +139,48 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     saveGeneratedInstructions,
     recordValidation,
     aiContext,
+    buildRequested,
+    setBuildRequested,
   } = usePathwayContext();
   // Read on mount, before StepPlayer's start of this visit gives it a status.
   const [firstVisit] = useState(() => !progress.steps[step.id]?.status);
+  // A review's build request is for the first project step with a prompt
+  // after it, so this step takes it on mount and spends it.
+  const [buildProject] = useState(
+    () => !!step.project && !!step.projectPrompt && buildRequested
+  );
+  useEffect(() => {
+    if (buildProject) setBuildRequested(false);
+  }, [buildProject, setBuildRequested]);
   // Keyed on the project's strings, not the channel, which changes on every save.
   const {name: projectName, description: projectDescription} =
     projectInfoFromChannel(step.project ? channel : undefined);
-  // A step with a project prompt generates the student's first version of
-  // the project before anything else reads it: once, for the owner, on a
-  // project with nothing saved and nothing generated. Unknown until loaded.
+  // A step with a project prompt rebuilds the owner's project from their
+  // plan when they asked for that on the review step before it, before
+  // anything else reads it. Opening it any other way loads what is there.
+  // Unknown until loaded.
   const isProjectLoaded =
     !isLoading && currentSources !== undefined && !!channel && !!projectManager;
   const shouldGenerateProject =
-    !step.project || !step.projectPrompt
+    !step.project || !step.projectPrompt || !buildProject
       ? false
       : !isProjectLoaded
       ? undefined
-      : isEditable && !hasSavedSources && !generationTraceId(channel);
+      : isEditable;
+  // Built over the template's start sources, not the project as it stands,
+  // so a rebuild does not inherit the site it replaces.
+  const templateSources = useMemo(
+    () => templateStartSources(levelProperties),
+    [levelProperties]
+  );
   const {isResolved: projectReady} = useGenerateProject({
     shouldGenerate: shouldGenerateProject,
     pathway,
     checkpoint,
     step,
     progress,
-    projectInfo: {name: projectName, description: projectDescription},
     aichatContext: aiContext,
-    sources: currentSources,
+    sources: templateSources ?? currentSources,
     channel,
     projectManager,
     updateSources,
