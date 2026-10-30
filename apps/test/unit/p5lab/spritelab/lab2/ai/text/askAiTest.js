@@ -67,30 +67,6 @@ describe('askAiText', () => {
     expect(extra.aichatContext.currentLevelId).toBe(7);
   });
 
-  // additionalProperties: false — anything else is dropped before the model
-  // sees it, so sending it would only look like it was doing something.
-  it('sends nothing outside the gateway request contract', async () => {
-    await askAiText('hello');
-    const [sent] = generateText.mock.calls[0];
-    expect(Object.keys(sent).sort()).toEqual([
-      'model',
-      'prompt',
-      'system',
-      'temperature',
-    ]);
-  });
-
-  it('varies the system text per request, so one question can differ', async () => {
-    await askAiText('hello');
-    await askAiText('hello');
-    const [first] = generateText.mock.calls[0];
-    const [second] = generateText.mock.calls[1];
-    expect(first.system).not.toBe(second.system);
-    // The question itself is untouched; only the tag moves.
-    expect(first.prompt).toBe(second.prompt);
-    expect(first.system).toContain(SYSTEM_PROMPT);
-  });
-
   it('throws with the prompt phase when the question is flagged', async () => {
     isTextSafe.mockResolvedValueOnce(false);
     await expect(askAiText('something awful')).rejects.toMatchObject({

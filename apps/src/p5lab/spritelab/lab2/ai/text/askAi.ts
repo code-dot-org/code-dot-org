@@ -32,9 +32,6 @@ export const MAX_PROMPT_CHARACTERS = 1000;
 // some of the places it can go (the say bubble) have a length limit.
 export const MAX_ANSWER_CHARACTERS = 150;
 
-// This tag is what makes two requests with the same question differ.
-const requestTag = () => Math.random().toString(36).slice(2, 10);
-
 export const SYSTEM_PROMPT = `You answer questions for a student building a game in a block-based programming class.
 
 - Write plain sentences a middle schooler can read: no markdown, lists, emoji, or code.
@@ -101,9 +98,7 @@ async function requestAnswer(prompt: string): Promise<string> {
   const {text} = await generateText(
     {
       model: getModel(AiChatModelIds.GEMINI_2_5_FLASH),
-      // The tag rides in the system text because it is the one field the
-      // gateway forwards that the student never sees.
-      system: `${SYSTEM_PROMPT}\n\nRequest tag ${requestTag()}. The tag is internal; never mention or repeat it.`,
+      system: SYSTEM_PROMPT,
       prompt,
       temperature: 0.7,
     },
