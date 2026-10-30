@@ -30,7 +30,10 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
 }) => {
   const ColumnTag = onClickItem ? 'div' : 'ul';
   return (
-    <ColumnTag className={styles.column}>
+    <ColumnTag
+      className={styles.column}
+      role={onClickItem ? undefined : 'list'}
+    >
       {itemsInColumn(matchSets, side).map(item => {
         const partnerId = findPartner(pairs, item.id);
         const isSelected = selectedId === item.id;
