@@ -8,10 +8,10 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true\r\n}",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L07-previs-base\"\r\n  ],\r\n  \"label\": \"Decision\"\r\n}",
     "uses_lab2": "true",
     "dynamic_instructions": "{\r\n  \"datasetView\": \"#Feature budget\\n\\nChoose exactly 4 features and train.\",\r\n  \"results\": \"#Test the Tree\\n\\nRun several different combinations and try to get the most accurate tree possible.,\\n\"\r\n}"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-28T20:57:05.113+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio3\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio3\"},{\"changed_at\":\"2026-10-28 20:58:10 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-28T20:57:05.113+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio3\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio3\"},{\"changed_at\":\"2026-10-28 20:58:10 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 14:25:42 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 14:25:51 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Ailab>
