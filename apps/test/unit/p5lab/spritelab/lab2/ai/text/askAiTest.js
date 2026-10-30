@@ -6,7 +6,6 @@ import {
   AskAiError,
   cleanAnswer,
   isAskAiEnabled,
-  SYSTEM_PROMPT,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/text/askAi';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
