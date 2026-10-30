@@ -1,5 +1,11 @@
 import classNames from 'classnames';
-import React, {createContext, useLayoutEffect, useRef, useState} from 'react';
+import React, {
+  createContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import {MapFit} from './MapView';
 import {useElementSize} from './useElementSize';
@@ -32,6 +38,38 @@ export interface MapZoomState {
 
 export const MapZoomContext = createContext<MapZoomState>({zoom: 1});
 
+const ZOOM_MS = 250;
+
+/**
+ * The zoom eased toward target a frame at a time, evenly in ratio so each
+ * doubling takes as long as the last; at once when motion is reduced.
+ */
+function useEasedZoom(target: number): number {
+  const [zoom, setZoom] = useState(target);
+  const current = useRef(target);
+  useEffect(() => {
+    const from = current.current;
+    if (from === target) return;
+    const show = (value: number) => {
+      current.current = value;
+      setZoom(value);
+    };
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+      show(target);
+      return;
+    }
+    const start = performance.now();
+    let frame = requestAnimationFrame(function step(now) {
+      const t = Math.min(1, (now - start) / ZOOM_MS);
+      const eased = 1 - (1 - t) ** 3;
+      show(t === 1 ? target : from * (target / from) ** eased);
+      if (t < 1) frame = requestAnimationFrame(step);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [target]);
+  return zoom;
+}
+
 /**
  * Zoom for a map: scales the fitted map inside it by the chosen level and
  * scrolls it, with a column of zoom controls. A map smaller than the view is
@@ -51,7 +89,7 @@ const MapZoom: React.FunctionComponent<MapZoomProps> = ({
   const [viewRef, view] = useElementSize<HTMLDivElement>();
   const [contentRef, content] = useElementSize<HTMLDivElement>();
   const moved = useRef(false);
-  const zoom = zoomPercentages[level] / 100;
+  const zoom = useEasedZoom(zoomPercentages[level] / 100);
   const left = Math.max(0, (view.width - content.width * zoom) / 2);
   const top = Math.max(0, (view.height - content.height * zoom) / 2);
   // Read in render: scrolling does not render, and a disabled view cannot

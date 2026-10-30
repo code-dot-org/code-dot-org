@@ -48,7 +48,7 @@ const ZoomControls: React.FunctionComponent<ZoomControlsProps> = ({
         aria-label="Reset zoom"
         onClick={() => onChange(resetLevel)}
       >
-        <FontAwesomeV6Icon iconName="expand" />
+        <FontAwesomeV6Icon iconName="up-right-and-down-left-from-center" />
       </IconButton>
     )}
   </div>
