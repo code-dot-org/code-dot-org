@@ -224,6 +224,76 @@ describe('QuestionsStep', () => {
     });
   });
 
+  describe('with a question that allows a typed answer', () => {
+    const otherStep: Step = {
+      ...step,
+      questions: [
+        {
+          ...question(1, 'What are you into?'),
+          allowOther: {placeholder: 'Or type your own'},
+        },
+      ],
+    };
+    const typed = () => screen.getByRole('textbox', {name: 'Or type your own'});
+
+    it('offers an Other option after the choices', () => {
+      renderStep({}, otherStep);
+      expect(screen.getByRole('radio', {name: /Other/})).toBeInTheDocument();
+      expect(typed()).toBeInTheDocument();
+    });
+
+    it('picks Other when the student types, and saves the text under the other id', () => {
+      const {saved, onComplete} = renderStep({}, otherStep);
+      fireEvent.change(typed(), {target: {value: 'Rockets'}});
+      expect(screen.getByRole('radio', {name: /Other/})).toBeChecked();
+
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(saved).toEqual([[1, [{answerId: 'other', text: 'Rockets'}]]]);
+      expect(onComplete).toHaveBeenCalledTimes(1);
+    });
+
+    it('keeps Submit disabled while Other is picked with nothing typed', () => {
+      renderStep({}, otherStep);
+      fireEvent.click(screen.getByRole('radio', {name: /Other/}));
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+      fireEvent.change(typed(), {target: {value: '  '}});
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+    });
+
+    it('restores a typed answer, which resubmitted is not a new save', () => {
+      const {saved, onComplete} = renderStep(
+        {1: [{answerId: 'other', text: 'Rockets'}]},
+        otherStep
+      );
+      expect(screen.getByRole('radio', {name: /Other/})).toBeChecked();
+      expect(typed()).toHaveValue('Rockets');
+
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(saved).toEqual([]);
+      expect(onComplete).toHaveBeenCalledTimes(1);
+    });
+
+    it('saves a changed typed answer as new', () => {
+      const {saved} = renderStep(
+        {1: [{answerId: 'other', text: 'Rockets'}]},
+        otherStep
+      );
+      fireEvent.change(typed(), {target: {value: 'Rockets and robots'}});
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(saved).toEqual([
+        [1, [{answerId: 'other', text: 'Rockets and robots'}]],
+      ]);
+    });
+
+    it('saves a picked choice without the typed text', () => {
+      const {saved} = renderStep({}, otherStep);
+      fireEvent.change(typed(), {target: {value: 'Rockets'}});
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      expect(saved).toEqual([[1, [{answerId: 'a'}]]]);
+    });
+  });
+
   describe('with a free response question', () => {
     it('renders a textarea with the configured placeholder', () => {
       renderStep({}, freeResponseStep);

@@ -14,6 +14,8 @@ class AdaptiveProgressController < ApplicationController
 
   MAX_JSON_BYTES = 64.kilobytes
   MAX_TEXT_LENGTH = 10_000
+  # OTHER_CHOICE_ID in apps/src/adaptive/schema/question.ts.
+  OTHER_CHOICE_ID = 'other'
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
@@ -182,9 +184,17 @@ class AdaptiveProgressController < ApplicationController
     case question['type']
     when 'MultipleChoiceQuestion'
       choice_ids = Array(question['choices']).map {|choice| choice['id']}
-      return nil unless entries.all? {|entry| choice_ids.include?(entry['answerId'])}
+      # A question that allows it takes a typed answer under the reserved id, with its text.
+      typed = ->(entry) {question['allowOther'] && entry['answerId'] == OTHER_CHOICE_ID && entry['text'].is_a?(String) && entry['text'].length <= MAX_TEXT_LENGTH}
+      return nil unless entries.all? {|entry| choice_ids.include?(entry['answerId']) || typed.call(entry)}
       correct_id = question['correctChoiceId']
-      list = entries.map {|entry| {'answerId' => entry['answerId'], 'isCorrect' => correct_id && entry['answerId'] == correct_id}.compact}
+      list = entries.map do |entry|
+        {
+          'answerId' => entry['answerId'],
+          'text' => (entry['text'] if typed.call(entry)),
+          'isCorrect' => correct_id && entry['answerId'] == correct_id,
+        }.compact
+      end
     when 'freeResponse'
       return nil unless entries.all? {|entry| entry['text'].is_a?(String) && entry['text'].length <= MAX_TEXT_LENGTH}
       list = entries.map {|entry| {'text' => entry['text']}}
