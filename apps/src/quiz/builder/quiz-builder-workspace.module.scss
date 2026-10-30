@@ -249,31 +249,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   width: 100%;
   min-height: 46px;
   padding: 30px 10px 32px;
   border: 1px dashed var(--border-neutral-primary);
   border-radius: var(--shape-md);
   background: transparent;
+  text-align: center;
 }
 
-.emptyQuizInner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
+.emptyQuizTitle,
+.emptyQuizBody,
+.emptyQuizActions {
   width: 100%;
   max-width: 400px;
-}
-
-.emptyQuizCopy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  width: 100%;
-  text-align: center;
 }
 
 .emptyQuizTitle {
@@ -291,17 +281,23 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
+  margin-top: 10px;
+}
+
+.addQuestionRow,
+.addPageSlot {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  border: 1px dashed var(--border-neutral-secondary);
+  border-radius: var(--shape-lg);
+  background: var(--background-neutral-secondary);
 }
 
 .addQuestionRow {
   position: relative;
-  display: flex;
-  justify-content: center;
   width: 100%;
   padding: 8px 0;
-  border: 1px dashed var(--border-neutral-secondary);
-  border-radius: var(--shape-lg);
-  background: var(--background-neutral-secondary);
 }
 
 .addQuestionRow:focus-within {
@@ -313,14 +309,8 @@
 }
 
 .addPageSlot {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
   width: fit-content;
   margin-inline: auto;
   padding: 8px;
-  border: 1px dashed var(--border-neutral-secondary);
-  border-radius: var(--shape-lg);
-  background: var(--background-neutral-secondary);
 }
 

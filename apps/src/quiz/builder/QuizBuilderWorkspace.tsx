@@ -132,43 +132,39 @@ const QuizBuilderWorkspace: React.FunctionComponent<
       aria-labelledby="quiz-empty-title"
       aria-describedby="quiz-empty-hint"
     >
-      <div className={styles.emptyQuizInner}>
-        <div className={styles.emptyQuizCopy}>
-          <Typography
-            variant="h6"
-            component="h2"
-            id="quiz-empty-title"
-            className={styles.emptyQuizTitle}
-          >
-            This quiz is empty
-          </Typography>
-          <Typography
-            variant="body3"
-            component="p"
-            id="quiz-empty-hint"
-            className={styles.emptyQuizBody}
-          >
-            Start by creating a new question or adding a page.
-          </Typography>
-        </div>
-        <div className={styles.emptyQuizActions}>
-          <CreateQuestionDropdown
-            name="create-question-empty"
-            onCreate={type => handleCreate(1, type)}
-            disabled={isLoading}
-          />
-          <Button
-            variant="outlined"
-            color="secondary"
-            size="extraSmall"
-            type="button"
-            disabled={isLoading}
-            onClick={() => setAddedEmptyPage(1)}
-            startIcon={<FontAwesomeV6Icon iconName="plus" />}
-          >
-            New page
-          </Button>
-        </div>
+      <Typography
+        variant="h6"
+        component="h2"
+        id="quiz-empty-title"
+        className={styles.emptyQuizTitle}
+      >
+        This quiz is empty
+      </Typography>
+      <Typography
+        variant="body3"
+        component="p"
+        id="quiz-empty-hint"
+        className={styles.emptyQuizBody}
+      >
+        Start by creating a new question or adding a page.
+      </Typography>
+      <div className={styles.emptyQuizActions}>
+        <CreateQuestionDropdown
+          name="create-question-empty"
+          onCreate={type => handleCreate(1, type)}
+          disabled={isLoading}
+        />
+        <Button
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
+          type="button"
+          disabled={isLoading}
+          onClick={() => setAddedEmptyPage(1)}
+          startIcon={<FontAwesomeV6Icon iconName="plus" />}
+        >
+          New page
+        </Button>
       </div>
     </div>
   );
