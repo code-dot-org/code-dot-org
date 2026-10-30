@@ -1,9 +1,19 @@
+import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react';
+import React, {
+  ErrorInfo,
+  useEffect,
+  useRef,
+  useState,
+  useCallback,
+  useMemo,
+} from 'react';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectIsWaitingForChatResponse} from '../redux';
@@ -34,6 +44,23 @@ interface ChatEventsListProps {
     onRequestScrollToBottom: () => void
   ) => React.ReactNode;
 }
+
+const unrenderableEventAlert = (
+  <Alert
+    text="This message could not be displayed."
+    type="danger"
+    size="s"
+    isImmediateImportance={false}
+  />
+);
+
+const logEventRenderError = (
+  error: Error,
+  componentStack: ErrorInfo['componentStack']
+) =>
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .logError('Chat event failed to render', error, {componentStack});
 
 /**
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
@@ -108,6 +135,13 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     if (e.target === e.currentTarget && e.key === 'Enter') {
       setIsInChatNavigationMode(true);
       finalEventRef.current?.focus();
+    }
+  };
+
+  const handleEventKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Escape' && e.target === e.currentTarget) {
+      setIsInChatNavigationMode(false);
+      parentRef.current?.focus();
     }
   };
 
@@ -258,26 +292,38 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
             {events.map((event, index) => {
               const isLastEvent = index === events.length - 1;
               const isLastChatMessage = index === lastChatMessageIndex;
+              const eventNavigationProps = {
+                ref: isLastEvent ? finalEventRef : undefined,
+                tabIndex: isInChatNavigationMode ? 0 : -1,
+                onKeyDown: handleEventKeyDown,
+              };
               return (
-                <ChatEventView
-                  event={event}
+                <ErrorBoundary
                   key={event.timestamp}
-                  isTeacherView={isTeacherView}
-                  buildAssetUrl={buildAssetUrl}
-                  clientType={clientType}
-                  modelParameters={modelParameters}
-                  postText={
-                    isLastChatMessage ? resolvedLastMessagePostText : undefined
+                  fallback={
+                    <div
+                      {...eventNavigationProps}
+                      className={moduleStyles.chatMessageOutline}
+                    >
+                      {unrenderableEventAlert}
+                    </div>
                   }
-                  ref={isLastEvent ? finalEventRef : undefined}
-                  tabIndex={isInChatNavigationMode ? 0 : -1}
-                  onKeyDown={e => {
-                    if (e.key === 'Escape' && e.target === e.currentTarget) {
-                      setIsInChatNavigationMode(false);
-                      parentRef.current?.focus();
+                  onError={logEventRenderError}
+                >
+                  <ChatEventView
+                    event={event}
+                    isTeacherView={isTeacherView}
+                    buildAssetUrl={buildAssetUrl}
+                    clientType={clientType}
+                    modelParameters={modelParameters}
+                    postText={
+                      isLastChatMessage
+                        ? resolvedLastMessagePostText
+                        : undefined
                     }
-                  }}
-                />
+                    {...eventNavigationProps}
+                  />
+                </ErrorBoundary>
               );
             })}
             <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
