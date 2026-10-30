@@ -1,0 +1,60 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-10-27T23:26:17.000Z",
+  "level_num": "custom",
+  "properties": {
+    "require_edit_to_continue": "true",
+    "long_instructions": "Here is a first version of your site, built from your plan. Look it over, then continue.",
+    "project_template_level_name": "adaptive-HoAI26-template-main-project",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildPage"
+      ],
+      "answerTypeCustomizations": {}
+    },
+    "start_sources": {
+      "folders": {},
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
+  }
+}]]></config>
+</Weblab2>
