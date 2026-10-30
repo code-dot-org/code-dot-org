@@ -208,6 +208,80 @@ class QuizQuestionPlacementsControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
+  test "reorder is forbidden for a non-levelbuilder" do
+    sign_in @teacher
+    put :reorder, as: :json, params: {level_id: @quiz.id, placements: []}
+    assert_response :forbidden
+  end
+
+  test "reorder renumbers pages from 1 and positions from 1 within each page, in the order given" do
+    question2 = create(:multiple_choice_question)
+    question3 = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question2, page: 1, position: 2)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question3, page: 2, position: 3)
+
+    put :reorder, as: :json, params: {
+      level_id: @quiz.id,
+      placements: [
+        {quizQuestionId: question3.id, page: 4, position: 1},
+        {quizQuestionId: @question.id, page: 7, position: 9},
+        {quizQuestionId: question2.id, page: 4, position: 5},
+      ]
+    }
+
+    assert_response :success
+    expected = [
+      {'quizQuestionId' => question3.id, 'page' => 1, 'position' => 1},
+      {'quizQuestionId' => question2.id, 'page' => 1, 'position' => 2},
+      {'quizQuestionId' => @question.id, 'page' => 2, 'position' => 1},
+    ]
+    assert_equal expected, JSON.parse(response.body)
+    assert_equal [[question3.id, 1, 1], [question2.id, 1, 2], [@question.id, 2, 1]],
+      (@quiz.placements.reload.map {|p| [p.quiz_question_id, p.page, p.position]})
+  end
+
+  test "reorder writes the quiz's .level file once" do
+    question2 = create(:multiple_choice_question)
+    create(:quiz_question_placement, level: @quiz, quiz_question: question2, page: 1, position: 2)
+    Services::LevelFiles.expects(:write_custom_level_file).once
+
+    put :reorder, as: :json, params: {
+      level_id: @quiz.id,
+      placements: [
+        {quizQuestionId: question2.id, page: 1, position: 1},
+        {quizQuestionId: @question.id, page: 1, position: 2},
+      ]
+    }
+
+    assert_response :success
+  end
+
+  test "reorder returns bad_request and changes nothing when the questions differ from the quiz's" do
+    other_question = create(:multiple_choice_question)
+
+    put :reorder, as: :json, params: {
+      level_id: @quiz.id,
+      placements: [
+        {quizQuestionId: @question.id, page: 2, position: 1},
+        {quizQuestionId: other_question.id, page: 1, position: 1},
+      ]
+    }
+
+    assert_response :bad_request
+    assert_equal [1, 1], [@placement.reload.page, @placement.position]
+    refute QuizQuestionPlacement.exists?(level: @quiz, quiz_question: other_question)
+  end
+
+  test "reorder returns bad_request when a field is not an integer" do
+    put :reorder, as: :json, params: {
+      level_id: @quiz.id,
+      placements: [{quizQuestionId: @question.id, page: 'two', position: 1}]
+    }
+
+    assert_response :bad_request
+    assert_equal 1, @placement.reload.page
+  end
+
   test "detach removes the placement but leaves the question itself intact" do
     delete :detach, params: {level_id: @quiz.id, id: @question.id}
 

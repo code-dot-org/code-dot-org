@@ -54,6 +54,36 @@ class QuizQuestionPlacementsController < ApplicationController
     render status: :bad_request, json: {error: exception.message}
   end
 
+  # PUT /levels/:level_id/quiz_question_placements/reorder
+  #
+  # Renumbers every placement's page and position from 1, in the order given.
+  # Must list exactly this quiz's questions; never adds or removes one.
+  def reorder
+    entries = reorder_params
+    placements_by_question_id = @level.placements.index_by(&:quiz_question_id)
+    unless entries.pluck(:quiz_question_id).sort == placements_by_question_id.keys.sort
+      return render status: :bad_request, json: {error: 'The quiz has changed. Reload and try again.'}
+    end
+
+    page_numbers = entries.pluck(:page).uniq.sort.each_with_index.to_h {|page, i| [page, i + 1]}
+    last_position_by_page = Hash.new(0)
+    ActiveRecord::Base.transaction(requires_new: true) do
+      entries.sort_by {|e| [e[:page], e[:position]]}.each do |entry|
+        page = page_numbers[entry[:page]]
+        # update_columns skips the after_commit that rewrites the .level file per placement.
+        placements_by_question_id[entry[:quiz_question_id]].update_columns(
+          page: page, position: last_position_by_page[page] += 1, updated_at: Time.now
+        )
+      end
+    end
+    # Writes the .level file once for the whole reorder.
+    @level.with_lock {@level.save!}
+
+    render json: @level.placements.reload.map {|p| {quizQuestionId: p.quiz_question_id, page: p.page, position: p.position}}
+  rescue StandardError => exception
+    render status: :bad_request, json: {error: exception.message}
+  end
+
   # DELETE /levels/:level_id/quiz_question_placements/:id/detach
   #
   # Destroys the placement only; the question itself is untouched.
@@ -88,6 +118,17 @@ class QuizQuestionPlacementsController < ApplicationController
     render json: {destroyed: destroyed}
   rescue ActiveRecord::RecordNotFound
     head :not_found
+  end
+
+  # Raises on a missing or non-integer field, which reorder reports as 400.
+  private def reorder_params
+    params.fetch(:placements, []).map do |entry|
+      {
+        quiz_question_id: Integer(entry[:quizQuestionId]),
+        page: Integer(entry[:page]),
+        position: Integer(entry[:position]),
+      }
+    end
   end
 
   private def require_quiz_level

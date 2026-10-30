@@ -22,6 +22,7 @@ class QuizzesController < ApplicationController
     published_usage = QuizQuestion.published_unit_usage(question_ids)
 
     render json: quiz_configuration_json(@level).merge(
+      usedInPublishedUnit: @level.used_in_published_unit?,
       questions: placements.map do |placement|
         question = placement.quiz_question
         quiz_question_json(
