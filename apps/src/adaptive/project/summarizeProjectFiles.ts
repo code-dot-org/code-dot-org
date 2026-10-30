@@ -5,7 +5,7 @@ import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 const FILE_LIMIT = 1500;
 const TOTAL_LIMIT = 8000;
 
-const isMultiFile = (source: unknown): source is MultiFileSource =>
+export const isMultiFile = (source: unknown): source is MultiFileSource =>
   typeof source === 'object' &&
   source !== null &&
   'files' in source &&

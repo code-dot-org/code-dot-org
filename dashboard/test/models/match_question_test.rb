@@ -39,11 +39,11 @@ class MatchQuestionTest < ActiveSupport::TestCase
     assert_equal({score: 0, max_score: 1}, question.grade('pairs' => [['a', 'x', 'b'], ['b', 'y'], ['c', 'z']]))
   end
 
-  test "answered? is true only when at least one pair is given" do
+  test "response_answered? is true only when at least one pair is given" do
     question = build(:match_question)
-    assert question.answered?({'pairs' => [['a', 'x']]})
-    refute question.answered?({'pairs' => []})
-    refute question.answered?({})
+    assert question.response_answered?({'pairs' => [['a', 'x']]})
+    refute question.response_answered?({'pairs' => []})
+    refute question.response_answered?({})
   end
 
   test "attempt_content_json splits the pairs into two sets and omits the answer key" do
@@ -52,8 +52,32 @@ class MatchQuestionTest < ActiveSupport::TestCase
     refute json.key?(:pairs)
     refute json.key?(:correctPairs)
     first, second = json[:matchSets]
-    assert_equal ['a', 'b', 'c'], first.map {|i| i['id']}.sort
+    assert_equal(['a', 'b', 'c'], first.map {|i| i['id']})
     assert_equal ['x', 'y', 'z'], second.map {|i| i['id']}.sort
+  end
+
+  test "attempt_content_json orders the second set the same way on every call" do
+    question = create(:match_question)
+    assert_equal question.attempt_content_json[:matchSets], question.attempt_content_json[:matchSets]
+  end
+
+  # The expected orders were copied from a run of the code with the stubbed
+  # secrets below; they can't be worked out by reading it. If this fails, every live match question now
+  # shows students a new order, so update the values only if that's intended.
+  test "attempt_content_json orders the second set by the question key and a server secret" do
+    second_set = ->(question) {question.attempt_content_json[:matchSets][1].map {|i| i['id']}}
+    question1 = create(:match_question, key: 'key-1')
+    question2 = create(:match_question, key: 'key-2')
+
+    # Same content, different keys: questions copied from one template still
+    # get different orders.
+    Rails.application.key_generator.stubs(:generate_key).returns('secret-2')
+    assert_equal %w(y x z), second_set.call(question1)
+    assert_equal %w(x z y), second_set.call(question2)
+
+    # Same key, different secret: the public key alone doesn't determine the order.
+    Rails.application.key_generator.stubs(:generate_key).returns('secret-1')
+    assert_equal %w(y z x), second_set.call(question2)
   end
 
   test "answer_key_json lists each pair's item ids" do

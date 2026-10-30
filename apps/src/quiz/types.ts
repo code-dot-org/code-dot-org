@@ -31,8 +31,8 @@ export interface QuizQuestionSummary {
   questionTitle: string;
   description?: string | null;
   choices?: QuizQuestionItem[];
-  // A match question's two sets of items. The server shuffles each set on
-  // every load.
+  // A match question's two sets of items: the first in authored order, the
+  // second shuffled, the same way for every student.
   matchSets?: [QuizQuestionItem[], QuizQuestionItem[]];
   page: number;
 }
