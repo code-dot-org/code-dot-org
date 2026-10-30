@@ -46,7 +46,7 @@ describe('SpriteLab2 characterSet', () => {
 
   it('passes a chosen pixel block into both frame prompts', () => {
     expect(basePrompt('a knight', 'pixel', key, 32)).toContain(
-      '32x32 pixel grid'
+      '32x32 logical pixels'
     );
     expect(
       posePrompt(
@@ -56,7 +56,7 @@ describe('SpriteLab2 characterSet', () => {
         key,
         32
       )
-    ).toContain('32x32 pixel grid');
+    ).toContain('32x32 logical pixels');
   });
 
   it('draws an animal on four legs when the body plan says so', () => {

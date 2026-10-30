@@ -45,7 +45,9 @@ export function logicalGridFor(blockSize: number): number {
 // Tacked onto the prompt so the generated image matches the chosen style.
 // Kept here (not inline) so the sprite and background prompts stay in sync.
 // Callers pass the pixelBlockFor block they also normalize against, so what
-// we ask for and what we assume can't drift apart.
+// we ask for and what we assume can't drift apart. The word "grid" appears
+// only in the prohibition: asked to draw "on a pixel grid", the model has
+// drawn the grid itself, as dark lines across a background.
 export function styleClause(style: ImageStyle, blockSize: number): string {
   if (style !== 'pixel') {
     return SMOOTH_PROMPT;
@@ -54,9 +56,11 @@ export function styleClause(style: ImageStyle, blockSize: number): string {
   return (
     'Render as crisp pixel art with a small, limited color palette and ' +
     'hard-edged pixels — no anti-aliasing, gradients, or soft shading. ' +
-    `Draw on a strict ${logical}x${logical} pixel grid: every logical ` +
-    `pixel is a uniform ${blockSize}x${blockSize} block, perfectly ` +
-    'aligned to the image edges.'
+    `The picture is made of exactly ${logical}x${logical} logical pixels: ` +
+    `each one is a uniform ${blockSize}x${blockSize} block of flat color, ` +
+    'perfectly aligned to the image edges. Blocks touch each other ' +
+    'directly: no grid lines, borders, seams or outlines between them, ' +
+    'and no visible grid anywhere in the image.'
   );
 }
 
