@@ -3,7 +3,12 @@
 // router reads evidence computed from progress on every decision, so authored
 // evidence levels can change without migrating anything.
 
-import type {Answer, Progress, StepProgress} from '../progress/model';
+import {
+  type Answer,
+  type Progress,
+  type StepProgress,
+  visibleSteps,
+} from '../progress/model';
 import {Measures} from '../schema/question';
 import {Checkpoint, LevelStep, Pathway, QuestionsStep, Step} from '../types';
 
@@ -48,7 +53,8 @@ export function computeEvidence(
 ): PathwayEvidence {
   const evidence: PathwayEvidence = {};
   for (const checkpoint of pathway.checkpoints) {
-    for (const step of checkpoint.steps) {
+    // A branch the student's answers hide may hold answers from before they changed them.
+    for (const step of visibleSteps(checkpoint, progress)) {
       for (const observation of getStepEvidence(
         step,
         progress.steps[step.id]

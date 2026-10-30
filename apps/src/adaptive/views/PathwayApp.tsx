@@ -265,6 +265,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       <div className={styles.app}>
         <PathwayContext.Provider value={pathwayContext}>
           <StepPlayer
+            key={checkpoint.id}
             checkpoint={checkpoint}
             finishLabel={isProject ? 'Back to map' : undefined}
             headerTitle={isProject ? checkpoint.title : undefined}

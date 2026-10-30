@@ -41,6 +41,13 @@ const pathway: Pathway = {
             {id: 3, type: 'freeResponse', text: 'Who is it for?'},
           ],
         },
+        {
+          id: 'branch',
+          title: 'Branch',
+          kind: 'questions',
+          showIf: {stepId: 'plan', questionId: 2, choiceId: 'b'},
+          questions: [{id: 6, type: 'freeResponse', text: 'Why B?'}],
+        },
       ],
     },
     {
@@ -128,6 +135,25 @@ describe('freeResponseAnswers', () => {
 
   it('is empty with nothing answered', () => {
     expect(freeResponseAnswers(pathway, {steps: {}})).toEqual([]);
+  });
+  it('leaves out a branch the current answers hide', () => {
+    const branchAnswer = {6: [{answerId: '', text: 'Because'}]};
+    const shown: Progress = {
+      steps: {
+        plan: {timeSpent: 0, answers: {2: [{answerId: 'b'}]}},
+        branch: {timeSpent: 0, answers: branchAnswer},
+      },
+    };
+    expect(freeResponseAnswers(pathway, shown).map(a => a.answer)).toEqual([
+      'Because',
+    ]);
+    const hidden: Progress = {
+      steps: {
+        plan: {timeSpent: 0, answers: {2: [{answerId: 'b'}, {answerId: 'a'}]}},
+        branch: {timeSpent: 0, answers: branchAnswer},
+      },
+    };
+    expect(freeResponseAnswers(pathway, hidden)).toEqual([]);
   });
 });
 
