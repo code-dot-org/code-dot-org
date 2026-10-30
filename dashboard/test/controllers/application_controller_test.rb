@@ -243,6 +243,45 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  describe 'privileged sign-in expiry' do
+    let(:user) {create(:levelbuilder)}
+    let(:page_load) {{'Accept' => 'text/html,application/xhtml+xml'}}
+
+    # sign_in takes effect on the next request, which also sets current_sign_in_at.
+    before do
+      sign_in user
+      get api_v1_users_current_path
+      user.update_columns(current_sign_in_at: 31.days.ago)
+    end
+
+    it 'signs out a levelbuilder on a page load' do
+      get root_path, headers: page_load
+      assert_redirected_to new_user_session_path
+      get api_v1_users_current_path
+      refute JSON.parse(response.body)['is_signed_in']
+    end
+
+    it 'does not interrupt API requests' do
+      get api_v1_users_current_path
+      assert JSON.parse(response.body)['is_signed_in']
+    end
+
+    it 'keeps a recent sign-in' do
+      user.update_columns(current_sign_in_at: 29.days.ago)
+      get root_path, headers: page_load
+      refute_redirect_to new_user_session_path
+    end
+
+    describe 'without a privilege' do
+      let(:user) {create(:teacher)}
+
+      it 'keeps an old sign-in' do
+        get root_path, headers: page_load
+        refute_redirect_to new_user_session_path
+      end
+    end
+  end
+
   describe '#root_url' do
     subject(:root_url_helper) {root_url}
 

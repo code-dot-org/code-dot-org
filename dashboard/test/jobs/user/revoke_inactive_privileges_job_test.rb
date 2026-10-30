@@ -3,6 +3,7 @@ require 'test_helper'
 class User::RevokeInactivePrivilegesJobTest < ActiveJob::TestCase
   setup do
     ChatClient.stubs(:message)
+    DCDO.set(User::RevokeInactivePrivilegesJob::DCDO_KEY, true)
   end
 
   def set_sign_in(user, created_at: 2.years.ago, current_sign_in_at: nil, last_sign_in_at: nil)
@@ -137,6 +138,15 @@ class User::RevokeInactivePrivilegesJobTest < ActiveJob::TestCase
     ChatClient.expects(:message).never
 
     User::RevokeInactivePrivilegesJob.perform_now
+  end
+
+  test 'does nothing while disabled' do
+    DCDO.set(User::RevokeInactivePrivilegesJob::DCDO_KEY, false)
+    admin = create_admin
+
+    User::RevokeInactivePrivilegesJob.perform_now
+
+    assert admin.reload.admin?
   end
 
   test 'dry run changes nothing' do

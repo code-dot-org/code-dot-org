@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'cdo/chat_client'
+require 'dynamic_config/dcdo'
 
 class User
   # Revokes admin and the levelbuilder permission from accounts that have not
@@ -10,7 +11,12 @@ class User
 
     SLACK_CHANNEL = 'cron-daily'
 
+    # Off until forced re-sign-in has been live long enough to make current_sign_in_at reliable.
+    DCDO_KEY = 'revoke_inactive_privileges'
+
     def perform(dry_run: false)
+      return unless dry_run || DCDO.get(DCDO_KEY, false)
+
       period = inactivity_period
       cutoff = period.ago
       admin_ids, levelbuilder_ids = ActiveRecord::Base.connected_to(role: :reporting) do
