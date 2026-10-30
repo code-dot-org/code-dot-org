@@ -144,7 +144,6 @@ describe('QuizBuilderWorkspace', () => {
       ],
     });
 
-    // A single page stays a flat outline, so the count is only the workspace total.
     expect(screen.getAllByText('2 questions')).toHaveLength(1);
     expect(screen.queryByText('Page 1')).not.toBeInTheDocument();
     expect(

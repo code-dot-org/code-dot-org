@@ -23,10 +23,8 @@ export interface BuilderCardProps {
   onRemove: () => void;
   // When set, Remove looks disabled but stays focusable to show this tooltip.
   cannotRemoveReason?: string;
-  // Nested in a page: item radius. Root / intro: block radius.
   nested?: boolean;
   showCollapsedRemove?: boolean;
-  // A new question that has not been posted yet: no Remove, Discard deletes it.
   neverSaved?: boolean;
   clampName?: boolean;
   children: React.ReactNode;

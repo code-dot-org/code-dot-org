@@ -33,7 +33,6 @@ export function questionCountLabel(count: number): string {
 interface QuizPageBlockProps {
   page: number;
   questions: QuizBuilderQuestion[];
-  // Flat when this is the quiz's only page and it already has questions.
   chrome: boolean;
   expandedId: number | null;
   onExpandedChange: (questionId: number, expanded: boolean) => void;

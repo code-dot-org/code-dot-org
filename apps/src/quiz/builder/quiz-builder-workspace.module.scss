@@ -88,20 +88,18 @@
   background: var(--border-neutral-primary);
 }
 
-// Isolating ancestor so deck layers (z-index -1) sit behind the card
-// border instead of painting over it. Isolation is only on the decked
-// state; otherwise an open ActionDropdown (no portal) stacks under the
-// next page. :focus-within lifts this page above following siblings.
 .pageBlock {
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
+// ActionDropdown does not portal, so this page has to paint above the next one.
 .pageBlock:focus-within {
   z-index: 1;
 }
 
+// Deck layers are z-index -1. Isolating every page would trap that menu.
 .pageBlockDeck {
   isolation: isolate;
 }
@@ -116,7 +114,6 @@
   background: var(--background-neutral-primary);
 }
 
-// Two card edges tucked under a collapsed page that still has questions.
 .pageDeck {
   margin-bottom: 10px;
 

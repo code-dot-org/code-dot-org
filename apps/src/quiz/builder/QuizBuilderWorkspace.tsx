@@ -260,7 +260,6 @@ const QuizBuilderWorkspace: React.FunctionComponent<
             </ul>
           </header>
 
-          {/* A question-specific error shows on that question's card instead - see error prop below. */}
           {error && errorQuestionId === null && (
             <Typography variant="body2" color="error" role="alert">
               {error}

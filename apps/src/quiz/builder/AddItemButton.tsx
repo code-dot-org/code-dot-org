@@ -10,7 +10,6 @@ interface AddItemButtonProps {
   disabled?: boolean;
 }
 
-// Dashed well with a text button, same add-slot language as the outline.
 const AddItemButton: React.FunctionComponent<AddItemButtonProps> = ({
   label,
   onClick,

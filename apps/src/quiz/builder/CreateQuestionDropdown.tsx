@@ -13,7 +13,6 @@ interface CreateQuestionDropdownProps {
   // Unique per instance; ActionDropdown uses it as the element id.
   name: string;
   onCreate: (type: QuizQuestionType) => void;
-  // contained for empty states, text inside a dashed add slot.
   variant?: 'contained' | 'outlined' | 'text';
   disabled?: boolean;
   // When set, the trigger stays focusable and this reason is shown in a tooltip.
