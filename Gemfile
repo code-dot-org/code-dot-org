@@ -85,6 +85,10 @@ group :development do
   gem 'aws-google', '~> 0.2.3'
   gem 'localhost'
   gem 'web-console', '~> 4.2.0'
+
+  # This would be helpful to include in :test, too, but it breaks delayed_job in Drone.
+  # See https://github.com/code-dot-org/code-dot-org/pull/56616#issuecomment-1966899127
+  gem 'debug', '>= 1.0.0'
 end
 
 # Rack::Cache middleware used in development/test;
@@ -93,8 +97,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-  # Use debugger
-  #gem 'debugger' unless ENV['RM_INFO']
 
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
