@@ -14,6 +14,7 @@ export interface MapProps {
   /** Checkpoint the map is zoomed onto, if any. */
   focusId?: string;
   onSelect: (id: string) => void;
+  tourFocusIds?: string[];
 }
 
 interface MapViewProps extends MapProps {
