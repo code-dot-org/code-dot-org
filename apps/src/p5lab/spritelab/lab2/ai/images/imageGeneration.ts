@@ -10,6 +10,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
+import {chooseKeyColor, keyClause, KeyColor} from './keyColor';
 import {
   ASSUMED_BLOCK,
   ImageSize,
@@ -22,7 +23,8 @@ import {
 import {
   cropToContent,
   flattenOntoGround,
-  removeBackground,
+  cropToSquare,
+  removeKeyColor,
 } from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
@@ -43,7 +45,9 @@ export function logicalGridFor(blockSize: number): number {
 // Tacked onto the prompt so the generated image matches the chosen style.
 // Kept here (not inline) so the sprite and background prompts stay in sync.
 // Callers pass the pixelBlockFor block they also normalize against, so what
-// we ask for and what we assume can't drift apart.
+// we ask for and what we assume can't drift apart. The word "grid" appears
+// only in the prohibition: asked to draw "on a pixel grid", the model has
+// drawn the grid itself, as dark lines across a background.
 export function styleClause(style: ImageStyle, blockSize: number): string {
   if (style !== 'pixel') {
     return SMOOTH_PROMPT;
@@ -52,17 +56,19 @@ export function styleClause(style: ImageStyle, blockSize: number): string {
   return (
     'Render as crisp pixel art with a small, limited color palette and ' +
     'hard-edged pixels — no anti-aliasing, gradients, or soft shading. ' +
-    `Draw on a strict ${logical}x${logical} pixel grid: every logical ` +
-    `pixel is a uniform ${blockSize}x${blockSize} block, perfectly ` +
-    'aligned to the image edges.'
+    `The picture is made of exactly ${logical}x${logical} logical pixels: ` +
+    `each one is a uniform ${blockSize}x${blockSize} block of flat color, ` +
+    'perfectly aligned to the image edges. Blocks touch each other ' +
+    'directly: no grid lines, borders, seams or outlines between them, ' +
+    'and no visible grid anywhere in the image.'
   );
 }
 
-// Asks for the flat key color a costume is keyed out against afterwards
-// (removeBackground flood-fills it from the corners). The character-set
-// generator asks for a NAMED key color in its own prompts instead.
-const SPRITE_PROMPT_CLAUSE =
-  'Use a plain solid background of one single flat color that contrasts strongly with the subject and appears nowhere on the subject, extending to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on that flat background.';
+// The named key color the subject is keyed out against afterwards; a
+// character also hears which of its parts must not wear it.
+function spritePromptClause(key: KeyColor, character: boolean): string {
+  return keyClause(key, character ? 'character' : 'subject');
+}
 
 // A still character faces the way an animated one does (characterSet.ts),
 // so a story's right-lane mirror turns it toward the others.
@@ -75,7 +81,7 @@ export const NO_WRITING_CLAUSE =
 
 // The model likes to dress a background's margins: painted frames, fake
 // transparency strips, title bars. Positive instruction first, and the
-// decorations go unnamed — named things get drawn (see BLOCK_PROMPT_CLAUSE).
+// decorations go unnamed — named things get drawn (see blockPromptClause).
 // The place is empty because the student's characters go on top; a
 // background with its own people is a crowd.
 const BACKGROUND_PROMPT_CLAUSE =
@@ -84,9 +90,11 @@ const BACKGROUND_PROMPT_CLAUSE =
 // The square is ground in a platform game, and the prompt says so: without
 // the game's meaning, "a block of gold" comes back as a picture of a gold
 // cube. Name no separate object ("block", "tile", "cube") — the model draws
-// it inside the square — describe the ground's face instead.
-const BLOCK_PROMPT_CLAUSE =
-  'This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in one plain solid flat color that contrasts strongly with the artwork and appears nowhere in it, extending to the image edges. No background scene — just the artwork on that flat color.';
+// it inside the square — describe the ground's face instead, and ask for
+// one square only, or a whole hillside under a sky can come back.
+function blockPromptClause(key: KeyColor): string {
+  return `This is one square of solid ground in a side-view platform game: the terrain a character stands on and walks across. Show the material as the surface of that ground, with a flat level top edge and a texture that continues across the square, not as a single object or item sitting inside the square. Draw exactly one such square: no sky above it, no scene around it, and no second tier, ledge or slope. Compose the artwork to completely fill one large centered square region, edge to edge, so that copies placed side by side connect seamlessly. Leave a clear margin around all four sides of that square in ${key.name} (${key.hex}), one plain solid flat color that appears nowhere in the artwork, extending to the image edges. No background scene — just the artwork on that flat ${key.name}.`;
+}
 
 /**
  * Pixel-style output depicts pixel art at ~1024x1024 with one art pixel per
@@ -274,7 +282,8 @@ async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
  */
 export function fullPromptFor(
   prompt: string,
-  options: GenerateImageOptions = {}
+  options: GenerateImageOptions = {},
+  key: KeyColor = chooseKeyColor(prompt)
 ): string {
   const {imageType = 'sprite', style = 'smooth'} = options;
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
@@ -286,9 +295,12 @@ export function fullPromptFor(
     if (options.subject === 'character') {
       fullPrompt = `${fullPrompt} ${CHARACTER_FACING_CLAUSE}`;
     }
-    fullPrompt = `${fullPrompt} ${SPRITE_PROMPT_CLAUSE}`;
+    fullPrompt = `${fullPrompt} ${spritePromptClause(
+      key,
+      options.subject === 'character'
+    )}`;
   } else if (imageType === 'block') {
-    fullPrompt = `${fullPrompt} ${BLOCK_PROMPT_CLAUSE}`;
+    fullPrompt = `${fullPrompt} ${blockPromptClause(key)}`;
   } else if (imageType === 'background') {
     fullPrompt = `${fullPrompt} ${BACKGROUND_PROMPT_CLAUSE}`;
   }
@@ -296,9 +308,8 @@ export function fullPromptFor(
 }
 
 /**
- * Generate an image from a text prompt. Sprites and blocks get a flat key
- * color the model picks to contrast with the subject, flood-filled to
- * transparency.
+ * Generate an image from a text prompt. Sprites and blocks are drawn on a
+ * named key color (keyColor.ts) that is keyed out afterwards.
  */
 export async function generateImage(
   prompt: string,
@@ -309,7 +320,8 @@ export async function generateImage(
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
-  const fullPrompt = fullPromptFor(prompt, options);
+  const key = chooseKeyColor(prompt);
+  const fullPrompt = fullPromptFor(prompt, options, key);
 
   // The prompt judge and the image model run concurrently — generation is
   // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks
@@ -371,13 +383,13 @@ export async function generateImage(
     };
   }
 
-  // Sprites and blocks get the key-color background removed the same way
-  // (both prompts keep the corner as background); blocks are then cropped to
-  // content so grid-placed copies tile seamlessly. Backgrounds are flattened
-  // opaque; pixel style gets grid-normalized.
+  // Sprites and blocks get the named key color removed the same way;
+  // blocks are cropped to content and squared so grid-placed copies tile
+  // seamlessly. Backgrounds are flattened opaque; pixel style gets
+  // grid-normalized.
   let blob = rawImageToBlob(raw);
   if (imageType === 'sprite' || imageType === 'block') {
-    blob = await removeBackground(blob, {soft: style === 'smooth'});
+    blob = await removeKeyColor(blob, key.rgb, {soft: style === 'smooth'});
   }
   // Smooth sprites are cropped like blocks always were, so the stored image
   // is what the runtime trim pass would have made anyway (pixel sprites
@@ -400,6 +412,10 @@ export async function generateImage(
     if (maxPx) {
       blob = await downscaleToFit(blob, maxPx);
     }
+  }
+  // After the pixel pass, so the square is cut on the art's own grid.
+  if (imageType === 'block') {
+    blob = await cropToSquare(blob);
   }
   await imageVerdict;
   return {
