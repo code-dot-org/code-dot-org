@@ -36,8 +36,8 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
       y: positions.reduce((s, p) => s + p.y, 0) / positions.length,
     };
   }, [tourFocusIds, layout.nodes]);
-  const firstAvailableId = useMemo(
-    () => pathway.checkpoints.find(c => statusMap[c.id] === 'available')?.id,
+  const firstSkippedId = useMemo(
+    () => pathway.checkpoints.find(c => statusMap[c.id] === 'skipped')?.id,
     [pathway.checkpoints, statusMap]
   );
   const lines = useMemo(
@@ -80,7 +80,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
           }
           onSelect={onSelect}
           tourId={
-            checkpoint.id === firstAvailableId
+            checkpoint.id === firstSkippedId
               ? 'adaptive-tour-first-available'
               : undefined
           }

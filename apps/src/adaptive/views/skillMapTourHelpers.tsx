@@ -1,10 +1,31 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
 export const SKILL_MAP_TOUR_STORAGE_KEY = 'adaptive-skill-map-tour-seen-v1';
 export const SKILL_MAP_TOUR_INITIAL_STEP = 0;
 
+/**
+ * Step indices for the interactive tour steps. These shift by one when the
+ * Skill Checks step is present so MapScreen doesn't hardcode numbers.
+ */
+export function getSkillMapTourStepIndices(hasSkippedCheckpoints: boolean) {
+  return {
+    /** Step where the user picks a checkpoint by clicking the map. */
+    pickCheckpoint: hasSkippedCheckpoints ? 2 : 1,
+    /** Sidebar step — user ends the tour by clicking Start. */
+    sidebar: hasSkippedCheckpoints ? 3 : 2,
+  };
+}
+
+interface TourStep {
+  element: string;
+  position?: string;
+  title: string;
+  intro: React.JSX.Element;
+}
+
 export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
-  const steps = [
+  const steps: TourStep[] = [
     {
       element: '#adaptive-tour-map-canvas',
       position: 'right',
@@ -15,6 +36,22 @@ export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
         </>
       ),
     },
+  ];
+
+  if (hasSkippedCheckpoints) {
+    steps.push({
+      element: '#adaptive-tour-first-available',
+      title: 'Skill Checks',
+      intro: (
+        <>
+          Checkpoints marked with <FontAwesomeV6Icon iconName="forward" /> are
+          Skill Checks. You may already know this material and can skip ahead.
+        </>
+      ),
+    });
+  }
+
+  steps.push(
     {
       element: '#adaptive-tour-map-canvas',
       title: 'Open checkpoints',
@@ -30,21 +67,8 @@ export function buildSkillMapTourSteps(hasSkippedCheckpoints: boolean) {
           different checkpoint any time.
         </>
       ),
-    },
-  ];
-
-  if (hasSkippedCheckpoints) {
-    steps.push({
-      element: '#adaptive-tour-first-available',
-      title: 'Skill Checks',
-      intro: (
-        <>
-          Checkpoints with a lightbulb badge are Skill Checks. You may already
-          know this material and can skip ahead.
-        </>
-      ),
-    });
-  }
+    }
+  );
 
   return steps;
 }

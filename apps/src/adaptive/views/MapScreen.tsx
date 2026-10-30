@@ -27,9 +27,11 @@ import './skillMapTourOverrides.scss';
 import {Steps} from 'intro.js-react';
 import {
   buildSkillMapTourSteps,
+  getSkillMapTourStepIndices,
   SKILL_MAP_TOUR_INITIAL_STEP,
   SKILL_MAP_TOUR_STORAGE_KEY,
 } from './skillMapTourHelpers';
+import {tryGetLocalStorage} from '@cdo/apps/utils';
 /* eslint-enable import/order */
 
 const THEME_ITEMS = [
@@ -82,11 +84,15 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   );
 
   const [tourEnabled, setTourEnabled] = useState(
-    () => !localStorage.getItem(SKILL_MAP_TOUR_STORAGE_KEY)
+    () => !tryGetLocalStorage(SKILL_MAP_TOUR_STORAGE_KEY, '0')
   );
 
   const tourSteps = useMemo(
     () => buildSkillMapTourSteps(hasSkippedCheckpoints),
+    [hasSkippedCheckpoints]
+  );
+  const tourStepIndices = useMemo(
+    () => getSkillMapTourStepIndices(hasSkippedCheckpoints),
     [hasSkippedCheckpoints]
   );
 
@@ -100,12 +106,18 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     );
   };
 
-  // Center the tour zoom on the first checkpoint in the map during step 1.
+  // Center the tour zoom on the first checkpoint during the "pick" step.
   const tourFocusIds = useMemo(() => {
-    if (!tourEnabled || tourStep !== 1) return undefined;
+    if (!tourEnabled || tourStep !== tourStepIndices.pickCheckpoint)
+      return undefined;
     const first = pathway.checkpoints[0];
     return first ? [first.id] : undefined;
-  }, [tourEnabled, tourStep, pathway.checkpoints]);
+  }, [
+    tourEnabled,
+    tourStep,
+    tourStepIndices.pickCheckpoint,
+    pathway.checkpoints,
+  ]);
 
   const stepsRef = useRef<Steps | null>(null);
 
@@ -129,14 +141,20 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
           setTourStep(stepIndex);
           document.body.classList.toggle(
             'adaptive-tour-step-select',
-            stepIndex === 1
+            stepIndex === tourStepIndices.pickCheckpoint
           );
           // On the sidebar step and beyond, the user ends the tour by clicking
           // Start — hide the Next/Done button so there's only one path forward.
           document.body.classList.toggle(
             'adaptive-tour-no-next',
-            stepIndex >= 2
+            stepIndex >= tourStepIndices.sidebar
           );
+          // Going back from the "open checkpoints" step zooms the map out
+          // (450ms CSS transition). Re-measure element positions once settled
+          // so the spotlight lands on the right node.
+          if (stepIndex === tourStepIndices.pickCheckpoint - 1) {
+            setTimeout(() => stepsRef.current?.introJs?.refresh(true), 500);
+          }
         }}
         onBeforeChange={(nextStepIndex: number) => {
           if (nextStepIndex === 0) {
@@ -180,7 +198,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
             focusId={focusId}
             tourFocusIds={tourFocusIds}
             onSelect={id => {
-              if (tourEnabled && tourStep === 1) {
+              if (tourEnabled && tourStep === tourStepIndices.pickCheckpoint) {
                 if (statusMap[id] !== 'locked') {
                   setTourCheckpointId(id);
                   stepsRef.current?.introJs?.nextStep();
