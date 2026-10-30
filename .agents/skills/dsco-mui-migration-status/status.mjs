@@ -118,9 +118,14 @@ function parseStatusDoc(doc) {
     if (/^## Component Migration Status/.test(line)) inTable = true;
     else if (/^## /.test(line)) inTable = false;
     if (!inTable) continue;
-    const m = /^\|\s*`([^`]+)`\s*\|([^|]*)\|([^|]*)\|/.exec(line);
+    const m = /^\|\s*`([^`]+)`\s*\|([^|]*)\|([^|]*)\|([^|]*)\|/.exec(line);
     if (m)
-      rows.push({component: m[1], status: stripMd(m[2]), mui: stripMd(m[3])});
+      rows.push({
+        component: m[1],
+        status: stripMd(m[2]),
+        mui: stripMd(m[3]),
+        wrapper: /wrapper/i.test(m[4]),
+      });
   }
   if (!rows.length)
     throw new Error(`no component rows found in ${STATUS_DOC} at ${opts.ref}`);
@@ -156,10 +161,13 @@ function parseDeferredRows(planDoc) {
   return rows;
 }
 
-// Finish step 4 renames Mui<X>.tsx to <X>.tsx, so a Mui* file means the legacy source is still there.
-function legacyPresent(component) {
-  const listing = gitShow(`${LIB}/src/${component}/`);
-  return !!listing && /^Mui[A-Z]\w*\.tsx$/m.test(listing);
+// A wrapper component (dialog) keeps a Mui<X>.tsx twin until step 4 renames it to <X>.tsx;
+// a theme-only component (button, tooltip) has no twin, and step 4 leaves no top-level .tsx.
+function legacyPresent(row) {
+  const listing = gitShow(`${LIB}/src/${row.component}/`);
+  if (!listing) return false;
+  if (/^Mui[A-Z]\w*\.tsx$/m.test(listing)) return true;
+  return !row.wrapper && /^[A-Za-z_]\w*\.tsx$/m.test(listing);
 }
 
 function importerCount(component) {
@@ -195,6 +203,7 @@ function classify(pr) {
 function checksState(pr) {
   const items = pr.statusCheckRollup || [];
   let pending = false;
+  let cancelled = false;
   for (const it of items) {
     const verdict = it.conclusion || it.state || '';
     if (
@@ -207,10 +216,13 @@ function checksState(pr) {
       ].includes(verdict)
     )
       return 'red';
+    if (['CANCELLED', 'STALE'].includes(verdict)) cancelled = true;
     if (it.status && it.status !== 'COMPLETED') pending = true;
     if (['PENDING', 'EXPECTED'].includes(it.state)) pending = true;
   }
-  return pending ? 'pending' : items.length ? 'green' : 'none';
+  if (pending) return 'pending';
+  if (cancelled) return 'cancelled';
+  return items.length ? 'green' : 'none';
 }
 
 const reviewers = (pr, state) => [
@@ -372,7 +384,7 @@ function build() {
     } else if (/^migrated/i.test(row.status)) {
       let step4Done = false;
       if (del) c.next.push(`step 4 delete legacy: #${del.number} in review`);
-      else if (legacyPresent(row.component)) {
+      else if (legacyPresent(row)) {
         c.next.push('runnable: step 4 delete legacy');
         c.runnable = 'finish';
       } else step4Done = true;
@@ -467,6 +479,7 @@ function prFacts(p) {
   if (p.quietDays >= QUIET_DAYS) f.push(`quiet ${p.quietDays}d`);
   if (p.checks === 'red') f.push('checks red');
   if (p.checks === 'pending') f.push('checks pending');
+  if (p.checks === 'cancelled') f.push('checks cancelled or stale');
   if (p.blockedBy.length)
     f.push(`blocked by ${p.blockedBy.map(n => `#${n}`).join(' ')}`);
   if (p.orphanBase) f.push(`base ${p.base} has no open PR`);
