@@ -4,9 +4,19 @@ export type TrainerFamily = 'knn' | 'decisionTree';
 
 export type Hyperparameters = {k: number} | {maxDepth: number};
 
+export type DatasetError = 'tooFewRows' | 'tooFewColumns' | 'loadFailed';
+
+export interface Dataset {
+  rows: DataRow[];
+  metadata: Metadata;
+  columnsByDataType: Record<string, string>;
+  removedRowsCount: number;
+}
+
 export interface Mode {
   datasets?: string[];
   trainer?: TrainerFamily;
+  hyperparameters?: Hyperparameters;
   label?: string;
   features?: string[];
   // Locks the label: `label` if set, else the dataset's default label.
@@ -206,7 +216,7 @@ export interface AilabProject {
   historicResults: HistoricResult[];
 }
 
-export const initialProject: AilabProject = {
+export const defaultProject: AilabProject = {
   labelColumn: undefined,
   selectedFeatures: [],
   hyperparameters: undefined,

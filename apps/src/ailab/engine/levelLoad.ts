@@ -7,7 +7,6 @@ import {
   setMode,
   setCurrentPanel,
   setSelectedCSV,
-  setSelectedJSON,
   setSelectedName,
   setReserveLocation,
   resetState,
@@ -20,16 +19,7 @@ import type {Mode} from './types';
  * Prepare the lab for a level.
  */
 export const loadLevel = function (mode?: Mode): void {
-  reload(mode);
-};
-
-export const startOver = function (): void {
-  reload(store.getState().mode);
-};
-
-const reload = (mode: Mode | undefined): void => {
   invalidatePendingDatasetLoads();
-  // Neither a level load nor a Start Over leaves a saved project to open.
   store.dispatch(resetState());
   train.reset();
   store.dispatch(setMode(mode));
@@ -60,7 +50,6 @@ const processMode = (mode: Mode | undefined): void => {
 
   store.dispatch(setSelectedName(item.name));
   store.dispatch(setSelectedCSV(assetPath + item.path));
-  store.dispatch(setSelectedJSON(assetPath + item.metadataPath));
   loadDataset(assetPath + item.path, assetPath + item.metadataPath);
 
   store.dispatch(setCurrentPanel('datasetView'));

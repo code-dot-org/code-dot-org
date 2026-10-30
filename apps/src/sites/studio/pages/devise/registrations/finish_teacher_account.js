@@ -15,9 +15,6 @@ $(document).ready(() => {
       countryCode={countryCode}
       redirectUrl={redirectUrl}
     />,
-    document.getElementById('finish-teacher-account-root'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('finish-teacher-account-root')
   );
 });

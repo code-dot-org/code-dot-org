@@ -14,7 +14,14 @@ import {DEFAULT_SCENE_GRID_SIZE} from '@cdo/apps/p5lab/spritelab/lab2/world';
 import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
-import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
+import {
+  PLAY_SOUND_BLOCK_TYPE,
+  PLAY_SOUND_DEFAULT,
+} from '../blockDefinitions/playSound';
+import {
+  EFFECT_FIELD_DEFAULTS,
+  PLAY_SOUND_EFFECT_BLOCK_TYPE,
+} from '../blockDefinitions/playSoundEffect';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
 import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
@@ -55,18 +62,24 @@ const PLATFORMER_COMPOSITES: [string, string][] = [
   ],
 ];
 
-// Grid-placement blocks that aren't composites still want a marked-cell
-// default in the toolbox.
-const GRID_FIELD_DEFAULTS = new Map<string, string>([
-  ...PLATFORMER_COMPOSITES,
+// Field values a toolbox entry starts with: a marked cell for grid blocks,
+// a jump for the sound effect, a hop for play sound.
+const FIELD_DEFAULTS = new Map<string, Record<string, string>>([
+  ...PLATFORMER_COMPOSITES.map(
+    ([type, grid]) => [type, {GRID: grid}] as [string, Record<string, string>]
+  ),
   [
     'spritelab2_makeSpriteAtGrid',
-    platformerGrid((row, col) =>
-      row === PLATFORMER_GRID_SIZE - 4 && col === PLATFORMER_GRID_SIZE - 3
-        ? 1
-        : 0
-    ),
+    {
+      GRID: platformerGrid((row, col) =>
+        row === PLATFORMER_GRID_SIZE - 4 && col === PLATFORMER_GRID_SIZE - 3
+          ? 1
+          : 0
+      ),
+    },
   ],
+  [PLAY_SOUND_EFFECT_BLOCK_TYPE, EFFECT_FIELD_DEFAULTS],
+  [PLAY_SOUND_BLOCK_TYPE, {SOUND: PLAY_SOUND_DEFAULT}],
 ]);
 
 // Lab-injected toolbox categories, inserted at the top of every level's
@@ -91,6 +104,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       WHEN_PLAYER_BLOCK_TYPE,
       'gamelab_checkTouching',
       PLAY_SOUND_BLOCK_TYPE,
+      PLAY_SOUND_EFFECT_BLOCK_TYPE,
       PLAY_MUSIC_BLOCK_TYPE,
       RESTART_SCENE_BLOCK_TYPE,
       'gamelab_spriteSay',
@@ -109,6 +123,7 @@ const INJECTED_CATEGORIES: {name: string; types: string[]}[] = [
       'gamelab_spriteClicked',
       'gamelab_atTime',
       PLAY_SOUND_BLOCK_TYPE,
+      PLAY_SOUND_EFFECT_BLOCK_TYPE,
       PLAY_MUSIC_BLOCK_TYPE,
       'gamelab_setProp',
       'gamelab_spriteSay',
@@ -148,11 +163,11 @@ function ensureInjectedCategories(def: ToolboxInfo): void {
   if (!sprites) {
     return;
   }
-  // A new block entry: grid-placement blocks carry their GRID defaults,
-  // anything else starts bare (fields initialize to their own defaults).
+  // A new block entry carries its FIELD_DEFAULTS; anything else starts
+  // bare (fields initialize to their own defaults).
   const makeBlock = (type: string): BlockInfo => {
-    const grid = GRID_FIELD_DEFAULTS.get(type);
-    return {kind: 'block', type, ...(grid ? {fields: {GRID: grid}} : {})};
+    const fields = FIELD_DEFAULTS.get(type);
+    return {kind: 'block', type, ...(fields ? {fields} : {})};
   };
   // Prefer cloning a curated entry from elsewhere in the toolbox — it keeps
   // the level's shadows and defaults.

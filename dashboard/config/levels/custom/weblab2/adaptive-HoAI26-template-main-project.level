@@ -8,38 +8,32 @@
   "properties": {
     "require_edit_to_continue": "true",
     "start_sources": {
-      "folders": {
-      },
+      "folders": {},
       "files": {
-        "cc872b33-cb6e-479a-b7e2-0887440c3249": {
-          "id": "cc872b33-cb6e-479a-b7e2-0887440c3249",
+        "1": {
+          "id": "1",
           "name": "index.html",
-          "contents": "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><title>My Starter Project</title><link rel=\"stylesheet\" href=\"style.css\"></head><body><header><h1>Welcome to Your Project</h1></header><main><p>This is a simple starting point. You can change anything here!</p><button id=\"actionButton\">Get Started</button></main><script src=\"script.js\"></script></body></html>",
-          "folderId": "0",
-          "type": "starter",
-          "active": true
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n    <script src=\"script.js\" defer></script>\n  </head>\n  <body>\n    Your website here!\n  </body>\n</html>\n",
+          "active": true,
+          "folderId": "0"
         },
-        "b449a5a8-2589-4d0d-8d94-7d3489929dbc": {
-          "id": "b449a5a8-2589-4d0d-8d94-7d3489929dbc",
+        "2": {
+          "id": "2",
           "name": "style.css",
-          "contents": "body { font-family: sans-serif; margin: 20px; background-color: #f8f8f8; color: #333; line-height: 1.6; }header { text-align: center; padding: 20px; background-color: #eee; border-bottom: 1px solid #ccc; margin-bottom: 20px; }h1 { color: #0056b3; }main { max-width: 800px; margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }p { margin-bottom: 1em; }button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1em; transition: background-color 0.2s; }button:hover { background-color: #0056b3; }",
-          "folderId": "0",
-          "type": "starter",
-          "active": false
+          "contents": "",
+          "active": false,
+          "folderId": "0"
         },
-        "6a963fee-89b1-4bca-9a86-8af179c89c89": {
-          "id": "6a963fee-89b1-4bca-9a86-8af179c89c89",
+        "3": {
+          "id": "3",
           "name": "script.js",
-          "contents": "// This is your JavaScript file.\n// You can add interactive features and logic here.\n\nconsole.log(\"script.js loaded successfully!\");",
-          "folderId": "0",
-          "type": "starter",
-          "active": false
+          "contents": "",
+          "active": false,
+          "folderId": "0"
         }
       },
       "openFiles": [
-        "cc872b33-cb6e-479a-b7e2-0887440c3249",
-        "b449a5a8-2589-4d0d-8d94-7d3489929dbc",
-        "6a963fee-89b1-4bca-9a86-8af179c89c89"
+        "1"
       ]
     },
     "encrypted": "false",
@@ -48,7 +42,7 @@
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
-    "initial_view_mode": "split",
+    "initial_view_mode": "preview",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -73,9 +67,10 @@
         "buildPage"
       ],
       "answerTypeCustomizations": {
-      }
+      },
+      "disableCommitMessages": true
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-16 21:19:56 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-23 00:04:16 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:19:56 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-23 00:04:16 +0000\",\"changed\":[\"require_edit_to_continue\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 03:36:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-27 04:06:03 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-27 06:28:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-27 06:28:34 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-29 20:47:57 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 20:56:18 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

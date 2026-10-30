@@ -5,6 +5,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import RadioButton from '@code-dot-org/component-library/radioButton';
 import Slider from '@code-dot-org/component-library/slider';
 import TextField from '@code-dot-org/component-library/textField';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
@@ -704,36 +705,39 @@ const GenerateImageView: React.FunctionComponent<GenerateImageViewProps> = ({
         )}
         {advanced && create && onPaintManually && (
           <div className={moduleStyles.footerLeft}>
-            <button
-              type="button"
-              className={moduleStyles.button}
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="small"
+              startIcon={<FontAwesomeV6Icon iconName="paintbrush" />}
               disabled={generating || !nameUsable}
               onClick={() =>
                 onPaintManually({name: trimmedName, imageType, style})
               }
             >
-              <FontAwesomeV6Icon iconName="paintbrush" />
               Paint manually
-            </button>
+            </MuiButton>
           </div>
         )}
-        <button
-          type="button"
-          className={moduleStyles.button}
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="small"
           disabled={generating}
           onClick={onCancel}
         >
           Cancel
-        </button>
-        <button
-          type="button"
-          className={moduleStyles.primaryButton}
+        </MuiButton>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
+          startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
           disabled={generating || !promptText || !nameUsable}
           onClick={generate}
         >
-          <FontAwesomeV6Icon iconName="sparkles" />
           {generating ? 'Generating…' : 'Generate'}
-        </button>
+        </MuiButton>
       </div>
     </>
   );

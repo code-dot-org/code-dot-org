@@ -17,14 +17,19 @@ import {groupByPage, toBool} from '../utils';
 import AttemptCard from './AttemptCard';
 import FreeResponseQuestionContainer from './FreeResponseQuestionContainer';
 import IntroCard from './IntroCard';
+import MatchQuestionContainer from './match/MatchQuestionContainer';
+import {MatchPairs} from './match/types';
 import MultiChoiceQuestionContainer from './MultiChoiceQuestionContainer';
+import MultipleSelectQuestionContainer from './MultipleSelectQuestionContainer';
 import PageDivider from './PageDivider';
 import QuestionResultCard from './QuestionResultCard';
 import QuizFooter from './QuizFooter';
 import ResultsCard from './ResultsCard';
 import {
   isFreeResponseResponse,
+  isMatchResponse,
   isMultipleChoiceResponse,
+  isMultipleSelectResponse,
   QuizAttemptData,
   QuizQuestionResponse,
   QuizQuestionResponseData,
@@ -289,12 +294,13 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     return thisWrite;
   };
 
-  const handleSelectChoice = (questionId: number, choiceId: string) => {
+  // Shows a choice-based answer at once and saves it; a failed save rolls
+  // back to the previous answer.
+  const saveChoiceResponse = (
+    questionId: number,
+    response: QuizQuestionResponse
+  ) => {
     const previousResponse = responsesByQuestionId[questionId];
-    const response: QuizQuestionResponse = {
-      questionType: 'MultipleChoiceQuestion',
-      responseData: {selectedChoiceId: choiceId},
-    };
     setResponsesByQuestionId(prev => ({...prev, [questionId]: response}));
 
     queueResponseWrite(questionId, response.responseData).catch(() => {
@@ -313,6 +319,29 @@ const QuizAttemptWorkspace: React.FunctionComponent<
         }
         return next;
       });
+    });
+  };
+
+  const handleSelectChoice = (questionId: number, choiceId: string) =>
+    saveChoiceResponse(questionId, {
+      questionType: 'MultipleChoiceQuestion',
+      responseData: {selectedChoiceId: choiceId},
+    });
+
+  const handleToggleChoice = (questionId: number, choiceId: string) => {
+    const previous = responsesByQuestionId[questionId];
+    const selectedChoiceIds =
+      (previous &&
+        isMultipleSelectResponse(previous) &&
+        previous.responseData.selectedChoiceIds) ||
+      [];
+    saveChoiceResponse(questionId, {
+      questionType: 'MultipleSelectQuestion',
+      responseData: {
+        selectedChoiceIds: selectedChoiceIds.includes(choiceId)
+          ? selectedChoiceIds.filter(id => id !== choiceId)
+          : [...selectedChoiceIds, choiceId],
+      },
     });
   };
 
@@ -348,6 +377,18 @@ const QuizAttemptWorkspace: React.FunctionComponent<
       () => saveAnswerText(questionId, answerText),
       ANSWER_AUTOSAVE_DELAY_MS
     );
+  };
+
+  // Do not rollback state update on failed save -- submit resends pairs.
+  const handleChangePairs = (questionId: number, pairs: MatchPairs) => {
+    const responseData = {pairs};
+    setResponsesByQuestionId(prev => ({
+      ...prev,
+      [questionId]: {questionType: 'MatchQuestion', responseData},
+    }));
+    queueResponseWrite(questionId, responseData).catch(() => {
+      // Already recorded as a user-facing error in useQuizAttempt.
+    });
   };
 
   const handleBlurAnswerText = (questionId: number) => {
@@ -437,19 +478,41 @@ const QuizAttemptWorkspace: React.FunctionComponent<
             disabled={isSubmitting}
           />
         );
-      // TODO: replace with a MatchQuestionContainer.
+      case 'MultipleSelectQuestion':
+        return (
+          <MultipleSelectQuestionContainer
+            key={question.id}
+            headingRef={headingRef}
+            question={question}
+            questionLabel={questionLabel}
+            selectedChoiceIds={
+              (response &&
+                isMultipleSelectResponse(response) &&
+                response.responseData.selectedChoiceIds) ||
+              []
+            }
+            onToggleChoice={choiceId =>
+              handleToggleChoice(question.id, choiceId)
+            }
+            disabled={isSubmitting}
+          />
+        );
       case 'MatchQuestion':
         return (
-          <AttemptCard
+          <MatchQuestionContainer
             key={question.id}
-            label={questionLabel}
-            title={question.questionTitle}
             headingRef={headingRef}
-          >
-            <Typography variant="body2">
-              Matching questions are not available yet.
-            </Typography>
-          </AttemptCard>
+            question={question}
+            questionLabel={questionLabel}
+            pairs={
+              (response &&
+                isMatchResponse(response) &&
+                response.responseData.pairs) ||
+              []
+            }
+            onChangePairs={pairs => handleChangePairs(question.id, pairs)}
+            disabled={isSubmitting}
+          />
         );
       default: {
         // A new question type fails to compile here until it gets a case.
@@ -459,7 +522,10 @@ const QuizAttemptWorkspace: React.FunctionComponent<
     }
   };
 
-  const renderQuestionResults = (results: QuizQuestionResult[]) =>
+  const renderQuestionResults = (
+    results: QuizQuestionResult[],
+    isSubmitted: boolean
+  ) =>
     resultPages.map(
       (
         {page, questions, firstQuestionNumber, lastQuestionNumber},
@@ -492,6 +558,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   revealAnswerExplanation={
                     isViewingStudent || toBool(revealAnswerExplanation)
                   }
+                  isSubmitted={isSubmitted}
+                  showCorrectness={isViewingStudent || toBool(showCorrectness)}
                   isViewingStudent={isViewingStudent}
                 />
               )
@@ -542,7 +610,8 @@ const QuizAttemptWorkspace: React.FunctionComponent<
                   correct: null,
                   explanation: null,
                   correctChoiceId: null,
-                }))
+                })),
+                false
               )}
           </div>
         ) : isIntroOpen ? (
@@ -589,7 +658,7 @@ const QuizAttemptWorkspace: React.FunctionComponent<
               onNextLevel={handleNextLevel}
             />
             {(isViewingStudent || toBool(showQuestionsAfterSubmit)) &&
-              renderQuestionResults(attempt.questionResults ?? [])}
+              renderQuestionResults(attempt.questionResults ?? [], true)}
           </div>
         ) : (
           <div className={styles.questions}>

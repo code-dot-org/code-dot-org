@@ -34,8 +34,5 @@ createReactRoot(
       showLessonExtrasWarning={viewer.show_lesson_extras_warning}
     />
   </Provider>,
-  document.querySelector('#lesson-extras'),
-  {
-    legacyReactDomRender: true,
-  }
+  document.querySelector('#lesson-extras')
 );

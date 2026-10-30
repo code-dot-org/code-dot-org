@@ -44,6 +44,8 @@ interface NavigationAreaProps {
   requireRun?: boolean;
   validationTooltip?: string;
   hideContinueIfDisabled?: boolean;
+  /** The level's checklist is all done, or not yet; unset without one. */
+  objectivesDone?: boolean;
   className?: string;
   markdownClassName?: string;
   overrideTheme?: Theme;
@@ -69,6 +71,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   validationTooltip,
   handleInstructionsTextClick,
   hideContinueIfDisabled,
+  objectivesDone,
   className,
   markdownClassName,
   overrideTheme,
@@ -250,11 +253,15 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
       | 'Run'
       | 'Edit'
       | 'AiTutorVersion'
+      | 'Objectives'
       | undefined;
     let canContinue: boolean = true;
     if (isPredictLevel) {
       action = 'SubmitPrediction';
       canContinue = predictResponseSubmitted;
+    } else if (objectivesDone === false) {
+      action = 'Objectives';
+      canContinue = false;
     } else if (hasValidationConditions) {
       action = 'Validate';
       canContinue = validationSatisfied;
@@ -286,6 +293,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasValidationConditions,
     validationTooltip,
     isAiTutorVersion,
+    objectivesDone,
     hasContinued,
     hasNextLevel,
     predictResponseSubmitted,

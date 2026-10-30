@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-10-28T20:58:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L07-previs-variant-budget\"\r\n  ]\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"#Add one feature\\n\\nUse your new feature [Movie Budget] and experiment with other feature(s) in order to train your tree\",\r\n  \"results\": \"#Test the Tree\\n\\nRun several different combinations and try to get the most accurate tree possible.,\\n\"\r\n}",
+    "display_name": "Movie Budget",
+    "bubble_choice_description": "Add a feature to your dataset: Movie Budget",
+    "thumbnail_url": "https://images.code.org/87b6fb473df4c7c88bf3fe7f5fa5e4df-movie-budget-card.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-28T20:58:23.951+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-ai-studio4\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-ai-studio4\"},{\"changed_at\":\"2026-10-28 21:07:57 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-29 14:26:15 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

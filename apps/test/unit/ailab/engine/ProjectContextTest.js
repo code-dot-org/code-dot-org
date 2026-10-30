@@ -1,5 +1,5 @@
 import {act, render} from '@testing-library/react';
-import {createElement} from 'react';
+import {createElement, useLayoutEffect} from 'react';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 
@@ -7,18 +7,26 @@ import {
   ColumnTypes,
   UNIQUE_OPTIONS_MAX,
 } from '@cdo/apps/ailab/engine/constants';
+import {loadLevel} from '@cdo/apps/ailab/engine/levelLoad';
 import {
   ProjectProvider,
   useProject,
 } from '@cdo/apps/ailab/engine/ProjectContext';
 import rootReducer, {
   resetState,
-  setColumnsByDataType,
-  setImportedData,
+  setDatasetLoaded,
+  setInvalidData,
   setMode,
   setPresetColumns,
+  setSelectedCSV,
 } from '@cdo/apps/ailab/engine/redux';
-import {initialProject} from '@cdo/apps/ailab/engine/types';
+import {store as singletonStore} from '@cdo/apps/ailab/engine/store';
+import {defaultProject} from '@cdo/apps/ailab/engine/types';
+
+import {dataset, seedDataset} from './levelStore';
+
+jest.mock('@cdo/apps/ailab/engine/csvReaderWrapper');
+jest.mock('@cdo/apps/ailab/engine/jsonReaderWrapper');
 
 const run = (accuracy, hyperparameters, accuracyCheckRowIndices) => ({
   hyperparameters,
@@ -35,7 +43,15 @@ const run = (accuracy, hyperparameters, accuracyCheckRowIndices) => ({
 const FIRST = run('80.00', {k: 1}, [8, 9]);
 const SECOND = run('90.00', {k: 3}, [0, 5]);
 
-function renderContext(openWith, seedStore) {
+const ROWS = [{a: '1', b: '2', c: '3'}];
+const COLUMNS = {
+  a: ColumnTypes.NUMERICAL,
+  b: ColumnTypes.NUMERICAL,
+  c: ColumnTypes.NUMERICAL,
+};
+const loadRows = store => seedDataset(store, ROWS, COLUMNS);
+
+function renderContext(initialProject, seedStore) {
   const store = seedStore ?? createStore(rootReducer);
   let context;
   const Probe = () => {
@@ -47,7 +63,7 @@ function renderContext(openWith, seedStore) {
     createElement(
       Provider,
       {store},
-      createElement(ProjectProvider, {project: openWith}, createElement(Probe))
+      createElement(ProjectProvider, {initialProject}, createElement(Probe))
     )
   );
 
@@ -60,16 +76,22 @@ const accuracies = project =>
 describe('ProjectContext', () => {
   test('starts empty', () => {
     const {project} = renderContext();
-    expect(project()).toEqual(initialProject);
+    expect(project()).toEqual(defaultProject);
   });
 
+  // A saved project waits for the dataset it will be reconciled against.
   test('opens with a project it is handed', () => {
-    const {project} = renderContext({
-      ...initialProject,
-      hyperparameters: {k: 5},
-      accuracyCheckRowIndices: [2, 7],
-      historicResults: [FIRST.historicResult],
-    });
+    const store = createStore(rootReducer);
+    loadRows(store);
+    const {project} = renderContext(
+      {
+        ...defaultProject,
+        hyperparameters: {k: 5},
+        accuracyCheckRowIndices: [2, 7],
+        historicResults: [FIRST.historicResult],
+      },
+      store
+    );
     expect(project().hyperparameters).toEqual({k: 5});
     expect(project().accuracyCheckRowIndices).toEqual([2, 7]);
     expect(accuracies(project())).toEqual(['80.00']);
@@ -145,7 +167,7 @@ describe('ProjectContext', () => {
       store.dispatch(resetState());
     });
 
-    expect(project()).toEqual(initialProject);
+    expect(project()).toEqual(defaultProject);
   });
 
   test('a reset drops the snapshot a cancel would have used', () => {
@@ -165,7 +187,7 @@ describe('ProjectContext', () => {
 describe('ProjectContext column choices', () => {
   const imported = () => {
     const store = createStore(rootReducer);
-    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
+    seedDataset(store, ROWS, {});
     return store;
   };
 
@@ -351,10 +373,7 @@ describe('ProjectContext column choices', () => {
 describe('ProjectContext opening a saved project', () => {
   const described = () => {
     const store = createStore(rootReducer);
-    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-    ['a', 'b', 'c'].forEach(column =>
-      store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-    );
+    loadRows(store);
     return store;
   };
 
@@ -365,6 +384,78 @@ describe('ProjectContext opening a saved project', () => {
     accuracyCheckRowIndices: [0],
     historicResults: [FIRST.historicResult],
   };
+
+  test('is not open until a project has been opened', () => {
+    const {context} = renderContext(undefined, described());
+
+    expect(context().isProjectLoaded).toBe(false);
+
+    act(() => context().openProject(SAVED));
+
+    expect(context().isProjectLoaded).toBe(true);
+  });
+
+  test('is not loading when no dataset is on its way', () => {
+    const {context} = renderContext(SAVED, createStore(rootReducer));
+
+    expect(context().isProjectLoading).toBe(false);
+    expect(context().isProjectLoaded).toBe(false);
+  });
+
+  test('is loading while the dataset it waits for is on its way', () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setSelectedCSV('animals.csv'));
+
+    expect(renderContext(SAVED, store).context().isProjectLoading).toBe(true);
+  });
+
+  // The picker reports the problem, so it has to be allowed to render.
+  test('is not loading once the chosen dataset has failed', () => {
+    const store = createStore(rootReducer);
+    store.dispatch(setSelectedCSV('animals.csv'));
+    store.dispatch(setInvalidData('tooFewRows'));
+
+    expect(renderContext(SAVED, store).context().isProjectLoading).toBe(false);
+  });
+
+  test('opens the saved project once the student picks a dataset', () => {
+    const store = createStore(rootReducer);
+    const {context} = renderContext(SAVED, store);
+
+    act(() => {
+      store.dispatch(setSelectedCSV('animals.csv'));
+      loadRows(store);
+    });
+
+    expect(context().project.labelColumn).toBe('a');
+    expect(context().isProjectLoaded).toBe(true);
+  });
+
+  test('is not open while a project waits for its dataset', () => {
+    const store = createStore(rootReducer);
+    const {context} = renderContext(undefined, store);
+
+    act(() => context().openProject(SAVED));
+    expect(context().isProjectLoaded).toBe(false);
+
+    act(() => {
+      loadRows(store);
+    });
+
+    expect(context().isProjectLoaded).toBe(true);
+  });
+
+  // An emptied project is still the state the student is now in.
+  test('stays open through a reset', () => {
+    const {store, context} = renderContext(undefined, described());
+    act(() => context().openProject(SAVED));
+
+    act(() => {
+      store.dispatch(resetState());
+    });
+
+    expect(context().isProjectLoaded).toBe(true);
+  });
 
   test('takes the columns and the run the project described', () => {
     const {project, context} = renderContext(undefined, described());
@@ -419,31 +510,11 @@ describe('ProjectContext opening a saved project', () => {
     const {project, context} = renderContext(undefined, store);
 
     act(() => context().openProject(SAVED));
-    expect(project()).toEqual(initialProject);
+    expect(project()).toEqual(defaultProject);
 
     act(() => {
-      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-      );
+      loadRows(store);
     });
-
-    expect(project()).toEqual(SAVED);
-  });
-
-  test('waits for the column types, not just the rows', () => {
-    const store = createStore(rootReducer);
-    store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-    const {project, context} = renderContext(undefined, store);
-
-    act(() => context().openProject(SAVED));
-    expect(project()).toEqual(initialProject);
-
-    act(() =>
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-      )
-    );
 
     expect(project()).toEqual(SAVED);
   });
@@ -464,10 +535,11 @@ describe('ProjectContext opening a saved project', () => {
 
     act(() => context().openProject(SAVED));
     act(() => {
-      store.dispatch(setImportedData(crowded, true));
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.CATEGORICAL))
-      );
+      seedDataset(store, crowded, {
+        a: ColumnTypes.CATEGORICAL,
+        b: ColumnTypes.CATEGORICAL,
+        c: ColumnTypes.CATEGORICAL,
+      });
     });
 
     expect(project().labelColumn).toBeUndefined();
@@ -490,10 +562,7 @@ describe('ProjectContext opening a saved project', () => {
       store.dispatch(resetState());
     });
     act(() => {
-      store.dispatch(setImportedData([{a: '1', b: '2', c: '3'}], false));
-      ['a', 'b', 'c'].forEach(column =>
-        store.dispatch(setColumnsByDataType(column, ColumnTypes.NUMERICAL))
-      );
+      loadRows(store);
     });
 
     expect(project()).toEqual(SAVED);
@@ -508,5 +577,188 @@ describe('ProjectContext opening a saved project', () => {
     act(() => context().restoreTrainingRun());
 
     expect(project().hyperparameters).toEqual(SAVED.hyperparameters);
+  });
+});
+
+describe('ProjectContext keeping a saved project in sync', () => {
+  // The singleton carries state between tests; each starts from a clean lab.
+  beforeEach(() => singletonStore.dispatch(resetState()));
+
+  const DATA = [
+    {a: '1', b: '2', c: '3'},
+    {a: '4', b: '5', c: '6'},
+  ];
+
+  const SAVED_COLUMNS = {
+    ...defaultProject,
+    labelColumn: 'a',
+    selectedFeatures: ['b'],
+    historicResults: [FIRST.historicResult],
+  };
+
+  // eslint-disable-next-line react/prop-types
+  const Workspace = ({initialProject, onProjectChange, report}) => {
+    useLayoutEffect(() => {
+      loadLevel(undefined);
+    }, []);
+
+    return createElement(
+      ProjectProvider,
+      {initialProject, onProjectChange},
+      createElement(Probe, {report})
+    );
+  };
+
+  // eslint-disable-next-line react/prop-types
+  const Probe = ({report}) => {
+    report(useProject());
+    return null;
+  };
+
+  function renderSync(initialProject = SAVED_COLUMNS) {
+    const onProjectChange = jest.fn();
+    let context;
+    render(
+      createElement(
+        Provider,
+        {store: singletonStore},
+        createElement(Workspace, {
+          initialProject,
+          onProjectChange,
+          report: value => (context = value),
+        })
+      )
+    );
+    return {save: onProjectChange, context: () => context};
+  }
+
+  const loadDataset = () =>
+    act(() => {
+      seedDataset(singletonStore, DATA, COLUMNS);
+    });
+
+  test('reports nothing until the saved project has been opened', () => {
+    const {save} = renderSync();
+
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('opens the saved project into the lab without reporting it', () => {
+    const {save, context} = renderSync();
+
+    loadDataset();
+
+    expect(context().project).toEqual(SAVED_COLUMNS);
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('does not report the columns opening drops', () => {
+    const {save, context} = renderSync({
+      ...SAVED_COLUMNS,
+      selectedFeatures: ['b', 'retired'],
+    });
+
+    loadDataset();
+
+    expect(context().project.selectedFeatures).toEqual(['b']);
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('does not report the empty project a new student opens', () => {
+    const {save, context} = renderSync(defaultProject);
+
+    loadDataset();
+
+    expect(context().project).toEqual(defaultProject);
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test("does not report the level's preset columns applied on opening", () => {
+    const {save, context} = renderSync(defaultProject);
+
+    act(() => {
+      singletonStore.dispatch(
+        setDatasetLoaded({
+          dataset: dataset(DATA, COLUMNS),
+          presetColumns: {labelColumn: 'c'},
+        })
+      );
+    });
+
+    expect(context().project.labelColumn).toBe('c');
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('does not open against the dataset the last level left behind', () => {
+    loadDataset();
+
+    const {context} = renderSync();
+    loadDataset();
+
+    expect(context().project).toEqual(SAVED_COLUMNS);
+  });
+
+  test('reports a column the student chooses', () => {
+    const {save, context} = renderSync();
+    loadDataset();
+    save.mockClear();
+
+    act(() => context().addSelectedFeature('c'));
+
+    expect(save).toHaveBeenCalledTimes(1);
+    expect(save.mock.lastCall[0].selectedFeatures).toEqual(['b', 'c']);
+  });
+
+  // The level chose these, but the saved copy mirrors the project either way.
+  test("reports the level's preset columns", () => {
+    const {save} = renderSync(defaultProject);
+    loadDataset();
+    save.mockClear();
+
+    act(() => {
+      singletonStore.dispatch(setMode({hideSelectLabel: true}));
+      singletonStore.dispatch(setPresetColumns({labelColumn: 'c'}));
+    });
+
+    expect(save).toHaveBeenCalledTimes(1);
+    expect(save.mock.lastCall[0].labelColumn).toBe('c');
+  });
+
+  test('does not report the emptying that a level change begins with', () => {
+    const {save, context} = renderSync();
+    loadDataset();
+    act(() => context().addSelectedFeature('c'));
+    save.mockClear();
+
+    act(() => loadLevel(undefined));
+
+    expect(save).not.toHaveBeenCalled();
+  });
+
+  test('opens the saved project once, not on every dataset', () => {
+    const {context} = renderSync();
+    loadDataset();
+
+    act(() => {
+      singletonStore.dispatch(resetState());
+    });
+    loadDataset();
+
+    expect(context().project).toEqual(defaultProject);
+  });
+
+  test('keeps reporting after a reset empties the project', () => {
+    const {save, context} = renderSync();
+    loadDataset();
+    act(() => {
+      singletonStore.dispatch(resetState());
+    });
+    loadDataset();
+    save.mockClear();
+
+    act(() => context().setLabelColumn('a'));
+
+    expect(save).toHaveBeenCalledTimes(1);
+    expect(save.mock.lastCall[0].labelColumn).toBe('a');
   });
 });

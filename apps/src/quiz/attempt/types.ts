@@ -5,6 +5,11 @@ export interface MultipleChoiceQuestionResponse {
   responseData: {selectedChoiceId?: string};
 }
 
+export interface MultipleSelectQuestionResponse {
+  questionType: 'MultipleSelectQuestion';
+  responseData: {selectedChoiceIds?: string[]};
+}
+
 export interface FreeResponseQuestionResponse {
   questionType: 'FreeResponseQuestion';
   responseData: {answerText?: string};
@@ -19,6 +24,7 @@ export interface MatchQuestionResponse {
 // Narrow with the type guards below to read responseData.
 export type QuizQuestionResponse =
   | MultipleChoiceQuestionResponse
+  | MultipleSelectQuestionResponse
   | FreeResponseQuestionResponse
   | MatchQuestionResponse;
 
@@ -30,17 +36,40 @@ export function isMultipleChoiceResponse(
   return response.questionType === 'MultipleChoiceQuestion';
 }
 
+export function isMultipleSelectResponse(
+  response: QuizQuestionResponse
+): response is MultipleSelectQuestionResponse {
+  return response.questionType === 'MultipleSelectQuestion';
+}
+
 export function isFreeResponseResponse(
   response: QuizQuestionResponse
 ): response is FreeResponseQuestionResponse {
   return response.questionType === 'FreeResponseQuestion';
 }
 
+export function isMatchResponse(
+  response: QuizQuestionResponse
+): response is MatchQuestionResponse {
+  return response.questionType === 'MatchQuestion';
+}
+
+// How a choice is marked in a submitted question's results.
+export type ChoiceResultStatus =
+  | 'correct'
+  | 'incorrect'
+  | 'selected_ungraded'
+  | 'neutral';
+
 export type QuizQuestionResult = QuizQuestionResponse & {
   quizQuestionId: number;
+  // Absent before submission.
+  answered?: boolean;
   correct: boolean | null;
   explanation: string | null;
-  correctChoiceId: string | null;
+  // The answer key, by question type; null when hidden.
+  correctChoiceId?: string | null;
+  correctChoiceIds?: string[] | null;
 };
 
 // Unanswered questions are omitted.

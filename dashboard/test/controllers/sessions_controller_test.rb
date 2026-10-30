@@ -164,6 +164,100 @@ class SessionsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'failed signin for a Google-only account shows the generic error when the SSO nudge is off' do
+    DCDO.set('sso_nudge_enabled', false)
+    user = create(:user, :with_google_authentication_option, :without_email_auth_option)
+    google_option = user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
+    post :create, params: {user: {login: '', hashed_email: google_option.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('devise.failure.not_found_in_database')
+  end
+
+  test 'failed signin for a password-only account shows the generic error' do
+    enable_sso_nudge
+    user = create(:user)
+    post :create, params: {user: {login: '', hashed_email: user.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('devise.failure.invalid')
+  end
+
+  test 'failed signin for an unknown email shows the generic error' do
+    enable_sso_nudge
+    post :create, params: {user: {login: '', hashed_email: User.hash_email('nobody@example.com'), password: 'wrong'}}
+    assert_select '.alert', I18n.t('devise.failure.not_found_in_database')
+  end
+
+  # The :without_email_auth_option trait blanks the user's own email and
+  # hashed_email, so these tests read them off the SSO option instead.
+  test 'failed signin for a Google-only account nudges toward Google' do
+    enable_sso_nudge
+    user = create(:user, :with_google_authentication_option, :without_email_auth_option)
+    google_option = user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
+    post :create, params: {user: {login: '', hashed_email: google_option.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.sso_login_nudge', provider: 'Google')
+  end
+
+  test 'failed signin by cleartext email nudges toward the SSO provider' do
+    enable_sso_nudge
+    user = create(:teacher, :with_google_authentication_option)
+    post :create, params: {user: {login: user.email, hashed_email: '', password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.sso_login_nudge', provider: 'Google')
+  end
+
+  test 'failed signin for a password account that also has Google nudges toward Google' do
+    enable_sso_nudge
+    user = create(:user, :with_google_authentication_option)
+    post :create, params: {user: {login: '', hashed_email: user.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.sso_login_nudge', provider: 'Google')
+  end
+
+  test 'failed signin with several SSO options names the most recently updated one' do
+    enable_sso_nudge
+    user = create(:teacher, :with_google_authentication_option)
+    create(:authentication_option, user: user, email: user.email, credential_type: AuthenticationOption::MICROSOFT)
+    user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update!(updated_at: 1.day.ago)
+    post :create, params: {user: {login: '', hashed_email: user.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.sso_login_nudge', provider: 'Microsoft')
+  end
+
+  test 'failed signin shows the generic error when matching SSO options belong to different users' do
+    enable_sso_nudge
+    email = 'shared@example.com'
+    create(:lti_authentication_option, user: create(:student), email: email)
+    create(:authentication_option, user: create(:student), email: email, credential_type: AuthenticationOption::CLEVER)
+
+    post :create, params: {user: {login: '', hashed_email: AuthenticationOption.hash_email(email), password: 'wrong'}}
+    assert_select '.alert', I18n.t('devise.failure.not_found_in_database')
+  end
+
+  test 'failed signin for an LTI account nudges toward launching from the LMS' do
+    enable_sso_nudge
+    user = create(:user, :with_lti_auth)
+    lti_option = user.authentication_options.find_by(credential_type: AuthenticationOption::LTI_V1)
+    lti_option.update!(email: 'lti-teacher@example.com')
+    canvas_issuer = Policies::Lti::LMS_PLATFORMS[:canvas_cloud][:issuer]
+    lti_option.update!(authentication_id: "#{canvas_issuer}|client|subject")
+
+    post :create, params: {user: {login: '', hashed_email: lti_option.hashed_email, password: 'wrong'}}
+    assert_select '.alert', I18n.t('auth.lti_login_nudge', platform: 'Canvas')
+  end
+
+  test 'failed signin for an LTI account from an unknown issuer falls back to a generic LMS name' do
+    enable_sso_nudge
+    user = create(:user, :with_lti_auth)
+    lti_option = user.authentication_options.find_by(credential_type: AuthenticationOption::LTI_V1)
+    lti_option.update!(email: 'lti-student@example.com')
+
+    post :create, params: {user: {login: '', hashed_email: lti_option.hashed_email, password: 'wrong'}}
+    expected_platform = I18n.t('auth.lti_login_nudge_default_platform')
+    assert_select '.alert', I18n.t('auth.lti_login_nudge', platform: expected_platform)
+  end
+
+  test 'sign in page with no failed login shows no nudge' do
+    enable_sso_nudge
+    create(:user, :with_google_authentication_option, :without_email_auth_option)
+    get :new
+    assert_select '.alert', 0
+  end
+
   test "users go to code.org after logging out" do
     student = create(:student)
     sign_in student
@@ -371,5 +465,9 @@ class SessionsControllerTest < ActionController::TestCase
         password: user.password
       }
     }
+  end
+
+  private def enable_sso_nudge
+    DCDO.set('sso_nudge_enabled', true)
   end
 end

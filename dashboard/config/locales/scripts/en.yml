@@ -420,6 +420,8 @@ en:
               name: Choice Progression
             lesson-62:
               name: Quiz
+            lesson-63:
+              name: Sprite Lab2
         ui-test-all-the-levels:
           title: All The Levels!
           description: |-
@@ -31159,11 +31161,13 @@ en:
           lessons:
             lesson-1:
               name: Lesson 1
+            lesson-2:
+              name: Unit 6 Project
           lesson_groups:
             lessonGroup-2:
               display_name: AIF
           name: ccsd-aif-workshop
-          title: CCSD AIF Workshop
+          title: CCSD AIF Workshop 2026
           description_audience: ''
           description_short: ''
           description: ''

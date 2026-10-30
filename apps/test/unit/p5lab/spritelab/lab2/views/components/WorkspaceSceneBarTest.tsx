@@ -57,8 +57,16 @@ describe('WorkspaceSceneBar', () => {
   });
 
   it('holds New scene and All scenes when locked', () => {
-    renderBar({locked: true, lockedReason: 'Not here'});
-    expect(screen.getByRole('button', {name: 'All scenes'})).toBeDisabled();
+    const {onManageScenes} = renderBar({
+      locked: true,
+      lockedReason: 'Not here',
+    });
+    // Still focusable, so the reason in its tooltip reaches the keyboard.
+    const allScenes = screen.getByRole('button', {name: 'All scenes'});
+    expect(allScenes.getAttribute('aria-disabled')).toBe('true');
+    expect(allScenes).not.toBeDisabled();
+    fireEvent.click(allScenes);
+    expect(onManageScenes).not.toHaveBeenCalled();
     fireEvent.click(screen.getByRole('button', {name: 'Scene: Cave'}));
     expect(screen.getByRole('button', {name: 'New scene…'})).toBeDisabled();
   });

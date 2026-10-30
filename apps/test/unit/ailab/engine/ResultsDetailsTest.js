@@ -1,16 +1,22 @@
 import {fireEvent, screen, waitFor, within} from '@testing-library/react';
 import {createElement} from 'react';
 
+import {ColumnTypes} from '@cdo/apps/ailab/engine/constants';
 import I18n from '@cdo/apps/ailab/engine/i18n';
 import {
   setAccuracyCheckExamples,
   setAccuracyCheckLabels,
   setAccuracyCheckPredictedLabels,
-  setImportedData,
 } from '@cdo/apps/ailab/engine/redux';
 import ResultsDetails from '@cdo/apps/ailab/engine/UIComponents/ResultsDetails';
 
-import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
+import {
+  ANIMAL_COLUMNS,
+  ANIMALS,
+  levelProject,
+  levelStore,
+  seedDataset,
+} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
 const NAMED_ANIMALS = ANIMALS.map((row, index) => ({
@@ -30,7 +36,16 @@ function renderScorecard({
 } = {}) {
   const store = levelStore(mode);
   if (data) {
-    store.dispatch(setImportedData(data, false));
+    seedDataset(
+      store,
+      data,
+      Object.fromEntries(
+        Object.keys(data[0]).map(column => [
+          column,
+          column === 'legs' ? ColumnTypes.NUMERICAL : ColumnTypes.CATEGORICAL,
+        ])
+      )
+    );
   }
   store.dispatch(setAccuracyCheckExamples(examples));
   store.dispatch(setAccuracyCheckLabels(labels));
@@ -119,14 +134,14 @@ describe('ResultsDetails', () => {
   test('shows the other dataset columns on request', () => {
     renderScorecard({data: NAMED_ANIMALS});
 
-    fireEvent.click(screen.getByLabelText('Show all columns'));
+    fireEvent.click(screen.getByRole('button', {name: 'Expand columns'}));
 
     expect(headerRows()).toEqual([
       ['', 'name', 'legs', 'animal', 'AI predicts'],
     ]);
     expect(bodyRows()[0]).toEqual(['1', 'Tweety', '2', 'bird', 'bird']);
 
-    fireEvent.click(screen.getByLabelText('Show only features and label'));
+    fireEvent.click(screen.getByRole('button', {name: 'Collapse columns'}));
 
     expect(bodyRows()[0]).toEqual(['1', '2', 'bird', 'bird']);
   });
@@ -148,7 +163,7 @@ describe('ResultsDetails', () => {
 
   test('sorts another dataset column by its own row', () => {
     renderScorecard({data: NAMED_ANIMALS, accuracyCheckRowIndices: [3, 4, 5]});
-    fireEvent.click(screen.getByLabelText('Show all columns'));
+    fireEvent.click(screen.getByRole('button', {name: 'Expand columns'}));
     fireEvent.click(sortButton('Sort by name A-Z'));
     fireEvent.click(sortButton('Sort by name Z-A'));
 

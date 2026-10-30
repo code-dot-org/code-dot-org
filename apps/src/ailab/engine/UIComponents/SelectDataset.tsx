@@ -1,20 +1,20 @@
 /* React component to handle importing CSVs and pushing data to Redux store. */
+import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, Divider, Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useRef, useState} from 'react';
 
 import {getAssetPath} from '../assetPath';
-import {parseCSV, MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
+import {MIN_CSV_ROWS, MIN_CSV_COLUMNS} from '../csvReaderWrapper';
 import {invalidatePendingDatasetLoads} from '../datasetLoad';
 import {getDatasets, getAvailableDatasets} from '../datasetManifest';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import I18n from '../i18n';
-import {loadDataset} from '../loadDataset';
+import {loadDataset, loadUploadedDataset} from '../loadDataset';
 import {
   setSelectedName as setSelectedNameAction,
   setSelectedCSV as setSelectedCSVAction,
-  setSelectedJSON as setSelectedJSONAction,
   resetState as resetStateAction,
   getSpecifiedDatasets,
 } from '../redux';
@@ -37,6 +37,7 @@ const SelectDataset = () => {
   );
   const isUploadSelected =
     uploadedFile !== undefined && csvfile === uploadedFile;
+  const isUploadRejected = isUploadSelected && !!invalidData;
   const fileInputRef = useRef<HTMLInputElement>(null);
   const uploadButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -45,8 +46,6 @@ const SelectDataset = () => {
     dispatch(setSelectedNameAction(datasetName));
   const setSelectedCSV = (csvfilePath: string | File) =>
     dispatch(setSelectedCSVAction(csvfilePath));
-  const setSelectedJSON = (jsonfilePath: string) =>
-    dispatch(setSelectedJSONAction(jsonfilePath));
 
   const handleDatasetClick = (id: string) => {
     const assetPath = getAssetPath();
@@ -58,15 +57,13 @@ const SelectDataset = () => {
       const csvPath = assetPath + dataset.path;
       const jsonPath = assetPath + dataset.metadataPath;
 
-      // Only an upload can be invalid, and a rejected one isn't worth keeping.
-      if (invalidData) {
+      if (isUploadRejected) {
         setUploadedFile(undefined);
       }
 
       resetState();
       setSelectedName(dataset.name);
       setSelectedCSV(csvPath);
-      setSelectedJSON(jsonPath);
 
       invalidatePendingDatasetLoads();
       loadDataset(csvPath, jsonPath);
@@ -77,7 +74,7 @@ const SelectDataset = () => {
     resetState();
     setSelectedCSV(file);
     invalidatePendingDatasetLoads();
-    parseCSV(file as unknown as string, false, true);
+    loadUploadedDataset(file);
   };
 
   const handleUploadSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -102,21 +99,25 @@ const SelectDataset = () => {
   };
 
   const getInvalidDataMessage = () => {
-    if (invalidData === 'tooFewRows') {
-      return I18n.t('selectDatasetErrorTooFewRows', {
-        count: MIN_CSV_ROWS,
-        fileType: 'CSV',
-      });
-    } else if (invalidData === 'tooFewColumns') {
-      return I18n.t('selectDatasetErrorTooFewColumns', {
-        count: MIN_CSV_COLUMNS,
-        fileType: 'CSV',
-      });
-    } else {
-      return null;
+    switch (invalidData) {
+      case 'tooFewRows':
+        return I18n.t('selectDatasetErrorTooFewRows', {
+          count: MIN_CSV_ROWS,
+          fileType: 'CSV',
+        });
+      case 'tooFewColumns':
+        return I18n.t('selectDatasetErrorTooFewColumns', {
+          count: MIN_CSV_COLUMNS,
+          fileType: 'CSV',
+        });
+      case 'loadFailed':
+        return 'This dataset could not be loaded. Try another one.';
+      default:
+        return null;
     }
   };
 
+  const invalidDataMessage = getInvalidDataMessage();
   const datasets = getAvailableDatasets(specifiedDatasets);
 
   const assetPath = getAssetPath();
@@ -140,6 +141,14 @@ const SelectDataset = () => {
           />
         ))}
       </div>
+      {invalidDataMessage && (
+        <Alert
+          type="danger"
+          size="s"
+          text={invalidDataMessage}
+          className={styles.alert}
+        />
+      )}
       {!specifiedDatasets && (
         <div className={styles.upload}>
           <Button
@@ -157,7 +166,7 @@ const SelectDataset = () => {
           >
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
           </Button>
-          {uploadedFile && !invalidData && (
+          {uploadedFile && !isUploadRejected && (
             <>
               <Divider orientation="vertical" className={styles.divider} />
               <UploadedFileChip
@@ -182,9 +191,6 @@ const SelectDataset = () => {
             onChange={handleUploadSelect}
             value=""
           />
-          <Typography variant="body3" className={styles.invalidData}>
-            {getInvalidDataMessage()}
-          </Typography>
         </div>
       )}
     </div>

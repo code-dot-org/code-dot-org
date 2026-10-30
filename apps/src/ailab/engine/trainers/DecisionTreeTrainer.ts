@@ -4,6 +4,7 @@ https://github.com/mljs/decision-tree-cart */
 import {DecisionTreeClassifier, DecisionTreeRegression} from 'ml-cart';
 
 import {isRegression} from '../helpers/columnDetails';
+import {isValidHyperparameter} from '../helpers/utils';
 import type {RootState} from '../redux';
 import type {Hyperparameters, TrainedModel} from '../types';
 
@@ -33,6 +34,10 @@ export default class DecisionTreeTrainer extends BaseTrainer<number> {
   }
 
   protected candidateFor(hyperparameters: Hyperparameters): number | undefined {
-    return 'maxDepth' in hyperparameters ? hyperparameters.maxDepth : undefined;
+    if (!('maxDepth' in hyperparameters)) {
+      return undefined;
+    }
+    const {maxDepth} = hyperparameters;
+    return isValidHyperparameter(maxDepth) ? maxDepth : undefined;
   }
 }

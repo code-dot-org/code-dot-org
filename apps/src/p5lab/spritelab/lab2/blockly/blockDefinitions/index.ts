@@ -16,6 +16,7 @@ import patrollingLeftRight from './patrollingLeftRight';
 import placeholder from './placeholder';
 import playMusic from './playMusic';
 import playSound from './playSound';
+import playSoundEffect from './playSoundEffect';
 import restartScene from './restartScene';
 import setAsPlatformPlayer from './setAsPlatformPlayer';
 import setCameraZoom from './setCameraZoom';
@@ -35,6 +36,7 @@ const labBlockDefinitions: {
   goToScene,
   playMusic,
   playSound,
+  playSoundEffect,
   whenRun,
   whenPlayer,
   goToExternalScene,

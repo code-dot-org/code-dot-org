@@ -1,6 +1,6 @@
 /*
-  The training flow shared by every trainer: sweep a list of candidate
-  hyperparameters, keep the model that grades best, and return it.
+  The training flow shared by every trainer: build the level's hyperparameters
+  if it sets them, else sweep the candidates and keep the most accurate model.
 
   A subclass supplies only what differs between algorithms — which candidates
   to try, how to build a model from one, and how to name it for the saved
@@ -95,13 +95,23 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
       return undefined;
     }
 
-    const model = this.buildModel(state, candidate);
+    try {
+      const model = this.buildModel(state, candidate);
 
-    return this.recordModel({
-      model,
-      predictedLabels: this.predictRows(model, state.accuracyCheckExamples),
-      candidate,
-    });
+      return this.recordModel({
+        model,
+        predictedLabels: this.predictRows(model, state.accuracyCheckExamples),
+        candidate,
+      });
+    } catch (error) {
+      /*
+        A saved run describes a model this trainer built once, which is no
+        promise it can be built again: the dataset may have changed under it,
+        or the file may have been edited by hand.
+      */
+      console.error('AI Lab could not rebuild a saved model.', error);
+      return undefined;
+    }
   }
 
   // Stores what grading a model needs, then describes the run it belongs to.
@@ -124,7 +134,7 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     let best: OptimalModelDetails<Candidate> | undefined;
     let bestAccuracy = -1;
 
-    this.candidates(state).forEach((candidate: Candidate) => {
+    this.candidatesToTry(state).forEach((candidate: Candidate) => {
       const model = this.buildModel(state, candidate);
       const predictedLabels = this.predictRows(
         model,
@@ -147,6 +157,15 @@ export default abstract class BaseTrainer<Candidate> implements Trainer {
     });
 
     return best;
+  }
+
+  private candidatesToTry(state: RootState): Candidate[] {
+    const levelHyperparameters = state.mode?.hyperparameters;
+    const levelCandidate =
+      levelHyperparameters && this.candidateFor(levelHyperparameters);
+    return levelCandidate === undefined
+      ? this.candidates(state)
+      : [levelCandidate];
   }
 
   // ml-knn throws on an empty matrix; ml-cart returns no predictions.

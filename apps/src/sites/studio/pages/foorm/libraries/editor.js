@@ -33,10 +33,7 @@ $(document).ready(function () {
         categories={scriptData.libraryCategories}
       />
     </Provider>,
-    document.getElementById('editor-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('editor-container')
   );
 });
 

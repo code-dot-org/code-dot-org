@@ -19,6 +19,7 @@ import {
   saveModel,
   setCurrentPanel,
 } from './redux';
+import {getData} from './selectors';
 import {useTrainingData} from './TrainingDataContext';
 import type {
   InstructionsKey,
@@ -30,6 +31,7 @@ import type {
 import ColumnAnalysis from './UIComponents/ColumnAnalysis';
 import DataCard from './UIComponents/DataCard';
 import DataDisplay from './UIComponents/DataDisplay';
+import EmptyState from './UIComponents/EmptyState';
 import ModelCard from './UIComponents/ModelCard';
 import Results from './UIComponents/Results';
 import SaveModel from './UIComponents/SaveModel';
@@ -38,6 +40,7 @@ import TrainingModal from './UIComponents/TrainingModal';
 import TrainPanel from './UIComponents/TrainPanel';
 import WorkspaceHeader from './UIComponents/WorkspaceHeader';
 import {usePretrainOnLoad} from './usePretrainOnLoad';
+import {useRestoreModel} from './useRestoreModel';
 
 import styles from './app.module.scss';
 
@@ -245,7 +248,7 @@ const App = ({
   onTrained,
 }: AppProps) => {
   const dispatch = useAppDispatch();
-  const {project} = useProject();
+  const {project, isProjectLoading} = useProject();
   const panelButtons = useAppSelector<PrevNextButtons>(
     state => getPanelButtons(state, project),
     panelButtonsEqual
@@ -262,7 +265,26 @@ const App = ({
   const hideTestingView = useAppSelector(getHideTestingView);
   const hasNavigation = !!(panelButtons.prev || panelButtons.next);
 
-  usePretrainOnLoad();
+  const restoringModel = useRestoreModel();
+  usePretrainOnLoad(restoringModel);
+
+  const datasetPending = useAppSelector(
+    state =>
+      !!state.csvfile && getData(state).length === 0 && !state.invalidData
+  );
+  /*
+    Datasets load while on the select dataset panel, don't hide that panel
+    while datasets are still loading.
+  */
+  const loading =
+    currentPanel !== 'selectDataset' &&
+    (datasetPending || isProjectLoading || restoringModel);
+  // The picker reports its own failures.
+  const datasetFailed = useAppSelector(
+    state =>
+      state.currentPanel !== 'selectDataset' &&
+      state.invalidData === 'loadFailed'
+  );
 
   // Notify the consumer of instructions key changes when they occur.
   useEffect(() => {
@@ -286,6 +308,26 @@ const App = ({
     // As above: report a result once, not once per render of the consumer.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [latestResult]);
+
+  if (datasetFailed) {
+    return (
+      <div className={styles.app} style={colorVariables}>
+        <BodyContainer flush>
+          <div className={styles.panelRow} role="alert">
+            <EmptyState
+              iconName="triangle-exclamation"
+              title="Dataset could not be loaded"
+              message="Reload the page to try again."
+            />
+          </div>
+        </BodyContainer>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return <div className={styles.app} style={colorVariables} />;
+  }
 
   return (
     <div className={styles.app} style={colorVariables}>

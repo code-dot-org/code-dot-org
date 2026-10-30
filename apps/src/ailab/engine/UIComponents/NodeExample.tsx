@@ -7,6 +7,7 @@ import {displayValue} from '../helpers/displayTreeNodeContent';
 import {getLocalizedValue} from '../helpers/valueDetails';
 import {useAppSelector} from '../hooks';
 import {useProject} from '../ProjectContext';
+import {getDatasetId} from '../selectors';
 import {getPredictionTrace} from '../selectors/visualizationSelectors';
 import {useTrainingData} from '../TrainingDataContext';
 
@@ -28,7 +29,7 @@ const NodeExample = ({nodeId, emphasizedColumn}: NodeExampleProps) => {
     getPredictionTrace(state, project, trainedModel)
   );
   const testData = useAppSelector(state => state.predictionTestData);
-  const datasetId = useAppSelector(state => state.metadata?.name || 'unknown');
+  const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
 
   if (!trace?.path.includes(nodeId)) {
     return null;

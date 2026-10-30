@@ -1,13 +1,16 @@
 import {act, screen} from '@testing-library/react';
 import {createElement} from 'react';
+import {createStore} from 'redux';
 
 import App from '@cdo/apps/ailab/engine/App';
 import I18n from '@cdo/apps/ailab/engine/i18n';
-import {
+import rootReducer, {
   resetState,
   setCurrentPanel,
+  setInvalidData,
   setMode,
   setPresetColumns,
+  setSelectedCSV,
 } from '@cdo/apps/ailab/engine/redux';
 import {store as storeSingleton} from '@cdo/apps/ailab/engine/store';
 
@@ -152,5 +155,70 @@ describe('a pretrained level', () => {
   test('hides Start over', () => {
     renderLevel(PRETRAINED);
     expect(screen.queryByRole('button', {name: 'Start over'})).toBeNull();
+  });
+});
+
+describe('a level whose only dataset fails to load', () => {
+  beforeEach(() => I18n.initI18n());
+
+  test.each([{}, {hideDatasetView: true}])(
+    'reports the failure in place of the lab (mode %j)',
+    mode => {
+      const store = createStore(rootReducer);
+      store.dispatch(setMode(mode));
+      store.dispatch(setSelectedCSV('animals.csv'));
+      store.dispatch(setCurrentPanel('datasetView'));
+      renderWithProviders(
+        createElement(App, {
+          onContinue: () => {},
+          saveTrainedModel: () => {},
+          onStartOver: () => {},
+        }),
+        {store}
+      );
+      expect(screen.queryByRole('alert')).toBeNull();
+
+      act(() => {
+        store.dispatch(setInvalidData('loadFailed'));
+      });
+      expect(screen.getByRole('alert').textContent).toContain(
+        'Dataset could not be loaded'
+      );
+      expect(screen.queryByRole('heading', {name: 'Train'})).toBeNull();
+    }
+  );
+});
+
+describe('choosing a dataset', () => {
+  beforeEach(() => I18n.initI18n());
+
+  function renderPicker() {
+    const store = createStore(rootReducer);
+    store.dispatch(setMode({}));
+    store.dispatch(setCurrentPanel('selectDataset'));
+    renderWithProviders(
+      createElement(App, {
+        onContinue: () => {},
+        saveTrainedModel: () => {},
+        onStartOver: () => {},
+      }),
+      {store}
+    );
+    const picker = () =>
+      screen.queryByRole('heading', {name: 'Choose a dataset'});
+    return {store, picker};
+  }
+
+  test('leaves the picker standing while the dataset loads', () => {
+    const {store, picker} = renderPicker();
+    const opened = picker();
+    expect(opened).toBeTruthy();
+
+    act(() => {
+      store.dispatch(setSelectedCSV('animals.csv'));
+    });
+
+    // The same node, not a replacement: a remount would empty its state.
+    expect(picker()).toBe(opened);
   });
 });
