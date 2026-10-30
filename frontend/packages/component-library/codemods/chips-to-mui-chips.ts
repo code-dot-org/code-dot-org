@@ -36,6 +36,13 @@ const MOCK_KEYS: Record<string, string> = {
 
 const MOCKERS = new Set(['jest.mock', 'jest.doMock', 'vi.mock', 'vi.doMock']);
 
+// Mock values that can be written twice: evaluating them again has no effect and records no calls.
+const COPYABLE = new Set([
+  'Identifier',
+  'ArrowFunctionExpression',
+  'FunctionExpression',
+]);
+
 const DISPLAY_NAMES: Record<string, string> = {
   Chips: 'MuiChips',
 };
@@ -247,7 +254,15 @@ function transformer(file: FileInfo, api: API) {
         ) {
           report(
             property,
-            `jest.mock key '${key}' is a method; add '${MOCK_KEYS[key]}' by hand.`,
+            `${mocker} key '${key}' is a method; add '${MOCK_KEYS[key]}' by hand.`,
+          );
+          continue;
+        }
+        // A copied `jest.fn()` would be a second mock that sees none of the first one's calls.
+        if (!COPYABLE.has(property.value.type)) {
+          report(
+            property,
+            `${mocker} key '${key}' is neither a name nor a function; bind its value to a const in the factory and give '${key}' and '${MOCK_KEYS[key]}' that const by hand.`,
           );
           continue;
         }

@@ -174,10 +174,12 @@ Transforms:
    `import type` and inline `type` modifiers are kept.
 4. `jest.mock`, `jest.doMock`, `vi.mock` or `vi.doMock` of the entry point
    where the factory returns one object literal (a return inside a branch is
-   reported): for a `default` or `Chips` key, add
-   a `MuiChips` key with the same value unless one is already there. A
-   factory with both keys is reported instead: only the file's import says
-   which value `MuiChips` should take.
+   reported): for a `default` or `Chips` key whose value is a name or a
+   function, add a `MuiChips` key with the same value unless one is already
+   there. Any other value is reported: a copied `jest.fn()` would be a second mock
+   that records none of the first one's calls. A factory with both keys is
+   reported instead: only the file's import says which value `MuiChips`
+   should take.
 5. Files without the source are untouched. Specifiers already on `Mui`
    names are left alone. No prop is renamed or dropped, so no call site is
    skipped.

@@ -41,7 +41,7 @@ Moves `Chips` imports from `@code-dot-org/component-library/chips` to `MuiChips`
 **What it does:**
 
 - Rewrites the default import (also as `{default as X}`) and the named `Chips` / `ChipsProps` imports to `MuiChips` / `MuiChipsProps`, keeping local names
-- Adds a `MuiChips` key to `jest.mock`, `jest.doMock`, `vi.mock` and `vi.doMock` factories that return one object literal; a factory with both `default` and `Chips`, or with a return inside a branch, is reported instead
+- Adds a `MuiChips` key to `jest.mock`, `jest.doMock`, `vi.mock` and `vi.doMock` factories that return one object literal, copying the `default` or `Chips` value when it is a name or a function; any other value (`jest.fn()` would become a second, separate mock), a factory with both `default` and `Chips`, or a return inside a branch is reported instead
 - Reports Enzyme string selectors that name `Chips` (`find('Chips')`, `find('.x Chips')`, `w?.find('Chips[name="x"]')`), namespace imports, re-exports and `require()` / `import()` of the entry point, for hand work
 - Idempotent; parses `.ts` files with the `ts` parser
 
