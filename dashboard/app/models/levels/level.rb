@@ -1176,7 +1176,7 @@ class Level < ApplicationRecord
 
   def uses_theme_preference?
     # These are the level types that set and use the theme preference in UserPreferences right now.
-    is_a?(Pythonlab) || is_a?(Weblab2) || is_a?(Sketchlab)
+    is_a?(Pythonlab) || is_a?(Weblab2) || is_a?(Sketchlab) || (is_a?(GamelabJr) && uses_lab2?)
   end
 
   def get_parent_level_for_script(script_id)
