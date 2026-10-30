@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-28 22:12:26 UTC",
+    "serialized_at": "2026-10-29 22:14:13 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1533,7 +1533,7 @@
       "key": "bb3934a5-6c3e-4610-874e-94e65d71db45",
       "position": 1,
       "properties": {
-        "progression_name": "Train Your First Tree"
+        "progression_name": "Meet the Data"
       },
       "seeding_key": {
         "activity_section.key": "bb3934a5-6c3e-4610-874e-94e65d71db45",
@@ -1541,8 +1541,19 @@
       }
     },
     {
-      "key": "6c6a9fba-e7e6-405f-9c85-ba5ea9d4a5fd",
+      "key": "527ad147-af0b-49e9-920c-a64e79dabfa6",
       "position": 2,
+      "properties": {
+        "progression_name": "Training Decision Trees"
+      },
+      "seeding_key": {
+        "activity_section.key": "527ad147-af0b-49e9-920c-a64e79dabfa6",
+        "lesson_activity.key": "982513d0-d281-4318-9c5e-c0adefeb4a87"
+      }
+    },
+    {
+      "key": "6c6a9fba-e7e6-405f-9c85-ba5ea9d4a5fd",
+      "position": 3,
       "properties": {
         "progression_name": "Make a Prediction"
       },
@@ -1553,7 +1564,7 @@
     },
     {
       "key": "99be952e-01b9-49ce-9889-cd9cd06b15f6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Limited Features"
       },
@@ -1564,7 +1575,7 @@
     },
     {
       "key": "9e8b0a3d-918a-4f82-b6ec-5d1abb3c4087",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Add a Feature"
       },
@@ -2007,7 +2018,7 @@
       "chapter": 20,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "progression": "Filling the Gaps"
       },
@@ -2226,12 +2237,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Train Your First Tree"
+        "progression": "Meet the Data"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "data-makes-ai-lesson7-ai-studio1"
+          "data-makes-ai-lesson7-ai-studio0"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -2239,16 +2250,16 @@
         "activity_section.key": "bb3934a5-6c3e-4610-874e-94e65d71db45"
       },
       "level_keys": [
-        "data-makes-ai-lesson7-ai-studio1"
+        "data-makes-ai-lesson7-ai-studio0"
       ]
     },
     {
       "chapter": 31,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Train Your First Tree"
+        "progression": "Training Decision Trees"
       },
       "bonus": false,
       "seeding_key": {
@@ -2258,7 +2269,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "bb3934a5-6c3e-4610-874e-94e65d71db45"
+        "activity_section.key": "527ad147-af0b-49e9-920c-a64e79dabfa6"
       },
       "level_keys": [
         "data-makes-ai-lesson7-ai-studio2"
@@ -2267,6 +2278,28 @@
     {
       "chapter": 32,
       "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Training Decision Trees"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "527ad147-af0b-49e9-920c-a64e79dabfa6"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson7-ai-studio4"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -2284,28 +2317,6 @@
       },
       "level_keys": [
         "data-makes-ai-lesson7-ai-studio3"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Limited Features"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-makes-ai-lesson7-ai-studio4"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "",
-        "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "99be952e-01b9-49ce-9889-cd9cd06b15f6"
-      },
-      "level_keys": [
-        "data-makes-ai-lesson7-ai-studio4"
       ]
     },
     {
@@ -2682,9 +2693,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "data-makes-ai-lesson7-ai-studio1",
+        "level.key": "data-makes-ai-lesson7-ai-studio0",
         "script_level.level_keys": [
-          "data-makes-ai-lesson7-ai-studio1"
+          "data-makes-ai-lesson7-ai-studio0"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -2701,7 +2712,19 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "bb3934a5-6c3e-4610-874e-94e65d71db45"
+        "activity_section.key": "527ad147-af0b-49e9-920c-a64e79dabfa6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson7-ai-studio4",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "527ad147-af0b-49e9-920c-a64e79dabfa6"
       }
     },
     {
@@ -2714,18 +2737,6 @@
         "lesson_group.key": "",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "6c6a9fba-e7e6-405f-9c85-ba5ea9d4a5fd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-makes-ai-lesson7-ai-studio4",
-        "script_level.level_keys": [
-          "data-makes-ai-lesson7-ai-studio4"
-        ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "",
-        "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "99be952e-01b9-49ce-9889-cd9cd06b15f6"
       }
     },
     {
