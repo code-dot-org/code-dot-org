@@ -10,8 +10,7 @@ import {NO_MATCH_SETS} from './utils';
 
 type MatchResult = QuizQuestionResult & MatchQuestionResponse;
 
-// A submitted match question: the pairs as made, read-only. Grading is all or
-// nothing, so whether the answer was correct is left to the card's result tag.
+// A submitted match question: the pairs as made, read-only.
 const MatchAnswer: React.FunctionComponent<{
   question: QuizQuestionSummary;
   result: MatchResult;
