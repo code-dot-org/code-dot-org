@@ -1737,6 +1737,22 @@ const defineEventBlock = (event: EventMeta) => {
         const property = subjectPropertyOf(block);
         const kind = subjectKindOf(block);
         const inMap = (generator as {__mapModule?: string}).__mapModule;
+        // ABOUT THE ACTOR'S OWN PROPERTY, in an actor file: carried by the
+        // kind, so every actor of it hears the event through its own value
+        // (specs/OWN_SUBJECTS_PLAN.md). `actor` is the one that hears.
+        const self = (generator as {__ruleModule?: string}).__ruleModule;
+        if (
+          property &&
+          property.scope !== 'world' &&
+          !inMap &&
+          self?.startsWith('actors/')
+        ) {
+          return (
+            `actor.onOwnSubject(${refCode(property.ref, generator)}, ` +
+            `${refCode(event.ref, generator)}, ` +
+            `(world, actor, subject, ${parameters.join(', ')}) => {\n${body}});\n`
+          );
+        }
         if (property || (kind && inMap)) {
           const read = property
             ? subjectRead(property, generator)

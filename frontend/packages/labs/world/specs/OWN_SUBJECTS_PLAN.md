@@ -1,6 +1,6 @@
 # Plan: a kind's hat about its own property
 
-STATUS: BUILDING, October 2026. Step 2 is done. Follows specs/PROPERTY_SUBJECTS_PLAN.md,
+STATUS: BUILDING, October 2026. Steps 2 and 3 are done. Follows specs/PROPERTY_SUBJECTS_PLAN.md,
 whose one open item this is.
 
 A hat in an actor file may be about that actor's own actor-typed property:
@@ -114,6 +114,14 @@ damaged` and `when ⟨subject⟩ is healed` and sets its own fraction from
   held by nobody.
 - **A listener's hats count in `handlerIds`**, by event, property and
   source, so editing one restarts the game as editing a handler does.
+- **Step 3 is one branch in the hat's generator.** An actor-scoped property
+  subject in a file whose module is under `actors/`, and not in a map's or a
+  placement's code, generates `actor.onOwnSubject(…)` on the file's builder.
+  `subject actor` already read the handler's `subject` under any property
+  hat, and `this actor` reads `actor`, which the handler binds to the
+  listener, so neither block changed. A property the kind has through
+  `acts like` is handled the same way, since the generator does not ask
+  which file declared it.
 
 ## Open
 
