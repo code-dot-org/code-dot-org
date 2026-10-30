@@ -104,8 +104,10 @@ interface ResultActionsProps {
   onChangeWords: () => void;
   onGenerateAgain: () => void;
   onContinue: () => void;
-  /** No generations left: Regenerate alone goes off. */
+  /** Disable Regenerate alone, when no generations are left. */
   regenerateDisabled?: boolean;
+  /** Disable Continue alone, while the picture still needs its rating. */
+  continueDisabled?: boolean;
 }
 
 const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
@@ -115,6 +117,7 @@ const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
   onContinue,
   disabled,
   regenerateDisabled,
+  continueDisabled,
 }) => (
   <>
     <hr className={styles.resultDivider} />
@@ -148,7 +151,7 @@ const ResultActions: React.FunctionComponent<ResultActionsProps> = ({
               aria-hidden
             />
           }
-          disabled={disabled}
+          disabled={disabled || continueDisabled}
           onClick={onContinue}
         >
           Continue

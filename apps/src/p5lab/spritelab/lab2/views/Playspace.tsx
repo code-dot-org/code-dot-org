@@ -186,8 +186,6 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
-  /** The scene playing now is a platformer, so the controls apply. */
-  platformScene?: boolean;
   // Over the play area's corner, outside the box so they keep their size.
   controls?: React.ReactNode;
   // Over the box's bottom edge, unscaled.
@@ -220,7 +218,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   covered = false,
   loading = false,
   boxRef,
-  platformScene = false,
   controls,
   prompt,
   playBar,
@@ -652,9 +649,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
-        aria-describedby={
-          mode === 'play' && platformScene ? CONTROLS_HELP_ID : undefined
-        }
+        aria-describedby={mode === 'play' ? CONTROLS_HELP_ID : undefined}
         tabIndex={mode === 'play' ? 0 : undefined}
         style={{
           transform,
@@ -763,7 +758,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           {prompt}
         </div>
       )}
-      {mode === 'play' && platformScene && (
+      {mode === 'play' && (
         <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
           Left and right arrows move. Space or up arrow jumps. In zero gravity,
           up and down steer. Navigation sounds can be turned on in Settings:
