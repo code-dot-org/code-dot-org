@@ -4,15 +4,15 @@ require 'cdo/chat_client'
 
 class User
   # Revokes admin and the levelbuilder permission from accounts that have not
-  # signed in for INACTIVITY_PERIOD.
+  # signed in for 90 days in production, or for a year elsewhere.
   class RevokeInactivePrivilegesJob < ApplicationJob
     queue_as :default
 
-    INACTIVITY_PERIOD = 1.year
     SLACK_CHANNEL = 'cron-daily'
 
     def perform(dry_run: false)
-      cutoff = INACTIVITY_PERIOD.ago
+      period = inactivity_period
+      cutoff = period.ago
       admin_ids, levelbuilder_ids = ActiveRecord::Base.connected_to(role: :reporting) do
         [inactive_admins(cutoff).pluck(:id), inactive_levelbuilders(cutoff).pluck(:user_id)]
       end
@@ -29,12 +29,16 @@ class User
       return if admins.empty? && levelbuilders.empty? && failures.zero?
 
       message = "#{rack_env}: revoked admin from #{admins.size} and levelbuilder from #{levelbuilders.size} " \
-        "accounts with no sign-in for #{INACTIVITY_PERIOD.inspect}."
+        "accounts with no sign-in for #{period.inspect}."
       if failures.zero?
         ChatClient.message(SLACK_CHANNEL, message)
       else
         ChatClient.message(SLACK_CHANNEL, "#{message} #{failures} failed; see the revoke_inactive_privilege_failed log events.", color: 'red')
       end
+    end
+
+    private def inactivity_period
+      rack_env?(:production) ? 90.days : 1.year
     end
 
     private def inactive_users(cutoff)

@@ -65,6 +65,17 @@ class User::RevokeInactivePrivilegesJobTest < ActiveJob::TestCase
     assert admin.reload.admin?
   end
 
+  test 'uses a 90-day period in production' do
+    User::RevokeInactivePrivilegesJob.any_instance.stubs(:rack_env?).with(:production).returns(true)
+    stale = create_admin(current_sign_in_at: 100.days.ago)
+    active = create_admin(current_sign_in_at: 80.days.ago)
+
+    User::RevokeInactivePrivilegesJob.perform_now
+
+    refute stale.reload.admin?
+    assert active.reload.admin?
+  end
+
   test 'revokes levelbuilder from inactive account' do
     user = create_levelbuilder(current_sign_in_at: 13.months.ago)
 

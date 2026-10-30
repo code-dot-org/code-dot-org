@@ -140,7 +140,7 @@
       cronjob at:'0 23 * * 5', do:deploy_dir('bin', 'cron', 'create_rollup_tables')
       cronjob at:'0 4 * * 0', do:deploy_dir('bin', 'cron', 'update_project_count')
 
-      # Revoke admin and levelbuilder from accounts with no sign-in for a year; weekdays, so someone reads the Slack report.
+      # Revoke admin and levelbuilder from inactive accounts; weekdays, so someone reads the Slack report.
       cronjob at:'47 15 * * 1-5', do:"#{deploy_dir('bin', 'cron', 'perform_job')} User::RevokeInactivePrivilegesJob"
     end
   end
