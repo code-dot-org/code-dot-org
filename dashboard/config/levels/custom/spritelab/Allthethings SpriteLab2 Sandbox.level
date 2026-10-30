@@ -327,6 +327,16 @@
                       "TEXT": "Tell me a joke about cats"
                     }
                   }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "fields": {
+                      "VAR": {
+                        "name": "AI answer"
+                      }
+                    }
+                  }
                 }
               }
             },

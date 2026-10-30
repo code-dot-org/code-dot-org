@@ -12,13 +12,14 @@ export const ASK_AI_BLOCK_TYPE = 'spritelab2_askAI';
  */
 const definition: BlockJson = {
   type: ASK_AI_BLOCK_TYPE,
-  message0: 'ask AI %1 and put the answer in %2',
-  args0: [
-    {type: 'input_value', name: 'PROMPT', check: 'String'},
-    // No type check: a variables_get block reports no output type.
-    {type: 'input_value', name: 'VAR'},
-  ],
-  inputsInline: true,
+  // Two rows, the variable on its own, wording after the classic prompt
+  // block ("prompt user ... for variable ...").
+  message0: 'ask AI %1',
+  args0: [{type: 'input_value', name: 'PROMPT', check: 'String'}],
+  message1: 'for variable %1',
+  // No type check: a variables_get block reports no output type.
+  args1: [{type: 'input_value', name: 'VAR'}],
+  inputsInline: false,
   previousStatement: null,
   nextStatement: null,
   style: BlockStyles.DEFAULT,

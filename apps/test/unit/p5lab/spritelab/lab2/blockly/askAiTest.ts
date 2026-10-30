@@ -12,6 +12,15 @@ const javascript = {
 };
 
 describe('spritelab2_askAI', () => {
+  it('puts the question and the variable on separate rows', () => {
+    expect(askAi.definition.message0).toBe('ask AI %1');
+    expect(askAi.definition.message1).toBe('for variable %1');
+    expect(askAi.definition.args0).toHaveLength(1);
+    expect(askAi.definition.args1).toHaveLength(1);
+    // Inline inputs would collapse the two rows back into one.
+    expect(askAi.definition.inputsInline).toBe(false);
+  });
+
   it('passes the variable a setter rather than its value', () => {
     const code = askAi.generator(
       blockWithVar({type: 'variables_get'}) as never,
