@@ -244,7 +244,7 @@ if (next.kind === 'delete-legacy') {
     discover.legacyImports.length && `legacy imports remain: ${discover.legacyImports.join(', ')}`,
     !discover.eslintBanPresent && `${ESLINT_APPS} has no ban on the legacy names`,
   ].filter(Boolean)
-  if (why.length) throw new Error(`delete-legacy is not allowed: ${why.join('; ')}`)
+  if (why.length) throw new Error(`delete-legacy is not allowed: ${why.join('; ')}${halfDone}`)
 }
 if (row) {
   if (step4Left.length) throw new Error(`"${row.behavior}" must wait until step 4 is complete: ${step4Left.join(', ')} remain${halfDone}`)
@@ -459,7 +459,7 @@ const subject = row
 const gapsOpen = !row && gaps.length > 0
 const closeGaps = gapsOpen && verify.pass
 const requiredRuns = row && row.movesDom ? 'Eyes and the test build must run before merge: this change moves DOM or changes rendering.' : ''
-const failingNote = verify.pass ? '' : `Verify was still failing when the heal budget ran out: ${JSON.stringify(verify.failures)}${gapsOpen ? `. The "Story gaps" section stays in ${PLAN_DOC} until its stories pass` : ''}`
+const failingNote = verify.pass ? '' : `Verify was still failing when the heal budget ran out: ${JSON.stringify(verify.failures)}${gapsOpen ? `. The "Story gaps" section stays in ${PLAN_DOC}: once its stories pass, delete it by hand before merge, or no later run will read step 4 as complete` : ''}`
 
 const PUBLISH_SCHEMA = {
   type: 'object',
