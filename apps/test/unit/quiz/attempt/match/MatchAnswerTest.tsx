@@ -91,7 +91,7 @@ describe('MatchAnswer', () => {
     ).toBeInTheDocument();
   });
 
-  it('marks each pair and shows the correct answer when the key is revealed', () => {
+  it('marks each pair and shows the answer key for a wrong response', () => {
     renderAnswer({
       responseData: {pairs: [['b', 'y']]},
       correct: false,
@@ -113,7 +113,7 @@ describe('MatchAnswer', () => {
     ]);
   });
 
-  it('shows no correct answer for a correct response', () => {
+  it('marks a correct response correct and shows no answer key', () => {
     renderAnswer({
       responseData: {pairs: CORRECT_PAIRS},
       correct: true,
