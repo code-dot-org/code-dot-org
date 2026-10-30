@@ -26,7 +26,7 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './customDropdown.module.scss';
 
-export const buttonSizeToMuiSizeMap: Record<
+const buttonSizeToMuiSizeMap: Record<
   ComponentSizeXSToL,
   MuiButtonProps['size']
 > = {
