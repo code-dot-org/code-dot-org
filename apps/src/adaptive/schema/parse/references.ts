@@ -1,11 +1,12 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, question and choice ids, branch conditions, each level played by at
-// most one step, and whether each level step's `project` flag agrees with the
-// level the server resolved for it.
+// shape, question and choice ids, branch conditions, plan slots, each level
+// played by at most one step, and whether each level step's `project` flag
+// agrees with the level the server resolved for it.
 
 import {z} from 'zod';
 
 import {pathwaySchema, pathwaySourceSchema} from '../pathway';
+import {planTemplateSlots} from '../planTemplate';
 import {OTHER_CHOICE_ID} from '../question';
 
 // A source has no resolved levels, so its project flags go unchecked.
@@ -22,6 +23,7 @@ export function findReferenceProblems(pathway: Pathway): string[] {
     ...findCheckpointProblems(pathway),
     ...findQuestionProblems(pathway),
     ...findBranchProblems(pathway),
+    ...findPlanProblems(pathway),
     ...findLevelReuseProblems(pathway),
     ...findLevelStepProblems(pathway),
     ...findEvidenceProblems(pathway),
@@ -119,6 +121,45 @@ function findBranchProblems(pathway: Pathway): string[] {
         );
       }
     });
+  }
+  return problems;
+}
+
+/**
+ * Detects plan slots that do not line up: every slot a checkpoint's plan
+ * template names must be filled by a plan question in the checkpoint, and
+ * every plan question must fill a slot the template names.
+ */
+function findPlanProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  for (const checkpoint of pathway.checkpoints) {
+    const where = `checkpoints.${checkpoint.id}`;
+    const slots = checkpoint.plan
+      ? planTemplateSlots(checkpoint.plan.template)
+      : [];
+    const filled = new Set<string>();
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'questions') continue;
+      step.questions.forEach((question, index) => {
+        if (!question.plan) return;
+        const at = `${where}.steps.${step.id}.questions.${index}.plan`;
+        if (!checkpoint.plan) {
+          problems.push(`${at}: the checkpoint has no plan template`);
+        } else if (!slots.includes(question.plan)) {
+          problems.push(
+            `${at}: the plan template has no slot '{${question.plan}}'`
+          );
+        }
+        filled.add(question.plan);
+      });
+    }
+    for (const slot of slots) {
+      if (!filled.has(slot)) {
+        problems.push(
+          `${where}.plan.template: no plan question fills '{${slot}}'`
+        );
+      }
+    }
   }
   return problems;
 }

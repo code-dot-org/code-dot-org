@@ -1,6 +1,7 @@
 export * from './checkpoint';
 export * from './common';
 export * from './pathway';
+export * from './planTemplate';
 export * from './helpers';
 export * from './parse';
 export * from './project';
