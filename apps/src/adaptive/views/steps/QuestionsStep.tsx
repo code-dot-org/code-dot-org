@@ -11,6 +11,7 @@ import AttemptCard from '@cdo/apps/quiz/attempt/AttemptCard';
 import MultiChoiceQuestionContainer from '@cdo/apps/quiz/attempt/MultiChoiceQuestionContainer';
 
 import {Answer, StepAnswers} from '../../progress';
+import {OTHER_CHOICE_ID} from '../../schema/question';
 import {
   FreeResponseQuestion,
   MultipleChoiceDiagnosticQuestion,
@@ -52,11 +53,11 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     return restored;
   });
 
-  // FR state: text per question, restored from saved answers on mount.
+  // Text per question, free response or typed in place of a choice,
+  // restored from saved answers on mount.
   const [freeResponseTexts, setFreeResponseTexts] = useState(() => {
     const restored: {[questionId: number]: string} = {};
     for (const q of questions) {
-      if (q.type !== 'freeResponse') continue;
       const text = answers[q.id]?.at(-1)?.text;
       if (text) restored[q.id] = text;
     }
@@ -67,6 +68,11 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     question?.type === 'MultipleChoiceQuestion'
       ? selectedChoiceIds[question.id] ?? null
       : null;
+  const otherText =
+    question?.type === 'MultipleChoiceQuestion' && question.allowOther
+      ? freeResponseTexts[question.id] ?? ''
+      : '';
+  const isOtherPicked = selectedChoiceId === OTHER_CHOICE_ID;
 
   const freeResponseText =
     question?.type === 'freeResponse'
@@ -111,15 +117,21 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
 
     if (question.type === 'MultipleChoiceQuestion') {
       if (!selectedChoiceId) return;
+      if (isOtherPicked && !otherText.trim()) return;
       const correctChoiceId = question.correctChoiceId;
       const savedAnswers = answers[question.id] ?? [];
+      const last = savedAnswers.at(-1);
       // Resubmitting the last saved pick is not a new try.
-      if (savedAnswers.slice(-1)[0]?.answerId !== selectedChoiceId) {
+      const isNew =
+        last?.answerId !== selectedChoiceId ||
+        (isOtherPicked && last?.text !== otherText);
+      if (isNew) {
         const answer: Answer = {
           answerId: selectedChoiceId,
           isCorrect: correctChoiceId
             ? selectedChoiceId === correctChoiceId
             : undefined,
+          text: isOtherPicked ? otherText : undefined,
         };
         // Graded questions keep every try; survey questions only the last.
         onSaveAnswers(
@@ -143,7 +155,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
 
   const isDisabled =
     question?.type === 'MultipleChoiceQuestion'
-      ? !selectedChoiceId
+      ? !selectedChoiceId || (isOtherPicked && !otherText.trim())
       : question?.type === 'freeResponse'
       ? !freeResponseText.trim()
       : true;
@@ -169,6 +181,15 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
             setSelectedChoiceIds(prev => ({...prev, [q.id]: choiceId}));
           }}
           selectedChoiceStatus={feedback}
+          other={
+            q.allowOther && {
+              id: OTHER_CHOICE_ID,
+              placeholder: q.allowOther.placeholder,
+              text: otherText,
+              onChangeText: text =>
+                setFreeResponseTexts(prev => ({...prev, [q.id]: text})),
+            }
+          }
         />
       );
     }

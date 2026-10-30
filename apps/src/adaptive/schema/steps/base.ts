@@ -7,7 +7,7 @@ export const stepBaseSchema = z.strictObject({
   /**
    * Played only while `choiceId` is the latest answer to question
    * `questionId` of an earlier questions step `stepId` in the same
-   * checkpoint.
+   * checkpoint. OTHER_CHOICE_ID names a typed answer.
    */
   showIf: z
     .strictObject({
