@@ -54,8 +54,14 @@
 }
 
 .choiceButton {
+  min-width: 0;
   margin: 0;
-  overflow-wrap: anywhere;
+}
+
+.choiceLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // Keep disabled button text visible, as buttons are disabled

@@ -72,10 +72,11 @@ const PromptBar: React.FunctionComponent<PromptBarProps> = ({
                 color="primary"
                 size="small"
                 className={styles.choiceButton}
+                title={choice}
                 disabled={disabled}
                 onClick={() => onAnswer(prompt.variableName, choice)}
               >
-                {choice}
+                <span className={styles.choiceLabel}>{choice}</span>
               </MuiButton>
             ))}
           </div>
