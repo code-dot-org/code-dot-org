@@ -447,12 +447,50 @@ describe('findReferenceProblems', () => {
     ]);
   });
 
-  it('accepts a typed answer on a question', () => {
+  it('accepts a typed answer and a plan slot on a question', () => {
     const raw = served();
+    raw.checkpoints[0].plan = {template: 'A site that is {which}.'};
     Object.assign(questionOf(raw), {
       allowOther: {placeholder: 'Or type your own'},
+      plan: 'which',
+    });
+    raw.checkpoints[2].plan = {template: 'Because {why}.'};
+    raw.checkpoints[2].steps.push({
+      id: 'why',
+      title: 'Why',
+      kind: 'questions',
+      questions: [{id: 2, type: 'freeResponse', text: 'Why?', plan: 'why'}],
     });
     expect(problemsOf(raw)).toEqual([]);
+  });
+
+  describe('plan', () => {
+    // A plan template on the intro, filled by its quiz question.
+    const planned = (): Raw => {
+      const raw = served();
+      raw.checkpoints[0].plan = {template: 'A site that is {which}.'};
+      Object.assign(questionOf(raw), {plan: 'which'});
+      return raw;
+    };
+
+    it('flags a template slot no question fills, and a question filling a slot the template lacks', () => {
+      const raw = planned();
+      raw.checkpoints[0].plan = {template: 'A {what} site that is {which}.'};
+      Object.assign(questionOf(raw), {plan: 'how'});
+      expect(problemsOf(raw)).toEqual([
+        "checkpoints.intro.steps.quiz.questions.0.plan: the plan template has no slot '{how}'",
+        "checkpoints.intro.plan.template: no plan question fills '{what}'",
+        "checkpoints.intro.plan.template: no plan question fills '{which}'",
+      ]);
+    });
+
+    it('flags a plan question in a checkpoint with no plan', () => {
+      const raw = planned();
+      delete raw.checkpoints[0].plan;
+      expect(problemsOf(raw)).toEqual([
+        'checkpoints.intro.steps.quiz.questions.0.plan: the checkpoint has no plan template',
+      ]);
+    });
   });
 
   it("flags a choice that takes the typed answer's id", () => {

@@ -6,7 +6,7 @@ import {z} from 'zod';
 
 import {ProjectFile} from '@cdo/apps/lab2/types';
 
-import {AnsweredQuestion} from '../project/projectGeneration';
+import {CheckpointPlan} from '../project/plan';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
 import {labEnvironment} from './labEnvironments';
@@ -14,7 +14,7 @@ import {labEnvironment} from './labEnvironments';
 /**
  * Used by Langfuse traces; change when a meaningful update is made.
  */
-export const PROJECT_PROMPT_VERSION = '2026-10-28';
+export const PROJECT_PROMPT_VERSION = '2026-10-29';
 
 export const projectOutputSchema = z.object({
   /** The project's name, a few words. */
@@ -33,7 +33,8 @@ export interface ProjectPromptInput {
   pathway: Pathway;
   checkpoint: Checkpoint;
   step: LevelStep;
-  answers: AnsweredQuestion[];
+  /** The checkpoint's plan: the answers, and the sentence they fill once complete. */
+  plan: CheckpointPlan;
   /** What the student has already called the project, if anything. */
   project: PathwayProjectInfo;
   /** The template's editable files, the only ones the model may rewrite. */
@@ -44,7 +45,7 @@ export function buildProjectPrompt({
   pathway,
   checkpoint,
   step,
-  answers,
+  plan,
   project,
   files,
 }: ProjectPromptInput): string {
@@ -62,9 +63,14 @@ export function buildProjectPrompt({
     `Pathway: ${pathway.title}\nObjective: ${pathway.objective}`,
     `Checkpoint: ${checkpoint.title}\n${checkpoint.description}`,
     `Step: ${step.title}\nWhat the first version should be:\n${step.projectPrompt}`,
+    plan.sentence
+      ? `The student's plan, as they saw it before asking for this build:\n${plan.sentence}`
+      : '',
     [
       'What the student said, in their own words:',
-      ...answers.map(({question, answer}) => `Q: ${question}\nA: ${answer}`),
+      ...plan.answers.map(
+        ({question, answer}) => `Q: ${question}\nA: ${answer}`
+      ),
     ].join('\n\n'),
     named,
     [
