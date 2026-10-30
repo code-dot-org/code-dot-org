@@ -254,6 +254,10 @@ const DanceView: React.FunctionComponent<{
     [mergeSources]
   );
 
+  // Sources saved from the workspace. An effect can see an older one after a
+  // newer save, so every one is kept, not just the last.
+  const [savedSources] = useState(() => new WeakSet<object>());
+
   const saveBlocks = useCallback(
     (forceSave = false) => {
       if (!workspace.current) {
@@ -262,9 +266,10 @@ const DanceView: React.FunctionComponent<{
       const blocks = Blockly.serialization.workspaces.save(
         workspace.current
       ) as BlocklySource;
+      savedSources.add(blocks);
       mergeSources({source: blocks}, forceSave);
     },
-    [mergeSources]
+    [mergeSources, savedSources]
   );
 
   const runProgram = useCallback(async () => {
@@ -445,7 +450,12 @@ const DanceView: React.FunctionComponent<{
   }, [dispatch, guideMode, readonlyWorkspace, levelProperties, theme]);
 
   useEffect(() => {
-    if (!workspace.current) {
+    // Skip our own saves: this effect can run well after the save, and by
+    // then reloading would discard edits made since, mid-drag included.
+    if (
+      !workspace.current ||
+      savedSources.has(currentSources.source as object)
+    ) {
       return;
     }
     const blocks = Blockly.serialization.workspaces.save(workspace.current);
@@ -471,6 +481,7 @@ const DanceView: React.FunctionComponent<{
     guideMode,
     onFlyoutGenerated,
     currentSources,
+    savedSources,
   ]);
 
   useEffect(() => {
