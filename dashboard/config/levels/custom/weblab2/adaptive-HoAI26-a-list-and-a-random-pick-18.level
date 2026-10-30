@@ -15,7 +15,7 @@
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "widget_view": "false",
     "initial_view_mode": "preview",
     "predict_settings": {
@@ -42,9 +42,10 @@
         "buildPage"
       ],
       "answerTypeCustomizations": {
-      }
+      },
+      "disableCommitMessages": true
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-16 21:33:04 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:33:05 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:33:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:33:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 03:29:40 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-22 23:55:48 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 02:12:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-27 04:43:09 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-27 04:47:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:33:04 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:33:05 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:33:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:33:31 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 03:29:40 +0000\",\"changed\":[\"require_edit_to_continue\",\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-22 23:55:48 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-23 02:12:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-27 04:43:09 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-27 04:47:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-29 20:45:50 +0000\",\"changed\":[\"hide_share_and_remix\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":19429,\"changed_by_email\":\"liam.fryemason+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

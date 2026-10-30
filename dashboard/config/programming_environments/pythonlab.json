@@ -36,6 +36,12 @@
       "name": "neighborhood (functional)",
       "color": "#fbdae8",
       "position": 4
+    },
+    {
+      "key": "theater",
+      "name": "Theater",
+      "color": "#f1ddf9",
+      "position": 5
     }
   ]
 }
