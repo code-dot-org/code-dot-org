@@ -242,6 +242,22 @@ describe('parsePathway', () => {
     expect(problemsOf(raw)).toHaveLength(1);
   });
 
+  it('accepts a markdown step with its own button label', () => {
+    const raw = served();
+    raw.checkpoints[0].steps.push({
+      id: 'card',
+      title: 'Card',
+      kind: 'markdown',
+      markdown: '## Welcome\n\nA note.',
+      continueLabel: 'Start',
+    });
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).checkpoints[0].steps.at(-1)).toMatchObject({
+      kind: 'markdown',
+      continueLabel: 'Start',
+    });
+  });
+
   it('accepts a video step with resolved URLs', () => {
     const raw = served();
     const watch = raw.checkpoints[0].steps[2];
