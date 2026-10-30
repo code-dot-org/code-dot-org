@@ -25,6 +25,8 @@ interface MatchColumnProps {
   disabled?: boolean;
   // Marks each paired card as correct or incorrect.
   correctPairs?: MatchPairs;
+  // Marks every paired card correct, without saying so in its hidden text.
+  isAnswerKey?: boolean;
 }
 
 const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
@@ -36,6 +38,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
   dotRef,
   disabled,
   correctPairs,
+  isAnswerKey,
 }) => {
   const ColumnTag = onClickItem ? 'div' : 'ul';
   return (
@@ -46,7 +49,11 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
       {itemsInColumn(matchSets, side).map(item => {
         const partnerId = findPartner(pairs, item.id);
         const isSelected = selectedId === item.id;
-        const status = correctPairs && pairStatus(pairs, correctPairs, item.id);
+        const status = isAnswerKey
+          ? partnerId
+            ? 'correct'
+            : undefined
+          : correctPairs && pairStatus(pairs, correctPairs, item.id);
         // An end item shows its partner's letter once paired.
         const letter =
           side === 'start'
@@ -89,7 +96,7 @@ const MatchColumn: React.FunctionComponent<MatchColumnProps> = ({
                 {partnerId
                   ? `, matched with ${getItemText(matchSets, partnerId)}`
                   : ', not matched'}
-                {status && `, ${status}`}
+                {status && !isAnswerKey && `, ${status}`}
               </span>
             </li>
           );

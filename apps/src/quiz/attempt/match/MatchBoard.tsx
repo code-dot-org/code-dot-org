@@ -19,6 +19,9 @@ export interface MatchBoardProps {
   disabled?: boolean;
   // Marks each pair in pairs as correct or incorrect.
   correctPairs?: MatchPairs;
+  // Shows pairs as the answer key: marked correct, but not announced as such,
+  // since the board's name already says so.
+  isAnswerKey?: boolean;
   describedBy?: string;
 }
 
@@ -51,6 +54,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
   selection = {},
   disabled,
   correctPairs,
+  isAnswerKey,
   label,
   labelledBy,
   describedBy,
@@ -86,8 +90,9 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
                 {
                   key: `${startId}:${endId}`,
                   path: curvePath(start, end),
-                  status:
-                    correctPairs && pairStatus(pairs, correctPairs, startId),
+                  status: isAnswerKey
+                    ? 'correct'
+                    : correctPairs && pairStatus(pairs, correctPairs, startId),
                 },
               ]
             : [];
@@ -104,7 +109,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
       .querySelectorAll(`.${styles.card}`)
       .forEach(card => observer.observe(card));
     return () => observer.disconnect();
-  }, [pairs, matchSets, correctPairs]);
+  }, [pairs, matchSets, correctPairs, isAnswerKey]);
 
   const dotRef = (id: string, element: HTMLElement | null) => {
     if (element) {
@@ -146,6 +151,7 @@ const MatchBoard: React.FunctionComponent<MatchBoardProps> = ({
           dotRef={dotRef}
           disabled={disabled}
           correctPairs={correctPairs}
+          isAnswerKey={isAnswerKey}
         />
       ))}
     </div>
