@@ -7,6 +7,7 @@ import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
+import {downscaleImagesForExport} from './downscaleImagesForExport';
 import {getCanvasBounds} from './getCanvasBounds';
 import {getExportStyleProperties} from './getExportStyleProperties';
 import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
@@ -17,6 +18,8 @@ const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
 // Only sketches larger than this along either axis are scaled down to fit.
 const MAX_EXPORT_DIMENSION_PX = 2048;
+// iOS Safari draws nothing on a canvas bigger than this.
+const MAX_EXPORT_CANVAS_PIXELS = 16_777_216;
 export const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
 // html-to-image never resolves if the browser loads an image but cannot decode it.
 export const CAPTURE_TIMEOUT_MS = 30_000;
@@ -79,6 +82,13 @@ const captureSketch = async (
     ? getComputedStyle(canvas).backgroundColor
     : '#ffffff';
 
+  // html-to-image multiplies the output by the device pixel ratio. Keep that
+  // detail, but not past our max canvas size.
+  const pixelRatio = Math.min(
+    Math.max(window.devicePixelRatio || 1, 1),
+    Math.sqrt(MAX_EXPORT_CANVAS_PIXELS / (imageWidth * imageHeight))
+  );
+
   const renderBlob = async () => {
     // Supplying this stops html-to-image from inlining every font the page declares.
     const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
@@ -86,6 +96,7 @@ const captureSketch = async (
       backgroundColor,
       fontEmbedCSS,
       includeStyleProperties: getExportStyleProperties(),
+      pixelRatio,
       width: imageWidth,
       height: imageHeight,
       style: {
@@ -96,6 +107,10 @@ const captureSketch = async (
     });
   };
 
+  const restoreImageSources = downscaleImagesForExport(
+    viewport,
+    scale * pixelRatio
+  );
   const restoreSvgStyles = inlineSvgStylesForExport(viewport);
   let timer: number | undefined;
   let blob: Blob | null;
@@ -118,6 +133,7 @@ const captureSketch = async (
       images: viewport.querySelectorAll('img').length,
       imageWidth,
       imageHeight,
+      pixelRatio,
     });
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -125,6 +141,7 @@ const captureSketch = async (
     return {error: CAPTURE_ERROR};
   } finally {
     window.clearTimeout(timer);
+    restoreImageSources();
     restoreSvgStyles();
   }
 
