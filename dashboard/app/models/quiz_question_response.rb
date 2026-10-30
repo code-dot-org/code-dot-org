@@ -42,8 +42,8 @@ class QuizQuestionResponse < ApplicationRecord
   # Only nil (the column missing entirely) should be rejected.
   validates :response_data, exclusion: {in: [nil], message: "can't be nil"}
 
-  # Whether response_data holds an answer, as opposed to a skip.
+  # Whether this response holds an answer, as opposed to a skip.
   def answered?
-    quiz_question.answered?(response_data)
+    quiz_question.response_answered?(response_data)
   end
 end

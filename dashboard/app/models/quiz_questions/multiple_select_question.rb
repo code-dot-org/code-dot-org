@@ -37,7 +37,7 @@ class MultipleSelectQuestion < QuizQuestion
   end
 
   # response_data shape: {"selectedChoiceIds" => ["0", "2"]}
-  def answered?(response_data)
+  def response_answered?(response_data)
     response_data['selectedChoiceIds'].is_a?(Array) && response_data['selectedChoiceIds'].any?
   end
 
