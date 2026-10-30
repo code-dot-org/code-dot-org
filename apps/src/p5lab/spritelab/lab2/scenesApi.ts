@@ -45,7 +45,7 @@ export function toExternalSceneOptions(
 ): ExternalSceneOption[] {
   return refs.map(ref => ({
     key: externalSceneKey(ref.channel, ref.sceneId),
-    label: `${ref.sceneName} — ${ref.ownerName} · #${ref.channel.slice(0, 6)}`,
+    label: `${ref.ownerName} — ${ref.sceneName}`,
   }));
 }
 
