@@ -15,6 +15,7 @@ const baseDetail: ChallengeResponseDetail = {
   student_feedback: 'Great explanation of the network!',
   evaluation_status: 'success',
   is_final: true,
+  approved: false,
   created_at: '2026-08-10T12:00:00Z',
   assets: [],
   reactions: [],
@@ -60,6 +61,27 @@ describe('AssessmentPanel', () => {
     );
 
     expect(screen.getByText('Feedback isn’t ready yet.')).toBeInTheDocument();
+  });
+
+  it('explains why there is no feedback when evaluation was flagged', () => {
+    render(
+      <AssessmentPanel
+        detail={{
+          ...baseDetail,
+          evaluation_status: 'feedback_violation',
+          student_feedback: null,
+        }}
+      />,
+    );
+
+    expect(
+      screen.getByText(
+        'This feedback was flagged by our content moderation policy.',
+      ),
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByText('Feedback isn’t ready yet.'),
+    ).not.toBeInTheDocument();
   });
 
   it('shows the teacher the assessment with the AI-assigned level highlighted', () => {

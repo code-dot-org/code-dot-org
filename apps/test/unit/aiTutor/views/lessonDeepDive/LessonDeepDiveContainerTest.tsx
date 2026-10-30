@@ -17,6 +17,7 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   LessonSummaryCard: () => <div>lesson-summary</div>,
   PreSkillsCheck: () => <div>pre-skills-check</div>,
   TutorSummaryBox: () => <div>tutor-summary</div>,
+  NextStepPicker: () => <div>next-step</div>,
 }));
 
 jest.mock(
@@ -145,6 +146,11 @@ describe('LessonDeepDiveContainer story card sequence', () => {
     expect(screen.getByText('time-spent')).toBeInTheDocument();
   });
 
+  it('does not show a Continue button on the next-step screen', () => {
+    renderContainer('next-step');
+    expect(screen.queryByText('Continue')).not.toBeInTheDocument();
+  });
+
   it('does not show a Continue button on the reflection screen', () => {
     renderContainer();
     // advance through the five story screens: welcome → levels-attempted →
@@ -167,6 +173,7 @@ describe('LessonDeepDiveContainer URL param routing', () => {
 
   it.each([
     ['reflection', 'reflection'],
+    ['next-step', 'next-step'],
     ['intervention', 'intervention'],
     ['pre-skills-check', 'pre-skills-check'],
     ['skills-check', 'skills-check'],

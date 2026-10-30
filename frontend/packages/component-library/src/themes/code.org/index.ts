@@ -15,14 +15,14 @@ const theme = createTheme({
       fontSize: '3rem', // 48px
       fontWeight: 600,
       lineHeight: 1.08,
-      letterSpacing: '-0.03rem',
+      letterSpacing: '-0.01em', // -1%
     },
     h2: {
       fontFamily: HEADING_FONT_STACK,
       fontSize: '2.375rem', // 38px
       fontWeight: 600,
       lineHeight: 1.05,
-      letterSpacing: '-0.03rem',
+      letterSpacing: '-0.01em', // -1%
     },
     h3: {
       fontFamily: MAIN_FONT_STACK,
@@ -50,50 +50,50 @@ const theme = createTheme({
     },
     body1: {
       fontFamily: MAIN_FONT_STACK,
-      fontSize: '1.25rem', // 20px
+      fontSize: '1.125rem', // 18px
       fontWeight: 400,
-      lineHeight: 1.4,
+      lineHeight: 1.44, // 26px
     },
     body2: {
       fontFamily: MAIN_FONT_STACK,
       fontSize: '1rem', // 16px
       fontWeight: 400,
-      lineHeight: 1.48,
+      lineHeight: 1.5, // 24px
     },
     body3: {
       fontFamily: MAIN_FONT_STACK,
-      fontSize: '0.875rem',
+      fontSize: '0.875rem', // 14px
       fontWeight: 400,
-      lineHeight: 1.54,
+      lineHeight: 1.57, // 22px
     },
     body4: {
       fontFamily: MAIN_FONT_STACK,
-      fontSize: '0.813rem',
+      fontSize: '0.75rem', // 12px
       fontWeight: 400,
-      lineHeight: 1.64,
+      lineHeight: 1.5, // 18px
     },
     overline1: {
       fontFamily: MAIN_FONT_STACK,
       fontSize: '0.875rem', // 14px
       fontWeight: 600,
-      letterSpacing: '0.04rem', // 0.64px
-      lineHeight: 1.54,
+      letterSpacing: '0.06em', // 6%
+      lineHeight: 1.57, // 22px
       textTransform: 'uppercase',
     },
     overline2: {
       fontFamily: MAIN_FONT_STACK,
-      fontSize: '0.813rem', // 13px
+      fontSize: '0.75rem', // 12px
       fontWeight: 600,
-      letterSpacing: '0.04rem', // 0.64px
-      lineHeight: 1.64,
+      letterSpacing: '0.06em', // 6%
+      lineHeight: 1.5, // 18px
       textTransform: 'uppercase',
     },
     overline3: {
       fontFamily: MAIN_FONT_STACK,
-      fontSize: '0.688rem', // 11px
+      fontSize: '0.625rem', // 10px
       fontWeight: 600,
-      letterSpacing: '0.04rem', // 0.64px
-      lineHeight: 1.76,
+      letterSpacing: '0.06em', // 6%
+      lineHeight: 1.6, // 16px
       textTransform: 'uppercase',
     },
     figcaption: {
@@ -114,25 +114,25 @@ const theme = createTheme({
       fontFamily: MAIN_FONT_STACK,
       fontSize: '1rem', // 16px
       fontWeight: 600,
-      lineHeight: 1.48,
+      lineHeight: 1.5, // 24px
     },
     label2: {
       fontFamily: MAIN_FONT_STACK,
       fontSize: '0.875rem', // 14px
       fontWeight: 600,
-      lineHeight: 1.54,
+      lineHeight: 1.57, // 22px
     },
     label3: {
       fontFamily: MAIN_FONT_STACK,
       fontSize: '0.75rem', // 12px
       fontWeight: 600,
-      lineHeight: 1.64,
+      lineHeight: 1.5, // 18px
     },
     label4: {
       fontFamily: MAIN_FONT_STACK,
       fontSize: '0.625rem', // 10px
       fontWeight: 600,
-      lineHeight: 1.8,
+      lineHeight: 1.6, // 16px
     },
   },
 });

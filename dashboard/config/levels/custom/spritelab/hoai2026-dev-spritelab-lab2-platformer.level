@@ -23,7 +23,12 @@
     "project_template_level_name": "hoai2026-dev-spritelab-lab2-template",
     "level_mode": {
       "kind": "world",
-      "imageType": "block"
+      "imageType": "block",
+      "imageRole": "block",
+      "sentence": "block",
+      "imageFirst": true,
+      "generatedInstructions": "**AI generated an image based on your prompt.**",
+      "paintInstructions": "**Draw a block.**"
     },
     "image_role_defaults": {
       "block": "block"
@@ -33,11 +38,39 @@
       "name": "Platformer",
       "type": "platform"
     },
+    "objectives": {
+      "title": "**Make this world yours**",
+      "items": [
+        {
+          "text": "Prompt AI to make a block.",
+          "check": {
+            "kind": "image",
+            "imageType": "block"
+          }
+        },
+        {
+          "text": "Add platforms on the grid.",
+          "check": {
+            "kind": "world",
+            "changed": true
+          }
+        },
+        {
+          "text": "Click **Play** and jump to the top.",
+          "check": {
+            "kind": "reach",
+            "height": 0.7
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Make this world yours\nMake your own block, then add platforms on the grid. Click **Play** and get to the top.",
+    "header_label": "Make a platformer",
     "world_start_pattern": [
       [
         "..........",
         "..........",
-        "BB......BB",
+        "..........",
         "..........",
         "....BB....",
         "..........",
@@ -49,23 +82,23 @@
       [
         "..........",
         "..........",
-        ".......BBB",
+        "..........",
         "..........",
         ".....BB...",
         "..........",
-        "...BB.....",
+        "...BB...BB",
         ".S........",
-        "BBB.......",
+        "BBB...BB..",
         ".........."
       ],
       [
         "..........",
         "..........",
-        "..BB...BB.",
         "..........",
-        ".BBB..BBB.",
         "..........",
-        "...BB.BB..",
+        ".BB....BB.",
+        "..........",
+        "..BB..BB..",
         "....S.....",
         "...BBBB...",
         ".........."
@@ -74,7 +107,7 @@
         "..........",
         "..........",
         "..........",
-        "..........",
+        "BBB.......",
         ".....BB...",
         "..........",
         "...BB..BB.",
@@ -85,30 +118,16 @@
       [
         "..........",
         "..........",
-        "....BB....",
         "..........",
-        "..BB..BB..",
+        "..........",
+        "..........",
+        "...BBBB...",
         "..........",
         "BB......BB",
         "....S.....",
-        "...BBBB...",
-        ".........."
+        "...BBBB..."
       ]
-    ],
-    "guide_steps": [
-      {
-        "text": "**Make this world yours.** Pick your block and paint platforms on the grid. Add blocks, erase blocks, build paths and towers. Click **Play** to try it."
-      },
-      {
-        "text": "**You built a platformer!** Click **Continue**.",
-        "showContinue": true,
-        "after": {
-          "tab": "Play"
-        }
-      }
-    ],
-    "long_instructions": "# Make this world yours\nPaint platforms on the grid: add blocks, erase blocks, build paths and towers. Click **Play** to try it.",
-    "header_label": "Make a platformer"
+    ]
   }
 }]]></config>
 </GamelabJr>

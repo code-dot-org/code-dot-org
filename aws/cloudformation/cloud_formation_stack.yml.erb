@@ -102,6 +102,9 @@ Resources:
             Condition:
               StringEquals:
                 secretsmanager:VersionStage: AWSCURRENT
+          - Effect: Allow
+            Action: 'secretsmanager:BatchGetSecretValue'
+            Resource: '*'
           # Read-only access to bootstrap scripts.
           - Effect: Allow
             Action: 's3:GetObject'
@@ -376,18 +379,14 @@ Resources:
       HealthCheckIntervalSeconds: 10
       HealthCheckTimeoutSeconds: 5
       TargetGroupAttributes:
-        # Least Outstanding Requests algorithm precludes usage of Slow Start feature below.
         - Key: load_balancing.algorithm.type
-          Value: round_robin
-        - Key: stickiness.enabled
-          Value: true
-        - Key: stickiness.type
-          Value: lb_cookie
-        - Key: stickiness.lb_cookie.duration_seconds
-          Value: 30
-        # Linearly increase the HTTP throughput share to new instances to give them time to initialize and load caches.
+          Value: weighted_random # Weighted Random precludes Stickiness and Slow Start.
+        - Key: load_balancing.algorithm.anomaly_mitigation
+          Value: "on" # Requires Weighted Random.
         - Key: slow_start.duration_seconds
-          Value: 300
+          Value: 0 # Explicitly disable Slow Start because it precludes Weighted Random.
+        - Key: stickiness.enabled
+          Value: false # We don't store sessions in-memory in web application servers.
 
 <%   unless frontends -%>
       Targets:
@@ -560,6 +559,15 @@ Resources:
                   - !Sub
                     - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dev"
                     - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+        - PolicyName: ManageZeroEtlIntegrationDataFilter
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action: 'rds:DescribeIntegrations'
+                Resource: '*' # Unscoped so a daemon can enumerate every Integration to find the match for the current environment type.
+              - Effect: Allow
+                Action: 'rds:ModifyIntegration'
+                Resource: !Ref ZeroETLIntegration
 <% end -%>
 <% if rack_env?(:production) -%>
         - PolicyName: StopInactiveAdhocInstances
@@ -618,19 +626,6 @@ Resources:
                 Condition:
                   StringEquals:
                     kms:ViaService: !Sub "rds.${AWS::Region}.amazonaws.com"
-        - PolicyName: DMSStartAndMonitorReplicationTasks
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action:
-                  - dms:DescribeReplicationTasks
-                Resource: "*"
-              - Effect: Allow
-                Action:
-                  - dms:DescribeTableStatistics
-                  - dms:ListTagsForResource
-                  - dms:StartReplicationTask
-                Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
 <% if rack_env?(:test) -%>
         # AWS Device Farm (Test Grid) access for UI test runners on the test daemon.

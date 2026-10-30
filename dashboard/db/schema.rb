@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_10_06_120000) do
+ActiveRecord::Schema[7.0].define(version: 2026_10_29_140602) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -1365,6 +1365,13 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_06_120000) do
     t.index ["practice_problem_id", "objective_id"], name: "index_practice_prob_objectives_on_prob_and_objective_ids", unique: true
   end
 
+  create_table "objectives_script_levels", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "script_level_id", null: false
+    t.integer "objective_id", null: false
+    t.index ["objective_id"], name: "index_objectives_script_levels_on_objective_id"
+    t.index ["script_level_id", "objective_id"], name: "index_objectives_script_levels_on_sl_and_objective_ids", unique: true
+  end
+
   create_table "paired_user_levels", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "driver_user_level_id", unsigned: true
     t.bigint "navigator_user_level_id", unsigned: true
@@ -1956,6 +1963,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_06_120000) do
     t.json "solution"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["key"], name: "index_practice_problems_on_key", unique: true
   end
 
   create_table "programming_classes", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2487,6 +2495,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_06_120000) do
     t.integer "avatar_emoji"
     t.string "ai_chat_access_level", default: "disabled"
     t.string "demo_type"
+    t.boolean "ai_challenge_enabled", default: false, null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
@@ -2720,6 +2729,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_10_06_120000) do
     t.integer "resource_id"
     t.index ["resource_id", "unit_group_id"], name: "index_ug_student_resources_on_resource_id_and_unit_group_id"
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
+  end
+
+  create_table "user_adaptive_steps", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "user_level_id", null: false, unsigned: true
+    t.string "step_id", null: false
+    t.json "progress"
+    t.json "validation_history"
+    t.json "generated_instructions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_level_id", "step_id"], name: "index_user_adaptive_steps_on_user_level_id_and_step_id", unique: true
   end
 
   create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

@@ -39,11 +39,15 @@ function UnitSelectorV2({
   onUserUnitChange,
 }) {
   // Reload courses with progress when selected section changes.
+  // Guard on !isLoadingSectionData: sectionId updates before section data
+  // arrives, so without this guard the effect fires for the old section,
+  // sets isLoadingCoursesWithProgress=true, and blocks the correct section's
+  // load when the effect refires.
   React.useEffect(() => {
-    if (sectionId) {
+    if (sectionId && !isLoadingSectionData) {
       asyncLoadCoursesWithProgress();
     }
-  }, [sectionId, asyncLoadCoursesWithProgress]);
+  }, [sectionId, isLoadingSectionData, asyncLoadCoursesWithProgress]);
 
   const onSelectUnit = React.useCallback(
     e => {

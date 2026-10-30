@@ -54,6 +54,7 @@ export const asyncLoadSelectedSection = async (
         sectionId,
       });
       console.log(error);
+      getStore().dispatch(finishLoadingSectionData());
     });
 };
 

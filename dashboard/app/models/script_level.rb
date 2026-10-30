@@ -66,6 +66,7 @@ class ScriptLevel < ApplicationRecord
   belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
+  has_and_belongs_to_many :objectives
   has_many :callouts, inverse_of: :script_level
   has_many :levels_script_levels # join table. we need this association for seeding logic
 
@@ -95,7 +96,12 @@ class ScriptLevel < ApplicationRecord
   end
 
   # A unit and the levels it references must be on the same side of the
-  # "UI Test " partition. See dashboard/test/ui/config/README.md.
+  # "UI Test " partition. See dashboard/config/PARTITIONS.md.
+  #
+  # For now, the rule is not enforced between the standalone projects partition
+  # and the production partition, because there are still some production units
+  # containing standalone project levels. Once the data is cleaned up, this rule
+  # can be enforced across all partitions.
   def levels_stay_within_ui_test_partition
     offending = cross_partition_level_keys(level_keys || [])
     return if offending.empty?
@@ -109,7 +115,7 @@ class ScriptLevel < ApplicationRecord
     keys = keys.compact.reject {|key| key.start_with?('blockly:')}
     return [] if keys.empty?
     ui_test_script = ui_test_script?
-    keys.reject {|key| Level.ui_test_name?(key) == ui_test_script}
+    keys.reject {|key| Level.ui_test_partition_name?(key) == ui_test_script}
   end
 
   def cross_partition_levels_message(offending_level_keys)
@@ -257,7 +263,7 @@ class ScriptLevel < ApplicationRecord
       else
         script_lesson_extras_path(script.name, lesson_position)
       end
-    elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor')
+    elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor') && user&.can_use_lesson_deep_dive?
       # For lessons with Tutor+ available (AIF/AID courses), send students at
       # the end of the lesson to the lesson deep dive ("tutor") space instead of
       # the next-level / unit-overview redirect. This is the single choke point

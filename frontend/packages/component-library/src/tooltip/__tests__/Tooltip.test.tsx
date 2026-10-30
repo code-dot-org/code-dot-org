@@ -59,7 +59,7 @@ describe('Design System - Tooltip (theme-only)', () => {
       renderTooltip();
       const s = getComputedStyle(await openAndGetBubble());
       expect(s.fontSize).toBe('0.875rem');
-      expect(s.lineHeight).toBe('1.54');
+      expect(s.lineHeight).toBe('1.57');
     });
 
     it('sizes the arrow, which MUI measures in em', async () => {

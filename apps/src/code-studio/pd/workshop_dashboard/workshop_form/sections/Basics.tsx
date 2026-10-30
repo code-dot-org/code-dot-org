@@ -319,6 +319,7 @@ export const Basics: FC<BasicsProps> = ({
               onSelectAll={handleSelectAllCourseOfferings}
               selectAllText="Select all"
               clearAllText="Clear all"
+              doneText="Done"
               onClearAll={handleClearAllCourseOfferings}
               styleAsFormField={true}
               checkedOptions={courseOfferings}

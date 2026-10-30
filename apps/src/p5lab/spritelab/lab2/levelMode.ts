@@ -1,7 +1,6 @@
 // What kind of level this is, and everything that follows from it: the
 // surfaces a student sees, and the image controls they get.
 
-import {ImageAdlibSet} from './ai/images/imageAdlibs';
 import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';
 import {Tab} from './redux/spriteLab2Redux';
 
@@ -20,61 +19,47 @@ export interface LevelMode {
       is the image_role_defaults level property (imageRoleDefaults.ts), which code
       and world levels use to open their dropdowns on an image by role. */
   imageRole?: string;
-  /** Word combos to offer, in place of the set the kind implies. */
-  adlibs?: ImageAdlibSet;
-  /** A world level that places one thing: no Erase, the image goes on an
-      empty cell, and choosing another cell moves it. */
-  placeOne?: boolean;
-  /** Which image-level layout to show; absent is the image dialog pane. */
-  imageUi?: ImageUi;
-  /** The explore layout's sentence, by id in exploreSentences.json; the
-      image type's own sentence when unset. */
-  sentence?: string;
+  /** The World palette offers the images in these roles, of any kind,
+      instead of the level's one image. */
+  paletteRoles?: string[];
+  /** The level opens on the Images tab to make its image, then goes on to
+      its own tabs. */
+  imageFirst?: boolean;
 }
 
-/** The two-half image scene with the word carousel; its panel is the
-    Guide. */
-export type ImageUi = 'explore';
+/** Generations a level before free play allows; free play has no limit. */
+export const GENERATION_LIMIT = 5;
 
-export function isImageUi(value: unknown): value is ImageUi {
-  return value === 'explore';
-}
-
-/** The style every generate form starts on; students can still switch. */
+/** The style the advanced generate form starts on; the student form is
+    pixel art only. */
 export const DEFAULT_IMAGE_STYLE: ImageStyle = 'pixel';
 
-/** The tabs a kind shows, the first being where the level opens. An image
-    level has none: its panel replaces the tab shell. */
+/** The tabs a kind shows, the first being where the level opens. */
 const TABS: Record<LevelModeKind, Tab[]> = {
   code: ['Code', 'Play'],
   world: ['World', 'Play'],
   play: ['Play'],
-  image: [],
+  image: ['Images'],
   freeplay: ['Code', 'Images', 'World', 'Play'],
 };
 
-/** Which combos a kind offers when the level names none. */
-const ADLIBS: Partial<Record<LevelModeKind, ImageAdlibSet>> = {
-  image: 'simple',
-  freeplay: 'expanded',
-};
-
+/** The tabs a level shows; undefined, for the lab's default, when the kind
+    is not one the lab knows. */
 export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
-  return mode ? TABS[mode.kind] : undefined;
+  const own = mode && TABS[mode.kind];
+  if (!own) {
+    return undefined;
+  }
+  return mode.imageFirst && !own.includes('Images') ? ['Images', ...own] : own;
 }
 
-/** The image panel is the whole level, in place of the tabs and the stage. */
-export function isImageMode(mode: LevelMode | undefined): boolean {
-  return mode?.kind === 'image';
+/** Whether the level is a world level: its work is placing images on the
+    World grid. */
+export function editsWorld(mode: LevelMode | undefined): boolean {
+  return mode?.kind === 'world';
 }
 
 /** The only mode offering the prompt box and the paint tools. */
 export function isFreeplayMode(mode: LevelMode | undefined): boolean {
   return mode?.kind === 'freeplay';
-}
-
-export function adlibSetForMode(
-  mode: LevelMode | undefined
-): ImageAdlibSet | undefined {
-  return mode ? mode.adlibs ?? ADLIBS[mode.kind] : undefined;
 }

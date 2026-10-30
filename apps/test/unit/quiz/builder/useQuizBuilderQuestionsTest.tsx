@@ -13,6 +13,7 @@ const QUESTION = {
     {id: 'b', text: '4'},
   ],
   correctChoiceId: 'b',
+  description: null,
   explanation: null,
   standards: [],
   attachedToOtherQuizzes: false,
@@ -57,7 +58,7 @@ describe('useQuizBuilderQuestions', () => {
 
     let id: number | undefined;
     act(() => {
-      id = result.current.addPendingQuestion(1);
+      id = result.current.addPendingQuestion(1, 'MultipleChoiceQuestion');
     });
 
     expect(postSpy).not.toHaveBeenCalled();
@@ -74,6 +75,57 @@ describe('useQuizBuilderQuestions', () => {
     });
   });
 
+  it('adds a multiple select placeholder with the first option correct', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    act(() => {
+      result.current.addPendingQuestion(1, 'MultipleSelectQuestion');
+    });
+
+    expect(result.current.questions[1]).toMatchObject({
+      type: 'MultipleSelectQuestion',
+      choices: [
+        {id: '0', text: 'Option A'},
+        {id: '1', text: 'Option B'},
+      ],
+      correctChoiceIds: ['0'],
+    });
+  });
+
+  it('adds a match placeholder with two pairs, each id random and distinct', async () => {
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useQuizBuilderQuestions(42)
+    );
+    await waitForNextUpdate();
+
+    act(() => {
+      result.current.addPendingQuestion(1, 'MatchQuestion');
+      result.current.addPendingQuestion(1, 'MatchQuestion');
+    });
+
+    const [first, second] = result.current.questions.slice(1);
+    expect(first).toMatchObject({
+      type: 'MatchQuestion',
+      pairs: [
+        {items: [{text: 'Term A'}, {text: 'Definition A'}]},
+        {items: [{text: 'Term B'}, {text: 'Definition B'}]},
+      ],
+    });
+    const ids = [first, second].flatMap(question =>
+      question.type === 'MatchQuestion'
+        ? question.pairs.flatMap(pair => [
+            pair.id,
+            ...pair.items.map(item => item.id),
+          ])
+        : []
+    );
+    expect(ids).toHaveLength(12);
+    expect(new Set(ids).size).toBe(12);
+  });
+
   it('adds the placeholder to the given page', async () => {
     const {result, waitForNextUpdate} = renderHook(() =>
       useQuizBuilderQuestions(42)
@@ -81,7 +133,7 @@ describe('useQuizBuilderQuestions', () => {
     await waitForNextUpdate();
 
     act(() => {
-      result.current.addPendingQuestion(2);
+      result.current.addPendingQuestion(2, 'MultipleChoiceQuestion');
     });
 
     expect(result.current.questions[1]).toMatchObject({page: 2});
@@ -95,7 +147,7 @@ describe('useQuizBuilderQuestions', () => {
 
     let id: number | undefined;
     act(() => {
-      id = result.current.addPendingQuestion(1);
+      id = result.current.addPendingQuestion(1, 'MultipleChoiceQuestion');
     });
 
     expect(id).toBeLessThan(0);
@@ -117,10 +169,12 @@ describe('useQuizBuilderQuestions', () => {
 
   describe('saveQuestion', () => {
     const PAYLOAD = {
+      type: 'MultipleChoiceQuestion' as const,
       questionName: 'Updated question',
       questionTitle: 'What is 2 + 3?',
       choices: QUESTION.choices,
       correctChoiceId: 'b',
+      description: null,
       explanation: null,
     };
 
@@ -197,7 +251,10 @@ describe('useQuizBuilderQuestions', () => {
 
       let pendingId: number | undefined;
       act(() => {
-        pendingId = result.current.addPendingQuestion(1);
+        pendingId = result.current.addPendingQuestion(
+          1,
+          'MultipleChoiceQuestion'
+        );
       });
 
       const created = {...QUESTION, ...PAYLOAD, id: 99};
@@ -211,12 +268,51 @@ describe('useQuizBuilderQuestions', () => {
       expect(putSpy).not.toHaveBeenCalled();
       expect(postSpy).toHaveBeenCalledWith(
         '/levels/42/quiz_question_placements',
-        JSON.stringify({...PAYLOAD, page: 1}),
+        JSON.stringify({
+          ...PAYLOAD,
+          type: 'MultipleChoiceQuestion',
+          page: 1,
+        }),
         true,
         {'Content-Type': 'application/json'}
       );
       expect(updatedId).toBe(99);
       expect(result.current.questions.map(q => q.id)).toEqual([7, 99]);
+    });
+
+    it('creates a pending question as the type it was switched to before its first save', async () => {
+      const {result, waitForNextUpdate} = renderHook(() =>
+        useQuizBuilderQuestions(42)
+      );
+      await waitForNextUpdate();
+
+      let pendingId: number | undefined;
+      act(() => {
+        pendingId = result.current.addPendingQuestion(
+          1,
+          'MultipleChoiceQuestion'
+        );
+      });
+
+      const {correctChoiceId, ...rest} = PAYLOAD;
+      void correctChoiceId;
+      const switched = {
+        ...rest,
+        type: 'MultipleSelectQuestion' as const,
+        correctChoiceIds: ['a', 'b'],
+      };
+      postSpy.mockResolvedValue({
+        json: async () => ({...QUESTION, ...switched, id: 99}),
+      } as Response);
+
+      await act(async () => {
+        await result.current.saveQuestion(pendingId!, switched);
+      });
+
+      expect(JSON.parse(postSpy.mock.calls[0][1] as string)).toMatchObject({
+        type: 'MultipleSelectQuestion',
+        correctChoiceIds: ['a', 'b'],
+      });
     });
 
     it("posts the pending question's own page, not always page 1", async () => {
@@ -227,7 +323,10 @@ describe('useQuizBuilderQuestions', () => {
 
       let pendingId: number | undefined;
       act(() => {
-        pendingId = result.current.addPendingQuestion(2);
+        pendingId = result.current.addPendingQuestion(
+          2,
+          'MultipleChoiceQuestion'
+        );
       });
 
       const created = {...QUESTION, ...PAYLOAD, id: 99, page: 2};
@@ -239,7 +338,11 @@ describe('useQuizBuilderQuestions', () => {
 
       expect(postSpy).toHaveBeenCalledWith(
         '/levels/42/quiz_question_placements',
-        JSON.stringify({...PAYLOAD, page: 2}),
+        JSON.stringify({
+          ...PAYLOAD,
+          type: 'MultipleChoiceQuestion',
+          page: 2,
+        }),
         true,
         {'Content-Type': 'application/json'}
       );
@@ -255,7 +358,10 @@ describe('useQuizBuilderQuestions', () => {
 
       let pendingId: number | undefined;
       act(() => {
-        pendingId = result.current.addPendingQuestion(1);
+        pendingId = result.current.addPendingQuestion(
+          1,
+          'MultipleChoiceQuestion'
+        );
       });
 
       let succeeded = false;

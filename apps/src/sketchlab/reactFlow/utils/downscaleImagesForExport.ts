@@ -52,7 +52,10 @@ export const downscaleImagesForExport = (
   root: HTMLElement,
   outputScale: number
 ): (() => void) => {
-  const originalSources = new Map<HTMLImageElement, string>();
+  const swaps = new Map<
+    HTMLImageElement,
+    {original: string; replacement: string}
+  >();
   Array.from(root.querySelectorAll('img')).forEach(image => {
     let replacement: string | undefined;
     try {
@@ -63,12 +66,16 @@ export const downscaleImagesForExport = (
       return;
     }
     if (replacement) {
-      originalSources.set(image, image.src);
+      const original = image.src;
       image.src = replacement;
+      swaps.set(image, {original, replacement: image.src});
     }
   });
+  // A source that changed during the capture was set by the app, so it stays.
   return () =>
-    originalSources.forEach((source, image) => {
-      image.src = source;
+    swaps.forEach(({original, replacement}, image) => {
+      if (image.src === replacement) {
+        image.src = original;
+      }
     });
 };

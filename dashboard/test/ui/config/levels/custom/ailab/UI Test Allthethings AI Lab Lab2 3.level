@@ -9,7 +9,6 @@
     "instructions_important": "false",
     "uses_lab2": "true",
     "long_instructions": "AI Lab Lab2!",
-    "hide_share_and_remix": "false",
     "mode": "{\r\n  \"datasets\": [\r\n    \"naan_toy\"\r\n  ],\r\n  \"hideSelectLabel\": true,\r\n  \"hideSave\": true\r\n}",
     "dynamic_instructions": "{\"dataDisplayFeatures\": \"This level has a pre-selected dataset.\", \"selectTrainer\": \"So, set up the training.\"}"
   },

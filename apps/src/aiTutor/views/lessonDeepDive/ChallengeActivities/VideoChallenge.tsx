@@ -27,7 +27,7 @@ interface VideoChallengeProps {
   setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
   setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
   onSubmittableChange: (canSubmit: boolean) => void;
-  submitRef: React.MutableRefObject<(() => void | Promise<void>) | null>;
+  submitRef: React.MutableRefObject<(() => Promise<boolean>) | null>;
   resetRef: React.MutableRefObject<(() => void) | null>;
 }
 
@@ -96,8 +96,8 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     [challenge]
   );
 
-  const handleSubmit = async () => {
-    if (!recordedBlob) return;
+  const handleSubmit = async (): Promise<boolean> => {
+    if (!recordedBlob) return false;
     setIsUploading(true);
     try {
       const text = await transcribeAudio();
@@ -125,8 +125,10 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
       // Only confirm once the upload actually succeeded; the confirmation
       // dialog in ChallengeBox keys off this.
       submitCallback(true);
+      return true;
     } catch (error) {
       console.log(error);
+      return false;
     } finally {
       setIsUploading(false);
     }

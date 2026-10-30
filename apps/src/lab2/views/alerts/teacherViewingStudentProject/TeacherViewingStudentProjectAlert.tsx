@@ -13,11 +13,14 @@ type TeacherViewingStudentProjectAlertProps = {
   inWorkspaceContainer?: boolean;
   /** Optional custom className */
   className?: string;
+  /** Replaces the default message which is based on the student's progress status for the level. */
+  getAlertText?: (studentName: string | undefined) => React.ReactElement;
+  type?: 'info' | 'warning';
 };
 
 const TeacherViewingStudentProjectAlert: React.FC<
   TeacherViewingStudentProjectAlertProps
-> = ({inWorkspaceContainer, className}) => {
+> = ({inWorkspaceContainer, className, getAlertText, type = 'info'}) => {
   // Get the user ID of the student whose project is being viewed.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
@@ -65,7 +68,9 @@ const TeacherViewingStudentProjectAlert: React.FC<
   }, [viewAsUserId, studentsInSection]);
 
   // Show a generic message while loading to avoid toggling stale status.
-  const alertText = isLoadingLevelProgress ? (
+  const alertText = getAlertText ? (
+    getAlertText(selectedStudentName)
+  ) : isLoadingLevelProgress ? (
     <>
       Loading <strong>{selectedStudentName ?? 'student'}'s</strong> project...
     </>
@@ -85,10 +90,11 @@ const TeacherViewingStudentProjectAlert: React.FC<
     <Alert
       className={classNames(
         inWorkspaceContainer && moduleStyles.inWorkspaceContainer,
+        type === 'warning' && moduleStyles.warningBorder,
         className
       )}
       text={alertText}
-      type="info"
+      type={type}
       size="xs"
     />
   );

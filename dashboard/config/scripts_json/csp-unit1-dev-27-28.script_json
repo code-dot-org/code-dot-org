@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-10-04 00:28:48 UTC",
+    "serialized_at": "2026-10-27 23:02:32 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -41,6 +41,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**What problems in my life could an app help solve?**\n\nWelcome to Computer Science Principles! This lesson gets students excited about the course by connecting their personal interests to computer science. Students share something they know a lot about with a small group, then work in groups to sketch a \"rapid\" prototype of an innovative technology idea, including a possible downside or new problem it could create. The lesson closes with a short video on how computing shows up across different fields, planting the seed that students can use technology to solve problems relevant to their own lives.",
+        "preparation": "- Setup section in Code Studio for this course. Instructions can be found in the previous “Set Up” lesson.\n- Provide sticky notes or scratch paper for students (one per student)\n- Provide poster paper and colored pencils or markers for the Rapid Prototype (one per group)\n",
+        "student_overview": "**What problems in my life could an app help solve?**\n\nWelcome to Computer Science Principles! Students share something they know a lot about, sketch a \"rapid\" prototype of an innovative idea with their group, and watch a video about how computing shows up in the world around them."
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -49,13 +52,34 @@
       }
     },
     {
-      "key": "lesson-16",
-      "name": "Lesson 3: Inputs, Outputs, and App Behavior",
+      "key": "lesson-31",
+      "name": "Lesson 2: Intro to Apps",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "**What makes an app an app?**\n\nThis lesson introduces apps by having students use them before naming what they see. In pairs, students explore sample apps to describe how users interact with each one, what its purpose is, and who it is for. Students then watch a short video on how computers work to learn the vocabulary of input, output, and user interface, and return to the apps to identify inputs and the outputs they cause. They close with a written reflection that explains an app's purpose, an action they tried, and a likely user. The emphasis is that users learn what an app does by using and observing it.",
+        "preparation": "- Identify the inputs of an app\n- Identify the outputs of an app\n- Identify the purpose of an app\n- Explain how users learn an app's purpose and behavior by using and observing it",
+        "student_overview": "**What makes an app an app?**\n\nTry out sample apps with a partner and work out what each one is for and who it was made for. After a short video on how computers work, you'll go back to the apps to find the inputs you can try and the outputs they cause. You'll finish by explaining one app's purpose and how you could tell what it does just by using it."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Lesson 3: Inputs, Outputs, and App Behavior",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**How do apps sense and respond to the world?**\n\nStudents explore how apps sense and respond to the world. They start by testing a simulated phone to identify automatic inputs such as sensors, location, camera, and microphone. Next, they use the ISPO model to trace an app from input to output, describing both the feedback users see and the hidden outputs they don't. They finish by planning how an app should respond when conditions change, like a lost connection or a denied permission, and explaining why apps need to behave as intended across a range of conditions.",
+        "preparation": "- Print co*pies of the Handle an Edge Case activity guide (1 for each student)*\n- Check the **\"Teacher's Lounge\"** forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How do apps sense and respond to the world?**\n\nYour phone notices more than you think. In this lesson, you'll discover the information your devices collect on their own, trace what apps do with it, including the parts you never see, and figure out how an app should respond when things don't go as planned."
       },
       "seeding_key": {
         "lesson.key": "lesson-16",
@@ -66,11 +90,14 @@
     {
       "key": "lesson-17",
       "name": "Lesson 4: Representing Information",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
+        "overview": "**How can we send information with only two options?**\n\nUsing everyday materials, students create devices for sending information to a partner, which introduces the concept of sending bits of information from one place to another. Each group then uses its device to send an answer to a question. Following this, students modify their devices to answer more complex answers, responding with one of four possible messages, then one of eight possible messages, then one of sixteen possible messages. This lays the foundation for understanding how complex information is represented in computers using a combination of bits.",
+        "preparation": "- Reusable and consumable supplies for the classroom, such as markers, small flashlights, noisemakers, bells, whistles, cups and string, straws, slinkies, blocks, or colored paper.",
+        "student_overview": "**How can we send information with only two options?**\n\nDesign a device for sending information across the room using common household supplies."
       },
       "seeding_key": {
         "lesson.key": "lesson-17",
@@ -81,11 +108,14 @@
     {
       "key": "lesson-18",
       "name": "Lesson 5: Circle Patterns",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
+        "overview": "**How do clear rules let us agree on what patterns mean?**\n\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
+        "preparation": "- Have scissors ready for groups to create Shape Cutouts or have these pre-cut and prepared before class",
+        "student_overview": "**How do clear rules let us agree on what patterns mean?**\n\nDevelop a system for creating and ordering patterns of shapes."
       },
       "seeding_key": {
         "lesson.key": "lesson-18",
@@ -96,11 +126,14 @@
     {
       "key": "lesson-19",
       "name": "Lesson 6: Binary Numbers",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
+        "overview": "**How do computers count with only 0s and 1s?**\n\nIn this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers.",
+        "preparation": "- Scissors (many pairs)\n- Printed copies of **Flippy Do**\n- Printed copies of Flippy Do Activity Guide",
+        "student_overview": "**How do computers count with only 0s and 1s?**\n\nIn this lesson, students will practice representing numbers in binary (base 2), transitioning from the circle-square representations they made in the last lesson. Students will create and use a \"Flippy Do\", a manipulative which helps students convert between binary (base 2) and decimal (base 10) numbers. They will practice converting numbers and explore the concept of place value in the context of binary numbers."
       },
       "seeding_key": {
         "lesson.key": "lesson-19",
@@ -111,11 +144,14 @@
     {
       "key": "lesson-22",
       "name": "Lesson 7: Overflow and Rounding",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
+        "overview": "**What happens when a number doesn't fit?**\n\nStudents extend their understanding of the binary number system by exploring errors that result from overflow and rounding. They use the binary odometer widget and develop their own systems for representing fractional amounts using the Flippy Do. Students discover the limitations of creating numbers that are “too big” or “too small” to count. They learn that, while a number system is infinite, the physical representation of numbers requires place values -- which are finite, and limit the ability to represent numbers.",
+        "preparation": "- Direct students to take out their FlippyDos from Lesson 6, or provide new copies for them.\n- (Optional) Print copies of the Candy Store Challenge Activity Guide (1 per pair, 2 on a page)\n- (Optional) Review the possible answers to the Candy Store Challenge in the Candy Store Challenge Key",
+        "student_overview": "\n\n**What happens when a number doesn't fit?**\n\nExplore the limitations or representing numbers with bits."
       },
       "seeding_key": {
         "lesson.key": "lesson-22",
@@ -126,11 +162,14 @@
     {
       "key": "lesson-23",
       "name": "Lesson 8: Representing Text",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
+        "overview": "**How can numbers stand for letters?**\n\nIn this lesson, students create a system for representing text using only numbers while communicating with each other. They are only allowed to send numbers back-and-forth, so they must create a system to translate between number and character. Most importantly they should understand the challenges or principles that led to the creation of these systems and that these systems are somewhat arbitrarily created to solve a shared problem. They work not because there was \"one right answer\" but because many people agreed to use them. At the end of the main activity they briefly review the ASCII system for representing text. The wrap up discussion emphasizes how all of the concepts thus far have ‘built’ on each other and introduces the concept of abstraction to describe this progression.",
+        "preparation": "- (Optional) Print copies of the ASCII Student Reference (1 per student)\n- Prepare a few sticky notes (3-5) per pair of students",
+        "student_overview": "### \n\n**How can numbers stand for letters?**\n\nDevelop a system for representing text using bits based on what you already know about representing numbers."
       },
       "seeding_key": {
         "lesson.key": "lesson-23",
@@ -141,11 +180,14 @@
     {
       "key": "lesson-24",
       "name": "Lesson 9: Black and Whtie Images",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
+        "overview": "### \n\n**How can bits make a picture?** \n\nStudents explore how bits can represent a black and white image. They use the black and white pixelation widget to set each pixel to black or white with a 0 or a 1, then build the same picture twice, once with larger squares and once with smaller squares. Students compare the number of bits and the detail of each picture, and reflect on the pros and cons of using smaller squares. They finish by decoding a string of bits into an image and explaining why bits alone are not enough to tell you what the picture is.",
+        "preparation": "- Print copies of the Black and White Images activity guide (1 per pair)\n- Practice using the pixelation widget",
+        "student_overview": "**How can bits make a picture?** \n\nLearn how computers represent black and white images using bits."
       },
       "seeding_key": {
         "lesson.key": "lesson-24",
@@ -156,11 +198,14 @@
     {
       "key": "lesson-25",
       "name": "Lesson 10: Color Images",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
+        "overview": "**How do layers of abstraction turn bits into color?**\n\nStudents build color pixels with the Pixelation Widget, starting with 3 bits per pixel (1 bit each for red, green, and blue light) and moving to 6 and 9 bits per pixel to make more shades, checking their work with a partner after each level. They then choose a gradient image, sample a section of it, and use the widget to match it as closely as they can, deciding how many bits per pixel to use. After a check for understanding on how bits set a pixel's color, students discuss what they worked with in the widget compared to what someone viewing a photo never has to think about, then record the layers of abstraction between bits and a displayed image and watch a video on how it works.",
+        "preparation": "- Practice using the color pixelation widget",
+        "student_overview": "**How do layers of abstraction turn bits into color?**\n\nBuild color one pixel at a time. You'll use bits to control red, green, and blue light, add more bits to make more shades, and then try to match a real gradient with the widget. Then you'll work out what each layer between the bits and the picture on your screen lets you ignore."
       },
       "seeding_key": {
         "lesson.key": "lesson-25",
@@ -169,12 +214,27 @@
       }
     },
     {
-      "key": "lesson-14",
-      "name": "Lesson 12: Generative AI and LLMs",
-      "absolute_position": 10,
+      "key": "lesson-26",
+      "name": "Lesson 11: Machine Learning",
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Lesson 12: Generative AI and LLMs",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -186,10 +246,10 @@
     {
       "key": "lesson-20",
       "name": "Lesson 13: Automate or Augment?",
-      "absolute_position": 11,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -201,10 +261,10 @@
     {
       "key": "lesson-21",
       "name": "Lesson 14: Trustworthy AI: Transparency and Maintenance",
-      "absolute_position": 12,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -214,12 +274,72 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Lesson 19: Intro to Programming - Day 1",
-      "absolute_position": 13,
+      "key": "lesson-27",
+      "name": "Lesson 15: Algorithmic Bias",
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "lesson-29",
+      "name": "Lesson 16: AI Lab",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "lesson-28",
+      "name": "Lesson 17: The Need for Programming Languages",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-28",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "lesson-30",
+      "name": "Lesson 18: Algorithms Solve Problems",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-30",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Lesson 19: Intro to Programming - Day 1",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -231,10 +351,10 @@
     {
       "key": "lesson-2",
       "name": "Lesson 20: Intro to Programming - Day 2",
-      "absolute_position": 14,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -246,10 +366,10 @@
     {
       "key": "lesson-4",
       "name": "Lesson 21: Variables - Day 1",
-      "absolute_position": 15,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -261,10 +381,10 @@
     {
       "key": "lesson-5",
       "name": "Lesson 22: Variables - Day 2",
-      "absolute_position": 16,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 22,
       "properties": {
       },
       "seeding_key": {
@@ -276,10 +396,10 @@
     {
       "key": "lesson-6",
       "name": "Lesson 23: Variables - Day 3",
-      "absolute_position": 17,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 23,
       "properties": {
       },
       "seeding_key": {
@@ -291,10 +411,10 @@
     {
       "key": "lesson-7",
       "name": "Lesson 24: Strings - Day 1",
-      "absolute_position": 18,
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -306,10 +426,10 @@
     {
       "key": "lesson-8",
       "name": "Lesson 25: Strings - Day 2",
-      "absolute_position": 19,
+      "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 25,
       "properties": {
       },
       "seeding_key": {
@@ -321,10 +441,10 @@
     {
       "key": "lesson-9",
       "name": "Lesson 26: Expressions and Operators - Day 1",
-      "absolute_position": 20,
+      "absolute_position": 26,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 26,
       "properties": {
       },
       "seeding_key": {
@@ -336,10 +456,10 @@
     {
       "key": "lesson-10",
       "name": "Lesson 27: Expressions and Operators - Day 2",
-      "absolute_position": 21,
+      "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 21,
+      "relative_position": 27,
       "properties": {
       },
       "seeding_key": {
@@ -351,10 +471,10 @@
     {
       "key": "lesson-11",
       "name": "Lesson 28: Random Values - Day 1",
-      "absolute_position": 22,
+      "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 22,
+      "relative_position": 28,
       "properties": {
       },
       "seeding_key": {
@@ -366,10 +486,10 @@
     {
       "key": "lesson-12",
       "name": "Lesson 29: Random Values - Day 2",
-      "absolute_position": 23,
+      "absolute_position": 29,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 23,
+      "relative_position": 29,
       "properties": {
       },
       "seeding_key": {
@@ -381,10 +501,10 @@
     {
       "key": "lesson-13",
       "name": "Lesson 30: Project - Wrapped",
-      "absolute_position": 24,
+      "absolute_position": 30,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 24,
+      "relative_position": 30,
       "properties": {
       },
       "seeding_key": {
@@ -395,6 +515,30 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "335e6312-817b-4b6d-b723-39f381478601",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601",
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
     {
       "key": "c0b407ac-df1b-4685-90bb-09f1a3efd1ea",
       "position": 1,
@@ -504,6 +648,18 @@
       }
     },
     {
+      "key": "76bd3f09-94ae-4289-b746-88a469e1c594",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76bd3f09-94ae-4289-b746-88a469e1c594",
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
       "key": "1c0c4e16-5c0c-4441-8c42-4078ca13e779",
       "position": 1,
       "properties": {
@@ -527,6 +683,84 @@
       "seeding_key": {
         "lesson_activity.key": "e418905a-5d47-46c1-bccc-7fdfa990949e",
         "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "aa82c15a-e8d3-437d-a528-12952210f240",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240",
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "a9775704-295d-4438-99a3-aa3c3cc42e5d",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a9775704-295d-4438-99a3-aa3c3cc42e5d",
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "9f3ec4ce-8d16-4f89-abc5-fef7bcb07241",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f3ec4ce-8d16-4f89-abc5-fef7bcb07241",
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "d73a1550-97b9-48f1-94ba-98f6b21cb7c7",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d73a1550-97b9-48f1-94ba-98f6b21cb7c7",
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "45fb7853-0964-408a-b305-23f3235c3060",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45fb7853-0964-408a-b305-23f3235c3060",
+        "lesson.key": "lesson-28",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28"
+      }
+    },
+    {
+      "key": "c4bccc0f-a177-4909-8dd6-5d6a9e35e7b4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c4bccc0f-a177-4909-8dd6-5d6a9e35e7b4",
+        "lesson.key": "lesson-30",
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28"
       }
@@ -752,6 +986,49 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "6eaf7378-b00a-4ac9-b30b-0d64b4e2d576",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6eaf7378-b00a-4ac9-b30b-0d64b4e2d576",
+        "lesson_activity.key": "a7e6bbfe-5ab1-40fb-844c-e712320b275d"
+      }
+    },
+    {
+      "key": "22820190-156e-432e-af5a-2b304c971103",
+      "position": 1,
+      "properties": {
+        "progression_name": "App Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "4d707f7b-9443-4365-9902-5aaab6fafc6e",
+      "position": 2,
+      "properties": {
+        "progression_name": "App Investigation"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
+    {
+      "key": "4142eae2-5b4c-45ca-9e3e-db3c595de1ed",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4142eae2-5b4c-45ca-9e3e-db3c595de1ed",
+        "lesson_activity.key": "335e6312-817b-4b6d-b723-39f381478601"
+      }
+    },
     {
       "key": "0b20dbe4-acdc-40dc-b06e-4c37a70efb07",
       "position": 1,
@@ -994,6 +1271,39 @@
       }
     },
     {
+      "key": "e5091401-bdef-4018-8949-d0ffd49fd294",
+      "position": 1,
+      "properties": {
+        "progression_name": "Train the AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5091401-bdef-4018-8949-d0ffd49fd294",
+        "lesson_activity.key": "76bd3f09-94ae-4289-b746-88a469e1c594"
+      }
+    },
+    {
+      "key": "2dae29af-dc95-4f7b-8fd5-c2f4ebd38a23",
+      "position": 2,
+      "properties": {
+        "progression_name": "Bias In Training Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "2dae29af-dc95-4f7b-8fd5-c2f4ebd38a23",
+        "lesson_activity.key": "76bd3f09-94ae-4289-b746-88a469e1c594"
+      }
+    },
+    {
+      "key": "1b44f67c-f546-4dd3-9bcc-2d39a5d72ec4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b44f67c-f546-4dd3-9bcc-2d39a5d72ec4",
+        "lesson_activity.key": "76bd3f09-94ae-4289-b746-88a469e1c594"
+      }
+    },
+    {
       "key": "b1f81caf-7765-466c-8791-1b3e6c579713",
       "position": 1,
       "properties": {
@@ -1022,6 +1332,101 @@
       "seeding_key": {
         "activity_section.key": "396b1e7d-0122-4420-bd4f-4b464144f33f",
         "lesson_activity.key": "e418905a-5d47-46c1-bccc-7fdfa990949e"
+      }
+    },
+    {
+      "key": "9f0e6f9c-9568-47d0-9d30-859154dccd8b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Cropping Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f0e6f9c-9568-47d0-9d30-859154dccd8b",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2",
+        "lesson_activity.key": "aa82c15a-e8d3-437d-a528-12952210f240"
+      }
+    },
+    {
+      "key": "eb8d5630-481e-49ef-909b-7e36d499c11d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eb8d5630-481e-49ef-909b-7e36d499c11d",
+        "lesson_activity.key": "a9775704-295d-4438-99a3-aa3c3cc42e5d"
+      }
+    },
+    {
+      "key": "5a4fe70c-ffa4-46ef-9169-f6c984642e6f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5a4fe70c-ffa4-46ef-9169-f6c984642e6f",
+        "lesson_activity.key": "9f3ec4ce-8d16-4f89-abc5-fef7bcb07241"
+      }
+    },
+    {
+      "key": "3a70399b-784c-4254-9bdb-5eee6b30b07f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Test the Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a70399b-784c-4254-9bdb-5eee6b30b07f",
+        "lesson_activity.key": "9f3ec4ce-8d16-4f89-abc5-fef7bcb07241"
+      }
+    },
+    {
+      "key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9",
+        "lesson_activity.key": "9f3ec4ce-8d16-4f89-abc5-fef7bcb07241"
+      }
+    },
+    {
+      "key": "9f463433-9ff6-4cf3-ab88-b99cf6200438",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9f463433-9ff6-4cf3-ab88-b99cf6200438",
+        "lesson_activity.key": "d73a1550-97b9-48f1-94ba-98f6b21cb7c7"
+      }
+    },
+    {
+      "key": "834bec7d-229c-454e-88c3-647fe0807bf3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Checking for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "834bec7d-229c-454e-88c3-647fe0807bf3",
+        "lesson_activity.key": "45fb7853-0964-408a-b305-23f3235c3060"
+      }
+    },
+    {
+      "key": "694b4687-6d17-45f0-9a19-0756e19b2395",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "694b4687-6d17-45f0-9a19-0756e19b2395",
+        "lesson_activity.key": "c4bccc0f-a177-4909-8dd6-5d6a9e35e7b4"
       }
     },
     {
@@ -1559,6 +1964,270 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "App Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample1_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample1_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "App Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample2_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample2_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "App Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample3_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample3_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "App Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample4_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample4_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "App Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample5_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample5_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample1-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample1-investigate_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample2-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample2-investigate_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample3-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample3-investigate_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample4-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample4-investigate_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "App Investigation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample5-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_sample5-investigate_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_cfu1_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4142eae2-5b4c-45ca-9e3e-db3c595de1ed"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_cfu1_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_cfu2_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4142eae2-5b4c-45ca-9e3e-db3c595de1ed"
+      },
+      "level_keys": [
+        "csp_unit1_lesson2_cfu2_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Test a Sensor"
       },
       "bonus": false,
@@ -1576,7 +2245,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1598,7 +2267,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -1620,7 +2289,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -1641,7 +2310,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -1663,7 +2332,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -1685,7 +2354,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -1707,7 +2376,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -1729,7 +2398,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1751,7 +2420,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -1773,7 +2442,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -1795,7 +2464,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -1817,7 +2486,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -1839,7 +2508,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -1861,7 +2530,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1883,7 +2552,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1905,7 +2574,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1927,7 +2596,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1949,7 +2618,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -1971,7 +2640,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1993,7 +2662,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2015,7 +2684,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2037,7 +2706,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2059,7 +2728,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -2081,7 +2750,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2103,7 +2772,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2125,7 +2794,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -2147,7 +2816,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 40,
       "position": 9,
       "activity_section_position": 2,
       "assessment": true,
@@ -2169,7 +2838,139 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Train the AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai1_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "e5091401-bdef-4018-8949-d0ffd49fd294"
+      },
+      "level_keys": [
+        "csp_unit1_lesson11_train-ai1_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Train the AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai1-demo_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "e5091401-bdef-4018-8949-d0ffd49fd294"
+      },
+      "level_keys": [
+        "csp_unit1_lesson11_train-ai1-demo_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Train the AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai2_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "e5091401-bdef-4018-8949-d0ffd49fd294"
+      },
+      "level_keys": [
+        "csp_unit1_lesson11_train-ai2_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Bias In Training Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai3_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "2dae29af-dc95-4f7b-8fd5-c2f4ebd38a23"
+      },
+      "level_keys": [
+        "csp_unit1_lesson11_train-ai3_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Bias In Training Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai4_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "2dae29af-dc95-4f7b-8fd5-c2f4ebd38a23"
+      },
+      "level_keys": [
+        "csp_unit1_lesson11_train-ai4_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_cfu_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "1b44f67c-f546-4dd3-9bcc-2d39a5d72ec4"
+      },
+      "level_keys": [
+        "csp_unit1_lesson11_cfu_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2191,7 +2992,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -2213,7 +3014,290 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Cropping Widget"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson15_cropping-widget_dev_27_28"
+        ],
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "9f0e6f9c-9568-47d0-9d30-859154dccd8b"
+      },
+      "level_keys": [
+        "csp_unit1_lesson15_cropping-widget_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson15_cfu1_dev_27_28"
+        ],
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2"
+      },
+      "level_keys": [
+        "csp_unit1_lesson15_cfu1_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson15_cfu2_dev_27_28"
+        ],
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2"
+      },
+      "level_keys": [
+        "csp_unit1_lesson15_cfu2_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson15_cfu3_dev_27_28"
+        ],
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2"
+      },
+      "level_keys": [
+        "csp_unit1_lesson15_cfu3_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Test the Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson16-library-chatbot_27_28"
+        ],
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "3a70399b-784c-4254-9bdb-5eee6b30b07f"
+      },
+      "level_keys": [
+        "csp-unit1-lesson16-library-chatbot_27_28"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson16-cfu1_27_28"
+        ],
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9"
+      },
+      "level_keys": [
+        "csp-unit1-lesson16-cfu1_27_28"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson16-cfu2_27_28"
+        ],
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9"
+      },
+      "level_keys": [
+        "csp-unit1-lesson16-cfu2_27_28"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-unit1-lesson16-cfu3_27_28"
+        ],
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9"
+      },
+      "level_keys": [
+        "csp-unit1-lesson16-cfu3_27_28"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Checking for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson17_cfu1_dev_27_28"
+        ],
+        "lesson.key": "lesson-28",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "834bec7d-229c-454e-88c3-647fe0807bf3"
+      },
+      "level_keys": [
+        "csp_unit1_lesson17_cfu1_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Checking for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson17_cfu2_dev_27_28"
+        ],
+        "lesson.key": "lesson-28",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "834bec7d-229c-454e-88c3-647fe0807bf3"
+      },
+      "level_keys": [
+        "csp_unit1_lesson17_cfu2_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson18_cfu1_dev_27_28"
+        ],
+        "lesson.key": "lesson-30",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "694b4687-6d17-45f0-9a19-0756e19b2395"
+      },
+      "level_keys": [
+        "csp_unit1_lesson18_cfu1_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson18_cfu2_dev_27_28"
+        ],
+        "lesson.key": "lesson-30",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "694b4687-6d17-45f0-9a19-0756e19b2395"
+      },
+      "level_keys": [
+        "csp_unit1_lesson18_cfu2_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp_unit1_lesson18_cfu3_dev_27_28"
+        ],
+        "lesson.key": "lesson-30",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "694b4687-6d17-45f0-9a19-0756e19b2395"
+      },
+      "level_keys": [
+        "csp_unit1_lesson18_cfu3_dev_27_28"
+      ]
+    },
+    {
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2235,7 +3319,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2257,7 +3341,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2279,7 +3363,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2301,7 +3385,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2323,7 +3407,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 67,
       "position": 6,
       "activity_section_position": 4,
       "assessment": true,
@@ -2345,7 +3429,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2367,7 +3451,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2389,7 +3473,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 70,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2411,7 +3495,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 71,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2433,7 +3517,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2455,7 +3539,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2477,7 +3561,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2499,7 +3583,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2521,7 +3605,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2543,7 +3627,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2565,7 +3649,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 78,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2587,7 +3671,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 79,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2609,7 +3693,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2631,7 +3715,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 81,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2653,7 +3737,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 82,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2675,7 +3759,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2697,7 +3781,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2719,7 +3803,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2741,7 +3825,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2763,7 +3847,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2785,7 +3869,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2807,7 +3891,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 89,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2829,7 +3913,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 90,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2851,7 +3935,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 91,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2873,7 +3957,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 92,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2895,7 +3979,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2917,7 +4001,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 94,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2939,7 +4023,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 95,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2961,7 +4045,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 96,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -2983,7 +4067,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 97,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3005,7 +4089,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 98,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -3028,6 +4112,150 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample1_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample1_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample2_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample2_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample3_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample3_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample4_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample4_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample5_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample5_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "22820190-156e-432e-af5a-2b304c971103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample1-investigate_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample1-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample2-investigate_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample2-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample3-investigate_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample3-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample4-investigate_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample4-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_sample5-investigate_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_sample5-investigate_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4d707f7b-9443-4365-9902-5aaab6fafc6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_cfu1_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_cfu1_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4142eae2-5b4c-45ca-9e3e-db3c595de1ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson2_cfu2_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson2_cfu2_dev_27_28"
+        ],
+        "lesson.key": "lesson-31",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4142eae2-5b4c-45ca-9e3e-db3c595de1ed"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "csp_unit1_lesson3_level1_dev_27_28",
@@ -3366,6 +4594,78 @@
     },
     {
       "seeding_key": {
+        "level.key": "csp_unit1_lesson11_train-ai1_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai1_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "e5091401-bdef-4018-8949-d0ffd49fd294"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson11_train-ai1-demo_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai1-demo_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "e5091401-bdef-4018-8949-d0ffd49fd294"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson11_train-ai2_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai2_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "e5091401-bdef-4018-8949-d0ffd49fd294"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson11_train-ai3_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai3_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "2dae29af-dc95-4f7b-8fd5-c2f4ebd38a23"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson11_train-ai4_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_train-ai4_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "2dae29af-dc95-4f7b-8fd5-c2f4ebd38a23"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson11_cfu_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson11_cfu_dev_27_28"
+        ],
+        "lesson.key": "lesson-26",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "1b44f67c-f546-4dd3-9bcc-2d39a5d72ec4"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csp-unit1-lesson14-simulation_27_28",
         "script_level.level_keys": [
           "csp-unit1-lesson14-simulation_27_28"
@@ -3386,6 +4686,162 @@
         "lesson_group.key": "",
         "script.name": "csp-unit1-dev-27-28",
         "activity_section.key": "396b1e7d-0122-4420-bd4f-4b464144f33f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson15_cropping-widget_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson15_cropping-widget_dev_27_28"
+        ],
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "9f0e6f9c-9568-47d0-9d30-859154dccd8b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson15_cfu1_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson15_cfu1_dev_27_28"
+        ],
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson15_cfu2_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson15_cfu2_dev_27_28"
+        ],
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson15_cfu3_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson15_cfu3_dev_27_28"
+        ],
+        "lesson.key": "lesson-27",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "59440aec-4b67-42ca-8a3d-223cf3cdadb2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson16-library-chatbot_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson16-library-chatbot_27_28"
+        ],
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "3a70399b-784c-4254-9bdb-5eee6b30b07f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson16-cfu1_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson16-cfu1_27_28"
+        ],
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson16-cfu2_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson16-cfu2_27_28"
+        ],
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-unit1-lesson16-cfu3_27_28",
+        "script_level.level_keys": [
+          "csp-unit1-lesson16-cfu3_27_28"
+        ],
+        "lesson.key": "lesson-29",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "4bc9cd79-3aeb-49ef-8a10-2314bd1ac3e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson17_cfu1_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson17_cfu1_dev_27_28"
+        ],
+        "lesson.key": "lesson-28",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "834bec7d-229c-454e-88c3-647fe0807bf3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson17_cfu2_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson17_cfu2_dev_27_28"
+        ],
+        "lesson.key": "lesson-28",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "834bec7d-229c-454e-88c3-647fe0807bf3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson18_cfu1_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson18_cfu1_dev_27_28"
+        ],
+        "lesson.key": "lesson-30",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "694b4687-6d17-45f0-9a19-0756e19b2395"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson18_cfu2_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson18_cfu2_dev_27_28"
+        ],
+        "lesson.key": "lesson-30",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "694b4687-6d17-45f0-9a19-0756e19b2395"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp_unit1_lesson18_cfu3_dev_27_28",
+        "script_level.level_keys": [
+          "csp_unit1_lesson18_cfu3_dev_27_28"
+        ],
+        "lesson.key": "lesson-30",
+        "lesson_group.key": "",
+        "script.name": "csp-unit1-dev-27-28",
+        "activity_section.key": "694b4687-6d17-45f0-9a19-0756e19b2395"
       }
     },
     {
@@ -3834,10 +5290,746 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "ASCII Student Reference",
+      "url": "https://docs.google.com/document/d/1_UW60GD6xJ861MK5Yf1X5DuCukBpnhz3Xlsvo_zOYag/",
+      "key": "ascii_student_reference",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ascii_student_reference"
+      }
+    },
+    {
+      "name": "Binary Numbers",
+      "url": "https://docs.google.com/presentation/d/1IR_wIytbkrEF4gnEk8YBdQO_VqKEeZ-aY7KUUKiZpHk/",
+      "key": "binary_numbers",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "binary_numbers"
+      }
+    },
+    {
+      "name": "Black and White Images",
+      "url": "https://docs.google.com/document/d/1yf0aQy1axkTYAFzGzqvb-Gu0imzg83wLshdsFoT3lFo/",
+      "key": "black_and_white_images",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "black_and_white_images"
+      }
+    },
+    {
+      "name": "Black and White Images",
+      "url": "https://docs.google.com/document/d/1lR_FfU8B2ZhC4UJ2-y5zIhwNy2x8PMwOd5X1ZjEfqdw",
+      "key": "black_and_white_images_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "black_and_white_images_1"
+      }
+    },
+    {
+      "name": "Black and White Images",
+      "url": "https://docs.google.com/presentation/d/1InlAFlMFmGZbvNtPnnRzHOuTi21jWh00HZEiBskVM-c/",
+      "key": "black_and_white_images_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "black_and_white_images_2"
+      }
+    },
+    {
+      "name": "Candy Store Challenge",
+      "url": "https://docs.google.com/document/d/1jPuDRMrk5rZM3SEbYaljgy2gd8d_PhimidOVd8Z3wrE/",
+      "key": "candy",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "candy"
+      }
+    },
+    {
+      "name": "Candy Store Challenge",
+      "url": "https://docs.google.com/document/d/1XbGZoChzNVLn_gNMgxxvdmof4HMUIoLLlTRsXKDQ8iY/",
+      "key": "candy_store_challenge",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "candy_store_challenge"
+      }
+    },
+    {
+      "name": "Circle Square Patterns",
+      "url": "https://docs.google.com/presentation/d/18RHFb0KIieQPpzeqt6xIP4zdv8FwoVyuXwrtrAGRqs0/",
+      "key": "circle_square_patterns",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "circle_square_patterns"
+      }
+    },
+    {
+      "name": "Circle Square Patterns",
+      "url": "https://docs.google.com/document/d/1On66cahB2E6vENYqp8JBkor_8qIs5QsDpTsqN45CaQA/",
+      "key": "circle_square_patterns_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "circle_square_patterns_1"
+      }
+    },
+    {
+      "name": "Color Images",
+      "url": "https://docs.google.com/presentation/d/1dbQl3WdxKpYhjiQDp3br7BUNOlFaDa8xSW0eWuz8Abg/",
+      "key": "color_images",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "color_images"
+      }
+    },
+    {
+      "name": "Computer Science is Changing Everything",
+      "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
+      "key": "computer_science_is_changing_everything_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_is_changing_everything_1"
+      }
+    },
+    {
+      "name": "CSP Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
+      "key": "csp_unit_1_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1_unit_guide"
+      }
+    },
+    {
+      "name": "Flippy Do",
+      "url": "https://drive.google.com/file/d/1H6-eWcrIV0ooJb5UMwC6pgAXRZFLgLWX/",
+      "key": "flippy_do",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "flippy_do"
+      }
+    },
+    {
+      "name": "Flippy Do Part 1",
+      "url": "https://docs.google.com/document/d/1R30egb70TIEUq_1zYvX9e432b_8sSknp4aPZfDwgdq8/",
+      "key": "flippy_do_part_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "flippy_do_part_1"
+      }
+    },
+    {
+      "name": "Flippy Do Part 1",
+      "url": "https://docs.google.com/document/d/1yncqRso-b1mseQ8i5RwuPdjtrUxe6qgPfIj0e9fNfGg/",
+      "key": "flippy_do_part_1_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "flippy_do_part_1_1"
+      }
+    },
+    {
+      "name": "Handle an Edge Case",
+      "url": "https://docs.google.com/document/d/1HwKzdnoaC-yRy-Zz8CZm7REMwpyAgLTW7zHj9fpZTaM/",
+      "key": "handle_an_edge_case",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "handle_an_edge_case"
+      }
+    },
+    {
+      "name": "Handle an Edge Case",
+      "url": "https://docs.google.com/document/d/1_KfdnSN8Y60LOmEThKWmk9NlIyAb1vIqwMnjOPqPLj8/",
+      "key": "handle_an_edge_case_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "handle_an_edge_case_1"
+      }
+    },
+    {
+      "name": "How Computers Work",
+      "url": "https://www.youtube.com/watch?v=mCq8-xTH7jA",
+      "key": "how_computers_work",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_computers_work"
+      }
+    },
+    {
+      "name": "How to Make a Flippy Do",
+      "url": "https://docs.google.com/document/d/1Uz9VuRyIonpl9EYb06egRVSkuvjLCymOJLpIP4BXyPk/",
+      "key": "how_to_make_a_flippy_do",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_make_a_flippy_do"
+      }
+    },
+    {
+      "name": "Inputs, Outputs, and App Behavior",
+      "url": "https://docs.google.com/presentation/d/1jbznMmv0ikKRb3TNV6br70D1EE5YGCgSFyKVXDlg2Ow/",
+      "key": "inputs_outputs_and_app_behavior",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "inputs_outputs_and_app_behavior"
+      }
+    },
+    {
+      "name": "Introduction to Apps",
+      "url": "https://docs.google.com/presentation/d/1F4Kb23ysISq1bv9CoH3lquZFXRmB4cjw7kXiSwUVMk0/",
+      "key": "introduction_to_apps_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_apps_1"
+      }
+    },
+    {
+      "name": "Overflow and Rounding",
+      "url": "https://docs.google.com/presentation/d/1YDfg7sLHtTaWFaTW7XrVGiqX-ogc_xvh-ARReLzKHBs/",
+      "key": "overflow_and_rounding",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "overflow_and_rounding"
+      }
+    },
+    {
+      "name": "Representing Information ",
+      "url": "https://docs.google.com/presentation/d/166bsLMbXAYX5ApwTaxElLkAhr_rSZr8aObe9sTNOBnQ/",
+      "key": "representing_information_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "representing_information_1"
+      }
+    },
+    {
+      "name": "Representing Text",
+      "url": "https://docs.google.com/presentation/d/1SLFjOvPux7BtRxerLL83_PXUa2LGKWw6sNJvcXe5tuk/",
+      "key": "representing_text",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "representing_text"
+      }
+    },
+    {
+      "name": "Shape Cutouts",
+      "url": "https://docs.google.com/document/d/1QVq10_ATEYGmMfaS78Cjv37MQ_6frPdcsBM2AnCCASk/",
+      "key": "shape_cutouts",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "shape_cutouts"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
+      "key": "unit_1_unit_guide",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/",
+      "key": "unit_1_unit_guide_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_1"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/",
+      "key": "unit_1_unit_guide_10",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_10"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
+      "key": "unit_1_unit_guide_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_2"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/",
+      "key": "unit_1_unit_guide_3",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_3"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/",
+      "key": "unit_1_unit_guide_4",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_4"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
+      "key": "unit_1_unit_guide_5",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "professional_learning",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_5"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/",
+      "key": "unit_1_unit_guide_6",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_6"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
+      "key": "unit_1_unit_guide_7",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_7"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/",
+      "key": "unit_1_unit_guide_8",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_8"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/",
+      "key": "unit_1_unit_guide_9",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_9"
+      }
+    },
+    {
+      "name": "Welcome to CSP",
+      "url": "https://docs.google.com/presentation/d/1Mz9fMGaI1Lye7kyyXM5Vu5S0ZbOhwHqXP0brNmQsYrM/",
+      "key": "welcome_to_csp_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_csp_1"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "computer_science_is_changing_everything_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "welcome_to_csp_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "handle_an_edge_case"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "handle_an_edge_case_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "inputs_outputs_and_app_behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "unit_1_unit_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "resource.key": "unit_1_unit_guide_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "resource.key": "representing_information_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "circle_square_patterns"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "circle_square_patterns_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "resource.key": "shape_cutouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "binary_numbers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "csp_unit_1_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "flippy_do"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "flippy_do_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "flippy_do_part_1_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "how_to_make_a_flippy_do"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "resource.key": "unit_1_unit_guide_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "candy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "candy_store_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "overflow_and_rounding"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "unit_1_unit_guide_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "resource.key": "unit_1_unit_guide_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "ascii_student_reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "representing_text"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "unit_1_unit_guide_7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "unit_1_unit_guide_8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-24",
+        "resource.key": "black_and_white_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-24",
+        "resource.key": "black_and_white_images_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-24",
+        "resource.key": "black_and_white_images_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-25",
+        "resource.key": "color_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-25",
+        "resource.key": "unit_1_unit_guide_10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-25",
+        "resource.key": "unit_1_unit_guide_9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "resource.key": "how_computers_work"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "resource.key": "introduction_to_apps_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "resource.key": "unit_1_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "resource.key": "unit_1_unit_guide_1"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -3846,16 +6038,401 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "abstraction",
+      "word": "Abstraction",
+      "definition": "the process of hiding complex background details so you can focus on working with simpler, high-level ideas",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "key": "automatic_input",
+      "word": "Automatic Input",
+      "definition": "information a device collects on its own, without the user typing, tapping, or speaking.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "automatic_input"
+      }
+    },
+    {
+      "key": "binary_number",
+      "word": "Binary Number",
+      "definition": "a base 2 number with two possible different digits",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "binary_number"
+      }
+    },
+    {
+      "key": "bit",
+      "word": "Bit",
+      "definition": "A contraction of \"Binary Digit\"; the single unit of information in a computer, typically represented as a 0 or 1",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bit"
+      }
+    },
+    {
+      "key": "byte",
+      "word": "Byte",
+      "definition": "8 bits",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "byte"
+      }
+    },
+    {
+      "key": "decimal_number",
+      "word": "Decimal Number",
+      "definition": "a base 10 number with ten possible different digits",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decimal_number"
+      }
+    },
+    {
+      "key": "edge_case",
+      "word": "Edge Case",
+      "definition": "an unusual or unexpected situation that an app must still handle correctly, such as losing an internet connection.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "edge_case"
+      }
+    },
+    {
+      "key": "hidden_output",
+      "word": "Hidden Output",
+      "definition": "an action an app performs that the user does not see, such as saving data or sending it to a server.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hidden_output"
+      }
+    },
+    {
+      "key": "input",
+      "word": "Input",
+      "definition": "data that are sent to a computer for processing by a program. Can come in a variety of forms, such as tactile interaction, audio, visuals, or text.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "key": "output",
+      "word": "Output",
+      "definition": "any data that are sent from a program to a device. Can come in a variety of forms, such as tactile interaction, audio, visuals, or text.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "output"
+      }
+    },
+    {
+      "key": "overflow_error",
+      "word": "Overflow Error",
+      "definition": "Error from attempting to represent a number that is too large.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "key": "round_off_error",
+      "word": "Round-off Error",
+      "definition": "Error from attempting to represent a number that is too precise. The value is rounded.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "round_off_error"
+      }
+    },
+    {
+      "key": "user_input",
+      "word": "User Input",
+      "definition": "information a user intentionally provides to a device, such as by typing, tapping, or speaking.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user_input"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "vocabulary.key": "automatic_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "vocabulary.key": "edge_case"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "vocabulary.key": "hidden_output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "vocabulary.key": "user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "vocabulary.key": "binary_number"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "vocabulary.key": "bit"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "vocabulary.key": "byte"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "vocabulary.key": "decimal_number"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "vocabulary.key": "round_off_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "vocabulary.key": "output"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "059ab747-7aee-4a1e-ac0b-9e8c7d6481da",
+      "properties": {
+        "description": "Explain how bits can be used to represent the individual pixels of a color image"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-25",
+        "objective.key": "059ab747-7aee-4a1e-ac0b-9e8c7d6481da"
+      }
+    },
+    {
+      "key": "0f09a691-3d05-4a2f-9997-4d829fc6ff11",
+      "properties": {
+        "description": "Describe positive and negative effects of computing innovations."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "0f09a691-3d05-4a2f-9997-4d829fc6ff11"
+      }
+    },
+    {
+      "key": "158c9495-a0f1-41c5-b5bd-3fffbdd421f3",
+      "properties": {
+        "description": "Explain how the position of each binary digit determines its place value and numeric value."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "objective.key": "158c9495-a0f1-41c5-b5bd-3fffbdd421f3"
+      }
+    },
+    {
+      "key": "16fc5020-1dd0-4810-b21a-98d21c4d703d",
+      "properties": {
+        "description": "Explain how the number of bits limits the values that can be represented."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "objective.key": "16fc5020-1dd0-4810-b21a-98d21c4d703d"
+      }
+    },
+    {
+      "key": "1a2cc9a1-86e7-4b1c-962f-18ee3298845d",
+      "properties": {
+        "description": "Explain the challenges of creating a clear set of rules for ordering patterns."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "1a2cc9a1-86e7-4b1c-962f-18ee3298845d"
+      }
+    },
+    {
+      "key": "22d21c70-fea6-40af-b3c6-62da7bddedda",
+      "properties": {
+        "description": "Explain how layers of abstraction let users work above raw bits"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-25",
+        "objective.key": "22d21c70-fea6-40af-b3c6-62da7bddedda"
+      }
+    },
+    {
+      "key": "3f54f837-118a-4a53-b953-2f1804677b44",
+      "properties": {
+        "description": "Explain that some languages, like Python, grow integers without overflow"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "objective.key": "3f54f837-118a-4a53-b953-2f1804677b44"
+      }
+    },
+    {
+      "key": "580d62f4-c1bc-41ee-9894-5d4587163751",
+      "properties": {
+        "description": "Describe the challenges in representing text using a fixed number of bits for each character"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "objective.key": "580d62f4-c1bc-41ee-9894-5d4587163751"
+      }
+    },
+    {
+      "key": "646f98d4-456e-4a62-8cd5-10de591ef91d",
+      "properties": {
+        "description": "Explain how bits are grouped to represent abstractions like numbers and text"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "objective.key": "646f98d4-456e-4a62-8cd5-10de591ef91d"
+      }
+    },
+    {
+      "key": "71d5ba75-3d8c-42bd-8e2e-6476a4bb6541",
+      "properties": {
+        "description": "Explain how users learn an app's purpose and behavior by using and observing it"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "objective.key": "71d5ba75-3d8c-42bd-8e2e-6476a4bb6541"
+      }
+    },
+    {
+      "key": "8119a4ea-325a-4eb1-95ac-663903be42f7",
+      "properties": {
+        "description": "Identify the purpose of an app"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "objective.key": "8119a4ea-325a-4eb1-95ac-663903be42f7"
+      }
+    },
+    {
+      "key": "86c9558a-e3e5-4e2f-b5d6-7362b461daae",
+      "properties": {
+        "description": "Develop a system for using numbers to represent text"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "objective.key": "86c9558a-e3e5-4e2f-b5d6-7362b461daae"
+      }
+    },
+    {
+      "key": "88600d26-3c6d-4ac7-9c93-2ebe7c289615",
+      "properties": {
+        "description": "Follow a set of rules for ordering sets of patterns."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "88600d26-3c6d-4ac7-9c93-2ebe7c289615"
+      }
+    },
+    {
+      "key": "91b971d8-e18b-473a-9346-0b39ad545544",
+      "properties": {
+        "description": "Explain why an app should behave as intended across a range of conditions "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "objective.key": "91b971d8-e18b-473a-9346-0b39ad545544"
+      }
+    },
+    {
+      "key": "99556a73-cec3-4f51-8fc9-c36c16f4ae24",
+      "properties": {
+        "description": "Use patterns to represent information"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "objective.key": "99556a73-cec3-4f51-8fc9-c36c16f4ae24"
+      }
+    },
+    {
+      "key": "ec6de7b6-ceb4-4326-9c36-6bd53dfd5586",
+      "properties": {
+        "description": "Explain how bits can be used to represent the individual pixels of a black and white image"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-24",
+        "objective.key": "ec6de7b6-ceb4-4326-9c36-6bd53dfd5586"
+      }
+    },
+    {
+      "key": "effb6ea9-97f6-44e1-bf6e-19cf8bdf775b",
+      "properties": {
+        "description": "Communicate with classmates about computing innovations in their lives."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "effb6ea9-97f6-44e1-bf6e-19cf8bdf775b"
+      }
+    },
+    {
+      "key": "fd6c0495-fee8-48cc-a874-50b28dcdda51",
+      "properties": {
+        "description": "Identify the outputs of an app"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-31",
+        "objective.key": "fd6c0495-fee8-48cc-a874-50b28dcdda51"
+      }
+    }
   ],
   "lessons_standards": [
 

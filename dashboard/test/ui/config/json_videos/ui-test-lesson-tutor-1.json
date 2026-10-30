@@ -1,0 +1,11 @@
+{
+  "key": "ui-test-lesson-tutor-1",
+  "description": "UI Test Lesson Tutor Video 1",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/ui-test-lesson-tutor-1.json",
+  "labs": [],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "82d11dd1-2488-44d2-99c7-b67e8c9ac26a"
+  ]
+}

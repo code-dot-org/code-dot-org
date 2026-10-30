@@ -33,6 +33,11 @@
   }
 }
 
+// Nested to outrank ChatMessage's own background, whatever the bundle order.
+.instructionsScrollArea .instructionsMessage {
+  background-color: var(--background-neutral-secondary);
+}
+
 .scrollFade {
   position: absolute;
   right: 0;
@@ -146,6 +151,13 @@
   // `top` follows the instructions height so the toggle rides the drawer's
   // bottom edge as it resizes; opacity fades the toggle in on the AI Tutor tab.
   transition: top 0.2s ease, opacity 0.2s ease;
+}
+
+// Pinned: the line the resize bar would draw, with no handle.
+.divider {
+  flex-shrink: 0;
+  height: 1px;
+  background-color: var(--background-neutral-quaternary);
 }
 
 .resizeBar {

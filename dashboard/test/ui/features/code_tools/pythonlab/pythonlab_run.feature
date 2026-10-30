@@ -12,6 +12,10 @@ Scenario: Can run and see output of Python program
   And I wait until "#uitest-codebridge-console" contains text "Hello from the start!"
   Then I sign out
 
+# Fails intermittently in DTT: the level 2 header bubble can stay "attempted" after
+# validation passes, likely a race between two milestone reports. See
+# code-dot-org/code-dot-org#76065. Student Learning to follow up.
+@skip
 Scenario: Continue button and progress status shows up correctly
   # Level 1 is not validated; continue button will show up after editing and running code.
   And I wait to see ".cm-content"

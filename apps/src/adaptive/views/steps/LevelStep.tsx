@@ -3,22 +3,45 @@
 // shares among levels naming the same project template, so a sandbox level
 // and a project level differ only in what levelbuilder says about them.
 
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
-import React, {Suspense, useEffect, useMemo, useState} from 'react';
+import React, {
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
+import {
+  ChatHandle,
+  ChatHostContext,
+} from '@cdo/apps/aichat/host/ChatHostContext';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   Lab2EntryPoint,
   LevelProperties,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+import {ExternalNavigationContext} from '@cdo/apps/lab2/views/components/Instructions/ExternalNavigationContext';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
+import {isAdaptiveAiEnabled} from '../../ai/generate';
 import {buildTutorContext} from '../../ai/tutorContext';
+import {workAdapterFor} from '../../ai/validation/adapters';
+import {latestValidation} from '../../progress/model';
+import {generationTraceId} from '../../project/projectGeneration';
+import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
+
+import {useGenerateProject} from './useGenerateProject';
+import {useStepInstructions} from './useStepInstructions';
+import {useStepValidation} from './useStepValidation';
 
 import styles from './stepPlayer.module.scss';
 import shared from '../shared.module.scss';
@@ -33,21 +56,26 @@ interface LevelStepProps {
   onComplete: () => void;
 }
 
+/** A level step whose level the server resolved. */
+type PlayableLevelStep = LevelStepContent & {levelProperties: LevelProperties};
+
+const isPlayable = (step: LevelStepContent): step is PlayableLevelStep =>
+  step.levelProperties !== undefined;
+
 const LevelStep: React.FunctionComponent<LevelStepProps> = ({
   step,
   continueLabel,
   onComplete,
 }) => {
-  const {levelProperties} = step;
   const View =
-    levelProperties && lab2EntryPoints[levelProperties.appName]?.view;
+    step.levelProperties && lab2EntryPoints[step.levelProperties.appName]?.view;
 
-  if (!levelProperties || !View) {
+  if (!isPlayable(step) || !View) {
     return (
       <div className={styles.stepFallback}>
         <MuiTypography variant="body3" className={shared.muted}>
-          {levelProperties
-            ? `No lab here can play '${levelProperties.appName}' levels.`
+          {step.levelProperties
+            ? `No lab here can play '${step.levelProperties.appName}' levels.`
             : `Level '${step.level}' was not found.`}
         </MuiTypography>
         <MuiButton variant="contained" onClick={onComplete}>
@@ -59,43 +87,121 @@ const LevelStep: React.FunctionComponent<LevelStepProps> = ({
 
   return (
     <div className={styles.levelStep}>
-      <LevelPlayer step={step} levelProperties={levelProperties} View={View} />
-      <div className={styles.stepFooter}>
-        <MuiButton variant="contained" size="small" onClick={onComplete}>
-          {continueLabel}
-        </MuiButton>
-      </div>
+      <LevelPlayer
+        step={step}
+        View={View}
+        continueLabel={continueLabel}
+        onComplete={onComplete}
+      />
     </div>
   );
 };
 
-interface LevelPlayerProps {
-  step: LevelStepContent;
-  levelProperties: LevelProperties;
+type LevelPlayerProps = LevelStepProps & {
+  step: PlayableLevelStep;
   View: Lab2EntryPoint['view'];
-}
+};
 
 /** Loads the level's project, then mounts the lab view over it. */
 const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   step,
-  levelProperties,
   View,
+  continueLabel,
+  onComplete,
 }) => {
-  const {currentSources, channel, projectManager, loadError} = useSources({
+  const {levelProperties} = step;
+  const {
+    currentSources,
+    channel,
+    projectManager,
+    loadError,
+    isLoading,
+    isEditable,
+    hasSavedSources,
+    updateSources,
+  } = useSources({
     levelProperties,
     defaultSources: EMPTY_SOURCES,
   });
 
-  const {pathway, checkpoint, statusMap} = usePathwayContext();
+  const {
+    pathway,
+    checkpoint,
+    statusMap,
+    progress,
+    saveGeneratedInstructions,
+    recordValidation,
+    aiContext,
+  } = usePathwayContext();
+  // Read on mount, before StepPlayer's start of this visit gives it a status.
+  const [firstVisit] = useState(() => !progress.steps[step.id]?.status);
   // Keyed on the project's strings, not the channel, which changes on every save.
-  const projectName = step.project ? channel?.name : undefined;
-  const projectDescription = step.project
-    ? channel?.labConfig?.adaptive?.description
-    : undefined;
+  const {name: projectName, description: projectDescription} =
+    projectInfoFromChannel(step.project ? channel : undefined);
+  // A step with a project prompt generates the student's first version of
+  // the project before anything else reads it: once, for the owner, on a
+  // project with nothing saved and nothing generated. Unknown until loaded.
+  const isProjectLoaded =
+    !isLoading && currentSources !== undefined && !!channel && !!projectManager;
+  const shouldGenerateProject =
+    !step.project || !step.projectPrompt
+      ? false
+      : !isProjectLoaded
+      ? undefined
+      : isEditable && !hasSavedSources && !generationTraceId(channel);
+  const {isResolved: projectReady} = useGenerateProject({
+    shouldGenerate: shouldGenerateProject,
+    pathway,
+    checkpoint,
+    step,
+    progress,
+    projectInfo: {name: projectName, description: projectDescription},
+    aichatContext: aiContext,
+    sources: currentSources,
+    channel,
+    projectManager,
+    updateSources,
+  });
+  // Instructions: the step's own or the level's, or for a project step with
+  // a prompt, generated around the student's project. The lab waits until
+  // they are resolved, so it never mounts with text that is about to change.
+  const {instructions, isResolved: instructionsReady} = useStepInstructions({
+    pathway,
+    checkpoint,
+    step,
+    projectInfo: {name: projectName, description: projectDescription},
+    sources: projectReady ? currentSources : undefined,
+    authoredInstructions: step.instructions ?? levelProperties.longInstructions,
+    generatedInstructions: progress.steps[step.id]?.generatedInstructions,
+    saveGeneratedInstructions,
+    aichatContext: aiContext,
+  });
+  // Each build the student accepts is checked against the step's condition,
+  // the verdict recorded on the step and told in the chat, through the
+  // handle the lab's chat hands back.
+  const [chat, setChat] = useState<ChatHandle>();
+  const chatHost = useMemo(() => ({onChatReady: setChat}), []);
+  const latestValidationAttempt = latestValidation(progress.steps[step.id]);
+  const recordStepValidation = useCallback(
+    (attempt: Parameters<typeof recordValidation>[1]) =>
+      recordValidation(step, attempt),
+    [recordValidation, step]
+  );
+  useStepValidation({
+    pathway,
+    checkpoint,
+    step,
+    projectInfo: {name: projectName, description: projectDescription},
+    instructions,
+    aichatContext: aiContext,
+    chat,
+    recordValidation: recordStepValidation,
+  });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share
-  // and remix, and pathway-specific tutor context that gets appendd to the level
-  // system prompt.
+  // and remix, spotlight the instructions on a first visit in place of the
+  // lab's product tours, and pathway-specific tutor context that gets appendd
+  // to the level system prompt.
   const viewProperties = useMemo<LevelProperties>(() => {
     const context = buildTutorContext({
       pathway,
@@ -105,12 +211,18 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       project: step.project
         ? {name: projectName, description: projectDescription}
         : undefined,
+      latestValidationAttempt,
     });
     const own = levelProperties.levelSystemPrompt;
     return {
+      // Default to pinning, but let the level override if needed.
+      showInstructionsInAiTutor: true,
       ...levelProperties,
       hideShareAndRemix: true,
-      longInstructions: step.instructions ?? levelProperties.longInstructions,
+      hideNonInstructionTabs: true,
+      spotlightInstructions: firstVisit,
+      disableProductTours: true,
+      longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
     };
   }, [
@@ -121,7 +233,37 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     levelProperties,
     projectName,
     projectDescription,
+    instructions,
+    latestValidationAttempt,
+    firstVisit,
   ]);
+
+  // The lab's own Continue button advances the step. A step whose work is
+  // checked waits for work that passes, unless no judge can run: adaptive AI
+  // is off, or the lab takes no part in checking.
+  const checked =
+    !step.validation ||
+    !isAdaptiveAiEnabled() ||
+    !workAdapterFor(levelProperties.appName) ||
+    !!latestValidationAttempt?.pass;
+  const navigation = useMemo(
+    () => ({
+      label: continueLabel,
+      enabled: checked,
+      tooltip: checked
+        ? undefined
+        : 'Continue unlocks once your work on this step meets its goal.',
+      endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
+      onContinue: onComplete,
+    }),
+    [continueLabel, checked, onComplete]
+  );
+
+  // Stands in for ProjectContainer's level-change reset, which steps bypass.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(resetProjectMetadata());
+  }, [dispatch]);
 
   // The lab saves through the registry, so the manager must be registered
   // before the lab mounts and reads it. The hook flushes saves on unmount.
@@ -151,19 +293,33 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   const initialSources =
     currentSources === EMPTY_SOURCES ? undefined : currentSources;
 
-  const ready = currentSources !== undefined && (!projectManager || registered);
+  const ready =
+    currentSources !== undefined &&
+    (!projectManager || registered) &&
+    projectReady &&
+    instructionsReady;
+  // The project and the instructions can each take a model call; say so
+  // instead of "slow".
+  const loadingText =
+    currentSources !== undefined && !(projectReady && instructionsReady)
+      ? 'Preparing your workspace...'
+      : undefined;
   return (
     <div className={styles.levelHost}>
       {ready ? (
-        <Suspense fallback={<Loading isLoading />}>
-          <View
-            levelProperties={viewProperties}
-            initialSources={initialSources}
-            channel={channel}
-          />
-        </Suspense>
+        <ExternalNavigationContext.Provider value={navigation}>
+          <ChatHostContext.Provider value={chatHost}>
+            <Suspense fallback={<Loading isLoading />}>
+              <View
+                levelProperties={viewProperties}
+                initialSources={initialSources}
+                channel={channel}
+              />
+            </Suspense>
+          </ChatHostContext.Provider>
+        </ExternalNavigationContext.Provider>
       ) : (
-        <Loading isLoading />
+        <Loading isLoading loadingText={loadingText} />
       )}
     </div>
   );

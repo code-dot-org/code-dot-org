@@ -1,12 +1,16 @@
 // Checks the schemas alone cannot make: skill references, checkpoint graph
-// shape, each level played by at most one step, and whether each level
-// step's `project` flag agrees with the level the server resolved for it.
+// shape, question and choice ids, each level played by at most one step, and whether
+// each level step's `project` flag agrees with the level the server resolved
+// for it.
 
 import {z} from 'zod';
 
-import {pathwaySchema} from '../pathway';
+import {pathwaySchema, pathwaySourceSchema} from '../pathway';
 
-type Pathway = z.infer<typeof pathwaySchema>;
+// A source has no resolved levels, so its project flags go unchecked.
+type Pathway =
+  | z.infer<typeof pathwaySchema>
+  | z.infer<typeof pathwaySourceSchema>;
 
 /**
  * Detects and returns any reference problems in a pathway.
@@ -15,8 +19,53 @@ export function findReferenceProblems(pathway: Pathway): string[] {
   return [
     ...findSkillProblems(pathway),
     ...findCheckpointProblems(pathway),
+    ...findQuestionProblems(pathway),
     ...findLevelReuseProblems(pathway),
     ...findLevelStepProblems(pathway),
+    ...findEvidenceProblems(pathway),
+  ];
+}
+
+/**
+ * Detects question ids used more than once, and multiple choice questions
+ * whose choice ids repeat or whose correct choice is not among them.
+ */
+function findQuestionProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  const seen = new Set<string | number>();
+  const duplicates = new Set<string | number>();
+  for (const checkpoint of pathway.checkpoints) {
+    for (const step of checkpoint.steps) {
+      if (step.kind !== 'questions') continue;
+      step.questions.forEach((question, index) => {
+        if (seen.has(question.id)) duplicates.add(question.id);
+        seen.add(question.id);
+
+        if (question.type !== 'MultipleChoiceQuestion') return;
+        const where = `checkpoints.${checkpoint.id}.steps.${step.id}.questions.${index}`;
+        const choiceIds = new Set<string>();
+        const repeated = new Set<string>();
+        for (const {id} of question.choices) {
+          if (choiceIds.has(id)) repeated.add(id);
+          choiceIds.add(id);
+        }
+        for (const id of repeated) {
+          problems.push(`${where}: choice id '${id}' is used more than once`);
+        }
+        const {correctChoiceId} = question;
+        if (correctChoiceId !== undefined && !choiceIds.has(correctChoiceId)) {
+          problems.push(
+            `${where}.correctChoiceId: '${correctChoiceId}' is not one of its choices`
+          );
+        }
+      });
+    }
+  }
+  return [
+    ...[...duplicates].map(
+      id => `checkpoints: question id '${id}' is used more than once`
+    ),
+    ...problems,
   ];
 }
 
@@ -53,15 +102,33 @@ function findLevelReuseProblems(pathway: Pathway): string[] {
 /**
  * Detects level steps whose `project` flag disagrees with their level: a
  * project step's level must share the pathway's project template, and a
- * sandbox step's must not. Steps whose level did not resolve are skipped.
+ * sandbox step's must not (skipped when the level did not resolve), and
+ * sandbox steps that ask for generated instructions, a generated project or
+ * validation.
  */
 function findLevelStepProblems(pathway: Pathway): string[] {
   const problems: string[] = [];
   const template = pathway.project.templateLevel;
   for (const checkpoint of pathway.checkpoints) {
     for (const step of checkpoint.steps) {
-      if (step.kind !== 'level' || !step.levelProperties) continue;
+      if (step.kind !== 'level') continue;
       const where = `checkpoints.${checkpoint.id}.steps.${step.id}`;
+      if (step.instructionsPrompt && !step.project) {
+        problems.push(
+          `${where}: instructionsPrompt needs the student's project, so the step must be marked project`
+        );
+      }
+      if (step.projectPrompt && !step.project) {
+        problems.push(
+          `${where}: projectPrompt builds the student's project, so the step must be marked project`
+        );
+      }
+      if (step.validation && !step.project) {
+        problems.push(
+          `${where}: validation judges the student's project, so the step must be marked project`
+        );
+      }
+      if (!('levelProperties' in step) || !step.levelProperties) continue;
       const sharesProject =
         step.level === template ||
         step.levelProperties.projectTemplateLevelName === template;
@@ -105,8 +172,9 @@ function findSkillProblems(pathway: Pathway): string[] {
 /**
  * Detects and returns any problems with the checkpoint graph: ids are
  * unique, `requires` name known checkpoints, at least one checkpoint is a
- * root, and every checkpoint can eventually unlock, meaning its `requires`
- * chains all lead back to a root rather than looping.
+ * root, every checkpoint can eventually unlock, meaning its `requires`
+ * chains all lead back to a root rather than looping, and only a checkpoint
+ * that no other checkpoints require has a `destination`.
  */
 function findCheckpointProblems(pathway: Pathway): string[] {
   const where = 'checkpoints';
@@ -158,9 +226,130 @@ function findCheckpointProblems(pathway: Pathway): string[] {
     }
   }
 
+  const requiredBy = new Map<string, string>();
+  for (const checkpoint of pathway.checkpoints) {
+    for (const req of checkpoint.requires || []) {
+      if (!requiredBy.has(req)) requiredBy.set(req, checkpoint.id);
+    }
+  }
+  for (const checkpoint of pathway.checkpoints) {
+    const child = requiredBy.get(checkpoint.id);
+    if (checkpoint.destination && child) {
+      problems.push(
+        `${where}.${checkpoint.id}.destination: only a checkpoint that no other checkpoints require may have one but '${child}' requires it`
+      );
+    }
+  }
+
   const stepIds = pathway.checkpoints.flatMap(c => c.steps.map(s => s.id));
   if (new Set(stepIds).size !== stepIds.length) {
     problems.push(`${where}: step ids must be unique across checkpoints`);
+  }
+  // The project screen plays a step of its own under this id.
+  if (stepIds.includes('project')) {
+    problems.push(`${where}: step id 'project' is reserved`);
+  }
+  return problems;
+}
+
+/**
+ * Detects and returns any problems with evidence fields: a question's
+ * `measures` must name a known skill, take the graded form exactly when the
+ * question has a correct choice, list only real choice ids, and name only
+ * evidence levels the skill describes in `evidenceLevels`; a checkpoint's
+ * `targetEvidenceLevels` must name only skills in its `skillIds`, at evidence
+ * levels they describe; `skippable` needs `skillIds`; and a level step's
+ * `validation` must measure a skill in its checkpoint's `skillIds` that
+ * describes evidence levels to rate on.
+ */
+function findEvidenceProblems(pathway: Pathway): string[] {
+  const problems: string[] = [];
+  const checkEvidenceLevel = (
+    where: string,
+    skillId: string,
+    evidenceLevel: number
+  ) => {
+    const described = pathway.skills[skillId]?.evidenceLevels;
+    if (evidenceLevel > 0 && described && !(evidenceLevel in described)) {
+      problems.push(
+        `${where}: skill '${skillId}' describes no evidence level ${evidenceLevel}`
+      );
+    }
+  };
+
+  for (const checkpoint of pathway.checkpoints) {
+    const where = `checkpoints.${checkpoint.id}`;
+    if (checkpoint.skippable && !checkpoint.skillIds?.length) {
+      problems.push(`${where}: skippable needs skillIds`);
+    }
+    for (const [skillId, evidenceLevel] of Object.entries(
+      checkpoint.targetEvidenceLevels || {}
+    )) {
+      if (!checkpoint.skillIds?.includes(skillId)) {
+        problems.push(
+          `${where}.targetEvidenceLevels: '${skillId}' is not in skillIds`
+        );
+      } else if (pathway.skills[skillId]) {
+        checkEvidenceLevel(
+          `${where}.targetEvidenceLevels.${skillId}`,
+          skillId,
+          evidenceLevel
+        );
+      }
+    }
+
+    for (const step of checkpoint.steps) {
+      if (step.kind === 'level' && step.validation) {
+        const where = `checkpoints.${checkpoint.id}.steps.${step.id}.validation.measures`;
+        const {skillId} = step.validation.measures;
+        if (!checkpoint.skillIds?.includes(skillId)) {
+          problems.push(`${where}: '${skillId}' is not in skillIds`);
+        } else if (!pathway.skills[skillId]?.evidenceLevels) {
+          problems.push(
+            `${where}: skill '${skillId}' describes no evidence levels to rate on`
+          );
+        }
+      }
+      if (step.kind !== 'questions') continue;
+      step.questions.forEach((question, index) => {
+        if (question.type !== 'MultipleChoiceQuestion' || !question.measures) {
+          return;
+        }
+        const {measures} = question;
+        const where = `checkpoints.${checkpoint.id}.steps.${step.id}.questions.${index}.measures`;
+        if (!pathway.skills[measures.skillId]) {
+          problems.push(`${where}: unknown skill '${measures.skillId}'`);
+        }
+        const graded = question.correctChoiceId !== undefined;
+        if ('evidenceLevel' in measures) {
+          if (!graded) {
+            problems.push(
+              `${where}: evidenceLevel needs a correctChoiceId; a survey question lists evidenceLevels by choice`
+            );
+          }
+          checkEvidenceLevel(where, measures.skillId, measures.evidenceLevel);
+          return;
+        }
+        if (graded) {
+          problems.push(
+            `${where}: a question with a correctChoiceId measures one evidenceLevel, not evidenceLevels by choice`
+          );
+        }
+        const choiceIds = new Set(question.choices.map(c => c.id));
+        for (const [choiceId, evidenceLevel] of Object.entries(
+          measures.evidenceLevels
+        )) {
+          if (!choiceIds.has(choiceId)) {
+            problems.push(`${where}: '${choiceId}' is not one of its choices`);
+          }
+          checkEvidenceLevel(
+            `${where}.${choiceId}`,
+            measures.skillId,
+            evidenceLevel
+          );
+        }
+      });
+    }
   }
   return problems;
 }

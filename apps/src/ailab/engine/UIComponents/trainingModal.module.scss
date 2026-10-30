@@ -1,0 +1,27 @@
+@use '../sharedMixins' as mixins;
+
+$content-height: 480px;
+
+.dialog {
+  @include mixins.modal;
+}
+
+.titleRow {
+  @include mixins.modal-title-row;
+}
+
+.content {
+  display: flex;
+  flex: 0 1 $content-height;
+  flex-direction: column;
+  min-height: 0;
+
+  > * {
+    flex: 1;
+    min-height: 0;
+  }
+}
+
+.actionRow {
+  @include mixins.modal-action-row;
+}

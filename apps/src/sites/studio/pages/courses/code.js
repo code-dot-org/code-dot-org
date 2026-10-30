@@ -23,9 +23,6 @@ function initPage() {
     <Provider store={store}>
       <CourseRollup objectToRollUp={'Code'} course={courseSummary} />
     </Provider>,
-    document.getElementById('roll_up'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('roll_up')
   );
 }

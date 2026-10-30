@@ -6,11 +6,16 @@ profile, login, school, role, and account actions. Consumed by the Studio app
 
 Three tabs are implemented: **Account Details** (profile, login, parent/guardian
 email, account actions), **Educator Profile** (school information and educator
-role, educators only), and **Integrations** (linked accounts). The email
-opt-in lives in the Update email dialog, as in legacy.
+role, educators only), and **Integrations** (linked accounts and LMS roster
+sync). The email opt-in lives in the Update email dialog, as in legacy.
 
-Integrations is hidden from accounts that can't manage linked accounts, the
-same accounts legacy hides its linked accounts section from.
+Integrations is hidden from accounts that can't manage linked accounts
+(accounts not yet migrated to multiple logins, and accounts in a
+district-restricted LMS deployment) unless they have the LMS roster sync
+setting. Connecting and
+disconnecting a linked account are native form POSTs to the Rails OAuth and
+disconnect routes, and land on the Rails `/users/edit` page with its flash
+message, as unlinking an LMS login does.
 
 Each tab is its own form: one `FormProvider`, one `SaveBar`, one PATCH. School
 information is a modal flow instead, because it needs a zip search and a
@@ -68,9 +73,10 @@ persona:
 - `sso-student`: Google-only student
 - `minimal`: word/picture student with optional fields empty and edits locked
 - `teacher-no-school`: educator with no school and no role
-- `multi-sso-teacher`: Google, Microsoft and two ClassLink logins
+- `multi-sso-teacher`: Google, Microsoft and ClassLink logins
 - `lti-teacher`: Canvas login beside a password
 - `lti-only-teacher`: Schoology is the only login
+- `restricted-lti-teacher`: educator in a district-restricted LMS deployment
 - `rostered-student`: Google and Clever tied to the student's sections
 - `cap-locked-student`: under-13 student awaiting parental permission
 - `unmigrated-teacher`: not yet migrated to multiple logins, so no Integrations tab

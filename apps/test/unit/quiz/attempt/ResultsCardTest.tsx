@@ -17,6 +17,7 @@ const renderCard = (props: Partial<ResultsCardProps> = {}) =>
       allowMultipleAttempts={false}
       canRetake={false}
       submittedAt="2026-09-05T14:14:00Z"
+      hasNextLevel
       onTryAgain={jest.fn()}
       onNextLevel={jest.fn()}
       {...props}
@@ -32,6 +33,17 @@ describe('ResultsCard', () => {
     expect(screen.getByText('2 of 3 Correct')).toBeInTheDocument();
     expect(screen.getByText('Attempt #1')).toBeInTheDocument();
     expect(screen.getByText(/^Submitted /)).toBeInTheDocument();
+  });
+
+  it('labels the primary action Finish level when there is no next level', () => {
+    renderCard({hasNextLevel: false});
+
+    expect(
+      screen.getByRole('button', {name: 'Finish level'})
+    ).toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: /Next level/})
+    ).not.toBeInTheDocument();
   });
 
   it('shows an em dash for the percentage when there are no auto-graded questions', () => {

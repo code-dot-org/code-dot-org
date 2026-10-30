@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-10-16T21:38:23.000Z",
+  "level_num": "custom",
+  "user_id": 18754,
+  "properties": {
+    "panels": [
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-cc215da3-5e1a-4f98-913c-ec1eee2dd05c",
+        "text": "###You started with a clear style.\n\nRepeated colors, shapes, and spacing help your page feel planned.",
+        "imageUrl": "https://images.code.org/f3cb9bd3ec62ddf8131668d33ce5de26-One palette, one coherent style-1.png",
+        "layout": "text-top-right"
+      },
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-c917aa50-bf5c-4f46-a949-fef5c9b7a386",
+        "text": "###Watch for style drift.\nA change can clash with the style you started with.",
+        "imageUrl": "https://images.code.org/77e8633bbeff7898b87371ff06dd2901-Angular hero clashes with rounded interface.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-99b13e14-681f-4d4d-a23a-cc040dc2a1d5",
+        "text": "###Small changes add up.\nDifferent buttons, colors, and shapes can make the page feel unplanned.",
+        "imageUrl": "https://images.code.org/afd9a4365032b86c688a34813e2e2295-When website styles drift apart-4.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-b06446b7-09ac-4ffd-8f2d-9d7b1ea933d7",
+        "text": "###Name your style.\nTell AI: “Use blue tones, rounded shapes, and generous spacing.”",
+        "imageUrl": "https://images.code.org/7f6889237c06678894c13097d71032c4-Blue tones, rounded shapes, open space.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "key": "adaptive-HoAI26-style-and-consistency-29-4ef13276-0b29-49e6-8d98-7d15b4ea009a",
+        "text": "###Repeat it with each change.\nInclude your style in new prompts. Check that AI’s changes still match.",
+        "imageUrl": "https://images.code.org/ce9531f139fad2a84160d5946006349e-Repeat the style, extend the page-5.png",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "generate_outline": "Watch a video demonstrating the importance of maintaining a consistent style. Observe how a site's style can drift after multiple changes and how naming and repeating the desired style helps maintain coherence.",
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-10-16 21:39:10 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-16 21:39:10 +0000\",\"changed\":[],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-10-21 03:15:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Panels>

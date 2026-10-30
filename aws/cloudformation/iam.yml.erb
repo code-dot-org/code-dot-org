@@ -143,7 +143,9 @@ Resources:
                   - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationMarketingSitesTestRole"
           # Read-only access to secrets.
           - Effect: Allow
-            Action: secretsmanager:GetSecretValue
+            Action:
+              - secretsmanager:GetSecretValue
+              - secretsmanager:BatchGetSecretValue
             Resource: '*'
           # Allow ECS ExecuteCommand on test environment resources only
           - Sid: AllowECSExecuteCommandOnTestResources
@@ -256,7 +258,6 @@ Resources:
                 SAML:aud: https://signin.aws.amazon.com/saml
       ManagedPolicyArns:
         - !Ref DataAnalystPolicy
-        - !Ref DataAnalystDmsReadOnlyPolicy
         - !Ref DataAnalystRedshiftPolicy
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
@@ -346,7 +347,6 @@ roles = {
     RoleName: 'DataAnalytics_FullAccess',
     ManagedPolicyArns: [
       '!Ref DataAnalystPolicy',
-      '!Ref DataAnalystDmsReadOnlyPolicy',
       '!Ref DataAnalystRedshiftPolicy',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
@@ -500,41 +500,6 @@ roles.each do |name, config| %>
               - 'arn:aws:s3:::cdo-nces/*'
               - 'arn:aws:s3:::cdo-nces'
 
-  DataAnalystDmsReadOnlyPolicy:
-    Type: AWS::IAM::ManagedPolicy
-    Properties:
-      ManagedPolicyName: DataAnalystDmsReadOnlyPolicy
-      Path: /dataanalyst/
-      PolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-          - Effect: Allow
-            Action:
-              - 'dms:DescribeOrderableReplicationInstances'
-              - 'dms:ListTagsForResource'
-              - 'dms:DescribeEndpointSettings'
-              - 'dms:DescribeConnections'
-              - 'dms:DescribeReplicationInstances'
-              - 'dms:DescribeApplicableIndividualAssessments'
-              - 'dms:TestConnection'
-              - 'dms:DescribeEndpoints'
-              - 'dms:DescribeReplicationInstanceTaskLogs'
-              - 'dms:DescribeSchemas'
-              - 'dms:DescribeReplicationSubnetGroups'
-              - 'dms:DescribeReplicationTasks'
-              - 'dms:DescribeReplicationTaskAssessmentResults'
-              - 'dms:DescribeAccountAttributes'
-              - 'dms:DescribeRefreshSchemasStatus'
-              - 'dms:DescribeReplicationTaskIndividualAssessments'
-              - 'dms:DescribeCertificates'
-              - 'dms:DescribeEvents'
-              - 'dms:DescribeEventSubscriptions'
-              - 'dms:DescribeEndpointTypes'
-              - 'dms:DescribeEventCategories'
-              - 'dms:DescribeReplicationTaskAssessmentRuns'
-              - 'dms:DescribeTableStatistics'
-            Resource: "*"
-
   DataAnalystRedshiftPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -676,6 +641,10 @@ roles.each do |name, config| %>
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
+          # Grants nothing alone: each secret in a batch also requires GetSecretValue.
+          - Effect: Allow
+            Action: secretsmanager:BatchGetSecretValue
+            Resource: '*'
 
   EngineerDataPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -786,6 +755,10 @@ roles.each do |name, config| %>
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/firebase_secret-ngO5yy
+          # Grants nothing alone: each secret in a batch also requires GetSecretValue.
+          - Effect: Allow
+            Action: secretsmanager:BatchGetSecretValue
+            Resource: '*'
 
   # Lets contributors publish new Font Awesome kit builds to dsco.code.org.
   # See frontend/packages/fonts/README.md#updating-fontawesome-files

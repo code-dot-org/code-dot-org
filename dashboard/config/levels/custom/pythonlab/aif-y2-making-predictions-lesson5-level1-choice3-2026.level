@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-11T00:03:50.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A gaming coach has data from 20 past players: hours practiced per week, reaction time, matches played, and their ranked points. They want to build a model that predicts a new player’s ranked points from their gaming habits and performance, so players can see whether they are on track to level up.\r\n\r\nBut if the coach only checks the model’s predictions against the same 20 players it learned from, they won’t know if it actually works. That’s like grading a test with the answer key the student wrote. What the coach really needs is to test the model on \r\nplayers it has never seen before.\r\n\r\n**☑️ Do This:**\r\n- Import the `train_test_split` function.\r\n- Split the data into training and test sets. 20% of the data should be in the test set.\r\n\r\nSave TODOs 3–5 for the next level.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember that to use the `train_test_split` function, you should import it with:\r\n\r\n```\r\nfrom sklearn.model_selection import train_test_split\r\n```\r\n\r\nThe `train_test_split` function takes `input` and `output` as its first two arguments. To put 20% of the data in a test set, set the `test_size` parameter to `0.2`.\r\n\r\nThe return value will be four separate lists, always in this order: `train_inputs`, `test_inputs`, `train_outputs`, `test_outputs`. Be sure to unpack all four when you call the function, or you'll get an error.\r\n\r\n```\r\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\r\n  inputs, outputs, test_size=0.2\r\n)\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "aif-y2-making-predictions-lesson5-choice3-2026 + template",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY47nl7zX7H4Xpts\n4GuVZHozOIcBsVc5dnBjHf1sE6x5y2cmxut4XzvXvl4K/sT7Ihj5e1TemfXC\n9y2ziZ50ikPM7YIoQ9/ubCQHNI1S0KBzEzZdn1O+14xU3LmkdaB50Mh/+Y2e\nqG7Uf+ZT3wpQqH55xGWKka5cnQrA3mSs7w+qRul/IaCwts/tP+UESBdxyKhG\n9mn3bWnjQSHMSBlDlXtryBoFMpd96/UWuH41ZmRKPw69Bg45YbRLhlxN3opv\nSPENbjvV5OluZMlM1RgLKNzZaU/7JbucYmbz4AY1RgHeD36hhACWQ8JFZGah\nh4Yb92b7QOXYmmooL+gzcFbdkdp03L2VfUnmQk0xqwOmMa5qYargTWtphKRp\nx5UrGviqwxEXNWmMfn7f86gBZG64QQbbj/XtBByDYmZ8aWlvx/d5GgN056HG\nw3Vyknw3J2eMwhEoDpKQch8a95wijodr3D6b26ZZRd/Nvy5xpoR1RB3ByCUC\nDAskRTjg5OwDnFdtJ1be0pcVGffc/DrWlxiBYsYeNtyyss+TC8WXXrWj09+/\nMsaoh5n5Xwjw+0FnP1Ln8SKg2c88W02rIha8YKA0WtqhNUZhfRuz9011/gEJ\nwJrWmbKrzwJ125NOAN2qJk+9BZKg/jITQ+/i31oJaQ4eIMLSFDcQEsgmKDEl\nRdEY9L5auo9BoaIruhCwjkfplONdMerWc62iu4sWEMEskfgflQDvkzt664FZ\n7YVVgCVjJ2ysM2v3sRlZo7futDBIzDT8ixzHxIaO54anMxq9FEhyiG+cBgKm\nZsDc3qUHSjpIcQaElJ63fZk3kXYLSR6rIUI0R7oIjUGfTvMgw+5iQfy0k3Nw\n1et0A10xlTtA8eWz/sDQ69FuahvbKQIhcQ2TyOmiy0oTuID9cjgbZjw+clsy\nsc3Bao898KOy6WxOFyx7WCGE6aBbptqXMGYLPlum+wJx5STWrt7w6DFLJ2t4\nPc0eP0JT5J1ve81R+hyLDWM/tGovRAe/hazXJCd4LKtU/8UFpWn9JmW59HKO\nB+2kAB3V1tfZ8IbnOCbT5WUDSBAPeqiTWnWKSvTjqeP7F8MTSaYqa1ZzVuEv\nC7xVGEr9cOefHvvIlQbOMRdvprUOazZDQ9i24eK32O+a7m3i1+YmjHk9lHx1\nSts5GSpd5MoyQbGoNHbfAUPKI/CRjj/Puoodv/zv4q7tVaawApTt9MCQt8UX\nTI5ngIGxWXqYEJQLX3wxZDaxjrQt/1EXhFkMcfFMfNLEhYzJDEsE/2p4uAq2\nBUs19SVLyOeNTjyA8L70/1ReYQmAy6lKTRV9KZmmC8af8+khXdcdU+h4mCHy\nsdYedf4uytPv+2Mttz2qxkpaE5rgrjh0hQiaTtId6/9wtIuXfuzaR37xKhG6\nkxcQHYuvG7wUBGBf7FlLorYPolGY6El4sNVOO4Boh2akmoubFd9sykPlZznK\n87avq54QWzyFpYkvdUknu0/wJaHAo9PbY0ukThnEILEJntE6lvlvlVHT+aea\n9z8kiEFv+Ws55QOjNN+K5j19wwyPB65Fg0f7Bw+HGs0wTOMDCcHG02CH368j\n2zacCHrRiDhuyZrlV6tgecEQqqsX68zSZzl7uPwPhpjhWOhgGg9/PkCfPz3S\nklF8DHWp9NaDfEXGQzZUeOAFwyIUFuq9bVJ2EPtZ9piYLuogZiURgaZedc14\nZagdnSHgEAR+Jdwc6chiu6G2KPrViPtmAFXHVSJ/EaKurYUu4mrKvCyF\n",
+    "display_name": "Leveling Up",
+    "bubble_choice_description": "Help an esports coach predict their players' performances.",
+    "thumbnail_url": "https://images.code.org/c124ebb471a2711fbcebe29978f80200-gamer.jpg"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-11 00:09:48 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:10:43 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:11:03 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:13:57 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:16:05 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:16:07 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:22:37 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-11 00:23:01 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

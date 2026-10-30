@@ -56,6 +56,27 @@ const statusMap = {
 } as const;
 
 describe('buildTutorContext', () => {
+  it("tells the tutor how the latest check of the step's work went", () => {
+    const context = buildTutorContext({
+      pathway,
+      checkpoint: prompting,
+      step: step('p2', true),
+      statusMap: {},
+      latestValidationAttempt: {
+        at: '2026-10-22T10:00:00Z',
+        pass: false,
+        evidenceLevel: 1,
+        reason: 'Add one more detail to your prompt.',
+      },
+    });
+    expect(context).toContain(
+      'The latest check of the student\'s work on this step did not meet the step\'s goal yet. They were told: "Add one more detail to your prompt."'
+    );
+    expect(context).toContain(
+      'Help them get there without doing the step for them.'
+    );
+  });
+
   it('describes the pathway, the checkpoint, the step and progress', () => {
     const context = buildTutorContext({
       pathway,

@@ -8,6 +8,7 @@ import i18n from '@cdo/locale';
 import {
   elementarySchoolCourseOffering,
   highSchoolCourseOfferings,
+  highSchoolCourseOfferingsWithRecommended,
   noRecommendedVersionsOfferings,
 } from './CourseOfferingsTestData';
 
@@ -98,6 +99,23 @@ describe('QuickAssignTable', () => {
     expect(
       screen.queryByText('Unavailable for the current language')
     ).not.toBeInTheDocument();
+  });
+
+  it('renders a Recommended header above the other headers in its column', () => {
+    setUpRtl({courseOfferings: highSchoolCourseOfferingsWithRecommended});
+
+    const courseColumnHeaders = screen
+      .getAllByRole('heading', {level: 5})
+      .map(heading => heading.textContent);
+
+    expect(courseColumnHeaders[0]).toBe('Recommended');
+    expect(courseColumnHeaders).toContain('Year Long');
+  });
+
+  it('lists a featured course offering only under Recommended', () => {
+    setUpRtl({courseOfferings: highSchoolCourseOfferingsWithRecommended});
+
+    expect(screen.getAllByLabelText('Computer Science A')).toHaveLength(1);
   });
 
   it('shows TA icon when course offering has TA enabled', () => {

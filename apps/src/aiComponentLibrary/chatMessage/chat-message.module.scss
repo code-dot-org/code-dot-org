@@ -141,6 +141,28 @@ $vertical-gap: 0.375rem;
   flex-shrink: 0;
 }
 
+.taDiscIcon {
+  // FontAwesome's own `.fa-kit` rule sets `display: var(--fa-display,
+  // inline-block)` at the same specificity as this class, so whichever
+  // stylesheet lands later wins - and that differs by page, because the legacy
+  // code-studio bundle injects FontAwesome unlayered at runtime while
+  // frontend/apps/studio layers it. Setting the variable makes FontAwesome's
+  // own declaration resolve to flex either way; the `display` below still
+  // covers the case where FontAwesome has not loaded at all.
+  --fa-display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--background-accent-pink-primary);
+  color: var(--text-neutral-white-fixed);
+  font-size: 0.625rem;
+  line-height: 1;
+}
+
 .botOverlay {
   position: absolute;
   top: 0;

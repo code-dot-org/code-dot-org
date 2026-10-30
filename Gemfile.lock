@@ -305,6 +305,9 @@ GEM
     aws-sdk-secretsmanager (1.48.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
+    aws-sdk-ssm (1.212.0)
+      aws-sdk-core (~> 3, >= 3.244.0)
+      aws-sigv4 (~> 1.5)
     aws-sigv4 (1.12.1)
       aws-eventstream (~> 1, >= 1.0.2)
     backports (3.11.3)
@@ -697,7 +700,6 @@ GEM
       actionpack (>= 4.2)
       omniauth (~> 2.0)
     open_uri_redirections (0.2.1)
-    openssl (3.3.1)
     opentelemetry-api (1.8.0)
       logger
     opentelemetry-common (0.23.0)
@@ -882,7 +884,6 @@ GEM
     parser (3.3.4.2)
       ast (~> 2.4.1)
       racc
-    pg (1.3.5)
     phantomjs (1.9.7.1)
     progress (3.3.1)
     prosopite (2.2.0)
@@ -1217,6 +1218,7 @@ DEPENDENCIES
   aws-sdk-sagemaker
   aws-sdk-sagemakerruntime
   aws-sdk-secretsmanager
+  aws-sdk-ssm
   bcrypt (= 3.1.13)
   benchmark-ips
   better_errors (>= 2.7.0)
@@ -1305,12 +1307,10 @@ DEPENDENCIES
   omniauth-microsoft_v2_auth!
   omniauth-rails_csrf_protection (~> 1.0.2)
   open_uri_redirections
-  openssl (>= 3.3.1)
   os
   parallel
   parallel_tests
   paranoia (~> 2.5.0)
-  pg (~> 1.3.0)
   phantomjs (~> 1.9.7.1)
   prosopite
   pry (~> 0.14.0)

@@ -1,0 +1,27 @@
+name 'csp-unit2-lesson11-cfu2_27_28'
+title 'Check your understanding'
+
+right 'Add `else:` and print `Try again!` inside it, because else runs for every case the `if` does not cover'
+wrong 'Add a second `if score < 100:` that prints `Try again!`'
+wrong 'Add a second `if score > 100:` that prints `Try again!`'
+wrong 'Add `else score <= 100:` that prints `Try again!`'
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+A program prints a message when a player wins. A student wants it to print `Try again!` for every case that is not a win. Given `score = 100`, which change should the student make?
+
+```
+score = 100
+if score > 100:
+    print("You win!")
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Teacher solution and distractor rationale:
+
+- Add `else:` and print `Try again!` inside it (correct): An else runs for every case the if does not cover. With score = 100, the if is False, so the else prints Try again!. Nothing is left out.
+- A second `if score < 100:`: The most likely misconception. It looks like the opposite of the first condition, but it leaves a gap. With score = 100, neither condition is True, so nothing prints. An else has no gap.
+- A second `if score > 100:` that prints Try again!: This repeats the first condition. With a winning score, both messages print. With score = 100, nothing prints.
+- `else score <= 100:`: A student thinks else takes a condition. It never does, and this line is a syntax error. Else always means "everything the if did not cover."
+MARKDOWN

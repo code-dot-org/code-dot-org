@@ -61,6 +61,20 @@ describe('downscaleImagesForExport', () => {
     expect(image.src).toBe(source);
   });
 
+  it('keeps a source the app changed during the capture', () => {
+    const image = addImage(
+      'http://localhost-studio.code.org/v3/assets/channel/a.png',
+      PHOTO
+    );
+    const changed = 'http://localhost-studio.code.org/v3/assets/channel/b.png';
+
+    const restore = downscaleImagesForExport(document.body, 1);
+    image.src = changed;
+    restore();
+
+    expect(image.src).toBe(changed);
+  });
+
   // The 4:3 photo sits in a 3:2 box, so it fits to the box height.
   it('draws at the exported size, keeping the source aspect ratio', () => {
     const image = addImage('/v3/assets/channel/photo.png', PHOTO);

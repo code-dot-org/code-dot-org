@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-12T20:00:46.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "aif-y2-making-predictions-lesson7-choice3-2026 + template",
+    "long_instructions": "You are building a nearest-neighbor classifier to categorize customers. You want to predict if an unknown customer is loyal, occasional, or at-risk by comparing their purchase history to a database of previously segmented (known) customers, using nearest neighbors classification.\r\n\r\n**☑️ Do This:**\r\n\r\n- Create a new model using `KNeighborsClassifier`\r\n- Train the model with`model.fit`\r\n\r\nYou’ll complete TODO 3 and TODO 4 in the next level.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo create a `KNeighborsClassifier`, call it and set `n_neighbors=1`, so that predictions are based on a single nearest neighbor:\r\n\r\n```\r\nKNeighborsClassifier(n_neighbors=1)\r\n```\r\n\r\nIf you’ve saved your classifier in a variable  called `model`, you can fit it to data with code like:\r\n\r\n```\r\nmodel.fit(train_inputs, train_outputs)\r\n```",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMq14OwIkt5D5/K1\n1Z29M/jD78YRBYOpYMtL7lf4uFoxDlQ1AbxEJ90PiBN82eH6sXOJyu+qdzFz\nTIxLsw+3dNq+WJGnsMLHdUsoX+Llqp0u6BYlOgOqZ0kauBflaxSeywMIY1Ee\n/GcYNQ5oVwCy36HWpVYX+SjsnKkJPe9I86g/+2j94G1hCjupscMc/hVKOwmP\n2YwLjlz9igoJsDR2YcRoNGZkKaJ58znUqGSZ43nBeV9AUEggSi1D6VPx4VbM\nCVBUgbIjHNnEo/TsELkb7wBiCXzaZia6m+0c3qJ6A5OTYm3c4N7Q3qBuLDcJ\nCduQ/TlbklIFso8IMepOZCSsZjG3LH0US1WKtSVwQ2yJOO+leud34V0hRL7e\nDn8/hJchKaB3iULiC0A5A1NkjM702jtaU53N9lv0abzkDBTD/92WDFtENItp\nK0utdOMru9B+9BCKR/SMsxbjhHHF0hiEFFuhy6FIqzAL/I5kbclum7tJiDfD\n0mL8HpEFqhsPlri2Q53g+i3a9vjCTLZalx1oYMOI9qFCp7SP+yFFqElFHA/9\n+l83z7IvIhv3IYIaeswKhalRLHRUPZXuAN8mzpSKxeNjSQK5KM1LGS55+IDe\nG7Kp9YrTrYKa5OVllOJLhuPZ6TdEyxuO2kDYBgpsakH3+uqE8aXcI3OoPm7B\n80HDLv3EsHThSr2N7QOTec53fM5imLiZL0jDFRH/+tqdMaPfKTFNq+A+lv6/\nqUfXAALcgy9q5e7r8qMq7RpJ8zM5voIu74GexYIkJM9LYHNNYewsvuMfvr1t\n91wJ+f1eFO4vfzdeV0wglFaR99Ut8fTej/w8szz+NfZcmVPoP3pU7DQD0Hh3\nCe7hXPHg/xTqnZM0sc7CGSBEO2BcWBTcAXT85JgbQnW0WY9URxwrs8vfOD0a\nL6H5h462Oaa4rCXE0jZ87j19Al/nDt9qxEQEdrD4LindbZCg77pOCJywfNaG\nT+begO+uWLPFQDT1nFTxh4CVTWMHiug8eCsL0Fbi/lQSWc7qZnDfWsAbFOpo\nJ50p+x8ZBVLVtmz6+0DMRYZSQeDnjV7R4Y135rMzsHq1BKdX+eWuacNhFglv\nEaqBcoRC4QFSE34CmKLNAi9rao2DwMV9O/Dk0ifzm1hmOFW5HUWHkPfPCe/e\nD8EBDlHTrYSJND82lRJgq4vcV4ZWl7pPFTOG+XIL7AycOQnsSztt/3s5pCPI\nd54Oyjh7NYuRHncFiDHuAaevvBuW4sXN8Jfo7ypb7RfdjtjDSoEgWEZm1GEH\nYNI+PA8miWHN2nfQunBs1Sq/5wpU5j39ruvIKKjzbKAPzky+JrLi2ai2lVRb\nC2FZ4S+E06w4uXrkDNvZ5v+gi6CbZ0ZJvpz+XlGuhH6vWMLBc2HdXBD0nDtS\nNtco2swuabWjyrVifJukadkCT5j1ZFjuvuPM15XWM7C4NO0kSi2CLafZabxF\nx2hTK8ZKHsOJOqvDJkyKFB1VJqmrQQ1rlkLwlbXF5oUQ7lODYjd6lxJYaiLg\nd9eer0E/TSEjJnYpEpR9od9e99DUyAdv01bC7MhhM4TJMpATAEDCveBjnpDN\npk4R6kEFF49TdrNwkPS9PXdfkZvZUDS4cEWiJvpxhzvsTE/DDD9/10QK0W4v\ni3aRSv+/sTZ7ilEOjVN5DiQLvCdBXSqLFdP+0fEnGybN+24G/cvh2uU19JC4\nfG6DNT6TmR5uDR9qLlACdiHKytGrv+pt3Q9OKtQI8jIMEYawKSv9B9OaGZAp\nlzkLpT/o1LmO6+ivRDbj1mrpKPtP7llXKm8NGMk=\n",
+    "display_name": "Business Analyst",
+    "thumbnail_url": "https://images.code.org/21b6d52b6163cd99a440be22dfc787ae-analyst.jpg",
+    "bubble_choice_description": "A business analyst advises businesses on how to achieve their goals."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-12 20:03:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:05:00 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:10:48 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:14:09 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-10-12 20:15:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

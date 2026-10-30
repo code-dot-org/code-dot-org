@@ -3,22 +3,25 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 import {networkErrorMessage} from '@cdo/apps/quiz/networkError';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {QuizQuestionType} from '../types';
+
+import {newMatchPair} from './matchPairs';
 import {
   isPendingQuestionId,
   QuizBuilderQuestion,
   QuizBuilderQuestionsState,
-  QuizQuestionEditableFields,
+  QuizQuestionPayload,
 } from './types';
 
 const NEW_QUESTION_DEFAULTS = {
   questionName: 'New question',
   questionTitle: 'New question',
-  choices: [
-    {id: '0', text: 'Option A'},
-    {id: '1', text: 'Option B'},
-  ],
-  correctChoiceId: '0',
 };
+
+const NEW_CHOICES = [
+  {id: '0', text: 'Option A'},
+  {id: '1', text: 'Option B'},
+];
 
 // A hook for managing a quiz's questions.
 // Provides the current state of the quiz's questions, including loading and error states.
@@ -58,41 +61,74 @@ export default function useQuizBuilderQuestions(
     load();
   }, [load]);
 
-  const addPendingQuestion = useCallback((page: number) => {
-    const id = nextPendingId.current--;
-    setQuestions(prev => [
-      ...prev,
-      {
+  const addPendingQuestion = useCallback(
+    (page: number, type: QuizQuestionType) => {
+      const id = nextPendingId.current--;
+      const shared = {
         id,
-        type: 'MultipleChoiceQuestion',
         ...NEW_QUESTION_DEFAULTS,
+        description: null,
         explanation: null,
         standards: [],
         attachedToOtherQuizzes: false,
         usedInPublishedUnit: false,
         page,
-      },
-    ]);
-    return id;
-  }, []);
+      };
+      let question: QuizBuilderQuestion;
+      switch (type) {
+        case 'MultipleChoiceQuestion':
+          question = {
+            ...shared,
+            type,
+            choices: NEW_CHOICES,
+            correctChoiceId: '0',
+          };
+          break;
+        case 'MultipleSelectQuestion':
+          question = {
+            ...shared,
+            type,
+            choices: NEW_CHOICES,
+            correctChoiceIds: ['0'],
+          };
+          break;
+        case 'FreeResponseQuestion':
+          question = {...shared, type};
+          break;
+        case 'MatchQuestion':
+          // We use nondeterministic IDs (via newMatchPair) when generating boilerplate
+          // match items to avoid possible exposure of solutions to students.
+          question = {
+            ...shared,
+            type,
+            pairs: [
+              newMatchPair('Term A', 'Definition A'),
+              newMatchPair('Term B', 'Definition B'),
+            ],
+          };
+          break;
+      }
+      setQuestions(prev => [...prev, question]);
+      return id;
+    },
+    []
+  );
 
   // Resolves with the saved question's id, which may differ from the one
   // passed in: a pending question (see isPendingQuestionId) is created
   // server-side on its first save, and QuizQuestionsController#update
-  // forks a question that's used in a published unit rather than editing
-  // it in place.
+  // forks a question that's used in a published unit, or whose type
+  // changed, rather than editing it in place.
   const saveQuestion = useCallback(
-    async (id: number, payload: QuizQuestionEditableFields) => {
+    async (id: number, payload: QuizQuestionPayload) => {
       setError(null);
       setErrorQuestionId(null);
       try {
+        const question = questions.find(q => q.id === id);
         const response = isPendingQuestionId(id)
           ? await HttpClient.post(
               `/levels/${levelId}/quiz_question_placements`,
-              JSON.stringify({
-                ...payload,
-                page: questions.find(question => question.id === id)?.page ?? 1,
-              }),
+              JSON.stringify({...payload, page: question?.page ?? 1}),
               true,
               {'Content-Type': 'application/json'}
             )

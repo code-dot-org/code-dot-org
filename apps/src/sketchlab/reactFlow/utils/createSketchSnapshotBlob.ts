@@ -1,12 +1,18 @@
 import {type ReactFlowInstance} from '@xyflow/react';
 import {toBlob} from 'html-to-image';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
 import {SKETCHLAB_CONTAINER_CLASS} from '../components/ReactFlowCanvas';
 import {REACT_FLOW_SELECTOR} from '../reactFlowSelectors';
 
 import {computeExportDimensions} from './computeExportDimensions';
 import {downscaleImagesForExport} from './downscaleImagesForExport';
 import {getCanvasBounds} from './getCanvasBounds';
+import {getExportStyleProperties} from './getExportStyleProperties';
+import {getSketchFontEmbedCss} from './getSketchFontEmbedCss';
+import {inlineSvgStylesForExport} from './inlineSvgStylesForExport';
+import {SketchCaptureError} from './SketchCaptureError';
 
 const EXPORT_PADDING_PX = 10;
 // Cap the longer side of the exported PNG. Small sketches export at 1:1.
@@ -14,10 +20,28 @@ const EXPORT_PADDING_PX = 10;
 const MAX_EXPORT_DIMENSION_PX = 2048;
 // iOS Safari draws nothing on a canvas bigger than this.
 const MAX_EXPORT_CANVAS_PIXELS = 16_777_216;
+export const CAPTURE_ERROR = 'Could not capture your sketch. Please try again.';
+// html-to-image never resolves if the browser loads an image but cannot decode it.
+export const CAPTURE_TIMEOUT_MS = 30_000;
 
-export const createSketchSnapshotBlob = async (
+type SnapshotResult = {blob?: Blob; error?: string};
+
+let captureInFlight: Promise<SnapshotResult> | undefined;
+
+// Overlapping captures would each save the other's temporary DOM edits as
+// originals, so a call made mid-capture shares the running capture's result.
+export const createSketchSnapshotBlob = (
   reactFlow: ReactFlowInstance | null
-): Promise<{blob?: Blob; error?: string}> => {
+): Promise<SnapshotResult> => {
+  captureInFlight ??= captureSketch(reactFlow).finally(() => {
+    captureInFlight = undefined;
+  });
+  return captureInFlight;
+};
+
+const captureSketch = async (
+  reactFlow: ReactFlowInstance | null
+): Promise<SnapshotResult> => {
   if (!reactFlow) {
     return {error: 'Sketch is not ready yet. Please try again.'};
   }
@@ -26,7 +50,7 @@ export const createSketchSnapshotBlob = async (
     `.${SKETCHLAB_CONTAINER_CLASS} ${REACT_FLOW_SELECTOR.viewport}`
   );
   if (!viewport) {
-    return {error: 'Could not capture your sketch. Please try again.'};
+    return {error: CAPTURE_ERROR};
   }
 
   // Read the themed canvas background so the PNG matches light/dark mode.
@@ -65,14 +89,13 @@ export const createSketchSnapshotBlob = async (
     Math.sqrt(MAX_EXPORT_CANVAS_PIXELS / (imageWidth * imageHeight))
   );
 
-  const restoreImageSources = downscaleImagesForExport(
-    viewport,
-    scale * pixelRatio
-  );
-  let blob: Blob | null;
-  try {
-    blob = await toBlob(viewport, {
+  const renderBlob = async () => {
+    // Supplying this stops html-to-image from inlining every font the page declares.
+    const fontEmbedCSS = await getSketchFontEmbedCss(viewport);
+    return toBlob(viewport, {
       backgroundColor,
+      fontEmbedCSS,
+      includeStyleProperties: getExportStyleProperties(),
       pixelRatio,
       width: imageWidth,
       height: imageHeight,
@@ -82,12 +105,48 @@ export const createSketchSnapshotBlob = async (
         transform: `translate(${translateX}px, ${translateY}px) scale(${scale})`,
       },
     });
+  };
+
+  const restoreImageSources = downscaleImagesForExport(
+    viewport,
+    scale * pixelRatio
+  );
+  const restoreSvgStyles = inlineSvgStylesForExport(viewport);
+  let timer: number | undefined;
+  let blob: Blob | null;
+  try {
+    blob = await Promise.race([
+      renderBlob(),
+      new Promise<never>((_, reject) => {
+        timer = window.setTimeout(
+          () =>
+            reject(
+              new Error(`capture timed out after ${CAPTURE_TIMEOUT_MS} ms`)
+            ),
+          CAPTURE_TIMEOUT_MS
+        );
+      }),
+    ]);
+  } catch (cause) {
+    const captureError = new SketchCaptureError(cause, {
+      elements: contentRects.length,
+      images: viewport.querySelectorAll('img').length,
+      imageWidth,
+      imageHeight,
+      pixelRatio,
+    });
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Sketch snapshot error', captureError, captureError.details);
+    return {error: CAPTURE_ERROR};
   } finally {
+    window.clearTimeout(timer);
     restoreImageSources();
+    restoreSvgStyles();
   }
 
   if (!blob) {
-    return {error: 'Could not capture your sketch. Please try again.'};
+    return {error: CAPTURE_ERROR};
   }
 
   return {blob};

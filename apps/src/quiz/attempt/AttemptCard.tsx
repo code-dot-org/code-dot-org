@@ -11,6 +11,8 @@ export interface AttemptCardProps {
   // A bordered row between the body and the footer.
   beforeFooterBorderedRow?: React.ReactNode;
   footer?: React.ReactNode;
+  // For moving focus to this card's heading.
+  headingRef?: React.Ref<HTMLHeadingElement>;
 }
 
 // Shared card shell for the intro screen and every question type.
@@ -21,6 +23,7 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
   children,
   beforeFooterBorderedRow,
   footer,
+  headingRef,
 }) => (
   <div className={styles.card}>
     <div className={styles.content}>
@@ -31,8 +34,12 @@ const AttemptCard: React.FunctionComponent<AttemptCardProps> = ({
               {label}
             </Typography>
           )}
-          {/* Lets a page-change handler focus this heading programmatically. */}
-          <Typography variant="h4" component="h2" tabIndex={-1}>
+          <Typography
+            ref={headingRef}
+            variant="h4"
+            component="h2"
+            tabIndex={-1}
+          >
             {title}
           </Typography>
         </div>

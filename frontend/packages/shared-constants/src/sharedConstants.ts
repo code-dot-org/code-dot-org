@@ -63,6 +63,8 @@ export const GlobalEditionExcludedPaths = [
 
 export const StatsigStableIdKey = 'statsig_stable_id' as const;
 
+export const StatsigStableIdPattern = '[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}' as const;
+
 export const ArtistAutorunOptions = {
   "full_auto_run": "FULL_AUTO_RUN"
 } as const;
@@ -364,7 +366,9 @@ export const AiChatClientTypes = {
   "AI_TUTOR": "ai-tutor",
   "FLOW_LAB": "flow-lab",
   "LESSON_DEEP_DIVE": "lesson-deep-dive",
-  "ADAPTIVE": "adaptive"
+  "ADAPTIVE": "adaptive",
+  "THEATER_DESCRIPTION": "theater-description",
+  "CURRICULUM_GENERATOR": "curriculum-generator"
 } as const;
 
 export const AiChatReadTimeouts = {
@@ -372,7 +376,9 @@ export const AiChatReadTimeouts = {
   "ai-tutor": 30,
   "flow-lab": 60,
   "lesson-deep-dive": 60,
-  "adaptive": 30
+  "adaptive": 30,
+  "theater-description": 30,
+  "curriculum-generator": 30
 } as const;
 
 export const AiChatTeacherFeedback = {

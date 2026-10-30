@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-29 17:27:25 UTC",
+    "serialized_at": "2026-10-08 16:00:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -76,6 +76,21 @@
         "lesson_group.key": "",
         "script.name": "joi-playground"
       }
+    },
+    {
+      "key": "lesson-4",
+      "name": "CSP Unit 2 Project Examples",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -111,6 +126,18 @@
       "seeding_key": {
         "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d",
         "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "joi-playground"
+      }
+    },
+    {
+      "key": "79b990b3-1124-44a9-aebf-97ece668d745",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "79b990b3-1124-44a9-aebf-97ece668d745",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "joi-playground"
       }
@@ -170,6 +197,17 @@
       "seeding_key": {
         "activity_section.key": "bc2159d3-a151-4d06-ad64-158ca00f57fb",
         "lesson_activity.key": "89081eb2-c3c3-45c1-a493-ee182e75181d"
+      }
+    },
+    {
+      "key": "924b4360-6f84-4a7e-9b95-261a69a39cdf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Examples"
+      },
+      "seeding_key": {
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf",
+        "lesson_activity.key": "79b990b3-1124-44a9-aebf-97ece668d745"
       }
     }
   ],
@@ -381,6 +419,94 @@
       "level_keys": [
         "joi-sandbox-joi-theater-unit2"
       ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-A"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      },
+      "level_keys": [
+        "joi-sandbox-csp-unit2-prototype-A"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-B"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      },
+      "level_keys": [
+        "joi-sandbox-csp-unit2-prototype-B"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-C"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      },
+      "level_keys": [
+        "joi-sandbox-csp-unit2-prototype-C"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-D"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      },
+      "level_keys": [
+        "joi-sandbox-csp-unit2-prototype-D"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -490,6 +616,54 @@
         "lesson_group.key": "",
         "script.name": "joi-playground",
         "activity_section.key": "bc2159d3-a151-4d06-ad64-158ca00f57fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-csp-unit2-prototype-A",
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-A"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-csp-unit2-prototype-B",
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-B"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-csp-unit2-prototype-C",
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-C"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "joi-sandbox-csp-unit2-prototype-D",
+        "script_level.level_keys": [
+          "joi-sandbox-csp-unit2-prototype-D"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "joi-playground",
+        "activity_section.key": "924b4360-6f84-4a7e-9b95-261a69a39cdf"
       }
     }
   ],

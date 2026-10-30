@@ -1,6 +1,5 @@
 <Sketchlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 75,
   "created_at": "2026-08-04T15:53:16.000Z",
   "level_num": "custom",
@@ -20,7 +19,8 @@
               "strokeColor": "transparent",
               "fontFamily": "draw",
               "textAlign": "left",
-              "fontSize": "extra-large"
+              "fontSize": "extra-large",
+              "locked": true
             },
             "position": {
               "x": 378.3433798022695,
@@ -41,7 +41,8 @@
               "text": "Hi, my name is Jasmine. I've been passionate about environmental science since middle school, and I love working on sustainability projects in my community. I'm a strong student with a 4.1 GPA, and I've taken AP Biology, AP Environmental Science, and AP Statistics. My SAT score is 1420. I'm applying to this college because of its strong environmental studies program and the research opportunities available for undergraduates. Outside of school, I run a community garden and volunteer for a local conservation group.",
               "strokeColor": "transparent",
               "fontFamily": "draw",
-              "textAlign": "left"
+              "textAlign": "left",
+              "locked": true
             },
             "position": {
               "x": 377.8119209774421,
@@ -462,7 +463,8 @@
             "type": "image",
             "data": {
               "src": "/level_starter_assets/problem-solving-with-ai-lesson6-examine-data-b-1/uuid/8b8d9b89-aec2-4429-9b6d-6b460029ff57.png",
-              "altText": "1"
+              "altText": "1",
+              "locked": true
             },
             "position": {
               "x": 326.09596550724865,
@@ -1034,9 +1036,9 @@
 
         ],
         "viewport": {
-          "x": -127.82914981147553,
-          "y": 365.67115930311036,
-          "zoom": 0.757858283255199
+          "x": 20.820275469487115,
+          "y": 62.076141460946985,
+          "zoom": 0.49999999999999994
         }
       }
     },
@@ -1045,6 +1047,7 @@
     "thumbnail_url": "https://images.code.org/b6a2cc5379520dc09ca7442208269c2a-slide-one.jpg",
     "hide_share_and_remix": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-08-04T15:53:16.216+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-examine-data-a\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-examine-data-a\"},{\"changed_at\":\"2026-08-04 15:54:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:20:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:33:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:35:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:42:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:48:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:50:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:51:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:54:55 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:58:23 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-08-04T15:53:16.216+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson6-examine-data-a\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson6-examine-data-a\"},{\"changed_at\":\"2026-08-04 15:54:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:20:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:33:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:35:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:42:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:48:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:50:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:51:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:54:55 +0000\",\"changed\":[\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-08-04 16:58:23 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-07 18:45:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

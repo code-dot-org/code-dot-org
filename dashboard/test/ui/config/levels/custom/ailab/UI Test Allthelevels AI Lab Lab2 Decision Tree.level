@@ -10,7 +10,6 @@
     "instructions_important": "false",
     "uses_lab2": "true",
     "long_instructions": "AI Lab Lab2!",
-    "hide_share_and_remix": "false",
     "mode": "{\r\n  \"datasets\": [\r\n    \"zoo\"\r\n  ],\r\n  \"trainer\": \"decisionTree\"\r\n}",
     "dynamic_instructions": "{\r\n  \"dataDisplayFeatures\": \"So, **choose one or more columns**.\\n\\nThey will do the predicting.\"\r\n}"
   },
