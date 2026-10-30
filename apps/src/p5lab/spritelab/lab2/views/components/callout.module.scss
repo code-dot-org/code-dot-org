@@ -1,0 +1,63 @@
+$arrow-size: 32px;
+$bounce-distance: 10px;
+// Above the toolbox flyout and the lab's own over-Blockly layers (70, 71).
+$z-callout: 80;
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes up-down {
+  0%,
+  100% {
+    top: $bounce-distance;
+  }
+  50% {
+    top: 0;
+  }
+}
+
+// The box's origin sits at the anchor point; the image points up, and each
+// direction's transform turns the box so the arrow's tip faces the element.
+.callout {
+  position: fixed;
+  z-index: $z-callout;
+  width: $arrow-size;
+  height: $arrow-size;
+  animation: fade-in 0.3s ease-out;
+  pointer-events: none;
+}
+
+.up {
+  transform: translateX(-50%);
+}
+
+.down {
+  transform: translateX(-50%) translateY(-100%) rotate(180deg);
+}
+
+.left {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  width: $arrow-size;
+  height: $arrow-size;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.bounce {
+  animation: up-down 0.75s infinite;
+}

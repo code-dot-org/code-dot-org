@@ -14,6 +14,10 @@ interface EditorSwitchProps {
 }
 
 const DEFAULT_EDITORS: Editor[] = ['Code', 'World'];
+
+/** The switch button's element id, for a callout to point at. */
+export const editorSwitchButtonId = (editor: Editor): string =>
+  `editor-switch-${editor.toLowerCase()}`;
 const ICONS: Record<Editor, string> = {
   Images: 'images',
   Code: 'code',
@@ -33,6 +37,7 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
       selectedButtonValue={value}
       onChange={editor => onChange(editor as Editor)}
       buttons={editors.map(editor => ({
+        id: editorSwitchButtonId(editor),
         value: editor,
         label: editor,
         iconLeft: {iconName: ICONS[editor], iconStyle: 'solid'},
