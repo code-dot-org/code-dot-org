@@ -169,6 +169,9 @@
                   "text": "Let them play or try something"
                 }
               ],
+              "allowOther": {
+                "placeholder": "Or something else"
+              },
               "plan": "purpose"
             }
           ]
