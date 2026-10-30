@@ -1160,7 +1160,8 @@ class Lesson < ApplicationRecord
 
   # For now, the lesson background color is determined by the following rules, which
   # generally will only come into play in lab2 levels:
-  # 1. If this lesson contains any python lab levels, we check the user's theme preference.
+  # 1. If this lesson contains any levels of a lab with a theme preference (see Level#uses_theme_preference?),
+  #    we check the user's theme preference.
   #    If the user has a theme preference, we use that. If not, we use the lesson's background color, if it exists.
   #    Otherwise, we default to dark mode.
   # 2. If the lesson does not contain any python lab levels, we use the lesson's background color, if it exists.
