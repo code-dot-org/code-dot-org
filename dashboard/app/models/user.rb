@@ -474,6 +474,8 @@ class User < ApplicationRecord
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
+  before_save :enable_sharing_for_teachers, if: :teacher?
+
   before_destroy :soft_delete_channels
 
   after_create :associate_with_potential_pd_enrollments
@@ -604,6 +606,11 @@ class User < ApplicationRecord
   def make_teachers_21
     return unless teacher?
     self.age = 21
+  end
+
+  def enable_sharing_for_teachers
+    return unless teacher?
+    self.sharing_disabled = false if sharing_disabled?
   end
 
   def normalize_email
