@@ -78,6 +78,14 @@ $alert-span-vertical-top-spacing: 0;
   }
 }
 
+.alert-pink {
+  background-color: var(--background-accent-pink-light);
+
+  .alertContentContainer i {
+    color: var(--text-accent-pink-primary-fixed);
+  }
+}
+
 // Sizes
 .alert-l {
   padding: 0.875rem 1.125rem;

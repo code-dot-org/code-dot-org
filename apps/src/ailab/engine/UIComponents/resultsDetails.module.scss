@@ -1,0 +1,30 @@
+@use '../sharedMixins' as mixins;
+
+$sentence-min-width: 280px;
+
+.details {
+  box-sizing: border-box;
+  flex: 1;
+  min-height: 0;
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modelRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.sentence {
+  flex: 1 1 $sentence-min-width;
+  min-width: 0;
+}
+
+.accuracy {
+  @include mixins.accuracy-readout;
+}

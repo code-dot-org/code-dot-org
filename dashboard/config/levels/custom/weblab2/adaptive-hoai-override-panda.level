@@ -20,7 +20,7 @@
       ]
     },
     "hide_share_and_remix": true,
-    "long_instructions": "Sam’s page is almost done, but three small things are off.\n\n1.  Run the page and look for what’s wrong: a typo in the heading, a heading that’s the wrong color, and a button with the wrong words.\n2.  Fix each one yourself in the code. Don’t ask the AI.\n3.  Run the page again to check your fixes.\n4.  Write one sentence: why was editing faster than writing another prompt?"
+    "long_instructions": "Sam’s page is almost done, but three small things are off.\n\n1.  Look at the preview and find what’s wrong: a typo in the heading, a heading that’s the wrong color, and a button with the wrong words.\n2.  Fix each one yourself in the code. Don’t ask the AI.\n3.  Check the preview again to see your fixes.\n4.  Write one sentence: why was editing faster than writing another prompt?"
   },
   "published": true
 }]]></config>

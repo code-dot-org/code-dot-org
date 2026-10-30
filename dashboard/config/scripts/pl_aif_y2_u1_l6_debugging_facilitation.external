@@ -1,0 +1,50 @@
+name 'pl-aif-y2-u1-l6-debugging-facilitation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Debugging
+
+Students practice two different debugging modes here: finding a bug from reading inputs and outputs alone, then finding and fixing bugs live in a Smart Home program.
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Finding Bugs:</strong> for several programs, students read the inputs and outputs, decide if they make sense, and write down the bug they find, no code-reading required yet</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Debug a Smart Home (Levels 1-3, Check for Understanding on Level 4):</strong> students identify and fix bugs in a program controlling smart-home devices</div>
+  </div>
+</div>
+
+<hr>
+
+## Watch for: "The Error Points to the Problem"
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Only Looks Where It Crashed</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Assumes a working program with no error message has no bug, or that an error's line number is always where the real mistake is.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Compares Output to Expectation</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Checks whether the actual output matches what it should be, with or without an error, and traces backward from there.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Does the output actually match what you expected? Walk me through why or why not."</div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#128188; Career context:</strong> this is exactly the daily work of a Quality Assurance (QA) engineer, someone who checks software for correctness before it reaches users, often by comparing expected and actual outputs rather than waiting for a crash.
+  </div>
+</div>
+MARKDOWN

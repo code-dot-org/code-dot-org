@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-10-13T18:08:11.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Solar System",
+    "long_instructions": "You are building a nearest-neighbor classifier to identify whether objects in the night sky are asteroids or comets. You’re making predictions based on three features: eccentricity (how circular or oval an orbit is), orbit size, and object density.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Run the starter code, which implements a simple classifier. Take note of its accuracy: you’ll answer a question about it later.\r\n2. Create a new `MinMaxScaler` to use for scaling the data.\r\n3. Use your scaler’s `fit_transform` method to fit the scaler and scale the training inputs.\r\n4. Use your scaler’s `transform` method to scale the test inputs.\r\n5. Train the model using the scaled training data instead of the unscaled training data.\r\n6. Test the model using the scaled test data instead of the unscaled test data.\r\n7. Run your updated code and take note of its new accuracy now: you’ll answer a question about it later.\r\n\r\nNote that the `model.score` function at the end is a convenient way to test how accurate a trained model performs on a specific set of inputs and outputs!",
+    "bubble_choice_description": "Build a nearest-neighbor classifier to identify whether objects in the night sky are asteroids or comets.",
+    "thumbnail_url": "https://images.code.org/b1fbd621bb2954c8b0445c225352afb1-asteroid.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.model_selection import train_test_split\nfrom sklearn.neighbors import KNeighborsClassifier\nfrom sklearn.preprocessing import MinMaxScaler\n\n# Input features: [eccentricity, orbit size (km), density (kg/m^3)]\ninputs = [\n  [0.204, 168000000, 1190],\n  [0.079, 414000000, 2160],\n  [0.186, 476000000, 1400],\n  [0.081, 519000000, 1290],\n  [0.142, 594000000, 1500],\n  [0.848, 331000000, 500],\n  [0.512, 470000000, 470],\n  [0.538, 516000000, 600],\n  [0.641, 518000000, 533],\n  [0.624, 540000000, 300],\n]\n\noutputs = [\n  \"asteroid\",\n  \"asteroid\",\n  \"asteroid\",\n  \"asteroid\",\n  \"asteroid\",\n  \"comet\",\n  \"comet\",\n  \"comet\",\n  \"comet\",\n  \"comet\",\n]\n\n# Split into training and testing data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n  inputs,\n  outputs,\n  test_size=0.3,\n)\n\n# TODO 2: Create a new MinMaxScaler\n# TODO 3: Fit the scaler and scale the training inputs\n# TODO 4: Scale the test inputs\n\n# Train the classifier\n# TODO 5: Train the model using the scaled training inputs\nmodel = KNeighborsClassifier(n_neighbors=1)\nmodel.fit(train_inputs, train_outputs)\n\n# TODO 6: Test the model using the scaled test inputs\naccuracy = model.score(test_inputs, test_outputs)\nprint(f\"Model Accuracy: {accuracy}\")",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqaXw420FgNumuu\nApYfQQo6dTYRSVwZ4BGiwqNicpbEWM6mac/pdZlTrHWb1ytr4EShrQtTFm5p\nprqcMcV/hzs8QEMpEmtmUaiDcctb2UPwxCFrTkX5n6WT7TsX3KscHJ7zCQtT\n9Bax1q9ZmJlWGLAaol34SCMpSVsolsMmUQHd2BEgSo9AITe60xWH7uGZYXoz\nobZN1rJxsxxs9yMsERXn6hxyJA5m7IB6FVKnKkOM6LWpwrLCI0GQ4Lyw4dYC\nF4aadJgQIi2WwVVaQ8fepBRmuwYTyRLoYFeHAjAP+u8RInIECfUIpJpUQZmJ\na0/vs7Rxykwbh/ZFsWqqmg/dteGORPGqMlBe+hnjXcUcAYr0QfwKKQ3yxqbB\nyY3FREDYI8w/6ngek8iBFdMwdFtnbYZ9xBMGpIkjjuyZetn7uOjRzEEyOPLW\nRs4RMG/ZmIymm97POgubfSEYi3+TbfTiKjqYgGkz4LNYiHjhyEiW2zSkCHcD\nXZzIHBVLqUsv103NFxA5XpRGZ1WLOTkMmDLndkMeL8es8nURCWnXd+VekRAK\n/loMXmBBuoXfL9jFZVYFBwAgF48Uwol9Wqf/at49cQrq9sSduO/ZbaFh4uzR\nBRqyuzl81l8zs65oyO+Pf/FX3uXpsGwyCl2LAhilJh4YF+RRdJQeN+JDpVkT\nu+k4HX/H4mhOPQfAQOMV/1Dh78o2SCN4u7/QUD6Wc2FEsZVQqSgSdRzKl3s5\nRNs/e+9hrXDL+s/BrjbQYVLAfKSNeACrKCIdLnOs1aJ+izS+PHrNQjXUmQrl\n2jqHX9ZdXgFolXlr5BIBGYAMvjoa4rV52HcL7tvx/scVZgqS3QaWw0aWIt9/\ngZfYSA7UxFqy1My6on0tP2uRWeY4IbBuPpuvO6y0f5AdASEFPfQi2LkxW+Bu\nf4l4WY3irR53akWZs4jF0ocDdlUAinGzd1bbkMVNedBh5l7DULLv8/tenPkm\nerUFjV7j8Y6XH9O0ywbbteM2HAyD0cG+Pz7tceWZQg8+br7K1XrNsZuu3j3M\nz/kvMVIzzJA8R52q8Sy4WS3RkgPGrUyiPn4E8cz+SD7xsNa3ju8aiLpUZaAk\nZKBPxVfAY10tsTzSiQYk6GBPRmIVXwrBZZJSTh1b3pXNSnsbK9VHub5k74QO\nTo/eI0OgUEsT7Angr/B2gk2bUm3dbj4dbjRfiBTXyh2kIzhUyaaUsV3riHxQ\n+5VoIW61/1UhryipO/ty+wv8dK2C9wKLu5ZOFQjz3wGc3sGiAbG59oDv8kv6\nCJR3AN2jQjX2Y5TWsR9RAJcq8bvQhuj40lU8dzKtChWH6ZbHrfrgNFH3c/IL\nloOPaOdIxP6Ru+PldKfYBcHxD/gGlEv19aVWbsAWUdPyF5bwFFMYWMlhcg5S\n4LRAmCOb3If5PpDRqVYuYU5IM23sVP27VXFtMY1sQRhJiQKHhFjErkhlab7J\nHhelTVjiOfrJajGTdS85Rjvbn1iEtwpPGAxCox/evlvN0WGFMQOzX7Poycid\nXEFAcF7QBoqHl6R+E+IP5fDIDZVgWfO+S7dfCB91lbqQU+mhfs8P8qVehCN5\n2fwmCN4JOHwoi5HreSShgP+A/ieiTpMuviPU/8Fx3UB2wyC5WSJBxWVYPBo1\nEK650+jJ/SB9I+N96bZLnmB8XQu+CM4Yw/j3vbJ5iqyp60mS1wHd\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-10-13 18:08:20 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-10-13 18:08:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

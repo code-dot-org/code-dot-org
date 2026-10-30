@@ -6,7 +6,8 @@
   "properties": {
     "project_template_level_name": "adaptive-hoai-template",
     "hide_share_and_remix": true,
-    "long_instructions": "Now it’s your turn. Look at your own page and pick one thing you want to change.\n\n**Do This:**\n\n1.  Write a detailed prompt that names the part of your page you want to change.  *Think color, size, wording, or tone. Change your heading, text, background or buttons.*\n1.  Run the page to see what changed. If it’s not what you meant, say what to change next."
+    "initial_view_mode": "preview",
+    "long_instructions": "Now it’s your turn. Look at your own page and pick one thing you want to change.\n\n**Do This:**\n\n1.  Write a detailed prompt that names the part of your page you want to change.  *Think color, size, wording, or tone. Change your heading, text, background or buttons.*\n1.  Look at the preview to see what changed. If it’s not what you meant, say what to change next."
   },
   "published": true
 }]]></config>

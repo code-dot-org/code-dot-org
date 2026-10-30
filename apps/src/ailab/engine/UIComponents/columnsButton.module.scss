@@ -1,0 +1,6 @@
+// Two classes, to outrank the theme's square icon box; the expand glyph is 1.25em wide.
+.button.button :global(.MuiButton-startIcon),
+.button.button :global(.MuiButton-startIcon) i {
+  width: 1.25em;
+  text-align: center;
+}

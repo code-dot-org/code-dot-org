@@ -1,8 +1,12 @@
-import {TutorGalleryData} from '@code-dot-org/lesson-deep-dive';
+import {
+  ChallengeGallery,
+  TutorGalleryData,
+} from '@code-dot-org/lesson-deep-dive';
 import React, {FC} from 'react';
 import {Navigate, Route, Routes} from 'react-router-dom';
 
-import ChallengeGallery from './gallery/ChallengeGallery';
+import experiments from '@cdo/apps/util/experiments';
+
 import ChallengeRoute from './lessonDeepDive/ChallengeActivities/ChallengeRoute';
 import LessonDeepDiveContainer from './lessonDeepDive/LessonDeepDiveContainer';
 import {LessonDeepDiveData} from './lessonDeepDive/types';
@@ -37,12 +41,15 @@ const TutorApp: FC<TutorAppProps> = ({
           />
         </>
       )}
-      {tutorGalleryData && (
-        <Route
-          path="gallery"
-          element={<ChallengeGallery tutorGalleryData={tutorGalleryData} />}
-        />
-      )}
+      {tutorGalleryData &&
+        experiments.isEnabledAllowingQueryString(
+          experiments.LESSON_TUTOR_CHALLENGE
+        ) && (
+          <Route
+            path="gallery"
+            element={<ChallengeGallery tutorGalleryData={tutorGalleryData} />}
+          />
+        )}
     </Routes>
   );
 };

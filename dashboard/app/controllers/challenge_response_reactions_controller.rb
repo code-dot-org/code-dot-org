@@ -9,6 +9,7 @@
 # single response.
 class ChallengeResponseReactionsController < ApplicationController
   before_action :authenticate_user!
+  before_action {head :forbidden unless current_user.can_use_lesson_deep_dive?}
   before_action :load_response
   before_action :authorize_react!
 

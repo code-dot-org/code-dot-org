@@ -1,0 +1,16 @@
+name 'aif-y2-making-predictions-preassessment-q5-2026'
+
+wrong '3'
+wrong '6'
+right '9'
+wrong '100'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A model predicts a value of 7, but the actual value is 10. What is the squared error of this prediction?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Loss Functions
+MARKDOWN

@@ -1,72 +1,37 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--border-neutral-primary);
-  border-radius: var(--shape-sm);
-  background: var(--background-neutral-secondary);
-  overflow: hidden;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px;
-  background: var(--background-neutral-primary);
-}
-
-.header:not(:last-child) {
-  border-bottom: 1px solid var(--border-neutral-primary);
-}
-
-.headerPreview {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: 1 0 0;
-  min-width: 0;
-}
-
-.typeIcon {
-  color: var(--text-neutral-quaternary);
-}
-
-.unsavedBadge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  border: 1px solid var(--border-warning-mid);
-  border-radius: var(--shape-sm);
-  background: var(--background-warning-light);
-  color: var(--text-warning-secondary);
-}
-
-.questionTitlePreview {
-  flex: 1 0 0;
-  min-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  color: var(--text-neutral-tertiary);
-}
-
 .tabsRow {
   padding: 0 10px;
+  border-bottom: 1px solid var(--border-neutral-primary);
 }
 
 .tabPanels {
   background: var(--background-neutral-primary);
 }
 
-.tabContent {
+.fieldGroup {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 8px 10px 10px;
-  background: var(--background-neutral-primary);
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--text-neutral-primary);
+}
+
+// A legend floats over the fieldset border by default.
+.fieldGroupLabel {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+.optionsField {
+  align-self: stretch;
+
+  > * {
+    align-self: stretch;
+  }
 }
 
 .optionsList {
@@ -85,19 +50,32 @@
   background: var(--background-neutral-secondary);
 }
 
-.correctToggle {
-  background: var(--background-neutral-primary);
-  border: 1px solid var(--border-neutral-secondary);
-  color: var(--text-neutral-primary);
+// The correct-answer marker sits in a box joined to the left of the text input.
+.optionInput {
+  display: flex;
+  flex: 1 0 0;
+  align-items: stretch;
+  min-width: 0;
+
+  .optionText input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
-.correctToggleSelected {
-  background: var(--background-selected-primary);
-  border-color: var(--background-selected-primary);
-  color: var(--text-selected-primary);
+.correctMarker {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  margin-right: -1px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-secondary);
+  border-radius: var(--shape-sm) 0 0 var(--shape-sm);
 
-  &:hover {
-    background: var(--background-selected-primary);
+  label {
+    margin: 0;
   }
 }
 
@@ -115,41 +93,46 @@
   min-width: 0;
 }
 
-.textarea {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 80px;
-  padding: 8px 12px;
-  border: 1px solid var(--border-neutral-secondary);
-  border-radius: var(--shape-sm);
-  font: inherit;
-  resize: vertical;
-}
-
-.saveError {
-  padding: 8px 10px 10px;
-  background: var(--background-neutral-primary);
-}
-
-.footer {
+.pairsGroup {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
-  padding: 10px;
-  background: var(--background-neutral-primary);
-  border-top: 1px solid var(--border-neutral-primary);
+  flex-direction: column;
+  gap: 4px;
 }
 
-// aria-disabled rather than disabled, so the button keeps focus and its tooltip.
-.footer .ariaDisabled[aria-disabled='true'] {
-  border-color: var(--borders-neutral-disabled);
-  color: var(--text-neutral-disabled);
-  background-color: var(--background-neutral-primary);
+.pairRow {
+  // A pair's two fields grow independently, so their heights can differ.
+  align-items: flex-start;
+
+  :global(.MuiIconButton-root) {
+    align-self: center;
+  }
 }
 
-.footerActions {
+.pairText {
+  flex: 1 0 0;
+  min-width: 0;
+
+  &::placeholder {
+    color: var(--text-neutral-placeholder);
+  }
+}
+
+.field {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fieldHelp {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin: 0;
+  color: var(--text-neutral-tertiary);
+}
+
+.fieldHelpIcon {
+  flex-shrink: 0;
+  width: 14px;
+  text-align: center;
 }

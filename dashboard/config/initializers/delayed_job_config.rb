@@ -33,6 +33,13 @@ Delayed::Worker.queue_attributes = CDO.active_job_queues.each_with_object({}) do
   }
 end
 
+# Sets the job priority range for workers. Ensure that another worker pool is
+# configured to process the remaining jobs if you restrict the priority range here.
+# Delayed::Command applies --min-priority/--max-priority after this runs, so
+# flags given to bin/delayed_job take precedence over these settings.
+Delayed::Worker.min_priority = CDO.active_job_worker_min_priority.presence&.to_i
+Delayed::Worker.max_priority = CDO.active_job_worker_max_priority.presence&.to_i
+
 # Retries deletion of a completed DelayedJob record when the database raises a deadlock.
 # This prevents a successfully executed job from being treated as failed
 # and potentially executed again because its queue record could not be removed.

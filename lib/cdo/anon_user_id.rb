@@ -14,9 +14,5 @@ module Cdo
     def self.valid?(value)
       value.is_a?(String) && FORMAT.match?(value)
     end
-
-    def self.valid_value(value)
-      value if valid?(value)
-    end
   end
 end

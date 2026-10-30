@@ -267,12 +267,12 @@ class Level < ApplicationRecord
   # from production levels; see dashboard/test/ui/config/README.md. Match on
   # the level name, never the filename: the DSL file for "UI Test Foo" is
   # ui_test_foo.<type>.
-  def self.ui_test_name?(name)
+  def self.ui_test_partition_name?(name)
     name.to_s.downcase.start_with?(UI_TEST_NAME_PREFIX)
   end
 
   def ui_test?
-    Level.ui_test_name?(name)
+    Level.ui_test_partition_name?(name)
   end
 
   def should_localize?
@@ -509,7 +509,7 @@ class Level < ApplicationRecord
   # dashboard/test/ui/config/README.md.
   def name_change_stays_within_ui_test_partition
     return unless name_changed?
-    return if Level.ui_test_name?(name) == Level.ui_test_name?(name_was)
+    return if Level.ui_test_partition_name?(name) == Level.ui_test_partition_name?(name_was)
     return unless script_levels.exists? || parent_levels.exists? || child_levels.exists?
     errors.add(:name, "cannot be renamed across the \"UI Test \" boundary while the level is used by a script or another level")
   end
@@ -521,7 +521,7 @@ class Level < ApplicationRecord
   # and is harmless during validation. See dashboard/test/ui/config/README.md.
   def ui_test_levels_are_immutable_on_levelbuilder
     return unless rack_env?(:levelbuilder)
-    return unless ui_test? || Level.ui_test_name?(name_was)
+    return unless ui_test? || Level.ui_test_partition_name?(name_was)
     errors.add(:base, "UI test levels cannot be changed on levelbuilder; they are maintained in the repo under dashboard/test/ui/config")
     throw :abort
   end
