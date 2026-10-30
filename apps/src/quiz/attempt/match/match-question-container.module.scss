@@ -27,6 +27,10 @@
   flex-direction: column;
   gap: 10px;
   min-width: 0;
+  // A read-only column is a list.
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 // Extra padding on the dot's side keeps text clear of it.

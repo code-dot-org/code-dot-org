@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
@@ -45,13 +45,22 @@ const renderAnswer = (
     />
   );
 
-const cardFor = (text: string) => screen.getByText(text).closest('div');
+// A card's text as a screen reader reads it, without the aria-hidden dot.
+const spokenTextFor = (text: string) => {
+  const card = screen
+    .getAllByRole('listitem')
+    .find(item => within(item).queryByText(text))!
+    .cloneNode(true) as Element;
+  card.querySelectorAll('[aria-hidden="true"]').forEach(el => el.remove());
+  return card.textContent;
+};
 
 describe('MatchAnswer', () => {
-  it('shows the pairs as read-only cards, not buttons', () => {
+  it('shows the pairs as two lists of read-only cards, not buttons', () => {
     renderAnswer();
 
     expect(screen.queryAllByRole('button')).toHaveLength(0);
+    expect(screen.getAllByRole('list')).toHaveLength(2);
     expect(
       screen.getByRole('group', {name: 'Your answer'})
     ).toBeInTheDocument();
@@ -60,10 +69,10 @@ describe('MatchAnswer', () => {
   it('states each card’s partner, or that it was left unmatched', () => {
     renderAnswer();
 
-    expect(cardFor('1 + 1')).toHaveTextContent('1 + 1A, matched with 2');
-    expect(cardFor('2')).toHaveTextContent('2A, matched with 1 + 1');
-    expect(cardFor('2 + 1')).toHaveTextContent('2 + 1B, not matched');
-    expect(cardFor('3')).toHaveTextContent('3, not matched');
+    expect(spokenTextFor('1 + 1')).toBe('1 + 1, matched with 2');
+    expect(spokenTextFor('2')).toBe('2, matched with 1 + 1');
+    expect(spokenTextFor('2 + 1')).toBe('2 + 1, not matched');
+    expect(spokenTextFor('3')).toBe('3, not matched');
   });
 
   it("labels the board as the student's answer for a teacher viewing it", () => {
