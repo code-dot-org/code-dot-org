@@ -58,7 +58,7 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
           <MuiTypography variant="body2">{step.description}</MuiTypography>
         )}
       </div>
-      <AttemptCard title="What you told us">
+      <AttemptCard title="A prompt to get you started">
         {answers.length > 0 && (
           <dl className={styles.reviewAnswers}>
             {answers.map(({slot, question, answer}) => (
