@@ -129,6 +129,10 @@ export default function useSources<T extends ProjectSources>({
   // Synchronous mirror of currentSources: written concurrently with
   // setCurrentSources so updater-form updates and getSources always see the latest value.
   const currentSourcesRef = useRef<T>();
+  // Set while the current load runs. A load clears the sources before the
+  // view that showed them has re-rendered, so a view effect can still write
+  // in between; such a write has nothing to land on and is dropped.
+  const loadPending = useRef(false);
   const setSources = useCallback((sources: T | undefined) => {
     currentSourcesRef.current = sources;
     setCurrentSources(sources);
@@ -277,6 +281,7 @@ export default function useSources<T extends ProjectSources>({
       // drop each other's fields.
       const prevSources = currentSourcesRef.current;
       if (prevSources === undefined) {
+        if (loadPending.current) return;
         throw new Error('updateSources called before sources loaded');
       }
       const newSources =
@@ -370,15 +375,20 @@ export default function useSources<T extends ProjectSources>({
   useEffect(() => {
     let cancelled = false;
     setIsLoading(true);
+    loadPending.current = true;
     loadProject(() => cancelled)
       .catch(error => {
         if (!cancelled) setLoadError(error);
       })
       .finally(() => {
-        if (!cancelled) setIsLoading(false);
+        if (!cancelled) {
+          loadPending.current = false;
+          setIsLoading(false);
+        }
       });
     return () => {
       cancelled = true;
+      loadPending.current = false;
     };
   }, [loadProject]);
 
